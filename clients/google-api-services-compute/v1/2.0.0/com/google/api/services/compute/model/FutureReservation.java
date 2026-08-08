@@ -177,6 +177,15 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
   private java.lang.String reservationName;
 
   /**
+   * Output only. Contains standard resource metadata for an FutureReservation resource. It is
+   * populated for each instance of the FutureReservation resource, and includes the api_version the
+   * instance was retrieved through, and its canonical resource_type name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourceMetadata resourceMetadata;
+
+  /**
    * Maintenance information for this reservation
    * The value may be {@code null}.
    */
@@ -586,6 +595,27 @@ public final class FutureReservation extends com.google.api.client.json.GenericJ
    */
   public FutureReservation setReservationName(java.lang.String reservationName) {
     this.reservationName = reservationName;
+    return this;
+  }
+
+  /**
+   * Output only. Contains standard resource metadata for an FutureReservation resource. It is
+   * populated for each instance of the FutureReservation resource, and includes the api_version the
+   * instance was retrieved through, and its canonical resource_type name.
+   * @return value or {@code null} for none
+   */
+  public ResourceMetadata getResourceMetadata() {
+    return resourceMetadata;
+  }
+
+  /**
+   * Output only. Contains standard resource metadata for an FutureReservation resource. It is
+   * populated for each instance of the FutureReservation resource, and includes the api_version the
+   * instance was retrieved through, and its canonical resource_type name.
+   * @param resourceMetadata resourceMetadata or {@code null} for none
+   */
+  public FutureReservation setResourceMetadata(ResourceMetadata resourceMetadata) {
+    this.resourceMetadata = resourceMetadata;
     return this;
   }
 

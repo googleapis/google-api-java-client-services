@@ -7819,6 +7819,105 @@ public class Walletobjects extends com.google.api.client.googleapis.services.jso
         return (Insert) super.set(parameterName, value);
       }
     }
+    /**
+     * Checks that the JWT or JSON string in the request represents a valid pass to be saved.
+     *
+     * Create a request for the method "jwt.validate".
+     *
+     * This request holds the parameters needed by the walletobjects server.  After setting any optional
+     * parameters, call the {@link Validate#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.walletobjects.model.JwtValidateRequest}
+     * @return the request
+     */
+    public Validate validate(com.google.api.services.walletobjects.model.JwtValidateRequest content) throws java.io.IOException {
+      Validate result = new Validate(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Validate extends WalletobjectsRequest<com.google.api.services.walletobjects.model.JwtValidateResponse> {
+
+      private static final String REST_PATH = "walletobjects/v1/jwt/validate";
+
+      /**
+       * Checks that the JWT or JSON string in the request represents a valid pass to be saved.
+       *
+       * Create a request for the method "jwt.validate".
+       *
+       * This request holds the parameters needed by the the walletobjects server.  After setting any
+       * optional parameters, call the {@link Validate#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Validate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.walletobjects.model.JwtValidateRequest}
+       * @since 1.13
+       */
+      protected Validate(com.google.api.services.walletobjects.model.JwtValidateRequest content) {
+        super(Walletobjects.this, "POST", REST_PATH, content, com.google.api.services.walletobjects.model.JwtValidateResponse.class);
+      }
+
+      @Override
+      public Validate set$Xgafv(java.lang.String $Xgafv) {
+        return (Validate) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Validate setAccessToken(java.lang.String accessToken) {
+        return (Validate) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Validate setAlt(java.lang.String alt) {
+        return (Validate) super.setAlt(alt);
+      }
+
+      @Override
+      public Validate setCallback(java.lang.String callback) {
+        return (Validate) super.setCallback(callback);
+      }
+
+      @Override
+      public Validate setFields(java.lang.String fields) {
+        return (Validate) super.setFields(fields);
+      }
+
+      @Override
+      public Validate setKey(java.lang.String key) {
+        return (Validate) super.setKey(key);
+      }
+
+      @Override
+      public Validate setOauthToken(java.lang.String oauthToken) {
+        return (Validate) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Validate setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Validate) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Validate setQuotaUser(java.lang.String quotaUser) {
+        return (Validate) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Validate setUploadType(java.lang.String uploadType) {
+        return (Validate) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Validate setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Validate) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Validate set(String parameterName, Object value) {
+        return (Validate) super.set(parameterName, value);
+      }
+    }
 
   }
 

@@ -66,6 +66,23 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
   private java.lang.String dataSourceDisplayName;
 
   /**
+   * Output only. The end-user-facing display name of the data source, sourced from
+   * `ConnectorSource.end_user_display_name`. When unset, clients fall back to
+   * `data_source_display_name`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String dataSourceEndUserDisplayName;
+
+  /**
+   * Output only. The version of the connector definition backing this collection, mirroring
+   * `DataConnector.data_source_version`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dataSourceVersion;
+
+  /**
    * For the data store collection, list of the children data stores.
    * The value may be {@code null}.
    */
@@ -88,6 +105,25 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * Output only. Whether this is a first-party (Google-owned) connector, as opposed to a third-
+   * party connector. Used by the frontend to group 1P vs 3P connectors. Sourced from
+   * `ConnectorSource.is_first_party` once that field is universally populated (b/534727761); until
+   * then derived from `ConnectorSource.connector_type == FIRST_PARTY`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isFirstParty;
+
+  /**
+   * Output only. User-facing connector metadata (`title`, `description`, `short_description`,
+   * `author`, `note`), retrieved from the registry `ConnectorSource.metadata` (joined by data
+   * source). Shown on the connector detail page.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata metadata;
 
   /**
    * The name of the collection. It should be collection resource name. Format:
@@ -171,6 +207,46 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
   }
 
   /**
+   * Output only. The end-user-facing display name of the data source, sourced from
+   * `ConnectorSource.end_user_display_name`. When unset, clients fall back to
+   * `data_source_display_name`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDataSourceEndUserDisplayName() {
+    return dataSourceEndUserDisplayName;
+  }
+
+  /**
+   * Output only. The end-user-facing display name of the data source, sourced from
+   * `ConnectorSource.end_user_display_name`. When unset, clients fall back to
+   * `data_source_display_name`.
+   * @param dataSourceEndUserDisplayName dataSourceEndUserDisplayName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent setDataSourceEndUserDisplayName(java.lang.String dataSourceEndUserDisplayName) {
+    this.dataSourceEndUserDisplayName = dataSourceEndUserDisplayName;
+    return this;
+  }
+
+  /**
+   * Output only. The version of the connector definition backing this collection, mirroring
+   * `DataConnector.data_source_version`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDataSourceVersion() {
+    return dataSourceVersion;
+  }
+
+  /**
+   * Output only. The version of the connector definition backing this collection, mirroring
+   * `DataConnector.data_source_version`.
+   * @param dataSourceVersion dataSourceVersion or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent setDataSourceVersion(java.lang.Double dataSourceVersion) {
+    this.dataSourceVersion = dataSourceVersion;
+    return this;
+  }
+
+  /**
    * For the data store collection, list of the children data stores.
    * @return value or {@code null} for none
    */
@@ -224,6 +300,50 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent e
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this is a first-party (Google-owned) connector, as opposed to a third-
+   * party connector. Used by the frontend to group 1P vs 3P connectors. Sourced from
+   * `ConnectorSource.is_first_party` once that field is universally populated (b/534727761); until
+   * then derived from `ConnectorSource.connector_type == FIRST_PARTY`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsFirstParty() {
+    return isFirstParty;
+  }
+
+  /**
+   * Output only. Whether this is a first-party (Google-owned) connector, as opposed to a third-
+   * party connector. Used by the frontend to group 1P vs 3P connectors. Sourced from
+   * `ConnectorSource.is_first_party` once that field is universally populated (b/534727761); until
+   * then derived from `ConnectorSource.connector_type == FIRST_PARTY`.
+   * @param isFirstParty isFirstParty or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent setIsFirstParty(java.lang.Boolean isFirstParty) {
+    this.isFirstParty = isFirstParty;
+    return this;
+  }
+
+  /**
+   * Output only. User-facing connector metadata (`title`, `description`, `short_description`,
+   * `author`, `note`), retrieved from the registry `ConnectorSource.metadata` (joined by data
+   * source). Shown on the connector detail page.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata getMetadata() {
+    return metadata;
+  }
+
+  /**
+   * Output only. User-facing connector metadata (`title`, `description`, `short_description`,
+   * `author`, `note`), retrieved from the registry `ConnectorSource.metadata` (joined by data
+   * source). Shown on the connector detail page.
+   * @param metadata metadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigCollectionComponent setMetadata(GoogleCloudDiscoveryengineV1DataConnectorConnectorMetadata metadata) {
+    this.metadata = metadata;
     return this;
   }
 

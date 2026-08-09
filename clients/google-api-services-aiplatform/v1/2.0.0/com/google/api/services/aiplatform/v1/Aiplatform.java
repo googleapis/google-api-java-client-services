@@ -136197,6 +136197,154 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             }
           }
           /**
+           * Compacts the event history of a given Session, which may run an LLM summarization call and
+           * rewrite the full event history. Compaction is a storage-side rewrite that can apply a stackable
+           * pipeline of rules (event-horizon preservation, tool-response truncation, thought stripping, and
+           * LLM summarization etc.)
+           *
+           * Create a request for the method "sessions.compact".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Compact#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the session to compact. Format:
+           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{ses
+           *        sion}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CompactSessionRequest}
+           * @return the request
+           */
+          public Compact compact(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CompactSessionRequest content) throws java.io.IOException {
+            Compact result = new Compact(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Compact extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
+
+            private static final String REST_PATH = "v1/{+name}:compact";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/sessions/[^/]+$");
+
+            /**
+             * Compacts the event history of a given Session, which may run an LLM summarization call and
+             * rewrite the full event history. Compaction is a storage-side rewrite that can apply a stackable
+             * pipeline of rules (event-horizon preservation, tool-response truncation, thought stripping, and
+             * LLM summarization etc.)
+             *
+             * Create a request for the method "sessions.compact".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Compact#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Compact#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the session to compact. Format:
+           *        `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{ses
+           *        sion}`
+             * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CompactSessionRequest}
+             * @since 1.13
+             */
+            protected Compact(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1CompactSessionRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/sessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Compact set$Xgafv(java.lang.String $Xgafv) {
+              return (Compact) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Compact setAccessToken(java.lang.String accessToken) {
+              return (Compact) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Compact setAlt(java.lang.String alt) {
+              return (Compact) super.setAlt(alt);
+            }
+
+            @Override
+            public Compact setCallback(java.lang.String callback) {
+              return (Compact) super.setCallback(callback);
+            }
+
+            @Override
+            public Compact setFields(java.lang.String fields) {
+              return (Compact) super.setFields(fields);
+            }
+
+            @Override
+            public Compact setKey(java.lang.String key) {
+              return (Compact) super.setKey(key);
+            }
+
+            @Override
+            public Compact setOauthToken(java.lang.String oauthToken) {
+              return (Compact) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Compact setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Compact) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Compact setQuotaUser(java.lang.String quotaUser) {
+              return (Compact) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Compact setUploadType(java.lang.String uploadType) {
+              return (Compact) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Compact setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Compact) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the session to compact. Format: `projects/{project}/lo
+             * cations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the session to compact. Format:
+           `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the session to compact. Format: `projects/{project}/lo
+             * cations/{location}/reasoningEngines/{reasoning_engine}/sessions/{session}`
+             */
+            public Compact setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/sessions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Compact set(String parameterName, Object value) {
+              return (Compact) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a new Session.
            *
            * Create a request for the method "sessions.create".

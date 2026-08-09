@@ -59,6 +59,13 @@ public final class GoogleCloudAiplatformV1beta1VideoResponseFormat extends com.g
   private java.lang.String gcsUri;
 
   /**
+   * Optional. The video output resolution. Supported values: "360p", "720p", "1080p", "4k".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolution;
+
+  /**
    * The aspect ratio for the video output.
    * @return value or {@code null} for none
    */
@@ -125,6 +132,23 @@ public final class GoogleCloudAiplatformV1beta1VideoResponseFormat extends com.g
    */
   public GoogleCloudAiplatformV1beta1VideoResponseFormat setGcsUri(java.lang.String gcsUri) {
     this.gcsUri = gcsUri;
+    return this;
+  }
+
+  /**
+   * Optional. The video output resolution. Supported values: "360p", "720p", "1080p", "4k".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolution() {
+    return resolution;
+  }
+
+  /**
+   * Optional. The video output resolution. Supported values: "360p", "720p", "1080p", "4k".
+   * @param resolution resolution or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VideoResponseFormat setResolution(java.lang.String resolution) {
+    this.resolution = resolution;
     return this;
   }
 

@@ -52,12 +52,12 @@ public final class GenaiVertexV1beta1TranscriptionConfig extends com.google.api.
   private java.lang.String diarizationMode;
 
   /**
-   * Required. BCP-47 language codes providing hints about the languages present in the audio. At
-   * least one must be specified, or set to ["auto"] to enable automatic language detection.
+   * Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+   * omitted or empty, defaults to automatic language detection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> languageHints;
+  private java.util.List<java.lang.String> languageCodes;
 
   /**
    * Optional. The granularity of timestamps to include in the transcription output. Supported
@@ -121,21 +121,21 @@ public final class GenaiVertexV1beta1TranscriptionConfig extends com.google.api.
   }
 
   /**
-   * Required. BCP-47 language codes providing hints about the languages present in the audio. At
-   * least one must be specified, or set to ["auto"] to enable automatic language detection.
+   * Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+   * omitted or empty, defaults to automatic language detection.
    * @return value or {@code null} for none
    */
-  public java.util.List<java.lang.String> getLanguageHints() {
-    return languageHints;
+  public java.util.List<java.lang.String> getLanguageCodes() {
+    return languageCodes;
   }
 
   /**
-   * Required. BCP-47 language codes providing hints about the languages present in the audio. At
-   * least one must be specified, or set to ["auto"] to enable automatic language detection.
-   * @param languageHints languageHints or {@code null} for none
+   * Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+   * omitted or empty, defaults to automatic language detection.
+   * @param languageCodes languageCodes or {@code null} for none
    */
-  public GenaiVertexV1beta1TranscriptionConfig setLanguageHints(java.util.List<java.lang.String> languageHints) {
-    this.languageHints = languageHints;
+  public GenaiVertexV1beta1TranscriptionConfig setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
+    this.languageCodes = languageCodes;
     return this;
   }
 

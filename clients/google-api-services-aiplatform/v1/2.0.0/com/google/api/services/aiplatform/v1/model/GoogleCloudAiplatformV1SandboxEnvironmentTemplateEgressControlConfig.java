@@ -52,7 +52,7 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressContro
   private java.lang.Boolean internetAccess;
 
   /**
-   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC interface IP into
+   * Optional. The name of the customer VPC `NetworkAttachment` used to draw a PSC interface IP into
    * the customer VPC for sandbox egress.
    * The value may be {@code null}.
    */
@@ -113,7 +113,7 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressContro
   }
 
   /**
-   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC interface IP into
+   * Optional. The name of the customer VPC `NetworkAttachment` used to draw a PSC interface IP into
    * the customer VPC for sandbox egress.
    * @return value or {@code null} for none
    */
@@ -122,7 +122,7 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentTemplateEgressContro
   }
 
   /**
-   * Optional. The name of the customer VPC NetworkAttachment used to draw a PSC interface IP into
+   * Optional. The name of the customer VPC `NetworkAttachment` used to draw a PSC interface IP into
    * the customer VPC for sandbox egress.
    * @param networkAttachment networkAttachment or {@code null} for none
    */

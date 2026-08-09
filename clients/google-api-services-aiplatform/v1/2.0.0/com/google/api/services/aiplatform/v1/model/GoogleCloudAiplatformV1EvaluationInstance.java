@@ -38,6 +38,16 @@ public final class GoogleCloudAiplatformV1EvaluationInstance extends com.google.
   private GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData agentData;
 
   /**
+   * Optional. Source for populating `AgentData` from an Interactions API interaction. If set, no
+   * other agent data source fields (`cloud_trace_agent_data_source`, `agent_eval_data`,
+   * `agent_data`) may be set. The request will be rejected with INVALID_ARGUMENT if multiple agent
+   * data sources are provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EvaluationInstanceInteractionsDataSource interactionsDataSource;
+
+  /**
    * Optional. Other data used to populate placeholders based on their key. If a key conflicts with
    * a field in the EvaluationInstance (e.g. `prompt`), the value of the field will take precedence
    * over the value in other_data.
@@ -90,6 +100,29 @@ public final class GoogleCloudAiplatformV1EvaluationInstance extends com.google.
    */
   public GoogleCloudAiplatformV1EvaluationInstance setAgentData(GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData agentData) {
     this.agentData = agentData;
+    return this;
+  }
+
+  /**
+   * Optional. Source for populating `AgentData` from an Interactions API interaction. If set, no
+   * other agent data source fields (`cloud_trace_agent_data_source`, `agent_eval_data`,
+   * `agent_data`) may be set. The request will be rejected with INVALID_ARGUMENT if multiple agent
+   * data sources are provided.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationInstanceInteractionsDataSource getInteractionsDataSource() {
+    return interactionsDataSource;
+  }
+
+  /**
+   * Optional. Source for populating `AgentData` from an Interactions API interaction. If set, no
+   * other agent data source fields (`cloud_trace_agent_data_source`, `agent_eval_data`,
+   * `agent_data`) may be set. The request will be rejected with INVALID_ARGUMENT if multiple agent
+   * data sources are provided.
+   * @param interactionsDataSource interactionsDataSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationInstance setInteractionsDataSource(GoogleCloudAiplatformV1EvaluationInstanceInteractionsDataSource interactionsDataSource) {
+    this.interactionsDataSource = interactionsDataSource;
     return this;
   }
 

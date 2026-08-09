@@ -39,6 +39,15 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgent
   private java.lang.String agentEngine;
 
   /**
+   * Optional. Config for scraping a Gemini Agent via the Interactions API. The scraping service
+   * creates interactions against the agent and returns the resulting interaction traces for
+   * evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GeminiAgentConfig geminiAgentConfig;
+
+  /**
    * Optional. The session input to get agent running results.
    * The value may be {@code null}.
    */
@@ -71,6 +80,27 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgent
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig setAgentEngine(java.lang.String agentEngine) {
     this.agentEngine = agentEngine;
+    return this;
+  }
+
+  /**
+   * Optional. Config for scraping a Gemini Agent via the Interactions API. The scraping service
+   * creates interactions against the agent and returns the resulting interaction traces for
+   * evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GeminiAgentConfig getGeminiAgentConfig() {
+    return geminiAgentConfig;
+  }
+
+  /**
+   * Optional. Config for scraping a Gemini Agent via the Interactions API. The scraping service
+   * creates interactions against the agent and returns the resulting interaction traces for
+   * evaluation.
+   * @param geminiAgentConfig geminiAgentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig setGeminiAgentConfig(GoogleCloudAiplatformV1beta1GeminiAgentConfig geminiAgentConfig) {
+    this.geminiAgentConfig = geminiAgentConfig;
     return this;
   }
 

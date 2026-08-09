@@ -511,7 +511,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
     /**
      * [Output Only] Metadata about this warning in key: value format. For example:
      *
-     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }]
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -552,7 +552,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
     /**
      * [Output Only] Metadata about this warning in key: value format. For example:
      *
-     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }]
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -562,7 +562,7 @@ public final class SslPolicy extends com.google.api.client.json.GenericJson {
     /**
      * [Output Only] Metadata about this warning in key: value format. For example:
      *
-     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }]
      * @param data data or {@code null} for none
      */
     public Warnings setData(java.util.List<Data> data) {

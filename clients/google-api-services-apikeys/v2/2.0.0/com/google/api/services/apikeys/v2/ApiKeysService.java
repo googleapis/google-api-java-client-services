@@ -806,6 +806,22 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /** Optional. Defines the behavior for checking existing usage when deleting a key. */
+          @com.google.api.client.util.Key
+          private java.lang.String checkExistingUsage;
+
+          /** Optional. Defines the behavior for checking existing usage when deleting a key.
+           */
+          public java.lang.String getCheckExistingUsage() {
+            return checkExistingUsage;
+          }
+
+          /** Optional. Defines the behavior for checking existing usage when deleting a key. */
+          public Delete setCheckExistingUsage(java.lang.String checkExistingUsage) {
+            this.checkExistingUsage = checkExistingUsage;
+            return this;
+          }
+
           /**
            * Optional. The etag known to the client for the expected state of the key. This is to be
            * used for optimistic concurrency.

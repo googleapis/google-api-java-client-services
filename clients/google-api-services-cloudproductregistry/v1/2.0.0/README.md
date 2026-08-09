@@ -1,6 +1,6 @@
 # Cloud Product Registry API Client Library for Java
 
-cloudproductregistry.googleapis.com API.
+Cloud Product Registry API provides capabilities to access all first Google Cloud products.
 
 This page contains information about getting started with the Cloud Product Registry API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-cloudproductregistry</artifactId>
-      <version>v1-rev20260611-2.0.0</version>
+      <version>v1-rev20260805-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-cloudproductregistry:v1-rev20260611-2.0.0'
+  implementation 'com.google.apis:google-api-services-cloudproductregistry:v1-rev20260805-2.0.0'
 }
 ```
 

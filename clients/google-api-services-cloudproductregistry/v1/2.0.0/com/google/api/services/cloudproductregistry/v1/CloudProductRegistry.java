@@ -20,7 +20,7 @@ package com.google.api.services.cloudproductregistry.v1;
  * Service definition for CloudProductRegistry (v1).
  *
  * <p>
- * cloudproductregistry.googleapis.com API.
+ * Cloud Product Registry API provides capabilities to access all first Google Cloud products.
  * </p>
  *
  * <p>

@@ -58,6 +58,16 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo 
   private java.lang.String sandboxInternalIp;
 
   /**
+   * Output only. The name of the PSC-E service attachment created for private ingress to this
+   * SandboxEnvironment. Only populated when the template enables private ingress (see
+   * SandboxEnvironmentTemplate.ingress_control_config). VPC-SC customers use this to create a PSC
+   * endpoint in their VPC.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAttachment;
+
+  /**
    * Output only. The hostname of the load balancer.
    * @return value or {@code null} for none
    */
@@ -122,6 +132,29 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo 
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo setSandboxInternalIp(java.lang.String sandboxInternalIp) {
     this.sandboxInternalIp = sandboxInternalIp;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the PSC-E service attachment created for private ingress to this
+   * SandboxEnvironment. Only populated when the template enables private ingress (see
+   * SandboxEnvironmentTemplate.ingress_control_config). VPC-SC customers use this to create a PSC
+   * endpoint in their VPC.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAttachment() {
+    return serviceAttachment;
+  }
+
+  /**
+   * Output only. The name of the PSC-E service attachment created for private ingress to this
+   * SandboxEnvironment. Only populated when the template enables private ingress (see
+   * SandboxEnvironmentTemplate.ingress_control_config). VPC-SC customers use this to create a PSC
+   * endpoint in their VPC.
+   * @param serviceAttachment serviceAttachment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentConnectionInfo setServiceAttachment(java.lang.String serviceAttachment) {
+    this.serviceAttachment = serviceAttachment;
     return this;
   }
 

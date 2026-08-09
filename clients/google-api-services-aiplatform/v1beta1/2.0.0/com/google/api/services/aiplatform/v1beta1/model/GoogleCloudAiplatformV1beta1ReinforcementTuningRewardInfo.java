@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. In case of an error for this reward, this field will be populated with a detailed
+   * error status.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus errorStatus;
+
+  /**
    * Output only. The calculated reward for the reward function.
    * The value may be {@code null}.
    */
@@ -44,6 +52,25 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo ext
    */
   @com.google.api.client.util.Key
   private java.lang.String userRequestedAuxInfo;
+
+  /**
+   * Output only. In case of an error for this reward, this field will be populated with a detailed
+   * error status.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getErrorStatus() {
+    return errorStatus;
+  }
+
+  /**
+   * Output only. In case of an error for this reward, this field will be populated with a detailed
+   * error status.
+   * @param errorStatus errorStatus or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementTuningRewardInfo setErrorStatus(GoogleRpcStatus errorStatus) {
+    this.errorStatus = errorStatus;
+    return this;
+  }
 
   /**
    * Output only. The calculated reward for the reward function.

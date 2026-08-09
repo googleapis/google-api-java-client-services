@@ -59,6 +59,14 @@ public final class GoogleCloudAiplatformV1EvaluationRun extends com.google.api.c
   private java.lang.String displayName;
 
   /**
+   * Optional. Customer-managed encryption key spec for this EvaluationRun. If set, this
+   * EvaluationRun will be secured by this key.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
+
+  /**
    * Output only. Only populated when the evaluation run's state is FAILED or CANCELLED.
    * The value may be {@code null}.
    */
@@ -193,6 +201,25 @@ public final class GoogleCloudAiplatformV1EvaluationRun extends com.google.api.c
    */
   public GoogleCloudAiplatformV1EvaluationRun setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationRun. If set, this
+   * EvaluationRun will be secured by this key.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Customer-managed encryption key spec for this EvaluationRun. If set, this
+   * EvaluationRun will be secured by this key.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRun setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

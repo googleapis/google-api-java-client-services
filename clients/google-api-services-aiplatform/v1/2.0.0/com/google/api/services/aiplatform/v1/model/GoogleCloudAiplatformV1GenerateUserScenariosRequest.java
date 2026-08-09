@@ -57,6 +57,13 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
   private java.lang.Boolean allowCrossRegionModel;
 
   /**
+   * Optional. Config for a Gemini Agent to generate user scenarios for.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GeminiAgentConfig geminiAgentConfig;
+
+  /**
    * Optional. The agent id to identify the root agent. Required unless `gemini_agent_config` is
    * set, in which case it is derived from the referenced Gemini Agent.
    * The value may be {@code null}.
@@ -116,6 +123,23 @@ public final class GoogleCloudAiplatformV1GenerateUserScenariosRequest extends c
    */
   public GoogleCloudAiplatformV1GenerateUserScenariosRequest setAllowCrossRegionModel(java.lang.Boolean allowCrossRegionModel) {
     this.allowCrossRegionModel = allowCrossRegionModel;
+    return this;
+  }
+
+  /**
+   * Optional. Config for a Gemini Agent to generate user scenarios for.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GeminiAgentConfig getGeminiAgentConfig() {
+    return geminiAgentConfig;
+  }
+
+  /**
+   * Optional. Config for a Gemini Agent to generate user scenarios for.
+   * @param geminiAgentConfig geminiAgentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateUserScenariosRequest setGeminiAgentConfig(GoogleCloudAiplatformV1GeminiAgentConfig geminiAgentConfig) {
+    this.geminiAgentConfig = geminiAgentConfig;
     return this;
   }
 

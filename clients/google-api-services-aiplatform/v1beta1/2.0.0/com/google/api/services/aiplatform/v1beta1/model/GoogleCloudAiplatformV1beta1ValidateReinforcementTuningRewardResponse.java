@@ -30,12 +30,20 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningRewardResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. In case of an error, this field will be populated with a detailed error message to
-   * help with debugging.
+   * Output only. Deprecated: Use error_status instead. In case of an error, this field will be
+   * populated with a detailed error message to help with debugging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String error;
+
+  /**
+   * Output only. In case of an error, this field will be populated with a detailed error message
+   * for overall rewards to help with debugging.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus errorStatus;
 
   /**
    * Output only. The overall weighted reward. For a CompositeReinforcementTuningRewardConfig, this
@@ -70,8 +78,8 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   }
 
   /**
-   * Output only. In case of an error, this field will be populated with a detailed error message to
-   * help with debugging.
+   * Output only. Deprecated: Use error_status instead. In case of an error, this field will be
+   * populated with a detailed error message to help with debugging.
    * @return value or {@code null} for none
    */
   public java.lang.String getError() {
@@ -79,12 +87,31 @@ public final class GoogleCloudAiplatformV1beta1ValidateReinforcementTuningReward
   }
 
   /**
-   * Output only. In case of an error, this field will be populated with a detailed error message to
-   * help with debugging.
+   * Output only. Deprecated: Use error_status instead. In case of an error, this field will be
+   * populated with a detailed error message to help with debugging.
    * @param error error or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ValidateReinforcementTuningRewardResponse setError(java.lang.String error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. In case of an error, this field will be populated with a detailed error message
+   * for overall rewards to help with debugging.
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getErrorStatus() {
+    return errorStatus;
+  }
+
+  /**
+   * Output only. In case of an error, this field will be populated with a detailed error message
+   * for overall rewards to help with debugging.
+   * @param errorStatus errorStatus or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ValidateReinforcementTuningRewardResponse setErrorStatus(GoogleRpcStatus errorStatus) {
+    this.errorStatus = errorStatus;
     return this;
   }
 

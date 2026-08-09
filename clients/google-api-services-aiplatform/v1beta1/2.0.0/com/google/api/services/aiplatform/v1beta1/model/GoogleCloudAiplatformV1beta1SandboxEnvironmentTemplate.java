@@ -66,6 +66,20 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
   private GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressControlConfig egressControlConfig;
 
   /**
+   * Optional. The configuration for private ingress (PSC-E) of this template. When set, the sandbox
+   * router is exposed privately via a PSC service attachment so VPC-SC customers can connect from
+   * their VPC over a private endpoint instead of the public internet. The resulting service
+   * attachment is surfaced on `SandboxEnvironment.connection_info.service_attachment`. Only the
+   * PSC-E (service-attachment/ingress) portion of `PrivateServiceConnectConfig` applies here:
+   * `enable_private_service_connect` and `project_allowlist` (the consumer projects allowed to
+   * connect). The nested `psc_interface_config` (PSC-I / egress) is not used for sandbox ingress;
+   * sandbox egress is configured via `egress_control_config` instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig ingressControlConfig;
+
+  /**
    * Identifier. The resource name of the SandboxEnvironmentTemplate. Format: `projects/{project}/lo
    * cations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironmentTemplates/{sandbox_env
    * ironment_template}`
@@ -170,6 +184,37 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setEgressControlConfig(GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressControlConfig egressControlConfig) {
     this.egressControlConfig = egressControlConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for private ingress (PSC-E) of this template. When set, the sandbox
+   * router is exposed privately via a PSC service attachment so VPC-SC customers can connect from
+   * their VPC over a private endpoint instead of the public internet. The resulting service
+   * attachment is surfaced on `SandboxEnvironment.connection_info.service_attachment`. Only the
+   * PSC-E (service-attachment/ingress) portion of `PrivateServiceConnectConfig` applies here:
+   * `enable_private_service_connect` and `project_allowlist` (the consumer projects allowed to
+   * connect). The nested `psc_interface_config` (PSC-I / egress) is not used for sandbox ingress;
+   * sandbox egress is configured via `egress_control_config` instead.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig getIngressControlConfig() {
+    return ingressControlConfig;
+  }
+
+  /**
+   * Optional. The configuration for private ingress (PSC-E) of this template. When set, the sandbox
+   * router is exposed privately via a PSC service attachment so VPC-SC customers can connect from
+   * their VPC over a private endpoint instead of the public internet. The resulting service
+   * attachment is surfaced on `SandboxEnvironment.connection_info.service_attachment`. Only the
+   * PSC-E (service-attachment/ingress) portion of `PrivateServiceConnectConfig` applies here:
+   * `enable_private_service_connect` and `project_allowlist` (the consumer projects allowed to
+   * connect). The nested `psc_interface_config` (PSC-I / egress) is not used for sandbox ingress;
+   * sandbox egress is configured via `egress_control_config` instead.
+   * @param ingressControlConfig ingressControlConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setIngressControlConfig(GoogleCloudAiplatformV1beta1PrivateServiceConnectConfig ingressControlConfig) {
+    this.ingressControlConfig = ingressControlConfig;
     return this;
   }
 

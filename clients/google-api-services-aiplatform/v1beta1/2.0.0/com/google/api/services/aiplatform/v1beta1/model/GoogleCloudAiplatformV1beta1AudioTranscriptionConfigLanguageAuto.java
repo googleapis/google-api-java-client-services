@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Indicates the language of the audio should be automatically detected.
+ * Deprecated: Use top-level `language_codes` instead. Indicates the language of the audio should be
+ * automatically detected.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:

@@ -39,7 +39,7 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
   private java.lang.String domain;
 
   /**
-   * Required. The VPC network name in the target_project where the DNS zone specified by 'domain'
+   * Required. The VPC network name in the target_project where the DNS zone specified by `domain`
    * is visible.
    * The value may be {@code null}.
    */
@@ -47,7 +47,7 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
   private java.lang.String targetNetwork;
 
   /**
-   * Required. The project ID hosting the Cloud DNS managed zone that contains the 'domain'. The
+   * Required. The project ID hosting the Cloud DNS managed zone that contains the `domain`. The
    * Vertex AI Service Agent requires the dns.peer role on this project.
    * The value may be {@code null}.
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
   }
 
   /**
-   * Required. The VPC network name in the target_project where the DNS zone specified by 'domain'
+   * Required. The VPC network name in the target_project where the DNS zone specified by `domain`
    * is visible.
    * @return value or {@code null} for none
    */
@@ -83,7 +83,7 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
   }
 
   /**
-   * Required. The VPC network name in the target_project where the DNS zone specified by 'domain'
+   * Required. The VPC network name in the target_project where the DNS zone specified by `domain`
    * is visible.
    * @param targetNetwork targetNetwork or {@code null} for none
    */
@@ -93,7 +93,7 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
   }
 
   /**
-   * Required. The project ID hosting the Cloud DNS managed zone that contains the 'domain'. The
+   * Required. The project ID hosting the Cloud DNS managed zone that contains the `domain`. The
    * Vertex AI Service Agent requires the dns.peer role on this project.
    * @return value or {@code null} for none
    */
@@ -102,7 +102,7 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
   }
 
   /**
-   * Required. The project ID hosting the Cloud DNS managed zone that contains the 'domain'. The
+   * Required. The project ID hosting the Cloud DNS managed zone that contains the `domain`. The
    * Vertex AI Service Agent requires the dns.peer role on this project.
    * @param targetProject targetProject or {@code null} for none
    */

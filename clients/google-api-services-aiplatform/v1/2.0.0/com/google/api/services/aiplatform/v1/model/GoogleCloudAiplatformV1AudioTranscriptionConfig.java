@@ -52,14 +52,24 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   private java.lang.Boolean diarization;
 
   /**
-   * Optional. The model will detect the language automatically.
+   * Optional. Deprecated: Use top-level `language_codes` instead. The model will detect the
+   * language automatically.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto languageAuto;
 
   /**
-   * Optional. Specifies one or more languages in the audio.
+   * Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+   * omitted or empty, defaults to automatic language detection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> languageCodes;
+
+  /**
+   * Optional. Deprecated: Use top-level `language_codes` instead. Specifies one or more languages
+   * in the audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,7 +136,8 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   }
 
   /**
-   * Optional. The model will detect the language automatically.
+   * Optional. Deprecated: Use top-level `language_codes` instead. The model will detect the
+   * language automatically.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto getLanguageAuto() {
@@ -134,7 +145,8 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   }
 
   /**
-   * Optional. The model will detect the language automatically.
+   * Optional. Deprecated: Use top-level `language_codes` instead. The model will detect the
+   * language automatically.
    * @param languageAuto languageAuto or {@code null} for none
    */
   public GoogleCloudAiplatformV1AudioTranscriptionConfig setLanguageAuto(GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageAuto languageAuto) {
@@ -143,7 +155,27 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   }
 
   /**
-   * Optional. Specifies one or more languages in the audio.
+   * Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+   * omitted or empty, defaults to automatic language detection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLanguageCodes() {
+    return languageCodes;
+  }
+
+  /**
+   * Optional. BCP-47 language codes providing hints about the languages present in the audio. If
+   * omitted or empty, defaults to automatic language detection.
+   * @param languageCodes languageCodes or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1AudioTranscriptionConfig setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
+    this.languageCodes = languageCodes;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: Use top-level `language_codes` instead. Specifies one or more languages
+   * in the audio.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints getLanguageHints() {
@@ -151,7 +183,8 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   }
 
   /**
-   * Optional. Specifies one or more languages in the audio.
+   * Optional. Deprecated: Use top-level `language_codes` instead. Specifies one or more languages
+   * in the audio.
    * @param languageHints languageHints or {@code null} for none
    */
   public GoogleCloudAiplatformV1AudioTranscriptionConfig setLanguageHints(GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints languageHints) {

@@ -41,14 +41,14 @@ public final class GenaiVertexV1beta1EnvironmentConfig extends com.google.api.cl
    * Allow only specific domains.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
+  @com.google.api.client.util.Key("network_allowlist")
   private GenaiVertexV1beta1EnvironmentConfigEnvironmentNetworkEgressAllowlist networkAllowlist;
 
   /**
    * Network egress mode.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
+  @com.google.api.client.util.Key("network_mode")
   private java.lang.String networkMode;
 
   /**

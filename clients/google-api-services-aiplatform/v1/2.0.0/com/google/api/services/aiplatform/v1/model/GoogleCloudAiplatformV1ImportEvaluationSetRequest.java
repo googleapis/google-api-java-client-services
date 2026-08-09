@@ -81,6 +81,13 @@ public final class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends com
   private GoogleCloudAiplatformV1ImportEvaluationSetRequestInlineSource inlineSource;
 
   /**
+   * Optional. Source for importing Interactions API interactions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource interactionsSource;
+
+  /**
    * Source for loading Agent Engine sessions.
    * @return value or {@code null} for none
    */
@@ -200,6 +207,23 @@ public final class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends com
    */
   public GoogleCloudAiplatformV1ImportEvaluationSetRequest setInlineSource(GoogleCloudAiplatformV1ImportEvaluationSetRequestInlineSource inlineSource) {
     this.inlineSource = inlineSource;
+    return this;
+  }
+
+  /**
+   * Optional. Source for importing Interactions API interactions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource getInteractionsSource() {
+    return interactionsSource;
+  }
+
+  /**
+   * Optional. Source for importing Interactions API interactions.
+   * @param interactionsSource interactionsSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1ImportEvaluationSetRequest setInteractionsSource(GoogleCloudAiplatformV1ImportEvaluationSetRequestInteractionsSource interactionsSource) {
+    this.interactionsSource = interactionsSource;
     return this;
   }
 

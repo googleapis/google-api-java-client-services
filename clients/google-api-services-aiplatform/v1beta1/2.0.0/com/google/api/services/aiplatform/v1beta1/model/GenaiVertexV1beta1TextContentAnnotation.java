@@ -59,7 +59,8 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
   private java.lang.Integer startIndex;
 
   /**
-   * A URL citation annotation.
+   * NOTE: We use these instead of the Citation message for historical reasons. A URL citation
+   * annotation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,8 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
   }
 
   /**
-   * A URL citation annotation.
+   * NOTE: We use these instead of the Citation message for historical reasons. A URL citation
+   * annotation.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1UrlCitation getUrlCitation() {
@@ -151,7 +153,8 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
   }
 
   /**
-   * A URL citation annotation.
+   * NOTE: We use these instead of the Citation message for historical reasons. A URL citation
+   * annotation.
    * @param urlCitation urlCitation or {@code null} for none
    */
   public GenaiVertexV1beta1TextContentAnnotation setUrlCitation(GenaiVertexV1beta1UrlCitation urlCitation) {

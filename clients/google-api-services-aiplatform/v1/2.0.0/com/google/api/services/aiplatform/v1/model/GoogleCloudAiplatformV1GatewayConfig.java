@@ -35,7 +35,7 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
    * endpoint in a project other than this gateway's `network` project. Each listed project is VPC-
    * SC enforced: it must be within the caller's service perimeter. The owning
    * SemanticGovernancePolicyEngine's own project is always permitted implicitly and need not be
-   * listed. Format: project ID or number.
+   * listed. Format: `projects/{project}` (ID or number).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
    * endpoint in a project other than this gateway's `network` project. Each listed project is VPC-
    * SC enforced: it must be within the caller's service perimeter. The owning
    * SemanticGovernancePolicyEngine's own project is always permitted implicitly and need not be
-   * listed. Format: project ID or number.
+   * listed. Format: `projects/{project}` (ID or number).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedProjects() {
@@ -112,7 +112,7 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
    * endpoint in a project other than this gateway's `network` project. Each listed project is VPC-
    * SC enforced: it must be within the caller's service perimeter. The owning
    * SemanticGovernancePolicyEngine's own project is always permitted implicitly and need not be
-   * listed. Format: project ID or number.
+   * listed. Format: `projects/{project}` (ID or number).
    * @param allowedProjects allowedProjects or {@code null} for none
    */
   public GoogleCloudAiplatformV1GatewayConfig setAllowedProjects(java.util.List<java.lang.String> allowedProjects) {

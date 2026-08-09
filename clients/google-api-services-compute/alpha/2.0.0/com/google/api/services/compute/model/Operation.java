@@ -94,6 +94,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata;
 
   /**
+   * Output only. [Output Only] Metadata for GetHealth operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GetHealthOperationMetadata getHealthOperationMetadata;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -384,6 +391,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setFirewallPolicyRuleOperationMetadata(FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata) {
     this.firewallPolicyRuleOperationMetadata = firewallPolicyRuleOperationMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Metadata for GetHealth operations.
+   * @return value or {@code null} for none
+   */
+  public GetHealthOperationMetadata getGetHealthOperationMetadata() {
+    return getHealthOperationMetadata;
+  }
+
+  /**
+   * Output only. [Output Only] Metadata for GetHealth operations.
+   * @param getHealthOperationMetadata getHealthOperationMetadata or {@code null} for none
+   */
+  public Operation setGetHealthOperationMetadata(GetHealthOperationMetadata getHealthOperationMetadata) {
+    this.getHealthOperationMetadata = getHealthOperationMetadata;
     return this;
   }
 
@@ -1122,7 +1146,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     /**
      * [Output Only] Metadata about this warning in key: value format. For example:
      *
-     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }]
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1163,7 +1187,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     /**
      * [Output Only] Metadata about this warning in key: value format. For example:
      *
-     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }]
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -1173,7 +1197,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     /**
      * [Output Only] Metadata about this warning in key: value format. For example:
      *
-     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }
+     * "data": [   {    "key": "scope",    "value": "zones/us-east1-d"   }]
      * @param data data or {@code null} for none
      */
     public Warnings setData(java.util.List<Data> data) {

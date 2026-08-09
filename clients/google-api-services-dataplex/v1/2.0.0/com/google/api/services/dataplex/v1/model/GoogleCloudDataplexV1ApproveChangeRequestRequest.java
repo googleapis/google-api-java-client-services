@@ -30,11 +30,38 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1ApproveChangeRequestRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The comment or reason for approving the ChangeRequest. Maximum length is 1024
+   * characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String comment;
+
+  /**
    * Optional. The etag of the ChangeRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
+
+  /**
+   * Optional. The comment or reason for approving the ChangeRequest. Maximum length is 1024
+   * characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComment() {
+    return comment;
+  }
+
+  /**
+   * Optional. The comment or reason for approving the ChangeRequest. Maximum length is 1024
+   * characters.
+   * @param comment comment or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ApproveChangeRequestRequest setComment(java.lang.String comment) {
+    this.comment = comment;
+    return this;
+  }
 
   /**
    * Optional. The etag of the ChangeRequest.

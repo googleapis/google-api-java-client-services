@@ -5827,6 +5827,35 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
+         * Optional. The literal filter to apply to the results returned. See
+         * https://google.aip.dev/160 for more details. Accepts values: * principal:group_key *
+         * principal:service_account OR principal:service_account_project_number. If this field is
+         * empty or not one of the above, the default value is "principal:group_key".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The literal filter to apply to the results returned. See https://google.aip.dev/160 for
+       more details. Accepts values: * principal:group_key * principal:service_account OR
+       principal:service_account_project_number. If this field is empty or not one of the above, the
+       default value is "principal:group_key".
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The literal filter to apply to the results returned. See
+         * https://google.aip.dev/160 for more details. Accepts values: * principal:group_key *
+         * principal:service_account OR principal:service_account_project_number. If this field is
+         * empty or not one of the above, the default value is "principal:group_key".
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
          * Optional. Maximum number of items to return. The server may return fewer items. If left
          * blank, the server may return any number of items.
          */

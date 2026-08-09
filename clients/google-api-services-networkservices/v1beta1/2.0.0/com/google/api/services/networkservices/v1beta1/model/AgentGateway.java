@@ -30,6 +30,14 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class AgentGateway extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The resource name of the AgentConnectivityTemplate. Format:
+   * projects/{project}/locations/{location}/agentConnectivityTemplates/{template}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentConnectivityTemplate;
+
+  /**
    * Output only. Field for populated AgentGateway card.
    * The value may be {@code null}.
    */
@@ -116,6 +124,25 @@ public final class AgentGateway extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. The resource name of the AgentConnectivityTemplate. Format:
+   * projects/{project}/locations/{location}/agentConnectivityTemplates/{template}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentConnectivityTemplate() {
+    return agentConnectivityTemplate;
+  }
+
+  /**
+   * Optional. The resource name of the AgentConnectivityTemplate. Format:
+   * projects/{project}/locations/{location}/agentConnectivityTemplates/{template}
+   * @param agentConnectivityTemplate agentConnectivityTemplate or {@code null} for none
+   */
+  public AgentGateway setAgentConnectivityTemplate(java.lang.String agentConnectivityTemplate) {
+    this.agentConnectivityTemplate = agentConnectivityTemplate;
+    return this;
+  }
 
   /**
    * Output only. Field for populated AgentGateway card.

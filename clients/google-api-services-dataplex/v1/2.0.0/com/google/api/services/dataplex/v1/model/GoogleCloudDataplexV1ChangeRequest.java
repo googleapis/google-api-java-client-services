@@ -183,6 +183,14 @@ public final class GoogleCloudDataplexV1ChangeRequest extends com.google.api.cli
   private java.lang.String resource;
 
   /**
+   * Output only. The comment provided by the reviewer when approving or rejecting the
+   * ChangeRequest. Maximum length is 1024 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reviewerComment;
+
+  /**
    * Output only. The current state of the ChangeRequest.
    * The value may be {@code null}.
    */
@@ -597,6 +605,25 @@ public final class GoogleCloudDataplexV1ChangeRequest extends com.google.api.cli
    */
   public GoogleCloudDataplexV1ChangeRequest setResource(java.lang.String resource) {
     this.resource = resource;
+    return this;
+  }
+
+  /**
+   * Output only. The comment provided by the reviewer when approving or rejecting the
+   * ChangeRequest. Maximum length is 1024 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReviewerComment() {
+    return reviewerComment;
+  }
+
+  /**
+   * Output only. The comment provided by the reviewer when approving or rejecting the
+   * ChangeRequest. Maximum length is 1024 characters.
+   * @param reviewerComment reviewerComment or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ChangeRequest setReviewerComment(java.lang.String reviewerComment) {
+    this.reviewerComment = reviewerComment;
     return this;
   }
 

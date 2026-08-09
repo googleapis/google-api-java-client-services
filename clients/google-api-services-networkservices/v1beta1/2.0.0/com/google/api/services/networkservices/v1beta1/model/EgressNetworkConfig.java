@@ -45,14 +45,7 @@ public final class EgressNetworkConfig extends com.google.api.client.json.Generi
   private java.lang.String networkAttachment;
 
   /**
-   * Optional. The TLS configuration for the egress traffic.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private EgressNetworkConfigTlsConfig tlsConfig;
-
-  /**
-   * Optional. The trust config resource name. Format:
+   * Optional. Deprecated: Use tls_config instead. The trust config resource name. Format:
    * projects/{project}/locations/{location}/trustConfigs/{trust_config}
    * The value may be {@code null}.
    */
@@ -103,24 +96,7 @@ public final class EgressNetworkConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The TLS configuration for the egress traffic.
-   * @return value or {@code null} for none
-   */
-  public EgressNetworkConfigTlsConfig getTlsConfig() {
-    return tlsConfig;
-  }
-
-  /**
-   * Optional. The TLS configuration for the egress traffic.
-   * @param tlsConfig tlsConfig or {@code null} for none
-   */
-  public EgressNetworkConfig setTlsConfig(EgressNetworkConfigTlsConfig tlsConfig) {
-    this.tlsConfig = tlsConfig;
-    return this;
-  }
-
-  /**
-   * Optional. The trust config resource name. Format:
+   * Optional. Deprecated: Use tls_config instead. The trust config resource name. Format:
    * projects/{project}/locations/{location}/trustConfigs/{trust_config}
    * @return value or {@code null} for none
    */
@@ -129,7 +105,7 @@ public final class EgressNetworkConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The trust config resource name. Format:
+   * Optional. Deprecated: Use tls_config instead. The trust config resource name. Format:
    * projects/{project}/locations/{location}/trustConfigs/{trust_config}
    * @param trustConfig trustConfig or {@code null} for none
    */

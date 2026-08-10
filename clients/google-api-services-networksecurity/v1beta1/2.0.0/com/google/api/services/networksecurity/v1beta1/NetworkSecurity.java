@@ -2509,6 +2509,28 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If set, validate the request and preview the endpoint, but do not actually
+           * create it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the endpoint, but do not actually create it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set, validate the request and preview the endpoint, but do not actually
+           * create it.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -15616,6 +15638,28 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. If set, validate the request and preview the endpoint, but do not actually
+           * create it.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If set, validate the request and preview the endpoint, but do not actually create it.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If set, validate the request and preview the endpoint, but do not actually
+           * create it.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -27196,6 +27240,37 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                   "^projects/[^/]+/locations/[^/]+/sacAttachments/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, the request will delete the SAC Attachment even if some steps
+           * fail (e.g. deleting the remote Symantec Location). This option is a no-op for partners
+           * where it does not apply (e.g. Palo Alto Networks). WARNING: Enabling this option may
+           * leave dangling resources in the Broadcom/Symantec customer portal that requires manual
+           * cleanup.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean ignorePartnerDeletionErrors;
+
+          /** Optional. If set to true, the request will delete the SAC Attachment even if some steps fail (e.g.
+         deleting the remote Symantec Location). This option is a no-op for partners where it does not apply
+         (e.g. Palo Alto Networks). WARNING: Enabling this option may leave dangling resources in the
+         Broadcom/Symantec customer portal that requires manual cleanup.
+           */
+          public java.lang.Boolean getIgnorePartnerDeletionErrors() {
+            return ignorePartnerDeletionErrors;
+          }
+
+          /**
+           * Optional. If set to true, the request will delete the SAC Attachment even if some steps
+           * fail (e.g. deleting the remote Symantec Location). This option is a no-op for partners
+           * where it does not apply (e.g. Palo Alto Networks). WARNING: Enabling this option may
+           * leave dangling resources in the Broadcom/Symantec customer portal that requires manual
+           * cleanup.
+           */
+          public Delete setIgnorePartnerDeletionErrors(java.lang.Boolean ignorePartnerDeletionErrors) {
+            this.ignorePartnerDeletionErrors = ignorePartnerDeletionErrors;
             return this;
           }
 

@@ -318,6 +318,32 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           return this;
         }
 
+        /**
+         * Optional. Indicates whether to fetch the reserved public IP addresses allocated for
+         * private connections in this location. If false or not set, fetches the shared external
+         * static IP addresses instead.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean fetchReservedPublicIps;
+
+        /** Optional. Indicates whether to fetch the reserved public IP addresses allocated for private
+       connections in this location. If false or not set, fetches the shared external static IP addresses
+       instead.
+         */
+        public java.lang.Boolean getFetchReservedPublicIps() {
+          return fetchReservedPublicIps;
+        }
+
+        /**
+         * Optional. Indicates whether to fetch the reserved public IP addresses allocated for
+         * private connections in this location. If false or not set, fetches the shared external
+         * static IP addresses instead.
+         */
+        public FetchStaticIps setFetchReservedPublicIps(java.lang.Boolean fetchReservedPublicIps) {
+          this.fetchReservedPublicIps = fetchReservedPublicIps;
+          return this;
+        }
+
         /** Optional. Maximum number of IPs to return. */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;

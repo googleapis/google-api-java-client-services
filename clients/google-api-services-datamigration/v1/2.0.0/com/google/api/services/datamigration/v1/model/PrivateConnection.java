@@ -76,6 +76,13 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
   private PscInterfaceConfig pscInterfaceConfig;
 
   /**
+   * Reserved Public IP configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservedPublicIpConfig reservedPublicIpConfig;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -213,6 +220,23 @@ public final class PrivateConnection extends com.google.api.client.json.GenericJ
    */
   public PrivateConnection setPscInterfaceConfig(PscInterfaceConfig pscInterfaceConfig) {
     this.pscInterfaceConfig = pscInterfaceConfig;
+    return this;
+  }
+
+  /**
+   * Reserved Public IP configuration.
+   * @return value or {@code null} for none
+   */
+  public ReservedPublicIpConfig getReservedPublicIpConfig() {
+    return reservedPublicIpConfig;
+  }
+
+  /**
+   * Reserved Public IP configuration.
+   * @param reservedPublicIpConfig reservedPublicIpConfig or {@code null} for none
+   */
+  public PrivateConnection setReservedPublicIpConfig(ReservedPublicIpConfig reservedPublicIpConfig) {
+    this.reservedPublicIpConfig = reservedPublicIpConfig;
     return this;
   }
 

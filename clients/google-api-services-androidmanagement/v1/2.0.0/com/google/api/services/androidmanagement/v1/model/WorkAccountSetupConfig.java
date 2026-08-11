@@ -42,7 +42,8 @@ public final class WorkAccountSetupConfig extends com.google.api.client.json.Gen
    * Optional. The specific google work account email address to be added. This field is only
    * relevant if authenticationType is GOOGLE_AUTHENTICATED. This must be an enterprise account and
    * not a consumer account. Once set and a Google authenticated account is added to the device,
-   * changing this field will have no effect, and thus recommended to be set only once.
+   * changing this field will have no effect, and thus recommended to be set only once. The email
+   * address must be all lowercase.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,8 @@ public final class WorkAccountSetupConfig extends com.google.api.client.json.Gen
    * Optional. The specific google work account email address to be added. This field is only
    * relevant if authenticationType is GOOGLE_AUTHENTICATED. This must be an enterprise account and
    * not a consumer account. Once set and a Google authenticated account is added to the device,
-   * changing this field will have no effect, and thus recommended to be set only once.
+   * changing this field will have no effect, and thus recommended to be set only once. The email
+   * address must be all lowercase.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequiredAccountEmail() {
@@ -80,7 +82,8 @@ public final class WorkAccountSetupConfig extends com.google.api.client.json.Gen
    * Optional. The specific google work account email address to be added. This field is only
    * relevant if authenticationType is GOOGLE_AUTHENTICATED. This must be an enterprise account and
    * not a consumer account. Once set and a Google authenticated account is added to the device,
-   * changing this field will have no effect, and thus recommended to be set only once.
+   * changing this field will have no effect, and thus recommended to be set only once. The email
+   * address must be all lowercase.
    * @param requiredAccountEmail requiredAccountEmail or {@code null} for none
    */
   public WorkAccountSetupConfig setRequiredAccountEmail(java.lang.String requiredAccountEmail) {

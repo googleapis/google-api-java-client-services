@@ -30,7 +30,7 @@ package com.google.api.services.youtube.model;
 public final class ActivityContentDetailsComment extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resourceId object contains information that identifies the resource associated with the
+   * The `resourceId` object contains information that identifies the resource associated with the
    * comment.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class ActivityContentDetailsComment extends com.google.api.client.j
   private ResourceId resourceId;
 
   /**
-   * The resourceId object contains information that identifies the resource associated with the
+   * The `resourceId` object contains information that identifies the resource associated with the
    * comment.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class ActivityContentDetailsComment extends com.google.api.client.j
   }
 
   /**
-   * The resourceId object contains information that identifies the resource associated with the
+   * The `resourceId` object contains information that identifies the resource associated with the
    * comment.
    * @param resourceId resourceId or {@code null} for none
    */

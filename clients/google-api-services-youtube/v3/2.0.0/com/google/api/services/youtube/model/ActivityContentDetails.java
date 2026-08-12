@@ -31,96 +31,99 @@ package com.google.api.services.youtube.model;
 public final class ActivityContentDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The bulletin object contains details about a channel bulletin post. This object is only present
-   * if the snippet.type is bulletin.
+   * The `bulletin` object contains details about a channel bulletin post. This object is only
+   * present if the `snippet.type` is `bulletin`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsBulletin bulletin;
 
   /**
-   * The channelItem object contains details about a resource which was added to a channel. This
-   * property is only present if the snippet.type is channelItem.
+   * The `channelItem` object contains details about a resource which was added to a channel. This
+   * property is only present if the `snippet.type` is `channelItem`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsChannelItem channelItem;
 
   /**
-   * The comment object contains information about a resource that received a comment. This property
-   * is only present if the snippet.type is comment.
+   * The `comment` object contains information about a resource that received a comment. This
+   * property is only present if the `snippet.type` is `comment`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsComment comment;
 
   /**
-   * The favorite object contains information about a video that was marked as a favorite video.
-   * This property is only present if the snippet.type is favorite.
+   * The `favorite` object contains information about a video that was marked as a favorite video.
+   * This property is only present if the `snippet.type` is `favorite`. Deprecated: This property is
+   * no longer returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsFavorite favorite;
 
   /**
-   * The like object contains information about a resource that received a positive (like) rating.
-   * This property is only present if the snippet.type is like.
+   * The `like` object contains information about a resource that received a positive (like) rating.
+   * This property is only present if the `snippet.type` is `like`. Deprecated: This property is no
+   * longer returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsLike like;
 
   /**
-   * The playlistItem object contains information about a new playlist item. This property is only
-   * present if the snippet.type is playlistItem.
+   * The `playlistItem` object contains information about a new playlist item. This property is only
+   * present if the `snippet.type` is `playlistItem`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsPlaylistItem playlistItem;
 
   /**
-   * The promotedItem object contains details about a resource which is being promoted. This
-   * property is only present if the snippet.type is promotedItem.
+   * The `promotedItem` object contains details about a resource which is being promoted. This
+   * property is only present if the `snippet.type` is `promotedItem`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsPromotedItem promotedItem;
 
   /**
-   * The recommendation object contains information about a recommended resource. This property is
-   * only present if the snippet.type is recommendation.
+   * The `recommendation` object contains information about a recommended resource. This property is
+   * only present if the `snippet.type` is `recommendation`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsRecommendation recommendation;
 
   /**
-   * The social object contains details about a social network post. This property is only present
-   * if the snippet.type is social.
+   * The `social` object contains details about a social network post. This property is only present
+   * if the `snippet.type` is `social`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsSocial social;
 
   /**
-   * The subscription object contains information about a channel that a user subscribed to. This
-   * property is only present if the snippet.type is subscription.
+   * The `subscription` object contains information about a channel that a user subscribed to. This
+   * property is only present if the `snippet.type` is `subscription`. Deprecated: This property is
+   * no longer returned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsSubscription subscription;
 
   /**
-   * The upload object contains information about the uploaded video. This property is only present
-   * if the snippet.type is upload.
+   * The `upload` object contains information about the uploaded video. This property is only
+   * present if the `snippet.type` is `upload`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ActivityContentDetailsUpload upload;
 
   /**
-   * The bulletin object contains details about a channel bulletin post. This object is only present
-   * if the snippet.type is bulletin.
+   * The `bulletin` object contains details about a channel bulletin post. This object is only
+   * present if the `snippet.type` is `bulletin`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsBulletin getBulletin() {
@@ -128,8 +131,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The bulletin object contains details about a channel bulletin post. This object is only present
-   * if the snippet.type is bulletin.
+   * The `bulletin` object contains details about a channel bulletin post. This object is only
+   * present if the `snippet.type` is `bulletin`.
    * @param bulletin bulletin or {@code null} for none
    */
   public ActivityContentDetails setBulletin(ActivityContentDetailsBulletin bulletin) {
@@ -138,8 +141,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The channelItem object contains details about a resource which was added to a channel. This
-   * property is only present if the snippet.type is channelItem.
+   * The `channelItem` object contains details about a resource which was added to a channel. This
+   * property is only present if the `snippet.type` is `channelItem`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsChannelItem getChannelItem() {
@@ -147,8 +150,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The channelItem object contains details about a resource which was added to a channel. This
-   * property is only present if the snippet.type is channelItem.
+   * The `channelItem` object contains details about a resource which was added to a channel. This
+   * property is only present if the `snippet.type` is `channelItem`.
    * @param channelItem channelItem or {@code null} for none
    */
   public ActivityContentDetails setChannelItem(ActivityContentDetailsChannelItem channelItem) {
@@ -157,8 +160,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The comment object contains information about a resource that received a comment. This property
-   * is only present if the snippet.type is comment.
+   * The `comment` object contains information about a resource that received a comment. This
+   * property is only present if the `snippet.type` is `comment`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsComment getComment() {
@@ -166,8 +169,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The comment object contains information about a resource that received a comment. This property
-   * is only present if the snippet.type is comment.
+   * The `comment` object contains information about a resource that received a comment. This
+   * property is only present if the `snippet.type` is `comment`.
    * @param comment comment or {@code null} for none
    */
   public ActivityContentDetails setComment(ActivityContentDetailsComment comment) {
@@ -176,8 +179,9 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The favorite object contains information about a video that was marked as a favorite video.
-   * This property is only present if the snippet.type is favorite.
+   * The `favorite` object contains information about a video that was marked as a favorite video.
+   * This property is only present if the `snippet.type` is `favorite`. Deprecated: This property is
+   * no longer returned.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsFavorite getFavorite() {
@@ -185,8 +189,9 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The favorite object contains information about a video that was marked as a favorite video.
-   * This property is only present if the snippet.type is favorite.
+   * The `favorite` object contains information about a video that was marked as a favorite video.
+   * This property is only present if the `snippet.type` is `favorite`. Deprecated: This property is
+   * no longer returned.
    * @param favorite favorite or {@code null} for none
    */
   public ActivityContentDetails setFavorite(ActivityContentDetailsFavorite favorite) {
@@ -195,8 +200,9 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The like object contains information about a resource that received a positive (like) rating.
-   * This property is only present if the snippet.type is like.
+   * The `like` object contains information about a resource that received a positive (like) rating.
+   * This property is only present if the `snippet.type` is `like`. Deprecated: This property is no
+   * longer returned.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsLike getLike() {
@@ -204,8 +210,9 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The like object contains information about a resource that received a positive (like) rating.
-   * This property is only present if the snippet.type is like.
+   * The `like` object contains information about a resource that received a positive (like) rating.
+   * This property is only present if the `snippet.type` is `like`. Deprecated: This property is no
+   * longer returned.
    * @param like like or {@code null} for none
    */
   public ActivityContentDetails setLike(ActivityContentDetailsLike like) {
@@ -214,8 +221,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The playlistItem object contains information about a new playlist item. This property is only
-   * present if the snippet.type is playlistItem.
+   * The `playlistItem` object contains information about a new playlist item. This property is only
+   * present if the `snippet.type` is `playlistItem`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsPlaylistItem getPlaylistItem() {
@@ -223,8 +230,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The playlistItem object contains information about a new playlist item. This property is only
-   * present if the snippet.type is playlistItem.
+   * The `playlistItem` object contains information about a new playlist item. This property is only
+   * present if the `snippet.type` is `playlistItem`.
    * @param playlistItem playlistItem or {@code null} for none
    */
   public ActivityContentDetails setPlaylistItem(ActivityContentDetailsPlaylistItem playlistItem) {
@@ -233,8 +240,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The promotedItem object contains details about a resource which is being promoted. This
-   * property is only present if the snippet.type is promotedItem.
+   * The `promotedItem` object contains details about a resource which is being promoted. This
+   * property is only present if the `snippet.type` is `promotedItem`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsPromotedItem getPromotedItem() {
@@ -242,8 +249,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The promotedItem object contains details about a resource which is being promoted. This
-   * property is only present if the snippet.type is promotedItem.
+   * The `promotedItem` object contains details about a resource which is being promoted. This
+   * property is only present if the `snippet.type` is `promotedItem`.
    * @param promotedItem promotedItem or {@code null} for none
    */
   public ActivityContentDetails setPromotedItem(ActivityContentDetailsPromotedItem promotedItem) {
@@ -252,8 +259,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The recommendation object contains information about a recommended resource. This property is
-   * only present if the snippet.type is recommendation.
+   * The `recommendation` object contains information about a recommended resource. This property is
+   * only present if the `snippet.type` is `recommendation`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsRecommendation getRecommendation() {
@@ -261,8 +268,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The recommendation object contains information about a recommended resource. This property is
-   * only present if the snippet.type is recommendation.
+   * The `recommendation` object contains information about a recommended resource. This property is
+   * only present if the `snippet.type` is `recommendation`.
    * @param recommendation recommendation or {@code null} for none
    */
   public ActivityContentDetails setRecommendation(ActivityContentDetailsRecommendation recommendation) {
@@ -271,8 +278,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The social object contains details about a social network post. This property is only present
-   * if the snippet.type is social.
+   * The `social` object contains details about a social network post. This property is only present
+   * if the `snippet.type` is `social`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsSocial getSocial() {
@@ -280,8 +287,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The social object contains details about a social network post. This property is only present
-   * if the snippet.type is social.
+   * The `social` object contains details about a social network post. This property is only present
+   * if the `snippet.type` is `social`.
    * @param social social or {@code null} for none
    */
   public ActivityContentDetails setSocial(ActivityContentDetailsSocial social) {
@@ -290,8 +297,9 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The subscription object contains information about a channel that a user subscribed to. This
-   * property is only present if the snippet.type is subscription.
+   * The `subscription` object contains information about a channel that a user subscribed to. This
+   * property is only present if the `snippet.type` is `subscription`. Deprecated: This property is
+   * no longer returned.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsSubscription getSubscription() {
@@ -299,8 +307,9 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The subscription object contains information about a channel that a user subscribed to. This
-   * property is only present if the snippet.type is subscription.
+   * The `subscription` object contains information about a channel that a user subscribed to. This
+   * property is only present if the `snippet.type` is `subscription`. Deprecated: This property is
+   * no longer returned.
    * @param subscription subscription or {@code null} for none
    */
   public ActivityContentDetails setSubscription(ActivityContentDetailsSubscription subscription) {
@@ -309,8 +318,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The upload object contains information about the uploaded video. This property is only present
-   * if the snippet.type is upload.
+   * The `upload` object contains information about the uploaded video. This property is only
+   * present if the `snippet.type` is `upload`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsUpload getUpload() {
@@ -318,8 +327,8 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   }
 
   /**
-   * The upload object contains information about the uploaded video. This property is only present
-   * if the snippet.type is upload.
+   * The `upload` object contains information about the uploaded video. This property is only
+   * present if the `snippet.type` is `upload`.
    * @param upload upload or {@code null} for none
    */
   public ActivityContentDetails setUpload(ActivityContentDetailsUpload upload) {

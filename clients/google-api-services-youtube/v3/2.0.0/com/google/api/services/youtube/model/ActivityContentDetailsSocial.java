@@ -51,7 +51,7 @@ public final class ActivityContentDetailsSocial extends com.google.api.client.js
   private java.lang.String referenceUrl;
 
   /**
-   * The resourceId object encapsulates information that identifies the resource associated with a
+   * The `resourceId` object encapsulates information that identifies the resource associated with a
    * social network post.
    * The value may be {@code null}.
    */
@@ -117,7 +117,7 @@ public final class ActivityContentDetailsSocial extends com.google.api.client.js
   }
 
   /**
-   * The resourceId object encapsulates information that identifies the resource associated with a
+   * The `resourceId` object encapsulates information that identifies the resource associated with a
    * social network post.
    * @return value or {@code null} for none
    */
@@ -126,7 +126,7 @@ public final class ActivityContentDetailsSocial extends com.google.api.client.js
   }
 
   /**
-   * The resourceId object encapsulates information that identifies the resource associated with a
+   * The `resourceId` object encapsulates information that identifies the resource associated with a
    * social network post.
    * @param resourceId resourceId or {@code null} for none
    */

@@ -37,14 +37,14 @@ public final class ActivityContentDetailsRecommendation extends com.google.api.c
   private java.lang.String reason;
 
   /**
-   * The resourceId object contains information that identifies the recommended resource.
+   * The `resourceId` object contains information that identifies the recommended resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceId resourceId;
 
   /**
-   * The seedResourceId object contains information about the resource that caused the
+   * The `seedResourceId` object contains information about the resource that caused the
    * recommendation.
    * The value may be {@code null}.
    */
@@ -69,7 +69,7 @@ public final class ActivityContentDetailsRecommendation extends com.google.api.c
   }
 
   /**
-   * The resourceId object contains information that identifies the recommended resource.
+   * The `resourceId` object contains information that identifies the recommended resource.
    * @return value or {@code null} for none
    */
   public ResourceId getResourceId() {
@@ -77,7 +77,7 @@ public final class ActivityContentDetailsRecommendation extends com.google.api.c
   }
 
   /**
-   * The resourceId object contains information that identifies the recommended resource.
+   * The `resourceId` object contains information that identifies the recommended resource.
    * @param resourceId resourceId or {@code null} for none
    */
   public ActivityContentDetailsRecommendation setResourceId(ResourceId resourceId) {
@@ -86,7 +86,7 @@ public final class ActivityContentDetailsRecommendation extends com.google.api.c
   }
 
   /**
-   * The seedResourceId object contains information about the resource that caused the
+   * The `seedResourceId` object contains information about the resource that caused the
    * recommendation.
    * @return value or {@code null} for none
    */
@@ -95,7 +95,7 @@ public final class ActivityContentDetailsRecommendation extends com.google.api.c
   }
 
   /**
-   * The seedResourceId object contains information about the resource that caused the
+   * The `seedResourceId` object contains information about the resource that caused the
    * recommendation.
    * @param seedResourceId seedResourceId or {@code null} for none
    */

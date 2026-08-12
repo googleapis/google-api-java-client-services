@@ -44,7 +44,7 @@ public final class ActivityContentDetailsPlaylistItem extends com.google.api.cli
   private java.lang.String playlistItemId;
 
   /**
-   * The resourceId object contains information about the resource that was added to the playlist.
+   * The `resourceId` object contains information about the resource that was added to the playlist.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class ActivityContentDetailsPlaylistItem extends com.google.api.cli
   }
 
   /**
-   * The resourceId object contains information about the resource that was added to the playlist.
+   * The `resourceId` object contains information about the resource that was added to the playlist.
    * @return value or {@code null} for none
    */
   public ResourceId getResourceId() {
@@ -93,7 +93,7 @@ public final class ActivityContentDetailsPlaylistItem extends com.google.api.cli
   }
 
   /**
-   * The resourceId object contains information about the resource that was added to the playlist.
+   * The `resourceId` object contains information about the resource that was added to the playlist.
    * @param resourceId resourceId or {@code null} for none
    */
   public ActivityContentDetailsPlaylistItem setResourceId(ResourceId resourceId) {

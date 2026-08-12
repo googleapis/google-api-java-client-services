@@ -54,10 +54,10 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
 
   /**
    * The group ID associated with the activity. A group ID identifies user events that are
-   * associated with the same user and resource. For example, if a user rates a video and marks the
-   * same video as a favorite, the entries for those events would have the same group ID in the
-   * user's activity feed. In your user interface, you can avoid repetition by grouping events with
-   * the same groupId value.
+   * associated with the same user and resource. For example, if a user uploads a video and watches
+   * the same video, the entries for those events would have the same group ID in the user's
+   * activity feed. In your user interface, you can avoid repetition by grouping events with the
+   * same `groupId` value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,10 +148,10 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
 
   /**
    * The group ID associated with the activity. A group ID identifies user events that are
-   * associated with the same user and resource. For example, if a user rates a video and marks the
-   * same video as a favorite, the entries for those events would have the same group ID in the
-   * user's activity feed. In your user interface, you can avoid repetition by grouping events with
-   * the same groupId value.
+   * associated with the same user and resource. For example, if a user uploads a video and watches
+   * the same video, the entries for those events would have the same group ID in the user's
+   * activity feed. In your user interface, you can avoid repetition by grouping events with the
+   * same `groupId` value.
    * @return value or {@code null} for none
    */
   public java.lang.String getGroupId() {
@@ -160,10 +160,10 @@ public final class ActivitySnippet extends com.google.api.client.json.GenericJso
 
   /**
    * The group ID associated with the activity. A group ID identifies user events that are
-   * associated with the same user and resource. For example, if a user rates a video and marks the
-   * same video as a favorite, the entries for those events would have the same group ID in the
-   * user's activity feed. In your user interface, you can avoid repetition by grouping events with
-   * the same groupId value.
+   * associated with the same user and resource. For example, if a user uploads a video and watches
+   * the same video, the entries for those events would have the same group ID in the user's
+   * activity feed. In your user interface, you can avoid repetition by grouping events with the
+   * same `groupId` value.
    * @param groupId groupId or {@code null} for none
    */
   public ActivitySnippet setGroupId(java.lang.String groupId) {

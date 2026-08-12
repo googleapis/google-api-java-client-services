@@ -30,7 +30,7 @@ package com.google.api.services.youtube.model;
 public final class ActivityContentDetailsChannelItem extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resourceId object contains information that identifies the resource that was added to the
+   * The `resourceId` object contains information that identifies the resource that was added to the
    * channel.
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class ActivityContentDetailsChannelItem extends com.google.api.clie
   private ResourceId resourceId;
 
   /**
-   * The resourceId object contains information that identifies the resource that was added to the
+   * The `resourceId` object contains information that identifies the resource that was added to the
    * channel.
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class ActivityContentDetailsChannelItem extends com.google.api.clie
   }
 
   /**
-   * The resourceId object contains information that identifies the resource that was added to the
+   * The `resourceId` object contains information that identifies the resource that was added to the
    * channel.
    * @param resourceId resourceId or {@code null} for none
    */

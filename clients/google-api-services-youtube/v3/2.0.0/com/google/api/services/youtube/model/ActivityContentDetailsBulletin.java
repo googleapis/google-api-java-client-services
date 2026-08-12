@@ -30,7 +30,7 @@ package com.google.api.services.youtube.model;
 public final class ActivityContentDetailsBulletin extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resourceId object contains information that identifies the resource associated with a
+   * The `resourceId` object contains information that identifies the resource associated with a
    * bulletin post. @mutable youtube.activities.insert
    * The value may be {@code null}.
    */
@@ -38,7 +38,7 @@ public final class ActivityContentDetailsBulletin extends com.google.api.client.
   private ResourceId resourceId;
 
   /**
-   * The resourceId object contains information that identifies the resource associated with a
+   * The `resourceId` object contains information that identifies the resource associated with a
    * bulletin post. @mutable youtube.activities.insert
    * @return value or {@code null} for none
    */
@@ -47,7 +47,7 @@ public final class ActivityContentDetailsBulletin extends com.google.api.client.
   }
 
   /**
-   * The resourceId object contains information that identifies the resource associated with a
+   * The `resourceId` object contains information that identifies the resource associated with a
    * bulletin post. @mutable youtube.activities.insert
    * @param resourceId resourceId or {@code null} for none
    */

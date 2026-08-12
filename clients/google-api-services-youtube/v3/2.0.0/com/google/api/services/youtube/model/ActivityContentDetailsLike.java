@@ -17,7 +17,8 @@
 package com.google.api.services.youtube.model;
 
 /**
- * Information about a resource that received a positive (like) rating.
+ * Information about a resource that received a positive (like) rating. Deprecated: This resource is
+ * no longer returned.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:
@@ -30,14 +31,14 @@ package com.google.api.services.youtube.model;
 public final class ActivityContentDetailsLike extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resourceId object contains information that identifies the rated resource.
+   * The `resourceId` object contains information that identifies the rated resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ResourceId resourceId;
 
   /**
-   * The resourceId object contains information that identifies the rated resource.
+   * The `resourceId` object contains information that identifies the rated resource.
    * @return value or {@code null} for none
    */
   public ResourceId getResourceId() {
@@ -45,7 +46,7 @@ public final class ActivityContentDetailsLike extends com.google.api.client.json
   }
 
   /**
-   * The resourceId object contains information that identifies the rated resource.
+   * The `resourceId` object contains information that identifies the rated resource.
    * @param resourceId resourceId or {@code null} for none
    */
   public ActivityContentDetailsLike setResourceId(ResourceId resourceId) {

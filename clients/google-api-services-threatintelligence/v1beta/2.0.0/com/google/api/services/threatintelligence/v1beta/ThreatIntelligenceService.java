@@ -1165,7 +1165,7 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
        * optional parameters, call the {@link GetPassword#execute()} method to invoke the remote
        * operation.
        *
-       * @param name Required. Name of the alert to get. Format: projects/{project}/alerts/{alert}
+       * @param name Required. Name of the alert to get password for. Format: projects/{project}/alerts/{alert}
        * @return the request
        */
       public GetPassword getPassword(java.lang.String name) throws java.io.IOException {
@@ -1174,7 +1174,7 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
         return result;
       }
 
-      public class GetPassword extends ThreatIntelligenceServiceRequest<com.google.api.services.threatintelligence.v1beta.model.Alert> {
+      public class GetPassword extends ThreatIntelligenceServiceRequest<com.google.api.services.threatintelligence.v1beta.model.GetPasswordResponse> {
 
         private static final String REST_PATH = "v1beta/{+name}:getPassword";
 
@@ -1192,11 +1192,11 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
          * GetPassword#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. Name of the alert to get. Format: projects/{project}/alerts/{alert}
+         * @param name Required. Name of the alert to get password for. Format: projects/{project}/alerts/{alert}
          * @since 1.13
          */
         protected GetPassword(java.lang.String name) {
-          super(ThreatIntelligenceService.this, "GET", REST_PATH, null, com.google.api.services.threatintelligence.v1beta.model.Alert.class);
+          super(ThreatIntelligenceService.this, "GET", REST_PATH, null, com.google.api.services.threatintelligence.v1beta.model.GetPasswordResponse.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1270,17 +1270,23 @@ public class ThreatIntelligenceService extends com.google.api.client.googleapis.
           return (GetPassword) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. Name of the alert to get. Format: projects/{project}/alerts/{alert} */
+        /**
+         * Required. Name of the alert to get password for. Format:
+         * projects/{project}/alerts/{alert}
+         */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. Name of the alert to get. Format: projects/{project}/alerts/{alert}
+        /** Required. Name of the alert to get password for. Format: projects/{project}/alerts/{alert}
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Required. Name of the alert to get. Format: projects/{project}/alerts/{alert} */
+        /**
+         * Required. Name of the alert to get password for. Format:
+         * projects/{project}/alerts/{alert}
+         */
         public GetPassword setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

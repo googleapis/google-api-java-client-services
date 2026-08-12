@@ -3139,7 +3139,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * `membership_count.joined_direct_human_user_count DESC` -
        * `membership_count.joined_direct_human_user_count ASC` - `last_active_time DESC` -
        * `last_active_time ASC` - `create_time DESC` - `create_time ASC` When `useAdminAccess` is
-       * set to `false`: - `create_time DESC` - `relevance DESC`
+       * set to `false`: - `create_time DESC` - `relevance DESC` [Developer
+       * Preview](https://developers.google.com/workspace/preview).
        */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
@@ -3154,7 +3155,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      `useAdminAccess` is set to `true`: - `membership_count.joined_direct_human_user_count DESC` -
      `membership_count.joined_direct_human_user_count ASC` - `last_active_time DESC` - `last_active_time
      ASC` - `create_time DESC` - `create_time ASC` When `useAdminAccess` is set to `false`: -
-     `create_time DESC` - `relevance DESC`
+     `create_time DESC` - `relevance DESC` [Developer
+     Preview](https://developers.google.com/workspace/preview).
        */
       public java.lang.String getOrderBy() {
         return orderBy;
@@ -3172,7 +3174,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * `membership_count.joined_direct_human_user_count DESC` -
        * `membership_count.joined_direct_human_user_count ASC` - `last_active_time DESC` -
        * `last_active_time ASC` - `create_time DESC` - `create_time ASC` When `useAdminAccess` is
-       * set to `false`: - `create_time DESC` - `relevance DESC`
+       * set to `false`: - `create_time DESC` - `relevance DESC` [Developer
+       * Preview](https://developers.google.com/workspace/preview).
        */
       public Search setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;

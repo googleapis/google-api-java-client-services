@@ -33,7 +33,7 @@ public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.go
 
   /**
    * Optional. The resource name of the backend environment where the key material of
-   * CryptoKeyVersions is associated with. Setting this field overrides the CryptoKeyBackend. This
+   * CryptoKeyVersions is associated with. Setting this field overrides the crypto_key_backend. This
    * field may be set when CryptoKeyVersions is set to EXTERNAL_VPC. Format:
    * `projects/locations/ekmConnections`.
    * The value may be {@code null}.
@@ -58,7 +58,7 @@ public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.go
 
   /**
    * Optional. The resource name of the backend environment where the key material of
-   * CryptoKeyVersions is associated with. Setting this field overrides the CryptoKeyBackend. This
+   * CryptoKeyVersions is associated with. Setting this field overrides the crypto_key_backend. This
    * field may be set when CryptoKeyVersions is set to EXTERNAL_VPC. Format:
    * `projects/locations/ekmConnections`.
    * @return value or {@code null} for none
@@ -69,7 +69,7 @@ public final class GoogleCloudKmsV1ExternalProtectionLevelOptions extends com.go
 
   /**
    * Optional. The resource name of the backend environment where the key material of
-   * CryptoKeyVersions is associated with. Setting this field overrides the CryptoKeyBackend. This
+   * CryptoKeyVersions is associated with. Setting this field overrides the crypto_key_backend. This
    * field may be set when CryptoKeyVersions is set to EXTERNAL_VPC. Format:
    * `projects/locations/ekmConnections`.
    * @param ekmConnectionBackendOverride ekmConnectionBackendOverride or {@code null} for none

@@ -38,6 +38,20 @@ public final class GoogleAdsSearchads360V23ResourcesCampaignGoalConfig extends c
   private java.lang.String campaign;
 
   /**
+   * Loyalty retention goal campaign settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings campaignLoyaltyRetentionSettings;
+
+  /**
+   * New customer acquisition goal campaign settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings campaignNewCustomerAcquisitionSettings;
+
+  /**
    * Retention goal campaign settings.
    * The value may be {@code null}.
    */
@@ -80,6 +94,40 @@ public final class GoogleAdsSearchads360V23ResourcesCampaignGoalConfig extends c
    */
   public GoogleAdsSearchads360V23ResourcesCampaignGoalConfig setCampaign(java.lang.String campaign) {
     this.campaign = campaign;
+    return this;
+  }
+
+  /**
+   * Loyalty retention goal campaign settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings getCampaignLoyaltyRetentionSettings() {
+    return campaignLoyaltyRetentionSettings;
+  }
+
+  /**
+   * Loyalty retention goal campaign settings.
+   * @param campaignLoyaltyRetentionSettings campaignLoyaltyRetentionSettings or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ResourcesCampaignGoalConfig setCampaignLoyaltyRetentionSettings(GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignLoyaltyRetentionGoalSettings campaignLoyaltyRetentionSettings) {
+    this.campaignLoyaltyRetentionSettings = campaignLoyaltyRetentionSettings;
+    return this;
+  }
+
+  /**
+   * New customer acquisition goal campaign settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings getCampaignNewCustomerAcquisitionSettings() {
+    return campaignNewCustomerAcquisitionSettings;
+  }
+
+  /**
+   * New customer acquisition goal campaign settings.
+   * @param campaignNewCustomerAcquisitionSettings campaignNewCustomerAcquisitionSettings or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ResourcesCampaignGoalConfig setCampaignNewCustomerAcquisitionSettings(GoogleAdsSearchads360V23CommonCampaignGoalSettingsCampaignNewCustomerAcquisitionGoalSettings campaignNewCustomerAcquisitionSettings) {
+    this.campaignNewCustomerAcquisitionSettings = campaignNewCustomerAcquisitionSettings;
     return this;
   }
 

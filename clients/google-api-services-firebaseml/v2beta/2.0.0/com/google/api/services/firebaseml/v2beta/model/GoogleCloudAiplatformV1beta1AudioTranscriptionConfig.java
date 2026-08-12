@@ -30,7 +30,8 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1AudioTranscriptionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A list of phrases to bias the ASR model towards.
+   * Optional. Deprecated: Use `custom_vocabulary` instead. A list of phrases to bias the speech
+   * recognition model towards.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +84,8 @@ public final class GoogleCloudAiplatformV1beta1AudioTranscriptionConfig extends 
   private java.lang.Boolean wordTimestamp;
 
   /**
-   * Optional. A list of phrases to bias the ASR model towards.
+   * Optional. Deprecated: Use `custom_vocabulary` instead. A list of phrases to bias the speech
+   * recognition model towards.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdaptationPhrases() {
@@ -91,7 +93,8 @@ public final class GoogleCloudAiplatformV1beta1AudioTranscriptionConfig extends 
   }
 
   /**
-   * Optional. A list of phrases to bias the ASR model towards.
+   * Optional. Deprecated: Use `custom_vocabulary` instead. A list of phrases to bias the speech
+   * recognition model towards.
    * @param adaptationPhrases adaptationPhrases or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AudioTranscriptionConfig setAdaptationPhrases(java.util.List<java.lang.String> adaptationPhrases) {

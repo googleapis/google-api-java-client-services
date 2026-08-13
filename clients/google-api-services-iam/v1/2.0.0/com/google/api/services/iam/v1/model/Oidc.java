@@ -44,7 +44,7 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedAudiences;
 
   /**
-   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
+   * Required. The OIDC `issuer_uri`. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
    * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
    * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
    * The value may be {@code null}.
@@ -94,7 +94,7 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
+   * Required. The OIDC `issuer_uri`. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
    * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
    * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
    * @return value or {@code null} for none
@@ -104,7 +104,7 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The OIDC issuer URL. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
+   * Required. The OIDC `issuer_uri`. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
    * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
    * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
    * @param issuerUri issuerUri or {@code null} for none

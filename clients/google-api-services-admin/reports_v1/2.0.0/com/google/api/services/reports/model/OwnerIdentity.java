@@ -44,6 +44,13 @@ public final class OwnerIdentity extends com.google.api.client.json.GenericJson 
   private GroupIdentity groupIdentity;
 
   /**
+   * Identity of the shared drive who owns the resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SharedDriveIdentity sharedDriveIdentity;
+
+  /**
    * Identity of the user who owns the resource.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class OwnerIdentity extends com.google.api.client.json.GenericJson 
    */
   public OwnerIdentity setGroupIdentity(GroupIdentity groupIdentity) {
     this.groupIdentity = groupIdentity;
+    return this;
+  }
+
+  /**
+   * Identity of the shared drive who owns the resource.
+   * @return value or {@code null} for none
+   */
+  public SharedDriveIdentity getSharedDriveIdentity() {
+    return sharedDriveIdentity;
+  }
+
+  /**
+   * Identity of the shared drive who owns the resource.
+   * @param sharedDriveIdentity sharedDriveIdentity or {@code null} for none
+   */
+  public OwnerIdentity setSharedDriveIdentity(SharedDriveIdentity sharedDriveIdentity) {
+    this.sharedDriveIdentity = sharedDriveIdentity;
     return this;
   }
 

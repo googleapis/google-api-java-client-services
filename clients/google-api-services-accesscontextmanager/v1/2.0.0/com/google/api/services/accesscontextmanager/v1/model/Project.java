@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * Modifier to apply to the API requests.
+ * A GCP project which contains applications and resources that users can access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -28,40 +28,43 @@ package com.google.api.services.accesscontextmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Modifier extends com.google.api.client.json.GenericJson {
+public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
-   * Adds an additional HTTP request header.
+   * The GCP project resource name. Format: "projects/{project_number}" (Only the numeric project
+   * name variation is supported). Example: "projects/1234567890"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AddRequestHeader addRequestHeader;
+  private java.lang.String name;
 
   /**
-   * Adds an additional HTTP request header.
+   * The GCP project resource name. Format: "projects/{project_number}" (Only the numeric project
+   * name variation is supported). Example: "projects/1234567890"
    * @return value or {@code null} for none
    */
-  public AddRequestHeader getAddRequestHeader() {
-    return addRequestHeader;
+  public java.lang.String getName() {
+    return name;
   }
 
   /**
-   * Adds an additional HTTP request header.
-   * @param addRequestHeader addRequestHeader or {@code null} for none
+   * The GCP project resource name. Format: "projects/{project_number}" (Only the numeric project
+   * name variation is supported). Example: "projects/1234567890"
+   * @param name name or {@code null} for none
    */
-  public Modifier setAddRequestHeader(AddRequestHeader addRequestHeader) {
-    this.addRequestHeader = addRequestHeader;
+  public Project setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 
   @Override
-  public Modifier set(String fieldName, Object value) {
-    return (Modifier) super.set(fieldName, value);
+  public Project set(String fieldName, Object value) {
+    return (Project) super.set(fieldName, value);
   }
 
   @Override
-  public Modifier clone() {
-    return (Modifier) super.clone();
+  public Project clone() {
+    return (Project) super.clone();
   }
 
 }

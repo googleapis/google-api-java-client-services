@@ -40,10 +40,11 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   private String maxInactivity;
 
   /**
-   * Optional. The session length. Setting this field to zero is equal to disabling session. Also
-   * can set infinite session by flipping the enabled bit to false below. If use_oidc_max_age is
-   * true, for OIDC apps, the session length will be the minimum of this field and OIDC max_age
-   * param. If this field is set to zero, session_length_enabled must be set to false or left unset.
+   * Optional. The session length. Setting this field to zero allows for sessions that are active
+   * indefinitely. Also, setting `session_length_enabled` to false disregards session limits, which
+   * means that sessions never expire. If use_oidc_max_age is true, for OIDC apps, the session
+   * length will be the minimum of this field and the OIDC max_age param. If this field is set to
+   * zero, `session_length_enabled` must be set to false or left unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,8 +52,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. This field enables or disables Google Cloud session length. When false, all fields
-   * set above will be disregarded and the session length is basically infinite. If session_length
-   * is set to zero, this field must be false.
+   * set above will be disregarded and the session length is basically infinite. If `session_length`
+   * is set to zero, this field must be set to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,10 +95,11 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The session length. Setting this field to zero is equal to disabling session. Also
-   * can set infinite session by flipping the enabled bit to false below. If use_oidc_max_age is
-   * true, for OIDC apps, the session length will be the minimum of this field and OIDC max_age
-   * param. If this field is set to zero, session_length_enabled must be set to false or left unset.
+   * Optional. The session length. Setting this field to zero allows for sessions that are active
+   * indefinitely. Also, setting `session_length_enabled` to false disregards session limits, which
+   * means that sessions never expire. If use_oidc_max_age is true, for OIDC apps, the session
+   * length will be the minimum of this field and the OIDC max_age param. If this field is set to
+   * zero, `session_length_enabled` must be set to false or left unset.
    * @return value or {@code null} for none
    */
   public String getSessionLength() {
@@ -105,10 +107,11 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The session length. Setting this field to zero is equal to disabling session. Also
-   * can set infinite session by flipping the enabled bit to false below. If use_oidc_max_age is
-   * true, for OIDC apps, the session length will be the minimum of this field and OIDC max_age
-   * param. If this field is set to zero, session_length_enabled must be set to false or left unset.
+   * Optional. The session length. Setting this field to zero allows for sessions that are active
+   * indefinitely. Also, setting `session_length_enabled` to false disregards session limits, which
+   * means that sessions never expire. If use_oidc_max_age is true, for OIDC apps, the session
+   * length will be the minimum of this field and the OIDC max_age param. If this field is set to
+   * zero, `session_length_enabled` must be set to false or left unset.
    * @param sessionLength sessionLength or {@code null} for none
    */
   public SessionSettings setSessionLength(String sessionLength) {
@@ -118,8 +121,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. This field enables or disables Google Cloud session length. When false, all fields
-   * set above will be disregarded and the session length is basically infinite. If session_length
-   * is set to zero, this field must be false.
+   * set above will be disregarded and the session length is basically infinite. If `session_length`
+   * is set to zero, this field must be set to false.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSessionLengthEnabled() {
@@ -128,8 +131,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. This field enables or disables Google Cloud session length. When false, all fields
-   * set above will be disregarded and the session length is basically infinite. If session_length
-   * is set to zero, this field must be false.
+   * set above will be disregarded and the session length is basically infinite. If `session_length`
+   * is set to zero, this field must be set to false.
    * @param sessionLengthEnabled sessionLengthEnabled or {@code null} for none
    */
   public SessionSettings setSessionLengthEnabled(java.lang.Boolean sessionLengthEnabled) {

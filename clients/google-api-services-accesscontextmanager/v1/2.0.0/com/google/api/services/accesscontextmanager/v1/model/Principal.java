@@ -17,8 +17,8 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * The comprehensive identity container supporting identities including groups, service accounts and
- * federated identities. Only one of them can be set to create an access binding.
+ * The comprehensive identity container supporting identities including groups, service accounts,
+ * and federated identities. Only one of them can be set to create an access binding.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -32,11 +32,22 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
+   * Immutable. IAM federated principal name to assign policies to workforce/workload federated
+   * identities. Can be principal set or single principal, here are some examples: Single principal:
+   * principal://iam.googleapis.com/projects/{project_number}/locations/global/workloadIdentityPools
+   * /{pool_id}/subject/{subject_attribute_value} PrincipalSet: principalSet://iam.googleapis.com/pr
+   * ojects/{project_number}/locations/global/workloadIdentityPools/{pool_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String federatedPrincipal;
+
+  /**
    * Immutable. Service account email used to assign policies to a specific service account. If a
    * service account is subject to multiple policies (e.g., if there is a policy for all service
    * accounts in a project and a policy for the service account), the closest (i.e. the most
-   * specific) dry-run policy will be used for the dry-run functionality and the closest policy will
-   * be used for the enforcement.
+   * specific) dry-run policy will be used for the dry-run functionality and the closest enforcement
+   * policy will be used for the enforcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,11 +62,36 @@ public final class Principal extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountProjectNumber;
 
   /**
+   * Immutable. IAM federated principal name to assign policies to workforce/workload federated
+   * identities. Can be principal set or single principal, here are some examples: Single principal:
+   * principal://iam.googleapis.com/projects/{project_number}/locations/global/workloadIdentityPools
+   * /{pool_id}/subject/{subject_attribute_value} PrincipalSet: principalSet://iam.googleapis.com/pr
+   * ojects/{project_number}/locations/global/workloadIdentityPools/{pool_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFederatedPrincipal() {
+    return federatedPrincipal;
+  }
+
+  /**
+   * Immutable. IAM federated principal name to assign policies to workforce/workload federated
+   * identities. Can be principal set or single principal, here are some examples: Single principal:
+   * principal://iam.googleapis.com/projects/{project_number}/locations/global/workloadIdentityPools
+   * /{pool_id}/subject/{subject_attribute_value} PrincipalSet: principalSet://iam.googleapis.com/pr
+   * ojects/{project_number}/locations/global/workloadIdentityPools/{pool_id}
+   * @param federatedPrincipal federatedPrincipal or {@code null} for none
+   */
+  public Principal setFederatedPrincipal(java.lang.String federatedPrincipal) {
+    this.federatedPrincipal = federatedPrincipal;
+    return this;
+  }
+
+  /**
    * Immutable. Service account email used to assign policies to a specific service account. If a
    * service account is subject to multiple policies (e.g., if there is a policy for all service
    * accounts in a project and a policy for the service account), the closest (i.e. the most
-   * specific) dry-run policy will be used for the dry-run functionality and the closest policy will
-   * be used for the enforcement.
+   * specific) dry-run policy will be used for the dry-run functionality and the closest enforcement
+   * policy will be used for the enforcement.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -66,8 +102,8 @@ public final class Principal extends com.google.api.client.json.GenericJson {
    * Immutable. Service account email used to assign policies to a specific service account. If a
    * service account is subject to multiple policies (e.g., if there is a policy for all service
    * accounts in a project and a policy for the service account), the closest (i.e. the most
-   * specific) dry-run policy will be used for the dry-run functionality and the closest policy will
-   * be used for the enforcement.
+   * specific) dry-run policy will be used for the dry-run functionality and the closest enforcement
+   * policy will be used for the enforcement.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Principal setServiceAccount(java.lang.String serviceAccount) {

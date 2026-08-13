@@ -80,7 +80,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private Principal principal;
 
   /**
-   * Optional. Deprecated: use scoped_access_settings instead. A list of applications that are
+   * Optional. Deprecated: Use `scoped_access_settings` instead. A list of applications that are
    * subject to this binding's restrictions. If the list is empty, the binding restrictions will
    * universally apply to all applications.
    * The value may be {@code null}.
@@ -221,7 +221,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated: use scoped_access_settings instead. A list of applications that are
+   * Optional. Deprecated: Use `scoped_access_settings` instead. A list of applications that are
    * subject to this binding's restrictions. If the list is empty, the binding restrictions will
    * universally apply to all applications.
    * @return value or {@code null} for none
@@ -231,7 +231,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated: use scoped_access_settings instead. A list of applications that are
+   * Optional. Deprecated: Use `scoped_access_settings` instead. A list of applications that are
    * subject to this binding's restrictions. If the list is empty, the binding restrictions will
    * universally apply to all applications.
    * @param restrictedClientApplications restrictedClientApplications or {@code null} for none

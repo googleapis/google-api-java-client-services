@@ -38,6 +38,13 @@ public final class ClientScope extends com.google.api.client.json.GenericJson {
   private Application restrictedClientApplication;
 
   /**
+   * Optional. The GCP project that is subject to this binding's scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Project restrictedProject;
+
+  /**
    * Optional. The application that is subject to this binding's scope.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class ClientScope extends com.google.api.client.json.GenericJson {
    */
   public ClientScope setRestrictedClientApplication(Application restrictedClientApplication) {
     this.restrictedClientApplication = restrictedClientApplication;
+    return this;
+  }
+
+  /**
+   * Optional. The GCP project that is subject to this binding's scope.
+   * @return value or {@code null} for none
+   */
+  public Project getRestrictedProject() {
+    return restrictedProject;
+  }
+
+  /**
+   * Optional. The GCP project that is subject to this binding's scope.
+   * @param restrictedProject restrictedProject or {@code null} for none
+   */
+  public ClientScope setRestrictedProject(Project restrictedProject) {
+    this.restrictedProject = restrictedProject;
     return this;
   }
 

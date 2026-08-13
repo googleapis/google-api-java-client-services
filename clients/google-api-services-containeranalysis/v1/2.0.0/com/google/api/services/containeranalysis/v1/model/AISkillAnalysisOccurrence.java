@@ -38,11 +38,18 @@ public final class AISkillAnalysisOccurrence extends com.google.api.client.json.
   private java.util.List<Finding> findings;
 
   /**
-   * Maximum severity found among findings.
+   * Maximum severity found among findings. Per scanner verdict details.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String maxSeverity;
+
+  /**
+   * Per scanner verdict.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerScannerVerdict perScannerVerdict;
 
   /**
    * Name of the skill that produced this analysis.
@@ -69,7 +76,7 @@ public final class AISkillAnalysisOccurrence extends com.google.api.client.json.
   }
 
   /**
-   * Maximum severity found among findings.
+   * Maximum severity found among findings. Per scanner verdict details.
    * @return value or {@code null} for none
    */
   public java.lang.String getMaxSeverity() {
@@ -77,11 +84,28 @@ public final class AISkillAnalysisOccurrence extends com.google.api.client.json.
   }
 
   /**
-   * Maximum severity found among findings.
+   * Maximum severity found among findings. Per scanner verdict details.
    * @param maxSeverity maxSeverity or {@code null} for none
    */
   public AISkillAnalysisOccurrence setMaxSeverity(java.lang.String maxSeverity) {
     this.maxSeverity = maxSeverity;
+    return this;
+  }
+
+  /**
+   * Per scanner verdict.
+   * @return value or {@code null} for none
+   */
+  public PerScannerVerdict getPerScannerVerdict() {
+    return perScannerVerdict;
+  }
+
+  /**
+   * Per scanner verdict.
+   * @param perScannerVerdict perScannerVerdict or {@code null} for none
+   */
+  public AISkillAnalysisOccurrence setPerScannerVerdict(PerScannerVerdict perScannerVerdict) {
+    this.perScannerVerdict = perScannerVerdict;
     return this;
   }
 

@@ -8419,6 +8419,235 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
+       * An accessor for creating requests from the SourceUploads collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudRun run = new CloudRun(...);}
+       *   {@code CloudRun.SourceUploads.List request = run.sourceUploads().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public SourceUploads sourceUploads() {
+        return new SourceUploads();
+      }
+
+      /**
+       * The "sourceUploads" collection of methods.
+       */
+      public class SourceUploads {
+
+        /**
+         * Uploads a source archive to a Google Cloud Storage bucket through Cloud Run. The uploaded source
+         * object should be used for Cloud Run resource deployments. User is responsible for managing the
+         * lifecycle of the uploaded object. If uploading through the Cloud Run API to Cloud Storage is not
+         * desired, you can use the IAM Deny Policy to deny the `run.locations.uploadSource` permission for
+         * all principals.
+         *
+         * Create a request for the method "sourceUploads.upload".
+         *
+         * This request holds the parameters needed by the run server.  After setting any optional
+         * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location in which the source archive should be uploaded to, specified in
+         *        the format `projects/locations`.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest}
+         * @return the request
+         */
+        public Upload upload(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest content) throws java.io.IOException {
+          Upload result = new Upload(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        /**
+         * Uploads a source archive to a Google Cloud Storage bucket through Cloud Run. The uploaded source
+         * object should be used for Cloud Run resource deployments. User is responsible for managing the
+         * lifecycle of the uploaded object. If uploading through the Cloud Run API to Cloud Storage is not
+         * desired, you can use the IAM Deny Policy to deny the `run.locations.uploadSource` permission for
+         * all principals.
+         *
+         * Create a request for the method "sourceUploads.upload".
+         *
+         * This request holds the parameters needed by the the run server.  After setting any optional
+         * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+         *
+         * <p>
+         * This method should be used for uploading media content.
+         * </p>
+         *
+         * @param parent Required. The project and location in which the source archive should be uploaded to, specified in
+         *        the format `projects/locations`.
+         * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest} media metadata or {@code null} if none
+         * @param mediaContent The media HTTP content.
+         * @return the request
+         * @throws java.io.IOException if the initialization of the request fails
+         */
+        public Upload upload(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+          Upload result = new Upload(parent, content, mediaContent);
+          initialize(result);
+          return result;
+        }
+
+        public class Upload extends CloudRunRequest<com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceResponse> {
+
+          private static final String REST_PATH = "v2/{+parent}:uploadSource";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Uploads a source archive to a Google Cloud Storage bucket through Cloud Run. The uploaded
+           * source object should be used for Cloud Run resource deployments. User is responsible for
+           * managing the lifecycle of the uploaded object. If uploading through the Cloud Run API to Cloud
+           * Storage is not desired, you can use the IAM Deny Policy to deny the
+           * `run.locations.uploadSource` permission for all principals.
+           *
+           * Create a request for the method "sourceUploads.upload".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+           * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location in which the source archive should be uploaded to, specified in
+         *        the format `projects/locations`.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest}
+           * @since 1.13
+           */
+          protected Upload(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest content) {
+            super(CloudRun.this, "POST", REST_PATH, content, com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          /**
+           * Uploads a source archive to a Google Cloud Storage bucket through Cloud Run. The uploaded
+           * source object should be used for Cloud Run resource deployments. User is responsible for
+           * managing the lifecycle of the uploaded object. If uploading through the Cloud Run API to Cloud
+           * Storage is not desired, you can use the IAM Deny Policy to deny the
+           * `run.locations.uploadSource` permission for all principals.
+           *
+           * Create a request for the method "sourceUploads.upload".
+           *
+           * This request holds the parameters needed by the the run server.  After setting any optional
+           * parameters, call the {@link Upload#execute()} method to invoke the remote operation. <p> {@link
+           * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * <p>
+           * This constructor should be used for uploading media content.
+           * </p>
+           *
+           * @param parent Required. The project and location in which the source archive should be uploaded to, specified in
+         *        the format `projects/locations`.
+           * @param content the {@link com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest} media metadata or {@code null} if none
+           * @param mediaContent The media HTTP content.
+           * @since 1.13
+           */
+          protected Upload(java.lang.String parent, com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+            super(CloudRun.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.run.v2.model.GoogleCloudRunV2UploadSourceResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+            initializeMediaUpload(mediaContent);
+          }
+
+          @Override
+          public Upload set$Xgafv(java.lang.String $Xgafv) {
+            return (Upload) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Upload setAccessToken(java.lang.String accessToken) {
+            return (Upload) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Upload setAlt(java.lang.String alt) {
+            return (Upload) super.setAlt(alt);
+          }
+
+          @Override
+          public Upload setCallback(java.lang.String callback) {
+            return (Upload) super.setCallback(callback);
+          }
+
+          @Override
+          public Upload setFields(java.lang.String fields) {
+            return (Upload) super.setFields(fields);
+          }
+
+          @Override
+          public Upload setKey(java.lang.String key) {
+            return (Upload) super.setKey(key);
+          }
+
+          @Override
+          public Upload setOauthToken(java.lang.String oauthToken) {
+            return (Upload) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Upload) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Upload setQuotaUser(java.lang.String quotaUser) {
+            return (Upload) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Upload setUploadType(java.lang.String uploadType) {
+            return (Upload) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Upload) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location in which the source archive should be uploaded to,
+           * specified in the format `projects/locations`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location in which the source archive should be uploaded to, specified in
+         the format `projects/locations`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location in which the source archive should be uploaded to,
+           * specified in the format `projects/locations`.
+           */
+          public Upload setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Upload set(String parameterName, Object value) {
+            return (Upload) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the WorkerPools collection.
        *
        * <p>The typical use is:</p>

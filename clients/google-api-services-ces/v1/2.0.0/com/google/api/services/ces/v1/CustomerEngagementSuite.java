@@ -3866,6 +3866,22 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return this;
             }
 
+            /** Optional. The view specifying which fields in the response should be populated. */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The view specifying which fields in the response should be populated.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /** Optional. The view specifying which fields in the response should be populated. */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);

@@ -39,11 +39,27 @@ public final class ConversationTurn extends com.google.api.client.json.GenericJs
   private java.util.List<Message> messages;
 
   /**
+   * Output only. The full dynamically resolved developer instruction generated from templates. This
+   * field is only populated on-demand when requested during history retrieval. It is not persisted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolvedDeveloperInstruction;
+
+  /**
    * Optional. The root span of the action processing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Span rootSpan;
+
+  /**
+   * Optional. Variables or configurations referenced by the template engine during dynamic prompt
+   * generation. This allows reconstructing the exact prompt sent to the model for this turn.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> templateAttributes;
 
   /**
    * Optional. The intended ground-truth text from the Simulated Caller (Polysynth). Only populated
@@ -73,6 +89,25 @@ public final class ConversationTurn extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * Output only. The full dynamically resolved developer instruction generated from templates. This
+   * field is only populated on-demand when requested during history retrieval. It is not persisted.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolvedDeveloperInstruction() {
+    return resolvedDeveloperInstruction;
+  }
+
+  /**
+   * Output only. The full dynamically resolved developer instruction generated from templates. This
+   * field is only populated on-demand when requested during history retrieval. It is not persisted.
+   * @param resolvedDeveloperInstruction resolvedDeveloperInstruction or {@code null} for none
+   */
+  public ConversationTurn setResolvedDeveloperInstruction(java.lang.String resolvedDeveloperInstruction) {
+    this.resolvedDeveloperInstruction = resolvedDeveloperInstruction;
+    return this;
+  }
+
+  /**
    * Optional. The root span of the action processing.
    * @return value or {@code null} for none
    */
@@ -86,6 +121,25 @@ public final class ConversationTurn extends com.google.api.client.json.GenericJs
    */
   public ConversationTurn setRootSpan(Span rootSpan) {
     this.rootSpan = rootSpan;
+    return this;
+  }
+
+  /**
+   * Optional. Variables or configurations referenced by the template engine during dynamic prompt
+   * generation. This allows reconstructing the exact prompt sent to the model for this turn.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getTemplateAttributes() {
+    return templateAttributes;
+  }
+
+  /**
+   * Optional. Variables or configurations referenced by the template engine during dynamic prompt
+   * generation. This allows reconstructing the exact prompt sent to the model for this turn.
+   * @param templateAttributes templateAttributes or {@code null} for none
+   */
+  public ConversationTurn setTemplateAttributes(java.util.Map<String, java.lang.Object> templateAttributes) {
+    this.templateAttributes = templateAttributes;
     return this;
   }
 

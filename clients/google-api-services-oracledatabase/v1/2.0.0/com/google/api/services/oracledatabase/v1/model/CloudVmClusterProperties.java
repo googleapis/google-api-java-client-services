@@ -271,6 +271,22 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
   private TimeZone timeZone;
 
   /**
+   * Optional. Specifies whether VM backups are stored on local DB server storage or Exascale
+   * storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmBackupStorageType;
+
+  /**
+   * Optional. Specifies whether VM file system storage / VM images are stored on local DB server
+   * storage or Exascale storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vmFileSystemStorageType;
+
+  /**
    * Optional. OCI Cluster name.
    * @return value or {@code null} for none
    */
@@ -849,6 +865,44 @@ public final class CloudVmClusterProperties extends com.google.api.client.json.G
    */
   public CloudVmClusterProperties setTimeZone(TimeZone timeZone) {
     this.timeZone = timeZone;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies whether VM backups are stored on local DB server storage or Exascale
+   * storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmBackupStorageType() {
+    return vmBackupStorageType;
+  }
+
+  /**
+   * Optional. Specifies whether VM backups are stored on local DB server storage or Exascale
+   * storage.
+   * @param vmBackupStorageType vmBackupStorageType or {@code null} for none
+   */
+  public CloudVmClusterProperties setVmBackupStorageType(java.lang.String vmBackupStorageType) {
+    this.vmBackupStorageType = vmBackupStorageType;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies whether VM file system storage / VM images are stored on local DB server
+   * storage or Exascale storage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVmFileSystemStorageType() {
+    return vmFileSystemStorageType;
+  }
+
+  /**
+   * Optional. Specifies whether VM file system storage / VM images are stored on local DB server
+   * storage or Exascale storage.
+   * @param vmFileSystemStorageType vmFileSystemStorageType or {@code null} for none
+   */
+  public CloudVmClusterProperties setVmFileSystemStorageType(java.lang.String vmFileSystemStorageType) {
+    this.vmFileSystemStorageType = vmFileSystemStorageType;
     return this;
   }
 

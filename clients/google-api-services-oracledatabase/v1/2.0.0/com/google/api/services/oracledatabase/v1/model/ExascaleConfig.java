@@ -38,11 +38,25 @@ public final class ExascaleConfig extends com.google.api.client.json.GenericJson
   private java.lang.Integer availableStorageSizeGb;
 
   /**
+   * Output only. Available storage size for VM storage on Exascale in GBs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer availableVmStorageSizeGb;
+
+  /**
    * Output only. Total storage size needed for Exascale in GBs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalStorageSizeGb;
+
+  /**
+   * Output only. Storage size needed for VM storage on Exascale in GBs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalVmStorageSizeGb;
 
   /**
    * Output only. Available storage size for Exascale in GBs.
@@ -62,6 +76,23 @@ public final class ExascaleConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Available storage size for VM storage on Exascale in GBs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getAvailableVmStorageSizeGb() {
+    return availableVmStorageSizeGb;
+  }
+
+  /**
+   * Output only. Available storage size for VM storage on Exascale in GBs.
+   * @param availableVmStorageSizeGb availableVmStorageSizeGb or {@code null} for none
+   */
+  public ExascaleConfig setAvailableVmStorageSizeGb(java.lang.Integer availableVmStorageSizeGb) {
+    this.availableVmStorageSizeGb = availableVmStorageSizeGb;
+    return this;
+  }
+
+  /**
    * Output only. Total storage size needed for Exascale in GBs.
    * @return value or {@code null} for none
    */
@@ -75,6 +106,23 @@ public final class ExascaleConfig extends com.google.api.client.json.GenericJson
    */
   public ExascaleConfig setTotalStorageSizeGb(java.lang.Integer totalStorageSizeGb) {
     this.totalStorageSizeGb = totalStorageSizeGb;
+    return this;
+  }
+
+  /**
+   * Output only. Storage size needed for VM storage on Exascale in GBs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalVmStorageSizeGb() {
+    return totalVmStorageSizeGb;
+  }
+
+  /**
+   * Output only. Storage size needed for VM storage on Exascale in GBs.
+   * @param totalVmStorageSizeGb totalVmStorageSizeGb or {@code null} for none
+   */
+  public ExascaleConfig setTotalVmStorageSizeGb(java.lang.Integer totalVmStorageSizeGb) {
+    this.totalVmStorageSizeGb = totalVmStorageSizeGb;
     return this;
   }
 

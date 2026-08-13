@@ -45,6 +45,13 @@ public final class ConfigureExascaleCloudExadataInfrastructureRequest extends co
   private java.lang.Integer totalStorageSizeGb;
 
   /**
+   * Optional. Storage size needed for VM storage on Exascale in GBs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer totalVmStorageSizeGb;
+
+  /**
    * Optional. An optional ID to identify the request.
    * @return value or {@code null} for none
    */
@@ -75,6 +82,23 @@ public final class ConfigureExascaleCloudExadataInfrastructureRequest extends co
    */
   public ConfigureExascaleCloudExadataInfrastructureRequest setTotalStorageSizeGb(java.lang.Integer totalStorageSizeGb) {
     this.totalStorageSizeGb = totalStorageSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Storage size needed for VM storage on Exascale in GBs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getTotalVmStorageSizeGb() {
+    return totalVmStorageSizeGb;
+  }
+
+  /**
+   * Optional. Storage size needed for VM storage on Exascale in GBs.
+   * @param totalVmStorageSizeGb totalVmStorageSizeGb or {@code null} for none
+   */
+  public ConfigureExascaleCloudExadataInfrastructureRequest setTotalVmStorageSizeGb(java.lang.Integer totalVmStorageSizeGb) {
+    this.totalVmStorageSizeGb = totalVmStorageSizeGb;
     return this;
   }
 

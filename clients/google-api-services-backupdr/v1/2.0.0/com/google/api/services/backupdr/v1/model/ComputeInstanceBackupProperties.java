@@ -63,6 +63,13 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
   }
 
   /**
+   * Optional. List of disks excluded from the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> excludedDisks;
+
+  /**
    * A list of guest accelerator cards' type and count to use for instances created from these
    * properties.
    * The value may be {@code null}.
@@ -83,6 +90,13 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean guestFlush;
+
+  /**
+   * Optional. List of disks included in the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> includedDisks;
 
   /**
    * KeyRevocationActionType of the instance. Supported options are "STOP" and "NONE". The default
@@ -230,6 +244,23 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
   }
 
   /**
+   * Optional. List of disks excluded from the backup.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExcludedDisks() {
+    return excludedDisks;
+  }
+
+  /**
+   * Optional. List of disks excluded from the backup.
+   * @param excludedDisks excludedDisks or {@code null} for none
+   */
+  public ComputeInstanceBackupProperties setExcludedDisks(java.util.List<java.lang.String> excludedDisks) {
+    this.excludedDisks = excludedDisks;
+    return this;
+  }
+
+  /**
    * A list of guest accelerator cards' type and count to use for instances created from these
    * properties.
    * @return value or {@code null} for none
@@ -264,6 +295,23 @@ public final class ComputeInstanceBackupProperties extends com.google.api.client
    */
   public ComputeInstanceBackupProperties setGuestFlush(java.lang.Boolean guestFlush) {
     this.guestFlush = guestFlush;
+    return this;
+  }
+
+  /**
+   * Optional. List of disks included in the backup.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIncludedDisks() {
+    return includedDisks;
+  }
+
+  /**
+   * Optional. List of disks included in the backup.
+   * @param includedDisks includedDisks or {@code null} for none
+   */
+  public ComputeInstanceBackupProperties setIncludedDisks(java.util.List<java.lang.String> includedDisks) {
+    this.includedDisks = includedDisks;
     return this;
   }
 

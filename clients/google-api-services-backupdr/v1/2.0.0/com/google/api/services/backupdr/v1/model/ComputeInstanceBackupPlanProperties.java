@@ -31,12 +31,63 @@ package com.google.api.services.backupdr.v1.model;
 public final class ComputeInstanceBackupPlanProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, only the boot disk will be backed up.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean bootDiskOnly;
+
+  /**
+   * Optional. Labels used to identify disks for exclusion from the backup. If a disk carries any of
+   * these labels, it will be excluded (OR logic).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiskExclusionLabels diskExclusionLabels;
+
+  /**
    * Optional. Indicates whether to perform a guest flush operation before taking a compute backup.
    * When set to false, the system will create crash-consistent backups. Default value is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean guestFlush;
+
+  /**
+   * Optional. If true, only the boot disk will be backed up.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBootDiskOnly() {
+    return bootDiskOnly;
+  }
+
+  /**
+   * Optional. If true, only the boot disk will be backed up.
+   * @param bootDiskOnly bootDiskOnly or {@code null} for none
+   */
+  public ComputeInstanceBackupPlanProperties setBootDiskOnly(java.lang.Boolean bootDiskOnly) {
+    this.bootDiskOnly = bootDiskOnly;
+    return this;
+  }
+
+  /**
+   * Optional. Labels used to identify disks for exclusion from the backup. If a disk carries any of
+   * these labels, it will be excluded (OR logic).
+   * @return value or {@code null} for none
+   */
+  public DiskExclusionLabels getDiskExclusionLabels() {
+    return diskExclusionLabels;
+  }
+
+  /**
+   * Optional. Labels used to identify disks for exclusion from the backup. If a disk carries any of
+   * these labels, it will be excluded (OR logic).
+   * @param diskExclusionLabels diskExclusionLabels or {@code null} for none
+   */
+  public ComputeInstanceBackupPlanProperties setDiskExclusionLabels(DiskExclusionLabels diskExclusionLabels) {
+    this.diskExclusionLabels = diskExclusionLabels;
+    return this;
+  }
 
   /**
    * Optional. Indicates whether to perform a guest flush operation before taking a compute backup.

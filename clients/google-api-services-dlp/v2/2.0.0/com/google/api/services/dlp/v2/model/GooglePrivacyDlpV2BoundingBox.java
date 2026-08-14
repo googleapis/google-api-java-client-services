@@ -17,7 +17,8 @@
 package com.google.api.services.dlp.v2.model;
 
 /**
- * Bounding box encompassing detected text within an image.
+ * Bounding box encompassing detected text within an image. Coordinates are in pixels and strictly
+ * within the image or frame bounds.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Sensitive Data Protection (DLP). For a detailed

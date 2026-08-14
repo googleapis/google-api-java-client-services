@@ -3184,6 +3184,149 @@ public class Games extends com.google.api.client.googleapis.services.json.Abstra
   }
 
   /**
+   * An accessor for creating requests from the PlayerGameEvents collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Games games = new Games(...);}
+   *   {@code Games.PlayerGameEvents.List request = games.playerGameEvents().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public PlayerGameEvents playerGameEvents() {
+    return new PlayerGameEvents();
+  }
+
+  /**
+   * The "playerGameEvents" collection of methods.
+   */
+  public class PlayerGameEvents {
+
+    /**
+     * Records a batch of player game events for a specific player. This method allows sending multiple
+     * events in a single request.
+     *
+     * Create a request for the method "playerGameEvents.batchRecordEvents".
+     *
+     * This request holds the parameters needed by the games server.  After setting any optional
+     * parameters, call the {@link BatchRecordEvents#execute()} method to invoke the remote operation.
+     *
+     * @param playerId Required. The player ID of the player that performed the events.
+     * @param content the {@link com.google.api.services.games.model.BatchRecordEventsRequest}
+     * @return the request
+     */
+    public BatchRecordEvents batchRecordEvents(java.lang.String playerId, com.google.api.services.games.model.BatchRecordEventsRequest content) throws java.io.IOException {
+      BatchRecordEvents result = new BatchRecordEvents(playerId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class BatchRecordEvents extends GamesRequest<com.google.api.services.games.model.BatchRecordEventsResponse> {
+
+      private static final String REST_PATH = "games/v1/players/{playerId}/gameEvents:batchRecordEvents";
+
+      /**
+       * Records a batch of player game events for a specific player. This method allows sending
+       * multiple events in a single request.
+       *
+       * Create a request for the method "playerGameEvents.batchRecordEvents".
+       *
+       * This request holds the parameters needed by the the games server.  After setting any optional
+       * parameters, call the {@link BatchRecordEvents#execute()} method to invoke the remote operation.
+       * <p> {@link BatchRecordEvents#initialize(com.google.api.client.googleapis.services.AbstractGoogl
+       * eClientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param playerId Required. The player ID of the player that performed the events.
+       * @param content the {@link com.google.api.services.games.model.BatchRecordEventsRequest}
+       * @since 1.13
+       */
+      protected BatchRecordEvents(java.lang.String playerId, com.google.api.services.games.model.BatchRecordEventsRequest content) {
+        super(Games.this, "POST", REST_PATH, content, com.google.api.services.games.model.BatchRecordEventsResponse.class);
+        this.playerId = com.google.api.client.util.Preconditions.checkNotNull(playerId, "Required parameter playerId must be specified.");
+      }
+
+      @Override
+      public BatchRecordEvents set$Xgafv(java.lang.String $Xgafv) {
+        return (BatchRecordEvents) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public BatchRecordEvents setAccessToken(java.lang.String accessToken) {
+        return (BatchRecordEvents) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public BatchRecordEvents setAlt(java.lang.String alt) {
+        return (BatchRecordEvents) super.setAlt(alt);
+      }
+
+      @Override
+      public BatchRecordEvents setCallback(java.lang.String callback) {
+        return (BatchRecordEvents) super.setCallback(callback);
+      }
+
+      @Override
+      public BatchRecordEvents setFields(java.lang.String fields) {
+        return (BatchRecordEvents) super.setFields(fields);
+      }
+
+      @Override
+      public BatchRecordEvents setKey(java.lang.String key) {
+        return (BatchRecordEvents) super.setKey(key);
+      }
+
+      @Override
+      public BatchRecordEvents setOauthToken(java.lang.String oauthToken) {
+        return (BatchRecordEvents) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public BatchRecordEvents setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (BatchRecordEvents) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public BatchRecordEvents setQuotaUser(java.lang.String quotaUser) {
+        return (BatchRecordEvents) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public BatchRecordEvents setUploadType(java.lang.String uploadType) {
+        return (BatchRecordEvents) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public BatchRecordEvents setUploadProtocol(java.lang.String uploadProtocol) {
+        return (BatchRecordEvents) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The player ID of the player that performed the events. */
+      @com.google.api.client.util.Key
+      private java.lang.String playerId;
+
+      /** Required. The player ID of the player that performed the events.
+       */
+      public java.lang.String getPlayerId() {
+        return playerId;
+      }
+
+      /** Required. The player ID of the player that performed the events. */
+      public BatchRecordEvents setPlayerId(java.lang.String playerId) {
+        this.playerId = playerId;
+        return this;
+      }
+
+      @Override
+      public BatchRecordEvents set(String parameterName, Object value) {
+        return (BatchRecordEvents) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Players collection.
    *
    * <p>The typical use is:</p>

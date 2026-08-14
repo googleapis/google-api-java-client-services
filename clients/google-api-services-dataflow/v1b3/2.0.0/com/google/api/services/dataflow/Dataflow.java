@@ -442,7 +442,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * List the jobs of a project across all regions. **Note:** This method doesn't support filtering
-       * the list of jobs by name.
+       * the list of jobs by name. # IAM Permissions Requires the `dataflow.jobs.list` permission on the
+       * project.
        *
        * Create a request for the method "jobs.aggregated".
        *
@@ -464,7 +465,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * List the jobs of a project across all regions. **Note:** This method doesn't support filtering
-         * the list of jobs by name.
+         * the list of jobs by name. # IAM Permissions Requires the `dataflow.jobs.list` permission on the
+         * project.
          *
          * Create a request for the method "jobs.aggregated".
          *
@@ -689,7 +691,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * Creates a Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with
        * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not
-       * enter confidential information when you supply string values using the API.
+       * enter confidential information when you supply string values using the API. # IAM Permissions 1.
+       * Requires the `dataflow.jobs.create` permission on the project. 2. `resourcemanager.projects.get`
+       * (Specifically required for regional endpoints to resolve regional resource metadata)
        *
        * Create a request for the method "jobs.create".
        *
@@ -715,7 +719,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
          * endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in
          * `us-central1`. Do not enter confidential information when you supply string values using the
-         * API.
+         * API. # IAM Permissions 1. Requires the `dataflow.jobs.create` permission on the project. 2.
+         * `resourcemanager.projects.get` (Specifically required for regional endpoints to resolve
+         * regional resource metadata)
          *
          * Create a request for the method "jobs.create".
          *
@@ -869,7 +875,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using
        * `projects.locations.jobs.get` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
-       * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
+       * is not recommended, as you can only get the state of jobs that are running in `us-central1`. #
+       * IAM Permissions Requires the `dataflow.jobs.get` permission on the job.
        *
        * Create a request for the method "jobs.get".
        *
@@ -894,7 +901,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend
          * using `projects.locations.jobs.get` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
-         * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
+         * is not recommended, as you can only get the state of jobs that are running in `us-central1`. #
+         * IAM Permissions Requires the `dataflow.jobs.get` permission on the job.
          *
          * Create a request for the method "jobs.get".
          *
@@ -1059,7 +1067,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * `projects.locations.jobs.getMetrics` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
-       * are running in `us-central1`.
+       * are running in `us-central1`. # IAM Permissions Requires the `dataflow.metrics.get` permission on
+       * the job.
        *
        * Create a request for the method "jobs.getMetrics".
        *
@@ -1085,7 +1094,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.jobs.getMetrics` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
-         * are running in `us-central1`.
+         * are running in `us-central1`. # IAM Permissions Requires the `dataflow.metrics.get` permission
+         * on the job.
          *
          * Create a request for the method "jobs.getMetrics".
          *
@@ -1260,7 +1270,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended,
        * because you can only get the list of jobs that are running in `us-central1`.
        * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
-       * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
+       * name. Filtering by name isn't supported by `projects.jobs.aggregated`. # IAM Permissions Requires
+       * the `dataflow.jobs.list` permission on the project.
        *
        * Create a request for the method "jobs.list".
        *
@@ -1287,7 +1298,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not
          * recommended, because you can only get the list of jobs that are running in `us-central1`.
          * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
-         * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
+         * name. Filtering by name isn't supported by `projects.jobs.aggregated`. # IAM Permissions
+         * Requires the `dataflow.jobs.list` permission on the project.
          *
          * Create a request for the method "jobs.list".
          *
@@ -1508,7 +1520,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * Snapshot the state of a streaming job.
+       * Snapshot the state of a streaming job. # IAM Permissions Requires the `dataflow.jobs.snapshot`
+       * permission on the job.
        *
        * Create a request for the method "jobs.snapshot".
        *
@@ -1531,7 +1544,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "v1b3/projects/{projectId}/jobs/{jobId}:snapshot";
 
         /**
-         * Snapshot the state of a streaming job.
+         * Snapshot the state of a streaming job. # IAM Permissions Requires the `dataflow.jobs.snapshot`
+         * permission on the job.
          *
          * Create a request for the method "jobs.snapshot".
          *
@@ -1649,7 +1663,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * recommend using `projects.locations.jobs.update` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
-       * running in `us-central1`.
+       * running in `us-central1`. # IAM Permissions 1. Requires the `dataflow.jobs.cancel` permission to
+       * cancel a job. 2. Requires the `dataflow.jobs.updateContents` permission to update runtime
+       * parameters.
        *
        * Create a request for the method "jobs.update".
        *
@@ -1676,7 +1692,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * recommend using `projects.locations.jobs.update` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
-         * running in `us-central1`.
+         * running in `us-central1`. # IAM Permissions 1. Requires the `dataflow.jobs.cancel` permission
+         * to cancel a job. 2. Requires the `dataflow.jobs.updateContents` permission to update runtime
+         * parameters.
          *
          * Create a request for the method "jobs.update".
          *
@@ -2165,7 +2183,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.jobs.messages.list` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that
-         * are running in `us-central1`.
+         * are running in `us-central1`. # IAM Permissions Requires the `dataflow.messages.list` permission
+         * on the job.
          *
          * Create a request for the method "messages.list".
          *
@@ -2191,7 +2210,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.jobs.messages.list` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs
-           * that are running in `us-central1`.
+           * that are running in `us-central1`. # IAM Permissions Requires the `dataflow.messages.list`
+           * permission on the job.
            *
            * Create a request for the method "messages.list".
            *
@@ -2932,7 +2952,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
       public class FlexTemplates {
 
         /**
-         * Launch a job with a FlexTemplate.
+         * Launch a job with a FlexTemplate. # IAM Permissions Requires the following IAM permission(s) on
+         * the resource: - `dataflow.jobs.create` - `resourcemanager.projects.get` -
+         * `iam.serviceAccounts.actAs` - `storage.buckets.get` - `storage.buckets.create` (Required if the
+         * default staging bucket must be created)
          *
          * Create a request for the method "flexTemplates.launch".
          *
@@ -2956,7 +2979,10 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/flexTemplates:launch";
 
           /**
-           * Launch a job with a FlexTemplate.
+           * Launch a job with a FlexTemplate. # IAM Permissions Requires the following IAM permission(s) on
+           * the resource: - `dataflow.jobs.create` - `resourcemanager.projects.get` -
+           * `iam.serviceAccounts.actAs` - `storage.buckets.get` - `storage.buckets.create` (Required if the
+           * default staging bucket must be created)
            *
            * Create a request for the method "flexTemplates.launch".
            *
@@ -3105,7 +3131,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * Creates a Dataflow job. To create a job, we recommend using `projects.locations.jobs.create` with
          * a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.create` is not recommended, as your job will always start in `us-central1`. Do not
-         * enter confidential information when you supply string values using the API.
+         * enter confidential information when you supply string values using the API. # IAM Permissions 1.
+         * Requires the `dataflow.jobs.create` permission on the project. 2. `resourcemanager.projects.get`
+         * (Specifically required for regional endpoints to resolve regional resource metadata)
          *
          * Create a request for the method "jobs.create".
          *
@@ -3133,7 +3161,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * with a [regional endpoint] (https://cloud.google.com/dataflow/docs/concepts/regional-
            * endpoints). Using `projects.jobs.create` is not recommended, as your job will always start in
            * `us-central1`. Do not enter confidential information when you supply string values using the
-           * API.
+           * API. # IAM Permissions 1. Requires the `dataflow.jobs.create` permission on the project. 2.
+           * `resourcemanager.projects.get` (Specifically required for regional endpoints to resolve
+           * regional resource metadata)
            *
            * Create a request for the method "jobs.create".
            *
@@ -3290,7 +3320,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend using
          * `projects.locations.jobs.get` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
-         * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
+         * is not recommended, as you can only get the state of jobs that are running in `us-central1`. #
+         * IAM Permissions Requires the `dataflow.jobs.get` permission on the job.
          *
          * Create a request for the method "jobs.get".
          *
@@ -3317,7 +3348,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * Gets the state of the specified Cloud Dataflow job. To get the state of a job, we recommend
            * using `projects.locations.jobs.get` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using `projects.jobs.get`
-           * is not recommended, as you can only get the state of jobs that are running in `us-central1`.
+           * is not recommended, as you can only get the state of jobs that are running in `us-central1`. #
+           * IAM Permissions Requires the `dataflow.jobs.get` permission on the job.
            *
            * Create a request for the method "jobs.get".
            *
@@ -3482,7 +3514,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
         /**
          * Request detailed information about the execution status of the job. EXPERIMENTAL. This API is
-         * subject to change or removal without notice.
+         * subject to change or removal without notice. # IAM Permissions Requires the
+         * `dataflow.metrics.get` permission on the job.
          *
          * Create a request for the method "jobs.getExecutionDetails".
          *
@@ -3507,7 +3540,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Request detailed information about the execution status of the job. EXPERIMENTAL. This API is
-           * subject to change or removal without notice.
+           * subject to change or removal without notice. # IAM Permissions Requires the
+           * `dataflow.metrics.get` permission on the job.
            *
            * Create a request for the method "jobs.getExecutionDetails".
            *
@@ -3708,7 +3742,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.jobs.getMetrics` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
-         * are running in `us-central1`.
+         * are running in `us-central1`. # IAM Permissions Requires the `dataflow.metrics.get` permission on
+         * the job.
          *
          * Create a request for the method "jobs.getMetrics".
          *
@@ -3736,7 +3771,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.jobs.getMetrics` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.getMetrics` is not recommended, as you can only request the status of jobs that
-           * are running in `us-central1`.
+           * are running in `us-central1`. # IAM Permissions Requires the `dataflow.metrics.get` permission
+           * on the job.
            *
            * Create a request for the method "jobs.getMetrics".
            *
@@ -3914,7 +3950,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not recommended,
          * because you can only get the list of jobs that are running in `us-central1`.
          * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
-         * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
+         * name. Filtering by name isn't supported by `projects.jobs.aggregated`. # IAM Permissions Requires
+         * the `dataflow.jobs.list` permission on the project.
          *
          * Create a request for the method "jobs.list".
          *
@@ -3943,7 +3980,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * across all regions, use `projects.jobs.aggregated`. Using `projects.jobs.list` is not
            * recommended, because you can only get the list of jobs that are running in `us-central1`.
            * `projects.locations.jobs.list` and `projects.jobs.list` support filtering the list of jobs by
-           * name. Filtering by name isn't supported by `projects.jobs.aggregated`.
+           * name. Filtering by name isn't supported by `projects.jobs.aggregated`. # IAM Permissions
+           * Requires the `dataflow.jobs.list` permission on the project.
            *
            * Create a request for the method "jobs.list".
            *
@@ -4167,7 +4205,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Snapshot the state of a streaming job.
+         * Snapshot the state of a streaming job. # IAM Permissions Requires the `dataflow.jobs.snapshot`
+         * permission on the job.
          *
          * Create a request for the method "jobs.snapshot".
          *
@@ -4191,7 +4230,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           private static final String REST_PATH = "v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}:snapshot";
 
           /**
-           * Snapshot the state of a streaming job.
+           * Snapshot the state of a streaming job. # IAM Permissions Requires the `dataflow.jobs.snapshot`
+           * permission on the job.
            *
            * Create a request for the method "jobs.snapshot".
            *
@@ -4327,7 +4367,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * recommend using `projects.locations.jobs.update` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
-         * running in `us-central1`.
+         * running in `us-central1`. # IAM Permissions 1. Requires the `dataflow.jobs.cancel` permission to
+         * cancel a job. 2. Requires the `dataflow.jobs.updateContents` permission to update runtime
+         * parameters.
          *
          * Create a request for the method "jobs.update".
          *
@@ -4356,7 +4398,9 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * recommend using `projects.locations.jobs.update` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.update` is not recommended, as you can only update the state of jobs that are
-           * running in `us-central1`.
+           * running in `us-central1`. # IAM Permissions 1. Requires the `dataflow.jobs.cancel` permission
+           * to cancel a job. 2. Requires the `dataflow.jobs.updateContents` permission to update runtime
+           * parameters.
            *
            * Create a request for the method "jobs.update".
            *
@@ -5070,7 +5114,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.jobs.messages.list` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs that
-           * are running in `us-central1`.
+           * are running in `us-central1`. # IAM Permissions Requires the `dataflow.messages.list` permission
+           * on the job.
            *
            * Create a request for the method "messages.list".
            *
@@ -5098,7 +5143,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
              * `projects.locations.jobs.messages.list` with a [regional endpoint]
              * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
              * `projects.jobs.messages.list` is not recommended, as you can only request the status of jobs
-             * that are running in `us-central1`.
+             * that are running in `us-central1`. # IAM Permissions Requires the `dataflow.messages.list`
+             * permission on the job.
              *
              * Create a request for the method "messages.list".
              *
@@ -5564,7 +5610,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Request detailed information about the execution status of a stage of the job. EXPERIMENTAL. This
-           * API is subject to change or removal without notice.
+           * API is subject to change or removal without notice. # IAM Permissions Requires the
+           * `dataflow.metrics.get` permission on the job.
            *
            * Create a request for the method "stages.getExecutionDetails".
            *
@@ -5590,7 +5637,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Request detailed information about the execution status of a stage of the job. EXPERIMENTAL.
-             * This API is subject to change or removal without notice.
+             * This API is subject to change or removal without notice. # IAM Permissions Requires the
+             * `dataflow.metrics.get` permission on the job.
              *
              * Create a request for the method "stages.getExecutionDetails".
              *
@@ -6716,7 +6764,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.templates.create` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.templates.create` is not recommended, because your job will always start in `us-
-         * central1`.
+         * central1`. # IAM Permissions Requires the following IAM permission(s) on the project: -
+         * `dataflow.jobs.create` - `resourcemanager.projects.get`
          *
          * Create a request for the method "templates.create".
          *
@@ -6745,7 +6794,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.templates.create` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.templates.create` is not recommended, because your job will always start in `us-
-           * central1`.
+           * central1`. # IAM Permissions Requires the following IAM permission(s) on the project: -
+           * `dataflow.jobs.create` - `resourcemanager.projects.get`
            *
            * Create a request for the method "templates.create".
            *
@@ -6871,7 +6921,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.templates.get` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.templates.get` is not recommended, because only templates that are running in `us-
-         * central1` are retrieved.
+         * central1` are retrieved. # IAM Permissions Requires the `resourcemanager.projects.get` permission
+         * on the project.
          *
          * Create a request for the method "templates.get".
          *
@@ -6898,7 +6949,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.templates.get` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.templates.get` is not recommended, because only templates that are running in `us-
-           * central1` are retrieved.
+           * central1` are retrieved. # IAM Permissions Requires the `resourcemanager.projects.get`
+           * permission on the project.
            *
            * Create a request for the method "templates.get".
            *
@@ -7071,7 +7123,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.templates.launch` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.templates.launch` is not recommended, because jobs launched from the template will
-         * always start in `us-central1`.
+         * always start in `us-central1`. # IAM Permissions Requires the following IAM permission(s) on the
+         * project: - `dataflow.jobs.create` - `resourcemanager.projects.get`
          *
          * Create a request for the method "templates.launch".
          *
@@ -7099,7 +7152,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            * `projects.locations.templates.launch` with a [regional endpoint]
            * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
            * `projects.templates.launch` is not recommended, because jobs launched from the template will
-           * always start in `us-central1`.
+           * always start in `us-central1`. # IAM Permissions Requires the following IAM permission(s) on
+           * the project: - `dataflow.jobs.create` - `resourcemanager.projects.get`
            *
            * Create a request for the method "templates.launch".
            *
@@ -7673,7 +7727,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * `projects.locations.templates.create` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.templates.create` is not recommended, because your job will always start in `us-
-       * central1`.
+       * central1`. # IAM Permissions Requires the following IAM permission(s) on the project: -
+       * `dataflow.jobs.create` - `resourcemanager.projects.get`
        *
        * Create a request for the method "templates.create".
        *
@@ -7700,7 +7755,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.templates.create` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.templates.create` is not recommended, because your job will always start in `us-
-         * central1`.
+         * central1`. # IAM Permissions Requires the following IAM permission(s) on the project: -
+         * `dataflow.jobs.create` - `resourcemanager.projects.get`
          *
          * Create a request for the method "templates.create".
          *
@@ -7800,7 +7856,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * `projects.locations.templates.get` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.templates.get` is not recommended, because only templates that are running in `us-
-       * central1` are retrieved.
+       * central1` are retrieved. # IAM Permissions Requires the `resourcemanager.projects.get` permission
+       * on the project.
        *
        * Create a request for the method "templates.get".
        *
@@ -7825,7 +7882,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.templates.get` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.templates.get` is not recommended, because only templates that are running in `us-
-         * central1` are retrieved.
+         * central1` are retrieved. # IAM Permissions Requires the `resourcemanager.projects.get`
+         * permission on the project.
          *
          * Create a request for the method "templates.get".
          *
@@ -7995,7 +8053,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
        * `projects.locations.templates.launch` with a [regional endpoint]
        * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
        * `projects.templates.launch` is not recommended, because jobs launched from the template will
-       * always start in `us-central1`.
+       * always start in `us-central1`. # IAM Permissions Requires the following IAM permission(s) on the
+       * project: - `dataflow.jobs.create` - `resourcemanager.projects.get`
        *
        * Create a request for the method "templates.launch".
        *
@@ -8021,7 +8080,8 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          * `projects.locations.templates.launch` with a [regional endpoint]
          * (https://cloud.google.com/dataflow/docs/concepts/regional-endpoints). Using
          * `projects.templates.launch` is not recommended, because jobs launched from the template will
-         * always start in `us-central1`.
+         * always start in `us-central1`. # IAM Permissions Requires the following IAM permission(s) on
+         * the project: - `dataflow.jobs.create` - `resourcemanager.projects.get`
          *
          * Create a request for the method "templates.launch".
          *

@@ -20,12 +20,12 @@ package com.google.api.services.ftp.v1alpha;
  * Service definition for CloudFTP (v1alpha).
  *
  * <p>
- * Cloud FTP is a managed service that allows transferring files directly to Google Cloud Storage using SFTP.
+ * A managed, cloud-native solution to move data in and out of Google Cloud by using SSH File Transfer Protocol (SFTP).
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/cloud-ftp/overview" target="_blank">API Documentation</a>
+ * <a href="https://docs.cloud.google.com/cloud-ftp" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>
@@ -1400,22 +1400,25 @@ public class CloudFTP extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and server_id from the method_signature of Create RPC
+           * Required. A unique ID for the server. Must start with a lowercase letter, and end with
+           * a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens.
+           * Maximum length is 30 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String serverId;
 
-          /** Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-         server_id from the method_signature of Create RPC
+          /** Required. A unique ID for the server. Must start with a lowercase letter, and end with a lowercase
+         letter or number. Can contain lowercase letters, numbers, and hyphens. Maximum length is 30
+         characters.
            */
           public java.lang.String getServerId() {
             return serverId;
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and server_id from the method_signature of Create RPC
+           * Required. A unique ID for the server. Must start with a lowercase letter, and end with
+           * a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens.
+           * Maximum length is 30 characters.
            */
           public Create setServerId(java.lang.String serverId) {
             this.serverId = serverId;
@@ -2600,22 +2603,22 @@ public class CloudFTP extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Required. Id of the requesting object If auto-generating Id server-side, remove this
-             * field and server_id from the method_signature of Create RPC
+             * Required. A unique user ID for the SFTP user. The user ID must start with a lowercase
+             * letter and can include lowercase letters, numbers, or hyphens.
              */
             @com.google.api.client.util.Key
             private java.lang.String userId;
 
-            /** Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-           server_id from the method_signature of Create RPC
+            /** Required. A unique user ID for the SFTP user. The user ID must start with a lowercase letter and
+           can include lowercase letters, numbers, or hyphens.
              */
             public java.lang.String getUserId() {
               return userId;
             }
 
             /**
-             * Required. Id of the requesting object If auto-generating Id server-side, remove this
-             * field and server_id from the method_signature of Create RPC
+             * Required. A unique user ID for the SFTP user. The user ID must start with a lowercase
+             * letter and can include lowercase letters, numbers, or hyphens.
              */
             public Create setUserId(java.lang.String userId) {
               this.userId = userId;

@@ -71,6 +71,19 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
   private java.lang.Integer minNumWorkers;
 
   /**
+   * Optional. The schedule for autoscaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AutoscalingSchedule> schedules;
+
+  static {
+    // hack to force ProGuard to consider AutoscalingSchedule used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AutoscalingSchedule.class);
+  }
+
+  /**
    * Target worker utilization, compared against the aggregate utilization of the worker pool by
    * autoscaler, to determine upscaling and downscaling when absent other constraints such as
    * backlog. For more information, see [Update an existing
@@ -172,6 +185,23 @@ public final class RuntimeUpdatableParams extends com.google.api.client.json.Gen
    */
   public RuntimeUpdatableParams setMinNumWorkers(java.lang.Integer minNumWorkers) {
     this.minNumWorkers = minNumWorkers;
+    return this;
+  }
+
+  /**
+   * Optional. The schedule for autoscaling.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AutoscalingSchedule> getSchedules() {
+    return schedules;
+  }
+
+  /**
+   * Optional. The schedule for autoscaling.
+   * @param schedules schedules or {@code null} for none
+   */
+  public RuntimeUpdatableParams setSchedules(java.util.List<AutoscalingSchedule> schedules) {
+    this.schedules = schedules;
     return this;
   }
 

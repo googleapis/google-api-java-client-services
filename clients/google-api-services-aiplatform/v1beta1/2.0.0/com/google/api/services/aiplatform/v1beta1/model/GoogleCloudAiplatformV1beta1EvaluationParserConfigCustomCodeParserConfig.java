@@ -30,6 +30,17 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1EvaluationParserConfigCustomCodeParserConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The region to use for code execution. If set, the Code Execution Sandbox will be
+   * invoked in the specified region regardless of the request's originating region. Must be a
+   * region where the Code Execution Sandbox is available. Supported regions: us-central1, us-east1,
+   * us-east4, us-west1, us-west4, southamerica-east1, europe-west2, europe-west3, asia-east1, asia-
+   * south1, asia-southeast1. If unset, the request's originating region is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String codeExecutionRegion;
+
+  /**
    * Required. Python function for parsing results. The function should be defined within this
    * string. The function takes a list of strings (LLM responses) and should return either a list of
    * dictionaries (for rubrics) or a single dictionary (for a metric result). Example function
@@ -45,6 +56,31 @@ public final class GoogleCloudAiplatformV1beta1EvaluationParserConfigCustomCodeP
    */
   @com.google.api.client.util.Key
   private java.lang.String parsingFunction;
+
+  /**
+   * Optional. The region to use for code execution. If set, the Code Execution Sandbox will be
+   * invoked in the specified region regardless of the request's originating region. Must be a
+   * region where the Code Execution Sandbox is available. Supported regions: us-central1, us-east1,
+   * us-east4, us-west1, us-west4, southamerica-east1, europe-west2, europe-west3, asia-east1, asia-
+   * south1, asia-southeast1. If unset, the request's originating region is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCodeExecutionRegion() {
+    return codeExecutionRegion;
+  }
+
+  /**
+   * Optional. The region to use for code execution. If set, the Code Execution Sandbox will be
+   * invoked in the specified region regardless of the request's originating region. Must be a
+   * region where the Code Execution Sandbox is available. Supported regions: us-central1, us-east1,
+   * us-east4, us-west1, us-west4, southamerica-east1, europe-west2, europe-west3, asia-east1, asia-
+   * south1, asia-southeast1. If unset, the request's originating region is used.
+   * @param codeExecutionRegion codeExecutionRegion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationParserConfigCustomCodeParserConfig setCodeExecutionRegion(java.lang.String codeExecutionRegion) {
+    this.codeExecutionRegion = codeExecutionRegion;
+    return this;
+  }
 
   /**
    * Required. Python function for parsing results. The function should be defined within this

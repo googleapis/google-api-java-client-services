@@ -34,7 +34,7 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfigSessionConfig extends 
    * timeout.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("max_rounds")
+  @com.google.api.client.util.Key
   private java.lang.Integer maxRounds;
 
   /**

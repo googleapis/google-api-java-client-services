@@ -34,8 +34,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Audio (input or output) transcription. This is only set when this Part contains audio
-   * data.
+   * Optional. Audio (input or output) transcription. This is only set when this `Part` contains
+   * audio data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +126,8 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1VideoMetadata videoMetadata;
 
   /**
-   * Optional. Audio (input or output) transcription. This is only set when this Part contains audio
-   * data.
+   * Optional. Audio (input or output) transcription. This is only set when this `Part` contains
+   * audio data.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AudioTranscription getAudioTranscription() {
@@ -135,8 +135,8 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   }
 
   /**
-   * Optional. Audio (input or output) transcription. This is only set when this Part contains audio
-   * data.
+   * Optional. Audio (input or output) transcription. This is only set when this `Part` contains
+   * audio data.
    * @param audioTranscription audioTranscription or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1Part setAudioTranscription(GoogleCloudAiplatformV1beta1AudioTranscription audioTranscription) {

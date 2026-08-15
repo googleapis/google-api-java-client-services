@@ -33,21 +33,21 @@ public final class GenaiVertexV1beta1Retrieval extends com.google.api.client.jso
    * Used to specify configuration for ExaAISearch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("exa_ai_search_config")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1ExaAISearchConfig exaAiSearchConfig;
 
   /**
    * Used to specify configuration for ParallelAISearch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("parallel_ai_search_config")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1ParallelAISearchConfig parallelAiSearchConfig;
 
   /**
    * Used to specify configuration for RagStore.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("rag_store_config")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1RagStoreConfig ragStoreConfig;
 
   /**
@@ -61,7 +61,7 @@ public final class GenaiVertexV1beta1Retrieval extends com.google.api.client.jso
    * Used to specify configuration for VertexAISearch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("vertex_ai_search_config")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1VertexAISearchConfig vertexAiSearchConfig;
 
   /**

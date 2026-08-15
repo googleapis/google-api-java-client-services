@@ -33,14 +33,14 @@ public final class GenaiVertexV1beta1RagStoreConfigRagResource extends com.googl
    * Optional. RagCorpora resource name.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("rag_corpus")
+  @com.google.api.client.util.Key
   private java.lang.String ragCorpus;
 
   /**
    * Optional. rag_file_id. The files should be in the same rag_corpus set in rag_corpus field.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("rag_file_ids")
+  @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ragFileIds;
 
   /**

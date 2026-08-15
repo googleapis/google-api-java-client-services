@@ -33,14 +33,14 @@ public final class GenaiVertexV1beta1ParallelAISearchConfig extends com.google.a
    * Optional. The API key for ParallelAiSearch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("api_key")
+  @com.google.api.client.util.Key
   private java.lang.String apiKey;
 
   /**
    * Optional. Custom configs for ParallelAiSearch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("custom_config")
+  @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customConfig;
 
   /**

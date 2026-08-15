@@ -44,11 +44,12 @@ public final class GenaiVertexV1beta1AudioContent extends com.google.api.client.
   private java.lang.String data;
 
   /**
-   * The mime type of the audio.
+   * Flexible MIME type string of the audio, superseding mime_type = 1. Note: Bespoke logic in the
+   * GAOS parser/serializer maps this to the "mime_type" JSON key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String mimeType;
+  private java.lang.String mimeTypeString;
 
   /**
    * The sample rate of the audio.
@@ -127,19 +128,21 @@ public final class GenaiVertexV1beta1AudioContent extends com.google.api.client.
   }
 
   /**
-   * The mime type of the audio.
+   * Flexible MIME type string of the audio, superseding mime_type = 1. Note: Bespoke logic in the
+   * GAOS parser/serializer maps this to the "mime_type" JSON key.
    * @return value or {@code null} for none
    */
-  public java.lang.String getMimeType() {
-    return mimeType;
+  public java.lang.String getMimeTypeString() {
+    return mimeTypeString;
   }
 
   /**
-   * The mime type of the audio.
-   * @param mimeType mimeType or {@code null} for none
+   * Flexible MIME type string of the audio, superseding mime_type = 1. Note: Bespoke logic in the
+   * GAOS parser/serializer maps this to the "mime_type" JSON key.
+   * @param mimeTypeString mimeTypeString or {@code null} for none
    */
-  public GenaiVertexV1beta1AudioContent setMimeType(java.lang.String mimeType) {
-    this.mimeType = mimeType;
+  public GenaiVertexV1beta1AudioContent setMimeTypeString(java.lang.String mimeTypeString) {
+    this.mimeTypeString = mimeTypeString;
     return this;
   }
 

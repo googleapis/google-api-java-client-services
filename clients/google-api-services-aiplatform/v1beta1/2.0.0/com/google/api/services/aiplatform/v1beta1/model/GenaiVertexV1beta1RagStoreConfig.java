@@ -33,28 +33,28 @@ public final class GenaiVertexV1beta1RagStoreConfig extends com.google.api.clien
    * Optional. The representation of the rag source.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("rag_resources")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1RagStoreConfigRagResource> ragResources;
 
   /**
    * Optional. The retrieval config for the Rag query.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("rag_retrieval_config")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1RagStoreConfigRagRetrievalConfig ragRetrievalConfig;
 
   /**
    * Optional. Number of top k results to return from the selected corpora.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("similarity_top_k")
+  @com.google.api.client.util.Key
   private java.lang.Integer similarityTopK;
 
   /**
    * Optional. Only return results with vector distance smaller than the threshold.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("vector_distance_threshold")
+  @com.google.api.client.util.Key
   private java.lang.Double vectorDistanceThreshold;
 
   /**

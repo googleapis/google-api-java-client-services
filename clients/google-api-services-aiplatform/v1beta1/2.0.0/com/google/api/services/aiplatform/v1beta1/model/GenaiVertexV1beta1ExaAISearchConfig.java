@@ -33,14 +33,14 @@ public final class GenaiVertexV1beta1ExaAISearchConfig extends com.google.api.cl
    * Required. The API key for ExaAiSearch.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("api_key")
+  @com.google.api.client.util.Key
   private java.lang.String apiKey;
 
   /**
    * Optional. This field can be used to pass any parameter from the Exa.ai Search API.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("custom_config")
+  @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> customConfig;
 
   /**

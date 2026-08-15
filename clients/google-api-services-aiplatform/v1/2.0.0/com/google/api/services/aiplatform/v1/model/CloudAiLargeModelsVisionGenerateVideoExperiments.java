@@ -38,6 +38,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.Boolean anchorLastFrame;
 
   /**
+   * Optional. Audio control configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsAudioControlConfig audioControl;
+
+  /**
    * CFG scale for video-transform, perf-generation, a2v, video-textures models.
    * The value may be {@code null}.
    */
@@ -119,6 +126,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.String originalRequestJson;
 
   /**
+   * Config for Outpainting task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig outpaintConfig;
+
+  /**
    * Prompt chunks for "ProModel" prompting. If set, the prompt will not be rewritten, and top-level
    * prompt ignored.
    * The value may be {@code null}.
@@ -168,6 +182,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private java.lang.Boolean truncateInputVideo;
 
   /**
+   * Video transform configuration for omni editing models.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsVideoTransform videoTransform;
+
+  /**
    * GCS URI of the grayscale video mask for Differential Diffusion. Maps to
    * sdedit_video_tmax_scale_map
    * The value may be {@code null}.
@@ -198,6 +219,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setAnchorLastFrame(java.lang.Boolean anchorLastFrame) {
     this.anchorLastFrame = anchorLastFrame;
+    return this;
+  }
+
+  /**
+   * Optional. Audio control configuration.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsAudioControlConfig getAudioControl() {
+    return audioControl;
+  }
+
+  /**
+   * Optional. Audio control configuration.
+   * @param audioControl audioControl or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setAudioControl(CloudAiLargeModelsVisionGenerateVideoExperimentsAudioControlConfig audioControl) {
+    this.audioControl = audioControl;
     return this;
   }
 
@@ -397,6 +435,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   }
 
   /**
+   * Config for Outpainting task.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig getOutpaintConfig() {
+    return outpaintConfig;
+  }
+
+  /**
+   * Config for Outpainting task.
+   * @param outpaintConfig outpaintConfig or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setOutpaintConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig outpaintConfig) {
+    this.outpaintConfig = outpaintConfig;
+    return this;
+  }
+
+  /**
    * Prompt chunks for "ProModel" prompting. If set, the prompt will not be rewritten, and top-level
    * prompt ignored.
    * @return value or {@code null} for none
@@ -509,6 +564,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setTruncateInputVideo(java.lang.Boolean truncateInputVideo) {
     this.truncateInputVideo = truncateInputVideo;
+    return this;
+  }
+
+  /**
+   * Video transform configuration for omni editing models.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsVideoTransform getVideoTransform() {
+    return videoTransform;
+  }
+
+  /**
+   * Video transform configuration for omni editing models.
+   * @param videoTransform videoTransform or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setVideoTransform(CloudAiLargeModelsVisionGenerateVideoExperimentsVideoTransform videoTransform) {
+    this.videoTransform = videoTransform;
     return this;
   }
 

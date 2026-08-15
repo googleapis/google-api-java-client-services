@@ -40,7 +40,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   private java.lang.Boolean audioTimestamp;
 
   /**
-   * Optional. Config for audio transcription (speech recognition).
+   * Optional. Configuration for audio transcription (speech recognition).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,7 +275,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
-   * Optional. Config for audio transcription (speech recognition).
+   * Optional. Configuration for audio transcription (speech recognition).
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AudioTranscriptionConfig getAudioTranscriptionConfig() {
@@ -283,7 +283,7 @@ public final class GoogleCloudAiplatformV1beta1GenerationConfig extends com.goog
   }
 
   /**
-   * Optional. Config for audio transcription (speech recognition).
+   * Optional. Configuration for audio transcription (speech recognition).
    * @param audioTranscriptionConfig audioTranscriptionConfig or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GenerationConfig setAudioTranscriptionConfig(GoogleCloudAiplatformV1beta1AudioTranscriptionConfig audioTranscriptionConfig) {

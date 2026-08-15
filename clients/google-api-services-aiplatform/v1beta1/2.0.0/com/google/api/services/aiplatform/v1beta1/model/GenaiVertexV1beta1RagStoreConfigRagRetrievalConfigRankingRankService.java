@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRank
    * Optional. The model name of the rank service.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("model_name")
+  @com.google.api.client.util.Key
   private java.lang.String modelName;
 
   /**

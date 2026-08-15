@@ -37200,7 +37200,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Lists agents in a location.
+         * Lists the agents in a location that belong to the caller. An agent belongs to the end user
+         * recorded as its owner when it was created, so the response holds that caller's agents and no
+         * others. It is empty for a caller that is not an end user, and an agent with no recorded owner is
+         * listed for nobody.
          *
          * Create a request for the method "agents.list".
          *
@@ -37225,7 +37228,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists agents in a location.
+           * Lists the agents in a location that belong to the caller. An agent belongs to the end user
+           * recorded as its owner when it was created, so the response holds that caller's agents and no
+           * others. It is empty for a caller that is not an end user, and an agent with no recorded owner
+           * is listed for nobody.
            *
            * Create a request for the method "agents.list".
            *

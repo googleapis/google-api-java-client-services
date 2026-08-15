@@ -66,6 +66,13 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
   private GoogleCloudAiplatformV1beta1Content systemInstruction;
 
   /**
+   * Optional. Corresponds to tools in user-facing GenerateContentRequest.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1Tool> tools;
+
+  /**
    * Multi-turn contents that represents the Prompt.
    * @return value or {@code null} for none
    */
@@ -131,6 +138,23 @@ public final class GoogleCloudAiplatformV1beta1ReinforcementTuningExample extend
    */
   public GoogleCloudAiplatformV1beta1ReinforcementTuningExample setSystemInstruction(GoogleCloudAiplatformV1beta1Content systemInstruction) {
     this.systemInstruction = systemInstruction;
+    return this;
+  }
+
+  /**
+   * Optional. Corresponds to tools in user-facing GenerateContentRequest.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1Tool> getTools() {
+    return tools;
+  }
+
+  /**
+   * Optional. Corresponds to tools in user-facing GenerateContentRequest.
+   * @param tools tools or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReinforcementTuningExample setTools(java.util.List<GoogleCloudAiplatformV1beta1Tool> tools) {
+    this.tools = tools;
     return this;
   }
 

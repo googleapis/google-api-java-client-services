@@ -72,6 +72,15 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfig
   private java.lang.Boolean isPreview;
 
   /**
+   * Output only. Short label shown in the compact selector bar chip (e.g. `3.x Flash`) as opposed
+   * to the full `display_name` (`Gemini 3.x Flash`). Falls back to `display_name` when the backend
+   * registry does not specify a distinct short label.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String label;
+
+  /**
    * Output only. Unique identifier of the model (e.g. `gemini-2.5-flash`, `gemini-3.1-pro-
    * preview`). This is the same identifier that clients pass back to the assistant service to
    * select this model. Virtual / "pseudo" models (e.g. `gemini-fast`) are also valid values here;
@@ -175,6 +184,27 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfig
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel setIsPreview(java.lang.Boolean isPreview) {
     this.isPreview = isPreview;
+    return this;
+  }
+
+  /**
+   * Output only. Short label shown in the compact selector bar chip (e.g. `3.x Flash`) as opposed
+   * to the full `display_name` (`Gemini 3.x Flash`). Falls back to `display_name` when the backend
+   * registry does not specify a distinct short label.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLabel() {
+    return label;
+  }
+
+  /**
+   * Output only. Short label shown in the compact selector bar chip (e.g. `3.x Flash`) as opposed
+   * to the full `display_name` (`Gemini 3.x Flash`). Falls back to `display_name` when the backend
+   * registry does not specify a distinct short label.
+   * @param label label or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel setLabel(java.lang.String label) {
+    this.label = label;
     return this;
   }
 

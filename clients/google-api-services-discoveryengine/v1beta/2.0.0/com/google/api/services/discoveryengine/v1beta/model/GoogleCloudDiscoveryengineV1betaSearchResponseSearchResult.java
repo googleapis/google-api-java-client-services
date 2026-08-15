@@ -73,6 +73,14 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
   private GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRankSignals rankSignals;
 
   /**
+   * Optional. A set of signals used by the relevance filter meant for use to fine-tune the
+   * relevance filter thresholds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRetrievalSignals retrievalSignals;
+
+  /**
    * The chunk data in the search response if the SearchRequest.ContentSearchSpec.search_result_mode
    * is set to CHUNKS.
    * @return value or {@code null} for none
@@ -158,6 +166,25 @@ public final class GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult ex
    */
   public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult setRankSignals(GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRankSignals rankSignals) {
     this.rankSignals = rankSignals;
+    return this;
+  }
+
+  /**
+   * Optional. A set of signals used by the relevance filter meant for use to fine-tune the
+   * relevance filter thresholds.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRetrievalSignals getRetrievalSignals() {
+    return retrievalSignals;
+  }
+
+  /**
+   * Optional. A set of signals used by the relevance filter meant for use to fine-tune the
+   * relevance filter thresholds.
+   * @param retrievalSignals retrievalSignals or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSearchResponseSearchResult setRetrievalSignals(GoogleCloudDiscoveryengineV1betaSearchResponseSearchResultRetrievalSignals retrievalSignals) {
+    this.retrievalSignals = retrievalSignals;
     return this;
   }
 

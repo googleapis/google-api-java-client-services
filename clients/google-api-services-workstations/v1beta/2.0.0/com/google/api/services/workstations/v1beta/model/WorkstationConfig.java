@@ -300,11 +300,11 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> replicaZones;
 
   /**
-   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
-   * recommend that workstations be shut down daily to reduce costs and so that security updates can
-   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
-   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
-   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * Optional. Number of seconds to wait before automatically stopping a workstation. We recommend
+   * that workstations be stopped daily so that security updates can be applied upon restart. The
+   * idle_timeout and running_timeout fields are independent of each other. Note that the
+   * running_timeout field stops workstations after the specified time, regardless of whether or not
+   * the workstations are idle. Provide duration terminated by `s` for seconds—for example,
    * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
    * workstations using this configuration should never time out. If encryption_key is set, it must
    * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
@@ -891,11 +891,11 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
-   * recommend that workstations be shut down daily to reduce costs and so that security updates can
-   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
-   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
-   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * Optional. Number of seconds to wait before automatically stopping a workstation. We recommend
+   * that workstations be stopped daily so that security updates can be applied upon restart. The
+   * idle_timeout and running_timeout fields are independent of each other. Note that the
+   * running_timeout field stops workstations after the specified time, regardless of whether or not
+   * the workstations are idle. Provide duration terminated by `s` for seconds—for example,
    * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
    * workstations using this configuration should never time out. If encryption_key is set, it must
    * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
@@ -909,11 +909,11 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Number of seconds that a workstation can run until it is automatically shut down. We
-   * recommend that workstations be shut down daily to reduce costs and so that security updates can
-   * be applied upon restart. The idle_timeout and running_timeout fields are independent of each
-   * other. Note that the running_timeout field shuts down VMs after the specified time, regardless
-   * of whether or not the VMs are idle. Provide duration terminated by `s` for seconds—for example,
+   * Optional. Number of seconds to wait before automatically stopping a workstation. We recommend
+   * that workstations be stopped daily so that security updates can be applied upon restart. The
+   * idle_timeout and running_timeout fields are independent of each other. Note that the
+   * running_timeout field stops workstations after the specified time, regardless of whether or not
+   * the workstations are idle. Provide duration terminated by `s` for seconds—for example,
    * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
    * workstations using this configuration should never time out. If encryption_key is set, it must
    * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`

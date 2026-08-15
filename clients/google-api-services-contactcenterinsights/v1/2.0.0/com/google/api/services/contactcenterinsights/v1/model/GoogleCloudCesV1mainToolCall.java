@@ -31,6 +31,14 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudCesV1mainToolCall extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Human-readable name of the agent that issued this call, e.g. "Contract Architect".
+   * Empty when the root agent issued it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentName;
+
+  /**
    * Optional. The input parameters and values for the tool in JSON object format.
    * The value may be {@code null}.
    */
@@ -53,6 +61,15 @@ public final class GoogleCloudCesV1mainToolCall extends com.google.api.client.js
   private java.lang.String id;
 
   /**
+   * Output only. The id of the tool call that caused this one, when it was issued by a sub-agent
+   * working on behalf of a parent call. Empty for top-level calls. Lets a client group a sub-
+   * agent's work under the call that started it instead of rendering every step as a sibling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentToolCallId;
+
+  /**
    * Optional. The name of the tool to execute. Format:
    * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}`
    * The value may be {@code null}.
@@ -66,6 +83,25 @@ public final class GoogleCloudCesV1mainToolCall extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private GoogleCloudCesV1mainToolsetTool toolsetTool;
+
+  /**
+   * Output only. Human-readable name of the agent that issued this call, e.g. "Contract Architect".
+   * Empty when the root agent issued it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentName() {
+    return agentName;
+  }
+
+  /**
+   * Output only. Human-readable name of the agent that issued this call, e.g. "Contract Architect".
+   * Empty when the root agent issued it.
+   * @param agentName agentName or {@code null} for none
+   */
+  public GoogleCloudCesV1mainToolCall setAgentName(java.lang.String agentName) {
+    this.agentName = agentName;
+    return this;
+  }
 
   /**
    * Optional. The input parameters and values for the tool in JSON object format.
@@ -117,6 +153,27 @@ public final class GoogleCloudCesV1mainToolCall extends com.google.api.client.js
    */
   public GoogleCloudCesV1mainToolCall setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Output only. The id of the tool call that caused this one, when it was issued by a sub-agent
+   * working on behalf of a parent call. Empty for top-level calls. Lets a client group a sub-
+   * agent's work under the call that started it instead of rendering every step as a sibling.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentToolCallId() {
+    return parentToolCallId;
+  }
+
+  /**
+   * Output only. The id of the tool call that caused this one, when it was issued by a sub-agent
+   * working on behalf of a parent call. Empty for top-level calls. Lets a client group a sub-
+   * agent's work under the call that started it instead of rendering every step as a sibling.
+   * @param parentToolCallId parentToolCallId or {@code null} for none
+   */
+  public GoogleCloudCesV1mainToolCall setParentToolCallId(java.lang.String parentToolCallId) {
+    this.parentToolCallId = parentToolCallId;
     return this;
   }
 

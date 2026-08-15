@@ -32,6 +32,14 @@ package com.google.api.services.looker.v1.model;
 public final class ExportMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Source BigQuery dataset (formatted as `project_id:dataset_id`) for O2C Elite System Activity
+   * (ESA) direct dataset migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String esaSourceDatasetId;
+
+  /**
    * Encryption key that was used to encrypt the export artifacts.
    * The value may be {@code null}.
    */
@@ -82,6 +90,25 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Source BigQuery dataset (formatted as `project_id:dataset_id`) for O2C Elite System Activity
+   * (ESA) direct dataset migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEsaSourceDatasetId() {
+    return esaSourceDatasetId;
+  }
+
+  /**
+   * Source BigQuery dataset (formatted as `project_id:dataset_id`) for O2C Elite System Activity
+   * (ESA) direct dataset migration.
+   * @param esaSourceDatasetId esaSourceDatasetId or {@code null} for none
+   */
+  public ExportMetadata setEsaSourceDatasetId(java.lang.String esaSourceDatasetId) {
+    this.esaSourceDatasetId = esaSourceDatasetId;
+    return this;
+  }
 
   /**
    * Encryption key that was used to encrypt the export artifacts.

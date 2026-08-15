@@ -47,11 +47,26 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   private java.util.List<java.lang.String> accessTypes;
 
   /**
+   * Optional. The compute environment where the agent is hosted. Exactly one type of compute must
+   * be chosen.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentCompute;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Required. The deployment model for the gateway.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String deploymentModel;
 
   /**
    * Optional. A free-text description of the resource. Max length 1024 characters.
@@ -138,6 +153,25 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   }
 
   /**
+   * Optional. The compute environment where the agent is hosted. Exactly one type of compute must
+   * be chosen.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentCompute() {
+    return agentCompute;
+  }
+
+  /**
+   * Optional. The compute environment where the agent is hosted. Exactly one type of compute must
+   * be chosen.
+   * @param agentCompute agentCompute or {@code null} for none
+   */
+  public AgentConnectivityTemplate setAgentCompute(java.lang.String agentCompute) {
+    this.agentCompute = agentCompute;
+    return this;
+  }
+
+  /**
    * Output only. The timestamp when the resource was created.
    * @return value or {@code null} for none
    */
@@ -151,6 +185,23 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
    */
   public AgentConnectivityTemplate setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Required. The deployment model for the gateway.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDeploymentModel() {
+    return deploymentModel;
+  }
+
+  /**
+   * Required. The deployment model for the gateway.
+   * @param deploymentModel deploymentModel or {@code null} for none
+   */
+  public AgentConnectivityTemplate setDeploymentModel(java.lang.String deploymentModel) {
+    this.deploymentModel = deploymentModel;
     return this;
   }
 

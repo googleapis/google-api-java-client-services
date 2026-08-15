@@ -33,21 +33,21 @@ public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigFilter exte
    * Optional. String for metadata filtering.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("metadata_filter")
+  @com.google.api.client.util.Key
   private java.lang.String metadataFilter;
 
   /**
    * Optional. Only returns contexts with vector distance smaller than the threshold.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("vector_distance_threshold")
+  @com.google.api.client.util.Key
   private java.lang.Double vectorDistanceThreshold;
 
   /**
    * Optional. Only returns contexts with vector similarity larger than the threshold.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("vector_similarity_threshold")
+  @com.google.api.client.util.Key
   private java.lang.Double vectorSimilarityThreshold;
 
   /**

@@ -37,8 +37,12 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
   private java.lang.String agentDisplayName;
 
   /**
-   * The agent resource name. Format:
-   * `projects/{project}/locations/{location}/reasoningEngines/{agent}`
+   * The resource name or identifier of the agent. Matches `AgentResource.agent` on the
+   * corresponding `MonitoredAgent`, so the format depends on that agent's
+   * `AgentResource.agent_type`: * `REASONING_ENGINE`:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` *
+   * `CLOUD_RUN_SERVICE`, `GKE_WORKLOAD`, `GCE_INSTANCE`: the resource name of the agent's runtime.
+   * * `AGENT_TYPE_OTHER`: a stable identifier for the agent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,6 +55,15 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
    */
   @com.google.api.client.util.Key
   private java.lang.String agentStatus;
+
+  /**
+   * Output only. The runtime the agent is hosted on (for example, `CLOUD_RUN_SERVICE`).
+   * `AGENT_TYPE_UNSPECIFIED` means the runtime is unknown to this service, which is distinct from
+   * `AGENT_TYPE_OTHER` (known, and not one of the enumerated Google Cloud runtimes).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String agentType;
 
   /**
    * The number of anomalous (SESSION_STATE_FLAGGED) sessions for this agent.
@@ -117,8 +130,12 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
   }
 
   /**
-   * The agent resource name. Format:
-   * `projects/{project}/locations/{location}/reasoningEngines/{agent}`
+   * The resource name or identifier of the agent. Matches `AgentResource.agent` on the
+   * corresponding `MonitoredAgent`, so the format depends on that agent's
+   * `AgentResource.agent_type`: * `REASONING_ENGINE`:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` *
+   * `CLOUD_RUN_SERVICE`, `GKE_WORKLOAD`, `GCE_INSTANCE`: the resource name of the agent's runtime.
+   * * `AGENT_TYPE_OTHER`: a stable identifier for the agent.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgentResourceName() {
@@ -126,8 +143,12 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
   }
 
   /**
-   * The agent resource name. Format:
-   * `projects/{project}/locations/{location}/reasoningEngines/{agent}`
+   * The resource name or identifier of the agent. Matches `AgentResource.agent` on the
+   * corresponding `MonitoredAgent`, so the format depends on that agent's
+   * `AgentResource.agent_type`: * `REASONING_ENGINE`:
+   * `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}` *
+   * `CLOUD_RUN_SERVICE`, `GKE_WORKLOAD`, `GCE_INSTANCE`: the resource name of the agent's runtime.
+   * * `AGENT_TYPE_OTHER`: a stable identifier for the agent.
    * @param agentResourceName agentResourceName or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponseAgentAggregate setAgentResourceName(java.lang.String agentResourceName) {
@@ -151,6 +172,27 @@ public final class GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponse
    */
   public GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponseAgentAggregate setAgentStatus(java.lang.String agentStatus) {
     this.agentStatus = agentStatus;
+    return this;
+  }
+
+  /**
+   * Output only. The runtime the agent is hosted on (for example, `CLOUD_RUN_SERVICE`).
+   * `AGENT_TYPE_UNSPECIFIED` means the runtime is unknown to this service, which is distinct from
+   * `AGENT_TYPE_OTHER` (known, and not one of the enumerated Google Cloud runtimes).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAgentType() {
+    return agentType;
+  }
+
+  /**
+   * Output only. The runtime the agent is hosted on (for example, `CLOUD_RUN_SERVICE`).
+   * `AGENT_TYPE_UNSPECIFIED` means the runtime is unknown to this service, which is distinct from
+   * `AGENT_TYPE_OTHER` (known, and not one of the enumerated Google Cloud runtimes).
+   * @param agentType agentType or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AggregateAnalyzedSessionsResponseAgentAggregate setAgentType(java.lang.String agentType) {
+    this.agentType = agentType;
     return this;
   }
 

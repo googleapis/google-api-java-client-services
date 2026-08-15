@@ -33,14 +33,14 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfig extends com.google.ap
    * Parameters for finding vulnerabilities.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("find_request")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1CodeMenderAgentConfigFindRequest findRequest;
 
   /**
    * Parameters for fixing vulnerabilities.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("fix_request")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1CodeMenderAgentConfigFixRequest fixRequest;
 
   /**
@@ -55,14 +55,14 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfig extends com.google.ap
    * Optional session-specific configurations to override default agent behavior.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("session_config")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1CodeMenderAgentConfigSessionConfig sessionConfig;
 
   /**
    * Parameter for grouping multiple interactions that belong to the same CodeMender session.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("session_id")
+  @com.google.api.client.util.Key
   private java.lang.String sessionId;
 
   /**

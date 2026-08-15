@@ -40,7 +40,7 @@ public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfig extends co
    * Optional. Config for Hybrid Search.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("hybrid_search")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigHybridSearch hybridSearch;
 
   /**
@@ -54,7 +54,7 @@ public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfig extends co
    * Optional. The number of contexts to retrieve.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("top_k")
+  @com.google.api.client.util.Key
   private java.lang.Integer topK;
 
   /**

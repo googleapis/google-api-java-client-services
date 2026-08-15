@@ -18,7 +18,7 @@ package com.google.api.services.aiplatform.v1.model;
 
 /**
  * The transcription of an audio part. For multi-speaker audio, each speaker segment is a separate
- * Part with its own AudioTranscription carrying the speaker_label.
+ * `Part` with its own `AudioTranscription` carrying the `speaker_label`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -31,8 +31,8 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1AudioTranscription extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A label identifying the speaker of this audio segment (e.g. "spk_1", "spk_2").
-   * Present when diarization is set.
+   * Optional. A label identifying the speaker of this audio segment (e.g. `spk_1`, `spk_2`).
+   * Present when `diarization` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,16 +46,16 @@ public final class GoogleCloudAiplatformV1AudioTranscription extends com.google.
   private java.lang.String text;
 
   /**
-   * Optional. Detailed word-level transcriptions and timing details. Present when word_timestamp is
-   * set.
+   * Optional. Detailed word-level transcriptions and timing details. Present when `word_timestamp`
+   * is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAiplatformV1AudioTranscriptionWordInfo> words;
 
   /**
-   * Optional. A label identifying the speaker of this audio segment (e.g. "spk_1", "spk_2").
-   * Present when diarization is set.
+   * Optional. A label identifying the speaker of this audio segment (e.g. `spk_1`, `spk_2`).
+   * Present when `diarization` is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpeakerLabel() {
@@ -63,8 +63,8 @@ public final class GoogleCloudAiplatformV1AudioTranscription extends com.google.
   }
 
   /**
-   * Optional. A label identifying the speaker of this audio segment (e.g. "spk_1", "spk_2").
-   * Present when diarization is set.
+   * Optional. A label identifying the speaker of this audio segment (e.g. `spk_1`, `spk_2`).
+   * Present when `diarization` is set.
    * @param speakerLabel speakerLabel or {@code null} for none
    */
   public GoogleCloudAiplatformV1AudioTranscription setSpeakerLabel(java.lang.String speakerLabel) {
@@ -90,8 +90,8 @@ public final class GoogleCloudAiplatformV1AudioTranscription extends com.google.
   }
 
   /**
-   * Optional. Detailed word-level transcriptions and timing details. Present when word_timestamp is
-   * set.
+   * Optional. Detailed word-level transcriptions and timing details. Present when `word_timestamp`
+   * is set.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1AudioTranscriptionWordInfo> getWords() {
@@ -99,8 +99,8 @@ public final class GoogleCloudAiplatformV1AudioTranscription extends com.google.
   }
 
   /**
-   * Optional. Detailed word-level transcriptions and timing details. Present when word_timestamp is
-   * set.
+   * Optional. Detailed word-level transcriptions and timing details. Present when `word_timestamp`
+   * is set.
    * @param words words or {@code null} for none
    */
   public GoogleCloudAiplatformV1AudioTranscription setWords(java.util.List<GoogleCloudAiplatformV1AudioTranscriptionWordInfo> words) {

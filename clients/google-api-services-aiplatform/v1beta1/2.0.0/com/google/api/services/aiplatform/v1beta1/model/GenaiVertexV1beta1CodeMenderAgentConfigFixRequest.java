@@ -42,7 +42,7 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfigFixRequest extends com
    * discovered vulnerability.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("finding_id")
+  @com.google.api.client.util.Key
   private java.lang.String findingId;
 
   /**
@@ -50,7 +50,7 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfigFixRequest extends com
    * ones containing the identified vulnerability.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("source_files")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1CodeMenderAgentConfigFileContent> sourceFiles;
 
   static {

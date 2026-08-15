@@ -48,8 +48,8 @@ public final class GoogleCloudAiplatformV1ReservationAffinity extends com.google
   private java.lang.String reservationAffinityType;
 
   /**
-   * Optional. Corresponds to the label values of a reservation resource. This must be the full
-   * resource name of the reservation or reservation block.
+   * Optional. Corresponds to the label values of a reservation resource. This must be the resource
+   * name of the reservation, reservation block, or reservation sub- block.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,8 +94,8 @@ public final class GoogleCloudAiplatformV1ReservationAffinity extends com.google
   }
 
   /**
-   * Optional. Corresponds to the label values of a reservation resource. This must be the full
-   * resource name of the reservation or reservation block.
+   * Optional. Corresponds to the label values of a reservation resource. This must be the resource
+   * name of the reservation, reservation block, or reservation sub- block.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getValues() {
@@ -103,8 +103,8 @@ public final class GoogleCloudAiplatformV1ReservationAffinity extends com.google
   }
 
   /**
-   * Optional. Corresponds to the label values of a reservation resource. This must be the full
-   * resource name of the reservation or reservation block.
+   * Optional. Corresponds to the label values of a reservation resource. This must be the resource
+   * name of the reservation, reservation block, or reservation sub- block.
    * @param values values or {@code null} for none
    */
   public GoogleCloudAiplatformV1ReservationAffinity setValues(java.util.List<java.lang.String> values) {

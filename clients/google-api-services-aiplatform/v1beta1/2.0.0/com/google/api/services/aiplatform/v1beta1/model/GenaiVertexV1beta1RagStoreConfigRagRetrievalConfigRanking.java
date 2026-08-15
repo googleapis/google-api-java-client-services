@@ -33,7 +33,7 @@ public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking ext
    * Optional. Config for Rank Service.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("rank_service")
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService rankService;
 
   /**

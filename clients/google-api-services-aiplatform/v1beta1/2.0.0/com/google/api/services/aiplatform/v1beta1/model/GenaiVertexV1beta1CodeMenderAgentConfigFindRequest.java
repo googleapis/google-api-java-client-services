@@ -42,7 +42,7 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfigFindRequest extends co
    * the agent's execution-based validation on a single vulnerability.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("finding_id")
+  @com.google.api.client.util.Key
   private java.lang.String findingId;
 
   /**
@@ -56,7 +56,7 @@ public final class GenaiVertexV1beta1CodeMenderAgentConfigFindRequest extends co
    * A list of source files to provide as context for the scan.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("source_files")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1CodeMenderAgentConfigFileContent> sourceFiles;
 
   static {

@@ -74,6 +74,19 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private java.lang.String environmentId;
 
   /**
+   * Output only. Diagnostic faults / platform errors recorded on the interaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GenaiVertexV1beta1Error> errors;
+
+  static {
+    // hack to force ProGuard to consider GenaiVertexV1beta1Error used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GenaiVertexV1beta1Error.class);
+  }
+
+  /**
    * Required. Output only. A unique identifier for the interaction completion.
    * The value may be {@code null}.
    */
@@ -180,8 +193,15 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    * Safety settings for the interaction.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key("safety_settings")
+  @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1SafetySetting> safetySettings;
+
+  /**
+   * The service tier for the interaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceTier;
 
   /**
    * Required. Output only. The status of the interaction.
@@ -350,6 +370,23 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setEnvironmentId(java.lang.String environmentId) {
     this.environmentId = environmentId;
+    return this;
+  }
+
+  /**
+   * Output only. Diagnostic faults / platform errors recorded on the interaction.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GenaiVertexV1beta1Error> getErrors() {
+    return errors;
+  }
+
+  /**
+   * Output only. Diagnostic faults / platform errors recorded on the interaction.
+   * @param errors errors or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setErrors(java.util.List<GenaiVertexV1beta1Error> errors) {
+    this.errors = errors;
     return this;
   }
 
@@ -600,6 +637,23 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setSafetySettings(java.util.List<GenaiVertexV1beta1SafetySetting> safetySettings) {
     this.safetySettings = safetySettings;
+    return this;
+  }
+
+  /**
+   * The service tier for the interaction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceTier() {
+    return serviceTier;
+  }
+
+  /**
+   * The service tier for the interaction.
+   * @param serviceTier serviceTier or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setServiceTier(java.lang.String serviceTier) {
+    this.serviceTier = serviceTier;
     return this;
   }
 

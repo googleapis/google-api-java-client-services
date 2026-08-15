@@ -1732,6 +1732,163 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
   }
 
   /**
+   * An accessor for creating requests from the Users collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code WebContentPublisher webcontentpublisher = new WebContentPublisher(...);}
+   *   {@code WebContentPublisher.Users.List request = webcontentpublisher.users().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Users users() {
+    return new Users();
+  }
+
+  /**
+   * The "users" collection of methods.
+   */
+  public class Users {
+
+    /**
+     * Returns user tokens mapped to their canonical domains for all publications the authenticated user
+     * is entitled to.
+     *
+     * Create a request for the method "users.generatePlatformSiteTokens".
+     *
+     * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+     * optional parameters, call the {@link GeneratePlatformSiteTokens#execute()} method to invoke the
+     * remote operation.
+     *
+     * @param name Required. The resource name of the user to generate tokens for. Format: users/{user}
+     * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.GeneratePlatformSiteTokensRequest}
+     * @return the request
+     */
+    public GeneratePlatformSiteTokens generatePlatformSiteTokens(java.lang.String name, com.google.api.services.webcontentpublisher.v1.model.GeneratePlatformSiteTokensRequest content) throws java.io.IOException {
+      GeneratePlatformSiteTokens result = new GeneratePlatformSiteTokens(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class GeneratePlatformSiteTokens extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.GeneratePlatformSiteTokensResponse> {
+
+      private static final String REST_PATH = "v1/{+name}:generatePlatformSiteTokens";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^users/[^/]+$");
+
+      /**
+       * Returns user tokens mapped to their canonical domains for all publications the authenticated
+       * user is entitled to.
+       *
+       * Create a request for the method "users.generatePlatformSiteTokens".
+       *
+       * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+       * any optional parameters, call the {@link GeneratePlatformSiteTokens#execute()} method to invoke
+       * the remote operation. <p> {@link GeneratePlatformSiteTokens#initialize(com.google.api.client.go
+       * ogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+       * immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the user to generate tokens for. Format: users/{user}
+       * @param content the {@link com.google.api.services.webcontentpublisher.v1.model.GeneratePlatformSiteTokensRequest}
+       * @since 1.13
+       */
+      protected GeneratePlatformSiteTokens(java.lang.String name, com.google.api.services.webcontentpublisher.v1.model.GeneratePlatformSiteTokensRequest content) {
+        super(WebContentPublisher.this, "POST", REST_PATH, content, com.google.api.services.webcontentpublisher.v1.model.GeneratePlatformSiteTokensResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^users/[^/]+$");
+        }
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens set$Xgafv(java.lang.String $Xgafv) {
+        return (GeneratePlatformSiteTokens) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setAccessToken(java.lang.String accessToken) {
+        return (GeneratePlatformSiteTokens) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setAlt(java.lang.String alt) {
+        return (GeneratePlatformSiteTokens) super.setAlt(alt);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setCallback(java.lang.String callback) {
+        return (GeneratePlatformSiteTokens) super.setCallback(callback);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setFields(java.lang.String fields) {
+        return (GeneratePlatformSiteTokens) super.setFields(fields);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setKey(java.lang.String key) {
+        return (GeneratePlatformSiteTokens) super.setKey(key);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setOauthToken(java.lang.String oauthToken) {
+        return (GeneratePlatformSiteTokens) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GeneratePlatformSiteTokens) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setQuotaUser(java.lang.String quotaUser) {
+        return (GeneratePlatformSiteTokens) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setUploadType(java.lang.String uploadType) {
+        return (GeneratePlatformSiteTokens) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GeneratePlatformSiteTokens) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the user to generate tokens for. Format: users/{user} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the user to generate tokens for. Format: users/{user}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The resource name of the user to generate tokens for. Format: users/{user} */
+      public GeneratePlatformSiteTokens setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^users/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GeneratePlatformSiteTokens set(String parameterName, Object value) {
+        return (GeneratePlatformSiteTokens) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link WebContentPublisher}.
    *
    * <p>

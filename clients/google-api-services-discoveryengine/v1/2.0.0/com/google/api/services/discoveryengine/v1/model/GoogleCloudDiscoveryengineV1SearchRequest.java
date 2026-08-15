@@ -327,6 +327,16 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private java.lang.String rankingExpressionBackend;
 
   /**
+   * Optional. The granular relevance filtering specification. If not specified, the global
+   * `relevance_threshold` will be used for all sub-searches. If specified, this overrides the
+   * global `relevance_threshold` to use thresholds on a per sub-search basis. This feature is
+   * currently supported only for custom and site search.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec relevanceFilterSpec;
+
+  /**
    * Optional. The specification for returning the relevance score.
    * The value may be {@code null}.
    */
@@ -1094,6 +1104,29 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setRankingExpressionBackend(java.lang.String rankingExpressionBackend) {
     this.rankingExpressionBackend = rankingExpressionBackend;
+    return this;
+  }
+
+  /**
+   * Optional. The granular relevance filtering specification. If not specified, the global
+   * `relevance_threshold` will be used for all sub-searches. If specified, this overrides the
+   * global `relevance_threshold` to use thresholds on a per sub-search basis. This feature is
+   * currently supported only for custom and site search.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec getRelevanceFilterSpec() {
+    return relevanceFilterSpec;
+  }
+
+  /**
+   * Optional. The granular relevance filtering specification. If not specified, the global
+   * `relevance_threshold` will be used for all sub-searches. If specified, this overrides the
+   * global `relevance_threshold` to use thresholds on a per sub-search basis. This feature is
+   * currently supported only for custom and site search.
+   * @param relevanceFilterSpec relevanceFilterSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setRelevanceFilterSpec(GoogleCloudDiscoveryengineV1SearchRequestRelevanceFilterSpec relevanceFilterSpec) {
+    this.relevanceFilterSpec = relevanceFilterSpec;
     return this;
   }
 

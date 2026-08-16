@@ -47,14 +47,14 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies the data governance tags on this field. This field works with other column-
-   * level security fields as follows: - Precedence: If a data governance tag is attached to a
+   * level security fields as follows: * **Precedence**: If a data governance tag is attached to a
    * column, it takes precedence over the policy tag attached to the column. However, if a data
-   * policy is attached to a column, it takes precedence over the data governance tag. - Patching
-   * behavior (how this field behaves during a `Table.patch` schema update): - Unset: If the
-   * `data_governance_tags_info` field is omitted from the update request, the existing tags on the
-   * column are preserved. - Empty Field: To clear data governance tags from a column, send the
-   * `data_governance_tags_info` field as an empty object. This will remove all tags from the
-   * column. - Updating tags: To replace existing tag, send the field with the new tag.
+   * policy is attached to a column, it takes precedence over the data governance tag. * **Patching
+   * behavior**: Describes how this field behaves during a `Table.patch` schema update: * **Unset**:
+   * If the `data_governance_tags_info` field is omitted from the update request, the existing tags
+   * on the column are preserved. * **Empty Field**: To clear data governance tags from a column,
+   * send the `data_governance_tags_info` field as an empty object. This removes all tags from the
+   * column. * **Updating tags**: To replace an existing tag, send the field with the new tag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -255,14 +255,14 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies the data governance tags on this field. This field works with other column-
-   * level security fields as follows: - Precedence: If a data governance tag is attached to a
+   * level security fields as follows: * **Precedence**: If a data governance tag is attached to a
    * column, it takes precedence over the policy tag attached to the column. However, if a data
-   * policy is attached to a column, it takes precedence over the data governance tag. - Patching
-   * behavior (how this field behaves during a `Table.patch` schema update): - Unset: If the
-   * `data_governance_tags_info` field is omitted from the update request, the existing tags on the
-   * column are preserved. - Empty Field: To clear data governance tags from a column, send the
-   * `data_governance_tags_info` field as an empty object. This will remove all tags from the
-   * column. - Updating tags: To replace existing tag, send the field with the new tag.
+   * policy is attached to a column, it takes precedence over the data governance tag. * **Patching
+   * behavior**: Describes how this field behaves during a `Table.patch` schema update: * **Unset**:
+   * If the `data_governance_tags_info` field is omitted from the update request, the existing tags
+   * on the column are preserved. * **Empty Field**: To clear data governance tags from a column,
+   * send the `data_governance_tags_info` field as an empty object. This removes all tags from the
+   * column. * **Updating tags**: To replace an existing tag, send the field with the new tag.
    * @return value or {@code null} for none
    */
   public DataGovernanceTagsInfo getDataGovernanceTagsInfo() {
@@ -271,14 +271,14 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies the data governance tags on this field. This field works with other column-
-   * level security fields as follows: - Precedence: If a data governance tag is attached to a
+   * level security fields as follows: * **Precedence**: If a data governance tag is attached to a
    * column, it takes precedence over the policy tag attached to the column. However, if a data
-   * policy is attached to a column, it takes precedence over the data governance tag. - Patching
-   * behavior (how this field behaves during a `Table.patch` schema update): - Unset: If the
-   * `data_governance_tags_info` field is omitted from the update request, the existing tags on the
-   * column are preserved. - Empty Field: To clear data governance tags from a column, send the
-   * `data_governance_tags_info` field as an empty object. This will remove all tags from the
-   * column. - Updating tags: To replace existing tag, send the field with the new tag.
+   * policy is attached to a column, it takes precedence over the data governance tag. * **Patching
+   * behavior**: Describes how this field behaves during a `Table.patch` schema update: * **Unset**:
+   * If the `data_governance_tags_info` field is omitted from the update request, the existing tags
+   * on the column are preserved. * **Empty Field**: To clear data governance tags from a column,
+   * send the `data_governance_tags_info` field as an empty object. This removes all tags from the
+   * column. * **Updating tags**: To replace an existing tag, send the field with the new tag.
    * @param dataGovernanceTagsInfo dataGovernanceTagsInfo or {@code null} for none
    */
   public TableFieldSchema setDataGovernanceTagsInfo(DataGovernanceTagsInfo dataGovernanceTagsInfo) {
@@ -688,25 +688,25 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Specifies the data governance tags on this field. This field works with other column-
-   * level security fields as follows: - Precedence: If a data governance tag is attached to a column,
-   * it takes precedence over the policy tag attached to the column. However, if a data policy is
-   * attached to a column, it takes precedence over the data governance tag. - Patching behavior (how
-   * this field behaves during a `Table.patch` schema update): - Unset: If the
-   * `data_governance_tags_info` field is omitted from the update request, the existing tags on the
-   * column are preserved. - Empty Field: To clear data governance tags from a column, send the
-   * `data_governance_tags_info` field as an empty object. This will remove all tags from the column.
-   * - Updating tags: To replace existing tag, send the field with the new tag.
+   * level security fields as follows: * **Precedence**: If a data governance tag is attached to a
+   * column, it takes precedence over the policy tag attached to the column. However, if a data policy
+   * is attached to a column, it takes precedence over the data governance tag. * **Patching
+   * behavior**: Describes how this field behaves during a `Table.patch` schema update: * **Unset**:
+   * If the `data_governance_tags_info` field is omitted from the update request, the existing tags on
+   * the column are preserved. * **Empty Field**: To clear data governance tags from a column, send
+   * the `data_governance_tags_info` field as an empty object. This removes all tags from the column.
+   * * **Updating tags**: To replace an existing tag, send the field with the new tag.
    */
   public static final class DataGovernanceTagsInfo extends com.google.api.client.json.GenericJson {
 
     /**
      * Optional. The data governance tags added to this field are used for field-level access control.
      * Only one data governance tag is currently supported on a field. Tag keys are globally unique.
-     * Tag key is expected to be in the namespaced format, for example "123456789012/pii" where
-     * 123456789012 is the ID of the parent organization or project resource for this tag key. Tag
-     * value is expected to be the short name, for example "sensitive". See [Tag
+     * Tag key is expected to be in the namespaced format, for example "parent-id/pii" where parent-id
+     * is the ID of the parent organization or project resource for this tag key. Tag value is
+     * expected to be the short name, for example "sensitive". See [Tag
      * definitions](https://cloud.google.com/iam/docs/tags-access-control#definitions) for more
-     * details. For example: "123456789012/pii": "sensitive", "myProject/cost_center": "sales"
+     * details. For example: "parent-id/pii": "sensitive", "myProject/cost_center": "sales"
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -715,11 +715,11 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     /**
      * Optional. The data governance tags added to this field are used for field-level access control.
      * Only one data governance tag is currently supported on a field. Tag keys are globally unique.
-     * Tag key is expected to be in the namespaced format, for example "123456789012/pii" where
-     * 123456789012 is the ID of the parent organization or project resource for this tag key. Tag
-     * value is expected to be the short name, for example "sensitive". See [Tag
+     * Tag key is expected to be in the namespaced format, for example "parent-id/pii" where parent-id
+     * is the ID of the parent organization or project resource for this tag key. Tag value is
+     * expected to be the short name, for example "sensitive". See [Tag
      * definitions](https://cloud.google.com/iam/docs/tags-access-control#definitions) for more
-     * details. For example: "123456789012/pii": "sensitive", "myProject/cost_center": "sales"
+     * details. For example: "parent-id/pii": "sensitive", "myProject/cost_center": "sales"
      * @return value or {@code null} for none
      */
     public java.util.Map<String, java.lang.String> getDataGovernanceTags() {
@@ -729,11 +729,11 @@ public final class TableFieldSchema extends com.google.api.client.json.GenericJs
     /**
      * Optional. The data governance tags added to this field are used for field-level access control.
      * Only one data governance tag is currently supported on a field. Tag keys are globally unique.
-     * Tag key is expected to be in the namespaced format, for example "123456789012/pii" where
-     * 123456789012 is the ID of the parent organization or project resource for this tag key. Tag
-     * value is expected to be the short name, for example "sensitive". See [Tag
+     * Tag key is expected to be in the namespaced format, for example "parent-id/pii" where parent-id
+     * is the ID of the parent organization or project resource for this tag key. Tag value is
+     * expected to be the short name, for example "sensitive". See [Tag
      * definitions](https://cloud.google.com/iam/docs/tags-access-control#definitions) for more
-     * details. For example: "123456789012/pii": "sensitive", "myProject/cost_center": "sales"
+     * details. For example: "parent-id/pii": "sensitive", "myProject/cost_center": "sales"
      * @param dataGovernanceTags dataGovernanceTags or {@code null} for none
      */
     public DataGovernanceTagsInfo setDataGovernanceTags(java.util.Map<String, java.lang.String> dataGovernanceTags) {

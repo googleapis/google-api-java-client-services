@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.playdeveloperreporting.v1beta1.model;
+package com.google.api.services.playdeveloperreporting.v1alpha1.model;
 
 /**
- * Request message for QueryStuckBackgroundWakelockRateMetricSet.
+ * Request message for QueryBitmapMemoryUsageMetricSet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Developer Reporting API. For a detailed
@@ -28,7 +28,7 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest extends com.google.api.client.json.GenericJson {
+public final class GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Dimensions to slice the data by. **Supported dimensions:** * `apiLevel` (string): the
@@ -40,11 +40,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
    * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
    * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096
-   * for 4-6GB). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g.,
-   * Samsung. [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER)
-   * * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
-   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
+   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung. *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100". *
    * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel`
    * (string): Model of the device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the
    * device's GPU, e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
@@ -52,7 +50,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * (string): Vulkan version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL
    * ES version of the device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the
    * device, e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g.,
-   * mdpi, hdpi.
+   * mdpi, hdpi. * `processName` (string): the name of the process that was running, e.g.,
+   * com.example.app. * `appState` (string): the state of the app when memory was collected, e.g.,
+   * FOREGROUND.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,20 +68,16 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
   private java.lang.String filter;
 
   /**
-   * Optional. Metrics to aggregate. **Supported metrics:** * `stuckBgWakelockRate`
-   * (`google.type.Decimal`): Percentage of distinct users in the aggregation period that had a
-   * wakelock held in the background for longer than 1 hour. * `stuckBgWakelockRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `stuckBgWakelockRate` in the last 7 days. The
-   * daily values are weighted by the count of distinct users for the day. *
-   * `stuckBgWakelockRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
-   * `stuckBgWakelockRate` in the last 28 days. The daily values are weighted by the count of
-   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
-   * in the aggregation period that were used as normalization value for the `stuckBgWakelockRate`
-   * metric. A user is counted in this metric if they app was doing any work on the device, i.e.,
-   * not just active foreground usage but also background work. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times. The value is
-   * rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of
-   * the value.
+   * Optional. Metrics to aggregate. **Supported metrics:** * `bitmapMemoryUsageP50`
+   * (`google.type.Decimal`): 50th percentile of bitmap memory usage. * `bitmapMemoryUsageP75`
+   * (`google.type.Decimal`): 75th percentile of bitmap memory usage. * `bitmapMemoryUsageP90`
+   * (`google.type.Decimal`): 90th percentile of bitmap memory usage. * `bitmapMemoryUsageP95`
+   * (`google.type.Decimal`): 95th percentile of bitmap memory usage. * `bitmapMemoryUsageP99`
+   * (`google.type.Decimal`): 99th percentile of bitmap memory usage. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users for which memory metrics were reported during
+   * the aggregation period. Care must be taken not to aggregate this count further, as it may
+   * result in users being counted multiple times. The value is rounded to the nearest multiple of
+   * 10, 100, 1,000 or 1,000,000, depending on the magnitude of the value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,11 +103,11 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
   /**
    * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
    * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
-   * constraints, the only supported timezone is `America/Los_Angeles`.
+   * constraints, the default and only supported timezone is `America/Los_Angeles`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GooglePlayDeveloperReportingV1beta1TimelineSpec timelineSpec;
+  private GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec;
 
   /**
    * Optional. User view to select. The output data will correspond to the selected view. The only
@@ -131,11 +127,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
    * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
    * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096
-   * for 4-6GB). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g.,
-   * Samsung. [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER)
-   * * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
-   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
+   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung. *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100". *
    * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel`
    * (string): Model of the device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the
    * device's GPU, e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
@@ -143,7 +137,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * (string): Vulkan version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL
    * ES version of the device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the
    * device, e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g.,
-   * mdpi, hdpi.
+   * mdpi, hdpi. * `processName` (string): the name of the process that was running, e.g.,
+   * com.example.app. * `appState` (string): the state of the app when memory was collected, e.g.,
+   * FOREGROUND.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDimensions() {
@@ -160,11 +156,9 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * google. * `deviceType` (string): the type (also known as form factor) of the user's device,
    * e.g., PHONE. * `countryCode` (string): the country or region of the user's device based on
    * their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United States). *
-   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096
-   * for 4-6GB). * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g.,
-   * Samsung. [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER)
-   * * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
-   * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
+   * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
+   * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung. *
+   * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100". *
    * `deviceCpuMake` (string): Make of the device's CPU, e.g., Qualcomm. * `deviceCpuModel`
    * (string): Model of the device's CPU, e.g., "Kryo 240". * `deviceGpuMake` (string): Make of the
    * device's GPU, e.g., ARM. * `deviceGpuModel` (string): Model of the device's GPU, e.g., Mali. *
@@ -172,10 +166,12 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * (string): Vulkan version of the device, e.g., "4198400". * `deviceGlEsVersion` (string): OpenGL
    * ES version of the device, e.g., "196610". * `deviceScreenSize` (string): Screen size of the
    * device, e.g., NORMAL, LARGE. * `deviceScreenDpi` (string): Screen density of the device, e.g.,
-   * mdpi, hdpi.
+   * mdpi, hdpi. * `processName` (string): the name of the process that was running, e.g.,
+   * com.example.app. * `appState` (string): the state of the app when memory was collected, e.g.,
+   * FOREGROUND.
    * @param dimensions dimensions or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setDimensions(java.util.List<java.lang.String> dimensions) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setDimensions(java.util.List<java.lang.String> dimensions) {
     this.dimensions = dimensions;
     return this;
   }
@@ -196,26 +192,22 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * breakdown dimensions.
    * @param filter filter or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setFilter(java.lang.String filter) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setFilter(java.lang.String filter) {
     this.filter = filter;
     return this;
   }
 
   /**
-   * Optional. Metrics to aggregate. **Supported metrics:** * `stuckBgWakelockRate`
-   * (`google.type.Decimal`): Percentage of distinct users in the aggregation period that had a
-   * wakelock held in the background for longer than 1 hour. * `stuckBgWakelockRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `stuckBgWakelockRate` in the last 7 days. The
-   * daily values are weighted by the count of distinct users for the day. *
-   * `stuckBgWakelockRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
-   * `stuckBgWakelockRate` in the last 28 days. The daily values are weighted by the count of
-   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
-   * in the aggregation period that were used as normalization value for the `stuckBgWakelockRate`
-   * metric. A user is counted in this metric if they app was doing any work on the device, i.e.,
-   * not just active foreground usage but also background work. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times. The value is
-   * rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of
-   * the value.
+   * Optional. Metrics to aggregate. **Supported metrics:** * `bitmapMemoryUsageP50`
+   * (`google.type.Decimal`): 50th percentile of bitmap memory usage. * `bitmapMemoryUsageP75`
+   * (`google.type.Decimal`): 75th percentile of bitmap memory usage. * `bitmapMemoryUsageP90`
+   * (`google.type.Decimal`): 90th percentile of bitmap memory usage. * `bitmapMemoryUsageP95`
+   * (`google.type.Decimal`): 95th percentile of bitmap memory usage. * `bitmapMemoryUsageP99`
+   * (`google.type.Decimal`): 99th percentile of bitmap memory usage. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users for which memory metrics were reported during
+   * the aggregation period. Care must be taken not to aggregate this count further, as it may
+   * result in users being counted multiple times. The value is rounded to the nearest multiple of
+   * 10, 100, 1,000 or 1,000,000, depending on the magnitude of the value.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMetrics() {
@@ -223,23 +215,19 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
   }
 
   /**
-   * Optional. Metrics to aggregate. **Supported metrics:** * `stuckBgWakelockRate`
-   * (`google.type.Decimal`): Percentage of distinct users in the aggregation period that had a
-   * wakelock held in the background for longer than 1 hour. * `stuckBgWakelockRate7dUserWeighted`
-   * (`google.type.Decimal`): Rolling average value of `stuckBgWakelockRate` in the last 7 days. The
-   * daily values are weighted by the count of distinct users for the day. *
-   * `stuckBgWakelockRate28dUserWeighted` (`google.type.Decimal`): Rolling average value of
-   * `stuckBgWakelockRate` in the last 28 days. The daily values are weighted by the count of
-   * distinct users for the day. * `distinctUsers` (`google.type.Decimal`): Count of distinct users
-   * in the aggregation period that were used as normalization value for the `stuckBgWakelockRate`
-   * metric. A user is counted in this metric if they app was doing any work on the device, i.e.,
-   * not just active foreground usage but also background work. Care must be taken not to aggregate
-   * this count further, as it may result in users being counted multiple times. The value is
-   * rounded to the nearest multiple of 10, 100, 1,000 or 1,000,000, depending on the magnitude of
-   * the value.
+   * Optional. Metrics to aggregate. **Supported metrics:** * `bitmapMemoryUsageP50`
+   * (`google.type.Decimal`): 50th percentile of bitmap memory usage. * `bitmapMemoryUsageP75`
+   * (`google.type.Decimal`): 75th percentile of bitmap memory usage. * `bitmapMemoryUsageP90`
+   * (`google.type.Decimal`): 90th percentile of bitmap memory usage. * `bitmapMemoryUsageP95`
+   * (`google.type.Decimal`): 95th percentile of bitmap memory usage. * `bitmapMemoryUsageP99`
+   * (`google.type.Decimal`): 99th percentile of bitmap memory usage. * `distinctUsers`
+   * (`google.type.Decimal`): Count of distinct users for which memory metrics were reported during
+   * the aggregation period. Care must be taken not to aggregate this count further, as it may
+   * result in users being counted multiple times. The value is rounded to the nearest multiple of
+   * 10, 100, 1,000 or 1,000,000, depending on the magnitude of the value.
    * @param metrics metrics or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setMetrics(java.util.List<java.lang.String> metrics) {
     this.metrics = metrics;
     return this;
   }
@@ -258,7 +246,7 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * returned. The maximum value is 100000; values above 100000 will be coerced to 100000.
    * @param pageSize pageSize or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setPageSize(java.lang.Integer pageSize) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setPageSize(java.lang.Integer pageSize) {
     this.pageSize = pageSize;
     return this;
   }
@@ -279,7 +267,7 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * provided the page token.
    * @param pageToken pageToken or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setPageToken(java.lang.String pageToken) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setPageToken(java.lang.String pageToken) {
     this.pageToken = pageToken;
     return this;
   }
@@ -287,20 +275,20 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
   /**
    * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
    * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
-   * constraints, the only supported timezone is `America/Los_Angeles`.
+   * constraints, the default and only supported timezone is `America/Los_Angeles`.
    * @return value or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1TimelineSpec getTimelineSpec() {
+  public GooglePlayDeveloperReportingV1alpha1TimelineSpec getTimelineSpec() {
     return timelineSpec;
   }
 
   /**
    * Optional. Specification of the timeline aggregation parameters. **Supported aggregation
    * periods:** * DAILY: metrics are aggregated in calendar date intervals. Due to historical
-   * constraints, the only supported timezone is `America/Los_Angeles`.
+   * constraints, the default and only supported timezone is `America/Los_Angeles`.
    * @param timelineSpec timelineSpec or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setTimelineSpec(GooglePlayDeveloperReportingV1beta1TimelineSpec timelineSpec) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setTimelineSpec(GooglePlayDeveloperReportingV1alpha1TimelineSpec timelineSpec) {
     this.timelineSpec = timelineSpec;
     return this;
   }
@@ -319,19 +307,19 @@ public final class GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelo
    * supported value is `OS_PUBLIC`.
    * @param userCohort userCohort or {@code null} for none
    */
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest setUserCohort(java.lang.String userCohort) {
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest setUserCohort(java.lang.String userCohort) {
     this.userCohort = userCohort;
     return this;
   }
 
   @Override
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest set(String fieldName, Object value) {
-    return (GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest) super.set(fieldName, value);
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest set(String fieldName, Object value) {
+    return (GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest clone() {
-    return (GooglePlayDeveloperReportingV1beta1QueryStuckBackgroundWakelockRateMetricSetRequest) super.clone();
+  public GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest clone() {
+    return (GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest) super.clone();
   }
 
 }

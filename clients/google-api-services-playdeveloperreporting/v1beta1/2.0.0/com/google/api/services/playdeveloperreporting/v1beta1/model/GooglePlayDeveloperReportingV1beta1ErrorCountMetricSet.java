@@ -35,8 +35,9 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
  * corresponds to Build.BRAND and device corresponds to Build.DEVICE, e.g., google/coral. *
  * `deviceType` (string): identifier of the device's form factor, e.g., PHONE. * `issueId` (string):
  * the id an error was assigned to. The value should correspond to the `{issue}` component of the
- * issue name. * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
- * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+ * issue name. * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (e.g., 1024 for
+ * 1-1.5GB, 4096 for 4-6GB). * `deviceSocMake` (string): Make of the device's primary system-on-
+ * chip, e.g., Samsung.
  * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
  * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
  * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) * `deviceCpuMake`

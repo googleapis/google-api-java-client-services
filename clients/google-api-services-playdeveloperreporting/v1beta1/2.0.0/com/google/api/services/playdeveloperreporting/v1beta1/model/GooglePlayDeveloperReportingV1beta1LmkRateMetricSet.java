@@ -43,8 +43,9 @@ package com.google.api.services.playdeveloperreporting.v1beta1.model;
  * device brand, e.g., google. * `deviceType` (string): the type (also known as form factor) of the
  * user's device, e.g., PHONE. * `countryCode` (string): the country or region of the user's device
  * based on their IP address, represented as a 2-letter ISO-3166 code (e.g. US for the United
- * States). * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (3GB, 4GB, etc.). *
- * `deviceSocMake` (string): Make of the device's primary system-on-chip, e.g., Samsung.
+ * States). * `deviceRamBucket` (int64): RAM of the device, in MB, in buckets (e.g., 1024 for
+ * 1-1.5GB, 4096 for 4-6GB). * `deviceSocMake` (string): Make of the device's primary system-on-
+ * chip, e.g., Samsung.
  * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
  * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
  * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) * `deviceCpuMake`

@@ -735,6 +735,298 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
   public class Vitals {
 
     /**
+     * An accessor for creating requests from the Anonrssandswapmemoryusage collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Anonrssandswapmemoryusage.List request = playdeveloperreporting.anonrssandswapmemoryusage().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Anonrssandswapmemoryusage anonrssandswapmemoryusage() {
+      return new Anonrssandswapmemoryusage();
+    }
+
+    /**
+     * The "anonrssandswapmemoryusage" collection of methods.
+     */
+    public class Anonrssandswapmemoryusage {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "anonrssandswapmemoryusage.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1AnonRssAndSwapMemoryUsageMetricSet> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/anonRssAndSwapMemoryUsageMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "anonrssandswapmemoryusage.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1AnonRssAndSwapMemoryUsageMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/anonRssAndSwapMemoryUsageMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/anonRssAndSwapMemoryUsageMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "anonrssandswapmemoryusage.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryAnonRssAndSwapMemoryUsageMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryAnonRssAndSwapMemoryUsageMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryAnonRssAndSwapMemoryUsageMetricSetResponse> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/anonRssAndSwapMemoryUsageMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "anonrssandswapmemoryusage.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryAnonRssAndSwapMemoryUsageMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryAnonRssAndSwapMemoryUsageMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryAnonRssAndSwapMemoryUsageMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/anonRssAndSwapMemoryUsageMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. * The resource name. Format: apps/{app}/anonRssAndSwapMemoryUsageMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/anonRssAndSwapMemoryUsageMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the Anrrate collection.
      *
      * <p>The typical use is:</p>
@@ -1014,6 +1306,298 @@ public class Playdeveloperreporting extends com.google.api.client.googleapis.ser
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                 "Parameter name must conform to the pattern " +
                 "^apps/[^/]+/anrRateMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Query set(String parameterName, Object value) {
+          return (Query) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the Bitmapmemoryusage collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Playdeveloperreporting playdeveloperreporting = new Playdeveloperreporting(...);}
+     *   {@code Playdeveloperreporting.Bitmapmemoryusage.List request = playdeveloperreporting.bitmapmemoryusage().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Bitmapmemoryusage bitmapmemoryusage() {
+      return new Bitmapmemoryusage();
+    }
+
+    /**
+     * The "bitmapmemoryusage" collection of methods.
+     */
+    public class Bitmapmemoryusage {
+
+      /**
+       * Describes the properties of the metric set.
+       *
+       * Create a request for the method "bitmapmemoryusage.get".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1BitmapMemoryUsageMetricSet> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/bitmapMemoryUsageMetricSet$");
+
+        /**
+         * Describes the properties of the metric set.
+         *
+         * Create a request for the method "bitmapmemoryusage.get".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(Playdeveloperreporting.this, "GET", REST_PATH, null, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1BitmapMemoryUsageMetricSet.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/bitmapMemoryUsageMetricSet$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/bitmapMemoryUsageMetricSet$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Queries the metrics in the metric set.
+       *
+       * Create a request for the method "bitmapmemoryusage.query".
+       *
+       * This request holds the parameters needed by the playdeveloperreporting server.  After setting any
+       * optional parameters, call the {@link Query#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet
+       * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest}
+       * @return the request
+       */
+      public Query query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest content) throws java.io.IOException {
+        Query result = new Query(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Query extends PlaydeveloperreportingRequest<com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetResponse> {
+
+        private static final String REST_PATH = "v1alpha1/{+name}:query";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^apps/[^/]+/bitmapMemoryUsageMetricSet$");
+
+        /**
+         * Queries the metrics in the metric set.
+         *
+         * Create a request for the method "bitmapmemoryusage.query".
+         *
+         * This request holds the parameters needed by the the playdeveloperreporting server.  After
+         * setting any optional parameters, call the {@link Query#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Query#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet
+         * @param content the {@link com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest}
+         * @since 1.13
+         */
+        protected Query(java.lang.String name, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetRequest content) {
+          super(Playdeveloperreporting.this, "POST", REST_PATH, content, com.google.api.services.playdeveloperreporting.v1alpha1.model.GooglePlayDeveloperReportingV1alpha1QueryBitmapMemoryUsageMetricSetResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/bitmapMemoryUsageMetricSet$");
+          }
+        }
+
+        @Override
+        public Query set$Xgafv(java.lang.String $Xgafv) {
+          return (Query) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Query setAccessToken(java.lang.String accessToken) {
+          return (Query) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Query setAlt(java.lang.String alt) {
+          return (Query) super.setAlt(alt);
+        }
+
+        @Override
+        public Query setCallback(java.lang.String callback) {
+          return (Query) super.setCallback(callback);
+        }
+
+        @Override
+        public Query setFields(java.lang.String fields) {
+          return (Query) super.setFields(fields);
+        }
+
+        @Override
+        public Query setKey(java.lang.String key) {
+          return (Query) super.setKey(key);
+        }
+
+        @Override
+        public Query setOauthToken(java.lang.String oauthToken) {
+          return (Query) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Query setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Query) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Query setQuotaUser(java.lang.String quotaUser) {
+          return (Query) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Query setUploadType(java.lang.String uploadType) {
+          return (Query) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Query setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Query) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The resource name. Format: apps/{app}/bitmapMemoryUsageMetricSet */
+        public Query setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^apps/[^/]+/bitmapMemoryUsageMetricSet$");
           }
           this.name = name;
           return this;

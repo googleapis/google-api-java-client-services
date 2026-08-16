@@ -40,8 +40,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRe
    * `reportType` (string): the type of error. The value should correspond to one of the possible
    * values in ErrorType. * `issueId` (string): the id an error was assigned to. The value should
    * correspond to the `{issue}` component of the issue name. * `deviceRamBucket` (int64): RAM of
-   * the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the
-   * device's primary system-on-chip, e.g., Samsung.
+   * the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096 for 4-6GB). * `deviceSocMake`
+   * (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -116,8 +116,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRe
    * `reportType` (string): the type of error. The value should correspond to one of the possible
    * values in ErrorType. * `issueId` (string): the id an error was assigned to. The value should
    * correspond to the `{issue}` component of the issue name. * `deviceRamBucket` (int64): RAM of
-   * the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the
-   * device's primary system-on-chip, e.g., Samsung.
+   * the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096 for 4-6GB). * `deviceSocMake`
+   * (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *
@@ -145,8 +145,8 @@ public final class GooglePlayDeveloperReportingV1beta1QueryErrorCountMetricSetRe
    * `reportType` (string): the type of error. The value should correspond to one of the possible
    * values in ErrorType. * `issueId` (string): the id an error was assigned to. The value should
    * correspond to the `{issue}` component of the issue name. * `deviceRamBucket` (int64): RAM of
-   * the device, in MB, in buckets (3GB, 4GB, etc.). * `deviceSocMake` (string): Make of the
-   * device's primary system-on-chip, e.g., Samsung.
+   * the device, in MB, in buckets (e.g., 1024 for 1-1.5GB, 4096 for 4-6GB). * `deviceSocMake`
+   * (string): Make of the device's primary system-on-chip, e.g., Samsung.
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MANUFACTURER) *
    * `deviceSocModel` (string): Model of the device's primary system-on-chip, e.g., "Exynos 2100".
    * [Reference](https://developer.android.com/reference/android/os/Build#SOC_MODEL) *

@@ -7311,6 +7311,173 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (TestIamPermissions) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates a managed folder using patch semantics.
+     *
+     * Create a request for the method "managedFolders.update".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param bucket The name of the bucket containing the managed folder.
+     * @param managedFolder The name of the managed folder.
+     * @param content the {@link com.google.api.services.storage.model.ManagedFolder}
+     * @return the request
+     */
+    public Update update(java.lang.String bucket, java.lang.String managedFolder, com.google.api.services.storage.model.ManagedFolder content) throws java.io.IOException {
+      Update result = new Update(bucket, managedFolder, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends StorageRequest<com.google.api.services.storage.model.ManagedFolder> {
+
+      private static final String REST_PATH = "b/{bucket}/managedFolders/{managedFolder}";
+
+      /**
+       * Updates a managed folder using patch semantics.
+       *
+       * Create a request for the method "managedFolders.update".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket The name of the bucket containing the managed folder.
+       * @param managedFolder The name of the managed folder.
+       * @param content the {@link com.google.api.services.storage.model.ManagedFolder}
+       * @since 1.13
+       */
+      protected Update(java.lang.String bucket, java.lang.String managedFolder, com.google.api.services.storage.model.ManagedFolder content) {
+        super(Storage.this, "PATCH", REST_PATH, content, com.google.api.services.storage.model.ManagedFolder.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.managedFolder = com.google.api.client.util.Preconditions.checkNotNull(managedFolder, "Required parameter managedFolder must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** The name of the bucket containing the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** The name of the bucket containing the managed folder.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** The name of the bucket containing the managed folder. */
+      public Update setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The name of the managed folder. */
+      @com.google.api.client.util.Key
+      private java.lang.String managedFolder;
+
+      /** The name of the managed folder.
+       */
+      public java.lang.String getManagedFolder() {
+        return managedFolder;
+      }
+
+      /** The name of the managed folder. */
+      public Update setManagedFolder(java.lang.String managedFolder) {
+        this.managedFolder = managedFolder;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the metageneration of the managed folder matches
+       * the specified value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationMatch;
+
+      /** Makes the operation conditional on whether the metageneration of the managed folder matches the
+     specified value.
+       */
+      public java.lang.Long getIfMetagenerationMatch() {
+        return ifMetagenerationMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the metageneration of the managed folder matches
+       * the specified value.
+       */
+      public Update setIfMetagenerationMatch(java.lang.Long ifMetagenerationMatch) {
+        this.ifMetagenerationMatch = ifMetagenerationMatch;
+        return this;
+      }
+
+      /**
+       * Makes the operation conditional on whether the metageneration of the managed folder doesn't
+       * match the specified value.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long ifMetagenerationNotMatch;
+
+      /** Makes the operation conditional on whether the metageneration of the managed folder doesn't match
+     the specified value.
+       */
+      public java.lang.Long getIfMetagenerationNotMatch() {
+        return ifMetagenerationNotMatch;
+      }
+
+      /**
+       * Makes the operation conditional on whether the metageneration of the managed folder doesn't
+       * match the specified value.
+       */
+      public Update setIfMetagenerationNotMatch(java.lang.Long ifMetagenerationNotMatch) {
+        this.ifMetagenerationNotMatch = ifMetagenerationNotMatch;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -15474,6 +15641,649 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
 
     }
+  }
+
+  /**
+   * An accessor for creating requests from the RapidCaches collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Storage storage = new Storage(...);}
+   *   {@code Storage.RapidCaches.List request = storage.rapidCaches().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public RapidCaches rapidCaches() {
+    return new RapidCaches();
+  }
+
+  /**
+   * The "rapidCaches" collection of methods.
+   */
+  public class RapidCaches {
+
+    /**
+     * Disables a Rapid Cache instance.
+     *
+     * Create a request for the method "rapidCaches.disable".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the parent bucket.
+     * @param rapidCacheId The ID of the requested Rapid Cache instance.
+     * @return the request
+     */
+    public Disable disable(java.lang.String bucket, java.lang.String rapidCacheId) throws java.io.IOException {
+      Disable result = new Disable(bucket, rapidCacheId);
+      initialize(result);
+      return result;
+    }
+
+    public class Disable extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/rapidCaches/{rapidCacheId}/disable";
+
+      /**
+       * Disables a Rapid Cache instance.
+       *
+       * Create a request for the method "rapidCaches.disable".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Disable#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the parent bucket.
+       * @param rapidCacheId The ID of the requested Rapid Cache instance.
+       * @since 1.13
+       */
+      protected Disable(java.lang.String bucket, java.lang.String rapidCacheId) {
+        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.rapidCacheId = com.google.api.client.util.Preconditions.checkNotNull(rapidCacheId, "Required parameter rapidCacheId must be specified.");
+      }
+
+      @Override
+      public Disable setAlt(java.lang.String alt) {
+        return (Disable) super.setAlt(alt);
+      }
+
+      @Override
+      public Disable setFields(java.lang.String fields) {
+        return (Disable) super.setFields(fields);
+      }
+
+      @Override
+      public Disable setKey(java.lang.String key) {
+        return (Disable) super.setKey(key);
+      }
+
+      @Override
+      public Disable setOauthToken(java.lang.String oauthToken) {
+        return (Disable) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Disable setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Disable) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Disable setQuotaUser(java.lang.String quotaUser) {
+        return (Disable) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Disable setUploadType(java.lang.String uploadType) {
+        return (Disable) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Disable setUserIp(java.lang.String userIp) {
+        return (Disable) super.setUserIp(userIp);
+      }
+
+      /** Name of the parent bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the parent bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the parent bucket. */
+      public Disable setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of the requested Rapid Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String rapidCacheId;
+
+      /** The ID of the requested Rapid Cache instance.
+       */
+      public java.lang.String getRapidCacheId() {
+        return rapidCacheId;
+      }
+
+      /** The ID of the requested Rapid Cache instance. */
+      public Disable setRapidCacheId(java.lang.String rapidCacheId) {
+        this.rapidCacheId = rapidCacheId;
+        return this;
+      }
+
+      @Override
+      public Disable set(String parameterName, Object value) {
+        return (Disable) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the metadata of a Rapid Cache instance.
+     *
+     * Create a request for the method "rapidCaches.get".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the parent bucket.
+     * @param rapidCacheId The ID of the requested Rapid Cache instance.
+     * @return the request
+     */
+    public Get get(java.lang.String bucket, java.lang.String rapidCacheId) throws java.io.IOException {
+      Get result = new Get(bucket, rapidCacheId);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends StorageRequest<com.google.api.services.storage.model.RapidCache> {
+
+      private static final String REST_PATH = "b/{bucket}/rapidCaches/{rapidCacheId}";
+
+      /**
+       * Returns the metadata of a Rapid Cache instance.
+       *
+       * Create a request for the method "rapidCaches.get".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the parent bucket.
+       * @param rapidCacheId The ID of the requested Rapid Cache instance.
+       * @since 1.13
+       */
+      protected Get(java.lang.String bucket, java.lang.String rapidCacheId) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.RapidCache.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.rapidCacheId = com.google.api.client.util.Preconditions.checkNotNull(rapidCacheId, "Required parameter rapidCacheId must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Name of the parent bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the parent bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the parent bucket. */
+      public Get setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of the requested Rapid Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String rapidCacheId;
+
+      /** The ID of the requested Rapid Cache instance.
+       */
+      public java.lang.String getRapidCacheId() {
+        return rapidCacheId;
+      }
+
+      /** The ID of the requested Rapid Cache instance. */
+      public Get setRapidCacheId(java.lang.String rapidCacheId) {
+        this.rapidCacheId = rapidCacheId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a Rapid Cache instance.
+     *
+     * Create a request for the method "rapidCaches.insert".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the parent bucket.
+     * @param content the {@link com.google.api.services.storage.model.RapidCache}
+     * @return the request
+     */
+    public Insert insert(java.lang.String bucket, com.google.api.services.storage.model.RapidCache content) throws java.io.IOException {
+      Insert result = new Insert(bucket, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/rapidCaches";
+
+      /**
+       * Creates a Rapid Cache instance.
+       *
+       * Create a request for the method "rapidCaches.insert".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the parent bucket.
+       * @param content the {@link com.google.api.services.storage.model.RapidCache}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String bucket, com.google.api.services.storage.model.RapidCache content) {
+        super(Storage.this, "POST", REST_PATH, content, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Name of the parent bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the parent bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the parent bucket. */
+      public Insert setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns a list of Rapid Cache instances of the bucket.
+     *
+     * Create a request for the method "rapidCaches.list".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the parent bucket.
+     * @return the request
+     */
+    public List list(java.lang.String bucket) throws java.io.IOException {
+      List result = new List(bucket);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends StorageRequest<com.google.api.services.storage.model.RapidCaches> {
+
+      private static final String REST_PATH = "b/{bucket}/rapidCaches";
+
+      /**
+       * Returns a list of Rapid Cache instances of the bucket.
+       *
+       * Create a request for the method "rapidCaches.list".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the parent bucket.
+       * @since 1.13
+       */
+      protected List(java.lang.String bucket) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.RapidCaches.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Name of the parent bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the parent bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the parent bucket. */
+      public List setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** Maximum number of items to return in a single page of responses. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Maximum number of items to return in a single page of responses.
+
+     [minimum: 0]
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Maximum number of items to return in a single page of responses. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A previously-returned page token representing part of the larger set of results to view.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A previously-returned page token representing part of the larger set of results to view.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the configuration of a Rapid Cache instance.
+     *
+     * Create a request for the method "rapidCaches.update".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link Update#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the parent bucket.
+     * @param rapidCacheId The ID of the requested Rapid Cache instance.
+     * @param content the {@link com.google.api.services.storage.model.RapidCache}
+     * @return the request
+     */
+    public Update update(java.lang.String bucket, java.lang.String rapidCacheId, com.google.api.services.storage.model.RapidCache content) throws java.io.IOException {
+      Update result = new Update(bucket, rapidCacheId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Update extends StorageRequest<com.google.api.services.storage.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "b/{bucket}/rapidCaches/{rapidCacheId}";
+
+      /**
+       * Updates the configuration of a Rapid Cache instance.
+       *
+       * Create a request for the method "rapidCaches.update".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link Update#execute()} method to invoke the remote operation. <p> {@link
+       * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param bucket Name of the parent bucket.
+       * @param rapidCacheId The ID of the requested Rapid Cache instance.
+       * @param content the {@link com.google.api.services.storage.model.RapidCache}
+       * @since 1.13
+       */
+      protected Update(java.lang.String bucket, java.lang.String rapidCacheId, com.google.api.services.storage.model.RapidCache content) {
+        super(Storage.this, "PATCH", REST_PATH, content, com.google.api.services.storage.model.GoogleLongrunningOperation.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.rapidCacheId = com.google.api.client.util.Preconditions.checkNotNull(rapidCacheId, "Required parameter rapidCacheId must be specified.");
+      }
+
+      @Override
+      public Update setAlt(java.lang.String alt) {
+        return (Update) super.setAlt(alt);
+      }
+
+      @Override
+      public Update setFields(java.lang.String fields) {
+        return (Update) super.setFields(fields);
+      }
+
+      @Override
+      public Update setKey(java.lang.String key) {
+        return (Update) super.setKey(key);
+      }
+
+      @Override
+      public Update setOauthToken(java.lang.String oauthToken) {
+        return (Update) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Update) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Update setQuotaUser(java.lang.String quotaUser) {
+        return (Update) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Update setUploadType(java.lang.String uploadType) {
+        return (Update) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Update setUserIp(java.lang.String userIp) {
+        return (Update) super.setUserIp(userIp);
+      }
+
+      /** Name of the parent bucket. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the parent bucket.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the parent bucket. */
+      public Update setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /** The ID of the requested Rapid Cache instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String rapidCacheId;
+
+      /** The ID of the requested Rapid Cache instance.
+       */
+      public java.lang.String getRapidCacheId() {
+        return rapidCacheId;
+      }
+
+      /** The ID of the requested Rapid Cache instance. */
+      public Update setRapidCacheId(java.lang.String rapidCacheId) {
+        this.rapidCacheId = rapidCacheId;
+        return this;
+      }
+
+      @Override
+      public Update set(String parameterName, Object value) {
+        return (Update) super.set(parameterName, value);
+      }
+    }
+
   }
 
   /**

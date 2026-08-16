@@ -74,6 +74,13 @@ public final class ManagedFolder extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * The rapid cache configuration for the managed folder.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RapidCacheConfig rapidCacheConfig;
+
+  /**
    * The link to this managed folder.
    * The value may be {@code null}.
    */
@@ -188,6 +195,23 @@ public final class ManagedFolder extends com.google.api.client.json.GenericJson 
    */
   public ManagedFolder setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * The rapid cache configuration for the managed folder.
+   * @return value or {@code null} for none
+   */
+  public RapidCacheConfig getRapidCacheConfig() {
+    return rapidCacheConfig;
+  }
+
+  /**
+   * The rapid cache configuration for the managed folder.
+   * @param rapidCacheConfig rapidCacheConfig or {@code null} for none
+   */
+  public ManagedFolder setRapidCacheConfig(RapidCacheConfig rapidCacheConfig) {
+    this.rapidCacheConfig = rapidCacheConfig;
     return this;
   }
 

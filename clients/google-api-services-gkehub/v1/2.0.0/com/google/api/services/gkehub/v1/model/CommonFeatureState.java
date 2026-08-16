@@ -58,6 +58,13 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
   private RBACRoleBindingActuationFeatureState rbacrolebindingactuation;
 
   /**
+   * Service Mesh-specific state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceMeshFeatureState servicemesh;
+
+  /**
    * Output only. The "running state" of the Feature in this Fleet.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class CommonFeatureState extends com.google.api.client.json.Generic
    */
   public CommonFeatureState setRbacrolebindingactuation(RBACRoleBindingActuationFeatureState rbacrolebindingactuation) {
     this.rbacrolebindingactuation = rbacrolebindingactuation;
+    return this;
+  }
+
+  /**
+   * Service Mesh-specific state.
+   * @return value or {@code null} for none
+   */
+  public ServiceMeshFeatureState getServicemesh() {
+    return servicemesh;
+  }
+
+  /**
+   * Service Mesh-specific state.
+   * @param servicemesh servicemesh or {@code null} for none
+   */
+  public CommonFeatureState setServicemesh(ServiceMeshFeatureState servicemesh) {
+    this.servicemesh = servicemesh;
     return this;
   }
 

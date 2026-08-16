@@ -45,6 +45,30 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGeneratio
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Float similarityToLastQuery;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float similarityToLastQueryThreshold;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer thinkingBudgetTokens;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thinkingLevel;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Integer totalTokenCount;
 
   /**
@@ -74,6 +98,66 @@ public final class GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGeneratio
    */
   public GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGenerationDebugInfo setPromptTokenCount(java.lang.Integer promptTokenCount) {
     this.promptTokenCount = promptTokenCount;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSimilarityToLastQuery() {
+    return similarityToLastQuery;
+  }
+
+  /**
+   * @param similarityToLastQuery similarityToLastQuery or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGenerationDebugInfo setSimilarityToLastQuery(java.lang.Float similarityToLastQuery) {
+    this.similarityToLastQuery = similarityToLastQuery;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getSimilarityToLastQueryThreshold() {
+    return similarityToLastQueryThreshold;
+  }
+
+  /**
+   * @param similarityToLastQueryThreshold similarityToLastQueryThreshold or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGenerationDebugInfo setSimilarityToLastQueryThreshold(java.lang.Float similarityToLastQueryThreshold) {
+    this.similarityToLastQueryThreshold = similarityToLastQueryThreshold;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getThinkingBudgetTokens() {
+    return thinkingBudgetTokens;
+  }
+
+  /**
+   * @param thinkingBudgetTokens thinkingBudgetTokens or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGenerationDebugInfo setThinkingBudgetTokens(java.lang.Integer thinkingBudgetTokens) {
+    this.thinkingBudgetTokens = thinkingBudgetTokens;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThinkingLevel() {
+    return thinkingLevel;
+  }
+
+  /**
+   * @param thinkingLevel thinkingLevel or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2KnowledgeAssistDebugInfoQueryGenerationDebugInfo setThinkingLevel(java.lang.String thinkingLevel) {
+    this.thinkingLevel = thinkingLevel;
     return this;
   }
 

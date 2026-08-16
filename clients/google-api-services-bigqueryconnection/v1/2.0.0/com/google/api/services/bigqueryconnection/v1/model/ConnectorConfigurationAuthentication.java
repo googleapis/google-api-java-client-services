@@ -31,12 +31,12 @@ package com.google.api.services.bigqueryconnection.v1.model;
 public final class ConnectorConfigurationAuthentication extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A map of name-value pairs for authentication-specific parameters. Extra configuration
-   * parameters, that are not standardized in authentication. To update a single parameter value
-   * call ConnectionService.UpdateConnection with `update_mask` set to
-   * `configuration.authentication.parameters.parameter_id`. If parameter id does not fit
-   * `[a-zA-Z0-9_]+` pattern, it should be escaped with backticks - for example
-   * ``configuration.authentication.parameters.`parameter id` ``.
+   * Optional. A map of name-value pairs for connector-specific parameters. These extra
+   * configuration parameters aren't standardized in the configuration sections. To update a single
+   * parameter value, call ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.parameters.parameter_id`. If ``parameter_id`` doesn't fit the `[a-zA-Z0-9_]+`
+   * pattern, ``parameter_id`` should be escaped with backticks—for example,
+   * ``configuration.parameters.`parameter id` ``.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,12 +60,12 @@ public final class ConnectorConfigurationAuthentication extends com.google.api.c
   private ConnectorConfigurationUsernamePassword usernamePassword;
 
   /**
-   * Optional. A map of name-value pairs for authentication-specific parameters. Extra configuration
-   * parameters, that are not standardized in authentication. To update a single parameter value
-   * call ConnectionService.UpdateConnection with `update_mask` set to
-   * `configuration.authentication.parameters.parameter_id`. If parameter id does not fit
-   * `[a-zA-Z0-9_]+` pattern, it should be escaped with backticks - for example
-   * ``configuration.authentication.parameters.`parameter id` ``.
+   * Optional. A map of name-value pairs for connector-specific parameters. These extra
+   * configuration parameters aren't standardized in the configuration sections. To update a single
+   * parameter value, call ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.parameters.parameter_id`. If ``parameter_id`` doesn't fit the `[a-zA-Z0-9_]+`
+   * pattern, ``parameter_id`` should be escaped with backticks—for example,
+   * ``configuration.parameters.`parameter id` ``.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ConnectorConfigurationParameterValue> getParameters() {
@@ -73,12 +73,12 @@ public final class ConnectorConfigurationAuthentication extends com.google.api.c
   }
 
   /**
-   * Optional. A map of name-value pairs for authentication-specific parameters. Extra configuration
-   * parameters, that are not standardized in authentication. To update a single parameter value
-   * call ConnectionService.UpdateConnection with `update_mask` set to
-   * `configuration.authentication.parameters.parameter_id`. If parameter id does not fit
-   * `[a-zA-Z0-9_]+` pattern, it should be escaped with backticks - for example
-   * ``configuration.authentication.parameters.`parameter id` ``.
+   * Optional. A map of name-value pairs for connector-specific parameters. These extra
+   * configuration parameters aren't standardized in the configuration sections. To update a single
+   * parameter value, call ConnectionService.UpdateConnection with `update_mask` set to
+   * `configuration.parameters.parameter_id`. If ``parameter_id`` doesn't fit the `[a-zA-Z0-9_]+`
+   * pattern, ``parameter_id`` should be escaped with backticks—for example,
+   * ``configuration.parameters.`parameter id` ``.
    * @param parameters parameters or {@code null} for none
    */
   public ConnectorConfigurationAuthentication setParameters(java.util.Map<String, ConnectorConfigurationParameterValue> parameters) {

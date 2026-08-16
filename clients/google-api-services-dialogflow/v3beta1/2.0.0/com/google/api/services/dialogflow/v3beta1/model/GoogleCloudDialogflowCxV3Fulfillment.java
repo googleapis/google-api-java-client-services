@@ -39,6 +39,12 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String codeBlockFunction;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowCxV3FulfillmentConditionalCases> conditionalCases;
 
   /**
@@ -95,6 +101,21 @@ public final class GoogleCloudDialogflowCxV3Fulfillment extends com.google.api.c
    */
   public GoogleCloudDialogflowCxV3Fulfillment setAdvancedSettings(GoogleCloudDialogflowCxV3AdvancedSettings advancedSettings) {
     this.advancedSettings = advancedSettings;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCodeBlockFunction() {
+    return codeBlockFunction;
+  }
+
+  /**
+   * @param codeBlockFunction codeBlockFunction or {@code null} for none
+   */
+  public GoogleCloudDialogflowCxV3Fulfillment setCodeBlockFunction(java.lang.String codeBlockFunction) {
+    this.codeBlockFunction = codeBlockFunction;
     return this;
   }
 

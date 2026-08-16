@@ -30,11 +30,83 @@ package com.google.api.services.bigquery.model;
 public final class SkewSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Max partition output size (in bytes) for this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long outputBytesMax;
+
+  /**
+   * Output only. Median partition output size (in bytes) for this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long outputBytesMedian;
+
+  /**
+   * Output only. 95-th percentile of partition output size (in bytes) for this stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long outputBytesP95;
+
+  /**
    * Output only. Stage id of the skew source stage.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long stageId;
+
+  /**
+   * Output only. Max partition output size (in bytes) for this stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOutputBytesMax() {
+    return outputBytesMax;
+  }
+
+  /**
+   * Output only. Max partition output size (in bytes) for this stage.
+   * @param outputBytesMax outputBytesMax or {@code null} for none
+   */
+  public SkewSource setOutputBytesMax(java.lang.Long outputBytesMax) {
+    this.outputBytesMax = outputBytesMax;
+    return this;
+  }
+
+  /**
+   * Output only. Median partition output size (in bytes) for this stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOutputBytesMedian() {
+    return outputBytesMedian;
+  }
+
+  /**
+   * Output only. Median partition output size (in bytes) for this stage.
+   * @param outputBytesMedian outputBytesMedian or {@code null} for none
+   */
+  public SkewSource setOutputBytesMedian(java.lang.Long outputBytesMedian) {
+    this.outputBytesMedian = outputBytesMedian;
+    return this;
+  }
+
+  /**
+   * Output only. 95-th percentile of partition output size (in bytes) for this stage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOutputBytesP95() {
+    return outputBytesP95;
+  }
+
+  /**
+   * Output only. 95-th percentile of partition output size (in bytes) for this stage.
+   * @param outputBytesP95 outputBytesP95 or {@code null} for none
+   */
+  public SkewSource setOutputBytesP95(java.lang.Long outputBytesP95) {
+    this.outputBytesP95 = outputBytesP95;
+    return this;
+  }
 
   /**
    * Output only. Stage id of the skew source stage.

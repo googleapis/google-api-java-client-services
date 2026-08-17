@@ -38,6 +38,13 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
   private String failoverCompleteTimestamp;
 
   /**
+   * Output only. The duration of the last failover.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String failoverDuration;
+
+  /**
    * Output only. [Output Only] Indicates if failover has been triggered automatically or manually.
    * The value may be {@code null}.
    */
@@ -75,6 +82,23 @@ public final class HaControllerStatusFailoverProgress extends com.google.api.cli
    */
   public HaControllerStatusFailoverProgress setFailoverCompleteTimestamp(String failoverCompleteTimestamp) {
     this.failoverCompleteTimestamp = failoverCompleteTimestamp;
+    return this;
+  }
+
+  /**
+   * Output only. The duration of the last failover.
+   * @return value or {@code null} for none
+   */
+  public String getFailoverDuration() {
+    return failoverDuration;
+  }
+
+  /**
+   * Output only. The duration of the last failover.
+   * @param failoverDuration failoverDuration or {@code null} for none
+   */
+  public HaControllerStatusFailoverProgress setFailoverDuration(String failoverDuration) {
+    this.failoverDuration = failoverDuration;
     return this;
   }
 

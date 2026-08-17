@@ -70,6 +70,15 @@ public final class Router extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean encryptedInterconnectRouter;
 
   /**
+   * ETag for optimistic concurrency control as described by AIP 154. Used to prevent conflicting
+   * updates. If provided, the request will succeed only if the etag matches the current etag of the
+   * router; otherwise, the request fails with an ABORTED error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
    * [Output Only] The unique identifier for the resource. This identifier is defined by the server.
    * The value may be {@code null}.
    */
@@ -252,6 +261,27 @@ public final class Router extends com.google.api.client.json.GenericJson {
    */
   public Router setEncryptedInterconnectRouter(java.lang.Boolean encryptedInterconnectRouter) {
     this.encryptedInterconnectRouter = encryptedInterconnectRouter;
+    return this;
+  }
+
+  /**
+   * ETag for optimistic concurrency control as described by AIP 154. Used to prevent conflicting
+   * updates. If provided, the request will succeed only if the etag matches the current etag of the
+   * router; otherwise, the request fails with an ABORTED error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * ETag for optimistic concurrency control as described by AIP 154. Used to prevent conflicting
+   * updates. If provided, the request will succeed only if the etag matches the current etag of the
+   * router; otherwise, the request fails with an ABORTED error.
+   * @param etag etag or {@code null} for none
+   */
+  public Router setEtag(java.lang.String etag) {
+    this.etag = etag;
     return this;
   }
 

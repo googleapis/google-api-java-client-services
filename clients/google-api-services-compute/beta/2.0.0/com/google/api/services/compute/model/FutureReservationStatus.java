@@ -44,6 +44,13 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> autoCreatedReservations;
 
   /**
+   * Output only. Exapool provisioned capacities for each SKU type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb;
+
+  /**
    * Output only. [Output Only] Represents the existing matching usage for the future reservation.
    * The value may be {@code null}.
    */
@@ -93,6 +100,13 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
   private FutureReservationStatusSpecificSKUProperties specificSkuProperties;
 
   /**
+   * Output only. Storage pool provisioned capacities for each SKU type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FutureReservationStoragePoolProvisionedCapacity storagePoolProvisionedCapacity;
+
+  /**
    * Output only. [Output Only] The current status of the requested amendment.
    * @return value or {@code null} for none
    */
@@ -123,6 +137,23 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    */
   public FutureReservationStatus setAutoCreatedReservations(java.util.List<java.lang.String> autoCreatedReservations) {
     this.autoCreatedReservations = autoCreatedReservations;
+    return this;
+  }
+
+  /**
+   * Output only. Exapool provisioned capacities for each SKU type.
+   * @return value or {@code null} for none
+   */
+  public StoragePoolExapoolProvisionedCapacityGb getExapoolProvisionedCapacityGb() {
+    return exapoolProvisionedCapacityGb;
+  }
+
+  /**
+   * Output only. Exapool provisioned capacities for each SKU type.
+   * @param exapoolProvisionedCapacityGb exapoolProvisionedCapacityGb or {@code null} for none
+   */
+  public FutureReservationStatus setExapoolProvisionedCapacityGb(StoragePoolExapoolProvisionedCapacityGb exapoolProvisionedCapacityGb) {
+    this.exapoolProvisionedCapacityGb = exapoolProvisionedCapacityGb;
     return this;
   }
 
@@ -239,6 +270,23 @@ public final class FutureReservationStatus extends com.google.api.client.json.Ge
    */
   public FutureReservationStatus setSpecificSkuProperties(FutureReservationStatusSpecificSKUProperties specificSkuProperties) {
     this.specificSkuProperties = specificSkuProperties;
+    return this;
+  }
+
+  /**
+   * Output only. Storage pool provisioned capacities for each SKU type.
+   * @return value or {@code null} for none
+   */
+  public FutureReservationStoragePoolProvisionedCapacity getStoragePoolProvisionedCapacity() {
+    return storagePoolProvisionedCapacity;
+  }
+
+  /**
+   * Output only. Storage pool provisioned capacities for each SKU type.
+   * @param storagePoolProvisionedCapacity storagePoolProvisionedCapacity or {@code null} for none
+   */
+  public FutureReservationStatus setStoragePoolProvisionedCapacity(FutureReservationStoragePoolProvisionedCapacity storagePoolProvisionedCapacity) {
+    this.storagePoolProvisionedCapacity = storagePoolProvisionedCapacity;
     return this;
   }
 

@@ -177,6 +177,22 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
   private java.lang.String peerIp;
 
   /**
+   * User specified list of PQC key exchange mechanisms (KEMs) to use for the phase 1 of the IKE
+   * protocol.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpnTunnelPqc pqcPhase1;
+
+  /**
+   * User specified list of PQC key exchange mechanisms (KEMs) to use for the phase 2 of the IKE
+   * protocol.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VpnTunnelPqc pqcPhase2;
+
+  /**
    * [Output Only] URL of the region where the VPN tunnel resides. You must specify this field as
    * part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -648,6 +664,44 @@ public final class VpnTunnel extends com.google.api.client.json.GenericJson {
    */
   public VpnTunnel setPeerIp(java.lang.String peerIp) {
     this.peerIp = peerIp;
+    return this;
+  }
+
+  /**
+   * User specified list of PQC key exchange mechanisms (KEMs) to use for the phase 1 of the IKE
+   * protocol.
+   * @return value or {@code null} for none
+   */
+  public VpnTunnelPqc getPqcPhase1() {
+    return pqcPhase1;
+  }
+
+  /**
+   * User specified list of PQC key exchange mechanisms (KEMs) to use for the phase 1 of the IKE
+   * protocol.
+   * @param pqcPhase1 pqcPhase1 or {@code null} for none
+   */
+  public VpnTunnel setPqcPhase1(VpnTunnelPqc pqcPhase1) {
+    this.pqcPhase1 = pqcPhase1;
+    return this;
+  }
+
+  /**
+   * User specified list of PQC key exchange mechanisms (KEMs) to use for the phase 2 of the IKE
+   * protocol.
+   * @return value or {@code null} for none
+   */
+  public VpnTunnelPqc getPqcPhase2() {
+    return pqcPhase2;
+  }
+
+  /**
+   * User specified list of PQC key exchange mechanisms (KEMs) to use for the phase 2 of the IKE
+   * protocol.
+   * @param pqcPhase2 pqcPhase2 or {@code null} for none
+   */
+  public VpnTunnel setPqcPhase2(VpnTunnelPqc pqcPhase2) {
+    this.pqcPhase2 = pqcPhase2;
     return this;
   }
 

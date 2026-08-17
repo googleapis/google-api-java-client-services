@@ -69,6 +69,13 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
   private java.lang.String faultResponse;
 
   /**
+   * The flow management configuration for the wire.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String flowManagement;
+
+  /**
    * The network service class.
    * The value may be {@code null}.
    */
@@ -162,6 +169,23 @@ public final class WireProperties extends com.google.api.client.json.GenericJson
    */
   public WireProperties setFaultResponse(java.lang.String faultResponse) {
     this.faultResponse = faultResponse;
+    return this;
+  }
+
+  /**
+   * The flow management configuration for the wire.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFlowManagement() {
+    return flowManagement;
+  }
+
+  /**
+   * The flow management configuration for the wire.
+   * @param flowManagement flowManagement or {@code null} for none
+   */
+  public WireProperties setFlowManagement(java.lang.String flowManagement) {
+    this.flowManagement = flowManagement;
     return this;
   }
 

@@ -236,9 +236,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load balancers that have configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
-   * balancing/docs/network/networklb-failover-overview).
-   *
-   * failoverPolicy cannot be specified with haPolicy.
+   * balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with
+   * haPolicy.failoverPolicy cannot be used by global external Passthrough Network Load Balancers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -277,9 +276,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * haPolicy requires customers to be responsible for tracking backend endpoint health and electing
    * a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with
-   * healthChecks.
-   *
-   * haPolicy can only be specified for External Passthrough Network Load Balancers and Internal
+   * healthChecks. haPolicy can only be specified for External Passthrough Network Load Balancers
+   * and Internal Passthrough Network Load Balancers.haPolicy cannot be used by global external
    * Passthrough Network Load Balancers.
    * The value may be {@code null}.
    */
@@ -348,7 +346,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the load balancer type. A backend service created for one type of load balancer
-   * cannot be used with another. For more information, refer toChoosing a load balancer.
+   * cannot be used with another. For more information, refer to Backend services product and scheme
+   * table.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -387,15 +386,26 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
    * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
    * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
-   * This field is applicable to either:       - A regional backend service with the service
-   * protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
-   * sessionAffinity is not configured—that is, if session    affinity remains at the default value
-   * of NONE—then the    default value for localityLbPolicy    is ROUND_ROBIN. If session affinity
-   * is set to a value other    than NONE,    then the default value for localityLbPolicy isMAGLEV.
-   * Only ROUND_ROBIN and RING_HASH are supported    when the backend service is referenced by a URL
-   * map that is bound to    target gRPC proxy that has validateForProxyless field set to true.
+   * - WEIGHTED_MAGLEV: Per-endpoint weighted load balancing via    health check reported weights.
+   * If set, the backend service must configure    an HTTP-based Health Check, and health check
+   * replies are expected to    contain the non-standard HTTP response header fieldX-Load-Balancing-
+   * Endpoint-Weight to specify the per-endpoint    weights. If set, load balancing is weighted
+   * based on the per-endpoint    weights reported in the last processed health check replies, as
+   * long as    every instance either reported a valid weight or had UNAVAILABLE_WEIGHT.
+   * Otherwise, load balancing remains equal-weight.
+   *
+   * This field is applicable to either:        - A regional backend service with the service
+   * protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or    EXTERNAL_MANAGED.
+   *
+   * If sessionAffinity is not configured—that is, if session affinity remains at the default value
+   * of NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set
+   * to a value other than NONE, then the default value for localityLbPolicy isMAGLEV.
+   *
+   * Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL
+   * map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   *
    * localityLbPolicy cannot be specified with haPolicy.
    * The value may be {@code null}.
    */
@@ -538,9 +548,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen
-   * load balancer or Traffic Director configuration. Refer to the documentation for the load
-   * balancers or for Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP, GRPC, or UNSPECIFIED, depending on
+   * the chosen load balancer or Traffic Director configuration. Refer to  Load balancing features
+   * for more information.
    *
    * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
    * gRPC proxy.
@@ -1099,9 +1109,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load balancers that have configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
-   * balancing/docs/network/networklb-failover-overview).
-   *
-   * failoverPolicy cannot be specified with haPolicy.
+   * balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with
+   * haPolicy.failoverPolicy cannot be used by global external Passthrough Network Load Balancers.
    * @return value or {@code null} for none
    */
   public BackendServiceFailoverPolicy getFailoverPolicy() {
@@ -1113,9 +1122,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * load balancers that have configurable failover: [Internal passthrough Network Load
    * Balancers](https://cloud.google.com/load-balancing/docs/internal/failover-overview) and
    * [external passthrough Network Load Balancers](https://cloud.google.com/load-
-   * balancing/docs/network/networklb-failover-overview).
-   *
-   * failoverPolicy cannot be specified with haPolicy.
+   * balancing/docs/network/networklb-failover-overview). failoverPolicy cannot be specified with
+   * haPolicy.failoverPolicy cannot be used by global external Passthrough Network Load Balancers.
    * @param failoverPolicy failoverPolicy or {@code null} for none
    */
   public BackendService setFailoverPolicy(BackendServiceFailoverPolicy failoverPolicy) {
@@ -1209,9 +1217,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * haPolicy requires customers to be responsible for tracking backend endpoint health and electing
    * a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with
-   * healthChecks.
-   *
-   * haPolicy can only be specified for External Passthrough Network Load Balancers and Internal
+   * healthChecks. haPolicy can only be specified for External Passthrough Network Load Balancers
+   * and Internal Passthrough Network Load Balancers.haPolicy cannot be used by global external
    * Passthrough Network Load Balancers.
    * @return value or {@code null} for none
    */
@@ -1240,9 +1247,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    *
    * haPolicy requires customers to be responsible for tracking backend endpoint health and electing
    * a leader among the healthy endpoints. Therefore, haPolicy cannot be specified with
-   * healthChecks.
-   *
-   * haPolicy can only be specified for External Passthrough Network Load Balancers and Internal
+   * healthChecks. haPolicy can only be specified for External Passthrough Network Load Balancers
+   * and Internal Passthrough Network Load Balancers.haPolicy cannot be used by global external
    * Passthrough Network Load Balancers.
    * @param haPolicy haPolicy or {@code null} for none
    */
@@ -1388,7 +1394,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the load balancer type. A backend service created for one type of load balancer
-   * cannot be used with another. For more information, refer toChoosing a load balancer.
+   * cannot be used with another. For more information, refer to Backend services product and scheme
+   * table.
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -1397,7 +1404,8 @@ public final class BackendService extends com.google.api.client.json.GenericJson
 
   /**
    * Specifies the load balancer type. A backend service created for one type of load balancer
-   * cannot be used with another. For more information, refer toChoosing a load balancer.
+   * cannot be used with another. For more information, refer to Backend services product and scheme
+   * table.
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public BackendService setLoadBalancingScheme(java.lang.String loadBalancingScheme) {
@@ -1456,15 +1464,26 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
    * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
    * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
-   * This field is applicable to either:       - A regional backend service with the service
-   * protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
-   * sessionAffinity is not configured—that is, if session    affinity remains at the default value
-   * of NONE—then the    default value for localityLbPolicy    is ROUND_ROBIN. If session affinity
-   * is set to a value other    than NONE,    then the default value for localityLbPolicy isMAGLEV.
-   * Only ROUND_ROBIN and RING_HASH are supported    when the backend service is referenced by a URL
-   * map that is bound to    target gRPC proxy that has validateForProxyless field set to true.
+   * - WEIGHTED_MAGLEV: Per-endpoint weighted load balancing via    health check reported weights.
+   * If set, the backend service must configure    an HTTP-based Health Check, and health check
+   * replies are expected to    contain the non-standard HTTP response header fieldX-Load-Balancing-
+   * Endpoint-Weight to specify the per-endpoint    weights. If set, load balancing is weighted
+   * based on the per-endpoint    weights reported in the last processed health check replies, as
+   * long as    every instance either reported a valid weight or had UNAVAILABLE_WEIGHT.
+   * Otherwise, load balancing remains equal-weight.
+   *
+   * This field is applicable to either:        - A regional backend service with the service
+   * protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or    EXTERNAL_MANAGED.
+   *
+   * If sessionAffinity is not configured—that is, if session affinity remains at the default value
+   * of NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set
+   * to a value other than NONE, then the default value for localityLbPolicy isMAGLEV.
+   *
+   * Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL
+   * map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   *
    * localityLbPolicy cannot be specified with haPolicy.
    * @return value or {@code null} for none
    */
@@ -1490,15 +1509,26 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    * computed from Backend reported Custom Metrics.    If set, the Backend Service responses are
    * expected to contain non-standard    HTTP response header field Endpoint-Load-Metrics. The
    * reported    metrics to use for computing the weights are specified via thecustomMetrics field.
-   * This field is applicable to either:       - A regional backend service with the service
-   * protocol set to HTTP,       HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
-   * INTERNAL_MANAGED.        - A global backend service with the       load_balancing_scheme set to
-   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or       EXTERNAL_MANAGED.            If
-   * sessionAffinity is not configured—that is, if session    affinity remains at the default value
-   * of NONE—then the    default value for localityLbPolicy    is ROUND_ROBIN. If session affinity
-   * is set to a value other    than NONE,    then the default value for localityLbPolicy isMAGLEV.
-   * Only ROUND_ROBIN and RING_HASH are supported    when the backend service is referenced by a URL
-   * map that is bound to    target gRPC proxy that has validateForProxyless field set to true.
+   * - WEIGHTED_MAGLEV: Per-endpoint weighted load balancing via    health check reported weights.
+   * If set, the backend service must configure    an HTTP-based Health Check, and health check
+   * replies are expected to    contain the non-standard HTTP response header fieldX-Load-Balancing-
+   * Endpoint-Weight to specify the per-endpoint    weights. If set, load balancing is weighted
+   * based on the per-endpoint    weights reported in the last processed health check replies, as
+   * long as    every instance either reported a valid weight or had UNAVAILABLE_WEIGHT.
+   * Otherwise, load balancing remains equal-weight.
+   *
+   * This field is applicable to either:        - A regional backend service with the service
+   * protocol set to HTTP,    HTTPS, HTTP2 or H2C, and load_balancing_scheme set to
+   * INTERNAL_MANAGED.     - A global backend service with the    load_balancing_scheme set to
+   * INTERNAL_SELF_MANAGED, INTERNAL_MANAGED, or    EXTERNAL_MANAGED.
+   *
+   * If sessionAffinity is not configured—that is, if session affinity remains at the default value
+   * of NONE—then the default value for localityLbPolicy is ROUND_ROBIN. If session affinity is set
+   * to a value other than NONE, then the default value for localityLbPolicy isMAGLEV.
+   *
+   * Only ROUND_ROBIN and RING_HASH are supported when the backend service is referenced by a URL
+   * map that is bound to target gRPC proxy that has validateForProxyless field set to true.
+   *
    * localityLbPolicy cannot be specified with haPolicy.
    * @param localityLbPolicy localityLbPolicy or {@code null} for none
    */
@@ -1809,9 +1839,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen
-   * load balancer or Traffic Director configuration. Refer to the documentation for the load
-   * balancers or for Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP, GRPC, or UNSPECIFIED, depending on
+   * the chosen load balancer or Traffic Director configuration. Refer to  Load balancing features
+   * for more information.
    *
    * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
    * gRPC proxy.
@@ -1824,9 +1854,9 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   /**
    * The protocol this BackendService uses to communicate with backends.
    *
-   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP or GRPC. depending on the chosen
-   * load balancer or Traffic Director configuration. Refer to the documentation for the load
-   * balancers or for Traffic Director for more information.
+   * Possible values are HTTP, HTTPS, HTTP2, H2C, TCP, SSL, UDP, GRPC, or UNSPECIFIED, depending on
+   * the chosen load balancer or Traffic Director configuration. Refer to  Load balancing features
+   * for more information.
    *
    * Must be set to GRPC when the backend service is referenced by a URL map that is bound to target
    * gRPC proxy.

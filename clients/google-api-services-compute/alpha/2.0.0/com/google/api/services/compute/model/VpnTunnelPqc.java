@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Attached disk configuration.
+ * Model definition for VpnTunnelPqc.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,58 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk extends com.google.api.client.json.GenericJson {
+public final class VpnTunnelPqc extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the type of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private VpnTunnelAdditionalKeyExchanges keys;
 
   /**
-   * Specifies the type of the disk.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public VpnTunnelAdditionalKeyExchanges getKeys() {
+    return keys;
   }
 
   /**
-   * Specifies the type of the disk.
-   * @param type type or {@code null} for none
+   * @param keys keys or {@code null} for none
    */
-  public CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk setType(java.lang.String type) {
-    this.type = type;
+  public VpnTunnelPqc setKeys(VpnTunnelAdditionalKeyExchanges keys) {
+    this.keys = keys;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * @param mode mode or {@code null} for none
+   */
+  public VpnTunnelPqc setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 
   @Override
-  public CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk set(String fieldName, Object value) {
-    return (CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk) super.set(fieldName, value);
+  public VpnTunnelPqc set(String fieldName, Object value) {
+    return (VpnTunnelPqc) super.set(fieldName, value);
   }
 
   @Override
-  public CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk clone() {
-    return (CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk) super.clone();
+  public VpnTunnelPqc clone() {
+    return (VpnTunnelPqc) super.clone();
   }
 
 }

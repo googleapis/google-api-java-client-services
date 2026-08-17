@@ -30,9 +30,9 @@ package com.google.api.services.compute.model;
 public final class RegexRewrite extends com.google.api.client.json.GenericJson {
 
   /**
-   * The regular expression used to match against the URL path. It uses RE2 syntax with the
-   * following constraints:              - Any single character operators      - Groups are allowed
-   * to have only submatch operator inside      - Groups are allowed only without any char
+   * Required. The regular expression used to match against the URL path. It uses RE2 syntax with
+   * the following constraints:              - Any single character operators      - Groups are
+   * allowed to have only submatch operator inside      - Groups are allowed only without any char
    * repetition, e.g.      .*      - Any char repetition, e.g. .*, is      only allowed to be used
    * in a single regex together with:                            - Empty string operators
    * - Other repetitions             - Ranges             - Repetitions of ranges
@@ -44,16 +44,16 @@ public final class RegexRewrite extends com.google.api.client.json.GenericJson {
   private java.lang.String pathPattern;
 
   /**
-   * Required when path pattern is specified. Used to rewrite matching parts of the path.
+   * Required. Required when path pattern is specified. Used to rewrite matching parts of the path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String pathSubstitution;
 
   /**
-   * The regular expression used to match against the URL path. It uses RE2 syntax with the
-   * following constraints:              - Any single character operators      - Groups are allowed
-   * to have only submatch operator inside      - Groups are allowed only without any char
+   * Required. The regular expression used to match against the URL path. It uses RE2 syntax with
+   * the following constraints:              - Any single character operators      - Groups are
+   * allowed to have only submatch operator inside      - Groups are allowed only without any char
    * repetition, e.g.      .*      - Any char repetition, e.g. .*, is      only allowed to be used
    * in a single regex together with:                            - Empty string operators
    * - Other repetitions             - Ranges             - Repetitions of ranges
@@ -66,9 +66,9 @@ public final class RegexRewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The regular expression used to match against the URL path. It uses RE2 syntax with the
-   * following constraints:              - Any single character operators      - Groups are allowed
-   * to have only submatch operator inside      - Groups are allowed only without any char
+   * Required. The regular expression used to match against the URL path. It uses RE2 syntax with
+   * the following constraints:              - Any single character operators      - Groups are
+   * allowed to have only submatch operator inside      - Groups are allowed only without any char
    * repetition, e.g.      .*      - Any char repetition, e.g. .*, is      only allowed to be used
    * in a single regex together with:                            - Empty string operators
    * - Other repetitions             - Ranges             - Repetitions of ranges
@@ -82,7 +82,7 @@ public final class RegexRewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required when path pattern is specified. Used to rewrite matching parts of the path.
+   * Required. Required when path pattern is specified. Used to rewrite matching parts of the path.
    * @return value or {@code null} for none
    */
   public java.lang.String getPathSubstitution() {
@@ -90,7 +90,7 @@ public final class RegexRewrite extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required when path pattern is specified. Used to rewrite matching parts of the path.
+   * Required. Required when path pattern is specified. Used to rewrite matching parts of the path.
    * @param pathSubstitution pathSubstitution or {@code null} for none
    */
   public RegexRewrite setPathSubstitution(java.lang.String pathSubstitution) {

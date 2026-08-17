@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Controls applied as part of the Control service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> appliedControls;
+
+  /**
    * A unique search token. This should be included in the UserEvent logs resulting from this
    * search, which enables accurate attribution of search model performance. This also helps to
    * identify a request during the customer support scenarios.
@@ -134,6 +141,23 @@ public final class GoogleCloudDiscoveryengineV1SearchResponse extends com.google
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
+
+  /**
+   * Optional. Controls applied as part of the Control service.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAppliedControls() {
+    return appliedControls;
+  }
+
+  /**
+   * Optional. Controls applied as part of the Control service.
+   * @param appliedControls appliedControls or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchResponse setAppliedControls(java.util.List<java.lang.String> appliedControls) {
+    this.appliedControls = appliedControls;
+    return this;
+  }
 
   /**
    * A unique search token. This should be included in the UserEvent logs resulting from this

@@ -30,7 +30,7 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls applied as part of the Control service.
+   * Optional. Controls applied as part of the Control service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
   private java.lang.Integer totalSize;
 
   /**
-   * Controls applied as part of the Control service.
+   * Optional. Controls applied as part of the Control service.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAppliedControls() {
@@ -181,7 +181,7 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchResponse extends com.g
   }
 
   /**
-   * Controls applied as part of the Control service.
+   * Optional. Controls applied as part of the Control service.
    * @param appliedControls appliedControls or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchResponse setAppliedControls(java.util.List<java.lang.String> appliedControls) {

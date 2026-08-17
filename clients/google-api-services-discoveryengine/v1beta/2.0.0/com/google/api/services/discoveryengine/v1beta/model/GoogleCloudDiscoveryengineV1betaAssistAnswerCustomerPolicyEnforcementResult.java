@@ -48,6 +48,13 @@ public final class GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnf
   private java.lang.String verdict;
 
   /**
+   * Output only. The source of the violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String violationSource;
+
+  /**
    * Customer policy enforcement results. Populated only if the assist call was skipped due to a
    * policy violation. It contains results from those filters that blocked the processing of the
    * query.
@@ -84,6 +91,23 @@ public final class GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnf
    */
   public GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnforcementResult setVerdict(java.lang.String verdict) {
     this.verdict = verdict;
+    return this;
+  }
+
+  /**
+   * Output only. The source of the violation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getViolationSource() {
+    return violationSource;
+  }
+
+  /**
+   * Output only. The source of the violation.
+   * @param violationSource violationSource or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnforcementResult setViolationSource(java.lang.String violationSource) {
+    this.violationSource = violationSource;
     return this;
   }
 

@@ -54,15 +54,6 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController. Deprecated: This field is
-   * deprecated and has no effect.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String failoverCapacity;
-
-  /**
    * Indicates how failover should be initiated.
    * The value may be {@code null}.
    */
@@ -124,13 +115,6 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private java.lang.String region;
 
   /**
-   * Indicates the capacity guarantees in the secondary zone.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String secondaryZoneCapacity;
-
-  /**
    * Output only. [Output only] Server-defined URL for the resource.
    * The value may be {@code null}.
    */
@@ -143,6 +127,13 @@ public final class HaController extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
+
+  /**
+   * Output only. The current state of the HA Controller.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
 
   /**
    * Output only. [Output Only] Status information for the HaController resource.
@@ -212,27 +203,6 @@ public final class HaController extends com.google.api.client.json.GenericJson {
    */
   public HaController setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController. Deprecated: This field is
-   * deprecated and has no effect.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFailoverCapacity() {
-    return failoverCapacity;
-  }
-
-  /**
-   * Capacity guarantee settings for the event of a failover. This determines whether capacity is
-   * guaranteed to be available in the zones used by the HaController. Deprecated: This field is
-   * deprecated and has no effect.
-   * @param failoverCapacity failoverCapacity or {@code null} for none
-   */
-  public HaController setFailoverCapacity(java.lang.String failoverCapacity) {
-    this.failoverCapacity = failoverCapacity;
     return this;
   }
 
@@ -380,23 +350,6 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the capacity guarantees in the secondary zone.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSecondaryZoneCapacity() {
-    return secondaryZoneCapacity;
-  }
-
-  /**
-   * Indicates the capacity guarantees in the secondary zone.
-   * @param secondaryZoneCapacity secondaryZoneCapacity or {@code null} for none
-   */
-  public HaController setSecondaryZoneCapacity(java.lang.String secondaryZoneCapacity) {
-    this.secondaryZoneCapacity = secondaryZoneCapacity;
-    return this;
-  }
-
-  /**
    * Output only. [Output only] Server-defined URL for the resource.
    * @return value or {@code null} for none
    */
@@ -427,6 +380,23 @@ public final class HaController extends com.google.api.client.json.GenericJson {
    */
   public HaController setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Output only. The current state of the HA Controller.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The current state of the HA Controller.
+   * @param state state or {@code null} for none
+   */
+  public HaController setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

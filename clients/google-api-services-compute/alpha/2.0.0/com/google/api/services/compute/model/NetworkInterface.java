@@ -114,6 +114,23 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
   private java.lang.Integer internalIpv6PrefixLength;
 
   /**
+   * [Output Only] This field specifies the internal IPv6 network address assigned to the CX9
+   * Network Interface Card, which facilitates the routing of traffic between NICs. For any single
+   * CX9 Network Interface Card, the identical internalNicLoadBalancingIpv6Address is assigned
+   * across all four associated ports.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String internalNicLoadBalancingIpv6Address;
+
+  /**
+   * [Output Only] The prefix length of the internal IPv6 Nic load balancing prefix.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer internalNicLoadBalancingIpv6PrefixLength;
+
+  /**
    * An array of IPv6 access configurations for this interface. Currently, only one IPv6 access
    * config, DIRECT_IPV6, is supported. If there is no ipv6AccessConfig specified, then this
    * instance will have no external IPv6 Internet access.
@@ -469,6 +486,46 @@ public final class NetworkInterface extends com.google.api.client.json.GenericJs
    */
   public NetworkInterface setInternalIpv6PrefixLength(java.lang.Integer internalIpv6PrefixLength) {
     this.internalIpv6PrefixLength = internalIpv6PrefixLength;
+    return this;
+  }
+
+  /**
+   * [Output Only] This field specifies the internal IPv6 network address assigned to the CX9
+   * Network Interface Card, which facilitates the routing of traffic between NICs. For any single
+   * CX9 Network Interface Card, the identical internalNicLoadBalancingIpv6Address is assigned
+   * across all four associated ports.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInternalNicLoadBalancingIpv6Address() {
+    return internalNicLoadBalancingIpv6Address;
+  }
+
+  /**
+   * [Output Only] This field specifies the internal IPv6 network address assigned to the CX9
+   * Network Interface Card, which facilitates the routing of traffic between NICs. For any single
+   * CX9 Network Interface Card, the identical internalNicLoadBalancingIpv6Address is assigned
+   * across all four associated ports.
+   * @param internalNicLoadBalancingIpv6Address internalNicLoadBalancingIpv6Address or {@code null} for none
+   */
+  public NetworkInterface setInternalNicLoadBalancingIpv6Address(java.lang.String internalNicLoadBalancingIpv6Address) {
+    this.internalNicLoadBalancingIpv6Address = internalNicLoadBalancingIpv6Address;
+    return this;
+  }
+
+  /**
+   * [Output Only] The prefix length of the internal IPv6 Nic load balancing prefix.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInternalNicLoadBalancingIpv6PrefixLength() {
+    return internalNicLoadBalancingIpv6PrefixLength;
+  }
+
+  /**
+   * [Output Only] The prefix length of the internal IPv6 Nic load balancing prefix.
+   * @param internalNicLoadBalancingIpv6PrefixLength internalNicLoadBalancingIpv6PrefixLength or {@code null} for none
+   */
+  public NetworkInterface setInternalNicLoadBalancingIpv6PrefixLength(java.lang.Integer internalNicLoadBalancingIpv6PrefixLength) {
+    this.internalNicLoadBalancingIpv6PrefixLength = internalNicLoadBalancingIpv6PrefixLength;
     return this;
   }
 

@@ -33,8 +33,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
    * or is fully loaded. For usage guidelines, see Connection balancing mode.
    *
-   * Backends must use compatible balancing modes. For more information, see Supported balancing
-   * modes and target capacity settings and Restrictions and guidance for instance groups.
+   * Backends must use compatible balancing modes. Backends of a backend service may use different
+   * balancing modes. For more information, see  Supported balancing modes and target capacity
+   * settings and Restrictions and guidance for instance groups.
    *
    * Note: Currently, if you use the API to configure incompatible balancing modes, the
    * configuration might be accepted even though it has no impact and is ignored. Specifically,
@@ -77,6 +78,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   /**
    * This field designates whether this is a failover backend. More than one failover backend can be
    * configured for a given BackendService.
+   *
+   * This field can only be used for a regional external Passthrough Network Load Balancer or a
+   * regional internal Passthrough Network Load Balancer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -203,6 +207,10 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * DEFAULT:  If preferred backends don't have enough    capacity, backends in this layer would be
    * used and traffic would be    assigned based on the load balancing algorithm you use. This is
    * the    default
+   *
+   * For global external Passthrough Network Load Balancers, the following restrictions apply:
+   * - At most one backend can be marked as PREFERRED.    - PREFERRED and DEFAULT backends cannot
+   * reside    in the same Cloud region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -218,8 +226,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
    * or is fully loaded. For usage guidelines, see Connection balancing mode.
    *
-   * Backends must use compatible balancing modes. For more information, see Supported balancing
-   * modes and target capacity settings and Restrictions and guidance for instance groups.
+   * Backends must use compatible balancing modes. Backends of a backend service may use different
+   * balancing modes. For more information, see  Supported balancing modes and target capacity
+   * settings and Restrictions and guidance for instance groups.
    *
    * Note: Currently, if you use the API to configure incompatible balancing modes, the
    * configuration might be accepted even though it has no impact and is ignored. Specifically,
@@ -235,8 +244,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * Specifies how to determine whether the backend of a load balancer can handle additional traffic
    * or is fully loaded. For usage guidelines, see Connection balancing mode.
    *
-   * Backends must use compatible balancing modes. For more information, see Supported balancing
-   * modes and target capacity settings and Restrictions and guidance for instance groups.
+   * Backends must use compatible balancing modes. Backends of a backend service may use different
+   * balancing modes. For more information, see  Supported balancing modes and target capacity
+   * settings and Restrictions and guidance for instance groups.
    *
    * Note: Currently, if you use the API to configure incompatible balancing modes, the
    * configuration might be accepted even though it has no impact and is ignored. Specifically,
@@ -319,6 +329,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   /**
    * This field designates whether this is a failover backend. More than one failover backend can be
    * configured for a given BackendService.
+   *
+   * This field can only be used for a regional external Passthrough Network Load Balancer or a
+   * regional internal Passthrough Network Load Balancer.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getFailover() {
@@ -328,6 +341,9 @@ public final class Backend extends com.google.api.client.json.GenericJson {
   /**
    * This field designates whether this is a failover backend. More than one failover backend can be
    * configured for a given BackendService.
+   *
+   * This field can only be used for a regional external Passthrough Network Load Balancer or a
+   * regional internal Passthrough Network Load Balancer.
    * @param failover failover or {@code null} for none
    */
   public Backend setFailover(java.lang.Boolean failover) {
@@ -606,6 +622,10 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * DEFAULT:  If preferred backends don't have enough    capacity, backends in this layer would be
    * used and traffic would be    assigned based on the load balancing algorithm you use. This is
    * the    default
+   *
+   * For global external Passthrough Network Load Balancers, the following restrictions apply:
+   * - At most one backend can be marked as PREFERRED.    - PREFERRED and DEFAULT backends cannot
+   * reside    in the same Cloud region.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreference() {
@@ -619,6 +639,10 @@ public final class Backend extends com.google.api.client.json.GenericJson {
    * DEFAULT:  If preferred backends don't have enough    capacity, backends in this layer would be
    * used and traffic would be    assigned based on the load balancing algorithm you use. This is
    * the    default
+   *
+   * For global external Passthrough Network Load Balancers, the following restrictions apply:
+   * - At most one backend can be marked as PREFERRED.    - PREFERRED and DEFAULT backends cannot
+   * reside    in the same Cloud region.
    * @param preference preference or {@code null} for none
    */
   public Backend setPreference(java.lang.String preference) {

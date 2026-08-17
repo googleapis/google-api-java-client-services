@@ -30,14 +30,14 @@ package com.google.api.services.compute.model;
 public final class CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies the type of the disk. This field must be set to SCRATCH.
+   * Specifies the type of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Specifies the type of the disk. This field must be set to SCRATCH.
+   * Specifies the type of the disk.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -45,7 +45,7 @@ public final class CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelecti
   }
 
   /**
-   * Specifies the type of the disk. This field must be set to SCRATCH.
+   * Specifies the type of the disk.
    * @param type type or {@code null} for none
    */
   public CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelectionAttachedDisk setType(java.lang.String type) {

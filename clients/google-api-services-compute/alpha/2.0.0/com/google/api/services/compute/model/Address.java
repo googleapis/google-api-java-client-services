@@ -189,6 +189,20 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.Integer prefixLength;
 
   /**
+   * The public DNS PTR record to be configured for this external IP.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ptrDomainName;
+
+  /**
+   * The TTL in seconds for public DNS PTR record.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer ptrDomainNameTtl;
+
+  /**
    * The purpose of this resource, which can be one of the following values:              -
    * GCE_ENDPOINT for addresses that are used by VM      instances, alias IP ranges, load balancers,
    * and similar resources.      - DNS_RESOLVER for a DNS resolver address in a subnetwork
@@ -655,6 +669,40 @@ public final class Address extends com.google.api.client.json.GenericJson {
    */
   public Address setPrefixLength(java.lang.Integer prefixLength) {
     this.prefixLength = prefixLength;
+    return this;
+  }
+
+  /**
+   * The public DNS PTR record to be configured for this external IP.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPtrDomainName() {
+    return ptrDomainName;
+  }
+
+  /**
+   * The public DNS PTR record to be configured for this external IP.
+   * @param ptrDomainName ptrDomainName or {@code null} for none
+   */
+  public Address setPtrDomainName(java.lang.String ptrDomainName) {
+    this.ptrDomainName = ptrDomainName;
+    return this;
+  }
+
+  /**
+   * The TTL in seconds for public DNS PTR record.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPtrDomainNameTtl() {
+    return ptrDomainNameTtl;
+  }
+
+  /**
+   * The TTL in seconds for public DNS PTR record.
+   * @param ptrDomainNameTtl ptrDomainNameTtl or {@code null} for none
+   */
+  public Address setPtrDomainNameTtl(java.lang.Integer ptrDomainNameTtl) {
+    this.ptrDomainNameTtl = ptrDomainNameTtl;
     return this;
   }
 

@@ -4720,6 +4720,255 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return (TestIamPermissions) super.set(parameterName, value);
       }
     }
+    /**
+     * Set a custom ptr domain name on regional address.
+     *
+     * Create a request for the method "addresses.updatePublicPtr".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link UpdatePublicPtr#execute()} method to invoke the remote operation.
+     *
+     * @param project Source project ID where the address belongs.
+     * @param region Name of the region for this request.
+     * @param address Name of the address resource to update.
+     * @param content the {@link com.google.api.services.compute.model.RegionAddressesUpdatePublicPtrRequest}
+     * @return the request
+     */
+    public UpdatePublicPtr updatePublicPtr(java.lang.String project, java.lang.String region, java.lang.String address, com.google.api.services.compute.model.RegionAddressesUpdatePublicPtrRequest content) throws java.io.IOException {
+      UpdatePublicPtr result = new UpdatePublicPtr(project, region, address, content);
+      initialize(result);
+      return result;
+    }
+
+    public class UpdatePublicPtr extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/addresses/{address}:updatePublicPtr";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern ADDRESS_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Set a custom ptr domain name on regional address.
+       *
+       * Create a request for the method "addresses.updatePublicPtr".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link UpdatePublicPtr#execute()} method to invoke the remote operation.
+       * <p> {@link UpdatePublicPtr#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Source project ID where the address belongs.
+       * @param region Name of the region for this request.
+       * @param address Name of the address resource to update.
+       * @param content the {@link com.google.api.services.compute.model.RegionAddressesUpdatePublicPtrRequest}
+       * @since 1.13
+       */
+      protected UpdatePublicPtr(java.lang.String project, java.lang.String region, java.lang.String address, com.google.api.services.compute.model.RegionAddressesUpdatePublicPtrRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.address = com.google.api.client.util.Preconditions.checkNotNull(address, "Required parameter address must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
+              "Parameter address must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public UpdatePublicPtr set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdatePublicPtr) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdatePublicPtr setAccessToken(java.lang.String accessToken) {
+        return (UpdatePublicPtr) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdatePublicPtr setAlt(java.lang.String alt) {
+        return (UpdatePublicPtr) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdatePublicPtr setCallback(java.lang.String callback) {
+        return (UpdatePublicPtr) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdatePublicPtr setFields(java.lang.String fields) {
+        return (UpdatePublicPtr) super.setFields(fields);
+      }
+
+      @Override
+      public UpdatePublicPtr setKey(java.lang.String key) {
+        return (UpdatePublicPtr) super.setKey(key);
+      }
+
+      @Override
+      public UpdatePublicPtr setOauthToken(java.lang.String oauthToken) {
+        return (UpdatePublicPtr) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdatePublicPtr setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdatePublicPtr) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdatePublicPtr setQuotaUser(java.lang.String quotaUser) {
+        return (UpdatePublicPtr) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdatePublicPtr setUploadType(java.lang.String uploadType) {
+        return (UpdatePublicPtr) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdatePublicPtr setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdatePublicPtr) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public UpdatePublicPtr setUserIp(java.lang.String userIp) {
+        return (UpdatePublicPtr) super.setUserIp(userIp);
+      }
+
+      /** Source project ID where the address belongs. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Source project ID where the address belongs.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Source project ID where the address belongs. */
+      public UpdatePublicPtr setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public UpdatePublicPtr setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name of the address resource to update. */
+      @com.google.api.client.util.Key
+      private java.lang.String address;
+
+      /** Name of the address resource to update.
+       */
+      public java.lang.String getAddress() {
+        return address;
+      }
+
+      /** Name of the address resource to update. */
+      public UpdatePublicPtr setAddress(java.lang.String address) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ADDRESS_PATTERN.matcher(address).matches(),
+              "Parameter address must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.address = address;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public UpdatePublicPtr setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public UpdatePublicPtr set(String parameterName, Object value) {
+        return (UpdatePublicPtr) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -230686,6 +230935,231 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     *
+     * Create a request for the method "regionSslPolicies.getIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param resource Name or id of the resource for this request.
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(project, region, resource);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{resource}/getIamPolicy";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Gets the access control policy for a resource. May be empty if no such policy or resource
+       * exists.
+       *
+       * Create a request for the method "regionSslPolicies.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param resource Name or id of the resource for this request.
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetIamPolicy setUserIp(java.lang.String userIp) {
+        return (GetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public GetIamPolicy setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      /** Requested IAM Policy version. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** Requested IAM Policy version.
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /** Requested IAM Policy version. */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a new policy in the specified project and region using the data included in the request.
      *
      * Create a request for the method "regionSslPolicies.insert".
@@ -232023,6 +232497,206 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy.
+     *
+     * Create a request for the method "regionSslPolicies.setIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.RegionSetPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.RegionSetPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(project, region, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{resource}/setIamPolicy";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Sets the access control policy on the specified resource. Replaces any existing policy.
+       *
+       * Create a request for the method "regionSslPolicies.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.RegionSetPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.RegionSetPolicyRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetIamPolicy setUserIp(java.lang.String userIp) {
+        return (SetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public SetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public SetIamPolicy setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
       }
     }
     /**
@@ -254592,6 +255266,32 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
+       * ETag for optimistic concurrency control as described by AIP 154. Used to prevent
+       * conflicting updates. If provided, the request will succeed only if the etag matches the
+       * current etag of the router; otherwise, the request fails with an ABORTED error.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String etag;
+
+      /** ETag for optimistic concurrency control as described by AIP 154. Used to prevent conflicting
+     updates. If provided, the request will succeed only if the etag matches the current etag of the
+     router; otherwise, the request fails with an ABORTED error.
+       */
+      public java.lang.String getEtag() {
+        return etag;
+      }
+
+      /**
+       * ETag for optimistic concurrency control as described by AIP 154. Used to prevent
+       * conflicting updates. If provided, the request will succeed only if the etag matches the
+       * current etag of the router; otherwise, the request fails with an ABORTED error.
+       */
+      public Delete setEtag(java.lang.String etag) {
+        this.etag = etag;
+        return this;
+      }
+
+      /**
        * An optional request ID to identify requests. Specify a unique request ID so that if you
        * must retry your request, the server will know to ignore the request if it has already been
        * completed.
@@ -275150,6 +275850,199 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     *
+     * Create a request for the method "sslPolicies.getIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param resource Name or id of the resource for this request.
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String project, java.lang.String resource) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(project, resource);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/global/sslPolicies/{resource}/getIamPolicy";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Gets the access control policy for a resource. May be empty if no such policy or resource
+       * exists.
+       *
+       * Create a request for the method "sslPolicies.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param resource Name or id of the resource for this request.
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String project, java.lang.String resource) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetIamPolicy setUserIp(java.lang.String userIp) {
+        return (GetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      /** Requested IAM Policy version. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** Requested IAM Policy version.
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /** Requested IAM Policy version. */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the specified SSL policy resource.
      *
      * Create a request for the method "sslPolicies.insert".
@@ -276358,6 +277251,174 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy.
+     *
+     * Create a request for the method "sslPolicies.setIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.GlobalSetPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String project, java.lang.String resource, com.google.api.services.compute.model.GlobalSetPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(project, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/global/sslPolicies/{resource}/setIamPolicy";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Sets the access control policy on the specified resource. Replaces any existing policy.
+       *
+       * Create a request for the method "sslPolicies.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.GlobalSetPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String project, java.lang.String resource, com.google.api.services.compute.model.GlobalSetPolicyRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetIamPolicy setUserIp(java.lang.String userIp) {
+        return (SetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public SetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
       }
     }
     /**

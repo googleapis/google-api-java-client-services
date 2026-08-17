@@ -255,12 +255,20 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    *
    * zones/zone/machineTypes/custom-CPUS-MEMORY
    *
-   * For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions,
-   * read theSpecifications for custom machine types.
+   * For example: zones/us-central1-f/machineTypes/custom-4-5120
+   *
+   * For a full list of restrictions, read theSpecifications for custom machine types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String machineType;
+
+  /**
+   * Map of management interfaces. Keys must be valid RFC1035 names and at most 63 characters long.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, InstanceManagementInterface> managementInterfaces;
 
   /**
    * The metadata key/value pairs assigned to this instance. This includes metadata keys that were
@@ -1081,8 +1089,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    *
    * zones/zone/machineTypes/custom-CPUS-MEMORY
    *
-   * For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions,
-   * read theSpecifications for custom machine types.
+   * For example: zones/us-central1-f/machineTypes/custom-4-5120
+   *
+   * For a full list of restrictions, read theSpecifications for custom machine types.
    * @return value or {@code null} for none
    */
   public java.lang.String getMachineType() {
@@ -1103,12 +1112,30 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    *
    * zones/zone/machineTypes/custom-CPUS-MEMORY
    *
-   * For example: zones/us-central1-f/machineTypes/custom-4-5120 For a full list of restrictions,
-   * read theSpecifications for custom machine types.
+   * For example: zones/us-central1-f/machineTypes/custom-4-5120
+   *
+   * For a full list of restrictions, read theSpecifications for custom machine types.
    * @param machineType machineType or {@code null} for none
    */
   public Instance setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Map of management interfaces. Keys must be valid RFC1035 names and at most 63 characters long.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, InstanceManagementInterface> getManagementInterfaces() {
+    return managementInterfaces;
+  }
+
+  /**
+   * Map of management interfaces. Keys must be valid RFC1035 names and at most 63 characters long.
+   * @param managementInterfaces managementInterfaces or {@code null} for none
+   */
+  public Instance setManagementInterfaces(java.util.Map<String, InstanceManagementInterface> managementInterfaces) {
+    this.managementInterfaces = managementInterfaces;
     return this;
   }
 

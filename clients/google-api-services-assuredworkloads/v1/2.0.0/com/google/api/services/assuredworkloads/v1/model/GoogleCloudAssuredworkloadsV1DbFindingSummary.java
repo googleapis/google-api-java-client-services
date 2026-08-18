@@ -59,11 +59,25 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   private java.lang.String name;
 
   /**
+   * Output only. Number of active organization policy findings for this category.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long organizationPolicyFindingCount;
+
+  /**
    * Optional. The list of compliance frameworks that the finding belongs to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedFrameworks;
+
+  /**
+   * Output only. Number of active resource findings for this category.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long resourceFindingCount;
 
   /**
    * Output only. The severity of the finding.
@@ -148,6 +162,23 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
+   * Output only. Number of active organization policy findings for this category.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrganizationPolicyFindingCount() {
+    return organizationPolicyFindingCount;
+  }
+
+  /**
+   * Output only. Number of active organization policy findings for this category.
+   * @param organizationPolicyFindingCount organizationPolicyFindingCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1DbFindingSummary setOrganizationPolicyFindingCount(java.lang.Long organizationPolicyFindingCount) {
+    this.organizationPolicyFindingCount = organizationPolicyFindingCount;
+    return this;
+  }
+
+  /**
    * Optional. The list of compliance frameworks that the finding belongs to.
    * @return value or {@code null} for none
    */
@@ -161,6 +192,23 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setRelatedFrameworks(java.util.List<java.lang.String> relatedFrameworks) {
     this.relatedFrameworks = relatedFrameworks;
+    return this;
+  }
+
+  /**
+   * Output only. Number of active resource findings for this category.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getResourceFindingCount() {
+    return resourceFindingCount;
+  }
+
+  /**
+   * Output only. Number of active resource findings for this category.
+   * @param resourceFindingCount resourceFindingCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1DbFindingSummary setResourceFindingCount(java.lang.Long resourceFindingCount) {
+    this.resourceFindingCount = resourceFindingCount;
     return this;
   }
 

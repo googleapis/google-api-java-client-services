@@ -928,7 +928,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-         *        `location_id` refers to a GCP region.
+         *        `location_id` refers to a Google Cloud region.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -957,7 +957,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-         *        `location_id` refers to a GCP region.
+         *        `location_id` refers to a Google Cloud region.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1028,14 +1028,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis ACL policy resource name using the form:
          `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where `location_id`
-         refers to a GCP region.
+         refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -1044,7 +1044,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1110,7 +1110,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-         *        `location_id` refers to a GCP region.
+         *        `location_id` refers to a Google Cloud region.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1138,7 +1138,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis ACL policy resource name using the form:
          *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-         *        `location_id` refers to a GCP region.
+         *        `location_id` refers to a Google Cloud region.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1219,14 +1219,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. Redis ACL policy resource name using the form:
          `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where `location_id`
-         refers to a GCP region.
+         refers to a Google Cloud region.
            */
           public java.lang.String getName() {
             return name;
@@ -1235,7 +1235,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
           /**
            * Required. Redis ACL policy resource name using the form:
            * `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}` where
-           * `location_id` refers to a GCP region.
+           * `location_id` refers to a Google Cloud region.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1674,7 +1674,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. Redis ACL policy revision resource name using the form:
            *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revi
-           *        sion_id}` where `location_id` refers to a GCP region.
+           *        sion_id}` where `location_id` refers to a Google Cloud region.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -1702,7 +1702,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. Redis ACL policy revision resource name using the form:
            *        `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revi
-           *        sion_id}` where `location_id` refers to a GCP region.
+           *        sion_id}` where `location_id` refers to a Google Cloud region.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -1783,14 +1783,14 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. Redis ACL policy revision resource name using the form: `projects/{project_
              * id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
-             * where `location_id` refers to a GCP region.
+             * where `location_id` refers to a Google Cloud region.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
             /** Required. Redis ACL policy revision resource name using the form:
            `projects/{project_id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
-           where `location_id` refers to a GCP region.
+           where `location_id` refers to a Google Cloud region.
              */
             public java.lang.String getName() {
               return name;
@@ -1799,7 +1799,7 @@ public class CloudRedis extends com.google.api.client.googleapis.services.json.A
             /**
              * Required. Redis ACL policy revision resource name using the form: `projects/{project_
              * id}/locations/{location_id}/aclPolicies/{acl_policy_id}/revisions/{revision_id}`
-             * where `location_id` refers to a GCP region.
+             * where `location_id` refers to a Google Cloud region.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {

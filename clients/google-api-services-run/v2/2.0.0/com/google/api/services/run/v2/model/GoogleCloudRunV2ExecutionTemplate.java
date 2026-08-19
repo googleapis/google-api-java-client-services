@@ -56,6 +56,14 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
   private java.lang.String clientVersion;
 
   /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean delayExecution;
+
+  /**
    * Unstructured key value map that can be used to organize and categorize objects. User-provided
    * labels are shared with Google's billing system, so they can be used to filter, or break down
    * billing charges by team, component, environment, state, etc. For more information, visit
@@ -154,6 +162,25 @@ public final class GoogleCloudRunV2ExecutionTemplate extends com.google.api.clie
    */
   public GoogleCloudRunV2ExecutionTemplate setClientVersion(java.lang.String clientVersion) {
     this.clientVersion = clientVersion;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDelayExecution() {
+    return delayExecution;
+  }
+
+  /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * @param delayExecution delayExecution or {@code null} for none
+   */
+  public GoogleCloudRunV2ExecutionTemplate setDelayExecution(java.lang.Boolean delayExecution) {
+    this.delayExecution = delayExecution;
     return this;
   }
 

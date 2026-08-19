@@ -30,6 +30,14 @@ package com.google.api.services.run.v1.model;
 public final class ExecutionSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean delayExecution;
+
+  /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at given time.
    * When the job is run, if this field is 0 or unset, the maximum possible value will be used for
    * that execution. The actual number of tasks running in steady state will be less than this
@@ -55,6 +63,25 @@ public final class ExecutionSpec extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private TaskTemplateSpec template;
+
+  /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDelayExecution() {
+    return delayExecution;
+  }
+
+  /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * @param delayExecution delayExecution or {@code null} for none
+   */
+  public ExecutionSpec setDelayExecution(java.lang.Boolean delayExecution) {
+    this.delayExecution = delayExecution;
+    return this;
+  }
 
   /**
    * Optional. Specifies the maximum desired number of tasks the execution should run at given time.

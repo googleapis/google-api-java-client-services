@@ -70,6 +70,14 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
   private java.lang.String parent;
 
   /**
+   * Output only. Represents the relevance score of the chunk to the search query. Higher score
+   * indicates higher chunk relevance. The score is in range [0.0, 1.0].
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double relevanceScore;
+
+  /**
    * Output only. Contains the content of the document chunk.
    * @return value or {@code null} for none
    */
@@ -152,6 +160,25 @@ public final class DocumentChunk extends com.google.api.client.json.GenericJson 
    */
   public DocumentChunk setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Output only. Represents the relevance score of the chunk to the search query. Higher score
+   * indicates higher chunk relevance. The score is in range [0.0, 1.0].
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getRelevanceScore() {
+    return relevanceScore;
+  }
+
+  /**
+   * Output only. Represents the relevance score of the chunk to the search query. Higher score
+   * indicates higher chunk relevance. The score is in range [0.0, 1.0].
+   * @param relevanceScore relevanceScore or {@code null} for none
+   */
+  public DocumentChunk setRelevanceScore(java.lang.Double relevanceScore) {
+    this.relevanceScore = relevanceScore;
     return this;
   }
 

@@ -43,6 +43,14 @@ public final class Overrides extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean delayExecution;
+
+  /**
    * The desired number of tasks the execution should run. Will replace existing task_count value.
    * The value may be {@code null}.
    */
@@ -71,6 +79,25 @@ public final class Overrides extends com.google.api.client.json.GenericJson {
    */
   public Overrides setContainerOverrides(java.util.List<ContainerOverride> containerOverrides) {
     this.containerOverrides = containerOverrides;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDelayExecution() {
+    return delayExecution;
+  }
+
+  /**
+   * Optional. If true, the system will start the execution within the next 12 hours depending on
+   * available capacity.
+   * @param delayExecution delayExecution or {@code null} for none
+   */
+  public Overrides setDelayExecution(java.lang.Boolean delayExecution) {
+    this.delayExecution = delayExecution;
     return this;
   }
 

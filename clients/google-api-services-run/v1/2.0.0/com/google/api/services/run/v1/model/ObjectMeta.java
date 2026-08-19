@@ -36,7 +36,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * objects. In Cloud Run, annotations with 'run.googleapis.com/' and 'autoscaling.knative.dev' are
    * restricted, and the accepted annotations will be different depending on the resource type. *
    * `autoscaling.knative.dev/maxScale`: Revision. * `autoscaling.knative.dev/minScale`: Revision. *
-   * `run.googleapis.com/base-images`: Service, Revision. * `run.googleapis.com/binary-
+   * `run.googleapis.com/base-images`: Service, Revision . * `run.googleapis.com/binary-
    * authorization-breakglass`: Service, Job, * `run.googleapis.com/binary-authorization`: Service,
    * Job, Execution. * `run.googleapis.com/build-base-image`: Service. * `run.googleapis.com/build-
    * enable-automatic-updates`: Service. * `run.googleapis.com/build-environment-variables`:
@@ -183,7 +183,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * objects. In Cloud Run, annotations with 'run.googleapis.com/' and 'autoscaling.knative.dev' are
    * restricted, and the accepted annotations will be different depending on the resource type. *
    * `autoscaling.knative.dev/maxScale`: Revision. * `autoscaling.knative.dev/minScale`: Revision. *
-   * `run.googleapis.com/base-images`: Service, Revision. * `run.googleapis.com/binary-
+   * `run.googleapis.com/base-images`: Service, Revision . * `run.googleapis.com/binary-
    * authorization-breakglass`: Service, Job, * `run.googleapis.com/binary-authorization`: Service,
    * Job, Execution. * `run.googleapis.com/build-base-image`: Service. * `run.googleapis.com/build-
    * enable-automatic-updates`: Service. * `run.googleapis.com/build-environment-variables`:
@@ -223,7 +223,7 @@ public final class ObjectMeta extends com.google.api.client.json.GenericJson {
    * objects. In Cloud Run, annotations with 'run.googleapis.com/' and 'autoscaling.knative.dev' are
    * restricted, and the accepted annotations will be different depending on the resource type. *
    * `autoscaling.knative.dev/maxScale`: Revision. * `autoscaling.knative.dev/minScale`: Revision. *
-   * `run.googleapis.com/base-images`: Service, Revision. * `run.googleapis.com/binary-
+   * `run.googleapis.com/base-images`: Service, Revision . * `run.googleapis.com/binary-
    * authorization-breakglass`: Service, Job, * `run.googleapis.com/binary-authorization`: Service,
    * Job, Execution. * `run.googleapis.com/build-base-image`: Service. * `run.googleapis.com/build-
    * enable-automatic-updates`: Service. * `run.googleapis.com/build-environment-variables`:

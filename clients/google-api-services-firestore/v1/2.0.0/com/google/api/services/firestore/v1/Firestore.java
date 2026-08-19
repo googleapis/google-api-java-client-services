@@ -2409,6 +2409,652 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
 
       }
       /**
+       * An accessor for creating requests from the ChangeStreams collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firestore firestore = new Firestore(...);}
+       *   {@code Firestore.ChangeStreams.List request = firestore.changeStreams().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ChangeStreams changeStreams() {
+        return new ChangeStreams();
+      }
+
+      /**
+       * The "changeStreams" collection of methods.
+       */
+      public class ChangeStreams {
+
+        /**
+         * Creates a new change stream for the database.
+         *
+         * Create a request for the method "changeStreams.create".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent database to create the change stream for. Format is
+         *        `projects/{project}/databases/{database}`.
+         * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream> {
+
+          private static final String REST_PATH = "v1/{+parent}/changeStreams";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Creates a new change stream for the database.
+           *
+           * Create a request for the method "changeStreams.create".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent database to create the change stream for. Format is
+         *        `projects/{project}/databases/{database}`.
+           * @param content the {@link com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream content) {
+            super(Firestore.this, "POST", REST_PATH, content, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent database to create the change stream for. Format is
+           * `projects/{project}/databases/{database}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent database to create the change stream for. Format is
+         `projects/{project}/databases/{database}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent database to create the change stream for. Format is
+           * `projects/{project}/databases/{database}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the change stream, which will become the final component of
+           * the change stream's resource name. This value should be 4-63 characters. Valid
+           * characters are lowercase letters, numbers, and hyphens. The first character must be a
+           * letter, and the last character must be a letter or a number.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String changeStreamId;
+
+          /** Required. The ID to use for the change stream, which will become the final component of the change
+         stream's resource name. This value should be 4-63 characters. Valid characters are lowercase
+         letters, numbers, and hyphens. The first character must be a letter, and the last character must be
+         a letter or a number.
+           */
+          public java.lang.String getChangeStreamId() {
+            return changeStreamId;
+          }
+
+          /**
+           * Required. The ID to use for the change stream, which will become the final component of
+           * the change stream's resource name. This value should be 4-63 characters. Valid
+           * characters are lowercase letters, numbers, and hyphens. The first character must be a
+           * letter, and the last character must be a letter or a number.
+           */
+          public Create setChangeStreamId(java.lang.String changeStreamId) {
+            this.changeStreamId = changeStreamId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a change stream.
+         *
+         * Create a request for the method "changeStreams.delete".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the change stream to delete. Format is
+         *        `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirestoreRequest<com.google.api.services.firestore.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/changeStreams/[^/]+$");
+
+          /**
+           * Deletes a change stream.
+           *
+           * Create a request for the method "changeStreams.delete".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the change stream to delete. Format is
+         *        `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Firestore.this, "DELETE", REST_PATH, null, com.google.api.services.firestore.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/changeStreams/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the change stream to delete. Format is
+           * `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the change stream to delete. Format is
+         `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the change stream to delete. Format is
+           * `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/changeStreams/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The etag of the change stream to delete. If this is not the current etag of
+           * the change stream, the deletion will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The etag of the change stream to delete. If this is not the current etag of the change
+         stream, the deletion will fail.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The etag of the change stream to delete. If this is not the current etag of
+           * the change stream, the deletion will fail.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets information about a change stream.
+         *
+         * Create a request for the method "changeStreams.get".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the change stream to retrieve. Format is
+         *        `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+/changeStreams/[^/]+$");
+
+          /**
+           * Gets information about a change stream.
+           *
+           * Create a request for the method "changeStreams.get".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the change stream to retrieve. Format is
+         *        `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ChangeStream.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/changeStreams/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the change stream to retrieve. Format is
+           * `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the change stream to retrieve. Format is
+         `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the change stream to retrieve. Format is
+           * `projects/{project}/databases/{database}/changeStreams/{change_stream}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+/changeStreams/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all change streams in a database.
+         *
+         * Create a request for the method "changeStreams.list".
+         *
+         * This request holds the parameters needed by the firestore server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent database to list change streams from. Format is
+         *        `projects/{project}/databases/{database}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirestoreRequest<com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListChangeStreamsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/changeStreams";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/databases/[^/]+$");
+
+          /**
+           * Lists all change streams in a database.
+           *
+           * Create a request for the method "changeStreams.list".
+           *
+           * This request holds the parameters needed by the the firestore server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent database to list change streams from. Format is
+         *        `projects/{project}/databases/{database}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Firestore.this, "GET", REST_PATH, null, com.google.api.services.firestore.v1.model.GoogleFirestoreAdminV1ListChangeStreamsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent database to list change streams from. Format is
+           * `projects/{project}/databases/{database}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent database to list change streams from. Format is
+         `projects/{project}/databases/{database}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent database to list change streams from. Format is
+           * `projects/{project}/databases/{database}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/databases/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the CollectionGroups collection.
        *
        * <p>The typical use is:</p>
@@ -4502,6 +5148,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /** Optional. The request tags for the request. */
+          @com.google.api.client.util.Key("requestOptions.requestTags")
+          private java.util.List<java.lang.String> requestOptionsRequestTags;
+
+          /** Optional. The request tags for the request.
+           */
+          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
+            return requestOptionsRequestTags;
+          }
+
+          /** Optional. The request tags for the request. */
+          public CreateDocument setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
+            this.requestOptionsRequestTags = requestOptionsRequestTags;
+            return this;
+          }
+
           @Override
           public CreateDocument set(String parameterName, Object value) {
             return (CreateDocument) super.set(parameterName, value);
@@ -4683,6 +5345,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Delete setCurrentDocumentUpdateTime(String currentDocumentUpdateTime) {
             this.currentDocumentUpdateTime = currentDocumentUpdateTime;
+            return this;
+          }
+
+          /** Optional. The request tags for the request. */
+          @com.google.api.client.util.Key("requestOptions.requestTags")
+          private java.util.List<java.lang.String> requestOptionsRequestTags;
+
+          /** Optional. The request tags for the request.
+           */
+          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
+            return requestOptionsRequestTags;
+          }
+
+          /** Optional. The request tags for the request. */
+          public Delete setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
+            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 
@@ -5013,6 +5691,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Get setReadTime(String readTime) {
             this.readTime = readTime;
+            return this;
+          }
+
+          /** Optional. The request tags for the request. */
+          @com.google.api.client.util.Key("requestOptions.requestTags")
+          private java.util.List<java.lang.String> requestOptionsRequestTags;
+
+          /** Optional. The request tags for the request.
+           */
+          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
+            return requestOptionsRequestTags;
+          }
+
+          /** Optional. The request tags for the request. */
+          public Get setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
+            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 
@@ -5381,6 +6075,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public List setRecursive(java.lang.Boolean recursive) {
             this.recursive = recursive;
+            return this;
+          }
+
+          /** Optional. The request tags for the request. */
+          @com.google.api.client.util.Key("requestOptions.requestTags")
+          private java.util.List<java.lang.String> requestOptionsRequestTags;
+
+          /** Optional. The request tags for the request.
+           */
+          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
+            return requestOptionsRequestTags;
+          }
+
+          /** Optional. The request tags for the request. */
+          public List setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
+            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 
@@ -5934,6 +6644,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
+          /** Optional. The request tags for the request. */
+          @com.google.api.client.util.Key("requestOptions.requestTags")
+          private java.util.List<java.lang.String> requestOptionsRequestTags;
+
+          /** Optional. The request tags for the request.
+           */
+          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
+            return requestOptionsRequestTags;
+          }
+
+          /** Optional. The request tags for the request. */
+          public ListDocuments setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
+            this.requestOptionsRequestTags = requestOptionsRequestTags;
+            return this;
+          }
+
           /**
            * If the list should show missing documents. A document is missing if it does not exist,
            * but there are sub-documents nested underneath it. When true, such missing documents
@@ -6470,6 +7196,22 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
            */
           public Patch setMaskFieldPaths(java.util.List<java.lang.String> maskFieldPaths) {
             this.maskFieldPaths = maskFieldPaths;
+            return this;
+          }
+
+          /** Optional. The request tags for the request. */
+          @com.google.api.client.util.Key("requestOptions.requestTags")
+          private java.util.List<java.lang.String> requestOptionsRequestTags;
+
+          /** Optional. The request tags for the request.
+           */
+          public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
+            return requestOptionsRequestTags;
+          }
+
+          /** Optional. The request tags for the request. */
+          public Patch setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
+            this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
           }
 

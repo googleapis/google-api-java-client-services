@@ -30,6 +30,13 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class CommitRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The request options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * If set, applies all writes in this transaction, and commits it.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class CommitRequest extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<Write> writes;
+
+  /**
+   * Optional. The request options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public CommitRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
+    return this;
+  }
 
   /**
    * If set, applies all writes in this transaction, and commits it.

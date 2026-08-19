@@ -29,6 +29,78 @@ package com.google.api.services.firestore.v1beta1.model;
 @SuppressWarnings("javadoc")
 public final class GoogleFirestoreAdminV1UpdateDatabaseMetadata extends com.google.api.client.json.GenericJson {
 
+  /**
+   * The time this operation completed. Will be unset if operation still in progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
+
+  /**
+   * The time this operation started.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String startTime;
+
+  /**
+   * The state of the operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
+   * The time this operation completed. Will be unset if operation still in progress.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * The time this operation completed. Will be unset if operation still in progress.
+   * @param endTime endTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1UpdateDatabaseMetadata setEndTime(String endTime) {
+    this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * The time this operation started.
+   * @return value or {@code null} for none
+   */
+  public String getStartTime() {
+    return startTime;
+  }
+
+  /**
+   * The time this operation started.
+   * @param startTime startTime or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1UpdateDatabaseMetadata setStartTime(String startTime) {
+    this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The state of the operation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * The state of the operation.
+   * @param state state or {@code null} for none
+   */
+  public GoogleFirestoreAdminV1UpdateDatabaseMetadata setState(java.lang.String state) {
+    this.state = state;
+    return this;
+  }
+
   @Override
   public GoogleFirestoreAdminV1UpdateDatabaseMetadata set(String fieldName, Object value) {
     return (GoogleFirestoreAdminV1UpdateDatabaseMetadata) super.set(fieldName, value);

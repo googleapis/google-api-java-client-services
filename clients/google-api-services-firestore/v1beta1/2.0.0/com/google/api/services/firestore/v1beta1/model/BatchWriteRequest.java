@@ -37,6 +37,13 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. The request options for this request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RequestOptions requestOptions;
+
+  /**
    * The writes to apply. Method does not apply writes atomically and does not guarantee ordering.
    * Each write succeeds or fails independently. You cannot write to the same document more than
    * once per request.
@@ -59,6 +66,23 @@ public final class BatchWriteRequest extends com.google.api.client.json.GenericJ
    */
   public BatchWriteRequest setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @return value or {@code null} for none
+   */
+  public RequestOptions getRequestOptions() {
+    return requestOptions;
+  }
+
+  /**
+   * Optional. The request options for this request.
+   * @param requestOptions requestOptions or {@code null} for none
+   */
+  public BatchWriteRequest setRequestOptions(RequestOptions requestOptions) {
+    this.requestOptions = requestOptions;
     return this;
   }
 

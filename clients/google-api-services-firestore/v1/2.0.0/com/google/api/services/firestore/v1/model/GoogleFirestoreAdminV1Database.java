@@ -107,8 +107,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Optional. The Firestore API data access mode to use for this database. If not set on write: -
-   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise Edition. - the default value is
-   * DATA_ACCESS_MODE_ENABLED for Standard Edition.
+   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise edition. - the default value is
+   * DATA_ACCESS_MODE_ENABLED for Standard edition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +146,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Optional. The MongoDB compatible API data access mode to use for this database. If not set on
-   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise Edition. The value is
-   * always DATA_ACCESS_MODE_DISABLED for Standard Edition.
+   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise edition. The value is
+   * always DATA_ACCESS_MODE_DISABLED for Standard edition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -411,8 +411,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Optional. The Firestore API data access mode to use for this database. If not set on write: -
-   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise Edition. - the default value is
-   * DATA_ACCESS_MODE_ENABLED for Standard Edition.
+   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise edition. - the default value is
+   * DATA_ACCESS_MODE_ENABLED for Standard edition.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirestoreDataAccessMode() {
@@ -421,8 +421,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Optional. The Firestore API data access mode to use for this database. If not set on write: -
-   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise Edition. - the default value is
-   * DATA_ACCESS_MODE_ENABLED for Standard Edition.
+   * the default value is DATA_ACCESS_MODE_DISABLED for Enterprise edition. - the default value is
+   * DATA_ACCESS_MODE_ENABLED for Standard edition.
    * @param firestoreDataAccessMode firestoreDataAccessMode or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setFirestoreDataAccessMode(java.lang.String firestoreDataAccessMode) {
@@ -501,8 +501,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Optional. The MongoDB compatible API data access mode to use for this database. If not set on
-   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise Edition. The value is
-   * always DATA_ACCESS_MODE_DISABLED for Standard Edition.
+   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise edition. The value is
+   * always DATA_ACCESS_MODE_DISABLED for Standard edition.
    * @return value or {@code null} for none
    */
   public java.lang.String getMongodbCompatibleDataAccessMode() {
@@ -511,8 +511,8 @@ public final class GoogleFirestoreAdminV1Database extends com.google.api.client.
 
   /**
    * Optional. The MongoDB compatible API data access mode to use for this database. If not set on
-   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise Edition. The value is
-   * always DATA_ACCESS_MODE_DISABLED for Standard Edition.
+   * write, the default value is DATA_ACCESS_MODE_ENABLED for Enterprise edition. The value is
+   * always DATA_ACCESS_MODE_DISABLED for Standard edition.
    * @param mongodbCompatibleDataAccessMode mongodbCompatibleDataAccessMode or {@code null} for none
    */
   public GoogleFirestoreAdminV1Database setMongodbCompatibleDataAccessMode(java.lang.String mongodbCompatibleDataAccessMode) {

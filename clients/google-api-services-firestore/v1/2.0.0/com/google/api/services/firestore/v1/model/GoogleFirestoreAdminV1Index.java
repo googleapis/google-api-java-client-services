@@ -17,7 +17,11 @@
 package com.google.api.services.firestore.v1.model;
 
 /**
- * Cloud Firestore indexes enable simple and complex queries against documents in a database.
+ * Cloud Firestore indexes enable simple and complex queries against documents in a database. In
+ * Standard edition databases, single-field indexes are managed using the
+ * google.firestore.admin.v1.Field resource, and composite indexes are managed using the
+ * google.firestore.admin.v1.Index resource. In Enterprise edition databases, both single-field and
+ * composite indexes are managed using the google.firestore.admin.v1.Index resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Firestore API. For a detailed explanation see:
@@ -44,13 +48,12 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   private java.lang.String density;
 
   /**
-   * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a
-   * maximum of 100 fields. The last field entry is always for the field path `__name__`. If, on
-   * creation, `__name__` was not specified as the last field, it will be added automatically with
-   * the same direction as that of the last field defined. If the final field in a composite index
-   * is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For
-   * single field indexes, this will always be exactly one entry with a field path equal to the
-   * field path of the associated field.
+   * The fields supported by this index. At most 100 fields may be specified. In Standard edition
+   * databases only: - At least 2 fields must be specified. - The last field entry is always for the
+   * field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will
+   * be added automatically with the same direction as that of the last field defined. If the final
+   * field in the index is not directional, the `__name__` will be ordered ASCENDING (unless
+   * explicitly specified).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,9 +71,10 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   private java.lang.Boolean multikey;
 
   /**
-   * Output only. A server defined name for this index. The form of this name for composite indexes
-   * will be: `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexe
-   * s/{composite_index_id}` For single field indexes, this field will be empty.
+   * A server-defined name for this index. Output only. When used in the
+   * google.firestore.admin.v1.Index resource, the value is of the form: `projects/{project_id}/data
+   * bases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}` When used in the
+   * google.firestore.admin.v1.Field resource, the value is empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,13 +156,12 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a
-   * maximum of 100 fields. The last field entry is always for the field path `__name__`. If, on
-   * creation, `__name__` was not specified as the last field, it will be added automatically with
-   * the same direction as that of the last field defined. If the final field in a composite index
-   * is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For
-   * single field indexes, this will always be exactly one entry with a field path equal to the
-   * field path of the associated field.
+   * The fields supported by this index. At most 100 fields may be specified. In Standard edition
+   * databases only: - At least 2 fields must be specified. - The last field entry is always for the
+   * field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will
+   * be added automatically with the same direction as that of the last field defined. If the final
+   * field in the index is not directional, the `__name__` will be ordered ASCENDING (unless
+   * explicitly specified).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleFirestoreAdminV1IndexField> getFields() {
@@ -166,13 +169,12 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * The fields supported by this index. For composite indexes, this requires a minimum of 2 and a
-   * maximum of 100 fields. The last field entry is always for the field path `__name__`. If, on
-   * creation, `__name__` was not specified as the last field, it will be added automatically with
-   * the same direction as that of the last field defined. If the final field in a composite index
-   * is not directional, the `__name__` will be ordered ASCENDING (unless explicitly specified). For
-   * single field indexes, this will always be exactly one entry with a field path equal to the
-   * field path of the associated field.
+   * The fields supported by this index. At most 100 fields may be specified. In Standard edition
+   * databases only: - At least 2 fields must be specified. - The last field entry is always for the
+   * field path `__name__`. If, on creation, `__name__` was not specified as the last field, it will
+   * be added automatically with the same direction as that of the last field defined. If the final
+   * field in the index is not directional, the `__name__` will be ordered ASCENDING (unless
+   * explicitly specified).
    * @param fields fields or {@code null} for none
    */
   public GoogleFirestoreAdminV1Index setFields(java.util.List<GoogleFirestoreAdminV1IndexField> fields) {
@@ -206,9 +208,10 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Output only. A server defined name for this index. The form of this name for composite indexes
-   * will be: `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexe
-   * s/{composite_index_id}` For single field indexes, this field will be empty.
+   * A server-defined name for this index. Output only. When used in the
+   * google.firestore.admin.v1.Index resource, the value is of the form: `projects/{project_id}/data
+   * bases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}` When used in the
+   * google.firestore.admin.v1.Field resource, the value is empty.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -216,9 +219,10 @@ public final class GoogleFirestoreAdminV1Index extends com.google.api.client.jso
   }
 
   /**
-   * Output only. A server defined name for this index. The form of this name for composite indexes
-   * will be: `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/indexe
-   * s/{composite_index_id}` For single field indexes, this field will be empty.
+   * A server-defined name for this index. Output only. When used in the
+   * google.firestore.admin.v1.Index resource, the value is of the form: `projects/{project_id}/data
+   * bases/{database_id}/collectionGroups/{collection_id}/indexes/{index_id}` When used in the
+   * google.firestore.admin.v1.Field resource, the value is empty.
    * @param name name or {@code null} for none
    */
   public GoogleFirestoreAdminV1Index setName(java.lang.String name) {

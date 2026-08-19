@@ -30,8 +30,9 @@ package com.google.api.services.firestore.v1beta1.model;
 public final class Value extends com.google.api.client.json.GenericJson {
 
   /**
-   * An array value. Cannot directly contain another array value, though can contain a map which
-   * contains another array.
+   * An array value. In Standard edition databases, an array value cannot directly contain another
+   * array value, though it can contain a map which contains another array. In Enterprise edition
+   * databases, an array value can contain another array value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +46,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean booleanValue;
 
   /**
-   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
-   * queries.
+   * A bytes value. In Standard edition databases: * The value must not exceed 1 MiB - 89 bytes. *
+   * Only the first 1,500 bytes are considered by queries. In Enterprise edition databases, there is
+   * no limit on the size of the value. However, it is still subject to document and index entry
+   * size limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,8 +124,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.String referenceValue;
 
   /**
-   * A string value. The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the
-   * first 1,500 bytes of the UTF-8 representation are considered by queries.
+   * A string value. In Standard edition databases: * The string, represented as UTF-8, must not
+   * exceed 1 MiB - 89 bytes. * Only the first 1,500 bytes of the UTF-8 representation are
+   * considered by queries. In Enterprise edition databases, there is no limit on the size of the
+   * value. However, it is still subject to document and index entry size limits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +151,9 @@ public final class Value extends com.google.api.client.json.GenericJson {
   private java.lang.String variableReferenceValue;
 
   /**
-   * An array value. Cannot directly contain another array value, though can contain a map which
-   * contains another array.
+   * An array value. In Standard edition databases, an array value cannot directly contain another
+   * array value, though it can contain a map which contains another array. In Enterprise edition
+   * databases, an array value can contain another array value.
    * @return value or {@code null} for none
    */
   public ArrayValue getArrayValue() {
@@ -155,8 +161,9 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * An array value. Cannot directly contain another array value, though can contain a map which
-   * contains another array.
+   * An array value. In Standard edition databases, an array value cannot directly contain another
+   * array value, though it can contain a map which contains another array. In Enterprise edition
+   * databases, an array value can contain another array value.
    * @param arrayValue arrayValue or {@code null} for none
    */
   public Value setArrayValue(ArrayValue arrayValue) {
@@ -182,8 +189,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
-   * queries.
+   * A bytes value. In Standard edition databases: * The value must not exceed 1 MiB - 89 bytes. *
+   * Only the first 1,500 bytes are considered by queries. In Enterprise edition databases, there is
+   * no limit on the size of the value. However, it is still subject to document and index entry
+   * size limits.
    * @see #decodeBytesValue()
    * @return value or {@code null} for none
    */
@@ -192,8 +201,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
-   * queries.
+   * A bytes value. In Standard edition databases: * The value must not exceed 1 MiB - 89 bytes. *
+   * Only the first 1,500 bytes are considered by queries. In Enterprise edition databases, there is
+   * no limit on the size of the value. However, it is still subject to document and index entry
+   * size limits.
    * @see #getBytesValue()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -204,8 +215,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
-   * queries.
+   * A bytes value. In Standard edition databases: * The value must not exceed 1 MiB - 89 bytes. *
+   * Only the first 1,500 bytes are considered by queries. In Enterprise edition databases, there is
+   * no limit on the size of the value. However, it is still subject to document and index entry
+   * size limits.
    * @see #encodeBytesValue()
    * @param bytesValue bytesValue or {@code null} for none
    */
@@ -215,8 +228,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A bytes value. Must not exceed 1 MiB - 89 bytes. Only the first 1,500 bytes are considered by
-   * queries.
+   * A bytes value. In Standard edition databases: * The value must not exceed 1 MiB - 89 bytes. *
+   * Only the first 1,500 bytes are considered by queries. In Enterprise edition databases, there is
+   * no limit on the size of the value. However, it is still subject to document and index entry
+   * size limits.
    * @see #setBytesValue()
    *
    * <p>
@@ -394,8 +409,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string value. The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the
-   * first 1,500 bytes of the UTF-8 representation are considered by queries.
+   * A string value. In Standard edition databases: * The string, represented as UTF-8, must not
+   * exceed 1 MiB - 89 bytes. * Only the first 1,500 bytes of the UTF-8 representation are
+   * considered by queries. In Enterprise edition databases, there is no limit on the size of the
+   * value. However, it is still subject to document and index entry size limits.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringValue() {
@@ -403,8 +420,10 @@ public final class Value extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A string value. The string, represented as UTF-8, must not exceed 1 MiB - 89 bytes. Only the
-   * first 1,500 bytes of the UTF-8 representation are considered by queries.
+   * A string value. In Standard edition databases: * The string, represented as UTF-8, must not
+   * exceed 1 MiB - 89 bytes. * Only the first 1,500 bytes of the UTF-8 representation are
+   * considered by queries. In Enterprise edition databases, there is no limit on the size of the
+   * value. However, it is still subject to document and index entry size limits.
    * @param stringValue stringValue or {@code null} for none
    */
   public Value setStringValue(java.lang.String stringValue) {

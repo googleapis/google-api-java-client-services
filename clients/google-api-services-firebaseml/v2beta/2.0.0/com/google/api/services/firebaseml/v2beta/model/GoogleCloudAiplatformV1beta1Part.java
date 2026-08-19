@@ -88,6 +88,14 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1Blob inlineData;
 
   /**
+   * Optional. How the model processes this part's media for understanding. Only meaningful for
+   * video parts (`inline_data` or `file_data` with video mime). Non-video parts ignore this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mediaProcessing;
+
+  /**
    * per part media resolution. Media resolution for the input media.
    * The value may be {@code null}.
    */
@@ -251,6 +259,25 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Part setInlineData(GoogleCloudAiplatformV1beta1Blob inlineData) {
     this.inlineData = inlineData;
+    return this;
+  }
+
+  /**
+   * Optional. How the model processes this part's media for understanding. Only meaningful for
+   * video parts (`inline_data` or `file_data` with video mime). Non-video parts ignore this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMediaProcessing() {
+    return mediaProcessing;
+  }
+
+  /**
+   * Optional. How the model processes this part's media for understanding. Only meaningful for
+   * video parts (`inline_data` or `file_data` with video mime). Non-video parts ignore this field.
+   * @param mediaProcessing mediaProcessing or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Part setMediaProcessing(java.lang.String mediaProcessing) {
+    this.mediaProcessing = mediaProcessing;
     return this;
   }
 

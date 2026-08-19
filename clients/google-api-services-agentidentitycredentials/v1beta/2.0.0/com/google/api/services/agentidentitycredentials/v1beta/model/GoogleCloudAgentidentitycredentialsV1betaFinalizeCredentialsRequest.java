@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentitycredentials.v1beta.model;
 
 /**
- * Request message for FinalizeCredentials.
+ * Request message for `FinalizeCredentials`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity Credentials API. For a detailed
@@ -31,8 +31,9 @@ package com.google.api.services.agentidentitycredentials.v1beta.model;
 public final class GoogleCloudAgentidentitycredentialsV1betaFinalizeCredentialsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The same consent_nonce value that was provided during redirect in the
-   * UriConsentRequired metadata.
+   * Required. The same `consent_nonce` value that was provided during retrieval in the [UriConsentR
+   * equired](https://cloud.google.com/iam/docs/reference/agentidentitycredentials/rest/v1/projects.
+   * locations.authProviders.credentials/retrieve#UriConsentRequired) metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +54,9 @@ public final class GoogleCloudAgentidentitycredentialsV1betaFinalizeCredentialsR
   private java.lang.String userIdValidationState;
 
   /**
-   * Required. The same consent_nonce value that was provided during redirect in the
-   * UriConsentRequired metadata.
+   * Required. The same `consent_nonce` value that was provided during retrieval in the [UriConsentR
+   * equired](https://cloud.google.com/iam/docs/reference/agentidentitycredentials/rest/v1/projects.
+   * locations.authProviders.credentials/retrieve#UriConsentRequired) metadata.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentNonce() {
@@ -62,8 +64,9 @@ public final class GoogleCloudAgentidentitycredentialsV1betaFinalizeCredentialsR
   }
 
   /**
-   * Required. The same consent_nonce value that was provided during redirect in the
-   * UriConsentRequired metadata.
+   * Required. The same `consent_nonce` value that was provided during retrieval in the [UriConsentR
+   * equired](https://cloud.google.com/iam/docs/reference/agentidentitycredentials/rest/v1/projects.
+   * locations.authProviders.credentials/retrieve#UriConsentRequired) metadata.
    * @param consentNonce consentNonce or {@code null} for none
    */
   public GoogleCloudAgentidentitycredentialsV1betaFinalizeCredentialsRequest setConsentNonce(java.lang.String consentNonce) {

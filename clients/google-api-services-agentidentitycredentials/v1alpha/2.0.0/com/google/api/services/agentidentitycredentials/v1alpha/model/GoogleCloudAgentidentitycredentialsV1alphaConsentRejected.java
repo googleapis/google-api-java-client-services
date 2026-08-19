@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentitycredentials.v1alpha.model;
 
 /**
- * Indicates the user has rejected the permission delegation or cancelled the request.
+ * Indicates the user has rejected the permission delegation or canceled the request.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity Credentials API. For a detailed

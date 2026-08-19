@@ -1,6 +1,6 @@
 # Agent Identity Credentials API Client Library for Java
 
-agentidentitycredentials.googleapis.com API.
+The Agent Identity Credentials API retrieves and finalizes authorization credentials for auth providers.
 
 This page contains information about getting started with the Agent Identity Credentials API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-agentidentitycredentials</artifactId>
-      <version>v1-rev20260717-2.0.0</version>
+      <version>v1-rev20260813-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-agentidentitycredentials:v1-rev20260717-2.0.0'
+  implementation 'com.google.apis:google-api-services-agentidentitycredentials:v1-rev20260813-2.0.0'
 }
 ```
 

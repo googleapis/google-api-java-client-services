@@ -19,7 +19,7 @@ package com.google.api.services.agentidentitycredentials.v1beta.model;
 /**
  * Indicates that the user must visit the provided URI to consent to delegate permission to the
  * agent to act on their behalf. The caller can either poll the `RetrieveCredentials` method, or
- * await the /ValidateUserId callback
+ * await the /ValidateUserId callback.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity Credentials API. For a detailed
@@ -43,8 +43,8 @@ public final class GoogleCloudAgentidentitycredentialsV1betaUriConsentRequired e
   /**
    * Output only. A one-time, randomly generated value that validates the entire consent flow is
    * handled by a single user, avoiding CSRF attacks. It must be submitted with the
-   * FinalizeCredentials request to complete the OAuth exchange. This will always be present.
-   * Implemented per https://www.rfc-editor.org/rfc/rfc6819#section-5.3.5
+   * `FinalizeCredentials` request to complete the OAuth exchange. This will always be present.
+   * Implemented per [RFC 6819 Section 5.3.5](https://www.rfc-editor.org/rfc/rfc6819#section-5.3.5).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,8 +79,8 @@ public final class GoogleCloudAgentidentitycredentialsV1betaUriConsentRequired e
   /**
    * Output only. A one-time, randomly generated value that validates the entire consent flow is
    * handled by a single user, avoiding CSRF attacks. It must be submitted with the
-   * FinalizeCredentials request to complete the OAuth exchange. This will always be present.
-   * Implemented per https://www.rfc-editor.org/rfc/rfc6819#section-5.3.5
+   * `FinalizeCredentials` request to complete the OAuth exchange. This will always be present.
+   * Implemented per [RFC 6819 Section 5.3.5](https://www.rfc-editor.org/rfc/rfc6819#section-5.3.5).
    * @return value or {@code null} for none
    */
   public java.lang.String getConsentNonce() {
@@ -90,8 +90,8 @@ public final class GoogleCloudAgentidentitycredentialsV1betaUriConsentRequired e
   /**
    * Output only. A one-time, randomly generated value that validates the entire consent flow is
    * handled by a single user, avoiding CSRF attacks. It must be submitted with the
-   * FinalizeCredentials request to complete the OAuth exchange. This will always be present.
-   * Implemented per https://www.rfc-editor.org/rfc/rfc6819#section-5.3.5
+   * `FinalizeCredentials` request to complete the OAuth exchange. This will always be present.
+   * Implemented per [RFC 6819 Section 5.3.5](https://www.rfc-editor.org/rfc/rfc6819#section-5.3.5).
    * @param consentNonce consentNonce or {@code null} for none
    */
   public GoogleCloudAgentidentitycredentialsV1betaUriConsentRequired setConsentNonce(java.lang.String consentNonce) {

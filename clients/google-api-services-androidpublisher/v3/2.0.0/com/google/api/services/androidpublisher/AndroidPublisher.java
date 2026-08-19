@@ -1650,6 +1650,287 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
   }
 
   /**
+   * An accessor for creating requests from the Appsigning collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AndroidPublisher androidpublisher = new AndroidPublisher(...);}
+   *   {@code AndroidPublisher.Appsigning.List request = androidpublisher.appsigning().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Appsigning appsigning() {
+    return new Appsigning();
+  }
+
+  /**
+   * The "appsigning" collection of methods.
+   */
+  public class Appsigning {
+
+    /**
+     * Enrolls an app in Play App Signing using a self-hosted Google Cloud KMS key. Warning: Do not use
+     * this method for standard Play App Signing enrollment. * Standard enrollment with Google-generated
+     * or Google-managed keys cannot be done via API. * This advanced API is strictly for enterprise
+     * organizations with mandatory compliance, regulatory, or policy requirements to retain key custody
+     * in an external Google Cloud KMS instance. * Prerequisites: Requires an active, properly
+     * configured Google Cloud KMS key with appropriate IAM permissions granted to Google Play before
+     * calling this method. See Help Center: https://support.google.com/googleplay/android-
+     * developer/answer/9842756
+     *
+     * Create a request for the method "appsigning.enrollApp".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link EnrollApp#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Either package name or app ID of the app enrolling in Play Signing.
+     * @param content the {@link com.google.api.services.androidpublisher.model.EnrollAppRequest}
+     * @return the request
+     */
+    public EnrollApp enrollApp(java.lang.String name, com.google.api.services.androidpublisher.model.EnrollAppRequest content) throws java.io.IOException {
+      EnrollApp result = new EnrollApp(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EnrollApp extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.EnrollAppResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{name}/appSigning:enrollApp";
+
+      /**
+       * Enrolls an app in Play App Signing using a self-hosted Google Cloud KMS key. Warning: Do not
+       * use this method for standard Play App Signing enrollment. * Standard enrollment with Google-
+       * generated or Google-managed keys cannot be done via API. * This advanced API is strictly for
+       * enterprise organizations with mandatory compliance, regulatory, or policy requirements to
+       * retain key custody in an external Google Cloud KMS instance. * Prerequisites: Requires an
+       * active, properly configured Google Cloud KMS key with appropriate IAM permissions granted to
+       * Google Play before calling this method. See Help Center:
+       * https://support.google.com/googleplay/android-developer/answer/9842756
+       *
+       * Create a request for the method "appsigning.enrollApp".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link EnrollApp#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * EnrollApp#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Either package name or app ID of the app enrolling in Play Signing.
+       * @param content the {@link com.google.api.services.androidpublisher.model.EnrollAppRequest}
+       * @since 1.13
+       */
+      protected EnrollApp(java.lang.String name, com.google.api.services.androidpublisher.model.EnrollAppRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.EnrollAppResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public EnrollApp set$Xgafv(java.lang.String $Xgafv) {
+        return (EnrollApp) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EnrollApp setAccessToken(java.lang.String accessToken) {
+        return (EnrollApp) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EnrollApp setAlt(java.lang.String alt) {
+        return (EnrollApp) super.setAlt(alt);
+      }
+
+      @Override
+      public EnrollApp setCallback(java.lang.String callback) {
+        return (EnrollApp) super.setCallback(callback);
+      }
+
+      @Override
+      public EnrollApp setFields(java.lang.String fields) {
+        return (EnrollApp) super.setFields(fields);
+      }
+
+      @Override
+      public EnrollApp setKey(java.lang.String key) {
+        return (EnrollApp) super.setKey(key);
+      }
+
+      @Override
+      public EnrollApp setOauthToken(java.lang.String oauthToken) {
+        return (EnrollApp) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EnrollApp setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EnrollApp) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EnrollApp setQuotaUser(java.lang.String quotaUser) {
+        return (EnrollApp) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EnrollApp setUploadType(java.lang.String uploadType) {
+        return (EnrollApp) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EnrollApp setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EnrollApp) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Either package name or app ID of the app enrolling in Play Signing. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Either package name or app ID of the app enrolling in Play Signing.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Either package name or app ID of the app enrolling in Play Signing. */
+      public EnrollApp setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public EnrollApp set(String parameterName, Object value) {
+        return (EnrollApp) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Rotates an app's signing key to a new self-hosted Google Cloud KMS key. Warning: This method only
+     * applies to apps enrolled with self-hosted Cloud KMS keys. For apps using standard Google-managed
+     * Play App Signing, key rotation requests must be initiated through the Google Play Console UI. See
+     * Help Center: https://support.google.com/googleplay/android-developer/answer/9842756
+     *
+     * Create a request for the method "appsigning.rotateAppSigningKey".
+     *
+     * This request holds the parameters needed by the androidpublisher server.  After setting any
+     * optional parameters, call the {@link RotateAppSigningKey#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. Either package name or app ID of the app rotating the signing key.
+     * @param content the {@link com.google.api.services.androidpublisher.model.RotateAppSigningKeyRequest}
+     * @return the request
+     */
+    public RotateAppSigningKey rotateAppSigningKey(java.lang.String name, com.google.api.services.androidpublisher.model.RotateAppSigningKeyRequest content) throws java.io.IOException {
+      RotateAppSigningKey result = new RotateAppSigningKey(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class RotateAppSigningKey extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.RotateAppSigningKeyResponse> {
+
+      private static final String REST_PATH = "androidpublisher/v3/applications/{name}/appSigning:rotateAppSigningKey";
+
+      /**
+       * Rotates an app's signing key to a new self-hosted Google Cloud KMS key. Warning: This method
+       * only applies to apps enrolled with self-hosted Cloud KMS keys. For apps using standard Google-
+       * managed Play App Signing, key rotation requests must be initiated through the Google Play
+       * Console UI. See Help Center: https://support.google.com/googleplay/android-
+       * developer/answer/9842756
+       *
+       * Create a request for the method "appsigning.rotateAppSigningKey".
+       *
+       * This request holds the parameters needed by the the androidpublisher server.  After setting any
+       * optional parameters, call the {@link RotateAppSigningKey#execute()} method to invoke the remote
+       * operation. <p> {@link RotateAppSigningKey#initialize(com.google.api.client.googleapis.services.
+       * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. Either package name or app ID of the app rotating the signing key.
+       * @param content the {@link com.google.api.services.androidpublisher.model.RotateAppSigningKeyRequest}
+       * @since 1.13
+       */
+      protected RotateAppSigningKey(java.lang.String name, com.google.api.services.androidpublisher.model.RotateAppSigningKeyRequest content) {
+        super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.RotateAppSigningKeyResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+      }
+
+      @Override
+      public RotateAppSigningKey set$Xgafv(java.lang.String $Xgafv) {
+        return (RotateAppSigningKey) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public RotateAppSigningKey setAccessToken(java.lang.String accessToken) {
+        return (RotateAppSigningKey) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public RotateAppSigningKey setAlt(java.lang.String alt) {
+        return (RotateAppSigningKey) super.setAlt(alt);
+      }
+
+      @Override
+      public RotateAppSigningKey setCallback(java.lang.String callback) {
+        return (RotateAppSigningKey) super.setCallback(callback);
+      }
+
+      @Override
+      public RotateAppSigningKey setFields(java.lang.String fields) {
+        return (RotateAppSigningKey) super.setFields(fields);
+      }
+
+      @Override
+      public RotateAppSigningKey setKey(java.lang.String key) {
+        return (RotateAppSigningKey) super.setKey(key);
+      }
+
+      @Override
+      public RotateAppSigningKey setOauthToken(java.lang.String oauthToken) {
+        return (RotateAppSigningKey) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public RotateAppSigningKey setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (RotateAppSigningKey) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public RotateAppSigningKey setQuotaUser(java.lang.String quotaUser) {
+        return (RotateAppSigningKey) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public RotateAppSigningKey setUploadType(java.lang.String uploadType) {
+        return (RotateAppSigningKey) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public RotateAppSigningKey setUploadProtocol(java.lang.String uploadProtocol) {
+        return (RotateAppSigningKey) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Either package name or app ID of the app rotating the signing key. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Either package name or app ID of the app rotating the signing key.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. Either package name or app ID of the app rotating the signing key. */
+      public RotateAppSigningKey setName(java.lang.String name) {
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public RotateAppSigningKey set(String parameterName, Object value) {
+        return (RotateAppSigningKey) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Appstoreappsreview collection.
    *
    * <p>The typical use is:</p>

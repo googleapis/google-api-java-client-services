@@ -53,6 +53,15 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
   private java.lang.String permissionType;
 
   /**
+   * Output only. Metadata about the Privileged Access Manager (PAM) backed authorization decisions.
+   * This field is populated if the access is granted via an IAM policy with a binding which is
+   * managed by Privileged Access Manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivilegedAccessManagerMetadata privilegedAccessManagerMetadata;
+
+  /**
    * The resource being accessed, as a REST-style or cloud resource string. For example:
    * bigquery.googleapis.com/projects/PROJECTID/datasets/DATASETID or
    * projects/PROJECTID/datasets/DATASETID
@@ -123,6 +132,27 @@ public final class AuthorizationInfo extends com.google.api.client.json.GenericJ
    */
   public AuthorizationInfo setPermissionType(java.lang.String permissionType) {
     this.permissionType = permissionType;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata about the Privileged Access Manager (PAM) backed authorization decisions.
+   * This field is populated if the access is granted via an IAM policy with a binding which is
+   * managed by Privileged Access Manager.
+   * @return value or {@code null} for none
+   */
+  public PrivilegedAccessManagerMetadata getPrivilegedAccessManagerMetadata() {
+    return privilegedAccessManagerMetadata;
+  }
+
+  /**
+   * Output only. Metadata about the Privileged Access Manager (PAM) backed authorization decisions.
+   * This field is populated if the access is granted via an IAM policy with a binding which is
+   * managed by Privileged Access Manager.
+   * @param privilegedAccessManagerMetadata privilegedAccessManagerMetadata or {@code null} for none
+   */
+  public AuthorizationInfo setPrivilegedAccessManagerMetadata(PrivilegedAccessManagerMetadata privilegedAccessManagerMetadata) {
+    this.privilegedAccessManagerMetadata = privilegedAccessManagerMetadata;
     return this;
   }
 

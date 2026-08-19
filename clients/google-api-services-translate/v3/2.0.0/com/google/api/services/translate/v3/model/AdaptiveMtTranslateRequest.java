@@ -54,6 +54,13 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
   private GlossaryConfig glossaryConfig;
 
   /**
+   * The format of the source text. Currently only text/plain is supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mimeType;
+
+  /**
    * Configuration for caller provided reference sentences.
    * The value may be {@code null}.
    */
@@ -112,6 +119,23 @@ public final class AdaptiveMtTranslateRequest extends com.google.api.client.json
    */
   public AdaptiveMtTranslateRequest setGlossaryConfig(GlossaryConfig glossaryConfig) {
     this.glossaryConfig = glossaryConfig;
+    return this;
+  }
+
+  /**
+   * The format of the source text. Currently only text/plain is supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMimeType() {
+    return mimeType;
+  }
+
+  /**
+   * The format of the source text. Currently only text/plain is supported.
+   * @param mimeType mimeType or {@code null} for none
+   */
+  public AdaptiveMtTranslateRequest setMimeType(java.lang.String mimeType) {
+    this.mimeType = mimeType;
     return this;
   }
 

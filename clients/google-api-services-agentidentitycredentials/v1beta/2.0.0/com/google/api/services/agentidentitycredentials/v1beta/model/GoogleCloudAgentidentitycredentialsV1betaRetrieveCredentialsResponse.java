@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentitycredentials.v1beta.model;
 
 /**
- * Response message for RetrieveCredentials. Contains the access tokens and related artifacts.
+ * Response message for `RetrieveCredentials`. Contains the access tokens and related artifacts.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity Credentials API. For a detailed
@@ -52,7 +52,7 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
   private GoogleCloudAgentidentitycredentialsV1betaSuccess success;
 
   /**
-   * Message indicating uri based consent is required.
+   * Message indicating URI-based consent is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
   }
 
   /**
-   * Message indicating uri based consent is required.
+   * Message indicating URI-based consent is required.
    * @return value or {@code null} for none
    */
   public GoogleCloudAgentidentitycredentialsV1betaUriConsentRequired getUriConsentRequired() {
@@ -118,7 +118,7 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
   }
 
   /**
-   * Message indicating uri based consent is required.
+   * Message indicating URI-based consent is required.
    * @param uriConsentRequired uriConsentRequired or {@code null} for none
    */
   public GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsResponse setUriConsentRequired(GoogleCloudAgentidentitycredentialsV1betaUriConsentRequired uriConsentRequired) {

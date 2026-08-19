@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentitycredentials.v1beta.model;
 
 /**
- * Request message for RetrieveCredentials.
+ * Request message for `RetrieveCredentials`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity Credentials API. For a detailed
@@ -32,7 +32,7 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
 
   /**
    * Optional. The URI to redirect the user to after consent is completed. This field is required
-   * for authproviders using the 3-legged OAuth flow. For other authprovider types, this field is
+   * for auth providers using the 3-legged OAuth flow. For other auth provider types, this field is
    * unused but not rejected.
    * The value may be {@code null}.
    */
@@ -41,8 +41,8 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
 
   /**
    * Optional. Input only. Set this field only if the previous token was expired or invalid. This
-   * value must be the full, previously returned token string. Will trigger a refresh of the access
-   * token with a stored refresh token, if possible, or a new consent flow.
+   * value must be the full, previously returned token string. Setting this field triggers a refresh
+   * of the access token with a stored refresh token, if possible, or a new consent flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
 
   /**
    * Optional. The URI to redirect the user to after consent is completed. This field is required
-   * for authproviders using the 3-legged OAuth flow. For other authprovider types, this field is
+   * for auth providers using the 3-legged OAuth flow. For other auth provider types, this field is
    * unused but not rejected.
    * @return value or {@code null} for none
    */
@@ -74,7 +74,7 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
 
   /**
    * Optional. The URI to redirect the user to after consent is completed. This field is required
-   * for authproviders using the 3-legged OAuth flow. For other authprovider types, this field is
+   * for auth providers using the 3-legged OAuth flow. For other auth provider types, this field is
    * unused but not rejected.
    * @param continueUri continueUri or {@code null} for none
    */
@@ -85,8 +85,8 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
 
   /**
    * Optional. Input only. Set this field only if the previous token was expired or invalid. This
-   * value must be the full, previously returned token string. Will trigger a refresh of the access
-   * token with a stored refresh token, if possible, or a new consent flow.
+   * value must be the full, previously returned token string. Setting this field triggers a refresh
+   * of the access token with a stored refresh token, if possible, or a new consent flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getForceRefreshToken() {
@@ -95,8 +95,8 @@ public final class GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsR
 
   /**
    * Optional. Input only. Set this field only if the previous token was expired or invalid. This
-   * value must be the full, previously returned token string. Will trigger a refresh of the access
-   * token with a stored refresh token, if possible, or a new consent flow.
+   * value must be the full, previously returned token string. Setting this field triggers a refresh
+   * of the access token with a stored refresh token, if possible, or a new consent flow.
    * @param forceRefreshToken forceRefreshToken or {@code null} for none
    */
   public GoogleCloudAgentidentitycredentialsV1betaRetrieveCredentialsRequest setForceRefreshToken(java.lang.String forceRefreshToken) {

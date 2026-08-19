@@ -20,7 +20,7 @@ package com.google.api.services.agentidentitycredentials.v1alpha;
  * Service definition for AgentIdentityCredentials (v1alpha).
  *
  * <p>
- * agentidentitycredentials.googleapis.com API.
+ * The Agent Identity Credentials API retrieves and finalizes authorization credentials for auth providers.
  * </p>
  *
  * <p>
@@ -222,7 +222,7 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
            * any optional parameters, call the {@link Finalize#execute()} method to invoke the remote
            * operation.
            *
-           * @param authProvider Required. The resource name of the AuthProvider. Format:
+           * @param authProvider Required. The resource name of the auth provider. Format:
            *        `projects/{project}/locations/{location}/authProviders/{auth_provider}`
            * @param content the {@link com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaFinalizeCredentialsRequest}
            * @return the request
@@ -251,7 +251,7 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
              * Finalize#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param authProvider Required. The resource name of the AuthProvider. Format:
+             * @param authProvider Required. The resource name of the auth provider. Format:
            *        `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              * @param content the {@link com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaFinalizeCredentialsRequest}
              * @since 1.13
@@ -322,13 +322,13 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Required. The resource name of the AuthProvider. Format:
+             * Required. The resource name of the auth provider. Format:
              * `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              */
             @com.google.api.client.util.Key
             private java.lang.String authProvider;
 
-            /** Required. The resource name of the AuthProvider. Format:
+            /** Required. The resource name of the auth provider. Format:
            `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              */
             public java.lang.String getAuthProvider() {
@@ -336,7 +336,7 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Required. The resource name of the AuthProvider. Format:
+             * Required. The resource name of the auth provider. Format:
              * `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              */
             public Finalize setAuthProvider(java.lang.String authProvider) {
@@ -355,9 +355,9 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
             }
           }
           /**
-           * Retrieves authorization credentials for an authprovider, or indicates what action needs to be
+           * Retrieves authorization credentials for an auth provider, or indicates what action needs to be
            * taken to obtain credentials. If the `token` field in the response is populated, credential
-           * retrieval was successful. If one of the fields in the `status` oneof is populated, further action
+           * retrieval was successful. If one of the fields in the `result` oneof is populated, further action
            * is required to obtain credentials, such as redirecting the user for consent. View comments on
            * `RetrieveCredentialsResponse` for more information.
            *
@@ -367,7 +367,7 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
            * any optional parameters, call the {@link Retrieve#execute()} method to invoke the remote
            * operation.
            *
-           * @param authProvider Required. The parent resource name of the AuthProvider. Format:
+           * @param authProvider Required. The resource name of the auth provider. Format:
            *        `projects/{project}/locations/{location}/authProviders/{auth_provider}`
            * @param content the {@link com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaRetrieveCredentialsRequest}
            * @return the request
@@ -386,9 +386,9 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
             /**
-             * Retrieves authorization credentials for an authprovider, or indicates what action needs to be
+             * Retrieves authorization credentials for an auth provider, or indicates what action needs to be
              * taken to obtain credentials. If the `token` field in the response is populated, credential
-             * retrieval was successful. If one of the fields in the `status` oneof is populated, further
+             * retrieval was successful. If one of the fields in the `result` oneof is populated, further
              * action is required to obtain credentials, such as redirecting the user for consent. View
              * comments on `RetrieveCredentialsResponse` for more information.
              *
@@ -400,7 +400,7 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
              * Retrieve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param authProvider Required. The parent resource name of the AuthProvider. Format:
+             * @param authProvider Required. The resource name of the auth provider. Format:
            *        `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              * @param content the {@link com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaRetrieveCredentialsRequest}
              * @since 1.13
@@ -471,13 +471,13 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Required. The parent resource name of the AuthProvider. Format:
+             * Required. The resource name of the auth provider. Format:
              * `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              */
             @com.google.api.client.util.Key
             private java.lang.String authProvider;
 
-            /** Required. The parent resource name of the AuthProvider. Format:
+            /** Required. The resource name of the auth provider. Format:
            `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              */
             public java.lang.String getAuthProvider() {
@@ -485,7 +485,7 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
             }
 
             /**
-             * Required. The parent resource name of the AuthProvider. Format:
+             * Required. The resource name of the auth provider. Format:
              * `projects/{project}/locations/{location}/authProviders/{auth_provider}`
              */
             public Retrieve setAuthProvider(java.lang.String authProvider) {

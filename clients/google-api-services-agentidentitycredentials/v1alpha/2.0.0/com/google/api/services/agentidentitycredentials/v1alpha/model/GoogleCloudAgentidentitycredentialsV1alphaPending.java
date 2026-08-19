@@ -18,7 +18,7 @@ package com.google.api.services.agentidentitycredentials.v1alpha.model;
 
 /**
  * Indicates that the credential retrieval is pending. The caller should retry the
- * RetrieveCredentials request after some time.
+ * `RetrieveCredentials` request after some time.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity Credentials API. For a detailed

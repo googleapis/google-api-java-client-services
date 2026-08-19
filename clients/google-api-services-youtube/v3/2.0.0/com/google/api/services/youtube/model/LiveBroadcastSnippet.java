@@ -46,6 +46,13 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   private com.google.api.client.util.DateTime actualStartTime;
 
   /**
+   * The YouTube video category associated with the video broadcast.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String categoryId;
+
+  /**
    * The ID that YouTube uses to uniquely identify the channel that is publishing the broadcast.
    * The value may be {@code null}.
    */
@@ -148,6 +155,23 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
    */
   public LiveBroadcastSnippet setActualStartTime(com.google.api.client.util.DateTime actualStartTime) {
     this.actualStartTime = actualStartTime;
+    return this;
+  }
+
+  /**
+   * The YouTube video category associated with the video broadcast.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCategoryId() {
+    return categoryId;
+  }
+
+  /**
+   * The YouTube video category associated with the video broadcast.
+   * @param categoryId categoryId or {@code null} for none
+   */
+  public LiveBroadcastSnippet setCategoryId(java.lang.String categoryId) {
+    this.categoryId = categoryId;
     return this;
   }
 

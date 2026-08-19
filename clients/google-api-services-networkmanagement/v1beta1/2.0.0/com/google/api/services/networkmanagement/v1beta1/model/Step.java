@@ -316,6 +316,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private StorageBucketInfo storageBucket;
 
   /**
+   * Display information of a step that is redacted due to missing permissions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ViewerPermissionMissingInfo viewerPermissionMissingInfo;
+
+  /**
    * Display information of a VPC connector.
    * The value may be {@code null}.
    */
@@ -1021,6 +1028,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setStorageBucket(StorageBucketInfo storageBucket) {
     this.storageBucket = storageBucket;
+    return this;
+  }
+
+  /**
+   * Display information of a step that is redacted due to missing permissions.
+   * @return value or {@code null} for none
+   */
+  public ViewerPermissionMissingInfo getViewerPermissionMissingInfo() {
+    return viewerPermissionMissingInfo;
+  }
+
+  /**
+   * Display information of a step that is redacted due to missing permissions.
+   * @param viewerPermissionMissingInfo viewerPermissionMissingInfo or {@code null} for none
+   */
+  public Step setViewerPermissionMissingInfo(ViewerPermissionMissingInfo viewerPermissionMissingInfo) {
+    this.viewerPermissionMissingInfo = viewerPermissionMissingInfo;
     return this;
   }
 

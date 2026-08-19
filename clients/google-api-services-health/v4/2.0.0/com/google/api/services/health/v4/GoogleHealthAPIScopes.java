@@ -47,9 +47,6 @@ public class GoogleHealthAPIScopes {
   /** See exercise GPS location data in Google Health. */
   public static final String GOOGLEHEALTH_LOCATION_READONLY = "https://www.googleapis.com/auth/googlehealth.location.readonly";
 
-  /** Add exercise GPS location data to Google Health, and edit or delete the data it adds.. */
-  public static final String GOOGLEHEALTH_LOCATION_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.location.writeonly";
-
   /** Add logged symptoms data to Google Health, and edit or delete the data it adds. */
   public static final String GOOGLEHEALTH_LOGGED_SYMPTOMS_WRITEONLY = "https://www.googleapis.com/auth/googlehealth.logged_symptoms.writeonly";
 
@@ -95,7 +92,6 @@ public class GoogleHealthAPIScopes {
     set.add(GOOGLEHEALTH_HEALTH_METRICS_AND_MEASUREMENTS_WRITEONLY);
     set.add(GOOGLEHEALTH_IRN_READONLY);
     set.add(GOOGLEHEALTH_LOCATION_READONLY);
-    set.add(GOOGLEHEALTH_LOCATION_WRITEONLY);
     set.add(GOOGLEHEALTH_LOGGED_SYMPTOMS_WRITEONLY);
     set.add(GOOGLEHEALTH_MINDFULNESS_WRITEONLY);
     set.add(GOOGLEHEALTH_NUTRITION_WRITEONLY);

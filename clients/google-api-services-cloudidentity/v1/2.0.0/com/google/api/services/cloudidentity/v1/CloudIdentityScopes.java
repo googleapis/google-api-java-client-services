@@ -23,6 +23,12 @@ package com.google.api.services.cloudidentity.v1;
  */
 public class CloudIdentityScopes {
 
+  /** See and edit allowlisted domains in your Cloud Identity Organization. */
+  public static final String CLOUD_IDENTITY_ALLOWLISTEDDOMAINS = "https://www.googleapis.com/auth/cloud-identity.allowlisteddomains";
+
+  /** See allowlisted domains in your Cloud Identity Organization. */
+  public static final String CLOUD_IDENTITY_ALLOWLISTEDDOMAINS_READONLY = "https://www.googleapis.com/auth/cloud-identity.allowlisteddomains.readonly";
+
   /** Private Service: https://www.googleapis.com/auth/cloud-identity.devices. */
   public static final String CLOUD_IDENTITY_DEVICES = "https://www.googleapis.com/auth/cloud-identity.devices";
 
@@ -60,6 +66,8 @@ public class CloudIdentityScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_IDENTITY_ALLOWLISTEDDOMAINS);
+    set.add(CLOUD_IDENTITY_ALLOWLISTEDDOMAINS_READONLY);
     set.add(CLOUD_IDENTITY_DEVICES);
     set.add(CLOUD_IDENTITY_DEVICES_LOOKUP);
     set.add(CLOUD_IDENTITY_DEVICES_READONLY);

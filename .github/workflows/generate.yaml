@@ -1,3 +1,6 @@
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
     inputs:
@@ -22,19 +25,23 @@ jobs:
       matrix:
         service: ${{fromJson(inputs.services)}}
     steps:
-      - run: echo generating ${{ matrix.service }}
-      - uses: actions/checkout@v2
+      - run: echo generating ${MATRIX_SERVICE}
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
         with:
           fetch-depth: 1
           path: google-api-java-client-services
           token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-      - uses: actions/checkout@v2
+          persist-credentials: false
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
         with:
           repository: googleapis/discovery-artifact-manager
           fetch-depth: 1
           path: discovery-artifact-manager
           token: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
-      - uses: actions/setup-python@v5
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: 3.8.18
       - run: |
@@ -42,8 +49,10 @@ jobs:
           python3 --version
           pip install pip==21.3.1
           pip --version  
-      - run: ./google-api-java-client-services/.github/workflows/generate.sh ${{ matrix.service }}
-      - uses: googleapis/code-suggester@v5
+      - run: ./google-api-java-client-services/.github/workflows/generate.sh ${MATRIX_SERVICE}
+        env:
+          MATRIX_SERVICE: ${{ matrix.service }}
+      - uses: googleapis/code-suggester@f9fef85aa02459e30e62526abe950341cbbd768b # v5
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
         with:

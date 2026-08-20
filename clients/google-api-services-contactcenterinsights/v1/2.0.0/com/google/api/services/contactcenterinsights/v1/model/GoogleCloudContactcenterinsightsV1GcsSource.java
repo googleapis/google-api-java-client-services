@@ -31,11 +31,21 @@ package com.google.api.services.contactcenterinsights.v1.model;
 public final class GoogleCloudContactcenterinsightsV1GcsSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * Cloud Storage URI that points to a file that contains the conversation audio.
+   * Immutable. Deprecated: Use `audio_uris` instead. Cloud Storage URI that points to a file that
+   * contains the conversation audio.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String audioUri;
+
+  /**
+   * Immutable. Cloud Storage URIs that point to files that contain the conversation audio. Supports
+   * both single audio files and multi-leg session recordings (e.g., call transfers, rolling
+   * recording buffers).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> audioUris;
 
   /**
    * Immutable. Cloud Storage URI that points to a file that contains the conversation transcript.
@@ -45,7 +55,8 @@ public final class GoogleCloudContactcenterinsightsV1GcsSource extends com.googl
   private java.lang.String transcriptUri;
 
   /**
-   * Cloud Storage URI that points to a file that contains the conversation audio.
+   * Immutable. Deprecated: Use `audio_uris` instead. Cloud Storage URI that points to a file that
+   * contains the conversation audio.
    * @return value or {@code null} for none
    */
   public java.lang.String getAudioUri() {
@@ -53,11 +64,33 @@ public final class GoogleCloudContactcenterinsightsV1GcsSource extends com.googl
   }
 
   /**
-   * Cloud Storage URI that points to a file that contains the conversation audio.
+   * Immutable. Deprecated: Use `audio_uris` instead. Cloud Storage URI that points to a file that
+   * contains the conversation audio.
    * @param audioUri audioUri or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1GcsSource setAudioUri(java.lang.String audioUri) {
     this.audioUri = audioUri;
+    return this;
+  }
+
+  /**
+   * Immutable. Cloud Storage URIs that point to files that contain the conversation audio. Supports
+   * both single audio files and multi-leg session recordings (e.g., call transfers, rolling
+   * recording buffers).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAudioUris() {
+    return audioUris;
+  }
+
+  /**
+   * Immutable. Cloud Storage URIs that point to files that contain the conversation audio. Supports
+   * both single audio files and multi-leg session recordings (e.g., call transfers, rolling
+   * recording buffers).
+   * @param audioUris audioUris or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1GcsSource setAudioUris(java.util.List<java.lang.String> audioUris) {
+    this.audioUris = audioUris;
     return this;
   }
 

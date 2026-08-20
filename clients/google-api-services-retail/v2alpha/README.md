@@ -1,14 +1,14 @@
-# Vertex AI Search for commerce API Client Library for Java
+# AI Commerce Search API Client Library for Java
 
-Vertex AI Search for commerce API is made up of Retail Search, Browse and Recommendations. These discovery AI solutions help you implement personalized search, browse and recommendations, based on machine learning models, across your websites and mobile applications.
+The AI Commerce Search API is made up of Retail Search, Browse and Recommendations. These discovery AI solutions help you implement personalized search, browse and recommendations, based on machine learning models, across your websites and mobile applications. 
 
-This page contains information about getting started with the Vertex AI Search for commerce API
+This page contains information about getting started with the AI Commerce Search API
 using the Google API Client Library for Java. In addition, you may be interested
 in the following documentation:
 
-* Browse the [Javadoc reference for the Vertex AI Search for commerce API][javadoc]
+* Browse the [Javadoc reference for the AI Commerce Search API][javadoc]
 * Read the [Developer's Guide for the Google API Client Library for Java][google-api-client].
-* Interact with this API in your browser using the [APIs Explorer for the Vertex AI Search for commerce API][api-explorer]
+* Interact with this API in your browser using the [APIs Explorer for the AI Commerce Search API][api-explorer]
 
 ## Installation
 
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-retail</artifactId>
-      <version>v2alpha-rev20260803-2.0.0</version>
+      <version>v2alpha-rev20260813-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-retail:v2alpha-rev20260803-2.0.0'
+  implementation 'com.google.apis:google-api-services-retail:v2alpha-rev20260813-2.0.0'
 }
 ```
 

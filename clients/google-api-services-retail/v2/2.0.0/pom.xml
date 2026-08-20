@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-retail</artifactId>
-  <version>v2-rev20260723-2.0.0</version>
-  <name>Vertex AI Search for commerce API v2-rev20260723-2.0.0</name>
+  <version>v2-rev20260813-2.0.0</version>
+  <name>AI Commerce Search API v2-rev20260813-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>
@@ -85,8 +85,8 @@
         </executions>
         <configuration>
           <doclint>none</doclint>
-          <doctitle>Vertex AI Search for commerce API ${project.version}</doctitle>
-          <windowtitle>Vertex AI Search for commerce API ${project.version}</windowtitle>
+          <doctitle>AI Commerce Search API ${project.version}</doctitle>
+          <windowtitle>AI Commerce Search API ${project.version}</windowtitle>
           <links>
             <link>http://docs.oracle.com/javase/7/docs/api</link>
             <link>https://googleapis.dev/java/google-http-client/${httpClientLibrary}/</link>

@@ -17,7 +17,7 @@
 package com.google.api.services.retail.v2alpha;
 
 /**
- * Available OAuth 2.0 scopes for use with the Vertex AI Search for commerce API.
+ * Available OAuth 2.0 scopes for use with the AI Commerce Search API.
  *
  * @since 1.4
  */

@@ -31,11 +31,35 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class SubscriptionMigrationDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The creation time of the migrated subscription in the legacy system.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String legacyCreationTime;
+
+  /**
    * Output only. The migrated subscription id in the legacy system.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String migratedSubscriptionId;
+
+  /**
+   * Output only. The creation time of the migrated subscription in the legacy system.
+   * @return value or {@code null} for none
+   */
+  public String getLegacyCreationTime() {
+    return legacyCreationTime;
+  }
+
+  /**
+   * Output only. The creation time of the migrated subscription in the legacy system.
+   * @param legacyCreationTime legacyCreationTime or {@code null} for none
+   */
+  public SubscriptionMigrationDetails setLegacyCreationTime(String legacyCreationTime) {
+    this.legacyCreationTime = legacyCreationTime;
+    return this;
+  }
 
   /**
    * Output only. The migrated subscription id in the legacy system.

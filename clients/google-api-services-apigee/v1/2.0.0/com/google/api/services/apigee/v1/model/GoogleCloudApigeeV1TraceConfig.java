@@ -46,6 +46,23 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
   private java.lang.String exporter;
 
   /**
+   * Optional. mTLS configuration for the OTel Collector endpoint. Required when
+   * `otel_collector_security_scheme` == MTLS; must not be set otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1TraceConfigOtelMtlsConfig mtlsConfig;
+
+  /**
+   * Optional. The security scheme for the OTel Collector endpoint. Defaults to NONE
+   * (unauthenticated OTLP/HTTP), preserving today's behavior for existing configurations. Only
+   * applicable when `exporter` == OPEN_TELEMETRY_COLLECTOR.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String otelCollectorSecurityScheme;
+
+  /**
    * Distributed trace configuration for all API proxies in an environment. You can also override
    * the configuration for a specific API proxy using the distributed trace configuration overrides
    * API.
@@ -107,6 +124,46 @@ public final class GoogleCloudApigeeV1TraceConfig extends com.google.api.client.
    */
   public GoogleCloudApigeeV1TraceConfig setExporter(java.lang.String exporter) {
     this.exporter = exporter;
+    return this;
+  }
+
+  /**
+   * Optional. mTLS configuration for the OTel Collector endpoint. Required when
+   * `otel_collector_security_scheme` == MTLS; must not be set otherwise.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TraceConfigOtelMtlsConfig getMtlsConfig() {
+    return mtlsConfig;
+  }
+
+  /**
+   * Optional. mTLS configuration for the OTel Collector endpoint. Required when
+   * `otel_collector_security_scheme` == MTLS; must not be set otherwise.
+   * @param mtlsConfig mtlsConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TraceConfig setMtlsConfig(GoogleCloudApigeeV1TraceConfigOtelMtlsConfig mtlsConfig) {
+    this.mtlsConfig = mtlsConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The security scheme for the OTel Collector endpoint. Defaults to NONE
+   * (unauthenticated OTLP/HTTP), preserving today's behavior for existing configurations. Only
+   * applicable when `exporter` == OPEN_TELEMETRY_COLLECTOR.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOtelCollectorSecurityScheme() {
+    return otelCollectorSecurityScheme;
+  }
+
+  /**
+   * Optional. The security scheme for the OTel Collector endpoint. Defaults to NONE
+   * (unauthenticated OTLP/HTTP), preserving today's behavior for existing configurations. Only
+   * applicable when `exporter` == OPEN_TELEMETRY_COLLECTOR.
+   * @param otelCollectorSecurityScheme otelCollectorSecurityScheme or {@code null} for none
+   */
+  public GoogleCloudApigeeV1TraceConfig setOtelCollectorSecurityScheme(java.lang.String otelCollectorSecurityScheme) {
+    this.otelCollectorSecurityScheme = otelCollectorSecurityScheme;
     return this;
   }
 

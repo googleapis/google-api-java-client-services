@@ -17,7 +17,7 @@
 package com.google.api.services.apigee.v1.model;
 
 /**
- * NEXT ID: 11 RuntimeTraceConfig defines the configurations for distributed trace in an
+ * NEXT ID: 13 RuntimeTraceConfig defines the configurations for distributed trace in an
  * environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -47,6 +47,14 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
   private java.lang.String exporter;
 
   /**
+   * Optional. mTLS configuration for the OTel Collector endpoint. Required when
+   * `otel_collector_security_scheme` is `MTLS`; must be absent otherwise.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1RuntimeTraceConfigOtelMtlsConfig mTlsConfig;
+
+  /**
    * Name of the trace config in the following format:
    * `organizations/{org}/environment/{env}/traceConfig`
    * The value may be {@code null}.
@@ -65,6 +73,15 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean openTelemetryProtocolEnabled;
+
+  /**
+   * Optional. Security scheme for the outbound connection to the customer-owned OpenTelemetry
+   * Collector. Only meaningful when `exporter` is `OPEN_TELEMETRY_COLLECTOR`. Runtime consumers
+   * unaware of a value should treat it as `OTEL_COLLECTOR_SECURITY_SCHEME_UNSPECIFIED` (== NONE).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String otelCollectorSecurityScheme;
 
   /**
    * List of trace configuration overrides for spicific API proxies.
@@ -149,6 +166,25 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
   }
 
   /**
+   * Optional. mTLS configuration for the OTel Collector endpoint. Required when
+   * `otel_collector_security_scheme` is `MTLS`; must be absent otherwise.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeTraceConfigOtelMtlsConfig getMTlsConfig() {
+    return mTlsConfig;
+  }
+
+  /**
+   * Optional. mTLS configuration for the OTel Collector endpoint. Required when
+   * `otel_collector_security_scheme` is `MTLS`; must be absent otherwise.
+   * @param mTlsConfig mTlsConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeTraceConfig setMTlsConfig(GoogleCloudApigeeV1RuntimeTraceConfigOtelMtlsConfig mTlsConfig) {
+    this.mTlsConfig = mTlsConfig;
+    return this;
+  }
+
+  /**
    * Name of the trace config in the following format:
    * `organizations/{org}/environment/{env}/traceConfig`
    * @return value or {@code null} for none
@@ -191,6 +227,27 @@ public final class GoogleCloudApigeeV1RuntimeTraceConfig extends com.google.api.
    */
   public GoogleCloudApigeeV1RuntimeTraceConfig setOpenTelemetryProtocolEnabled(java.lang.Boolean openTelemetryProtocolEnabled) {
     this.openTelemetryProtocolEnabled = openTelemetryProtocolEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Security scheme for the outbound connection to the customer-owned OpenTelemetry
+   * Collector. Only meaningful when `exporter` is `OPEN_TELEMETRY_COLLECTOR`. Runtime consumers
+   * unaware of a value should treat it as `OTEL_COLLECTOR_SECURITY_SCHEME_UNSPECIFIED` (== NONE).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOtelCollectorSecurityScheme() {
+    return otelCollectorSecurityScheme;
+  }
+
+  /**
+   * Optional. Security scheme for the outbound connection to the customer-owned OpenTelemetry
+   * Collector. Only meaningful when `exporter` is `OPEN_TELEMETRY_COLLECTOR`. Runtime consumers
+   * unaware of a value should treat it as `OTEL_COLLECTOR_SECURITY_SCHEME_UNSPECIFIED` (== NONE).
+   * @param otelCollectorSecurityScheme otelCollectorSecurityScheme or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeTraceConfig setOtelCollectorSecurityScheme(java.lang.String otelCollectorSecurityScheme) {
+    this.otelCollectorSecurityScheme = otelCollectorSecurityScheme;
     return this;
   }
 

@@ -58,6 +58,13 @@ public final class GoogleCloudApigeeV1RuntimeAddonsConfig extends com.google.api
   private java.lang.String revisionId;
 
   /**
+   * Runtime configuration for Spec Generation add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApigeeV1RuntimeSpecGenerationAddonConfig specGenerationConfig;
+
+  /**
    * UID is to detect if config is recreated after deletion. The add-on config will only be deleted
    * when the environment itself gets deleted, thus it will always be the same as the UID of
    * EnvironmentConfig.
@@ -131,6 +138,23 @@ public final class GoogleCloudApigeeV1RuntimeAddonsConfig extends com.google.api
    */
   public GoogleCloudApigeeV1RuntimeAddonsConfig setRevisionId(java.lang.String revisionId) {
     this.revisionId = revisionId;
+    return this;
+  }
+
+  /**
+   * Runtime configuration for Spec Generation add-on.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeSpecGenerationAddonConfig getSpecGenerationConfig() {
+    return specGenerationConfig;
+  }
+
+  /**
+   * Runtime configuration for Spec Generation add-on.
+   * @param specGenerationConfig specGenerationConfig or {@code null} for none
+   */
+  public GoogleCloudApigeeV1RuntimeAddonsConfig setSpecGenerationConfig(GoogleCloudApigeeV1RuntimeSpecGenerationAddonConfig specGenerationConfig) {
+    this.specGenerationConfig = specGenerationConfig;
     return this;
   }
 

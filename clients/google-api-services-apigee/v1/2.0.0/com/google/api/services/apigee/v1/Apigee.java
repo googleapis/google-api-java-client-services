@@ -2418,13 +2418,13 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * List of fields to be updated. Fields that can be updated: synchronizer_identities,
-       * publisher_identities.
+       * analytics_publisher_identities, watcher_identities.
        */
       @com.google.api.client.util.Key
       private String updateMask;
 
       /** List of fields to be updated. Fields that can be updated: synchronizer_identities,
-     publisher_identities.
+     analytics_publisher_identities, watcher_identities.
        */
       public String getUpdateMask() {
         return updateMask;
@@ -2432,7 +2432,7 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
 
       /**
        * List of fields to be updated. Fields that can be updated: synchronizer_identities,
-       * publisher_identities.
+       * analytics_publisher_identities, watcher_identities.
        */
       public UpdateControlPlaneAccess setUpdateMask(String updateMask) {
         this.updateMask = updateMask;

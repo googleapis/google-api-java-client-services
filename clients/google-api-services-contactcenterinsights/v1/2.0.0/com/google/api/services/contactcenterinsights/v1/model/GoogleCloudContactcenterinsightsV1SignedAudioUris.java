@@ -45,6 +45,14 @@ public final class GoogleCloudContactcenterinsightsV1SignedAudioUris extends com
   private java.lang.String signedGcsAudioUri;
 
   /**
+   * Output only. The signed URIs for the audio from the Cloud Storage conversation source when
+   * multiple audio files exist (e.g. multi-leg conversations).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> signedGcsAudioUris;
+
+  /**
    * The signed URI for the audio corresponding to each turn in the conversation.
    * The value may be {@code null}.
    */
@@ -88,6 +96,25 @@ public final class GoogleCloudContactcenterinsightsV1SignedAudioUris extends com
    */
   public GoogleCloudContactcenterinsightsV1SignedAudioUris setSignedGcsAudioUri(java.lang.String signedGcsAudioUri) {
     this.signedGcsAudioUri = signedGcsAudioUri;
+    return this;
+  }
+
+  /**
+   * Output only. The signed URIs for the audio from the Cloud Storage conversation source when
+   * multiple audio files exist (e.g. multi-leg conversations).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSignedGcsAudioUris() {
+    return signedGcsAudioUris;
+  }
+
+  /**
+   * Output only. The signed URIs for the audio from the Cloud Storage conversation source when
+   * multiple audio files exist (e.g. multi-leg conversations).
+   * @param signedGcsAudioUris signedGcsAudioUris or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1SignedAudioUris setSignedGcsAudioUris(java.util.List<java.lang.String> signedGcsAudioUris) {
+    this.signedGcsAudioUris = signedGcsAudioUris;
     return this;
   }
 

@@ -5579,7 +5579,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not set in the `CourseWork` object, an `INVALID_ARGUMENT` error is returned. The
          * following fields may be specified by teachers: * `title` * `description` * `state` *
          * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-         * `submission_modification_mode` * `topic_id` * `grading_period_id`
+         * `submission_modification_mode` * `topic_id` * `grading_period_id` * `learning_goals`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -5590,7 +5590,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        does not support empty values is included in the update mask and not set in the `CourseWork`
        object, an `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
        * `title` * `description` * `state` * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-       `submission_modification_mode` * `topic_id` * `grading_period_id`
+       `submission_modification_mode` * `topic_id` * `grading_period_id` * `learning_goals`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -5604,7 +5604,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * not set in the `CourseWork` object, an `INVALID_ARGUMENT` error is returned. The
          * following fields may be specified by teachers: * `title` * `description` * `state` *
          * `due_date` * `due_time` * `max_points` * `scheduled_time` *
-         * `submission_modification_mode` * `topic_id` * `grading_period_id`
+         * `submission_modification_mode` * `topic_id` * `grading_period_id` * `learning_goals`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -10952,7 +10952,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the course work material object. If a field that does not support empty values is
          * included in the update mask and not set in the course work material object, an
          * `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
-         * * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         * * `title` * `description` * `state` * `scheduled_time` * `topic_id` * `learning_goals`
          */
         @com.google.api.client.util.Key
         private String updateMask;
@@ -10962,7 +10962,8 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
        it can be cleared by specifying it in the update mask and not in the course work material object.
        If a field that does not support empty values is included in the update mask and not set in the
        course work material object, an `INVALID_ARGUMENT` error is returned. The following fields may be
-       specified by teachers: * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+       specified by teachers: * `title` * `description` * `state` * `scheduled_time` * `topic_id` *
+       `learning_goals`
          */
         public String getUpdateMask() {
           return updateMask;
@@ -10975,7 +10976,7 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
          * the course work material object. If a field that does not support empty values is
          * included in the update mask and not set in the course work material object, an
          * `INVALID_ARGUMENT` error is returned. The following fields may be specified by teachers:
-         * * `title` * `description` * `state` * `scheduled_time` * `topic_id`
+         * * `title` * `description` * `state` * `scheduled_time` * `topic_id` * `learning_goals`
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

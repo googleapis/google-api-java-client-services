@@ -134,6 +134,578 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
   }
 
   /**
+   * An accessor for creating requests from the AllowlistedDomains collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code CloudIdentity cloudidentity = new CloudIdentity(...);}
+   *   {@code CloudIdentity.AllowlistedDomains.List request = cloudidentity.allowlistedDomains().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AllowlistedDomains allowlistedDomains() {
+    return new AllowlistedDomains();
+  }
+
+  /**
+   * The "allowlistedDomains" collection of methods.
+   */
+  public class AllowlistedDomains {
+
+    /**
+     * Adds a domain to the allowlist.
+     *
+     * Create a request for the method "allowlistedDomains.create".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.cloudidentity.v1.model.AllowlistedDomain}
+     * @return the request
+     */
+    public Create create(com.google.api.services.cloudidentity.v1.model.AllowlistedDomain content) throws java.io.IOException {
+      Create result = new Create(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/allowlistedDomains";
+
+      /**
+       * Adds a domain to the allowlist.
+       *
+       * Create a request for the method "allowlistedDomains.create".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.cloudidentity.v1.model.AllowlistedDomain}
+       * @since 1.13
+       */
+      protected Create(com.google.api.services.cloudidentity.v1.model.AllowlistedDomain content) {
+        super(CloudIdentity.this, "POST", REST_PATH, content, com.google.api.services.cloudidentity.v1.model.Operation.class);
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Removes a domain from the allowlist.
+     *
+     * Create a request for the method "allowlistedDomains.delete".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.Operation> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^allowlistedDomains/[^/]+$");
+
+      /**
+       * Removes a domain from the allowlist.
+       *
+       * Create a request for the method "allowlistedDomains.delete".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(CloudIdentity.this, "DELETE", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^allowlistedDomains/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to
+       * delete.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to delete.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to
+       * delete.
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^allowlistedDomains/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a specific domain from the allowlist.
+     *
+     * Create a request for the method "allowlistedDomains.get".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to retrieve.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.AllowlistedDomain> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^allowlistedDomains/[^/]+$");
+
+      /**
+       * Retrieves a specific domain from the allowlist.
+       *
+       * Create a request for the method "allowlistedDomains.get".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to retrieve.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.AllowlistedDomain.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^allowlistedDomains/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to
+       * retrieve.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to retrieve.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Specifies the [resource name](https://google.aip.dev/122) of the domain to
+       * retrieve.
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^allowlistedDomains/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the domains in the allowlist.
+     *
+     * Create a request for the method "allowlistedDomains.list".
+     *
+     * This request holds the parameters needed by the cloudidentity server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @return the request
+     */
+    public List list() throws java.io.IOException {
+      List result = new List();
+      initialize(result);
+      return result;
+    }
+
+    public class List extends CloudIdentityRequest<com.google.api.services.cloudidentity.v1.model.ListAllowlistedDomainsResponse> {
+
+      private static final String REST_PATH = "v1/allowlistedDomains";
+
+      /**
+       * Lists the domains in the allowlist.
+       *
+       * Create a request for the method "allowlistedDomains.list".
+       *
+       * This request holds the parameters needed by the the cloudidentity server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected List() {
+        super(CloudIdentity.this, "GET", REST_PATH, null, com.google.api.services.cloudidentity.v1.model.ListAllowlistedDomainsResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Optional. Provides an optional filter for list results. Currently, only exact matches on
+       * the domain are supported, such as "domain = 'google.com'", with no composite conditions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. Provides an optional filter for list results. Currently, only exact matches on the domain
+     are supported, such as "domain = 'google.com'", with no composite conditions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * Optional. Provides an optional filter for list results. Currently, only exact matches on
+       * the domain are supported, such as "domain = 'google.com'", with no composite conditions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * Optional. Specifies the requested page size. If unspecified, the service returns at most
+       * 5000 domains. The maximum value is 5000; values above 5000 coerce to 5000. The limits can
+       * change over time.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. Specifies the requested page size. If unspecified, the service returns at most 5000
+     domains. The maximum value is 5000; values above 5000 coerce to 5000. The limits can change over
+     time.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. Specifies the requested page size. If unspecified, the service returns at most
+       * 5000 domains. The maximum value is 5000; values above 5000 coerce to 5000. The limits can
+       * change over time.
+       */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Optional. Identifies a token from a previous page of results, if any. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. Identifies a token from a previous page of results, if any.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Optional. Identifies a token from a previous page of results, if any. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Customers collection.
    *
    * <p>The typical use is:</p>

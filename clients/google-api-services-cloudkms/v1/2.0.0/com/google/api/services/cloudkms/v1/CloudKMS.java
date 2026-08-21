@@ -441,7 +441,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
+     * Returns the effective Cloud KMS Autokey configuration for a given project or folder. Note on
+     * permissions: - If called on a project (`projects/{project}`), requires
+     * `cloudkms.projects.showEffectiveAutokeyConfig`. - If called on a folder (`folders/{folder}`),
+     * requires `cloudkms.folders.showEffectiveAutokeyConfig`.
      *
      * Create a request for the method "folders.showEffectiveAutokeyConfig".
      *
@@ -450,7 +453,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * operation.
      *
      * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configuration for. This may be helpful for evaluating the effect of nested folder
      *        configurations on a given resource project. Format: * projects/{project} *
      *        folders/{folder}
      * @return the request
@@ -469,7 +472,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^folders/[^/]+$");
 
       /**
-       * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
+       * Returns the effective Cloud KMS Autokey configuration for a given project or folder. Note on
+       * permissions: - If called on a project (`projects/{project}`), requires
+       * `cloudkms.projects.showEffectiveAutokeyConfig`. - If called on a folder (`folders/{folder}`),
+       * requires `cloudkms.folders.showEffectiveAutokeyConfig`.
        *
        * Create a request for the method "folders.showEffectiveAutokeyConfig".
        *
@@ -480,7 +486,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * immediately after invoking the constructor. </p>
        *
        * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configuration for. This may be helpful for evaluating the effect of nested folder
      *        configurations on a given resource project. Format: * projects/{project} *
      *        folders/{folder}
        * @since 1.13
@@ -562,15 +568,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configuration for. This may be helpful for evaluating the effect of nested folder
        * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-     configuration for. This may be helpful for interrogating the effect of nested folder configurations
-     on a given resource project. Format: * projects/{project} * folders/{folder}
+     configuration for. This may be helpful for evaluating the effect of nested folder configurations on
+     a given resource project. Format: * projects/{project} * folders/{folder}
        */
       public java.lang.String getParent() {
         return parent;
@@ -578,7 +584,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configuration for. This may be helpful for evaluating the effect of nested folder
        * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       public ShowEffectiveAutokeyConfig setParent(java.lang.String parent) {
@@ -1549,7 +1555,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
       }
     }
     /**
-     * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
+     * Returns the effective Cloud KMS Autokey configuration for a given project or folder. Note on
+     * permissions: - If called on a project (`projects/{project}`), requires
+     * `cloudkms.projects.showEffectiveAutokeyConfig`. - If called on a folder (`folders/{folder}`),
+     * requires `cloudkms.folders.showEffectiveAutokeyConfig`.
      *
      * Create a request for the method "projects.showEffectiveAutokeyConfig".
      *
@@ -1558,7 +1567,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
      * operation.
      *
      * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configuration for. This may be helpful for evaluating the effect of nested folder
      *        configurations on a given resource project. Format: * projects/{project} *
      *        folders/{folder}
      * @return the request
@@ -1577,7 +1586,10 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Returns the effective Cloud KMS Autokey configuration for a given project or folder.
+       * Returns the effective Cloud KMS Autokey configuration for a given project or folder. Note on
+       * permissions: - If called on a project (`projects/{project}`), requires
+       * `cloudkms.projects.showEffectiveAutokeyConfig`. - If called on a folder (`folders/{folder}`),
+       * requires `cloudkms.folders.showEffectiveAutokeyConfig`.
        *
        * Create a request for the method "projects.showEffectiveAutokeyConfig".
        *
@@ -1588,7 +1600,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
        * immediately after invoking the constructor. </p>
        *
        * @param parent Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-     *        configuration for. This may be helpful for interrogating the effect of nested folder
+     *        configuration for. This may be helpful for evaluating the effect of nested folder
      *        configurations on a given resource project. Format: * projects/{project} *
      *        folders/{folder}
        * @since 1.13
@@ -1670,15 +1682,15 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configuration for. This may be helpful for evaluating the effect of nested folder
        * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
       /** Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-     configuration for. This may be helpful for interrogating the effect of nested folder configurations
-     on a given resource project. Format: * projects/{project} * folders/{folder}
+     configuration for. This may be helpful for evaluating the effect of nested folder configurations on
+     a given resource project. Format: * projects/{project} * folders/{folder}
        */
       public java.lang.String getParent() {
         return parent;
@@ -1686,7 +1698,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Required. Name of the resource project or folder to show the effective Cloud KMS Autokey
-       * configuration for. This may be helpful for interrogating the effect of nested folder
+       * configuration for. This may be helpful for evaluating the effect of nested folder
        * configurations on a given resource project. Format: * projects/{project} * folders/{folder}
        */
       public ShowEffectiveAutokeyConfig setParent(java.lang.String parent) {

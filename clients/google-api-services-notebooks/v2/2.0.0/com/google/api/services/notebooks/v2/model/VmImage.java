@@ -39,6 +39,15 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
   private java.lang.String family;
 
   /**
+   * Output only. A human-readable description of the image running on the instance (for example,
+   * "Debian 11, Python 3.10"), derived at read time from the image release configuration (the
+   * source of truth). Set to "Custom" for unrecognized boot-disk images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageDescription;
+
+  /**
    * Optional. Use VM image name to find the image.
    * The value may be {@code null}.
    */
@@ -69,6 +78,27 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
    */
   public VmImage setFamily(java.lang.String family) {
     this.family = family;
+    return this;
+  }
+
+  /**
+   * Output only. A human-readable description of the image running on the instance (for example,
+   * "Debian 11, Python 3.10"), derived at read time from the image release configuration (the
+   * source of truth). Set to "Custom" for unrecognized boot-disk images.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageDescription() {
+    return imageDescription;
+  }
+
+  /**
+   * Output only. A human-readable description of the image running on the instance (for example,
+   * "Debian 11, Python 3.10"), derived at read time from the image release configuration (the
+   * source of truth). Set to "Custom" for unrecognized boot-disk images.
+   * @param imageDescription imageDescription or {@code null} for none
+   */
+  public VmImage setImageDescription(java.lang.String imageDescription) {
+    this.imageDescription = imageDescription;
     return this;
   }
 

@@ -391,9 +391,9 @@ pycparser==2.21 \
     # via
     #   -r requirements.in
     #   cffi
-pyjwt==2.4.0 \
-    --hash=sha256:72d1d253f32dbd4f5c88eaf1fdc62f3a19f676ccbadb9dbc5d07e951b2b26daf \
-    --hash=sha256:d42908208c699b3b973cbeb01a969ba6a96c821eefb1c5bfe4c390c01d67abba
+pyjwt==2.13.0 \
+    --hash=sha256:41571c89ca91598c79e8ef18a2d07367d4810fbbd6f637794879baf1b7703423 \
+    --hash=sha256:66adcc2aff09b3f1bbd95fc1e1577df8ac8723c978552fd43304c8a290ac5728
     # via
     #   -r requirements.in
     #   gcp-releasetool
@@ -443,7 +443,9 @@ six==1.16.0 \
 typing-extensions==4.1.1 \
     --hash=sha256:1a9462dcc3347a79b1f1c0271fbe79e844580bb598bafa1ed208b94da3cdcd42 \
     --hash=sha256:21c85e0fe4b9a155d0799430b0ad741cdce7e359660ccbd8b530613e8df88ce2
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   pyjwt
 urllib3==1.26.19 \
     --hash=sha256:37a0344459b199fce0e80b0d3569837ec6b6937435c5244e7fd73fa6006830f3 \
     --hash=sha256:3e3d753a8618b86d7de333b4223005f68720bcd6a7d2bcb9fbd2229ec7c1e429

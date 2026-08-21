@@ -17,7 +17,7 @@
 package com.google.api.services.cloudkms.v1.model;
 
 /**
- * Cloud KMS Autokey configuration for a folder.
+ * Cloud KMS Autokey configuration for a project or folder.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Key Management Service (KMS) API. For a

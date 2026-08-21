@@ -96,10 +96,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> ownerEmails;
 
   /**
-   * Input only. If set to true, welcome email will not be sent to the customer. It is recommended
-   * to skip the welcome email if devices will be claimed with additional DEVICE_PROTECTION service,
-   * as the customer will receive separate emails at device claim time. This field is ignored if
-   * this is not a Zero-touch customer.
+   * Input only. Deprecated: This field is no longer supported and is ignored by the server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,10 +262,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. If set to true, welcome email will not be sent to the customer. It is recommended
-   * to skip the welcome email if devices will be claimed with additional DEVICE_PROTECTION service,
-   * as the customer will receive separate emails at device claim time. This field is ignored if
-   * this is not a Zero-touch customer.
+   * Input only. Deprecated: This field is no longer supported and is ignored by the server.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSkipWelcomeEmail() {
@@ -276,10 +270,7 @@ public final class Company extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Input only. If set to true, welcome email will not be sent to the customer. It is recommended
-   * to skip the welcome email if devices will be claimed with additional DEVICE_PROTECTION service,
-   * as the customer will receive separate emails at device claim time. This field is ignored if
-   * this is not a Zero-touch customer.
+   * Input only. Deprecated: This field is no longer supported and is ignored by the server.
    * @param skipWelcomeEmail skipWelcomeEmail or {@code null} for none
    */
   public Company setSkipWelcomeEmail(java.lang.Boolean skipWelcomeEmail) {

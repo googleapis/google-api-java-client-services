@@ -3654,6 +3654,162 @@ public class CloudObservability extends com.google.api.client.googleapis.service
       public class Buckets {
 
         /**
+         * Create a new bucket.
+         *
+         * Create a request for the method "buckets.create".
+         *
+         * This request holds the parameters needed by the observability server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Name of the project and location for the bucket. The format is:
+         *        projects/[PROJECT_ID]/locations/[LOCATION]
+         * @param content the {@link com.google.api.services.observability.v1.model.Bucket}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.observability.v1.model.Bucket content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudObservabilityRequest<com.google.api.services.observability.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/buckets";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Create a new bucket.
+           *
+           * Create a request for the method "buckets.create".
+           *
+           * This request holds the parameters needed by the the observability server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Name of the project and location for the bucket. The format is:
+         *        projects/[PROJECT_ID]/locations/[LOCATION]
+           * @param content the {@link com.google.api.services.observability.v1.model.Bucket}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.observability.v1.model.Bucket content) {
+            super(CloudObservability.this, "POST", REST_PATH, content, com.google.api.services.observability.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the project and location for the bucket. The format is:
+           * projects/[PROJECT_ID]/locations/[LOCATION]
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Name of the project and location for the bucket. The format is:
+         projects/[PROJECT_ID]/locations/[LOCATION]
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Name of the project and location for the bucket. The format is:
+           * projects/[PROJECT_ID]/locations/[LOCATION]
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. Id of the bucket to create. */
+          @com.google.api.client.util.Key
+          private java.lang.String bucketId;
+
+          /** Required. Id of the bucket to create.
+           */
+          public java.lang.String getBucketId() {
+            return bucketId;
+          }
+
+          /** Required. Id of the bucket to create. */
+          public Create setBucketId(java.lang.String bucketId) {
+            this.bucketId = bucketId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
          * Get bucket resource.
          *
          * Create a request for the method "buckets.get".
@@ -4007,6 +4163,162 @@ public class CloudObservability extends com.google.api.client.googleapis.service
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Update a bucket.
+         *
+         * Create a request for the method "buckets.patch".
+         *
+         * This request holds the parameters needed by the observability server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Name of the bucket. The format is:
+         *        projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+         * @param content the {@link com.google.api.services.observability.v1.model.Bucket}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.observability.v1.model.Bucket content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudObservabilityRequest<com.google.api.services.observability.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Update a bucket.
+           *
+           * Create a request for the method "buckets.patch".
+           *
+           * This request holds the parameters needed by the the observability server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Name of the bucket. The format is:
+         *        projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           * @param content the {@link com.google.api.services.observability.v1.model.Bucket}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.observability.v1.model.Bucket content) {
+            super(CloudObservability.this, "PATCH", REST_PATH, content, com.google.api.services.observability.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Name of the bucket. The format is:
+           * projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Name of the bucket. The format is:
+         projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Name of the bucket. The format is:
+           * projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. The list of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. The list of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 

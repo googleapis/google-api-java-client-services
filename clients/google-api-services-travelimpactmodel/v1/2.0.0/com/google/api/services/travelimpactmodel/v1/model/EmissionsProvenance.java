@@ -18,7 +18,10 @@ package com.google.api.services.travelimpactmodel.v1.model;
 
 /**
  * Information about the provenance of the data used to calculate emissions estimates, including
- * contributing factors and their data sources.
+ * contributing factors and their data sources. In `provenance_entries`, `provenance_entry_type`
+ * acts as the "key" identifying the contributing factor, and there is always only one entry per
+ * entry type. The remaining fields in each entry describe that specific entry type and may or may
+ * not be populated depending on the contributing factor and available data.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Travel Impact Model API. For a detailed explanation
@@ -32,14 +35,20 @@ package com.google.api.services.travelimpactmodel.v1.model;
 public final class EmissionsProvenance extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. All contributing factors used to calculate emissions.
+   * Output only. All contributing factors used to calculate emissions. Each entry type
+   * (`provenance_entry_type`) acts as a "key" identifying the factor, with always only one entry
+   * per entry type. The remaining fields describe that specific factor and may or may not be
+   * populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EmissionsProvenanceEntry> provenanceEntries;
 
   /**
-   * Output only. All contributing factors used to calculate emissions.
+   * Output only. All contributing factors used to calculate emissions. Each entry type
+   * (`provenance_entry_type`) acts as a "key" identifying the factor, with always only one entry
+   * per entry type. The remaining fields describe that specific factor and may or may not be
+   * populated.
    * @return value or {@code null} for none
    */
   public java.util.List<EmissionsProvenanceEntry> getProvenanceEntries() {
@@ -47,7 +56,10 @@ public final class EmissionsProvenance extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. All contributing factors used to calculate emissions.
+   * Output only. All contributing factors used to calculate emissions. Each entry type
+   * (`provenance_entry_type`) acts as a "key" identifying the factor, with always only one entry
+   * per entry type. The remaining fields describe that specific factor and may or may not be
+   * populated.
    * @param provenanceEntries provenanceEntries or {@code null} for none
    */
   public EmissionsProvenance setProvenanceEntries(java.util.List<EmissionsProvenanceEntry> provenanceEntries) {

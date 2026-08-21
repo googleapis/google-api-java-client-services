@@ -742,24 +742,24 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * The maximum number of notification subscriptions to return in a page. The default value
-         * for `page_size` is 100. The maximum value is `200`. Values above `200` will be coerced to
-         * `200`.
+         * Optional. The maximum number of notification subscriptions to return in a page. The
+         * default value for `page_size` is 100. The maximum value is `200`. Values above `200` will
+         * be coerced to `200`.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
-        /** The maximum number of notification subscriptions to return in a page. The default value for
-       `page_size` is 100. The maximum value is `200`. Values above `200` will be coerced to `200`.
+        /** Optional. The maximum number of notification subscriptions to return in a page. The default value
+       for `page_size` is 100. The maximum value is `200`. Values above `200` will be coerced to `200`.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
         }
 
         /**
-         * The maximum number of notification subscriptions to return in a page. The default value
-         * for `page_size` is 100. The maximum value is `200`. Values above `200` will be coerced to
-         * `200`.
+         * Optional. The maximum number of notification subscriptions to return in a page. The
+         * default value for `page_size` is 100. The maximum value is `200`. Values above `200` will
+         * be coerced to `200`.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -767,22 +767,22 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
 
         /**
-         * Token (if provided) to retrieve the subsequent page. All other parameters must match the
-         * original call that provided the page token.
+         * Optional. Token (if provided) to retrieve the subsequent page. All other parameters must
+         * match the original call that provided the page token.
          */
         @com.google.api.client.util.Key
         private java.lang.String pageToken;
 
-        /** Token (if provided) to retrieve the subsequent page. All other parameters must match the original
-       call that provided the page token.
+        /** Optional. Token (if provided) to retrieve the subsequent page. All other parameters must match the
+       original call that provided the page token.
          */
         public java.lang.String getPageToken() {
           return pageToken;
         }
 
         /**
-         * Token (if provided) to retrieve the subsequent page. All other parameters must match the
-         * original call that provided the page token.
+         * Optional. Token (if provided) to retrieve the subsequent page. All other parameters must
+         * match the original call that provided the page token.
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;

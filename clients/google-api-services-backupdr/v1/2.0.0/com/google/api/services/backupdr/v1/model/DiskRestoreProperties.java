@@ -77,6 +77,13 @@ public final class DiskRestoreProperties extends com.google.api.client.json.Gene
   private java.util.List<GuestOsFeature> guestOsFeature;
 
   /**
+   * Provides options for creating a disk from a source Compute Instance backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RestoreDiskFromInstanceOptions instanceBackupSource;
+
+  /**
    * Optional. Labels to apply to this disk. These can be modified later using setLabels method.
    * Label values can be empty.
    * The value may be {@code null}.
@@ -266,6 +273,23 @@ public final class DiskRestoreProperties extends com.google.api.client.json.Gene
    */
   public DiskRestoreProperties setGuestOsFeature(java.util.List<GuestOsFeature> guestOsFeature) {
     this.guestOsFeature = guestOsFeature;
+    return this;
+  }
+
+  /**
+   * Provides options for creating a disk from a source Compute Instance backup.
+   * @return value or {@code null} for none
+   */
+  public RestoreDiskFromInstanceOptions getInstanceBackupSource() {
+    return instanceBackupSource;
+  }
+
+  /**
+   * Provides options for creating a disk from a source Compute Instance backup.
+   * @param instanceBackupSource instanceBackupSource or {@code null} for none
+   */
+  public DiskRestoreProperties setInstanceBackupSource(RestoreDiskFromInstanceOptions instanceBackupSource) {
+    this.instanceBackupSource = instanceBackupSource;
     return this;
   }
 

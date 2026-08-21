@@ -38,7 +38,7 @@ public final class CompositeRef extends com.google.api.client.json.GenericJson {
   private java.lang.String applicationTemplate;
 
   /**
-   * Revision of the ApplicationTemplate to use. Changes to revision will trigger manual
+   * Optional. Revision of the ApplicationTemplate to use. Changes to revision will trigger manual
    * resynchronization. If empty, ApplicationTemplate will be ignored.
    * The value may be {@code null}.
    */
@@ -71,7 +71,7 @@ public final class CompositeRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Revision of the ApplicationTemplate to use. Changes to revision will trigger manual
+   * Optional. Revision of the ApplicationTemplate to use. Changes to revision will trigger manual
    * resynchronization. If empty, ApplicationTemplate will be ignored.
    * @return value or {@code null} for none
    */
@@ -80,7 +80,7 @@ public final class CompositeRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Revision of the ApplicationTemplate to use. Changes to revision will trigger manual
+   * Optional. Revision of the ApplicationTemplate to use. Changes to revision will trigger manual
    * resynchronization. If empty, ApplicationTemplate will be ignored.
    * @param revision revision or {@code null} for none
    */

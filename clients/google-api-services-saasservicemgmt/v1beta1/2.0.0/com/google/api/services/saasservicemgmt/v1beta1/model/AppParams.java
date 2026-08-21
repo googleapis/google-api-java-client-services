@@ -31,25 +31,26 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
 public final class AppParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Grouping used to construct the name of the AppHub Application. Multiple UnitKinds can specify
-   * the same group to use the same Application across their respective units. Corresponds to the
-   * app_boundary_id in the ADC composite ApplicationTemplate. Defaults to UnitKind.name
+   * Optional. Grouping used to construct the name of the AppHub Application. Multiple UnitKinds can
+   * specify the same group to use the same Application across their respective units. Corresponds
+   * to the app_boundary_id in the ADC composite ApplicationTemplate. Defaults to UnitKind.name
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String group;
 
   /**
-   * Corresponds to the scope in the ADC composite ApplicationTemplate. Defaults to TYPE_REGIONAL.
+   * Optional. Corresponds to the scope in the ADC composite ApplicationTemplate. Defaults to
+   * TYPE_REGIONAL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Scope scope;
 
   /**
-   * Grouping used to construct the name of the AppHub Application. Multiple UnitKinds can specify
-   * the same group to use the same Application across their respective units. Corresponds to the
-   * app_boundary_id in the ADC composite ApplicationTemplate. Defaults to UnitKind.name
+   * Optional. Grouping used to construct the name of the AppHub Application. Multiple UnitKinds can
+   * specify the same group to use the same Application across their respective units. Corresponds
+   * to the app_boundary_id in the ADC composite ApplicationTemplate. Defaults to UnitKind.name
    * @return value or {@code null} for none
    */
   public java.lang.String getGroup() {
@@ -57,9 +58,9 @@ public final class AppParams extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grouping used to construct the name of the AppHub Application. Multiple UnitKinds can specify
-   * the same group to use the same Application across their respective units. Corresponds to the
-   * app_boundary_id in the ADC composite ApplicationTemplate. Defaults to UnitKind.name
+   * Optional. Grouping used to construct the name of the AppHub Application. Multiple UnitKinds can
+   * specify the same group to use the same Application across their respective units. Corresponds
+   * to the app_boundary_id in the ADC composite ApplicationTemplate. Defaults to UnitKind.name
    * @param group group or {@code null} for none
    */
   public AppParams setGroup(java.lang.String group) {
@@ -68,7 +69,8 @@ public final class AppParams extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Corresponds to the scope in the ADC composite ApplicationTemplate. Defaults to TYPE_REGIONAL.
+   * Optional. Corresponds to the scope in the ADC composite ApplicationTemplate. Defaults to
+   * TYPE_REGIONAL.
    * @return value or {@code null} for none
    */
   public Scope getScope() {
@@ -76,7 +78,8 @@ public final class AppParams extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Corresponds to the scope in the ADC composite ApplicationTemplate. Defaults to TYPE_REGIONAL.
+   * Optional. Corresponds to the scope in the ADC composite ApplicationTemplate. Defaults to
+   * TYPE_REGIONAL.
    * @param scope scope or {@code null} for none
    */
   public AppParams setScope(Scope scope) {

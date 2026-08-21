@@ -80,6 +80,13 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Immutable. Specifies the release consisting of a list of flags.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FlagNameList flagNamesRelease;
+
+  /**
    * Optional. Immutable. DEPRECATED: Use flag_revisions_release instead. FlagRevisions to be rolled
    * out. Only one of flag_revisions, all_flags, or flag_sets can be set. It used to be the ultimate
    * source to truth and has been moved to effective_flag_revisions.
@@ -275,6 +282,23 @@ public final class FlagRelease extends com.google.api.client.json.GenericJson {
    */
   public FlagRelease setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the release consisting of a list of flags.
+   * @return value or {@code null} for none
+   */
+  public FlagNameList getFlagNamesRelease() {
+    return flagNamesRelease;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the release consisting of a list of flags.
+   * @param flagNamesRelease flagNamesRelease or {@code null} for none
+   */
+  public FlagRelease setFlagNamesRelease(FlagNameList flagNamesRelease) {
+    this.flagNamesRelease = flagNamesRelease;
     return this;
   }
 

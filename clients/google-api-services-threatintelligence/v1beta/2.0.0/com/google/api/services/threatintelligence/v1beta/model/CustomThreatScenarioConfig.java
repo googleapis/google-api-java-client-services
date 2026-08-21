@@ -31,12 +31,43 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class CustomThreatScenarioConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The compiled Lucene query string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String compiledLuceneQuery;
+
+  /**
    * Required. The condition driving the scenario, stored as a stringified JSON. This is used to
    * query/filter documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String documentCondition;
+
+  /**
+   * Optional. Legacy metadata associated with this scenario/monitor.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LegacyMetadata legacyMonitorMetadata;
+
+  /**
+   * Output only. The compiled Lucene query string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompiledLuceneQuery() {
+    return compiledLuceneQuery;
+  }
+
+  /**
+   * Output only. The compiled Lucene query string.
+   * @param compiledLuceneQuery compiledLuceneQuery or {@code null} for none
+   */
+  public CustomThreatScenarioConfig setCompiledLuceneQuery(java.lang.String compiledLuceneQuery) {
+    this.compiledLuceneQuery = compiledLuceneQuery;
+    return this;
+  }
 
   /**
    * Required. The condition driving the scenario, stored as a stringified JSON. This is used to
@@ -54,6 +85,23 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
    */
   public CustomThreatScenarioConfig setDocumentCondition(java.lang.String documentCondition) {
     this.documentCondition = documentCondition;
+    return this;
+  }
+
+  /**
+   * Optional. Legacy metadata associated with this scenario/monitor.
+   * @return value or {@code null} for none
+   */
+  public LegacyMetadata getLegacyMonitorMetadata() {
+    return legacyMonitorMetadata;
+  }
+
+  /**
+   * Optional. Legacy metadata associated with this scenario/monitor.
+   * @param legacyMonitorMetadata legacyMonitorMetadata or {@code null} for none
+   */
+  public CustomThreatScenarioConfig setLegacyMonitorMetadata(LegacyMetadata legacyMonitorMetadata) {
+    this.legacyMonitorMetadata = legacyMonitorMetadata;
     return this;
   }
 

@@ -17,7 +17,9 @@
 package com.google.api.services.travelimpactmodel.v1.model;
 
 /**
- * Details about a single contributing factor in emissions calculations.
+ * Details about a single contributing factor in emissions calculations. Each entry represents a
+ * single factor where `provenance_entry_type` acts as the key identifying the factor, and the other
+ * fields describe it and may or may not be populated.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Travel Impact Model API. For a detailed explanation
@@ -97,7 +99,8 @@ public final class EmissionsProvenanceEntry extends com.google.api.client.json.G
   private java.lang.String loadFactorsT100Strategy;
 
   /**
-   * Output only. The type of the provenance entry.
+   * Output only. The type of the provenance entry. Acts as the "key" identifying the contributing
+   * factor; the remaining fields in this message describe it and may or may not be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -284,7 +287,8 @@ public final class EmissionsProvenanceEntry extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The type of the provenance entry.
+   * Output only. The type of the provenance entry. Acts as the "key" identifying the contributing
+   * factor; the remaining fields in this message describe it and may or may not be populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getProvenanceEntryType() {
@@ -292,7 +296,8 @@ public final class EmissionsProvenanceEntry extends com.google.api.client.json.G
   }
 
   /**
-   * Output only. The type of the provenance entry.
+   * Output only. The type of the provenance entry. Acts as the "key" identifying the contributing
+   * factor; the remaining fields in this message describe it and may or may not be populated.
    * @param provenanceEntryType provenanceEntryType or {@code null} for none
    */
   public EmissionsProvenanceEntry setProvenanceEntryType(java.lang.String provenanceEntryType) {

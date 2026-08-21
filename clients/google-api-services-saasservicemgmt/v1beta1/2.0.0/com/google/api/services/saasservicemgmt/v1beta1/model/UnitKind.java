@@ -42,7 +42,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * AppParams contains the parameters for creating an AppHub Application.
+   * Optional. AppParams contains the parameters for creating an AppHub Application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -194,7 +194,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AppParams contains the parameters for creating an AppHub Application.
+   * Optional. AppParams contains the parameters for creating an AppHub Application.
    * @return value or {@code null} for none
    */
   public AppParams getAppParams() {
@@ -202,7 +202,7 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * AppParams contains the parameters for creating an AppHub Application.
+   * Optional. AppParams contains the parameters for creating an AppHub Application.
    * @param appParams appParams or {@code null} for none
    */
   public UnitKind setAppParams(AppParams appParams) {

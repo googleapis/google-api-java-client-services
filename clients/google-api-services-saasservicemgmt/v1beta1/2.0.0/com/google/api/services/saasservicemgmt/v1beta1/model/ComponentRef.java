@@ -45,8 +45,8 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   private CompositeRef compositeRef;
 
   /**
-   * Revision of the component. If the component does not have a revision, this field will be
-   * explicitly set to the revision of the composite ApplicationTemplate.
+   * Optional. Revision of the component. If the component does not have a revision, this field will
+   * be explicitly set to the revision of the composite ApplicationTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,8 +87,8 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Revision of the component. If the component does not have a revision, this field will be
-   * explicitly set to the revision of the composite ApplicationTemplate.
+   * Optional. Revision of the component. If the component does not have a revision, this field will
+   * be explicitly set to the revision of the composite ApplicationTemplate.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevision() {
@@ -96,8 +96,8 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Revision of the component. If the component does not have a revision, this field will be
-   * explicitly set to the revision of the composite ApplicationTemplate.
+   * Optional. Revision of the component. If the component does not have a revision, this field will
+   * be explicitly set to the revision of the composite ApplicationTemplate.
    * @param revision revision or {@code null} for none
    */
   public ComponentRef setRevision(java.lang.String revision) {

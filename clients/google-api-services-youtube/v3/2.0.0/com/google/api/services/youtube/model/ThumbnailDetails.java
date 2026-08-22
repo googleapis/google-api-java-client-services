@@ -37,6 +37,13 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
   private Thumbnail default__;
 
   /**
+   * The full high definition (1080p) quality image for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Thumbnail fhd;
+
+  /**
    * The high quality image for this resource.
    * The value may be {@code null}.
    */
@@ -58,11 +65,25 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
   private Thumbnail medium;
 
   /**
+   * The quad high definition (1440p / 2K) quality image for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Thumbnail qhd;
+
+  /**
    * The standard quality image for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Thumbnail standard;
+
+  /**
+   * The ultra-high resolution (4K) quality image for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Thumbnail uhd;
 
   /**
    * The default image for this resource.
@@ -78,6 +99,23 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
    */
   public ThumbnailDetails setDefault(Thumbnail default__) {
     this.default__ = default__;
+    return this;
+  }
+
+  /**
+   * The full high definition (1080p) quality image for this resource.
+   * @return value or {@code null} for none
+   */
+  public Thumbnail getFhd() {
+    return fhd;
+  }
+
+  /**
+   * The full high definition (1080p) quality image for this resource.
+   * @param fhd fhd or {@code null} for none
+   */
+  public ThumbnailDetails setFhd(Thumbnail fhd) {
+    this.fhd = fhd;
     return this;
   }
 
@@ -133,6 +171,23 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
   }
 
   /**
+   * The quad high definition (1440p / 2K) quality image for this resource.
+   * @return value or {@code null} for none
+   */
+  public Thumbnail getQhd() {
+    return qhd;
+  }
+
+  /**
+   * The quad high definition (1440p / 2K) quality image for this resource.
+   * @param qhd qhd or {@code null} for none
+   */
+  public ThumbnailDetails setQhd(Thumbnail qhd) {
+    this.qhd = qhd;
+    return this;
+  }
+
+  /**
    * The standard quality image for this resource.
    * @return value or {@code null} for none
    */
@@ -146,6 +201,23 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
    */
   public ThumbnailDetails setStandard(Thumbnail standard) {
     this.standard = standard;
+    return this;
+  }
+
+  /**
+   * The ultra-high resolution (4K) quality image for this resource.
+   * @return value or {@code null} for none
+   */
+  public Thumbnail getUhd() {
+    return uhd;
+  }
+
+  /**
+   * The ultra-high resolution (4K) quality image for this resource.
+   * @param uhd uhd or {@code null} for none
+   */
+  public ThumbnailDetails setUhd(Thumbnail uhd) {
+    this.uhd = uhd;
     return this;
   }
 

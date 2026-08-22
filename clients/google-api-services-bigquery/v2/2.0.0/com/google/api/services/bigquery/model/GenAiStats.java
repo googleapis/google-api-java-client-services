@@ -37,8 +37,8 @@ public final class GenAiStats extends com.google.api.client.json.GenericJson {
   private GenAiErrorStats errorStats;
 
   /**
-   * Function level stats for GenAi Functions. See
-   * https://docs.cloud.google.com/bigquery/docs/generative-ai-overview
+   * Function level stats for GenAI Functions. For more information, see [Generative AI
+   * overview](https://docs.cloud.google.com/bigquery/docs/generative-ai-overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class GenAiStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Function level stats for GenAi Functions. See
-   * https://docs.cloud.google.com/bigquery/docs/generative-ai-overview
+   * Function level stats for GenAI Functions. For more information, see [Generative AI
+   * overview](https://docs.cloud.google.com/bigquery/docs/generative-ai-overview).
    * @return value or {@code null} for none
    */
   public java.util.List<GenAiFunctionStats> getFunctionStats() {
@@ -77,8 +77,8 @@ public final class GenAiStats extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Function level stats for GenAi Functions. See
-   * https://docs.cloud.google.com/bigquery/docs/generative-ai-overview
+   * Function level stats for GenAI Functions. For more information, see [Generative AI
+   * overview](https://docs.cloud.google.com/bigquery/docs/generative-ai-overview).
    * @param functionStats functionStats or {@code null} for none
    */
   public GenAiStats setFunctionStats(java.util.List<GenAiFunctionStats> functionStats) {

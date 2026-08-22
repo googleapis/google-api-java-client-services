@@ -38,6 +38,43 @@ public final class UpgradeRolloutSequenceRequest extends com.google.api.client.j
   private java.lang.Boolean force;
 
   /**
+   * Optional. If set to true, the rollout will ignore the disruption budgets of the clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreClusterDisruptionBudgets;
+
+  /**
+   * Optional. If set to true, the rollout will ignore any maintenance policies (Maintenance Windows
+   * and Maintenance Exclusions) set on the clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreMaintenancePolicies;
+
+  /**
+   * Optional. If set to true, the rollout will only upgrade clusters that match the minor version
+   * of the `version` field, but are on an earlier patch version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean patchOnly;
+
+  /**
+   * Optional. Overrides the soak duration for all stages of the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String soakDurationOverrideAllStages;
+
+  /**
+   * Optional. Overrides the soak durations for specific stages of the rollout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PerStageSoakDurationOverrides soakDurationOverridePerStage;
+
+  /**
    * Required. The type of upgrade.
    * The value may be {@code null}.
    */
@@ -75,6 +112,95 @@ public final class UpgradeRolloutSequenceRequest extends com.google.api.client.j
    */
   public UpgradeRolloutSequenceRequest setForce(java.lang.Boolean force) {
     this.force = force;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore the disruption budgets of the clusters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreClusterDisruptionBudgets() {
+    return ignoreClusterDisruptionBudgets;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore the disruption budgets of the clusters.
+   * @param ignoreClusterDisruptionBudgets ignoreClusterDisruptionBudgets or {@code null} for none
+   */
+  public UpgradeRolloutSequenceRequest setIgnoreClusterDisruptionBudgets(java.lang.Boolean ignoreClusterDisruptionBudgets) {
+    this.ignoreClusterDisruptionBudgets = ignoreClusterDisruptionBudgets;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore any maintenance policies (Maintenance Windows
+   * and Maintenance Exclusions) set on the clusters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreMaintenancePolicies() {
+    return ignoreMaintenancePolicies;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore any maintenance policies (Maintenance Windows
+   * and Maintenance Exclusions) set on the clusters.
+   * @param ignoreMaintenancePolicies ignoreMaintenancePolicies or {@code null} for none
+   */
+  public UpgradeRolloutSequenceRequest setIgnoreMaintenancePolicies(java.lang.Boolean ignoreMaintenancePolicies) {
+    this.ignoreMaintenancePolicies = ignoreMaintenancePolicies;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will only upgrade clusters that match the minor version
+   * of the `version` field, but are on an earlier patch version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPatchOnly() {
+    return patchOnly;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will only upgrade clusters that match the minor version
+   * of the `version` field, but are on an earlier patch version.
+   * @param patchOnly patchOnly or {@code null} for none
+   */
+  public UpgradeRolloutSequenceRequest setPatchOnly(java.lang.Boolean patchOnly) {
+    this.patchOnly = patchOnly;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides the soak duration for all stages of the rollout.
+   * @return value or {@code null} for none
+   */
+  public String getSoakDurationOverrideAllStages() {
+    return soakDurationOverrideAllStages;
+  }
+
+  /**
+   * Optional. Overrides the soak duration for all stages of the rollout.
+   * @param soakDurationOverrideAllStages soakDurationOverrideAllStages or {@code null} for none
+   */
+  public UpgradeRolloutSequenceRequest setSoakDurationOverrideAllStages(String soakDurationOverrideAllStages) {
+    this.soakDurationOverrideAllStages = soakDurationOverrideAllStages;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides the soak durations for specific stages of the rollout.
+   * @return value or {@code null} for none
+   */
+  public PerStageSoakDurationOverrides getSoakDurationOverridePerStage() {
+    return soakDurationOverridePerStage;
+  }
+
+  /**
+   * Optional. Overrides the soak durations for specific stages of the rollout.
+   * @param soakDurationOverridePerStage soakDurationOverridePerStage or {@code null} for none
+   */
+  public UpgradeRolloutSequenceRequest setSoakDurationOverridePerStage(PerStageSoakDurationOverrides soakDurationOverridePerStage) {
+    this.soakDurationOverridePerStage = soakDurationOverridePerStage;
     return this;
   }
 

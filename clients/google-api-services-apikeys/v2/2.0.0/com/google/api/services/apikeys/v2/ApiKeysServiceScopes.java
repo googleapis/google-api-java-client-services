@@ -23,6 +23,12 @@ package com.google.api.services.apikeys.v2;
  */
 public class ApiKeysServiceScopes {
 
+  /** See, edit, configure, and delete your Google Cloud API Keys data and see the email address for your Google Account. */
+  public static final String APIKEYS = "https://www.googleapis.com/auth/apikeys";
+
+  /** See your Google Cloud API Keys data and the email address of your Google Account. */
+  public static final String APIKEYS_READONLY = "https://www.googleapis.com/auth/apikeys.readonly";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -36,6 +42,8 @@ public class ApiKeysServiceScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(APIKEYS);
+    set.add(APIKEYS_READONLY);
     set.add(CLOUD_PLATFORM);
     set.add(CLOUD_PLATFORM_READ_ONLY);
     return java.util.Collections.unmodifiableSet(set);

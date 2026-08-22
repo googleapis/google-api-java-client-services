@@ -32,10 +32,11 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. For subscriptions to Google Drive events, whether to receive events about
-   * Drive files that are children of the target folder or shared drive. * If `false`, the
-   * subscription only receives events about changes to the folder or shared drive that's specified
-   * as the `targetResource`. * If `true`, the `mimeType` field of the `file` resource must be set
-   * to `application/vnd.google-apps.folder`. For details, see [Google Drive event
+   * Drive files that are children of the target folder or shared drive. This field must be `true`
+   * for subscriptions on shared drives. * If `false`, the subscription only receives events about
+   * changes to the folder or shared drive that's specified as the `targetResource`. * If `true`,
+   * the `mimeType` field of the `file` resource must be set to `application/vnd.google-
+   * apps.folder`. For details, see [Google Drive event
    * types](https://developers.google.com/workspace/events/guides/events-drive#event-types).
    * The value may be {@code null}.
    */
@@ -44,10 +45,11 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. For subscriptions to Google Drive events, whether to receive events about
-   * Drive files that are children of the target folder or shared drive. * If `false`, the
-   * subscription only receives events about changes to the folder or shared drive that's specified
-   * as the `targetResource`. * If `true`, the `mimeType` field of the `file` resource must be set
-   * to `application/vnd.google-apps.folder`. For details, see [Google Drive event
+   * Drive files that are children of the target folder or shared drive. This field must be `true`
+   * for subscriptions on shared drives. * If `false`, the subscription only receives events about
+   * changes to the folder or shared drive that's specified as the `targetResource`. * If `true`,
+   * the `mimeType` field of the `file` resource must be set to `application/vnd.google-
+   * apps.folder`. For details, see [Google Drive event
    * types](https://developers.google.com/workspace/events/guides/events-drive#event-types).
    * @return value or {@code null} for none
    */
@@ -57,10 +59,11 @@ public final class DriveOptions extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. For subscriptions to Google Drive events, whether to receive events about
-   * Drive files that are children of the target folder or shared drive. * If `false`, the
-   * subscription only receives events about changes to the folder or shared drive that's specified
-   * as the `targetResource`. * If `true`, the `mimeType` field of the `file` resource must be set
-   * to `application/vnd.google-apps.folder`. For details, see [Google Drive event
+   * Drive files that are children of the target folder or shared drive. This field must be `true`
+   * for subscriptions on shared drives. * If `false`, the subscription only receives events about
+   * changes to the folder or shared drive that's specified as the `targetResource`. * If `true`,
+   * the `mimeType` field of the `file` resource must be set to `application/vnd.google-
+   * apps.folder`. For details, see [Google Drive event
    * types](https://developers.google.com/workspace/events/guides/events-drive#event-types).
    * @param includeDescendants includeDescendants or {@code null} for none
    */

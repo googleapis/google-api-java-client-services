@@ -45,6 +45,15 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourc
   private java.lang.String destPath;
 
   /**
+   * Optional. True if remote tags should be fetched too (default false). Note: when depth is 1
+   * (default), git fetch only retrieves tags pointing to commits within the shallow boundary. Set
+   * depth to -1 to fetch all historical tags.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean fetchTags;
+
+  /**
    * Optional. True if submodules should be fetched too (default false).
    * The value may be {@code null}.
    */
@@ -96,6 +105,27 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourc
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency setDestPath(java.lang.String destPath) {
     this.destPath = destPath;
+    return this;
+  }
+
+  /**
+   * Optional. True if remote tags should be fetched too (default false). Note: when depth is 1
+   * (default), git fetch only retrieves tags pointing to commits within the shallow boundary. Set
+   * depth to -1 to fetch all historical tags.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFetchTags() {
+    return fetchTags;
+  }
+
+  /**
+   * Optional. True if remote tags should be fetched too (default false). Note: when depth is 1
+   * (default), git fetch only retrieves tags pointing to commits within the shallow boundary. Set
+   * depth to -1 to fetch all historical tags.
+   * @param fetchTags fetchTags or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1DependencyGitSourceDependency setFetchTags(java.lang.Boolean fetchTags) {
+    this.fetchTags = fetchTags;
     return this;
   }
 

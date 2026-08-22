@@ -30,8 +30,8 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Api extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The api functional requirements associated with the API resource. Carinality is 1 for
-   * this attribute. This maps to the following system defined attribute:
+   * Optional. The api functional requirements associated with the API resource. Cardinality is 1
+   * for this attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-functional-requirements`
    * attribute. The value of the attribute should be a proper URI, and in case of Cloud Storage URI,
    * it should point to a Cloud Storage object, not a directory.
@@ -41,7 +41,7 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   private GoogleCloudApihubV1AttributeValues apiFunctionalRequirements;
 
   /**
-   * Optional. The api requirement doc associated with the API resource. Carinality is 1 for this
+   * Optional. The api requirement doc associated with the API resource. Cardinality is 1 for this
    * attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-requirements` attribute. The
    * value of the attribute should be a proper URI, and in case of Cloud Storage URI, it should
@@ -63,7 +63,7 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   private GoogleCloudApihubV1AttributeValues apiStyle;
 
   /**
-   * Optional. The api technical requirements associated with the API resource. Carinality is 1 for
+   * Optional. The api technical requirements associated with the API resource. Cardinality is 1 for
    * this attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-technical-requirements`
    * attribute. The value of the attribute should be a proper URI, and in case of Cloud Storage URI,
@@ -211,8 +211,8 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   private java.util.List<java.lang.String> versions;
 
   /**
-   * Optional. The api functional requirements associated with the API resource. Carinality is 1 for
-   * this attribute. This maps to the following system defined attribute:
+   * Optional. The api functional requirements associated with the API resource. Cardinality is 1
+   * for this attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-functional-requirements`
    * attribute. The value of the attribute should be a proper URI, and in case of Cloud Storage URI,
    * it should point to a Cloud Storage object, not a directory.
@@ -223,8 +223,8 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The api functional requirements associated with the API resource. Carinality is 1 for
-   * this attribute. This maps to the following system defined attribute:
+   * Optional. The api functional requirements associated with the API resource. Cardinality is 1
+   * for this attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-functional-requirements`
    * attribute. The value of the attribute should be a proper URI, and in case of Cloud Storage URI,
    * it should point to a Cloud Storage object, not a directory.
@@ -236,7 +236,7 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The api requirement doc associated with the API resource. Carinality is 1 for this
+   * Optional. The api requirement doc associated with the API resource. Cardinality is 1 for this
    * attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-requirements` attribute. The
    * value of the attribute should be a proper URI, and in case of Cloud Storage URI, it should
@@ -248,7 +248,7 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The api requirement doc associated with the API resource. Carinality is 1 for this
+   * Optional. The api requirement doc associated with the API resource. Cardinality is 1 for this
    * attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-requirements` attribute. The
    * value of the attribute should be a proper URI, and in case of Cloud Storage URI, it should
@@ -286,7 +286,7 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The api technical requirements associated with the API resource. Carinality is 1 for
+   * Optional. The api technical requirements associated with the API resource. Cardinality is 1 for
    * this attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-technical-requirements`
    * attribute. The value of the attribute should be a proper URI, and in case of Cloud Storage URI,
@@ -298,7 +298,7 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The api technical requirements associated with the API resource. Carinality is 1 for
+   * Optional. The api technical requirements associated with the API resource. Cardinality is 1 for
    * this attribute. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-api-technical-requirements`
    * attribute. The value of the attribute should be a proper URI, and in case of Cloud Storage URI,

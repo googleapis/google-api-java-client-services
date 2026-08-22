@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-searchads360</artifactId>
-  <version>v23-rev20260810-2.0.0</version>
-  <name>Search Ads 360 Reporting API v23-rev20260810-2.0.0</name>
+  <version>v23-rev20260820-2.0.0</version>
+  <name>Search Ads 360 Reporting API v23-rev20260820-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

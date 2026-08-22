@@ -248,6 +248,13 @@ public final class GoogleAdsSearchads360V23ServicesMutateOperationResponse exten
   private GoogleAdsSearchads360V23ServicesMutateCampaignDraftResult campaignDraftResult;
 
   /**
+   * The result for the campaign goal config mutate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleAdsSearchads360V23ServicesMutateCampaignGoalConfigResult campaignGoalConfigResult;
+
+  /**
    * The result for the campaign group mutate.
    * The value may be {@code null}.
    */
@@ -995,6 +1002,23 @@ public final class GoogleAdsSearchads360V23ServicesMutateOperationResponse exten
    */
   public GoogleAdsSearchads360V23ServicesMutateOperationResponse setCampaignDraftResult(GoogleAdsSearchads360V23ServicesMutateCampaignDraftResult campaignDraftResult) {
     this.campaignDraftResult = campaignDraftResult;
+    return this;
+  }
+
+  /**
+   * The result for the campaign goal config mutate.
+   * @return value or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ServicesMutateCampaignGoalConfigResult getCampaignGoalConfigResult() {
+    return campaignGoalConfigResult;
+  }
+
+  /**
+   * The result for the campaign goal config mutate.
+   * @param campaignGoalConfigResult campaignGoalConfigResult or {@code null} for none
+   */
+  public GoogleAdsSearchads360V23ServicesMutateOperationResponse setCampaignGoalConfigResult(GoogleAdsSearchads360V23ServicesMutateCampaignGoalConfigResult campaignGoalConfigResult) {
+    this.campaignGoalConfigResult = campaignGoalConfigResult;
     return this;
   }
 

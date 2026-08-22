@@ -33,12 +33,16 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class AlloydbClhErrorsAlloyDbInternalDebugInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * The original error message or details before sanitization, used internally for debugging and
+   * logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String originalError;
 
   /**
+   * The original error message or details before sanitization, used internally for debugging and
+   * logging.
    * @return value or {@code null} for none
    */
   public java.lang.String getOriginalError() {
@@ -46,6 +50,8 @@ public final class AlloydbClhErrorsAlloyDbInternalDebugInfo extends com.google.a
   }
 
   /**
+   * The original error message or details before sanitization, used internally for debugging and
+   * logging.
    * @param originalError originalError or {@code null} for none
    */
   public AlloydbClhErrorsAlloyDbInternalDebugInfo setOriginalError(java.lang.String originalError) {

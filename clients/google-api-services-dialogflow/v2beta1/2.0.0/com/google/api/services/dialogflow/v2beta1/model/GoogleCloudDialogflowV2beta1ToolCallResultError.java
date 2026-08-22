@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2beta1ToolCallResultError extends com.g
   private java.lang.String message;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean retryable;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -47,6 +53,21 @@ public final class GoogleCloudDialogflowV2beta1ToolCallResultError extends com.g
    */
   public GoogleCloudDialogflowV2beta1ToolCallResultError setMessage(java.lang.String message) {
     this.message = message;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRetryable() {
+    return retryable;
+  }
+
+  /**
+   * @param retryable retryable or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolCallResultError setRetryable(java.lang.Boolean retryable) {
+    this.retryable = retryable;
     return this;
   }
 

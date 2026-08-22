@@ -5350,14 +5350,14 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. Custom, user-defined unique container identifier. Must be unique within the
-           * parent project and location. This value should be 4-63 characters, and valid characters
+           * parent project and location. This value should be 4-64 characters, and valid characters
            * are `/a-z-/`.
            */
           @com.google.api.client.util.Key
           private java.lang.String skillId;
 
           /** Required. Custom, user-defined unique container identifier. Must be unique within the parent
-         project and location. This value should be 4-63 characters, and valid characters are `/a-z-/`.
+         project and location. This value should be 4-64 characters, and valid characters are `/a-z-/`.
            */
           public java.lang.String getSkillId() {
             return skillId;
@@ -5365,7 +5365,7 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. Custom, user-defined unique container identifier. Must be unique within the
-           * parent project and location. This value should be 4-63 characters, and valid characters
+           * parent project and location. This value should be 4-64 characters, and valid characters
            * are `/a-z-/`.
            */
           public Create setSkillId(java.lang.String skillId) {
@@ -5593,6 +5593,30 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
                   "Parameter name must conform to the pattern " +
                   "^projects/[^/]+/locations/[^/]+/skills/[^/]+$");
             }
+            initializeMediaDownload();
+          }
+
+          @Override
+          public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+            super.executeMediaAndDownloadTo(outputStream);
+          }
+
+          @Override
+          public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+            return super.executeMediaAsInputStream();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+            return super.executeMedia();
+          }
+
+          @Override
+          public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+            java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+                ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+            return new com.google.api.client.http.GenericUrl(
+                com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
           }
 
           @Override

@@ -41,6 +41,16 @@ public final class BulkDeleteResourcesRequest extends com.google.api.client.json
   private GoogleCloudHealthcareV1beta1FhirGcsDestination gcsDestination;
 
   /**
+   * Optional. Specifies the Cloud Storage source data location containing the list of resource IDs
+   * to delete. Each file inside `gcs_source` must contain newline-delimited strings in the format
+   * `{resourceType}/{resourceId}`. This field is mutually exclusive with filter parameters such as
+   * `type` and `until`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudHealthcareV1beta1FhirGcsSource gcsSource;
+
+  /**
    * Optional. String of comma-delimited FHIR resource types. If provided, only resources of the
    * specified resource type(s) will be deleted.
    * The value may be {@code null}.
@@ -95,6 +105,29 @@ public final class BulkDeleteResourcesRequest extends com.google.api.client.json
    */
   public BulkDeleteResourcesRequest setGcsDestination(GoogleCloudHealthcareV1beta1FhirGcsDestination gcsDestination) {
     this.gcsDestination = gcsDestination;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the Cloud Storage source data location containing the list of resource IDs
+   * to delete. Each file inside `gcs_source` must contain newline-delimited strings in the format
+   * `{resourceType}/{resourceId}`. This field is mutually exclusive with filter parameters such as
+   * `type` and `until`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudHealthcareV1beta1FhirGcsSource getGcsSource() {
+    return gcsSource;
+  }
+
+  /**
+   * Optional. Specifies the Cloud Storage source data location containing the list of resource IDs
+   * to delete. Each file inside `gcs_source` must contain newline-delimited strings in the format
+   * `{resourceType}/{resourceId}`. This field is mutually exclusive with filter parameters such as
+   * `type` and `until`.
+   * @param gcsSource gcsSource or {@code null} for none
+   */
+  public BulkDeleteResourcesRequest setGcsSource(GoogleCloudHealthcareV1beta1FhirGcsSource gcsSource) {
+    this.gcsSource = gcsSource;
     return this;
   }
 

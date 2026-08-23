@@ -44,8 +44,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigSource extends com.google.
   private java.lang.String encoding;
 
   /**
-   * The source of the environment. For GCS, this is the GCS path. For GitHub, this is the GitHub
-   * path.
+   * The source of the environment. For Cloud Storage, this is the Cloud Storage path. For GitHub,
+   * this is the GitHub path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,8 +99,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigSource extends com.google.
   }
 
   /**
-   * The source of the environment. For GCS, this is the GCS path. For GitHub, this is the GitHub
-   * path.
+   * The source of the environment. For Cloud Storage, this is the Cloud Storage path. For GitHub,
+   * this is the GitHub path.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -108,8 +108,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigSource extends com.google.
   }
 
   /**
-   * The source of the environment. For GCS, this is the GCS path. For GitHub, this is the GitHub
-   * path.
+   * The source of the environment. For Cloud Storage, this is the Cloud Storage path. For GitHub,
+   * this is the GitHub path.
    * @param source source or {@code null} for none
    */
   public GenaiVertexV1beta1EnvironmentConfigSource setSource(java.lang.String source) {

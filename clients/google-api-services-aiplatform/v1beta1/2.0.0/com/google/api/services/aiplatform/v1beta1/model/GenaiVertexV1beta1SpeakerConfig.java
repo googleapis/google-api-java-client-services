@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A list of Turns.
+ * Configuration for multi-speaker and speech generation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,43 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiVertexV1beta1TurnList extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1SpeakerConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Individual speaker configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GenaiVertexV1beta1Turn> turns;
-
-  static {
-    // hack to force ProGuard to consider GenaiVertexV1beta1Turn used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GenaiVertexV1beta1Turn.class);
-  }
+  private java.util.List<GenaiVertexV1beta1SpeechConfig> speakers;
 
   /**
+   * Individual speaker configurations.
    * @return value or {@code null} for none
    */
-  public java.util.List<GenaiVertexV1beta1Turn> getTurns() {
-    return turns;
+  public java.util.List<GenaiVertexV1beta1SpeechConfig> getSpeakers() {
+    return speakers;
   }
 
   /**
-   * @param turns turns or {@code null} for none
+   * Individual speaker configurations.
+   * @param speakers speakers or {@code null} for none
    */
-  public GenaiVertexV1beta1TurnList setTurns(java.util.List<GenaiVertexV1beta1Turn> turns) {
-    this.turns = turns;
+  public GenaiVertexV1beta1SpeakerConfig setSpeakers(java.util.List<GenaiVertexV1beta1SpeechConfig> speakers) {
+    this.speakers = speakers;
     return this;
   }
 
   @Override
-  public GenaiVertexV1beta1TurnList set(String fieldName, Object value) {
-    return (GenaiVertexV1beta1TurnList) super.set(fieldName, value);
+  public GenaiVertexV1beta1SpeakerConfig set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1SpeakerConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiVertexV1beta1TurnList clone() {
-    return (GenaiVertexV1beta1TurnList) super.clone();
+  public GenaiVertexV1beta1SpeakerConfig clone() {
+    return (GenaiVertexV1beta1SpeakerConfig) super.clone();
   }
 
 }

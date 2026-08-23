@@ -96,6 +96,13 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
   private String updateTime;
 
   /**
+   * Optional. If set, the XmanagerInstance will be set up for managed XProf.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1XprofConfig xprofConfig;
+
+  /**
    * Output only. gRPC API endpoint for Experiment State Server (ESS).
    * @return value or {@code null} for none
    */
@@ -251,6 +258,23 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
    */
   public GoogleCloudAiplatformV1beta1XmanagerInstance setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. If set, the XmanagerInstance will be set up for managed XProf.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1XprofConfig getXprofConfig() {
+    return xprofConfig;
+  }
+
+  /**
+   * Optional. If set, the XmanagerInstance will be set up for managed XProf.
+   * @param xprofConfig xprofConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1XmanagerInstance setXprofConfig(GoogleCloudAiplatformV1beta1XprofConfig xprofConfig) {
+    this.xprofConfig = xprofConfig;
     return this;
   }
 

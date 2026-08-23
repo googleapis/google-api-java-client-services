@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1RayMetricSpec extends com.google.
   private java.lang.Boolean disabled;
 
   /**
+   * Optional. Flag to enable the Ray usage stats collection by Anyscale.
+   * https://docs.ray.io/en/latest/cluster/usage-stats.html#usage-stats-collection Disable by
+   * default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableUsageStatsCollection;
+
+  /**
    * Optional. Flag to disable the Ray metrics collection.
    * @return value or {@code null} for none
    */
@@ -50,6 +59,27 @@ public final class GoogleCloudAiplatformV1beta1RayMetricSpec extends com.google.
    */
   public GoogleCloudAiplatformV1beta1RayMetricSpec setDisabled(java.lang.Boolean disabled) {
     this.disabled = disabled;
+    return this;
+  }
+
+  /**
+   * Optional. Flag to enable the Ray usage stats collection by Anyscale.
+   * https://docs.ray.io/en/latest/cluster/usage-stats.html#usage-stats-collection Disable by
+   * default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableUsageStatsCollection() {
+    return enableUsageStatsCollection;
+  }
+
+  /**
+   * Optional. Flag to enable the Ray usage stats collection by Anyscale.
+   * https://docs.ray.io/en/latest/cluster/usage-stats.html#usage-stats-collection Disable by
+   * default.
+   * @param enableUsageStatsCollection enableUsageStatsCollection or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RayMetricSpec setEnableUsageStatsCollection(java.lang.Boolean enableUsageStatsCollection) {
+    this.enableUsageStatsCollection = enableUsageStatsCollection;
     return this;
   }
 

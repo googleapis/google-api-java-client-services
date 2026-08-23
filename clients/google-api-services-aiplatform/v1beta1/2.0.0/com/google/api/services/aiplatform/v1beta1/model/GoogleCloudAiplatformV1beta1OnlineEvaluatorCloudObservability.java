@@ -46,6 +46,13 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
   private GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityOpenTelemetry openTelemetry;
 
   /**
+   * Scope online evaluation to OTel sessions (i.e. group of traces with the same conversation ID).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilitySessionScope sessionScope;
+
+  /**
    * Scope online evaluation to single traces.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability setOpenTelemetry(GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityOpenTelemetry openTelemetry) {
     this.openTelemetry = openTelemetry;
+    return this;
+  }
+
+  /**
+   * Scope online evaluation to OTel sessions (i.e. group of traces with the same conversation ID).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilitySessionScope getSessionScope() {
+    return sessionScope;
+  }
+
+  /**
+   * Scope online evaluation to OTel sessions (i.e. group of traces with the same conversation ID).
+   * @param sessionScope sessionScope or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability setSessionScope(GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilitySessionScope sessionScope) {
+    this.sessionScope = sessionScope;
     return this;
   }
 

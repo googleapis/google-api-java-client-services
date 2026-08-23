@@ -28590,56 +28590,56 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /** Optional. If true, includes the input in the response. */
+      /** If true, includes the input in the response. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeInput;
 
-      /** Optional. If true, includes the input in the response.
+      /** If true, includes the input in the response.
        */
       public java.lang.Boolean getIncludeInput() {
         return includeInput;
       }
 
-      /** Optional. If true, includes the input in the response. */
+      /** If true, includes the input in the response. */
       public GetPoll setIncludeInput(java.lang.Boolean includeInput) {
         this.includeInput = includeInput;
         return this;
       }
 
       /**
-       * Optional. If set, resumes the interaction stream from the chunk after the event marked by
-       * the event id. Can only be used if `stream` is true.
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
        */
       @com.google.api.client.util.Key
       private java.lang.String lastEventId;
 
-      /** Optional. If set, resumes the interaction stream from the chunk after the event marked by the event
-     id. Can only be used if `stream` is true.
+      /** If set, resumes the interaction stream from the chunk after the event marked by the event id. Can
+     only be used if `stream` is true.
        */
       public java.lang.String getLastEventId() {
         return lastEventId;
       }
 
       /**
-       * Optional. If set, resumes the interaction stream from the chunk after the event marked by
-       * the event id. Can only be used if `stream` is true.
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
        */
       public GetPoll setLastEventId(java.lang.String lastEventId) {
         this.lastEventId = lastEventId;
         return this;
       }
 
-      /** Optional. If true, streams the interaction events as Server-Sent Events. */
+      /** If true, streams the interaction events as Server-Sent Events. */
       @com.google.api.client.util.Key
       private java.lang.Boolean stream;
 
-      /** Optional. If true, streams the interaction events as Server-Sent Events.
+      /** If true, streams the interaction events as Server-Sent Events.
        */
       public java.lang.Boolean getStream() {
         return stream;
       }
 
-      /** Optional. If true, streams the interaction events as Server-Sent Events. */
+      /** If true, streams the interaction events as Server-Sent Events. */
       public GetPoll setStream(java.lang.Boolean stream) {
         this.stream = stream;
         return this;
@@ -28784,56 +28784,56 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /** Optional. If true, includes the input in the response. */
+      /** If true, includes the input in the response. */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeInput;
 
-      /** Optional. If true, includes the input in the response.
+      /** If true, includes the input in the response.
        */
       public java.lang.Boolean getIncludeInput() {
         return includeInput;
       }
 
-      /** Optional. If true, includes the input in the response. */
+      /** If true, includes the input in the response. */
       public GetStream setIncludeInput(java.lang.Boolean includeInput) {
         this.includeInput = includeInput;
         return this;
       }
 
       /**
-       * Optional. If set, resumes the interaction stream from the chunk after the event marked by
-       * the event id. Can only be used if `stream` is true.
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
        */
       @com.google.api.client.util.Key
       private java.lang.String lastEventId;
 
-      /** Optional. If set, resumes the interaction stream from the chunk after the event marked by the event
-     id. Can only be used if `stream` is true.
+      /** If set, resumes the interaction stream from the chunk after the event marked by the event id. Can
+     only be used if `stream` is true.
        */
       public java.lang.String getLastEventId() {
         return lastEventId;
       }
 
       /**
-       * Optional. If set, resumes the interaction stream from the chunk after the event marked by
-       * the event id. Can only be used if `stream` is true.
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
        */
       public GetStream setLastEventId(java.lang.String lastEventId) {
         this.lastEventId = lastEventId;
         return this;
       }
 
-      /** Optional. If true, streams the interaction events as Server-Sent Events. */
+      /** If true, streams the interaction events as Server-Sent Events. */
       @com.google.api.client.util.Key
       private java.lang.Boolean stream;
 
-      /** Optional. If true, streams the interaction events as Server-Sent Events.
+      /** If true, streams the interaction events as Server-Sent Events.
        */
       public java.lang.Boolean getStream() {
         return stream;
       }
 
-      /** Optional. If true, streams the interaction events as Server-Sent Events. */
+      /** If true, streams the interaction events as Server-Sent Events. */
       public GetStream setStream(java.lang.Boolean stream) {
         this.stream = stream;
         return this;

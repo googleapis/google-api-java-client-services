@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Config for ranking and reranking.
+ * Model definition for GenaiVertexV1beta1VideoContentMediaProcessing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,37 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1VideoContentMediaProcessing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config for Rank Service.
    * The value may be {@code null}.
    */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService rankService;
+  @com.google.api.client.util.Key("static")
+  private GenaiVertexV1beta1VideoContentStaticMediaProcessing static__;
 
   /**
-   * Config for Rank Service.
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService getRankService() {
-    return rankService;
+  public GenaiVertexV1beta1VideoContentStaticMediaProcessing getStatic() {
+    return static__;
   }
 
   /**
-   * Config for Rank Service.
-   * @param rankService rankService or {@code null} for none
+   * @param static__ static__ or {@code null} for none
    */
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking setRankService(GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService rankService) {
-    this.rankService = rankService;
+  public GenaiVertexV1beta1VideoContentMediaProcessing setStatic(GenaiVertexV1beta1VideoContentStaticMediaProcessing static__) {
+    this.static__ = static__;
     return this;
   }
 
   @Override
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking set(String fieldName, Object value) {
-    return (GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking) super.set(fieldName, value);
+  public GenaiVertexV1beta1VideoContentMediaProcessing set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1VideoContentMediaProcessing) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking clone() {
-    return (GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking) super.clone();
+  public GenaiVertexV1beta1VideoContentMediaProcessing clone() {
+    return (GenaiVertexV1beta1VideoContentMediaProcessing) super.clone();
   }
 
 }

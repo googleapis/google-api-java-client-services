@@ -65,6 +65,13 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
   }
 
   /**
+   * Optional. Optional Ray autoscaling configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1RayClusterAutoscalingSpec rayClusterAutoscalingSpec;
+
+  /**
    * Optional. OSS Ray logging configurations.
    * The value may be {@code null}.
    */
@@ -148,6 +155,23 @@ public final class GoogleCloudAiplatformV1beta1RaySpec extends com.google.api.cl
    */
   public GoogleCloudAiplatformV1beta1RaySpec setNfsMounts(java.util.List<GoogleCloudAiplatformV1beta1NfsMount> nfsMounts) {
     this.nfsMounts = nfsMounts;
+    return this;
+  }
+
+  /**
+   * Optional. Optional Ray autoscaling configurations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RayClusterAutoscalingSpec getRayClusterAutoscalingSpec() {
+    return rayClusterAutoscalingSpec;
+  }
+
+  /**
+   * Optional. Optional Ray autoscaling configurations.
+   * @param rayClusterAutoscalingSpec rayClusterAutoscalingSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1RaySpec setRayClusterAutoscalingSpec(GoogleCloudAiplatformV1beta1RayClusterAutoscalingSpec rayClusterAutoscalingSpec) {
+    this.rayClusterAutoscalingSpec = rayClusterAutoscalingSpec;
     return this;
   }
 

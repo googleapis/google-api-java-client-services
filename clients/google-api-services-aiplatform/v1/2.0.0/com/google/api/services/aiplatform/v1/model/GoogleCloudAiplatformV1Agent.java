@@ -30,7 +30,11 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Agent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The base agent for the agent. Supported values: * `antigravity-preview-05-2026`
+   * Required. Immutable. The base agent for the agent. Supported values: * `antigravity-
+   * preview-05-2026` Immutable: `UpdateAgent` rejects a change, including clearing it. The kind of
+   * agent this is gets derived from this field when the agent is created and is recorded then;
+   * nothing recomputes it afterwards, so a later change would leave the agent described as one kind
+   * and behaving as another. Create a new agent instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("base_agent")
@@ -112,7 +116,11 @@ public final class GoogleCloudAiplatformV1Agent extends com.google.api.client.js
   private String updated;
 
   /**
-   * Required. The base agent for the agent. Supported values: * `antigravity-preview-05-2026`
+   * Required. Immutable. The base agent for the agent. Supported values: * `antigravity-
+   * preview-05-2026` Immutable: `UpdateAgent` rejects a change, including clearing it. The kind of
+   * agent this is gets derived from this field when the agent is created and is recorded then;
+   * nothing recomputes it afterwards, so a later change would leave the agent described as one kind
+   * and behaving as another. Create a new agent instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getBaseAgent() {
@@ -120,7 +128,11 @@ public final class GoogleCloudAiplatformV1Agent extends com.google.api.client.js
   }
 
   /**
-   * Required. The base agent for the agent. Supported values: * `antigravity-preview-05-2026`
+   * Required. Immutable. The base agent for the agent. Supported values: * `antigravity-
+   * preview-05-2026` Immutable: `UpdateAgent` rejects a change, including clearing it. The kind of
+   * agent this is gets derived from this field when the agent is created and is recorded then;
+   * nothing recomputes it afterwards, so a later change would leave the agent described as one kind
+   * and behaving as another. Create a new agent instead.
    * @param baseAgent baseAgent or {@code null} for none
    */
   public GoogleCloudAiplatformV1Agent setBaseAgent(java.lang.String baseAgent) {

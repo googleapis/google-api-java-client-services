@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * File Search result content.
+ * The shell environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiVertexV1beta1FileSearchResultContent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The results of the File Search.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GenaiVertexV1beta1FileSearchResultContentFileSearchResult> result;
-
-  /**
-   * The results of the File Search.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GenaiVertexV1beta1FileSearchResultContentFileSearchResult> getResult() {
-    return result;
-  }
-
-  /**
-   * The results of the File Search.
-   * @param result result or {@code null} for none
-   */
-  public GenaiVertexV1beta1FileSearchResultContent setResult(java.util.List<GenaiVertexV1beta1FileSearchResultContentFileSearchResult> result) {
-    this.result = result;
-    return this;
+  @Override
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiVertexV1beta1FileSearchResultContent set(String fieldName, Object value) {
-    return (GenaiVertexV1beta1FileSearchResultContent) super.set(fieldName, value);
-  }
-
-  @Override
-  public GenaiVertexV1beta1FileSearchResultContent clone() {
-    return (GenaiVertexV1beta1FileSearchResultContent) super.clone();
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment clone() {
+    return (GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment) super.clone();
   }
 
 }

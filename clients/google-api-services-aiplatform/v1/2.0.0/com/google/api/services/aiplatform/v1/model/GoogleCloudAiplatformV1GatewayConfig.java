@@ -49,7 +49,12 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
   private java.lang.String dnsRecord;
 
   /**
-   * Optional. FQDN of the private DNS zone to create DNS record set for PSC endpoint.
+   * Optional. Name of the private Cloud DNS managed zone in which to create the gateway's A-record.
+   * This is the managed zone's own name, not its DNS name: for a zone serving `example.internal.`,
+   * this field takes the zone name, such as `my-private-zone`. The zone's DNS name is combined with
+   * a generated per-gateway label to form the record's fully qualified name, which must stay within
+   * the 255-octet DNS limit. If the full name is too long, gateway provisioning fails when it
+   * attempts to create the DNS record.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,7 +143,12 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
   }
 
   /**
-   * Optional. FQDN of the private DNS zone to create DNS record set for PSC endpoint.
+   * Optional. Name of the private Cloud DNS managed zone in which to create the gateway's A-record.
+   * This is the managed zone's own name, not its DNS name: for a zone serving `example.internal.`,
+   * this field takes the zone name, such as `my-private-zone`. The zone's DNS name is combined with
+   * a generated per-gateway label to form the record's fully qualified name, which must stay within
+   * the 255-octet DNS limit. If the full name is too long, gateway provisioning fails when it
+   * attempts to create the DNS record.
    * @return value or {@code null} for none
    */
   public java.lang.String getDnsZoneName() {
@@ -146,7 +156,12 @@ public final class GoogleCloudAiplatformV1GatewayConfig extends com.google.api.c
   }
 
   /**
-   * Optional. FQDN of the private DNS zone to create DNS record set for PSC endpoint.
+   * Optional. Name of the private Cloud DNS managed zone in which to create the gateway's A-record.
+   * This is the managed zone's own name, not its DNS name: for a zone serving `example.internal.`,
+   * this field takes the zone name, such as `my-private-zone`. The zone's DNS name is combined with
+   * a generated per-gateway label to form the record's fully qualified name, which must stay within
+   * the 255-octet DNS limit. If the full name is too long, gateway provisioning fails when it
+   * attempts to create the DNS record.
    * @param dnsZoneName dnsZoneName or {@code null} for none
    */
   public GoogleCloudAiplatformV1GatewayConfig setDnsZoneName(java.lang.String dnsZoneName) {

@@ -37,6 +37,13 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentSpec extends com.goo
   private GoogleCloudAiplatformV1SandboxEnvironmentSpecCodeExecutionEnvironment codeExecutionEnvironment;
 
   /**
+   * Optional. The shell environment for executing shell commands and scripts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment shellEnvironment;
+
+  /**
    * Optional. The code execution environment.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudAiplatformV1SandboxEnvironmentSpec extends com.goo
    */
   public GoogleCloudAiplatformV1SandboxEnvironmentSpec setCodeExecutionEnvironment(GoogleCloudAiplatformV1SandboxEnvironmentSpecCodeExecutionEnvironment codeExecutionEnvironment) {
     this.codeExecutionEnvironment = codeExecutionEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. The shell environment for executing shell commands and scripts.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment getShellEnvironment() {
+    return shellEnvironment;
+  }
+
+  /**
+   * Optional. The shell environment for executing shell commands and scripts.
+   * @param shellEnvironment shellEnvironment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SandboxEnvironmentSpec setShellEnvironment(GoogleCloudAiplatformV1SandboxEnvironmentSpecShellEnvironment shellEnvironment) {
+    this.shellEnvironment = shellEnvironment;
     return this;
   }
 

@@ -65,6 +65,21 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. If set to true, the rollout will ignore the disruption budgets of the clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreClusterDisruptionBudgets;
+
+  /**
+   * Optional. If set to true, the rollout will ignore any maintenance policies (Maintenance Windows
+   * and Maintenance Exclusions) set on the clusters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreMaintenancePolicies;
+
+  /**
    * Output only. The intent of the rollout.
    * The value may be {@code null}.
    */
@@ -103,6 +118,15 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String rolloutSequence;
+
+  /**
+   * Optional. Overrides the soak durations for specific stages of the rollout. Key is the stage
+   * number, value is the desired soak duration. Stages omitted from the map will receive the
+   * standard soak duration configured on the sequence for that stage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, String> stageSoakDurationOverrides;
 
   /**
    * Output only. The stages of the Rollout.
@@ -248,6 +272,42 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. If set to true, the rollout will ignore the disruption budgets of the clusters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreClusterDisruptionBudgets() {
+    return ignoreClusterDisruptionBudgets;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore the disruption budgets of the clusters.
+   * @param ignoreClusterDisruptionBudgets ignoreClusterDisruptionBudgets or {@code null} for none
+   */
+  public Rollout setIgnoreClusterDisruptionBudgets(java.lang.Boolean ignoreClusterDisruptionBudgets) {
+    this.ignoreClusterDisruptionBudgets = ignoreClusterDisruptionBudgets;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore any maintenance policies (Maintenance Windows
+   * and Maintenance Exclusions) set on the clusters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreMaintenancePolicies() {
+    return ignoreMaintenancePolicies;
+  }
+
+  /**
+   * Optional. If set to true, the rollout will ignore any maintenance policies (Maintenance Windows
+   * and Maintenance Exclusions) set on the clusters.
+   * @param ignoreMaintenancePolicies ignoreMaintenancePolicies or {@code null} for none
+   */
+  public Rollout setIgnoreMaintenancePolicies(java.lang.Boolean ignoreMaintenancePolicies) {
+    this.ignoreMaintenancePolicies = ignoreMaintenancePolicies;
+    return this;
+  }
+
+  /**
    * Output only. The intent of the rollout.
    * @return value or {@code null} for none
    */
@@ -339,6 +399,27 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setRolloutSequence(java.lang.String rolloutSequence) {
     this.rolloutSequence = rolloutSequence;
+    return this;
+  }
+
+  /**
+   * Optional. Overrides the soak durations for specific stages of the rollout. Key is the stage
+   * number, value is the desired soak duration. Stages omitted from the map will receive the
+   * standard soak duration configured on the sequence for that stage.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, String> getStageSoakDurationOverrides() {
+    return stageSoakDurationOverrides;
+  }
+
+  /**
+   * Optional. Overrides the soak durations for specific stages of the rollout. Key is the stage
+   * number, value is the desired soak duration. Stages omitted from the map will receive the
+   * standard soak duration configured on the sequence for that stage.
+   * @param stageSoakDurationOverrides stageSoakDurationOverrides or {@code null} for none
+   */
+  public Rollout setStageSoakDurationOverrides(java.util.Map<String, String> stageSoakDurationOverrides) {
+    this.stageSoakDurationOverrides = stageSoakDurationOverrides;
     return this;
   }
 

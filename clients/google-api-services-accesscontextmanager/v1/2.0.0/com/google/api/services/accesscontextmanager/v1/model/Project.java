@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * A GCP project which contains applications and resources that users can access.
+ * A Google Cloud project which contains applications and resources that users can access.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -31,16 +31,16 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class Project extends com.google.api.client.json.GenericJson {
 
   /**
-   * The GCP project resource name. Format: "projects/{project_number}" (Only the numeric project
-   * name variation is supported). Example: "projects/1234567890"
+   * The Google Cloud project resource name. Format: `projects/{project_number}`. Only the project
+   * number is supported. Example: `projects/1234567890`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The GCP project resource name. Format: "projects/{project_number}" (Only the numeric project
-   * name variation is supported). Example: "projects/1234567890"
+   * The Google Cloud project resource name. Format: `projects/{project_number}`. Only the project
+   * number is supported. Example: `projects/1234567890`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -48,8 +48,8 @@ public final class Project extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The GCP project resource name. Format: "projects/{project_number}" (Only the numeric project
-   * name variation is supported). Example: "projects/1234567890"
+   * The Google Cloud project resource name. Format: `projects/{project_number}`. Only the project
+   * number is supported. Example: `projects/1234567890`
    * @param name name or {@code null} for none
    */
   public Project setName(java.lang.String name) {

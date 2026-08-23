@@ -45,12 +45,30 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   private DataEncryptionState dataEncryptionState;
 
   /**
+   * Optional. Input only. Immutable. The maximum depth of the Git repository to checkout for this
+   * workspace. If defined and greater than 0, the Git repository will be created as a shallow clone
+   * with the given depth, otherwise a full clone will be performed. This field is available only
+   * for GitHub, Gitlab and 1p repositories with enabled branch management.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer depth;
+
+  /**
    * Optional. If set to true, workspaces will not be moved if its linked Repository is moved.
    * Instead, it will be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disableMoves;
+
+  /**
+   * Immutable. Controls the enablement of branch checkout for the workspace. When set to True, the
+   * workspace will be allowed to checkout branches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableBranchManagement;
 
   /**
    * Output only. All the metadata information that is used internally to serve the resource. For
@@ -68,12 +86,29 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Input only. Immutable. The name of the default upstream branch for all pull/push
+   * operations in the remote repository for this workspace. If empty, the HEAD branch from
+   * repository will be used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String originalBranch;
+
+  /**
    * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
    * resources, the `user_scoped` field is always `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PrivateResourceMetadata privateResourceMetadata;
+
+  /**
+   * Output only. If set to true, the workspace was created as a shallow clone. Will be set to true
+   * if the depth field is set to a value greater than 0, otherwise it will be set to false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean shallow;
 
   /**
    * Output only. The timestamp of when the workspace was created.
@@ -112,6 +147,29 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Input only. Immutable. The maximum depth of the Git repository to checkout for this
+   * workspace. If defined and greater than 0, the Git repository will be created as a shallow clone
+   * with the given depth, otherwise a full clone will be performed. This field is available only
+   * for GitHub, Gitlab and 1p repositories with enabled branch management.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDepth() {
+    return depth;
+  }
+
+  /**
+   * Optional. Input only. Immutable. The maximum depth of the Git repository to checkout for this
+   * workspace. If defined and greater than 0, the Git repository will be created as a shallow clone
+   * with the given depth, otherwise a full clone will be performed. This field is available only
+   * for GitHub, Gitlab and 1p repositories with enabled branch management.
+   * @param depth depth or {@code null} for none
+   */
+  public Workspace setDepth(java.lang.Integer depth) {
+    this.depth = depth;
+    return this;
+  }
+
+  /**
    * Optional. If set to true, workspaces will not be moved if its linked Repository is moved.
    * Instead, it will be deleted.
    * @return value or {@code null} for none
@@ -127,6 +185,25 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    */
   public Workspace setDisableMoves(java.lang.Boolean disableMoves) {
     this.disableMoves = disableMoves;
+    return this;
+  }
+
+  /**
+   * Immutable. Controls the enablement of branch checkout for the workspace. When set to True, the
+   * workspace will be allowed to checkout branches.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableBranchManagement() {
+    return enableBranchManagement;
+  }
+
+  /**
+   * Immutable. Controls the enablement of branch checkout for the workspace. When set to True, the
+   * workspace will be allowed to checkout branches.
+   * @param enableBranchManagement enableBranchManagement or {@code null} for none
+   */
+  public Workspace setEnableBranchManagement(java.lang.Boolean enableBranchManagement) {
+    this.enableBranchManagement = enableBranchManagement;
     return this;
   }
 
@@ -167,6 +244,27 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Input only. Immutable. The name of the default upstream branch for all pull/push
+   * operations in the remote repository for this workspace. If empty, the HEAD branch from
+   * repository will be used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOriginalBranch() {
+    return originalBranch;
+  }
+
+  /**
+   * Optional. Input only. Immutable. The name of the default upstream branch for all pull/push
+   * operations in the remote repository for this workspace. If empty, the HEAD branch from
+   * repository will be used.
+   * @param originalBranch originalBranch or {@code null} for none
+   */
+  public Workspace setOriginalBranch(java.lang.String originalBranch) {
+    this.originalBranch = originalBranch;
+    return this;
+  }
+
+  /**
    * Output only. Metadata indicating whether this resource is user-scoped. For `Workspace`
    * resources, the `user_scoped` field is always `true`.
    * @return value or {@code null} for none
@@ -182,6 +280,25 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    */
   public Workspace setPrivateResourceMetadata(PrivateResourceMetadata privateResourceMetadata) {
     this.privateResourceMetadata = privateResourceMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. If set to true, the workspace was created as a shallow clone. Will be set to true
+   * if the depth field is set to a value greater than 0, otherwise it will be set to false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getShallow() {
+    return shallow;
+  }
+
+  /**
+   * Output only. If set to true, the workspace was created as a shallow clone. Will be set to true
+   * if the depth field is set to a value greater than 0, otherwise it will be set to false.
+   * @param shallow shallow or {@code null} for none
+   */
+  public Workspace setShallow(java.lang.Boolean shallow) {
+    this.shallow = shallow;
     return this;
   }
 

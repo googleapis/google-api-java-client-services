@@ -9430,6 +9430,146 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
         public class Workspaces {
 
           /**
+           * Checkout a branch in a Workspace.
+           *
+           * Create a request for the method "workspaces.checkout".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link Checkout#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.CheckoutWorkspaceBranchRequest}
+           * @return the request
+           */
+          public Checkout checkout(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CheckoutWorkspaceBranchRequest content) throws java.io.IOException {
+            Checkout result = new Checkout(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Checkout extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Empty> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:checkout";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Checkout a branch in a Workspace.
+             *
+             * Create a request for the method "workspaces.checkout".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link Checkout#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Checkout#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             * @param content the {@link com.google.api.services.dataform.v1beta1.model.CheckoutWorkspaceBranchRequest}
+             * @since 1.13
+             */
+            protected Checkout(java.lang.String name, com.google.api.services.dataform.v1beta1.model.CheckoutWorkspaceBranchRequest content) {
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public Checkout set$Xgafv(java.lang.String $Xgafv) {
+              return (Checkout) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Checkout setAccessToken(java.lang.String accessToken) {
+              return (Checkout) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Checkout setAlt(java.lang.String alt) {
+              return (Checkout) super.setAlt(alt);
+            }
+
+            @Override
+            public Checkout setCallback(java.lang.String callback) {
+              return (Checkout) super.setCallback(callback);
+            }
+
+            @Override
+            public Checkout setFields(java.lang.String fields) {
+              return (Checkout) super.setFields(fields);
+            }
+
+            @Override
+            public Checkout setKey(java.lang.String key) {
+              return (Checkout) super.setKey(key);
+            }
+
+            @Override
+            public Checkout setOauthToken(java.lang.String oauthToken) {
+              return (Checkout) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Checkout setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Checkout) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Checkout setQuotaUser(java.lang.String quotaUser) {
+              return (Checkout) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Checkout setUploadType(java.lang.String uploadType) {
+              return (Checkout) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Checkout setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Checkout) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The workspace resource name. Format:
+           projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            public Checkout setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Checkout set(String parameterName, Object value) {
+              return (Checkout) super.set(parameterName, value);
+            }
+          }
+          /**
            * Applies a Git commit for uncommitted files in a Workspace.
            *
            * Create a request for the method "workspaces.commit".
@@ -9850,6 +9990,513 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a branch in a Workspace.
+           *
+           * Create a request for the method "workspaces.deleteBranch".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link DeleteBranch#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteBranchRequest}
+           * @return the request
+           */
+          public DeleteBranch deleteBranch(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteBranchRequest content) throws java.io.IOException {
+            DeleteBranch result = new DeleteBranch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class DeleteBranch extends DataformRequest<com.google.api.services.dataform.v1beta1.model.DeleteBranchResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:deleteBranch";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Deletes a branch in a Workspace.
+             *
+             * Create a request for the method "workspaces.deleteBranch".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link DeleteBranch#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * DeleteBranch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             * @param content the {@link com.google.api.services.dataform.v1beta1.model.DeleteBranchRequest}
+             * @since 1.13
+             */
+            protected DeleteBranch(java.lang.String name, com.google.api.services.dataform.v1beta1.model.DeleteBranchRequest content) {
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.DeleteBranchResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public DeleteBranch set$Xgafv(java.lang.String $Xgafv) {
+              return (DeleteBranch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DeleteBranch setAccessToken(java.lang.String accessToken) {
+              return (DeleteBranch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DeleteBranch setAlt(java.lang.String alt) {
+              return (DeleteBranch) super.setAlt(alt);
+            }
+
+            @Override
+            public DeleteBranch setCallback(java.lang.String callback) {
+              return (DeleteBranch) super.setCallback(callback);
+            }
+
+            @Override
+            public DeleteBranch setFields(java.lang.String fields) {
+              return (DeleteBranch) super.setFields(fields);
+            }
+
+            @Override
+            public DeleteBranch setKey(java.lang.String key) {
+              return (DeleteBranch) super.setKey(key);
+            }
+
+            @Override
+            public DeleteBranch setOauthToken(java.lang.String oauthToken) {
+              return (DeleteBranch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DeleteBranch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DeleteBranch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DeleteBranch setQuotaUser(java.lang.String quotaUser) {
+              return (DeleteBranch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DeleteBranch setUploadType(java.lang.String uploadType) {
+              return (DeleteBranch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DeleteBranch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DeleteBranch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The workspace resource name. Format:
+           projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            public DeleteBranch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public DeleteBranch set(String parameterName, Object value) {
+              return (DeleteBranch) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetches branches in a Workspace.
+           *
+           * Create a request for the method "workspaces.fetchBranches".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link FetchBranches#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+           * @return the request
+           */
+          public FetchBranches fetchBranches(java.lang.String name) throws java.io.IOException {
+            FetchBranches result = new FetchBranches(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchBranches extends DataformRequest<com.google.api.services.dataform.v1beta1.model.FetchWorkspaceBranchesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:fetchBranches";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Fetches branches in a Workspace.
+             *
+             * Create a request for the method "workspaces.fetchBranches".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link FetchBranches#execute()} method to invoke the remote
+             * operation. <p> {@link FetchBranches#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             * @since 1.13
+             */
+            protected FetchBranches(java.lang.String name) {
+              super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.FetchWorkspaceBranchesResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchBranches set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchBranches) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchBranches setAccessToken(java.lang.String accessToken) {
+              return (FetchBranches) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchBranches setAlt(java.lang.String alt) {
+              return (FetchBranches) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchBranches setCallback(java.lang.String callback) {
+              return (FetchBranches) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchBranches setFields(java.lang.String fields) {
+              return (FetchBranches) super.setFields(fields);
+            }
+
+            @Override
+            public FetchBranches setKey(java.lang.String key) {
+              return (FetchBranches) super.setKey(key);
+            }
+
+            @Override
+            public FetchBranches setOauthToken(java.lang.String oauthToken) {
+              return (FetchBranches) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchBranches setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchBranches) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchBranches setQuotaUser(java.lang.String quotaUser) {
+              return (FetchBranches) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchBranches setUploadType(java.lang.String uploadType) {
+              return (FetchBranches) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchBranches setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchBranches) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The workspace resource name. Format:
+           projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            public FetchBranches setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. Filter for the returned list. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter for the returned list.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filter for the returned list. */
+            public FetchBranches setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of branches to return. The server may return fewer items
+             * than requested. If unspecified, the server will pick an appropriate default. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of branches to return. The server may return fewer items than requested.
+           If unspecified, the server will pick an appropriate default. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of branches to return. The server may return fewer items
+             * than requested. If unspecified, the server will pick an appropriate default. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public FetchBranches setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Page token received from a previous `FetchWorkspaceBranches` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `FetchWorkspaceBranches`, with the exception of `page_size`, must match the call
+             * that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page token received from a previous `FetchWorkspaceBranches` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `FetchWorkspaceBranches`, with the exception of `page_size`, must match the call that provided the
+           page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Page token received from a previous `FetchWorkspaceBranches` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `FetchWorkspaceBranches`, with the exception of `page_size`, must match the call
+             * that provided the page token.
+             */
+            public FetchBranches setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public FetchBranches set(String parameterName, Object value) {
+              return (FetchBranches) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetches the current branch of a Workspace.
+           *
+           * Create a request for the method "workspaces.fetchCurrentBranch".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link FetchCurrentBranch#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+           * @return the request
+           */
+          public FetchCurrentBranch fetchCurrentBranch(java.lang.String name) throws java.io.IOException {
+            FetchCurrentBranch result = new FetchCurrentBranch(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchCurrentBranch extends DataformRequest<com.google.api.services.dataform.v1beta1.model.FetchCurrentWorkspaceBranchResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:fetchCurrentBranch";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Fetches the current branch of a Workspace.
+             *
+             * Create a request for the method "workspaces.fetchCurrentBranch".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link FetchCurrentBranch#execute()} method to invoke the remote
+             * operation. <p> {@link FetchCurrentBranch#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             * @since 1.13
+             */
+            protected FetchCurrentBranch(java.lang.String name) {
+              super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.FetchCurrentWorkspaceBranchResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchCurrentBranch set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchCurrentBranch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchCurrentBranch setAccessToken(java.lang.String accessToken) {
+              return (FetchCurrentBranch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchCurrentBranch setAlt(java.lang.String alt) {
+              return (FetchCurrentBranch) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchCurrentBranch setCallback(java.lang.String callback) {
+              return (FetchCurrentBranch) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchCurrentBranch setFields(java.lang.String fields) {
+              return (FetchCurrentBranch) super.setFields(fields);
+            }
+
+            @Override
+            public FetchCurrentBranch setKey(java.lang.String key) {
+              return (FetchCurrentBranch) super.setKey(key);
+            }
+
+            @Override
+            public FetchCurrentBranch setOauthToken(java.lang.String oauthToken) {
+              return (FetchCurrentBranch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchCurrentBranch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchCurrentBranch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchCurrentBranch setQuotaUser(java.lang.String quotaUser) {
+              return (FetchCurrentBranch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchCurrentBranch setUploadType(java.lang.String uploadType) {
+              return (FetchCurrentBranch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchCurrentBranch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchCurrentBranch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The workspace resource name. Format:
+           projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            public FetchCurrentBranch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public FetchCurrentBranch set(String parameterName, Object value) {
+              return (FetchCurrentBranch) super.set(parameterName, value);
             }
           }
           /**
@@ -12850,6 +13497,146 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             @Override
             public SetIamPolicy set(String parameterName, Object value) {
               return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Syncs the refs of a Workspace.
+           *
+           * Create a request for the method "workspaces.syncWorkspaceRefs".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link SyncWorkspaceRefs#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.SyncWorkspaceRefsRequest}
+           * @return the request
+           */
+          public SyncWorkspaceRefs syncWorkspaceRefs(java.lang.String name, com.google.api.services.dataform.v1beta1.model.SyncWorkspaceRefsRequest content) throws java.io.IOException {
+            SyncWorkspaceRefs result = new SyncWorkspaceRefs(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SyncWorkspaceRefs extends DataformRequest<com.google.api.services.dataform.v1beta1.model.SyncWorkspaceRefsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:syncWorkspaceRefs";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Syncs the refs of a Workspace.
+             *
+             * Create a request for the method "workspaces.syncWorkspaceRefs".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link SyncWorkspaceRefs#execute()} method to invoke the remote
+             * operation. <p> {@link SyncWorkspaceRefs#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The workspace resource name. Format:
+           *        projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             * @param content the {@link com.google.api.services.dataform.v1beta1.model.SyncWorkspaceRefsRequest}
+             * @since 1.13
+             */
+            protected SyncWorkspaceRefs(java.lang.String name, com.google.api.services.dataform.v1beta1.model.SyncWorkspaceRefsRequest content) {
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.SyncWorkspaceRefsResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public SyncWorkspaceRefs set$Xgafv(java.lang.String $Xgafv) {
+              return (SyncWorkspaceRefs) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setAccessToken(java.lang.String accessToken) {
+              return (SyncWorkspaceRefs) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setAlt(java.lang.String alt) {
+              return (SyncWorkspaceRefs) super.setAlt(alt);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setCallback(java.lang.String callback) {
+              return (SyncWorkspaceRefs) super.setCallback(callback);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setFields(java.lang.String fields) {
+              return (SyncWorkspaceRefs) super.setFields(fields);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setKey(java.lang.String key) {
+              return (SyncWorkspaceRefs) super.setKey(key);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setOauthToken(java.lang.String oauthToken) {
+              return (SyncWorkspaceRefs) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SyncWorkspaceRefs) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setQuotaUser(java.lang.String quotaUser) {
+              return (SyncWorkspaceRefs) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setUploadType(java.lang.String uploadType) {
+              return (SyncWorkspaceRefs) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SyncWorkspaceRefs setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SyncWorkspaceRefs) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The workspace resource name. Format:
+           projects/{project}/locations/{location}/repositories/{repository}/workspaces/{workspace}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The workspace resource name. Format: projects/{project}/locations/{location
+             * }/repositories/{repository}/workspaces/{workspace}
+             */
+            public SyncWorkspaceRefs setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public SyncWorkspaceRefs set(String parameterName, Object value) {
+              return (SyncWorkspaceRefs) super.set(parameterName, value);
             }
           }
           /**

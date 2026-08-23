@@ -60,6 +60,18 @@ public final class GenaiVertexV1beta1TranscriptionConfig extends com.google.api.
   private java.util.List<java.lang.String> languageCodes;
 
   /**
+   * Configures transcription mode. Supported values: `VERBATIM`, `SMART`. If unspecified, defaults
+   * to `VERBATIM` transcription. In `SMART` mode, the model performs disfluency removal
+   * (eliminating filler words, repetitions, and false starts), light grammatical cleanup, automatic
+   * formatting (paragraphs, bullet points, numbered lists), and minor user edits (inline self-
+   * corrections). Timestamps (`timestamp_granularities`) and diarization (`diarization_mode`) are
+   * incompatible with mode `SMART`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Optional. The granularity of timestamps to include in the transcription output. Supported
    * values: "word". If empty, no timestamps are generated.
    * The value may be {@code null}.
@@ -136,6 +148,33 @@ public final class GenaiVertexV1beta1TranscriptionConfig extends com.google.api.
    */
   public GenaiVertexV1beta1TranscriptionConfig setLanguageCodes(java.util.List<java.lang.String> languageCodes) {
     this.languageCodes = languageCodes;
+    return this;
+  }
+
+  /**
+   * Configures transcription mode. Supported values: `VERBATIM`, `SMART`. If unspecified, defaults
+   * to `VERBATIM` transcription. In `SMART` mode, the model performs disfluency removal
+   * (eliminating filler words, repetitions, and false starts), light grammatical cleanup, automatic
+   * formatting (paragraphs, bullet points, numbered lists), and minor user edits (inline self-
+   * corrections). Timestamps (`timestamp_granularities`) and diarization (`diarization_mode`) are
+   * incompatible with mode `SMART`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Configures transcription mode. Supported values: `VERBATIM`, `SMART`. If unspecified, defaults
+   * to `VERBATIM` transcription. In `SMART` mode, the model performs disfluency removal
+   * (eliminating filler words, repetitions, and false starts), light grammatical cleanup, automatic
+   * formatting (paragraphs, bullet points, numbered lists), and minor user edits (inline self-
+   * corrections). Timestamps (`timestamp_granularities`) and diarization (`diarization_mode`) are
+   * incompatible with mode `SMART`.
+   * @param mode mode or {@code null} for none
+   */
+  public GenaiVertexV1beta1TranscriptionConfig setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

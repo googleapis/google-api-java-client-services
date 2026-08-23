@@ -94,11 +94,10 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private java.lang.String id;
 
   /**
-   * Optional. The labels with user-defined metadata for the request. It is used for billing and
-   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
-   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
-   * International characters are allowed. Label values are optional. Label keys must start with a
-   * letter.
+   * The labels with user-defined metadata for the request. It is used for billing and reporting
+   * only. Label keys and values can be no longer than 63 characters (Unicode codepoints) and can
+   * only contain lowercase letters, numeric characters, underscores, and dashes. International
+   * characters are allowed. Label values are optional. Label keys must start with a letter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -244,13 +243,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<GenaiVertexV1beta1Tool> tools;
-
-  /**
-   * The turns for the interaction.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1TurnList turnList;
 
   /**
    * Required. Output only. The time at which the response was last updated in ISO 8601 format
@@ -408,11 +400,10 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request. It is used for billing and
-   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
-   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
-   * International characters are allowed. Label values are optional. Label keys must start with a
-   * letter.
+   * The labels with user-defined metadata for the request. It is used for billing and reporting
+   * only. Label keys and values can be no longer than 63 characters (Unicode codepoints) and can
+   * only contain lowercase letters, numeric characters, underscores, and dashes. International
+   * characters are allowed. Label values are optional. Label keys must start with a letter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -420,11 +411,10 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Optional. The labels with user-defined metadata for the request. It is used for billing and
-   * reporting only. Label keys and values can be no longer than 63 characters (Unicode codepoints)
-   * and can only contain lowercase letters, numeric characters, underscores, and dashes.
-   * International characters are allowed. Label values are optional. Label keys must start with a
-   * letter.
+   * The labels with user-defined metadata for the request. It is used for billing and reporting
+   * only. Label keys and values can be no longer than 63 characters (Unicode codepoints) and can
+   * only contain lowercase letters, numeric characters, underscores, and dashes. International
+   * characters are allowed. Label values are optional. Label keys must start with a letter.
    * @param labels labels or {@code null} for none
    */
   public GenaiVertexV1beta1Interaction setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -756,23 +746,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setTools(java.util.List<GenaiVertexV1beta1Tool> tools) {
     this.tools = tools;
-    return this;
-  }
-
-  /**
-   * The turns for the interaction.
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1TurnList getTurnList() {
-    return turnList;
-  }
-
-  /**
-   * The turns for the interaction.
-   * @param turnList turnList or {@code null} for none
-   */
-  public GenaiVertexV1beta1Interaction setTurnList(GenaiVertexV1beta1TurnList turnList) {
-    this.turnList = turnList;
     return this;
   }
 

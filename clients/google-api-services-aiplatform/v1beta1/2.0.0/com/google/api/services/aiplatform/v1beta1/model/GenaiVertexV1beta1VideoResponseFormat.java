@@ -51,11 +51,18 @@ public final class GenaiVertexV1beta1VideoResponseFormat extends com.google.api.
   private String duration;
 
   /**
-   * The GCS URI to store the video output. Required for Vertex if delivery mode is URI.
+   * The Cloud Storage URI to store the video output. Required for Vertex if delivery mode is URI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcsUri;
+
+  /**
+   * The video output resolution. Defaults to 720p.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolution;
 
   /**
    * The aspect ratio for the video output.
@@ -109,7 +116,7 @@ public final class GenaiVertexV1beta1VideoResponseFormat extends com.google.api.
   }
 
   /**
-   * The GCS URI to store the video output. Required for Vertex if delivery mode is URI.
+   * The Cloud Storage URI to store the video output. Required for Vertex if delivery mode is URI.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -117,11 +124,28 @@ public final class GenaiVertexV1beta1VideoResponseFormat extends com.google.api.
   }
 
   /**
-   * The GCS URI to store the video output. Required for Vertex if delivery mode is URI.
+   * The Cloud Storage URI to store the video output. Required for Vertex if delivery mode is URI.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public GenaiVertexV1beta1VideoResponseFormat setGcsUri(java.lang.String gcsUri) {
     this.gcsUri = gcsUri;
+    return this;
+  }
+
+  /**
+   * The video output resolution. Defaults to 720p.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolution() {
+    return resolution;
+  }
+
+  /**
+   * The video output resolution. Defaults to 720p.
+   * @param resolution resolution or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoResponseFormat setResolution(java.lang.String resolution) {
+    this.resolution = resolution;
     return this;
   }
 

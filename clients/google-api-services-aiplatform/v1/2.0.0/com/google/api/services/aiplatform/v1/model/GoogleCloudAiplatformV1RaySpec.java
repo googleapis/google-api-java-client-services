@@ -52,6 +52,13 @@ public final class GoogleCloudAiplatformV1RaySpec extends com.google.api.client.
   private java.lang.String imageUri;
 
   /**
+   * Optional. Optional Ray autoscaling configurations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1RayClusterAutoscalingSpec rayClusterAutoscalingSpec;
+
+  /**
    * Optional. OSS Ray logging configurations.
    * The value may be {@code null}.
    */
@@ -118,6 +125,23 @@ public final class GoogleCloudAiplatformV1RaySpec extends com.google.api.client.
    */
   public GoogleCloudAiplatformV1RaySpec setImageUri(java.lang.String imageUri) {
     this.imageUri = imageUri;
+    return this;
+  }
+
+  /**
+   * Optional. Optional Ray autoscaling configurations.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RayClusterAutoscalingSpec getRayClusterAutoscalingSpec() {
+    return rayClusterAutoscalingSpec;
+  }
+
+  /**
+   * Optional. Optional Ray autoscaling configurations.
+   * @param rayClusterAutoscalingSpec rayClusterAutoscalingSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1RaySpec setRayClusterAutoscalingSpec(GoogleCloudAiplatformV1RayClusterAutoscalingSpec rayClusterAutoscalingSpec) {
+    this.rayClusterAutoscalingSpec = rayClusterAutoscalingSpec;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Config for ranking and reranking.
+ * XprofConfig contains the configuration for managed XProf.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1XprofConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Config for Rank Service.
+   * Required. User-owned Cloud Storage bucket (gs://) in the user project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService rankService;
+  private java.lang.String gcsBucketUri;
 
   /**
-   * Config for Rank Service.
+   * Required. User-owned Cloud Storage bucket (gs://) in the user project.
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService getRankService() {
-    return rankService;
+  public java.lang.String getGcsBucketUri() {
+    return gcsBucketUri;
   }
 
   /**
-   * Config for Rank Service.
-   * @param rankService rankService or {@code null} for none
+   * Required. User-owned Cloud Storage bucket (gs://) in the user project.
+   * @param gcsBucketUri gcsBucketUri or {@code null} for none
    */
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking setRankService(GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRankingRankService rankService) {
-    this.rankService = rankService;
+  public GoogleCloudAiplatformV1beta1XprofConfig setGcsBucketUri(java.lang.String gcsBucketUri) {
+    this.gcsBucketUri = gcsBucketUri;
     return this;
   }
 
   @Override
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking set(String fieldName, Object value) {
-    return (GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1beta1XprofConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1XprofConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking clone() {
-    return (GenaiVertexV1beta1RagStoreConfigRagRetrievalConfigRanking) super.clone();
+  public GoogleCloudAiplatformV1beta1XprofConfig clone() {
+    return (GoogleCloudAiplatformV1beta1XprofConfig) super.clone();
   }
 
 }

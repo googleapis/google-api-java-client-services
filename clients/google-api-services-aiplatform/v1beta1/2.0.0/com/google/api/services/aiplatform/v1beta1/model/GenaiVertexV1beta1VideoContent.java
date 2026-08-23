@@ -45,6 +45,18 @@ public final class GenaiVertexV1beta1VideoContent extends com.google.api.client.
   private java.lang.String mimeTypeString;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1VideoContentMediaProcessing processingConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String processingType;
+
+  /**
    * The resolution of the media.
    * The value may be {@code null}.
    */
@@ -119,6 +131,36 @@ public final class GenaiVertexV1beta1VideoContent extends com.google.api.client.
    */
   public GenaiVertexV1beta1VideoContent setMimeTypeString(java.lang.String mimeTypeString) {
     this.mimeTypeString = mimeTypeString;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoContentMediaProcessing getProcessingConfig() {
+    return processingConfig;
+  }
+
+  /**
+   * @param processingConfig processingConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoContent setProcessingConfig(GenaiVertexV1beta1VideoContentMediaProcessing processingConfig) {
+    this.processingConfig = processingConfig;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProcessingType() {
+    return processingType;
+  }
+
+  /**
+   * @param processingType processingType or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoContent setProcessingType(java.lang.String processingType) {
+    this.processingType = processingType;
     return this;
   }
 

@@ -39,6 +39,15 @@ public final class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends
   private java.lang.String codeRepositoryState;
 
   /**
+   * Optional. The Cloud Run regions in which the application is currently deployed. Used to
+   * rediscover and redeploy the app in the regions it already runs in, which may differ from the
+   * prompt's location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> deployedRegions;
+
+  /**
    * Optional. Framework used to build the application.
    * The value may be {@code null}.
    */
@@ -70,6 +79,27 @@ public final class GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData extends
    */
   public GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData setCodeRepositoryState(java.lang.String codeRepositoryState) {
     this.codeRepositoryState = codeRepositoryState;
+    return this;
+  }
+
+  /**
+   * Optional. The Cloud Run regions in which the application is currently deployed. Used to
+   * rediscover and redeploy the app in the regions it already runs in, which may differ from the
+   * prompt's location.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDeployedRegions() {
+    return deployedRegions;
+  }
+
+  /**
+   * Optional. The Cloud Run regions in which the application is currently deployed. Used to
+   * rediscover and redeploy the app in the regions it already runs in, which may differ from the
+   * prompt's location.
+   * @param deployedRegions deployedRegions or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPromptSpecAppBuilderData setDeployedRegions(java.util.List<java.lang.String> deployedRegions) {
+    this.deployedRegions = deployedRegions;
     return this;
   }
 

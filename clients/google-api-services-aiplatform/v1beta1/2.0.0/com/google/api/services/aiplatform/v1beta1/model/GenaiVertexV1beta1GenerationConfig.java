@@ -51,18 +51,18 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
   private java.lang.Integer seed;
 
   /**
-   * Configuration for speech interaction.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GenaiVertexV1beta1SpeechConfig> speechConfig;
-
-  /**
    * A list of character sequences that will stop output interaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> stopSequences;
+
+  /**
+   * Speech and multi-speaker configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1SpeakerConfig structuredSpeechConfig;
 
   /**
    * Controls the randomness of the output.
@@ -172,23 +172,6 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
   }
 
   /**
-   * Configuration for speech interaction.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GenaiVertexV1beta1SpeechConfig> getSpeechConfig() {
-    return speechConfig;
-  }
-
-  /**
-   * Configuration for speech interaction.
-   * @param speechConfig speechConfig or {@code null} for none
-   */
-  public GenaiVertexV1beta1GenerationConfig setSpeechConfig(java.util.List<GenaiVertexV1beta1SpeechConfig> speechConfig) {
-    this.speechConfig = speechConfig;
-    return this;
-  }
-
-  /**
    * A list of character sequences that will stop output interaction.
    * @return value or {@code null} for none
    */
@@ -202,6 +185,23 @@ public final class GenaiVertexV1beta1GenerationConfig extends com.google.api.cli
    */
   public GenaiVertexV1beta1GenerationConfig setStopSequences(java.util.List<java.lang.String> stopSequences) {
     this.stopSequences = stopSequences;
+    return this;
+  }
+
+  /**
+   * Speech and multi-speaker configuration.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1SpeakerConfig getStructuredSpeechConfig() {
+    return structuredSpeechConfig;
+  }
+
+  /**
+   * Speech and multi-speaker configuration.
+   * @param structuredSpeechConfig structuredSpeechConfig or {@code null} for none
+   */
+  public GenaiVertexV1beta1GenerationConfig setStructuredSpeechConfig(GenaiVertexV1beta1SpeakerConfig structuredSpeechConfig) {
+    this.structuredSpeechConfig = structuredSpeechConfig;
     return this;
   }
 

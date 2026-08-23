@@ -32,11 +32,15 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
-   * Immutable. IAM federated principal name to assign policies to workforce/workload federated
-   * identities. Can be principal set or single principal, here are some examples: Single principal:
-   * principal://iam.googleapis.com/projects/{project_number}/locations/global/workloadIdentityPools
-   * /{pool_id}/subject/{subject_attribute_value} PrincipalSet: principalSet://iam.googleapis.com/pr
-   * ojects/{project_number}/locations/global/workloadIdentityPools/{pool_id}
+   * Immutable. The IAM principal identifier of the federated workforce or workload to assign the
+   * policy to. Examples include the following: * Single principal: `principal://iam.googleapis.com/
+   * projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}/subject/{subject_att
+   * ribute_value}` * All workloads in a workload identity pool: `principalSet://iam.googleapis.com/
+   * projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}` * All Workforce
+   * Pools in a Google Cloud organization: `principalSet://cloudresourcemanager.googleapis.com/organ
+   * izations/{organization_id}/type/WorkforcePool` Bindings created for all Workforce Pools in a
+   * Google Cloud organization support only `scoped_access_settings` with the `restricted_project`
+   * client scope and active `session_settings`. No other configurations are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,11 +66,15 @@ public final class Principal extends com.google.api.client.json.GenericJson {
   private java.lang.String serviceAccountProjectNumber;
 
   /**
-   * Immutable. IAM federated principal name to assign policies to workforce/workload federated
-   * identities. Can be principal set or single principal, here are some examples: Single principal:
-   * principal://iam.googleapis.com/projects/{project_number}/locations/global/workloadIdentityPools
-   * /{pool_id}/subject/{subject_attribute_value} PrincipalSet: principalSet://iam.googleapis.com/pr
-   * ojects/{project_number}/locations/global/workloadIdentityPools/{pool_id}
+   * Immutable. The IAM principal identifier of the federated workforce or workload to assign the
+   * policy to. Examples include the following: * Single principal: `principal://iam.googleapis.com/
+   * projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}/subject/{subject_att
+   * ribute_value}` * All workloads in a workload identity pool: `principalSet://iam.googleapis.com/
+   * projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}` * All Workforce
+   * Pools in a Google Cloud organization: `principalSet://cloudresourcemanager.googleapis.com/organ
+   * izations/{organization_id}/type/WorkforcePool` Bindings created for all Workforce Pools in a
+   * Google Cloud organization support only `scoped_access_settings` with the `restricted_project`
+   * client scope and active `session_settings`. No other configurations are allowed.
    * @return value or {@code null} for none
    */
   public java.lang.String getFederatedPrincipal() {
@@ -74,11 +82,15 @@ public final class Principal extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. IAM federated principal name to assign policies to workforce/workload federated
-   * identities. Can be principal set or single principal, here are some examples: Single principal:
-   * principal://iam.googleapis.com/projects/{project_number}/locations/global/workloadIdentityPools
-   * /{pool_id}/subject/{subject_attribute_value} PrincipalSet: principalSet://iam.googleapis.com/pr
-   * ojects/{project_number}/locations/global/workloadIdentityPools/{pool_id}
+   * Immutable. The IAM principal identifier of the federated workforce or workload to assign the
+   * policy to. Examples include the following: * Single principal: `principal://iam.googleapis.com/
+   * projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}/subject/{subject_att
+   * ribute_value}` * All workloads in a workload identity pool: `principalSet://iam.googleapis.com/
+   * projects/{project_number}/locations/global/workloadIdentityPools/{pool_id}` * All Workforce
+   * Pools in a Google Cloud organization: `principalSet://cloudresourcemanager.googleapis.com/organ
+   * izations/{organization_id}/type/WorkforcePool` Bindings created for all Workforce Pools in a
+   * Google Cloud organization support only `scoped_access_settings` with the `restricted_project`
+   * client scope and active `session_settings`. No other configurations are allowed.
    * @param federatedPrincipal federatedPrincipal or {@code null} for none
    */
   public Principal setFederatedPrincipal(java.lang.String federatedPrincipal) {

@@ -3911,6 +3911,29 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           return this;
         }
 
+        /**
+         * Optional. If true, the response will contain the deleted principal syntax for identities
+         * that support it.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String deletedPrincipalSyntax;
+
+        /** Optional. If true, the response will contain the deleted principal syntax for identities that
+       support it.
+         */
+        public java.lang.String getDeletedPrincipalSyntax() {
+          return deletedPrincipalSyntax;
+        }
+
+        /**
+         * Optional. If true, the response will contain the deleted principal syntax for identities
+         * that support it.
+         */
+        public Get setDeletedPrincipalSyntax(java.lang.String deletedPrincipalSyntax) {
+          this.deletedPrincipalSyntax = deletedPrincipalSyntax;
+          return this;
+        }
+
         @Override
         public Get set(String parameterName, Object value) {
           return (Get) super.set(parameterName, value);
@@ -4056,6 +4079,29 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
                 "^accessPolicies/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. If true, the response will contain the deleted principal syntax for identities
+         * that support it.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String deletedPrincipalSyntax;
+
+        /** Optional. If true, the response will contain the deleted principal syntax for identities that
+       support it.
+         */
+        public java.lang.String getDeletedPrincipalSyntax() {
+          return deletedPrincipalSyntax;
+        }
+
+        /**
+         * Optional. If true, the response will contain the deleted principal syntax for identities
+         * that support it.
+         */
+        public List setDeletedPrincipalSyntax(java.lang.String deletedPrincipalSyntax) {
+          this.deletedPrincipalSyntax = deletedPrincipalSyntax;
           return this;
         }
 
@@ -4249,6 +4295,29 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
                 "^accessPolicies/[^/]+/servicePerimeters/[^/]+$");
           }
           this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. If true, the response will contain the deleted principal syntax for identities
+         * that support it and the request can contain identities with deleted principal syntax.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String deletedPrincipalSyntax;
+
+        /** Optional. If true, the response will contain the deleted principal syntax for identities that
+       support it and the request can contain identities with deleted principal syntax.
+         */
+        public java.lang.String getDeletedPrincipalSyntax() {
+          return deletedPrincipalSyntax;
+        }
+
+        /**
+         * Optional. If true, the response will contain the deleted principal syntax for identities
+         * that support it and the request can contain identities with deleted principal syntax.
+         */
+        public Patch setDeletedPrincipalSyntax(java.lang.String deletedPrincipalSyntax) {
+          this.deletedPrincipalSyntax = deletedPrincipalSyntax;
           return this;
         }
 

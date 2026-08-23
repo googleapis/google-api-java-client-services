@@ -41,10 +41,10 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The session length. Setting this field to zero allows for sessions that are active
-   * indefinitely. Also, setting `session_length_enabled` to false disregards session limits, which
-   * means that sessions never expire. If use_oidc_max_age is true, for OIDC apps, the session
-   * length will be the minimum of this field and the OIDC max_age param. If this field is set to
-   * zero, `session_length_enabled` must be set to false or left unset.
+   * indefinitely. Also, setting `session_length_enabled` to `false` disregards session limits,
+   * which means that sessions never expire. If `use_oidc_max_age` is `true`, for OIDC apps, the
+   * session length will be the minimum of this field and the OIDC `max_age` param. If this field is
+   * set to zero, `session_length_enabled` must be set to `false` or left unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,10 +96,10 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The session length. Setting this field to zero allows for sessions that are active
-   * indefinitely. Also, setting `session_length_enabled` to false disregards session limits, which
-   * means that sessions never expire. If use_oidc_max_age is true, for OIDC apps, the session
-   * length will be the minimum of this field and the OIDC max_age param. If this field is set to
-   * zero, `session_length_enabled` must be set to false or left unset.
+   * indefinitely. Also, setting `session_length_enabled` to `false` disregards session limits,
+   * which means that sessions never expire. If `use_oidc_max_age` is `true`, for OIDC apps, the
+   * session length will be the minimum of this field and the OIDC `max_age` param. If this field is
+   * set to zero, `session_length_enabled` must be set to `false` or left unset.
    * @return value or {@code null} for none
    */
   public String getSessionLength() {
@@ -108,10 +108,10 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. The session length. Setting this field to zero allows for sessions that are active
-   * indefinitely. Also, setting `session_length_enabled` to false disregards session limits, which
-   * means that sessions never expire. If use_oidc_max_age is true, for OIDC apps, the session
-   * length will be the minimum of this field and the OIDC max_age param. If this field is set to
-   * zero, `session_length_enabled` must be set to false or left unset.
+   * indefinitely. Also, setting `session_length_enabled` to `false` disregards session limits,
+   * which means that sessions never expire. If `use_oidc_max_age` is `true`, for OIDC apps, the
+   * session length will be the minimum of this field and the OIDC `max_age` param. If this field is
+   * set to zero, `session_length_enabled` must be set to `false` or left unset.
    * @param sessionLength sessionLength or {@code null} for none
    */
   public SessionSettings setSessionLength(String sessionLength) {

@@ -68,9 +68,11 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   }
 
   /**
-   * Optional. A list of non-empty strings whose value is matched against the resource value. If not
-   * specified, any resource is allowed. If specified, a match occurs if any of the resources
-   * matches the resource value in the request. Limited to 5 resources.
+   * Optional. A list of non-empty strings whose value is matched against the resource to which a
+   * request is sent (e.g., an Agent in AiApplication). If not specified, any resource is allowed.
+   * If specified, a match occurs if any of the resources matches the resource value in the request.
+   * Limited to 5 resources. When matching against resources in the AgentRegistry, use the URNs of
+   * the registry resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,9 +146,11 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   }
 
   /**
-   * Optional. A list of non-empty strings whose value is matched against the resource value. If not
-   * specified, any resource is allowed. If specified, a match occurs if any of the resources
-   * matches the resource value in the request. Limited to 5 resources.
+   * Optional. A list of non-empty strings whose value is matched against the resource to which a
+   * request is sent (e.g., an Agent in AiApplication). If not specified, any resource is allowed.
+   * If specified, a match occurs if any of the resources matches the resource value in the request.
+   * Limited to 5 resources. When matching against resources in the AgentRegistry, use the URNs of
+   * the registry resources.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionBindingMatchConditionStringMatch> getResources() {
@@ -154,9 +158,11 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   }
 
   /**
-   * Optional. A list of non-empty strings whose value is matched against the resource value. If not
-   * specified, any resource is allowed. If specified, a match occurs if any of the resources
-   * matches the resource value in the request. Limited to 5 resources.
+   * Optional. A list of non-empty strings whose value is matched against the resource to which a
+   * request is sent (e.g., an Agent in AiApplication). If not specified, any resource is allowed.
+   * If specified, a match occurs if any of the resources matches the resource value in the request.
+   * Limited to 5 resources. When matching against resources in the AgentRegistry, use the URNs of
+   * the registry resources.
    * @param resources resources or {@code null} for none
    */
   public ExtensionBindingMatchConditionToDestination setResources(java.util.List<ExtensionBindingMatchConditionStringMatch> resources) {

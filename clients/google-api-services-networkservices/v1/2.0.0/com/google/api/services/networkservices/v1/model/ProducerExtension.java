@@ -61,7 +61,7 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Set of labels associated with the `ProducerExtension` resource. The format must
-   * comply with [the following requirements]((https://cloud.google.com/compute/docs/labeling-
+   * comply with [the following requirements](https://cloud.google.com/compute/docs/labeling-
    * resources#requirements).
    * The value may be {@code null}.
    */
@@ -162,7 +162,7 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Set of labels associated with the `ProducerExtension` resource. The format must
-   * comply with [the following requirements]((https://cloud.google.com/compute/docs/labeling-
+   * comply with [the following requirements](https://cloud.google.com/compute/docs/labeling-
    * resources#requirements).
    * @return value or {@code null} for none
    */
@@ -172,7 +172,7 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
 
   /**
    * Optional. Set of labels associated with the `ProducerExtension` resource. The format must
-   * comply with [the following requirements]((https://cloud.google.com/compute/docs/labeling-
+   * comply with [the following requirements](https://cloud.google.com/compute/docs/labeling-
    * resources#requirements).
    * @param labels labels or {@code null} for none
    */

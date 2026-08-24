@@ -127,15 +127,6 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
   private GitHubEventsConfig github;
 
   /**
-   * Deprecated: CloudBuild GitLab V1 integration is deprecated. GitLabEnterpriseEventsConfig
-   * describes the configuration of a trigger that creates a build whenever a GitLab Enterprise
-   * event is received.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GitLabEventsConfig gitlabEnterpriseEventsConfig;
-
-  /**
    * Output only. Unique identifier of the trigger.
    * The value may be {@code null}.
    */
@@ -490,27 +481,6 @@ public final class BuildTrigger extends com.google.api.client.json.GenericJson {
    */
   public BuildTrigger setGithub(GitHubEventsConfig github) {
     this.github = github;
-    return this;
-  }
-
-  /**
-   * Deprecated: CloudBuild GitLab V1 integration is deprecated. GitLabEnterpriseEventsConfig
-   * describes the configuration of a trigger that creates a build whenever a GitLab Enterprise
-   * event is received.
-   * @return value or {@code null} for none
-   */
-  public GitLabEventsConfig getGitlabEnterpriseEventsConfig() {
-    return gitlabEnterpriseEventsConfig;
-  }
-
-  /**
-   * Deprecated: CloudBuild GitLab V1 integration is deprecated. GitLabEnterpriseEventsConfig
-   * describes the configuration of a trigger that creates a build whenever a GitLab Enterprise
-   * event is received.
-   * @param gitlabEnterpriseEventsConfig gitlabEnterpriseEventsConfig or {@code null} for none
-   */
-  public BuildTrigger setGitlabEnterpriseEventsConfig(GitLabEventsConfig gitlabEnterpriseEventsConfig) {
-    this.gitlabEnterpriseEventsConfig = gitlabEnterpriseEventsConfig;
     return this;
   }
 

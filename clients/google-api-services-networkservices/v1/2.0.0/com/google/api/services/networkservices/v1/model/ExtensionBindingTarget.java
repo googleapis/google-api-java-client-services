@@ -31,10 +31,7 @@ public final class ExtensionBindingTarget extends com.google.api.client.json.Gen
 
   /**
    * Optional. The reference to the target resource, to which this binding should attach. Exactly
-   * one of `resources` or `scope` must be set. For Agent Gateway, this would be the full resource
-   * name, in the format: `projects/{project}/locations/{location}/agentGateways/{agent_gateway}`.
-   * For AI App, this would be the full resource name, in the format:
-   * `projects/{project}/locations/{location}/applications/{application}`.
+   * one of `resources` or `scope` must be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,10 +47,7 @@ public final class ExtensionBindingTarget extends com.google.api.client.json.Gen
 
   /**
    * Optional. The reference to the target resource, to which this binding should attach. Exactly
-   * one of `resources` or `scope` must be set. For Agent Gateway, this would be the full resource
-   * name, in the format: `projects/{project}/locations/{location}/agentGateways/{agent_gateway}`.
-   * For AI App, this would be the full resource name, in the format:
-   * `projects/{project}/locations/{location}/applications/{application}`.
+   * one of `resources` or `scope` must be set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -62,10 +56,7 @@ public final class ExtensionBindingTarget extends com.google.api.client.json.Gen
 
   /**
    * Optional. The reference to the target resource, to which this binding should attach. Exactly
-   * one of `resources` or `scope` must be set. For Agent Gateway, this would be the full resource
-   * name, in the format: `projects/{project}/locations/{location}/agentGateways/{agent_gateway}`.
-   * For AI App, this would be the full resource name, in the format:
-   * `projects/{project}/locations/{location}/applications/{application}`.
+   * one of `resources` or `scope` must be set.
    * @param resources resources or {@code null} for none
    */
   public ExtensionBindingTarget setResources(java.util.List<java.lang.String> resources) {

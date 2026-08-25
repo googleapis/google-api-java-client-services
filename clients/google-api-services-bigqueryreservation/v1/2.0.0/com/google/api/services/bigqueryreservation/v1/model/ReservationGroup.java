@@ -31,6 +31,13 @@ package com.google.api.services.bigqueryreservation.v1.model;
 public final class ReservationGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Creation time of the reservation group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String creationTime;
+
+  /**
    * Identifier. The resource name of the reservation group, e.g.,
    * `projects/locations/reservationGroups/team1-prod`. The reservation_group_id must only contain
    * lower case alphanumeric characters or dashes. It must start with a letter and must not end with
@@ -48,6 +55,32 @@ public final class ReservationGroup extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String parentGroup;
+
+  /**
+   * Output only. Last update time of the reservation group via a user operation. This timestamp is
+   * updated only when an update operation explicitly targets this reservation group directly. It is
+   * not updated when parent or child groups are created, updated, or deleted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
+   * Output only. Creation time of the reservation group.
+   * @return value or {@code null} for none
+   */
+  public String getCreationTime() {
+    return creationTime;
+  }
+
+  /**
+   * Output only. Creation time of the reservation group.
+   * @param creationTime creationTime or {@code null} for none
+   */
+  public ReservationGroup setCreationTime(String creationTime) {
+    this.creationTime = creationTime;
+    return this;
+  }
 
   /**
    * Identifier. The resource name of the reservation group, e.g.,
@@ -90,6 +123,27 @@ public final class ReservationGroup extends com.google.api.client.json.GenericJs
    */
   public ReservationGroup setParentGroup(java.lang.String parentGroup) {
     this.parentGroup = parentGroup;
+    return this;
+  }
+
+  /**
+   * Output only. Last update time of the reservation group via a user operation. This timestamp is
+   * updated only when an update operation explicitly targets this reservation group directly. It is
+   * not updated when parent or child groups are created, updated, or deleted.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Last update time of the reservation group via a user operation. This timestamp is
+   * updated only when an update operation explicitly targets this reservation group directly. It is
+   * not updated when parent or child groups are created, updated, or deleted.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public ReservationGroup setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

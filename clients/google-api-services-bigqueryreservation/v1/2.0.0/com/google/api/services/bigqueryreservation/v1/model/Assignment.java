@@ -40,6 +40,15 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
   private java.lang.String assignee;
 
   /**
+   * Optional. Common Expression Language (CEL) condition that defines the matching criteria for
+   * this assignment. The condition must resolve to a boolean value. Supported variables will be
+   * added later.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Expr condition;
+
+  /**
    * Optional. Deprecated: "Gemini in BigQuery" is now available by default for all BigQuery
    * editions and should not be explicitly set. Controls if "Gemini in BigQuery"
    * (https://cloud.google.com/gemini/docs/bigquery/overview) features should be enabled for this
@@ -65,6 +74,17 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Specifies the priority precedence for this assignment. Used to resolve ambiguity when
+   * multiple assignments match a single job. Higher numerical values represent higher priority
+   * (e.g., 20 is higher than 10). If unspecified, it defaults to 0. Multiple assignments can share
+   * the same precedence, but it is recommended to use unique precedence values for assignments
+   * within the same assignee scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long precedence;
 
   /**
    * Optional. Represents the principal for this assignment. If not empty, jobs run by this
@@ -115,6 +135,27 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   public Assignment setAssignee(java.lang.String assignee) {
     this.assignee = assignee;
+    return this;
+  }
+
+  /**
+   * Optional. Common Expression Language (CEL) condition that defines the matching criteria for
+   * this assignment. The condition must resolve to a boolean value. Supported variables will be
+   * added later.
+   * @return value or {@code null} for none
+   */
+  public Expr getCondition() {
+    return condition;
+  }
+
+  /**
+   * Optional. Common Expression Language (CEL) condition that defines the matching criteria for
+   * this assignment. The condition must resolve to a boolean value. Supported variables will be
+   * added later.
+   * @param condition condition or {@code null} for none
+   */
+  public Assignment setCondition(Expr condition) {
+    this.condition = condition;
     return this;
   }
 
@@ -178,6 +219,31 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
    */
   public Assignment setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the priority precedence for this assignment. Used to resolve ambiguity when
+   * multiple assignments match a single job. Higher numerical values represent higher priority
+   * (e.g., 20 is higher than 10). If unspecified, it defaults to 0. Multiple assignments can share
+   * the same precedence, but it is recommended to use unique precedence values for assignments
+   * within the same assignee scope.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getPrecedence() {
+    return precedence;
+  }
+
+  /**
+   * Optional. Specifies the priority precedence for this assignment. Used to resolve ambiguity when
+   * multiple assignments match a single job. Higher numerical values represent higher priority
+   * (e.g., 20 is higher than 10). If unspecified, it defaults to 0. Multiple assignments can share
+   * the same precedence, but it is recommended to use unique precedence values for assignments
+   * within the same assignee scope.
+   * @param precedence precedence or {@code null} for none
+   */
+  public Assignment setPrecedence(java.lang.Long precedence) {
+    this.precedence = precedence;
     return this;
   }
 

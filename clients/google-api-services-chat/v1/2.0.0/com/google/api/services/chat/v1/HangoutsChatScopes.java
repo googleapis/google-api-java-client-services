@@ -116,6 +116,12 @@ public class HangoutsChatScopes {
   /** Create new conversations and spaces in Google Chat. */
   public static final String CHAT_SPACES_CREATE = "https://www.googleapis.com/auth/chat.spaces.create";
 
+  /** See, add, and remove pins in your Google Chat spaces. */
+  public static final String CHAT_SPACES_PINS = "https://www.googleapis.com/auth/chat.spaces.pins";
+
+  /** See pins in your Google Chat spaces. */
+  public static final String CHAT_SPACES_PINS_READONLY = "https://www.googleapis.com/auth/chat.spaces.pins.readonly";
+
   /** View chat and spaces in Google Chat. */
   public static final String CHAT_SPACES_READONLY = "https://www.googleapis.com/auth/chat.spaces.readonly";
 
@@ -178,6 +184,8 @@ public class HangoutsChatScopes {
     set.add(CHAT_MESSAGES_READONLY);
     set.add(CHAT_SPACES);
     set.add(CHAT_SPACES_CREATE);
+    set.add(CHAT_SPACES_PINS);
+    set.add(CHAT_SPACES_PINS_READONLY);
     set.add(CHAT_SPACES_READONLY);
     set.add(CHAT_USERS_AVAILABILITY);
     set.add(CHAT_USERS_AVAILABILITY_READONLY);

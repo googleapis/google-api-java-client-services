@@ -31,7 +31,7 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
 
   /**
    * A token that can be used to retrieve the next page. If this field is empty, there are no
-   * subsequent pages.
+   * subsequent pages. Only populated when `useAdminAccess` is set to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
 
   /**
    * The total number of spaces that match the query, across all pages. If the result is over 10,000
-   * spaces, this value is an estimate.
+   * spaces, this value is an estimate. Only populated when `useAdminAccess` is set to `true`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
 
   /**
    * A token that can be used to retrieve the next page. If this field is empty, there are no
-   * subsequent pages.
+   * subsequent pages. Only populated when `useAdminAccess` is set to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -78,7 +78,7 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
 
   /**
    * A token that can be used to retrieve the next page. If this field is empty, there are no
-   * subsequent pages.
+   * subsequent pages. Only populated when `useAdminAccess` is set to `true`.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public SearchSpacesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -126,7 +126,7 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
 
   /**
    * The total number of spaces that match the query, across all pages. If the result is over 10,000
-   * spaces, this value is an estimate.
+   * spaces, this value is an estimate. Only populated when `useAdminAccess` is set to `true`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -135,7 +135,7 @@ public final class SearchSpacesResponse extends com.google.api.client.json.Gener
 
   /**
    * The total number of spaces that match the query, across all pages. If the result is over 10,000
-   * spaces, this value is an estimate.
+   * spaces, this value is an estimate. Only populated when `useAdminAccess` is set to `true`.
    * @param totalSize totalSize or {@code null} for none
    */
   public SearchSpacesResponse setTotalSize(java.lang.Integer totalSize) {

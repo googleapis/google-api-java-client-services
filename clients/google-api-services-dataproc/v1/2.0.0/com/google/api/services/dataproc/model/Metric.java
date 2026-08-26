@@ -34,7 +34,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * (https://cloud.google.com/dataproc/docs/guides/dataproc-metrics#custom_metrics) to collect for
    * the metric course (for the SPARK metric source (any Spark metric
    * (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified).Provide
-   * metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use camelcase as
+   * metrics in the following format:METRIC_SOURCE:INSTANCE :GROUP:METRIC Use camelcase as
    * appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
    * spark:driver:DAGScheduler:job.allJobs
    * sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed
@@ -63,7 +63,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * (https://cloud.google.com/dataproc/docs/guides/dataproc-metrics#custom_metrics) to collect for
    * the metric course (for the SPARK metric source (any Spark metric
    * (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified).Provide
-   * metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use camelcase as
+   * metrics in the following format:METRIC_SOURCE:INSTANCE :GROUP:METRIC Use camelcase as
    * appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
    * spark:driver:DAGScheduler:job.allJobs
    * sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed
@@ -84,7 +84,7 @@ public final class Metric extends com.google.api.client.json.GenericJson {
    * (https://cloud.google.com/dataproc/docs/guides/dataproc-metrics#custom_metrics) to collect for
    * the metric course (for the SPARK metric source (any Spark metric
    * (https://spark.apache.org/docs/latest/monitoring.html#metrics) can be specified).Provide
-   * metrics in the following format: METRIC_SOURCE: INSTANCE:GROUP:METRIC Use camelcase as
+   * metrics in the following format:METRIC_SOURCE:INSTANCE :GROUP:METRIC Use camelcase as
    * appropriate.Examples: yarn:ResourceManager:QueueMetrics:AppsCompleted
    * spark:driver:DAGScheduler:job.allJobs
    * sparkHistoryServer:JVM:Memory:NonHeapMemoryUsage.committed

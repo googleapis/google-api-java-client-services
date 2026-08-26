@@ -46,7 +46,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}`
+   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually exclusive with
+   * `worker_pool_uri`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,6 +60,15 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * URI of Cloud Run worker pool this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`. Mutually exclusive
+   * with `service_uri`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerPoolUri;
 
   /**
    * Name of a Cloud Run revision.
@@ -96,7 +106,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}`
+   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually exclusive with
+   * `worker_pool_uri`.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceUri() {
@@ -105,7 +116,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}`
+   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually exclusive with
+   * `worker_pool_uri`.
    * @param serviceUri serviceUri or {@code null} for none
    */
   public CloudRunRevisionInfo setServiceUri(java.lang.String serviceUri) {
@@ -129,6 +141,27 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
    */
   public CloudRunRevisionInfo setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * URI of Cloud Run worker pool this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`. Mutually exclusive
+   * with `service_uri`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerPoolUri() {
+    return workerPoolUri;
+  }
+
+  /**
+   * URI of Cloud Run worker pool this revision belongs to. Format:
+   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`. Mutually exclusive
+   * with `service_uri`.
+   * @param workerPoolUri workerPoolUri or {@code null} for none
+   */
+  public CloudRunRevisionInfo setWorkerPoolUri(java.lang.String workerPoolUri) {
+    this.workerPoolUri = workerPoolUri;
     return this;
   }
 

@@ -32,7 +32,8 @@ public final class CloudRunRevisionEndpoint extends com.google.api.client.json.G
 
   /**
    * Output only. The URI of the Cloud Run service that the revision belongs to. The format is:
-   * projects/{project}/locations/{location}/services/{service}
+   * projects/{project}/locations/{location}/services/{service}. Mutually exclusive with
+   * worker_pool_uri.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +49,18 @@ public final class CloudRunRevisionEndpoint extends com.google.api.client.json.G
   private java.lang.String uri;
 
   /**
+   * Output only. The URI of the worker pool that the revision belongs to. The format is:
+   * projects/{project}/locations/{location}/workerPools/{workerPool}. Mutually exclusive with
+   * service_uri.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerPoolUri;
+
+  /**
    * Output only. The URI of the Cloud Run service that the revision belongs to. The format is:
-   * projects/{project}/locations/{location}/services/{service}
+   * projects/{project}/locations/{location}/services/{service}. Mutually exclusive with
+   * worker_pool_uri.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceUri() {
@@ -58,7 +69,8 @@ public final class CloudRunRevisionEndpoint extends com.google.api.client.json.G
 
   /**
    * Output only. The URI of the Cloud Run service that the revision belongs to. The format is:
-   * projects/{project}/locations/{location}/services/{service}
+   * projects/{project}/locations/{location}/services/{service}. Mutually exclusive with
+   * worker_pool_uri.
    * @param serviceUri serviceUri or {@code null} for none
    */
   public CloudRunRevisionEndpoint setServiceUri(java.lang.String serviceUri) {
@@ -84,6 +96,27 @@ public final class CloudRunRevisionEndpoint extends com.google.api.client.json.G
    */
   public CloudRunRevisionEndpoint setUri(java.lang.String uri) {
     this.uri = uri;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the worker pool that the revision belongs to. The format is:
+   * projects/{project}/locations/{location}/workerPools/{workerPool}. Mutually exclusive with
+   * service_uri.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerPoolUri() {
+    return workerPoolUri;
+  }
+
+  /**
+   * Output only. The URI of the worker pool that the revision belongs to. The format is:
+   * projects/{project}/locations/{location}/workerPools/{workerPool}. Mutually exclusive with
+   * service_uri.
+   * @param workerPoolUri workerPoolUri or {@code null} for none
+   */
+  public CloudRunRevisionEndpoint setWorkerPoolUri(java.lang.String workerPoolUri) {
+    this.workerPoolUri = workerPoolUri;
     return this;
   }
 

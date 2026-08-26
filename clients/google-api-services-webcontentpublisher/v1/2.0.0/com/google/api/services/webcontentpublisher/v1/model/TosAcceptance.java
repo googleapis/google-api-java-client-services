@@ -38,20 +38,6 @@ public final class TosAcceptance extends com.google.api.client.json.GenericJson 
   private java.lang.Boolean emailOptIn;
 
   /**
-   * Optional. The name of the person who accepted the TOS.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String signer;
-
-  /**
-   * Optional. The job title or role of the signer.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String signerTitle;
-
-  /**
    * Required. Whether the user has accepted the Terms of Service.
    * The value may be {@code null}.
    */
@@ -72,40 +58,6 @@ public final class TosAcceptance extends com.google.api.client.json.GenericJson 
    */
   public TosAcceptance setEmailOptIn(java.lang.Boolean emailOptIn) {
     this.emailOptIn = emailOptIn;
-    return this;
-  }
-
-  /**
-   * Optional. The name of the person who accepted the TOS.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSigner() {
-    return signer;
-  }
-
-  /**
-   * Optional. The name of the person who accepted the TOS.
-   * @param signer signer or {@code null} for none
-   */
-  public TosAcceptance setSigner(java.lang.String signer) {
-    this.signer = signer;
-    return this;
-  }
-
-  /**
-   * Optional. The job title or role of the signer.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getSignerTitle() {
-    return signerTitle;
-  }
-
-  /**
-   * Optional. The job title or role of the signer.
-   * @param signerTitle signerTitle or {@code null} for none
-   */
-  public TosAcceptance setSignerTitle(java.lang.String signerTitle) {
-    this.signerTitle = signerTitle;
     return this;
   }
 

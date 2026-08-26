@@ -32,8 +32,8 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class WipeAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether the factory-reset protection data is preserved on the device. This setting doesn’t
-   * apply to work profiles.
+   * Whether the factory-reset protection data is preserved on the device. This setting applies to
+   * fully managed devices and work profiles on company-owned devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class WipeAction extends com.google.api.client.json.GenericJson {
   private java.lang.Integer wipeAfterDays;
 
   /**
-   * Whether the factory-reset protection data is preserved on the device. This setting doesn’t
-   * apply to work profiles.
+   * Whether the factory-reset protection data is preserved on the device. This setting applies to
+   * fully managed devices and work profiles on company-owned devices.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPreserveFrp() {
@@ -57,8 +57,8 @@ public final class WipeAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether the factory-reset protection data is preserved on the device. This setting doesn’t
-   * apply to work profiles.
+   * Whether the factory-reset protection data is preserved on the device. This setting applies to
+   * fully managed devices and work profiles on company-owned devices.
    * @param preserveFrp preserveFrp or {@code null} for none
    */
   public WipeAction setPreserveFrp(java.lang.Boolean preserveFrp) {

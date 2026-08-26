@@ -3184,15 +3184,17 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * The maximum number of spaces to return. The service may return fewer than this value. If
-       * unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value
-       * more than 1000, it's automatically changed to 1000.
+       * unspecified, at most 100 spaces are returned. The maximum value is 1000 when
+       * `useAdminAccess` is set to `true`. Otherwise, the maximum value is 100. If you use a value
+       * more than the maximum value, it's automatically changed to the maximum value.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** The maximum number of spaces to return. The service may return fewer than this value. If
-     unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value more
-     than 1000, it's automatically changed to 1000.
+     unspecified, at most 100 spaces are returned. The maximum value is 1000 when `useAdminAccess` is
+     set to `true`. Otherwise, the maximum value is 100. If you use a value more than the maximum value,
+     it's automatically changed to the maximum value.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -3200,8 +3202,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
 
       /**
        * The maximum number of spaces to return. The service may return fewer than this value. If
-       * unspecified, at most 100 spaces are returned. The maximum value is 1000. If you use a value
-       * more than 1000, it's automatically changed to 1000.
+       * unspecified, at most 100 spaces are returned. The maximum value is 1000 when
+       * `useAdminAccess` is set to `true`. Otherwise, the maximum value is 100. If you use a value
+       * more than the maximum value, it's automatically changed to the maximum value.
        */
       public Search setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -3276,7 +3279,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * are valid when `useAdminAccess` is set to `false`: ``` display_name:"Hello World" AND
        * space_type = "SPACE" (display_name:"Hello" OR display_name:"Fun") AND space_type = "SPACE"
        * (external_user_allowed = "true" AND space_type = "SPACE") // Returns an empty response.
-       * (external_user_allowed = "true" AND display_name:"Hello" AND space_type = "SPACE") ```
+       * (external_user_allowed = "true" AND display_name:"Hello" AND space_type = "SPACE") ``` The
+       * maximum query length is 1,000 characters. Invalid queries are rejected by the server with
+       * an `INVALID_ARGUMENT` error.
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
@@ -3317,7 +3322,8 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
      ``` display_name:"Hello World" AND space_type = "SPACE" (display_name:"Hello" OR
      display_name:"Fun") AND space_type = "SPACE" (external_user_allowed = "true" AND space_type =
      "SPACE") // Returns an empty response. (external_user_allowed = "true" AND display_name:"Hello" AND
-     space_type = "SPACE") ```
+     space_type = "SPACE") ``` The maximum query length is 1,000 characters. Invalid queries are
+     rejected by the server with an `INVALID_ARGUMENT` error.
        */
       public java.lang.String getQuery() {
         return query;
@@ -3363,7 +3369,9 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
        * are valid when `useAdminAccess` is set to `false`: ``` display_name:"Hello World" AND
        * space_type = "SPACE" (display_name:"Hello" OR display_name:"Fun") AND space_type = "SPACE"
        * (external_user_allowed = "true" AND space_type = "SPACE") // Returns an empty response.
-       * (external_user_allowed = "true" AND display_name:"Hello" AND space_type = "SPACE") ```
+       * (external_user_allowed = "true" AND display_name:"Hello" AND space_type = "SPACE") ``` The
+       * maximum query length is 1,000 characters. Invalid queries are rejected by the server with
+       * an `INVALID_ARGUMENT` error.
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;
@@ -4913,6 +4921,539 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the MessagePins collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code HangoutsChat chat = new HangoutsChat(...);}
+     *   {@code HangoutsChat.MessagePins.List request = chat.messagePins().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public MessagePins messagePins() {
+      return new MessagePins();
+    }
+
+    /**
+     * The "messagePins" collection of methods.
+     */
+    public class MessagePins {
+
+      /**
+       * Creates a message pin. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.spaces.pins` -
+       * `https://www.googleapis.com/auth/chat.spaces`
+       *
+       * Create a request for the method "messagePins.create".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent space in which to create the message pin. Format: spaces/{space}
+       * @param content the {@link com.google.api.services.chat.v1.model.MessagePin}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.chat.v1.model.MessagePin content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends HangoutsChatRequest<com.google.api.services.chat.v1.model.MessagePin> {
+
+        private static final String REST_PATH = "v1/{+parent}/messagePins";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+        /**
+         * Creates a message pin. Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.spaces.pins` -
+         * `https://www.googleapis.com/auth/chat.spaces`
+         *
+         * Create a request for the method "messagePins.create".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent space in which to create the message pin. Format: spaces/{space}
+         * @param content the {@link com.google.api.services.chat.v1.model.MessagePin}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.chat.v1.model.MessagePin content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.MessagePin.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent space in which to create the message pin. Format: spaces/{space}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent space in which to create the message pin. Format: spaces/{space}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent space in which to create the message pin. Format: spaces/{space}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a message pin. Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.spaces.pins` -
+       * `https://www.googleapis.com/auth/chat.spaces`
+       *
+       * Create a request for the method "messagePins.delete".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the message pin to remove. Format:
+       *        spaces/{space}/messagePins/{message_pin}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends HangoutsChatRequest<com.google.api.services.chat.v1.model.Empty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+/messagePins/[^/]+$");
+
+        /**
+         * Deletes a message pin. Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.spaces.pins` -
+         * `https://www.googleapis.com/auth/chat.spaces`
+         *
+         * Create a request for the method "messagePins.delete".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the message pin to remove. Format:
+       *        spaces/{space}/messagePins/{message_pin}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(HangoutsChat.this, "DELETE", REST_PATH, null, com.google.api.services.chat.v1.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/messagePins/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the message pin to remove. Format:
+         * spaces/{space}/messagePins/{message_pin}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the message pin to remove. Format:
+       spaces/{space}/messagePins/{message_pin}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the message pin to remove. Format:
+         * spaces/{space}/messagePins/{message_pin}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/messagePins/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists message pins in a space. Users can pin important messages in spaces for easy access. For
+       * more information, see [Pin or unpin a conversation in Google
+       * Chat](https://support.google.com/chat/answer/15622437). Requires [user
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+       * with one of the following [authorization
+       * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+       * `https://www.googleapis.com/auth/chat.spaces.pins.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces.pins` -
+       * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+       * `https://www.googleapis.com/auth/chat.spaces`
+       *
+       * Create a request for the method "messagePins.list".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent space which owns the collection of pinned items Format: `spaces/{space}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ListMessagePinsResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/messagePins";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+$");
+
+        /**
+         * Lists message pins in a space. Users can pin important messages in spaces for easy access. For
+         * more information, see [Pin or unpin a conversation in Google
+         * Chat](https://support.google.com/chat/answer/15622437). Requires [user
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+         * with one of the following [authorization
+         * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
+         * `https://www.googleapis.com/auth/chat.spaces.pins.readonly` -
+         * `https://www.googleapis.com/auth/chat.spaces.pins` -
+         * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+         * `https://www.googleapis.com/auth/chat.spaces`
+         *
+         * Create a request for the method "messagePins.list".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent space which owns the collection of pinned items Format: `spaces/{space}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(HangoutsChat.this, "GET", REST_PATH, null, com.google.api.services.chat.v1.model.ListMessagePinsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent space which owns the collection of pinned items Format:
+         * `spaces/{space}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent space which owns the collection of pinned items Format: `spaces/{space}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent space which owns the collection of pinned items Format:
+         * `spaces/{space}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^spaces/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of message pins returned. The service might return fewer
+         * messages than this value. The maximum value is 100. If you use a value more than 100,
+         * it's automatically changed to 100. If unspecified, at most 100 message pins will be
+         * returned. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of message pins returned. The service might return fewer messages than
+       this value. The maximum value is 100. If you use a value more than 100, it's automatically changed
+       to 100. If unspecified, at most 100 message pins will be returned. Negative values return an
+       `INVALID_ARGUMENT` error.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of message pins returned. The service might return fewer
+         * messages than this value. The maximum value is 100. If you use a value more than 100,
+         * it's automatically changed to 100. If unspecified, at most 100 message pins will be
+         * returned. Negative values return an `INVALID_ARGUMENT` error.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token received from a previous list message pins call. Provide this
+         * parameter to retrieve the subsequent page. When paginating, all other parameters provided
+         * should match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token received from a previous list message pins call. Provide this parameter to
+       retrieve the subsequent page. When paginating, all other parameters provided should match the call
+       that provided the page token. Passing different values to the other parameters might lead to
+       unexpected results.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token received from a previous list message pins call. Provide this
+         * parameter to retrieve the subsequent page. When paginating, all other parameters provided
+         * should match the call that provided the page token. Passing different values to the other
+         * parameters might lead to unexpected results.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
         }
       }
 

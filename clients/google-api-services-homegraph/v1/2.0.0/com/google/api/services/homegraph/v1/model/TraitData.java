@@ -37,14 +37,12 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
   private String commitTime;
 
   /**
-   * Optional in write requests (e.g. ReportStateAndNotification). If set, represents the provider
-   * version timestamp of the existing trait in the database. The server will perform optimistic
-   * locking validation if this field is present and the experiment is enabled. It will not be
-   * persisted to the database.
+   * The custom timestamp supplied by the provider during a ReportStateAndNotification update (if
+   * provided). This field is returned as part of the `QueryResponse`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private String providerVersionTime;
+  private String providerUpdateTime;
 
   /**
    * The Provider Home API trait payload.
@@ -71,25 +69,21 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional in write requests (e.g. ReportStateAndNotification). If set, represents the provider
-   * version timestamp of the existing trait in the database. The server will perform optimistic
-   * locking validation if this field is present and the experiment is enabled. It will not be
-   * persisted to the database.
+   * The custom timestamp supplied by the provider during a ReportStateAndNotification update (if
+   * provided). This field is returned as part of the `QueryResponse`.
    * @return value or {@code null} for none
    */
-  public String getProviderVersionTime() {
-    return providerVersionTime;
+  public String getProviderUpdateTime() {
+    return providerUpdateTime;
   }
 
   /**
-   * Optional in write requests (e.g. ReportStateAndNotification). If set, represents the provider
-   * version timestamp of the existing trait in the database. The server will perform optimistic
-   * locking validation if this field is present and the experiment is enabled. It will not be
-   * persisted to the database.
-   * @param providerVersionTime providerVersionTime or {@code null} for none
+   * The custom timestamp supplied by the provider during a ReportStateAndNotification update (if
+   * provided). This field is returned as part of the `QueryResponse`.
+   * @param providerUpdateTime providerUpdateTime or {@code null} for none
    */
-  public TraitData setProviderVersionTime(String providerVersionTime) {
-    this.providerVersionTime = providerVersionTime;
+  public TraitData setProviderUpdateTime(String providerUpdateTime) {
+    this.providerUpdateTime = providerUpdateTime;
     return this;
   }
 

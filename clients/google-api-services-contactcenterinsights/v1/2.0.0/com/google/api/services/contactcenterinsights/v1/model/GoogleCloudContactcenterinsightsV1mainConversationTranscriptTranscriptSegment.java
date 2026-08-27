@@ -70,6 +70,13 @@ public final class GoogleCloudContactcenterinsightsV1mainConversationTranscriptT
   private String messageTime;
 
   /**
+   * Optional. The structured parts that make up this transcript segment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudContactcenterinsightsV1mainConversationTranscriptTranscriptSegmentTranscriptPart> parts;
+
+  /**
    * The participant of this segment.
    * The value may be {@code null}.
    */
@@ -194,6 +201,23 @@ public final class GoogleCloudContactcenterinsightsV1mainConversationTranscriptT
    */
   public GoogleCloudContactcenterinsightsV1mainConversationTranscriptTranscriptSegment setMessageTime(String messageTime) {
     this.messageTime = messageTime;
+    return this;
+  }
+
+  /**
+   * Optional. The structured parts that make up this transcript segment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudContactcenterinsightsV1mainConversationTranscriptTranscriptSegmentTranscriptPart> getParts() {
+    return parts;
+  }
+
+  /**
+   * Optional. The structured parts that make up this transcript segment.
+   * @param parts parts or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainConversationTranscriptTranscriptSegment setParts(java.util.List<GoogleCloudContactcenterinsightsV1mainConversationTranscriptTranscriptSegmentTranscriptPart> parts) {
+    this.parts = parts;
     return this;
   }
 

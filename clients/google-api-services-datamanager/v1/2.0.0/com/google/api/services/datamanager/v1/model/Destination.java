@@ -57,8 +57,10 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   private ProductAccount operatingAccount;
 
   /**
-   * Required. The object within the product account to ingest into. For example, a Google Ads
-   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID.
+   * Optional. The object within the product account to ingest into. For example, a Google Ads
+   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID. This field
+   * is optional for Google Ad Manager event ingestion and User ingestion. Required for all other
+   * use cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -136,8 +138,10 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The object within the product account to ingest into. For example, a Google Ads
-   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID.
+   * Optional. The object within the product account to ingest into. For example, a Google Ads
+   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID. This field
+   * is optional for Google Ad Manager event ingestion and User ingestion. Required for all other
+   * use cases.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductDestinationId() {
@@ -145,8 +149,10 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The object within the product account to ingest into. For example, a Google Ads
-   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID.
+   * Optional. The object within the product account to ingest into. For example, a Google Ads
+   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID. This field
+   * is optional for Google Ad Manager event ingestion and User ingestion. Required for all other
+   * use cases.
    * @param productDestinationId productDestinationId or {@code null} for none
    */
   public Destination setProductDestinationId(java.lang.String productDestinationId) {

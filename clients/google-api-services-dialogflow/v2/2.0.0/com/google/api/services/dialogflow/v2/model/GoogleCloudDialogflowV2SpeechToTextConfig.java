@@ -45,6 +45,12 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig geminiAsrConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
@@ -70,6 +76,12 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String speechModelVariant;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useGeminiAsr;
 
   /**
    * The value may be {@code null}.
@@ -104,6 +116,21 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setEnableWordInfo(java.lang.Boolean enableWordInfo) {
     this.enableWordInfo = enableWordInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig getGeminiAsrConfig() {
+    return geminiAsrConfig;
+  }
+
+  /**
+   * @param geminiAsrConfig geminiAsrConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SpeechToTextConfig setGeminiAsrConfig(GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig geminiAsrConfig) {
+    this.geminiAsrConfig = geminiAsrConfig;
     return this;
   }
 
@@ -179,6 +206,21 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setSpeechModelVariant(java.lang.String speechModelVariant) {
     this.speechModelVariant = speechModelVariant;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseGeminiAsr() {
+    return useGeminiAsr;
+  }
+
+  /**
+   * @param useGeminiAsr useGeminiAsr or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SpeechToTextConfig setUseGeminiAsr(java.lang.Boolean useGeminiAsr) {
+    this.useGeminiAsr = useGeminiAsr;
     return this;
   }
 

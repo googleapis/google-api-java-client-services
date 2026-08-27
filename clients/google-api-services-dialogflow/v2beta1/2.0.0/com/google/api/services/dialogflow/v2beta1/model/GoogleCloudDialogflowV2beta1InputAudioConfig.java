@@ -75,6 +75,12 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1SpeechToTextConfigGeminiAsrConfig geminiAsrConfig;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String languageCode;
 
   /**
@@ -124,6 +130,12 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDialogflowV2beta1SpeechContext> speechContexts;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useGeminiAsr;
 
   /**
    * @return value or {@code null} for none
@@ -227,6 +239,21 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setEnableWordInfo(java.lang.Boolean enableWordInfo) {
     this.enableWordInfo = enableWordInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SpeechToTextConfigGeminiAsrConfig getGeminiAsrConfig() {
+    return geminiAsrConfig;
+  }
+
+  /**
+   * @param geminiAsrConfig geminiAsrConfig or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setGeminiAsrConfig(GoogleCloudDialogflowV2beta1SpeechToTextConfigGeminiAsrConfig geminiAsrConfig) {
+    this.geminiAsrConfig = geminiAsrConfig;
     return this;
   }
 
@@ -362,6 +389,21 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setSpeechContexts(java.util.List<GoogleCloudDialogflowV2beta1SpeechContext> speechContexts) {
     this.speechContexts = speechContexts;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseGeminiAsr() {
+    return useGeminiAsr;
+  }
+
+  /**
+   * @param useGeminiAsr useGeminiAsr or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setUseGeminiAsr(java.lang.Boolean useGeminiAsr) {
+    this.useGeminiAsr = useGeminiAsr;
     return this;
   }
 

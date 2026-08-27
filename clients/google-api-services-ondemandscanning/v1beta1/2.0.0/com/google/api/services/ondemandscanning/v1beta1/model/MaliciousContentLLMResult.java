@@ -38,6 +38,13 @@ public final class MaliciousContentLLMResult extends com.google.api.client.json.
   private java.lang.String maxSeverity;
 
   /**
+   * The base name of the model that performed the scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelId;
+
+  /**
    * Status of the scan.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class MaliciousContentLLMResult extends com.google.api.client.json.
    */
   public MaliciousContentLLMResult setMaxSeverity(java.lang.String maxSeverity) {
     this.maxSeverity = maxSeverity;
+    return this;
+  }
+
+  /**
+   * The base name of the model that performed the scan.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelId() {
+    return modelId;
+  }
+
+  /**
+   * The base name of the model that performed the scan.
+   * @param modelId modelId or {@code null} for none
+   */
+  public MaliciousContentLLMResult setModelId(java.lang.String modelId) {
+    this.modelId = modelId;
     return this;
   }
 

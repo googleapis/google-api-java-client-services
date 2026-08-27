@@ -332,7 +332,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. Server-defined URL for this resource with the resource id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1106,7 +1106,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. Server-defined URL for this resource with the resource id.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelfLinkWithId() {
@@ -1114,7 +1114,7 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Server-defined URL for this resource with the resource id.
+   * Output only. Server-defined URL for this resource with the resource id.
    * @param selfLinkWithId selfLinkWithId or {@code null} for none
    */
   public Interconnect setSelfLinkWithId(java.lang.String selfLinkWithId) {

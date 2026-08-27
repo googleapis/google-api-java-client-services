@@ -94,7 +94,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata;
 
   /**
-   * Output only. [Output Only] Metadata for GetHealth operations.
+   * Output only. Metadata for GetHealth operations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -395,7 +395,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Metadata for GetHealth operations.
+   * Output only. Metadata for GetHealth operations.
    * @return value or {@code null} for none
    */
   public GetHealthOperationMetadata getGetHealthOperationMetadata() {
@@ -403,7 +403,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output Only] Metadata for GetHealth operations.
+   * Output only. Metadata for GetHealth operations.
    * @param getHealthOperationMetadata getHealthOperationMetadata or {@code null} for none
    */
   public Operation setGetHealthOperationMetadata(GetHealthOperationMetadata getHealthOperationMetadata) {

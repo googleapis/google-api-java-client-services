@@ -70,7 +70,7 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   private java.lang.String creationTimestamp;
 
   /**
-   * Output only. [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
+   * Output only. [Output Only] Deletion timestamp of snapshot inRFC3339 text format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -447,7 +447,7 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
+   * Output only. [Output Only] Deletion timestamp of snapshot inRFC3339 text format.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeletionTimestamp() {
@@ -455,7 +455,7 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   }
 
   /**
-   * Output only. [Output Only] Purge timestamp of recoverable snapshot inRFC3339 text format.
+   * Output only. [Output Only] Deletion timestamp of snapshot inRFC3339 text format.
    * @param deletionTimestamp deletionTimestamp or {@code null} for none
    */
   public RecoverableSnapshotOriginalSnapshot setDeletionTimestamp(java.lang.String deletionTimestamp) {

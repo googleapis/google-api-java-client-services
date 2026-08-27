@@ -30,6 +30,15 @@ package com.google.api.services.compute.model;
 public final class FirewallPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If specified, it defines what should happen in case of backend issues for rules with
+   * apply_security_profile_group action. Allowed values: ALLOW, DENY. If not specified, the default
+   * behavior is ALLOW.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String applySecurityProfileFallbackAction;
+
+  /**
    * A list of associations that belong to this firewall policy.
    * The value may be {@code null}.
    */
@@ -214,6 +223,27 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String vpcNetworkScope;
+
+  /**
+   * Optional. If specified, it defines what should happen in case of backend issues for rules with
+   * apply_security_profile_group action. Allowed values: ALLOW, DENY. If not specified, the default
+   * behavior is ALLOW.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplySecurityProfileFallbackAction() {
+    return applySecurityProfileFallbackAction;
+  }
+
+  /**
+   * Optional. If specified, it defines what should happen in case of backend issues for rules with
+   * apply_security_profile_group action. Allowed values: ALLOW, DENY. If not specified, the default
+   * behavior is ALLOW.
+   * @param applySecurityProfileFallbackAction applySecurityProfileFallbackAction or {@code null} for none
+   */
+  public FirewallPolicy setApplySecurityProfileFallbackAction(java.lang.String applySecurityProfileFallbackAction) {
+    this.applySecurityProfileFallbackAction = applySecurityProfileFallbackAction;
+    return this;
+  }
 
   /**
    * A list of associations that belong to this firewall policy.

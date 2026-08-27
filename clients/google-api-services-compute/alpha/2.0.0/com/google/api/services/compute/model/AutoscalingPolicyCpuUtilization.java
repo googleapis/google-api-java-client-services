@@ -42,6 +42,48 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   private java.lang.String predictiveMethod;
 
   /**
+   * Defines how CPU utilization is aggregated in a group.
+   *
+   * Operates on the results from the `time_aggregation`, reducing the per-instance values down to a
+   * single aggregate value across the entire instance group if samples are available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingPolicySignalAggregation signalAggregation;
+
+  /**
+   * Defines how CPU utilization is aggregated over time.
+   *
+   * Operates on all CPU utilization samples produced by each instance over the
+   * `time_aggregation.time_window_sec`, reducing them to exactly one value per instance if samples
+   * are available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoscalingPolicyTimeAggregation timeAggregation;
+
+  /**
+   * Defines a target range for CPU utilization. The values of `min_utilization` and
+   * `max_utilization` must be in the range (0.0, 1.0].
+   *
+   * If the average CPU is between `min_utilization` and `max_utilization`, the autoscaler maintains
+   * the current size unless another configured metric requires scaling out.
+   *
+   * If the average CPU is above `max_utilization`, the autoscaler scales out until the average
+   * utilization reaches the `utilization_range.utilization_target`.
+   *
+   * If the average CPU is below `min_utilization`, the autoscaler considers scaling in until the
+   * average utilization reaches the `utilization_range.utilization_target`. Scaling in can occur
+   * only if all other configured scaling metrics also suggest scaling in.
+   *
+   * At most one of CpuUtilization.utilization_target or CpuUtilization.utilization_range can be
+   * set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UtilizationRange utilizationRange;
+
+  /**
    * The target CPU utilization that the autoscaler maintains. Must be a float value in the range
    * (0, 1]. If not specified, the default is0.6.
    *
@@ -81,6 +123,99 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
    */
   public AutoscalingPolicyCpuUtilization setPredictiveMethod(java.lang.String predictiveMethod) {
     this.predictiveMethod = predictiveMethod;
+    return this;
+  }
+
+  /**
+   * Defines how CPU utilization is aggregated in a group.
+   *
+   * Operates on the results from the `time_aggregation`, reducing the per-instance values down to a
+   * single aggregate value across the entire instance group if samples are available.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingPolicySignalAggregation getSignalAggregation() {
+    return signalAggregation;
+  }
+
+  /**
+   * Defines how CPU utilization is aggregated in a group.
+   *
+   * Operates on the results from the `time_aggregation`, reducing the per-instance values down to a
+   * single aggregate value across the entire instance group if samples are available.
+   * @param signalAggregation signalAggregation or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setSignalAggregation(AutoscalingPolicySignalAggregation signalAggregation) {
+    this.signalAggregation = signalAggregation;
+    return this;
+  }
+
+  /**
+   * Defines how CPU utilization is aggregated over time.
+   *
+   * Operates on all CPU utilization samples produced by each instance over the
+   * `time_aggregation.time_window_sec`, reducing them to exactly one value per instance if samples
+   * are available.
+   * @return value or {@code null} for none
+   */
+  public AutoscalingPolicyTimeAggregation getTimeAggregation() {
+    return timeAggregation;
+  }
+
+  /**
+   * Defines how CPU utilization is aggregated over time.
+   *
+   * Operates on all CPU utilization samples produced by each instance over the
+   * `time_aggregation.time_window_sec`, reducing them to exactly one value per instance if samples
+   * are available.
+   * @param timeAggregation timeAggregation or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setTimeAggregation(AutoscalingPolicyTimeAggregation timeAggregation) {
+    this.timeAggregation = timeAggregation;
+    return this;
+  }
+
+  /**
+   * Defines a target range for CPU utilization. The values of `min_utilization` and
+   * `max_utilization` must be in the range (0.0, 1.0].
+   *
+   * If the average CPU is between `min_utilization` and `max_utilization`, the autoscaler maintains
+   * the current size unless another configured metric requires scaling out.
+   *
+   * If the average CPU is above `max_utilization`, the autoscaler scales out until the average
+   * utilization reaches the `utilization_range.utilization_target`.
+   *
+   * If the average CPU is below `min_utilization`, the autoscaler considers scaling in until the
+   * average utilization reaches the `utilization_range.utilization_target`. Scaling in can occur
+   * only if all other configured scaling metrics also suggest scaling in.
+   *
+   * At most one of CpuUtilization.utilization_target or CpuUtilization.utilization_range can be
+   * set.
+   * @return value or {@code null} for none
+   */
+  public UtilizationRange getUtilizationRange() {
+    return utilizationRange;
+  }
+
+  /**
+   * Defines a target range for CPU utilization. The values of `min_utilization` and
+   * `max_utilization` must be in the range (0.0, 1.0].
+   *
+   * If the average CPU is between `min_utilization` and `max_utilization`, the autoscaler maintains
+   * the current size unless another configured metric requires scaling out.
+   *
+   * If the average CPU is above `max_utilization`, the autoscaler scales out until the average
+   * utilization reaches the `utilization_range.utilization_target`.
+   *
+   * If the average CPU is below `min_utilization`, the autoscaler considers scaling in until the
+   * average utilization reaches the `utilization_range.utilization_target`. Scaling in can occur
+   * only if all other configured scaling metrics also suggest scaling in.
+   *
+   * At most one of CpuUtilization.utilization_target or CpuUtilization.utilization_range can be
+   * set.
+   * @param utilizationRange utilizationRange or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setUtilizationRange(UtilizationRange utilizationRange) {
+    this.utilizationRange = utilizationRange;
     return this;
   }
 

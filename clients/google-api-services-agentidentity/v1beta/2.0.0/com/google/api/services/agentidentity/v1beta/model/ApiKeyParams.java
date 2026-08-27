@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1beta.model;
 
 /**
- * Message describing ApiKeyParams object.
+ * Configuration for API key authentication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.agentidentity.v1beta.model;
 public final class ApiKeyParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Input only. The API key for this auth_provider.
+   * Optional. Input only. The API key for this auth provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiKey;
 
   /**
-   * Optional. Input only. The API key for this auth_provider.
+   * Optional. Input only. The API key for this auth provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKey() {
@@ -45,7 +45,7 @@ public final class ApiKeyParams extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The API key for this auth_provider.
+   * Optional. Input only. The API key for this auth provider.
    * @param apiKey apiKey or {@code null} for none
    */
   public ApiKeyParams setApiKey(java.lang.String apiKey) {

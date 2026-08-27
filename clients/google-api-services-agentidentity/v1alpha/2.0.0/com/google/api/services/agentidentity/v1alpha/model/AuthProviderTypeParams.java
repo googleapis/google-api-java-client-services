@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1alpha.model;
 
 /**
- * AuthProvider type specific parameters. Required when creating an auth_provider.
+ * Required. Parameters specific to the auth provider type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,35 +30,35 @@ package com.google.api.services.agentidentity.v1alpha.model;
 public final class AuthProviderTypeParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * ApiKey AuthProvider type parameters.
+   * Parameters for API key authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ApiKeyParams apiKey;
 
   /**
-   * GeminiEnterprise auth_provider type parameters.
+   * Parameters for Gemini Enterprise authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GeminiEnterpriseAuthProviderParams geAuthProvider;
 
   /**
-   * ThreeLeggedOAuth AuthProvider type parameters.
+   * Parameters for 3-legged OAuth (3LO) authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ThreeLeggedOAuth threeLeggedOauth;
 
   /**
-   * TwoLeggedOAuth AuthProvider type parameters.
+   * Parameters for 2-legged OAuth (2LO) authentication.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TwoLeggedOAuth twoLeggedOauth;
 
   /**
-   * ApiKey AuthProvider type parameters.
+   * Parameters for API key authentication.
    * @return value or {@code null} for none
    */
   public ApiKeyParams getApiKey() {
@@ -66,7 +66,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * ApiKey AuthProvider type parameters.
+   * Parameters for API key authentication.
    * @param apiKey apiKey or {@code null} for none
    */
   public AuthProviderTypeParams setApiKey(ApiKeyParams apiKey) {
@@ -75,7 +75,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * GeminiEnterprise auth_provider type parameters.
+   * Parameters for Gemini Enterprise authentication.
    * @return value or {@code null} for none
    */
   public GeminiEnterpriseAuthProviderParams getGeAuthProvider() {
@@ -83,7 +83,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * GeminiEnterprise auth_provider type parameters.
+   * Parameters for Gemini Enterprise authentication.
    * @param geAuthProvider geAuthProvider or {@code null} for none
    */
   public AuthProviderTypeParams setGeAuthProvider(GeminiEnterpriseAuthProviderParams geAuthProvider) {
@@ -92,7 +92,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * ThreeLeggedOAuth AuthProvider type parameters.
+   * Parameters for 3-legged OAuth (3LO) authentication.
    * @return value or {@code null} for none
    */
   public ThreeLeggedOAuth getThreeLeggedOauth() {
@@ -100,7 +100,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * ThreeLeggedOAuth AuthProvider type parameters.
+   * Parameters for 3-legged OAuth (3LO) authentication.
    * @param threeLeggedOauth threeLeggedOauth or {@code null} for none
    */
   public AuthProviderTypeParams setThreeLeggedOauth(ThreeLeggedOAuth threeLeggedOauth) {
@@ -109,7 +109,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * TwoLeggedOAuth AuthProvider type parameters.
+   * Parameters for 2-legged OAuth (2LO) authentication.
    * @return value or {@code null} for none
    */
   public TwoLeggedOAuth getTwoLeggedOauth() {
@@ -117,7 +117,7 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   }
 
   /**
-   * TwoLeggedOAuth AuthProvider type parameters.
+   * Parameters for 2-legged OAuth (2LO) authentication.
    * @param twoLeggedOauth twoLeggedOauth or {@code null} for none
    */
   public AuthProviderTypeParams setTwoLeggedOauth(TwoLeggedOAuth twoLeggedOauth) {

@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1.model;
 
 /**
- * Message describing AccessSummary object
+ * Represents an access summary.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,36 +30,36 @@ package com.google.api.services.agentidentity.v1.model;
 public final class AccessSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The auth_provider that this access summary is associated with.
+   * Output only. The auth provider that this access summary is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authProvider;
 
   /**
-   * Output only. The type of the connector that was used to create this access summary.
+   * Output only. The auth provider type used to create this access summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String authProviderType;
 
   /**
-   * Output only. The first time this user has interacted with this workload. Rounded to the
-   * previous hour.
+   * Output only. The first time this user interacted with this workload, rounded to the previous
+   * hour.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String firstAccessTime;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The most recent time this user has interacted with this workload. Rounded to the
+   * Output only. The most recent time this user interacted with this workload, rounded to the
    * previous hour.
    * The value may be {@code null}.
    */
@@ -67,7 +67,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   private String lastAccessTime;
 
   /**
-   * Output only. Identifier. Name of the AccessSummary
+   * Output only. Identifier. The resource name of the access summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,14 +89,14 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Output only. The url of the authentication server that was accessed.
+   * Output only. The URL of the authentication server that was accessed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tokenUrl;
 
   /**
-   * Output only. The user_id provided by the workload application for this user. Not verified by
+   * Output only. The user ID provided by the workload application for this user. Not verified by
    * Google.
    * The value may be {@code null}.
    */
@@ -105,14 +105,14 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The identity bound to the workload that this user interacted with to produce this
-   * AccessSummary. Will typically be an agentic spiffe id
+   * access summary. Typically an agentic SPIFFE ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadId;
 
   /**
-   * Output only. The auth_provider that this access summary is associated with.
+   * Output only. The auth provider that this access summary is associated with.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthProvider() {
@@ -120,7 +120,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The auth_provider that this access summary is associated with.
+   * Output only. The auth provider that this access summary is associated with.
    * @param authProvider authProvider or {@code null} for none
    */
   public AccessSummary setAuthProvider(java.lang.String authProvider) {
@@ -129,7 +129,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The type of the connector that was used to create this access summary.
+   * Output only. The auth provider type used to create this access summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthProviderType() {
@@ -137,7 +137,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The type of the connector that was used to create this access summary.
+   * Output only. The auth provider type used to create this access summary.
    * @param authProviderType authProviderType or {@code null} for none
    */
   public AccessSummary setAuthProviderType(java.lang.String authProviderType) {
@@ -146,8 +146,8 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The first time this user has interacted with this workload. Rounded to the
-   * previous hour.
+   * Output only. The first time this user interacted with this workload, rounded to the previous
+   * hour.
    * @return value or {@code null} for none
    */
   public String getFirstAccessTime() {
@@ -155,8 +155,8 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The first time this user has interacted with this workload. Rounded to the
-   * previous hour.
+   * Output only. The first time this user interacted with this workload, rounded to the previous
+   * hour.
    * @param firstAccessTime firstAccessTime or {@code null} for none
    */
   public AccessSummary setFirstAccessTime(String firstAccessTime) {
@@ -165,7 +165,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -173,7 +173,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public AccessSummary setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -182,7 +182,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The most recent time this user has interacted with this workload. Rounded to the
+   * Output only. The most recent time this user interacted with this workload, rounded to the
    * previous hour.
    * @return value or {@code null} for none
    */
@@ -191,7 +191,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The most recent time this user has interacted with this workload. Rounded to the
+   * Output only. The most recent time this user interacted with this workload, rounded to the
    * previous hour.
    * @param lastAccessTime lastAccessTime or {@code null} for none
    */
@@ -201,7 +201,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Identifier. Name of the AccessSummary
+   * Output only. Identifier. The resource name of the access summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -209,7 +209,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Identifier. Name of the AccessSummary
+   * Output only. Identifier. The resource name of the access summary.
    * @param name name or {@code null} for none
    */
   public AccessSummary setName(java.lang.String name) {
@@ -254,7 +254,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The url of the authentication server that was accessed.
+   * Output only. The URL of the authentication server that was accessed.
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenUrl() {
@@ -262,7 +262,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The url of the authentication server that was accessed.
+   * Output only. The URL of the authentication server that was accessed.
    * @param tokenUrl tokenUrl or {@code null} for none
    */
   public AccessSummary setTokenUrl(java.lang.String tokenUrl) {
@@ -271,7 +271,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The user_id provided by the workload application for this user. Not verified by
+   * Output only. The user ID provided by the workload application for this user. Not verified by
    * Google.
    * @return value or {@code null} for none
    */
@@ -280,7 +280,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The user_id provided by the workload application for this user. Not verified by
+   * Output only. The user ID provided by the workload application for this user. Not verified by
    * Google.
    * @param userId userId or {@code null} for none
    */
@@ -291,7 +291,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The identity bound to the workload that this user interacted with to produce this
-   * AccessSummary. Will typically be an agentic spiffe id
+   * access summary. Typically an agentic SPIFFE ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkloadId() {
@@ -300,7 +300,7 @@ public final class AccessSummary extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The identity bound to the workload that this user interacted with to produce this
-   * AccessSummary. Will typically be an agentic spiffe id
+   * access summary. Typically an agentic SPIFFE ID.
    * @param workloadId workloadId or {@code null} for none
    */
   public AccessSummary setWorkloadId(java.lang.String workloadId) {

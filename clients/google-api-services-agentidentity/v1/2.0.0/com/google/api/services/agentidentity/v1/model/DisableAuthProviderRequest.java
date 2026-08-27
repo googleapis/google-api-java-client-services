@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1.model;
 
 /**
- * Message for disabling an AuthProvider
+ * Request message for `DisableAuthProvider`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:

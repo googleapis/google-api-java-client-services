@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1.model;
 
 /**
- * Message describing ThreeLeggedOAuth object.
+ * Configuration for 3-legged OAuth (3LO) authentication.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -31,7 +31,7 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The authorization endpoint to send users to for consenting to delegate to the agent.
-   * eg. "https://auth.atlassian.com/authorize"
+   * For example, "https://auth.atlassian.com/authorize".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   private java.lang.String clientSecret;
 
   /**
-   * Optional. The default continue URI for 3LO flow and it will be used when no continue URI is
-   * provided in the RetrieveCredentials request.
+   * Optional. The default continue URI for the 3LO flow, used when no continue URI is provided in
+   * the RetrieveCredentials request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,16 +68,16 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   private java.lang.Boolean enablePkce;
 
   /**
-   * Output only. The redirect URL this auth_provider uses for the OAuth exchange. This is
-   * deterministic based on the name of the auth_provider.
+   * Output only. The redirect URL this auth provider uses for the OAuth exchange. This is
+   * deterministic based on the name of the auth provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String redirectUrl;
 
   /**
-   * Optional. The token endpoint for requesting tokens on behalf of an end user. eg.
-   * "https://auth.atlassian.com/oauth/token"
+   * Optional. The token endpoint for requesting tokens on behalf of an end user. For example,
+   * "https://auth.atlassian.com/oauth/token".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The authorization endpoint to send users to for consenting to delegate to the agent.
-   * eg. "https://auth.atlassian.com/authorize"
+   * For example, "https://auth.atlassian.com/authorize".
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizationUrl() {
@@ -94,7 +94,7 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. The authorization endpoint to send users to for consenting to delegate to the agent.
-   * eg. "https://auth.atlassian.com/authorize"
+   * For example, "https://auth.atlassian.com/authorize".
    * @param authorizationUrl authorizationUrl or {@code null} for none
    */
   public ThreeLeggedOAuth setAuthorizationUrl(java.lang.String authorizationUrl) {
@@ -137,8 +137,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The default continue URI for 3LO flow and it will be used when no continue URI is
-   * provided in the RetrieveCredentials request.
+   * Optional. The default continue URI for the 3LO flow, used when no continue URI is provided in
+   * the RetrieveCredentials request.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultContinueUri() {
@@ -146,8 +146,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The default continue URI for 3LO flow and it will be used when no continue URI is
-   * provided in the RetrieveCredentials request.
+   * Optional. The default continue URI for the 3LO flow, used when no continue URI is provided in
+   * the RetrieveCredentials request.
    * @param defaultContinueUri defaultContinueUri or {@code null} for none
    */
   public ThreeLeggedOAuth setDefaultContinueUri(java.lang.String defaultContinueUri) {
@@ -175,8 +175,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The redirect URL this auth_provider uses for the OAuth exchange. This is
-   * deterministic based on the name of the auth_provider.
+   * Output only. The redirect URL this auth provider uses for the OAuth exchange. This is
+   * deterministic based on the name of the auth provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedirectUrl() {
@@ -184,8 +184,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The redirect URL this auth_provider uses for the OAuth exchange. This is
-   * deterministic based on the name of the auth_provider.
+   * Output only. The redirect URL this auth provider uses for the OAuth exchange. This is
+   * deterministic based on the name of the auth provider.
    * @param redirectUrl redirectUrl or {@code null} for none
    */
   public ThreeLeggedOAuth setRedirectUrl(java.lang.String redirectUrl) {
@@ -194,8 +194,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The token endpoint for requesting tokens on behalf of an end user. eg.
-   * "https://auth.atlassian.com/oauth/token"
+   * Optional. The token endpoint for requesting tokens on behalf of an end user. For example,
+   * "https://auth.atlassian.com/oauth/token".
    * @return value or {@code null} for none
    */
   public java.lang.String getTokenUrl() {
@@ -203,8 +203,8 @@ public final class ThreeLeggedOAuth extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The token endpoint for requesting tokens on behalf of an end user. eg.
-   * "https://auth.atlassian.com/oauth/token"
+   * Optional. The token endpoint for requesting tokens on behalf of an end user. For example,
+   * "https://auth.atlassian.com/oauth/token".
    * @param tokenUrl tokenUrl or {@code null} for none
    */
   public ThreeLeggedOAuth setTokenUrl(java.lang.String tokenUrl) {

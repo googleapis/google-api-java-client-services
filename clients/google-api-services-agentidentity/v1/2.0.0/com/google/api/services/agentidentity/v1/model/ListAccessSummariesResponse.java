@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1.model;
 
 /**
- * Message for response to listing AccessSummaries
+ * Response message for `ListAccessSummaries`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.agentidentity.v1.model;
 public final class ListAccessSummariesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of AccessSummary
+   * The list of access summaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ListAccessSummariesResponse extends com.google.api.client.jso
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of AccessSummary
+   * The list of access summaries.
    * @return value or {@code null} for none
    */
   public java.util.List<AccessSummary> getAccessSummaries() {
@@ -65,7 +65,7 @@ public final class ListAccessSummariesResponse extends com.google.api.client.jso
   }
 
   /**
-   * The list of AccessSummary
+   * The list of access summaries.
    * @param accessSummaries accessSummaries or {@code null} for none
    */
   public ListAccessSummariesResponse setAccessSummaries(java.util.List<AccessSummary> accessSummaries) {

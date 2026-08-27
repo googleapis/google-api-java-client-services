@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1beta.model;
 
 /**
- * Response message for QueryWorkloads.
+ * Response message for `QueryWorkloads`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -37,7 +37,8 @@ public final class QueryWorkloadsResponse extends com.google.api.client.json.Gen
   private java.lang.String nextPageToken;
 
   /**
-   * The unique list of workload identifiers (agents) that used the auth_provider.
+   * The unique list of identifiers for the agents that used this auth provider, starting with
+   * `principal://`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class QueryWorkloadsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The unique list of workload identifiers (agents) that used the auth_provider.
+   * The unique list of identifiers for the agents that used this auth provider, starting with
+   * `principal://`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWorkloadIds() {
@@ -69,7 +71,8 @@ public final class QueryWorkloadsResponse extends com.google.api.client.json.Gen
   }
 
   /**
-   * The unique list of workload identifiers (agents) that used the auth_provider.
+   * The unique list of identifiers for the agents that used this auth provider, starting with
+   * `principal://`.
    * @param workloadIds workloadIds or {@code null} for none
    */
   public QueryWorkloadsResponse setWorkloadIds(java.util.List<java.lang.String> workloadIds) {

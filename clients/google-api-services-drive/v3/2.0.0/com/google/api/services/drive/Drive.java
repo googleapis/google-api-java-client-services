@@ -1481,7 +1481,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Lists the approvals on a file. For more information, see [Manage
-     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
+     * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). By default, this
+     * method returns a minimal response that may not include the items array. To retrieve approval
+     * details, you must explicitly specify the fields you want using the `fields` query parameter. To
+     * return the exact fields you need, see [Return specific
+     * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
      *
      * Create a request for the method "approvals.list".
      *
@@ -1503,7 +1507,11 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Lists the approvals on a file. For more information, see [Manage
-       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals).
+       * approvals](https://developers.google.com/workspace/drive/api/guides/approvals). By default,
+       * this method returns a minimal response that may not include the items array. To retrieve
+       * approval details, you must explicitly specify the fields you want using the `fields` query
+       * parameter. To return the exact fields you need, see [Return specific
+       * fields](https://developers.google.com/workspace/drive/api/guides/fields-parameter).
        *
        * Create a request for the method "approvals.list".
        *

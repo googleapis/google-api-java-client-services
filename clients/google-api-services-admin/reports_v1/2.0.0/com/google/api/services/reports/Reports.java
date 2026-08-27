@@ -717,15 +717,16 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. When set to `true`, this field allows sensitive user-generated content to be
-       * included in the returned audit logs. This parameter is supported only for Rules (DLP) and
-       * Chat applications; using it with any other application will result in a permission error.
+       * included in the returned audit logs. This parameter is supported only for Rules (DLP), Chat
+       * and Workspace Studio applications; using it with any other application will result in a
+       * permission error.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean includeSensitiveData;
 
       /** Optional. When set to `true`, this field allows sensitive user-generated content to be included in
-     the returned audit logs. This parameter is supported only for Rules (DLP) and Chat applications;
-     using it with any other application will result in a permission error.
+     the returned audit logs. This parameter is supported only for Rules (DLP), Chat and Workspace
+     Studio applications; using it with any other application will result in a permission error.
        */
       public java.lang.Boolean getIncludeSensitiveData() {
         return includeSensitiveData;
@@ -733,8 +734,9 @@ public class Reports extends com.google.api.client.googleapis.services.json.Abst
 
       /**
        * Optional. When set to `true`, this field allows sensitive user-generated content to be
-       * included in the returned audit logs. This parameter is supported only for Rules (DLP) and
-       * Chat applications; using it with any other application will result in a permission error.
+       * included in the returned audit logs. This parameter is supported only for Rules (DLP), Chat
+       * and Workspace Studio applications; using it with any other application will result in a
+       * permission error.
        */
       public List setIncludeSensitiveData(java.lang.Boolean includeSensitiveData) {
         this.includeSensitiveData = includeSensitiveData;

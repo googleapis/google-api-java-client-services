@@ -573,14 +573,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
       public class AccessSummaries {
 
         /**
-         * Gets details of a single AccessSummary.
+         * Gets details of a single access summary.
          *
          * Create a request for the method "accessSummaries.get".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the access summary.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -597,7 +597,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/accessSummaries/[^/]+$");
 
           /**
-           * Gets details of a single AccessSummary.
+           * Gets details of a single access summary.
            *
            * Create a request for the method "accessSummaries.get".
            *
@@ -606,7 +606,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the access summary.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -684,17 +684,17 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the access summary. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the access summary.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the access summary. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -711,9 +711,9 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Lists AccessSummaries in a given project and location. Supported Filters: - `workload_id`: Filter
-         * by the SPIFFE ID of the agent. Example: `workload_id="spiffe://example.com/ns/default/sa/my-
-         * agent"`
+         * Lists access summaries in a given project and location. Supported filters: - `workload_id`:
+         * Filter by the SPIFFE ID of the agent. Example:
+         * `workload_id="spiffe://example.com/ns/default/sa/my-agent"`
          *
          * Create a request for the method "accessSummaries.list".
          *
@@ -738,7 +738,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists AccessSummaries in a given project and location. Supported Filters: - `workload_id`:
+           * Lists access summaries in a given project and location. Supported filters: - `workload_id`:
            * Filter by the SPIFFE ID of the agent. Example:
            * `workload_id="spiffe://example.com/ns/default/sa/my-agent"`
            *
@@ -909,13 +909,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. The maximum page size is 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+         will pick an appropriate default. The maximum page size is 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -923,7 +923,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. The maximum page size is 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -974,14 +974,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
       public class AuthProviders {
 
         /**
-         * Creates a new AuthProvider in a given project and location.
+         * Creates a new auth provider in a given project and location.
          *
          * Create a request for the method "authProviders.create".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource where the AuthProvider is created. Format:
+         * @param parent Required. The parent resource where the auth provider is created. Format:
          *        projects/{project}/locations/{location}
          * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.AuthProvider}
          * @return the request
@@ -1000,7 +1000,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new AuthProvider in a given project and location.
+           * Creates a new auth provider in a given project and location.
            *
            * Create a request for the method "authProviders.create".
            *
@@ -1010,7 +1010,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource where the AuthProvider is created. Format:
+           * @param parent Required. The parent resource where the auth provider is created. Format:
          *        projects/{project}/locations/{location}
            * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.AuthProvider}
            * @since 1.13
@@ -1081,13 +1081,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent resource where the AuthProvider is created. Format:
+           * Required. The parent resource where the auth provider is created. Format:
            * projects/{project}/locations/{location}
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource where the AuthProvider is created. Format:
+          /** Required. The parent resource where the auth provider is created. Format:
          projects/{project}/locations/{location}
            */
           public java.lang.String getParent() {
@@ -1095,7 +1095,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The parent resource where the AuthProvider is created. Format:
+           * Required. The parent resource where the auth provider is created. Format:
            * projects/{project}/locations/{location}
            */
           public Create setParent(java.lang.String parent) {
@@ -1109,26 +1109,26 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The ID to use for the AuthProvider, which will become the final segment of
-           * the AuthProvider's resource name. This value should be 1-63 characters, and valid
+           * Required. The ID to use for the auth provider, which will become the final segment of
+           * the auth provider's resource name. This value should be 1-63 characters, and valid
            * characters are /a-z-/. The first character must be a lowercase letter, and the last
            * character must be a lowercase letter or a number.
            */
           @com.google.api.client.util.Key
           private java.lang.String authProviderId;
 
-          /** Required. The ID to use for the AuthProvider, which will become the final segment of the
-         AuthProvider's resource name. This value should be 1-63 characters, and valid characters are
-         /a-z-/. The first character must be a lowercase letter, and the last character must be a lowercase
-         letter or a number.
+          /** Required. The ID to use for the auth provider, which will become the final segment of the auth
+         provider's resource name. This value should be 1-63 characters, and valid characters are /a-z-/.
+         The first character must be a lowercase letter, and the last character must be a lowercase letter
+         or a number.
            */
           public java.lang.String getAuthProviderId() {
             return authProviderId;
           }
 
           /**
-           * Required. The ID to use for the AuthProvider, which will become the final segment of
-           * the AuthProvider's resource name. This value should be 1-63 characters, and valid
+           * Required. The ID to use for the auth provider, which will become the final segment of
+           * the auth provider's resource name. This value should be 1-63 characters, and valid
            * characters are /a-z-/. The first character must be a lowercase letter, and the last
            * character must be a lowercase letter or a number.
            */
@@ -1186,14 +1186,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Deletes a single AuthProvider.
+         * Deletes a single auth provider.
          *
          * Create a request for the method "authProviders.delete".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the auth provider.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -1210,7 +1210,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Deletes a single AuthProvider.
+           * Deletes a single auth provider.
            *
            * Create a request for the method "authProviders.delete".
            *
@@ -1220,7 +1220,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the auth provider.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -1288,17 +1288,17 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the auth provider. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the auth provider.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the auth provider. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1358,14 +1358,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Disables a single AuthProvider.
+         * Disables a single auth provider.
          *
          * Create a request for the method "authProviders.disable".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Disable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource Format:
+         * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
          * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.DisableAuthProviderRequest}
          * @return the request
@@ -1384,7 +1384,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Disables a single AuthProvider.
+           * Disables a single auth provider.
            *
            * Create a request for the method "authProviders.disable".
            *
@@ -1394,7 +1394,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * Disable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource Format:
+           * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
            * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.DisableAuthProviderRequest}
            * @since 1.13
@@ -1465,13 +1465,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. Name of the resource Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource Format:
+          /** Required. The resource name of the auth provider. Format:
          projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public java.lang.String getName() {
@@ -1479,7 +1479,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. Name of the resource Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public Disable setName(java.lang.String name) {
@@ -1498,14 +1498,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Enables a single AuthProvider.
+         * Enables a single auth provider.
          *
          * Create a request for the method "authProviders.enable".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Enable#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource Format:
+         * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
          * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.EnableAuthProviderRequest}
          * @return the request
@@ -1524,7 +1524,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Enables a single AuthProvider.
+           * Enables a single auth provider.
            *
            * Create a request for the method "authProviders.enable".
            *
@@ -1534,7 +1534,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * Enable#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource Format:
+           * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
            * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.EnableAuthProviderRequest}
            * @since 1.13
@@ -1605,13 +1605,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. Name of the resource Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource Format:
+          /** Required. The resource name of the auth provider. Format:
          projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public java.lang.String getName() {
@@ -1619,7 +1619,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. Name of the resource Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public Enable setName(java.lang.String name) {
@@ -1638,14 +1638,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Gets details of a single AuthProvider.
+         * Gets details of a single auth provider.
          *
          * Create a request for the method "authProviders.get".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The resource name of the auth provider.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -1662,7 +1662,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Gets details of a single AuthProvider.
+           * Gets details of a single auth provider.
            *
            * Create a request for the method "authProviders.get".
            *
@@ -1671,7 +1671,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the auth provider.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -1749,17 +1749,17 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the auth provider. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The resource name of the auth provider.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The resource name of the auth provider. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1974,7 +1974,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Lists AuthProviders in a given project and location.
+         * Lists auth providers in a given project and location.
          *
          * Create a request for the method "authProviders.list".
          *
@@ -1999,7 +1999,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists AuthProviders in a given project and location.
+           * Lists auth providers in a given project and location.
            *
            * Create a request for the method "authProviders.list".
            *
@@ -2155,13 +2155,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. The maximum page size is 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+         will pick an appropriate default. The maximum page size is 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -2169,7 +2169,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. The maximum page size is 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -2200,23 +2200,23 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Deleted auth_providers will be kept with a soft-delete for 30 days before
-           * being purged. If this field is set to true, deleted auth_providers will also be
+           * Optional. Deleted auth providers will be kept with a soft-delete for 30 days before
+           * being purged. If this field is set to `true`, deleted auth providers will also be
            * returned.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean showDeleted;
 
-          /** Optional. Deleted auth_providers will be kept with a soft-delete for 30 days before being purged.
-         If this field is set to true, deleted auth_providers will also be returned.
+          /** Optional. Deleted auth providers will be kept with a soft-delete for 30 days before being purged.
+         If this field is set to `true`, deleted auth providers will also be returned.
            */
           public java.lang.Boolean getShowDeleted() {
             return showDeleted;
           }
 
           /**
-           * Optional. Deleted auth_providers will be kept with a soft-delete for 30 days before
-           * being purged. If this field is set to true, deleted auth_providers will also be
+           * Optional. Deleted auth providers will be kept with a soft-delete for 30 days before
+           * being purged. If this field is set to `true`, deleted auth providers will also be
            * returned.
            */
           public List setShowDeleted(java.lang.Boolean showDeleted) {
@@ -2230,14 +2230,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Updates the parameters of a single AuthProvider.
+         * Updates the parameters of a single auth provider.
          *
          * Create a request for the method "authProviders.patch".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. The full resource name of the auth_provider. Format:
+         * @param name Identifier. The full resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
          * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.AuthProvider}
          * @return the request
@@ -2256,7 +2256,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Updates the parameters of a single AuthProvider.
+           * Updates the parameters of a single auth provider.
            *
            * Create a request for the method "authProviders.patch".
            *
@@ -2266,7 +2266,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. The full resource name of the auth_provider. Format:
+           * @param name Identifier. The full resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
            * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.AuthProvider}
            * @since 1.13
@@ -2337,13 +2337,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Identifier. The full resource name of the auth_provider. Format:
+           * Identifier. The full resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. The full resource name of the auth_provider. Format:
+          /** Identifier. The full resource name of the auth provider. Format:
          projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public java.lang.String getName() {
@@ -2351,7 +2351,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Identifier. The full resource name of the auth_provider. Format:
+           * Identifier. The full resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public Patch setName(java.lang.String name) {
@@ -2408,17 +2408,17 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Field mask is used to specify the fields to be overwritten in the
-           * AuthProvider resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields present in the request
-           * will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the auth
+           * provider resource by the update. The fields specified in the `update_mask` are relative
+           * to the resource, not the full request. A field will be overwritten if it is in the
+           * mask. If the user does not provide a mask then all fields present in the request will
+           * be overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Optional. Field mask is used to specify the fields to be overwritten in the AuthProvider resource
-         by the update. The fields specified in the update_mask are relative to the resource, not the full
+          /** Optional. Field mask is used to specify the fields to be overwritten in the auth provider resource
+         by the update. The fields specified in the `update_mask` are relative to the resource, not the full
          request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
          all fields present in the request will be overwritten.
            */
@@ -2427,11 +2427,11 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Optional. Field mask is used to specify the fields to be overwritten in the
-           * AuthProvider resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields present in the request
-           * will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the auth
+           * provider resource by the update. The fields specified in the `update_mask` are relative
+           * to the resource, not the full request. A field will be overwritten if it is in the
+           * mask. If the user does not provide a mask then all fields present in the request will
+           * be overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2444,7 +2444,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Queries what all auth_providers are used by a given workload_id.
+         * Queries which auth providers are used by a given workload ID.
          *
          * Create a request for the method "authProviders.query".
          *
@@ -2469,7 +2469,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Queries what all auth_providers are used by a given workload_id.
+           * Queries which auth providers are used by a given workload ID.
            *
            * Create a request for the method "authProviders.query".
            *
@@ -2662,14 +2662,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Queries what all workloads are using a given auth_provider.
+         * Queries which workloads are using a given auth provider.
          *
          * Create a request for the method "authProviders.queryWorkloads".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link QueryWorkloads#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the auth_provider to query. Format:
+         * @param name Required. The name of the auth provider to query. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
          * @return the request
          */
@@ -2687,7 +2687,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Queries what all workloads are using a given auth_provider.
+           * Queries which workloads are using a given auth provider.
            *
            * Create a request for the method "authProviders.queryWorkloads".
            *
@@ -2697,7 +2697,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
            * the constructor. </p>
            *
-           * @param name Required. The name of the auth_provider to query. Format:
+           * @param name Required. The name of the auth provider to query. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
            * @since 1.13
            */
@@ -2777,13 +2777,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the auth_provider to query. Format:
+           * Required. The name of the auth provider to query. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the auth_provider to query. Format:
+          /** Required. The name of the auth provider to query. Format:
          projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public java.lang.String getName() {
@@ -2791,7 +2791,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The name of the auth_provider to query. Format:
+           * Required. The name of the auth provider to query. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public QueryWorkloads setName(java.lang.String name) {
@@ -2806,13 +2806,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. The maximum page size is 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+         will pick an appropriate default. The maximum page size is 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -2820,7 +2820,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * unspecified, server will pick an appropriate default. The maximum page size is 1000.
            */
           public QueryWorkloads setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -2829,14 +2829,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. A token, which can be sent as `page_token` to retrieve the next page. When
-           * paginating, all other parameters provided to QueryWorkloads must match the call that
+           * paginating, all other parameters provided to `QueryWorkloads` must match the call that
            * provided the page token. If this field is omitted, the first page is returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. A token, which can be sent as `page_token` to retrieve the next page. When paginating,
-         all other parameters provided to QueryWorkloads must match the call that provided the page token.
+         all other parameters provided to `QueryWorkloads` must match the call that provided the page token.
          If this field is omitted, the first page is returned.
            */
           public java.lang.String getPageToken() {
@@ -2845,7 +2845,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
           /**
            * Optional. A token, which can be sent as `page_token` to retrieve the next page. When
-           * paginating, all other parameters provided to QueryWorkloads must match the call that
+           * paginating, all other parameters provided to `QueryWorkloads` must match the call that
            * provided the page token. If this field is omitted, the first page is returned.
            */
           public QueryWorkloads setPageToken(java.lang.String pageToken) {
@@ -2859,15 +2859,16 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Revokes all authorizations for a specific user on an AuthProvider. This deletes all authorization
-         * records associated with the user and AuthProvider, effectively revoking access across all agents.
+         * Revokes all authorizations for a specific user on an auth provider. This deletes all
+         * authorization records associated with the user and auth provider, effectively revoking access
+         * across all agents.
          *
          * Create a request for the method "authProviders.revokeAuthorization".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link RevokeAuthorization#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the AuthProvider. Format:
+         * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
          * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.RevokeAuthorizationRequest}
          * @return the request
@@ -2886,8 +2887,8 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Revokes all authorizations for a specific user on an AuthProvider. This deletes all
-           * authorization records associated with the user and AuthProvider, effectively revoking access
+           * Revokes all authorizations for a specific user on an auth provider. This deletes all
+           * authorization records associated with the user and auth provider, effectively revoking access
            * across all agents.
            *
            * Create a request for the method "authProviders.revokeAuthorization".
@@ -2898,7 +2899,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
            * invoking the constructor. </p>
            *
-           * @param name Required. The resource name of the AuthProvider. Format:
+           * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
            * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.RevokeAuthorizationRequest}
            * @since 1.13
@@ -2969,13 +2970,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The resource name of the AuthProvider. Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the AuthProvider. Format:
+          /** Required. The resource name of the auth provider. Format:
          projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public java.lang.String getName() {
@@ -2983,7 +2984,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. The resource name of the AuthProvider. Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public RevokeAuthorization setName(java.lang.String name) {
@@ -3300,14 +3301,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
-         * Undeletes a single AuthProvider.
+         * Undeletes a single auth provider.
          *
          * Create a request for the method "authProviders.undelete".
          *
          * This request holds the parameters needed by the agentidentity server.  After setting any optional
          * parameters, call the {@link Undelete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource Format:
+         * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
          * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.UndeleteAuthProviderRequest}
          * @return the request
@@ -3326,7 +3327,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
           /**
-           * Undeletes a single AuthProvider.
+           * Undeletes a single auth provider.
            *
            * Create a request for the method "authProviders.undelete".
            *
@@ -3336,7 +3337,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
            * Undelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource Format:
+           * @param name Required. The resource name of the auth provider. Format:
          *        projects/{project}/locations/{location}/authProviders/{auth_provider}
            * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.UndeleteAuthProviderRequest}
            * @since 1.13
@@ -3407,13 +3408,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. Name of the resource Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource Format:
+          /** Required. The resource name of the auth provider. Format:
          projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public java.lang.String getName() {
@@ -3421,7 +3422,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
 
           /**
-           * Required. Name of the resource Format:
+           * Required. The resource name of the auth provider. Format:
            * projects/{project}/locations/{location}/authProviders/{auth_provider}
            */
           public Undelete setName(java.lang.String name) {
@@ -3461,14 +3462,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
         public class Authorizations {
 
           /**
-           * Deletes a single Authorization.
+           * Deletes a single authorization.
            *
            * Create a request for the method "authorizations.delete".
            *
            * This request holds the parameters needed by the agentidentity server.  After setting any optional
            * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the Authorization to delete. Format:
+           * @param name Required. The resource name of the authorization to delete. Format:
            *        projects/{project}/locations/{location}/authProviders/{auth_provider}/authorizations/{auth
            *        orization}
            * @return the request
@@ -3487,7 +3488,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
 
             /**
-             * Deletes a single Authorization.
+             * Deletes a single authorization.
              *
              * Create a request for the method "authorizations.delete".
              *
@@ -3497,7 +3498,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
              * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the Authorization to delete. Format:
+             * @param name Required. The resource name of the authorization to delete. Format:
            *        projects/{project}/locations/{location}/authProviders/{auth_provider}/authorizations/{auth
            *        orization}
              * @since 1.13
@@ -3568,22 +3569,22 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             }
 
             /**
-             * Required. The name of the Authorization to delete. Format: projects/{project}/locatio
-             * ns/{location}/authProviders/{auth_provider}/authorizations/{authorization}
+             * Required. The resource name of the authorization to delete. Format: projects/{project
+             * }/locations/{location}/authProviders/{auth_provider}/authorizations/{authorization}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the Authorization to delete. Format: projects/{project}/locations/{location}/
-           authProviders/{auth_provider}/authorizations/{authorization}
+            /** Required. The resource name of the authorization to delete. Format: projects/{project}/locations/{l
+           ocation}/authProviders/{auth_provider}/authorizations/{authorization}
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The name of the Authorization to delete. Format: projects/{project}/locatio
-             * ns/{location}/authProviders/{auth_provider}/authorizations/{authorization}
+             * Required. The resource name of the authorization to delete. Format: projects/{project
+             * }/locations/{location}/authProviders/{auth_provider}/authorizations/{authorization}
              */
             public Delete setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3644,14 +3645,14 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Gets details of a single Authorization.
+           * Gets details of a single authorization.
            *
            * Create a request for the method "authorizations.get".
            *
            * This request holds the parameters needed by the agentidentity server.  After setting any optional
            * parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The resource name of the authorization.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3668,7 +3669,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
 
             /**
-             * Gets details of a single Authorization.
+             * Gets details of a single authorization.
              *
              * Create a request for the method "authorizations.get".
              *
@@ -3677,7 +3678,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the resource
+             * @param name Required. The resource name of the authorization.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3755,17 +3756,17 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
               return (Get) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Name of the resource */
+            /** Required. The resource name of the authorization. */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the resource
+            /** Required. The resource name of the authorization.
              */
             public java.lang.String getName() {
               return name;
             }
 
-            /** Required. Name of the resource */
+            /** Required. The resource name of the authorization. */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3782,7 +3783,205 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             }
           }
           /**
-           * Lists Authorizations in a given project and location.
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+           * does not have a policy set.
+           *
+           * Create a request for the method "authorizations.getIamPolicy".
+           *
+           * This request holds the parameters needed by the agentidentity server.  After setting any optional
+           * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @return the request
+           */
+          public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+            GetIamPolicy result = new GetIamPolicy(resource);
+            initialize(result);
+            return result;
+          }
+
+          public class GetIamPolicy extends AgentIdentityRequest<com.google.api.services.agentidentity.v1alpha.model.Policy> {
+
+            private static final String REST_PATH = "v1alpha/{+resource}:getIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+
+            /**
+             * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+             * and does not have a policy set.
+             *
+             * Create a request for the method "authorizations.getIamPolicy".
+             *
+             * This request holds the parameters needed by the the agentidentity server.  After setting any
+             * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @since 1.13
+             */
+            protected GetIamPolicy(java.lang.String resource) {
+              super(AgentIdentity.this, "GET", REST_PATH, null, com.google.api.services.agentidentity.v1alpha.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (GetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (GetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public GetIamPolicy setAlt(java.lang.String alt) {
+              return (GetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public GetIamPolicy setCallback(java.lang.String callback) {
+              return (GetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public GetIamPolicy setFields(java.lang.String fields) {
+              return (GetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public GetIamPolicy setKey(java.lang.String key) {
+              return (GetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (GetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (GetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public GetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (GetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public GetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            @com.google.api.client.util.Key("options.requestedPolicyVersion")
+            private java.lang.Integer optionsRequestedPolicyVersion;
+
+            /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+           and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+           conditional role bindings must specify version 3. Policies with no conditional role bindings may
+           specify any valid value or leave the field unset. The policy in the response might use the policy
+           version that you specified, or it might use a lower policy version. For example, if you specify
+           version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+           which resources support conditions in their IAM policies, see the [IAM
+           documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public java.lang.Integer getOptionsRequestedPolicyVersion() {
+              return optionsRequestedPolicyVersion;
+            }
+
+            /**
+             * Optional. The maximum policy version that will be used to format the policy. Valid
+             * values are 0, 1, and 3. Requests specifying an invalid value will be rejected.
+             * Requests for policies with any conditional role bindings must specify version 3.
+             * Policies with no conditional role bindings may specify any valid value or leave the
+             * field unset. The policy in the response might use the policy version that you
+             * specified, or it might use a lower policy version. For example, if you specify
+             * version 3, but the policy has no conditional role bindings, the response uses version
+             * 1. To learn which resources support conditions in their IAM policies, see the [IAM
+             * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+             */
+            public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+              this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+              return this;
+            }
+
+            @Override
+            public GetIamPolicy set(String parameterName, Object value) {
+              return (GetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists authorizations in a given project and location.
            *
            * Create a request for the method "authorizations.list".
            *
@@ -3807,7 +4006,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
 
             /**
-             * Lists Authorizations in a given project and location.
+             * Lists authorizations in a given project and location.
              *
              * Create a request for the method "authorizations.list".
              *
@@ -3971,13 +4170,13 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, server will pick an appropriate default.
+             * unspecified, server will pick an appropriate default. The maximum page size is 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
             /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-           will pick an appropriate default.
+           will pick an appropriate default. The maximum page size is 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
@@ -3985,7 +4184,7 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
 
             /**
              * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, server will pick an appropriate default.
+             * unspecified, server will pick an appropriate default. The maximum page size is 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -4021,6 +4220,304 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "authorizations.setIamPolicy".
+           *
+           * This request holds the parameters needed by the agentidentity server.  After setting any optional
+           * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.SetIamPolicyRequest}
+           * @return the request
+           */
+          public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.agentidentity.v1alpha.model.SetIamPolicyRequest content) throws java.io.IOException {
+            SetIamPolicy result = new SetIamPolicy(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class SetIamPolicy extends AgentIdentityRequest<com.google.api.services.agentidentity.v1alpha.model.Policy> {
+
+            private static final String REST_PATH = "v1alpha/{+resource}:setIamPolicy";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+
+            /**
+             * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+             * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+             *
+             * Create a request for the method "authorizations.setIamPolicy".
+             *
+             * This request holds the parameters needed by the the agentidentity server.  After setting any
+             * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.SetIamPolicyRequest}
+             * @since 1.13
+             */
+            protected SetIamPolicy(java.lang.String resource, com.google.api.services.agentidentity.v1alpha.model.SetIamPolicyRequest content) {
+              super(AgentIdentity.this, "POST", REST_PATH, content, com.google.api.services.agentidentity.v1alpha.model.Policy.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+              }
+            }
+
+            @Override
+            public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+              return (SetIamPolicy) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+              return (SetIamPolicy) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public SetIamPolicy setAlt(java.lang.String alt) {
+              return (SetIamPolicy) super.setAlt(alt);
+            }
+
+            @Override
+            public SetIamPolicy setCallback(java.lang.String callback) {
+              return (SetIamPolicy) super.setCallback(callback);
+            }
+
+            @Override
+            public SetIamPolicy setFields(java.lang.String fields) {
+              return (SetIamPolicy) super.setFields(fields);
+            }
+
+            @Override
+            public SetIamPolicy setKey(java.lang.String key) {
+              return (SetIamPolicy) super.setKey(key);
+            }
+
+            @Override
+            public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+              return (SetIamPolicy) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+              return (SetIamPolicy) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public SetIamPolicy setUploadType(java.lang.String uploadType) {
+              return (SetIamPolicy) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+              return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy is being specified. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy is being specified. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public SetIamPolicy setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public SetIamPolicy set(String parameterName, Object value) {
+              return (SetIamPolicy) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+           * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+           * designed to be used for building permission-aware UIs and command-line tools, not for
+           * authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "authorizations.testIamPermissions".
+           *
+           * This request holds the parameters needed by the agentidentity server.  After setting any optional
+           * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+           * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.TestIamPermissionsRequest}
+           * @return the request
+           */
+          public TestIamPermissions testIamPermissions(java.lang.String resource, com.google.api.services.agentidentity.v1alpha.model.TestIamPermissionsRequest content) throws java.io.IOException {
+            TestIamPermissions result = new TestIamPermissions(resource, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TestIamPermissions extends AgentIdentityRequest<com.google.api.services.agentidentity.v1alpha.model.TestIamPermissionsResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+resource}:testIamPermissions";
+
+            private final java.util.regex.Pattern RESOURCE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+
+            /**
+             * Returns permissions that a caller has on the specified resource. If the resource does not
+             * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+             * operation is designed to be used for building permission-aware UIs and command-line tools, not
+             * for authorization checking. This operation may "fail open" without warning.
+             *
+             * Create a request for the method "authorizations.testIamPermissions".
+             *
+             * This request holds the parameters needed by the the agentidentity server.  After setting any
+             * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+             * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+           *        this field.
+             * @param content the {@link com.google.api.services.agentidentity.v1alpha.model.TestIamPermissionsRequest}
+             * @since 1.13
+             */
+            protected TestIamPermissions(java.lang.String resource, com.google.api.services.agentidentity.v1alpha.model.TestIamPermissionsRequest content) {
+              super(AgentIdentity.this, "POST", REST_PATH, content, com.google.api.services.agentidentity.v1alpha.model.TestIamPermissionsResponse.class);
+              this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+              }
+            }
+
+            @Override
+            public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+              return (TestIamPermissions) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+              return (TestIamPermissions) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TestIamPermissions setAlt(java.lang.String alt) {
+              return (TestIamPermissions) super.setAlt(alt);
+            }
+
+            @Override
+            public TestIamPermissions setCallback(java.lang.String callback) {
+              return (TestIamPermissions) super.setCallback(callback);
+            }
+
+            @Override
+            public TestIamPermissions setFields(java.lang.String fields) {
+              return (TestIamPermissions) super.setFields(fields);
+            }
+
+            @Override
+            public TestIamPermissions setKey(java.lang.String key) {
+              return (TestIamPermissions) super.setKey(key);
+            }
+
+            @Override
+            public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+              return (TestIamPermissions) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+              return (TestIamPermissions) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TestIamPermissions setUploadType(java.lang.String uploadType) {
+              return (TestIamPermissions) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String resource;
+
+            /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+           field.
+             */
+            public java.lang.String getResource() {
+              return resource;
+            }
+
+            /**
+             * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+             * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+             * for this field.
+             */
+            public TestIamPermissions setResource(java.lang.String resource) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                    "Parameter resource must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+/authorizations/[^/]+$");
+              }
+              this.resource = resource;
+              return this;
+            }
+
+            @Override
+            public TestIamPermissions set(String parameterName, Object value) {
+              return (TestIamPermissions) super.set(parameterName, value);
             }
           }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1.model;
 
 /**
- * Message describing AuthProvider object
+ * Represents an auth provider.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.agentidentity.v1.model;
 public final class AuthProvider extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of scopes that are allowed to be requested for this auth_provider. If this list
+   * Optional. List of scopes that are allowed to be requested for this auth provider. If this list
    * is non-empty, only scopes within this list may be requested. If this list is empty, all scopes
    * may be requested. Scopes appearing in `blocked_scopes` are disallowed even if they appear in
    * `allowed_scopes`. The number of allowed scopes is limited to 200.
@@ -40,14 +40,14 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedScopes;
 
   /**
-   * Required. AuthProvider type specific parameters.
+   * Required. Parameters specific to the auth provider type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AuthProviderTypeParams authProviderTypeParams;
 
   /**
-   * Optional. List of scopes that are blocked from being requested for this auth_provider. If a
+   * Optional. List of scopes that are blocked from being requested for this auth provider. If a
    * scope appears in this list, it will not be requested, even if it also appears in
    * `allowed_scopes`. `blocked_scopes` takes precedence over `allowed_scopes`. The number of
    * blocked scopes is limited to 200.
@@ -57,14 +57,14 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> blockedScopes;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The creation timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. This is set to true if the auth_provider is deleted.
+   * Output only. Set to `true` if the auth provider is deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,21 +78,21 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Output only. The time when the auth_provider will expire.
+   * Output only. The time when the auth provider will expire.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String expireTime;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. The full resource name of the auth_provider. Format:
+   * Identifier. The full resource name of the auth provider. Format:
    * projects/{project}/locations/{location}/authProviders/{auth_provider}
    * The value may be {@code null}.
    */
@@ -100,31 +100,30 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Output only. The state of the auth_provider.
+   * Output only. The state of the auth provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Input only. Represents the workload identity in IAM `principal://` format of the
-   * agent(s) that will use this AuthProvider. Example: `principal://agents.global.org-${ORG_ID}.sys
-   * tem.id.goog/resources/aiplatform/projects/{PROJECT_ID}/locations/{LOCATIONS}/reasoningEngines/{
-   * ID}`
+   * Optional. Input only. Identifiers for the agents that will use this auth provider, starting
+   * with `principal://`. For example: `principal://agents.global.org-${ORG_ID}.system.id.goog/resou
+   * rces/aiplatform/projects/{PROJECT_ID}/locations/{LOCATIONS}/reasoningEngines/{ID}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> workloadIds;
 
   /**
-   * Optional. List of scopes that are allowed to be requested for this auth_provider. If this list
+   * Optional. List of scopes that are allowed to be requested for this auth provider. If this list
    * is non-empty, only scopes within this list may be requested. If this list is empty, all scopes
    * may be requested. Scopes appearing in `blocked_scopes` are disallowed even if they appear in
    * `allowed_scopes`. The number of allowed scopes is limited to 200.
@@ -135,7 +134,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. List of scopes that are allowed to be requested for this auth_provider. If this list
+   * Optional. List of scopes that are allowed to be requested for this auth provider. If this list
    * is non-empty, only scopes within this list may be requested. If this list is empty, all scopes
    * may be requested. Scopes appearing in `blocked_scopes` are disallowed even if they appear in
    * `allowed_scopes`. The number of allowed scopes is limited to 200.
@@ -147,7 +146,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. AuthProvider type specific parameters.
+   * Required. Parameters specific to the auth provider type.
    * @return value or {@code null} for none
    */
   public AuthProviderTypeParams getAuthProviderTypeParams() {
@@ -155,7 +154,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. AuthProvider type specific parameters.
+   * Required. Parameters specific to the auth provider type.
    * @param authProviderTypeParams authProviderTypeParams or {@code null} for none
    */
   public AuthProvider setAuthProviderTypeParams(AuthProviderTypeParams authProviderTypeParams) {
@@ -164,7 +163,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. List of scopes that are blocked from being requested for this auth_provider. If a
+   * Optional. List of scopes that are blocked from being requested for this auth provider. If a
    * scope appears in this list, it will not be requested, even if it also appears in
    * `allowed_scopes`. `blocked_scopes` takes precedence over `allowed_scopes`. The number of
    * blocked scopes is limited to 200.
@@ -175,7 +174,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. List of scopes that are blocked from being requested for this auth_provider. If a
+   * Optional. List of scopes that are blocked from being requested for this auth provider. If a
    * scope appears in this list, it will not be requested, even if it also appears in
    * `allowed_scopes`. `blocked_scopes` takes precedence over `allowed_scopes`. The number of
    * blocked scopes is limited to 200.
@@ -187,7 +186,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The creation timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -195,7 +194,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The creation timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public AuthProvider setCreateTime(String createTime) {
@@ -204,7 +203,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This is set to true if the auth_provider is deleted.
+   * Output only. Set to `true` if the auth provider is deleted.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDeleted() {
@@ -212,7 +211,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. This is set to true if the auth_provider is deleted.
+   * Output only. Set to `true` if the auth provider is deleted.
    * @param deleted deleted or {@code null} for none
    */
   public AuthProvider setDeleted(java.lang.Boolean deleted) {
@@ -238,7 +237,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the auth_provider will expire.
+   * Output only. The time when the auth provider will expire.
    * @return value or {@code null} for none
    */
   public String getExpireTime() {
@@ -246,7 +245,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time when the auth_provider will expire.
+   * Output only. The time when the auth provider will expire.
    * @param expireTime expireTime or {@code null} for none
    */
   public AuthProvider setExpireTime(String expireTime) {
@@ -255,7 +254,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -263,7 +262,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public AuthProvider setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -272,7 +271,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The full resource name of the auth_provider. Format:
+   * Identifier. The full resource name of the auth provider. Format:
    * projects/{project}/locations/{location}/authProviders/{auth_provider}
    * @return value or {@code null} for none
    */
@@ -281,7 +280,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The full resource name of the auth_provider. Format:
+   * Identifier. The full resource name of the auth provider. Format:
    * projects/{project}/locations/{location}/authProviders/{auth_provider}
    * @param name name or {@code null} for none
    */
@@ -291,7 +290,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the auth_provider.
+   * Output only. The state of the auth provider.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -299,7 +298,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The state of the auth_provider.
+   * Output only. The state of the auth provider.
    * @param state state or {@code null} for none
    */
   public AuthProvider setState(java.lang.String state) {
@@ -308,7 +307,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -316,7 +315,7 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public AuthProvider setUpdateTime(String updateTime) {
@@ -325,10 +324,9 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Represents the workload identity in IAM `principal://` format of the
-   * agent(s) that will use this AuthProvider. Example: `principal://agents.global.org-${ORG_ID}.sys
-   * tem.id.goog/resources/aiplatform/projects/{PROJECT_ID}/locations/{LOCATIONS}/reasoningEngines/{
-   * ID}`
+   * Optional. Input only. Identifiers for the agents that will use this auth provider, starting
+   * with `principal://`. For example: `principal://agents.global.org-${ORG_ID}.system.id.goog/resou
+   * rces/aiplatform/projects/{PROJECT_ID}/locations/{LOCATIONS}/reasoningEngines/{ID}`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getWorkloadIds() {
@@ -336,10 +334,9 @@ public final class AuthProvider extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Represents the workload identity in IAM `principal://` format of the
-   * agent(s) that will use this AuthProvider. Example: `principal://agents.global.org-${ORG_ID}.sys
-   * tem.id.goog/resources/aiplatform/projects/{PROJECT_ID}/locations/{LOCATIONS}/reasoningEngines/{
-   * ID}`
+   * Optional. Input only. Identifiers for the agents that will use this auth provider, starting
+   * with `principal://`. For example: `principal://agents.global.org-${ORG_ID}.system.id.goog/resou
+   * rces/aiplatform/projects/{PROJECT_ID}/locations/{LOCATIONS}/reasoningEngines/{ID}`
    * @param workloadIds workloadIds or {@code null} for none
    */
   public AuthProvider setWorkloadIds(java.util.List<java.lang.String> workloadIds) {

@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1beta.model;
 
 /**
- * Message describing Authorization object
+ * Represents an authorization.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.agentidentity.v1beta.model;
 public final class Authorization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The client_user_id provided by the client application for their end user. Not
+   * Output only. The client user ID provided by the client application for their end user. Not
    * verified by Google.
    * The value may be {@code null}.
    */
@@ -38,14 +38,14 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   private java.lang.String clientUserId;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The creation timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Identifier. name of resource
+   * Identifier. The resource name of the authorization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,14 +66,14 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   private java.lang.String state;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The client_user_id provided by the client application for their end user. Not
+   * Output only. The client user ID provided by the client application for their end user. Not
    * verified by Google.
    * @return value or {@code null} for none
    */
@@ -82,7 +82,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The client_user_id provided by the client application for their end user. Not
+   * Output only. The client user ID provided by the client application for their end user. Not
    * verified by Google.
    * @param clientUserId clientUserId or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The creation timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -100,7 +100,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. The creation timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public Authorization setCreateTime(String createTime) {
@@ -109,7 +109,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifier. name of resource
+   * Identifier. The resource name of the authorization.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -117,7 +117,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Identifier. name of resource
+   * Identifier. The resource name of the authorization.
    * @param name name or {@code null} for none
    */
   public Authorization setName(java.lang.String name) {
@@ -160,7 +160,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -168,7 +168,7 @@ public final class Authorization extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. The update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public Authorization setUpdateTime(String updateTime) {

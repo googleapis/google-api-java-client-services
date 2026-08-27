@@ -17,7 +17,7 @@
 package com.google.api.services.agentidentity.v1.model;
 
 /**
- * Message for response to listing Authorizations
+ * Response message for `ListAuthorizations`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Identity API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.agentidentity.v1.model;
 public final class ListAuthorizationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Authorization
+   * The list of authorizations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class ListAuthorizationsResponse extends com.google.api.client.json
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Authorization
+   * The list of authorizations.
    * @return value or {@code null} for none
    */
   public java.util.List<Authorization> getAuthorizations() {
@@ -65,7 +65,7 @@ public final class ListAuthorizationsResponse extends com.google.api.client.json
   }
 
   /**
-   * The list of Authorization
+   * The list of authorizations.
    * @param authorizations authorizations or {@code null} for none
    */
   public ListAuthorizationsResponse setAuthorizations(java.util.List<Authorization> authorizations) {

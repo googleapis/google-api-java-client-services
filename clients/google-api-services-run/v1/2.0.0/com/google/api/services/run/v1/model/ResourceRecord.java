@@ -30,8 +30,8 @@ package com.google.api.services.run.v1.model;
 public final class ResourceRecord extends com.google.api.client.json.GenericJson {
 
   /**
-   * Relative name of the object affected by this record. Only applicable for `CNAME` records.
-   * Example: 'www'.
+   * Name of the resource record relative to its apex domain, e.g. `www` for `www.example.com`.
+   * Omitted for apex records.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +53,8 @@ public final class ResourceRecord extends com.google.api.client.json.GenericJson
   private java.lang.String type;
 
   /**
-   * Relative name of the object affected by this record. Only applicable for `CNAME` records.
-   * Example: 'www'.
+   * Name of the resource record relative to its apex domain, e.g. `www` for `www.example.com`.
+   * Omitted for apex records.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -62,8 +62,8 @@ public final class ResourceRecord extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Relative name of the object affected by this record. Only applicable for `CNAME` records.
-   * Example: 'www'.
+   * Name of the resource record relative to its apex domain, e.g. `www` for `www.example.com`.
+   * Omitted for apex records.
    * @param name name or {@code null} for none
    */
   public ResourceRecord setName(java.lang.String name) {

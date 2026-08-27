@@ -110,7 +110,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   private java.util.List<ResourceDetails> resourceDetails;
 
   /**
-   * Device details of the user doing the action.
+   * Device details of the user doing the action. This field is only exposed for the `contacts`,
+   * `gemini_in_workspace_apps`, `keep`, `meet_hardware`, `meet`, `chat`, `chrome`,
+   * `directory_sync`, `drive`, `groups`, `rules`, `data_studio`, `saml` applications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,7 +297,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Device details of the user doing the action.
+   * Device details of the user doing the action. This field is only exposed for the `contacts`,
+   * `gemini_in_workspace_apps`, `keep`, `meet_hardware`, `meet`, `chat`, `chrome`,
+   * `directory_sync`, `drive`, `groups`, `rules`, `data_studio`, `saml` applications.
    * @return value or {@code null} for none
    */
   public ActivityUserDeviceInfo getUserDeviceInfo() {
@@ -303,7 +307,9 @@ public final class Activity extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Device details of the user doing the action.
+   * Device details of the user doing the action. This field is only exposed for the `contacts`,
+   * `gemini_in_workspace_apps`, `keep`, `meet_hardware`, `meet`, `chat`, `chrome`,
+   * `directory_sync`, `drive`, `groups`, `rules`, `data_studio`, `saml` applications.
    * @param userDeviceInfo userDeviceInfo or {@code null} for none
    */
   public Activity setUserDeviceInfo(ActivityUserDeviceInfo userDeviceInfo) {

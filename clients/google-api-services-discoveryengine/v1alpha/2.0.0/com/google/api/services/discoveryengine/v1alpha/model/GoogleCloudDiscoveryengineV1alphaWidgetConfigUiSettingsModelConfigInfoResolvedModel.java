@@ -91,6 +91,13 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelC
   private java.lang.String modelId;
 
   /**
+   * Output only. Whether this model should be promoted in the GE chat homepage banner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean promoted;
+
+  /**
    * Output only. Admin-surface metadata; populated only for the Console admin Feature Control page
    * (see `AdminView`). Unset for end-user surfaces.
    * @return value or {@code null} for none
@@ -228,6 +235,23 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelC
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModel setModelId(java.lang.String modelId) {
     this.modelId = modelId;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this model should be promoted in the GE chat homepage banner.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPromoted() {
+    return promoted;
+  }
+
+  /**
+   * Output only. Whether this model should be promoted in the GE chat homepage banner.
+   * @param promoted promoted or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModel setPromoted(java.lang.Boolean promoted) {
+    this.promoted = promoted;
     return this;
   }
 

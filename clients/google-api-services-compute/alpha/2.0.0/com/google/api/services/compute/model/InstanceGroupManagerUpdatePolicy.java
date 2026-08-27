@@ -37,13 +37,6 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
   private java.util.List<java.lang.String> allowedActions;
 
   /**
-   * Whether the boot disk is allowed to be updated with restart.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String disruptionMode;
-
-  /**
    * The instance redistribution policy for regional managed instance groups. Valid values are:
    * - PROACTIVE (default): The group attempts to maintain an    even distribution of VM instances
    * across zones in the region.    - NONE: For non-autoscaled groups, proactive    redistribution
@@ -152,23 +145,6 @@ public final class InstanceGroupManagerUpdatePolicy extends com.google.api.clien
    */
   public InstanceGroupManagerUpdatePolicy setAllowedActions(java.util.List<java.lang.String> allowedActions) {
     this.allowedActions = allowedActions;
-    return this;
-  }
-
-  /**
-   * Whether the boot disk is allowed to be updated with restart.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDisruptionMode() {
-    return disruptionMode;
-  }
-
-  /**
-   * Whether the boot disk is allowed to be updated with restart.
-   * @param disruptionMode disruptionMode or {@code null} for none
-   */
-  public InstanceGroupManagerUpdatePolicy setDisruptionMode(java.lang.String disruptionMode) {
-    this.disruptionMode = disruptionMode;
     return this;
   }
 

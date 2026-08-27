@@ -46123,6 +46123,310 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the GlobalFrontendSettings collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.GlobalFrontendSettings.List request = compute.globalFrontendSettings().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public GlobalFrontendSettings globalFrontendSettings() {
+    return new GlobalFrontendSettings();
+  }
+
+  /**
+   * The "globalFrontendSettings" collection of methods.
+   */
+  public class GlobalFrontendSettings {
+
+    /**
+     * Gets the Global Frontend Billing Bundle Settings for a project.
+     *
+     * Create a request for the method "globalFrontendSettings.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project
+     * @return the request
+     */
+    public Get get(java.lang.String project) throws java.io.IOException {
+      Get result = new Get(project);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.GlobalFrontendSettings> {
+
+      private static final String REST_PATH = "projects/{project}/global/globalFrontendSettings";
+
+      /**
+       * Gets the Global Frontend Billing Bundle Settings for a project.
+       *
+       * Create a request for the method "globalFrontendSettings.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project
+       * @since 1.13
+       */
+      protected Get(java.lang.String project) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.GlobalFrontendSettings.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /**
+
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      public Get setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates the Global Frontend Billing Bundle Settings for a project.
+     *
+     * Create a request for the method "globalFrontendSettings.patch".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param project
+     * @param content the {@link com.google.api.services.compute.model.GlobalFrontendSettings}
+     * @return the request
+     */
+    public Patch patch(java.lang.String project, com.google.api.services.compute.model.GlobalFrontendSettings content) throws java.io.IOException {
+      Patch result = new Patch(project, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends ComputeRequest<com.google.api.services.compute.model.GlobalFrontendSettingsPatchResponse> {
+
+      private static final String REST_PATH = "projects/{project}/global/globalFrontendSettings";
+
+      /**
+       * Updates the Global Frontend Billing Bundle Settings for a project.
+       *
+       * Create a request for the method "globalFrontendSettings.patch".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project
+       * @param content the {@link com.google.api.services.compute.model.GlobalFrontendSettings}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String project, com.google.api.services.compute.model.GlobalFrontendSettings content) {
+        super(Compute.this, "PATCH", REST_PATH, content, com.google.api.services.compute.model.GlobalFrontendSettingsPatchResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Patch setUserIp(java.lang.String userIp) {
+        return (Patch) super.setUserIp(userIp);
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /**
+
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      public Patch setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /**
+
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      public Patch setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      /** e.g., "type" */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** e.g., "type"
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** e.g., "type" */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the GlobalNetworkEndpointGroups collection.
    *
    * <p>The typical use is:</p>
@@ -164253,6 +164557,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
+      private final java.util.regex.Pattern RECOVERABLE_SNAPSHOT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
       private final java.util.regex.Pattern SNAPSHOT_NAME_PATTERN =
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
@@ -164280,6 +164587,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
               "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
         }
         this.recoverableSnapshot = com.google.api.client.util.Preconditions.checkNotNull(recoverableSnapshot, "Required parameter recoverableSnapshot must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RECOVERABLE_SNAPSHOT_PATTERN.matcher(recoverableSnapshot).matches(),
+              "Parameter recoverableSnapshot must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
       }
 
       @Override
@@ -164375,6 +164687,11 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       /** Name of the recoverable resource to recover */
       public Recover setRecoverableSnapshot(java.lang.String recoverableSnapshot) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RECOVERABLE_SNAPSHOT_PATTERN.matcher(recoverableSnapshot).matches(),
+              "Parameter recoverableSnapshot must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
         this.recoverableSnapshot = recoverableSnapshot;
         return this;
       }

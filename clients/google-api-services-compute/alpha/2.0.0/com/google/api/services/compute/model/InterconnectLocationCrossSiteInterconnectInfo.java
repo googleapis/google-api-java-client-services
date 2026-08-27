@@ -40,6 +40,22 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
   private java.lang.String city;
 
   /**
+   * Output only. The maximum unmetered bandwidth for dynamic paths allowable per WireGroup for this
+   * metro.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxDynamicPathBandwidthGbps;
+
+  /**
+   * Output only. The maximum unmetered bandwidth for fixed paths allowable per WireGroup for this
+   * metro.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long maxFixedPathBandwidthGbps;
+
+  /**
    * Output only. The maximum gbps for a single flow to this metro. This limits the total bandwidth
    * which may be configured per wire.
    * The value may be {@code null}.
@@ -65,6 +81,44 @@ public final class InterconnectLocationCrossSiteInterconnectInfo extends com.goo
    */
   public InterconnectLocationCrossSiteInterconnectInfo setCity(java.lang.String city) {
     this.city = city;
+    return this;
+  }
+
+  /**
+   * Output only. The maximum unmetered bandwidth for dynamic paths allowable per WireGroup for this
+   * metro.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxDynamicPathBandwidthGbps() {
+    return maxDynamicPathBandwidthGbps;
+  }
+
+  /**
+   * Output only. The maximum unmetered bandwidth for dynamic paths allowable per WireGroup for this
+   * metro.
+   * @param maxDynamicPathBandwidthGbps maxDynamicPathBandwidthGbps or {@code null} for none
+   */
+  public InterconnectLocationCrossSiteInterconnectInfo setMaxDynamicPathBandwidthGbps(java.lang.Long maxDynamicPathBandwidthGbps) {
+    this.maxDynamicPathBandwidthGbps = maxDynamicPathBandwidthGbps;
+    return this;
+  }
+
+  /**
+   * Output only. The maximum unmetered bandwidth for fixed paths allowable per WireGroup for this
+   * metro.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getMaxFixedPathBandwidthGbps() {
+    return maxFixedPathBandwidthGbps;
+  }
+
+  /**
+   * Output only. The maximum unmetered bandwidth for fixed paths allowable per WireGroup for this
+   * metro.
+   * @param maxFixedPathBandwidthGbps maxFixedPathBandwidthGbps or {@code null} for none
+   */
+  public InterconnectLocationCrossSiteInterconnectInfo setMaxFixedPathBandwidthGbps(java.lang.Long maxFixedPathBandwidthGbps) {
+    this.maxFixedPathBandwidthGbps = maxFixedPathBandwidthGbps;
     return this;
   }
 

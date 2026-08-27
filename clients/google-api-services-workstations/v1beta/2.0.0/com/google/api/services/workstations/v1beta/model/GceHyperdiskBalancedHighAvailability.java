@@ -54,6 +54,22 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
   private java.lang.Integer maxSizeGb;
 
   /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
+   * operations per second that the disk can handle. Values must be between 3000 and 100,000.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedIops;
+
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This sets the number of
+   * throughput mb per second that the disk can handle. Values must be between 1 and 2,400.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long provisionedThroughput;
+
+  /**
    * Optional. Whether the persistent disk should be deleted when the workstation is deleted. Valid
    * values are `DELETE` and `RETAIN`. Defaults to `DELETE`.
    * The value may be {@code null}.
@@ -121,6 +137,44 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
    */
   public GceHyperdiskBalancedHighAvailability setMaxSizeGb(java.lang.Integer maxSizeGb) {
     this.maxSizeGb = maxSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
+   * operations per second that the disk can handle. Values must be between 3000 and 100,000.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedIops() {
+    return provisionedIops;
+  }
+
+  /**
+   * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
+   * operations per second that the disk can handle. Values must be between 3000 and 100,000.
+   * @param provisionedIops provisionedIops or {@code null} for none
+   */
+  public GceHyperdiskBalancedHighAvailability setProvisionedIops(java.lang.Long provisionedIops) {
+    this.provisionedIops = provisionedIops;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This sets the number of
+   * throughput mb per second that the disk can handle. Values must be between 1 and 2,400.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getProvisionedThroughput() {
+    return provisionedThroughput;
+  }
+
+  /**
+   * Optional. Indicates how much throughput to provision for the disk. This sets the number of
+   * throughput mb per second that the disk can handle. Values must be between 1 and 2,400.
+   * @param provisionedThroughput provisionedThroughput or {@code null} for none
+   */
+  public GceHyperdiskBalancedHighAvailability setProvisionedThroughput(java.lang.Long provisionedThroughput) {
+    this.provisionedThroughput = provisionedThroughput;
     return this;
   }
 

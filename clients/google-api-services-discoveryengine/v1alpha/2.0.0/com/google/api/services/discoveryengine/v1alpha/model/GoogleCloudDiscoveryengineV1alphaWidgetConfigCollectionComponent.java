@@ -108,9 +108,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as opposed to a third-
-   * party connector. Used by the frontend to group 1P vs 3P connectors. Sourced from
-   * `ConnectorSource.is_first_party` once that field is universally populated (b/534727761); until
-   * then derived from `ConnectorSource.connector_type == FIRST_PARTY`.
+   * party connector. Used by the frontend to group 1P vs 3P connectors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,9 +303,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as opposed to a third-
-   * party connector. Used by the frontend to group 1P vs 3P connectors. Sourced from
-   * `ConnectorSource.is_first_party` once that field is universally populated (b/534727761); until
-   * then derived from `ConnectorSource.connector_type == FIRST_PARTY`.
+   * party connector. Used by the frontend to group 1P vs 3P connectors.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsFirstParty() {
@@ -316,9 +312,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
 
   /**
    * Output only. Whether this is a first-party (Google-owned) connector, as opposed to a third-
-   * party connector. Used by the frontend to group 1P vs 3P connectors. Sourced from
-   * `ConnectorSource.is_first_party` once that field is universally populated (b/534727761); until
-   * then derived from `ConnectorSource.connector_type == FIRST_PARTY`.
+   * party connector. Used by the frontend to group 1P vs 3P connectors.
    * @param isFirstParty isFirstParty or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setIsFirstParty(java.lang.Boolean isFirstParty) {

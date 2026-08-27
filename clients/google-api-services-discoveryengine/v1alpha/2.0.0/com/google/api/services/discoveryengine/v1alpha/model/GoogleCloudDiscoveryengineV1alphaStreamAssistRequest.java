@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequest extends 
   private GoogleCloudDiscoveryengineV1alphaStreamAssistRequestActionSpec actionSpec;
 
   /**
+   * Optional. Specification of agents that are used to serve the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaStreamAssistRequestAgentsSpec agentsSpec;
+
+  /**
    * Optional. Specification of the generation configuration for the request.
    * The value may be {@code null}.
    */
@@ -90,6 +97,23 @@ public final class GoogleCloudDiscoveryengineV1alphaStreamAssistRequest extends 
    */
   public GoogleCloudDiscoveryengineV1alphaStreamAssistRequest setActionSpec(GoogleCloudDiscoveryengineV1alphaStreamAssistRequestActionSpec actionSpec) {
     this.actionSpec = actionSpec;
+    return this;
+  }
+
+  /**
+   * Optional. Specification of agents that are used to serve the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaStreamAssistRequestAgentsSpec getAgentsSpec() {
+    return agentsSpec;
+  }
+
+  /**
+   * Optional. Specification of agents that are used to serve the request.
+   * @param agentsSpec agentsSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaStreamAssistRequest setAgentsSpec(GoogleCloudDiscoveryengineV1alphaStreamAssistRequestAgentsSpec agentsSpec) {
+    this.agentsSpec = agentsSpec;
     return this;
   }
 

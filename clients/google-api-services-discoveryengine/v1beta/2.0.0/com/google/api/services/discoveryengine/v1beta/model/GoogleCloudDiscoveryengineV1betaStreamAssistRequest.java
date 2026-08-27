@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaStreamAssistRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specification of agents that are used to serve the request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaStreamAssistRequestAgentsSpec agentsSpec;
+
+  /**
    * Optional. Specification of the generation configuration for the request.
    * The value may be {@code null}.
    */
@@ -68,6 +75,23 @@ public final class GoogleCloudDiscoveryengineV1betaStreamAssistRequest extends c
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaAssistUserMetadata userMetadata;
+
+  /**
+   * Optional. Specification of agents that are used to serve the request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaStreamAssistRequestAgentsSpec getAgentsSpec() {
+    return agentsSpec;
+  }
+
+  /**
+   * Optional. Specification of agents that are used to serve the request.
+   * @param agentsSpec agentsSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaStreamAssistRequest setAgentsSpec(GoogleCloudDiscoveryengineV1betaStreamAssistRequestAgentsSpec agentsSpec) {
+    this.agentsSpec = agentsSpec;
+    return this;
+  }
 
   /**
    * Optional. Specification of the generation configuration for the request.

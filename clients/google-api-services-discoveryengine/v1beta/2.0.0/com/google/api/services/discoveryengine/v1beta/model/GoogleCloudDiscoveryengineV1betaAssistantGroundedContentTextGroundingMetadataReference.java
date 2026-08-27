@@ -30,6 +30,13 @@ package com.google.api.services.discoveryengine.v1beta.model;
 public final class GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadataReference extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Generic structured chunk metadata from upstream data source connectors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> chunkMetadata;
+
+  /**
    * Chunk of code snippet from the referenced document.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextG
    */
   @com.google.api.client.util.Key
   private GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadataReferenceDocumentMetadata documentMetadata;
+
+  /**
+   * Output only. Generic structured chunk metadata from upstream data source connectors.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getChunkMetadata() {
+    return chunkMetadata;
+  }
+
+  /**
+   * Output only. Generic structured chunk metadata from upstream data source connectors.
+   * @param chunkMetadata chunkMetadata or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaAssistantGroundedContentTextGroundingMetadataReference setChunkMetadata(java.util.Map<String, java.lang.Object> chunkMetadata) {
+    this.chunkMetadata = chunkMetadata;
+    return this;
+  }
 
   /**
    * Chunk of code snippet from the referenced document.

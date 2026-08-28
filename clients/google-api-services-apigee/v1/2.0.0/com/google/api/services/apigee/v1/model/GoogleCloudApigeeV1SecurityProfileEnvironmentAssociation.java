@@ -37,7 +37,8 @@ public final class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation exte
   private String attachTime;
 
   /**
-   * Immutable. Name of the environment that the profile is attached to.
+   * Immutable. The environment ID that the profile is attached to, e.g. `prod`. This is the bare
+   * environment ID, not a full resource name; see b/288477507.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation exte
   }
 
   /**
-   * Immutable. Name of the environment that the profile is attached to.
+   * Immutable. The environment ID that the profile is attached to, e.g. `prod`. This is the bare
+   * environment ID, not a full resource name; see b/288477507.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -76,7 +78,8 @@ public final class GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation exte
   }
 
   /**
-   * Immutable. Name of the environment that the profile is attached to.
+   * Immutable. The environment ID that the profile is attached to, e.g. `prod`. This is the bare
+   * environment ID, not a full resource name; see b/288477507.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1SecurityProfileEnvironmentAssociation setName(java.lang.String name) {

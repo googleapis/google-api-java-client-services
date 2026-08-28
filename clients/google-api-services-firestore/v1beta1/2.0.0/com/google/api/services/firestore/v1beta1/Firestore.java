@@ -1249,17 +1249,70 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           @com.google.api.client.util.Key("requestOptions.requestTags")
           private java.util.List<java.lang.String> requestOptionsRequestTags;
 
-          /** Optional. The request tags for the request.
+          /** Optional. The request tags for the request. Request tags are user-provided strings used for usage
+         monitoring, cost management, and observability. Callers can associate custom application context
+         (such as component, microservice, feature name, or operation type) with database requests. These
+         tags are collected and aggregated in usage and monitoring reports, allowing billable operations and
+         usage metrics to be sliced and analyzed by tag. These tags *only* show up in monitoring and are
+         visible in administrative operations (such as usage reports). They do not affect data storage,
+         query semantics, or request execution. Cardinality and Best Practices: - Request tags are most
+         effective when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across an
+         entire database). Using a large number of distinct tags may result in tags being omitted from top
+         usage dashboards. - Use structured identifiers (for example: `app=cart`, `env=prod`,
+         `service=checkout`) and avoid high-cardinality values such as UUIDs, request IDs, timestamps, user
+         IDs, or document keys. - Do not include sensitive data or personally identifiable information (PII)
+         in request tags, as they show up in administrative monitoring. The tags are processed as follows: -
+         Leading and trailing whitespace is trimmed. - Empty tags (after trimming) are filtered out. -
+         Truncated to a maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+         maximum of 50 tags per request (excess tags are silently discarded).
            */
           public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
             return requestOptionsRequestTags;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           public CreateDocument setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
             this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
@@ -1449,17 +1502,70 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           @com.google.api.client.util.Key("requestOptions.requestTags")
           private java.util.List<java.lang.String> requestOptionsRequestTags;
 
-          /** Optional. The request tags for the request.
+          /** Optional. The request tags for the request. Request tags are user-provided strings used for usage
+         monitoring, cost management, and observability. Callers can associate custom application context
+         (such as component, microservice, feature name, or operation type) with database requests. These
+         tags are collected and aggregated in usage and monitoring reports, allowing billable operations and
+         usage metrics to be sliced and analyzed by tag. These tags *only* show up in monitoring and are
+         visible in administrative operations (such as usage reports). They do not affect data storage,
+         query semantics, or request execution. Cardinality and Best Practices: - Request tags are most
+         effective when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across an
+         entire database). Using a large number of distinct tags may result in tags being omitted from top
+         usage dashboards. - Use structured identifiers (for example: `app=cart`, `env=prod`,
+         `service=checkout`) and avoid high-cardinality values such as UUIDs, request IDs, timestamps, user
+         IDs, or document keys. - Do not include sensitive data or personally identifiable information (PII)
+         in request tags, as they show up in administrative monitoring. The tags are processed as follows: -
+         Leading and trailing whitespace is trimmed. - Empty tags (after trimming) are filtered out. -
+         Truncated to a maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+         maximum of 50 tags per request (excess tags are silently discarded).
            */
           public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
             return requestOptionsRequestTags;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           public Delete setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
             this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
@@ -1795,17 +1901,70 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           @com.google.api.client.util.Key("requestOptions.requestTags")
           private java.util.List<java.lang.String> requestOptionsRequestTags;
 
-          /** Optional. The request tags for the request.
+          /** Optional. The request tags for the request. Request tags are user-provided strings used for usage
+         monitoring, cost management, and observability. Callers can associate custom application context
+         (such as component, microservice, feature name, or operation type) with database requests. These
+         tags are collected and aggregated in usage and monitoring reports, allowing billable operations and
+         usage metrics to be sliced and analyzed by tag. These tags *only* show up in monitoring and are
+         visible in administrative operations (such as usage reports). They do not affect data storage,
+         query semantics, or request execution. Cardinality and Best Practices: - Request tags are most
+         effective when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across an
+         entire database). Using a large number of distinct tags may result in tags being omitted from top
+         usage dashboards. - Use structured identifiers (for example: `app=cart`, `env=prod`,
+         `service=checkout`) and avoid high-cardinality values such as UUIDs, request IDs, timestamps, user
+         IDs, or document keys. - Do not include sensitive data or personally identifiable information (PII)
+         in request tags, as they show up in administrative monitoring. The tags are processed as follows: -
+         Leading and trailing whitespace is trimmed. - Empty tags (after trimming) are filtered out. -
+         Truncated to a maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+         maximum of 50 tags per request (excess tags are silently discarded).
            */
           public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
             return requestOptionsRequestTags;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           public Get setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
             this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
@@ -2179,17 +2338,70 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           @com.google.api.client.util.Key("requestOptions.requestTags")
           private java.util.List<java.lang.String> requestOptionsRequestTags;
 
-          /** Optional. The request tags for the request.
+          /** Optional. The request tags for the request. Request tags are user-provided strings used for usage
+         monitoring, cost management, and observability. Callers can associate custom application context
+         (such as component, microservice, feature name, or operation type) with database requests. These
+         tags are collected and aggregated in usage and monitoring reports, allowing billable operations and
+         usage metrics to be sliced and analyzed by tag. These tags *only* show up in monitoring and are
+         visible in administrative operations (such as usage reports). They do not affect data storage,
+         query semantics, or request execution. Cardinality and Best Practices: - Request tags are most
+         effective when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across an
+         entire database). Using a large number of distinct tags may result in tags being omitted from top
+         usage dashboards. - Use structured identifiers (for example: `app=cart`, `env=prod`,
+         `service=checkout`) and avoid high-cardinality values such as UUIDs, request IDs, timestamps, user
+         IDs, or document keys. - Do not include sensitive data or personally identifiable information (PII)
+         in request tags, as they show up in administrative monitoring. The tags are processed as follows: -
+         Leading and trailing whitespace is trimmed. - Empty tags (after trimming) are filtered out. -
+         Truncated to a maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+         maximum of 50 tags per request (excess tags are silently discarded).
            */
           public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
             return requestOptionsRequestTags;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           public List setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
             this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
@@ -2745,17 +2957,70 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           @com.google.api.client.util.Key("requestOptions.requestTags")
           private java.util.List<java.lang.String> requestOptionsRequestTags;
 
-          /** Optional. The request tags for the request.
+          /** Optional. The request tags for the request. Request tags are user-provided strings used for usage
+         monitoring, cost management, and observability. Callers can associate custom application context
+         (such as component, microservice, feature name, or operation type) with database requests. These
+         tags are collected and aggregated in usage and monitoring reports, allowing billable operations and
+         usage metrics to be sliced and analyzed by tag. These tags *only* show up in monitoring and are
+         visible in administrative operations (such as usage reports). They do not affect data storage,
+         query semantics, or request execution. Cardinality and Best Practices: - Request tags are most
+         effective when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across an
+         entire database). Using a large number of distinct tags may result in tags being omitted from top
+         usage dashboards. - Use structured identifiers (for example: `app=cart`, `env=prod`,
+         `service=checkout`) and avoid high-cardinality values such as UUIDs, request IDs, timestamps, user
+         IDs, or document keys. - Do not include sensitive data or personally identifiable information (PII)
+         in request tags, as they show up in administrative monitoring. The tags are processed as follows: -
+         Leading and trailing whitespace is trimmed. - Empty tags (after trimming) are filtered out. -
+         Truncated to a maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+         maximum of 50 tags per request (excess tags are silently discarded).
            */
           public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
             return requestOptionsRequestTags;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           public ListDocuments setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
             this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;
@@ -3300,17 +3565,70 @@ public class Firestore extends com.google.api.client.googleapis.services.json.Ab
             return this;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           @com.google.api.client.util.Key("requestOptions.requestTags")
           private java.util.List<java.lang.String> requestOptionsRequestTags;
 
-          /** Optional. The request tags for the request.
+          /** Optional. The request tags for the request. Request tags are user-provided strings used for usage
+         monitoring, cost management, and observability. Callers can associate custom application context
+         (such as component, microservice, feature name, or operation type) with database requests. These
+         tags are collected and aggregated in usage and monitoring reports, allowing billable operations and
+         usage metrics to be sliced and analyzed by tag. These tags *only* show up in monitoring and are
+         visible in administrative operations (such as usage reports). They do not affect data storage,
+         query semantics, or request execution. Cardinality and Best Practices: - Request tags are most
+         effective when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across an
+         entire database). Using a large number of distinct tags may result in tags being omitted from top
+         usage dashboards. - Use structured identifiers (for example: `app=cart`, `env=prod`,
+         `service=checkout`) and avoid high-cardinality values such as UUIDs, request IDs, timestamps, user
+         IDs, or document keys. - Do not include sensitive data or personally identifiable information (PII)
+         in request tags, as they show up in administrative monitoring. The tags are processed as follows: -
+         Leading and trailing whitespace is trimmed. - Empty tags (after trimming) are filtered out. -
+         Truncated to a maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+         maximum of 50 tags per request (excess tags are silently discarded).
            */
           public java.util.List<java.lang.String> getRequestOptionsRequestTags() {
             return requestOptionsRequestTags;
           }
 
-          /** Optional. The request tags for the request. */
+          /**
+           * Optional. The request tags for the request. Request tags are user-provided strings used
+           * for usage monitoring, cost management, and observability. Callers can associate custom
+           * application context (such as component, microservice, feature name, or operation type)
+           * with database requests. These tags are collected and aggregated in usage and monitoring
+           * reports, allowing billable operations and usage metrics to be sliced and analyzed by
+           * tag. These tags *only* show up in monitoring and are visible in administrative
+           * operations (such as usage reports). They do not affect data storage, query semantics,
+           * or request execution. Cardinality and Best Practices: - Request tags are most effective
+           * when using a bounded set of distinct values (e.g., fewer than 100 distinct tags across
+           * an entire database). Using a large number of distinct tags may result in tags being
+           * omitted from top usage dashboards. - Use structured identifiers (for example:
+           * `app=cart`, `env=prod`, `service=checkout`) and avoid high-cardinality values such as
+           * UUIDs, request IDs, timestamps, user IDs, or document keys. - Do not include sensitive
+           * data or personally identifiable information (PII) in request tags, as they show up in
+           * administrative monitoring. The tags are processed as follows: - Leading and trailing
+           * whitespace is trimmed. - Empty tags (after trimming) are filtered out. - Truncated to a
+           * maximum of 510 characters. - Deduplicated within the same request. - Limited to a
+           * maximum of 50 tags per request (excess tags are silently discarded).
+           */
           public Patch setRequestOptionsRequestTags(java.util.List<java.lang.String> requestOptionsRequestTags) {
             this.requestOptionsRequestTags = requestOptionsRequestTags;
             return this;

@@ -320,7 +320,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private UserFacingMessage deviceOwnerLockScreenInfo;
 
   /**
-   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   * Optional. Covers controls for radio state such as Wi-Fi, bluetooth, and more.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1525,7 +1525,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   * Optional. Covers controls for radio state such as Wi-Fi, bluetooth, and more.
    * @return value or {@code null} for none
    */
   public DeviceRadioState getDeviceRadioState() {
@@ -1533,7 +1533,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Covers controls for radio state such as Wi-Fi, bluetooth, and more.
+   * Optional. Covers controls for radio state such as Wi-Fi, bluetooth, and more.
    * @param deviceRadioState deviceRadioState or {@code null} for none
    */
   public Policy setDeviceRadioState(DeviceRadioState deviceRadioState) {

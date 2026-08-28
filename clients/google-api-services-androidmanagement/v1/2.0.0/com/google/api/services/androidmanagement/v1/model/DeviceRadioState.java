@@ -31,28 +31,29 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class DeviceRadioState extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls whether airplane mode can be toggled by the user or not.
+   * Optional. Controls whether airplane mode can be toggled by the user or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String airplaneModeState;
 
   /**
-   * Controls whether cellular 2G setting can be toggled by the user or not.
+   * Optional. Controls whether cellular 2G setting can be toggled by the user or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String cellularTwoGState;
 
   /**
-   * The minimum required security level of Wi-Fi networks that the device can connect to.
+   * Optional. The minimum required security level of Wi-Fi networks that the device can connect to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String minimumWifiSecurityLevel;
 
   /**
-   * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
+   * Optional. Controls the state of the ultra wideband setting and whether the user can toggle it
+   * on or off.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,14 +67,14 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   private java.lang.String userInitiatedAddEsimSettings;
 
   /**
-   * Controls current state of Wi-Fi and if user can change its state.
+   * Optional. Controls current state of Wi-Fi and if user can change its state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wifiState;
 
   /**
-   * Controls whether airplane mode can be toggled by the user or not.
+   * Optional. Controls whether airplane mode can be toggled by the user or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getAirplaneModeState() {
@@ -81,7 +82,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls whether airplane mode can be toggled by the user or not.
+   * Optional. Controls whether airplane mode can be toggled by the user or not.
    * @param airplaneModeState airplaneModeState or {@code null} for none
    */
   public DeviceRadioState setAirplaneModeState(java.lang.String airplaneModeState) {
@@ -90,7 +91,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls whether cellular 2G setting can be toggled by the user or not.
+   * Optional. Controls whether cellular 2G setting can be toggled by the user or not.
    * @return value or {@code null} for none
    */
   public java.lang.String getCellularTwoGState() {
@@ -98,7 +99,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls whether cellular 2G setting can be toggled by the user or not.
+   * Optional. Controls whether cellular 2G setting can be toggled by the user or not.
    * @param cellularTwoGState cellularTwoGState or {@code null} for none
    */
   public DeviceRadioState setCellularTwoGState(java.lang.String cellularTwoGState) {
@@ -107,7 +108,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The minimum required security level of Wi-Fi networks that the device can connect to.
+   * Optional. The minimum required security level of Wi-Fi networks that the device can connect to.
    * @return value or {@code null} for none
    */
   public java.lang.String getMinimumWifiSecurityLevel() {
@@ -115,7 +116,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The minimum required security level of Wi-Fi networks that the device can connect to.
+   * Optional. The minimum required security level of Wi-Fi networks that the device can connect to.
    * @param minimumWifiSecurityLevel minimumWifiSecurityLevel or {@code null} for none
    */
   public DeviceRadioState setMinimumWifiSecurityLevel(java.lang.String minimumWifiSecurityLevel) {
@@ -124,7 +125,8 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
+   * Optional. Controls the state of the ultra wideband setting and whether the user can toggle it
+   * on or off.
    * @return value or {@code null} for none
    */
   public java.lang.String getUltraWidebandState() {
@@ -132,7 +134,8 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls the state of the ultra wideband setting and whether the user can toggle it on or off.
+   * Optional. Controls the state of the ultra wideband setting and whether the user can toggle it
+   * on or off.
    * @param ultraWidebandState ultraWidebandState or {@code null} for none
    */
   public DeviceRadioState setUltraWidebandState(java.lang.String ultraWidebandState) {
@@ -158,7 +161,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls current state of Wi-Fi and if user can change its state.
+   * Optional. Controls current state of Wi-Fi and if user can change its state.
    * @return value or {@code null} for none
    */
   public java.lang.String getWifiState() {
@@ -166,7 +169,7 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Controls current state of Wi-Fi and if user can change its state.
+   * Optional. Controls current state of Wi-Fi and if user can change its state.
    * @param wifiState wifiState or {@code null} for none
    */
   public DeviceRadioState setWifiState(java.lang.String wifiState) {

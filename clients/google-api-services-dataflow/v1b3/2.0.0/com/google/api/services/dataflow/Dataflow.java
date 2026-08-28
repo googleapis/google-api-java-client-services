@@ -134,6 +134,1566 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dataflow dataflow = new Dataflow(...);}
+   *   {@code Dataflow.Folders.List request = dataflow.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dataflow dataflow = new Dataflow(...);}
+     *   {@code Dataflow.Locations.List request = dataflow.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ConfigStoreSettings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.ConfigStoreSettings.List request = dataflow.configStoreSettings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ConfigStoreSettings configStoreSettings() {
+        return new ConfigStoreSettings();
+      }
+
+      /**
+       * The "configStoreSettings" collection of methods.
+       */
+      public class ConfigStoreSettings {
+
+        /**
+         * Creates a new ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.create".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this setting will be created.
+         * @param content the {@link com.google.api.services.dataflow.model.ConfigStoreSetting}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataflow.model.ConfigStoreSetting content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataflowRequest<com.google.api.services.dataflow.model.ConfigStoreSetting> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/configStoreSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.create".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this setting will be created.
+           * @param content the {@link com.google.api.services.dataflow.model.ConfigStoreSetting}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataflow.model.ConfigStoreSetting content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ConfigStoreSetting.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource where this setting will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this setting will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource where this setting will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The ID to use for the setting. */
+          @com.google.api.client.util.Key
+          private java.lang.String configStoreSettingId;
+
+          /** Required. The ID to use for the setting.
+           */
+          public java.lang.String getConfigStoreSettingId() {
+            return configStoreSettingId;
+          }
+
+          /** Required. The ID to use for the setting. */
+          public Create setConfigStoreSettingId(java.lang.String configStoreSettingId) {
+            this.configStoreSettingId = configStoreSettingId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.delete".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ConfigStoreSetting to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataflowRequest<com.google.api.services.dataflow.model.Empty> {
+
+          private static final String REST_PATH = "v1b3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Deletes an existing ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.delete".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ConfigStoreSetting to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataflow.this, "DELETE", REST_PATH, null, com.google.api.services.dataflow.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ConfigStoreSetting to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ConfigStoreSetting to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ConfigStoreSetting to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.get".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ConfigStoreSetting to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataflowRequest<com.google.api.services.dataflow.model.ConfigStoreSetting> {
+
+          private static final String REST_PATH = "v1b3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Gets a ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.get".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ConfigStoreSetting to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ConfigStoreSetting.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ConfigStoreSetting to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ConfigStoreSetting to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ConfigStoreSetting to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists ConfigStoreSettings.
+         *
+         * Create a request for the method "configStoreSettings.list".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose settings are being listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListConfigStoreSettingsResponse> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/configStoreSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists ConfigStoreSettings.
+           *
+           * Create a request for the method "configStoreSettings.list".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose settings are being listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListConfigStoreSettingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource whose settings are being listed. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose settings are being listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource whose settings are being listed. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of settings to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of settings to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of settings to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resolves effective value of a ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.resolve".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the setting to resolve.
+         * @param content the {@link com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest}
+         * @return the request
+         */
+        public Resolve resolve(java.lang.String name, com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest content) throws java.io.IOException {
+          Resolve result = new Resolve(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Resolve extends DataflowRequest<com.google.api.services.dataflow.model.ResolveConfigStoreSettingResponse> {
+
+          private static final String REST_PATH = "v1b3/{+name}:resolve";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Resolves effective value of a ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.resolve".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the setting to resolve.
+           * @param content the {@link com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest}
+           * @since 1.13
+           */
+          protected Resolve(java.lang.String name, com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ResolveConfigStoreSettingResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Resolve set$Xgafv(java.lang.String $Xgafv) {
+            return (Resolve) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Resolve setAccessToken(java.lang.String accessToken) {
+            return (Resolve) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Resolve setAlt(java.lang.String alt) {
+            return (Resolve) super.setAlt(alt);
+          }
+
+          @Override
+          public Resolve setCallback(java.lang.String callback) {
+            return (Resolve) super.setCallback(callback);
+          }
+
+          @Override
+          public Resolve setFields(java.lang.String fields) {
+            return (Resolve) super.setFields(fields);
+          }
+
+          @Override
+          public Resolve setKey(java.lang.String key) {
+            return (Resolve) super.setKey(key);
+          }
+
+          @Override
+          public Resolve setOauthToken(java.lang.String oauthToken) {
+            return (Resolve) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Resolve setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Resolve) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Resolve setQuotaUser(java.lang.String quotaUser) {
+            return (Resolve) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Resolve setUploadType(java.lang.String uploadType) {
+            return (Resolve) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Resolve setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Resolve) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the setting to resolve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the setting to resolve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the setting to resolve. */
+          public Resolve setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Resolve set(String parameterName, Object value) {
+            return (Resolve) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
+   * An accessor for creating requests from the Organizations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dataflow dataflow = new Dataflow(...);}
+   *   {@code Dataflow.Organizations.List request = dataflow.organizations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Organizations organizations() {
+    return new Organizations();
+  }
+
+  /**
+   * The "organizations" collection of methods.
+   */
+  public class Organizations {
+
+    /**
+     * An accessor for creating requests from the Locations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code Dataflow dataflow = new Dataflow(...);}
+     *   {@code Dataflow.Locations.List request = dataflow.locations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Locations locations() {
+      return new Locations();
+    }
+
+    /**
+     * The "locations" collection of methods.
+     */
+    public class Locations {
+
+      /**
+       * An accessor for creating requests from the ConfigStoreSettings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.ConfigStoreSettings.List request = dataflow.configStoreSettings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ConfigStoreSettings configStoreSettings() {
+        return new ConfigStoreSettings();
+      }
+
+      /**
+       * The "configStoreSettings" collection of methods.
+       */
+      public class ConfigStoreSettings {
+
+        /**
+         * Creates a new ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.create".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this setting will be created.
+         * @param content the {@link com.google.api.services.dataflow.model.ConfigStoreSetting}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataflow.model.ConfigStoreSetting content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataflowRequest<com.google.api.services.dataflow.model.ConfigStoreSetting> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/configStoreSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.create".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this setting will be created.
+           * @param content the {@link com.google.api.services.dataflow.model.ConfigStoreSetting}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataflow.model.ConfigStoreSetting content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ConfigStoreSetting.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource where this setting will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this setting will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource where this setting will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The ID to use for the setting. */
+          @com.google.api.client.util.Key
+          private java.lang.String configStoreSettingId;
+
+          /** Required. The ID to use for the setting.
+           */
+          public java.lang.String getConfigStoreSettingId() {
+            return configStoreSettingId;
+          }
+
+          /** Required. The ID to use for the setting. */
+          public Create setConfigStoreSettingId(java.lang.String configStoreSettingId) {
+            this.configStoreSettingId = configStoreSettingId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.delete".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ConfigStoreSetting to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataflowRequest<com.google.api.services.dataflow.model.Empty> {
+
+          private static final String REST_PATH = "v1b3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Deletes an existing ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.delete".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ConfigStoreSetting to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataflow.this, "DELETE", REST_PATH, null, com.google.api.services.dataflow.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ConfigStoreSetting to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ConfigStoreSetting to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ConfigStoreSetting to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.get".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ConfigStoreSetting to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataflowRequest<com.google.api.services.dataflow.model.ConfigStoreSetting> {
+
+          private static final String REST_PATH = "v1b3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Gets a ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.get".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ConfigStoreSetting to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ConfigStoreSetting.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ConfigStoreSetting to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ConfigStoreSetting to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ConfigStoreSetting to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists ConfigStoreSettings.
+         *
+         * Create a request for the method "configStoreSettings.list".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose settings are being listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListConfigStoreSettingsResponse> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/configStoreSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists ConfigStoreSettings.
+           *
+           * Create a request for the method "configStoreSettings.list".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose settings are being listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListConfigStoreSettingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource whose settings are being listed. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose settings are being listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource whose settings are being listed. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of settings to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of settings to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of settings to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resolves effective value of a ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.resolve".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the setting to resolve.
+         * @param content the {@link com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest}
+         * @return the request
+         */
+        public Resolve resolve(java.lang.String name, com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest content) throws java.io.IOException {
+          Resolve result = new Resolve(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Resolve extends DataflowRequest<com.google.api.services.dataflow.model.ResolveConfigStoreSettingResponse> {
+
+          private static final String REST_PATH = "v1b3/{+name}:resolve";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Resolves effective value of a ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.resolve".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the setting to resolve.
+           * @param content the {@link com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest}
+           * @since 1.13
+           */
+          protected Resolve(java.lang.String name, com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ResolveConfigStoreSettingResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Resolve set$Xgafv(java.lang.String $Xgafv) {
+            return (Resolve) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Resolve setAccessToken(java.lang.String accessToken) {
+            return (Resolve) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Resolve setAlt(java.lang.String alt) {
+            return (Resolve) super.setAlt(alt);
+          }
+
+          @Override
+          public Resolve setCallback(java.lang.String callback) {
+            return (Resolve) super.setCallback(callback);
+          }
+
+          @Override
+          public Resolve setFields(java.lang.String fields) {
+            return (Resolve) super.setFields(fields);
+          }
+
+          @Override
+          public Resolve setKey(java.lang.String key) {
+            return (Resolve) super.setKey(key);
+          }
+
+          @Override
+          public Resolve setOauthToken(java.lang.String oauthToken) {
+            return (Resolve) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Resolve setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Resolve) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Resolve setQuotaUser(java.lang.String quotaUser) {
+            return (Resolve) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Resolve setUploadType(java.lang.String uploadType) {
+            return (Resolve) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Resolve setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Resolve) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the setting to resolve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the setting to resolve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the setting to resolve. */
+          public Resolve setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Resolve set(String parameterName, Object value) {
+            return (Resolve) super.set(parameterName, value);
+          }
+        }
+
+      }
+    }
+  }
+
+  /**
    * An accessor for creating requests from the Projects collection.
    *
    * <p>The typical use is:</p>
@@ -2931,6 +4491,743 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         }
       }
 
+      /**
+       * An accessor for creating requests from the ConfigStoreSettings collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Dataflow dataflow = new Dataflow(...);}
+       *   {@code Dataflow.ConfigStoreSettings.List request = dataflow.configStoreSettings().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public ConfigStoreSettings configStoreSettings() {
+        return new ConfigStoreSettings();
+      }
+
+      /**
+       * The "configStoreSettings" collection of methods.
+       */
+      public class ConfigStoreSettings {
+
+        /**
+         * Creates a new ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.create".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this setting will be created.
+         * @param content the {@link com.google.api.services.dataflow.model.ConfigStoreSetting}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.dataflow.model.ConfigStoreSetting content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends DataflowRequest<com.google.api.services.dataflow.model.ConfigStoreSetting> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/configStoreSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.create".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this setting will be created.
+           * @param content the {@link com.google.api.services.dataflow.model.ConfigStoreSetting}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.dataflow.model.ConfigStoreSetting content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ConfigStoreSetting.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource where this setting will be created. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this setting will be created.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource where this setting will be created. */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Required. The ID to use for the setting. */
+          @com.google.api.client.util.Key
+          private java.lang.String configStoreSettingId;
+
+          /** Required. The ID to use for the setting.
+           */
+          public java.lang.String getConfigStoreSettingId() {
+            return configStoreSettingId;
+          }
+
+          /** Required. The ID to use for the setting. */
+          public Create setConfigStoreSettingId(java.lang.String configStoreSettingId) {
+            this.configStoreSettingId = configStoreSettingId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an existing ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.delete".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ConfigStoreSetting to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends DataflowRequest<com.google.api.services.dataflow.model.Empty> {
+
+          private static final String REST_PATH = "v1b3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Deletes an existing ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.delete".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ConfigStoreSetting to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Dataflow.this, "DELETE", REST_PATH, null, com.google.api.services.dataflow.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ConfigStoreSetting to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ConfigStoreSetting to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ConfigStoreSetting to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.get".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the ConfigStoreSetting to retrieve.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends DataflowRequest<com.google.api.services.dataflow.model.ConfigStoreSetting> {
+
+          private static final String REST_PATH = "v1b3/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Gets a ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.get".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the ConfigStoreSetting to retrieve.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ConfigStoreSetting.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the ConfigStoreSetting to retrieve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the ConfigStoreSetting to retrieve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the ConfigStoreSetting to retrieve. */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists ConfigStoreSettings.
+         *
+         * Create a request for the method "configStoreSettings.list".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource whose settings are being listed.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends DataflowRequest<com.google.api.services.dataflow.model.ListConfigStoreSettingsResponse> {
+
+          private static final String REST_PATH = "v1b3/{+parent}/configStoreSettings";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists ConfigStoreSettings.
+           *
+           * Create a request for the method "configStoreSettings.list".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource whose settings are being listed.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Dataflow.this, "GET", REST_PATH, null, com.google.api.services.dataflow.model.ListConfigStoreSettingsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The parent resource whose settings are being listed. */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource whose settings are being listed.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /** Required. The parent resource whose settings are being listed. */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. The maximum number of settings to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of settings to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of settings to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A page token, received from a previous `ListConfigStoreSettings` call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resolves effective value of a ConfigStoreSetting.
+         *
+         * Create a request for the method "configStoreSettings.resolve".
+         *
+         * This request holds the parameters needed by the dataflow server.  After setting any optional
+         * parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the setting to resolve.
+         * @param content the {@link com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest}
+         * @return the request
+         */
+        public Resolve resolve(java.lang.String name, com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest content) throws java.io.IOException {
+          Resolve result = new Resolve(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Resolve extends DataflowRequest<com.google.api.services.dataflow.model.ResolveConfigStoreSettingResponse> {
+
+          private static final String REST_PATH = "v1b3/{+name}:resolve";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+
+          /**
+           * Resolves effective value of a ConfigStoreSetting.
+           *
+           * Create a request for the method "configStoreSettings.resolve".
+           *
+           * This request holds the parameters needed by the the dataflow server.  After setting any
+           * optional parameters, call the {@link Resolve#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Resolve#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the setting to resolve.
+           * @param content the {@link com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest}
+           * @since 1.13
+           */
+          protected Resolve(java.lang.String name, com.google.api.services.dataflow.model.ResolveConfigStoreSettingRequest content) {
+            super(Dataflow.this, "POST", REST_PATH, content, com.google.api.services.dataflow.model.ResolveConfigStoreSettingResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Resolve set$Xgafv(java.lang.String $Xgafv) {
+            return (Resolve) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Resolve setAccessToken(java.lang.String accessToken) {
+            return (Resolve) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Resolve setAlt(java.lang.String alt) {
+            return (Resolve) super.setAlt(alt);
+          }
+
+          @Override
+          public Resolve setCallback(java.lang.String callback) {
+            return (Resolve) super.setCallback(callback);
+          }
+
+          @Override
+          public Resolve setFields(java.lang.String fields) {
+            return (Resolve) super.setFields(fields);
+          }
+
+          @Override
+          public Resolve setKey(java.lang.String key) {
+            return (Resolve) super.setKey(key);
+          }
+
+          @Override
+          public Resolve setOauthToken(java.lang.String oauthToken) {
+            return (Resolve) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Resolve setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Resolve) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Resolve setQuotaUser(java.lang.String quotaUser) {
+            return (Resolve) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Resolve setUploadType(java.lang.String uploadType) {
+            return (Resolve) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Resolve setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Resolve) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the setting to resolve. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the setting to resolve.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the setting to resolve. */
+          public Resolve setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/configStoreSettings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Resolve set(String parameterName, Object value) {
+            return (Resolve) super.set(parameterName, value);
+          }
+        }
+
+      }
       /**
        * An accessor for creating requests from the FlexTemplates collection.
        *

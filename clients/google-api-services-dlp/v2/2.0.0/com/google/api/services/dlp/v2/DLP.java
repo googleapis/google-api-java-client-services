@@ -18572,9 +18572,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
-         *        request (project or organization): + Projects scope:
-         *        `projects/{project_id}/locations/{location_id}` + Organizations scope:
-         *        `organizations/{org_id}/locations/{location_id}`
+         *        request (project): + Projects scope: `projects/{project_id}/locations/{location_id}`
          * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateContentPolicyRequest}
          * @return the request
          */
@@ -18602,9 +18600,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. Parent resource name. The format of this value varies depending on the scope of the
-         *        request (project or organization): + Projects scope:
-         *        `projects/{project_id}/locations/{location_id}` + Organizations scope:
-         *        `organizations/{org_id}/locations/{location_id}`
+         *        request (project): + Projects scope: `projects/{project_id}/locations/{location_id}`
            * @param content the {@link com.google.api.services.dlp.v2.model.GooglePrivacyDlpV2CreateContentPolicyRequest}
            * @since 1.13
            */
@@ -18675,17 +18671,14 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
-           * of the request (project or organization): + Projects scope:
-           * `projects/{project_id}/locations/{location_id}` + Organizations scope:
-           * `organizations/{org_id}/locations/{location_id}`
+           * of the request (project): + Projects scope:
+           * `projects/{project_id}/locations/{location_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent resource name. The format of this value varies depending on the scope of the
-         request (project or organization): + Projects scope:
-         `projects/{project_id}/locations/{location_id}` + Organizations scope:
-         `organizations/{org_id}/locations/{location_id}`
+         request (project): + Projects scope: `projects/{project_id}/locations/{location_id}`
            */
           public java.lang.String getParent() {
             return parent;
@@ -18693,9 +18686,8 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
 
           /**
            * Required. Parent resource name. The format of this value varies depending on the scope
-           * of the request (project or organization): + Projects scope:
-           * `projects/{project_id}/locations/{location_id}` + Organizations scope:
-           * `organizations/{org_id}/locations/{location_id}`
+           * of the request (project): + Projects scope:
+           * `projects/{project_id}/locations/{location_id}`
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -19004,8 +18996,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
          * This request holds the parameters needed by the dlp server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Resource name of the organization or project, for example,
-         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+         * @param parent Required. Resource name of the project, for example, `projects/project-id/locations/asia`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -19031,8 +19022,7 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Resource name of the organization or project, for example,
-         *        `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * @param parent Required. Resource name of the project, for example, `projects/project-id/locations/asia`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -19111,22 +19101,21 @@ public class DLP extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. Resource name of the organization or project, for example,
-           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * Required. Resource name of the project, for example, `projects/project-
+           * id/locations/asia`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Resource name of the organization or project, for example,
-         `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+          /** Required. Resource name of the project, for example, `projects/project-id/locations/asia`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. Resource name of the organization or project, for example,
-           * `organizations/433245324/locations/europe` or `projects/project-id/locations/asia`.
+           * Required. Resource name of the project, for example, `projects/project-
+           * id/locations/asia`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

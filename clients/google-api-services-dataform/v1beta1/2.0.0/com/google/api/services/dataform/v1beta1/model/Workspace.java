@@ -48,7 +48,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    * Optional. Input only. Immutable. The maximum depth of the Git repository to checkout for this
    * workspace. If defined and greater than 0, the Git repository will be created as a shallow clone
    * with the given depth, otherwise a full clone will be performed. This field is available only
-   * for GitHub, Gitlab and 1p repositories with enabled branch management.
+   * for GitHub, GitLab and 1p repositories with enabled branch management.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +150,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    * Optional. Input only. Immutable. The maximum depth of the Git repository to checkout for this
    * workspace. If defined and greater than 0, the Git repository will be created as a shallow clone
    * with the given depth, otherwise a full clone will be performed. This field is available only
-   * for GitHub, Gitlab and 1p repositories with enabled branch management.
+   * for GitHub, GitLab and 1p repositories with enabled branch management.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDepth() {
@@ -161,7 +161,7 @@ public final class Workspace extends com.google.api.client.json.GenericJson {
    * Optional. Input only. Immutable. The maximum depth of the Git repository to checkout for this
    * workspace. If defined and greater than 0, the Git repository will be created as a shallow clone
    * with the given depth, otherwise a full clone will be performed. This field is available only
-   * for GitHub, Gitlab and 1p repositories with enabled branch management.
+   * for GitHub, GitLab and 1p repositories with enabled branch management.
    * @param depth depth or {@code null} for none
    */
   public Workspace setDepth(java.lang.Integer depth) {

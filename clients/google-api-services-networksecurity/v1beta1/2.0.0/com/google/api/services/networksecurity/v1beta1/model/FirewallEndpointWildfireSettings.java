@@ -60,8 +60,8 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   private java.lang.String wildfireRealtimeLookupTimeoutAction;
 
   /**
-   * Optional. The region where WildFire analysis will be performed. PAN supports regions:
-   * https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
+   * Optional. The region where WildFire analysis will be performed. Palo Alto Networks supports
+   * regions: https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
    * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud
    * The value may be {@code null}.
    */
@@ -141,8 +141,8 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. The region where WildFire analysis will be performed. PAN supports regions:
-   * https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
+   * Optional. The region where WildFire analysis will be performed. Palo Alto Networks supports
+   * regions: https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
    * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud
    * @return value or {@code null} for none
    */
@@ -151,8 +151,8 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. The region where WildFire analysis will be performed. PAN supports regions:
-   * https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
+   * Optional. The region where WildFire analysis will be performed. Palo Alto Networks supports
+   * regions: https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
    * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud
    * @param wildfireRegion wildfireRegion or {@code null} for none
    */

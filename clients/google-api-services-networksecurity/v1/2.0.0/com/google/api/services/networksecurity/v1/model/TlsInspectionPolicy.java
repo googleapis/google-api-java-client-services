@@ -40,6 +40,13 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
   private java.lang.String caPool;
 
   /**
+   * Optional. The mode used to issue certificates (local CA signing vs direct leaf).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificateIssuanceMode;
+
+  /**
    * Output only. The timestamp when the resource was created.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class TlsInspectionPolicy extends com.google.api.client.json.Generi
    */
   public TlsInspectionPolicy setCaPool(java.lang.String caPool) {
     this.caPool = caPool;
+    return this;
+  }
+
+  /**
+   * Optional. The mode used to issue certificates (local CA signing vs direct leaf).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificateIssuanceMode() {
+    return certificateIssuanceMode;
+  }
+
+  /**
+   * Optional. The mode used to issue certificates (local CA signing vs direct leaf).
+   * @param certificateIssuanceMode certificateIssuanceMode or {@code null} for none
+   */
+  public TlsInspectionPolicy setCertificateIssuanceMode(java.lang.String certificateIssuanceMode) {
+    this.certificateIssuanceMode = certificateIssuanceMode;
     return this;
   }
 

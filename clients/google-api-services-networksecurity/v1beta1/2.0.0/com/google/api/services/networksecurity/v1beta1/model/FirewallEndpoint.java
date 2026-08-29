@@ -77,6 +77,14 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private FirewallEndpointEndpointSettings endpointSettings;
 
   /**
+   * Output only. The resource name of the explicit PSC Attachment. Format:
+   * projects/{project}/regions/{region}/serviceAttachments/{id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String explicitPrivateServiceConnectAttachment;
+
+  /**
    * Optional. Labels as key value pairs
    * The value may be {@code null}.
    */
@@ -241,6 +249,25 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
    */
   public FirewallEndpoint setEndpointSettings(FirewallEndpointEndpointSettings endpointSettings) {
     this.endpointSettings = endpointSettings;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the explicit PSC Attachment. Format:
+   * projects/{project}/regions/{region}/serviceAttachments/{id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExplicitPrivateServiceConnectAttachment() {
+    return explicitPrivateServiceConnectAttachment;
+  }
+
+  /**
+   * Output only. The resource name of the explicit PSC Attachment. Format:
+   * projects/{project}/regions/{region}/serviceAttachments/{id}
+   * @param explicitPrivateServiceConnectAttachment explicitPrivateServiceConnectAttachment or {@code null} for none
+   */
+  public FirewallEndpoint setExplicitPrivateServiceConnectAttachment(java.lang.String explicitPrivateServiceConnectAttachment) {
+    this.explicitPrivateServiceConnectAttachment = explicitPrivateServiceConnectAttachment;
     return this;
   }
 

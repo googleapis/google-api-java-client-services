@@ -33,9 +33,9 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
    * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
    * the same load balancing scheme. Required only when targeting forwarding rules. If targeting
    * Secure Web Proxy, this field must be `INTERNAL_MANAGED` or not specified. Must not be specified
-   * when targeting Agent Gateway. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For
-   * more information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * when targeting Agent Gateway. Supported values include `INTERNAL_MANAGED` and
+   * `EXTERNAL_MANAGED`. For more information, refer to [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,9 +53,9 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
    * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
    * the same load balancing scheme. Required only when targeting forwarding rules. If targeting
    * Secure Web Proxy, this field must be `INTERNAL_MANAGED` or not specified. Must not be specified
-   * when targeting Agent Gateway. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For
-   * more information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * when targeting Agent Gateway. Supported values include `INTERNAL_MANAGED` and
+   * `EXTERNAL_MANAGED`. For more information, refer to [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * @return value or {@code null} for none
    */
   public java.lang.String getLoadBalancingScheme() {
@@ -66,9 +66,9 @@ public final class AuthzPolicyTarget extends com.google.api.client.json.GenericJ
    * Optional. All gateways and forwarding rules referenced by this policy and extensions must share
    * the same load balancing scheme. Required only when targeting forwarding rules. If targeting
    * Secure Web Proxy, this field must be `INTERNAL_MANAGED` or not specified. Must not be specified
-   * when targeting Agent Gateway. Supported values: `INTERNAL_MANAGED` and `EXTERNAL_MANAGED`. For
-   * more information, refer to [Backend services overview](https://cloud.google.com/load-
-   * balancing/docs/backend-service).
+   * when targeting Agent Gateway. Supported values include `INTERNAL_MANAGED` and
+   * `EXTERNAL_MANAGED`. For more information, refer to [Backend services
+   * overview](https://cloud.google.com/load-balancing/docs/backend-service).
    * @param loadBalancingScheme loadBalancingScheme or {@code null} for none
    */
   public AuthzPolicyTarget setLoadBalancingScheme(java.lang.String loadBalancingScheme) {

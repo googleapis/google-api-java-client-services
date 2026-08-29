@@ -109,6 +109,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, StorageResource> storageResources;
 
   /**
+   * Output only. The globally unique identifier for this Cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String uid;
+
+  /**
    * Output only. Time that the cluster was most recently updated.
    * The value may be {@code null}.
    */
@@ -289,6 +296,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setStorageResources(java.util.Map<String, StorageResource> storageResources) {
     this.storageResources = storageResources;
+    return this;
+  }
+
+  /**
+   * Output only. The globally unique identifier for this Cluster.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUid() {
+    return uid;
+  }
+
+  /**
+   * Output only. The globally unique identifier for this Cluster.
+   * @param uid uid or {@code null} for none
+   */
+  public Cluster setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

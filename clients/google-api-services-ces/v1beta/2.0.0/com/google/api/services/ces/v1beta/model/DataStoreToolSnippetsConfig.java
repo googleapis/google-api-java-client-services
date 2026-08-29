@@ -38,6 +38,14 @@ public final class DataStoreToolSnippetsConfig extends com.google.api.client.jso
   private java.lang.Boolean enableSnippets;
 
   /**
+   * Optional. Number of snippets to return per query. If unset, returns all snippets from the
+   * service by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxSnippets;
+
+  /**
    * Optional. Whether snippets are enabled.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class DataStoreToolSnippetsConfig extends com.google.api.client.jso
    */
   public DataStoreToolSnippetsConfig setEnableSnippets(java.lang.Boolean enableSnippets) {
     this.enableSnippets = enableSnippets;
+    return this;
+  }
+
+  /**
+   * Optional. Number of snippets to return per query. If unset, returns all snippets from the
+   * service by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxSnippets() {
+    return maxSnippets;
+  }
+
+  /**
+   * Optional. Number of snippets to return per query. If unset, returns all snippets from the
+   * service by default.
+   * @param maxSnippets maxSnippets or {@code null} for none
+   */
+  public DataStoreToolSnippetsConfig setMaxSnippets(java.lang.Integer maxSnippets) {
+    this.maxSnippets = maxSnippets;
     return this;
   }
 

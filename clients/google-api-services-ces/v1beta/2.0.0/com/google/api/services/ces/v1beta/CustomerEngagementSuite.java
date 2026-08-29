@@ -4866,22 +4866,6 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return this;
             }
 
-            /** Optional. The view specifying which fields in the response should be populated. */
-            @com.google.api.client.util.Key
-            private java.lang.String view;
-
-            /** Optional. The view specifying which fields in the response should be populated.
-             */
-            public java.lang.String getView() {
-              return view;
-            }
-
-            /** Optional. The view specifying which fields in the response should be populated. */
-            public Get setView(java.lang.String view) {
-              this.view = view;
-              return this;
-            }
-
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
@@ -6314,6 +6298,147 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               @Override
               public Send set(String parameterName, Object value) {
                 return (Send) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Sends a streaming message to an agent, allowing for real-time interaction and status updates.
+             * Streaming version of `SendMessage`
+             *
+             * Create a request for the method "message.stream".
+             *
+             * This request holds the parameters needed by the ces server.  After setting any optional
+             * parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+             *
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
+             * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+             * @return the request
+             */
+            public Stream stream(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) throws java.io.IOException {
+              Stream result = new Stream(tenant, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Stream extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1StreamResponse> {
+
+              private static final String REST_PATH = "v1beta/{+tenant}/message:stream";
+
+              private final java.util.regex.Pattern TENANT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+
+              /**
+               * Sends a streaming message to an agent, allowing for real-time interaction and status updates.
+               * Streaming version of `SendMessage`
+               *
+               * Create a request for the method "message.stream".
+               *
+               * This request holds the parameters needed by the the ces server.  After setting any optional
+               * parameters, call the {@link Stream#execute()} method to invoke the remote operation. <p> {@link
+               * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
+               * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+               * @since 1.13
+               */
+              protected Stream(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) {
+                super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.LfA2aV1StreamResponse.class);
+                this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+                }
+              }
+
+              @Override
+              public Stream set$Xgafv(java.lang.String $Xgafv) {
+                return (Stream) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Stream setAccessToken(java.lang.String accessToken) {
+                return (Stream) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Stream setAlt(java.lang.String alt) {
+                return (Stream) super.setAlt(alt);
+              }
+
+              @Override
+              public Stream setCallback(java.lang.String callback) {
+                return (Stream) super.setCallback(callback);
+              }
+
+              @Override
+              public Stream setFields(java.lang.String fields) {
+                return (Stream) super.setFields(fields);
+              }
+
+              @Override
+              public Stream setKey(java.lang.String key) {
+                return (Stream) super.setKey(key);
+              }
+
+              @Override
+              public Stream setOauthToken(java.lang.String oauthToken) {
+                return (Stream) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Stream) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Stream setQuotaUser(java.lang.String quotaUser) {
+                return (Stream) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Stream setUploadType(java.lang.String uploadType) {
+                return (Stream) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Stream setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Stream) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String tenant;
+
+              /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             `AgentInterface` in the Agent Card when that field is set.
+               */
+              public java.lang.String getTenant() {
+                return tenant;
+              }
+
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
+              public Stream setTenant(java.lang.String tenant) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/deployments/[^/]+$");
+                }
+                this.tenant = tenant;
+                return this;
+              }
+
+              @Override
+              public Stream set(String parameterName, Object value) {
+                return (Stream) super.set(parameterName, value);
               }
             }
 
@@ -12739,6 +12864,147 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               return (Send) super.set(parameterName, value);
             }
           }
+          /**
+           * Sends a streaming message to an agent, allowing for real-time interaction and status updates.
+           * Streaming version of `SendMessage`
+           *
+           * Create a request for the method "message.stream".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+           *
+           * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
+           * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+           * @return the request
+           */
+          public Stream stream(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) throws java.io.IOException {
+            Stream result = new Stream(tenant, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Stream extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1StreamResponse> {
+
+            private static final String REST_PATH = "v1beta/{+tenant}/message:stream";
+
+            private final java.util.regex.Pattern TENANT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+            /**
+             * Sends a streaming message to an agent, allowing for real-time interaction and status updates.
+             * Streaming version of `SendMessage`
+             *
+             * Create a request for the method "message.stream".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link Stream#execute()} method to invoke the remote operation. <p> {@link
+             * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           *        `AgentInterface` in the Agent Card when that field is set.
+             * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+             * @since 1.13
+             */
+            protected Stream(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.LfA2aV1StreamResponse.class);
+              this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                    "Parameter tenant must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+            }
+
+            @Override
+            public Stream set$Xgafv(java.lang.String $Xgafv) {
+              return (Stream) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Stream setAccessToken(java.lang.String accessToken) {
+              return (Stream) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Stream setAlt(java.lang.String alt) {
+              return (Stream) super.setAlt(alt);
+            }
+
+            @Override
+            public Stream setCallback(java.lang.String callback) {
+              return (Stream) super.setCallback(callback);
+            }
+
+            @Override
+            public Stream setFields(java.lang.String fields) {
+              return (Stream) super.setFields(fields);
+            }
+
+            @Override
+            public Stream setKey(java.lang.String key) {
+              return (Stream) super.setKey(key);
+            }
+
+            @Override
+            public Stream setOauthToken(java.lang.String oauthToken) {
+              return (Stream) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Stream) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Stream setQuotaUser(java.lang.String quotaUser) {
+              return (Stream) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Stream setUploadType(java.lang.String uploadType) {
+              return (Stream) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Stream setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Stream) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String tenant;
+
+            /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+           `AgentInterface` in the Agent Card when that field is set.
+             */
+            public java.lang.String getTenant() {
+              return tenant;
+            }
+
+            /**
+             * Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             * `AgentInterface` in the Agent Card when that field is set.
+             */
+            public Stream setTenant(java.lang.String tenant) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                    "Parameter tenant must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+              this.tenant = tenant;
+              return this;
+            }
+
+            @Override
+            public Stream set(String parameterName, Object value) {
+              return (Stream) super.set(parameterName, value);
+            }
+          }
 
         }
         /**
@@ -17150,6 +17416,147 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               @Override
               public Send set(String parameterName, Object value) {
                 return (Send) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Sends a streaming message to an agent, allowing for real-time interaction and status updates.
+             * Streaming version of `SendMessage`
+             *
+             * Create a request for the method "message.stream".
+             *
+             * This request holds the parameters needed by the ces server.  After setting any optional
+             * parameters, call the {@link Stream#execute()} method to invoke the remote operation.
+             *
+             * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
+             * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+             * @return the request
+             */
+            public Stream stream(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) throws java.io.IOException {
+              Stream result = new Stream(tenant, content);
+              initialize(result);
+              return result;
+            }
+
+            public class Stream extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.LfA2aV1StreamResponse> {
+
+              private static final String REST_PATH = "v1beta/{+tenant}/message:stream";
+
+              private final java.util.regex.Pattern TENANT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+
+              /**
+               * Sends a streaming message to an agent, allowing for real-time interaction and status updates.
+               * Streaming version of `SendMessage`
+               *
+               * Create a request for the method "message.stream".
+               *
+               * This request holds the parameters needed by the the ces server.  After setting any optional
+               * parameters, call the {@link Stream#execute()} method to invoke the remote operation. <p> {@link
+               * Stream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+               * be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param tenant Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             *        `AgentInterface` in the Agent Card when that field is set.
+               * @param content the {@link com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest}
+               * @since 1.13
+               */
+              protected Stream(java.lang.String tenant, com.google.api.services.ces.v1beta.model.LfA2aV1SendMessageRequest content) {
+                super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.LfA2aV1StreamResponse.class);
+                this.tenant = com.google.api.client.util.Preconditions.checkNotNull(tenant, "Required parameter tenant must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+                }
+              }
+
+              @Override
+              public Stream set$Xgafv(java.lang.String $Xgafv) {
+                return (Stream) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Stream setAccessToken(java.lang.String accessToken) {
+                return (Stream) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Stream setAlt(java.lang.String alt) {
+                return (Stream) super.setAlt(alt);
+              }
+
+              @Override
+              public Stream setCallback(java.lang.String callback) {
+                return (Stream) super.setCallback(callback);
+              }
+
+              @Override
+              public Stream setFields(java.lang.String fields) {
+                return (Stream) super.setFields(fields);
+              }
+
+              @Override
+              public Stream setKey(java.lang.String key) {
+                return (Stream) super.setKey(key);
+              }
+
+              @Override
+              public Stream setOauthToken(java.lang.String oauthToken) {
+                return (Stream) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Stream setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Stream) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Stream setQuotaUser(java.lang.String quotaUser) {
+                return (Stream) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Stream setUploadType(java.lang.String uploadType) {
+                return (Stream) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Stream setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Stream) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String tenant;
+
+              /** Optional. Opaque routing identifier. Must match the `tenant` value from the selected
+             `AgentInterface` in the Agent Card when that field is set.
+               */
+              public java.lang.String getTenant() {
+                return tenant;
+              }
+
+              /**
+               * Optional. Opaque routing identifier. Must match the `tenant` value from the
+               * selected `AgentInterface` in the Agent Card when that field is set.
+               */
+              public Stream setTenant(java.lang.String tenant) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(TENANT_PATTERN.matcher(tenant).matches(),
+                      "Parameter tenant must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/apps/[^/]+/versions/[^/]+$");
+                }
+                this.tenant = tenant;
+                return this;
+              }
+
+              @Override
+              public Stream set(String parameterName, Object value) {
+                return (Stream) super.set(parameterName, value);
               }
             }
 

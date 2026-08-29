@@ -95,6 +95,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.String databaseVersion;
 
   /**
+   * Output only. Deployment info for the instance. This is set if the instance is currently part of
+   * any blue-green setup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BlueGreenDeploymentInfo deploymentInfo;
+
+  /**
    * Disk encryption configuration specific to an instance.
    * The value may be {@code null}.
    */
@@ -581,6 +589,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setDatabaseVersion(java.lang.String databaseVersion) {
     this.databaseVersion = databaseVersion;
+    return this;
+  }
+
+  /**
+   * Output only. Deployment info for the instance. This is set if the instance is currently part of
+   * any blue-green setup.
+   * @return value or {@code null} for none
+   */
+  public BlueGreenDeploymentInfo getDeploymentInfo() {
+    return deploymentInfo;
+  }
+
+  /**
+   * Output only. Deployment info for the instance. This is set if the instance is currently part of
+   * any blue-green setup.
+   * @param deploymentInfo deploymentInfo or {@code null} for none
+   */
+  public DatabaseInstance setDeploymentInfo(BlueGreenDeploymentInfo deploymentInfo) {
+    this.deploymentInfo = deploymentInfo;
     return this;
   }
 

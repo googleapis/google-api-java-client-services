@@ -65,6 +65,13 @@ public final class ReleaseChannelConfig extends com.google.api.client.json.Gener
   private java.lang.String defaultVersion;
 
   /**
+   * Output only. List of preview versions for the channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> previewVersions;
+
+  /**
    * The auto upgrade target version for clusters on the channel.
    * The value may be {@code null}.
    */
@@ -143,6 +150,23 @@ public final class ReleaseChannelConfig extends com.google.api.client.json.Gener
    */
   public ReleaseChannelConfig setDefaultVersion(java.lang.String defaultVersion) {
     this.defaultVersion = defaultVersion;
+    return this;
+  }
+
+  /**
+   * Output only. List of preview versions for the channel.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getPreviewVersions() {
+    return previewVersions;
+  }
+
+  /**
+   * Output only. List of preview versions for the channel.
+   * @param previewVersions previewVersions or {@code null} for none
+   */
+  public ReleaseChannelConfig setPreviewVersions(java.util.List<java.lang.String> previewVersions) {
+    this.previewVersions = previewVersions;
     return this;
   }
 

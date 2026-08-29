@@ -42,8 +42,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   private java.lang.String bootDiskKmsKey;
 
   /**
-   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB. If unspecified, the default disk size is 100GB.
+   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 15
+   * GB for node pools running GKE versions 1.36.3-gke.1480000 or later. Or, for earlier versions,
+   * the smallest allowed disk size is 12 GB. If unspecified, the default disk size is 100GB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,8 +156,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB. If unspecified, the default disk size is 100GB.
+   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 15
+   * GB for node pools running GKE versions 1.36.3-gke.1480000 or later. Or, for earlier versions,
+   * the smallest allowed disk size is 12 GB. If unspecified, the default disk size is 100GB.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getDiskSizeGb() {
@@ -164,8 +166,9 @@ public final class AutoprovisioningNodePoolDefaults extends com.google.api.clien
   }
 
   /**
-   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is
-   * 10GB. If unspecified, the default disk size is 100GB.
+   * Size of the disk attached to each node, specified in GB. The smallest allowed disk size is 15
+   * GB for node pools running GKE versions 1.36.3-gke.1480000 or later. Or, for earlier versions,
+   * the smallest allowed disk size is 12 GB. If unspecified, the default disk size is 100GB.
    * @param diskSizeGb diskSizeGb or {@code null} for none
    */
   public AutoprovisioningNodePoolDefaults setDiskSizeGb(java.lang.Integer diskSizeGb) {

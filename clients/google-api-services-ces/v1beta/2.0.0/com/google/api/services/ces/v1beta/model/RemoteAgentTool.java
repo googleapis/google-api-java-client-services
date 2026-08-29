@@ -38,6 +38,13 @@ public final class RemoteAgentTool extends com.google.api.client.json.GenericJso
   private AgentCard agentCard;
 
   /**
+   * Optional. Authentication configuration for calling the remote agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApiAuthentication apiAuthentication;
+
+  /**
    * Required. The description of the tool.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class RemoteAgentTool extends com.google.api.client.json.GenericJso
    */
   public RemoteAgentTool setAgentCard(AgentCard agentCard) {
     this.agentCard = agentCard;
+    return this;
+  }
+
+  /**
+   * Optional. Authentication configuration for calling the remote agent.
+   * @return value or {@code null} for none
+   */
+  public ApiAuthentication getApiAuthentication() {
+    return apiAuthentication;
+  }
+
+  /**
+   * Optional. Authentication configuration for calling the remote agent.
+   * @param apiAuthentication apiAuthentication or {@code null} for none
+   */
+  public RemoteAgentTool setApiAuthentication(ApiAuthentication apiAuthentication) {
+    this.apiAuthentication = apiAuthentication;
     return this;
   }
 

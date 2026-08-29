@@ -40,16 +40,15 @@ package com.google.api.services.mybusinessbusinessinformation.v1.model;
 public final class SpecialHourPeriod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Valid values are `00:00-24:00`, where `24:00` represents midnight at the end of the
-   * specified day field. It must be specified if `closed` is `false`. Note: In Proto3 JSON mapping,
-   * default zero values (`00:00`) are omitted, producing `{}` for `close_time`.
+   * Optional. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
+   * specified day field. Must be specified if `closed` is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeOfDay closeTime;
 
   /**
-   * Optional. If `true`, `end_date`, `open_time`, and `close_time` are ignored, and the date
+   * Optional. If true, `end_date`, `open_time`, and `close_time` are ignored, and the date
    * specified in `start_date` is treated as the location being closed for the entire day.
    * The value may be {@code null}.
    */
@@ -66,9 +65,8 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   private Date endDate;
 
   /**
-   * Optional. Valid values are `00:00-24:00`, where `24:00` represents midnight at the end of the
-   * specified day field. It must be specified if `closed` is `false`. Note: In Proto3 JSON mapping,
-   * default zero values (`00:00`) are omitted, producing `{}` for `open_time`.
+   * Optional. Valid values are 00:00-24:00 where 24:00 represents midnight at the end of the
+   * specified day field. Must be specified if `closed` is false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,9 +80,8 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   private Date startDate;
 
   /**
-   * Optional. Valid values are `00:00-24:00`, where `24:00` represents midnight at the end of the
-   * specified day field. It must be specified if `closed` is `false`. Note: In Proto3 JSON mapping,
-   * default zero values (`00:00`) are omitted, producing `{}` for `close_time`.
+   * Optional. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
+   * specified day field. Must be specified if `closed` is false.
    * @return value or {@code null} for none
    */
   public TimeOfDay getCloseTime() {
@@ -92,9 +89,8 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Valid values are `00:00-24:00`, where `24:00` represents midnight at the end of the
-   * specified day field. It must be specified if `closed` is `false`. Note: In Proto3 JSON mapping,
-   * default zero values (`00:00`) are omitted, producing `{}` for `close_time`.
+   * Optional. Valid values are 00:00-24:00, where 24:00 represents midnight at the end of the
+   * specified day field. Must be specified if `closed` is false.
    * @param closeTime closeTime or {@code null} for none
    */
   public SpecialHourPeriod setCloseTime(TimeOfDay closeTime) {
@@ -103,7 +99,7 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. If `true`, `end_date`, `open_time`, and `close_time` are ignored, and the date
+   * Optional. If true, `end_date`, `open_time`, and `close_time` are ignored, and the date
    * specified in `start_date` is treated as the location being closed for the entire day.
    * @return value or {@code null} for none
    */
@@ -112,7 +108,7 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. If `true`, `end_date`, `open_time`, and `close_time` are ignored, and the date
+   * Optional. If true, `end_date`, `open_time`, and `close_time` are ignored, and the date
    * specified in `start_date` is treated as the location being closed for the entire day.
    * @param closed closed or {@code null} for none
    */
@@ -143,9 +139,8 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Valid values are `00:00-24:00`, where `24:00` represents midnight at the end of the
-   * specified day field. It must be specified if `closed` is `false`. Note: In Proto3 JSON mapping,
-   * default zero values (`00:00`) are omitted, producing `{}` for `open_time`.
+   * Optional. Valid values are 00:00-24:00 where 24:00 represents midnight at the end of the
+   * specified day field. Must be specified if `closed` is false.
    * @return value or {@code null} for none
    */
   public TimeOfDay getOpenTime() {
@@ -153,9 +148,8 @@ public final class SpecialHourPeriod extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Valid values are `00:00-24:00`, where `24:00` represents midnight at the end of the
-   * specified day field. It must be specified if `closed` is `false`. Note: In Proto3 JSON mapping,
-   * default zero values (`00:00`) are omitted, producing `{}` for `open_time`.
+   * Optional. Valid values are 00:00-24:00 where 24:00 represents midnight at the end of the
+   * specified day field. Must be specified if `closed` is false.
    * @param openTime openTime or {@code null} for none
    */
   public SpecialHourPeriod setOpenTime(TimeOfDay openTime) {

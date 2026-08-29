@@ -48,6 +48,14 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
   private java.lang.String backupdrBackup;
 
   /**
+   * Optional. If true, the restore operation proceeds even if the target instance's maintenance
+   * version is older than the source instance's maintenance version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean ignoreMaintenanceVersion;
+
+  /**
    * Parameters required to perform the restore backup operation.
    * The value may be {@code null}.
    */
@@ -112,6 +120,25 @@ public final class InstancesRestoreBackupRequest extends com.google.api.client.j
    */
   public InstancesRestoreBackupRequest setBackupdrBackup(java.lang.String backupdrBackup) {
     this.backupdrBackup = backupdrBackup;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the restore operation proceeds even if the target instance's maintenance
+   * version is older than the source instance's maintenance version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIgnoreMaintenanceVersion() {
+    return ignoreMaintenanceVersion;
+  }
+
+  /**
+   * Optional. If true, the restore operation proceeds even if the target instance's maintenance
+   * version is older than the source instance's maintenance version.
+   * @param ignoreMaintenanceVersion ignoreMaintenanceVersion or {@code null} for none
+   */
+  public InstancesRestoreBackupRequest setIgnoreMaintenanceVersion(java.lang.Boolean ignoreMaintenanceVersion) {
+    this.ignoreMaintenanceVersion = ignoreMaintenanceVersion;
     return this;
   }
 

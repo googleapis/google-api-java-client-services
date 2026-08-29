@@ -30,6 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class DiskEncryptionConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, enables Confidential Mode for the instance's Hyperdisk Balanced volumes.
+   * Only supported for zonal C4A instances currently.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean confidentialMode;
+
+  /**
    * This is always `sql#diskEncryptionConfiguration`.
    * The value may be {@code null}.
    */
@@ -42,6 +50,25 @@ public final class DiskEncryptionConfiguration extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
+
+  /**
+   * Optional. If true, enables Confidential Mode for the instance's Hyperdisk Balanced volumes.
+   * Only supported for zonal C4A instances currently.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getConfidentialMode() {
+    return confidentialMode;
+  }
+
+  /**
+   * Optional. If true, enables Confidential Mode for the instance's Hyperdisk Balanced volumes.
+   * Only supported for zonal C4A instances currently.
+   * @param confidentialMode confidentialMode or {@code null} for none
+   */
+  public DiskEncryptionConfiguration setConfidentialMode(java.lang.Boolean confidentialMode) {
+    this.confidentialMode = confidentialMode;
+    return this;
+  }
 
   /**
    * This is always `sql#diskEncryptionConfiguration`.

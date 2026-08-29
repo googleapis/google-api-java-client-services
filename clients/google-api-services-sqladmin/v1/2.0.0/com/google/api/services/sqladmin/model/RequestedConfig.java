@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Instance reset replica size request.
+ * Configuration specified by the user at creation time for the target (green) instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -27,40 +27,43 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SqlInstancesResetReplicaSizeRequest extends com.google.api.client.json.GenericJson {
+public final class RequestedConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Optional. The target database major version for the upgrade. For example, `MYSQL_8_0` or
+   * `POSTGRES_15`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String location;
+  private java.lang.String databaseVersion;
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Optional. The target database major version for the upgrade. For example, `MYSQL_8_0` or
+   * `POSTGRES_15`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLocation() {
-    return location;
+  public java.lang.String getDatabaseVersion() {
+    return databaseVersion;
   }
 
   /**
-   * Optional. Region of the Cloud SQL instance.
-   * @param location location or {@code null} for none
+   * Optional. The target database major version for the upgrade. For example, `MYSQL_8_0` or
+   * `POSTGRES_15`.
+   * @param databaseVersion databaseVersion or {@code null} for none
    */
-  public SqlInstancesResetReplicaSizeRequest setLocation(java.lang.String location) {
-    this.location = location;
+  public RequestedConfig setDatabaseVersion(java.lang.String databaseVersion) {
+    this.databaseVersion = databaseVersion;
     return this;
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest set(String fieldName, Object value) {
-    return (SqlInstancesResetReplicaSizeRequest) super.set(fieldName, value);
+  public RequestedConfig set(String fieldName, Object value) {
+    return (RequestedConfig) super.set(fieldName, value);
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest clone() {
-    return (SqlInstancesResetReplicaSizeRequest) super.clone();
+  public RequestedConfig clone() {
+    return (RequestedConfig) super.clone();
   }
 
 }

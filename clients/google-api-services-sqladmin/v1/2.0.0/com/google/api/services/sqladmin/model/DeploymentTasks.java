@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Instance reset replica size request.
+ * Combined list of tasks for all paired nodes in the deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -27,40 +27,49 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SqlInstancesResetReplicaSizeRequest extends com.google.api.client.json.GenericJson {
+public final class DeploymentTasks extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Output only. Tasks performed or being performed on the paired nodes of the deployment at a
+   * consolidated level.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String location;
+  private java.util.List<DeploymentTask> task;
 
-  /**
-   * Optional. Region of the Cloud SQL instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocation() {
-    return location;
+  static {
+    // hack to force ProGuard to consider DeploymentTask used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DeploymentTask.class);
   }
 
   /**
-   * Optional. Region of the Cloud SQL instance.
-   * @param location location or {@code null} for none
+   * Output only. Tasks performed or being performed on the paired nodes of the deployment at a
+   * consolidated level.
+   * @return value or {@code null} for none
    */
-  public SqlInstancesResetReplicaSizeRequest setLocation(java.lang.String location) {
-    this.location = location;
+  public java.util.List<DeploymentTask> getTask() {
+    return task;
+  }
+
+  /**
+   * Output only. Tasks performed or being performed on the paired nodes of the deployment at a
+   * consolidated level.
+   * @param task task or {@code null} for none
+   */
+  public DeploymentTasks setTask(java.util.List<DeploymentTask> task) {
+    this.task = task;
     return this;
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest set(String fieldName, Object value) {
-    return (SqlInstancesResetReplicaSizeRequest) super.set(fieldName, value);
+  public DeploymentTasks set(String fieldName, Object value) {
+    return (DeploymentTasks) super.set(fieldName, value);
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest clone() {
-    return (SqlInstancesResetReplicaSizeRequest) super.clone();
+  public DeploymentTasks clone() {
+    return (DeploymentTasks) super.clone();
   }
 
 }

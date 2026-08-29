@@ -46,6 +46,13 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
   private java.lang.String documentCondition;
 
   /**
+   * Optional. The query used to match documents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DocumentQuery documentQuery;
+
+  /**
    * Optional. Legacy metadata associated with this scenario/monitor.
    * The value may be {@code null}.
    */
@@ -85,6 +92,23 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
    */
   public CustomThreatScenarioConfig setDocumentCondition(java.lang.String documentCondition) {
     this.documentCondition = documentCondition;
+    return this;
+  }
+
+  /**
+   * Optional. The query used to match documents.
+   * @return value or {@code null} for none
+   */
+  public DocumentQuery getDocumentQuery() {
+    return documentQuery;
+  }
+
+  /**
+   * Optional. The query used to match documents.
+   * @param documentQuery documentQuery or {@code null} for none
+   */
+  public CustomThreatScenarioConfig setDocumentQuery(DocumentQuery documentQuery) {
+    this.documentQuery = documentQuery;
     return this;
   }
 

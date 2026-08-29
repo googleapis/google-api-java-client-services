@@ -54,6 +54,13 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
   private java.lang.String detailType;
 
   /**
+   * Domain Configuration detail config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DomainConfiguration domainConfiguration;
+
+  /**
    * Technology Watchlist detail config.
    * The value may be {@code null}.
    */
@@ -110,6 +117,23 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
    */
   public ConfigurationDetail setDetailType(java.lang.String detailType) {
     this.detailType = detailType;
+    return this;
+  }
+
+  /**
+   * Domain Configuration detail config.
+   * @return value or {@code null} for none
+   */
+  public DomainConfiguration getDomainConfiguration() {
+    return domainConfiguration;
+  }
+
+  /**
+   * Domain Configuration detail config.
+   * @param domainConfiguration domainConfiguration or {@code null} for none
+   */
+  public ConfigurationDetail setDomainConfiguration(DomainConfiguration domainConfiguration) {
+    this.domainConfiguration = domainConfiguration;
     return this;
   }
 

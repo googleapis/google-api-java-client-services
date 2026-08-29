@@ -30,9 +30,9 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class AuthzPolicyAuthzRuleToRequestOperationMCPMethod extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The MCP method to match against. Allowed values are as follows: 1. `tools`,
-   * `prompts`, `resources` - these will match against all sub methods under the respective methods.
-   * 2. `prompts/list`, `tools/list`, `resources/list`, `resources/templates/list` 3. `prompts/get`,
+   * Required. The MCP method to match against. Allowed values include: 1. `tools`, `prompts`,
+   * `resources` - these will match against all sub methods under the respective methods. 2.
+   * `prompts/list`, `tools/list`, `resources/list`, `resources/templates/list` 3. `prompts/get`,
    * `tools/call`, `resources/subscribe`, `resources/unsubscribe`, `resources/read` Params cannot be
    * specified for categories 1 and 2.
    * The value may be {@code null}.
@@ -56,9 +56,9 @@ public final class AuthzPolicyAuthzRuleToRequestOperationMCPMethod extends com.g
   }
 
   /**
-   * Required. The MCP method to match against. Allowed values are as follows: 1. `tools`,
-   * `prompts`, `resources` - these will match against all sub methods under the respective methods.
-   * 2. `prompts/list`, `tools/list`, `resources/list`, `resources/templates/list` 3. `prompts/get`,
+   * Required. The MCP method to match against. Allowed values include: 1. `tools`, `prompts`,
+   * `resources` - these will match against all sub methods under the respective methods. 2.
+   * `prompts/list`, `tools/list`, `resources/list`, `resources/templates/list` 3. `prompts/get`,
    * `tools/call`, `resources/subscribe`, `resources/unsubscribe`, `resources/read` Params cannot be
    * specified for categories 1 and 2.
    * @return value or {@code null} for none
@@ -68,9 +68,9 @@ public final class AuthzPolicyAuthzRuleToRequestOperationMCPMethod extends com.g
   }
 
   /**
-   * Required. The MCP method to match against. Allowed values are as follows: 1. `tools`,
-   * `prompts`, `resources` - these will match against all sub methods under the respective methods.
-   * 2. `prompts/list`, `tools/list`, `resources/list`, `resources/templates/list` 3. `prompts/get`,
+   * Required. The MCP method to match against. Allowed values include: 1. `tools`, `prompts`,
+   * `resources` - these will match against all sub methods under the respective methods. 2.
+   * `prompts/list`, `tools/list`, `resources/list`, `resources/templates/list` 3. `prompts/get`,
    * `tools/call`, `resources/subscribe`, `resources/unsubscribe`, `resources/read` Params cannot be
    * specified for categories 1 and 2.
    * @param name name or {@code null} for none

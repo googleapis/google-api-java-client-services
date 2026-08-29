@@ -30,7 +30,7 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Client and resource project enable type.
+   * Deprecated: EnableType is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +53,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> values;
 
   /**
-   * Client and resource project enable type.
+   * Deprecated: EnableType is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnableType() {
@@ -61,7 +61,7 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Client and resource project enable type.
+   * Deprecated: EnableType is not supported.
    * @param enableType enableType or {@code null} for none
    */
   public EnableRule setEnableType(java.lang.String enableType) {

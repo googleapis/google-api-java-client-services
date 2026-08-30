@@ -85,6 +85,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private Error error;
 
   /**
+   * Output only. Metadata for GetHealth operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GetHealthOperationMetadata getHealthOperationMetadata;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -347,6 +354,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setError(Error error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata for GetHealth operations.
+   * @return value or {@code null} for none
+   */
+  public GetHealthOperationMetadata getGetHealthOperationMetadata() {
+    return getHealthOperationMetadata;
+  }
+
+  /**
+   * Output only. Metadata for GetHealth operations.
+   * @param getHealthOperationMetadata getHealthOperationMetadata or {@code null} for none
+   */
+  public Operation setGetHealthOperationMetadata(GetHealthOperationMetadata getHealthOperationMetadata) {
+    this.getHealthOperationMetadata = getHealthOperationMetadata;
     return this;
   }
 

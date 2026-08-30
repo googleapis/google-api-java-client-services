@@ -144,8 +144,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   private ManagedInstanceShutdownDetails shutdownDetails;
 
   /**
-   * Output only. [Output Only] The eventual status of the instance. The instance group manager will
-   * not be identified as stable till each managed instance reaches its targetStatus.
+   * Output only. The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -426,8 +426,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The eventual status of the instance. The instance group manager will
-   * not be identified as stable till each managed instance reaches its targetStatus.
+   * Output only. The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetStatus() {
@@ -435,8 +435,8 @@ public final class ManagedInstance extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Output only. [Output Only] The eventual status of the instance. The instance group manager will
-   * not be identified as stable till each managed instance reaches its targetStatus.
+   * Output only. The eventual status of the instance. The instance group manager will not be
+   * identified as stable till each managed instance reaches its targetStatus.
    * @param targetStatus targetStatus or {@code null} for none
    */
   public ManagedInstance setTargetStatus(java.lang.String targetStatus) {

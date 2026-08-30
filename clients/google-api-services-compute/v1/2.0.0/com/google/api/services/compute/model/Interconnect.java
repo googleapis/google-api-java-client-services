@@ -332,6 +332,13 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * Output only. Server-defined URL for this resource with the resource id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String selfLinkWithId;
+
+  /**
    * Output only. [Output Only] The current state of Interconnect functionality, which can take one
    * of the following values:        - ACTIVE: The Interconnect is valid, turned up and ready to
    * use.    Attachments may be provisioned on this Interconnect.    - UNPROVISIONED: The
@@ -1095,6 +1102,23 @@ public final class Interconnect extends com.google.api.client.json.GenericJson {
    */
   public Interconnect setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Output only. Server-defined URL for this resource with the resource id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSelfLinkWithId() {
+    return selfLinkWithId;
+  }
+
+  /**
+   * Output only. Server-defined URL for this resource with the resource id.
+   * @param selfLinkWithId selfLinkWithId or {@code null} for none
+   */
+  public Interconnect setSelfLinkWithId(java.lang.String selfLinkWithId) {
+    this.selfLinkWithId = selfLinkWithId;
     return this;
   }
 

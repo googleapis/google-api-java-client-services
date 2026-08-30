@@ -74,6 +74,13 @@ public final class SessionOutput extends com.google.api.client.json.GenericJson 
   private GoogleSearchSuggestions googleSearchSuggestions;
 
   /**
+   * Output image from the CES agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Image image;
+
+  /**
    * Custom payload with structured output from the CES agent.
    * The value may be {@code null}.
    */
@@ -239,6 +246,23 @@ public final class SessionOutput extends com.google.api.client.json.GenericJson 
    */
   public SessionOutput setGoogleSearchSuggestions(GoogleSearchSuggestions googleSearchSuggestions) {
     this.googleSearchSuggestions = googleSearchSuggestions;
+    return this;
+  }
+
+  /**
+   * Output image from the CES agent.
+   * @return value or {@code null} for none
+   */
+  public Image getImage() {
+    return image;
+  }
+
+  /**
+   * Output image from the CES agent.
+   * @param image image or {@code null} for none
+   */
+  public SessionOutput setImage(Image image) {
+    this.image = image;
     return this;
   }
 

@@ -54,6 +54,14 @@ public final class App extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
+   * Optional. App-specific dashboard settings for linking and configuring Contact Center Insights
+   * dashboards.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DashboardSettings dashboardSettings;
+
+  /**
    * Optional. The data store settings for the app.
    * The value may be {@code null}.
    */
@@ -284,6 +292,25 @@ public final class App extends com.google.api.client.json.GenericJson {
    */
   public App setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. App-specific dashboard settings for linking and configuring Contact Center Insights
+   * dashboards.
+   * @return value or {@code null} for none
+   */
+  public DashboardSettings getDashboardSettings() {
+    return dashboardSettings;
+  }
+
+  /**
+   * Optional. App-specific dashboard settings for linking and configuring Contact Center Insights
+   * dashboards.
+   * @param dashboardSettings dashboardSettings or {@code null} for none
+   */
+  public App setDashboardSettings(DashboardSettings dashboardSettings) {
+    this.dashboardSettings = dashboardSettings;
     return this;
   }
 

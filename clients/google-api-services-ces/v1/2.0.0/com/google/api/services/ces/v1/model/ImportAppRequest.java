@@ -82,6 +82,20 @@ public final class ImportAppRequest extends com.google.api.client.json.GenericJs
   private ImportAppRequestImportOptions importOptions;
 
   /**
+   * Optional. Patch content as a JSON string.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonPatchContent;
+
+  /**
+   * Optional. A Cloud Storage URI pointing to a JSON file containing the patches.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String jsonPatchGcsUri;
+
+  /**
    * Raw bytes representing the compressed zip file with the app folder structure.
    * @see #decodeAppContent()
    * @return value or {@code null} for none
@@ -226,6 +240,40 @@ public final class ImportAppRequest extends com.google.api.client.json.GenericJs
    */
   public ImportAppRequest setImportOptions(ImportAppRequestImportOptions importOptions) {
     this.importOptions = importOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Patch content as a JSON string.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonPatchContent() {
+    return jsonPatchContent;
+  }
+
+  /**
+   * Optional. Patch content as a JSON string.
+   * @param jsonPatchContent jsonPatchContent or {@code null} for none
+   */
+  public ImportAppRequest setJsonPatchContent(java.lang.String jsonPatchContent) {
+    this.jsonPatchContent = jsonPatchContent;
+    return this;
+  }
+
+  /**
+   * Optional. A Cloud Storage URI pointing to a JSON file containing the patches.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getJsonPatchGcsUri() {
+    return jsonPatchGcsUri;
+  }
+
+  /**
+   * Optional. A Cloud Storage URI pointing to a JSON file containing the patches.
+   * @param jsonPatchGcsUri jsonPatchGcsUri or {@code null} for none
+   */
+  public ImportAppRequest setJsonPatchGcsUri(java.lang.String jsonPatchGcsUri) {
+    this.jsonPatchGcsUri = jsonPatchGcsUri;
     return this;
   }
 

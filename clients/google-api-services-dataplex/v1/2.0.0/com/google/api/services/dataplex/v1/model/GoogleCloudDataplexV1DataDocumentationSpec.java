@@ -46,6 +46,14 @@ public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google
   private java.util.List<java.lang.String> generationScopes;
 
   /**
+   * Optional. The SQL dialect to use in the generated SQL queries. If not specified, the default
+   * dialect is Google SQL.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sqlDialect;
+
+  /**
    * Optional. Whether to publish result to Dataplex Catalog.
    * @return value or {@code null} for none
    */
@@ -80,6 +88,25 @@ public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google
    */
   public GoogleCloudDataplexV1DataDocumentationSpec setGenerationScopes(java.util.List<java.lang.String> generationScopes) {
     this.generationScopes = generationScopes;
+    return this;
+  }
+
+  /**
+   * Optional. The SQL dialect to use in the generated SQL queries. If not specified, the default
+   * dialect is Google SQL.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSqlDialect() {
+    return sqlDialect;
+  }
+
+  /**
+   * Optional. The SQL dialect to use in the generated SQL queries. If not specified, the default
+   * dialect is Google SQL.
+   * @param sqlDialect sqlDialect or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationSpec setSqlDialect(java.lang.String sqlDialect) {
+    this.sqlDialect = sqlDialect;
     return this;
   }
 

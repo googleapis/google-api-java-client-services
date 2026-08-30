@@ -168,9 +168,9 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   private java.lang.String state;
 
   /**
-   * Immutable. Field indicating that the key may be wrapped by a trusted key. This field can be set
-   * for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with protection level
-   * HSM_SINGLE_TENANT. This field can only be set at creation or import time via
+   * Optional. Immutable. Field indicating that the key may be wrapped by a trusted key. This field
+   * can be set for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with
+   * protection level HSM_SINGLE_TENANT. This field can only be set at creation or import time via
    * CreateCryptoKeyVersion, or ImportCryptoKeyVersion.
    * The value may be {@code null}.
    */
@@ -495,9 +495,9 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Field indicating that the key may be wrapped by a trusted key. This field can be set
-   * for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with protection level
-   * HSM_SINGLE_TENANT. This field can only be set at creation or import time via
+   * Optional. Immutable. Field indicating that the key may be wrapped by a trusted key. This field
+   * can be set for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with
+   * protection level HSM_SINGLE_TENANT. This field can only be set at creation or import time via
    * CreateCryptoKeyVersion, or ImportCryptoKeyVersion.
    * @return value or {@code null} for none
    */
@@ -506,9 +506,9 @@ public final class CryptoKeyVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Field indicating that the key may be wrapped by a trusted key. This field can be set
-   * for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with protection level
-   * HSM_SINGLE_TENANT. This field can only be set at creation or import time via
+   * Optional. Immutable. Field indicating that the key may be wrapped by a trusted key. This field
+   * can be set for all key purposes except ENCRYPT_DECRYPT, and is only valid for keys with
+   * protection level HSM_SINGLE_TENANT. This field can only be set at creation or import time via
    * CreateCryptoKeyVersion, or ImportCryptoKeyVersion.
    * @param trustedWrappingEnabled trustedWrappingEnabled or {@code null} for none
    */

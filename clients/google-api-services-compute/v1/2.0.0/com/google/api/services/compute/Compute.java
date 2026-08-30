@@ -199986,6 +199986,237 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Get health info on a reservation slot.
+     *
+     * Create a request for the method "reservationSlots.getHealth".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetHealth#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone Name of the zone for this request. Zone name should conform to RFC1035.
+     * @param parentName The name of the parent reservation, parent block and parent sub-block. In
+    the format of
+    reservations
+     *        /{reservation_name}/reservationBlocks/{reservation_block_name}/reservationSubBlocks/{reser
+     *        vation_sub_block_name}
+     * @param reservationSlot The name of the reservation slot.
+    Name should conform to RFC1035 or be a resource ID.
+     * @return the request
+     */
+    public GetHealth getHealth(java.lang.String project, java.lang.String zone, java.lang.String parentName, java.lang.String reservationSlot) throws java.io.IOException {
+      GetHealth result = new GetHealth(project, zone, parentName, reservationSlot);
+      initialize(result);
+      return result;
+    }
+
+    public class GetHealth extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSlots/{reservationSlot}/getHealth";
+
+      private final java.util.regex.Pattern PARENT_NAME_PATTERN =
+          java.util.regex.Pattern.compile("reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
+
+      /**
+       * Get health info on a reservation slot.
+       *
+       * Create a request for the method "reservationSlots.getHealth".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetHealth#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetHealth#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone Name of the zone for this request. Zone name should conform to RFC1035.
+       * @param parentName The name of the parent reservation, parent block and parent sub-block. In
+    the format of
+    reservations
+     *        /{reservation_name}/reservationBlocks/{reservation_block_name}/reservationSubBlocks/{reser
+     *        vation_sub_block_name}
+       * @param reservationSlot The name of the reservation slot.
+    Name should conform to RFC1035 or be a resource ID.
+       * @since 1.13
+       */
+      protected GetHealth(java.lang.String project, java.lang.String zone, java.lang.String parentName, java.lang.String reservationSlot) {
+        super(Compute.this, "POST", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        this.parentName = com.google.api.client.util.Preconditions.checkNotNull(parentName, "Required parameter parentName must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_NAME_PATTERN.matcher(parentName).matches(),
+              "Parameter parentName must conform to the pattern " +
+              "reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
+        }
+        this.reservationSlot = com.google.api.client.util.Preconditions.checkNotNull(reservationSlot, "Required parameter reservationSlot must be specified.");
+      }
+
+      @Override
+      public GetHealth set$Xgafv(java.lang.String $Xgafv) {
+        return (GetHealth) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetHealth setAccessToken(java.lang.String accessToken) {
+        return (GetHealth) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetHealth setAlt(java.lang.String alt) {
+        return (GetHealth) super.setAlt(alt);
+      }
+
+      @Override
+      public GetHealth setCallback(java.lang.String callback) {
+        return (GetHealth) super.setCallback(callback);
+      }
+
+      @Override
+      public GetHealth setFields(java.lang.String fields) {
+        return (GetHealth) super.setFields(fields);
+      }
+
+      @Override
+      public GetHealth setKey(java.lang.String key) {
+        return (GetHealth) super.setKey(key);
+      }
+
+      @Override
+      public GetHealth setOauthToken(java.lang.String oauthToken) {
+        return (GetHealth) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetHealth setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetHealth) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetHealth setQuotaUser(java.lang.String quotaUser) {
+        return (GetHealth) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetHealth setUploadType(java.lang.String uploadType) {
+        return (GetHealth) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetHealth setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetHealth) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetHealth setUserIp(java.lang.String userIp) {
+        return (GetHealth) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetHealth setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the zone for this request. Zone name should conform to RFC1035. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Name of the zone for this request. Zone name should conform to RFC1035.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Name of the zone for this request. Zone name should conform to RFC1035. */
+      public GetHealth setZone(java.lang.String zone) {
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * The name of the parent reservation, parent block and parent sub-block. In the format of res
+       * ervations/{reservation_name}/reservationBlocks/{reservation_block_name}/reservationSubBlock
+       * s/{reservation_sub_block_name}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parentName;
+
+      /** The name of the parent reservation, parent block and parent sub-block. In the format of reservation
+     s/{reservation_name}/reservationBlocks/{reservation_block_name}/reservationSubBlocks/{reservation_s
+     ub_block_name}
+       */
+      public java.lang.String getParentName() {
+        return parentName;
+      }
+
+      /**
+       * The name of the parent reservation, parent block and parent sub-block. In the format of res
+       * ervations/{reservation_name}/reservationBlocks/{reservation_block_name}/reservationSubBlock
+       * s/{reservation_sub_block_name}
+       */
+      public GetHealth setParentName(java.lang.String parentName) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_NAME_PATTERN.matcher(parentName).matches(),
+              "Parameter parentName must conform to the pattern " +
+              "reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
+        }
+        this.parentName = parentName;
+        return this;
+      }
+
+      /**
+       * The name of the reservation slot. Name should conform to RFC1035 or be a resource ID.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String reservationSlot;
+
+      /** The name of the reservation slot. Name should conform to RFC1035 or be a resource ID.
+       */
+      public java.lang.String getReservationSlot() {
+        return reservationSlot;
+      }
+
+      /**
+       * The name of the reservation slot. Name should conform to RFC1035 or be a resource ID.
+       */
+      public GetHealth setReservationSlot(java.lang.String reservationSlot) {
+        this.reservationSlot = reservationSlot;
+        return this;
+      }
+
+      /** An optional request ID to identify requests. */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /** An optional request ID to identify requests. */
+      public GetHealth setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public GetHealth set(String parameterName, Object value) {
+        return (GetHealth) super.set(parameterName, value);
+      }
+    }
+    /**
      * Allows customers to get SBOM versions of a reservation slot.
      *
      * Create a request for the method "reservationSlots.getVersion".

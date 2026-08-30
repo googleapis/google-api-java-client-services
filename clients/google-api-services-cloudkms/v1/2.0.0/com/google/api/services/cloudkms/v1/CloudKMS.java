@@ -5807,6 +5807,143 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
+         * Permanently deletes the given KeyRing. All child resources of the KeyRing must have been
+         * previously deleted using their corresponding Delete operations. The specified key ring will be
+         * immediately and permanently deleted upon calling this method. This action cannot be undone. Note:
+         * the key ring and its metadata will be remembered by KeyManagementService to prevent re-use of the
+         * key ring's resource name.
+         *
+         * Create a request for the method "keyRings.delete".
+         *
+         * This request holds the parameters needed by the cloudkms server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the KeyRing to delete.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends CloudKMSRequest<com.google.api.services.cloudkms.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keyRings/[^/]+$");
+
+          /**
+           * Permanently deletes the given KeyRing. All child resources of the KeyRing must have been
+           * previously deleted using their corresponding Delete operations. The specified key ring will be
+           * immediately and permanently deleted upon calling this method. This action cannot be undone.
+           * Note: the key ring and its metadata will be remembered by KeyManagementService to prevent re-
+           * use of the key ring's resource name.
+           *
+           * Create a request for the method "keyRings.delete".
+           *
+           * This request holds the parameters needed by the the cloudkms server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the KeyRing to delete.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(CloudKMS.this, "DELETE", REST_PATH, null, com.google.api.services.cloudkms.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Required. The name of the KeyRing to delete. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the KeyRing to delete.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Required. The name of the KeyRing to delete. */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/keyRings/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
          * Returns metadata for a given KeyRing.
          *
          * Create a request for the method "keyRings.get".

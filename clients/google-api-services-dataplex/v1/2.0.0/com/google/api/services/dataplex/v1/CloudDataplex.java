@@ -3545,6 +3545,31 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
         }
 
         /**
+         * Optional. Specifies the scope of the context in which the search will be performed. This
+         * scope will also be used to perform IAM checks, which if passing, will return all
+         * resources in the scope.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> contexts;
+
+        /** Optional. Specifies the scope of the context in which the search will be performed. This scope will
+       also be used to perform IAM checks, which if passing, will return all resources in the scope.
+         */
+        public java.util.List<java.lang.String> getContexts() {
+          return contexts;
+        }
+
+        /**
+         * Optional. Specifies the scope of the context in which the search will be performed. This
+         * scope will also be used to perform IAM checks, which if passing, will return all
+         * resources in the scope.
+         */
+        public SearchEntries setContexts(java.util.List<java.lang.String> contexts) {
+          this.contexts = contexts;
+          return this;
+        }
+
+        /**
          * Optional. Specifies the ordering of results. Supported values are: relevance
          * last_modified_timestamp last_modified_timestamp asc
          */

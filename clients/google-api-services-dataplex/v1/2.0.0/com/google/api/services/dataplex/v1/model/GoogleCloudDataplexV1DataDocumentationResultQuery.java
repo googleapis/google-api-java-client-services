@@ -44,6 +44,13 @@ public final class GoogleCloudDataplexV1DataDocumentationResultQuery extends com
   private java.lang.String sql;
 
   /**
+   * Output only. The SQL dialect of the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sqlDialect;
+
+  /**
    * Output only. The description for the query.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class GoogleCloudDataplexV1DataDocumentationResultQuery extends com
    */
   public GoogleCloudDataplexV1DataDocumentationResultQuery setSql(java.lang.String sql) {
     this.sql = sql;
+    return this;
+  }
+
+  /**
+   * Output only. The SQL dialect of the query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSqlDialect() {
+    return sqlDialect;
+  }
+
+  /**
+   * Output only. The SQL dialect of the query.
+   * @param sqlDialect sqlDialect or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResultQuery setSqlDialect(java.lang.String sqlDialect) {
+    this.sqlDialect = sqlDialect;
     return this;
   }
 

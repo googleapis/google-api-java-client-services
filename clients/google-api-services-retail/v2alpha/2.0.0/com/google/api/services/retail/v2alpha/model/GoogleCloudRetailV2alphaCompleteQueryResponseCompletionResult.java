@@ -31,13 +31,19 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Conversational prompts to trigger agents like Shopping Agent. There may be multiple prompts for
-   * a single suggestion. This is an experimental feature for select customers. If you want to
-   * receive this prompt information, reach out to the Retail support team.
+   * Deprecated: Use CompleteQueryResponse.agent_prompts instead. Conversational prompts to trigger
+   * agents like Shopping Agent. There may be multiple prompts for a single suggestion. This is an
+   * experimental feature for select customers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt> agentPrompts;
+  private java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt> agentPrompts;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt.class);
+  }
 
   /**
    * Custom attributes for the suggestion term. * For `user-data`, the attributes are additional
@@ -75,22 +81,22 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
   private java.lang.Integer totalProductCount;
 
   /**
-   * Conversational prompts to trigger agents like Shopping Agent. There may be multiple prompts for
-   * a single suggestion. This is an experimental feature for select customers. If you want to
-   * receive this prompt information, reach out to the Retail support team.
+   * Deprecated: Use CompleteQueryResponse.agent_prompts instead. Conversational prompts to trigger
+   * agents like Shopping Agent. There may be multiple prompts for a single suggestion. This is an
+   * experimental feature for select customers.
    * @return value or {@code null} for none
    */
-  public java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt> getAgentPrompts() {
+  public java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt> getAgentPrompts() {
     return agentPrompts;
   }
 
   /**
-   * Conversational prompts to trigger agents like Shopping Agent. There may be multiple prompts for
-   * a single suggestion. This is an experimental feature for select customers. If you want to
-   * receive this prompt information, reach out to the Retail support team.
+   * Deprecated: Use CompleteQueryResponse.agent_prompts instead. Conversational prompts to trigger
+   * agents like Shopping Agent. There may be multiple prompts for a single suggestion. This is an
+   * experimental feature for select customers.
    * @param agentPrompts agentPrompts or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult setAgentPrompts(java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt> agentPrompts) {
+  public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult setAgentPrompts(java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt> agentPrompts) {
     this.agentPrompts = agentPrompts;
     return this;
   }

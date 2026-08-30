@@ -28,7 +28,7 @@ package com.google.api.services.retail.v2alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt extends com.google.api.client.json.GenericJson {
 
   /**
    * The conversational prompt string.
@@ -49,19 +49,19 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResult
    * The conversational prompt string.
    * @param prompt prompt or {@code null} for none
    */
-  public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt setPrompt(java.lang.String prompt) {
+  public GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt setPrompt(java.lang.String prompt) {
     this.prompt = prompt;
     return this;
   }
 
   @Override
-  public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt set(String fieldName, Object value) {
-    return (GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt) super.set(fieldName, value);
+  public GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt set(String fieldName, Object value) {
+    return (GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt clone() {
-    return (GoogleCloudRetailV2alphaCompleteQueryResponseCompletionResultAgentPrompt) super.clone();
+  public GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt clone() {
+    return (GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt) super.clone();
   }
 
 }

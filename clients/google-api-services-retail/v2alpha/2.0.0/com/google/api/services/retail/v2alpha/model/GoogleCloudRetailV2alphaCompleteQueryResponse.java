@@ -31,6 +31,14 @@ package com.google.api.services.retail.v2alpha.model;
 public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Conversational prompts to trigger agents like Shopping Agent. This is an experimental feature
+   * for select customers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt> agentPrompts;
+
+  /**
    * A map of matched attribute suggestions. This field is only available for `cloud-retail`
    * dataset. Current supported keys: * `brands` * `categories`
    * The value may be {@code null}.
@@ -67,6 +75,25 @@ public final class GoogleCloudRetailV2alphaCompleteQueryResponse extends com.goo
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseRecentSearchResult> recentSearchResults;
+
+  /**
+   * Conversational prompts to trigger agents like Shopping Agent. This is an experimental feature
+   * for select customers.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt> getAgentPrompts() {
+    return agentPrompts;
+  }
+
+  /**
+   * Conversational prompts to trigger agents like Shopping Agent. This is an experimental feature
+   * for select customers.
+   * @param agentPrompts agentPrompts or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCompleteQueryResponse setAgentPrompts(java.util.List<GoogleCloudRetailV2alphaCompleteQueryResponseAgentPrompt> agentPrompts) {
+    this.agentPrompts = agentPrompts;
+    return this;
+  }
 
   /**
    * A map of matched attribute suggestions. This field is only available for `cloud-retail`

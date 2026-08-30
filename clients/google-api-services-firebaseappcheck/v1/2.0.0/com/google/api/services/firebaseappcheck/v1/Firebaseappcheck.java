@@ -2535,6 +2535,165 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           return (GeneratePlayIntegrityChallenge) super.set(parameterName, value);
         }
       }
+      /**
+       * Mints a new App Check token for the specified Firebase App. This method is intended to be called
+       * from a privileged environment where the caller can be authorized via Cloud IAM; for example,
+       * using a service account. To call this method, the caller must have the [`firebaseappcheck.googlea
+       * pis.com/tokens.mint`](https://firebase.google.com/docs/projects/iam/permissions#app-check)
+       * permission. Returns a MintAppCheckTokenResponse.
+       *
+       * Create a request for the method "apps.mintAppCheckToken".
+       *
+       * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+       * optional parameters, call the {@link MintAppCheckToken#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param app Required. The relative resource name of the app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+       * @param content the {@link com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1MintAppCheckTokenRequest}
+       * @return the request
+       */
+      public MintAppCheckToken mintAppCheckToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1MintAppCheckTokenRequest content) throws java.io.IOException {
+        MintAppCheckToken result = new MintAppCheckToken(app, content);
+        initialize(result);
+        return result;
+      }
+
+      public class MintAppCheckToken extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1MintAppCheckTokenResponse> {
+
+        private static final String REST_PATH = "v1/{+app}:mintAppCheckToken";
+
+        private final java.util.regex.Pattern APP_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Mints a new App Check token for the specified Firebase App. This method is intended to be
+         * called from a privileged environment where the caller can be authorized via Cloud IAM; for
+         * example, using a service account. To call this method, the caller must have the [`firebaseappch
+         * eck.googleapis.com/tokens.mint`](https://firebase.google.com/docs/projects/iam/permissions#app-
+         * check) permission. Returns a MintAppCheckTokenResponse.
+         *
+         * Create a request for the method "apps.mintAppCheckToken".
+         *
+         * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link MintAppCheckToken#execute()} method to invoke the remote
+         * operation. <p> {@link MintAppCheckToken#initialize(com.google.api.client.googleapis.services.Ab
+         * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param app Required. The relative resource name of the app, in the format: ```
+       *        projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can
+       *        be replaced with the project ID of the Firebase project. Learn more about using project
+       *        identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1MintAppCheckTokenRequest}
+         * @since 1.13
+         */
+        protected MintAppCheckToken(java.lang.String app, com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1MintAppCheckTokenRequest content) {
+          super(Firebaseappcheck.this, "POST", REST_PATH, content, com.google.api.services.firebaseappcheck.v1.model.GoogleFirebaseAppcheckV1MintAppCheckTokenResponse.class);
+          this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public MintAppCheckToken set$Xgafv(java.lang.String $Xgafv) {
+          return (MintAppCheckToken) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public MintAppCheckToken setAccessToken(java.lang.String accessToken) {
+          return (MintAppCheckToken) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public MintAppCheckToken setAlt(java.lang.String alt) {
+          return (MintAppCheckToken) super.setAlt(alt);
+        }
+
+        @Override
+        public MintAppCheckToken setCallback(java.lang.String callback) {
+          return (MintAppCheckToken) super.setCallback(callback);
+        }
+
+        @Override
+        public MintAppCheckToken setFields(java.lang.String fields) {
+          return (MintAppCheckToken) super.setFields(fields);
+        }
+
+        @Override
+        public MintAppCheckToken setKey(java.lang.String key) {
+          return (MintAppCheckToken) super.setKey(key);
+        }
+
+        @Override
+        public MintAppCheckToken setOauthToken(java.lang.String oauthToken) {
+          return (MintAppCheckToken) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public MintAppCheckToken setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (MintAppCheckToken) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public MintAppCheckToken setQuotaUser(java.lang.String quotaUser) {
+          return (MintAppCheckToken) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public MintAppCheckToken setUploadType(java.lang.String uploadType) {
+          return (MintAppCheckToken) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public MintAppCheckToken setUploadProtocol(java.lang.String uploadProtocol) {
+          return (MintAppCheckToken) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The relative resource name of the app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The relative resource name of the app, in the format: ```
+       projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element can be
+       replaced with the project ID of the Firebase project. Learn more about using project identifiers in
+       Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /**
+         * Required. The relative resource name of the app, in the format: ```
+         * projects/{project_number}/apps/{app_id} ``` If necessary, the `project_number` element
+         * can be replaced with the project ID of the Firebase project. Learn more about using
+         * project identifiers in Google's [AIP 2510](https://google.aip.dev/cloud/2510) standard.
+         */
+        public MintAppCheckToken setApp(java.lang.String app) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                "Parameter app must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.app = app;
+          return this;
+        }
+
+        @Override
+        public MintAppCheckToken set(String parameterName, Object value) {
+          return (MintAppCheckToken) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the AppAttestConfig collection.

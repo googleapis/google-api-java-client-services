@@ -46,6 +46,14 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   private java.lang.String androidPackageName;
 
   /**
+   * Output only. Indicates a failure collecting reCAPTCHA signals at token generation. This might
+   * be a transient condition, or persistent for a user’s environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean clientSignalsFailed;
+
+  /**
    * Output only. The timestamp corresponding to the generation of the token.
    * The value may be {@code null}.
    */
@@ -115,6 +123,25 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setAndroidPackageName(java.lang.String androidPackageName) {
     this.androidPackageName = androidPackageName;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates a failure collecting reCAPTCHA signals at token generation. This might
+   * be a transient condition, or persistent for a user’s environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getClientSignalsFailed() {
+    return clientSignalsFailed;
+  }
+
+  /**
+   * Output only. Indicates a failure collecting reCAPTCHA signals at token generation. This might
+   * be a transient condition, or persistent for a user’s environment.
+   * @param clientSignalsFailed clientSignalsFailed or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1TokenProperties setClientSignalsFailed(java.lang.Boolean clientSignalsFailed) {
+    this.clientSignalsFailed = clientSignalsFailed;
     return this;
   }
 

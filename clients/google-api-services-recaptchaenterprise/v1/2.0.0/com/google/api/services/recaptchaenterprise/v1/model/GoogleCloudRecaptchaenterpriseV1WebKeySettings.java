@@ -60,8 +60,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
 
   /**
    * Optional. Settings for the frequency and difficulty at which this key triggers captcha
-   * challenges. This should only be specified for `IntegrationType` CHECKBOX, INVISIBLE or
-   * POLICY_BASED_CHALLENGE.
+   * challenges. This should only be specified for `IntegrationType` CHECKBOX (defaults to BALANCE),
+   * INVISIBLE (defaults to USABILITY), or POLICY_BASED_CHALLENGE (defaults to USABILITY).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +148,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
 
   /**
    * Optional. Settings for the frequency and difficulty at which this key triggers captcha
-   * challenges. This should only be specified for `IntegrationType` CHECKBOX, INVISIBLE or
-   * POLICY_BASED_CHALLENGE.
+   * challenges. This should only be specified for `IntegrationType` CHECKBOX (defaults to BALANCE),
+   * INVISIBLE (defaults to USABILITY), or POLICY_BASED_CHALLENGE (defaults to USABILITY).
    * @return value or {@code null} for none
    */
   public java.lang.String getChallengeSecurityPreference() {
@@ -158,8 +158,8 @@ public final class GoogleCloudRecaptchaenterpriseV1WebKeySettings extends com.go
 
   /**
    * Optional. Settings for the frequency and difficulty at which this key triggers captcha
-   * challenges. This should only be specified for `IntegrationType` CHECKBOX, INVISIBLE or
-   * POLICY_BASED_CHALLENGE.
+   * challenges. This should only be specified for `IntegrationType` CHECKBOX (defaults to BALANCE),
+   * INVISIBLE (defaults to USABILITY), or POLICY_BASED_CHALLENGE (defaults to USABILITY).
    * @param challengeSecurityPreference challengeSecurityPreference or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1WebKeySettings setChallengeSecurityPreference(java.lang.String challengeSecurityPreference) {

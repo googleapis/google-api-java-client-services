@@ -80,6 +80,18 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Optional. Immutable. The ID of the User List wrapped by this Data Segment. Curators with a
+   * linked Data Partner account can create a data segment that wraps a user list owned by the
+   * linked Data Partner account. User lists can be uploaded and managed using the [Data Manager
+   * API](https://developers.google.com/data-manager/api/data-partners/audiences). Linking a user
+   * list to a data segment lets you define a segment of inventory that is based on an audience you
+   * create.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String userListId;
+
+  /**
    * Optional. A fixed fee charged per thousand impressions. Once set, the currency code cannot be
    * changed.
    * @return value or {@code null} for none
@@ -188,6 +200,33 @@ public final class DataSegment extends com.google.api.client.json.GenericJson {
    */
   public DataSegment setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The ID of the User List wrapped by this Data Segment. Curators with a
+   * linked Data Partner account can create a data segment that wraps a user list owned by the
+   * linked Data Partner account. User lists can be uploaded and managed using the [Data Manager
+   * API](https://developers.google.com/data-manager/api/data-partners/audiences). Linking a user
+   * list to a data segment lets you define a segment of inventory that is based on an audience you
+   * create.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUserListId() {
+    return userListId;
+  }
+
+  /**
+   * Optional. Immutable. The ID of the User List wrapped by this Data Segment. Curators with a
+   * linked Data Partner account can create a data segment that wraps a user list owned by the
+   * linked Data Partner account. User lists can be uploaded and managed using the [Data Manager
+   * API](https://developers.google.com/data-manager/api/data-partners/audiences). Linking a user
+   * list to a data segment lets you define a segment of inventory that is based on an audience you
+   * create.
+   * @param userListId userListId or {@code null} for none
+   */
+  public DataSegment setUserListId(java.lang.String userListId) {
+    this.userListId = userListId;
     return this;
   }
 

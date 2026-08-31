@@ -31,13 +31,11 @@ package com.google.api.services.metastore.v1.model;
 public final class MigrationExecution extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
-   * migration instead. Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
+   * Configuration information specific to migrating from Dataproc Metastore to BigLake Metastore.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CloudSQLMigrationConfig cloudSqlMigrationConfig;
+  private BigLakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig;
 
   /**
    * Output only. The time when the migration execution was started.
@@ -85,23 +83,19 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   private java.lang.String stateMessage;
 
   /**
-   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
-   * migration instead. Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
+   * Configuration information specific to migrating from Dataproc Metastore to BigLake Metastore.
    * @return value or {@code null} for none
    */
-  public CloudSQLMigrationConfig getCloudSqlMigrationConfig() {
-    return cloudSqlMigrationConfig;
+  public BigLakeMetastoreMigrationConfig getBiglakeMetastoreMigrationConfig() {
+    return biglakeMetastoreMigrationConfig;
   }
 
   /**
-   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
-   * migration instead. Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
-   * @param cloudSqlMigrationConfig cloudSqlMigrationConfig or {@code null} for none
+   * Configuration information specific to migrating from Dataproc Metastore to BigLake Metastore.
+   * @param biglakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig or {@code null} for none
    */
-  public MigrationExecution setCloudSqlMigrationConfig(CloudSQLMigrationConfig cloudSqlMigrationConfig) {
-    this.cloudSqlMigrationConfig = cloudSqlMigrationConfig;
+  public MigrationExecution setBiglakeMetastoreMigrationConfig(BigLakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig) {
+    this.biglakeMetastoreMigrationConfig = biglakeMetastoreMigrationConfig;
     return this;
   }
 

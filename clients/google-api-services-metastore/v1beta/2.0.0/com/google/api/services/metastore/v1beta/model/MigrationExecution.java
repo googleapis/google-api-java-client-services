@@ -38,15 +38,6 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
   private BigLakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig;
 
   /**
-   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
-   * migration instead. Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private CloudSQLMigrationConfig cloudSqlMigrationConfig;
-
-  /**
    * Output only. The time when the migration execution was started.
    * The value may be {@code null}.
    */
@@ -105,27 +96,6 @@ public final class MigrationExecution extends com.google.api.client.json.Generic
    */
   public MigrationExecution setBiglakeMetastoreMigrationConfig(BigLakeMetastoreMigrationConfig biglakeMetastoreMigrationConfig) {
     this.biglakeMetastoreMigrationConfig = biglakeMetastoreMigrationConfig;
-    return this;
-  }
-
-  /**
-   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
-   * migration instead. Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
-   * @return value or {@code null} for none
-   */
-  public CloudSQLMigrationConfig getCloudSqlMigrationConfig() {
-    return cloudSqlMigrationConfig;
-  }
-
-  /**
-   * Deprecated: Migrations to Dataproc Metastore are no longer supported. Use BigLake Metastore
-   * migration instead. Configuration information specific to migrating from self-managed hive
-   * metastore on Google Cloud using Cloud SQL as the backend database to Dataproc Metastore.
-   * @param cloudSqlMigrationConfig cloudSqlMigrationConfig or {@code null} for none
-   */
-  public MigrationExecution setCloudSqlMigrationConfig(CloudSQLMigrationConfig cloudSqlMigrationConfig) {
-    this.cloudSqlMigrationConfig = cloudSqlMigrationConfig;
     return this;
   }
 

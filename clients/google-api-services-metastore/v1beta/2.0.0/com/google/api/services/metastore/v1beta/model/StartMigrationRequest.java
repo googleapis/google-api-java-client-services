@@ -38,6 +38,16 @@ public final class StartMigrationRequest extends com.google.api.client.json.Gene
   private MigrationExecution migrationExecution;
 
   /**
+   * Optional. The ID to use for the migration execution, which will become the final component of
+   * the migration execution's resource name. If not specified, a UUID will be generated.This value
+   * must be between 2 and 63 characters long inclusive, begin with a letter, end with a letter or
+   * number, and valid characters are a-z0-9-.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String migrationExecutionId;
+
+  /**
    * Optional. A request ID. Specify a unique request ID to allow the server to ignore the request
    * if it has completed. The server will ignore subsequent requests that provide a duplicate
    * request ID for at least 60 minutes after the first request.For example, if an initial request
@@ -64,6 +74,29 @@ public final class StartMigrationRequest extends com.google.api.client.json.Gene
    */
   public StartMigrationRequest setMigrationExecution(MigrationExecution migrationExecution) {
     this.migrationExecution = migrationExecution;
+    return this;
+  }
+
+  /**
+   * Optional. The ID to use for the migration execution, which will become the final component of
+   * the migration execution's resource name. If not specified, a UUID will be generated.This value
+   * must be between 2 and 63 characters long inclusive, begin with a letter, end with a letter or
+   * number, and valid characters are a-z0-9-.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMigrationExecutionId() {
+    return migrationExecutionId;
+  }
+
+  /**
+   * Optional. The ID to use for the migration execution, which will become the final component of
+   * the migration execution's resource name. If not specified, a UUID will be generated.This value
+   * must be between 2 and 63 characters long inclusive, begin with a letter, end with a letter or
+   * number, and valid characters are a-z0-9-.
+   * @param migrationExecutionId migrationExecutionId or {@code null} for none
+   */
+  public StartMigrationRequest setMigrationExecutionId(java.lang.String migrationExecutionId) {
+    this.migrationExecutionId = migrationExecutionId;
     return this;
   }
 

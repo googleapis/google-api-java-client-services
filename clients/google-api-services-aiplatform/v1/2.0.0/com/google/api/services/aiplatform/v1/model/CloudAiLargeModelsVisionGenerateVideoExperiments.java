@@ -96,6 +96,14 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private CloudAiLargeModelsVisionHumanPose humanPose;
 
   /**
+   * Optional. BNS override for model backend. Enabled only for local and autopush environments by
+   * the flag `lvm_allow_model_zoo_bns_override`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String modelEndpointOverride;
+
+  /**
    * Model names, as defined in: xyz
    * The value may be {@code null}.
    */
@@ -359,6 +367,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setHumanPose(CloudAiLargeModelsVisionHumanPose humanPose) {
     this.humanPose = humanPose;
+    return this;
+  }
+
+  /**
+   * Optional. BNS override for model backend. Enabled only for local and autopush environments by
+   * the flag `lvm_allow_model_zoo_bns_override`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModelEndpointOverride() {
+    return modelEndpointOverride;
+  }
+
+  /**
+   * Optional. BNS override for model backend. Enabled only for local and autopush environments by
+   * the flag `lvm_allow_model_zoo_bns_override`.
+   * @param modelEndpointOverride modelEndpointOverride or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setModelEndpointOverride(java.lang.String modelEndpointOverride) {
+    this.modelEndpointOverride = modelEndpointOverride;
     return this;
   }
 

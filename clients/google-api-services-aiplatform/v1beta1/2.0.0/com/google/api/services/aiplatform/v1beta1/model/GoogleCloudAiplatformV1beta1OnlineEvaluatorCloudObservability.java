@@ -31,8 +31,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Optional log view that will be used to query logs. If empty, the `_Default` view will
-   * be used.
+   * Optional. Optional log view that will be used to query logs. If empty, the project's default
+   * view (`projects/{project_id}`) will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,16 +60,17 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
   private GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityTraceScope traceScope;
 
   /**
-   * Optional. Optional trace view that will be used to query traces. If empty, the `_Default` view
-   * will be used. NOTE: This field is not supported yet and will be ignored if set.
+   * Optional. Optional trace view that will be used to query traces. If empty, the `_AllSpans` view
+   * from `_Trace` US bucket will be used, i.e.
+   * `projects/{project_id}/locations/us/buckets/_Trace/datasets/Spans/views/_AllSpans`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String traceView;
 
   /**
-   * Optional. Optional log view that will be used to query logs. If empty, the `_Default` view will
-   * be used.
+   * Optional. Optional log view that will be used to query logs. If empty, the project's default
+   * view (`projects/{project_id}`) will be used.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogView() {
@@ -77,8 +78,8 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
   }
 
   /**
-   * Optional. Optional log view that will be used to query logs. If empty, the `_Default` view will
-   * be used.
+   * Optional. Optional log view that will be used to query logs. If empty, the project's default
+   * view (`projects/{project_id}`) will be used.
    * @param logView logView or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability setLogView(java.lang.String logView) {
@@ -138,8 +139,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
   }
 
   /**
-   * Optional. Optional trace view that will be used to query traces. If empty, the `_Default` view
-   * will be used. NOTE: This field is not supported yet and will be ignored if set.
+   * Optional. Optional trace view that will be used to query traces. If empty, the `_AllSpans` view
+   * from `_Trace` US bucket will be used, i.e.
+   * `projects/{project_id}/locations/us/buckets/_Trace/datasets/Spans/views/_AllSpans`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTraceView() {
@@ -147,8 +149,9 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
   }
 
   /**
-   * Optional. Optional trace view that will be used to query traces. If empty, the `_Default` view
-   * will be used. NOTE: This field is not supported yet and will be ignored if set.
+   * Optional. Optional trace view that will be used to query traces. If empty, the `_AllSpans` view
+   * from `_Trace` US bucket will be used, i.e.
+   * `projects/{project_id}/locations/us/buckets/_Trace/datasets/Spans/views/_AllSpans`.
    * @param traceView traceView or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability setTraceView(java.lang.String traceView) {

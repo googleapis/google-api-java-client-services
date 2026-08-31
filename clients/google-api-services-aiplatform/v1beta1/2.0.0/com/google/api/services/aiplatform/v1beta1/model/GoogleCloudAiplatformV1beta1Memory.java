@@ -30,6 +30,13 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Represents the context of the memory.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String context;
+
+  /**
    * Output only. Represents the timestamp when this Memory was created.
    * The value may be {@code null}.
    */
@@ -159,6 +166,23 @@ public final class GoogleCloudAiplatformV1beta1Memory extends com.google.api.cli
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Represents the context of the memory.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContext() {
+    return context;
+  }
+
+  /**
+   * Optional. Represents the context of the memory.
+   * @param context context or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Memory setContext(java.lang.String context) {
+    this.context = context;
+    return this;
+  }
 
   /**
    * Output only. Represents the timestamp when this Memory was created.

@@ -50901,6 +50901,41 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. If true, any `Task` belonging to this agent is deleted along with it. If
+           * false or unset and the agent still has at least one `Task`, the request fails with
+           * `FAILED_PRECONDITION` and nothing is deleted. This governs `Task` and nothing else.
+           * Resources the agent owns but a caller never named -- its AI Application and the tenant
+           * project bound to it, its Workspace identity, its service-extension binding -- are torn
+           * down with the agent on every delete, whatever this field says.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If true, any `Task` belonging to this agent is deleted along with it. If false or unset
+         and the agent still has at least one `Task`, the request fails with `FAILED_PRECONDITION` and
+         nothing is deleted. This governs `Task` and nothing else. Resources the agent owns but a caller
+         never named -- its AI Application and the tenant project bound to it, its Workspace identity, its
+         service-extension binding -- are torn down with the agent on every delete, whatever this field
+         says.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If true, any `Task` belonging to this agent is deleted along with it. If
+           * false or unset and the agent still has at least one `Task`, the request fails with
+           * `FAILED_PRECONDITION` and nothing is deleted. This governs `Task` and nothing else.
+           * Resources the agent owns but a caller never named -- its AI Application and the tenant
+           * project bound to it, its Workspace identity, its service-extension binding -- are torn
+           * down with the agent on every delete, whatever this field says.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -51054,6 +51089,194 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Gets the access control policy for a resource. Returns an empty policy if the resource exists and
+         * does not have a policy set.
+         *
+         * Create a request for the method "agents.getIamPolicy".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public GetIamPolicy getIamPolicy(java.lang.String resource) throws java.io.IOException {
+          GetIamPolicy result = new GetIamPolicy(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class GetIamPolicy extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:getIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+          /**
+           * Gets the access control policy for a resource. Returns an empty policy if the resource exists
+           * and does not have a policy set.
+           *
+           * Create a request for the method "agents.getIamPolicy".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected GetIamPolicy(java.lang.String resource) {
+            super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+            }
+          }
+
+          @Override
+          public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (GetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (GetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GetIamPolicy setAlt(java.lang.String alt) {
+            return (GetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public GetIamPolicy setCallback(java.lang.String callback) {
+            return (GetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public GetIamPolicy setFields(java.lang.String fields) {
+            return (GetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public GetIamPolicy setKey(java.lang.String key) {
+            return (GetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (GetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (GetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (GetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public GetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          @com.google.api.client.util.Key("options.requestedPolicyVersion")
+          private java.lang.Integer optionsRequestedPolicyVersion;
+
+          /** Optional. The maximum policy version that will be used to format the policy. Valid values are 0, 1,
+         and 3. Requests specifying an invalid value will be rejected. Requests for policies with any
+         conditional role bindings must specify version 3. Policies with no conditional role bindings may
+         specify any valid value or leave the field unset. The policy in the response might use the policy
+         version that you specified, or it might use a lower policy version. For example, if you specify
+         version 3, but the policy has no conditional role bindings, the response uses version 1. To learn
+         which resources support conditions in their IAM policies, see the [IAM
+         documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public java.lang.Integer getOptionsRequestedPolicyVersion() {
+            return optionsRequestedPolicyVersion;
+          }
+
+          /**
+           * Optional. The maximum policy version that will be used to format the policy. Valid
+           * values are 0, 1, and 3. Requests specifying an invalid value will be rejected. Requests
+           * for policies with any conditional role bindings must specify version 3. Policies with
+           * no conditional role bindings may specify any valid value or leave the field unset. The
+           * policy in the response might use the policy version that you specified, or it might use
+           * a lower policy version. For example, if you specify version 3, but the policy has no
+           * conditional role bindings, the response uses version 1. To learn which resources
+           * support conditions in their IAM policies, see the [IAM
+           * documentation](https://cloud.google.com/iam/help/conditions/resource-policies).
+           */
+          public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+            this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+            return this;
+          }
+
+          @Override
+          public GetIamPolicy set(String parameterName, Object value) {
+            return (GetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
          * Lists the agents in a location that belong to the caller. An agent belongs to the end user
          * recorded as its owner when it was created, so the response holds that caller's agents and no
          * others. It is empty for a caller that is not an end user, and an agent with no recorded owner is
@@ -51198,6 +51421,57 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                   "^projects/[^/]+/locations/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter over the returned agents. An
+           * empty filter returns the unfiltered collection. Supported fields: * `created` *
+           * `updated` Both are timestamps and take an RFC-3339 value, for example
+           * `2026-08-01T00:00:00Z`. Supported operators: `=`, `!=`, `<`, `>`, `<=`, `>=`, `:`,
+           * `AND`, `OR`, `NOT` (equivalently `-`), and parentheses. Note that `OR` binds more
+           * tightly than `AND`, so `a AND b OR c` means `a AND (b OR c)`; parentheses are
+           * recommended, not required. Example: `created > "2026-08-01T00:00:00Z" AND updated <
+           * "2026-08-09T00:00:00Z"`. Not supported: any field other than those listed above,
+           * wildcards other than `field:*`, bare literals with no field name, functions, and the
+           * regular-expression operators `=~` and `!~`. A filter that names an unsupported field,
+           * exceeds 1000 characters, or nests parentheses more than 5 deep fails with
+           * `INVALID_ARGUMENT`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An [AIP-160](https://google.aip.dev/160) filter over the returned agents. An empty filter
+         returns the unfiltered collection. Supported fields: * `created` * `updated` Both are timestamps
+         and take an RFC-3339 value, for example `2026-08-01T00:00:00Z`. Supported operators: `=`, `!=`,
+         `<`, `>`, `<=`, `>=`, `:`, `AND`, `OR`, `NOT` (equivalently `-`), and parentheses. Note that `OR`
+         binds more tightly than `AND`, so `a AND b OR c` means `a AND (b OR c)`; parentheses are
+         recommended, not required. Example: `created > "2026-08-01T00:00:00Z" AND updated <
+         "2026-08-09T00:00:00Z"`. Not supported: any field other than those listed above, wildcards other
+         than `field:*`, bare literals with no field name, functions, and the regular-expression operators
+         `=~` and `!~`. A filter that names an unsupported field, exceeds 1000 characters, or nests
+         parentheses more than 5 deep fails with `INVALID_ARGUMENT`.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An [AIP-160](https://google.aip.dev/160) filter over the returned agents. An
+           * empty filter returns the unfiltered collection. Supported fields: * `created` *
+           * `updated` Both are timestamps and take an RFC-3339 value, for example
+           * `2026-08-01T00:00:00Z`. Supported operators: `=`, `!=`, `<`, `>`, `<=`, `>=`, `:`,
+           * `AND`, `OR`, `NOT` (equivalently `-`), and parentheses. Note that `OR` binds more
+           * tightly than `AND`, so `a AND b OR c` means `a AND (b OR c)`; parentheses are
+           * recommended, not required. Example: `created > "2026-08-01T00:00:00Z" AND updated <
+           * "2026-08-09T00:00:00Z"`. Not supported: any field other than those listed above,
+           * wildcards other than `field:*`, bare literals with no field name, functions, and the
+           * regular-expression operators `=~` and `!~`. A filter that names an unsupported field,
+           * exceeds 1000 characters, or nests parentheses more than 5 deep fails with
+           * `INVALID_ARGUMENT`.
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
             return this;
           }
 
@@ -51432,6 +51706,328 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+         * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+         *
+         * Create a request for the method "agents.setIamPolicy".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
+         * @return the request
+         */
+        public SetIamPolicy setIamPolicy(java.lang.String resource, com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1SetIamPolicyRequest content) throws java.io.IOException {
+          SetIamPolicy result = new SetIamPolicy(resource, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetIamPolicy extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1Policy> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:setIamPolicy";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+          /**
+           * Sets the access control policy on the specified resource. Replaces any existing policy. Can
+           * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
+           *
+           * Create a request for the method "agents.setIamPolicy".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy is being specified. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1SetIamPolicyRequest}
+           * @since 1.13
+           */
+          protected SetIamPolicy(java.lang.String resource, com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1SetIamPolicyRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1Policy.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+            return (SetIamPolicy) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+            return (SetIamPolicy) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetIamPolicy setAlt(java.lang.String alt) {
+            return (SetIamPolicy) super.setAlt(alt);
+          }
+
+          @Override
+          public SetIamPolicy setCallback(java.lang.String callback) {
+            return (SetIamPolicy) super.setCallback(callback);
+          }
+
+          @Override
+          public SetIamPolicy setFields(java.lang.String fields) {
+            return (SetIamPolicy) super.setFields(fields);
+          }
+
+          @Override
+          public SetIamPolicy setKey(java.lang.String key) {
+            return (SetIamPolicy) super.setKey(key);
+          }
+
+          @Override
+          public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+            return (SetIamPolicy) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+            return (SetIamPolicy) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetIamPolicy setUploadType(java.lang.String uploadType) {
+            return (SetIamPolicy) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy is being specified. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy is being specified. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public SetIamPolicy setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          @Override
+          public SetIamPolicy set(String parameterName, Object value) {
+            return (SetIamPolicy) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns permissions that a caller has on the specified resource. If the resource does not exist,
+         * this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This operation is
+         * designed to be used for building permission-aware UIs and command-line tools, not for
+         * authorization checking. This operation may "fail open" without warning.
+         *
+         * Create a request for the method "agents.testIamPermissions".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+         *
+         * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+         * @return the request
+         */
+        public TestIamPermissions testIamPermissions(java.lang.String resource) throws java.io.IOException {
+          TestIamPermissions result = new TestIamPermissions(resource);
+          initialize(result);
+          return result;
+        }
+
+        public class TestIamPermissions extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1TestIamPermissionsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+resource}:testIamPermissions";
+
+          private final java.util.regex.Pattern RESOURCE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+
+          /**
+           * Returns permissions that a caller has on the specified resource. If the resource does not
+           * exist, this will return an empty set of permissions, not a `NOT_FOUND` error. Note: This
+           * operation is designed to be used for building permission-aware UIs and command-line tools, not
+           * for authorization checking. This operation may "fail open" without warning.
+           *
+           * Create a request for the method "agents.testIamPermissions".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+           * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+           * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param resource REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         *        names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for
+         *        this field.
+           * @since 1.13
+           */
+          protected TestIamPermissions(java.lang.String resource) {
+            super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleIamV1TestIamPermissionsResponse.class);
+            this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+            }
+          }
+
+          @Override
+          public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+            return (TestIamPermissions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+            return (TestIamPermissions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public TestIamPermissions setAlt(java.lang.String alt) {
+            return (TestIamPermissions) super.setAlt(alt);
+          }
+
+          @Override
+          public TestIamPermissions setCallback(java.lang.String callback) {
+            return (TestIamPermissions) super.setCallback(callback);
+          }
+
+          @Override
+          public TestIamPermissions setFields(java.lang.String fields) {
+            return (TestIamPermissions) super.setFields(fields);
+          }
+
+          @Override
+          public TestIamPermissions setKey(java.lang.String key) {
+            return (TestIamPermissions) super.setKey(key);
+          }
+
+          @Override
+          public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+            return (TestIamPermissions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+            return (TestIamPermissions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public TestIamPermissions setUploadType(java.lang.String uploadType) {
+            return (TestIamPermissions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String resource;
+
+          /** REQUIRED: The resource for which the policy detail is being requested. See [Resource
+         names](https://cloud.google.com/apis/design/resource_names) for the appropriate value for this
+         field.
+           */
+          public java.lang.String getResource() {
+            return resource;
+          }
+
+          /**
+           * REQUIRED: The resource for which the policy detail is being requested. See [Resource
+           * names](https://cloud.google.com/apis/design/resource_names) for the appropriate value
+           * for this field.
+           */
+          public TestIamPermissions setResource(java.lang.String resource) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+                  "Parameter resource must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/agents/[^/]+$");
+            }
+            this.resource = resource;
+            return this;
+          }
+
+          /**
+           * The set of permissions to check for the `resource`. Permissions with wildcards (such as
+           * `*` or `storage.*`) are not allowed. For more information see [IAM
+           * Overview](https://cloud.google.com/iam/docs/overview#permissions).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> permissions;
+
+          /** The set of permissions to check for the `resource`. Permissions with wildcards (such as `*` or
+         `storage.*`) are not allowed. For more information see [IAM
+         Overview](https://cloud.google.com/iam/docs/overview#permissions).
+           */
+          public java.util.List<java.lang.String> getPermissions() {
+            return permissions;
+          }
+
+          /**
+           * The set of permissions to check for the `resource`. Permissions with wildcards (such as
+           * `*` or `storage.*`) are not allowed. For more information see [IAM
+           * Overview](https://cloud.google.com/iam/docs/overview#permissions).
+           */
+          public TestIamPermissions setPermissions(java.util.List<java.lang.String> permissions) {
+            this.permissions = permissions;
+            return this;
+          }
+
+          @Override
+          public TestIamPermissions set(String parameterName, Object value) {
+            return (TestIamPermissions) super.set(parameterName, value);
           }
         }
 
@@ -185018,6 +185614,159 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         public class SandboxEnvironments {
 
           /**
+           * Checks whether the caller is authorized to access the sandbox environment. Authorization is
+           * performed entirely by the API infrastructure from the `method_policy` below; the handler is a no-
+           * op. A successful response means the caller holds `sandboxEnvironments.execute` on the named
+           * sandbox. Used by the sandbox data-plane proxy, which forwards the caller's credential and proxies
+           * traffic only on success.
+           *
+           * Create a request for the method "sandboxEnvironments.authorizeAccess".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link AuthorizeAccess#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the sandbox environment to authorize access to. Format: `projects/{pr
+           *        oject}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironments/{sandb
+           *        ox_environment}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest}
+           * @return the request
+           */
+          public AuthorizeAccess authorizeAccess(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest content) throws java.io.IOException {
+            AuthorizeAccess result = new AuthorizeAccess(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AuthorizeAccess extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:authorizeAccess";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/sandboxEnvironments/[^/]+$");
+
+            /**
+             * Checks whether the caller is authorized to access the sandbox environment. Authorization is
+             * performed entirely by the API infrastructure from the `method_policy` below; the handler is a
+             * no-op. A successful response means the caller holds `sandboxEnvironments.execute` on the named
+             * sandbox. Used by the sandbox data-plane proxy, which forwards the caller's credential and
+             * proxies traffic only on success.
+             *
+             * Create a request for the method "sandboxEnvironments.authorizeAccess".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link AuthorizeAccess#execute()} method to invoke the remote
+             * operation. <p> {@link AuthorizeAccess#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The resource name of the sandbox environment to authorize access to. Format: `projects/{pr
+           *        oject}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironments/{sandb
+           *        ox_environment}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest}
+             * @since 1.13
+             */
+            protected AuthorizeAccess(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/sandboxEnvironments/[^/]+$");
+              }
+            }
+
+            @Override
+            public AuthorizeAccess set$Xgafv(java.lang.String $Xgafv) {
+              return (AuthorizeAccess) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AuthorizeAccess setAccessToken(java.lang.String accessToken) {
+              return (AuthorizeAccess) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AuthorizeAccess setAlt(java.lang.String alt) {
+              return (AuthorizeAccess) super.setAlt(alt);
+            }
+
+            @Override
+            public AuthorizeAccess setCallback(java.lang.String callback) {
+              return (AuthorizeAccess) super.setCallback(callback);
+            }
+
+            @Override
+            public AuthorizeAccess setFields(java.lang.String fields) {
+              return (AuthorizeAccess) super.setFields(fields);
+            }
+
+            @Override
+            public AuthorizeAccess setKey(java.lang.String key) {
+              return (AuthorizeAccess) super.setKey(key);
+            }
+
+            @Override
+            public AuthorizeAccess setOauthToken(java.lang.String oauthToken) {
+              return (AuthorizeAccess) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AuthorizeAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AuthorizeAccess) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AuthorizeAccess setQuotaUser(java.lang.String quotaUser) {
+              return (AuthorizeAccess) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AuthorizeAccess setUploadType(java.lang.String uploadType) {
+              return (AuthorizeAccess) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AuthorizeAccess setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AuthorizeAccess) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the sandbox environment to authorize access to.
+             * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/
+             * sandboxEnvironments/{sandbox_environment}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the sandbox environment to authorize access to. Format: `projects/{p
+           roject}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironments/{sandbox_envir
+           onment}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the sandbox environment to authorize access to.
+             * Format: `projects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/
+             * sandboxEnvironments/{sandbox_environment}`
+             */
+            public AuthorizeAccess setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/reasoningEngines/[^/]+/sandboxEnvironments/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AuthorizeAccess set(String parameterName, Object value) {
+              return (AuthorizeAccess) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a SandboxEnvironment in a given reasoning engine.
            *
            * Create a request for the method "sandboxEnvironments.create".
@@ -238442,6 +239191,159 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
      */
     public class SandboxEnvironments {
 
+      /**
+       * Checks whether the caller is authorized to access the sandbox environment. Authorization is
+       * performed entirely by the API infrastructure from the `method_policy` below; the handler is a no-
+       * op. A successful response means the caller holds `sandboxEnvironments.execute` on the named
+       * sandbox. Used by the sandbox data-plane proxy, which forwards the caller's credential and proxies
+       * traffic only on success.
+       *
+       * Create a request for the method "sandboxEnvironments.authorizeAccess".
+       *
+       * This request holds the parameters needed by the aiplatform server.  After setting any optional
+       * parameters, call the {@link AuthorizeAccess#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the sandbox environment to authorize access to. Format: `projects/{pr
+       *        oject}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironments/{sandb
+       *        ox_environment}`
+       * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest}
+       * @return the request
+       */
+      public AuthorizeAccess authorizeAccess(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest content) throws java.io.IOException {
+        AuthorizeAccess result = new AuthorizeAccess(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AuthorizeAccess extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessResponse> {
+
+        private static final String REST_PATH = "v1beta1/{+name}:authorizeAccess";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^reasoningEngines/[^/]+/sandboxEnvironments/[^/]+$");
+
+        /**
+         * Checks whether the caller is authorized to access the sandbox environment. Authorization is
+         * performed entirely by the API infrastructure from the `method_policy` below; the handler is a
+         * no-op. A successful response means the caller holds `sandboxEnvironments.execute` on the named
+         * sandbox. Used by the sandbox data-plane proxy, which forwards the caller's credential and
+         * proxies traffic only on success.
+         *
+         * Create a request for the method "sandboxEnvironments.authorizeAccess".
+         *
+         * This request holds the parameters needed by the the aiplatform server.  After setting any
+         * optional parameters, call the {@link AuthorizeAccess#execute()} method to invoke the remote
+         * operation. <p> {@link AuthorizeAccess#initialize(com.google.api.client.googleapis.services.Abst
+         * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param name Required. The resource name of the sandbox environment to authorize access to. Format: `projects/{pr
+       *        oject}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironments/{sandb
+       *        ox_environment}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest}
+         * @since 1.13
+         */
+        protected AuthorizeAccess(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessRequest content) {
+          super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1AuthorizeSandboxEnvironmentAccessResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^reasoningEngines/[^/]+/sandboxEnvironments/[^/]+$");
+          }
+        }
+
+        @Override
+        public AuthorizeAccess set$Xgafv(java.lang.String $Xgafv) {
+          return (AuthorizeAccess) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AuthorizeAccess setAccessToken(java.lang.String accessToken) {
+          return (AuthorizeAccess) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AuthorizeAccess setAlt(java.lang.String alt) {
+          return (AuthorizeAccess) super.setAlt(alt);
+        }
+
+        @Override
+        public AuthorizeAccess setCallback(java.lang.String callback) {
+          return (AuthorizeAccess) super.setCallback(callback);
+        }
+
+        @Override
+        public AuthorizeAccess setFields(java.lang.String fields) {
+          return (AuthorizeAccess) super.setFields(fields);
+        }
+
+        @Override
+        public AuthorizeAccess setKey(java.lang.String key) {
+          return (AuthorizeAccess) super.setKey(key);
+        }
+
+        @Override
+        public AuthorizeAccess setOauthToken(java.lang.String oauthToken) {
+          return (AuthorizeAccess) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AuthorizeAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AuthorizeAccess) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AuthorizeAccess setQuotaUser(java.lang.String quotaUser) {
+          return (AuthorizeAccess) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AuthorizeAccess setUploadType(java.lang.String uploadType) {
+          return (AuthorizeAccess) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AuthorizeAccess setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AuthorizeAccess) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the sandbox environment to authorize access to. Format: `p
+         * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnviron
+         * ments/{sandbox_environment}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the sandbox environment to authorize access to. Format: `projects/{p
+       roject}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnvironments/{sandbox_envir
+       onment}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the sandbox environment to authorize access to. Format: `p
+         * rojects/{project}/locations/{location}/reasoningEngines/{reasoning_engine}/sandboxEnviron
+         * ments/{sandbox_environment}`
+         */
+        public AuthorizeAccess setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^reasoningEngines/[^/]+/sandboxEnvironments/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public AuthorizeAccess set(String parameterName, Object value) {
+          return (AuthorizeAccess) super.set(parameterName, value);
+        }
+      }
       /**
        * Creates a SandboxEnvironment in a given reasoning engine.
        *

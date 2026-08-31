@@ -1179,6 +1179,152 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Hibernates (pauses) a running environment. It requests the environment to switch to the
+         * HIBERNATED state, keeping its data and minimizing cost, but not running any DAGs. This method is
+         * supported for Cloud Composer environments in development mode in versions
+         * composer-3-airflow-*.*.*-build.* and newer.
+         *
+         * Create a request for the method "environments.hibernate".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link Hibernate#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the environment to hibernate, in the form:
+         *        "projects/{project}/locations/{location}/environments/{environment}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.HibernateEnvironmentRequest}
+         * @return the request
+         */
+        public Hibernate hibernate(java.lang.String name, com.google.api.services.composer.v1beta1.model.HibernateEnvironmentRequest content) throws java.io.IOException {
+          Hibernate result = new Hibernate(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Hibernate extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:hibernate";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Hibernates (pauses) a running environment. It requests the environment to switch to the
+           * HIBERNATED state, keeping its data and minimizing cost, but not running any DAGs. This method
+           * is supported for Cloud Composer environments in development mode in versions
+           * composer-3-airflow-*.*.*-build.* and newer.
+           *
+           * Create a request for the method "environments.hibernate".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link Hibernate#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Hibernate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the environment to hibernate, in the form:
+         *        "projects/{project}/locations/{location}/environments/{environment}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.HibernateEnvironmentRequest}
+           * @since 1.13
+           */
+          protected Hibernate(java.lang.String name, com.google.api.services.composer.v1beta1.model.HibernateEnvironmentRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Hibernate set$Xgafv(java.lang.String $Xgafv) {
+            return (Hibernate) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Hibernate setAccessToken(java.lang.String accessToken) {
+            return (Hibernate) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Hibernate setAlt(java.lang.String alt) {
+            return (Hibernate) super.setAlt(alt);
+          }
+
+          @Override
+          public Hibernate setCallback(java.lang.String callback) {
+            return (Hibernate) super.setCallback(callback);
+          }
+
+          @Override
+          public Hibernate setFields(java.lang.String fields) {
+            return (Hibernate) super.setFields(fields);
+          }
+
+          @Override
+          public Hibernate setKey(java.lang.String key) {
+            return (Hibernate) super.setKey(key);
+          }
+
+          @Override
+          public Hibernate setOauthToken(java.lang.String oauthToken) {
+            return (Hibernate) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Hibernate setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Hibernate) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Hibernate setQuotaUser(java.lang.String quotaUser) {
+            return (Hibernate) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Hibernate setUploadType(java.lang.String uploadType) {
+            return (Hibernate) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Hibernate setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Hibernate) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the environment to hibernate, in the form:
+           * "projects/{project}/locations/{location}/environments/{environment}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the environment to hibernate, in the form:
+         "projects/{project}/locations/{location}/environments/{environment}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the environment to hibernate, in the form:
+           * "projects/{project}/locations/{location}/environments/{environment}"
+           */
+          public Hibernate setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Hibernate set(String parameterName, Object value) {
+            return (Hibernate) super.set(parameterName, value);
+          }
+        }
+        /**
          * List environments.
          *
          * Create a request for the method "environments.list".
@@ -2157,6 +2303,151 @@ public class CloudComposer extends com.google.api.client.googleapis.services.jso
           @Override
           public RestartWebServer set(String parameterName, Object value) {
             return (RestartWebServer) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Resumes (unpauses) a hibernated environment. It requests the environment to switch to the RUNNING
+         * state, so that it is ready to use and run DAGs. This method is supported for Cloud Composer
+         * environments in development mode in versions composer-3-airflow-*.*.*-build.* and newer.
+         *
+         * Create a request for the method "environments.resume".
+         *
+         * This request holds the parameters needed by the composer server.  After setting any optional
+         * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the environment to resume, in the form:
+         *        "projects/{project}/locations/{location}/environments/{environment}"
+         * @param content the {@link com.google.api.services.composer.v1beta1.model.ResumeEnvironmentRequest}
+         * @return the request
+         */
+        public Resume resume(java.lang.String name, com.google.api.services.composer.v1beta1.model.ResumeEnvironmentRequest content) throws java.io.IOException {
+          Resume result = new Resume(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Resume extends CloudComposerRequest<com.google.api.services.composer.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:resume";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+
+          /**
+           * Resumes (unpauses) a hibernated environment. It requests the environment to switch to the
+           * RUNNING state, so that it is ready to use and run DAGs. This method is supported for Cloud
+           * Composer environments in development mode in versions composer-3-airflow-*.*.*-build.* and
+           * newer.
+           *
+           * Create a request for the method "environments.resume".
+           *
+           * This request holds the parameters needed by the the composer server.  After setting any
+           * optional parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the environment to resume, in the form:
+         *        "projects/{project}/locations/{location}/environments/{environment}"
+           * @param content the {@link com.google.api.services.composer.v1beta1.model.ResumeEnvironmentRequest}
+           * @since 1.13
+           */
+          protected Resume(java.lang.String name, com.google.api.services.composer.v1beta1.model.ResumeEnvironmentRequest content) {
+            super(CloudComposer.this, "POST", REST_PATH, content, com.google.api.services.composer.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Resume set$Xgafv(java.lang.String $Xgafv) {
+            return (Resume) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Resume setAccessToken(java.lang.String accessToken) {
+            return (Resume) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Resume setAlt(java.lang.String alt) {
+            return (Resume) super.setAlt(alt);
+          }
+
+          @Override
+          public Resume setCallback(java.lang.String callback) {
+            return (Resume) super.setCallback(callback);
+          }
+
+          @Override
+          public Resume setFields(java.lang.String fields) {
+            return (Resume) super.setFields(fields);
+          }
+
+          @Override
+          public Resume setKey(java.lang.String key) {
+            return (Resume) super.setKey(key);
+          }
+
+          @Override
+          public Resume setOauthToken(java.lang.String oauthToken) {
+            return (Resume) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Resume) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Resume setQuotaUser(java.lang.String quotaUser) {
+            return (Resume) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Resume setUploadType(java.lang.String uploadType) {
+            return (Resume) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Resume) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the environment to resume, in the form:
+           * "projects/{project}/locations/{location}/environments/{environment}"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the environment to resume, in the form:
+         "projects/{project}/locations/{location}/environments/{environment}"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the environment to resume, in the form:
+           * "projects/{project}/locations/{location}/environments/{environment}"
+           */
+          public Resume setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/environments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Resume set(String parameterName, Object value) {
+            return (Resume) super.set(parameterName, value);
           }
         }
         /**

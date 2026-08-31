@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1MemoryRevision extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Represents the context of the Memory Revision. The context may include context
+   * from both the historical revisions and the extracted content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String context;
+
+  /**
    * Output only. Represents the timestamp when this Memory Revision was created.
    * The value may be {@code null}.
    */
@@ -89,6 +97,25 @@ public final class GoogleCloudAiplatformV1MemoryRevision extends com.google.api.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> structuredData;
+
+  /**
+   * Output only. Represents the context of the Memory Revision. The context may include context
+   * from both the historical revisions and the extracted content.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContext() {
+    return context;
+  }
+
+  /**
+   * Output only. Represents the context of the Memory Revision. The context may include context
+   * from both the historical revisions and the extracted content.
+   * @param context context or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1MemoryRevision setContext(java.lang.String context) {
+    this.context = context;
+    return this;
+  }
 
   /**
    * Output only. Represents the timestamp when this Memory Revision was created.

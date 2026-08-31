@@ -30,13 +30,6 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressControlConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The customer VPC network that sandbox egress is routed into.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String customerVpcNetwork;
-
-  /**
    * Optional. DNS peering configurations that allow sandbox egress to resolve customer-internal
    * domains via the customer VPC.
    * The value may be {@code null}.
@@ -58,23 +51,6 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressC
    */
   @com.google.api.client.util.Key
   private java.lang.String networkAttachment;
-
-  /**
-   * Optional. The customer VPC network that sandbox egress is routed into.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCustomerVpcNetwork() {
-    return customerVpcNetwork;
-  }
-
-  /**
-   * Optional. The customer VPC network that sandbox egress is routed into.
-   * @param customerVpcNetwork customerVpcNetwork or {@code null} for none
-   */
-  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateEgressControlConfig setCustomerVpcNetwork(java.lang.String customerVpcNetwork) {
-    this.customerVpcNetwork = customerVpcNetwork;
-    return this;
-  }
 
   /**
    * Optional. DNS peering configurations that allow sandbox egress to resolve customer-internal

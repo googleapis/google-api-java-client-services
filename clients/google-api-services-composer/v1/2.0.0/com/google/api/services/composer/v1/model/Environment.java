@@ -55,6 +55,14 @@ public final class Environment extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Selects the environment mode that determines what settings are customizable and what
+   * features are available in the environment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Identifier. The resource name of the environment, in the form:
    * "projects/{projectId}/locations/{locationId}/environments/{environmentId}" EnvironmentId must
    * start with a lowercase letter followed by up to 63 lowercase letters, numbers, or hyphens, and
@@ -163,6 +171,25 @@ public final class Environment extends com.google.api.client.json.GenericJson {
    */
   public Environment setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Selects the environment mode that determines what settings are customizable and what
+   * features are available in the environment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. Selects the environment mode that determines what settings are customizable and what
+   * features are available in the environment.
+   * @param mode mode or {@code null} for none
+   */
+  public Environment setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

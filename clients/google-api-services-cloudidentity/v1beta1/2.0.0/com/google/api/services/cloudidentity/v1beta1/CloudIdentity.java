@@ -5937,9 +5937,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The search query. * Must be specified in [Common Expression
-       * Language](https://opensource.google/projects/cel). * Must contain equality operators on the
-       * parent, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C"
-       * (for example, 'C046psxkn'). [Find your customer ID.]
+       * Language](https://opensource.google/projects/cel). See [CEL
+       * Introduction](https://github.com/google/cel-spec/blob/master/doc/intro.md) for CEL syntax
+       * usage and examples. * Must contain equality operators on the parent, e.g. `parent ==
+       * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+       * 'C046psxkn'). [Find your customer ID.]
        * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
        * operators on `labels` such as `'cloudidentity.googleapis.com/groups.discussion_forum' in
        * labels`). * Can contain an optional equality operator on `domain_name`. e.g. `domain_name
@@ -5947,22 +5949,34 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * on `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key
        * == 'dev@examplepetstore.com'` * Can contain optional `startsWith/contains/equality`
        * operators on `display_name`, such as `display_name.startsWith('dev')` ,
-       * `display_name.contains('dev')`, `display_name == 'dev'`
+       * `display_name.contains('dev')`, `display_name == 'dev'` Examples: * Search for all
+       * discussion forums under a customer: `parent == 'customers/C046psxkn' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels` * Search for groups with
+       * key starting with 'sales': `parent == 'customers/C046psxkn' &&
+       * group_key.startsWith('sales')` * Search for groups with display name containing 'test':
+       * `parent == 'customers/C046psxkn' && display_name.contains('test')`
        */
       @com.google.api.client.util.Key
       private java.lang.String query;
 
       /** Required. The search query. * Must be specified in [Common Expression
-     Language](https://opensource.google/projects/cel). * Must contain equality operators on the parent,
-     e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
-     'C046psxkn'). [Find your customer ID.] (https://support.google.com/cloudidentity/answer/10070793) *
-     Can contain optional inclusion operators on `labels` such as
+     Language](https://opensource.google/projects/cel). See [CEL
+     Introduction](https://github.com/google/cel-spec/blob/master/doc/intro.md) for CEL syntax usage and
+     examples. * Must contain equality operators on the parent, e.g. `parent ==
+     'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example, 'C046psxkn'). [Find
+     your customer ID.] (https://support.google.com/cloudidentity/answer/10070793) * Can contain
+     optional inclusion operators on `labels` such as
      `'cloudidentity.googleapis.com/groups.discussion_forum' in labels`). * Can contain an optional
      equality operator on `domain_name`. e.g. `domain_name == 'examplepetstore.com'` * Can contain
      optional `startsWith/contains/equality` operators on `group_key`, e.g.
      `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key == 'dev@examplepetstore.com'`
      * Can contain optional `startsWith/contains/equality` operators on `display_name`, such as
      `display_name.startsWith('dev')` , `display_name.contains('dev')`, `display_name == 'dev'`
+     Examples: * Search for all discussion forums under a customer: `parent == 'customers/C046psxkn' &&
+     'cloudidentity.googleapis.com/groups.discussion_forum' in labels` * Search for groups with key
+     starting with 'sales': `parent == 'customers/C046psxkn' && group_key.startsWith('sales')` * Search
+     for groups with display name containing 'test': `parent == 'customers/C046psxkn' &&
+     display_name.contains('test')`
        */
       public java.lang.String getQuery() {
         return query;
@@ -5970,9 +5984,11 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
 
       /**
        * Required. The search query. * Must be specified in [Common Expression
-       * Language](https://opensource.google/projects/cel). * Must contain equality operators on the
-       * parent, e.g. `parent == 'customers/{customer_id}'`. The `customer_id` must begin with "C"
-       * (for example, 'C046psxkn'). [Find your customer ID.]
+       * Language](https://opensource.google/projects/cel). See [CEL
+       * Introduction](https://github.com/google/cel-spec/blob/master/doc/intro.md) for CEL syntax
+       * usage and examples. * Must contain equality operators on the parent, e.g. `parent ==
+       * 'customers/{customer_id}'`. The `customer_id` must begin with "C" (for example,
+       * 'C046psxkn'). [Find your customer ID.]
        * (https://support.google.com/cloudidentity/answer/10070793) * Can contain optional inclusion
        * operators on `labels` such as `'cloudidentity.googleapis.com/groups.discussion_forum' in
        * labels`). * Can contain an optional equality operator on `domain_name`. e.g. `domain_name
@@ -5980,7 +5996,12 @@ public class CloudIdentity extends com.google.api.client.googleapis.services.jso
        * on `group_key`, e.g. `group_key.startsWith('dev')`, `group_key.contains('dev'), group_key
        * == 'dev@examplepetstore.com'` * Can contain optional `startsWith/contains/equality`
        * operators on `display_name`, such as `display_name.startsWith('dev')` ,
-       * `display_name.contains('dev')`, `display_name == 'dev'`
+       * `display_name.contains('dev')`, `display_name == 'dev'` Examples: * Search for all
+       * discussion forums under a customer: `parent == 'customers/C046psxkn' &&
+       * 'cloudidentity.googleapis.com/groups.discussion_forum' in labels` * Search for groups with
+       * key starting with 'sales': `parent == 'customers/C046psxkn' &&
+       * group_key.startsWith('sales')` * Search for groups with display name containing 'test':
+       * `parent == 'customers/C046psxkn' && display_name.contains('test')`
        */
       public Search setQuery(java.lang.String query) {
         this.query = query;

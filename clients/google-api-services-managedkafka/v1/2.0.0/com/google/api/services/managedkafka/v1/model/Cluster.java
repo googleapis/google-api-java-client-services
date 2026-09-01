@@ -31,6 +31,26 @@ package com.google.api.services.managedkafka.v1.model;
 public final class Cluster extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The bootstrap address of the Kafka cluster. The returned address format is:
+   * `bootstrap-...managedkafka.s.cloud.goog` or `bootstrap...managedkafka..cloud.goog` (legacy
+   * format). ## Examples: `bootstrap-nol2mecj8p94jhx2ge2rg54579a.c0aad26f.europe-
+   * west1.managedkafka.s.cloud.goog` - `bootstrap.my-cluster.us-central1.managedkafka.my-
+   * project.cloud.goog` The port number is omitted so clients can connect to their target listener
+   * (for example, `:9092` for TLS or `:9094` for mTLS).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String bootstrapAddress;
+
+  /**
+   * Optional. Capacity configuration at a per-broker level within the Kafka cluster. The config
+   * will be appled to each broker in the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BrokerCapacityConfig brokerCapacityConfig;
+
+  /**
    * Output only. Only populated when FULL view is requested. Details of each broker in the cluster.
    * The value may be {@code null}.
    */
@@ -56,6 +76,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Output only. Only populated when FULL view is requested. The effective capacity configuration
+   * of the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EffectiveCapacityConfig effectiveCapacityConfig;
 
   /**
    * Required. Configuration properties for a Kafka cluster deployed to Google Cloud Platform.
@@ -85,6 +113,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Details of the public cluster feature for the Kafka cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PublicClusterDetails publicClusterDetails;
 
   /**
    * Optional. Rebalance configuration for the Kafka cluster.
@@ -136,6 +171,52 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. The bootstrap address of the Kafka cluster. The returned address format is:
+   * `bootstrap-...managedkafka.s.cloud.goog` or `bootstrap...managedkafka..cloud.goog` (legacy
+   * format). ## Examples: `bootstrap-nol2mecj8p94jhx2ge2rg54579a.c0aad26f.europe-
+   * west1.managedkafka.s.cloud.goog` - `bootstrap.my-cluster.us-central1.managedkafka.my-
+   * project.cloud.goog` The port number is omitted so clients can connect to their target listener
+   * (for example, `:9092` for TLS or `:9094` for mTLS).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBootstrapAddress() {
+    return bootstrapAddress;
+  }
+
+  /**
+   * Output only. The bootstrap address of the Kafka cluster. The returned address format is:
+   * `bootstrap-...managedkafka.s.cloud.goog` or `bootstrap...managedkafka..cloud.goog` (legacy
+   * format). ## Examples: `bootstrap-nol2mecj8p94jhx2ge2rg54579a.c0aad26f.europe-
+   * west1.managedkafka.s.cloud.goog` - `bootstrap.my-cluster.us-central1.managedkafka.my-
+   * project.cloud.goog` The port number is omitted so clients can connect to their target listener
+   * (for example, `:9092` for TLS or `:9094` for mTLS).
+   * @param bootstrapAddress bootstrapAddress or {@code null} for none
+   */
+  public Cluster setBootstrapAddress(java.lang.String bootstrapAddress) {
+    this.bootstrapAddress = bootstrapAddress;
+    return this;
+  }
+
+  /**
+   * Optional. Capacity configuration at a per-broker level within the Kafka cluster. The config
+   * will be appled to each broker in the cluster.
+   * @return value or {@code null} for none
+   */
+  public BrokerCapacityConfig getBrokerCapacityConfig() {
+    return brokerCapacityConfig;
+  }
+
+  /**
+   * Optional. Capacity configuration at a per-broker level within the Kafka cluster. The config
+   * will be appled to each broker in the cluster.
+   * @param brokerCapacityConfig brokerCapacityConfig or {@code null} for none
+   */
+  public Cluster setBrokerCapacityConfig(BrokerCapacityConfig brokerCapacityConfig) {
+    this.brokerCapacityConfig = brokerCapacityConfig;
+    return this;
+  }
+
+  /**
    * Output only. Only populated when FULL view is requested. Details of each broker in the cluster.
    * @return value or {@code null} for none
    */
@@ -183,6 +264,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. Only populated when FULL view is requested. The effective capacity configuration
+   * of the cluster.
+   * @return value or {@code null} for none
+   */
+  public EffectiveCapacityConfig getEffectiveCapacityConfig() {
+    return effectiveCapacityConfig;
+  }
+
+  /**
+   * Output only. Only populated when FULL view is requested. The effective capacity configuration
+   * of the cluster.
+   * @param effectiveCapacityConfig effectiveCapacityConfig or {@code null} for none
+   */
+  public Cluster setEffectiveCapacityConfig(EffectiveCapacityConfig effectiveCapacityConfig) {
+    this.effectiveCapacityConfig = effectiveCapacityConfig;
     return this;
   }
 
@@ -253,6 +353,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Details of the public cluster feature for the Kafka cluster.
+   * @return value or {@code null} for none
+   */
+  public PublicClusterDetails getPublicClusterDetails() {
+    return publicClusterDetails;
+  }
+
+  /**
+   * Output only. Details of the public cluster feature for the Kafka cluster.
+   * @param publicClusterDetails publicClusterDetails or {@code null} for none
+   */
+  public Cluster setPublicClusterDetails(PublicClusterDetails publicClusterDetails) {
+    this.publicClusterDetails = publicClusterDetails;
     return this;
   }
 

@@ -39,6 +39,13 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<NetworkConfig> networkConfigs;
 
   /**
+   * Optional. The configuration for public connectivity to the Kafka cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PublicClusterConfig publicClusterConfig;
+
+  /**
    * Required. Virtual Private Cloud (VPC) networks that must be granted direct access to the Kafka
    * cluster. Minimum of 1 network is required. Maximum 10 networks can be specified.
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
    */
   public AccessConfig setNetworkConfigs(java.util.List<NetworkConfig> networkConfigs) {
     this.networkConfigs = networkConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for public connectivity to the Kafka cluster.
+   * @return value or {@code null} for none
+   */
+  public PublicClusterConfig getPublicClusterConfig() {
+    return publicClusterConfig;
+  }
+
+  /**
+   * Optional. The configuration for public connectivity to the Kafka cluster.
+   * @param publicClusterConfig publicClusterConfig or {@code null} for none
+   */
+  public AccessConfig setPublicClusterConfig(PublicClusterConfig publicClusterConfig) {
+    this.publicClusterConfig = publicClusterConfig;
     return this;
   }
 

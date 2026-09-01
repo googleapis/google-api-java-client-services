@@ -39,6 +39,13 @@ public final class UploadFileRequest extends com.google.api.client.json.GenericJ
   private java.lang.String fileId;
 
   /**
+   * Optional. The type of the file to upload. Defaulting to ATTACHMENT if not specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String fileType;
+
+  /**
    * Optional. The ID of the file. If left empty will default to sha256 digest of the content
    * uploaded.
    * @return value or {@code null} for none
@@ -54,6 +61,23 @@ public final class UploadFileRequest extends com.google.api.client.json.GenericJ
    */
   public UploadFileRequest setFileId(java.lang.String fileId) {
     this.fileId = fileId;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the file to upload. Defaulting to ATTACHMENT if not specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFileType() {
+    return fileType;
+  }
+
+  /**
+   * Optional. The type of the file to upload. Defaulting to ATTACHMENT if not specified.
+   * @param fileType fileType or {@code null} for none
+   */
+  public UploadFileRequest setFileType(java.lang.String fileType) {
+    this.fileType = fileType;
     return this;
   }
 

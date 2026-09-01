@@ -50,6 +50,15 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
   private java.lang.String packageId;
 
   /**
+   * Optional. Client specified annotations to attach to the version upon creation. This field is
+   * only applied if the Version is created during this upload. If the Version already exists and
+   * this field is set, the request will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> versionAnnotations;
+
+  /**
    * The ID of the version of the generic artifact. If the version does not exist, a new version
    * will be created. The version_id must start and end with a letter or number, can only contain
    * lowercase letters, numbers, the following characters [-.+~:], i.e.[a-z0-9-.+~:] and cannot
@@ -96,6 +105,27 @@ public final class UploadGenericArtifactRequest extends com.google.api.client.js
    */
   public UploadGenericArtifactRequest setPackageId(java.lang.String packageId) {
     this.packageId = packageId;
+    return this;
+  }
+
+  /**
+   * Optional. Client specified annotations to attach to the version upon creation. This field is
+   * only applied if the Version is created during this upload. If the Version already exists and
+   * this field is set, the request will fail.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getVersionAnnotations() {
+    return versionAnnotations;
+  }
+
+  /**
+   * Optional. Client specified annotations to attach to the version upon creation. This field is
+   * only applied if the Version is created during this upload. If the Version already exists and
+   * this field is set, the request will fail.
+   * @param versionAnnotations versionAnnotations or {@code null} for none
+   */
+  public UploadGenericArtifactRequest setVersionAnnotations(java.util.Map<String, java.lang.String> versionAnnotations) {
+    this.versionAnnotations = versionAnnotations;
     return this;
   }
 

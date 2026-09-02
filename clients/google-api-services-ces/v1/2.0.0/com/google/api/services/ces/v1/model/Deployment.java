@@ -32,6 +32,14 @@ package com.google.api.services.ces.v1.model;
 public final class Deployment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for deploying this deployment to Agent Registry. If present, this
+   * deployment will be published to Agent Registry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentRegistryDeployment agentRegistryDeployment;
+
+  /**
    * Optional. The resource name of the app version to deploy. Format:
    * `projects/{project}/locations/{location}/apps/{app}/versions/{version}` Use
    * `projects/{project}/locations/{location}/apps/{app}/versions/-` to use the draft app.
@@ -123,6 +131,25 @@ public final class Deployment extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private WhatsAppCredentials whatsappCredentials;
+
+  /**
+   * Optional. Configuration for deploying this deployment to Agent Registry. If present, this
+   * deployment will be published to Agent Registry.
+   * @return value or {@code null} for none
+   */
+  public AgentRegistryDeployment getAgentRegistryDeployment() {
+    return agentRegistryDeployment;
+  }
+
+  /**
+   * Optional. Configuration for deploying this deployment to Agent Registry. If present, this
+   * deployment will be published to Agent Registry.
+   * @param agentRegistryDeployment agentRegistryDeployment or {@code null} for none
+   */
+  public Deployment setAgentRegistryDeployment(AgentRegistryDeployment agentRegistryDeployment) {
+    this.agentRegistryDeployment = agentRegistryDeployment;
+    return this;
+  }
 
   /**
    * Optional. The resource name of the app version to deploy. Format:

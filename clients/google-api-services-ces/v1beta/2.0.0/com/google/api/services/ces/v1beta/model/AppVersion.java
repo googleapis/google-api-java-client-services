@@ -83,6 +83,13 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
   private AppSnapshot snapshot;
 
   /**
+   * Output only. Timestamp when the app version was last updated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateTime;
+
+  /**
    * Output only. Timestamp when the app version was created.
    * @return value or {@code null} for none
    */
@@ -202,6 +209,23 @@ public final class AppVersion extends com.google.api.client.json.GenericJson {
    */
   public AppVersion setSnapshot(AppSnapshot snapshot) {
     this.snapshot = snapshot;
+    return this;
+  }
+
+  /**
+   * Output only. Timestamp when the app version was last updated.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateTime() {
+    return updateTime;
+  }
+
+  /**
+   * Output only. Timestamp when the app version was last updated.
+   * @param updateTime updateTime or {@code null} for none
+   */
+  public AppVersion setUpdateTime(String updateTime) {
+    this.updateTime = updateTime;
     return this;
   }
 

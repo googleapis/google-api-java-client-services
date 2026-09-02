@@ -31,6 +31,13 @@ package com.google.api.services.ces.v1.model;
 public final class Image extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The alternative text for the image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String altText;
+
+  /**
    * Required. Raw bytes of the image.
    * The value may be {@code null}.
    */
@@ -44,6 +51,23 @@ public final class Image extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String mimeType;
+
+  /**
+   * Optional. The alternative text for the image.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAltText() {
+    return altText;
+  }
+
+  /**
+   * Optional. The alternative text for the image.
+   * @param altText altText or {@code null} for none
+   */
+  public Image setAltText(java.lang.String altText) {
+    this.altText = altText;
+    return this;
+  }
 
   /**
    * Required. Raw bytes of the image.

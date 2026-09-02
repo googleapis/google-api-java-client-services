@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class SqlInstancesStartExternalSyncRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Region of the Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String location;
+
+  /**
    * Optional. MigrationType configures the migration to use physical files or logical dump files.
    * If not set, then the logical dump file configuration is used. Valid values are `LOGICAL` or
    * `PHYSICAL`. Only applicable to MySQL.
@@ -74,6 +81,23 @@ public final class SqlInstancesStartExternalSyncRequest extends com.google.api.c
    */
   @com.google.api.client.util.Key
   private java.lang.String syncParallelLevel;
+
+  /**
+   * Optional. Region of the Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocation() {
+    return location;
+  }
+
+  /**
+   * Optional. Region of the Cloud SQL instance.
+   * @param location location or {@code null} for none
+   */
+  public SqlInstancesStartExternalSyncRequest setLocation(java.lang.String location) {
+    this.location = location;
+    return this;
+  }
 
   /**
    * Optional. MigrationType configures the migration to use physical files or logical dump files.

@@ -296,7 +296,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   private MaintenanceWindow maintenanceWindow;
 
   /**
-   * The local user password validation policy of the instance.
+   * The local user password validation policy of the instance for PostgreSQL and MySQL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1008,7 +1008,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The local user password validation policy of the instance.
+   * The local user password validation policy of the instance for PostgreSQL and MySQL.
    * @return value or {@code null} for none
    */
   public PasswordValidationPolicy getPasswordValidationPolicy() {
@@ -1016,7 +1016,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The local user password validation policy of the instance.
+   * The local user password validation policy of the instance for PostgreSQL and MySQL.
    * @param passwordValidationPolicy passwordValidationPolicy or {@code null} for none
    */
   public Settings setPasswordValidationPolicy(PasswordValidationPolicy passwordValidationPolicy) {

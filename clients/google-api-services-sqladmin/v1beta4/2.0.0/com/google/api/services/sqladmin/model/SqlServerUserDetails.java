@@ -30,21 +30,21 @@ package com.google.api.services.sqladmin.model;
 public final class SqlServerUserDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * If the user has been disabled
+   * Indicates if the user has been disabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * The server roles for this user
+   * Indicates the server roles for this user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> serverRoles;
 
   /**
-   * If the user has been disabled
+   * Indicates if the user has been disabled.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -52,7 +52,7 @@ public final class SqlServerUserDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * If the user has been disabled
+   * Indicates if the user has been disabled.
    * @param disabled disabled or {@code null} for none
    */
   public SqlServerUserDetails setDisabled(java.lang.Boolean disabled) {
@@ -61,7 +61,7 @@ public final class SqlServerUserDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The server roles for this user
+   * Indicates the server roles for this user.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServerRoles() {
@@ -69,7 +69,7 @@ public final class SqlServerUserDetails extends com.google.api.client.json.Gener
   }
 
   /**
-   * The server roles for this user
+   * Indicates the server roles for this user.
    * @param serverRoles serverRoles or {@code null} for none
    */
   public SqlServerUserDetails setServerRoles(java.util.List<java.lang.String> serverRoles) {

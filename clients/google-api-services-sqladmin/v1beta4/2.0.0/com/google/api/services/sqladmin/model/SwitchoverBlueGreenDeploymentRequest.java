@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Instance reset replica size request.
+ * Request message for switching over a `BlueGreenDeployment` resource.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SqlInstancesResetReplicaSizeRequest extends com.google.api.client.json.GenericJson {
+public final class SwitchoverBlueGreenDeploymentRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * Optional. Region of the Cloud SQL instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String location;
-
-  /**
-   * Optional. Region of the Cloud SQL instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getLocation() {
-    return location;
-  }
-
-  /**
-   * Optional. Region of the Cloud SQL instance.
-   * @param location location or {@code null} for none
-   */
-  public SqlInstancesResetReplicaSizeRequest setLocation(java.lang.String location) {
-    this.location = location;
-    return this;
+  @Override
+  public SwitchoverBlueGreenDeploymentRequest set(String fieldName, Object value) {
+    return (SwitchoverBlueGreenDeploymentRequest) super.set(fieldName, value);
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest set(String fieldName, Object value) {
-    return (SqlInstancesResetReplicaSizeRequest) super.set(fieldName, value);
-  }
-
-  @Override
-  public SqlInstancesResetReplicaSizeRequest clone() {
-    return (SqlInstancesResetReplicaSizeRequest) super.clone();
+  public SwitchoverBlueGreenDeploymentRequest clone() {
+    return (SwitchoverBlueGreenDeploymentRequest) super.clone();
   }
 
 }

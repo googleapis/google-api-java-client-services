@@ -172,6 +172,14 @@ public final class Agent extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. The remote [A2A](https://github.com/a2aproject/A2A) agent to be used for the agent
+   * execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AgentRemoteA2aAgent remoteA2aAgent;
+
+  /**
    * Optional. The remote [Dialogflow](https://cloud.google.com/dialogflow/cx/docs/concept/console-
    * conversational-agents) agent to be used for the agent execution. If this field is set, all
    * other agent level properties will be ignored. Note: If the Dialogflow agent is in a different
@@ -547,6 +555,25 @@ public final class Agent extends com.google.api.client.json.GenericJson {
    */
   public Agent setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The remote [A2A](https://github.com/a2aproject/A2A) agent to be used for the agent
+   * execution.
+   * @return value or {@code null} for none
+   */
+  public AgentRemoteA2aAgent getRemoteA2aAgent() {
+    return remoteA2aAgent;
+  }
+
+  /**
+   * Optional. The remote [A2A](https://github.com/a2aproject/A2A) agent to be used for the agent
+   * execution.
+   * @param remoteA2aAgent remoteA2aAgent or {@code null} for none
+   */
+  public Agent setRemoteA2aAgent(AgentRemoteA2aAgent remoteA2aAgent) {
+    this.remoteA2aAgent = remoteA2aAgent;
     return this;
   }
 

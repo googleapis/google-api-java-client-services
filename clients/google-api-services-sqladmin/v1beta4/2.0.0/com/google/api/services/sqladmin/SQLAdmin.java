@@ -1617,6 +1617,894 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the BlueGreenDeployments collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SQLAdmin sqladmin = new SQLAdmin(...);}
+   *   {@code SQLAdmin.BlueGreenDeployments.List request = sqladmin.blueGreenDeployments().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public BlueGreenDeployments blueGreenDeployments() {
+    return new BlueGreenDeployments();
+  }
+
+  /**
+   * The "blueGreenDeployments" collection of methods.
+   */
+  public class BlueGreenDeployments {
+
+    /**
+     * Creates a blue-green deployment under a given project and location. This deployment provisions a
+     * synchronized green environment (target instance) from a blue production environment (source
+     * instance), facilitating updates like major version upgrades on the green instance without
+     * impacting the blue instance.
+     *
+     * Create a request for the method "blueGreenDeployments.create".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The parent resource where this blue-green deployment will be created. Format:
+     *        projects/{project}/locations/{location}
+     * @param content the {@link com.google.api.services.sqladmin.model.BlueGreenDeployment}
+     * @return the request
+     */
+    public Create create(java.lang.String parent, com.google.api.services.sqladmin.model.BlueGreenDeployment content) throws java.io.IOException {
+      Create result = new Create(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "sql/v1beta4/{+parent}/blueGreenDeployments";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+      /**
+       * Creates a blue-green deployment under a given project and location. This deployment provisions
+       * a synchronized green environment (target instance) from a blue production environment (source
+       * instance), facilitating updates like major version upgrades on the green instance without
+       * impacting the blue instance.
+       *
+       * Create a request for the method "blueGreenDeployments.create".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The parent resource where this blue-green deployment will be created. Format:
+     *        projects/{project}/locations/{location}
+       * @param content the {@link com.google.api.services.sqladmin.model.BlueGreenDeployment}
+       * @since 1.13
+       */
+      protected Create(java.lang.String parent, com.google.api.services.sqladmin.model.BlueGreenDeployment content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The parent resource where this blue-green deployment will be created. Format:
+       * projects/{project}/locations/{location}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent resource where this blue-green deployment will be created. Format:
+     projects/{project}/locations/{location}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent resource where this blue-green deployment will be created. Format:
+       * projects/{project}/locations/{location}
+       */
+      public Create setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * Required. The ID to use for the blue-green deployment, which will become the final
+       * component of the deployment's resource name.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String blueGreenDeploymentId;
+
+      /** Required. The ID to use for the blue-green deployment, which will become the final component of the
+     deployment's resource name.
+       */
+      public java.lang.String getBlueGreenDeploymentId() {
+        return blueGreenDeploymentId;
+      }
+
+      /**
+       * Required. The ID to use for the blue-green deployment, which will become the final
+       * component of the deployment's resource name.
+       */
+      public Create setBlueGreenDeploymentId(java.lang.String blueGreenDeploymentId) {
+        this.blueGreenDeploymentId = blueGreenDeploymentId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a blue-green deployment, including metadata and underlying resources based on the
+     * deployment state. If issued before switchover, this deletes the green instance. If issued after
+     * switchover, this deletes the old blue instance (source instance) if the `delete_old_source` field
+     * in the request is set to true. All blue-green deployment metadata is permanently deleted.
+     * Resources deleted as a result of this operation are no longer accessible and can't be restored.
+     *
+     * Create a request for the method "blueGreenDeployments.delete".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the blue-green deployment to delete. Format:
+     *        projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "sql/v1beta4/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+
+      /**
+       * Deletes a blue-green deployment, including metadata and underlying resources based on the
+       * deployment state. If issued before switchover, this deletes the green instance. If issued after
+       * switchover, this deletes the old blue instance (source instance) if the `delete_old_source`
+       * field in the request is set to true. All blue-green deployment metadata is permanently deleted.
+       * Resources deleted as a result of this operation are no longer accessible and can't be restored.
+       *
+       * Create a request for the method "blueGreenDeployments.delete".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the blue-green deployment to delete. Format:
+     *        projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(SQLAdmin.this, "DELETE", REST_PATH, null, com.google.api.services.sqladmin.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the blue-green deployment to delete. Format:
+       * projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the blue-green deployment to delete. Format:
+     projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the blue-green deployment to delete. Format:
+       * projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. If set to true, and the switchover is complete, this deletes the old source
+       * instance along with the deployment.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean deleteOldSource;
+
+      /** Optional. If set to true, and the switchover is complete, this deletes the old source instance
+     along with the deployment.
+       */
+      public java.lang.Boolean getDeleteOldSource() {
+        return deleteOldSource;
+      }
+
+      /**
+       * Optional. If set to true, and the switchover is complete, this deletes the old source
+       * instance along with the deployment.
+       */
+      public Delete setDeleteOldSource(java.lang.Boolean deleteOldSource) {
+        this.deleteOldSource = deleteOldSource;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a blue-green deployment resource under a given project and location.
+     *
+     * Create a request for the method "blueGreenDeployments.get".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the blue-green deployment to retrieve. Format:
+     *        projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends SQLAdminRequest<com.google.api.services.sqladmin.model.BlueGreenDeployment> {
+
+      private static final String REST_PATH = "sql/v1beta4/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+
+      /**
+       * Retrieves a blue-green deployment resource under a given project and location.
+       *
+       * Create a request for the method "blueGreenDeployments.get".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+       * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the blue-green deployment to retrieve. Format:
+     *        projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.BlueGreenDeployment.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the blue-green deployment to retrieve. Format:
+       * projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the blue-green deployment to retrieve. Format:
+     projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the blue-green deployment to retrieve. Format:
+       * projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Specifies whether to return the basic or detailed view of the resource in the
+       * response.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String view;
+
+      /** Optional. Specifies whether to return the basic or detailed view of the resource in the response.
+       */
+      public java.lang.String getView() {
+        return view;
+      }
+
+      /**
+       * Optional. Specifies whether to return the basic or detailed view of the resource in the
+       * response.
+       */
+      public Get setView(java.lang.String view) {
+        this.view = view;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists blue-green deployments under a given project.
+     *
+     * Create a request for the method "blueGreenDeployments.list".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The parent resource whose blue-green deployments are to be listed. Format:
+     *        projects/{project}/locations/{location}
+     * @return the request
+     */
+    public List list(java.lang.String parent) throws java.io.IOException {
+      List result = new List(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.ListBlueGreenDeploymentsResponse> {
+
+      private static final String REST_PATH = "sql/v1beta4/{+parent}/blueGreenDeployments";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+      /**
+       * Lists blue-green deployments under a given project.
+       *
+       * Create a request for the method "blueGreenDeployments.list".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The parent resource whose blue-green deployments are to be listed. Format:
+     *        projects/{project}/locations/{location}
+       * @since 1.13
+       */
+      protected List(java.lang.String parent) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.ListBlueGreenDeploymentsResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The parent resource whose blue-green deployments are to be listed. Format:
+       * projects/{project}/locations/{location}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent resource whose blue-green deployments are to be listed. Format:
+     projects/{project}/locations/{location}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent resource whose blue-green deployments are to be listed. Format:
+       * projects/{project}/locations/{location}
+       */
+      public List setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /** Optional. A filter expression that filters the results. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** Optional. A filter expression that filters the results.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** Optional. A filter expression that filters the results. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** Optional. A comma-separated list of fields to order the results by. */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Optional. A comma-separated list of fields to order the results by.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /** Optional. A comma-separated list of fields to order the results by. */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /** Optional. The maximum number of deployments to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of deployments to return.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Optional. The maximum number of deployments to return. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListBlueGreenDeployments` call. Provide
+       * this to retrieve the subsequent page.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token, received from a previous `ListBlueGreenDeployments` call. Provide this to
+     retrieve the subsequent page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A page token, received from a previous `ListBlueGreenDeployments` call. Provide
+       * this to retrieve the subsequent page.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Switches over to green instance for a blue-green deployment.
+     *
+     * Create a request for the method "blueGreenDeployments.switchover".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Switchover#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the blue-green deployment to switch over. Format:
+     *        projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+     * @param content the {@link com.google.api.services.sqladmin.model.SwitchoverBlueGreenDeploymentRequest}
+     * @return the request
+     */
+    public Switchover switchover(java.lang.String name, com.google.api.services.sqladmin.model.SwitchoverBlueGreenDeploymentRequest content) throws java.io.IOException {
+      Switchover result = new Switchover(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Switchover extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "sql/v1beta4/{+name}:switchover";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+
+      /**
+       * Switches over to green instance for a blue-green deployment.
+       *
+       * Create a request for the method "blueGreenDeployments.switchover".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Switchover#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Switchover#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the blue-green deployment to switch over. Format:
+     *        projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       * @param content the {@link com.google.api.services.sqladmin.model.SwitchoverBlueGreenDeploymentRequest}
+       * @since 1.13
+       */
+      protected Switchover(java.lang.String name, com.google.api.services.sqladmin.model.SwitchoverBlueGreenDeploymentRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+        }
+      }
+
+      @Override
+      public Switchover set$Xgafv(java.lang.String $Xgafv) {
+        return (Switchover) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Switchover setAccessToken(java.lang.String accessToken) {
+        return (Switchover) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Switchover setAlt(java.lang.String alt) {
+        return (Switchover) super.setAlt(alt);
+      }
+
+      @Override
+      public Switchover setCallback(java.lang.String callback) {
+        return (Switchover) super.setCallback(callback);
+      }
+
+      @Override
+      public Switchover setFields(java.lang.String fields) {
+        return (Switchover) super.setFields(fields);
+      }
+
+      @Override
+      public Switchover setKey(java.lang.String key) {
+        return (Switchover) super.setKey(key);
+      }
+
+      @Override
+      public Switchover setOauthToken(java.lang.String oauthToken) {
+        return (Switchover) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Switchover setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Switchover) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Switchover setQuotaUser(java.lang.String quotaUser) {
+        return (Switchover) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Switchover setUploadType(java.lang.String uploadType) {
+        return (Switchover) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Switchover setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Switchover) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the blue-green deployment to switch over. Format:
+       * projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the blue-green deployment to switch over. Format:
+     projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the blue-green deployment to switch over. Format:
+       * projects/{project}/locations/{location}/blueGreenDeployments/{blue_green_deployment}
+       */
+      public Switchover setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/blueGreenDeployments/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Switchover set(String parameterName, Object value) {
+        return (Switchover) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Connect collection.
    *
    * <p>The typical use is:</p>
@@ -2255,6 +3143,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Delete setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -2418,6 +3322,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Get setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -2554,6 +3474,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public Insert setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Insert setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -2698,6 +3634,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public List setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -2859,6 +3811,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Patch setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Patch set(String parameterName, Object value) {
         return (Patch) super.set(parameterName, value);
@@ -3012,6 +3980,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Name of the database to be updated in the instance. */
       public Update setDatabase(java.lang.String database) {
         this.database = database;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Update setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -3363,6 +4347,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public ListEntraIdCertificates setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public ListEntraIdCertificates set(String parameterName, Object value) {
         return (ListEntraIdCertificates) super.set(parameterName, value);
@@ -3517,6 +4517,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public ListServerCertificates setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public ListServerCertificates set(String parameterName, Object value) {
         return (ListServerCertificates) super.set(parameterName, value);
@@ -3654,6 +4670,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Required. Cloud SQL instance ID. This does not include the project ID. */
       public RotateEntraIdCertificate setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public RotateEntraIdCertificate setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -3796,6 +4828,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Required. Cloud SQL instance ID. This does not include the project ID. */
       public RotateServerCertificate setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public RotateServerCertificate setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -3950,6 +4998,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public AcquireSsrsLease setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public AcquireSsrsLease set(String parameterName, Object value) {
         return (AcquireSsrsLease) super.set(parameterName, value);
@@ -4086,6 +5150,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Required. Cloud SQL instance ID. This does not include the project ID. */
       public AddEntraIdCertificate setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public AddEntraIdCertificate setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -4229,6 +5309,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public AddServerCa setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public AddServerCa setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -4376,6 +5472,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public AddServerCertificate setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public AddServerCertificate set(String parameterName, Object value) {
         return (AddServerCertificate) super.set(parameterName, value);
@@ -4518,6 +5630,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public Clone setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Clone setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -4727,6 +5855,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Delete setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Delete set(String parameterName, Object value) {
         return (Delete) super.set(parameterName, value);
@@ -4863,6 +6007,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Required. The name of the Cloud SQL instance. */
       public Demote setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Demote setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -5004,6 +6164,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public DemoteMaster setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public DemoteMaster set(String parameterName, Object value) {
         return (DemoteMaster) super.set(parameterName, value);
@@ -5141,6 +6317,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public ExecuteSql setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public ExecuteSql set(String parameterName, Object value) {
         return (ExecuteSql) super.set(parameterName, value);
@@ -5275,6 +6467,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** The Cloud SQL instance ID. This doesn't include the project ID. */
       public Export setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Export setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -5425,6 +6633,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Failover setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Failover set(String parameterName, Object value) {
         return (Failover) super.set(parameterName, value);
@@ -5569,6 +6793,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Get setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -5706,6 +6946,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public SQLAdminImport setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public SQLAdminImport set(String parameterName, Object value) {
         return (SQLAdminImport) super.set(parameterName, value);
@@ -5825,6 +7081,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public Insert setProject(java.lang.String project) {
         this.project = project;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Insert setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -5984,6 +7256,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public List setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -6184,6 +7472,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public ListServerCas setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public ListServerCas set(String parameterName, Object value) {
         return (ListServerCas) super.set(parameterName, value);
@@ -6320,6 +7624,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Patch setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Patch setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -6641,6 +7961,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public PreCheckMajorVersionUpgrade setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public PreCheckMajorVersionUpgrade set(String parameterName, Object value) {
         return (PreCheckMajorVersionUpgrade) super.set(parameterName, value);
@@ -6809,6 +8145,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public PromoteReplica setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public PromoteReplica set(String parameterName, Object value) {
         return (PromoteReplica) super.set(parameterName, value);
@@ -6943,6 +8295,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Reencrypt setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Reencrypt setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -7095,6 +8463,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public ReleaseSsrsLease setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public ReleaseSsrsLease set(String parameterName, Object value) {
         return (ReleaseSsrsLease) super.set(parameterName, value);
@@ -7227,6 +8611,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public ResetSslConfig setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public ResetSslConfig setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -7381,6 +8781,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Restart setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Restart set(String parameterName, Object value) {
         return (Restart) super.set(parameterName, value);
@@ -7517,6 +8933,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public RestoreBackup setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public RestoreBackup setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -7662,6 +9094,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public RotateServerCa setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public RotateServerCa set(String parameterName, Object value) {
         return (RotateServerCa) super.set(parameterName, value);
@@ -7797,6 +9245,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public StartReplica setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public StartReplica set(String parameterName, Object value) {
         return (StartReplica) super.set(parameterName, value);
@@ -7929,6 +9393,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL read replica instance name. */
       public StopReplica setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public StopReplica setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -8093,6 +9573,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Switchover setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Switchover set(String parameterName, Object value) {
         return (Switchover) super.set(parameterName, value);
@@ -8227,6 +9723,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public TruncateLog setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public TruncateLog setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -8366,6 +9878,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public Update setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Update setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -9088,6 +10616,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /** Optional. Region of the Cloud SQL instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Optional. Region of the Cloud SQL instance.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** Optional. Region of the Cloud SQL instance. */
+        public GetDiskShrinkConfig setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
         @Override
         public GetDiskShrinkConfig set(String parameterName, Object value) {
           return (GetDiskShrinkConfig) super.set(parameterName, value);
@@ -9231,6 +10775,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud SQL instance ID. This does not include the project ID. */
         public GetLatestRecoveryTime setInstance(java.lang.String instance) {
           this.instance = instance;
+          return this;
+        }
+
+        /** Optional. Region of the Cloud SQL instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Optional. Region of the Cloud SQL instance.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** Optional. Region of the Cloud SQL instance. */
+        public GetLatestRecoveryTime setLocation(java.lang.String location) {
+          this.location = location;
           return this;
         }
 
@@ -9394,6 +10954,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /** Optional. Region of the Cloud SQL instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Optional. Region of the Cloud SQL instance.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** Optional. Region of the Cloud SQL instance. */
+        public PerformDiskShrink setLocation(java.lang.String location) {
+          this.location = location;
+          return this;
+        }
+
         @Override
         public PerformDiskShrink set(String parameterName, Object value) {
           return (PerformDiskShrink) super.set(parameterName, value);
@@ -9529,6 +11105,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         /** Cloud SQL instance ID. This does not include the project ID. */
         public RescheduleMaintenance setInstance(java.lang.String instance) {
           this.instance = instance;
+          return this;
+        }
+
+        /** Optional. Region of the Cloud SQL instance. */
+        @com.google.api.client.util.Key
+        private java.lang.String location;
+
+        /** Optional. Region of the Cloud SQL instance.
+         */
+        public java.lang.String getLocation() {
+          return location;
+        }
+
+        /** Optional. Region of the Cloud SQL instance. */
+        public RescheduleMaintenance setLocation(java.lang.String location) {
+          this.location = location;
           return this;
         }
 
@@ -10106,6 +11698,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Cloud SQL instance ID. This does not include the project ID. */
       public CreateEphemeral setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public CreateEphemeral setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -11037,6 +12645,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Delete setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       /** Name of the user in the instance. */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -11232,6 +12856,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
         return this;
       }
 
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Get setLocation(java.lang.String location) {
+        this.location = location;
+        return this;
+      }
+
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);
@@ -11366,6 +13006,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public Insert setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Insert setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -11510,6 +13166,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Database instance ID. This does not include the project ID. */
       public List setInstance(java.lang.String instance) {
         this.instance = instance;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public List setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 
@@ -11686,6 +13358,22 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
       /** Optional. Host of the user in the instance. */
       public Update setHost(java.lang.String host) {
         this.host = host;
+        return this;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String location;
+
+      /** Optional. Region of the Cloud SQL instance.
+       */
+      public java.lang.String getLocation() {
+        return location;
+      }
+
+      /** Optional. Region of the Cloud SQL instance. */
+      public Update setLocation(java.lang.String location) {
+        this.location = location;
         return this;
       }
 

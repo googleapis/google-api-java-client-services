@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Instance reset replica size request.
+ * The target instance for the Blue-Green deployment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SqlInstancesResetReplicaSizeRequest extends com.google.api.client.json.GenericJson {
+public final class TargetRole extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Output only. The source instance paired with this target instance in a blue-green deployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String location;
+  private InstanceReference sourceId;
 
   /**
-   * Optional. Region of the Cloud SQL instance.
+   * Output only. The source instance paired with this target instance in a blue-green deployment.
    * @return value or {@code null} for none
    */
-  public java.lang.String getLocation() {
-    return location;
+  public InstanceReference getSourceId() {
+    return sourceId;
   }
 
   /**
-   * Optional. Region of the Cloud SQL instance.
-   * @param location location or {@code null} for none
+   * Output only. The source instance paired with this target instance in a blue-green deployment.
+   * @param sourceId sourceId or {@code null} for none
    */
-  public SqlInstancesResetReplicaSizeRequest setLocation(java.lang.String location) {
-    this.location = location;
+  public TargetRole setSourceId(InstanceReference sourceId) {
+    this.sourceId = sourceId;
     return this;
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest set(String fieldName, Object value) {
-    return (SqlInstancesResetReplicaSizeRequest) super.set(fieldName, value);
+  public TargetRole set(String fieldName, Object value) {
+    return (TargetRole) super.set(fieldName, value);
   }
 
   @Override
-  public SqlInstancesResetReplicaSizeRequest clone() {
-    return (SqlInstancesResetReplicaSizeRequest) super.clone();
+  public TargetRole clone() {
+    return (TargetRole) super.clone();
   }
 
 }

@@ -52,6 +52,13 @@ public final class MaliciousContentLLMResult extends com.google.api.client.json.
   private java.lang.String scanStatus;
 
   /**
+   * Telemetry metrics tracking token usage for the AI scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TokenUsage tokenUsage;
+
+  /**
    * Tracks max severity found.
    * @return value or {@code null} for none
    */
@@ -99,6 +106,23 @@ public final class MaliciousContentLLMResult extends com.google.api.client.json.
    */
   public MaliciousContentLLMResult setScanStatus(java.lang.String scanStatus) {
     this.scanStatus = scanStatus;
+    return this;
+  }
+
+  /**
+   * Telemetry metrics tracking token usage for the AI scan.
+   * @return value or {@code null} for none
+   */
+  public TokenUsage getTokenUsage() {
+    return tokenUsage;
+  }
+
+  /**
+   * Telemetry metrics tracking token usage for the AI scan.
+   * @param tokenUsage tokenUsage or {@code null} for none
+   */
+  public MaliciousContentLLMResult setTokenUsage(TokenUsage tokenUsage) {
+    this.tokenUsage = tokenUsage;
     return this;
   }
 

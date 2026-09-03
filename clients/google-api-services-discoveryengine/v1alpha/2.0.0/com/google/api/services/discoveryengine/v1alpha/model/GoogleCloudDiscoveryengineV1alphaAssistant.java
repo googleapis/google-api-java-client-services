@@ -101,6 +101,14 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
   private GoogleCloudDiscoveryengineV1alphaAssistantGenerationConfig generationConfig;
 
   /**
+   * Optional. Indicates whether Knowledge Catalog is enabled for this specific assistant. When
+   * enabled, it powers discovery context using organizational data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean knowledgeCatalogEnabled;
+
+  /**
    * Immutable. Resource name of the assistant. Format: `projects/{project}/locations/{location}/col
    * lections/{collection}/engines/{engine}/assistants/{assistant}` It must be a UTF-8 encoded
    * string with a length limit of 1024 characters.
@@ -286,6 +294,25 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaAssistant setGenerationConfig(GoogleCloudDiscoveryengineV1alphaAssistantGenerationConfig generationConfig) {
     this.generationConfig = generationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether Knowledge Catalog is enabled for this specific assistant. When
+   * enabled, it powers discovery context using organizational data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getKnowledgeCatalogEnabled() {
+    return knowledgeCatalogEnabled;
+  }
+
+  /**
+   * Optional. Indicates whether Knowledge Catalog is enabled for this specific assistant. When
+   * enabled, it powers discovery context using organizational data.
+   * @param knowledgeCatalogEnabled knowledgeCatalogEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistant setKnowledgeCatalogEnabled(java.lang.Boolean knowledgeCatalogEnabled) {
+    this.knowledgeCatalogEnabled = knowledgeCatalogEnabled;
     return this;
   }
 

@@ -129,7 +129,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.lang.Boolean sandboxLauncher;
 
   /**
-   * Optional. Location of the source.
+   * Optional. Location of the source. This field is only supported in Cloud Run Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -393,7 +393,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Location of the source.
+   * Optional. Location of the source. This field is only supported in Cloud Run Service.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2SourceCode getSourceCode() {
@@ -401,7 +401,7 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Location of the source.
+   * Optional. Location of the source. This field is only supported in Cloud Run Service.
    * @param sourceCode sourceCode or {@code null} for none
    */
   public GoogleCloudRunV2Container setSourceCode(GoogleCloudRunV2SourceCode sourceCode) {

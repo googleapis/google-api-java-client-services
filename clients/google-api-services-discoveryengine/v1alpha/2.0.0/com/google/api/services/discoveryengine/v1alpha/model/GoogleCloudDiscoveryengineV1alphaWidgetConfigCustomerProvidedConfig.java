@@ -30,11 +30,41 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCustomerProvidedConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The customer's Assured Workloads compliance level. `customer_type` collapses every
+   * compliance level into a single `GOVERNMENT_CUSTOMER` value, so a client that gates a feature on
+   * one specific level rather than on government status as a whole must read this field instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String complianceLevel;
+
+  /**
    * Customer type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerType;
+
+  /**
+   * Output only. The customer's Assured Workloads compliance level. `customer_type` collapses every
+   * compliance level into a single `GOVERNMENT_CUSTOMER` value, so a client that gates a feature on
+   * one specific level rather than on government status as a whole must read this field instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComplianceLevel() {
+    return complianceLevel;
+  }
+
+  /**
+   * Output only. The customer's Assured Workloads compliance level. `customer_type` collapses every
+   * compliance level into a single `GOVERNMENT_CUSTOMER` value, so a client that gates a feature on
+   * one specific level rather than on government status as a whole must read this field instead.
+   * @param complianceLevel complianceLevel or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigCustomerProvidedConfig setComplianceLevel(java.lang.String complianceLevel) {
+    this.complianceLevel = complianceLevel;
+    return this;
+  }
 
   /**
    * Customer type.

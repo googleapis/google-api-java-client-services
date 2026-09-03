@@ -362,6 +362,14 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
   private java.lang.Boolean safeSearch;
 
   /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
+   * This field is only supported for search requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1SearchRequestSearchAddonSpec searchAddonSpec;
+
+  /**
    * Search as you type configuration. Only supported for the IndustryVertical.MEDIA vertical.
    * The value may be {@code null}.
    */
@@ -1186,6 +1194,25 @@ public final class GoogleCloudDiscoveryengineV1SearchRequest extends com.google.
    */
   public GoogleCloudDiscoveryengineV1SearchRequest setSafeSearch(java.lang.Boolean safeSearch) {
     this.safeSearch = safeSearch;
+    return this;
+  }
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
+   * This field is only supported for search requests.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequestSearchAddonSpec getSearchAddonSpec() {
+    return searchAddonSpec;
+  }
+
+  /**
+   * Optional. SearchAddonSpec is used to disable add-ons for search as per new repricing model.
+   * This field is only supported for search requests.
+   * @param searchAddonSpec searchAddonSpec or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1SearchRequest setSearchAddonSpec(GoogleCloudDiscoveryengineV1SearchRequestSearchAddonSpec searchAddonSpec) {
+    this.searchAddonSpec = searchAddonSpec;
     return this;
   }
 

@@ -828,7 +828,8 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * `partner_link_id` - `owning_account.account_type` - `owning_account.account_id` -
            * `partner_account.account_type` - `partner_account.account_id` - `feature_set` For
            * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT feature set, the following
-           * fields are also supported: - `partner_customer_account.account_id` Example:
+           * fields are also supported: - `partner_customer_account.account_id` -
+           * `partner_link_metadata.implicit_accounts.account_id` Example:
            * `owning_account.account_type = "GOOGLE_ADS" AND partner_account.account_id = 987654321`
            */
           @com.google.api.client.util.Key
@@ -842,8 +843,8 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
          `owning_account.account_type` - `owning_account.account_id` - `partner_account.account_type` -
          `partner_account.account_id` - `feature_set` For partner links with the
          FEATURE_SET_AD_EVENT_MANAGEMENT feature set, the following fields are also supported: -
-         `partner_customer_account.account_id` Example: `owning_account.account_type = "GOOGLE_ADS" AND
-         partner_account.account_id = 987654321`
+         `partner_customer_account.account_id` - `partner_link_metadata.implicit_accounts.account_id`
+         Example: `owning_account.account_type = "GOOGLE_ADS" AND partner_account.account_id = 987654321`
            */
           public java.lang.String getFilter() {
             return filter;
@@ -859,7 +860,8 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
            * `partner_link_id` - `owning_account.account_type` - `owning_account.account_id` -
            * `partner_account.account_type` - `partner_account.account_id` - `feature_set` For
            * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT feature set, the following
-           * fields are also supported: - `partner_customer_account.account_id` Example:
+           * fields are also supported: - `partner_customer_account.account_id` -
+           * `partner_link_metadata.implicit_accounts.account_id` Example:
            * `owning_account.account_type = "GOOGLE_ADS" AND partner_account.account_id = 987654321`
            */
           public Search setFilter(java.lang.String filter) {

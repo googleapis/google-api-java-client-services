@@ -38,7 +38,8 @@ public final class GoogleCloudRunV2SourceCode extends com.google.api.client.json
 
   /**
    * Optional. Input only. Source code inlined in the request. Cloud Run will store the
-   * inlined_source to Cloud Storage and replace the field with cloud_storage_source.
+   * inlined_source to Cloud Storage and replace the field with cloud_storage_source. This field is
+   * only supported in Cloud Run Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +64,8 @@ public final class GoogleCloudRunV2SourceCode extends com.google.api.client.json
 
   /**
    * Optional. Input only. Source code inlined in the request. Cloud Run will store the
-   * inlined_source to Cloud Storage and replace the field with cloud_storage_source.
+   * inlined_source to Cloud Storage and replace the field with cloud_storage_source. This field is
+   * only supported in Cloud Run Service.
    * @return value or {@code null} for none
    */
   public GoogleCloudRunV2InlinedSource getInlinedSource() {
@@ -72,7 +74,8 @@ public final class GoogleCloudRunV2SourceCode extends com.google.api.client.json
 
   /**
    * Optional. Input only. Source code inlined in the request. Cloud Run will store the
-   * inlined_source to Cloud Storage and replace the field with cloud_storage_source.
+   * inlined_source to Cloud Storage and replace the field with cloud_storage_source. This field is
+   * only supported in Cloud Run Service.
    * @param inlinedSource inlinedSource or {@code null} for none
    */
   public GoogleCloudRunV2SourceCode setInlinedSource(GoogleCloudRunV2InlinedSource inlinedSource) {

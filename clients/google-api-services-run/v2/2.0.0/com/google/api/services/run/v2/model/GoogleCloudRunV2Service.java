@@ -133,14 +133,6 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private java.lang.String description;
 
   /**
-   * Optional. Immutable. Indicates whether the Service has durable execution enabled. This field is
-   * immutable once the Service is created.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean durableExecution;
-
-  /**
    * Optional. A system-generated fingerprint for this version of the resource. May be used to
    * detect modification conflict during updates.
    * The value may be {@code null}.
@@ -596,25 +588,6 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setDescription(java.lang.String description) {
     this.description = description;
-    return this;
-  }
-
-  /**
-   * Optional. Immutable. Indicates whether the Service has durable execution enabled. This field is
-   * immutable once the Service is created.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getDurableExecution() {
-    return durableExecution;
-  }
-
-  /**
-   * Optional. Immutable. Indicates whether the Service has durable execution enabled. This field is
-   * immutable once the Service is created.
-   * @param durableExecution durableExecution or {@code null} for none
-   */
-  public GoogleCloudRunV2Service setDurableExecution(java.lang.Boolean durableExecution) {
-    this.durableExecution = durableExecution;
     return this;
   }
 

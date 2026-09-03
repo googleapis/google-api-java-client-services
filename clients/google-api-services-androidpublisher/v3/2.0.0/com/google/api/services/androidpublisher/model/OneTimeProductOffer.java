@@ -38,6 +38,13 @@ public final class OneTimeProductOffer extends com.google.api.client.json.Generi
   private OneTimeProductDiscountedOffer discountedOffer;
 
   /**
+   * A game reward offer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OneTimeProductGameRewardOffer gameRewardOffer;
+
+  /**
    * Required. Immutable. The ID of this product offer. Must be unique within the purchase option.
    * It must start with a number or lower-case letter, and can only contain lower-case letters
    * (a-z), numbers (0-9), and hyphens (-). The maximum length is 63 characters.
@@ -126,6 +133,23 @@ public final class OneTimeProductOffer extends com.google.api.client.json.Generi
    */
   public OneTimeProductOffer setDiscountedOffer(OneTimeProductDiscountedOffer discountedOffer) {
     this.discountedOffer = discountedOffer;
+    return this;
+  }
+
+  /**
+   * A game reward offer.
+   * @return value or {@code null} for none
+   */
+  public OneTimeProductGameRewardOffer getGameRewardOffer() {
+    return gameRewardOffer;
+  }
+
+  /**
+   * A game reward offer.
+   * @param gameRewardOffer gameRewardOffer or {@code null} for none
+   */
+  public OneTimeProductOffer setGameRewardOffer(OneTimeProductGameRewardOffer gameRewardOffer) {
+    this.gameRewardOffer = gameRewardOffer;
     return this;
   }
 

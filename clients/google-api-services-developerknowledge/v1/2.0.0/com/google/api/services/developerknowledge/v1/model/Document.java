@@ -86,7 +86,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Provides the URI of the content, such as
-   * `docs.cloud.google.com/storage/docs/creating-buckets`.
+   * `https://docs.cloud.google.com/storage/docs/creating-buckets`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -228,7 +228,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Provides the URI of the content, such as
-   * `docs.cloud.google.com/storage/docs/creating-buckets`.
+   * `https://docs.cloud.google.com/storage/docs/creating-buckets`.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -237,7 +237,7 @@ public final class Document extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. Provides the URI of the content, such as
-   * `docs.cloud.google.com/storage/docs/creating-buckets`.
+   * `https://docs.cloud.google.com/storage/docs/creating-buckets`.
    * @param uri uri or {@code null} for none
    */
   public Document setUri(java.lang.String uri) {

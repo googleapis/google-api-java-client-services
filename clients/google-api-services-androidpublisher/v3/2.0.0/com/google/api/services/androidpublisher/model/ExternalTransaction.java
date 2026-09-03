@@ -55,6 +55,13 @@ public final class ExternalTransaction extends com.google.api.client.json.Generi
   private Price currentTaxAmount;
 
   /**
+   * Optional. Details necessary to accurately report external content link transactions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExternalContentLinkDetails externalContentLinkDetails;
+
+  /**
    * Optional. Details necessary to accurately report external offers transactions.
    * The value may be {@code null}.
    */
@@ -202,6 +209,23 @@ public final class ExternalTransaction extends com.google.api.client.json.Generi
    */
   public ExternalTransaction setCurrentTaxAmount(Price currentTaxAmount) {
     this.currentTaxAmount = currentTaxAmount;
+    return this;
+  }
+
+  /**
+   * Optional. Details necessary to accurately report external content link transactions.
+   * @return value or {@code null} for none
+   */
+  public ExternalContentLinkDetails getExternalContentLinkDetails() {
+    return externalContentLinkDetails;
+  }
+
+  /**
+   * Optional. Details necessary to accurately report external content link transactions.
+   * @param externalContentLinkDetails externalContentLinkDetails or {@code null} for none
+   */
+  public ExternalTransaction setExternalContentLinkDetails(ExternalContentLinkDetails externalContentLinkDetails) {
+    this.externalContentLinkDetails = externalContentLinkDetails;
     return this;
   }
 

@@ -60,14 +60,16 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
    * Optional. Search query. This string filters resources in an AIP-160-like format. It has some
    * limitations. You can only specify top level conjunctions or attribute level negations. Each
    * restriction can only be used once except the attribute restriction. The available restrictions
-   * for Ranges are: - `realm`: The Realm name to search in. - `ip_address`: The IP address to
-   * search for within Ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
-   * `parent_range`: The parent Range of the Range to search for. - `attribute_text`: The attribute
-   * text to search for within Ranges. - `attribute`: The attribute key and value to filter by. The
-   * available restrictions for Realms are: - `ip_version`: The IP version to search for. -
-   * `management_type`: The management type of the Realm (e.g., "CNR", "USER"). Only one of
-   * attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-realm` -
-   * `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
+   * for Ranges are: - `resource_id`: The resource ID to search for within Ranges (only substring
+   * matching using the format `resource_id="*value*"` is supported). - `realm`: The Realm name to
+   * search in. - `ip_address`: The IP address to search for within Ranges. - `ip_version`: The IP
+   * version to filter by (e.g., "IPV4", "IPV6"). - `parent_range`: The parent Range of the Range to
+   * search for. - `attribute_text`: The attribute text to search for within Ranges. - `attribute`:
+   * The attribute key and value to filter by. The available restrictions for Realms are: -
+   * `ip_version`: The IP version to search for. - `management_type`: The management type of the
+   * Realm (e.g., "CNR", "USER"). Only one of attribute_text or multiple attribute filters can be
+   * specified. Examples: - `realm=test-realm` - `realm=test-realm AND ip_address=10.0.0.0` -
+   * `realm=test-realm AND ip_version=IPV6` - `realm=test-realm AND resource_id="*my-range*"` -
    * `realm=test-realm AND attribute_text=test` - `ip_address=10.0.0.0 AND attribute:(key1=value1)
    * AND attribute:(key2=value2)` - `attribute_text=test AND
    * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range` -
@@ -156,14 +158,16 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
    * Optional. Search query. This string filters resources in an AIP-160-like format. It has some
    * limitations. You can only specify top level conjunctions or attribute level negations. Each
    * restriction can only be used once except the attribute restriction. The available restrictions
-   * for Ranges are: - `realm`: The Realm name to search in. - `ip_address`: The IP address to
-   * search for within Ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
-   * `parent_range`: The parent Range of the Range to search for. - `attribute_text`: The attribute
-   * text to search for within Ranges. - `attribute`: The attribute key and value to filter by. The
-   * available restrictions for Realms are: - `ip_version`: The IP version to search for. -
-   * `management_type`: The management type of the Realm (e.g., "CNR", "USER"). Only one of
-   * attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-realm` -
-   * `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
+   * for Ranges are: - `resource_id`: The resource ID to search for within Ranges (only substring
+   * matching using the format `resource_id="*value*"` is supported). - `realm`: The Realm name to
+   * search in. - `ip_address`: The IP address to search for within Ranges. - `ip_version`: The IP
+   * version to filter by (e.g., "IPV4", "IPV6"). - `parent_range`: The parent Range of the Range to
+   * search for. - `attribute_text`: The attribute text to search for within Ranges. - `attribute`:
+   * The attribute key and value to filter by. The available restrictions for Realms are: -
+   * `ip_version`: The IP version to search for. - `management_type`: The management type of the
+   * Realm (e.g., "CNR", "USER"). Only one of attribute_text or multiple attribute filters can be
+   * specified. Examples: - `realm=test-realm` - `realm=test-realm AND ip_address=10.0.0.0` -
+   * `realm=test-realm AND ip_version=IPV6` - `realm=test-realm AND resource_id="*my-range*"` -
    * `realm=test-realm AND attribute_text=test` - `ip_address=10.0.0.0 AND attribute:(key1=value1)
    * AND attribute:(key2=value2)` - `attribute_text=test AND
    * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range` -
@@ -178,14 +182,16 @@ public final class SearchIpResourcesRequest extends com.google.api.client.json.G
    * Optional. Search query. This string filters resources in an AIP-160-like format. It has some
    * limitations. You can only specify top level conjunctions or attribute level negations. Each
    * restriction can only be used once except the attribute restriction. The available restrictions
-   * for Ranges are: - `realm`: The Realm name to search in. - `ip_address`: The IP address to
-   * search for within Ranges. - `ip_version`: The IP version to filter by (e.g., "IPV4", "IPV6"). -
-   * `parent_range`: The parent Range of the Range to search for. - `attribute_text`: The attribute
-   * text to search for within Ranges. - `attribute`: The attribute key and value to filter by. The
-   * available restrictions for Realms are: - `ip_version`: The IP version to search for. -
-   * `management_type`: The management type of the Realm (e.g., "CNR", "USER"). Only one of
-   * attribute_text or multiple attribute filters can be specified. Examples: - `realm=test-realm` -
-   * `realm=test-realm AND ip_address=10.0.0.0` - `realm=test-realm AND ip_version=IPV6` -
+   * for Ranges are: - `resource_id`: The resource ID to search for within Ranges (only substring
+   * matching using the format `resource_id="*value*"` is supported). - `realm`: The Realm name to
+   * search in. - `ip_address`: The IP address to search for within Ranges. - `ip_version`: The IP
+   * version to filter by (e.g., "IPV4", "IPV6"). - `parent_range`: The parent Range of the Range to
+   * search for. - `attribute_text`: The attribute text to search for within Ranges. - `attribute`:
+   * The attribute key and value to filter by. The available restrictions for Realms are: -
+   * `ip_version`: The IP version to search for. - `management_type`: The management type of the
+   * Realm (e.g., "CNR", "USER"). Only one of attribute_text or multiple attribute filters can be
+   * specified. Examples: - `realm=test-realm` - `realm=test-realm AND ip_address=10.0.0.0` -
+   * `realm=test-realm AND ip_version=IPV6` - `realm=test-realm AND resource_id="*my-range*"` -
    * `realm=test-realm AND attribute_text=test` - `ip_address=10.0.0.0 AND attribute:(key1=value1)
    * AND attribute:(key2=value2)` - `attribute_text=test AND
    * parent_range=projects/123/locations/global/discoveredRanges/test-parent-range` -

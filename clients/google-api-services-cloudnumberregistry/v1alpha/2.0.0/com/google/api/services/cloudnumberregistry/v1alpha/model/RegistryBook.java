@@ -48,6 +48,13 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> claimedScopes;
 
   /**
+   * Output only. Detailed scope information corresponding to each entry in `claimed_scopes`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ScopeInfo> claimedScopesInfo;
+
+  /**
    * Output only. The time at which the RegistryBook was created.
    * The value may be {@code null}.
    */
@@ -117,6 +124,23 @@ public final class RegistryBook extends com.google.api.client.json.GenericJson {
    */
   public RegistryBook setClaimedScopes(java.util.List<java.lang.String> claimedScopes) {
     this.claimedScopes = claimedScopes;
+    return this;
+  }
+
+  /**
+   * Output only. Detailed scope information corresponding to each entry in `claimed_scopes`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ScopeInfo> getClaimedScopesInfo() {
+    return claimedScopesInfo;
+  }
+
+  /**
+   * Output only. Detailed scope information corresponding to each entry in `claimed_scopes`.
+   * @param claimedScopesInfo claimedScopesInfo or {@code null} for none
+   */
+  public RegistryBook setClaimedScopesInfo(java.util.List<ScopeInfo> claimedScopesInfo) {
+    this.claimedScopesInfo = claimedScopesInfo;
     return this;
   }
 

@@ -33,6 +33,9 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
 
   /**
    * Required. An enum for the DV360 Sensitive category content classified to be EXCLUDED.
+   * **Starting on *October 1, 2026*, this field will only accept
+   * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` or `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`. All other
+   * values will be deprecated and no longer be accepted.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,6 +43,9 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
 
   /**
    * Required. An enum for the DV360 Sensitive category content classified to be EXCLUDED.
+   * **Starting on *October 1, 2026*, this field will only accept
+   * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` or `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`. All other
+   * values will be deprecated and no longer be accepted.**
    * @return value or {@code null} for none
    */
   public java.lang.String getExcludedSensitiveCategory() {
@@ -48,6 +54,9 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
 
   /**
    * Required. An enum for the DV360 Sensitive category content classified to be EXCLUDED.
+   * **Starting on *October 1, 2026*, this field will only accept
+   * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` or `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`. All other
+   * values will be deprecated and no longer be accepted.**
    * @param excludedSensitiveCategory excludedSensitiveCategory or {@code null} for none
    */
   public SensitiveCategoryAssignedTargetingOptionDetails setExcludedSensitiveCategory(java.lang.String excludedSensitiveCategory) {

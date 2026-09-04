@@ -32,14 +32,18 @@ package com.google.api.services.displayvideo.v4.model;
 public final class DigitalContentLabelAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The display name of the digital content label rating tier to be EXCLUDED.
+   * Required. The display name of the digital content label rating tier to be EXCLUDED. **Starting
+   * on *October 1, 2026*, this field will only accept the value `CONTENT_RATING_TIER_UNRATED`. All
+   * other values will be deprecated and no longer be accepted.**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String excludedContentRatingTier;
 
   /**
-   * Required. The display name of the digital content label rating tier to be EXCLUDED.
+   * Required. The display name of the digital content label rating tier to be EXCLUDED. **Starting
+   * on *October 1, 2026*, this field will only accept the value `CONTENT_RATING_TIER_UNRATED`. All
+   * other values will be deprecated and no longer be accepted.**
    * @return value or {@code null} for none
    */
   public java.lang.String getExcludedContentRatingTier() {
@@ -47,7 +51,9 @@ public final class DigitalContentLabelAssignedTargetingOptionDetails extends com
   }
 
   /**
-   * Required. The display name of the digital content label rating tier to be EXCLUDED.
+   * Required. The display name of the digital content label rating tier to be EXCLUDED. **Starting
+   * on *October 1, 2026*, this field will only accept the value `CONTENT_RATING_TIER_UNRATED`. All
+   * other values will be deprecated and no longer be accepted.**
    * @param excludedContentRatingTier excludedContentRatingTier or {@code null} for none
    */
   public DigitalContentLabelAssignedTargetingOptionDetails setExcludedContentRatingTier(java.lang.String excludedContentRatingTier) {

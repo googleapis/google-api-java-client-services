@@ -1116,6 +1116,158 @@ public class Apigee extends com.google.api.client.googleapis.services.json.Abstr
       }
     }
     /**
+     * Gets the deployed MCP server configuration for an organization. McpServerConfig is an org-scoped
+     * singleton (one per organization). The returned configuration may be up to 30 seconds out of date
+     * by default.
+     *
+     * Create a request for the method "organizations.getMcpServerConfig".
+     *
+     * This request holds the parameters needed by the apigee server.  After setting any optional
+     * parameters, call the {@link GetMcpServerConfig#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. Name of the deployed MCP server configuration for the organization in the singleton form:
+     *        `organizations/{org}/mcpServerConfig`.
+     * @return the request
+     */
+    public GetMcpServerConfig getMcpServerConfig(java.lang.String name) throws java.io.IOException {
+      GetMcpServerConfig result = new GetMcpServerConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetMcpServerConfig extends ApigeeRequest<com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1McpServerConfig> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/mcpServerConfig$");
+
+      /**
+       * Gets the deployed MCP server configuration for an organization. McpServerConfig is an org-
+       * scoped singleton (one per organization). The returned configuration may be up to 30 seconds out
+       * of date by default.
+       *
+       * Create a request for the method "organizations.getMcpServerConfig".
+       *
+       * This request holds the parameters needed by the the apigee server.  After setting any optional
+       * parameters, call the {@link GetMcpServerConfig#execute()} method to invoke the remote
+       * operation. <p> {@link GetMcpServerConfig#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. Name of the deployed MCP server configuration for the organization in the singleton form:
+     *        `organizations/{org}/mcpServerConfig`.
+       * @since 1.13
+       */
+      protected GetMcpServerConfig(java.lang.String name) {
+        super(Apigee.this, "GET", REST_PATH, null, com.google.api.services.apigee.v1.model.GoogleCloudApigeeV1McpServerConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/mcpServerConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetMcpServerConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetMcpServerConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetMcpServerConfig setAccessToken(java.lang.String accessToken) {
+        return (GetMcpServerConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetMcpServerConfig setAlt(java.lang.String alt) {
+        return (GetMcpServerConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetMcpServerConfig setCallback(java.lang.String callback) {
+        return (GetMcpServerConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetMcpServerConfig setFields(java.lang.String fields) {
+        return (GetMcpServerConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetMcpServerConfig setKey(java.lang.String key) {
+        return (GetMcpServerConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetMcpServerConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetMcpServerConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetMcpServerConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetMcpServerConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetMcpServerConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetMcpServerConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetMcpServerConfig setUploadType(java.lang.String uploadType) {
+        return (GetMcpServerConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetMcpServerConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetMcpServerConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. Name of the deployed MCP server configuration for the organization in the
+       * singleton form: `organizations/{org}/mcpServerConfig`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the deployed MCP server configuration for the organization in the singleton form:
+     `organizations/{org}/mcpServerConfig`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Name of the deployed MCP server configuration for the organization in the
+       * singleton form: `organizations/{org}/mcpServerConfig`.
+       */
+      public GetMcpServerConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/mcpServerConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetMcpServerConfig set(String parameterName, Object value) {
+        return (GetMcpServerConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the project ID and region for an Apigee organization.
      *
      * Create a request for the method "organizations.getProjectMapping".

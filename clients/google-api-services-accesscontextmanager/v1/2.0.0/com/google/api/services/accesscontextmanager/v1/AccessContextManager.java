@@ -4650,6 +4650,171 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   }
 
   /**
+   * An accessor for creating requests from the Folders collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AccessContextManager accesscontextmanager = new AccessContextManager(...);}
+   *   {@code AccessContextManager.Folders.List request = accesscontextmanager.folders().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Folders folders() {
+    return new Folders();
+  }
+
+  /**
+   * The "folders" collection of methods.
+   */
+  public class Folders {
+
+    /**
+     * Looks up the configured service perimeter for a given resource Format:
+     * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+     *
+     * Create a request for the method "folders.lookupConfiguredServicePerimeter".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+     * @return the request
+     */
+    public LookupConfiguredServicePerimeter lookupConfiguredServicePerimeter(java.lang.String resource) throws java.io.IOException {
+      LookupConfiguredServicePerimeter result = new LookupConfiguredServicePerimeter(resource);
+      initialize(result);
+      return result;
+    }
+
+    public class LookupConfiguredServicePerimeter extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.LookupConfiguredServicePerimeterResponse> {
+
+      private static final String REST_PATH = "v1/{+resource}:lookupConfiguredServicePerimeter";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+      /**
+       * Looks up the configured service perimeter for a given resource Format:
+       * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+       *
+       * Create a request for the method "folders.lookupConfiguredServicePerimeter".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to
+       * invoke the remote operation. <p> {@link LookupConfiguredServicePerimeter#initialize(com.google.
+       * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+       * @since 1.13
+       */
+      protected LookupConfiguredServicePerimeter(java.lang.String resource) {
+        super(AccessContextManager.this, "GET", REST_PATH, null, com.google.api.services.accesscontextmanager.v1.model.LookupConfiguredServicePerimeterResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter set$Xgafv(java.lang.String $Xgafv) {
+        return (LookupConfiguredServicePerimeter) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setAccessToken(java.lang.String accessToken) {
+        return (LookupConfiguredServicePerimeter) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setAlt(java.lang.String alt) {
+        return (LookupConfiguredServicePerimeter) super.setAlt(alt);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setCallback(java.lang.String callback) {
+        return (LookupConfiguredServicePerimeter) super.setCallback(callback);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setFields(java.lang.String fields) {
+        return (LookupConfiguredServicePerimeter) super.setFields(fields);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setKey(java.lang.String key) {
+        return (LookupConfiguredServicePerimeter) super.setKey(key);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setOauthToken(java.lang.String oauthToken) {
+        return (LookupConfiguredServicePerimeter) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (LookupConfiguredServicePerimeter) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setQuotaUser(java.lang.String quotaUser) {
+        return (LookupConfiguredServicePerimeter) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setUploadType(java.lang.String uploadType) {
+        return (LookupConfiguredServicePerimeter) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setUploadProtocol(java.lang.String uploadProtocol) {
+        return (LookupConfiguredServicePerimeter) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      public LookupConfiguredServicePerimeter setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^folders/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter set(String parameterName, Object value) {
+        return (LookupConfiguredServicePerimeter) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Operations collection.
    *
    * <p>The typical use is:</p>
@@ -6370,6 +6535,171 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       @Override
       public List set(String parameterName, Object value) {
         return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Projects collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code AccessContextManager accesscontextmanager = new AccessContextManager(...);}
+   *   {@code AccessContextManager.Projects.List request = accesscontextmanager.projects().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Projects projects() {
+    return new Projects();
+  }
+
+  /**
+   * The "projects" collection of methods.
+   */
+  public class Projects {
+
+    /**
+     * Looks up the configured service perimeter for a given resource Format:
+     * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+     *
+     * Create a request for the method "projects.lookupConfiguredServicePerimeter".
+     *
+     * This request holds the parameters needed by the accesscontextmanager server.  After setting any
+     * optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to invoke
+     * the remote operation.
+     *
+     * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+     * @return the request
+     */
+    public LookupConfiguredServicePerimeter lookupConfiguredServicePerimeter(java.lang.String resource) throws java.io.IOException {
+      LookupConfiguredServicePerimeter result = new LookupConfiguredServicePerimeter(resource);
+      initialize(result);
+      return result;
+    }
+
+    public class LookupConfiguredServicePerimeter extends AccessContextManagerRequest<com.google.api.services.accesscontextmanager.v1.model.LookupConfiguredServicePerimeterResponse> {
+
+      private static final String REST_PATH = "v1/{+resource}:lookupConfiguredServicePerimeter";
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Looks up the configured service perimeter for a given resource Format:
+       * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+       *
+       * Create a request for the method "projects.lookupConfiguredServicePerimeter".
+       *
+       * This request holds the parameters needed by the the accesscontextmanager server.  After setting
+       * any optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to
+       * invoke the remote operation. <p> {@link LookupConfiguredServicePerimeter#initialize(com.google.
+       * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+       * instance immediately after invoking the constructor. </p>
+       *
+       * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+       * @since 1.13
+       */
+      protected LookupConfiguredServicePerimeter(java.lang.String resource) {
+        super(AccessContextManager.this, "GET", REST_PATH, null, com.google.api.services.accesscontextmanager.v1.model.LookupConfiguredServicePerimeterResponse.class);
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter set$Xgafv(java.lang.String $Xgafv) {
+        return (LookupConfiguredServicePerimeter) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setAccessToken(java.lang.String accessToken) {
+        return (LookupConfiguredServicePerimeter) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setAlt(java.lang.String alt) {
+        return (LookupConfiguredServicePerimeter) super.setAlt(alt);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setCallback(java.lang.String callback) {
+        return (LookupConfiguredServicePerimeter) super.setCallback(callback);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setFields(java.lang.String fields) {
+        return (LookupConfiguredServicePerimeter) super.setFields(fields);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setKey(java.lang.String key) {
+        return (LookupConfiguredServicePerimeter) super.setKey(key);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setOauthToken(java.lang.String oauthToken) {
+        return (LookupConfiguredServicePerimeter) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (LookupConfiguredServicePerimeter) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setQuotaUser(java.lang.String quotaUser) {
+        return (LookupConfiguredServicePerimeter) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setUploadType(java.lang.String uploadType) {
+        return (LookupConfiguredServicePerimeter) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter setUploadProtocol(java.lang.String uploadProtocol) {
+        return (LookupConfiguredServicePerimeter) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      public LookupConfiguredServicePerimeter setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public LookupConfiguredServicePerimeter set(String parameterName, Object value) {
+        return (LookupConfiguredServicePerimeter) super.set(parameterName, value);
       }
     }
 

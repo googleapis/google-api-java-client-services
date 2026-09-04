@@ -80,23 +80,8 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   private Principal principal;
 
   /**
-   * Optional. Deprecated: Use `scoped_access_settings` instead. A list of applications that are
-   * subject to this binding's restrictions. If the list is empty, the binding restrictions will
-   * universally apply to all applications.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<Application> restrictedClientApplications;
-
-  static {
-    // hack to force ProGuard to consider Application used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Application.class);
-  }
-
-  /**
    * Optional. A list of scoped access settings that set this binding's restrictions on a subset of
-   * applications. This field cannot be set if restricted_client_applications is set.
+   * applications.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,29 +206,8 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Deprecated: Use `scoped_access_settings` instead. A list of applications that are
-   * subject to this binding's restrictions. If the list is empty, the binding restrictions will
-   * universally apply to all applications.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<Application> getRestrictedClientApplications() {
-    return restrictedClientApplications;
-  }
-
-  /**
-   * Optional. Deprecated: Use `scoped_access_settings` instead. A list of applications that are
-   * subject to this binding's restrictions. If the list is empty, the binding restrictions will
-   * universally apply to all applications.
-   * @param restrictedClientApplications restrictedClientApplications or {@code null} for none
-   */
-  public GcpUserAccessBinding setRestrictedClientApplications(java.util.List<Application> restrictedClientApplications) {
-    this.restrictedClientApplications = restrictedClientApplications;
-    return this;
-  }
-
-  /**
    * Optional. A list of scoped access settings that set this binding's restrictions on a subset of
-   * applications. This field cannot be set if restricted_client_applications is set.
+   * applications.
    * @return value or {@code null} for none
    */
   public java.util.List<ScopedAccessSettings> getScopedAccessSettings() {
@@ -252,7 +216,7 @@ public final class GcpUserAccessBinding extends com.google.api.client.json.Gener
 
   /**
    * Optional. A list of scoped access settings that set this binding's restrictions on a subset of
-   * applications. This field cannot be set if restricted_client_applications is set.
+   * applications.
    * @param scopedAccessSettings scopedAccessSettings or {@code null} for none
    */
   public GcpUserAccessBinding setScopedAccessSettings(java.util.List<ScopedAccessSettings> scopedAccessSettings) {

@@ -46,6 +46,13 @@ public final class AudioProcessingConfig extends com.google.api.client.json.Gene
   private BargeInConfig bargeInConfig;
 
   /**
+   * Optional. Configures custom voice samples for voice cloning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomVoiceSample> customVoiceSamples;
+
+  /**
    * Optional. The duration of user inactivity (no speech or interaction) before the agent prompts
    * the user for reengagement. If not set, the agent will not prompt the user for reengagement.
    * The value may be {@code null}.
@@ -97,6 +104,23 @@ public final class AudioProcessingConfig extends com.google.api.client.json.Gene
    */
   public AudioProcessingConfig setBargeInConfig(BargeInConfig bargeInConfig) {
     this.bargeInConfig = bargeInConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configures custom voice samples for voice cloning.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomVoiceSample> getCustomVoiceSamples() {
+    return customVoiceSamples;
+  }
+
+  /**
+   * Optional. Configures custom voice samples for voice cloning.
+   * @param customVoiceSamples customVoiceSamples or {@code null} for none
+   */
+  public AudioProcessingConfig setCustomVoiceSamples(java.util.List<CustomVoiceSample> customVoiceSamples) {
+    this.customVoiceSamples = customVoiceSamples;
     return this;
   }
 

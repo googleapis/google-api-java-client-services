@@ -53,7 +53,7 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
   private DocumentQuery documentQuery;
 
   /**
-   * Optional. Legacy metadata associated with this scenario/monitor.
+   * Output only. Legacy metadata associated with this scenario/monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Legacy metadata associated with this scenario/monitor.
+   * Output only. Legacy metadata associated with this scenario/monitor.
    * @return value or {@code null} for none
    */
   public LegacyMetadata getLegacyMonitorMetadata() {
@@ -121,7 +121,7 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
   }
 
   /**
-   * Optional. Legacy metadata associated with this scenario/monitor.
+   * Output only. Legacy metadata associated with this scenario/monitor.
    * @param legacyMonitorMetadata legacyMonitorMetadata or {@code null} for none
    */
   public CustomThreatScenarioConfig setLegacyMonitorMetadata(LegacyMetadata legacyMonitorMetadata) {

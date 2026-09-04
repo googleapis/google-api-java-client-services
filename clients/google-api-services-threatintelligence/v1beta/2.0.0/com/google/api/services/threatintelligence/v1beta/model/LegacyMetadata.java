@@ -31,119 +31,121 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class LegacyMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether aggregation is enabled for alerts from this monitor.
+   * Output only. Whether aggregation is enabled for alerts from this monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean aggregationEnabled;
 
   /**
-   * Optional. Similarity threshold for aggregation.
+   * Output only. Similarity threshold for aggregation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double aggregationSimilarity;
 
   /**
-   * Optional. Version of the condition schema.
+   * Output only. Version of the condition schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer conditionVersion;
 
   /**
-   * Optional. User ID who created the monitor.
+   * Output only. User ID who created the monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String creatorUserId;
 
   /**
-   * Optional. Description of the legacy monitor.
+   * Output only. Description of the legacy monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Optional. Code indicating why the monitor is disabled (if applicable).
+   * Output only. Code indicating why the monitor is disabled (if applicable).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String disabledCode;
 
   /**
-   * Optional. Reason why the monitor is disabled (if applicable).
+   * Output only. Reason why the monitor is disabled (if applicable).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String disabledReason;
 
   /**
-   * Optional. Name of the legacy monitor.
+   * Output only. Name of the legacy monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Optional. Whether email notifications are enabled.
+   * Output only. Deprecated: Whether email notifications are enabled. This field will not be used
+   * as email notifications are handled through the GTI Mail Hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean emailNotificationEnabled;
 
   /**
-   * Optional. Whether email notifications are intermediate/immediate.
+   * Output only. Deprecated: Whether email notifications are intermediate/immediate. This field
+   * will not be used as email notifications are handled through the GTI Mail Hub.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean emailNotificationImmediate;
 
   /**
-   * Optional. Unique identifier of the legacy monitor.
+   * Output only. Unique identifier of the legacy monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String legacyMonitorId;
 
   /**
-   * Optional. Time the legacy monitor was considered stale.
+   * Output only. Time the legacy monitor was considered stale.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String staleTime;
 
   /**
-   * Optional. ID of the template this monitor was created from.
+   * Output only. ID of the template this monitor was created from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String templateId;
 
   /**
-   * Optional. ID of the tenant owning the monitor.
+   * Output only. ID of the tenant owning the monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tenantId;
 
   /**
-   * Optional. User ID who last updated the monitor.
+   * Output only. User ID who last updated the monitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String updaterUserId;
 
   /**
-   * Optional. Version of the monitor configuration.
+   * Output only. Version of the monitor configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer version;
 
   /**
-   * Optional. Whether aggregation is enabled for alerts from this monitor.
+   * Output only. Whether aggregation is enabled for alerts from this monitor.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAggregationEnabled() {
@@ -151,7 +153,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Whether aggregation is enabled for alerts from this monitor.
+   * Output only. Whether aggregation is enabled for alerts from this monitor.
    * @param aggregationEnabled aggregationEnabled or {@code null} for none
    */
   public LegacyMetadata setAggregationEnabled(java.lang.Boolean aggregationEnabled) {
@@ -160,7 +162,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Similarity threshold for aggregation.
+   * Output only. Similarity threshold for aggregation.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAggregationSimilarity() {
@@ -168,7 +170,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Similarity threshold for aggregation.
+   * Output only. Similarity threshold for aggregation.
    * @param aggregationSimilarity aggregationSimilarity or {@code null} for none
    */
   public LegacyMetadata setAggregationSimilarity(java.lang.Double aggregationSimilarity) {
@@ -177,7 +179,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Version of the condition schema.
+   * Output only. Version of the condition schema.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getConditionVersion() {
@@ -185,7 +187,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Version of the condition schema.
+   * Output only. Version of the condition schema.
    * @param conditionVersion conditionVersion or {@code null} for none
    */
   public LegacyMetadata setConditionVersion(java.lang.Integer conditionVersion) {
@@ -194,7 +196,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User ID who created the monitor.
+   * Output only. User ID who created the monitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreatorUserId() {
@@ -202,7 +204,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User ID who created the monitor.
+   * Output only. User ID who created the monitor.
    * @param creatorUserId creatorUserId or {@code null} for none
    */
   public LegacyMetadata setCreatorUserId(java.lang.String creatorUserId) {
@@ -211,7 +213,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Description of the legacy monitor.
+   * Output only. Description of the legacy monitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -219,7 +221,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Description of the legacy monitor.
+   * Output only. Description of the legacy monitor.
    * @param description description or {@code null} for none
    */
   public LegacyMetadata setDescription(java.lang.String description) {
@@ -228,7 +230,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Code indicating why the monitor is disabled (if applicable).
+   * Output only. Code indicating why the monitor is disabled (if applicable).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisabledCode() {
@@ -236,7 +238,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Code indicating why the monitor is disabled (if applicable).
+   * Output only. Code indicating why the monitor is disabled (if applicable).
    * @param disabledCode disabledCode or {@code null} for none
    */
   public LegacyMetadata setDisabledCode(java.lang.String disabledCode) {
@@ -245,7 +247,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Reason why the monitor is disabled (if applicable).
+   * Output only. Reason why the monitor is disabled (if applicable).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisabledReason() {
@@ -253,7 +255,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Reason why the monitor is disabled (if applicable).
+   * Output only. Reason why the monitor is disabled (if applicable).
    * @param disabledReason disabledReason or {@code null} for none
    */
   public LegacyMetadata setDisabledReason(java.lang.String disabledReason) {
@@ -262,7 +264,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Name of the legacy monitor.
+   * Output only. Name of the legacy monitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -270,7 +272,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Name of the legacy monitor.
+   * Output only. Name of the legacy monitor.
    * @param displayName displayName or {@code null} for none
    */
   public LegacyMetadata setDisplayName(java.lang.String displayName) {
@@ -279,7 +281,8 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Whether email notifications are enabled.
+   * Output only. Deprecated: Whether email notifications are enabled. This field will not be used
+   * as email notifications are handled through the GTI Mail Hub.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEmailNotificationEnabled() {
@@ -287,7 +290,8 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Whether email notifications are enabled.
+   * Output only. Deprecated: Whether email notifications are enabled. This field will not be used
+   * as email notifications are handled through the GTI Mail Hub.
    * @param emailNotificationEnabled emailNotificationEnabled or {@code null} for none
    */
   public LegacyMetadata setEmailNotificationEnabled(java.lang.Boolean emailNotificationEnabled) {
@@ -296,7 +300,8 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Whether email notifications are intermediate/immediate.
+   * Output only. Deprecated: Whether email notifications are intermediate/immediate. This field
+   * will not be used as email notifications are handled through the GTI Mail Hub.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEmailNotificationImmediate() {
@@ -304,7 +309,8 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Whether email notifications are intermediate/immediate.
+   * Output only. Deprecated: Whether email notifications are intermediate/immediate. This field
+   * will not be used as email notifications are handled through the GTI Mail Hub.
    * @param emailNotificationImmediate emailNotificationImmediate or {@code null} for none
    */
   public LegacyMetadata setEmailNotificationImmediate(java.lang.Boolean emailNotificationImmediate) {
@@ -313,7 +319,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Unique identifier of the legacy monitor.
+   * Output only. Unique identifier of the legacy monitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getLegacyMonitorId() {
@@ -321,7 +327,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Unique identifier of the legacy monitor.
+   * Output only. Unique identifier of the legacy monitor.
    * @param legacyMonitorId legacyMonitorId or {@code null} for none
    */
   public LegacyMetadata setLegacyMonitorId(java.lang.String legacyMonitorId) {
@@ -330,7 +336,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Time the legacy monitor was considered stale.
+   * Output only. Time the legacy monitor was considered stale.
    * @return value or {@code null} for none
    */
   public String getStaleTime() {
@@ -338,7 +344,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Time the legacy monitor was considered stale.
+   * Output only. Time the legacy monitor was considered stale.
    * @param staleTime staleTime or {@code null} for none
    */
   public LegacyMetadata setStaleTime(String staleTime) {
@@ -347,7 +353,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. ID of the template this monitor was created from.
+   * Output only. ID of the template this monitor was created from.
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplateId() {
@@ -355,7 +361,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. ID of the template this monitor was created from.
+   * Output only. ID of the template this monitor was created from.
    * @param templateId templateId or {@code null} for none
    */
   public LegacyMetadata setTemplateId(java.lang.String templateId) {
@@ -364,7 +370,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. ID of the tenant owning the monitor.
+   * Output only. ID of the tenant owning the monitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getTenantId() {
@@ -372,7 +378,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. ID of the tenant owning the monitor.
+   * Output only. ID of the tenant owning the monitor.
    * @param tenantId tenantId or {@code null} for none
    */
   public LegacyMetadata setTenantId(java.lang.String tenantId) {
@@ -381,7 +387,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User ID who last updated the monitor.
+   * Output only. User ID who last updated the monitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getUpdaterUserId() {
@@ -389,7 +395,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User ID who last updated the monitor.
+   * Output only. User ID who last updated the monitor.
    * @param updaterUserId updaterUserId or {@code null} for none
    */
   public LegacyMetadata setUpdaterUserId(java.lang.String updaterUserId) {
@@ -398,7 +404,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Version of the monitor configuration.
+   * Output only. Version of the monitor configuration.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVersion() {
@@ -406,7 +412,7 @@ public final class LegacyMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Version of the monitor configuration.
+   * Output only. Version of the monitor configuration.
    * @param version version or {@code null} for none
    */
   public LegacyMetadata setVersion(java.lang.Integer version) {

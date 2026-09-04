@@ -30,6 +30,21 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Addon extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The Vertex AI region where the BoostSpec Gemini model calls run for this API Hub
+   * instance. Populated only for the SpecGen addon (`system-spec-generation`); other addons leave
+   * this field empty. `gemini-2.5-flash` is not available in every API Hub region, so the effective
+   * region may differ from the API Hub instance's own region. The value follows these semantics: -
+   * `""`: BoostSpec is disabled in this region (the addon is not SpecGen, or the API Hub instance
+   * region has no configured Gemini endpoint or fallback). - Equal to the API Hub instance region:
+   * BoostSpec calls run in-region. - Differs from the API Hub instance region: BoostSpec calls run
+   * in the specified fallback region. Callers rendering this field can derive the three display
+   * states from this single field combined with the API Hub instance region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String boostSpecGeminiRegionId;
+
+  /**
    * Required. The configuration of the addon.
    * The value may be {@code null}.
    */
@@ -86,6 +101,39 @@ public final class GoogleCloudApihubV1Addon extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The Vertex AI region where the BoostSpec Gemini model calls run for this API Hub
+   * instance. Populated only for the SpecGen addon (`system-spec-generation`); other addons leave
+   * this field empty. `gemini-2.5-flash` is not available in every API Hub region, so the effective
+   * region may differ from the API Hub instance's own region. The value follows these semantics: -
+   * `""`: BoostSpec is disabled in this region (the addon is not SpecGen, or the API Hub instance
+   * region has no configured Gemini endpoint or fallback). - Equal to the API Hub instance region:
+   * BoostSpec calls run in-region. - Differs from the API Hub instance region: BoostSpec calls run
+   * in the specified fallback region. Callers rendering this field can derive the three display
+   * states from this single field combined with the API Hub instance region.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBoostSpecGeminiRegionId() {
+    return boostSpecGeminiRegionId;
+  }
+
+  /**
+   * Output only. The Vertex AI region where the BoostSpec Gemini model calls run for this API Hub
+   * instance. Populated only for the SpecGen addon (`system-spec-generation`); other addons leave
+   * this field empty. `gemini-2.5-flash` is not available in every API Hub region, so the effective
+   * region may differ from the API Hub instance's own region. The value follows these semantics: -
+   * `""`: BoostSpec is disabled in this region (the addon is not SpecGen, or the API Hub instance
+   * region has no configured Gemini endpoint or fallback). - Equal to the API Hub instance region:
+   * BoostSpec calls run in-region. - Differs from the API Hub instance region: BoostSpec calls run
+   * in the specified fallback region. Callers rendering this field can derive the three display
+   * states from this single field combined with the API Hub instance region.
+   * @param boostSpecGeminiRegionId boostSpecGeminiRegionId or {@code null} for none
+   */
+  public GoogleCloudApihubV1Addon setBoostSpecGeminiRegionId(java.lang.String boostSpecGeminiRegionId) {
+    this.boostSpecGeminiRegionId = boostSpecGeminiRegionId;
+    return this;
+  }
 
   /**
    * Required. The configuration of the addon.

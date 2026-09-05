@@ -6047,6 +6047,49 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
+      /** Whether to copy the comments associated with the file. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean copyComments;
+
+      /** Whether to copy the comments associated with the file. [default: false]
+       */
+      public java.lang.Boolean getCopyComments() {
+        return copyComments;
+      }
+
+      /** Whether to copy the comments associated with the file. */
+      public Copy setCopyComments(java.lang.Boolean copyComments) {
+        this.copyComments = copyComments;
+        return this;
+      }
+
+      /**
+       * Convenience method that returns only {@link Boolean#TRUE} or {@link Boolean#FALSE}.
+       *
+       * <p>
+       * Boolean properties can have four possible values:
+       * {@code null}, {@link com.google.api.client.util.Data#NULL_BOOLEAN}, {@link Boolean#TRUE}
+       * or {@link Boolean#FALSE}.
+       * </p>
+       *
+       * <p>
+       * This method returns {@link Boolean#TRUE} if the default of the property is {@link Boolean#TRUE}
+       * and it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * {@link Boolean#FALSE} is returned if the default of the property is {@link Boolean#FALSE} and
+       * it is {@code null} or {@link com.google.api.client.util.Data#NULL_BOOLEAN}.
+       * </p>
+       *
+       * <p>
+       * Whether to copy the comments associated with the file.
+       * </p>
+       */
+      public boolean isCopyComments() {
+        if (copyComments == null || copyComments == com.google.api.client.util.Data.NULL_BOOLEAN) {
+          return false;
+        }
+        return copyComments;
+      }
+
       /**
        * Deprecated: Copying files into multiple folders is no longer supported. Use shortcuts
        * instead.

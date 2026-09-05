@@ -127,6 +127,15 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String sourceInstanceTier;
 
   /**
+   * Optional. The resource name of the Filestore volume that the backup is created from. Should be
+   * in the format:
+   * projects/{project_id}/locations/{location_id}/volumePools/{volume_pool_id}/volumes/{volume_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceVolume;
+
+  /**
    * Output only. The backup state.
    * The value may be {@code null}.
    */
@@ -383,6 +392,27 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setSourceInstanceTier(java.lang.String sourceInstanceTier) {
     this.sourceInstanceTier = sourceInstanceTier;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of the Filestore volume that the backup is created from. Should be
+   * in the format:
+   * projects/{project_id}/locations/{location_id}/volumePools/{volume_pool_id}/volumes/{volume_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceVolume() {
+    return sourceVolume;
+  }
+
+  /**
+   * Optional. The resource name of the Filestore volume that the backup is created from. Should be
+   * in the format:
+   * projects/{project_id}/locations/{location_id}/volumePools/{volume_pool_id}/volumes/{volume_id}
+   * @param sourceVolume sourceVolume or {@code null} for none
+   */
+  public Backup setSourceVolume(java.lang.String sourceVolume) {
+    this.sourceVolume = sourceVolume;
     return this;
   }
 

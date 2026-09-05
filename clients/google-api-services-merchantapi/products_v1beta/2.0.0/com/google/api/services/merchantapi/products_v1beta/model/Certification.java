@@ -46,6 +46,26 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   private java.lang.String certificationCode;
 
   /**
+   * Optional. URL to the certification document (eg. `https://www.example.com/document`), for
+   * example, the product data sheet or fiche required by UK's DESNZ or EU's EPREL. Maximum length
+   * is 2000 characters. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificationDocumentLink;
+
+  /**
+   * Optional. URL to the certification label (eg. `https://www.example.com/label`), for example,
+   * the energy efficiency label required by UK's DESNZ or EU's EPREL. Maximum length is 2000
+   * characters. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String certificationLabelLink;
+
+  /**
    * The name of the certification, for example "EPREL". Maximum length is 2000 characters.
    * The value may be {@code null}.
    */
@@ -93,6 +113,52 @@ public final class Certification extends com.google.api.client.json.GenericJson 
    */
   public Certification setCertificationCode(java.lang.String certificationCode) {
     this.certificationCode = certificationCode;
+    return this;
+  }
+
+  /**
+   * Optional. URL to the certification document (eg. `https://www.example.com/document`), for
+   * example, the product data sheet or fiche required by UK's DESNZ or EU's EPREL. Maximum length
+   * is 2000 characters. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificationDocumentLink() {
+    return certificationDocumentLink;
+  }
+
+  /**
+   * Optional. URL to the certification document (eg. `https://www.example.com/document`), for
+   * example, the product data sheet or fiche required by UK's DESNZ or EU's EPREL. Maximum length
+   * is 2000 characters. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
+   * @param certificationDocumentLink certificationDocumentLink or {@code null} for none
+   */
+  public Certification setCertificationDocumentLink(java.lang.String certificationDocumentLink) {
+    this.certificationDocumentLink = certificationDocumentLink;
+    return this;
+  }
+
+  /**
+   * Optional. URL to the certification label (eg. `https://www.example.com/label`), for example,
+   * the energy efficiency label required by UK's DESNZ or EU's EPREL. Maximum length is 2000
+   * characters. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCertificationLabelLink() {
+    return certificationLabelLink;
+  }
+
+  /**
+   * Optional. URL to the certification label (eg. `https://www.example.com/label`), for example,
+   * the energy efficiency label required by UK's DESNZ or EU's EPREL. Maximum length is 2000
+   * characters. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
+   * @param certificationLabelLink certificationLabelLink or {@code null} for none
+   */
+  public Certification setCertificationLabelLink(java.lang.String certificationLabelLink) {
+    this.certificationLabelLink = certificationLabelLink;
     return this;
   }
 

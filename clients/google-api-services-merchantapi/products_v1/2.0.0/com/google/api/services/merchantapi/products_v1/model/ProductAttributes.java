@@ -142,8 +142,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
 
   /**
    * Product Certifications, for example for energy efficiency labeling of products recorded in the
-   * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. See the [Help
-   * Center](https://support.google.com/merchants/answer/13528839) article for more information.
+   * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1446,8 +1446,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
 
   /**
    * Product Certifications, for example for energy efficiency labeling of products recorded in the
-   * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. See the [Help
-   * Center](https://support.google.com/merchants/answer/13528839) article for more information.
+   * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
    * @return value or {@code null} for none
    */
   public java.util.List<ProductCertification> getCertifications() {
@@ -1456,8 +1456,8 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
 
   /**
    * Product Certifications, for example for energy efficiency labeling of products recorded in the
-   * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. See the [Help
-   * Center](https://support.google.com/merchants/answer/13528839) article for more information.
+   * [EU EPREL](https://eprel.ec.europa.eu/screen/home) database. For more information, see
+   * [Certification](https://support.google.com/merchants/answer/13528839).
    * @param certifications certifications or {@code null} for none
    */
   public ProductAttributes setCertifications(java.util.List<ProductCertification> certifications) {

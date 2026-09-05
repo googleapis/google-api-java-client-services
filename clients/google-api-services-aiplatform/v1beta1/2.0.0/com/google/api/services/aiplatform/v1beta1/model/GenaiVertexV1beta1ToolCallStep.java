@@ -76,6 +76,12 @@ public final class GenaiVertexV1beta1ToolCallStep extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GenaiVertexV1beta1ProcessingCallStep processingCall;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GenaiVertexV1beta1RetrievalCallStep retrievalCall;
 
   /**
@@ -195,6 +201,21 @@ public final class GenaiVertexV1beta1ToolCallStep extends com.google.api.client.
    */
   public GenaiVertexV1beta1ToolCallStep setMcpServerToolCall(GenaiVertexV1beta1McpServerToolCallStep mcpServerToolCall) {
     this.mcpServerToolCall = mcpServerToolCall;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1ProcessingCallStep getProcessingCall() {
+    return processingCall;
+  }
+
+  /**
+   * @param processingCall processingCall or {@code null} for none
+   */
+  public GenaiVertexV1beta1ToolCallStep setProcessingCall(GenaiVertexV1beta1ProcessingCallStep processingCall) {
+    this.processingCall = processingCall;
     return this;
   }
 

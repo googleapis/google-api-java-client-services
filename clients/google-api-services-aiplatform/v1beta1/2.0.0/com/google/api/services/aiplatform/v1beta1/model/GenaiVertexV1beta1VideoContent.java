@@ -45,6 +45,14 @@ public final class GenaiVertexV1beta1VideoContent extends com.google.api.client.
   private java.lang.String mimeTypeString;
 
   /**
+   * A user-defined name for this content block. Can be referenced by the model in the final
+   * response.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String name;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -131,6 +139,25 @@ public final class GenaiVertexV1beta1VideoContent extends com.google.api.client.
    */
   public GenaiVertexV1beta1VideoContent setMimeTypeString(java.lang.String mimeTypeString) {
     this.mimeTypeString = mimeTypeString;
+    return this;
+  }
+
+  /**
+   * A user-defined name for this content block. Can be referenced by the model in the final
+   * response.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+  /**
+   * A user-defined name for this content block. Can be referenced by the model in the final
+   * response.
+   * @param name name or {@code null} for none
+   */
+  public GenaiVertexV1beta1VideoContent setName(java.lang.String name) {
+    this.name = name;
     return this;
   }
 

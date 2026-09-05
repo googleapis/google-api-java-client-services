@@ -51,6 +51,14 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec extends co
   private GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment shellEnvironment;
 
   /**
+   * Optional. Immutable. Whether to provision the SandboxEnvironment via the GKE TD pool.
+   * Immutable.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useGkeTd;
+
+  /**
    * Optional. The code execution environment.
    * @return value or {@code null} for none
    */
@@ -98,6 +106,25 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec extends co
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec setShellEnvironment(GoogleCloudAiplatformV1beta1SandboxEnvironmentSpecShellEnvironment shellEnvironment) {
     this.shellEnvironment = shellEnvironment;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Whether to provision the SandboxEnvironment via the GKE TD pool.
+   * Immutable.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseGkeTd() {
+    return useGkeTd;
+  }
+
+  /**
+   * Optional. Immutable. Whether to provision the SandboxEnvironment via the GKE TD pool.
+   * Immutable.
+   * @param useGkeTd useGkeTd or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSpec setUseGkeTd(java.lang.Boolean useGkeTd) {
+    this.useGkeTd = useGkeTd;
     return this;
   }
 

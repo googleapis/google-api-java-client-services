@@ -42,6 +42,13 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String iPv4Range;
 
   /**
+   * Output only. [Output Only] Additional tags for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> additionalTags;
+
+  /**
    * Must be set to create a VPC network. If not set, a legacy network is created.
    *
    * When set to true, the VPC network is created in auto mode. When set to false, the VPC network
@@ -228,6 +235,23 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setIPv4Range(java.lang.String iPv4Range) {
     this.iPv4Range = iPv4Range;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Additional tags for this resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAdditionalTags() {
+    return additionalTags;
+  }
+
+  /**
+   * Output only. [Output Only] Additional tags for this resource.
+   * @param additionalTags additionalTags or {@code null} for none
+   */
+  public Network setAdditionalTags(java.util.List<java.lang.String> additionalTags) {
+    this.additionalTags = additionalTags;
     return this;
   }
 

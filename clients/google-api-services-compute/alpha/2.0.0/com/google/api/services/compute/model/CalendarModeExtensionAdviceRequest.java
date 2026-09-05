@@ -17,8 +17,9 @@
 package com.google.api.services.compute.model;
 
 /**
- * A request to recommend the best duration for extending an existing Future Reservation in CALENDAR
- * mode, that is equal or less than the specified extension duration.
+ * A request to recommend the maximum duration for extending an existing future reservation in
+ * calendar mode. The recommended duration is shorter than or equal to the specified extension
+ * duration.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -31,14 +32,14 @@ package com.google.api.services.compute.model;
 public final class CalendarModeExtensionAdviceRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The desired end time after the Future Reservation is extended.
+   * Required. The desired end time for the extension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTimeNotLaterThan;
 
   /**
-   * Required. Reference to the Future Reservation, in the format:
+   * Required. Reference to the future reservation, in the format:
    * projects/{project}/zones/{zone}/futureReservations/{name} Full URIs that include hostnames
    * (like compute.googleapis.com or www.googleapis.com) are also supported.
    * The value may be {@code null}.
@@ -47,7 +48,7 @@ public final class CalendarModeExtensionAdviceRequest extends com.google.api.cli
   private java.lang.String futureReservation;
 
   /**
-   * Required. The desired end time after the Future Reservation is extended.
+   * Required. The desired end time for the extension.
    * @return value or {@code null} for none
    */
   public String getEndTimeNotLaterThan() {
@@ -55,7 +56,7 @@ public final class CalendarModeExtensionAdviceRequest extends com.google.api.cli
   }
 
   /**
-   * Required. The desired end time after the Future Reservation is extended.
+   * Required. The desired end time for the extension.
    * @param endTimeNotLaterThan endTimeNotLaterThan or {@code null} for none
    */
   public CalendarModeExtensionAdviceRequest setEndTimeNotLaterThan(String endTimeNotLaterThan) {
@@ -64,7 +65,7 @@ public final class CalendarModeExtensionAdviceRequest extends com.google.api.cli
   }
 
   /**
-   * Required. Reference to the Future Reservation, in the format:
+   * Required. Reference to the future reservation, in the format:
    * projects/{project}/zones/{zone}/futureReservations/{name} Full URIs that include hostnames
    * (like compute.googleapis.com or www.googleapis.com) are also supported.
    * @return value or {@code null} for none
@@ -74,7 +75,7 @@ public final class CalendarModeExtensionAdviceRequest extends com.google.api.cli
   }
 
   /**
-   * Required. Reference to the Future Reservation, in the format:
+   * Required. Reference to the future reservation, in the format:
    * projects/{project}/zones/{zone}/futureReservations/{name} Full URIs that include hostnames
    * (like compute.googleapis.com or www.googleapis.com) are also supported.
    * @param futureReservation futureReservation or {@code null} for none

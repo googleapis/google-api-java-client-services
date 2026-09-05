@@ -30,6 +30,14 @@ package com.google.api.services.pubsub.model;
 public final class Schema extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for a schema provided as a pre-compiled Protocol Buffer
+   * FileDescriptorSet. The `type` field above must be set to PROTOCOL_BUFFER.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompiledProtoSchema compiledProtoSchema;
+
+  /**
    * The definition of the schema. This should contain a string representing the full definition of
    * the schema that is a valid schema definition of the type specified in `type`.
    * The value may be {@code null}.
@@ -64,6 +72,25 @@ public final class Schema extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
+
+  /**
+   * Optional. Configuration for a schema provided as a pre-compiled Protocol Buffer
+   * FileDescriptorSet. The `type` field above must be set to PROTOCOL_BUFFER.
+   * @return value or {@code null} for none
+   */
+  public CompiledProtoSchema getCompiledProtoSchema() {
+    return compiledProtoSchema;
+  }
+
+  /**
+   * Optional. Configuration for a schema provided as a pre-compiled Protocol Buffer
+   * FileDescriptorSet. The `type` field above must be set to PROTOCOL_BUFFER.
+   * @param compiledProtoSchema compiledProtoSchema or {@code null} for none
+   */
+  public Schema setCompiledProtoSchema(CompiledProtoSchema compiledProtoSchema) {
+    this.compiledProtoSchema = compiledProtoSchema;
+    return this;
+  }
 
   /**
    * The definition of the schema. This should contain a string representing the full definition of

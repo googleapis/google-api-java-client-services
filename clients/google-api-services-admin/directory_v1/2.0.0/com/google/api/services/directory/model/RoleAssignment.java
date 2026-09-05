@@ -80,6 +80,13 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
   private java.lang.String etag;
 
   /**
+   * Optional. Details regarding the expiration of this role assignment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExpirationDetails expirationDetails;
+
+  /**
    * The type of the API resource. This is always `admin#directory#roleAssignment`.
    * The value may be {@code null}.
    */
@@ -224,6 +231,23 @@ public final class RoleAssignment extends com.google.api.client.json.GenericJson
    */
   public RoleAssignment setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Details regarding the expiration of this role assignment.
+   * @return value or {@code null} for none
+   */
+  public ExpirationDetails getExpirationDetails() {
+    return expirationDetails;
+  }
+
+  /**
+   * Optional. Details regarding the expiration of this role assignment.
+   * @param expirationDetails expirationDetails or {@code null} for none
+   */
+  public RoleAssignment setExpirationDetails(ExpirationDetails expirationDetails) {
+    this.expirationDetails = expirationDetails;
     return this;
   }
 

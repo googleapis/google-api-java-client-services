@@ -84,13 +84,6 @@ public final class GooglePrivacyDlpV2ContentPolicy extends com.google.api.client
   private GooglePrivacyDlpV2InspectConfig inspectConfig;
 
   /**
-   * Optional. InspectTemplate to use to produce findings. Deprecated: use inspect_config instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GooglePrivacyDlpV2InspectTemplate inspectTemplate;
-
-  /**
    * Optional. Log the actions taken by the content policy to external systems.
    * The value may be {@code null}.
    */
@@ -250,23 +243,6 @@ public final class GooglePrivacyDlpV2ContentPolicy extends com.google.api.client
    */
   public GooglePrivacyDlpV2ContentPolicy setInspectConfig(GooglePrivacyDlpV2InspectConfig inspectConfig) {
     this.inspectConfig = inspectConfig;
-    return this;
-  }
-
-  /**
-   * Optional. InspectTemplate to use to produce findings. Deprecated: use inspect_config instead.
-   * @return value or {@code null} for none
-   */
-  public GooglePrivacyDlpV2InspectTemplate getInspectTemplate() {
-    return inspectTemplate;
-  }
-
-  /**
-   * Optional. InspectTemplate to use to produce findings. Deprecated: use inspect_config instead.
-   * @param inspectTemplate inspectTemplate or {@code null} for none
-   */
-  public GooglePrivacyDlpV2ContentPolicy setInspectTemplate(GooglePrivacyDlpV2InspectTemplate inspectTemplate) {
-    this.inspectTemplate = inspectTemplate;
     return this;
   }
 

@@ -52,13 +52,6 @@ public final class GooglePrivacyDlpV2PolicyRule extends com.google.api.client.js
   }
 
   /**
-   * If set, the verdict will be returned to the user. Deprecated: Use `action` instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String returnVerdict;
-
-  /**
    * Required. Action to take if this rule applies.
    * @return value or {@code null} for none
    */
@@ -91,23 +84,6 @@ public final class GooglePrivacyDlpV2PolicyRule extends com.google.api.client.js
    */
   public GooglePrivacyDlpV2PolicyRule setConditions(java.util.List<GooglePrivacyDlpV2PolicyCondition> conditions) {
     this.conditions = conditions;
-    return this;
-  }
-
-  /**
-   * If set, the verdict will be returned to the user. Deprecated: Use `action` instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getReturnVerdict() {
-    return returnVerdict;
-  }
-
-  /**
-   * If set, the verdict will be returned to the user. Deprecated: Use `action` instead.
-   * @param returnVerdict returnVerdict or {@code null} for none
-   */
-  public GooglePrivacyDlpV2PolicyRule setReturnVerdict(java.lang.String returnVerdict) {
-    this.returnVerdict = returnVerdict;
     return this;
   }
 

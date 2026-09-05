@@ -38,22 +38,29 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   private java.util.Map<String, java.lang.String> headers;
 
   /**
-   * Optional. The name of the MCP server. Only applicable when `type` is `mcp_server`.
+   * Optional. The tool's GCP resource name, used to resolve the tool. Applicable when `type` is
+   * `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
+   * `projects/{project}/locations/{location}/.../mcpServers/{id}` or
+   * `projects/{project}/locations/{location}/.../endpoints/{id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` * `filesystem` *
-   * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `code_execution` * `endpoint` * `filesystem`
+   * * `google_search` * `mcp_server` * `url_context`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. The URL for the MCP server endpoint. Only applicable when `type` is `mcp_server`.
+   * Optional. Temporary: the tool's runtime reference, consumed by CreateAgent to create the
+   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`. It is duplicated here
+   * (the resource name is already in `name`) only because the Agent service is not yet connected to
+   * Agent Registry to derive it from `name`; the Task Service instead resolves it from Agent
+   * Registry (GetMcpServer / GetEndpoint) at task creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +86,10 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Optional. The name of the MCP server. Only applicable when `type` is `mcp_server`.
+   * Optional. The tool's GCP resource name, used to resolve the tool. Applicable when `type` is
+   * `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
+   * `projects/{project}/locations/{location}/.../mcpServers/{id}` or
+   * `projects/{project}/locations/{location}/.../endpoints/{id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -87,7 +97,10 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Optional. The name of the MCP server. Only applicable when `type` is `mcp_server`.
+   * Optional. The tool's GCP resource name, used to resolve the tool. Applicable when `type` is
+   * `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
+   * `projects/{project}/locations/{location}/.../mcpServers/{id}` or
+   * `projects/{project}/locations/{location}/.../endpoints/{id}`.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAiplatformV1AgentTool setName(java.lang.String name) {
@@ -96,8 +109,8 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` * `filesystem` *
-   * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `code_execution` * `endpoint` * `filesystem`
+   * * `google_search` * `mcp_server` * `url_context`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -105,8 +118,8 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` * `filesystem` *
-   * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `code_execution` * `endpoint` * `filesystem`
+   * * `google_search` * `mcp_server` * `url_context`
    * @param type type or {@code null} for none
    */
   public GoogleCloudAiplatformV1AgentTool setType(java.lang.String type) {
@@ -115,7 +128,11 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Optional. The URL for the MCP server endpoint. Only applicable when `type` is `mcp_server`.
+   * Optional. Temporary: the tool's runtime reference, consumed by CreateAgent to create the
+   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`. It is duplicated here
+   * (the resource name is already in `name`) only because the Agent service is not yet connected to
+   * Agent Registry to derive it from `name`; the Task Service instead resolves it from Agent
+   * Registry (GetMcpServer / GetEndpoint) at task creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -123,7 +140,11 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Optional. The URL for the MCP server endpoint. Only applicable when `type` is `mcp_server`.
+   * Optional. Temporary: the tool's runtime reference, consumed by CreateAgent to create the
+   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`. It is duplicated here
+   * (the resource name is already in `name`) only because the Agent service is not yet connected to
+   * Agent Registry to derive it from `name`; the Task Service instead resolves it from Agent
+   * Registry (GetMcpServer / GetEndpoint) at task creation.
    * @param url url or {@code null} for none
    */
   public GoogleCloudAiplatformV1AgentTool setUrl(java.lang.String url) {

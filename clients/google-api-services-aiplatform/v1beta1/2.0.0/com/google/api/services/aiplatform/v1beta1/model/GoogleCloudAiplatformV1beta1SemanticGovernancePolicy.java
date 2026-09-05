@@ -49,6 +49,14 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicy extends 
   private java.lang.String agentIdentity;
 
   /**
+   * Optional. Settings for customizing the agent's response to end users when this policy is
+   * evaluated, such as messages displayed when the policy denies a request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentResponseCustomization agentResponseCustomization;
+
+  /**
    * Output only. Timestamp when this SemanticGovernancePolicy was created.
    * The value may be {@code null}.
    */
@@ -145,6 +153,25 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicy extends 
    */
   public GoogleCloudAiplatformV1beta1SemanticGovernancePolicy setAgentIdentity(java.lang.String agentIdentity) {
     this.agentIdentity = agentIdentity;
+    return this;
+  }
+
+  /**
+   * Optional. Settings for customizing the agent's response to end users when this policy is
+   * evaluated, such as messages displayed when the policy denies a request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentResponseCustomization getAgentResponseCustomization() {
+    return agentResponseCustomization;
+  }
+
+  /**
+   * Optional. Settings for customizing the agent's response to end users when this policy is
+   * evaluated, such as messages displayed when the policy denies a request.
+   * @param agentResponseCustomization agentResponseCustomization or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SemanticGovernancePolicy setAgentResponseCustomization(GoogleCloudAiplatformV1beta1AgentResponseCustomization agentResponseCustomization) {
+    this.agentResponseCustomization = agentResponseCustomization;
     return this;
   }
 

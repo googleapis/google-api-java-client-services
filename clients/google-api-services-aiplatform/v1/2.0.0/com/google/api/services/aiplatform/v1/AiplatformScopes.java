@@ -23,6 +23,9 @@ package com.google.api.services.aiplatform.v1;
  */
 public class AiplatformScopes {
 
+  /** See, edit, configure, and delete your Google Cloud Vertex AI data and see the email address for your Google Account. */
+  public static final String AIPLATFORM = "https://www.googleapis.com/auth/aiplatform";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -36,6 +39,7 @@ public class AiplatformScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(AIPLATFORM);
     set.add(CLOUD_PLATFORM);
     set.add(CLOUD_PLATFORM_READ_ONLY);
     return java.util.Collections.unmodifiableSet(set);

@@ -103,6 +103,13 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
   private String updateTime;
 
   /**
+   * Optional. Immutable. Whether to provision the SandboxEnvironmentTemplate via the GKE TD pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useGkeTd;
+
+  /**
    * Output only. The timestamp when this SandboxEnvironmentTemplate was created.
    * @return value or {@code null} for none
    */
@@ -270,6 +277,23 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Whether to provision the SandboxEnvironmentTemplate via the GKE TD pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseGkeTd() {
+    return useGkeTd;
+  }
+
+  /**
+   * Optional. Immutable. Whether to provision the SandboxEnvironmentTemplate via the GKE TD pool.
+   * @param useGkeTd useGkeTd or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setUseGkeTd(java.lang.Boolean useGkeTd) {
+    this.useGkeTd = useGkeTd;
     return this;
   }
 

@@ -116,6 +116,13 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSnapshot extend
   private String updateTime;
 
   /**
+   * Output only. Whether the source SandboxEnvironment uses the GKE TD pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean useGkeTd;
+
+  /**
    * Output only. The timestamp when this SandboxEnvironmentSnapshot was created.
    * @return value or {@code null} for none
    */
@@ -317,6 +324,23 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentSnapshot extend
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentSnapshot setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. Whether the source SandboxEnvironment uses the GKE TD pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getUseGkeTd() {
+    return useGkeTd;
+  }
+
+  /**
+   * Output only. Whether the source SandboxEnvironment uses the GKE TD pool.
+   * @param useGkeTd useGkeTd or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentSnapshot setUseGkeTd(java.lang.Boolean useGkeTd) {
+    this.useGkeTd = useGkeTd;
     return this;
   }
 

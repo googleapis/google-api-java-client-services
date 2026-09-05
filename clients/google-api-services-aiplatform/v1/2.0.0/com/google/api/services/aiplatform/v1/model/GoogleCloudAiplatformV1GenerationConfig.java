@@ -249,6 +249,13 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
   private java.lang.Float topP;
 
   /**
+   * Optional. Config for translation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1TranslationConfig translationConfig;
+
+  /**
    * Optional. If enabled, audio timestamps will be included in the request to the model. This can
    * be useful for synchronizing audio with other modalities in the response.
    * @return value or {@code null} for none
@@ -751,6 +758,23 @@ public final class GoogleCloudAiplatformV1GenerationConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1GenerationConfig setTopP(java.lang.Float topP) {
     this.topP = topP;
+    return this;
+  }
+
+  /**
+   * Optional. Config for translation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TranslationConfig getTranslationConfig() {
+    return translationConfig;
+  }
+
+  /**
+   * Optional. Config for translation.
+   * @param translationConfig translationConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerationConfig setTranslationConfig(GoogleCloudAiplatformV1TranslationConfig translationConfig) {
+    this.translationConfig = translationConfig;
     return this;
   }
 

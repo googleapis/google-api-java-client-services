@@ -5809,9 +5809,7 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Permanently deletes the given KeyRing. All child resources of the KeyRing must have been
          * previously deleted using their corresponding Delete operations. The specified key ring will be
-         * immediately and permanently deleted upon calling this method. This action cannot be undone. Note:
-         * the key ring and its metadata will be remembered by KeyManagementService to prevent re-use of the
-         * key ring's resource name.
+         * immediately and permanently deleted upon calling this method. This action cannot be undone.
          *
          * Create a request for the method "keyRings.delete".
          *
@@ -5838,8 +5836,6 @@ public class CloudKMS extends com.google.api.client.googleapis.services.json.Abs
            * Permanently deletes the given KeyRing. All child resources of the KeyRing must have been
            * previously deleted using their corresponding Delete operations. The specified key ring will be
            * immediately and permanently deleted upon calling this method. This action cannot be undone.
-           * Note: the key ring and its metadata will be remembered by KeyManagementService to prevent re-
-           * use of the key ring's resource name.
            *
            * Create a request for the method "keyRings.delete".
            *

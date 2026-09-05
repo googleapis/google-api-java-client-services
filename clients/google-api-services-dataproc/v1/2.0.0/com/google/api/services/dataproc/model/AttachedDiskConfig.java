@@ -37,7 +37,7 @@ public final class AttachedDiskConfig extends com.google.api.client.json.Generic
   private java.lang.Integer diskSizeGb;
 
   /**
-   * Optional. Disk type.
+   * Optional. Deprecated: Use type instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,6 +62,16 @@ public final class AttachedDiskConfig extends com.google.api.client.json.Generic
   private java.lang.Long provisionedThroughput;
 
   /**
+   * Optional. Attached disk type. Currently only supports Hyperdisks. See
+   * https://cloud.google.com/compute/docs/disks/hyperdisks. Note: Hyperdisk Balanced High
+   * Availability is not supported.Allowed values are: hyperdisk-balanced hyperdisk-extreme
+   * hyperdisk-ml hyperdisk-throughput
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Optional. Disk size in GB.
    * @return value or {@code null} for none
    */
@@ -79,7 +89,7 @@ public final class AttachedDiskConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Disk type.
+   * Optional. Deprecated: Use type instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getDiskType() {
@@ -87,7 +97,7 @@ public final class AttachedDiskConfig extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Disk type.
+   * Optional. Deprecated: Use type instead.
    * @param diskType diskType or {@code null} for none
    */
   public AttachedDiskConfig setDiskType(java.lang.String diskType) {
@@ -134,6 +144,29 @@ public final class AttachedDiskConfig extends com.google.api.client.json.Generic
    */
   public AttachedDiskConfig setProvisionedThroughput(java.lang.Long provisionedThroughput) {
     this.provisionedThroughput = provisionedThroughput;
+    return this;
+  }
+
+  /**
+   * Optional. Attached disk type. Currently only supports Hyperdisks. See
+   * https://cloud.google.com/compute/docs/disks/hyperdisks. Note: Hyperdisk Balanced High
+   * Availability is not supported.Allowed values are: hyperdisk-balanced hyperdisk-extreme
+   * hyperdisk-ml hyperdisk-throughput
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. Attached disk type. Currently only supports Hyperdisks. See
+   * https://cloud.google.com/compute/docs/disks/hyperdisks. Note: Hyperdisk Balanced High
+   * Availability is not supported.Allowed values are: hyperdisk-balanced hyperdisk-extreme
+   * hyperdisk-ml hyperdisk-throughput
+   * @param type type or {@code null} for none
+   */
+  public AttachedDiskConfig setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

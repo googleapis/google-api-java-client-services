@@ -61,11 +61,42 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   private java.lang.String consumerProject;
 
   /**
+   * Output only. List of DNS automation info for the PSC auto connection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DnsAutomationInfo> dnsAutomationInfos;
+
+  static {
+    // hack to force ProGuard to consider DnsAutomationInfo used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DnsAutomationInfo.class);
+  }
+
+  /**
    * Output only. The IP address of the PSC service automation endpoint.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
+
+  /**
+   * Output only. The PSC service connection policy name. The format is
+   * "projects//regions//serviceConnectionPolicies/"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceConnectionPolicy;
+
+  /**
+   * Output only. The creation state or result of the connection policy. Possible values include: -
+   * `ACTIVE`: The policy was created successfully. - `PERMISSION_DENIED`: Sufficient permissions
+   * were not provided. Note that this field is an unstructured output and customers should not rely
+   * on the specific string value or error message directly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceConnectionPolicyCreationState;
 
   /**
    * Output only. The status of the PSC service automation connection. Possible values:
@@ -149,6 +180,23 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
   }
 
   /**
+   * Output only. List of DNS automation info for the PSC auto connection.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DnsAutomationInfo> getDnsAutomationInfos() {
+    return dnsAutomationInfos;
+  }
+
+  /**
+   * Output only. List of DNS automation info for the PSC auto connection.
+   * @param dnsAutomationInfos dnsAutomationInfos or {@code null} for none
+   */
+  public PscAutoConnectionConfig setDnsAutomationInfos(java.util.List<DnsAutomationInfo> dnsAutomationInfos) {
+    this.dnsAutomationInfos = dnsAutomationInfos;
+    return this;
+  }
+
+  /**
    * Output only. The IP address of the PSC service automation endpoint.
    * @return value or {@code null} for none
    */
@@ -162,6 +210,48 @@ public final class PscAutoConnectionConfig extends com.google.api.client.json.Ge
    */
   public PscAutoConnectionConfig setIpAddress(java.lang.String ipAddress) {
     this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
+   * Output only. The PSC service connection policy name. The format is
+   * "projects//regions//serviceConnectionPolicies/"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceConnectionPolicy() {
+    return serviceConnectionPolicy;
+  }
+
+  /**
+   * Output only. The PSC service connection policy name. The format is
+   * "projects//regions//serviceConnectionPolicies/"
+   * @param serviceConnectionPolicy serviceConnectionPolicy or {@code null} for none
+   */
+  public PscAutoConnectionConfig setServiceConnectionPolicy(java.lang.String serviceConnectionPolicy) {
+    this.serviceConnectionPolicy = serviceConnectionPolicy;
+    return this;
+  }
+
+  /**
+   * Output only. The creation state or result of the connection policy. Possible values include: -
+   * `ACTIVE`: The policy was created successfully. - `PERMISSION_DENIED`: Sufficient permissions
+   * were not provided. Note that this field is an unstructured output and customers should not rely
+   * on the specific string value or error message directly.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceConnectionPolicyCreationState() {
+    return serviceConnectionPolicyCreationState;
+  }
+
+  /**
+   * Output only. The creation state or result of the connection policy. Possible values include: -
+   * `ACTIVE`: The policy was created successfully. - `PERMISSION_DENIED`: Sufficient permissions
+   * were not provided. Note that this field is an unstructured output and customers should not rely
+   * on the specific string value or error message directly.
+   * @param serviceConnectionPolicyCreationState serviceConnectionPolicyCreationState or {@code null} for none
+   */
+  public PscAutoConnectionConfig setServiceConnectionPolicyCreationState(java.lang.String serviceConnectionPolicyCreationState) {
+    this.serviceConnectionPolicyCreationState = serviceConnectionPolicyCreationState;
     return this;
   }
 

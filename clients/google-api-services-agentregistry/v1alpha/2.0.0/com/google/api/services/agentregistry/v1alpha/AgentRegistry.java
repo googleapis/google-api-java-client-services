@@ -5848,13 +5848,9 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
            * can be used to restrict results based upon filterable fields, where equality operators
            * can be used. See [instructions](https://docs.cloud.google.com/agent-registry/search-
            * agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`,
-           * `OR`, and `()`. | Field | `=` | `<`, `>` |
-           * |----------------------------|-----|----------| | state | Yes | No | | targetState |
-           * Yes | No | | createTime | Yes | Yes | | updateTime | Yes | Yes | | publisher | Yes | No
-           * | | frontmatter.metadata. | Yes | No | | attributes.. | Yes | No | Examples: *
-           * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state. *
-           * `frontmatter.metadata.version=10` to restrict results to skills with a frontmatter
-           * metadata `version` equal to `10`.
+           * `OR`, and `()`. | Field | `=` | `<`, `>` | |--------------|-----|----------| | state |
+           * Yes | No | | targetState | Yes | No | | createTime | Yes | Yes | | updateTime | Yes |
+           * Yes | Examples: * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -5863,11 +5859,9 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
          to restrict results based upon filterable fields, where equality operators can be used. See
          [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools) for more
          details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`, `OR`, and `()`. | Field | `=` | `<`, `>` |
-         |----------------------------|-----|----------| | state | Yes | No | | targetState | Yes | No | |
-         createTime | Yes | Yes | | updateTime | Yes | Yes | | publisher | Yes | No | |
-         frontmatter.metadata. | Yes | No | | attributes.. | Yes | No | Examples: * `state=ACTIVE` to
-         restrict results to skills in the `ACTIVE` state. * `frontmatter.metadata.version=10` to restrict
-         results to skills with a frontmatter metadata `version` equal to `10`.
+         |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No | | createTime |
+         Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to restrict results to skills in
+         the `ACTIVE` state.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -5878,13 +5872,9 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
            * can be used to restrict results based upon filterable fields, where equality operators
            * can be used. See [instructions](https://docs.cloud.google.com/agent-registry/search-
            * agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`,
-           * `OR`, and `()`. | Field | `=` | `<`, `>` |
-           * |----------------------------|-----|----------| | state | Yes | No | | targetState |
-           * Yes | No | | createTime | Yes | Yes | | updateTime | Yes | Yes | | publisher | Yes | No
-           * | | frontmatter.metadata. | Yes | No | | attributes.. | Yes | No | Examples: *
-           * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state. *
-           * `frontmatter.metadata.version=10` to restrict results to skills with a frontmatter
-           * metadata `version` equal to `10`.
+           * `OR`, and `()`. | Field | `=` | `<`, `>` | |--------------|-----|----------| | state |
+           * Yes | No | | targetState | Yes | No | | createTime | Yes | Yes | | updateTime | Yes |
+           * Yes | Examples: * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -6283,12 +6273,9 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
            * equality operators can be used. See [instructions](https://docs.cloud.google.com/agent-
            * registry/search-agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`,
            * `NOT`, `AND`, `OR`, and `()`. | Field | `=` | `<`, `>` |
-           * |----------------------------|-----|----------| | state | Yes | No | | targetState |
-           * Yes | No | | createTime | Yes | Yes | | updateTime | Yes | Yes | | publisher | Yes | No
-           * | | frontmatter.metadata. | Yes | No | | attributes.. | Yes | No | Examples: *
-           * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state. *
-           * `frontmatter.metadata.version=10` to restrict results to skills with a frontmatter
-           * metadata `version` equal to `10`.
+           * |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No | |
+           * createTime | Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to
+           * restrict results to skills in the `ACTIVE` state.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -6297,11 +6284,9 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
          expressions can be used to restrict results based upon filterable fields, where equality operators
          can be used. See [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-
          tools) for more details. Allowed operators: `=`, `<`, `>`, `NOT`, `AND`, `OR`, and `()`. | Field |
-         `=` | `<`, `>` | |----------------------------|-----|----------| | state | Yes | No | | targetState
-         | Yes | No | | createTime | Yes | Yes | | updateTime | Yes | Yes | | publisher | Yes | No | |
-         frontmatter.metadata. | Yes | No | | attributes.. | Yes | No | Examples: * `state=ACTIVE` to
-         restrict results to skills in the `ACTIVE` state. * `frontmatter.metadata.version=10` to restrict
-         results to skills with a frontmatter metadata `version` equal to `10`.
+         `=` | `<`, `>` | |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No |
+         | createTime | Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to restrict
+         results to skills in the `ACTIVE` state.
            */
           public java.lang.String getFilter() {
             return filter;
@@ -6313,12 +6298,9 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
            * equality operators can be used. See [instructions](https://docs.cloud.google.com/agent-
            * registry/search-agents-and-tools) for more details. Allowed operators: `=`, `<`, `>`,
            * `NOT`, `AND`, `OR`, and `()`. | Field | `=` | `<`, `>` |
-           * |----------------------------|-----|----------| | state | Yes | No | | targetState |
-           * Yes | No | | createTime | Yes | Yes | | updateTime | Yes | Yes | | publisher | Yes | No
-           * | | frontmatter.metadata. | Yes | No | | attributes.. | Yes | No | Examples: *
-           * `state=ACTIVE` to restrict results to skills in the `ACTIVE` state. *
-           * `frontmatter.metadata.version=10` to restrict results to skills with a frontmatter
-           * metadata `version` equal to `10`.
+           * |--------------|-----|----------| | state | Yes | No | | targetState | Yes | No | |
+           * createTime | Yes | Yes | | updateTime | Yes | Yes | Examples: * `state=ACTIVE` to
+           * restrict results to skills in the `ACTIVE` state.
            */
           public Search setFilter(java.lang.String filter) {
             this.filter = filter;
@@ -6390,18 +6372,16 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
            * [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools)
            * for more details. Allowed operators: `=`, `:`, `NOT`, `AND`, `OR`, and `()`. Searchable
            * fields: | Field | `=` | `:` | `*` | Keyword Search |
-           * |----------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes
+           * |---------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes
            * | Yes | Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes
-           * | Included | | description | No | Yes | No | Included | | publisher | No | Yes | Yes |
-           * Excluded | | frontmatter.name | No | Yes | No | Included | | frontmatter.description |
-           * No | Yes | No | Included | | frontmatter.compatibility | No | Yes | No | Included | |
-           * frontmatter.license | No | Yes | No | Included | | frontmatter.metadata. | No | Yes |
-           * No | Excluded | | attributes.. | No | Yes | No | Excluded | Examples: *
+           * | Included | | description | No | Yes | No | Included | | frontmatter.name | No | Yes |
+           * No | Included | | frontmatter.description | No | Yes | No | Included | |
+           * frontmatter.compatibility | No | Yes | No | Included | | frontmatter.license | No | Yes
+           * | No | Included | Examples: *
            * `skillId="urn:skill:projects-1234:locations:global:private-important-skill"` to find
            * the skill with the specified skill ID. * `name:important` to find skills whose name
            * contains `important` as a word. * `displayName:works*` to find skills whose display
-           * name contains words that start with `works`. * `frontmatter.metadata.author:alice` to
-           * find skills whose frontmatter metadata `author` contains words that start with `alice`.
+           * name contains words that start with `works`.
            */
           @com.google.api.client.util.Key
           private java.lang.String searchString;
@@ -6412,17 +6392,15 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
          `*`. See [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools) for
          more details. Allowed operators: `=`, `:`, `NOT`, `AND`, `OR`, and `()`. Searchable fields: | Field
          | `=` | `:` | `*` | Keyword Search |
-         |----------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes | Yes |
+         |---------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes | Yes |
          Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes | Included | |
-         description | No | Yes | No | Included | | publisher | No | Yes | Yes | Excluded | |
-         frontmatter.name | No | Yes | No | Included | | frontmatter.description | No | Yes | No | Included
-         | | frontmatter.compatibility | No | Yes | No | Included | | frontmatter.license | No | Yes | No |
-         Included | | frontmatter.metadata. | No | Yes | No | Excluded | | attributes.. | No | Yes | No |
-         Excluded | Examples: * `skillId="urn:skill:projects-1234:locations:global:private-important-skill"`
-         to find the skill with the specified skill ID. * `name:important` to find skills whose name
-         contains `important` as a word. * `displayName:works*` to find skills whose display name contains
-         words that start with `works`. * `frontmatter.metadata.author:alice` to find skills whose
-         frontmatter metadata `author` contains words that start with `alice`.
+         description | No | Yes | No | Included | | frontmatter.name | No | Yes | No | Included | |
+         frontmatter.description | No | Yes | No | Included | | frontmatter.compatibility | No | Yes | No |
+         Included | | frontmatter.license | No | Yes | No | Included | Examples: *
+         `skillId="urn:skill:projects-1234:locations:global:private-important-skill"` to find the skill with
+         the specified skill ID. * `name:important` to find skills whose name contains `important` as a
+         word. * `displayName:works*` to find skills whose display name contains words that start with
+         `works`.
            */
           public java.lang.String getSearchString() {
             return searchString;
@@ -6436,18 +6414,16 @@ public class AgentRegistry extends com.google.api.client.googleapis.services.jso
            * [instructions](https://docs.cloud.google.com/agent-registry/search-agents-and-tools)
            * for more details. Allowed operators: `=`, `:`, `NOT`, `AND`, `OR`, and `()`. Searchable
            * fields: | Field | `=` | `:` | `*` | Keyword Search |
-           * |----------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes
+           * |---------------------------|-----|-----|-----|----------------| | skillId | Yes | Yes
            * | Yes | Included | | name | No | Yes | Yes | Included | | displayName | No | Yes | Yes
-           * | Included | | description | No | Yes | No | Included | | publisher | No | Yes | Yes |
-           * Excluded | | frontmatter.name | No | Yes | No | Included | | frontmatter.description |
-           * No | Yes | No | Included | | frontmatter.compatibility | No | Yes | No | Included | |
-           * frontmatter.license | No | Yes | No | Included | | frontmatter.metadata. | No | Yes |
-           * No | Excluded | | attributes.. | No | Yes | No | Excluded | Examples: *
+           * | Included | | description | No | Yes | No | Included | | frontmatter.name | No | Yes |
+           * No | Included | | frontmatter.description | No | Yes | No | Included | |
+           * frontmatter.compatibility | No | Yes | No | Included | | frontmatter.license | No | Yes
+           * | No | Included | Examples: *
            * `skillId="urn:skill:projects-1234:locations:global:private-important-skill"` to find
            * the skill with the specified skill ID. * `name:important` to find skills whose name
            * contains `important` as a word. * `displayName:works*` to find skills whose display
-           * name contains words that start with `works`. * `frontmatter.metadata.author:alice` to
-           * find skills whose frontmatter metadata `author` contains words that start with `alice`.
+           * name contains words that start with `works`.
            */
           public Search setSearchString(java.lang.String searchString) {
             this.searchString = searchString;

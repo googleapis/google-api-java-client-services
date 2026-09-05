@@ -5165,9 +5165,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Advise on whether extending an existing Future Reservation is possible based on the desired
-     * extension end time. If capacity is not available for the entire requested duration, the method
-     * will recommend the longest possible extension.
+     * Advises on whether extending an existing future reservation is possible based on the desired
+     * extension end time. If capacity isn't available for the entire requested duration, the method
+     * recommends the longest possible extension.
      *
      * Create a request for the method "advice.calendarModeExtension".
      *
@@ -5197,9 +5197,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
       /**
-       * Advise on whether extending an existing Future Reservation is possible based on the desired
-       * extension end time. If capacity is not available for the entire requested duration, the method
-       * will recommend the longest possible extension.
+       * Advises on whether extending an existing future reservation is possible based on the desired
+       * extension end time. If capacity isn't available for the entire requested duration, the method
+       * recommends the longest possible extension.
        *
        * Create a request for the method "advice.calendarModeExtension".
        *

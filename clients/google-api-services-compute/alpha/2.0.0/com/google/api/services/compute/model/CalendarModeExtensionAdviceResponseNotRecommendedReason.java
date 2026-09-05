@@ -30,9 +30,9 @@ package com.google.api.services.compute.model;
 public final class CalendarModeExtensionAdviceResponseNotRecommendedReason extends com.google.api.client.json.GenericJson {
 
   /**
-   * Details (human readable) describing why the recommendation was not provided. For example, if
-   * the status is CONDITION_NOT_MET, then this field will contain information about why the
-   * requested extension duration is not eligible.
+   * Human-readable details describing why the recommendation wasn't provided. For example, if the
+   * status is CONDITIONS_NOT_MET, this field explains why the requested extension duration isn't
+   * possible.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +46,9 @@ public final class CalendarModeExtensionAdviceResponseNotRecommendedReason exten
   private java.lang.String status;
 
   /**
-   * Details (human readable) describing why the recommendation was not provided. For example, if
-   * the status is CONDITION_NOT_MET, then this field will contain information about why the
-   * requested extension duration is not eligible.
+   * Human-readable details describing why the recommendation wasn't provided. For example, if the
+   * status is CONDITIONS_NOT_MET, this field explains why the requested extension duration isn't
+   * possible.
    * @return value or {@code null} for none
    */
   public java.lang.String getDetails() {
@@ -56,9 +56,9 @@ public final class CalendarModeExtensionAdviceResponseNotRecommendedReason exten
   }
 
   /**
-   * Details (human readable) describing why the recommendation was not provided. For example, if
-   * the status is CONDITION_NOT_MET, then this field will contain information about why the
-   * requested extension duration is not eligible.
+   * Human-readable details describing why the recommendation wasn't provided. For example, if the
+   * status is CONDITIONS_NOT_MET, this field explains why the requested extension duration isn't
+   * possible.
    * @param details details or {@code null} for none
    */
   public CalendarModeExtensionAdviceResponseNotRecommendedReason setDetails(java.lang.String details) {

@@ -443,6 +443,14 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
    * This signifies the networking tier used for configuring this load balancer and can only take
    * the following values:PREMIUM, STANDARD.
    *
@@ -559,6 +567,15 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLinkWithId;
+
+  /**
+   * Optional. Producer Service's Service class ID for the region of this forwarding rule. Can only
+   * be used with network_attachment. It is not possible to use on its own; however,
+   * network_attachment can be used without service_class_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceClassId;
 
   /**
    * Service Directory resources to register this forwarding rule with. Currently, only supports a
@@ -1603,6 +1620,25 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public ForwardingRule setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
+    return this;
+  }
+
+  /**
    * This signifies the networking tier used for configuring this load balancer and can only take
    * the following values:PREMIUM, STANDARD.
    *
@@ -1865,6 +1901,27 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setSelfLinkWithId(java.lang.String selfLinkWithId) {
     this.selfLinkWithId = selfLinkWithId;
+    return this;
+  }
+
+  /**
+   * Optional. Producer Service's Service class ID for the region of this forwarding rule. Can only
+   * be used with network_attachment. It is not possible to use on its own; however,
+   * network_attachment can be used without service_class_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceClassId() {
+    return serviceClassId;
+  }
+
+  /**
+   * Optional. Producer Service's Service class ID for the region of this forwarding rule. Can only
+   * be used with network_attachment. It is not possible to use on its own; however,
+   * network_attachment can be used without service_class_id.
+   * @param serviceClassId serviceClassId or {@code null} for none
+   */
+  public ForwardingRule setServiceClassId(java.lang.String serviceClassId) {
+    this.serviceClassId = serviceClassId;
     return this;
   }
 

@@ -471,6 +471,14 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
    * Configures traffic steering properties of internal passthrough Network Load Balancers.
    *
    * networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
@@ -607,6 +615,15 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> serviceBindings;
+
+  /**
+   * Optional. The service class ID associated with this resource. Producer Service's Service class
+   * ID for the region of this backend service. Can only be used with network_attachment. It is not
+   * possible to use on its own; however, network_attachment can be used without service_class_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceClassId;
 
   /**
    * URL to networkservices.ServiceLbPolicy resource.
@@ -1669,6 +1686,25 @@ public final class BackendService extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public BackendService setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
+    return this;
+  }
+
+  /**
    * Configures traffic steering properties of internal passthrough Network Load Balancers.
    *
    * networkPassThroughLbTrafficPolicy cannot be specified with haPolicy.
@@ -1980,6 +2016,27 @@ public final class BackendService extends com.google.api.client.json.GenericJson
    */
   public BackendService setServiceBindings(java.util.List<java.lang.String> serviceBindings) {
     this.serviceBindings = serviceBindings;
+    return this;
+  }
+
+  /**
+   * Optional. The service class ID associated with this resource. Producer Service's Service class
+   * ID for the region of this backend service. Can only be used with network_attachment. It is not
+   * possible to use on its own; however, network_attachment can be used without service_class_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceClassId() {
+    return serviceClassId;
+  }
+
+  /**
+   * Optional. The service class ID associated with this resource. Producer Service's Service class
+   * ID for the region of this backend service. Can only be used with network_attachment. It is not
+   * possible to use on its own; however, network_attachment can be used without service_class_id.
+   * @param serviceClassId serviceClassId or {@code null} for none
+   */
+  public BackendService setServiceClassId(java.lang.String serviceClassId) {
+    this.serviceClassId = serviceClassId;
     return this;
   }
 

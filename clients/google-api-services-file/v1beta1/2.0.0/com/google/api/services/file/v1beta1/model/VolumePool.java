@@ -30,11 +30,25 @@ package com.google.api.services.file.v1beta1.model;
 public final class VolumePool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The number of IOPs provisioned per active volume.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer activeVolumeIops;
+
+  /**
    * Output only. The time when the volume pool was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
+
+  /**
+   * Optional. The default quota per volume in MiB. Default: 1024 MiB.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer defaultVolumeQuotaMib;
 
   /**
    * Optional. A description of the volume pool with 2048 characters or less.
@@ -44,88 +58,11 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Optional. The page size to use when listing instances.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer instanceListPageSize;
-
-  /**
-   * Optional. Instance name prefix.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String instanceNamePrefix;
-
-  /**
-   * Optional. Instance template details.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private InstanceTemplate instanceTemplate;
-
-  /**
    * Optional. Resource labels to represent user provided metadata.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
-
-  /**
-   * Optional. The maximum number of candidates to fetch when acquiring a volume.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxAcquireCandidates;
-
-  /**
-   * Optional. Maximum number of instances to create.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxInstances;
-
-  /**
-   * Optional. The maximum number of pending instance creation requests.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxPendingInstanceCreations;
-
-  /**
-   * Optional. The maximum number of pending volume creation requests per instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxPendingVolumeCreationsPerInstance;
-
-  /**
-   * Optional. The maximum number of pending volume deletion requests per instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxPendingVolumeDeletionsPerInstance;
-
-  /**
-   * Optional. Maximum number of volumes per instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer maxVolumesPerInstance;
-
-  /**
-   * Optional. Minimum number of available volumes to maintain.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer minAvailableVolumes;
-
-  /**
-   * Optional. Minimum number of instances to create.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer minInstances;
 
   /**
    * Identifier. The resource name of the volume pool, in the format
@@ -136,46 +73,36 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. The ratio of Negba instances to maintain in the volume pool, between 0 and 1.
+   * Required. The VPC network to which the VolumePool should be attached. Only Private Service
+   * Connect (PSC) is supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Float negbaInstanceRatio;
+  private java.lang.String network;
 
   /**
-   * Optional. The maximum number of operations to poll in a single reconciliation run.
+   * Output only. System-assigned unique identifier for the volume pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer operationPollLimit;
+  private java.lang.String uid;
 
   /**
-   * Output only. The volume pool state.
-   * The value may be {@code null}.
+   * Optional. The number of IOPs provisioned per active volume.
+   * @return value or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String state;
+  public java.lang.Integer getActiveVolumeIops() {
+    return activeVolumeIops;
+  }
 
   /**
-   * Output only. Unique ID of the resource, as defined by CCFE.
-   * The value may be {@code null}.
+   * Optional. The number of IOPs provisioned per active volume.
+   * @param activeVolumeIops activeVolumeIops or {@code null} for none
    */
-  @com.google.api.client.util.Key
-  private java.lang.String uniqueId;
-
-  /**
-   * Optional. The number of volumes to create in a single batch.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer volumeBatchSize;
-
-  /**
-   * Optional. Volume size in MiB.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Integer volumeSizeMb;
+  public VolumePool setActiveVolumeIops(java.lang.Integer activeVolumeIops) {
+    this.activeVolumeIops = activeVolumeIops;
+    return this;
+  }
 
   /**
    * Output only. The time when the volume pool was created.
@@ -191,6 +118,23 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
    */
   public VolumePool setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The default quota per volume in MiB. Default: 1024 MiB.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getDefaultVolumeQuotaMib() {
+    return defaultVolumeQuotaMib;
+  }
+
+  /**
+   * Optional. The default quota per volume in MiB. Default: 1024 MiB.
+   * @param defaultVolumeQuotaMib defaultVolumeQuotaMib or {@code null} for none
+   */
+  public VolumePool setDefaultVolumeQuotaMib(java.lang.Integer defaultVolumeQuotaMib) {
+    this.defaultVolumeQuotaMib = defaultVolumeQuotaMib;
     return this;
   }
 
@@ -212,57 +156,6 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The page size to use when listing instances.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getInstanceListPageSize() {
-    return instanceListPageSize;
-  }
-
-  /**
-   * Optional. The page size to use when listing instances.
-   * @param instanceListPageSize instanceListPageSize or {@code null} for none
-   */
-  public VolumePool setInstanceListPageSize(java.lang.Integer instanceListPageSize) {
-    this.instanceListPageSize = instanceListPageSize;
-    return this;
-  }
-
-  /**
-   * Optional. Instance name prefix.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getInstanceNamePrefix() {
-    return instanceNamePrefix;
-  }
-
-  /**
-   * Optional. Instance name prefix.
-   * @param instanceNamePrefix instanceNamePrefix or {@code null} for none
-   */
-  public VolumePool setInstanceNamePrefix(java.lang.String instanceNamePrefix) {
-    this.instanceNamePrefix = instanceNamePrefix;
-    return this;
-  }
-
-  /**
-   * Optional. Instance template details.
-   * @return value or {@code null} for none
-   */
-  public InstanceTemplate getInstanceTemplate() {
-    return instanceTemplate;
-  }
-
-  /**
-   * Optional. Instance template details.
-   * @param instanceTemplate instanceTemplate or {@code null} for none
-   */
-  public VolumePool setInstanceTemplate(InstanceTemplate instanceTemplate) {
-    this.instanceTemplate = instanceTemplate;
-    return this;
-  }
-
-  /**
    * Optional. Resource labels to represent user provided metadata.
    * @return value or {@code null} for none
    */
@@ -276,142 +169,6 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
    */
   public VolumePool setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
-    return this;
-  }
-
-  /**
-   * Optional. The maximum number of candidates to fetch when acquiring a volume.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxAcquireCandidates() {
-    return maxAcquireCandidates;
-  }
-
-  /**
-   * Optional. The maximum number of candidates to fetch when acquiring a volume.
-   * @param maxAcquireCandidates maxAcquireCandidates or {@code null} for none
-   */
-  public VolumePool setMaxAcquireCandidates(java.lang.Integer maxAcquireCandidates) {
-    this.maxAcquireCandidates = maxAcquireCandidates;
-    return this;
-  }
-
-  /**
-   * Optional. Maximum number of instances to create.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxInstances() {
-    return maxInstances;
-  }
-
-  /**
-   * Optional. Maximum number of instances to create.
-   * @param maxInstances maxInstances or {@code null} for none
-   */
-  public VolumePool setMaxInstances(java.lang.Integer maxInstances) {
-    this.maxInstances = maxInstances;
-    return this;
-  }
-
-  /**
-   * Optional. The maximum number of pending instance creation requests.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxPendingInstanceCreations() {
-    return maxPendingInstanceCreations;
-  }
-
-  /**
-   * Optional. The maximum number of pending instance creation requests.
-   * @param maxPendingInstanceCreations maxPendingInstanceCreations or {@code null} for none
-   */
-  public VolumePool setMaxPendingInstanceCreations(java.lang.Integer maxPendingInstanceCreations) {
-    this.maxPendingInstanceCreations = maxPendingInstanceCreations;
-    return this;
-  }
-
-  /**
-   * Optional. The maximum number of pending volume creation requests per instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxPendingVolumeCreationsPerInstance() {
-    return maxPendingVolumeCreationsPerInstance;
-  }
-
-  /**
-   * Optional. The maximum number of pending volume creation requests per instance.
-   * @param maxPendingVolumeCreationsPerInstance maxPendingVolumeCreationsPerInstance or {@code null} for none
-   */
-  public VolumePool setMaxPendingVolumeCreationsPerInstance(java.lang.Integer maxPendingVolumeCreationsPerInstance) {
-    this.maxPendingVolumeCreationsPerInstance = maxPendingVolumeCreationsPerInstance;
-    return this;
-  }
-
-  /**
-   * Optional. The maximum number of pending volume deletion requests per instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxPendingVolumeDeletionsPerInstance() {
-    return maxPendingVolumeDeletionsPerInstance;
-  }
-
-  /**
-   * Optional. The maximum number of pending volume deletion requests per instance.
-   * @param maxPendingVolumeDeletionsPerInstance maxPendingVolumeDeletionsPerInstance or {@code null} for none
-   */
-  public VolumePool setMaxPendingVolumeDeletionsPerInstance(java.lang.Integer maxPendingVolumeDeletionsPerInstance) {
-    this.maxPendingVolumeDeletionsPerInstance = maxPendingVolumeDeletionsPerInstance;
-    return this;
-  }
-
-  /**
-   * Optional. Maximum number of volumes per instance.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMaxVolumesPerInstance() {
-    return maxVolumesPerInstance;
-  }
-
-  /**
-   * Optional. Maximum number of volumes per instance.
-   * @param maxVolumesPerInstance maxVolumesPerInstance or {@code null} for none
-   */
-  public VolumePool setMaxVolumesPerInstance(java.lang.Integer maxVolumesPerInstance) {
-    this.maxVolumesPerInstance = maxVolumesPerInstance;
-    return this;
-  }
-
-  /**
-   * Optional. Minimum number of available volumes to maintain.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMinAvailableVolumes() {
-    return minAvailableVolumes;
-  }
-
-  /**
-   * Optional. Minimum number of available volumes to maintain.
-   * @param minAvailableVolumes minAvailableVolumes or {@code null} for none
-   */
-  public VolumePool setMinAvailableVolumes(java.lang.Integer minAvailableVolumes) {
-    this.minAvailableVolumes = minAvailableVolumes;
-    return this;
-  }
-
-  /**
-   * Optional. Minimum number of instances to create.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getMinInstances() {
-    return minInstances;
-  }
-
-  /**
-   * Optional. Minimum number of instances to create.
-   * @param minInstances minInstances or {@code null} for none
-   */
-  public VolumePool setMinInstances(java.lang.Integer minInstances) {
-    this.minInstances = minInstances;
     return this;
   }
 
@@ -435,104 +192,38 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ratio of Negba instances to maintain in the volume pool, between 0 and 1.
+   * Required. The VPC network to which the VolumePool should be attached. Only Private Service
+   * Connect (PSC) is supported.
    * @return value or {@code null} for none
    */
-  public java.lang.Float getNegbaInstanceRatio() {
-    return negbaInstanceRatio;
+  public java.lang.String getNetwork() {
+    return network;
   }
 
   /**
-   * Optional. The ratio of Negba instances to maintain in the volume pool, between 0 and 1.
-   * @param negbaInstanceRatio negbaInstanceRatio or {@code null} for none
+   * Required. The VPC network to which the VolumePool should be attached. Only Private Service
+   * Connect (PSC) is supported.
+   * @param network network or {@code null} for none
    */
-  public VolumePool setNegbaInstanceRatio(java.lang.Float negbaInstanceRatio) {
-    this.negbaInstanceRatio = negbaInstanceRatio;
+  public VolumePool setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 
   /**
-   * Optional. The maximum number of operations to poll in a single reconciliation run.
+   * Output only. System-assigned unique identifier for the volume pool.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getOperationPollLimit() {
-    return operationPollLimit;
+  public java.lang.String getUid() {
+    return uid;
   }
 
   /**
-   * Optional. The maximum number of operations to poll in a single reconciliation run.
-   * @param operationPollLimit operationPollLimit or {@code null} for none
+   * Output only. System-assigned unique identifier for the volume pool.
+   * @param uid uid or {@code null} for none
    */
-  public VolumePool setOperationPollLimit(java.lang.Integer operationPollLimit) {
-    this.operationPollLimit = operationPollLimit;
-    return this;
-  }
-
-  /**
-   * Output only. The volume pool state.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getState() {
-    return state;
-  }
-
-  /**
-   * Output only. The volume pool state.
-   * @param state state or {@code null} for none
-   */
-  public VolumePool setState(java.lang.String state) {
-    this.state = state;
-    return this;
-  }
-
-  /**
-   * Output only. Unique ID of the resource, as defined by CCFE.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getUniqueId() {
-    return uniqueId;
-  }
-
-  /**
-   * Output only. Unique ID of the resource, as defined by CCFE.
-   * @param uniqueId uniqueId or {@code null} for none
-   */
-  public VolumePool setUniqueId(java.lang.String uniqueId) {
-    this.uniqueId = uniqueId;
-    return this;
-  }
-
-  /**
-   * Optional. The number of volumes to create in a single batch.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getVolumeBatchSize() {
-    return volumeBatchSize;
-  }
-
-  /**
-   * Optional. The number of volumes to create in a single batch.
-   * @param volumeBatchSize volumeBatchSize or {@code null} for none
-   */
-  public VolumePool setVolumeBatchSize(java.lang.Integer volumeBatchSize) {
-    this.volumeBatchSize = volumeBatchSize;
-    return this;
-  }
-
-  /**
-   * Optional. Volume size in MiB.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Integer getVolumeSizeMb() {
-    return volumeSizeMb;
-  }
-
-  /**
-   * Optional. Volume size in MiB.
-   * @param volumeSizeMb volumeSizeMb or {@code null} for none
-   */
-  public VolumePool setVolumeSizeMb(java.lang.Integer volumeSizeMb) {
-    this.volumeSizeMb = volumeSizeMb;
+  public VolumePool setUid(java.lang.String uid) {
+    this.uid = uid;
     return this;
   }
 

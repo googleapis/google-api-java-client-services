@@ -39,12 +39,20 @@ public final class Share extends com.google.api.client.json.GenericJson {
   private java.lang.String backup;
 
   /**
-   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater
-   * than 0.
+   * Optional. File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must
+   * be greater than 0. Exactly one of capacity_gb or capacity_mb must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long capacityGb;
+
+  /**
+   * Optional. File share capacity in Megabytes (MB). Must be greater than 0. Exactly one of
+   * capacity_gb or capacity_mb must be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long capacityMb;
 
   /**
    * Output only. The time when the share was created.
@@ -126,8 +134,8 @@ public final class Share extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater
-   * than 0.
+   * Optional. File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must
+   * be greater than 0. Exactly one of capacity_gb or capacity_mb must be specified.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCapacityGb() {
@@ -135,12 +143,31 @@ public final class Share extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must be greater
-   * than 0.
+   * Optional. File share capacity in gigabytes (GB). Filestore defines 1 GB as 1024^3 bytes. Must
+   * be greater than 0. Exactly one of capacity_gb or capacity_mb must be specified.
    * @param capacityGb capacityGb or {@code null} for none
    */
   public Share setCapacityGb(java.lang.Long capacityGb) {
     this.capacityGb = capacityGb;
+    return this;
+  }
+
+  /**
+   * Optional. File share capacity in Megabytes (MB). Must be greater than 0. Exactly one of
+   * capacity_gb or capacity_mb must be specified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getCapacityMb() {
+    return capacityMb;
+  }
+
+  /**
+   * Optional. File share capacity in Megabytes (MB). Must be greater than 0. Exactly one of
+   * capacity_gb or capacity_mb must be specified.
+   * @param capacityMb capacityMb or {@code null} for none
+   */
+  public Share setCapacityMb(java.lang.Long capacityMb) {
+    this.capacityMb = capacityMb;
     return this;
   }
 

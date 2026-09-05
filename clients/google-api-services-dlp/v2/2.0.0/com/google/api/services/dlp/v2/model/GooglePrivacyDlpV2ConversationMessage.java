@@ -31,11 +31,20 @@ package com.google.api.services.dlp.v2.model;
 public final class GooglePrivacyDlpV2ConversationMessage extends com.google.api.client.json.GenericJson {
 
   /**
-   * The contents of this message.
+   * Deprecated: Use `message_parts` instead. The contents of this message. Only one of `content`
+   * and `message_parts` can be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String content;
+
+  /**
+   * Optional. The parts of the message. Restricted to being at most a single text item. Only one of
+   * `content` and `message_parts` can be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GooglePrivacyDlpV2MessagePart> messageParts;
 
   /**
    * The type of message.
@@ -54,7 +63,8 @@ public final class GooglePrivacyDlpV2ConversationMessage extends com.google.api.
   private java.lang.String participantId;
 
   /**
-   * The contents of this message.
+   * Deprecated: Use `message_parts` instead. The contents of this message. Only one of `content`
+   * and `message_parts` can be set.
    * @return value or {@code null} for none
    */
   public java.lang.String getContent() {
@@ -62,11 +72,31 @@ public final class GooglePrivacyDlpV2ConversationMessage extends com.google.api.
   }
 
   /**
-   * The contents of this message.
+   * Deprecated: Use `message_parts` instead. The contents of this message. Only one of `content`
+   * and `message_parts` can be set.
    * @param content content or {@code null} for none
    */
   public GooglePrivacyDlpV2ConversationMessage setContent(java.lang.String content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Optional. The parts of the message. Restricted to being at most a single text item. Only one of
+   * `content` and `message_parts` can be set.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GooglePrivacyDlpV2MessagePart> getMessageParts() {
+    return messageParts;
+  }
+
+  /**
+   * Optional. The parts of the message. Restricted to being at most a single text item. Only one of
+   * `content` and `message_parts` can be set.
+   * @param messageParts messageParts or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ConversationMessage setMessageParts(java.util.List<GooglePrivacyDlpV2MessagePart> messageParts) {
+    this.messageParts = messageParts;
     return this;
   }
 

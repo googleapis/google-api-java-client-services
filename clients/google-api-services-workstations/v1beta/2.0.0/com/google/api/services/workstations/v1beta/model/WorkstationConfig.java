@@ -213,9 +213,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   private java.lang.String idleAction;
 
   /**
-   * Optional. Number of seconds to wait before automatically stopping a workstation after it last
-   * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
-   * this configuration should never time out due to idleness. Provide
+   * Optional. Number of seconds to wait before automatically stopping or suspending a workstation
+   * after it last received user traffic. See idle_action to configure whether to stop or suspend
+   * idle workstations. A value of `"0s"` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
    * `"7200s"` (2 hours). The default is `"1200s"` (20 minutes).
@@ -304,13 +305,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * that workstations be stopped daily so that security updates can be applied upon restart. The
    * idle_timeout and running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time, regardless of whether or not
-   * the workstations are idle. Provide duration terminated by `s` for seconds—for example,
-   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
-   * workstations using this configuration should never time out. If encryption_key is set, it must
-   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
-   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
-   * time. This is strongly discouraged because you incur costs and will not pick up security
-   * updates.
+   * the workstations are idle. Note: This timeout applies to workstations in the following states:
+   * * STATE_RUNNING * STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
+   * duration terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults to
+   * `"43200s"` (12 hours). A value of `"0s"` indicates that workstations using this configuration
+   * should never time out. If encryption_key is set, it must be greater than `"0s"` and less than
+   * `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that Cloud Workstations VMs created
+   * with this configuration have no maximum running time. This is strongly discouraged because you
+   * incur costs and will not pick up security updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -717,9 +719,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Number of seconds to wait before automatically stopping a workstation after it last
-   * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
-   * this configuration should never time out due to idleness. Provide
+   * Optional. Number of seconds to wait before automatically stopping or suspending a workstation
+   * after it last received user traffic. See idle_action to configure whether to stop or suspend
+   * idle workstations. A value of `"0s"` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
    * `"7200s"` (2 hours). The default is `"1200s"` (20 minutes).
@@ -730,9 +733,10 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Number of seconds to wait before automatically stopping a workstation after it last
-   * received user traffic. A value of `"0s"` indicates that Cloud Workstations VMs created with
-   * this configuration should never time out due to idleness. Provide
+   * Optional. Number of seconds to wait before automatically stopping or suspending a workstation
+   * after it last received user traffic. See idle_action to configure whether to stop or suspend
+   * idle workstations. A value of `"0s"` indicates that Cloud Workstations VMs created with this
+   * configuration should never time out due to idleness. Provide
    * [duration](https://developers.google.com/protocol-
    * buffers/docs/reference/google.protobuf#duration) terminated by `s` for seconds—for example,
    * `"7200s"` (2 hours). The default is `"1200s"` (20 minutes).
@@ -895,13 +899,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * that workstations be stopped daily so that security updates can be applied upon restart. The
    * idle_timeout and running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time, regardless of whether or not
-   * the workstations are idle. Provide duration terminated by `s` for seconds—for example,
-   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
-   * workstations using this configuration should never time out. If encryption_key is set, it must
-   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
-   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
-   * time. This is strongly discouraged because you incur costs and will not pick up security
-   * updates.
+   * the workstations are idle. Note: This timeout applies to workstations in the following states:
+   * * STATE_RUNNING * STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
+   * duration terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults to
+   * `"43200s"` (12 hours). A value of `"0s"` indicates that workstations using this configuration
+   * should never time out. If encryption_key is set, it must be greater than `"0s"` and less than
+   * `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that Cloud Workstations VMs created
+   * with this configuration have no maximum running time. This is strongly discouraged because you
+   * incur costs and will not pick up security updates.
    * @return value or {@code null} for none
    */
   public String getRunningTimeout() {
@@ -913,13 +918,14 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * that workstations be stopped daily so that security updates can be applied upon restart. The
    * idle_timeout and running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time, regardless of whether or not
-   * the workstations are idle. Provide duration terminated by `s` for seconds—for example,
-   * `"54000s"` (15 hours). Defaults to `"43200s"` (12 hours). A value of `"0s"` indicates that
-   * workstations using this configuration should never time out. If encryption_key is set, it must
-   * be greater than `"0s"` and less than `"86400s"` (24 hours). Warning: A value of `"0s"`
-   * indicates that Cloud Workstations VMs created with this configuration have no maximum running
-   * time. This is strongly discouraged because you incur costs and will not pick up security
-   * updates.
+   * the workstations are idle. Note: This timeout applies to workstations in the following states:
+   * * STATE_RUNNING * STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
+   * duration terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults to
+   * `"43200s"` (12 hours). A value of `"0s"` indicates that workstations using this configuration
+   * should never time out. If encryption_key is set, it must be greater than `"0s"` and less than
+   * `"86400s"` (24 hours). Warning: A value of `"0s"` indicates that Cloud Workstations VMs created
+   * with this configuration have no maximum running time. This is strongly discouraged because you
+   * incur costs and will not pick up security updates.
    * @param runningTimeout runningTimeout or {@code null} for none
    */
   public WorkstationConfig setRunningTimeout(String runningTimeout) {

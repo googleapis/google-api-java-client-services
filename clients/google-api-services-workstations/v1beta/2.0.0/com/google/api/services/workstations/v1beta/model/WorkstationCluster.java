@@ -52,6 +52,16 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
   }
 
   /**
+   * Optional. Specifies a custom base URL for the Google Cloud Console. This field is intended to
+   * be user-configurable to support data residency for Cloud Workstations users. This will be used
+   * generally for user journeys where users need to go to the Cloud Console from Code OSS. When the
+   * Auth and Launch URLs are unset, this will be used as the base URL for those endpoints if set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String consoleBaseUrl;
+
+  /**
    * Output only. The private IP address of the control plane for this workstation cluster.
    * Workstation VMs need access to this IP address to work with the service, so make sure that your
    * firewall rules allow egress from the workstation VMs to this address.
@@ -250,6 +260,29 @@ public final class WorkstationCluster extends com.google.api.client.json.Generic
    */
   public WorkstationCluster setConditions(java.util.List<Status> conditions) {
     this.conditions = conditions;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies a custom base URL for the Google Cloud Console. This field is intended to
+   * be user-configurable to support data residency for Cloud Workstations users. This will be used
+   * generally for user journeys where users need to go to the Cloud Console from Code OSS. When the
+   * Auth and Launch URLs are unset, this will be used as the base URL for those endpoints if set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConsoleBaseUrl() {
+    return consoleBaseUrl;
+  }
+
+  /**
+   * Optional. Specifies a custom base URL for the Google Cloud Console. This field is intended to
+   * be user-configurable to support data residency for Cloud Workstations users. This will be used
+   * generally for user journeys where users need to go to the Cloud Console from Code OSS. When the
+   * Auth and Launch URLs are unset, this will be used as the base URL for those endpoints if set.
+   * @param consoleBaseUrl consoleBaseUrl or {@code null} for none
+   */
+  public WorkstationCluster setConsoleBaseUrl(java.lang.String consoleBaseUrl) {
+    this.consoleBaseUrl = consoleBaseUrl;
     return this;
   }
 

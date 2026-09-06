@@ -32,7 +32,7 @@ package com.google.api.services.webcontentpublisher.v1.model;
 public final class DomainProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether the domain ownership has been verified (e.g., via Google Search Console).
+   * Output only. Whether the domain ownership has been verified (e.g., via Google Search Console).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class DomainProperty extends com.google.api.client.json.GenericJson
   private java.lang.String url;
 
   /**
-   * Optional. Whether the domain ownership has been verified (e.g., via Google Search Console).
+   * Output only. Whether the domain ownership has been verified (e.g., via Google Search Console).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getOwnershipVerified() {
@@ -54,7 +54,7 @@ public final class DomainProperty extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Whether the domain ownership has been verified (e.g., via Google Search Console).
+   * Output only. Whether the domain ownership has been verified (e.g., via Google Search Console).
    * @param ownershipVerified ownershipVerified or {@code null} for none
    */
   public DomainProperty setOwnershipVerified(java.lang.Boolean ownershipVerified) {

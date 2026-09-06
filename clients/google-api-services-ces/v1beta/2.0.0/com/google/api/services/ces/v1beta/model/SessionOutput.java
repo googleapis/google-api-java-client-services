@@ -88,6 +88,13 @@ public final class SessionOutput extends com.google.api.client.json.GenericJson 
   private java.util.Map<String, java.lang.Object> payload;
 
   /**
+   * Intermediate progress update from the CES agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String progress;
+
+  /**
    * Output text from the CES agent.
    * The value may be {@code null}.
    */
@@ -280,6 +287,23 @@ public final class SessionOutput extends com.google.api.client.json.GenericJson 
    */
   public SessionOutput setPayload(java.util.Map<String, java.lang.Object> payload) {
     this.payload = payload;
+    return this;
+  }
+
+  /**
+   * Intermediate progress update from the CES agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProgress() {
+    return progress;
+  }
+
+  /**
+   * Intermediate progress update from the CES agent.
+   * @param progress progress or {@code null} for none
+   */
+  public SessionOutput setProgress(java.lang.String progress) {
+    this.progress = progress;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.cloudtasks.v2.model;
 
 /**
- * HTTP target. When specified as a Queue, all the tasks with [HttpRequest] will be overridden
+ * HTTP target. When specified at the Queue level, all tasks with HttpRequest are overridden
  * according to the target.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

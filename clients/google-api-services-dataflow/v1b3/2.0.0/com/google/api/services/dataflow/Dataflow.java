@@ -2226,6 +2226,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /** Optional. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean regionalFanoutRequested;
+
+        /** Optional.
+         */
+        public java.lang.Boolean getRegionalFanoutRequested() {
+          return regionalFanoutRequested;
+        }
+
+        /** Optional. */
+        public Aggregated setRegionalFanoutRequested(java.lang.Boolean regionalFanoutRequested) {
+          this.regionalFanoutRequested = regionalFanoutRequested;
+          return this;
+        }
+
         /** Deprecated. ListJobs always returns summaries now. Use GetJob for other JobViews. */
         @com.google.api.client.util.Key
         private java.lang.String view;
@@ -3055,6 +3071,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
          */
         public List setPageToken(java.lang.String pageToken) {
           this.pageToken = pageToken;
+          return this;
+        }
+
+        /** Optional. */
+        @com.google.api.client.util.Key
+        private java.lang.Boolean regionalFanoutRequested;
+
+        /** Optional.
+         */
+        public java.lang.Boolean getRegionalFanoutRequested() {
+          return regionalFanoutRequested;
+        }
+
+        /** Optional. */
+        public List setRegionalFanoutRequested(java.lang.Boolean regionalFanoutRequested) {
+          this.regionalFanoutRequested = regionalFanoutRequested;
           return this;
         }
 
@@ -6477,6 +6509,22 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean regionalFanoutRequested;
+
+          /** Optional.
+           */
+          public java.lang.Boolean getRegionalFanoutRequested() {
+            return regionalFanoutRequested;
+          }
+
+          /** Optional. */
+          public List setRegionalFanoutRequested(java.lang.Boolean regionalFanoutRequested) {
+            this.regionalFanoutRequested = regionalFanoutRequested;
             return this;
           }
 

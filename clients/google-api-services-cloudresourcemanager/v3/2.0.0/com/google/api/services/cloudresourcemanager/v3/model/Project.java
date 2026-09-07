@@ -73,6 +73,14 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Output only. If `true`, this project is a Management Project. A Management Project manages
+   * dedicated project groups for specific purposes (e.g., agent management or app management).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isManagementProject;
+
+  /**
    * Optional. The labels associated with this project. Label keys must be between 1 and 63
    * characters long and must conform to the following regular expression:
    * \[a-z\](\[-a-z0-9\]*\[a-z0-9\])?. Label values must be between 0 and 63 characters long and
@@ -226,6 +234,25 @@ public final class Project extends com.google.api.client.json.GenericJson {
    */
   public Project setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Output only. If `true`, this project is a Management Project. A Management Project manages
+   * dedicated project groups for specific purposes (e.g., agent management or app management).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsManagementProject() {
+    return isManagementProject;
+  }
+
+  /**
+   * Output only. If `true`, this project is a Management Project. A Management Project manages
+   * dedicated project groups for specific purposes (e.g., agent management or app management).
+   * @param isManagementProject isManagementProject or {@code null} for none
+   */
+  public Project setIsManagementProject(java.lang.Boolean isManagementProject) {
+    this.isManagementProject = isManagementProject;
     return this;
   }
 

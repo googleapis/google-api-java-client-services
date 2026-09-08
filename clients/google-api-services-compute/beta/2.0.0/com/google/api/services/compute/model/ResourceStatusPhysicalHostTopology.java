@@ -61,6 +61,14 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
   private java.lang.String host;
 
   /**
+   * Output only. [Output Only] The ID of the machine on which the running instance is located. It
+   * is only populated for machines which have multiple hosts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String machine;
+
+  /**
    * [Output Only] The ID of the sub-block in which the running instance is located. Instances in
    * the same sub-block experience lower network latency than instances in the same block.
    * The value may be {@code null}.
@@ -139,6 +147,25 @@ public final class ResourceStatusPhysicalHostTopology extends com.google.api.cli
    */
   public ResourceStatusPhysicalHostTopology setHost(java.lang.String host) {
     this.host = host;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The ID of the machine on which the running instance is located. It
+   * is only populated for machines which have multiple hosts.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMachine() {
+    return machine;
+  }
+
+  /**
+   * Output only. [Output Only] The ID of the machine on which the running instance is located. It
+   * is only populated for machines which have multiple hosts.
+   * @param machine machine or {@code null} for none
+   */
+  public ResourceStatusPhysicalHostTopology setMachine(java.lang.String machine) {
+    this.machine = machine;
     return this;
   }
 

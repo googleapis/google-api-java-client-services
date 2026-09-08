@@ -42,6 +42,14 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
   private java.lang.Boolean failOpen;
 
   /**
+   * Optional. URL of the InterconnectKeyGroup resource to use for MACsec, in the format:
+   * projects/{project}/locations/{region}/interconnectKeyGroups/{interconnectKeyGroup}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String interconnectKeyGroup;
+
+  /**
    * Required. A keychain placeholder describing a set of named key objects along with their start
    * times. A MACsec CKN/CAK is generated for each key in the key chain. Google router automatically
    * picks the key with the most recent startTime when establishing or re-establishing a MACsec
@@ -73,6 +81,25 @@ public final class InterconnectMacsec extends com.google.api.client.json.Generic
    */
   public InterconnectMacsec setFailOpen(java.lang.Boolean failOpen) {
     this.failOpen = failOpen;
+    return this;
+  }
+
+  /**
+   * Optional. URL of the InterconnectKeyGroup resource to use for MACsec, in the format:
+   * projects/{project}/locations/{region}/interconnectKeyGroups/{interconnectKeyGroup}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getInterconnectKeyGroup() {
+    return interconnectKeyGroup;
+  }
+
+  /**
+   * Optional. URL of the InterconnectKeyGroup resource to use for MACsec, in the format:
+   * projects/{project}/locations/{region}/interconnectKeyGroups/{interconnectKeyGroup}.
+   * @param interconnectKeyGroup interconnectKeyGroup or {@code null} for none
+   */
+  public InterconnectMacsec setInterconnectKeyGroup(java.lang.String interconnectKeyGroup) {
+    this.interconnectKeyGroup = interconnectKeyGroup;
     return this;
   }
 

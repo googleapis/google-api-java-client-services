@@ -49,6 +49,14 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
   private CorsPolicy corsPolicy;
 
   /**
+   * Dynamic compression policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
+   * load balancer schemes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DynamicCompressionPolicy dynamicCompressionPolicy;
+
+  /**
    * The specification for fault injection introduced into traffic to test the resiliency of clients
    * to backend service failure. As part of fault injection, when clients send requests to a backend
    * service, delays can be introduced by a load balancer on a percentage of requests before sending
@@ -192,6 +200,25 @@ public final class HttpRouteAction extends com.google.api.client.json.GenericJso
    */
   public HttpRouteAction setCorsPolicy(CorsPolicy corsPolicy) {
     this.corsPolicy = corsPolicy;
+    return this;
+  }
+
+  /**
+   * Dynamic compression policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
+   * load balancer schemes.
+   * @return value or {@code null} for none
+   */
+  public DynamicCompressionPolicy getDynamicCompressionPolicy() {
+    return dynamicCompressionPolicy;
+  }
+
+  /**
+   * Dynamic compression policy for this URL Map's route. Available only for Global EXTERNAL_MANAGED
+   * load balancer schemes.
+   * @param dynamicCompressionPolicy dynamicCompressionPolicy or {@code null} for none
+   */
+  public HttpRouteAction setDynamicCompressionPolicy(DynamicCompressionPolicy dynamicCompressionPolicy) {
+    this.dynamicCompressionPolicy = dynamicCompressionPolicy;
     return this;
   }
 

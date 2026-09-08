@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstancePropertiesPatch extends com.google.api.client.json.GenericJson {
 
   /**
+   * This optional flag exposes the hashed physical host ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exposeHostTopology;
+
+  /**
    * The label key-value pairs that you want to patch onto the instance.
    * The value may be {@code null}.
    */
@@ -43,6 +50,23 @@ public final class InstancePropertiesPatch extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> metadata;
+
+  /**
+   * This optional flag exposes the hashed physical host ID.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExposeHostTopology() {
+    return exposeHostTopology;
+  }
+
+  /**
+   * This optional flag exposes the hashed physical host ID.
+   * @param exposeHostTopology exposeHostTopology or {@code null} for none
+   */
+  public InstancePropertiesPatch setExposeHostTopology(java.lang.Boolean exposeHostTopology) {
+    this.exposeHostTopology = exposeHostTopology;
+    return this;
+  }
 
   /**
    * The label key-value pairs that you want to patch onto the instance.

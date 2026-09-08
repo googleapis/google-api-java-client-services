@@ -88,15 +88,15 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Represents the principal for this assignment. If not empty, jobs run by this
-   * principal will utilize the associated reservation. Otherwise, jobs will fall back to using the
-   * reservation assigned to the project, folder, or organization (in that order). If no reservation
-   * is assigned at any of these levels, on-demand capacity will be used. The supported formats are:
-   * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
+   * principal utilize the associated reservation. Otherwise, jobs fall back to using the
+   * reservation assigned to the project, folder, or organization, in that order. If no reservation
+   * is assigned at any of these levels, on-demand capacity is used. The supported formats are: *
+   * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
    * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
    * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities. * The special
    * value `unknown_or_deleted_user` represents principals which cannot be read from the user info
-   * service, for example deleted users.
+   * service, for example, deleted users.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -249,15 +249,15 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Represents the principal for this assignment. If not empty, jobs run by this
-   * principal will utilize the associated reservation. Otherwise, jobs will fall back to using the
-   * reservation assigned to the project, folder, or organization (in that order). If no reservation
-   * is assigned at any of these levels, on-demand capacity will be used. The supported formats are:
-   * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
+   * principal utilize the associated reservation. Otherwise, jobs fall back to using the
+   * reservation assigned to the project, folder, or organization, in that order. If no reservation
+   * is assigned at any of these levels, on-demand capacity is used. The supported formats are: *
+   * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
    * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
    * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities. * The special
    * value `unknown_or_deleted_user` represents principals which cannot be read from the user info
-   * service, for example deleted users.
+   * service, for example, deleted users.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrincipal() {
@@ -266,15 +266,15 @@ public final class Assignment extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Represents the principal for this assignment. If not empty, jobs run by this
-   * principal will utilize the associated reservation. Otherwise, jobs will fall back to using the
-   * reservation assigned to the project, folder, or organization (in that order). If no reservation
-   * is assigned at any of these levels, on-demand capacity will be used. The supported formats are:
-   * * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
+   * principal utilize the associated reservation. Otherwise, jobs fall back to using the
+   * reservation assigned to the project, folder, or organization, in that order. If no reservation
+   * is assigned at any of these levels, on-demand capacity is used. The supported formats are: *
+   * `principal://goog/subject/USER_EMAIL_ADDRESS` for users, *
    * `principal://iam.googleapis.com/projects/-/serviceAccounts/SA_EMAIL_ADDRESS` for service
    * accounts, * `principal://iam.googleapis.com/projects/PROJECT_NUMBER/locations/global/workloadId
    * entityPools/POOL_ID/subject/SUBJECT_ID` for workload identity pool identities. * The special
    * value `unknown_or_deleted_user` represents principals which cannot be read from the user info
-   * service, for example deleted users.
+   * service, for example, deleted users.
    * @param principal principal or {@code null} for none
    */
   public Assignment setPrincipal(java.lang.String principal) {

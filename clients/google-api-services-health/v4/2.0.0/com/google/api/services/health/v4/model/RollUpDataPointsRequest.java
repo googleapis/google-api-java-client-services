@@ -70,7 +70,9 @@ public final class RollUpDataPointsRequest extends com.google.api.client.json.Ge
 
   /**
    * Required. The size of the time window to group data points into before applying the aggregation
-   * functions. Must be at least 1 second.
+   * functions. Must be at least 1 second. If the requested range is not an exact multiple of
+   * `window_size`, the final bucket chronologically will be truncated at the upper endpoint of the
+   * range and will cover a duration shorter than `window_size`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -168,7 +170,9 @@ public final class RollUpDataPointsRequest extends com.google.api.client.json.Ge
 
   /**
    * Required. The size of the time window to group data points into before applying the aggregation
-   * functions. Must be at least 1 second.
+   * functions. Must be at least 1 second. If the requested range is not an exact multiple of
+   * `window_size`, the final bucket chronologically will be truncated at the upper endpoint of the
+   * range and will cover a duration shorter than `window_size`.
    * @return value or {@code null} for none
    */
   public String getWindowSize() {
@@ -177,7 +181,9 @@ public final class RollUpDataPointsRequest extends com.google.api.client.json.Ge
 
   /**
    * Required. The size of the time window to group data points into before applying the aggregation
-   * functions. Must be at least 1 second.
+   * functions. Must be at least 1 second. If the requested range is not an exact multiple of
+   * `window_size`, the final bucket chronologically will be truncated at the upper endpoint of the
+   * range and will cover a duration shorter than `window_size`.
    * @param windowSize windowSize or {@code null} for none
    */
   public RollUpDataPointsRequest setWindowSize(String windowSize) {

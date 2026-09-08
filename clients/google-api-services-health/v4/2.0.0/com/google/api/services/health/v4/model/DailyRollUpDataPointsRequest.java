@@ -70,7 +70,10 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   private CivilTimeInterval range;
 
   /**
-   * Optional. Aggregation window size, in number of days. Defaults to 1 if not specified.
+   * Optional. Aggregation window size, in number of days. Defaults to 1 if not specified. If the
+   * requested range is not an exact multiple of `window_size_days`, the final bucket
+   * chronologically will be truncated at the upper endpoint of the range and will cover a duration
+   * shorter than `window_size_days`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -169,7 +172,10 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Aggregation window size, in number of days. Defaults to 1 if not specified.
+   * Optional. Aggregation window size, in number of days. Defaults to 1 if not specified. If the
+   * requested range is not an exact multiple of `window_size_days`, the final bucket
+   * chronologically will be truncated at the upper endpoint of the range and will cover a duration
+   * shorter than `window_size_days`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getWindowSizeDays() {
@@ -177,7 +183,10 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Aggregation window size, in number of days. Defaults to 1 if not specified.
+   * Optional. Aggregation window size, in number of days. Defaults to 1 if not specified. If the
+   * requested range is not an exact multiple of `window_size_days`, the final bucket
+   * chronologically will be truncated at the upper endpoint of the range and will cover a duration
+   * shorter than `window_size_days`.
    * @param windowSizeDays windowSizeDays or {@code null} for none
    */
   public DailyRollUpDataPointsRequest setWindowSizeDays(java.lang.Integer windowSizeDays) {

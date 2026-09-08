@@ -122,6 +122,13 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
   private java.lang.Boolean required;
 
   /**
+   * Output only. If true, the parameter value can be provided through Secret Manager.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean secretManagerAllowed;
+
+  /**
    * Parameter type.
    * The value may be {@code null}.
    */
@@ -368,6 +375,23 @@ public final class DataSourceParameter extends com.google.api.client.json.Generi
    */
   public DataSourceParameter setRequired(java.lang.Boolean required) {
     this.required = required;
+    return this;
+  }
+
+  /**
+   * Output only. If true, the parameter value can be provided through Secret Manager.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSecretManagerAllowed() {
+    return secretManagerAllowed;
+  }
+
+  /**
+   * Output only. If true, the parameter value can be provided through Secret Manager.
+   * @param secretManagerAllowed secretManagerAllowed or {@code null} for none
+   */
+  public DataSourceParameter setSecretManagerAllowed(java.lang.Boolean secretManagerAllowed) {
+    this.secretManagerAllowed = secretManagerAllowed;
     return this;
   }
 

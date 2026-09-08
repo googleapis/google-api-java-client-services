@@ -77,6 +77,17 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   private ResourcePolicyMember policyMember;
 
   /**
+   * Optional. Input only. Immutable. Tag keys and tag values that are bound to this Parameter. You
+   * must represent each item in the map as: `"" : ""`. For example, a single resource can have the
+   * following tags: ``` "123/environment": "production", "123/costCenter": "marketing", ``` Tags
+   * are used to organize and group resources. Tags can be used to control policy evaluation for the
+   * resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Output only. [Output only] Update time stamp
    * The value may be {@code null}.
    */
@@ -190,6 +201,31 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
    */
   public Parameter setPolicyMember(ResourcePolicyMember policyMember) {
     this.policyMember = policyMember;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys and tag values that are bound to this Parameter. You
+   * must represent each item in the map as: `"" : ""`. For example, a single resource can have the
+   * following tags: ``` "123/environment": "production", "123/costCenter": "marketing", ``` Tags
+   * are used to organize and group resources. Tags can be used to control policy evaluation for the
+   * resource.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Input only. Immutable. Tag keys and tag values that are bound to this Parameter. You
+   * must represent each item in the map as: `"" : ""`. For example, a single resource can have the
+   * following tags: ``` "123/environment": "production", "123/costCenter": "marketing", ``` Tags
+   * are used to organize and group resources. Tags can be used to control policy evaluation for the
+   * resource.
+   * @param tags tags or {@code null} for none
+   */
+  public Parameter setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

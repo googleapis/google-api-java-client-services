@@ -156,6 +156,13 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
   private UserInfo ownerInfo;
 
   /**
+   * Optional. The config for values in `params`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParameterConfig paramConfig;
+
+  /**
    * Parameters specific to each data source. For more information see the bq tab in the 'Setting up
    * a data transfer' section for each data source. For example the parameters for Cloud Storage
    * transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-storage-
@@ -501,6 +508,23 @@ public final class TransferConfig extends com.google.api.client.json.GenericJson
    */
   public TransferConfig setOwnerInfo(UserInfo ownerInfo) {
     this.ownerInfo = ownerInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The config for values in `params`.
+   * @return value or {@code null} for none
+   */
+  public ParameterConfig getParamConfig() {
+    return paramConfig;
+  }
+
+  /**
+   * Optional. The config for values in `params`.
+   * @param paramConfig paramConfig or {@code null} for none
+   */
+  public TransferConfig setParamConfig(ParameterConfig paramConfig) {
+    this.paramConfig = paramConfig;
     return this;
   }
 

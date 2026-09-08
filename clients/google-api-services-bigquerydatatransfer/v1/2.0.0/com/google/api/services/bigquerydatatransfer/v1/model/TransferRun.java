@@ -84,6 +84,13 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
   private java.lang.String notificationPubsubTopic;
 
   /**
+   * Output only. The parameter config of the transfer run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ParameterConfig parameterConfig;
+
+  /**
    * Output only. Parameters specific to each data source. For more information see the bq tab in
    * the 'Setting up a data transfer' section for each data source. For example the parameters for
    * Cloud Storage transfers are listed here: https://cloud.google.com/bigquery-transfer/docs/cloud-
@@ -270,6 +277,23 @@ public final class TransferRun extends com.google.api.client.json.GenericJson {
    */
   public TransferRun setNotificationPubsubTopic(java.lang.String notificationPubsubTopic) {
     this.notificationPubsubTopic = notificationPubsubTopic;
+    return this;
+  }
+
+  /**
+   * Output only. The parameter config of the transfer run.
+   * @return value or {@code null} for none
+   */
+  public ParameterConfig getParameterConfig() {
+    return parameterConfig;
+  }
+
+  /**
+   * Output only. The parameter config of the transfer run.
+   * @param parameterConfig parameterConfig or {@code null} for none
+   */
+  public TransferRun setParameterConfig(ParameterConfig parameterConfig) {
+    this.parameterConfig = parameterConfig;
     return this;
   }
 

@@ -31,6 +31,13 @@ package com.google.api.services.parametermanager.v1.model;
 public final class ParameterVersion extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Output only. [Output only] The source of the checksum.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String checksumSource;
+
+  /**
    * Output only. [Output only] Create time stamp
    * The value may be {@code null}.
    */
@@ -78,6 +85,23 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Output only. [Output only] The source of the checksum.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChecksumSource() {
+    return checksumSource;
+  }
+
+  /**
+   * Optional. Output only. [Output only] The source of the checksum.
+   * @param checksumSource checksumSource or {@code null} for none
+   */
+  public ParameterVersion setChecksumSource(java.lang.String checksumSource) {
+    this.checksumSource = checksumSource;
+    return this;
+  }
 
   /**
    * Output only. [Output only] Create time stamp

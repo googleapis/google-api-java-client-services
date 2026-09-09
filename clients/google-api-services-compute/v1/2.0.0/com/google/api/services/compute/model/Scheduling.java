@@ -51,6 +51,14 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.Integer availabilityDomain;
 
   /**
+   * This optional flag exposes the hashed physical host ID in the ResourceStatus resource of the
+   * VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean exposeHostTopology;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -214,6 +222,25 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
    */
   public Scheduling setAvailabilityDomain(java.lang.Integer availabilityDomain) {
     this.availabilityDomain = availabilityDomain;
+    return this;
+  }
+
+  /**
+   * This optional flag exposes the hashed physical host ID in the ResourceStatus resource of the
+   * VM.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getExposeHostTopology() {
+    return exposeHostTopology;
+  }
+
+  /**
+   * This optional flag exposes the hashed physical host ID in the ResourceStatus resource of the
+   * VM.
+   * @param exposeHostTopology exposeHostTopology or {@code null} for none
+   */
+  public Scheduling setExposeHostTopology(java.lang.Boolean exposeHostTopology) {
+    this.exposeHostTopology = exposeHostTopology;
     return this;
   }
 

@@ -3766,6 +3766,344 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return (CalendarMode) super.set(parameterName, value);
       }
     }
+    /**
+     * Advice on making real-time decisions (such as choosing zone or machine types) during deployment
+     * to maximize your chances of obtaining capacity.
+     *
+     * Create a request for the method "advice.capacity".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Capacity#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param content the {@link com.google.api.services.compute.model.CapacityAdviceRequest}
+     * @return the request
+     */
+    public Capacity capacity(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.CapacityAdviceRequest content) throws java.io.IOException {
+      Capacity result = new Capacity(project, region, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Capacity extends ComputeRequest<com.google.api.services.compute.model.CapacityAdviceResponse> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/advice/capacity";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Advice on making real-time decisions (such as choosing zone or machine types) during deployment
+       * to maximize your chances of obtaining capacity.
+       *
+       * Create a request for the method "advice.capacity".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Capacity#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Capacity#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param content the {@link com.google.api.services.compute.model.CapacityAdviceRequest}
+       * @since 1.13
+       */
+      protected Capacity(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.CapacityAdviceRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.CapacityAdviceResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public Capacity set$Xgafv(java.lang.String $Xgafv) {
+        return (Capacity) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Capacity setAccessToken(java.lang.String accessToken) {
+        return (Capacity) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Capacity setAlt(java.lang.String alt) {
+        return (Capacity) super.setAlt(alt);
+      }
+
+      @Override
+      public Capacity setCallback(java.lang.String callback) {
+        return (Capacity) super.setCallback(callback);
+      }
+
+      @Override
+      public Capacity setFields(java.lang.String fields) {
+        return (Capacity) super.setFields(fields);
+      }
+
+      @Override
+      public Capacity setKey(java.lang.String key) {
+        return (Capacity) super.setKey(key);
+      }
+
+      @Override
+      public Capacity setOauthToken(java.lang.String oauthToken) {
+        return (Capacity) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Capacity setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Capacity) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Capacity setQuotaUser(java.lang.String quotaUser) {
+        return (Capacity) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Capacity setUploadType(java.lang.String uploadType) {
+        return (Capacity) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Capacity setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Capacity) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Capacity setUserIp(java.lang.String userIp) {
+        return (Capacity) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Capacity setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public Capacity setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      @Override
+      public Capacity set(String parameterName, Object value) {
+        return (Capacity) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the capacity history.
+     *
+     * Create a request for the method "advice.capacityHistory".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link CapacityHistory#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region for this request.
+     * @param content the {@link com.google.api.services.compute.model.CapacityHistoryRequest}
+     * @return the request
+     */
+    public CapacityHistory capacityHistory(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.CapacityHistoryRequest content) throws java.io.IOException {
+      CapacityHistory result = new CapacityHistory(project, region, content);
+      initialize(result);
+      return result;
+    }
+
+    public class CapacityHistory extends ComputeRequest<com.google.api.services.compute.model.CapacityHistoryResponse> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/advice/capacityHistory";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Gets the capacity history.
+       *
+       * Create a request for the method "advice.capacityHistory".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link CapacityHistory#execute()} method to invoke the remote operation.
+       * <p> {@link CapacityHistory#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region for this request.
+       * @param content the {@link com.google.api.services.compute.model.CapacityHistoryRequest}
+       * @since 1.13
+       */
+      protected CapacityHistory(java.lang.String project, java.lang.String region, com.google.api.services.compute.model.CapacityHistoryRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.CapacityHistoryResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public CapacityHistory set$Xgafv(java.lang.String $Xgafv) {
+        return (CapacityHistory) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CapacityHistory setAccessToken(java.lang.String accessToken) {
+        return (CapacityHistory) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CapacityHistory setAlt(java.lang.String alt) {
+        return (CapacityHistory) super.setAlt(alt);
+      }
+
+      @Override
+      public CapacityHistory setCallback(java.lang.String callback) {
+        return (CapacityHistory) super.setCallback(callback);
+      }
+
+      @Override
+      public CapacityHistory setFields(java.lang.String fields) {
+        return (CapacityHistory) super.setFields(fields);
+      }
+
+      @Override
+      public CapacityHistory setKey(java.lang.String key) {
+        return (CapacityHistory) super.setKey(key);
+      }
+
+      @Override
+      public CapacityHistory setOauthToken(java.lang.String oauthToken) {
+        return (CapacityHistory) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CapacityHistory setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CapacityHistory) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CapacityHistory setQuotaUser(java.lang.String quotaUser) {
+        return (CapacityHistory) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CapacityHistory setUploadType(java.lang.String uploadType) {
+        return (CapacityHistory) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CapacityHistory setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CapacityHistory) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public CapacityHistory setUserIp(java.lang.String userIp) {
+        return (CapacityHistory) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public CapacityHistory setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region for this request. */
+      public CapacityHistory setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      @Override
+      public CapacityHistory set(String parameterName, Object value) {
+        return (CapacityHistory) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -126648,6 +126986,212 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the ProjectViews collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.ProjectViews.List request = compute.projectViews().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public ProjectViews projectViews() {
+    return new ProjectViews();
+  }
+
+  /**
+   * The "projectViews" collection of methods.
+   */
+  public class ProjectViews {
+
+    /**
+     * Returns the specified global ProjectViews resource, with a regional context. This regional API
+     * endpoint reads resource metadata from regional read-only replicas. Because changes are copied to
+     * these regional replicas asynchronously, for real-time resource reads or any write operations
+     * (creating, updating, or deleting resources), use the global
+     * [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get) endpoint.
+     *
+     * Create a request for the method "projectViews.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID for this request. This is part of the URL path.
+     * @param region Required. Name of the region for this request. This is part of the URL path.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String region) throws java.io.IOException {
+      Get result = new Get(project, region);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.ProjectView> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/projectViews";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Returns the specified global ProjectViews resource, with a regional context. This regional API
+       * endpoint reads resource metadata from regional read-only replicas. Because changes are copied
+       * to these regional replicas asynchronously, for real-time resource reads or any write operations
+       * (creating, updating, or deleting resources), use the global
+       * [projects.get](https://cloud.google.com/compute/docs/reference/rest/v1/projects/get) endpoint.
+       *
+       * Create a request for the method "projectViews.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID for this request. This is part of the URL path.
+       * @param region Required. Name of the region for this request. This is part of the URL path.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String region) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.ProjectView.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID for this request. This is part of the URL path. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID for this request. This is part of the URL path.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID for this request. This is part of the URL path. */
+      public Get setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Name of the region for this request. This is part of the URL path. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Required. Name of the region for this request. This is part of the URL path.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Required. Name of the region for this request. This is part of the URL path. */
+      public Get setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
       }
     }
 

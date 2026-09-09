@@ -93,7 +93,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private GcpConfig gcpConfig;
 
   /**
-   * Output only. Only populated when FULL view is requested. The Kafka version of the cluster.
+   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`, `4.3.x`). If not
+   * specified during cluster creation, defaults to `3.7.x`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -304,7 +305,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Only populated when FULL view is requested. The Kafka version of the cluster.
+   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`, `4.3.x`). If not
+   * specified during cluster creation, defaults to `3.7.x`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKafkaVersion() {
@@ -312,7 +314,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Only populated when FULL view is requested. The Kafka version of the cluster.
+   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`, `4.3.x`). If not
+   * specified during cluster creation, defaults to `3.7.x`.
    * @param kafkaVersion kafkaVersion or {@code null} for none
    */
   public Cluster setKafkaVersion(java.lang.String kafkaVersion) {

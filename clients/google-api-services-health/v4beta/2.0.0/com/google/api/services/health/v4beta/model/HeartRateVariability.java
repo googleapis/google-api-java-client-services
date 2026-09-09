@@ -14,7 +14,7 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.health.v4.model;
+package com.google.api.services.health.v4beta.model;
 
 /**
  * Captures user's heart rate variability (HRV) as measured by the root mean square of successive

@@ -9217,6 +9217,801 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
           return (FindInstalledAppProfiles) super.set(parameterName, value);
         }
       }
+      /**
+       * Find SaaS usage reports of a customer based on the given search and sorting criteria.
+       *
+       * Create a request for the method "reports.findSaasUsage".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link FindSaasUsage#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+       * @return the request
+       */
+      public FindSaasUsage findSaasUsage(java.lang.String customer) throws java.io.IOException {
+        FindSaasUsage result = new FindSaasUsage(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class FindSaasUsage extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindSaasUsageReportsResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:findSaasUsage";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Find SaaS usage reports of a customer based on the given search and sorting criteria.
+         *
+         * Create a request for the method "reports.findSaasUsage".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link FindSaasUsage#execute()} method to invoke the remote
+         * operation. <p> {@link FindSaasUsage#initialize(com.google.api.client.googleapis.services.Abstra
+         * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         * @since 1.13
+         */
+        protected FindSaasUsage(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindSaasUsageReportsResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FindSaasUsage set$Xgafv(java.lang.String $Xgafv) {
+          return (FindSaasUsage) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FindSaasUsage setAccessToken(java.lang.String accessToken) {
+          return (FindSaasUsage) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FindSaasUsage setAlt(java.lang.String alt) {
+          return (FindSaasUsage) super.setAlt(alt);
+        }
+
+        @Override
+        public FindSaasUsage setCallback(java.lang.String callback) {
+          return (FindSaasUsage) super.setCallback(callback);
+        }
+
+        @Override
+        public FindSaasUsage setFields(java.lang.String fields) {
+          return (FindSaasUsage) super.setFields(fields);
+        }
+
+        @Override
+        public FindSaasUsage setKey(java.lang.String key) {
+          return (FindSaasUsage) super.setKey(key);
+        }
+
+        @Override
+        public FindSaasUsage setOauthToken(java.lang.String oauthToken) {
+          return (FindSaasUsage) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FindSaasUsage setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FindSaasUsage) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FindSaasUsage setQuotaUser(java.lang.String quotaUser) {
+          return (FindSaasUsage) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FindSaasUsage setUploadType(java.lang.String uploadType) {
+          return (FindSaasUsage) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FindSaasUsage setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FindSaasUsage) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public FindSaasUsage setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /**
+         * Optional. The filter expression to narrow down the SaaS reports to return. Supported
+         * operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are supported.
+         * Supported fields: * app * org_unit_id * first_navigation_time * last_navigation_time *
+         * category * organization * founded_year * headquarters * primary_domain * domains *
+         * encryption_protocols * visits_count * distinct_users_count * distinct_browsers_count *
+         * content_transfer_count Example: `(first_navigation_time < "2026-01-31T00:00:00Z" AND
+         * last_navigation_time > "2026-01-01T00:00:00Z") AND visits_count > 100`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter expression to narrow down the SaaS reports to return. Supported operators are:
+       =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are supported. Supported fields: * app *
+       org_unit_id * first_navigation_time * last_navigation_time * category * organization * founded_year
+       * headquarters * primary_domain * domains * encryption_protocols * visits_count *
+       distinct_users_count * distinct_browsers_count * content_transfer_count Example:
+       `(first_navigation_time < "2026-01-31T00:00:00Z" AND last_navigation_time > "2026-01-01T00:00:00Z")
+       AND visits_count > 100`
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The filter expression to narrow down the SaaS reports to return. Supported
+         * operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are supported.
+         * Supported fields: * app * org_unit_id * first_navigation_time * last_navigation_time *
+         * category * organization * founded_year * headquarters * primary_domain * domains *
+         * encryption_protocols * visits_count * distinct_users_count * distinct_browsers_count *
+         * content_transfer_count Example: `(first_navigation_time < "2026-01-31T00:00:00Z" AND
+         * last_navigation_time > "2026-01-01T00:00:00Z") AND visits_count > 100`
+         */
+        public FindSaasUsage setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The order by expression to sort the SaaS reports. Supported fields: * app *
+         * category * organization * founded_year * headquarters * primary_domain * visits_count *
+         * distinct_users_count * distinct_browsers_count * content_transfer_count Default order is
+         * ascending. To specify descending order for a field, append " desc". Example:
+         * `visits_count desc`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The order by expression to sort the SaaS reports. Supported fields: * app * category *
+       organization * founded_year * headquarters * primary_domain * visits_count * distinct_users_count *
+       distinct_browsers_count * content_transfer_count Default order is ascending. To specify descending
+       order for a field, append " desc". Example: `visits_count desc`
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The order by expression to sort the SaaS reports. Supported fields: * app *
+         * category * organization * founded_year * headquarters * primary_domain * visits_count *
+         * distinct_users_count * distinct_browsers_count * content_transfer_count Default order is
+         * ascending. To specify descending order for a field, append " desc". Example:
+         * `visits_count desc`
+         */
+        public FindSaasUsage setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of reports to return. The service may return fewer than this
+         * value. If unspecified, at most 100 reports will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of reports to return. The service may return fewer than this value. If
+       unspecified, at most 100 reports will be returned. The maximum value is 200; values above 200 will
+       be coerced to 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of reports to return. The service may return fewer than this
+         * value. If unspecified, at most 100 reports will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        public FindSaasUsage setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FindSaasUsageReports` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `FindSaasUsageReports` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `FindSaasUsageReports` call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `FindSaasUsageReports` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FindSaasUsageReports` call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `FindSaasUsageReports` must match the call that provided the page token.
+         */
+        public FindSaasUsage setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FindSaasUsage set(String parameterName, Object value) {
+          return (FindSaasUsage) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Find SaaS usage reports of a customer grouped by browsers based on the given search and sorting
+       * criteria.
+       *
+       * Create a request for the method "reports.findSaasUsageBrowsers".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link FindSaasUsageBrowsers#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+       * @return the request
+       */
+      public FindSaasUsageBrowsers findSaasUsageBrowsers(java.lang.String customer) throws java.io.IOException {
+        FindSaasUsageBrowsers result = new FindSaasUsageBrowsers(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class FindSaasUsageBrowsers extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindSaasUsageBrowsersResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:findSaasUsageBrowsers";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Find SaaS usage reports of a customer grouped by browsers based on the given search and sorting
+         * criteria.
+         *
+         * Create a request for the method "reports.findSaasUsageBrowsers".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link FindSaasUsageBrowsers#execute()} method to invoke the
+         * remote operation. <p> {@link FindSaasUsageBrowsers#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         * @since 1.13
+         */
+        protected FindSaasUsageBrowsers(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindSaasUsageBrowsersResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FindSaasUsageBrowsers set$Xgafv(java.lang.String $Xgafv) {
+          return (FindSaasUsageBrowsers) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setAccessToken(java.lang.String accessToken) {
+          return (FindSaasUsageBrowsers) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setAlt(java.lang.String alt) {
+          return (FindSaasUsageBrowsers) super.setAlt(alt);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setCallback(java.lang.String callback) {
+          return (FindSaasUsageBrowsers) super.setCallback(callback);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setFields(java.lang.String fields) {
+          return (FindSaasUsageBrowsers) super.setFields(fields);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setKey(java.lang.String key) {
+          return (FindSaasUsageBrowsers) super.setKey(key);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setOauthToken(java.lang.String oauthToken) {
+          return (FindSaasUsageBrowsers) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FindSaasUsageBrowsers) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setQuotaUser(java.lang.String quotaUser) {
+          return (FindSaasUsageBrowsers) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setUploadType(java.lang.String uploadType) {
+          return (FindSaasUsageBrowsers) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FindSaasUsageBrowsers setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FindSaasUsageBrowsers) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public FindSaasUsageBrowsers setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Required. The name of the SaaS application (e.g., `ChatGPT`, `Gemini`). */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The name of the SaaS application (e.g., `ChatGPT`, `Gemini`).
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /** Required. The name of the SaaS application (e.g., `ChatGPT`, `Gemini`). */
+        public FindSaasUsageBrowsers setApp(java.lang.String app) {
+          this.app = app;
+          return this;
+        }
+
+        /**
+         * Optional. The filter expression to narrow down the SaaS browser reports to return.
+         * Supported operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are
+         * supported. Supported fields: * machine * os_platform * first_navigation_time *
+         * last_navigation_time * org_unit_id
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter expression to narrow down the SaaS browser reports to return. Supported
+       operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are supported. Supported
+       fields: * machine * os_platform * first_navigation_time * last_navigation_time * org_unit_id
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The filter expression to narrow down the SaaS browser reports to return.
+         * Supported operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are
+         * supported. Supported fields: * machine * os_platform * first_navigation_time *
+         * last_navigation_time * org_unit_id
+         */
+        public FindSaasUsageBrowsers setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The order by expression to sort the SaaS browser reports. Supported fields: *
+         * machine * os_platform * first_navigation_time * last_navigation_time Default order is
+         * ascending. To specify descending order for a field, append " desc".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The order by expression to sort the SaaS browser reports. Supported fields: * machine *
+       os_platform * first_navigation_time * last_navigation_time Default order is ascending. To specify
+       descending order for a field, append " desc".
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The order by expression to sort the SaaS browser reports. Supported fields: *
+         * machine * os_platform * first_navigation_time * last_navigation_time Default order is
+         * ascending. To specify descending order for a field, append " desc".
+         */
+        public FindSaasUsageBrowsers setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of browsers to return. The service may return fewer than
+         * this value. If unspecified, at most 100 browsers will be returned. The maximum value is
+         * 200; values above 200 will be coerced to 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of browsers to return. The service may return fewer than this value.
+       If unspecified, at most 100 browsers will be returned. The maximum value is 200; values above 200
+       will be coerced to 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of browsers to return. The service may return fewer than
+         * this value. If unspecified, at most 100 browsers will be returned. The maximum value is
+         * 200; values above 200 will be coerced to 200.
+         */
+        public FindSaasUsageBrowsers setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FindSaasUsageBrowsers` call. Provide
+         * this to retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `FindSaasUsageBrowsers` call. Provide this to
+       retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FindSaasUsageBrowsers` call. Provide
+         * this to retrieve the subsequent page.
+         */
+        public FindSaasUsageBrowsers setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FindSaasUsageBrowsers set(String parameterName, Object value) {
+          return (FindSaasUsageBrowsers) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Find SaaS usage reports of a customer grouped by profiles based on the given search and sorting
+       * criteria.
+       *
+       * Create a request for the method "reports.findSaasUsageProfiles".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link FindSaasUsageProfiles#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+       * @return the request
+       */
+      public FindSaasUsageProfiles findSaasUsageProfiles(java.lang.String customer) throws java.io.IOException {
+        FindSaasUsageProfiles result = new FindSaasUsageProfiles(customer);
+        initialize(result);
+        return result;
+      }
+
+      public class FindSaasUsageProfiles extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindSaasUsageProfilesResponse> {
+
+        private static final String REST_PATH = "v1/{+customer}/reports:findSaasUsageProfiles";
+
+        private final java.util.regex.Pattern CUSTOMER_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Find SaaS usage reports of a customer grouped by profiles based on the given search and sorting
+         * criteria.
+         *
+         * Create a request for the method "reports.findSaasUsageProfiles".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link FindSaasUsageProfiles#execute()} method to invoke the
+         * remote operation. <p> {@link FindSaasUsageProfiles#initialize(com.google.api.client.googleapis.
+         * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param customer Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         * @since 1.13
+         */
+        protected FindSaasUsageProfiles(java.lang.String customer) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementV1FindSaasUsageProfilesResponse.class);
+          this.customer = com.google.api.client.util.Preconditions.checkNotNull(customer, "Required parameter customer must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FindSaasUsageProfiles set$Xgafv(java.lang.String $Xgafv) {
+          return (FindSaasUsageProfiles) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setAccessToken(java.lang.String accessToken) {
+          return (FindSaasUsageProfiles) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setAlt(java.lang.String alt) {
+          return (FindSaasUsageProfiles) super.setAlt(alt);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setCallback(java.lang.String callback) {
+          return (FindSaasUsageProfiles) super.setCallback(callback);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setFields(java.lang.String fields) {
+          return (FindSaasUsageProfiles) super.setFields(fields);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setKey(java.lang.String key) {
+          return (FindSaasUsageProfiles) super.setKey(key);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setOauthToken(java.lang.String oauthToken) {
+          return (FindSaasUsageProfiles) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FindSaasUsageProfiles) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setQuotaUser(java.lang.String quotaUser) {
+          return (FindSaasUsageProfiles) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setUploadType(java.lang.String uploadType) {
+          return (FindSaasUsageProfiles) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FindSaasUsageProfiles setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FindSaasUsageProfiles) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String customer;
+
+        /** Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public java.lang.String getCustomer() {
+          return customer;
+        }
+
+        /**
+         * Required. Obfuscated customer ID prefixed with "customers/C" or "customers/my_customer".
+         */
+        public FindSaasUsageProfiles setCustomer(java.lang.String customer) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(CUSTOMER_PATTERN.matcher(customer).matches(),
+                "Parameter customer must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.customer = customer;
+          return this;
+        }
+
+        /** Required. The name of the SaaS application (e.g., `ChatGPT`, `Gemini`). */
+        @com.google.api.client.util.Key
+        private java.lang.String app;
+
+        /** Required. The name of the SaaS application (e.g., `ChatGPT`, `Gemini`).
+         */
+        public java.lang.String getApp() {
+          return app;
+        }
+
+        /** Required. The name of the SaaS application (e.g., `ChatGPT`, `Gemini`). */
+        public FindSaasUsageProfiles setApp(java.lang.String app) {
+          this.app = app;
+          return this;
+        }
+
+        /**
+         * Optional. The filter expression to narrow down the SaaS profile reports to return.
+         * Supported operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are
+         * supported. Supported fields: * email * org_unit_id * os_platform * first_navigation_time
+         * * last_navigation_time
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter expression to narrow down the SaaS profile reports to return. Supported
+       operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are supported. Supported
+       fields: * email * org_unit_id * os_platform * first_navigation_time * last_navigation_time
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The filter expression to narrow down the SaaS profile reports to return.
+         * Supported operators are: =, !=, <, <=, >, >=, :. Logical operators AND, OR, and NOT are
+         * supported. Supported fields: * email * org_unit_id * os_platform * first_navigation_time
+         * * last_navigation_time
+         */
+        public FindSaasUsageProfiles setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The order by expression to sort the SaaS profile reports. Supported fields: *
+         * email * os_platform * first_navigation_time * last_navigation_time Default order is
+         * ascending. To specify descending order for a field, append " desc".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The order by expression to sort the SaaS profile reports. Supported fields: * email *
+       os_platform * first_navigation_time * last_navigation_time Default order is ascending. To specify
+       descending order for a field, append " desc".
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The order by expression to sort the SaaS profile reports. Supported fields: *
+         * email * os_platform * first_navigation_time * last_navigation_time Default order is
+         * ascending. To specify descending order for a field, append " desc".
+         */
+        public FindSaasUsageProfiles setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of reports to return. The service may return fewer than this
+         * value. If unspecified, at most 100 reports will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of reports to return. The service may return fewer than this value. If
+       unspecified, at most 100 reports will be returned. The maximum value is 200; values above 200 will
+       be coerced to 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of reports to return. The service may return fewer than this
+         * value. If unspecified, at most 100 reports will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        public FindSaasUsageProfiles setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FindSaasUsageProfiles` call. Provide
+         * this to retrieve the subsequent page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `FindSaasUsageProfiles` call. Provide this to
+       retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FindSaasUsageProfiles` call. Provide
+         * this to retrieve the subsequent page.
+         */
+        public FindSaasUsageProfiles setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FindSaasUsageProfiles set(String parameterName, Object value) {
+          return (FindSaasUsageProfiles) super.set(parameterName, value);
+        }
+      }
 
     }
     /**

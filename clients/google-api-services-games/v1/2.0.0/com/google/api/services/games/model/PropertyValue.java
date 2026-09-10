@@ -66,13 +66,6 @@ public final class PropertyValue extends com.google.api.client.json.GenericJson 
   private java.lang.String stringValue;
 
   /**
-   * A timestamp value.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private String timestampValue;
-
-  /**
    * A boolean value.
    * @return value or {@code null} for none
    */
@@ -154,23 +147,6 @@ public final class PropertyValue extends com.google.api.client.json.GenericJson 
    */
   public PropertyValue setStringValue(java.lang.String stringValue) {
     this.stringValue = stringValue;
-    return this;
-  }
-
-  /**
-   * A timestamp value.
-   * @return value or {@code null} for none
-   */
-  public String getTimestampValue() {
-    return timestampValue;
-  }
-
-  /**
-   * A timestamp value.
-   * @param timestampValue timestampValue or {@code null} for none
-   */
-  public PropertyValue setTimestampValue(String timestampValue) {
-    this.timestampValue = timestampValue;
     return this;
   }
 

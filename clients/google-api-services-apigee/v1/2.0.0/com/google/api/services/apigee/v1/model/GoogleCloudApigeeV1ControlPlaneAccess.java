@@ -63,6 +63,14 @@ public final class GoogleCloudApigeeV1ControlPlaneAccess extends com.google.api.
   private java.util.List<java.lang.String> synchronizerIdentities;
 
   /**
+   * Optional. Service accounts granted access to control plane resources for the apigee-watcher
+   * component.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> watcherIdentities;
+
+  /**
    * Optional. Array of service accounts authorized to publish analytics data to the control plane
    * (for the Message Processor component).
    * @return value or {@code null} for none
@@ -120,6 +128,25 @@ public final class GoogleCloudApigeeV1ControlPlaneAccess extends com.google.api.
    */
   public GoogleCloudApigeeV1ControlPlaneAccess setSynchronizerIdentities(java.util.List<java.lang.String> synchronizerIdentities) {
     this.synchronizerIdentities = synchronizerIdentities;
+    return this;
+  }
+
+  /**
+   * Optional. Service accounts granted access to control plane resources for the apigee-watcher
+   * component.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getWatcherIdentities() {
+    return watcherIdentities;
+  }
+
+  /**
+   * Optional. Service accounts granted access to control plane resources for the apigee-watcher
+   * component.
+   * @param watcherIdentities watcherIdentities or {@code null} for none
+   */
+  public GoogleCloudApigeeV1ControlPlaneAccess setWatcherIdentities(java.util.List<java.lang.String> watcherIdentities) {
+    this.watcherIdentities = watcherIdentities;
     return this;
   }
 

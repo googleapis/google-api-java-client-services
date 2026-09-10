@@ -225,6 +225,13 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
   private GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig searchEngineConfig;
 
   /**
+   * Optional. Non-empty default. Session config for the engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaSessionConfig sessionConfig;
+
+  /**
    * Required. The solutions of the engine.
    * The value may be {@code null}.
    */
@@ -694,6 +701,23 @@ public final class GoogleCloudDiscoveryengineV1betaEngine extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1betaEngine setSearchEngineConfig(GoogleCloudDiscoveryengineV1betaEngineSearchEngineConfig searchEngineConfig) {
     this.searchEngineConfig = searchEngineConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Non-empty default. Session config for the engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaSessionConfig getSessionConfig() {
+    return sessionConfig;
+  }
+
+  /**
+   * Optional. Non-empty default. Session config for the engine.
+   * @param sessionConfig sessionConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaEngine setSessionConfig(GoogleCloudDiscoveryengineV1betaSessionConfig sessionConfig) {
+    this.sessionConfig = sessionConfig;
     return this;
   }
 

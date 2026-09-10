@@ -43,6 +43,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperimentConfigG
   private java.lang.String name;
 
   /**
+   * Optional. Sent as Vertex `ThinkingConfig.thinking_level`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thinkingLevel;
+
+  /**
    * Optional. Relative weight for this model in the mixture. Must be a finite, strictly positive
    * value. Weights across all entries are normalized server-side, so they need not sum to 1.0.
    * Defaults to 1.0 when unset, which is convenient when configuring a single model or an even
@@ -69,6 +76,23 @@ public final class GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperimentConfigG
    */
   public GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperimentConfigGenerationSettingsModelConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Sent as Vertex `ThinkingConfig.thinking_level`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThinkingLevel() {
+    return thinkingLevel;
+  }
+
+  /**
+   * Optional. Sent as Vertex `ThinkingConfig.thinking_level`.
+   * @param thinkingLevel thinkingLevel or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAlphaEvolveExperimentConfigGenerationSettingsModelConfig setThinkingLevel(java.lang.String thinkingLevel) {
+    this.thinkingLevel = thinkingLevel;
     return this;
   }
 

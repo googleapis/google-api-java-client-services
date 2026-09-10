@@ -233,6 +233,13 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
   private GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig searchEngineConfig;
 
   /**
+   * Optional. Non-empty default. Session config for the engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaSessionConfig sessionConfig;
+
+  /**
    * Additional config specs for a `similar-items` engine.
    * The value may be {@code null}.
    */
@@ -728,6 +735,23 @@ public final class GoogleCloudDiscoveryengineV1alphaEngine extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1alphaEngine setSearchEngineConfig(GoogleCloudDiscoveryengineV1alphaEngineSearchEngineConfig searchEngineConfig) {
     this.searchEngineConfig = searchEngineConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Non-empty default. Session config for the engine.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSessionConfig getSessionConfig() {
+    return sessionConfig;
+  }
+
+  /**
+   * Optional. Non-empty default. Session config for the engine.
+   * @param sessionConfig sessionConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaEngine setSessionConfig(GoogleCloudDiscoveryengineV1alphaSessionConfig sessionConfig) {
+    this.sessionConfig = sessionConfig;
     return this;
   }
 

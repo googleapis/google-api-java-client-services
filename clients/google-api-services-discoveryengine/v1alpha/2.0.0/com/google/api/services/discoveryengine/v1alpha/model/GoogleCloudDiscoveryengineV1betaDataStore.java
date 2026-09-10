@@ -91,6 +91,13 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
   private String createTime;
 
   /**
+   * Optional. Specifies the data protection policy for the data store.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaDataProtectionPolicy dataProtectionPolicy;
+
+  /**
    * Output only. The id of the default Schema associated to this data store.
    * The value may be {@code null}.
    */
@@ -361,6 +368,23 @@ public final class GoogleCloudDiscoveryengineV1betaDataStore extends com.google.
    */
   public GoogleCloudDiscoveryengineV1betaDataStore setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for the data store.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataProtectionPolicy getDataProtectionPolicy() {
+    return dataProtectionPolicy;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for the data store.
+   * @param dataProtectionPolicy dataProtectionPolicy or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaDataStore setDataProtectionPolicy(GoogleCloudDiscoveryengineV1betaDataProtectionPolicy dataProtectionPolicy) {
+    this.dataProtectionPolicy = dataProtectionPolicy;
     return this;
   }
 

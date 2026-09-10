@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1AssistantCustomerPolicy extends c
   private java.util.List<GoogleCloudDiscoveryengineV1AssistantCustomerPolicyBannedPhrase> bannedPhrases;
 
   /**
+   * Optional. Data protection policy to be used for sanitizing file uploads.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1DataProtectionPolicy dataProtectionPolicy;
+
+  /**
    * Optional. Model Armor configuration to be used for sanitizing user prompts and assistant
    * responses.
    * The value may be {@code null}.
@@ -58,6 +65,23 @@ public final class GoogleCloudDiscoveryengineV1AssistantCustomerPolicy extends c
    */
   public GoogleCloudDiscoveryengineV1AssistantCustomerPolicy setBannedPhrases(java.util.List<GoogleCloudDiscoveryengineV1AssistantCustomerPolicyBannedPhrase> bannedPhrases) {
     this.bannedPhrases = bannedPhrases;
+    return this;
+  }
+
+  /**
+   * Optional. Data protection policy to be used for sanitizing file uploads.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataProtectionPolicy getDataProtectionPolicy() {
+    return dataProtectionPolicy;
+  }
+
+  /**
+   * Optional. Data protection policy to be used for sanitizing file uploads.
+   * @param dataProtectionPolicy dataProtectionPolicy or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1AssistantCustomerPolicy setDataProtectionPolicy(GoogleCloudDiscoveryengineV1DataProtectionPolicy dataProtectionPolicy) {
+    this.dataProtectionPolicy = dataProtectionPolicy;
     return this;
   }
 

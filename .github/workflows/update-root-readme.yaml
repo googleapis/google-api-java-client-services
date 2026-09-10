@@ -1,3 +1,6 @@
+permissions:
+  contents: read
+
 on:
   schedule:
   # Runs at 03:00 am.
@@ -9,10 +12,11 @@ jobs:
   update:
     runs-on: 'ubuntu-24.04'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2
         with:
           fetch-depth: 1
           path: google-api-java-client-services
+          persist-credentials: false
       - run: |
           sudo apt update
           sudo apt install python3
@@ -21,7 +25,7 @@ jobs:
           python3 get-pip.py
           python3 -m pip install --require-hashes -r ./google-api-java-client-services/.github/workflows/requirements.txt
       - run: python3 ./google-api-java-client-services/.github/workflows/update-root-readme.py
-      - uses: googleapis/code-suggester@v2 # takes the changes from git directory
+      - uses: googleapis/code-suggester@9222591646c050504e4a341ab8418cbfb5f619e1 # v2
         env:
           ACCESS_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
         with:

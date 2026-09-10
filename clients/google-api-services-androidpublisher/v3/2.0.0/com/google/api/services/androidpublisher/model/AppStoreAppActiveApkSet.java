@@ -17,11 +17,12 @@
 package com.google.api.services.androidpublisher.model;
 
 /**
- * An installable set of active APKs. A set of APKs might only contain 1 APK if the app in question
- * publishes using APKs. If the app uses app bundles (or a similar technology), this set should
- * contain all APKs (even optional ones) that might be installed for this app. A set of APKs should
- * be installable together. If certain APKs are exclusive to one another and cannot be installed
- * together, then a separate AppStoreAppActiveApkSet should be created.
+ * An installable set of active APKs. All APKs in this set should belong to the same version of the
+ * app. A set of APKs might only contain 1 APK if the app in question publishes using APKs. If the
+ * app uses app bundles (or a similar technology), this set should contain all APKs (even optional
+ * ones) that might be installed for this app. A set of APKs should be installable together. If
+ * certain APKs are exclusive to one another and cannot be installed together, then a separate
+ * AppStoreAppActiveApkSet should be created.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Android Developer API. For a detailed

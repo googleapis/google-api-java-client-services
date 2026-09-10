@@ -317,6 +317,13 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   private GoogleCloudRunV2VpcAccess vpcAccess;
 
   /**
+   * Optional. The Revision's workload identity settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
    * Output only. Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * @return value or {@code null} for none
@@ -969,6 +976,23 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setVpcAccess(GoogleCloudRunV2VpcAccess vpcAccess) {
     this.vpcAccess = vpcAccess;
+    return this;
+  }
+
+  /**
+   * Optional. The Revision's workload identity settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkloadIdentityConfig getWorkloadIdentityConfig() {
+    return workloadIdentityConfig;
+  }
+
+  /**
+   * Optional. The Revision's workload identity settings.
+   * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setWorkloadIdentityConfig(GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig) {
+    this.workloadIdentityConfig = workloadIdentityConfig;
     return this;
   }
 

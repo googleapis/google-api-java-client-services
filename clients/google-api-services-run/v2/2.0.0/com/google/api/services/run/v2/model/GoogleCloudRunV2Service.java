@@ -148,6 +148,13 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
   private String expireTime;
 
   /**
+   * Optional. The functional type of the Service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String functionalType;
+
+  /**
    * Output only. A number that monotonically increases every time the user modifies the desired
    * state. Please note that unlike v1, this is an int64 value. As with most Google APIs, its JSON
    * representation will be a `string` instead of an `integer`.
@@ -624,6 +631,23 @@ public final class GoogleCloudRunV2Service extends com.google.api.client.json.Ge
    */
   public GoogleCloudRunV2Service setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Optional. The functional type of the Service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFunctionalType() {
+    return functionalType;
+  }
+
+  /**
+   * Optional. The functional type of the Service.
+   * @param functionalType functionalType or {@code null} for none
+   */
+  public GoogleCloudRunV2Service setFunctionalType(java.lang.String functionalType) {
+    this.functionalType = functionalType;
     return this;
   }
 

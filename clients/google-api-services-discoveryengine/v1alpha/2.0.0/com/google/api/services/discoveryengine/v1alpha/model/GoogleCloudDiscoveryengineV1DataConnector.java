@@ -137,6 +137,13 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   private String createTime;
 
   /**
+   * Optional. Specifies the data protection policy for the connector.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1DataProtectionPolicy dataProtectionPolicy;
+
+  /**
    * Required. The identifier for the data source. For the full, up-to-date list of supported
    * connectors and their values, see [Connect a third-party data
    * source](https://docs.cloud.google.com/gemini/enterprise/docs/connectors/connect-third-party-
@@ -652,6 +659,23 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
    */
   public GoogleCloudDiscoveryengineV1DataConnector setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for the connector.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataProtectionPolicy getDataProtectionPolicy() {
+    return dataProtectionPolicy;
+  }
+
+  /**
+   * Optional. Specifies the data protection policy for the connector.
+   * @param dataProtectionPolicy dataProtectionPolicy or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DataConnector setDataProtectionPolicy(GoogleCloudDiscoveryengineV1DataProtectionPolicy dataProtectionPolicy) {
+    this.dataProtectionPolicy = dataProtectionPolicy;
     return this;
   }
 

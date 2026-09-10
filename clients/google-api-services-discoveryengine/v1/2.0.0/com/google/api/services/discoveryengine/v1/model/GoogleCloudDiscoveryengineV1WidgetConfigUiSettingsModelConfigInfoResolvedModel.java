@@ -64,6 +64,15 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfig
   private java.lang.String icon;
 
   /**
+   * Output only. Absolute URL of a brand mark to render instead of `icon`, for models whose vendor
+   * logo is not a GM3 glyph. `icon` stays populated as the fallback, so a client that does not
+   * render images, or that fails to fetch this one, shows the glyph instead of nothing.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String iconUrl;
+
+  /**
    * Output only. Whether the model is currently in preview. Clients should surface this via a
    * "Preview" badge in the selector UI.
    * The value may be {@code null}.
@@ -172,6 +181,27 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfig
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel setIcon(java.lang.String icon) {
     this.icon = icon;
+    return this;
+  }
+
+  /**
+   * Output only. Absolute URL of a brand mark to render instead of `icon`, for models whose vendor
+   * logo is not a GM3 glyph. `icon` stays populated as the fallback, so a client that does not
+   * render images, or that fails to fetch this one, shows the glyph instead of nothing.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIconUrl() {
+    return iconUrl;
+  }
+
+  /**
+   * Output only. Absolute URL of a brand mark to render instead of `icon`, for models whose vendor
+   * logo is not a GM3 glyph. `icon` stays populated as the fallback, so a client that does not
+   * render images, or that fails to fetch this one, shows the glyph instead of nothing.
+   * @param iconUrl iconUrl or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel setIconUrl(java.lang.String iconUrl) {
+    this.iconUrl = iconUrl;
     return this;
   }
 

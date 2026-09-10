@@ -204,6 +204,13 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
   private GoogleCloudRunV2VpcAccess vpcAccess;
 
   /**
+   * Optional. The Revision's workload identity settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
    * Optional. Unstructured key value map that may be set by external tools to store and arbitrary
    * metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API
    * v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
@@ -599,6 +606,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   public GoogleCloudRunV2RevisionTemplate setVpcAccess(GoogleCloudRunV2VpcAccess vpcAccess) {
     this.vpcAccess = vpcAccess;
+    return this;
+  }
+
+  /**
+   * Optional. The Revision's workload identity settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkloadIdentityConfig getWorkloadIdentityConfig() {
+    return workloadIdentityConfig;
+  }
+
+  /**
+   * Optional. The Revision's workload identity settings.
+   * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setWorkloadIdentityConfig(GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig) {
+    this.workloadIdentityConfig = workloadIdentityConfig;
     return this;
   }
 

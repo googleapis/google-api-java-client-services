@@ -112,6 +112,13 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private GoogleCloudRunV2VpcAccess vpcAccess;
 
   /**
+   * Optional. The Task's workload identity settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
    * Holds the single container that defines the unit of execution for this task.
    * @return value or {@code null} for none
    */
@@ -290,6 +297,23 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
    */
   public GoogleCloudRunV2TaskTemplate setVpcAccess(GoogleCloudRunV2VpcAccess vpcAccess) {
     this.vpcAccess = vpcAccess;
+    return this;
+  }
+
+  /**
+   * Optional. The Task's workload identity settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkloadIdentityConfig getWorkloadIdentityConfig() {
+    return workloadIdentityConfig;
+  }
+
+  /**
+   * Optional. The Task's workload identity settings.
+   * @param workloadIdentityConfig workloadIdentityConfig or {@code null} for none
+   */
+  public GoogleCloudRunV2TaskTemplate setWorkloadIdentityConfig(GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig) {
+    this.workloadIdentityConfig = workloadIdentityConfig;
     return this;
   }
 

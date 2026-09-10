@@ -304,6 +304,13 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
   private java.lang.String serviceAccount;
 
   /**
+   * Optional. Enables SSH access to the Instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean sshEnabled;
+
+  /**
    * Output only. The Condition of this Instance, containing its readiness status, and detailed
    * error information in case it did not reach a serving state. See comments in `reconciling` for
    * additional information on reconciliation process in Cloud Run.
@@ -957,6 +964,23 @@ public final class GoogleCloudRunV2Instance extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Instance setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
+    return this;
+  }
+
+  /**
+   * Optional. Enables SSH access to the Instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSshEnabled() {
+    return sshEnabled;
+  }
+
+  /**
+   * Optional. Enables SSH access to the Instance.
+   * @param sshEnabled sshEnabled or {@code null} for none
+   */
+  public GoogleCloudRunV2Instance setSshEnabled(java.lang.Boolean sshEnabled) {
+    this.sshEnabled = sshEnabled;
     return this;
   }
 

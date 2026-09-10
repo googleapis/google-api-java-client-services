@@ -122,6 +122,13 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
   private String expireTime;
 
   /**
+   * Optional. The functional type of the Job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String functionalType;
+
+  /**
    * Output only. A number that monotonically increases every time the user modifies the desired
    * state.
    * The value may be {@code null}.
@@ -459,6 +466,23 @@ public final class GoogleCloudRunV2Job extends com.google.api.client.json.Generi
    */
   public GoogleCloudRunV2Job setExpireTime(String expireTime) {
     this.expireTime = expireTime;
+    return this;
+  }
+
+  /**
+   * Optional. The functional type of the Job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFunctionalType() {
+    return functionalType;
+  }
+
+  /**
+   * Optional. The functional type of the Job.
+   * @param functionalType functionalType or {@code null} for none
+   */
+  public GoogleCloudRunV2Job setFunctionalType(java.lang.String functionalType) {
+    this.functionalType = functionalType;
     return this;
   }
 

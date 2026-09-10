@@ -39,9 +39,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The automatically calculated running stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,9 +48,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The automatically calculated walking stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +75,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The user's user configured running stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +84,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The user's user configured walking stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,9 +112,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The automatically calculated running stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAutoRunningStrideLengthMm() {
@@ -127,9 +122,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The automatically calculated running stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @param autoRunningStrideLengthMm autoRunningStrideLengthMm or {@code null} for none
    */
   public Profile setAutoRunningStrideLengthMm(java.lang.Integer autoRunningStrideLengthMm) {
@@ -139,9 +133,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The automatically calculated walking stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAutoWalkingStrideLengthMm() {
@@ -150,9 +143,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The automatically calculated walking stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @param autoWalkingStrideLengthMm autoWalkingStrideLengthMm or {@code null} for none
    */
   public Profile setAutoWalkingStrideLengthMm(java.lang.Integer autoWalkingStrideLengthMm) {
@@ -204,9 +196,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The user's user configured running stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUserConfiguredRunningStrideLengthMm() {
@@ -215,9 +206,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The user's user configured running stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @param userConfiguredRunningStrideLengthMm userConfiguredRunningStrideLengthMm or {@code null} for none
    */
   public Profile setUserConfiguredRunningStrideLengthMm(java.lang.Integer userConfiguredRunningStrideLengthMm) {
@@ -227,9 +217,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The user's user configured walking stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @return value or {@code null} for none
    */
   public java.lang.Integer getUserConfiguredWalkingStrideLengthMm() {
@@ -238,9 +227,8 @@ public final class Profile extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The user's user configured walking stride length, in millimeters. The user must
-   * consent to one of the following access scopes to access this field: -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly` -
-   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness`
+   * consent to the following access scope to access this field: -
+   * `https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly`
    * @param userConfiguredWalkingStrideLengthMm userConfiguredWalkingStrideLengthMm or {@code null} for none
    */
   public Profile setUserConfiguredWalkingStrideLengthMm(java.lang.Integer userConfiguredWalkingStrideLengthMm) {

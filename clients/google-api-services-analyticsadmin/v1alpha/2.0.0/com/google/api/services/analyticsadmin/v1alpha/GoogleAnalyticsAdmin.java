@@ -22346,7 +22346,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Retrieve a single Key Event.
+       * Retrieves a single Key Event.
        *
        * Create a request for the method "keyEvents.get".
        *
@@ -22371,7 +22371,7 @@ public class GoogleAnalyticsAdmin extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^properties/[^/]+/keyEvents/[^/]+$");
 
         /**
-         * Retrieve a single Key Event.
+         * Retrieves a single Key Event.
          *
          * Create a request for the method "keyEvents.get".
          *

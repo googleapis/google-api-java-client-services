@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response from the ListUserListGlobalLicensesCustomerInfoRequest.
+ * Model definition for ListUserListGlobalLicenseCustomerInfosResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class ListUserListGlobalLicenseCustomerInfosResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The customer information for the given license in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserListGlobalLicenseCustomerInfo> userListGlobalLicenseCustomerInfos;
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +49,6 @@ public final class ListUserListGlobalLicenseCustomerInfosResponse extends com.go
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListUserListGlobalLicenseCustomerInfosResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +57,6 @@ public final class ListUserListGlobalLicenseCustomerInfosResponse extends com.go
   }
 
   /**
-   * The customer information for the given license in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<UserListGlobalLicenseCustomerInfo> getUserListGlobalLicenseCustomerInfos() {
@@ -72,7 +64,6 @@ public final class ListUserListGlobalLicenseCustomerInfosResponse extends com.go
   }
 
   /**
-   * The customer information for the given license in the request.
    * @param userListGlobalLicenseCustomerInfos userListGlobalLicenseCustomerInfos or {@code null} for none
    */
   public ListUserListGlobalLicenseCustomerInfosResponse setUserListGlobalLicenseCustomerInfos(java.util.List<UserListGlobalLicenseCustomerInfo> userListGlobalLicenseCustomerInfos) {

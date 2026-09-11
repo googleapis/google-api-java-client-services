@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Publisher provided identifiers data holding the ppids. At least one ppid is required. This
- * feature is only available to data partners.
+ * Model definition for PpidData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class PpidData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of publisher provided identifiers for a user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> ppids;
 
   /**
-   * Required. The list of publisher provided identifiers for a user.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPpids() {
@@ -46,7 +43,6 @@ public final class PpidData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of publisher provided identifiers for a user.
    * @param ppids ppids or {@code null} for none
    */
   public PpidData setPpids(java.util.List<java.lang.String> ppids) {

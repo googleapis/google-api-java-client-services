@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Additional information when `PSEUDONYMOUS_ID` is one of the `upload_key_types`.
+ * Model definition for PseudonymousIdInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class PseudonymousIdInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable. The number of billable records (e.g. uploaded or matched).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long billableRecordCount;
 
   /**
-   * Output only. Sync status of the user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String syncStatus;
 
   /**
-   * Optional. Immutable. The number of billable records (e.g. uploaded or matched).
    * @return value or {@code null} for none
    */
   public java.lang.Long getBillableRecordCount() {
@@ -52,7 +49,6 @@ public final class PseudonymousIdInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Immutable. The number of billable records (e.g. uploaded or matched).
    * @param billableRecordCount billableRecordCount or {@code null} for none
    */
   public PseudonymousIdInfo setBillableRecordCount(java.lang.Long billableRecordCount) {
@@ -61,7 +57,6 @@ public final class PseudonymousIdInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Sync status of the user list.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyncStatus() {
@@ -69,7 +64,6 @@ public final class PseudonymousIdInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. Sync status of the user list.
    * @param syncStatus syncStatus or {@code null} for none
    */
   public PseudonymousIdInfo setSyncStatus(java.lang.String syncStatus) {

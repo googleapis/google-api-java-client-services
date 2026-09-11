@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Mobile IDs for the audience. At least one mobile ID is required.
+ * Model definition for MobileData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,20 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class MobileData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of mobile device IDs (Android advertising ID, iOS IDFA for Customer Match
-   * user lists and Android advertising ID, iOS IDFA, Xbox or Microsoft ID, Amazon Fire TV ID, Roku
-   * ID, Generic Device ID for basic user lists). At most 10 `mobileIds` can be provided in a single
-   * AudienceMember.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> mobileIds;
 
   /**
-   * Required. The list of mobile device IDs (Android advertising ID, iOS IDFA for Customer Match
-   * user lists and Android advertising ID, iOS IDFA, Xbox or Microsoft ID, Amazon Fire TV ID, Roku
-   * ID, Generic Device ID for basic user lists). At most 10 `mobileIds` can be provided in a single
-   * AudienceMember.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getMobileIds() {
@@ -51,10 +43,6 @@ public final class MobileData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of mobile device IDs (Android advertising ID, iOS IDFA for Customer Match
-   * user lists and Android advertising ID, iOS IDFA, Xbox or Microsoft ID, Amazon Fire TV ID, Roku
-   * ID, Generic Device ID for basic user lists). At most 10 `mobileIds` can be provided in a single
-   * AudienceMember.
    * @param mobileIds mobileIds or {@code null} for none
    */
   public MobileData setMobileIds(java.util.List<java.lang.String> mobileIds) {

@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The count for a specific data type.
+ * Model definition for DataTypeCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class DataTypeCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The count for this data type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long count;
 
   /**
-   * The type of data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * The count for this data type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -52,7 +49,6 @@ public final class DataTypeCount extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The count for this data type.
    * @param count count or {@code null} for none
    */
   public DataTypeCount setCount(java.lang.Long count) {
@@ -61,7 +57,6 @@ public final class DataTypeCount extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of data.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -69,7 +64,6 @@ public final class DataTypeCount extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The type of data.
    * @param type type or {@code null} for none
    */
   public DataTypeCount setType(java.lang.String type) {

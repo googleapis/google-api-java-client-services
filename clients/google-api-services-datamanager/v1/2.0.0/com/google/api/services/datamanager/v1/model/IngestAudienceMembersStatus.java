@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the ingest audience members request.
+ * Model definition for IngestAudienceMembersStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,63 +30,54 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestAudienceMembersStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the composite data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestCompositeDataStatus compositeDataIngestionStatus;
 
   /**
-   * The status of the google user id data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestGoogleUserIdDataStatus googleUserIdDataIngestionStatus;
 
   /**
-   * The status of the mobile data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestMobileDataStatus mobileDataIngestionStatus;
 
   /**
-   * The status of the pair data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestPairDataStatus pairDataIngestionStatus;
 
   /**
-   * The status of the partner provided id data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestPartnerProvidedIdDataStatus partnerProvidedIdDataIngestionStatus;
 
   /**
-   * The status of the ppid data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestPpidDataStatus ppidDataIngestionStatus;
 
   /**
-   * The status of the user data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestUserDataStatus userDataIngestionStatus;
 
   /**
-   * The status of the user id data ingestion to the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestUserIdDataStatus userIdDataIngestionStatus;
 
   /**
-   * The status of the composite data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestCompositeDataStatus getCompositeDataIngestionStatus() {
@@ -94,7 +85,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the composite data ingestion to the destination.
    * @param compositeDataIngestionStatus compositeDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setCompositeDataIngestionStatus(IngestCompositeDataStatus compositeDataIngestionStatus) {
@@ -103,7 +93,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the google user id data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestGoogleUserIdDataStatus getGoogleUserIdDataIngestionStatus() {
@@ -111,7 +100,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the google user id data ingestion to the destination.
    * @param googleUserIdDataIngestionStatus googleUserIdDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setGoogleUserIdDataIngestionStatus(IngestGoogleUserIdDataStatus googleUserIdDataIngestionStatus) {
@@ -120,7 +108,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the mobile data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestMobileDataStatus getMobileDataIngestionStatus() {
@@ -128,7 +115,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the mobile data ingestion to the destination.
    * @param mobileDataIngestionStatus mobileDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setMobileDataIngestionStatus(IngestMobileDataStatus mobileDataIngestionStatus) {
@@ -137,7 +123,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the pair data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestPairDataStatus getPairDataIngestionStatus() {
@@ -145,7 +130,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the pair data ingestion to the destination.
    * @param pairDataIngestionStatus pairDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setPairDataIngestionStatus(IngestPairDataStatus pairDataIngestionStatus) {
@@ -154,7 +138,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the partner provided id data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestPartnerProvidedIdDataStatus getPartnerProvidedIdDataIngestionStatus() {
@@ -162,7 +145,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the partner provided id data ingestion to the destination.
    * @param partnerProvidedIdDataIngestionStatus partnerProvidedIdDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setPartnerProvidedIdDataIngestionStatus(IngestPartnerProvidedIdDataStatus partnerProvidedIdDataIngestionStatus) {
@@ -171,7 +153,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ppid data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestPpidDataStatus getPpidDataIngestionStatus() {
@@ -179,7 +160,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ppid data ingestion to the destination.
    * @param ppidDataIngestionStatus ppidDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setPpidDataIngestionStatus(IngestPpidDataStatus ppidDataIngestionStatus) {
@@ -188,7 +168,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestUserDataStatus getUserDataIngestionStatus() {
@@ -196,7 +175,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user data ingestion to the destination.
    * @param userDataIngestionStatus userDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setUserDataIngestionStatus(IngestUserDataStatus userDataIngestionStatus) {
@@ -205,7 +183,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user id data ingestion to the destination.
    * @return value or {@code null} for none
    */
   public IngestUserIdDataStatus getUserIdDataIngestionStatus() {
@@ -213,7 +190,6 @@ public final class IngestAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user id data ingestion to the destination.
    * @param userIdDataIngestionStatus userIdDataIngestionStatus or {@code null} for none
    */
   public IngestAudienceMembersStatus setUserIdDataIngestionStatus(IngestUserIdDataStatus userIdDataIngestionStatus) {

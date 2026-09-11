@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Information about a customer of a user list global license. This will automatically be created by
- * the system when a customer purchases a global license.
+ * Model definition for UserListGlobalLicenseCustomerInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,85 +30,72 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserListGlobalLicenseCustomerInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Name of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientAccountDisplayName;
 
   /**
-   * Output only. ID of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long clientAccountId;
 
   /**
-   * Output only. Product type of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientAccountType;
 
   /**
-   * Output only. Pricing history of this user list license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserListLicensePricing> historicalPricings;
 
   /**
-   * Output only. Product type of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String licenseType;
 
   /**
-   * Output only. Metrics related to this license This field is only populated if the start and end
-   * dates are set in the ListUserListGlobalLicenseCustomerInfos call.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserListLicenseMetrics metrics;
 
   /**
-   * Identifier. The resource name of the user list global license customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. UserListDirectLicense pricing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserListLicensePricing pricing;
 
   /**
-   * Output only. Status of UserListDirectLicense - ENABLED or DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. Name of the user list being licensed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userListDisplayName;
 
   /**
-   * Output only. ID of the user list being licensed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userListId;
 
   /**
-   * Output only. Name of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAccountDisplayName() {
@@ -117,7 +103,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Name of client customer which the user list is being licensed to.
    * @param clientAccountDisplayName clientAccountDisplayName or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setClientAccountDisplayName(java.lang.String clientAccountDisplayName) {
@@ -126,7 +111,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. ID of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountId() {
@@ -134,7 +118,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. ID of client customer which the user list is being licensed to.
    * @param clientAccountId clientAccountId or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setClientAccountId(java.lang.Long clientAccountId) {
@@ -143,7 +126,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Product type of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAccountType() {
@@ -151,7 +133,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Product type of client customer which the user list is being licensed to.
    * @param clientAccountType clientAccountType or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setClientAccountType(java.lang.String clientAccountType) {
@@ -160,7 +141,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Pricing history of this user list license.
    * @return value or {@code null} for none
    */
   public java.util.List<UserListLicensePricing> getHistoricalPricings() {
@@ -168,7 +148,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Pricing history of this user list license.
    * @param historicalPricings historicalPricings or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setHistoricalPricings(java.util.List<UserListLicensePricing> historicalPricings) {
@@ -177,7 +156,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Product type of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicenseType() {
@@ -185,7 +163,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Product type of client customer which the user list is being licensed to.
    * @param licenseType licenseType or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setLicenseType(java.lang.String licenseType) {
@@ -194,8 +171,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Metrics related to this license This field is only populated if the start and end
-   * dates are set in the ListUserListGlobalLicenseCustomerInfos call.
    * @return value or {@code null} for none
    */
   public UserListLicenseMetrics getMetrics() {
@@ -203,8 +178,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Metrics related to this license This field is only populated if the start and end
-   * dates are set in the ListUserListGlobalLicenseCustomerInfos call.
    * @param metrics metrics or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setMetrics(UserListLicenseMetrics metrics) {
@@ -213,7 +186,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Identifier. The resource name of the user list global license customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -221,7 +193,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Identifier. The resource name of the user list global license customer.
    * @param name name or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setName(java.lang.String name) {
@@ -230,7 +201,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. UserListDirectLicense pricing.
    * @return value or {@code null} for none
    */
   public UserListLicensePricing getPricing() {
@@ -238,7 +208,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. UserListDirectLicense pricing.
    * @param pricing pricing or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setPricing(UserListLicensePricing pricing) {
@@ -247,7 +216,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Status of UserListDirectLicense - ENABLED or DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -255,7 +223,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Status of UserListDirectLicense - ENABLED or DISABLED.
    * @param status status or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setStatus(java.lang.String status) {
@@ -264,7 +231,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Name of the user list being licensed.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserListDisplayName() {
@@ -272,7 +238,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. Name of the user list being licensed.
    * @param userListDisplayName userListDisplayName or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setUserListDisplayName(java.lang.String userListDisplayName) {
@@ -281,7 +246,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. ID of the user list being licensed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserListId() {
@@ -289,7 +253,6 @@ public final class UserListGlobalLicenseCustomerInfo extends com.google.api.clie
   }
 
   /**
-   * Output only. ID of the user list being licensed.
    * @param userListId userListId or {@code null} for none
    */
   public UserListGlobalLicenseCustomerInfo setUserListId(java.lang.Long userListId) {

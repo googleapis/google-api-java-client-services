@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * An event representing a user interaction with an advertiser's website or app.
+ * Model definition for Event.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,75 +30,60 @@ package com.google.api.services.datamanager.v1.model;
 public final class Event extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Identifiers and other information used to match the conversion event with other
-   * online activity (such as ad clicks).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AdIdentifiers adIdentifiers;
 
   /**
-   * Optional. A bucket of any [event parameters](https://developers.google.com/analytics/devguides/
-   * collection/protocol/ga4/reference/events) to be included within the event that were not already
-   * specified using other structured fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EventParameter> additionalEventParameters;
 
   /**
-   * Optional. A unique identifier for the user instance of an app client for this GA4 app stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appInstanceId;
 
   /**
-   * Optional. Information about the transaction and items associated with the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CartData cartData;
 
   /**
-   * Optional. A unique identifier for the user instance of a web client for this GA4 web stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientId;
 
   /**
-   * Optional. Information about whether the associated user has provided different types of
-   * consent.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Consent consent;
 
   /**
-   * Optional. The conversion quantity associated with the event, for counting-based conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double conversionCount;
 
   /**
-   * Optional. The conversion value associated with the event, for value-based conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double conversionValue;
 
   /**
-   * Optional. The currency code associated with all monetary values within this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currency;
 
   /**
-   * Optional. Additional key/value pair information to send to the conversion containers
-   * (conversion action or FL activity).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,103 +96,84 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Reference string used to determine the destination. If empty, the event will be sent
-   * to all destinations in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> destinationReferences;
 
   /**
-   * Optional. Information gathered about the device being used (if any) when the event happened.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceInfo eventDeviceInfo;
 
   /**
-   * Optional. Information gathered about the location of the user when this event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EventLocation eventLocation;
 
   /**
-   * Optional. The name of the event. Required for GA4 events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventName;
 
   /**
-   * Optional. Signal for where the event happened (web, app, in-store, etc.).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventSource;
 
   /**
-   * Required. The time the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String eventTimestamp;
 
   /**
-   * Optional. A list of key/value pairs for experimental fields that may eventually be promoted to
-   * be part of the API.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ExperimentalField> experimentalFields;
 
   /**
-   * Optional. The last time the event was updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastUpdatedTimestamp;
 
   /**
-   * Optional. The same type of data provided in user_data, but explicitly flagged as being provided
-   * as owned by a third-party and not first-party advertiser data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserData thirdPartyUserData;
 
   /**
-   * Optional. The unique identifier for this event. Required for events sent as an additional data
-   * source for tag conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String transactionId;
 
   /**
-   * Optional. Pieces of user provided data, representing the user the event is associated with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserData userData;
 
   /**
-   * Optional. A unique identifier for a user, as defined by the advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userId;
 
   /**
-   * Optional. Advertiser-assessed information about the user at the time that the event happened.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserProperties userProperties;
 
   /**
-   * Optional. Identifiers and other information used to match the conversion event with other
-   * online activity (such as ad clicks).
    * @return value or {@code null} for none
    */
   public AdIdentifiers getAdIdentifiers() {
@@ -215,8 +181,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Identifiers and other information used to match the conversion event with other
-   * online activity (such as ad clicks).
    * @param adIdentifiers adIdentifiers or {@code null} for none
    */
   public Event setAdIdentifiers(AdIdentifiers adIdentifiers) {
@@ -225,9 +189,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A bucket of any [event parameters](https://developers.google.com/analytics/devguides/
-   * collection/protocol/ga4/reference/events) to be included within the event that were not already
-   * specified using other structured fields.
    * @return value or {@code null} for none
    */
   public java.util.List<EventParameter> getAdditionalEventParameters() {
@@ -235,9 +196,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A bucket of any [event parameters](https://developers.google.com/analytics/devguides/
-   * collection/protocol/ga4/reference/events) to be included within the event that were not already
-   * specified using other structured fields.
    * @param additionalEventParameters additionalEventParameters or {@code null} for none
    */
   public Event setAdditionalEventParameters(java.util.List<EventParameter> additionalEventParameters) {
@@ -246,7 +204,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier for the user instance of an app client for this GA4 app stream.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppInstanceId() {
@@ -254,7 +211,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier for the user instance of an app client for this GA4 app stream.
    * @param appInstanceId appInstanceId or {@code null} for none
    */
   public Event setAppInstanceId(java.lang.String appInstanceId) {
@@ -263,7 +219,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about the transaction and items associated with the event.
    * @return value or {@code null} for none
    */
   public CartData getCartData() {
@@ -271,7 +226,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about the transaction and items associated with the event.
    * @param cartData cartData or {@code null} for none
    */
   public Event setCartData(CartData cartData) {
@@ -280,7 +234,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier for the user instance of a web client for this GA4 web stream.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientId() {
@@ -288,7 +241,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier for the user instance of a web client for this GA4 web stream.
    * @param clientId clientId or {@code null} for none
    */
   public Event setClientId(java.lang.String clientId) {
@@ -297,8 +249,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about whether the associated user has provided different types of
-   * consent.
    * @return value or {@code null} for none
    */
   public Consent getConsent() {
@@ -306,8 +256,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information about whether the associated user has provided different types of
-   * consent.
    * @param consent consent or {@code null} for none
    */
   public Event setConsent(Consent consent) {
@@ -316,7 +264,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The conversion quantity associated with the event, for counting-based conversions.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConversionCount() {
@@ -324,7 +271,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The conversion quantity associated with the event, for counting-based conversions.
    * @param conversionCount conversionCount or {@code null} for none
    */
   public Event setConversionCount(java.lang.Double conversionCount) {
@@ -333,7 +279,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The conversion value associated with the event, for value-based conversions.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConversionValue() {
@@ -341,7 +286,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The conversion value associated with the event, for value-based conversions.
    * @param conversionValue conversionValue or {@code null} for none
    */
   public Event setConversionValue(java.lang.Double conversionValue) {
@@ -350,7 +294,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The currency code associated with all monetary values within this event.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrency() {
@@ -358,7 +301,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The currency code associated with all monetary values within this event.
    * @param currency currency or {@code null} for none
    */
   public Event setCurrency(java.lang.String currency) {
@@ -367,8 +309,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional key/value pair information to send to the conversion containers
-   * (conversion action or FL activity).
    * @return value or {@code null} for none
    */
   public java.util.List<CustomVariable> getCustomVariables() {
@@ -376,8 +316,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional key/value pair information to send to the conversion containers
-   * (conversion action or FL activity).
    * @param customVariables customVariables or {@code null} for none
    */
   public Event setCustomVariables(java.util.List<CustomVariable> customVariables) {
@@ -386,8 +324,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Reference string used to determine the destination. If empty, the event will be sent
-   * to all destinations in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinationReferences() {
@@ -395,8 +331,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Reference string used to determine the destination. If empty, the event will be sent
-   * to all destinations in the request.
    * @param destinationReferences destinationReferences or {@code null} for none
    */
   public Event setDestinationReferences(java.util.List<java.lang.String> destinationReferences) {
@@ -405,7 +339,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information gathered about the device being used (if any) when the event happened.
    * @return value or {@code null} for none
    */
   public DeviceInfo getEventDeviceInfo() {
@@ -413,7 +346,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information gathered about the device being used (if any) when the event happened.
    * @param eventDeviceInfo eventDeviceInfo or {@code null} for none
    */
   public Event setEventDeviceInfo(DeviceInfo eventDeviceInfo) {
@@ -422,7 +354,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information gathered about the location of the user when this event occurred.
    * @return value or {@code null} for none
    */
   public EventLocation getEventLocation() {
@@ -430,7 +361,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Information gathered about the location of the user when this event occurred.
    * @param eventLocation eventLocation or {@code null} for none
    */
   public Event setEventLocation(EventLocation eventLocation) {
@@ -439,7 +369,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The name of the event. Required for GA4 events.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventName() {
@@ -447,7 +376,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The name of the event. Required for GA4 events.
    * @param eventName eventName or {@code null} for none
    */
   public Event setEventName(java.lang.String eventName) {
@@ -456,7 +384,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Signal for where the event happened (web, app, in-store, etc.).
    * @return value or {@code null} for none
    */
   public java.lang.String getEventSource() {
@@ -464,7 +391,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Signal for where the event happened (web, app, in-store, etc.).
    * @param eventSource eventSource or {@code null} for none
    */
   public Event setEventSource(java.lang.String eventSource) {
@@ -473,7 +399,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time the event occurred.
    * @return value or {@code null} for none
    */
   public String getEventTimestamp() {
@@ -481,7 +406,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time the event occurred.
    * @param eventTimestamp eventTimestamp or {@code null} for none
    */
   public Event setEventTimestamp(String eventTimestamp) {
@@ -490,8 +414,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of key/value pairs for experimental fields that may eventually be promoted to
-   * be part of the API.
    * @return value or {@code null} for none
    */
   public java.util.List<ExperimentalField> getExperimentalFields() {
@@ -499,8 +421,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A list of key/value pairs for experimental fields that may eventually be promoted to
-   * be part of the API.
    * @param experimentalFields experimentalFields or {@code null} for none
    */
   public Event setExperimentalFields(java.util.List<ExperimentalField> experimentalFields) {
@@ -509,7 +429,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The last time the event was updated.
    * @return value or {@code null} for none
    */
   public String getLastUpdatedTimestamp() {
@@ -517,7 +436,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The last time the event was updated.
    * @param lastUpdatedTimestamp lastUpdatedTimestamp or {@code null} for none
    */
   public Event setLastUpdatedTimestamp(String lastUpdatedTimestamp) {
@@ -526,8 +444,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The same type of data provided in user_data, but explicitly flagged as being provided
-   * as owned by a third-party and not first-party advertiser data.
    * @return value or {@code null} for none
    */
   public UserData getThirdPartyUserData() {
@@ -535,8 +451,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The same type of data provided in user_data, but explicitly flagged as being provided
-   * as owned by a third-party and not first-party advertiser data.
    * @param thirdPartyUserData thirdPartyUserData or {@code null} for none
    */
   public Event setThirdPartyUserData(UserData thirdPartyUserData) {
@@ -545,8 +459,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The unique identifier for this event. Required for events sent as an additional data
-   * source for tag conversions.
    * @return value or {@code null} for none
    */
   public java.lang.String getTransactionId() {
@@ -554,8 +466,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The unique identifier for this event. Required for events sent as an additional data
-   * source for tag conversions.
    * @param transactionId transactionId or {@code null} for none
    */
   public Event setTransactionId(java.lang.String transactionId) {
@@ -564,7 +474,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Pieces of user provided data, representing the user the event is associated with.
    * @return value or {@code null} for none
    */
   public UserData getUserData() {
@@ -572,7 +481,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Pieces of user provided data, representing the user the event is associated with.
    * @param userData userData or {@code null} for none
    */
   public Event setUserData(UserData userData) {
@@ -581,7 +489,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier for a user, as defined by the advertiser.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserId() {
@@ -589,7 +496,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier for a user, as defined by the advertiser.
    * @param userId userId or {@code null} for none
    */
   public Event setUserId(java.lang.String userId) {
@@ -598,7 +504,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Advertiser-assessed information about the user at the time that the event happened.
    * @return value or {@code null} for none
    */
   public UserProperties getUserProperties() {
@@ -606,7 +511,6 @@ public final class Event extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Advertiser-assessed information about the user at the time that the event happened.
    * @param userProperties userProperties or {@code null} for none
    */
   public Event setUserProperties(UserProperties userProperties) {

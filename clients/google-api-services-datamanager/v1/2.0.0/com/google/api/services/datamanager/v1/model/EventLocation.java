@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The location where the event occurred.
+ * Model definition for EventLocation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,50 +30,42 @@ package com.google.api.services.datamanager.v1.model;
 public final class EventLocation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the city where the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
 
   /**
-   * Optional. The continent code in UN M49 format where the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String continentCode;
 
   /**
-   * Optional. The 2-letter CLDR region code of the user's address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * Optional. Required for Store Sales. The identifier to represent a physical store where the
-   * event happened.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String storeId;
 
   /**
-   * Optional. The subcontinent code in UN M49 format where the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subcontinentCode;
 
   /**
-   * Optional. The ISO 3166-2 subdivision code where the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subdivisionCode;
 
   /**
-   * Optional. The name of the city where the event occurred.
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -81,7 +73,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The name of the city where the event occurred.
    * @param city city or {@code null} for none
    */
   public EventLocation setCity(java.lang.String city) {
@@ -90,7 +81,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The continent code in UN M49 format where the event occurred.
    * @return value or {@code null} for none
    */
   public java.lang.String getContinentCode() {
@@ -98,7 +88,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The continent code in UN M49 format where the event occurred.
    * @param continentCode continentCode or {@code null} for none
    */
   public EventLocation setContinentCode(java.lang.String continentCode) {
@@ -107,7 +96,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The 2-letter CLDR region code of the user's address.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -115,7 +103,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The 2-letter CLDR region code of the user's address.
    * @param regionCode regionCode or {@code null} for none
    */
   public EventLocation setRegionCode(java.lang.String regionCode) {
@@ -124,8 +111,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Required for Store Sales. The identifier to represent a physical store where the
-   * event happened.
    * @return value or {@code null} for none
    */
   public java.lang.String getStoreId() {
@@ -133,8 +118,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Required for Store Sales. The identifier to represent a physical store where the
-   * event happened.
    * @param storeId storeId or {@code null} for none
    */
   public EventLocation setStoreId(java.lang.String storeId) {
@@ -143,7 +126,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The subcontinent code in UN M49 format where the event occurred.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubcontinentCode() {
@@ -151,7 +133,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The subcontinent code in UN M49 format where the event occurred.
    * @param subcontinentCode subcontinentCode or {@code null} for none
    */
   public EventLocation setSubcontinentCode(java.lang.String subcontinentCode) {
@@ -160,7 +141,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The ISO 3166-2 subdivision code where the event occurred.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubdivisionCode() {
@@ -168,7 +148,6 @@ public final class EventLocation extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The ISO 3166-2 subdivision code where the event occurred.
    * @param subdivisionCode subdivisionCode or {@code null} for none
    */
   public EventLocation setSubdivisionCode(java.lang.String subdivisionCode) {

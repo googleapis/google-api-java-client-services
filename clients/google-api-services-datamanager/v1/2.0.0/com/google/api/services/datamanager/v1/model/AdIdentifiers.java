@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Identifiers and other information used to match the conversion event with other online activity
- * (such as ad clicks).
+ * Model definition for AdIdentifiers.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,81 +30,78 @@ package com.google.api.services.datamanager.v1.model;
 public final class AdIdentifiers extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The display click ID associated with this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dclid;
 
   /**
-   * Optional. Any number of encrypted user IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EncryptedUserId> encryptedUserIds;
 
   /**
-   * Optional. The click identifier for clicks associated with app events and originating from iOS
-   * devices starting with iOS14.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gbraid;
 
   /**
-   * Optional. The Google click ID (gclid) associated with this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gclid;
 
   /**
-   * Optional. The impression ID associated with this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String impressionId;
 
   /**
-   * Optional. Information gathered about the device being used (if any) at the time of landing onto
-   * the advertiser’s site after interacting with the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceInfo landingPageDeviceInfo;
 
   /**
-   * Optional. The match ID field used to join this event with a previous event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String matchId;
 
   /**
-   * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
-   * other platforms’ identifiers for advertisers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mobileDeviceId;
 
   /**
-   * Optional. Session attributes for event attribution and modeling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ppid;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionAttributes;
 
   /**
-   * Optional. The click identifier for clicks associated with web events and originating from iOS
-   * devices starting with iOS14.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String visitorPpid;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wbraid;
 
   /**
-   * Optional. The display click ID associated with this event.
    * @return value or {@code null} for none
    */
   public java.lang.String getDclid() {
@@ -113,7 +109,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The display click ID associated with this event.
    * @param dclid dclid or {@code null} for none
    */
   public AdIdentifiers setDclid(java.lang.String dclid) {
@@ -122,7 +117,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Any number of encrypted user IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<EncryptedUserId> getEncryptedUserIds() {
@@ -130,7 +124,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Any number of encrypted user IDs.
    * @param encryptedUserIds encryptedUserIds or {@code null} for none
    */
   public AdIdentifiers setEncryptedUserIds(java.util.List<EncryptedUserId> encryptedUserIds) {
@@ -139,8 +132,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The click identifier for clicks associated with app events and originating from iOS
-   * devices starting with iOS14.
    * @return value or {@code null} for none
    */
   public java.lang.String getGbraid() {
@@ -148,8 +139,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The click identifier for clicks associated with app events and originating from iOS
-   * devices starting with iOS14.
    * @param gbraid gbraid or {@code null} for none
    */
   public AdIdentifiers setGbraid(java.lang.String gbraid) {
@@ -158,7 +147,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Google click ID (gclid) associated with this event.
    * @return value or {@code null} for none
    */
   public java.lang.String getGclid() {
@@ -166,7 +154,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The Google click ID (gclid) associated with this event.
    * @param gclid gclid or {@code null} for none
    */
   public AdIdentifiers setGclid(java.lang.String gclid) {
@@ -175,7 +162,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The impression ID associated with this event.
    * @return value or {@code null} for none
    */
   public java.lang.String getImpressionId() {
@@ -183,7 +169,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The impression ID associated with this event.
    * @param impressionId impressionId or {@code null} for none
    */
   public AdIdentifiers setImpressionId(java.lang.String impressionId) {
@@ -192,8 +177,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Information gathered about the device being used (if any) at the time of landing onto
-   * the advertiser’s site after interacting with the ad.
    * @return value or {@code null} for none
    */
   public DeviceInfo getLandingPageDeviceInfo() {
@@ -201,8 +184,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Information gathered about the device being used (if any) at the time of landing onto
-   * the advertiser’s site after interacting with the ad.
    * @param landingPageDeviceInfo landingPageDeviceInfo or {@code null} for none
    */
   public AdIdentifiers setLandingPageDeviceInfo(DeviceInfo landingPageDeviceInfo) {
@@ -211,7 +192,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The match ID field used to join this event with a previous event.
    * @return value or {@code null} for none
    */
   public java.lang.String getMatchId() {
@@ -219,7 +199,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The match ID field used to join this event with a previous event.
    * @param matchId matchId or {@code null} for none
    */
   public AdIdentifiers setMatchId(java.lang.String matchId) {
@@ -228,8 +207,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
-   * other platforms’ identifiers for advertisers.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileDeviceId() {
@@ -237,8 +214,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The mobile identifier for advertisers. This would be IDFA on iOS, AdID on Android, or
-   * other platforms’ identifiers for advertisers.
    * @param mobileDeviceId mobileDeviceId or {@code null} for none
    */
   public AdIdentifiers setMobileDeviceId(java.lang.String mobileDeviceId) {
@@ -247,7 +222,21 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Session attributes for event attribution and modeling.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPpid() {
+    return ppid;
+  }
+
+  /**
+   * @param ppid ppid or {@code null} for none
+   */
+  public AdIdentifiers setPpid(java.lang.String ppid) {
+    this.ppid = ppid;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionAttributes() {
@@ -255,7 +244,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Session attributes for event attribution and modeling.
    * @param sessionAttributes sessionAttributes or {@code null} for none
    */
   public AdIdentifiers setSessionAttributes(java.lang.String sessionAttributes) {
@@ -264,8 +252,21 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The click identifier for clicks associated with web events and originating from iOS
-   * devices starting with iOS14.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVisitorPpid() {
+    return visitorPpid;
+  }
+
+  /**
+   * @param visitorPpid visitorPpid or {@code null} for none
+   */
+  public AdIdentifiers setVisitorPpid(java.lang.String visitorPpid) {
+    this.visitorPpid = visitorPpid;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getWbraid() {
@@ -273,8 +274,6 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. The click identifier for clicks associated with web events and originating from iOS
-   * devices starting with iOS14.
    * @param wbraid wbraid or {@code null} for none
    */
   public AdIdentifiers setWbraid(java.lang.String wbraid) {

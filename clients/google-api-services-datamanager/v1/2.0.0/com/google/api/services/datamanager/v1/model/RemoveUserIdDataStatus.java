@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the user id data removal from the destination.
+ * Model definition for RemoveUserIdDataStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveUserIdDataStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The total count of user ids sent in the removal request. Includes all user ids in the request,
-   * regardless of whether they were successfully removed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userIdCount;
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -55,8 +49,6 @@ public final class RemoveUserIdDataStatus extends com.google.api.client.json.Gen
   }
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * @param recordCount recordCount or {@code null} for none
    */
   public RemoveUserIdDataStatus setRecordCount(java.lang.Long recordCount) {
@@ -65,8 +57,6 @@ public final class RemoveUserIdDataStatus extends com.google.api.client.json.Gen
   }
 
   /**
-   * The total count of user ids sent in the removal request. Includes all user ids in the request,
-   * regardless of whether they were successfully removed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserIdCount() {
@@ -74,8 +64,6 @@ public final class RemoveUserIdDataStatus extends com.google.api.client.json.Gen
   }
 
   /**
-   * The total count of user ids sent in the removal request. Includes all user ids in the request,
-   * regardless of whether they were successfully removed or not.
    * @param userIdCount userIdCount or {@code null} for none
    */
   public RemoveUserIdDataStatus setUserIdCount(java.lang.Long userIdCount) {

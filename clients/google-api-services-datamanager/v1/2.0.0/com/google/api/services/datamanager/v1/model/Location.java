@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The baseline location of the request. Baseline location is on OR-list of ISO 3166-1 alpha-2
- * region codes of the requested regions.
+ * Model definition for Location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class Location extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of ISO 3166-1 alpha-2 region codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> regionCodes;
 
   /**
-   * List of ISO 3166-1 alpha-2 region codes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegionCodes() {
@@ -46,7 +43,6 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * List of ISO 3166-1 alpha-2 region codes.
    * @param regionCodes regionCodes or {@code null} for none
    */
   public Location setRegionCodes(java.util.List<java.lang.String> regionCodes) {

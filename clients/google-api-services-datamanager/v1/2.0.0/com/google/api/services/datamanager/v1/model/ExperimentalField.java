@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Experimental field representing unofficial fields.
+ * Model definition for ExperimentalField.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class ExperimentalField extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the field to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * Optional. The value the field to set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Optional. The name of the field to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -52,7 +49,6 @@ public final class ExperimentalField extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The name of the field to use.
    * @param field field or {@code null} for none
    */
   public ExperimentalField setField(java.lang.String field) {
@@ -61,7 +57,6 @@ public final class ExperimentalField extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The value the field to set.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +64,6 @@ public final class ExperimentalField extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. The value the field to set.
    * @param value value or {@code null} for none
    */
   public ExperimentalField setValue(java.lang.String value) {

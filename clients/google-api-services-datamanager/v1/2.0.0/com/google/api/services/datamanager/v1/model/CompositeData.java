@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Composite data holding identifiers and associated data for a user. At least one of `user_data` or
- * `ip_data` is required.
+ * Model definition for CompositeData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class CompositeData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. IP address data representing customer interaction used to build the audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<IpData> ipData;
 
   /**
-   * Optional. User-provided data that identifies the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserData userData;
 
   /**
-   * Optional. IP address data representing customer interaction used to build the audience.
    * @return value or {@code null} for none
    */
   public java.util.List<IpData> getIpData() {
@@ -53,7 +49,6 @@ public final class CompositeData extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. IP address data representing customer interaction used to build the audience.
    * @param ipData ipData or {@code null} for none
    */
   public CompositeData setIpData(java.util.List<IpData> ipData) {
@@ -62,7 +57,6 @@ public final class CompositeData extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. User-provided data that identifies the user.
    * @return value or {@code null} for none
    */
   public UserData getUserData() {
@@ -70,7 +64,6 @@ public final class CompositeData extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. User-provided data that identifies the user.
    * @param userData userData or {@code null} for none
    */
   public CompositeData setUserData(UserData userData) {

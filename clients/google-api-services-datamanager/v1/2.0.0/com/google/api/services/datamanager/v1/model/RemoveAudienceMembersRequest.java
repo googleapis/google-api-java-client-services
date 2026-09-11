@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Request to remove users from an audience in the provided destinations. Returns a
- * RemoveAudienceMembersResponse.
+ * Model definition for RemoveAudienceMembersRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveAudienceMembersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of users to remove.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +42,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Required. The list of destinations to remove the users from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,33 +54,24 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user identifiers. Applies to
-   * only the outer encoding for encrypted user identifiers. For non `UserData` uploads, this field
-   * is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encoding;
 
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's assumed that uploaded
-   * identifying information is hashed but not encrypted. For non `UserData` uploads, this field is
-   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionInfo encryptionInfo;
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. The list of users to remove.
    * @return value or {@code null} for none
    */
   public java.util.List<AudienceMember> getAudienceMembers() {
@@ -91,7 +79,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Required. The list of users to remove.
    * @param audienceMembers audienceMembers or {@code null} for none
    */
   public RemoveAudienceMembersRequest setAudienceMembers(java.util.List<AudienceMember> audienceMembers) {
@@ -100,7 +87,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Required. The list of destinations to remove the users from.
    * @return value or {@code null} for none
    */
   public java.util.List<Destination> getDestinations() {
@@ -108,7 +94,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Required. The list of destinations to remove the users from.
    * @param destinations destinations or {@code null} for none
    */
   public RemoveAudienceMembersRequest setDestinations(java.util.List<Destination> destinations) {
@@ -117,9 +102,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user identifiers. Applies to
-   * only the outer encoding for encrypted user identifiers. For non `UserData` uploads, this field
-   * is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -127,9 +109,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user identifiers. Applies to
-   * only the outer encoding for encrypted user identifiers. For non `UserData` uploads, this field
-   * is ignored.
    * @param encoding encoding or {@code null} for none
    */
   public RemoveAudienceMembersRequest setEncoding(java.lang.String encoding) {
@@ -138,9 +117,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's assumed that uploaded
-   * identifying information is hashed but not encrypted. For non `UserData` uploads, this field is
-   * ignored.
    * @return value or {@code null} for none
    */
   public EncryptionInfo getEncryptionInfo() {
@@ -148,9 +124,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's assumed that uploaded
-   * identifying information is hashed but not encrypted. For non `UserData` uploads, this field is
-   * ignored.
    * @param encryptionInfo encryptionInfo or {@code null} for none
    */
   public RemoveAudienceMembersRequest setEncryptionInfo(EncryptionInfo encryptionInfo) {
@@ -159,8 +132,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -168,8 +139,6 @@ public final class RemoveAudienceMembersRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public RemoveAudienceMembersRequest setValidateOnly(java.lang.Boolean validateOnly) {

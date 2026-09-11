@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Represents a customer account in the partner's system.
+ * Model definition for PartnerCustomerAccount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class PartnerCustomerAccount extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifier of the customer account in the partner's ID space.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountId;
 
   /**
-   * Optional. The name of the account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountName;
 
   /**
-   * Optional. The type of the account. Can be used to distinguish between advertiser accounts and
-   * business level accounts, for example.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountType;
 
   /**
-   * Required. The identifier of the customer account in the partner's ID space.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -60,7 +55,6 @@ public final class PartnerCustomerAccount extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The identifier of the customer account in the partner's ID space.
    * @param accountId accountId or {@code null} for none
    */
   public PartnerCustomerAccount setAccountId(java.lang.String accountId) {
@@ -69,7 +63,6 @@ public final class PartnerCustomerAccount extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The name of the account.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountName() {
@@ -77,7 +70,6 @@ public final class PartnerCustomerAccount extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The name of the account.
    * @param accountName accountName or {@code null} for none
    */
   public PartnerCustomerAccount setAccountName(java.lang.String accountName) {
@@ -86,8 +78,6 @@ public final class PartnerCustomerAccount extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The type of the account. Can be used to distinguish between advertiser accounts and
-   * business level accounts, for example.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountType() {
@@ -95,8 +85,6 @@ public final class PartnerCustomerAccount extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The type of the account. Can be used to distinguish between advertiser accounts and
-   * business level accounts, for example.
    * @param accountType accountType or {@code null} for none
    */
   public PartnerCustomerAccount setAccountType(java.lang.String accountType) {

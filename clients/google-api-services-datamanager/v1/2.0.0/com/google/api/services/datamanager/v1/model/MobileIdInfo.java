@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Additional information when `MOBILE_ID` is one of the `upload_key_types`.
+ * Model definition for MobileIdInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class MobileIdInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. A string that uniquely identifies a mobile application from which the data
-   * was collected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String appId;
 
   /**
-   * Optional. Immutable. Source of the upload data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataSourceType;
 
   /**
-   * Required. Immutable. The key space of mobile IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keySpace;
 
   /**
-   * Required. Immutable. A string that uniquely identifies a mobile application from which the data
-   * was collected.
    * @return value or {@code null} for none
    */
   public java.lang.String getAppId() {
@@ -61,8 +55,6 @@ public final class MobileIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. A string that uniquely identifies a mobile application from which the data
-   * was collected.
    * @param appId appId or {@code null} for none
    */
   public MobileIdInfo setAppId(java.lang.String appId) {
@@ -71,7 +63,6 @@ public final class MobileIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Source of the upload data.
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSourceType() {
@@ -79,7 +70,6 @@ public final class MobileIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. Source of the upload data.
    * @param dataSourceType dataSourceType or {@code null} for none
    */
   public MobileIdInfo setDataSourceType(java.lang.String dataSourceType) {
@@ -88,7 +78,6 @@ public final class MobileIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The key space of mobile IDs.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeySpace() {
@@ -96,7 +85,6 @@ public final class MobileIdInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. The key space of mobile IDs.
    * @param keySpace keySpace or {@code null} for none
    */
   public MobileIdInfo setKeySpace(java.lang.String keySpace) {

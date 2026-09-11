@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the remove audience members request.
+ * Model definition for RemoveAudienceMembersStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,63 +30,54 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveAudienceMembersStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the composite data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveCompositeDataStatus compositeDataRemovalStatus;
 
   /**
-   * The status of the google user id data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveGoogleUserIdDataStatus googleUserIdDataRemovalStatus;
 
   /**
-   * The status of the mobile data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveMobileDataStatus mobileDataRemovalStatus;
 
   /**
-   * The status of the pair data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemovePairDataStatus pairDataRemovalStatus;
 
   /**
-   * The status of the partner provided id data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemovePartnerProvidedIdDataStatus partnerProvidedIdDataRemovalStatus;
 
   /**
-   * The status of the ppid data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemovePpidDataStatus ppidDataRemovalStatus;
 
   /**
-   * The status of the user data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveUserDataStatus userDataRemovalStatus;
 
   /**
-   * The status of the user id data removal from the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveUserIdDataStatus userIdDataRemovalStatus;
 
   /**
-   * The status of the composite data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemoveCompositeDataStatus getCompositeDataRemovalStatus() {
@@ -94,7 +85,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the composite data removal from the destination.
    * @param compositeDataRemovalStatus compositeDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setCompositeDataRemovalStatus(RemoveCompositeDataStatus compositeDataRemovalStatus) {
@@ -103,7 +93,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the google user id data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemoveGoogleUserIdDataStatus getGoogleUserIdDataRemovalStatus() {
@@ -111,7 +100,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the google user id data removal from the destination.
    * @param googleUserIdDataRemovalStatus googleUserIdDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setGoogleUserIdDataRemovalStatus(RemoveGoogleUserIdDataStatus googleUserIdDataRemovalStatus) {
@@ -120,7 +108,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the mobile data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemoveMobileDataStatus getMobileDataRemovalStatus() {
@@ -128,7 +115,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the mobile data removal from the destination.
    * @param mobileDataRemovalStatus mobileDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setMobileDataRemovalStatus(RemoveMobileDataStatus mobileDataRemovalStatus) {
@@ -137,7 +123,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the pair data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemovePairDataStatus getPairDataRemovalStatus() {
@@ -145,7 +130,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the pair data removal from the destination.
    * @param pairDataRemovalStatus pairDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setPairDataRemovalStatus(RemovePairDataStatus pairDataRemovalStatus) {
@@ -154,7 +138,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the partner provided id data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemovePartnerProvidedIdDataStatus getPartnerProvidedIdDataRemovalStatus() {
@@ -162,7 +145,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the partner provided id data removal from the destination.
    * @param partnerProvidedIdDataRemovalStatus partnerProvidedIdDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setPartnerProvidedIdDataRemovalStatus(RemovePartnerProvidedIdDataStatus partnerProvidedIdDataRemovalStatus) {
@@ -171,7 +153,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ppid data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemovePpidDataStatus getPpidDataRemovalStatus() {
@@ -179,7 +160,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ppid data removal from the destination.
    * @param ppidDataRemovalStatus ppidDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setPpidDataRemovalStatus(RemovePpidDataStatus ppidDataRemovalStatus) {
@@ -188,7 +168,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemoveUserDataStatus getUserDataRemovalStatus() {
@@ -196,7 +175,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user data removal from the destination.
    * @param userDataRemovalStatus userDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setUserDataRemovalStatus(RemoveUserDataStatus userDataRemovalStatus) {
@@ -205,7 +183,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user id data removal from the destination.
    * @return value or {@code null} for none
    */
   public RemoveUserIdDataStatus getUserIdDataRemovalStatus() {
@@ -213,7 +190,6 @@ public final class RemoveAudienceMembersStatus extends com.google.api.client.jso
   }
 
   /**
-   * The status of the user id data removal from the destination.
    * @param userIdDataRemovalStatus userIdDataRemovalStatus or {@code null} for none
    */
   public RemoveAudienceMembersStatus setUserIdDataRemovalStatus(RemoveUserIdDataStatus userIdDataRemovalStatus) {

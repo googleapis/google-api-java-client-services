@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A user list global license. This feature is only available to data partners.
+ * Model definition for UserListGlobalLicense.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,64 +30,54 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserListGlobalLicense extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Pricing history of this user list license. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserListLicensePricing> historicalPricings;
 
   /**
-   * Immutable. Product type of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String licenseType;
 
   /**
-   * Output only. Metrics related to this license This field is read-only and only populated if the
-   * start and end dates are set in the ListUserListGlobalLicenses call
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserListLicenseMetrics metrics;
 
   /**
-   * Identifier. The resource name of the user list global license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. UserListGlobalLicense pricing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserListLicensePricing pricing;
 
   /**
-   * Optional. Status of UserListGlobalLicense - ENABLED or DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. Name of the user list being licensed. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userListDisplayName;
 
   /**
-   * Immutable. ID of the user list being licensed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userListId;
 
   /**
-   * Output only. Pricing history of this user list license. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<UserListLicensePricing> getHistoricalPricings() {
@@ -95,7 +85,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Pricing history of this user list license. This field is read-only.
    * @param historicalPricings historicalPricings or {@code null} for none
    */
   public UserListGlobalLicense setHistoricalPricings(java.util.List<UserListLicensePricing> historicalPricings) {
@@ -104,7 +93,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. Product type of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.String getLicenseType() {
@@ -112,7 +100,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. Product type of client customer which the user list is being licensed to.
    * @param licenseType licenseType or {@code null} for none
    */
   public UserListGlobalLicense setLicenseType(java.lang.String licenseType) {
@@ -121,8 +108,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Metrics related to this license This field is read-only and only populated if the
-   * start and end dates are set in the ListUserListGlobalLicenses call
    * @return value or {@code null} for none
    */
   public UserListLicenseMetrics getMetrics() {
@@ -130,8 +115,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Metrics related to this license This field is read-only and only populated if the
-   * start and end dates are set in the ListUserListGlobalLicenses call
    * @param metrics metrics or {@code null} for none
    */
   public UserListGlobalLicense setMetrics(UserListLicenseMetrics metrics) {
@@ -140,7 +123,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Identifier. The resource name of the user list global license.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -148,7 +130,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Identifier. The resource name of the user list global license.
    * @param name name or {@code null} for none
    */
   public UserListGlobalLicense setName(java.lang.String name) {
@@ -157,7 +138,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. UserListGlobalLicense pricing.
    * @return value or {@code null} for none
    */
   public UserListLicensePricing getPricing() {
@@ -165,7 +145,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. UserListGlobalLicense pricing.
    * @param pricing pricing or {@code null} for none
    */
   public UserListGlobalLicense setPricing(UserListLicensePricing pricing) {
@@ -174,7 +153,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Status of UserListGlobalLicense - ENABLED or DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -182,7 +160,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Status of UserListGlobalLicense - ENABLED or DISABLED.
    * @param status status or {@code null} for none
    */
   public UserListGlobalLicense setStatus(java.lang.String status) {
@@ -191,7 +168,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Name of the user list being licensed. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserListDisplayName() {
@@ -199,7 +175,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Name of the user list being licensed. This field is read-only.
    * @param userListDisplayName userListDisplayName or {@code null} for none
    */
   public UserListGlobalLicense setUserListDisplayName(java.lang.String userListDisplayName) {
@@ -208,7 +183,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. ID of the user list being licensed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserListId() {
@@ -216,7 +190,6 @@ public final class UserListGlobalLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. ID of the user list being licensed.
    * @param userListId userListId or {@code null} for none
    */
   public UserListGlobalLicense setUserListId(java.lang.Long userListId) {

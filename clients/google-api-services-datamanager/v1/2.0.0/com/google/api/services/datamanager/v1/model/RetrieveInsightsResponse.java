@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response message for DM API MarketingDataInsightsService.RetrieveInsights
+ * Model definition for RetrieveInsightsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class RetrieveInsightsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Contains the insights for the marketing data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class RetrieveInsightsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Contains the insights for the marketing data.
    * @return value or {@code null} for none
    */
   public java.util.List<MarketingDataInsight> getMarketingDataInsights() {
@@ -51,7 +49,6 @@ public final class RetrieveInsightsResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Contains the insights for the marketing data.
    * @param marketingDataInsights marketingDataInsights or {@code null} for none
    */
   public RetrieveInsightsResponse setMarketingDataInsights(java.util.List<MarketingDataInsight> marketingDataInsights) {

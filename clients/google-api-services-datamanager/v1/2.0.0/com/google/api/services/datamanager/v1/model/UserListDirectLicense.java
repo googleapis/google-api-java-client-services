@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A user list direct license. This feature is only available to data partners.
+ * Model definition for UserListDirectLicense.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,80 +30,66 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserListDirectLicense extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Name of client customer which the user list is being licensed to. This field is
-   * read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientAccountDisplayName;
 
   /**
-   * Immutable. ID of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long clientAccountId;
 
   /**
-   * Immutable. Account type of client customer which the user list is being licensed to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String clientAccountType;
 
   /**
-   * Output only. Pricing history of this user list license. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserListLicensePricing> historicalPricings;
 
   /**
-   * Output only. Metrics related to this license This field is read-only and only populated if the
-   * start and end dates are set in the ListUserListDirectLicenses call
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserListLicenseMetrics metrics;
 
   /**
-   * Identifier. The resource name of the user list direct license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. UserListDirectLicense pricing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserListLicensePricing pricing;
 
   /**
-   * Optional. Status of UserListDirectLicense - ENABLED or DISABLED.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
 
   /**
-   * Output only. Name of the user list being licensed. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userListDisplayName;
 
   /**
-   * Immutable. ID of the user list being licensed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userListId;
 
   /**
-   * Output only. Name of client customer which the user list is being licensed to. This field is
-   * read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAccountDisplayName() {
@@ -111,8 +97,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Name of client customer which the user list is being licensed to. This field is
-   * read-only.
    * @param clientAccountDisplayName clientAccountDisplayName or {@code null} for none
    */
   public UserListDirectLicense setClientAccountDisplayName(java.lang.String clientAccountDisplayName) {
@@ -121,7 +105,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. ID of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.Long getClientAccountId() {
@@ -129,7 +112,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. ID of client customer which the user list is being licensed to.
    * @param clientAccountId clientAccountId or {@code null} for none
    */
   public UserListDirectLicense setClientAccountId(java.lang.Long clientAccountId) {
@@ -138,7 +120,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. Account type of client customer which the user list is being licensed to.
    * @return value or {@code null} for none
    */
   public java.lang.String getClientAccountType() {
@@ -146,7 +127,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. Account type of client customer which the user list is being licensed to.
    * @param clientAccountType clientAccountType or {@code null} for none
    */
   public UserListDirectLicense setClientAccountType(java.lang.String clientAccountType) {
@@ -155,7 +135,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Pricing history of this user list license. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.util.List<UserListLicensePricing> getHistoricalPricings() {
@@ -163,7 +142,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Pricing history of this user list license. This field is read-only.
    * @param historicalPricings historicalPricings or {@code null} for none
    */
   public UserListDirectLicense setHistoricalPricings(java.util.List<UserListLicensePricing> historicalPricings) {
@@ -172,8 +150,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Metrics related to this license This field is read-only and only populated if the
-   * start and end dates are set in the ListUserListDirectLicenses call
    * @return value or {@code null} for none
    */
   public UserListLicenseMetrics getMetrics() {
@@ -181,8 +157,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Metrics related to this license This field is read-only and only populated if the
-   * start and end dates are set in the ListUserListDirectLicenses call
    * @param metrics metrics or {@code null} for none
    */
   public UserListDirectLicense setMetrics(UserListLicenseMetrics metrics) {
@@ -191,7 +165,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Identifier. The resource name of the user list direct license.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -199,7 +172,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Identifier. The resource name of the user list direct license.
    * @param name name or {@code null} for none
    */
   public UserListDirectLicense setName(java.lang.String name) {
@@ -208,7 +180,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. UserListDirectLicense pricing.
    * @return value or {@code null} for none
    */
   public UserListLicensePricing getPricing() {
@@ -216,7 +187,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. UserListDirectLicense pricing.
    * @param pricing pricing or {@code null} for none
    */
   public UserListDirectLicense setPricing(UserListLicensePricing pricing) {
@@ -225,7 +195,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Status of UserListDirectLicense - ENABLED or DISABLED.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -233,7 +202,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Status of UserListDirectLicense - ENABLED or DISABLED.
    * @param status status or {@code null} for none
    */
   public UserListDirectLicense setStatus(java.lang.String status) {
@@ -242,7 +210,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Name of the user list being licensed. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserListDisplayName() {
@@ -250,7 +217,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Output only. Name of the user list being licensed. This field is read-only.
    * @param userListDisplayName userListDisplayName or {@code null} for none
    */
   public UserListDirectLicense setUserListDisplayName(java.lang.String userListDisplayName) {
@@ -259,7 +225,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. ID of the user list being licensed.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserListId() {
@@ -267,7 +232,6 @@ public final class UserListDirectLicense extends com.google.api.client.json.Gene
   }
 
   /**
-   * Immutable. ID of the user list being licensed.
    * @param userListId userListId or {@code null} for none
    */
   public UserListDirectLicense setUserListId(java.lang.Long userListId) {

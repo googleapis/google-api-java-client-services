@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Represents a user list that is populated by user provided data.
+ * Model definition for IngestedUserListInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,58 +30,48 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestedUserListInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Additional information when `CONTACT_ID` is one of the `upload_key_types`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ContactIdInfo contactIdInfo;
 
   /**
-   * Optional. Additional information when `MOBILE_ID` is one of the `upload_key_types`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MobileIdInfo mobileIdInfo;
 
   /**
-   * Optional. Additional information when `PAIR_ID` is one of the `upload_key_types`. This feature
-   * is only available to data partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PairIdInfo pairIdInfo;
 
   /**
-   * Optional. Additional information for partner audiences. This feature is only available to data
-   * partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PartnerAudienceInfo partnerAudienceInfo;
 
   /**
-   * Optional. Additional information for `PSEUDONYMOUS_ID` is one of the `upload_key_types`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PseudonymousIdInfo pseudonymousIdInfo;
 
   /**
-   * Required. Immutable. Upload key types of this user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> uploadKeyTypes;
 
   /**
-   * Optional. Additional information when `USER_ID` is one of the `upload_key_types`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserIdInfo userIdInfo;
 
   /**
-   * Optional. Additional information when `CONTACT_ID` is one of the `upload_key_types`.
    * @return value or {@code null} for none
    */
   public ContactIdInfo getContactIdInfo() {
@@ -89,7 +79,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `CONTACT_ID` is one of the `upload_key_types`.
    * @param contactIdInfo contactIdInfo or {@code null} for none
    */
   public IngestedUserListInfo setContactIdInfo(ContactIdInfo contactIdInfo) {
@@ -98,7 +87,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `MOBILE_ID` is one of the `upload_key_types`.
    * @return value or {@code null} for none
    */
   public MobileIdInfo getMobileIdInfo() {
@@ -106,7 +94,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `MOBILE_ID` is one of the `upload_key_types`.
    * @param mobileIdInfo mobileIdInfo or {@code null} for none
    */
   public IngestedUserListInfo setMobileIdInfo(MobileIdInfo mobileIdInfo) {
@@ -115,8 +102,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `PAIR_ID` is one of the `upload_key_types`. This feature
-   * is only available to data partners.
    * @return value or {@code null} for none
    */
   public PairIdInfo getPairIdInfo() {
@@ -124,8 +109,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `PAIR_ID` is one of the `upload_key_types`. This feature
-   * is only available to data partners.
    * @param pairIdInfo pairIdInfo or {@code null} for none
    */
   public IngestedUserListInfo setPairIdInfo(PairIdInfo pairIdInfo) {
@@ -134,8 +117,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information for partner audiences. This feature is only available to data
-   * partners.
    * @return value or {@code null} for none
    */
   public PartnerAudienceInfo getPartnerAudienceInfo() {
@@ -143,8 +124,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information for partner audiences. This feature is only available to data
-   * partners.
    * @param partnerAudienceInfo partnerAudienceInfo or {@code null} for none
    */
   public IngestedUserListInfo setPartnerAudienceInfo(PartnerAudienceInfo partnerAudienceInfo) {
@@ -153,7 +132,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information for `PSEUDONYMOUS_ID` is one of the `upload_key_types`.
    * @return value or {@code null} for none
    */
   public PseudonymousIdInfo getPseudonymousIdInfo() {
@@ -161,7 +139,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information for `PSEUDONYMOUS_ID` is one of the `upload_key_types`.
    * @param pseudonymousIdInfo pseudonymousIdInfo or {@code null} for none
    */
   public IngestedUserListInfo setPseudonymousIdInfo(PseudonymousIdInfo pseudonymousIdInfo) {
@@ -170,7 +147,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Immutable. Upload key types of this user list.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUploadKeyTypes() {
@@ -178,7 +154,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. Immutable. Upload key types of this user list.
    * @param uploadKeyTypes uploadKeyTypes or {@code null} for none
    */
   public IngestedUserListInfo setUploadKeyTypes(java.util.List<java.lang.String> uploadKeyTypes) {
@@ -187,7 +162,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `USER_ID` is one of the `upload_key_types`.
    * @return value or {@code null} for none
    */
   public UserIdInfo getUserIdInfo() {
@@ -195,7 +169,6 @@ public final class IngestedUserListInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Additional information when `USER_ID` is one of the `upload_key_types`.
    * @param userIdInfo userIdInfo or {@code null} for none
    */
   public IngestedUserListInfo setUserIdInfo(UserIdInfo userIdInfo) {

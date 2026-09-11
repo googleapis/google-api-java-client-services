@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Information about the coordinator key.
+ * Model definition for CoordinatorKeyInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class CoordinatorKeyInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The ID of the chosen coordinator key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyId;
 
   /**
-   * Required. The ID of the chosen coordinator key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyId() {
@@ -45,7 +43,6 @@ public final class CoordinatorKeyInfo extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. The ID of the chosen coordinator key.
    * @param keyId keyId or {@code null} for none
    */
   public CoordinatorKeyInfo setKeyId(java.lang.String keyId) {

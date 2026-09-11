@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Request to upload ad events.
+ * Model definition for IngestAdEventsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestAdEventsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Required (at least 1). A list of ad events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,21 +42,18 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Information about encryption keys which are used to encrypt the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionInfo encryptionInfo;
 
   /**
-   * Optional. If true, the request is validated, but not executed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. Required (at least 1). A list of ad events.
    * @return value or {@code null} for none
    */
   public java.util.List<AdEvent> getAdEvents() {
@@ -65,7 +61,6 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Required (at least 1). A list of ad events.
    * @param adEvents adEvents or {@code null} for none
    */
   public IngestAdEventsRequest setAdEvents(java.util.List<AdEvent> adEvents) {
@@ -74,7 +69,6 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Information about encryption keys which are used to encrypt the data.
    * @return value or {@code null} for none
    */
   public EncryptionInfo getEncryptionInfo() {
@@ -82,7 +76,6 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. Information about encryption keys which are used to encrypt the data.
    * @param encryptionInfo encryptionInfo or {@code null} for none
    */
   public IngestAdEventsRequest setEncryptionInfo(EncryptionInfo encryptionInfo) {
@@ -91,7 +84,6 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. If true, the request is validated, but not executed.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -99,7 +91,6 @@ public final class IngestAdEventsRequest extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. If true, the request is validated, but not executed.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public IngestAdEventsRequest setValidateOnly(java.lang.Boolean validateOnly) {

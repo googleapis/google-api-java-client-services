@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Additional information for partner audiences. This feature is only available to data partners.
+ * Model definition for PartnerAudienceInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class PartnerAudienceInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The commerce partner name. Only allowed if `partner_audience_source` is
-   * `COMMERCE_AUDIENCE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String commercePartner;
 
   /**
-   * Required. Immutable. The source of the partner audience.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partnerAudienceSource;
 
   /**
-   * Optional. The commerce partner name. Only allowed if `partner_audience_source` is
-   * `COMMERCE_AUDIENCE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommercePartner() {
@@ -54,8 +49,6 @@ public final class PartnerAudienceInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The commerce partner name. Only allowed if `partner_audience_source` is
-   * `COMMERCE_AUDIENCE`.
    * @param commercePartner commercePartner or {@code null} for none
    */
   public PartnerAudienceInfo setCommercePartner(java.lang.String commercePartner) {
@@ -64,7 +57,6 @@ public final class PartnerAudienceInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The source of the partner audience.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartnerAudienceSource() {
@@ -72,7 +64,6 @@ public final class PartnerAudienceInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Immutable. The source of the partner audience.
    * @param partnerAudienceSource partnerAudienceSource or {@code null} for none
    */
   public PartnerAudienceInfo setPartnerAudienceSource(java.lang.String partnerAudienceSource) {

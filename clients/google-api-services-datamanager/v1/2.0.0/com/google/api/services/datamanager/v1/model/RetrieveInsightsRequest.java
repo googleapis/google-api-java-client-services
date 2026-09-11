@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Request message for DM API MarketingDataInsightsService.RetrieveInsights
+ * Model definition for RetrieveInsightsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class RetrieveInsightsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Baseline for the insights requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Baseline baseline;
 
   /**
-   * Required. The user list ID for which insights are requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userListId;
 
   /**
-   * Required. Baseline for the insights requested.
    * @return value or {@code null} for none
    */
   public Baseline getBaseline() {
@@ -52,7 +49,6 @@ public final class RetrieveInsightsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Baseline for the insights requested.
    * @param baseline baseline or {@code null} for none
    */
   public RetrieveInsightsRequest setBaseline(Baseline baseline) {
@@ -61,7 +57,6 @@ public final class RetrieveInsightsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The user list ID for which insights are requested.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserListId() {
@@ -69,7 +64,6 @@ public final class RetrieveInsightsRequest extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The user list ID for which insights are requested.
    * @param userListId userListId or {@code null} for none
    */
   public RetrieveInsightsRequest setUserListId(java.lang.String userListId) {

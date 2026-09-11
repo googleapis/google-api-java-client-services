@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response from the RetrieveRequestStatusRequest.
+ * Model definition for RetrieveRequestStatusResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,8 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class RetrieveRequestStatusResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of request statuses per destination. The order of the statuses matches the order of the
-   * destinations in the original request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +42,6 @@ public final class RetrieveRequestStatusResponse extends com.google.api.client.j
   }
 
   /**
-   * A list of request statuses per destination. The order of the statuses matches the order of the
-   * destinations in the original request.
    * @return value or {@code null} for none
    */
   public java.util.List<RequestStatusPerDestination> getRequestStatusPerDestination() {
@@ -53,8 +49,6 @@ public final class RetrieveRequestStatusResponse extends com.google.api.client.j
   }
 
   /**
-   * A list of request statuses per destination. The order of the statuses matches the order of the
-   * destinations in the original request.
    * @param requestStatusPerDestination requestStatusPerDestination or {@code null} for none
    */
   public RetrieveRequestStatusResponse setRequestStatusPerDestination(java.util.List<RequestStatusPerDestination> requestStatusPerDestination) {

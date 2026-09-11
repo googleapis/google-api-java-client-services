@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Event parameter for GA4 events.
+ * Model definition for EventParameter.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class EventParameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the parameter to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parameterName;
 
   /**
-   * Required. The string representation of the value of the parameter to set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Required. The name of the parameter to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getParameterName() {
@@ -52,7 +49,6 @@ public final class EventParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The name of the parameter to use.
    * @param parameterName parameterName or {@code null} for none
    */
   public EventParameter setParameterName(java.lang.String parameterName) {
@@ -61,7 +57,6 @@ public final class EventParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The string representation of the value of the parameter to set.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -69,7 +64,6 @@ public final class EventParameter extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The string representation of the value of the parameter to set.
    * @param value value or {@code null} for none
    */
   public EventParameter setValue(java.lang.String value) {

@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * [PAIR](//support.google.com/admanager/answer/15067908) IDs for the audience. At least one PAIR ID
- * is required. This feature is only available to data partners.
+ * Model definition for PairData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,18 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class PairData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Cleanroom-provided PII data, hashed with SHA256, and encrypted with an EC commutative
-   * cipher using publisher key for the [PAIR]((//support.google.com/admanager/answer/15067908))
-   * user list. At most 10 `pairIds` can be provided in a single AudienceMember.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pairIds;
 
   /**
-   * Required. Cleanroom-provided PII data, hashed with SHA256, and encrypted with an EC commutative
-   * cipher using publisher key for the [PAIR]((//support.google.com/admanager/answer/15067908))
-   * user list. At most 10 `pairIds` can be provided in a single AudienceMember.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPairIds() {
@@ -50,9 +43,6 @@ public final class PairData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Cleanroom-provided PII data, hashed with SHA256, and encrypted with an EC commutative
-   * cipher using publisher key for the [PAIR]((//support.google.com/admanager/answer/15067908))
-   * user list. At most 10 `pairIds` can be provided in a single AudienceMember.
    * @param pairIds pairIds or {@code null} for none
    */
   public PairData setPairIds(java.util.List<java.lang.String> pairIds) {

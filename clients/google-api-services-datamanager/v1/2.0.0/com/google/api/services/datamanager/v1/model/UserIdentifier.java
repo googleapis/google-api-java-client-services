@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A single identifier for the user.
+ * Model definition for UserIdentifier.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,30 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserIdentifier extends com.google.api.client.json.GenericJson {
 
   /**
-   * The known components of a user's address. Holds a grouping of identifiers that are matched all
-   * at once.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AddressInfo address;
 
   /**
-   * Hashed email address using SHA-256 hash function after normalization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String emailAddress;
 
   /**
-   * Hashed phone number using SHA-256 hash function after normalization (E164 standard).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String phoneNumber;
 
   /**
-   * The known components of a user's address. Holds a grouping of identifiers that are matched all
-   * at once.
    * @return value or {@code null} for none
    */
   public AddressInfo getAddress() {
@@ -61,8 +55,6 @@ public final class UserIdentifier extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The known components of a user's address. Holds a grouping of identifiers that are matched all
-   * at once.
    * @param address address or {@code null} for none
    */
   public UserIdentifier setAddress(AddressInfo address) {
@@ -71,7 +63,6 @@ public final class UserIdentifier extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Hashed email address using SHA-256 hash function after normalization.
    * @return value or {@code null} for none
    */
   public java.lang.String getEmailAddress() {
@@ -79,7 +70,6 @@ public final class UserIdentifier extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Hashed email address using SHA-256 hash function after normalization.
    * @param emailAddress emailAddress or {@code null} for none
    */
   public UserIdentifier setEmailAddress(java.lang.String emailAddress) {
@@ -88,7 +78,6 @@ public final class UserIdentifier extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Hashed phone number using SHA-256 hash function after normalization (E164 standard).
    * @return value or {@code null} for none
    */
   public java.lang.String getPhoneNumber() {
@@ -96,7 +85,6 @@ public final class UserIdentifier extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Hashed phone number using SHA-256 hash function after normalization (E164 standard).
    * @param phoneNumber phoneNumber or {@code null} for none
    */
   public UserIdentifier setPhoneNumber(java.lang.String phoneNumber) {

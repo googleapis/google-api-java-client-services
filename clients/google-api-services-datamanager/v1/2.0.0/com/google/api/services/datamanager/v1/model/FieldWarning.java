@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Detailed row-level warning with field paths.
+ * Model definition for FieldWarning.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class FieldWarning extends com.google.api.client.json.GenericJson {
 
   /**
-   * The detailed warning message describing the issue.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * The field path that triggered the warning. Uses the same format as
-   * google.rpc.BadRequest.FieldViolation.field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String field;
 
   /**
-   * The warning reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The detailed warning message describing the issue.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -60,7 +55,6 @@ public final class FieldWarning extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The detailed warning message describing the issue.
    * @param description description or {@code null} for none
    */
   public FieldWarning setDescription(java.lang.String description) {
@@ -69,8 +63,6 @@ public final class FieldWarning extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The field path that triggered the warning. Uses the same format as
-   * google.rpc.BadRequest.FieldViolation.field.
    * @return value or {@code null} for none
    */
   public java.lang.String getField() {
@@ -78,8 +70,6 @@ public final class FieldWarning extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The field path that triggered the warning. Uses the same format as
-   * google.rpc.BadRequest.FieldViolation.field.
    * @param field field or {@code null} for none
    */
   public FieldWarning setField(java.lang.String field) {
@@ -88,7 +78,6 @@ public final class FieldWarning extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The warning reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -96,7 +85,6 @@ public final class FieldWarning extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The warning reason.
    * @param reason reason or {@code null} for none
    */
   public FieldWarning setReason(java.lang.String reason) {

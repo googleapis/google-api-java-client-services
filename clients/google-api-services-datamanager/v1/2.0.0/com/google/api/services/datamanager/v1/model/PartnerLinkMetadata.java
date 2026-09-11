@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Represents metadata associated with a partner link.
+ * Model definition for PartnerLinkMetadata.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class PartnerLinkMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The list of implicit accounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class PartnerLinkMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The list of implicit accounts.
    * @return value or {@code null} for none
    */
   public java.util.List<PartnerCustomerAccount> getImplicitAccounts() {
@@ -51,7 +49,6 @@ public final class PartnerLinkMetadata extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The list of implicit accounts.
    * @param implicitAccounts implicitAccounts or {@code null} for none
    */
   public PartnerLinkMetadata setImplicitAccounts(java.util.List<PartnerCustomerAccount> implicitAccounts) {

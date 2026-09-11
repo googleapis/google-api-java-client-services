@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Insights for a collection of related attributes of the same dimension.
+ * Model definition for MarketingDataInsightsAttribute.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.datamanager.v1.model;
 public final class MarketingDataInsightsAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Age range of the audience for which the lift is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ageRange;
 
   /**
-   * Gender of the audience for which the lift is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gender;
 
   /**
-   * Measure of lift that the audience has for the attribute value as compared to the baseline.
-   * Range [0-1].
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Float lift;
 
   /**
-   * The user interest ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userInterestId;
 
   /**
-   * Age range of the audience for which the lift is provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getAgeRange() {
@@ -67,7 +61,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * Age range of the audience for which the lift is provided.
    * @param ageRange ageRange or {@code null} for none
    */
   public MarketingDataInsightsAttribute setAgeRange(java.lang.String ageRange) {
@@ -76,7 +69,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * Gender of the audience for which the lift is provided.
    * @return value or {@code null} for none
    */
   public java.lang.String getGender() {
@@ -84,7 +76,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * Gender of the audience for which the lift is provided.
    * @param gender gender or {@code null} for none
    */
   public MarketingDataInsightsAttribute setGender(java.lang.String gender) {
@@ -93,8 +84,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * Measure of lift that the audience has for the attribute value as compared to the baseline.
-   * Range [0-1].
    * @return value or {@code null} for none
    */
   public java.lang.Float getLift() {
@@ -102,8 +91,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * Measure of lift that the audience has for the attribute value as compared to the baseline.
-   * Range [0-1].
    * @param lift lift or {@code null} for none
    */
   public MarketingDataInsightsAttribute setLift(java.lang.Float lift) {
@@ -112,7 +99,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * The user interest ID.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserInterestId() {
@@ -120,7 +106,6 @@ public final class MarketingDataInsightsAttribute extends com.google.api.client.
   }
 
   /**
-   * The user interest ID.
    * @param userInterestId userInterestId or {@code null} for none
    */
   public MarketingDataInsightsAttribute setUserInterestId(java.lang.Long userInterestId) {

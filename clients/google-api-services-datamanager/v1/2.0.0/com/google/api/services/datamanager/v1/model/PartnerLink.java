@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A partner link between an owning account and a partner account.
+ * Model definition for PartnerLink.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,61 +30,48 @@ package com.google.api.services.datamanager.v1.model;
 public final class PartnerLink extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable. The set of features supported for the partner link. If not specified, the
-   * system behavior defaults to FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String featureSet;
 
   /**
-   * Identifier. The name of the partner link. Format:
-   * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. The owning account granting access to the partner account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductAccount owningAccount;
 
   /**
-   * Required. The partner account granted access by the owning account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductAccount partnerAccount;
 
   /**
-   * Optional. The customer account in the partner system. This is required for partner links with
-   * the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PartnerCustomerAccount partnerCustomerAccount;
 
   /**
-   * Output only. The partner link ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partnerLinkId;
 
   /**
-   * Optional. Metadata associated with the partner link. This is optional and only accepted for
-   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PartnerLinkMetadata partnerLinkMetadata;
 
   /**
-   * Optional. Immutable. The set of features supported for the partner link. If not specified, the
-   * system behavior defaults to FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeatureSet() {
@@ -92,8 +79,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Immutable. The set of features supported for the partner link. If not specified, the
-   * system behavior defaults to FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT.
    * @param featureSet featureSet or {@code null} for none
    */
   public PartnerLink setFeatureSet(java.lang.String featureSet) {
@@ -102,8 +87,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The name of the partner link. Format:
-   * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -111,8 +94,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The name of the partner link. Format:
-   * accountTypes/{account_type}/accounts/{account}/partnerLinks/{partner_link}
    * @param name name or {@code null} for none
    */
   public PartnerLink setName(java.lang.String name) {
@@ -121,7 +102,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The owning account granting access to the partner account.
    * @return value or {@code null} for none
    */
   public ProductAccount getOwningAccount() {
@@ -129,7 +109,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The owning account granting access to the partner account.
    * @param owningAccount owningAccount or {@code null} for none
    */
   public PartnerLink setOwningAccount(ProductAccount owningAccount) {
@@ -138,7 +117,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The partner account granted access by the owning account.
    * @return value or {@code null} for none
    */
   public ProductAccount getPartnerAccount() {
@@ -146,7 +124,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The partner account granted access by the owning account.
    * @param partnerAccount partnerAccount or {@code null} for none
    */
   public PartnerLink setPartnerAccount(ProductAccount partnerAccount) {
@@ -155,8 +132,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The customer account in the partner system. This is required for partner links with
-   * the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
    * @return value or {@code null} for none
    */
   public PartnerCustomerAccount getPartnerCustomerAccount() {
@@ -164,8 +139,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The customer account in the partner system. This is required for partner links with
-   * the FEATURE_SET_AD_EVENT_MANAGEMENT feature set.
    * @param partnerCustomerAccount partnerCustomerAccount or {@code null} for none
    */
   public PartnerLink setPartnerCustomerAccount(PartnerCustomerAccount partnerCustomerAccount) {
@@ -174,7 +147,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The partner link ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartnerLinkId() {
@@ -182,7 +154,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The partner link ID.
    * @param partnerLinkId partnerLinkId or {@code null} for none
    */
   public PartnerLink setPartnerLinkId(java.lang.String partnerLinkId) {
@@ -191,8 +162,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata associated with the partner link. This is optional and only accepted for
-   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
    * @return value or {@code null} for none
    */
   public PartnerLinkMetadata getPartnerLinkMetadata() {
@@ -200,8 +169,6 @@ public final class PartnerLink extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Metadata associated with the partner link. This is optional and only accepted for
-   * partner links with the FEATURE_SET_AD_EVENT_MANAGEMENT.
    * @param partnerLinkMetadata partnerLinkMetadata or {@code null} for none
    */
   public PartnerLink setPartnerLinkMetadata(PartnerLinkMetadata partnerLinkMetadata) {

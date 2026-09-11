@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Baseline criteria against which insights are compared.
+ * Model definition for Baseline.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,22 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class Baseline extends com.google.api.client.json.GenericJson {
 
   /**
-   * The baseline location of the request. Baseline location is an OR-list of the requested regions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Location baselineLocation;
 
   /**
-   * If set to true, the service will try to automatically detect the baseline location for
-   * insights.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean locationAutoDetectionEnabled;
 
   /**
-   * The baseline location of the request. Baseline location is an OR-list of the requested regions.
    * @return value or {@code null} for none
    */
   public Location getBaselineLocation() {
@@ -53,7 +49,6 @@ public final class Baseline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The baseline location of the request. Baseline location is an OR-list of the requested regions.
    * @param baselineLocation baselineLocation or {@code null} for none
    */
   public Baseline setBaselineLocation(Location baselineLocation) {
@@ -62,8 +57,6 @@ public final class Baseline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set to true, the service will try to automatically detect the baseline location for
-   * insights.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLocationAutoDetectionEnabled() {
@@ -71,8 +64,6 @@ public final class Baseline extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * If set to true, the service will try to automatically detect the baseline location for
-   * insights.
    * @param locationAutoDetectionEnabled locationAutoDetectionEnabled or {@code null} for none
    */
   public Baseline setLocationAutoDetectionEnabled(java.lang.Boolean locationAutoDetectionEnabled) {

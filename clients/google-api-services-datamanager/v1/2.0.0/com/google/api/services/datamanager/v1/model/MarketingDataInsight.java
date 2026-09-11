@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Insights for marketing data. This feature is only available to data partners.
+ * Model definition for MarketingDataInsight.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class MarketingDataInsight extends com.google.api.client.json.GenericJson {
 
   /**
-   * Insights for values of a given dimension.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<MarketingDataInsightsAttribute> attributes;
 
   /**
-   * The dimension to which the insight belongs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dimension;
 
   /**
-   * Insights for values of a given dimension.
    * @return value or {@code null} for none
    */
   public java.util.List<MarketingDataInsightsAttribute> getAttributes() {
@@ -52,7 +49,6 @@ public final class MarketingDataInsight extends com.google.api.client.json.Gener
   }
 
   /**
-   * Insights for values of a given dimension.
    * @param attributes attributes or {@code null} for none
    */
   public MarketingDataInsight setAttributes(java.util.List<MarketingDataInsightsAttribute> attributes) {
@@ -61,7 +57,6 @@ public final class MarketingDataInsight extends com.google.api.client.json.Gener
   }
 
   /**
-   * The dimension to which the insight belongs.
    * @return value or {@code null} for none
    */
   public java.lang.String getDimension() {
@@ -69,7 +64,6 @@ public final class MarketingDataInsight extends com.google.api.client.json.Gener
   }
 
   /**
-   * The dimension to which the insight belongs.
    * @param dimension dimension or {@code null} for none
    */
   public MarketingDataInsight setDimension(java.lang.String dimension) {

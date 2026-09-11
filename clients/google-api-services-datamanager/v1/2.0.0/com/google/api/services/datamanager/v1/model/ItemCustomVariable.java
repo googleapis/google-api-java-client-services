@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Item-level custom variable for ads conversions.
+ * Model definition for ItemCustomVariable.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,31 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class ItemCustomVariable extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Reference string used to determine which of the Event.destination_references the
-   * custom variable should be sent to. If empty, the Event.destination_references will be used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> destinationReferences;
 
   /**
-   * Optional. The value to store for the custom variable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Optional. The name of the custom variable to set. If the variable is not found for the given
-   * destination, it will be ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String variable;
 
   /**
-   * Optional. Reference string used to determine which of the Event.destination_references the
-   * custom variable should be sent to. If empty, the Event.destination_references will be used.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinationReferences() {
@@ -62,8 +55,6 @@ public final class ItemCustomVariable extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Reference string used to determine which of the Event.destination_references the
-   * custom variable should be sent to. If empty, the Event.destination_references will be used.
    * @param destinationReferences destinationReferences or {@code null} for none
    */
   public ItemCustomVariable setDestinationReferences(java.util.List<java.lang.String> destinationReferences) {
@@ -72,7 +63,6 @@ public final class ItemCustomVariable extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The value to store for the custom variable.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -80,7 +70,6 @@ public final class ItemCustomVariable extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The value to store for the custom variable.
    * @param value value or {@code null} for none
    */
   public ItemCustomVariable setValue(java.lang.String value) {
@@ -89,8 +78,6 @@ public final class ItemCustomVariable extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the custom variable to set. If the variable is not found for the given
-   * destination, it will be ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getVariable() {
@@ -98,8 +85,6 @@ public final class ItemCustomVariable extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The name of the custom variable to set. If the variable is not found for the given
-   * destination, it will be ignored.
    * @param variable variable or {@code null} for none
    */
   public ItemCustomVariable setVariable(java.lang.String variable) {

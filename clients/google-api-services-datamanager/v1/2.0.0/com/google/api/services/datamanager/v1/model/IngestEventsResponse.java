@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response from the IngestEventsRequest.
+ * Model definition for IngestEventsResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestEventsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Detailed row-level warnings with field paths.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +42,12 @@ public final class IngestEventsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The auto-generated ID of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
 
   /**
-   * Detailed row-level warnings with field paths.
    * @return value or {@code null} for none
    */
   public java.util.List<FieldWarning> getFieldWarnings() {
@@ -58,7 +55,6 @@ public final class IngestEventsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Detailed row-level warnings with field paths.
    * @param fieldWarnings fieldWarnings or {@code null} for none
    */
   public IngestEventsResponse setFieldWarnings(java.util.List<FieldWarning> fieldWarnings) {
@@ -67,7 +63,6 @@ public final class IngestEventsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The auto-generated ID of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -75,7 +70,6 @@ public final class IngestEventsResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * The auto-generated ID of the request.
    * @param requestId requestId or {@code null} for none
    */
   public IngestEventsResponse setRequestId(java.lang.String requestId) {

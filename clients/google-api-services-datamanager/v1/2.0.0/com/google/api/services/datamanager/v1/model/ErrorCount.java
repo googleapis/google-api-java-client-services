@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The error count for a given error reason.
+ * Model definition for ErrorCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class ErrorCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The error reason of the failed records.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The count of records that failed to upload for a given reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The error reason of the failed records.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -52,7 +49,6 @@ public final class ErrorCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The error reason of the failed records.
    * @param reason reason or {@code null} for none
    */
   public ErrorCount setReason(java.lang.String reason) {
@@ -61,7 +57,6 @@ public final class ErrorCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The count of records that failed to upload for a given reason.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -69,7 +64,6 @@ public final class ErrorCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The count of records that failed to upload for a given reason.
    * @param recordCount recordCount or {@code null} for none
    */
   public ErrorCount setRecordCount(java.lang.Long recordCount) {

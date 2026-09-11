@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Partner-provided data holding the partner-provided identifiers. At least one partner-provided
- * identifier is required.
+ * Model definition for PartnerProvidedIdData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,14 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class PartnerProvidedIdData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of partner-provided identifiers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> partnerProvidedIds;
 
   /**
-   * Required. The list of partner-provided identifiers.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPartnerProvidedIds() {
@@ -46,7 +43,6 @@ public final class PartnerProvidedIdData extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The list of partner-provided identifiers.
    * @param partnerProvidedIds partnerProvidedIds or {@code null} for none
    */
   public PartnerProvidedIdData setPartnerProvidedIds(java.util.List<java.lang.String> partnerProvidedIds) {

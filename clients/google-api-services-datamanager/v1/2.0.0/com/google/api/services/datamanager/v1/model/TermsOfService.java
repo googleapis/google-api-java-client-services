@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The terms of service that the user has accepted/rejected.
+ * Model definition for TermsOfService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,18 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class TermsOfService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Customer Match terms of service:
-   * https://support.google.com/adspolicy/answer/6299717. This must be accepted when ingesting
-   * UserData or MobileData. This field is not required for Partner Match User list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerMatchTermsOfServiceStatus;
 
   /**
-   * Optional. The Customer Match terms of service:
-   * https://support.google.com/adspolicy/answer/6299717. This must be accepted when ingesting
-   * UserData or MobileData. This field is not required for Partner Match User list.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerMatchTermsOfServiceStatus() {
@@ -49,9 +43,6 @@ public final class TermsOfService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The Customer Match terms of service:
-   * https://support.google.com/adspolicy/answer/6299717. This must be accepted when ingesting
-   * UserData or MobileData. This field is not required for Partner Match User list.
    * @param customerMatchTermsOfServiceStatus customerMatchTermsOfServiceStatus or {@code null} for none
    */
   public TermsOfService setCustomerMatchTermsOfServiceStatus(java.lang.String customerMatchTermsOfServiceStatus) {

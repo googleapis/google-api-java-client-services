@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The cart data associated with the event.
+ * Model definition for CartData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,54 +30,42 @@ package com.google.api.services.datamanager.v1.model;
 public final class CartData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The list of coupon codes that were applied to the cart. Cart-level and item-level
-   * coupon codes are independent. If the event is for a Google Analytics destination, only provide
-   * a single coupon code. Google Analytics ignores additional coupon codes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> couponCodes;
 
   /**
-   * Optional. The list of items associated with the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<Item> items;
 
   /**
-   * Optional. The Merchant Center feed label associated with the feed of the items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantFeedLabel;
 
   /**
-   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed of the
-   * items.where your items are uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantFeedLanguageCode;
 
   /**
-   * Optional. The Merchant Center ID associated with the items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantId;
 
   /**
-   * Optional. The sum of all discounts associated with the transaction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double transactionDiscount;
 
   /**
-   * Optional. The list of coupon codes that were applied to the cart. Cart-level and item-level
-   * coupon codes are independent. If the event is for a Google Analytics destination, only provide
-   * a single coupon code. Google Analytics ignores additional coupon codes.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCouponCodes() {
@@ -85,9 +73,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of coupon codes that were applied to the cart. Cart-level and item-level
-   * coupon codes are independent. If the event is for a Google Analytics destination, only provide
-   * a single coupon code. Google Analytics ignores additional coupon codes.
    * @param couponCodes couponCodes or {@code null} for none
    */
   public CartData setCouponCodes(java.util.List<java.lang.String> couponCodes) {
@@ -96,7 +81,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of items associated with the event.
    * @return value or {@code null} for none
    */
   public java.util.List<Item> getItems() {
@@ -104,7 +88,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of items associated with the event.
    * @param items items or {@code null} for none
    */
   public CartData setItems(java.util.List<Item> items) {
@@ -113,7 +96,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Merchant Center feed label associated with the feed of the items.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantFeedLabel() {
@@ -121,7 +103,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Merchant Center feed label associated with the feed of the items.
    * @param merchantFeedLabel merchantFeedLabel or {@code null} for none
    */
   public CartData setMerchantFeedLabel(java.lang.String merchantFeedLabel) {
@@ -130,8 +111,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed of the
-   * items.where your items are uploaded.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantFeedLanguageCode() {
@@ -139,8 +118,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed of the
-   * items.where your items are uploaded.
    * @param merchantFeedLanguageCode merchantFeedLanguageCode or {@code null} for none
    */
   public CartData setMerchantFeedLanguageCode(java.lang.String merchantFeedLanguageCode) {
@@ -149,7 +126,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Merchant Center ID associated with the items.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantId() {
@@ -157,7 +133,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Merchant Center ID associated with the items.
    * @param merchantId merchantId or {@code null} for none
    */
   public CartData setMerchantId(java.lang.String merchantId) {
@@ -166,7 +141,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The sum of all discounts associated with the transaction.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTransactionDiscount() {
@@ -174,7 +148,6 @@ public final class CartData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The sum of all discounts associated with the transaction.
    * @param transactionDiscount transactionDiscount or {@code null} for none
    */
   public CartData setTransactionDiscount(java.lang.Double transactionDiscount) {

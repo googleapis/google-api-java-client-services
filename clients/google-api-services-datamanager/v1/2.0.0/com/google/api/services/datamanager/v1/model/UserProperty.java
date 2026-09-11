@@ -17,9 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A bucket of any additional [user
- * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
- * properties) for the user associated with this event.
+ * Model definition for UserProperty.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -32,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserProperty extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the user property to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String propertyName;
 
   /**
-   * Required. The string representation of the value of the user property to use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String value;
 
   /**
-   * Required. The name of the user property to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getPropertyName() {
@@ -54,7 +49,6 @@ public final class UserProperty extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the user property to use.
    * @param propertyName propertyName or {@code null} for none
    */
   public UserProperty setPropertyName(java.lang.String propertyName) {
@@ -63,7 +57,6 @@ public final class UserProperty extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The string representation of the value of the user property to use.
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -71,7 +64,6 @@ public final class UserProperty extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The string representation of the value of the user property to use.
    * @param value value or {@code null} for none
    */
   public UserProperty setValue(java.lang.String value) {

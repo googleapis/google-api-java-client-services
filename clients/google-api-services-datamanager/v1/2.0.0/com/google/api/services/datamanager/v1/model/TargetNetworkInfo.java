@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Eligibility information for different target networks.
+ * Model definition for TargetNetworkInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class TargetNetworkInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Indicates this user list is eligible for Google Display Network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean eligibleForDisplay;
 
   /**
-   * Optional. Indicates if this user list is eligible for Google Search Network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean eligibleForSearch;
 
   /**
-   * Output only. Indicates this user list is eligible for Google Display Network.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEligibleForDisplay() {
@@ -52,7 +49,6 @@ public final class TargetNetworkInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Indicates this user list is eligible for Google Display Network.
    * @param eligibleForDisplay eligibleForDisplay or {@code null} for none
    */
   public TargetNetworkInfo setEligibleForDisplay(java.lang.Boolean eligibleForDisplay) {
@@ -61,7 +57,6 @@ public final class TargetNetworkInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Indicates if this user list is eligible for Google Search Network.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEligibleForSearch() {
@@ -69,7 +64,6 @@ public final class TargetNetworkInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Indicates if this user list is eligible for Google Search Network.
    * @param eligibleForSearch eligibleForSearch or {@code null} for none
    */
   public TargetNetworkInfo setEligibleForSearch(java.lang.Boolean eligibleForSearch) {

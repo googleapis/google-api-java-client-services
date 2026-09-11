@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the user data ingestion to the destination containing stats related to the
- * ingestion.
+ * Model definition for IngestUserDataStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,34 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestUserDataStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total count of audience members sent in the upload request for the destination. Includes
-   * all audience members in the request, regardless of whether they were successfully ingested or
-   * not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The match rate range of the upload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uploadMatchRateRange;
 
   /**
-   * The total count of user identifiers sent in the upload request for the destination. Includes
-   * all user identifiers in the request, regardless of whether they were successfully ingested or
-   * not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long userIdentifierCount;
 
   /**
-   * The total count of audience members sent in the upload request for the destination. Includes
-   * all audience members in the request, regardless of whether they were successfully ingested or
-   * not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -66,9 +55,6 @@ public final class IngestUserDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of audience members sent in the upload request for the destination. Includes
-   * all audience members in the request, regardless of whether they were successfully ingested or
-   * not.
    * @param recordCount recordCount or {@code null} for none
    */
   public IngestUserDataStatus setRecordCount(java.lang.Long recordCount) {
@@ -77,7 +63,6 @@ public final class IngestUserDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The match rate range of the upload.
    * @return value or {@code null} for none
    */
   public java.lang.String getUploadMatchRateRange() {
@@ -85,7 +70,6 @@ public final class IngestUserDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The match rate range of the upload.
    * @param uploadMatchRateRange uploadMatchRateRange or {@code null} for none
    */
   public IngestUserDataStatus setUploadMatchRateRange(java.lang.String uploadMatchRateRange) {
@@ -94,9 +78,6 @@ public final class IngestUserDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of user identifiers sent in the upload request for the destination. Includes
-   * all user identifiers in the request, regardless of whether they were successfully ingested or
-   * not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getUserIdentifierCount() {
@@ -104,9 +85,6 @@ public final class IngestUserDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of user identifiers sent in the upload request for the destination. Includes
-   * all user identifiers in the request, regardless of whether they were successfully ingested or
-   * not.
    * @param userIdentifierCount userIdentifierCount or {@code null} for none
    */
   public IngestUserDataStatus setUserIdentifierCount(java.lang.Long userIdentifierCount) {

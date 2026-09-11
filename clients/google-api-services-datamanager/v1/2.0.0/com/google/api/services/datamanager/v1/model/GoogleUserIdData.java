@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Google user id data holding encrypted google user IDs. At least one google user ID is required.
+ * Model definition for GoogleUserIdData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class GoogleUserIdData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of encrypted google user IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> googleUserIds;
 
   /**
-   * Required. The list of encrypted google user IDs.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGoogleUserIds() {
@@ -45,7 +43,6 @@ public final class GoogleUserIdData extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The list of encrypted google user IDs.
    * @param googleUserIds googleUserIds or {@code null} for none
    */
   public GoogleUserIdData setGoogleUserIds(java.util.List<java.lang.String> googleUserIds) {

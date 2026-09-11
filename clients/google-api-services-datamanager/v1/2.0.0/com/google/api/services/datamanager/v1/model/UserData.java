@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Data that identifies the user. At least one identifier is required.
+ * Model definition for UserData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,20 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The identifiers for the user. It's possible to provide multiple instances of the same
-   * type of data (for example, multiple email addresses). To increase the likelihood of a match,
-   * provide as many identifiers as possible. At most 10 `userIdentifiers` can be provided in a
-   * single AudienceMember or Event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserIdentifier> userIdentifiers;
 
   /**
-   * Required. The identifiers for the user. It's possible to provide multiple instances of the same
-   * type of data (for example, multiple email addresses). To increase the likelihood of a match,
-   * provide as many identifiers as possible. At most 10 `userIdentifiers` can be provided in a
-   * single AudienceMember or Event.
    * @return value or {@code null} for none
    */
   public java.util.List<UserIdentifier> getUserIdentifiers() {
@@ -51,10 +43,6 @@ public final class UserData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The identifiers for the user. It's possible to provide multiple instances of the same
-   * type of data (for example, multiple email addresses). To increase the likelihood of a match,
-   * provide as many identifiers as possible. At most 10 `userIdentifiers` can be provided in a
-   * single AudienceMember or Event.
    * @param userIdentifiers userIdentifiers or {@code null} for none
    */
   public UserData setUserIdentifiers(java.util.List<UserIdentifier> userIdentifiers) {

@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A user identifier issued to be used for attribution. All fields are required if this is used.
+ * Model definition for EncryptedUserId.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,38 +30,30 @@ package com.google.api.services.datamanager.v1.model;
 public final class EncryptedUserId extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The alphanumeric encrypted id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encryptedId;
 
   /**
-   * Required. The encryption entity ID. This should match the encryption configuration for ad
-   * serving or Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long entityId;
 
   /**
-   * Required. The encryption entity type. This should match the encryption configuration for ad
-   * serving or Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entityType;
 
   /**
-   * Required. Describes whether the encrypted cookie was received from ad serving (the %m macro) or
-   * from Data Transfer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Required. The alphanumeric encrypted id.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryptedId() {
@@ -69,7 +61,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The alphanumeric encrypted id.
    * @param encryptedId encryptedId or {@code null} for none
    */
   public EncryptedUserId setEncryptedId(java.lang.String encryptedId) {
@@ -78,8 +69,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The encryption entity ID. This should match the encryption configuration for ad
-   * serving or Data Transfer.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEntityId() {
@@ -87,8 +76,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The encryption entity ID. This should match the encryption configuration for ad
-   * serving or Data Transfer.
    * @param entityId entityId or {@code null} for none
    */
   public EncryptedUserId setEntityId(java.lang.Long entityId) {
@@ -97,8 +84,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The encryption entity type. This should match the encryption configuration for ad
-   * serving or Data Transfer.
    * @return value or {@code null} for none
    */
   public java.lang.String getEntityType() {
@@ -106,8 +91,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The encryption entity type. This should match the encryption configuration for ad
-   * serving or Data Transfer.
    * @param entityType entityType or {@code null} for none
    */
   public EncryptedUserId setEntityType(java.lang.String entityType) {
@@ -116,8 +99,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Describes whether the encrypted cookie was received from ad serving (the %m macro) or
-   * from Data Transfer.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -125,8 +106,6 @@ public final class EncryptedUserId extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. Describes whether the encrypted cookie was received from ad serving (the %m macro) or
-   * from Data Transfer.
    * @param source source or {@code null} for none
    */
   public EncryptedUserId setSource(java.lang.String source) {

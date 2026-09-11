@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The audience member to be operated on.
+ * Model definition for AudienceMember.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,80 +30,66 @@ package com.google.api.services.datamanager.v1.model;
 public final class AudienceMember extends com.google.api.client.json.GenericJson {
 
   /**
-   * Group of multiple identifier types.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CompositeData compositeData;
 
   /**
-   * Optional. The consent setting for the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Consent consent;
 
   /**
-   * Optional. Defines which Destination to send the audience member to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> destinationReferences;
 
   /**
-   * Encrypted Google User IDs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleUserIdData googleUserIdData;
 
   /**
-   * Data identifying the user's mobile devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MobileData mobileData;
 
   /**
-   * [Publisher Advertiser Identity Reconciliation (PAIR)
-   * IDs](//support.google.com/admanager/answer/15067908). This feature is only available to data
-   * partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PairData pairData;
 
   /**
-   * Partner-provided identifiers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PartnerProvidedIdData partnerProvidedIdData;
 
   /**
-   * Data related to publisher provided identifiers. This feature is only available to data
-   * partners.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private PpidData ppidData;
 
   /**
-   * User-provided data that identifies the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserData userData;
 
   /**
-   * Data related to unique identifiers for a user, as defined by the advertiser.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserIdData userIdData;
 
   /**
-   * Group of multiple identifier types.
    * @return value or {@code null} for none
    */
   public CompositeData getCompositeData() {
@@ -111,7 +97,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Group of multiple identifier types.
    * @param compositeData compositeData or {@code null} for none
    */
   public AudienceMember setCompositeData(CompositeData compositeData) {
@@ -120,7 +105,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The consent setting for the user.
    * @return value or {@code null} for none
    */
   public Consent getConsent() {
@@ -128,7 +112,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The consent setting for the user.
    * @param consent consent or {@code null} for none
    */
   public AudienceMember setConsent(Consent consent) {
@@ -137,7 +120,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Defines which Destination to send the audience member to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinationReferences() {
@@ -145,7 +127,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Defines which Destination to send the audience member to.
    * @param destinationReferences destinationReferences or {@code null} for none
    */
   public AudienceMember setDestinationReferences(java.util.List<java.lang.String> destinationReferences) {
@@ -154,7 +135,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Encrypted Google User IDs.
    * @return value or {@code null} for none
    */
   public GoogleUserIdData getGoogleUserIdData() {
@@ -162,7 +142,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Encrypted Google User IDs.
    * @param googleUserIdData googleUserIdData or {@code null} for none
    */
   public AudienceMember setGoogleUserIdData(GoogleUserIdData googleUserIdData) {
@@ -171,7 +150,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data identifying the user's mobile devices.
    * @return value or {@code null} for none
    */
   public MobileData getMobileData() {
@@ -179,7 +157,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data identifying the user's mobile devices.
    * @param mobileData mobileData or {@code null} for none
    */
   public AudienceMember setMobileData(MobileData mobileData) {
@@ -188,9 +165,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Publisher Advertiser Identity Reconciliation (PAIR)
-   * IDs](//support.google.com/admanager/answer/15067908). This feature is only available to data
-   * partners.
    * @return value or {@code null} for none
    */
   public PairData getPairData() {
@@ -198,9 +172,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * [Publisher Advertiser Identity Reconciliation (PAIR)
-   * IDs](//support.google.com/admanager/answer/15067908). This feature is only available to data
-   * partners.
    * @param pairData pairData or {@code null} for none
    */
   public AudienceMember setPairData(PairData pairData) {
@@ -209,7 +180,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partner-provided identifiers.
    * @return value or {@code null} for none
    */
   public PartnerProvidedIdData getPartnerProvidedIdData() {
@@ -217,7 +187,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Partner-provided identifiers.
    * @param partnerProvidedIdData partnerProvidedIdData or {@code null} for none
    */
   public AudienceMember setPartnerProvidedIdData(PartnerProvidedIdData partnerProvidedIdData) {
@@ -226,8 +195,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data related to publisher provided identifiers. This feature is only available to data
-   * partners.
    * @return value or {@code null} for none
    */
   public PpidData getPpidData() {
@@ -235,8 +202,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data related to publisher provided identifiers. This feature is only available to data
-   * partners.
    * @param ppidData ppidData or {@code null} for none
    */
   public AudienceMember setPpidData(PpidData ppidData) {
@@ -245,7 +210,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User-provided data that identifies the user.
    * @return value or {@code null} for none
    */
   public UserData getUserData() {
@@ -253,7 +217,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * User-provided data that identifies the user.
    * @param userData userData or {@code null} for none
    */
   public AudienceMember setUserData(UserData userData) {
@@ -262,7 +225,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data related to unique identifiers for a user, as defined by the advertiser.
    * @return value or {@code null} for none
    */
   public UserIdData getUserIdData() {
@@ -270,7 +232,6 @@ public final class AudienceMember extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Data related to unique identifiers for a user, as defined by the advertiser.
    * @param userIdData userIdData or {@code null} for none
    */
   public AudienceMember setUserIdData(UserIdData userIdData) {

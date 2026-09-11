@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * IP address information for a user. We recommend including observe_start_time and observe_end_time
- * to help improve Customer Match match rates.
+ * Model definition for IpData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,30 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class IpData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. IP address captured at the time of customer interaction. Accepts standard string
-   * formats for both IPv4 and IPv6.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String ipAddress;
 
   /**
-   * Optional. Last recorded interaction time from this IP address in a session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String observeEndTime;
 
   /**
-   * Optional. First recorded interaction time from this IP address in a session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String observeStartTime;
 
   /**
-   * Required. IP address captured at the time of customer interaction. Accepts standard string
-   * formats for both IPv4 and IPv6.
    * @return value or {@code null} for none
    */
   public java.lang.String getIpAddress() {
@@ -62,8 +55,6 @@ public final class IpData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. IP address captured at the time of customer interaction. Accepts standard string
-   * formats for both IPv4 and IPv6.
    * @param ipAddress ipAddress or {@code null} for none
    */
   public IpData setIpAddress(java.lang.String ipAddress) {
@@ -72,7 +63,6 @@ public final class IpData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Last recorded interaction time from this IP address in a session.
    * @return value or {@code null} for none
    */
   public String getObserveEndTime() {
@@ -80,7 +70,6 @@ public final class IpData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Last recorded interaction time from this IP address in a session.
    * @param observeEndTime observeEndTime or {@code null} for none
    */
   public IpData setObserveEndTime(String observeEndTime) {
@@ -89,7 +78,6 @@ public final class IpData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. First recorded interaction time from this IP address in a session.
    * @return value or {@code null} for none
    */
   public String getObserveStartTime() {
@@ -97,7 +85,6 @@ public final class IpData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. First recorded interaction time from this IP address in a session.
    * @param observeStartTime observeStartTime or {@code null} for none
    */
   public IpData setObserveStartTime(String observeStartTime) {

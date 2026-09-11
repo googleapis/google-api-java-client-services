@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A user list resource.
+ * Model definition for UserList.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,111 +30,90 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserList extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The reason this account has been granted access to the list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accessReason;
 
   /**
-   * Optional. Indicates if this share is still enabled. When a user list is shared with the account
-   * this field is set to `ENABLED`. Later the user list owner can decide to revoke the share and
-   * make it `DISABLED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String accountAccessStatus;
 
   /**
-   * Output only. The reason why this user list membership status is closed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String closingReason;
 
   /**
-   * Optional. A description of the user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The display name of the user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Output only. The unique ID of the user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long id;
 
   /**
-   * Optional. Represents a user list that is populated by user ingested data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestedUserListInfo ingestedUserListInfo;
 
   /**
-   * Optional. An ID from external system. It is used by user list sellers to correlate IDs on their
-   * systems.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String integrationCode;
 
   /**
-   * Optional. The duration a user remains in the user list. Valid durations are exact multiples of
-   * 24 hours (86400 seconds). Providing a value that is not an exact multiple of 24 hours will
-   * result in an INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String membershipDuration;
 
   /**
-   * Optional. Membership status of this user list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String membershipStatus;
 
   /**
-   * Identifier. The resource name of the user list. Format:
-   * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. An option that indicates if a user may edit a list.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean readOnly;
 
   /**
-   * Output only. Estimated number of members in this user list in different target networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SizeInfo sizeInfo;
 
   /**
-   * Optional. Eligibility information for different target networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TargetNetworkInfo targetNetworkInfo;
 
   /**
-   * Output only. The reason this account has been granted access to the list.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccessReason() {
@@ -142,7 +121,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason this account has been granted access to the list.
    * @param accessReason accessReason or {@code null} for none
    */
   public UserList setAccessReason(java.lang.String accessReason) {
@@ -151,9 +129,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates if this share is still enabled. When a user list is shared with the account
-   * this field is set to `ENABLED`. Later the user list owner can decide to revoke the share and
-   * make it `DISABLED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountAccessStatus() {
@@ -161,9 +136,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Indicates if this share is still enabled. When a user list is shared with the account
-   * this field is set to `ENABLED`. Later the user list owner can decide to revoke the share and
-   * make it `DISABLED`.
    * @param accountAccessStatus accountAccessStatus or {@code null} for none
    */
   public UserList setAccountAccessStatus(java.lang.String accountAccessStatus) {
@@ -172,7 +144,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason why this user list membership status is closed.
    * @return value or {@code null} for none
    */
   public java.lang.String getClosingReason() {
@@ -180,7 +151,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The reason why this user list membership status is closed.
    * @param closingReason closingReason or {@code null} for none
    */
   public UserList setClosingReason(java.lang.String closingReason) {
@@ -189,7 +159,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of the user list.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -197,7 +166,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A description of the user list.
    * @param description description or {@code null} for none
    */
   public UserList setDescription(java.lang.String description) {
@@ -206,7 +174,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name of the user list.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -214,7 +181,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name of the user list.
    * @param displayName displayName or {@code null} for none
    */
   public UserList setDisplayName(java.lang.String displayName) {
@@ -223,7 +189,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the user list.
    * @return value or {@code null} for none
    */
   public java.lang.Long getId() {
@@ -231,7 +196,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The unique ID of the user list.
    * @param id id or {@code null} for none
    */
   public UserList setId(java.lang.Long id) {
@@ -240,7 +204,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents a user list that is populated by user ingested data.
    * @return value or {@code null} for none
    */
   public IngestedUserListInfo getIngestedUserListInfo() {
@@ -248,7 +211,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents a user list that is populated by user ingested data.
    * @param ingestedUserListInfo ingestedUserListInfo or {@code null} for none
    */
   public UserList setIngestedUserListInfo(IngestedUserListInfo ingestedUserListInfo) {
@@ -257,8 +219,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An ID from external system. It is used by user list sellers to correlate IDs on their
-   * systems.
    * @return value or {@code null} for none
    */
   public java.lang.String getIntegrationCode() {
@@ -266,8 +226,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An ID from external system. It is used by user list sellers to correlate IDs on their
-   * systems.
    * @param integrationCode integrationCode or {@code null} for none
    */
   public UserList setIntegrationCode(java.lang.String integrationCode) {
@@ -276,9 +234,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The duration a user remains in the user list. Valid durations are exact multiples of
-   * 24 hours (86400 seconds). Providing a value that is not an exact multiple of 24 hours will
-   * result in an INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public String getMembershipDuration() {
@@ -286,9 +241,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The duration a user remains in the user list. Valid durations are exact multiples of
-   * 24 hours (86400 seconds). Providing a value that is not an exact multiple of 24 hours will
-   * result in an INVALID_ARGUMENT error.
    * @param membershipDuration membershipDuration or {@code null} for none
    */
   public UserList setMembershipDuration(String membershipDuration) {
@@ -297,7 +249,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Membership status of this user list.
    * @return value or {@code null} for none
    */
   public java.lang.String getMembershipStatus() {
@@ -305,7 +256,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Membership status of this user list.
    * @param membershipStatus membershipStatus or {@code null} for none
    */
   public UserList setMembershipStatus(java.lang.String membershipStatus) {
@@ -314,8 +264,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the user list. Format:
-   * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -323,8 +271,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. The resource name of the user list. Format:
-   * accountTypes/{account_type}/accounts/{account}/userLists/{user_list}
    * @param name name or {@code null} for none
    */
   public UserList setName(java.lang.String name) {
@@ -333,7 +279,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An option that indicates if a user may edit a list.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReadOnly() {
@@ -341,7 +286,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An option that indicates if a user may edit a list.
    * @param readOnly readOnly or {@code null} for none
    */
   public UserList setReadOnly(java.lang.Boolean readOnly) {
@@ -350,7 +294,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list in different target networks.
    * @return value or {@code null} for none
    */
   public SizeInfo getSizeInfo() {
@@ -358,7 +301,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list in different target networks.
    * @param sizeInfo sizeInfo or {@code null} for none
    */
   public UserList setSizeInfo(SizeInfo sizeInfo) {
@@ -367,7 +309,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Eligibility information for different target networks.
    * @return value or {@code null} for none
    */
   public TargetNetworkInfo getTargetNetworkInfo() {
@@ -375,7 +316,6 @@ public final class UserList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Eligibility information for different target networks.
    * @param targetNetworkInfo targetNetworkInfo or {@code null} for none
    */
   public UserList setTargetNetworkInfo(TargetNetworkInfo targetNetworkInfo) {

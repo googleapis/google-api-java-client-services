@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The Google product you're sending data to. For example, a Google Ads account.
+ * Model definition for Destination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,55 +30,36 @@ package com.google.api.services.datamanager.v1.model;
 public final class Destination extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. An account that the calling user's `login_account` has access to, through an
-   * established account link. For example, a data partner's `login_account` might have access to a
-   * client's `linked_account`. The partner might use this field to send data from the
-   * `linked_account` to another `operating_account`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductAccount linkedAccount;
 
   /**
-   * Optional. The account used to make this API call. To add or remove data from the
-   * `operating_account`, this `login_account` must have write access to the `operating_account`.
-   * For example, a manager account of the `operating_account`, or an account with an established
-   * link to the `operating_account`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductAccount loginAccount;
 
   /**
-   * Required. The account to send the data to or remove the data from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ProductAccount operatingAccount;
 
   /**
-   * Optional. The object within the product account to ingest into. For example, a Google Ads
-   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID. This field
-   * is optional for Google Ad Manager event ingestion and User ingestion. Required for all other
-   * use cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productDestinationId;
 
   /**
-   * Optional. ID for this `Destination` resource, unique within the request. Use to reference this
-   * `Destination` in the IngestEventsRequest and IngestAudienceMembersRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reference;
 
   /**
-   * Optional. An account that the calling user's `login_account` has access to, through an
-   * established account link. For example, a data partner's `login_account` might have access to a
-   * client's `linked_account`. The partner might use this field to send data from the
-   * `linked_account` to another `operating_account`.
    * @return value or {@code null} for none
    */
   public ProductAccount getLinkedAccount() {
@@ -86,10 +67,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An account that the calling user's `login_account` has access to, through an
-   * established account link. For example, a data partner's `login_account` might have access to a
-   * client's `linked_account`. The partner might use this field to send data from the
-   * `linked_account` to another `operating_account`.
    * @param linkedAccount linkedAccount or {@code null} for none
    */
   public Destination setLinkedAccount(ProductAccount linkedAccount) {
@@ -98,10 +75,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The account used to make this API call. To add or remove data from the
-   * `operating_account`, this `login_account` must have write access to the `operating_account`.
-   * For example, a manager account of the `operating_account`, or an account with an established
-   * link to the `operating_account`.
    * @return value or {@code null} for none
    */
   public ProductAccount getLoginAccount() {
@@ -109,10 +82,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The account used to make this API call. To add or remove data from the
-   * `operating_account`, this `login_account` must have write access to the `operating_account`.
-   * For example, a manager account of the `operating_account`, or an account with an established
-   * link to the `operating_account`.
    * @param loginAccount loginAccount or {@code null} for none
    */
   public Destination setLoginAccount(ProductAccount loginAccount) {
@@ -121,7 +90,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The account to send the data to or remove the data from.
    * @return value or {@code null} for none
    */
   public ProductAccount getOperatingAccount() {
@@ -129,7 +97,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The account to send the data to or remove the data from.
    * @param operatingAccount operatingAccount or {@code null} for none
    */
   public Destination setOperatingAccount(ProductAccount operatingAccount) {
@@ -138,10 +105,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The object within the product account to ingest into. For example, a Google Ads
-   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID. This field
-   * is optional for Google Ad Manager event ingestion and User ingestion. Required for all other
-   * use cases.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductDestinationId() {
@@ -149,10 +112,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The object within the product account to ingest into. For example, a Google Ads
-   * audience ID, a Display & Video 360 audience ID or a Google Ads conversion action ID. This field
-   * is optional for Google Ad Manager event ingestion and User ingestion. Required for all other
-   * use cases.
    * @param productDestinationId productDestinationId or {@code null} for none
    */
   public Destination setProductDestinationId(java.lang.String productDestinationId) {
@@ -161,8 +120,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ID for this `Destination` resource, unique within the request. Use to reference this
-   * `Destination` in the IngestEventsRequest and IngestAudienceMembersRequest.
    * @return value or {@code null} for none
    */
   public java.lang.String getReference() {
@@ -170,8 +127,6 @@ public final class Destination extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. ID for this `Destination` resource, unique within the request. Use to reference this
-   * `Destination` in the IngestEventsRequest and IngestAudienceMembersRequest.
    * @param reference reference or {@code null} for none
    */
   public Destination setReference(java.lang.String reference) {

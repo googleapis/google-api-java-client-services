@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the ppid data removal from the destination.
+ * Model definition for RemovePpidDataStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,24 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemovePpidDataStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total count of ppids sent in the removal request. Includes all ppids in the request,
-   * regardless of whether they were successfully removed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long ppidCount;
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The total count of ppids sent in the removal request. Includes all ppids in the request,
-   * regardless of whether they were successfully removed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPpidCount() {
@@ -55,8 +49,6 @@ public final class RemovePpidDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of ppids sent in the removal request. Includes all ppids in the request,
-   * regardless of whether they were successfully removed or not.
    * @param ppidCount ppidCount or {@code null} for none
    */
   public RemovePpidDataStatus setPpidCount(java.lang.Long ppidCount) {
@@ -65,8 +57,6 @@ public final class RemovePpidDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -74,8 +64,6 @@ public final class RemovePpidDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * @param recordCount recordCount or {@code null} for none
    */
   public RemovePpidDataStatus setRecordCount(java.lang.Long recordCount) {

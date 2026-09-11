@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response from the RemoveAudienceMembersRequest.
+ * Model definition for RemoveAudienceMembersResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,14 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveAudienceMembersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The auto-generated ID of the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestId;
 
   /**
-   * The auto-generated ID of the request.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestId() {
@@ -45,7 +43,6 @@ public final class RemoveAudienceMembersResponse extends com.google.api.client.j
   }
 
   /**
-   * The auto-generated ID of the request.
    * @param requestId requestId or {@code null} for none
    */
   public RemoveAudienceMembersResponse setRequestId(java.lang.String requestId) {

@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Error counts for each type of error.
+ * Model definition for ErrorInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class ErrorInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of errors and counts per error reason. May not be populated in all cases.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of errors and counts per error reason. May not be populated in all cases.
    * @return value or {@code null} for none
    */
   public java.util.List<ErrorCount> getErrorCounts() {
@@ -51,7 +49,6 @@ public final class ErrorInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of errors and counts per error reason. May not be populated in all cases.
    * @param errorCounts errorCounts or {@code null} for none
    */
   public ErrorInfo setErrorCounts(java.util.List<ErrorCount> errorCounts) {

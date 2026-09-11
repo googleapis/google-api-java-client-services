@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Request to upload audience members to the provided destinations. Returns an IngestEventsResponse.
+ * Model definition for IngestEventsRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,15 +30,12 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestEventsRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Request-level consent to apply to all users in the request. User-level consent
-   * overrides request-level consent, and can be specified in each Event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Consent consent;
 
   /**
-   * Required. The list of destinations to send the events to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,28 +48,18 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user identifiers. For hashed
-   * user identifiers, this is the encoding type of the hashed string. For encrypted hashed user
-   * identifiers, this is the encoding type of the outer encrypted string, but not necessarily the
-   * inner hashed string, meaning the inner hashed string could be encoded in a different way than
-   * the outer encrypted string. For non `UserData` uploads, this field is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encoding;
 
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's assumed that uploaded
-   * identifying information is hashed but not encrypted. For non `UserData` uploads, this field is
-   * ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private EncryptionInfo encryptionInfo;
 
   /**
-   * Required. The list of events to send to the specified destinations. At most 2000 Event
-   * resources can be sent in a single request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,16 +72,12 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
 
   /**
-   * Optional. Request-level consent to apply to all users in the request. User-level consent
-   * overrides request-level consent, and can be specified in each Event.
    * @return value or {@code null} for none
    */
   public Consent getConsent() {
@@ -102,8 +85,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Request-level consent to apply to all users in the request. User-level consent
-   * overrides request-level consent, and can be specified in each Event.
    * @param consent consent or {@code null} for none
    */
   public IngestEventsRequest setConsent(Consent consent) {
@@ -112,7 +93,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The list of destinations to send the events to.
    * @return value or {@code null} for none
    */
   public java.util.List<Destination> getDestinations() {
@@ -120,7 +100,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The list of destinations to send the events to.
    * @param destinations destinations or {@code null} for none
    */
   public IngestEventsRequest setDestinations(java.util.List<Destination> destinations) {
@@ -129,11 +108,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user identifiers. For hashed
-   * user identifiers, this is the encoding type of the hashed string. For encrypted hashed user
-   * identifiers, this is the encoding type of the outer encrypted string, but not necessarily the
-   * inner hashed string, meaning the inner hashed string could be encoded in a different way than
-   * the outer encrypted string. For non `UserData` uploads, this field is ignored.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncoding() {
@@ -141,11 +115,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Required for UserData uploads. The encoding type of the user identifiers. For hashed
-   * user identifiers, this is the encoding type of the hashed string. For encrypted hashed user
-   * identifiers, this is the encoding type of the outer encrypted string, but not necessarily the
-   * inner hashed string, meaning the inner hashed string could be encoded in a different way than
-   * the outer encrypted string. For non `UserData` uploads, this field is ignored.
    * @param encoding encoding or {@code null} for none
    */
   public IngestEventsRequest setEncoding(java.lang.String encoding) {
@@ -154,9 +123,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's assumed that uploaded
-   * identifying information is hashed but not encrypted. For non `UserData` uploads, this field is
-   * ignored.
    * @return value or {@code null} for none
    */
   public EncryptionInfo getEncryptionInfo() {
@@ -164,9 +130,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Encryption information for UserData uploads. If not set, it's assumed that uploaded
-   * identifying information is hashed but not encrypted. For non `UserData` uploads, this field is
-   * ignored.
    * @param encryptionInfo encryptionInfo or {@code null} for none
    */
   public IngestEventsRequest setEncryptionInfo(EncryptionInfo encryptionInfo) {
@@ -175,8 +138,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The list of events to send to the specified destinations. At most 2000 Event
-   * resources can be sent in a single request.
    * @return value or {@code null} for none
    */
   public java.util.List<Event> getEvents() {
@@ -184,8 +145,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The list of events to send to the specified destinations. At most 2000 Event
-   * resources can be sent in a single request.
    * @param events events or {@code null} for none
    */
   public IngestEventsRequest setEvents(java.util.List<Event> events) {
@@ -194,8 +153,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -203,8 +160,6 @@ public final class IngestEventsRequest extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public IngestEventsRequest setValidateOnly(java.lang.Boolean validateOnly) {

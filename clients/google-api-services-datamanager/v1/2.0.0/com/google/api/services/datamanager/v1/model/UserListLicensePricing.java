@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A user list license pricing.
+ * Model definition for UserListLicensePricing.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,77 +30,60 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserListLicensePricing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The buyer approval state of this pricing. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String buyerApprovalState;
 
   /**
-   * Optional. The cost associated with the model, in micro units (10^-6), in the currency specified
-   * by the currency_code field. For example, 2000000 means $2 if `currency_code` is `USD`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long costMicros;
 
   /**
-   * Immutable. The cost type of this pricing. Can be set only in the `create` operation. Can't be
-   * updated for an existing license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String costType;
 
   /**
-   * Optional. The currency in which cost and max_cost is specified. Must be a three-letter currency
-   * code defined in ISO 4217.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String currencyCode;
 
   /**
-   * Optional. End time of the pricing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String endTime;
 
   /**
-   * Optional. The maximum CPM a commerce audience can be charged when the MEDIA_SHARE cost type is
-   * used. The value is in micro units (10^-6) and in the currency specified by the currency_code
-   * field. For example, 2000000 means $2 if `currency_code` is `USD`. This is only relevant when
-   * cost_type is MEDIA_SHARE. When cost_type is not MEDIA_SHARE, and this field is set, a
-   * MAX_COST_NOT_ALLOWED error will be returned. If not set or set to`0`, there is no cap.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxCostMicros;
 
   /**
-   * Output only. Whether this pricing is active.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean pricingActive;
 
   /**
-   * Output only. The ID of this pricing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long pricingId;
 
   /**
-   * Output only. Start time of the pricing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String startTime;
 
   /**
-   * Output only. The buyer approval state of this pricing. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getBuyerApprovalState() {
@@ -108,7 +91,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The buyer approval state of this pricing. This field is read-only.
    * @param buyerApprovalState buyerApprovalState or {@code null} for none
    */
   public UserListLicensePricing setBuyerApprovalState(java.lang.String buyerApprovalState) {
@@ -117,8 +99,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The cost associated with the model, in micro units (10^-6), in the currency specified
-   * by the currency_code field. For example, 2000000 means $2 if `currency_code` is `USD`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCostMicros() {
@@ -126,8 +106,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The cost associated with the model, in micro units (10^-6), in the currency specified
-   * by the currency_code field. For example, 2000000 means $2 if `currency_code` is `USD`.
    * @param costMicros costMicros or {@code null} for none
    */
   public UserListLicensePricing setCostMicros(java.lang.Long costMicros) {
@@ -136,8 +114,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. The cost type of this pricing. Can be set only in the `create` operation. Can't be
-   * updated for an existing license.
    * @return value or {@code null} for none
    */
   public java.lang.String getCostType() {
@@ -145,8 +121,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Immutable. The cost type of this pricing. Can be set only in the `create` operation. Can't be
-   * updated for an existing license.
    * @param costType costType or {@code null} for none
    */
   public UserListLicensePricing setCostType(java.lang.String costType) {
@@ -155,8 +129,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The currency in which cost and max_cost is specified. Must be a three-letter currency
-   * code defined in ISO 4217.
    * @return value or {@code null} for none
    */
   public java.lang.String getCurrencyCode() {
@@ -164,8 +136,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The currency in which cost and max_cost is specified. Must be a three-letter currency
-   * code defined in ISO 4217.
    * @param currencyCode currencyCode or {@code null} for none
    */
   public UserListLicensePricing setCurrencyCode(java.lang.String currencyCode) {
@@ -174,7 +144,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. End time of the pricing.
    * @return value or {@code null} for none
    */
   public String getEndTime() {
@@ -182,7 +151,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. End time of the pricing.
    * @param endTime endTime or {@code null} for none
    */
   public UserListLicensePricing setEndTime(String endTime) {
@@ -191,11 +159,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The maximum CPM a commerce audience can be charged when the MEDIA_SHARE cost type is
-   * used. The value is in micro units (10^-6) and in the currency specified by the currency_code
-   * field. For example, 2000000 means $2 if `currency_code` is `USD`. This is only relevant when
-   * cost_type is MEDIA_SHARE. When cost_type is not MEDIA_SHARE, and this field is set, a
-   * MAX_COST_NOT_ALLOWED error will be returned. If not set or set to`0`, there is no cap.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxCostMicros() {
@@ -203,11 +166,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The maximum CPM a commerce audience can be charged when the MEDIA_SHARE cost type is
-   * used. The value is in micro units (10^-6) and in the currency specified by the currency_code
-   * field. For example, 2000000 means $2 if `currency_code` is `USD`. This is only relevant when
-   * cost_type is MEDIA_SHARE. When cost_type is not MEDIA_SHARE, and this field is set, a
-   * MAX_COST_NOT_ALLOWED error will be returned. If not set or set to`0`, there is no cap.
    * @param maxCostMicros maxCostMicros or {@code null} for none
    */
   public UserListLicensePricing setMaxCostMicros(java.lang.Long maxCostMicros) {
@@ -216,7 +174,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Whether this pricing is active.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPricingActive() {
@@ -224,7 +181,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Whether this pricing is active.
    * @param pricingActive pricingActive or {@code null} for none
    */
   public UserListLicensePricing setPricingActive(java.lang.Boolean pricingActive) {
@@ -233,7 +189,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The ID of this pricing.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPricingId() {
@@ -241,7 +196,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The ID of this pricing.
    * @param pricingId pricingId or {@code null} for none
    */
   public UserListLicensePricing setPricingId(java.lang.Long pricingId) {
@@ -250,7 +204,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Start time of the pricing.
    * @return value or {@code null} for none
    */
   public String getStartTime() {
@@ -258,7 +211,6 @@ public final class UserListLicensePricing extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. Start time of the pricing.
    * @param startTime startTime or {@code null} for none
    */
   public UserListLicensePricing setStartTime(String startTime) {

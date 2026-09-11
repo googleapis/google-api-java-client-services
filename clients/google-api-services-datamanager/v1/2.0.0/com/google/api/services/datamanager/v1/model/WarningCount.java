@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The warning count for a given warning reason.
+ * Model definition for WarningCount.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class WarningCount extends com.google.api.client.json.GenericJson {
 
   /**
-   * The warning reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String reason;
 
   /**
-   * The count of records that have a warning.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The warning reason.
    * @return value or {@code null} for none
    */
   public java.lang.String getReason() {
@@ -52,7 +49,6 @@ public final class WarningCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The warning reason.
    * @param reason reason or {@code null} for none
    */
   public WarningCount setReason(java.lang.String reason) {
@@ -61,7 +57,6 @@ public final class WarningCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The count of records that have a warning.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -69,7 +64,6 @@ public final class WarningCount extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The count of records that have a warning.
    * @param recordCount recordCount or {@code null} for none
    */
   public WarningCount setRecordCount(java.lang.Long recordCount) {

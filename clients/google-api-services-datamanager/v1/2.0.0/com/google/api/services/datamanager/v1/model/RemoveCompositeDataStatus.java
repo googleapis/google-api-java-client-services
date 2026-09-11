@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the composite data removal from the destination.
+ * Model definition for RemoveCompositeDataStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,8 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveCompositeDataStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total count of data types sent in the removal request, broken down by data type. Includes
-   * all data types in the request, regardless of whether they were successfully removed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,16 +42,12 @@ public final class RemoveCompositeDataStatus extends com.google.api.client.json.
   }
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The total count of data types sent in the removal request, broken down by data type. Includes
-   * all data types in the request, regardless of whether they were successfully removed or not.
    * @return value or {@code null} for none
    */
   public java.util.List<DataTypeCount> getDataTypeCounts() {
@@ -61,8 +55,6 @@ public final class RemoveCompositeDataStatus extends com.google.api.client.json.
   }
 
   /**
-   * The total count of data types sent in the removal request, broken down by data type. Includes
-   * all data types in the request, regardless of whether they were successfully removed or not.
    * @param dataTypeCounts dataTypeCounts or {@code null} for none
    */
   public RemoveCompositeDataStatus setDataTypeCounts(java.util.List<DataTypeCount> dataTypeCounts) {
@@ -71,8 +63,6 @@ public final class RemoveCompositeDataStatus extends com.google.api.client.json.
   }
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -80,8 +70,6 @@ public final class RemoveCompositeDataStatus extends com.google.api.client.json.
   }
 
   /**
-   * The total count of audience members sent in the removal request. Includes all audience members
-   * in the request, regardless of whether they were successfully removed or not.
    * @param recordCount recordCount or {@code null} for none
    */
   public RemoveCompositeDataStatus setRecordCount(java.lang.Long recordCount) {

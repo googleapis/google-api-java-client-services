@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Request to remove all users from an audience in the provided destinations. Returns a
- * RemoveAllAudienceMembersResponse.
+ * Model definition for RemoveAllAudienceMembersRequest.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class RemoveAllAudienceMembersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of destinations to remove the users from.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,24 +42,18 @@ public final class RemoveAllAudienceMembersRequest extends com.google.api.client
   }
 
   /**
-   * Optional. The remove as of time. If set, only audience members last added before this time will
-   * be removed. If not set, it defaults to current time. The remove as of time must not be in the
-   * future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String removeAsOfTime;
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean validateOnly;
 
   /**
-   * Required. The list of destinations to remove the users from.
    * @return value or {@code null} for none
    */
   public java.util.List<Destination> getDestinations() {
@@ -69,7 +61,6 @@ public final class RemoveAllAudienceMembersRequest extends com.google.api.client
   }
 
   /**
-   * Required. The list of destinations to remove the users from.
    * @param destinations destinations or {@code null} for none
    */
   public RemoveAllAudienceMembersRequest setDestinations(java.util.List<Destination> destinations) {
@@ -78,9 +69,6 @@ public final class RemoveAllAudienceMembersRequest extends com.google.api.client
   }
 
   /**
-   * Optional. The remove as of time. If set, only audience members last added before this time will
-   * be removed. If not set, it defaults to current time. The remove as of time must not be in the
-   * future.
    * @return value or {@code null} for none
    */
   public String getRemoveAsOfTime() {
@@ -88,9 +76,6 @@ public final class RemoveAllAudienceMembersRequest extends com.google.api.client
   }
 
   /**
-   * Optional. The remove as of time. If set, only audience members last added before this time will
-   * be removed. If not set, it defaults to current time. The remove as of time must not be in the
-   * future.
    * @param removeAsOfTime removeAsOfTime or {@code null} for none
    */
   public RemoveAllAudienceMembersRequest setRemoveAsOfTime(String removeAsOfTime) {
@@ -99,8 +84,6 @@ public final class RemoveAllAudienceMembersRequest extends com.google.api.client
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -108,8 +91,6 @@ public final class RemoveAllAudienceMembersRequest extends com.google.api.client
   }
 
   /**
-   * Optional. For testing purposes. If `true`, the request is validated but not executed. Only
-   * errors are returned, not results.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public RemoveAllAudienceMembersRequest setValidateOnly(java.lang.Boolean validateOnly) {

@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Represents an item in the cart associated with the event.
+ * Model definition for Item.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,87 +30,66 @@ package com.google.api.services.datamanager.v1.model;
 public final class Item extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A bucket of any [event parameters related to an item](https://developers.google.com/a
-   * nalytics/devguides/collection/protocol/ga4/reference/events) to be included within the event
-   * that were not already specified using other structured fields.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ItemParameter> additionalItemParameters;
 
   /**
-   * Optional. The conversion value associated with this item within the event, for cases where the
-   * conversion value is different for each item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double conversionValue;
 
   /**
-   * Optional. Additional key/value pair information to send to the conversion containers
-   * (conversion action or Floodlight activity), when tracking per-item conversions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<ItemCustomVariable> customVariables;
 
   /**
-   * Optional. A unique identifier to reference the item.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String itemId;
 
   /**
-   * Optional. The feed label of the Merchant Center feed. If countries are still being used, the
-   * 2-letter country code in ISO-3166-1 alpha-2 can be used instead. For Store Sales events this
-   * will override the value set at the cart level. This field is ignored for other events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantFeedLabel;
 
   /**
-   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed where your
-   * items are uploaded.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantFeedLanguageCode;
 
   /**
-   * Optional. The Merchant Center ID associated with the item. For Store Sales events this will
-   * override the value set at the cart level. This field is ignored for other events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantId;
 
   /**
-   * Optional. The product ID within the Merchant Center account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String merchantProductId;
 
   /**
-   * Optional. The number of this item associated with the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long quantity;
 
   /**
-   * Optional. The unit price excluding tax, shipping, and any transaction level discounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double unitPrice;
 
   /**
-   * Optional. A bucket of any [event parameters related to an item](https://developers.google.com/a
-   * nalytics/devguides/collection/protocol/ga4/reference/events) to be included within the event
-   * that were not already specified using other structured fields.
    * @return value or {@code null} for none
    */
   public java.util.List<ItemParameter> getAdditionalItemParameters() {
@@ -118,9 +97,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A bucket of any [event parameters related to an item](https://developers.google.com/a
-   * nalytics/devguides/collection/protocol/ga4/reference/events) to be included within the event
-   * that were not already specified using other structured fields.
    * @param additionalItemParameters additionalItemParameters or {@code null} for none
    */
   public Item setAdditionalItemParameters(java.util.List<ItemParameter> additionalItemParameters) {
@@ -129,8 +105,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The conversion value associated with this item within the event, for cases where the
-   * conversion value is different for each item.
    * @return value or {@code null} for none
    */
   public java.lang.Double getConversionValue() {
@@ -138,8 +112,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The conversion value associated with this item within the event, for cases where the
-   * conversion value is different for each item.
    * @param conversionValue conversionValue or {@code null} for none
    */
   public Item setConversionValue(java.lang.Double conversionValue) {
@@ -148,8 +120,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional key/value pair information to send to the conversion containers
-   * (conversion action or Floodlight activity), when tracking per-item conversions.
    * @return value or {@code null} for none
    */
   public java.util.List<ItemCustomVariable> getCustomVariables() {
@@ -157,8 +127,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Additional key/value pair information to send to the conversion containers
-   * (conversion action or Floodlight activity), when tracking per-item conversions.
    * @param customVariables customVariables or {@code null} for none
    */
   public Item setCustomVariables(java.util.List<ItemCustomVariable> customVariables) {
@@ -167,7 +135,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier to reference the item.
    * @return value or {@code null} for none
    */
   public java.lang.String getItemId() {
@@ -175,7 +142,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. A unique identifier to reference the item.
    * @param itemId itemId or {@code null} for none
    */
   public Item setItemId(java.lang.String itemId) {
@@ -184,9 +150,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The feed label of the Merchant Center feed. If countries are still being used, the
-   * 2-letter country code in ISO-3166-1 alpha-2 can be used instead. For Store Sales events this
-   * will override the value set at the cart level. This field is ignored for other events.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantFeedLabel() {
@@ -194,9 +157,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The feed label of the Merchant Center feed. If countries are still being used, the
-   * 2-letter country code in ISO-3166-1 alpha-2 can be used instead. For Store Sales events this
-   * will override the value set at the cart level. This field is ignored for other events.
    * @param merchantFeedLabel merchantFeedLabel or {@code null} for none
    */
   public Item setMerchantFeedLabel(java.lang.String merchantFeedLabel) {
@@ -205,8 +165,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed where your
-   * items are uploaded.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantFeedLanguageCode() {
@@ -214,8 +172,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The language code in ISO 639-1 associated with the Merchant Center feed where your
-   * items are uploaded.
    * @param merchantFeedLanguageCode merchantFeedLanguageCode or {@code null} for none
    */
   public Item setMerchantFeedLanguageCode(java.lang.String merchantFeedLanguageCode) {
@@ -224,8 +180,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Merchant Center ID associated with the item. For Store Sales events this will
-   * override the value set at the cart level. This field is ignored for other events.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantId() {
@@ -233,8 +187,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Merchant Center ID associated with the item. For Store Sales events this will
-   * override the value set at the cart level. This field is ignored for other events.
    * @param merchantId merchantId or {@code null} for none
    */
   public Item setMerchantId(java.lang.String merchantId) {
@@ -243,7 +195,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The product ID within the Merchant Center account.
    * @return value or {@code null} for none
    */
   public java.lang.String getMerchantProductId() {
@@ -251,7 +202,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The product ID within the Merchant Center account.
    * @param merchantProductId merchantProductId or {@code null} for none
    */
   public Item setMerchantProductId(java.lang.String merchantProductId) {
@@ -260,7 +210,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The number of this item associated with the event.
    * @return value or {@code null} for none
    */
   public java.lang.Long getQuantity() {
@@ -268,7 +217,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The number of this item associated with the event.
    * @param quantity quantity or {@code null} for none
    */
   public Item setQuantity(java.lang.Long quantity) {
@@ -277,7 +225,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The unit price excluding tax, shipping, and any transaction level discounts.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUnitPrice() {
@@ -285,7 +232,6 @@ public final class Item extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The unit price excluding tax, shipping, and any transaction level discounts.
    * @param unitPrice unitPrice or {@code null} for none
    */
   public Item setUnitPrice(java.lang.Double unitPrice) {

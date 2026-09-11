@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * An ad event.
+ * Model definition for AdEvent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,246 +30,210 @@ package com.google.api.services.datamanager.v1.model;
 public final class AdEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Enum value for ad format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adFormat;
 
   /**
-   * String value for ad format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adFormatString;
 
   /**
-   * Optional. The ID of the associated ad group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adGroupId;
 
   /**
-   * Optional. The height of the ad in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer adHeight;
 
   /**
-   * Optional. The ID of the associated ad within the group.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adId;
 
   /**
-   * Enum value for ad placement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adPlacement;
 
   /**
-   * String value for ad placement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adPlacementString;
 
   /**
-   * Enum value for ad type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adType;
 
   /**
-   * String value for ad type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adTypeString;
 
   /**
-   * Optional. The width of the ad in pixels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer adWidth;
 
   /**
-   * Required. The ID of the advertiser for the ad event. This must match the ID sent in the linking
-   * flow.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String advertiserId;
 
   /**
-   * Optional. The partner-assumed attribution status for this ad event. This acts only as a signal
-   * for how the partner assumed attribution played out, and does not force an end result in final
-   * reports.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String attributionHint;
 
   /**
-   * Required. The ID of the associated campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String campaignId;
 
   /**
-   * Required. The name of the associated campaign.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String campaignName;
 
   /**
-   * Required. Information gathered about the device being used when the ad event happened.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceInfo deviceInfo;
 
   /**
-   * Optional. An ID created and managed by the caller that uniquely identifies this event. Required
-   * if you want to deduplicate ad events that are included in multiple requests. Otherwise, this
-   * field is optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventId;
 
   /**
-   * Enum value for event subtype.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventSubtype;
 
   /**
-   * String value for event subtype.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventSubtypeString;
 
   /**
-   * Required. The type of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String eventType;
 
   /**
-   * Optional. Represents if the row is allowed to be used for measurement purposes, as governed by
-   * applicable privacy laws within regional jurisdiction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAddress;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean measurementAllowed;
 
   /**
-   * Required. The medium of the ad, akin to the Google Analytics medium.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String medium;
 
   /**
-   * Optional. The device ID of the device that the ad was served to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mobileDeviceId;
 
   /**
-   * Enum value for platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platform;
 
   /**
-   * String value for platform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platformString;
 
   /**
-   * Enum value for platform type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platformType;
 
   /**
-   * String value for platform type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platformTypeString;
 
   /**
-   * Optional. The ISO 3166-2 country plus subdivision.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * Required. The platform source of the ad, akin to the Google Analytics source.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
 
   /**
-   * Enum value for targeting type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetingType;
 
   /**
-   * String value for targeting type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String targetingTypeString;
 
   /**
-   * Required. The time the event occurred.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String timestamp;
 
   /**
-   * Optional. Multiple pieces of user-provided data, representing the user the event is associated
-   * with. It is possible to provide multiple instances of the same type of data (e.g. email
-   * address). The more data provided, the more likely a match will be found.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UserData userData;
 
   /**
-   * Required. Details of the viewability of the ad served.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ViewabilityInfo viewabilityInfo;
 
   /**
-   * Enum value for ad format.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdFormat() {
@@ -277,7 +241,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for ad format.
    * @param adFormat adFormat or {@code null} for none
    */
   public AdEvent setAdFormat(java.lang.String adFormat) {
@@ -286,7 +249,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for ad format.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdFormatString() {
@@ -294,7 +256,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for ad format.
    * @param adFormatString adFormatString or {@code null} for none
    */
   public AdEvent setAdFormatString(java.lang.String adFormatString) {
@@ -303,7 +264,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ID of the associated ad group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdGroupId() {
@@ -311,7 +271,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ID of the associated ad group.
    * @param adGroupId adGroupId or {@code null} for none
    */
   public AdEvent setAdGroupId(java.lang.String adGroupId) {
@@ -320,7 +279,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The height of the ad in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAdHeight() {
@@ -328,7 +286,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The height of the ad in pixels.
    * @param adHeight adHeight or {@code null} for none
    */
   public AdEvent setAdHeight(java.lang.Integer adHeight) {
@@ -337,7 +294,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ID of the associated ad within the group.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdId() {
@@ -345,7 +301,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ID of the associated ad within the group.
    * @param adId adId or {@code null} for none
    */
   public AdEvent setAdId(java.lang.String adId) {
@@ -354,7 +309,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for ad placement.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdPlacement() {
@@ -362,7 +316,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for ad placement.
    * @param adPlacement adPlacement or {@code null} for none
    */
   public AdEvent setAdPlacement(java.lang.String adPlacement) {
@@ -371,7 +324,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for ad placement.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdPlacementString() {
@@ -379,7 +331,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for ad placement.
    * @param adPlacementString adPlacementString or {@code null} for none
    */
   public AdEvent setAdPlacementString(java.lang.String adPlacementString) {
@@ -388,7 +339,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for ad type.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdType() {
@@ -396,7 +346,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for ad type.
    * @param adType adType or {@code null} for none
    */
   public AdEvent setAdType(java.lang.String adType) {
@@ -405,7 +354,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for ad type.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdTypeString() {
@@ -413,7 +361,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for ad type.
    * @param adTypeString adTypeString or {@code null} for none
    */
   public AdEvent setAdTypeString(java.lang.String adTypeString) {
@@ -422,7 +369,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The width of the ad in pixels.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAdWidth() {
@@ -430,7 +376,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The width of the ad in pixels.
    * @param adWidth adWidth or {@code null} for none
    */
   public AdEvent setAdWidth(java.lang.Integer adWidth) {
@@ -439,8 +384,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the advertiser for the ad event. This must match the ID sent in the linking
-   * flow.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdvertiserId() {
@@ -448,8 +391,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the advertiser for the ad event. This must match the ID sent in the linking
-   * flow.
    * @param advertiserId advertiserId or {@code null} for none
    */
   public AdEvent setAdvertiserId(java.lang.String advertiserId) {
@@ -458,9 +399,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The partner-assumed attribution status for this ad event. This acts only as a signal
-   * for how the partner assumed attribution played out, and does not force an end result in final
-   * reports.
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributionHint() {
@@ -468,9 +406,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The partner-assumed attribution status for this ad event. This acts only as a signal
-   * for how the partner assumed attribution played out, and does not force an end result in final
-   * reports.
    * @param attributionHint attributionHint or {@code null} for none
    */
   public AdEvent setAttributionHint(java.lang.String attributionHint) {
@@ -479,7 +414,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the associated campaign.
    * @return value or {@code null} for none
    */
   public java.lang.String getCampaignId() {
@@ -487,7 +421,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The ID of the associated campaign.
    * @param campaignId campaignId or {@code null} for none
    */
   public AdEvent setCampaignId(java.lang.String campaignId) {
@@ -496,7 +429,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the associated campaign.
    * @return value or {@code null} for none
    */
   public java.lang.String getCampaignName() {
@@ -504,7 +436,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the associated campaign.
    * @param campaignName campaignName or {@code null} for none
    */
   public AdEvent setCampaignName(java.lang.String campaignName) {
@@ -513,7 +444,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Information gathered about the device being used when the ad event happened.
    * @return value or {@code null} for none
    */
   public DeviceInfo getDeviceInfo() {
@@ -521,7 +451,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Information gathered about the device being used when the ad event happened.
    * @param deviceInfo deviceInfo or {@code null} for none
    */
   public AdEvent setDeviceInfo(DeviceInfo deviceInfo) {
@@ -530,9 +459,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An ID created and managed by the caller that uniquely identifies this event. Required
-   * if you want to deduplicate ad events that are included in multiple requests. Otherwise, this
-   * field is optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventId() {
@@ -540,9 +466,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. An ID created and managed by the caller that uniquely identifies this event. Required
-   * if you want to deduplicate ad events that are included in multiple requests. Otherwise, this
-   * field is optional.
    * @param eventId eventId or {@code null} for none
    */
   public AdEvent setEventId(java.lang.String eventId) {
@@ -551,7 +474,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for event subtype.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventSubtype() {
@@ -559,7 +481,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for event subtype.
    * @param eventSubtype eventSubtype or {@code null} for none
    */
   public AdEvent setEventSubtype(java.lang.String eventSubtype) {
@@ -568,7 +489,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for event subtype.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventSubtypeString() {
@@ -576,7 +496,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for event subtype.
    * @param eventSubtypeString eventSubtypeString or {@code null} for none
    */
   public AdEvent setEventSubtypeString(java.lang.String eventSubtypeString) {
@@ -585,7 +504,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getEventType() {
@@ -593,7 +511,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the event.
    * @param eventType eventType or {@code null} for none
    */
   public AdEvent setEventType(java.lang.String eventType) {
@@ -602,8 +519,21 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents if the row is allowed to be used for measurement purposes, as governed by
-   * applicable privacy laws within regional jurisdiction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public AdEvent setIpAddress(java.lang.String ipAddress) {
+    this.ipAddress = ipAddress;
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMeasurementAllowed() {
@@ -611,8 +541,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents if the row is allowed to be used for measurement purposes, as governed by
-   * applicable privacy laws within regional jurisdiction.
    * @param measurementAllowed measurementAllowed or {@code null} for none
    */
   public AdEvent setMeasurementAllowed(java.lang.Boolean measurementAllowed) {
@@ -621,7 +549,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The medium of the ad, akin to the Google Analytics medium.
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -629,7 +556,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The medium of the ad, akin to the Google Analytics medium.
    * @param medium medium or {@code null} for none
    */
   public AdEvent setMedium(java.lang.String medium) {
@@ -638,7 +564,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The device ID of the device that the ad was served to.
    * @return value or {@code null} for none
    */
   public java.lang.String getMobileDeviceId() {
@@ -646,7 +571,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The device ID of the device that the ad was served to.
    * @param mobileDeviceId mobileDeviceId or {@code null} for none
    */
   public AdEvent setMobileDeviceId(java.lang.String mobileDeviceId) {
@@ -655,7 +579,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatform() {
@@ -663,7 +586,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for platform.
    * @param platform platform or {@code null} for none
    */
   public AdEvent setPlatform(java.lang.String platform) {
@@ -672,7 +594,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for platform.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatformString() {
@@ -680,7 +601,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for platform.
    * @param platformString platformString or {@code null} for none
    */
   public AdEvent setPlatformString(java.lang.String platformString) {
@@ -689,7 +609,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for platform type.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatformType() {
@@ -697,7 +616,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for platform type.
    * @param platformType platformType or {@code null} for none
    */
   public AdEvent setPlatformType(java.lang.String platformType) {
@@ -706,7 +624,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for platform type.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatformTypeString() {
@@ -714,7 +631,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for platform type.
    * @param platformTypeString platformTypeString or {@code null} for none
    */
   public AdEvent setPlatformTypeString(java.lang.String platformTypeString) {
@@ -723,7 +639,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ISO 3166-2 country plus subdivision.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -731,7 +646,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The ISO 3166-2 country plus subdivision.
    * @param regionCode regionCode or {@code null} for none
    */
   public AdEvent setRegionCode(java.lang.String regionCode) {
@@ -740,7 +654,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The platform source of the ad, akin to the Google Analytics source.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -748,7 +661,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The platform source of the ad, akin to the Google Analytics source.
    * @param source source or {@code null} for none
    */
   public AdEvent setSource(java.lang.String source) {
@@ -757,7 +669,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for targeting type.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingType() {
@@ -765,7 +676,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Enum value for targeting type.
    * @param targetingType targetingType or {@code null} for none
    */
   public AdEvent setTargetingType(java.lang.String targetingType) {
@@ -774,7 +684,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for targeting type.
    * @return value or {@code null} for none
    */
   public java.lang.String getTargetingTypeString() {
@@ -782,7 +691,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * String value for targeting type.
    * @param targetingTypeString targetingTypeString or {@code null} for none
    */
   public AdEvent setTargetingTypeString(java.lang.String targetingTypeString) {
@@ -791,7 +699,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time the event occurred.
    * @return value or {@code null} for none
    */
   public String getTimestamp() {
@@ -799,7 +706,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The time the event occurred.
    * @param timestamp timestamp or {@code null} for none
    */
   public AdEvent setTimestamp(String timestamp) {
@@ -808,9 +714,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Multiple pieces of user-provided data, representing the user the event is associated
-   * with. It is possible to provide multiple instances of the same type of data (e.g. email
-   * address). The more data provided, the more likely a match will be found.
    * @return value or {@code null} for none
    */
   public UserData getUserData() {
@@ -818,9 +721,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Multiple pieces of user-provided data, representing the user the event is associated
-   * with. It is possible to provide multiple instances of the same type of data (e.g. email
-   * address). The more data provided, the more likely a match will be found.
    * @param userData userData or {@code null} for none
    */
   public AdEvent setUserData(UserData userData) {
@@ -829,7 +729,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Details of the viewability of the ad served.
    * @return value or {@code null} for none
    */
   public ViewabilityInfo getViewabilityInfo() {
@@ -837,7 +736,6 @@ public final class AdEvent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Details of the viewability of the ad served.
    * @param viewabilityInfo viewabilityInfo or {@code null} for none
    */
   public AdEvent setViewabilityInfo(ViewabilityInfo viewabilityInfo) {

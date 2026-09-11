@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Response from the ListUserListDirectLicensesRequest.
+ * Model definition for ListUserListDirectLicensesResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,23 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class ListUserListDirectLicensesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The licenses for the given user list in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserListDirectLicense> userListDirectLicenses;
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -54,8 +49,6 @@ public final class ListUserListDirectLicensesResponse extends com.google.api.cli
   }
 
   /**
-   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
-   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListUserListDirectLicensesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -64,7 +57,6 @@ public final class ListUserListDirectLicensesResponse extends com.google.api.cli
   }
 
   /**
-   * The licenses for the given user list in the request.
    * @return value or {@code null} for none
    */
   public java.util.List<UserListDirectLicense> getUserListDirectLicenses() {
@@ -72,7 +64,6 @@ public final class ListUserListDirectLicensesResponse extends com.google.api.cli
   }
 
   /**
-   * The licenses for the given user list in the request.
    * @param userListDirectLicenses userListDirectLicenses or {@code null} for none
    */
   public ListUserListDirectLicensesResponse setUserListDirectLicenses(java.util.List<UserListDirectLicense> userListDirectLicenses) {

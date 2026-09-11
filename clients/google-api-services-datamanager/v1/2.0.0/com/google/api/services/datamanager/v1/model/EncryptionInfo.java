@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Encryption information for the data being ingested.
+ * Model definition for EncryptionInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,29 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class EncryptionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Amazon Web Services wrapped key information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AwsWrappedKeyInfo awsWrappedKeyInfo;
 
   /**
-   * Key information for the chosen coordinator key. This is not supported for the IngestEvents,
-   * IngestAudienceMembers, and RemoveAudienceMembers methods.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CoordinatorKeyInfo coordinatorKeyInfo;
 
   /**
-   * Google Cloud Platform wrapped key information.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GcpWrappedKeyInfo gcpWrappedKeyInfo;
 
   /**
-   * Amazon Web Services wrapped key information.
    * @return value or {@code null} for none
    */
   public AwsWrappedKeyInfo getAwsWrappedKeyInfo() {
@@ -60,7 +55,6 @@ public final class EncryptionInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Amazon Web Services wrapped key information.
    * @param awsWrappedKeyInfo awsWrappedKeyInfo or {@code null} for none
    */
   public EncryptionInfo setAwsWrappedKeyInfo(AwsWrappedKeyInfo awsWrappedKeyInfo) {
@@ -69,8 +63,6 @@ public final class EncryptionInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Key information for the chosen coordinator key. This is not supported for the IngestEvents,
-   * IngestAudienceMembers, and RemoveAudienceMembers methods.
    * @return value or {@code null} for none
    */
   public CoordinatorKeyInfo getCoordinatorKeyInfo() {
@@ -78,8 +70,6 @@ public final class EncryptionInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Key information for the chosen coordinator key. This is not supported for the IngestEvents,
-   * IngestAudienceMembers, and RemoveAudienceMembers methods.
    * @param coordinatorKeyInfo coordinatorKeyInfo or {@code null} for none
    */
   public EncryptionInfo setCoordinatorKeyInfo(CoordinatorKeyInfo coordinatorKeyInfo) {
@@ -88,7 +78,6 @@ public final class EncryptionInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Google Cloud Platform wrapped key information.
    * @return value or {@code null} for none
    */
   public GcpWrappedKeyInfo getGcpWrappedKeyInfo() {
@@ -96,7 +85,6 @@ public final class EncryptionInfo extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Google Cloud Platform wrapped key information.
    * @param gcpWrappedKeyInfo gcpWrappedKeyInfo or {@code null} for none
    */
   public EncryptionInfo setGcpWrappedKeyInfo(GcpWrappedKeyInfo gcpWrappedKeyInfo) {

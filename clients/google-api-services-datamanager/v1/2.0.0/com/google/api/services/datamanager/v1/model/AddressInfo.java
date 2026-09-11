@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Address information for the user.
+ * Model definition for AddressInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,66 +30,48 @@ package com.google.api.services.datamanager.v1.model;
 public final class AddressInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The street and number of the user's address. Used only for Google Analytics. This
-   * field is hashed and possibly encrypted. Normalize the value before hashing: - Remove symbol
-   * characters - Convert to lowercase - Remove leading and trailing whitespace
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String addressLine;
 
   /**
-   * Optional. The administrative area (state/province) of the user's address. Used only for Google
-   * Analytics. The value should be normalized as such: - Remove symbol characters - Convert to
-   * lowercase - Remove leading and trailing whitespace
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String administrativeArea;
 
   /**
-   * Optional. The city of the user's address. Used only for Google Analytics. The value should be
-   * normalized as such: - Remove symbol characters - Convert to lowercase - Remove leading and
-   * trailing whitespace
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String city;
 
   /**
-   * Required. Family (last) name of the user, all lowercase, with no punctuation, no leading or
-   * trailing whitespace, and hashed as SHA-256.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String familyName;
 
   /**
-   * Required. Given (first) name of the user, all lowercase, with no punctuation, no leading or
-   * trailing whitespace, and hashed as SHA-256.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String givenName;
 
   /**
-   * Required. The postal code of the user's address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String postalCode;
 
   /**
-   * Required. The 2-letter region code in ISO-3166-1 alpha-2 of the user's address.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String regionCode;
 
   /**
-   * Optional. The street and number of the user's address. Used only for Google Analytics. This
-   * field is hashed and possibly encrypted. Normalize the value before hashing: - Remove symbol
-   * characters - Convert to lowercase - Remove leading and trailing whitespace
    * @return value or {@code null} for none
    */
   public java.lang.String getAddressLine() {
@@ -97,9 +79,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The street and number of the user's address. Used only for Google Analytics. This
-   * field is hashed and possibly encrypted. Normalize the value before hashing: - Remove symbol
-   * characters - Convert to lowercase - Remove leading and trailing whitespace
    * @param addressLine addressLine or {@code null} for none
    */
   public AddressInfo setAddressLine(java.lang.String addressLine) {
@@ -108,9 +87,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The administrative area (state/province) of the user's address. Used only for Google
-   * Analytics. The value should be normalized as such: - Remove symbol characters - Convert to
-   * lowercase - Remove leading and trailing whitespace
    * @return value or {@code null} for none
    */
   public java.lang.String getAdministrativeArea() {
@@ -118,9 +94,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The administrative area (state/province) of the user's address. Used only for Google
-   * Analytics. The value should be normalized as such: - Remove symbol characters - Convert to
-   * lowercase - Remove leading and trailing whitespace
    * @param administrativeArea administrativeArea or {@code null} for none
    */
   public AddressInfo setAdministrativeArea(java.lang.String administrativeArea) {
@@ -129,9 +102,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The city of the user's address. Used only for Google Analytics. The value should be
-   * normalized as such: - Remove symbol characters - Convert to lowercase - Remove leading and
-   * trailing whitespace
    * @return value or {@code null} for none
    */
   public java.lang.String getCity() {
@@ -139,9 +109,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The city of the user's address. Used only for Google Analytics. The value should be
-   * normalized as such: - Remove symbol characters - Convert to lowercase - Remove leading and
-   * trailing whitespace
    * @param city city or {@code null} for none
    */
   public AddressInfo setCity(java.lang.String city) {
@@ -150,8 +117,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Family (last) name of the user, all lowercase, with no punctuation, no leading or
-   * trailing whitespace, and hashed as SHA-256.
    * @return value or {@code null} for none
    */
   public java.lang.String getFamilyName() {
@@ -159,8 +124,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Family (last) name of the user, all lowercase, with no punctuation, no leading or
-   * trailing whitespace, and hashed as SHA-256.
    * @param familyName familyName or {@code null} for none
    */
   public AddressInfo setFamilyName(java.lang.String familyName) {
@@ -169,8 +132,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Given (first) name of the user, all lowercase, with no punctuation, no leading or
-   * trailing whitespace, and hashed as SHA-256.
    * @return value or {@code null} for none
    */
   public java.lang.String getGivenName() {
@@ -178,8 +139,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Given (first) name of the user, all lowercase, with no punctuation, no leading or
-   * trailing whitespace, and hashed as SHA-256.
    * @param givenName givenName or {@code null} for none
    */
   public AddressInfo setGivenName(java.lang.String givenName) {
@@ -188,7 +147,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The postal code of the user's address.
    * @return value or {@code null} for none
    */
   public java.lang.String getPostalCode() {
@@ -196,7 +154,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The postal code of the user's address.
    * @param postalCode postalCode or {@code null} for none
    */
   public AddressInfo setPostalCode(java.lang.String postalCode) {
@@ -205,7 +162,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The 2-letter region code in ISO-3166-1 alpha-2 of the user's address.
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -213,7 +169,6 @@ public final class AddressInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The 2-letter region code in ISO-3166-1 alpha-2 of the user's address.
    * @param regionCode regionCode or {@code null} for none
    */
   public AddressInfo setRegionCode(java.lang.String regionCode) {

@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * The status of the ppid data ingestion to the destination containing stats related to the
- * ingestion.
+ * Model definition for IngestPpidDataStatus.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,25 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class IngestPpidDataStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The total count of ppids sent in the upload request for the destination. Includes all ppids in
-   * the request, regardless of whether they were successfully ingested or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long ppidCount;
 
   /**
-   * The total count of audience members sent in the upload request for the destination. Includes
-   * all audience members in the request, regardless of whether they were successfully ingested or
-   * not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long recordCount;
 
   /**
-   * The total count of ppids sent in the upload request for the destination. Includes all ppids in
-   * the request, regardless of whether they were successfully ingested or not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPpidCount() {
@@ -57,8 +49,6 @@ public final class IngestPpidDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of ppids sent in the upload request for the destination. Includes all ppids in
-   * the request, regardless of whether they were successfully ingested or not.
    * @param ppidCount ppidCount or {@code null} for none
    */
   public IngestPpidDataStatus setPpidCount(java.lang.Long ppidCount) {
@@ -67,9 +57,6 @@ public final class IngestPpidDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of audience members sent in the upload request for the destination. Includes
-   * all audience members in the request, regardless of whether they were successfully ingested or
-   * not.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRecordCount() {
@@ -77,9 +64,6 @@ public final class IngestPpidDataStatus extends com.google.api.client.json.Gener
   }
 
   /**
-   * The total count of audience members sent in the upload request for the destination. Includes
-   * all audience members in the request, regardless of whether they were successfully ingested or
-   * not.
    * @param recordCount recordCount or {@code null} for none
    */
   public IngestPpidDataStatus setRecordCount(java.lang.Long recordCount) {

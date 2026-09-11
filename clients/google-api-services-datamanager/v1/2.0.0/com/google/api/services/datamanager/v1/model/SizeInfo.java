@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Estimated number of members in this user list in different target networks.
+ * Model definition for SizeInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,36 +30,30 @@ package com.google.api.services.datamanager.v1.model;
 public final class SizeInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Estimated number of members in this user list, on the Google Display Network.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long displayNetworkMembersCount;
 
   /**
-   * Output only. Estimated number of members in this user list on Gmail.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long gmailMembersCount;
 
   /**
-   * Output only. Estimated number of members in this user list in the google.com domain. These are
-   * the members available for targeting in Search campaigns.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long searchNetworkMembersCount;
 
   /**
-   * Output only. Estimated number of members in this user list on YouTube.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long youtubeMembersCount;
 
   /**
-   * Output only. Estimated number of members in this user list, on the Google Display Network.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDisplayNetworkMembersCount() {
@@ -67,7 +61,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list, on the Google Display Network.
    * @param displayNetworkMembersCount displayNetworkMembersCount or {@code null} for none
    */
   public SizeInfo setDisplayNetworkMembersCount(java.lang.Long displayNetworkMembersCount) {
@@ -76,7 +69,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list on Gmail.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGmailMembersCount() {
@@ -84,7 +76,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list on Gmail.
    * @param gmailMembersCount gmailMembersCount or {@code null} for none
    */
   public SizeInfo setGmailMembersCount(java.lang.Long gmailMembersCount) {
@@ -93,8 +84,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list in the google.com domain. These are
-   * the members available for targeting in Search campaigns.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSearchNetworkMembersCount() {
@@ -102,8 +91,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list in the google.com domain. These are
-   * the members available for targeting in Search campaigns.
    * @param searchNetworkMembersCount searchNetworkMembersCount or {@code null} for none
    */
   public SizeInfo setSearchNetworkMembersCount(java.lang.Long searchNetworkMembersCount) {
@@ -112,7 +99,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list on YouTube.
    * @return value or {@code null} for none
    */
   public java.lang.Long getYoutubeMembersCount() {
@@ -120,7 +106,6 @@ public final class SizeInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Estimated number of members in this user list on YouTube.
    * @param youtubeMembersCount youtubeMembersCount or {@code null} for none
    */
   public SizeInfo setYoutubeMembersCount(java.lang.Long youtubeMembersCount) {

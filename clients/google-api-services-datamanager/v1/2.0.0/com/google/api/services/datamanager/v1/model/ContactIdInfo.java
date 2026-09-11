@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Additional information when `CONTACT_ID` is one of the `upload_key_types`.
+ * Model definition for ContactIdInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class ContactIdInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable. Source of the upload data
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String dataSourceType;
 
   /**
-   * Output only. Match rate for customer match user lists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer matchRatePercentage;
 
   /**
-   * Optional. Immutable. Source of the upload data
    * @return value or {@code null} for none
    */
   public java.lang.String getDataSourceType() {
@@ -52,7 +49,6 @@ public final class ContactIdInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Immutable. Source of the upload data
    * @param dataSourceType dataSourceType or {@code null} for none
    */
   public ContactIdInfo setDataSourceType(java.lang.String dataSourceType) {
@@ -61,7 +57,6 @@ public final class ContactIdInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Match rate for customer match user lists.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMatchRatePercentage() {
@@ -69,7 +64,6 @@ public final class ContactIdInfo extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Match rate for customer match user lists.
    * @param matchRatePercentage matchRatePercentage or {@code null} for none
    */
   public ContactIdInfo setMatchRatePercentage(java.lang.Integer matchRatePercentage) {

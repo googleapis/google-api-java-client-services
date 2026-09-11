@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * [Digital Markets Act (DMA)](//digital-markets-act.ec.europa.eu/index_en) consent settings for the
- * user.
+ * Model definition for Consent.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,21 +30,18 @@ package com.google.api.services.datamanager.v1.model;
 public final class Consent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Represents if the user consents to ad personalization.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adPersonalization;
 
   /**
-   * Optional. Represents if the user consents to ad user data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String adUserData;
 
   /**
-   * Optional. Represents if the user consents to ad personalization.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdPersonalization() {
@@ -53,7 +49,6 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents if the user consents to ad personalization.
    * @param adPersonalization adPersonalization or {@code null} for none
    */
   public Consent setAdPersonalization(java.lang.String adPersonalization) {
@@ -62,7 +57,6 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents if the user consents to ad user data.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdUserData() {
@@ -70,7 +64,6 @@ public final class Consent extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Represents if the user consents to ad user data.
    * @param adUserData adUserData or {@code null} for none
    */
   public Consent setAdUserData(java.lang.String adUserData) {

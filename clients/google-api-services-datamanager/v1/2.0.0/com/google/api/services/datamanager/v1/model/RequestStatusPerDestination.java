@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * A request status per destination.
+ * Model definition for RequestStatusPerDestination.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,66 +30,54 @@ package com.google.api.services.datamanager.v1.model;
 public final class RequestStatusPerDestination extends com.google.api.client.json.GenericJson {
 
   /**
-   * The status of the ingest audience members request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestAudienceMembersStatus audienceMembersIngestionStatus;
 
   /**
-   * The status of the remove audience members request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveAudienceMembersStatus audienceMembersRemovalStatus;
 
   /**
-   * A destination within a DM API request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Destination destination;
 
   /**
-   * An error info error containing the error reason and error counts related to the upload. Only
-   * populated if the `request_status` is `FAILED` or `PARTIAL_SUCCESS`. This field isn't populated
-   * while the request has `request_status` of `PROCESSING`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ErrorInfo errorInfo;
 
   /**
-   * The status of the ingest events request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private IngestEventsStatus eventsIngestionStatus;
 
   /**
-   * The status of the remove all audience members request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RemoveAllAudienceMembersStatus removeAllAudienceMembersStatus;
 
   /**
-   * The request status of the destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String requestStatus;
 
   /**
-   * A warning info containing the warning reason and warning counts related to the upload. This
-   * field isn't populated while the request has `request_status` of `PROCESSING`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WarningInfo warningInfo;
 
   /**
-   * The status of the ingest audience members request.
    * @return value or {@code null} for none
    */
   public IngestAudienceMembersStatus getAudienceMembersIngestionStatus() {
@@ -97,7 +85,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ingest audience members request.
    * @param audienceMembersIngestionStatus audienceMembersIngestionStatus or {@code null} for none
    */
   public RequestStatusPerDestination setAudienceMembersIngestionStatus(IngestAudienceMembersStatus audienceMembersIngestionStatus) {
@@ -106,7 +93,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the remove audience members request.
    * @return value or {@code null} for none
    */
   public RemoveAudienceMembersStatus getAudienceMembersRemovalStatus() {
@@ -114,7 +100,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the remove audience members request.
    * @param audienceMembersRemovalStatus audienceMembersRemovalStatus or {@code null} for none
    */
   public RequestStatusPerDestination setAudienceMembersRemovalStatus(RemoveAudienceMembersStatus audienceMembersRemovalStatus) {
@@ -123,7 +108,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * A destination within a DM API request.
    * @return value or {@code null} for none
    */
   public Destination getDestination() {
@@ -131,7 +115,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * A destination within a DM API request.
    * @param destination destination or {@code null} for none
    */
   public RequestStatusPerDestination setDestination(Destination destination) {
@@ -140,9 +123,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * An error info error containing the error reason and error counts related to the upload. Only
-   * populated if the `request_status` is `FAILED` or `PARTIAL_SUCCESS`. This field isn't populated
-   * while the request has `request_status` of `PROCESSING`.
    * @return value or {@code null} for none
    */
   public ErrorInfo getErrorInfo() {
@@ -150,9 +130,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * An error info error containing the error reason and error counts related to the upload. Only
-   * populated if the `request_status` is `FAILED` or `PARTIAL_SUCCESS`. This field isn't populated
-   * while the request has `request_status` of `PROCESSING`.
    * @param errorInfo errorInfo or {@code null} for none
    */
   public RequestStatusPerDestination setErrorInfo(ErrorInfo errorInfo) {
@@ -161,7 +138,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ingest events request.
    * @return value or {@code null} for none
    */
   public IngestEventsStatus getEventsIngestionStatus() {
@@ -169,7 +145,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the ingest events request.
    * @param eventsIngestionStatus eventsIngestionStatus or {@code null} for none
    */
   public RequestStatusPerDestination setEventsIngestionStatus(IngestEventsStatus eventsIngestionStatus) {
@@ -178,7 +153,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the remove all audience members request.
    * @return value or {@code null} for none
    */
   public RemoveAllAudienceMembersStatus getRemoveAllAudienceMembersStatus() {
@@ -186,7 +160,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The status of the remove all audience members request.
    * @param removeAllAudienceMembersStatus removeAllAudienceMembersStatus or {@code null} for none
    */
   public RequestStatusPerDestination setRemoveAllAudienceMembersStatus(RemoveAllAudienceMembersStatus removeAllAudienceMembersStatus) {
@@ -195,7 +168,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The request status of the destination.
    * @return value or {@code null} for none
    */
   public java.lang.String getRequestStatus() {
@@ -203,7 +175,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * The request status of the destination.
    * @param requestStatus requestStatus or {@code null} for none
    */
   public RequestStatusPerDestination setRequestStatus(java.lang.String requestStatus) {
@@ -212,8 +183,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * A warning info containing the warning reason and warning counts related to the upload. This
-   * field isn't populated while the request has `request_status` of `PROCESSING`.
    * @return value or {@code null} for none
    */
   public WarningInfo getWarningInfo() {
@@ -221,8 +190,6 @@ public final class RequestStatusPerDestination extends com.google.api.client.jso
   }
 
   /**
-   * A warning info containing the warning reason and warning counts related to the upload. This
-   * field isn't populated while the request has `request_status` of `PROCESSING`.
    * @param warningInfo warningInfo or {@code null} for none
    */
   public RequestStatusPerDestination setWarningInfo(WarningInfo warningInfo) {

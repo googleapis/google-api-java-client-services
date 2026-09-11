@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Information about the Google Cloud Platform wrapped key.
+ * Model definition for GcpWrappedKeyInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,39 +30,30 @@ package com.google.api.services.datamanager.v1.model;
 public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The base64 encoded encrypted data encryption key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String encryptedDek;
 
   /**
-   * Required. Google Cloud Platform [Cloud Key Management Service resource
-   * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the format of
-   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}` or `gcp-
-   * kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kekUri;
 
   /**
-   * Required. The type of algorithm used to encrypt the data.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String keyType;
 
   /**
-   * Required. The [Workload Identity](//cloud.google.com/iam/docs/workload-identity-federation)
-   * pool provider required to use KEK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wipProvider;
 
   /**
-   * Required. The base64 encoded encrypted data encryption key.
    * @return value or {@code null} for none
    */
   public java.lang.String getEncryptedDek() {
@@ -70,7 +61,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The base64 encoded encrypted data encryption key.
    * @param encryptedDek encryptedDek or {@code null} for none
    */
   public GcpWrappedKeyInfo setEncryptedDek(java.lang.String encryptedDek) {
@@ -79,10 +69,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Google Cloud Platform [Cloud Key Management Service resource
-   * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the format of
-   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}` or `gcp-
-   * kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
    * @return value or {@code null} for none
    */
   public java.lang.String getKekUri() {
@@ -90,10 +76,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. Google Cloud Platform [Cloud Key Management Service resource
-   * ID](//cloud.google.com/kms/docs/getting-resource-ids). Should be in the format of
-   * `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}` or `gcp-
-   * kms://projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{key}`
    * @param kekUri kekUri or {@code null} for none
    */
   public GcpWrappedKeyInfo setKekUri(java.lang.String kekUri) {
@@ -102,7 +84,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The type of algorithm used to encrypt the data.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyType() {
@@ -110,7 +91,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The type of algorithm used to encrypt the data.
    * @param keyType keyType or {@code null} for none
    */
   public GcpWrappedKeyInfo setKeyType(java.lang.String keyType) {
@@ -119,8 +99,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The [Workload Identity](//cloud.google.com/iam/docs/workload-identity-federation)
-   * pool provider required to use KEK.
    * @return value or {@code null} for none
    */
   public java.lang.String getWipProvider() {
@@ -128,8 +106,6 @@ public final class GcpWrappedKeyInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The [Workload Identity](//cloud.google.com/iam/docs/workload-identity-federation)
-   * pool provider required to use KEK.
    * @param wipProvider wipProvider or {@code null} for none
    */
   public GcpWrappedKeyInfo setWipProvider(java.lang.String wipProvider) {

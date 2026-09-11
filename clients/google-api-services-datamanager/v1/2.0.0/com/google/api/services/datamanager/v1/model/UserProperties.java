@@ -17,8 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Advertiser-assessed information about the user at the time that the event happened. See
- * https://support.google.com/google-ads/answer/14007601 for more details.
+ * Model definition for UserProperties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -31,32 +30,24 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserProperties extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. A bucket of any additional [user
-   * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
-   * properties) for the user associated with this event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<UserProperty> additionalUserProperties;
 
   /**
-   * Optional. Type of the customer associated with the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerType;
 
   /**
-   * Optional. The advertiser-assessed value of the customer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customerValueBucket;
 
   /**
-   * Optional. A bucket of any additional [user
-   * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
-   * properties) for the user associated with this event.
    * @return value or {@code null} for none
    */
   public java.util.List<UserProperty> getAdditionalUserProperties() {
@@ -64,9 +55,6 @@ public final class UserProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. A bucket of any additional [user
-   * properties](https://developers.google.com/analytics/devguides/collection/protocol/ga4/user-
-   * properties) for the user associated with this event.
    * @param additionalUserProperties additionalUserProperties or {@code null} for none
    */
   public UserProperties setAdditionalUserProperties(java.util.List<UserProperty> additionalUserProperties) {
@@ -75,7 +63,6 @@ public final class UserProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Type of the customer associated with the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerType() {
@@ -83,7 +70,6 @@ public final class UserProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Type of the customer associated with the event.
    * @param customerType customerType or {@code null} for none
    */
   public UserProperties setCustomerType(java.lang.String customerType) {
@@ -92,7 +78,6 @@ public final class UserProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The advertiser-assessed value of the customer.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomerValueBucket() {
@@ -100,7 +85,6 @@ public final class UserProperties extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The advertiser-assessed value of the customer.
    * @param customerValueBucket customerValueBucket or {@code null} for none
    */
   public UserProperties setCustomerValueBucket(java.lang.String customerValueBucket) {

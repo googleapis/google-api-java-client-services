@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Metrics related to a user list license.
+ * Model definition for UserListLicenseMetrics.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,48 +30,36 @@ package com.google.api.services.datamanager.v1.model;
 public final class UserListLicenseMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The number of clicks for the user list license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long clickCount;
 
   /**
-   * Output only. The end date (inclusive) of the metrics in the format YYYYMMDD. For example,
-   * 20260102 represents January 2, 2026. If `start_date` is used in the filter, `end_date` is also
-   * required. If neither `start_date` nor `end_date` are included in the filter, the
-   * UserListLicenseMetrics fields will not be populated in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long endDate;
 
   /**
-   * Output only. The number of impressions for the user list license.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long impressionCount;
 
   /**
-   * Output only. The revenue for the user list license in USD micros.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long revenueUsdMicros;
 
   /**
-   * Output only. The start date (inclusive) of the metrics in the format YYYYMMDD. For example,
-   * 20260102 represents January 2, 2026. If `end_date` is used in the filter, `start_date` is also
-   * required. If neither `start_date` nor `end_date` are included in the filter, the
-   * UserListLicenseMetrics fields will not be populated in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long startDate;
 
   /**
-   * Output only. The number of clicks for the user list license.
    * @return value or {@code null} for none
    */
   public java.lang.Long getClickCount() {
@@ -79,7 +67,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The number of clicks for the user list license.
    * @param clickCount clickCount or {@code null} for none
    */
   public UserListLicenseMetrics setClickCount(java.lang.Long clickCount) {
@@ -88,10 +75,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The end date (inclusive) of the metrics in the format YYYYMMDD. For example,
-   * 20260102 represents January 2, 2026. If `start_date` is used in the filter, `end_date` is also
-   * required. If neither `start_date` nor `end_date` are included in the filter, the
-   * UserListLicenseMetrics fields will not be populated in the response.
    * @return value or {@code null} for none
    */
   public java.lang.Long getEndDate() {
@@ -99,10 +82,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The end date (inclusive) of the metrics in the format YYYYMMDD. For example,
-   * 20260102 represents January 2, 2026. If `start_date` is used in the filter, `end_date` is also
-   * required. If neither `start_date` nor `end_date` are included in the filter, the
-   * UserListLicenseMetrics fields will not be populated in the response.
    * @param endDate endDate or {@code null} for none
    */
   public UserListLicenseMetrics setEndDate(java.lang.Long endDate) {
@@ -111,7 +90,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The number of impressions for the user list license.
    * @return value or {@code null} for none
    */
   public java.lang.Long getImpressionCount() {
@@ -119,7 +97,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The number of impressions for the user list license.
    * @param impressionCount impressionCount or {@code null} for none
    */
   public UserListLicenseMetrics setImpressionCount(java.lang.Long impressionCount) {
@@ -128,7 +105,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The revenue for the user list license in USD micros.
    * @return value or {@code null} for none
    */
   public java.lang.Long getRevenueUsdMicros() {
@@ -136,7 +112,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The revenue for the user list license in USD micros.
    * @param revenueUsdMicros revenueUsdMicros or {@code null} for none
    */
   public UserListLicenseMetrics setRevenueUsdMicros(java.lang.Long revenueUsdMicros) {
@@ -145,10 +120,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The start date (inclusive) of the metrics in the format YYYYMMDD. For example,
-   * 20260102 represents January 2, 2026. If `end_date` is used in the filter, `start_date` is also
-   * required. If neither `start_date` nor `end_date` are included in the filter, the
-   * UserListLicenseMetrics fields will not be populated in the response.
    * @return value or {@code null} for none
    */
   public java.lang.Long getStartDate() {
@@ -156,10 +127,6 @@ public final class UserListLicenseMetrics extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. The start date (inclusive) of the metrics in the format YYYYMMDD. For example,
-   * 20260102 represents January 2, 2026. If `end_date` is used in the filter, `start_date` is also
-   * required. If neither `start_date` nor `end_date` are included in the filter, the
-   * UserListLicenseMetrics fields will not be populated in the response.
    * @param startDate startDate or {@code null} for none
    */
   public UserListLicenseMetrics setStartDate(java.lang.Long startDate) {

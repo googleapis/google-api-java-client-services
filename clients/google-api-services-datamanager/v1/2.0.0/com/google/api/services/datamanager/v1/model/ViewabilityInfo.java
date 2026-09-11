@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Details of the viewability of the ad served.
+ * Model definition for ViewabilityInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,64 +30,54 @@ package com.google.api.services.datamanager.v1.model;
 public final class ViewabilityInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The duration of the ad media.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String mediaDuration;
 
   /**
-   * Optional. The amount of the media that was played as discrete quartiles.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String mediaQuartile;
 
   /**
-   * Optional. Whether the ad media was skippable or not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean mediaSkippable;
 
   /**
-   * Optional. The numerical percent (0-100) of the volume of the media playback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer mediaVolumePercent;
 
   /**
-   * Optional. The duration of playback of the ad media, regardless of whether it was viewable or
-   * not.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String playbackDuration;
 
   /**
-   * Required. The type of the event.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String viewType;
 
   /**
-   * Optional. The amount of time the ad was viewable for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String viewableDuration;
 
   /**
-   * Optional. The numerical percent (0-100) of the pixels that were viewable.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer viewablePercent;
 
   /**
-   * Optional. The duration of the ad media.
    * @return value or {@code null} for none
    */
   public String getMediaDuration() {
@@ -95,7 +85,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration of the ad media.
    * @param mediaDuration mediaDuration or {@code null} for none
    */
   public ViewabilityInfo setMediaDuration(String mediaDuration) {
@@ -104,7 +93,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The amount of the media that was played as discrete quartiles.
    * @return value or {@code null} for none
    */
   public java.lang.String getMediaQuartile() {
@@ -112,7 +100,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The amount of the media that was played as discrete quartiles.
    * @param mediaQuartile mediaQuartile or {@code null} for none
    */
   public ViewabilityInfo setMediaQuartile(java.lang.String mediaQuartile) {
@@ -121,7 +108,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Whether the ad media was skippable or not.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMediaSkippable() {
@@ -129,7 +115,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Whether the ad media was skippable or not.
    * @param mediaSkippable mediaSkippable or {@code null} for none
    */
   public ViewabilityInfo setMediaSkippable(java.lang.Boolean mediaSkippable) {
@@ -138,7 +123,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The numerical percent (0-100) of the volume of the media playback.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMediaVolumePercent() {
@@ -146,7 +130,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The numerical percent (0-100) of the volume of the media playback.
    * @param mediaVolumePercent mediaVolumePercent or {@code null} for none
    */
   public ViewabilityInfo setMediaVolumePercent(java.lang.Integer mediaVolumePercent) {
@@ -155,8 +138,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration of playback of the ad media, regardless of whether it was viewable or
-   * not.
    * @return value or {@code null} for none
    */
   public String getPlaybackDuration() {
@@ -164,8 +145,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The duration of playback of the ad media, regardless of whether it was viewable or
-   * not.
    * @param playbackDuration playbackDuration or {@code null} for none
    */
   public ViewabilityInfo setPlaybackDuration(String playbackDuration) {
@@ -174,7 +153,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The type of the event.
    * @return value or {@code null} for none
    */
   public java.lang.String getViewType() {
@@ -182,7 +160,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Required. The type of the event.
    * @param viewType viewType or {@code null} for none
    */
   public ViewabilityInfo setViewType(java.lang.String viewType) {
@@ -191,7 +168,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The amount of time the ad was viewable for.
    * @return value or {@code null} for none
    */
   public String getViewableDuration() {
@@ -199,7 +175,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The amount of time the ad was viewable for.
    * @param viewableDuration viewableDuration or {@code null} for none
    */
   public ViewabilityInfo setViewableDuration(String viewableDuration) {
@@ -208,7 +183,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The numerical percent (0-100) of the pixels that were viewable.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getViewablePercent() {
@@ -216,7 +190,6 @@ public final class ViewabilityInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. The numerical percent (0-100) of the pixels that were viewable.
    * @param viewablePercent viewablePercent or {@code null} for none
    */
   public ViewabilityInfo setViewablePercent(java.lang.Integer viewablePercent) {

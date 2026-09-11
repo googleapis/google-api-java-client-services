@@ -17,7 +17,7 @@
 package com.google.api.services.datamanager.v1.model;
 
 /**
- * Warning counts for each type of warning.
+ * Model definition for WarningInfo.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Data Manager API. For a detailed explanation see:
@@ -30,7 +30,6 @@ package com.google.api.services.datamanager.v1.model;
 public final class WarningInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * A list of warnings and counts per warning reason.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +42,6 @@ public final class WarningInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of warnings and counts per warning reason.
    * @return value or {@code null} for none
    */
   public java.util.List<WarningCount> getWarningCounts() {
@@ -51,7 +49,6 @@ public final class WarningInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of warnings and counts per warning reason.
    * @param warningCounts warningCounts or {@code null} for none
    */
   public WarningInfo setWarningCounts(java.util.List<WarningCount> warningCounts) {

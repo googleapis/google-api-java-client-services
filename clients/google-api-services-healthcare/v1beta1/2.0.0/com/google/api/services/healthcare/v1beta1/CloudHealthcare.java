@@ -17585,6 +17585,267 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Export resources using POST.
+           *
+           * Create a request for the method "fhirStores.bulk-export-group-post".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link BulkExportGroupPost#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Name of the `Group` resource that is exported, in format `projects/{project_id}/locations/
+           *        {location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Group/{group_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+           * @return the request
+           */
+          public BulkExportGroupPost bulkExportGroupPost(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.HttpBody content) throws java.io.IOException {
+            BulkExportGroupPost result = new BulkExportGroupPost(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BulkExportGroupPost extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1beta1/{+name}/$export";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Group/[^/]+$");
+
+            /**
+             * Export resources using POST.
+             *
+             * Create a request for the method "fhirStores.bulk-export-group-post".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link BulkExportGroupPost#execute()} method to invoke the remote
+             * operation. <p> {@link BulkExportGroupPost#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. Name of the `Group` resource that is exported, in format `projects/{project_id}/locations/
+           *        {location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Group/{group_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.HttpBody}
+             * @since 1.13
+             */
+            protected BulkExportGroupPost(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.HttpBody content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.HttpBody.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Group/[^/]+$");
+              }
+            }
+
+            @Override
+            public BulkExportGroupPost set$Xgafv(java.lang.String $Xgafv) {
+              return (BulkExportGroupPost) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BulkExportGroupPost setAccessToken(java.lang.String accessToken) {
+              return (BulkExportGroupPost) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BulkExportGroupPost setAlt(java.lang.String alt) {
+              return (BulkExportGroupPost) super.setAlt(alt);
+            }
+
+            @Override
+            public BulkExportGroupPost setCallback(java.lang.String callback) {
+              return (BulkExportGroupPost) super.setCallback(callback);
+            }
+
+            @Override
+            public BulkExportGroupPost setFields(java.lang.String fields) {
+              return (BulkExportGroupPost) super.setFields(fields);
+            }
+
+            @Override
+            public BulkExportGroupPost setKey(java.lang.String key) {
+              return (BulkExportGroupPost) super.setKey(key);
+            }
+
+            @Override
+            public BulkExportGroupPost setOauthToken(java.lang.String oauthToken) {
+              return (BulkExportGroupPost) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BulkExportGroupPost setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BulkExportGroupPost) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BulkExportGroupPost setQuotaUser(java.lang.String quotaUser) {
+              return (BulkExportGroupPost) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BulkExportGroupPost setUploadType(java.lang.String uploadType) {
+              return (BulkExportGroupPost) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BulkExportGroupPost setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BulkExportGroupPost) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the `Group` resource that is exported, in format `projects/{project
+             * _id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Gr
+             * oup/{group_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the `Group` resource that is exported, in format `projects/{project_id}/locations
+           /{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Group/{group_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the `Group` resource that is exported, in format `projects/{project
+             * _id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}/fhir/Gr
+             * oup/{group_id}`.
+             */
+            public BulkExportGroupPost setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+/fhir/Group/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. If provided, only resources updated after this time are exported. The time
+             * uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example,
+             * `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The time must be specified
+             * to the second and include a time zone.
+             */
+            @com.google.api.client.util.Key("_since")
+            private java.lang.String since;
+
+            /** Optional. If provided, only resources updated after this time are exported. The time uses the
+           format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example, `2015-02-07T13:28:17.239+02:00` or
+           `2017-01-01T00:00:00Z`. The time must be specified to the second and include a time zone.
+             */
+            public java.lang.String getSince() {
+              return since;
+            }
+
+            /**
+             * Optional. If provided, only resources updated after this time are exported. The time
+             * uses the format YYYY-MM-DDThh:mm:ss.sss+zz:zz. For example,
+             * `2015-02-07T13:28:17.239+02:00` or `2017-01-01T00:00:00Z`. The time must be specified
+             * to the second and include a time zone.
+             */
+            public BulkExportGroupPost setSince(java.lang.String since) {
+              this.since = since;
+              return this;
+            }
+
+            /**
+             * Optional. String of comma-delimited FHIR resource types. If provided, only resources
+             * of the specified resource type(s) are exported.
+             */
+            @com.google.api.client.util.Key("_type")
+            private java.lang.String type;
+
+            /** Optional. String of comma-delimited FHIR resource types. If provided, only resources of the
+           specified resource type(s) are exported.
+             */
+            public java.lang.String getType() {
+              return type;
+            }
+
+            /**
+             * Optional. String of comma-delimited FHIR resource types. If provided, only resources
+             * of the specified resource type(s) are exported.
+             */
+            public BulkExportGroupPost setType(java.lang.String type) {
+              this.type = type;
+              return this;
+            }
+
+            /**
+             * Required. The FHIR resource type used to organize exported resources. Only supports
+             * "Patient". When organized by Patient resource, output files are grouped as follows: *
+             * Patient file(s) containing the Patient resources. Each Patient is sequentially
+             * followed by all resources the Patient references, and all resources that reference
+             * the Patient (equivalent to a GetPatientEverything request). * Individual files
+             * grouped by resource type for resources in the Group's member field and the Group
+             * resource itself. Resources may be duplicated across multiple Patients. For example,
+             * if two Patient resources reference the same Organization resource, it will appear
+             * twice, once after each Patient. The Group resource from the request does not appear
+             * in the Patient files.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String organizeOutputBy;
+
+            /** Required. The FHIR resource type used to organize exported resources. Only supports "Patient". When
+           organized by Patient resource, output files are grouped as follows: * Patient file(s) containing
+           the Patient resources. Each Patient is sequentially followed by all resources the Patient
+           references, and all resources that reference the Patient (equivalent to a GetPatientEverything
+           request). * Individual files grouped by resource type for resources in the Group's member field and
+           the Group resource itself. Resources may be duplicated across multiple Patients. For example, if
+           two Patient resources reference the same Organization resource, it will appear twice, once after
+           each Patient. The Group resource from the request does not appear in the Patient files.
+             */
+            public java.lang.String getOrganizeOutputBy() {
+              return organizeOutputBy;
+            }
+
+            /**
+             * Required. The FHIR resource type used to organize exported resources. Only supports
+             * "Patient". When organized by Patient resource, output files are grouped as follows: *
+             * Patient file(s) containing the Patient resources. Each Patient is sequentially
+             * followed by all resources the Patient references, and all resources that reference
+             * the Patient (equivalent to a GetPatientEverything request). * Individual files
+             * grouped by resource type for resources in the Group's member field and the Group
+             * resource itself. Resources may be duplicated across multiple Patients. For example,
+             * if two Patient resources reference the same Organization resource, it will appear
+             * twice, once after each Patient. The Group resource from the request does not appear
+             * in the Patient files.
+             */
+            public BulkExportGroupPost setOrganizeOutputBy(java.lang.String organizeOutputBy) {
+              this.organizeOutputBy = organizeOutputBy;
+              return this;
+            }
+
+            /**
+             * Optional. Output format of the export. This field is optional and only
+             * `application/fhir+ndjson` is supported.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String outputFormat;
+
+            /** Optional. Output format of the export. This field is optional and only `application/fhir+ndjson` is
+           supported.
+             */
+            public java.lang.String getOutputFormat() {
+              return outputFormat;
+            }
+
+            /**
+             * Optional. Output format of the export. This field is optional and only
+             * `application/fhir+ndjson` is supported.
+             */
+            public BulkExportGroupPost setOutputFormat(java.lang.String outputFormat) {
+              this.outputFormat = outputFormat;
+              return this;
+            }
+
+            @Override
+            public BulkExportGroupPost set(String parameterName, Object value) {
+              return (BulkExportGroupPost) super.set(parameterName, value);
+            }
+          }
+          /**
            * Bulk deletes the FHIR resources from the given FHIR store. This method returns an Operation that
            * can be used to track the progress of the deletion by calling GetOperation. The success and
            * secondary_success counters correspond to the deleted current version and historical versions,

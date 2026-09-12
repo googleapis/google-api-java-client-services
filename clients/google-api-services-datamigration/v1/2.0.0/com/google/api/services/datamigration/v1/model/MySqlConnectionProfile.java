@@ -69,11 +69,32 @@ public final class MySqlConnectionProfile extends com.google.api.client.json.Gen
   private java.lang.Integer port;
 
   /**
+   * Private connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateConnectivity privateConnectivity;
+
+  /**
+   * Private Service Connect connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PrivateServiceConnectConnectivity privateServiceConnectConnectivity;
+
+  /**
    * SSL configuration for the destination to connect to the source database.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SslConfig ssl;
+
+  /**
+   * Static Service IP connectivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StaticServiceIpConnectivity staticServiceIpConnectivity;
 
   /**
    * Required. The username that Database Migration Service will use to connect to the database. The
@@ -175,6 +196,40 @@ public final class MySqlConnectionProfile extends com.google.api.client.json.Gen
   }
 
   /**
+   * Private connectivity.
+   * @return value or {@code null} for none
+   */
+  public PrivateConnectivity getPrivateConnectivity() {
+    return privateConnectivity;
+  }
+
+  /**
+   * Private connectivity.
+   * @param privateConnectivity privateConnectivity or {@code null} for none
+   */
+  public MySqlConnectionProfile setPrivateConnectivity(PrivateConnectivity privateConnectivity) {
+    this.privateConnectivity = privateConnectivity;
+    return this;
+  }
+
+  /**
+   * Private Service Connect connectivity.
+   * @return value or {@code null} for none
+   */
+  public PrivateServiceConnectConnectivity getPrivateServiceConnectConnectivity() {
+    return privateServiceConnectConnectivity;
+  }
+
+  /**
+   * Private Service Connect connectivity.
+   * @param privateServiceConnectConnectivity privateServiceConnectConnectivity or {@code null} for none
+   */
+  public MySqlConnectionProfile setPrivateServiceConnectConnectivity(PrivateServiceConnectConnectivity privateServiceConnectConnectivity) {
+    this.privateServiceConnectConnectivity = privateServiceConnectConnectivity;
+    return this;
+  }
+
+  /**
    * SSL configuration for the destination to connect to the source database.
    * @return value or {@code null} for none
    */
@@ -188,6 +243,23 @@ public final class MySqlConnectionProfile extends com.google.api.client.json.Gen
    */
   public MySqlConnectionProfile setSsl(SslConfig ssl) {
     this.ssl = ssl;
+    return this;
+  }
+
+  /**
+   * Static Service IP connectivity.
+   * @return value or {@code null} for none
+   */
+  public StaticServiceIpConnectivity getStaticServiceIpConnectivity() {
+    return staticServiceIpConnectivity;
+  }
+
+  /**
+   * Static Service IP connectivity.
+   * @param staticServiceIpConnectivity staticServiceIpConnectivity or {@code null} for none
+   */
+  public MySqlConnectionProfile setStaticServiceIpConnectivity(StaticServiceIpConnectivity staticServiceIpConnectivity) {
+    this.staticServiceIpConnectivity = staticServiceIpConnectivity;
     return this;
   }
 

@@ -38,6 +38,13 @@ public final class PerformanceConfig extends com.google.api.client.json.GenericJ
   private java.lang.String dumpParallelLevel;
 
   /**
+   * Optional. Initial load parallelism level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String loadParallelLevel;
+
+  /**
    * Initial dump parallelism level.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class PerformanceConfig extends com.google.api.client.json.GenericJ
    */
   public PerformanceConfig setDumpParallelLevel(java.lang.String dumpParallelLevel) {
     this.dumpParallelLevel = dumpParallelLevel;
+    return this;
+  }
+
+  /**
+   * Optional. Initial load parallelism level.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLoadParallelLevel() {
+    return loadParallelLevel;
+  }
+
+  /**
+   * Optional. Initial load parallelism level.
+   * @param loadParallelLevel loadParallelLevel or {@code null} for none
+   */
+  public PerformanceConfig setLoadParallelLevel(java.lang.String loadParallelLevel) {
+    this.loadParallelLevel = loadParallelLevel;
     return this;
   }
 

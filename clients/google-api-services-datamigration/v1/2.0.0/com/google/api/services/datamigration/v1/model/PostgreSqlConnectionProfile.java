@@ -114,7 +114,7 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   private PrivateConnectivity privateConnectivity;
 
   /**
-   * Private service connect connectivity.
+   * Private Service Connect connectivity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -342,7 +342,7 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   }
 
   /**
-   * Private service connect connectivity.
+   * Private Service Connect connectivity.
    * @return value or {@code null} for none
    */
   public PrivateServiceConnectConnectivity getPrivateServiceConnectConnectivity() {
@@ -350,7 +350,7 @@ public final class PostgreSqlConnectionProfile extends com.google.api.client.jso
   }
 
   /**
-   * Private service connect connectivity.
+   * Private Service Connect connectivity.
    * @param privateServiceConnectConnectivity privateServiceConnectConnectivity or {@code null} for none
    */
   public PostgreSqlConnectionProfile setPrivateServiceConnectConnectivity(PrivateServiceConnectConnectivity privateServiceConnectConnectivity) {

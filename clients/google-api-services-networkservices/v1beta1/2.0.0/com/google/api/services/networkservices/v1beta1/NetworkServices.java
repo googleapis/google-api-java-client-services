@@ -2032,6 +2032,29 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. A filter expression to filter the results listed in the response. The
+           * expression must follow the syntax described in [AIP-160](https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression to filter the results listed in the response. The expression must
+         follow the syntax described in [AIP-160](https://google.aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression to filter the results listed in the response. The
+           * expression must follow the syntax described in [AIP-160](https://google.aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
           /** Optional. Maximum number of AgentGateways to return per call. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;

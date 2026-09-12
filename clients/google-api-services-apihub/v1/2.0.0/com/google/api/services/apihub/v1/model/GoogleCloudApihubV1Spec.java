@@ -74,6 +74,14 @@ public final class GoogleCloudApihubV1Spec extends com.google.api.client.json.Ge
   private String createTime;
 
   /**
+   * Optional. The deployments linked directly to this spec. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> deployments;
+
+  /**
    * Output only. Details parsed from the spec.
    * The value may be {@code null}.
    */
@@ -226,6 +234,25 @@ public final class GoogleCloudApihubV1Spec extends com.google.api.client.json.Ge
    */
   public GoogleCloudApihubV1Spec setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The deployments linked directly to this spec. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDeployments() {
+    return deployments;
+  }
+
+  /**
+   * Optional. The deployments linked directly to this spec. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * @param deployments deployments or {@code null} for none
+   */
+  public GoogleCloudApihubV1Spec setDeployments(java.util.List<java.lang.String> deployments) {
+    this.deployments = deployments;
     return this;
   }
 

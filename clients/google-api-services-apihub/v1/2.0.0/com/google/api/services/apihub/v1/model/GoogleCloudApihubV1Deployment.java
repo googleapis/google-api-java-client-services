@@ -32,6 +32,13 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1Deployment extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The API operations linked directly to this deployment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> apiOperations;
+
+  /**
    * Output only. The API versions linked to this deployment. Note: A particular deployment could be
    * linked to multiple different API versions (of same or different APIs).
    * The value may be {@code null}.
@@ -177,6 +184,15 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private java.lang.String sourceProject;
 
   /**
+   * Optional. A revision identifier for the underlying gateway configuration that this deployment
+   * serves. For Apigee gateway variants, this is typically the proxy revision number populated
+   * automatically when the deployment is discovered.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceRevision;
+
+  /**
    * Optional. The uri where additional source specific information for this deployment can be
    * found. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
@@ -189,11 +205,36 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   private GoogleCloudApihubV1AttributeValues sourceUri;
 
   /**
+   * Output only. The specs linked directly to this deployment. Note: a deployment could serve
+   * multiple specs (e.g., across different revisions of the same underlying gateway configuration).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> specs;
+
+  /**
    * Output only. The time at which the deployment was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. The API operations linked directly to this deployment.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getApiOperations() {
+    return apiOperations;
+  }
+
+  /**
+   * Output only. The API operations linked directly to this deployment.
+   * @param apiOperations apiOperations or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setApiOperations(java.util.List<java.lang.String> apiOperations) {
+    this.apiOperations = apiOperations;
+    return this;
+  }
 
   /**
    * Output only. The API versions linked to this deployment. Note: A particular deployment could be
@@ -522,6 +563,27 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
   }
 
   /**
+   * Optional. A revision identifier for the underlying gateway configuration that this deployment
+   * serves. For Apigee gateway variants, this is typically the proxy revision number populated
+   * automatically when the deployment is discovered.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceRevision() {
+    return sourceRevision;
+  }
+
+  /**
+   * Optional. A revision identifier for the underlying gateway configuration that this deployment
+   * serves. For Apigee gateway variants, this is typically the proxy revision number populated
+   * automatically when the deployment is discovered.
+   * @param sourceRevision sourceRevision or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setSourceRevision(java.lang.String sourceRevision) {
+    this.sourceRevision = sourceRevision;
+    return this;
+  }
+
+  /**
    * Optional. The uri where additional source specific information for this deployment can be
    * found. This maps to the following system defined attribute:
    * `projects/{project}/locations/{location}/attributes/system-source-uri` The number of values for
@@ -545,6 +607,25 @@ public final class GoogleCloudApihubV1Deployment extends com.google.api.client.j
    */
   public GoogleCloudApihubV1Deployment setSourceUri(GoogleCloudApihubV1AttributeValues sourceUri) {
     this.sourceUri = sourceUri;
+    return this;
+  }
+
+  /**
+   * Output only. The specs linked directly to this deployment. Note: a deployment could serve
+   * multiple specs (e.g., across different revisions of the same underlying gateway configuration).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSpecs() {
+    return specs;
+  }
+
+  /**
+   * Output only. The specs linked directly to this deployment. Note: a deployment could serve
+   * multiple specs (e.g., across different revisions of the same underlying gateway configuration).
+   * @param specs specs or {@code null} for none
+   */
+  public GoogleCloudApihubV1Deployment setSpecs(java.util.List<java.lang.String> specs) {
+    this.specs = specs;
     return this;
   }
 

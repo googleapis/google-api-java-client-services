@@ -220,6 +220,14 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.Long podPidsLimit;
 
   /**
+   * Optional. Controls the reserved resources on the node. Only included if any fields are
+   * specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservedResourcesConfig reservedResourcesConfig;
+
+  /**
    * Optional. shutdown_grace_period_critical_pods_seconds is the maximum allowed grace period (in
    * seconds) used to terminate critical pods during a node shutdown. This value should be <=
    * shutdown_grace_period_seconds, and is only valid if shutdown_grace_period_seconds is set.
@@ -690,6 +698,25 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setPodPidsLimit(java.lang.Long podPidsLimit) {
     this.podPidsLimit = podPidsLimit;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the reserved resources on the node. Only included if any fields are
+   * specified.
+   * @return value or {@code null} for none
+   */
+  public ReservedResourcesConfig getReservedResourcesConfig() {
+    return reservedResourcesConfig;
+  }
+
+  /**
+   * Optional. Controls the reserved resources on the node. Only included if any fields are
+   * specified.
+   * @param reservedResourcesConfig reservedResourcesConfig or {@code null} for none
+   */
+  public NodeKubeletConfig setReservedResourcesConfig(ReservedResourcesConfig reservedResourcesConfig) {
+    this.reservedResourcesConfig = reservedResourcesConfig;
     return this;
   }
 

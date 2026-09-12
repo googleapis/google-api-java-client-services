@@ -145,7 +145,8 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private NodeReadinessConfig nodeReadinessConfig;
 
   /**
-   * Configuration for the Cloud Storage Parallelstore CSI driver.
+   * Deprecated: The Parallelstore CSI driver is no longer supported. Configuration for the Cloud
+   * Storage Parallelstore CSI driver.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -458,7 +459,8 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the Cloud Storage Parallelstore CSI driver.
+   * Deprecated: The Parallelstore CSI driver is no longer supported. Configuration for the Cloud
+   * Storage Parallelstore CSI driver.
    * @return value or {@code null} for none
    */
   public ParallelstoreCsiDriverConfig getParallelstoreCsiDriverConfig() {
@@ -466,7 +468,8 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the Cloud Storage Parallelstore CSI driver.
+   * Deprecated: The Parallelstore CSI driver is no longer supported. Configuration for the Cloud
+   * Storage Parallelstore CSI driver.
    * @param parallelstoreCsiDriverConfig parallelstoreCsiDriverConfig or {@code null} for none
    */
   public AddonsConfig setParallelstoreCsiDriverConfig(ParallelstoreCsiDriverConfig parallelstoreCsiDriverConfig) {

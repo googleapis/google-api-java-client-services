@@ -39,6 +39,13 @@ public final class AdditionalNodeNetworkConfig extends com.google.api.client.jso
   private java.lang.String network;
 
   /**
+   * Optional. Additional NIC stack type, configured by the client.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String stackType;
+
+  /**
    * Name of the subnetwork where the additional interface belongs
    * The value may be {@code null}.
    */
@@ -59,6 +66,23 @@ public final class AdditionalNodeNetworkConfig extends com.google.api.client.jso
    */
   public AdditionalNodeNetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Additional NIC stack type, configured by the client.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStackType() {
+    return stackType;
+  }
+
+  /**
+   * Optional. Additional NIC stack type, configured by the client.
+   * @param stackType stackType or {@code null} for none
+   */
+  public AdditionalNodeNetworkConfig setStackType(java.lang.String stackType) {
+    this.stackType = stackType;
     return this;
   }
 

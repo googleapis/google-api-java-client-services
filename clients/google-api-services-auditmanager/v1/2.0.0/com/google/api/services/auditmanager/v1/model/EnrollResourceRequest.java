@@ -47,6 +47,19 @@ public final class EnrollResourceRequest extends com.google.api.client.json.Gene
   }
 
   /**
+   * Optional. If `true`, only validates the request and does not enroll the resource. This executes
+   * standard request validation (such as schema, IAM, and destination checks) and skips the apply
+   * phase. Use this field for the following purposes: * **Infrastructure as Code (IaC)**: Allow
+   * tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without creating real
+   * resources or incurring costs. * **User Interface Validation**: Enable real-time form and
+   * permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+   * your scripts, permissions, and parameters safely without consuming resource quotas.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Required. Cloud Storage buckets that you can upload your audit reports to during the audit
    * process. When you enroll an organization or folder, you can choose a Cloud Storage bucket from
    * any project in the organization or folder. If you run an audit at the project level using the
@@ -68,6 +81,35 @@ public final class EnrollResourceRequest extends com.google.api.client.json.Gene
    */
   public EnrollResourceRequest setDestinations(java.util.List<EligibleDestination> destinations) {
     this.destinations = destinations;
+    return this;
+  }
+
+  /**
+   * Optional. If `true`, only validates the request and does not enroll the resource. This executes
+   * standard request validation (such as schema, IAM, and destination checks) and skips the apply
+   * phase. Use this field for the following purposes: * **Infrastructure as Code (IaC)**: Allow
+   * tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without creating real
+   * resources or incurring costs. * **User Interface Validation**: Enable real-time form and
+   * permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+   * your scripts, permissions, and parameters safely without consuming resource quotas.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If `true`, only validates the request and does not enroll the resource. This executes
+   * standard request validation (such as schema, IAM, and destination checks) and skips the apply
+   * phase. Use this field for the following purposes: * **Infrastructure as Code (IaC)**: Allow
+   * tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without creating real
+   * resources or incurring costs. * **User Interface Validation**: Enable real-time form and
+   * permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+   * your scripts, permissions, and parameters safely without consuming resource quotas.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public EnrollResourceRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

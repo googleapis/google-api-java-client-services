@@ -124,6 +124,14 @@ public final class Widget extends com.google.api.client.json.GenericJson {
   private Text text;
 
   /**
+   * Optional. Represents a time range for the widget. When set, this time range will override the
+   * dashboard time range. Supported for line, stacked area and stacked bar widgets only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TimeRange timeRange;
+
+  /**
    * A widget that displays time series data in a tabular format.
    * The value may be {@code null}.
    */
@@ -380,6 +388,25 @@ public final class Widget extends com.google.api.client.json.GenericJson {
    */
   public Widget setText(Text text) {
     this.text = text;
+    return this;
+  }
+
+  /**
+   * Optional. Represents a time range for the widget. When set, this time range will override the
+   * dashboard time range. Supported for line, stacked area and stacked bar widgets only.
+   * @return value or {@code null} for none
+   */
+  public TimeRange getTimeRange() {
+    return timeRange;
+  }
+
+  /**
+   * Optional. Represents a time range for the widget. When set, this time range will override the
+   * dashboard time range. Supported for line, stacked area and stacked bar widgets only.
+   * @param timeRange timeRange or {@code null} for none
+   */
+  public Widget setTimeRange(TimeRange timeRange) {
+    this.timeRange = timeRange;
     return this;
   }
 

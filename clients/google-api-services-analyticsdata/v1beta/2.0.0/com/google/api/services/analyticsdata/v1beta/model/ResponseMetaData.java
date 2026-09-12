@@ -57,6 +57,19 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
   private java.lang.Boolean dataLossFromOtherRow;
 
   /**
+   * If set, indicate there is data truncation in the report.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DataTruncationReason> dataTruncationReasons;
+
+  static {
+    // hack to force ProGuard to consider DataTruncationReason used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DataTruncationReason.class);
+  }
+
+  /**
    * If empty reason is specified, the report is empty for this reason.
    * The value may be {@code null}.
    */
@@ -157,6 +170,23 @@ public final class ResponseMetaData extends com.google.api.client.json.GenericJs
    */
   public ResponseMetaData setDataLossFromOtherRow(java.lang.Boolean dataLossFromOtherRow) {
     this.dataLossFromOtherRow = dataLossFromOtherRow;
+    return this;
+  }
+
+  /**
+   * If set, indicate there is data truncation in the report.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DataTruncationReason> getDataTruncationReasons() {
+    return dataTruncationReasons;
+  }
+
+  /**
+   * If set, indicate there is data truncation in the report.
+   * @param dataTruncationReasons dataTruncationReasons or {@code null} for none
+   */
+  public ResponseMetaData setDataTruncationReasons(java.util.List<DataTruncationReason> dataTruncationReasons) {
+    this.dataTruncationReasons = dataTruncationReasons;
     return this;
   }
 

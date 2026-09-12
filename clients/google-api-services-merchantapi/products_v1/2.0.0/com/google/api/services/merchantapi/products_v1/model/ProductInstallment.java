@@ -58,6 +58,14 @@ public final class ProductInstallment extends com.google.api.client.json.Generic
   private Price downpayment;
 
   /**
+   * Optional. The mileage allowance for the lease of the vehicle. Only applicable to vehicle
+   * products.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Mileage mileageAllowance;
+
+  /**
    * The number of installments the buyer has to pay.
    * The value may be {@code null}.
    */
@@ -136,6 +144,25 @@ public final class ProductInstallment extends com.google.api.client.json.Generic
    */
   public ProductInstallment setDownpayment(Price downpayment) {
     this.downpayment = downpayment;
+    return this;
+  }
+
+  /**
+   * Optional. The mileage allowance for the lease of the vehicle. Only applicable to vehicle
+   * products.
+   * @return value or {@code null} for none
+   */
+  public Mileage getMileageAllowance() {
+    return mileageAllowance;
+  }
+
+  /**
+   * Optional. The mileage allowance for the lease of the vehicle. Only applicable to vehicle
+   * products.
+   * @param mileageAllowance mileageAllowance or {@code null} for none
+   */
+  public ProductInstallment setMileageAllowance(Mileage mileageAllowance) {
+    this.mileageAllowance = mileageAllowance;
     return this;
   }
 

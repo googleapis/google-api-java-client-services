@@ -17,7 +17,8 @@
 package com.google.api.services.container.model;
 
 /**
- * Configuration for the Cloud Storage Parallelstore CSI driver.
+ * Deprecated: The Parallelstore CSI driver is no longer supported. Configuration for the Cloud
+ * Storage Parallelstore CSI driver.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Kubernetes Engine API. For a detailed explanation

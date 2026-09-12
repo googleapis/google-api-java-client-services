@@ -38,6 +38,13 @@ public final class EnvironmentDetails extends com.google.api.client.json.Generic
   private AppAccessRiskVerdict appAccessRiskVerdict;
 
   /**
+   * The evaluation of the Location Spoofing Risk verdict.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> locationSpoofingRiskVerdict;
+
+  /**
    * The evaluation of Play Protect verdict.
    * The value may be {@code null}.
    */
@@ -58,6 +65,23 @@ public final class EnvironmentDetails extends com.google.api.client.json.Generic
    */
   public EnvironmentDetails setAppAccessRiskVerdict(AppAccessRiskVerdict appAccessRiskVerdict) {
     this.appAccessRiskVerdict = appAccessRiskVerdict;
+    return this;
+  }
+
+  /**
+   * The evaluation of the Location Spoofing Risk verdict.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getLocationSpoofingRiskVerdict() {
+    return locationSpoofingRiskVerdict;
+  }
+
+  /**
+   * The evaluation of the Location Spoofing Risk verdict.
+   * @param locationSpoofingRiskVerdict locationSpoofingRiskVerdict or {@code null} for none
+   */
+  public EnvironmentDetails setLocationSpoofingRiskVerdict(java.util.List<java.lang.String> locationSpoofingRiskVerdict) {
+    this.locationSpoofingRiskVerdict = locationSpoofingRiskVerdict;
     return this;
   }
 

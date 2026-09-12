@@ -53,6 +53,16 @@ public final class GoogleCloudApihubV1ApiOperation extends com.google.api.client
   private String createTime;
 
   /**
+   * Optional. The deployments linked directly to this API operation. For operations parsed from a
+   * spec, `UpdateApiOperation` returns `FAILED_PRECONDITION`; link the parent spec to the
+   * deployment via `Spec.deployments` instead. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> deployments;
+
+  /**
    * Optional. Operation details. Note: Even though this field is optional, it is required for
    * CreateApiOperation API and we will fail the request if not provided.
    * The value may be {@code null}.
@@ -128,6 +138,29 @@ public final class GoogleCloudApihubV1ApiOperation extends com.google.api.client
    */
   public GoogleCloudApihubV1ApiOperation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. The deployments linked directly to this API operation. For operations parsed from a
+   * spec, `UpdateApiOperation` returns `FAILED_PRECONDITION`; link the parent spec to the
+   * deployment via `Spec.deployments` instead. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDeployments() {
+    return deployments;
+  }
+
+  /**
+   * Optional. The deployments linked directly to this API operation. For operations parsed from a
+   * spec, `UpdateApiOperation` returns `FAILED_PRECONDITION`; link the parent spec to the
+   * deployment via `Spec.deployments` instead. Format is
+   * `projects/{project}/locations/{location}/deployments/{deployment}`
+   * @param deployments deployments or {@code null} for none
+   */
+  public GoogleCloudApihubV1ApiOperation setDeployments(java.util.List<java.lang.String> deployments) {
+    this.deployments = deployments;
     return this;
   }
 

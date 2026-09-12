@@ -30,6 +30,16 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1SpecMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The gateway-side URIs of deployments that serve this spec. If provided, the API Hub
+   * service creates links between this spec and the deployments identified by these URIs. URIs that
+   * don't match any known deployment are ignored; a subsequent ingestion cycle that includes the
+   * missing deployment will re-establish the link. The maximum number of URIs allowed is 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> deploymentResourceUris;
+
+  /**
    * Optional. Timestamp indicating when the spec was created at the source.
    * The value may be {@code null}.
    */
@@ -57,6 +67,29 @@ public final class GoogleCloudApihubV1SpecMetadata extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private GoogleCloudApihubV1Spec spec;
+
+  /**
+   * Optional. The gateway-side URIs of deployments that serve this spec. If provided, the API Hub
+   * service creates links between this spec and the deployments identified by these URIs. URIs that
+   * don't match any known deployment are ignored; a subsequent ingestion cycle that includes the
+   * missing deployment will re-establish the link. The maximum number of URIs allowed is 100.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDeploymentResourceUris() {
+    return deploymentResourceUris;
+  }
+
+  /**
+   * Optional. The gateway-side URIs of deployments that serve this spec. If provided, the API Hub
+   * service creates links between this spec and the deployments identified by these URIs. URIs that
+   * don't match any known deployment are ignored; a subsequent ingestion cycle that includes the
+   * missing deployment will re-establish the link. The maximum number of URIs allowed is 100.
+   * @param deploymentResourceUris deploymentResourceUris or {@code null} for none
+   */
+  public GoogleCloudApihubV1SpecMetadata setDeploymentResourceUris(java.util.List<java.lang.String> deploymentResourceUris) {
+    this.deploymentResourceUris = deploymentResourceUris;
+    return this;
+  }
 
   /**
    * Optional. Timestamp indicating when the spec was created at the source.

@@ -39,6 +39,15 @@ public final class Transport extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> advertisedRoutes;
 
   /**
+   * Optional. Immutable. Controls whether resources proposed by the Transport are automatically
+   * accepted on behalf of the user. List of actions that can be automatically accepted are: 1. VPC
+   * Peering creation 2. Routing VPC Spoke creation 3. Hybrid Spoke creation
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean autoAccept;
+
+  /**
    * Optional. Bandwidth of the Transport. This must be one of the supported bandwidths for the
    * remote profile, and must be set when no activation key is being provided.
    * The value may be {@code null}.
@@ -69,6 +78,15 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String generatedActivationKey;
+
+  /**
+   * Optional. Immutable. The NCC Hub that the Transport should attach to. The hub must be in the
+   * same project as the Transport. Format: `{hub}` or
+   * `projects/{project}/locations/global/hubs/{hub}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String hub;
 
   /**
    * Optional. Labels as key value pairs.
@@ -116,6 +134,15 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String providedActivationKey;
+
+  /**
+   * Optional. Immutable. Controls whether a Routing VPC Spoke should be created and attached to the
+   * NCC Hub. This will provide Private Service Connect (PSC) connectivity through NCC. This can
+   * only be set when the Transport is first created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean pscRoutingEnabled;
 
   /**
    * Optional. Immutable. The user supplied account id for the CSP associated with the remote
@@ -169,6 +196,27 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    */
   public Transport setAdvertisedRoutes(java.util.List<java.lang.String> advertisedRoutes) {
     this.advertisedRoutes = advertisedRoutes;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Controls whether resources proposed by the Transport are automatically
+   * accepted on behalf of the user. List of actions that can be automatically accepted are: 1. VPC
+   * Peering creation 2. Routing VPC Spoke creation 3. Hybrid Spoke creation
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAutoAccept() {
+    return autoAccept;
+  }
+
+  /**
+   * Optional. Immutable. Controls whether resources proposed by the Transport are automatically
+   * accepted on behalf of the user. List of actions that can be automatically accepted are: 1. VPC
+   * Peering creation 2. Routing VPC Spoke creation 3. Hybrid Spoke creation
+   * @param autoAccept autoAccept or {@code null} for none
+   */
+  public Transport setAutoAccept(java.lang.Boolean autoAccept) {
+    this.autoAccept = autoAccept;
     return this;
   }
 
@@ -245,6 +293,27 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    */
   public Transport setGeneratedActivationKey(java.lang.String generatedActivationKey) {
     this.generatedActivationKey = generatedActivationKey;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The NCC Hub that the Transport should attach to. The hub must be in the
+   * same project as the Transport. Format: `{hub}` or
+   * `projects/{project}/locations/global/hubs/{hub}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHub() {
+    return hub;
+  }
+
+  /**
+   * Optional. Immutable. The NCC Hub that the Transport should attach to. The hub must be in the
+   * same project as the Transport. Format: `{hub}` or
+   * `projects/{project}/locations/global/hubs/{hub}`
+   * @param hub hub or {@code null} for none
+   */
+  public Transport setHub(java.lang.String hub) {
+    this.hub = hub;
     return this;
   }
 
@@ -357,6 +426,27 @@ public final class Transport extends com.google.api.client.json.GenericJson {
    */
   public Transport setProvidedActivationKey(java.lang.String providedActivationKey) {
     this.providedActivationKey = providedActivationKey;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Controls whether a Routing VPC Spoke should be created and attached to the
+   * NCC Hub. This will provide Private Service Connect (PSC) connectivity through NCC. This can
+   * only be set when the Transport is first created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPscRoutingEnabled() {
+    return pscRoutingEnabled;
+  }
+
+  /**
+   * Optional. Immutable. Controls whether a Routing VPC Spoke should be created and attached to the
+   * NCC Hub. This will provide Private Service Connect (PSC) connectivity through NCC. This can
+   * only be set when the Transport is first created.
+   * @param pscRoutingEnabled pscRoutingEnabled or {@code null} for none
+   */
+  public Transport setPscRoutingEnabled(java.lang.Boolean pscRoutingEnabled) {
+    this.pscRoutingEnabled = pscRoutingEnabled;
     return this;
   }
 

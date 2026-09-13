@@ -37,6 +37,13 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
   private Assertion assertion;
 
   /**
+   * The unit test executed by this action.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryUnitTest bigqueryUnitTest;
+
+  /**
    * The action's identifier if the project had been compiled without any overrides configured.
    * Unique within the compilation result.
    * The value may be {@code null}.
@@ -116,6 +123,23 @@ public final class CompilationResultAction extends com.google.api.client.json.Ge
    */
   public CompilationResultAction setAssertion(Assertion assertion) {
     this.assertion = assertion;
+    return this;
+  }
+
+  /**
+   * The unit test executed by this action.
+   * @return value or {@code null} for none
+   */
+  public BigQueryUnitTest getBigqueryUnitTest() {
+    return bigqueryUnitTest;
+  }
+
+  /**
+   * The unit test executed by this action.
+   * @param bigqueryUnitTest bigqueryUnitTest or {@code null} for none
+   */
+  public CompilationResultAction setBigqueryUnitTest(BigQueryUnitTest bigqueryUnitTest) {
+    this.bigqueryUnitTest = bigqueryUnitTest;
     return this;
   }
 

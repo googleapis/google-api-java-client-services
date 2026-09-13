@@ -61,6 +61,13 @@ public final class Repository extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Optional. Includes configuration options for end user authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EndUserAuthConfig endUserAuthConfig;
+
+  /**
    * Optional. If set, configures this repository to be linked to a Git remote.
    * The value may be {@code null}.
    */
@@ -212,6 +219,23 @@ public final class Repository extends com.google.api.client.json.GenericJson {
    */
   public Repository setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Includes configuration options for end user authentication.
+   * @return value or {@code null} for none
+   */
+  public EndUserAuthConfig getEndUserAuthConfig() {
+    return endUserAuthConfig;
+  }
+
+  /**
+   * Optional. Includes configuration options for end user authentication.
+   * @param endUserAuthConfig endUserAuthConfig or {@code null} for none
+   */
+  public Repository setEndUserAuthConfig(EndUserAuthConfig endUserAuthConfig) {
+    this.endUserAuthConfig = endUserAuthConfig;
     return this;
   }
 

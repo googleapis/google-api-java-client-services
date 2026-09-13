@@ -37,6 +37,13 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
   private BigQueryAction bigqueryAction;
 
   /**
+   * Output only. The workflow action's unit test details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BigQueryUnitTestAction bigqueryUnitTestAction;
+
+  /**
    * Output only. The action's identifier if the project had been compiled without any overrides
    * configured. Unique within the compilation result.
    * The value may be {@code null}.
@@ -110,6 +117,23 @@ public final class WorkflowInvocationAction extends com.google.api.client.json.G
    */
   public WorkflowInvocationAction setBigqueryAction(BigQueryAction bigqueryAction) {
     this.bigqueryAction = bigqueryAction;
+    return this;
+  }
+
+  /**
+   * Output only. The workflow action's unit test details.
+   * @return value or {@code null} for none
+   */
+  public BigQueryUnitTestAction getBigqueryUnitTestAction() {
+    return bigqueryUnitTestAction;
+  }
+
+  /**
+   * Output only. The workflow action's unit test details.
+   * @param bigqueryUnitTestAction bigqueryUnitTestAction or {@code null} for none
+   */
+  public WorkflowInvocationAction setBigqueryUnitTestAction(BigQueryUnitTestAction bigqueryUnitTestAction) {
+    this.bigqueryUnitTestAction = bigqueryUnitTestAction;
     return this;
   }
 

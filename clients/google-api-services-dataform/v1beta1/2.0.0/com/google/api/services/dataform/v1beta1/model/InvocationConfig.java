@@ -31,6 +31,21 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class InvocationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration for end user authentication. Note that this should not be set when
+   * `service_account` is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EndUserAuthenticationConfig endUserAuthConfig;
+
+  /**
+   * Optional. Specifies the execution mode for the workflow invocation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String executionMode;
+
+  /**
    * Optional. When set to true, any incremental tables will be fully refreshed.
    * The value may be {@code null}.
    */
@@ -79,6 +94,42 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean transitiveDependentsIncluded;
+
+  /**
+   * Optional. Configuration for end user authentication. Note that this should not be set when
+   * `service_account` is used.
+   * @return value or {@code null} for none
+   */
+  public EndUserAuthenticationConfig getEndUserAuthConfig() {
+    return endUserAuthConfig;
+  }
+
+  /**
+   * Optional. Configuration for end user authentication. Note that this should not be set when
+   * `service_account` is used.
+   * @param endUserAuthConfig endUserAuthConfig or {@code null} for none
+   */
+  public InvocationConfig setEndUserAuthConfig(EndUserAuthenticationConfig endUserAuthConfig) {
+    this.endUserAuthConfig = endUserAuthConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the execution mode for the workflow invocation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExecutionMode() {
+    return executionMode;
+  }
+
+  /**
+   * Optional. Specifies the execution mode for the workflow invocation.
+   * @param executionMode executionMode or {@code null} for none
+   */
+  public InvocationConfig setExecutionMode(java.lang.String executionMode) {
+    this.executionMode = executionMode;
+    return this;
+  }
 
   /**
    * Optional. When set to true, any incremental tables will be fully refreshed.

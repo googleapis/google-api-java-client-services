@@ -27,7 +27,7 @@ package com.google.api.services.cloudbuild.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class PipelineRun extends com.google.api.client.json.GenericJson {
+public final class GoogleDevtoolsCloudbuildV2PipelineRun extends com.google.api.client.json.GenericJson {
 
   /**
    * User annotations. See https://google.aip.dev/128#annotations
@@ -113,12 +113,6 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<Param> params;
-
-  static {
-    // hack to force ProGuard to consider Param used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(Param.class);
-  }
 
   /**
    * PipelineRef refer to a specific instance of a Pipeline.
@@ -267,7 +261,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * User annotations. See https://google.aip.dev/128#annotations
    * @param annotations annotations or {@code null} for none
    */
-  public PipelineRun setAnnotations(java.util.Map<String, java.lang.String> annotations) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
     return this;
   }
@@ -286,7 +280,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * PipelineRun.
    * @param childReferences childReferences or {@code null} for none
    */
-  public PipelineRun setChildReferences(java.util.List<ChildStatusReference> childReferences) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setChildReferences(java.util.List<ChildStatusReference> childReferences) {
     this.childReferences = childReferences;
     return this;
   }
@@ -303,7 +297,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. Time the pipeline completed.
    * @param completionTime completionTime or {@code null} for none
    */
-  public PipelineRun setCompletionTime(String completionTime) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setCompletionTime(String completionTime) {
     this.completionTime = completionTime;
     return this;
   }
@@ -320,7 +314,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. Kubernetes Conditions convention for PipelineRun status and error.
    * @param conditions conditions or {@code null} for none
    */
-  public PipelineRun setConditions(java.util.List<GoogleDevtoolsCloudbuildV2Condition> conditions) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setConditions(java.util.List<GoogleDevtoolsCloudbuildV2Condition> conditions) {
     this.conditions = conditions;
     return this;
   }
@@ -337,7 +331,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. Time at which the request to create the `PipelineRun` was received.
    * @param createTime createTime or {@code null} for none
    */
-  public PipelineRun setCreateTime(String createTime) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setCreateTime(String createTime) {
     this.createTime = createTime;
     return this;
   }
@@ -354,7 +348,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Needed for declarative-friendly resources.
    * @param etag etag or {@code null} for none
    */
-  public PipelineRun setEtag(java.lang.String etag) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setEtag(java.lang.String etag) {
     this.etag = etag;
     return this;
   }
@@ -373,7 +367,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * finally tasks are being executed. +optional
    * @param finallyStartTime finallyStartTime or {@code null} for none
    */
-  public PipelineRun setFinallyStartTime(String finallyStartTime) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setFinallyStartTime(String finallyStartTime) {
     this.finallyStartTime = finallyStartTime;
     return this;
   }
@@ -390,7 +384,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. GCB default params.
    * @param gcbParams gcbParams or {@code null} for none
    */
-  public PipelineRun setGcbParams(java.util.Map<String, java.lang.String> gcbParams) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setGcbParams(java.util.Map<String, java.lang.String> gcbParams) {
     this.gcbParams = gcbParams;
     return this;
   }
@@ -409,7 +403,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * `projects/{project}/locations/{location}/pipelineRuns/{pipeline_run}`
    * @param name name or {@code null} for none
    */
-  public PipelineRun setName(java.lang.String name) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setName(java.lang.String name) {
     this.name = name;
     return this;
   }
@@ -426,7 +420,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Params is a list of parameter names and values.
    * @param params params or {@code null} for none
    */
-  public PipelineRun setParams(java.util.List<Param> params) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setParams(java.util.List<Param> params) {
     this.params = params;
     return this;
   }
@@ -443,7 +437,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * PipelineRef refer to a specific instance of a Pipeline.
    * @param pipelineRef pipelineRef or {@code null} for none
    */
-  public PipelineRun setPipelineRef(PipelineRef pipelineRef) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setPipelineRef(PipelineRef pipelineRef) {
     this.pipelineRef = pipelineRef;
     return this;
   }
@@ -460,7 +454,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Pipelinerun status the user can provide. Used for cancellation.
    * @param pipelineRunStatus pipelineRunStatus or {@code null} for none
    */
-  public PipelineRun setPipelineRunStatus(java.lang.String pipelineRunStatus) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setPipelineRunStatus(java.lang.String pipelineRunStatus) {
     this.pipelineRunStatus = pipelineRunStatus;
     return this;
   }
@@ -477,7 +471,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * PipelineSpec defines the desired state of Pipeline.
    * @param pipelineSpec pipelineSpec or {@code null} for none
    */
-  public PipelineRun setPipelineSpec(PipelineSpec pipelineSpec) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setPipelineSpec(PipelineSpec pipelineSpec) {
     this.pipelineSpec = pipelineSpec;
     return this;
   }
@@ -494,7 +488,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. Inline pipelineSpec yaml string, used by workflow run requests.
    * @param pipelineSpecYaml pipelineSpecYaml or {@code null} for none
    */
-  public PipelineRun setPipelineSpecYaml(java.lang.String pipelineSpecYaml) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setPipelineSpecYaml(java.lang.String pipelineSpecYaml) {
     this.pipelineSpecYaml = pipelineSpecYaml;
     return this;
   }
@@ -511,7 +505,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Optional. Provenance configuration.
    * @param provenance provenance or {@code null} for none
    */
-  public PipelineRun setProvenance(Provenance provenance) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setProvenance(Provenance provenance) {
     this.provenance = provenance;
     return this;
   }
@@ -530,7 +524,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * `projects/{project}/locations/{location}/results/{result_id}/records/{record_id}`
    * @param record record or {@code null} for none
    */
-  public PipelineRun setRecord(java.lang.String record) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setRecord(java.lang.String record) {
     this.record = record;
     return this;
   }
@@ -547,7 +541,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. The exact PipelineSpec used to instantiate the run.
    * @param resolvedPipelineSpec resolvedPipelineSpec or {@code null} for none
    */
-  public PipelineRun setResolvedPipelineSpec(PipelineSpec resolvedPipelineSpec) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setResolvedPipelineSpec(PipelineSpec resolvedPipelineSpec) {
     this.resolvedPipelineSpec = resolvedPipelineSpec;
     return this;
   }
@@ -564,7 +558,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Optional. Output only. List of results written out by the pipeline's containers
    * @param results results or {@code null} for none
    */
-  public PipelineRun setResults(java.util.List<PipelineRunResult> results) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setResults(java.util.List<PipelineRunResult> results) {
     this.results = results;
     return this;
   }
@@ -581,7 +575,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Optional. Security configuration.
    * @param security security or {@code null} for none
    */
-  public PipelineRun setSecurity(Security security) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setSecurity(Security security) {
     this.security = security;
     return this;
   }
@@ -598,7 +592,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Service account used in the Pipeline. Deprecated; please use security.service_account instead.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
-  public PipelineRun setServiceAccount(java.lang.String serviceAccount) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setServiceAccount(java.lang.String serviceAccount) {
     this.serviceAccount = serviceAccount;
     return this;
   }
@@ -615,7 +609,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. List of tasks that were skipped due to when expressions evaluating to false.
    * @param skippedTasks skippedTasks or {@code null} for none
    */
-  public PipelineRun setSkippedTasks(java.util.List<SkippedTask> skippedTasks) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setSkippedTasks(java.util.List<SkippedTask> skippedTasks) {
     this.skippedTasks = skippedTasks;
     return this;
   }
@@ -632,7 +626,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. Time the pipeline is actually started.
    * @param startTime startTime or {@code null} for none
    */
-  public PipelineRun setStartTime(String startTime) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setStartTime(String startTime) {
     this.startTime = startTime;
     return this;
   }
@@ -651,7 +645,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * tasks and finally with Timeouts.pipeline >= Timeouts.tasks + Timeouts.finally
    * @param timeouts timeouts or {@code null} for none
    */
-  public PipelineRun setTimeouts(TimeoutFields timeouts) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setTimeouts(TimeoutFields timeouts) {
     this.timeouts = timeouts;
     return this;
   }
@@ -668,7 +662,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. A unique identifier for the `PipelineRun`.
    * @param uid uid or {@code null} for none
    */
-  public PipelineRun setUid(java.lang.String uid) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setUid(java.lang.String uid) {
     this.uid = uid;
     return this;
   }
@@ -685,7 +679,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. Time at which the request to update the `PipelineRun` was received.
    * @param updateTime updateTime or {@code null} for none
    */
-  public PipelineRun setUpdateTime(String updateTime) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
     return this;
   }
@@ -702,7 +696,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Optional. Worker configuration.
    * @param worker worker or {@code null} for none
    */
-  public PipelineRun setWorker(Worker worker) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setWorker(Worker worker) {
     this.worker = worker;
     return this;
   }
@@ -719,7 +713,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. The WorkerPool used to run this PipelineRun.
    * @param workerPool workerPool or {@code null} for none
    */
-  public PipelineRun setWorkerPool(java.lang.String workerPool) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setWorkerPool(java.lang.String workerPool) {
     this.workerPool = workerPool;
     return this;
   }
@@ -736,7 +730,7 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Output only. The Workflow used to create this PipelineRun.
    * @param workflow workflow or {@code null} for none
    */
-  public PipelineRun setWorkflow(java.lang.String workflow) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setWorkflow(java.lang.String workflow) {
     this.workflow = workflow;
     return this;
   }
@@ -753,19 +747,19 @@ public final class PipelineRun extends com.google.api.client.json.GenericJson {
    * Workspaces is a list of WorkspaceBindings from volumes to workspaces.
    * @param workspaces workspaces or {@code null} for none
    */
-  public PipelineRun setWorkspaces(java.util.List<WorkspaceBinding> workspaces) {
+  public GoogleDevtoolsCloudbuildV2PipelineRun setWorkspaces(java.util.List<WorkspaceBinding> workspaces) {
     this.workspaces = workspaces;
     return this;
   }
 
   @Override
-  public PipelineRun set(String fieldName, Object value) {
-    return (PipelineRun) super.set(fieldName, value);
+  public GoogleDevtoolsCloudbuildV2PipelineRun set(String fieldName, Object value) {
+    return (GoogleDevtoolsCloudbuildV2PipelineRun) super.set(fieldName, value);
   }
 
   @Override
-  public PipelineRun clone() {
-    return (PipelineRun) super.clone();
+  public GoogleDevtoolsCloudbuildV2PipelineRun clone() {
+    return (GoogleDevtoolsCloudbuildV2PipelineRun) super.clone();
   }
 
 }

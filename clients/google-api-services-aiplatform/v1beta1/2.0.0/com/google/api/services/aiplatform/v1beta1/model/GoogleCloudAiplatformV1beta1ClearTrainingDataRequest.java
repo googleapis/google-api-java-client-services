@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Google Maps content.
+ * Request message for AgentAnomalyDetectionService.ClearTrainingData.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,16 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiVertexV1beta1GoogleMapsCallContent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1beta1ClearTrainingDataRequest extends com.google.api.client.json.GenericJson {
 
-  /**
-   * The arguments to pass to the Google Maps tool.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1GoogleMapsCallContentGoogleMapsCallArguments arguments;
-
-  /**
-   * The arguments to pass to the Google Maps tool.
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1GoogleMapsCallContentGoogleMapsCallArguments getArguments() {
-    return arguments;
-  }
-
-  /**
-   * The arguments to pass to the Google Maps tool.
-   * @param arguments arguments or {@code null} for none
-   */
-  public GenaiVertexV1beta1GoogleMapsCallContent setArguments(GenaiVertexV1beta1GoogleMapsCallContentGoogleMapsCallArguments arguments) {
-    this.arguments = arguments;
-    return this;
+  @Override
+  public GoogleCloudAiplatformV1beta1ClearTrainingDataRequest set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1beta1ClearTrainingDataRequest) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiVertexV1beta1GoogleMapsCallContent set(String fieldName, Object value) {
-    return (GenaiVertexV1beta1GoogleMapsCallContent) super.set(fieldName, value);
-  }
-
-  @Override
-  public GenaiVertexV1beta1GoogleMapsCallContent clone() {
-    return (GenaiVertexV1beta1GoogleMapsCallContent) super.clone();
+  public GoogleCloudAiplatformV1beta1ClearTrainingDataRequest clone() {
+    return (GoogleCloudAiplatformV1beta1ClearTrainingDataRequest) super.clone();
   }
 
 }

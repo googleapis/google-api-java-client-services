@@ -39,6 +39,15 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgent
   private java.lang.String agentEngine;
 
   /**
+   * Optional. Config for scraping a Discovery Engine Assistant. The scraping service runs the
+   * assistant via the Discovery Engine AssistantService and returns the resulting trajectory for
+   * evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DiscoveryEngineAssistantConfig discoveryEngineAssistantConfig;
+
+  /**
    * Optional. Config for scraping a Gemini Agent via the Interactions API. The scraping service
    * creates interactions against the agent and returns the resulting interaction traces for
    * evaluation.
@@ -80,6 +89,27 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgent
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig setAgentEngine(java.lang.String agentEngine) {
     this.agentEngine = agentEngine;
+    return this;
+  }
+
+  /**
+   * Optional. Config for scraping a Discovery Engine Assistant. The scraping service runs the
+   * assistant via the Discovery Engine AssistantService and returns the resulting trajectory for
+   * evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DiscoveryEngineAssistantConfig getDiscoveryEngineAssistantConfig() {
+    return discoveryEngineAssistantConfig;
+  }
+
+  /**
+   * Optional. Config for scraping a Discovery Engine Assistant. The scraping service runs the
+   * assistant via the Discovery Engine AssistantService and returns the resulting trajectory for
+   * evaluation.
+   * @param discoveryEngineAssistantConfig discoveryEngineAssistantConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig setDiscoveryEngineAssistantConfig(GoogleCloudAiplatformV1beta1DiscoveryEngineAssistantConfig discoveryEngineAssistantConfig) {
+    this.discoveryEngineAssistantConfig = discoveryEngineAssistantConfig;
     return this;
   }
 

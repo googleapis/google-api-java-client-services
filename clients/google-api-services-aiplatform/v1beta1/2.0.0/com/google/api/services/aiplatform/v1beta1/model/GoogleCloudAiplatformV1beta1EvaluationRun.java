@@ -82,6 +82,16 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRun extends com.google.
   private GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig evaluationConfig;
 
   /**
+   * Optional. The resource name of the evaluation experiment for the evaluation run. Setting the
+   * evaluation experiment will add the run to the experiment. Multiple runs can be added to the
+   * same experiment. Format:
+   * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationExperiment;
+
+  /**
    * Output only. The results of the evaluation run. Only populated when the evaluation run's state
    * is SUCCEEDED.
    * The value may be {@code null}.
@@ -256,6 +266,29 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRun extends com.google.
    */
   public GoogleCloudAiplatformV1beta1EvaluationRun setEvaluationConfig(GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfig evaluationConfig) {
     this.evaluationConfig = evaluationConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The resource name of the evaluation experiment for the evaluation run. Setting the
+   * evaluation experiment will add the run to the experiment. Multiple runs can be added to the
+   * same experiment. Format:
+   * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationExperiment() {
+    return evaluationExperiment;
+  }
+
+  /**
+   * Optional. The resource name of the evaluation experiment for the evaluation run. Setting the
+   * evaluation experiment will add the run to the experiment. Multiple runs can be added to the
+   * same experiment. Format:
+   * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+   * @param evaluationExperiment evaluationExperiment or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRun setEvaluationExperiment(java.lang.String evaluationExperiment) {
+    this.evaluationExperiment = evaluationExperiment;
     return this;
   }
 

@@ -38,8 +38,8 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   private java.util.Map<String, java.lang.String> headers;
 
   /**
-   * Optional. The tool's GCP resource name, used to resolve the tool. Applicable when `type` is
-   * `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
+   * Optional. The tool's Google Cloud resource name, used to resolve the tool. Applicable when
+   * `type` is `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
    * `projects/{project}/locations/{location}/.../mcpServers/{id}` or
    * `projects/{project}/locations/{location}/.../endpoints/{id}`.
    * The value may be {@code null}.
@@ -86,8 +86,8 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Optional. The tool's GCP resource name, used to resolve the tool. Applicable when `type` is
-   * `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
+   * Optional. The tool's Google Cloud resource name, used to resolve the tool. Applicable when
+   * `type` is `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
    * `projects/{project}/locations/{location}/.../mcpServers/{id}` or
    * `projects/{project}/locations/{location}/.../endpoints/{id}`.
    * @return value or {@code null} for none
@@ -97,8 +97,8 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Optional. The tool's GCP resource name, used to resolve the tool. Applicable when `type` is
-   * `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
+   * Optional. The tool's Google Cloud resource name, used to resolve the tool. Applicable when
+   * `type` is `mcp_server` or `endpoint` (a tool registered in Agent Registry), for example
    * `projects/{project}/locations/{location}/.../mcpServers/{id}` or
    * `projects/{project}/locations/{location}/.../endpoints/{id}`.
    * @param name name or {@code null} for none

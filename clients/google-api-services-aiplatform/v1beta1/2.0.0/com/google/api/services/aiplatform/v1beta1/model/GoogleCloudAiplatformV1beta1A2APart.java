@@ -34,7 +34,7 @@ public final class GoogleCloudAiplatformV1beta1A2APart extends com.google.api.cl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Object data;
+  private java.util.Map<String, java.lang.Object> data;
 
   /**
    * Optional. The name of the file, when the part represents a file.
@@ -83,7 +83,7 @@ public final class GoogleCloudAiplatformV1beta1A2APart extends com.google.api.cl
    * Optional. Arbitrary data content.
    * @return value or {@code null} for none
    */
-  public java.lang.Object getData() {
+  public java.util.Map<String, java.lang.Object> getData() {
     return data;
   }
 
@@ -91,7 +91,7 @@ public final class GoogleCloudAiplatformV1beta1A2APart extends com.google.api.cl
    * Optional. Arbitrary data content.
    * @param data data or {@code null} for none
    */
-  public GoogleCloudAiplatformV1beta1A2APart setData(java.lang.Object data) {
+  public GoogleCloudAiplatformV1beta1A2APart setData(java.util.Map<String, java.lang.Object> data) {
     this.data = data;
     return this;
   }

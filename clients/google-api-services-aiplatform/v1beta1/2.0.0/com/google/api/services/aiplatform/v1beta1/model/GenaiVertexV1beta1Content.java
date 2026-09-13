@@ -57,24 +57,6 @@ public final class GenaiVertexV1beta1Content extends com.google.api.client.json.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ThoughtContent thought;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ToolCallContent toolCall;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ToolResultContent toolResult;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private GenaiVertexV1beta1VideoContent video;
 
   /**
@@ -134,51 +116,6 @@ public final class GenaiVertexV1beta1Content extends com.google.api.client.json.
    */
   public GenaiVertexV1beta1Content setText(GenaiVertexV1beta1TextContent text) {
     this.text = text;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ThoughtContent getThought() {
-    return thought;
-  }
-
-  /**
-   * @param thought thought or {@code null} for none
-   */
-  public GenaiVertexV1beta1Content setThought(GenaiVertexV1beta1ThoughtContent thought) {
-    this.thought = thought;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ToolCallContent getToolCall() {
-    return toolCall;
-  }
-
-  /**
-   * @param toolCall toolCall or {@code null} for none
-   */
-  public GenaiVertexV1beta1Content setToolCall(GenaiVertexV1beta1ToolCallContent toolCall) {
-    this.toolCall = toolCall;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ToolResultContent getToolResult() {
-    return toolResult;
-  }
-
-  /**
-   * @param toolResult toolResult or {@code null} for none
-   */
-  public GenaiVertexV1beta1Content setToolResult(GenaiVertexV1beta1ToolResultContent toolResult) {
-    this.toolResult = toolResult;
     return this;
   }
 

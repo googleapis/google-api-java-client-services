@@ -76235,6 +76235,853 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
+       * An accessor for creating requests from the EvaluationExperiments collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+       *   {@code Aiplatform.EvaluationExperiments.List request = aiplatform.evaluationExperiments().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public EvaluationExperiments evaluationExperiments() {
+        return new EvaluationExperiments();
+      }
+
+      /**
+       * The "evaluationExperiments" collection of methods.
+       */
+      public class EvaluationExperiments {
+
+        /**
+         * Creates an Evaluation Experiment.
+         *
+         * Create a request for the method "evaluationExperiments.create".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location to create the Evaluation Experiment in. Format:
+         *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/evaluationExperiments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates an Evaluation Experiment.
+           *
+           * Create a request for the method "evaluationExperiments.create".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location to create the Evaluation Experiment in. Format:
+         *        `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location to create the Evaluation Experiment in.
+           * Format: `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location to create the Evaluation Experiment in. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location to create the Evaluation Experiment in.
+           * Format: `projects/{project}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an Evaluation Experiment.
+         *
+         * Create a request for the method "evaluationExperiments.delete".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the EvaluationExperiment resource to be deleted. Format:
+         *        `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+
+          /**
+           * Deletes an Evaluation Experiment.
+           *
+           * Create a request for the method "evaluationExperiments.delete".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the EvaluationExperiment resource to be deleted. Format:
+         *        `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the EvaluationExperiment resource to be deleted. Format:
+           * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the EvaluationExperiment resource to be deleted. Format:
+         `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the EvaluationExperiment resource to be deleted. Format:
+           * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets an Evaluation Experiment.
+         *
+         * Create a request for the method "evaluationExperiments.get".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the EvaluationExperiment resource. Format:
+         *        `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+
+          /**
+           * Gets an Evaluation Experiment.
+           *
+           * Create a request for the method "evaluationExperiments.get".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the EvaluationExperiment resource. Format:
+         *        `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the EvaluationExperiment resource. Format:
+           * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the EvaluationExperiment resource. Format:
+         `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the EvaluationExperiment resource. Format:
+           * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists Evaluation Experiments.
+         *
+         * Create a request for the method "evaluationExperiments.list".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location from which to list the Evaluation Experiments. Format:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListEvaluationExperimentsResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/evaluationExperiments";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists Evaluation Experiments.
+           *
+           * Create a request for the method "evaluationExperiments.list".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location from which to list the Evaluation Experiments. Format:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListEvaluationExperimentsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location from which to list the Evaluation
+           * Experiments. Format: `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location from which to list the Evaluation Experiments. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location from which to list the Evaluation
+           * Experiments. Format: `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter expression that matches a subset of the EvaluationExperiments to show.
+           * For field names both snake_case and camelCase are supported. For more information about
+           * filter syntax, see [AIP-160](https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter expression that matches a subset of the EvaluationExperiments to show. For field
+         names both snake_case and camelCase are supported. For more information about filter syntax, see
+         [AIP-160](https://google.aip.dev/160).
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. Filter expression that matches a subset of the EvaluationExperiments to show.
+           * For field names both snake_case and camelCase are supported. For more information about
+           * filter syntax, see [AIP-160](https://google.aip.dev/160).
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order by
+           * default. Use `desc` after a field name for descending.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. A comma-separated list of fields to order by, sorted in ascending order by default. Use
+         `desc` after a field name for descending.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. A comma-separated list of fields to order by, sorted in ascending order by
+           * default. Use `desc` after a field name for descending.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Optional. The maximum number of Evaluation Experiments to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of Evaluation Experiments to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of Evaluation Experiments to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListEvaluationExperiments` call.
+           * Provide this to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListEvaluationExperiments` call. Provide this to
+         retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListEvaluationExperiments` call.
+           * Provide this to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an Evaluation Experiment.
+         *
+         * Create a request for the method "evaluationExperiments.patch".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the EvaluationExperiment. This is a unique identifier. Format:
+         *        `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+
+          /**
+           * Updates an Evaluation Experiment.
+           *
+           * Create a request for the method "evaluationExperiments.patch".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the EvaluationExperiment. This is a unique identifier. Format:
+         *        `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment content) {
+            super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1EvaluationExperiment.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the EvaluationExperiment. This is a unique identifier.
+           * Format:
+           * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the EvaluationExperiment. This is a unique identifier. Format:
+         `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the EvaluationExperiment. This is a unique identifier.
+           * Format:
+           * `projects/{project}/locations/{location}/evaluationExperiments/{evaluation_experiment}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/evaluationExperiments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The update mask applies to the resource. For the `FieldMask` definition, see
+           * google.protobuf.FieldMask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The update mask applies to the resource. For the `FieldMask` definition, see
+         google.protobuf.FieldMask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The update mask applies to the resource. For the `FieldMask` definition, see
+           * google.protobuf.FieldMask.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the EvaluationItems collection.
        *
        * <p>The typical use is:</p>
@@ -138740,6 +139587,165 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
        */
       public class MonitoredAgents {
 
+        /**
+         * Clears (purges) the trained model artifacts derived from a MonitoredAgent's data. The purged
+         * model is rebuilt by the next scheduled training run. To clear every MonitoredAgent in a
+         * location's scope, use the `-` wildcard agent segment for the name field:
+         * `projects/{project}/locations/{location}/monitoredAgents/-` This is the on-demand data-deletion
+         * path for customers who have deleted the underlying logs / observability data a model was trained
+         * on. It deletes only the derived model artifacts in the tenant project (it does NOT delete the
+         * scope, tenant project, or monitoring). To stop monitoring an agent entirely, disable it via
+         * DisableMonitoredAgent. See go/aad-clear-training-data.
+         *
+         * Create a request for the method "monitoredAgents.clearTrainingData".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link ClearTrainingData#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The MonitoredAgent whose trained model artifacts to purge. Use the `-` wildcard agent
+         *        segment to purge every MonitoredAgent in the scope. Format:
+         *        `projects/{project}/locations/{location}/monitoredAgents/{monitored_agent}`
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClearTrainingDataRequest}
+         * @return the request
+         */
+        public ClearTrainingData clearTrainingData(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClearTrainingDataRequest content) throws java.io.IOException {
+          ClearTrainingData result = new ClearTrainingData(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ClearTrainingData extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:clearTrainingData";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/monitoredAgents/[^/]+$");
+
+          /**
+           * Clears (purges) the trained model artifacts derived from a MonitoredAgent's data. The purged
+           * model is rebuilt by the next scheduled training run. To clear every MonitoredAgent in a
+           * location's scope, use the `-` wildcard agent segment for the name field:
+           * `projects/{project}/locations/{location}/monitoredAgents/-` This is the on-demand data-deletion
+           * path for customers who have deleted the underlying logs / observability data a model was
+           * trained on. It deletes only the derived model artifacts in the tenant project (it does NOT
+           * delete the scope, tenant project, or monitoring). To stop monitoring an agent entirely, disable
+           * it via DisableMonitoredAgent. See go/aad-clear-training-data.
+           *
+           * Create a request for the method "monitoredAgents.clearTrainingData".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link ClearTrainingData#execute()} method to invoke the remote
+           * operation. <p> {@link ClearTrainingData#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The MonitoredAgent whose trained model artifacts to purge. Use the `-` wildcard agent
+         *        segment to purge every MonitoredAgent in the scope. Format:
+         *        `projects/{project}/locations/{location}/monitoredAgents/{monitored_agent}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClearTrainingDataRequest}
+           * @since 1.13
+           */
+          protected ClearTrainingData(java.lang.String name, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClearTrainingDataRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/monitoredAgents/[^/]+$");
+            }
+          }
+
+          @Override
+          public ClearTrainingData set$Xgafv(java.lang.String $Xgafv) {
+            return (ClearTrainingData) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ClearTrainingData setAccessToken(java.lang.String accessToken) {
+            return (ClearTrainingData) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ClearTrainingData setAlt(java.lang.String alt) {
+            return (ClearTrainingData) super.setAlt(alt);
+          }
+
+          @Override
+          public ClearTrainingData setCallback(java.lang.String callback) {
+            return (ClearTrainingData) super.setCallback(callback);
+          }
+
+          @Override
+          public ClearTrainingData setFields(java.lang.String fields) {
+            return (ClearTrainingData) super.setFields(fields);
+          }
+
+          @Override
+          public ClearTrainingData setKey(java.lang.String key) {
+            return (ClearTrainingData) super.setKey(key);
+          }
+
+          @Override
+          public ClearTrainingData setOauthToken(java.lang.String oauthToken) {
+            return (ClearTrainingData) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ClearTrainingData setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ClearTrainingData) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ClearTrainingData setQuotaUser(java.lang.String quotaUser) {
+            return (ClearTrainingData) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ClearTrainingData setUploadType(java.lang.String uploadType) {
+            return (ClearTrainingData) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ClearTrainingData setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ClearTrainingData) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The MonitoredAgent whose trained model artifacts to purge. Use the `-`
+           * wildcard agent segment to purge every MonitoredAgent in the scope. Format:
+           * `projects/{project}/locations/{location}/monitoredAgents/{monitored_agent}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The MonitoredAgent whose trained model artifacts to purge. Use the `-` wildcard agent
+         segment to purge every MonitoredAgent in the scope. Format:
+         `projects/{project}/locations/{location}/monitoredAgents/{monitored_agent}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The MonitoredAgent whose trained model artifacts to purge. Use the `-`
+           * wildcard agent segment to purge every MonitoredAgent in the scope. Format:
+           * `projects/{project}/locations/{location}/monitoredAgents/{monitored_agent}`
+           */
+          public ClearTrainingData setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/monitoredAgents/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ClearTrainingData set(String parameterName, Object value) {
+            return (ClearTrainingData) super.set(parameterName, value);
+          }
+        }
         /**
          * Disables a specific MonitoredAgent.
          *
@@ -205374,14 +206380,18 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Optional. The standard list filter. More detail in
-             * [AIP-160](https://google.aip.dev/160). Supported fields: * `context_id` *
-             * `status.state` Example: `context_id="abc"`, `status.state="WORKING"`.
+             * [AIP-160](https://google.aip.dev/160). Supported fields: * `task_id` * `context_id` *
+             * `status.state` * `app_id` * `user_id` * `create_time` range (i.e.
+             * `create_time>="2025-01-31T11:30:00-04:00"` where the timestamp is in RFC 3339 format)
+             * Example: `context_id="abc"`, `status.state="WORKING"`.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
             /** Optional. The standard list filter. More detail in [AIP-160](https://google.aip.dev/160). Supported
-           fields: * `context_id` * `status.state` Example: `context_id="abc"`, `status.state="WORKING"`.
+           fields: * `task_id` * `context_id` * `status.state` * `app_id` * `user_id` * `create_time` range
+           (i.e. `create_time>="2025-01-31T11:30:00-04:00"` where the timestamp is in RFC 3339 format)
+           Example: `context_id="abc"`, `status.state="WORKING"`.
              */
             public java.lang.String getFilter() {
               return filter;
@@ -205389,8 +206399,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             /**
              * Optional. The standard list filter. More detail in
-             * [AIP-160](https://google.aip.dev/160). Supported fields: * `context_id` *
-             * `status.state` Example: `context_id="abc"`, `status.state="WORKING"`.
+             * [AIP-160](https://google.aip.dev/160). Supported fields: * `task_id` * `context_id` *
+             * `status.state` * `app_id` * `user_id` * `create_time` range (i.e.
+             * `create_time>="2025-01-31T11:30:00-04:00"` where the timestamp is in RFC 3339 format)
+             * Example: `context_id="abc"`, `status.state="WORKING"`.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -205400,17 +206412,17 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Optional. A comma-separated list of fields to order by, sorted in ascending order.
              * Use "desc" after a field name for descending. If this field is omitted, the default
-             * ordering is `create_time` descending. More detail in
-             * [AIP-132](https://google.aip.dev/132). Supported fields: * `create_time` *
-             * `update_time` Example: `create_time desc`.
+             * ordering is `task_id` descending. More detail in
+             * [AIP-132](https://google.aip.dev/132). Supported field: * `task_id` * `create_time`
+             * Example: `create_time desc`, `task_id asc`.
              */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
             /** Optional. A comma-separated list of fields to order by, sorted in ascending order. Use "desc" after
-           a field name for descending. If this field is omitted, the default ordering is `create_time`
-           descending. More detail in [AIP-132](https://google.aip.dev/132). Supported fields: * `create_time`
-           * `update_time` Example: `create_time desc`.
+           a field name for descending. If this field is omitted, the default ordering is `task_id`
+           descending. More detail in [AIP-132](https://google.aip.dev/132). Supported field: * `task_id` *
+           `create_time` Example: `create_time desc`, `task_id asc`.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
@@ -205419,9 +206431,9 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             /**
              * Optional. A comma-separated list of fields to order by, sorted in ascending order.
              * Use "desc" after a field name for descending. If this field is omitted, the default
-             * ordering is `create_time` descending. More detail in
-             * [AIP-132](https://google.aip.dev/132). Supported fields: * `create_time` *
-             * `update_time` Example: `create_time desc`.
+             * ordering is `task_id` descending. More detail in
+             * [AIP-132](https://google.aip.dev/132). Supported field: * `task_id` * `create_time`
+             * Example: `create_time desc`, `task_id asc`.
              */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
@@ -205650,14 +206662,15 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Optional. The standard list filter. Supported fields: * `create_time` range (i.e.
-               * `create_time>="2025-01-31T11:30:00-04:00"` where the timestamp is in RFC 3339
-               * format) More detail in [AIP-160](https://google.aip.dev/160).
+               * Optional. The standard list filter. Supported fields: * `generation` *
+               * `create_time` range (i.e. `create_time>="2025-01-31T11:30:00-04:00"` where the
+               * timestamp is in RFC 3339 format) More detail in
+               * [AIP-160](https://google.aip.dev/160).
                */
               @com.google.api.client.util.Key
               private java.lang.String filter;
 
-              /** Optional. The standard list filter. Supported fields: * `create_time` range (i.e.
+              /** Optional. The standard list filter. Supported fields: * `generation` * `create_time` range (i.e.
              `create_time>="2025-01-31T11:30:00-04:00"` where the timestamp is in RFC 3339 format) More detail
              in [AIP-160](https://google.aip.dev/160).
                */
@@ -205666,9 +206679,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Optional. The standard list filter. Supported fields: * `create_time` range (i.e.
-               * `create_time>="2025-01-31T11:30:00-04:00"` where the timestamp is in RFC 3339
-               * format) More detail in [AIP-160](https://google.aip.dev/160).
+               * Optional. The standard list filter. Supported fields: * `generation` *
+               * `create_time` range (i.e. `create_time>="2025-01-31T11:30:00-04:00"` where the
+               * timestamp is in RFC 3339 format) More detail in
+               * [AIP-160](https://google.aip.dev/160).
                */
               public List setFilter(java.lang.String filter) {
                 this.filter = filter;
@@ -205676,30 +206690,36 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               }
 
               /**
-               * Optional. A comma-separated list of fields to order the results by. If this field
-               * is omitted, the results will be ordered by `generation` in ascending order. For
-               * each field, the default sort order is ascending. To specify descending order for a
-               * field, append a ` desc` suffix. For example: `create_time desc`. Supported fields:
-               * * `create_time` * `generation`
+               * Optional. Specifies the order of the returned events. If omitted, results default
+               * to `generation` in ascending order. To specify descending order, append a ` desc`
+               * suffix. For example: `generation desc`. Supported fields: * `generation` Note:
+               * Ordering directly by event timestamp (e.g., `create_time`) is not supported. Users
+               * requiring time-based traversal should use `generation` ordering and scan the
+               * results until the desired time threshold is reached (e.g., for chronological order,
+               * use default ascending and stop when `create_time` exceeds your target).
                */
               @com.google.api.client.util.Key
               private java.lang.String orderBy;
 
-              /** Optional. A comma-separated list of fields to order the results by. If this field is omitted, the
-             results will be ordered by `generation` in ascending order. For each field, the default sort order
-             is ascending. To specify descending order for a field, append a ` desc` suffix. For example:
-             `create_time desc`. Supported fields: * `create_time` * `generation`
+              /** Optional. Specifies the order of the returned events. If omitted, results default to `generation`
+             in ascending order. To specify descending order, append a ` desc` suffix. For example: `generation
+             desc`. Supported fields: * `generation` Note: Ordering directly by event timestamp (e.g.,
+             `create_time`) is not supported. Users requiring time-based traversal should use `generation`
+             ordering and scan the results until the desired time threshold is reached (e.g., for chronological
+             order, use default ascending and stop when `create_time` exceeds your target).
                */
               public java.lang.String getOrderBy() {
                 return orderBy;
               }
 
               /**
-               * Optional. A comma-separated list of fields to order the results by. If this field
-               * is omitted, the results will be ordered by `generation` in ascending order. For
-               * each field, the default sort order is ascending. To specify descending order for a
-               * field, append a ` desc` suffix. For example: `create_time desc`. Supported fields:
-               * * `create_time` * `generation`
+               * Optional. Specifies the order of the returned events. If omitted, results default
+               * to `generation` in ascending order. To specify descending order, append a ` desc`
+               * suffix. For example: `generation desc`. Supported fields: * `generation` Note:
+               * Ordering directly by event timestamp (e.g., `create_time`) is not supported. Users
+               * requiring time-based traversal should use `generation` ordering and scan the
+               * results until the desired time threshold is reached (e.g., for chronological order,
+               * use default ascending and stop when `create_time` exceeds your target).
                */
               public List setOrderBy(java.lang.String orderBy) {
                 this.orderBy = orderBy;

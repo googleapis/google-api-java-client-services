@@ -44,13 +44,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private GenaiVertexV1beta1Content content;
 
   /**
-   * The inputs for the interaction.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1ContentList contentList;
-
-  /**
    * Required. Output only. The time at which the response was created in ISO 8601 format (YYYY-MM-
    * DDThh:mm:ssZ).
    * The value may be {@code null}.
@@ -122,19 +115,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private GenaiVertexV1beta1ModelInteraction modelInteraction;
 
   /**
-   * Output only. Responses from the model.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<GenaiVertexV1beta1Content> outputs;
-
-  static {
-    // hack to force ProGuard to consider GenaiVertexV1beta1Content used, since otherwise it would be stripped out
-    // see https://github.com/google/google-api-java-client/issues/543
-    com.google.api.client.util.Data.nullOf(GenaiVertexV1beta1Content.class);
-  }
-
-  /**
    * The ID of the previous interaction, if any.
    * The value may be {@code null}.
    */
@@ -146,14 +126,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1EnvironmentConfig remoteEnvironment;
-
-  /**
-   * Enforces that the generated response is a JSON object that complies with the JSON schema
-   * specified in this field.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Value responseFormat;
 
   /**
    * The value may be {@code null}.
@@ -180,13 +152,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> responseModalities;
-
-  /**
-   * Output only. The role of the interaction.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String role;
 
   /**
    * Safety settings for the interaction.
@@ -290,23 +255,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setContent(GenaiVertexV1beta1Content content) {
     this.content = content;
-    return this;
-  }
-
-  /**
-   * The inputs for the interaction.
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1ContentList getContentList() {
-    return contentList;
-  }
-
-  /**
-   * The inputs for the interaction.
-   * @param contentList contentList or {@code null} for none
-   */
-  public GenaiVertexV1beta1Interaction setContentList(GenaiVertexV1beta1ContentList contentList) {
-    this.contentList = contentList;
     return this;
   }
 
@@ -465,23 +413,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Output only. Responses from the model.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<GenaiVertexV1beta1Content> getOutputs() {
-    return outputs;
-  }
-
-  /**
-   * Output only. Responses from the model.
-   * @param outputs outputs or {@code null} for none
-   */
-  public GenaiVertexV1beta1Interaction setOutputs(java.util.List<GenaiVertexV1beta1Content> outputs) {
-    this.outputs = outputs;
-    return this;
-  }
-
-  /**
    * The ID of the previous interaction, if any.
    * @return value or {@code null} for none
    */
@@ -510,25 +441,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setRemoteEnvironment(GenaiVertexV1beta1EnvironmentConfig remoteEnvironment) {
     this.remoteEnvironment = remoteEnvironment;
-    return this;
-  }
-
-  /**
-   * Enforces that the generated response is a JSON object that complies with the JSON schema
-   * specified in this field.
-   * @return value or {@code null} for none
-   */
-  public GenaiVertexV1beta1Value getResponseFormat() {
-    return responseFormat;
-  }
-
-  /**
-   * Enforces that the generated response is a JSON object that complies with the JSON schema
-   * specified in this field.
-   * @param responseFormat responseFormat or {@code null} for none
-   */
-  public GenaiVertexV1beta1Interaction setResponseFormat(GenaiVertexV1beta1Value responseFormat) {
-    this.responseFormat = responseFormat;
     return this;
   }
 
@@ -593,23 +505,6 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setResponseModalities(java.util.List<java.lang.String> responseModalities) {
     this.responseModalities = responseModalities;
-    return this;
-  }
-
-  /**
-   * Output only. The role of the interaction.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getRole() {
-    return role;
-  }
-
-  /**
-   * Output only. The role of the interaction.
-   * @param role role or {@code null} for none
-   */
-  public GenaiVertexV1beta1Interaction setRole(java.lang.String role) {
-    this.role = role;
     return this;
   }
 

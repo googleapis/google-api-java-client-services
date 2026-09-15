@@ -62,6 +62,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * [Output Only] Extended details about the operation's execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperationDetails details;
+
+  /**
    * [Output Only] The time that this operation was completed. This value is in RFC3339 text format.
    * The value may be {@code null}.
    */
@@ -77,10 +84,20 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private Error error;
 
   /**
+   * Output only. [Output Only] Metadata containing the allocated priority from the
+   * networkFirewallPolicies.addRule and regionNetworkFirewallPolicies.addRule methods if not
+   * explicitly provided by the user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata;
+
+  /**
+   * Output only. Metadata for GetHealth operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GetHealthOperationMetadata getHealthOperationMetadata;
 
   /**
    * The value may be {@code null}.
@@ -124,6 +141,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata;
+
+  /**
+   * Output only. [Output Only] Operation metadata for instances.troubleshoot.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstancesTroubleshootOperationMetadata instancesTroubleshootOperationMetadata;
 
   /**
    * Output only. [Output Only] Type of the resource. Always `compute#operation` for Operation
@@ -328,6 +352,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * [Output Only] Extended details about the operation's execution.
+   * @return value or {@code null} for none
+   */
+  public OperationDetails getDetails() {
+    return details;
+  }
+
+  /**
+   * [Output Only] Extended details about the operation's execution.
+   * @param details details or {@code null} for none
+   */
+  public Operation setDetails(OperationDetails details) {
+    this.details = details;
+    return this;
+  }
+
+  /**
    * [Output Only] The time that this operation was completed. This value is in RFC3339 text format.
    * @return value or {@code null} for none
    */
@@ -364,6 +405,9 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. [Output Only] Metadata containing the allocated priority from the
+   * networkFirewallPolicies.addRule and regionNetworkFirewallPolicies.addRule methods if not
+   * explicitly provided by the user.
    * @return value or {@code null} for none
    */
   public FirewallPolicyRuleOperationMetadata getFirewallPolicyRuleOperationMetadata() {
@@ -371,10 +415,30 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. [Output Only] Metadata containing the allocated priority from the
+   * networkFirewallPolicies.addRule and regionNetworkFirewallPolicies.addRule methods if not
+   * explicitly provided by the user.
    * @param firewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata or {@code null} for none
    */
   public Operation setFirewallPolicyRuleOperationMetadata(FirewallPolicyRuleOperationMetadata firewallPolicyRuleOperationMetadata) {
     this.firewallPolicyRuleOperationMetadata = firewallPolicyRuleOperationMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. Metadata for GetHealth operations.
+   * @return value or {@code null} for none
+   */
+  public GetHealthOperationMetadata getGetHealthOperationMetadata() {
+    return getHealthOperationMetadata;
+  }
+
+  /**
+   * Output only. Metadata for GetHealth operations.
+   * @param getHealthOperationMetadata getHealthOperationMetadata or {@code null} for none
+   */
+  public Operation setGetHealthOperationMetadata(GetHealthOperationMetadata getHealthOperationMetadata) {
+    this.getHealthOperationMetadata = getHealthOperationMetadata;
     return this;
   }
 
@@ -479,6 +543,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setInstancesBulkInsertOperationMetadata(InstancesBulkInsertOperationMetadata instancesBulkInsertOperationMetadata) {
     this.instancesBulkInsertOperationMetadata = instancesBulkInsertOperationMetadata;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Operation metadata for instances.troubleshoot.
+   * @return value or {@code null} for none
+   */
+  public InstancesTroubleshootOperationMetadata getInstancesTroubleshootOperationMetadata() {
+    return instancesTroubleshootOperationMetadata;
+  }
+
+  /**
+   * Output only. [Output Only] Operation metadata for instances.troubleshoot.
+   * @param instancesTroubleshootOperationMetadata instancesTroubleshootOperationMetadata or {@code null} for none
+   */
+  public Operation setInstancesTroubleshootOperationMetadata(InstancesTroubleshootOperationMetadata instancesTroubleshootOperationMetadata) {
+    this.instancesTroubleshootOperationMetadata = instancesTroubleshootOperationMetadata;
     return this;
   }
 
@@ -875,7 +956,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
     }
 
     /**
-     * Model definition for OperationErrorErrors.
+     * Represents a single error encountered during the processing of an operation.
      */
     public static final class Errors extends com.google.api.client.json.GenericJson {
 
@@ -897,6 +978,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
       private java.lang.String code;
 
       /**
+       * Output only. [Output Only] Advanced debugging information with stack traces and other
+       * diagnostic details for the error.
        * The value may be {@code null}.
        */
       @com.google.api.client.util.Key
@@ -973,6 +1056,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
       }
 
       /**
+       * Output only. [Output Only] Advanced debugging information with stack traces and other
+       * diagnostic details for the error.
        * @return value or {@code null} for none
        */
       public DebugInfo getDebugInfo() {
@@ -980,6 +1065,8 @@ public final class Operation extends com.google.api.client.json.GenericJson {
       }
 
       /**
+       * Output only. [Output Only] Advanced debugging information with stack traces and other
+       * diagnostic details for the error.
        * @param debugInfo debugInfo or {@code null} for none
        */
       public Errors setDebugInfo(DebugInfo debugInfo) {
@@ -1055,35 +1142,41 @@ public final class Operation extends com.google.api.client.json.GenericJson {
       }
 
       /**
-       * Model definition for OperationErrorErrorsErrorDetails.
+       * Container for structured error details providing additional context specific to the encountered
+       * error code.
        */
       public static final class ErrorDetails extends com.google.api.client.json.GenericJson {
 
         /**
+         * Error information containing structured domain, reason, and metadata.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private ErrorInfo errorInfo;
 
         /**
+         * Links and information to help the user resolve the error.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private Help help;
 
         /**
+         * A localized human-readable error message intended for end users.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private LocalizedMessage localizedMessage;
 
         /**
+         * Details about quota limits and metrics when a quota is exceeded.
          * The value may be {@code null}.
          */
         @com.google.api.client.util.Key
         private QuotaExceededInfo quotaInfo;
 
         /**
+         * Error information containing structured domain, reason, and metadata.
          * @return value or {@code null} for none
          */
         public ErrorInfo getErrorInfo() {
@@ -1091,6 +1184,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Error information containing structured domain, reason, and metadata.
          * @param errorInfo errorInfo or {@code null} for none
          */
         public ErrorDetails setErrorInfo(ErrorInfo errorInfo) {
@@ -1099,6 +1193,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Links and information to help the user resolve the error.
          * @return value or {@code null} for none
          */
         public Help getHelp() {
@@ -1106,6 +1201,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Links and information to help the user resolve the error.
          * @param help help or {@code null} for none
          */
         public ErrorDetails setHelp(Help help) {
@@ -1114,6 +1210,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * A localized human-readable error message intended for end users.
          * @return value or {@code null} for none
          */
         public LocalizedMessage getLocalizedMessage() {
@@ -1121,6 +1218,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * A localized human-readable error message intended for end users.
          * @param localizedMessage localizedMessage or {@code null} for none
          */
         public ErrorDetails setLocalizedMessage(LocalizedMessage localizedMessage) {
@@ -1129,6 +1227,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Details about quota limits and metrics when a quota is exceeded.
          * @return value or {@code null} for none
          */
         public QuotaExceededInfo getQuotaInfo() {
@@ -1136,6 +1235,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
         }
 
         /**
+         * Details about quota limits and metrics when a quota is exceeded.
          * @param quotaInfo quotaInfo or {@code null} for none
          */
         public ErrorDetails setQuotaInfo(QuotaExceededInfo quotaInfo) {
@@ -1172,7 +1272,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
     /**
      * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * "scope", "value": "zones/us-east1-d" }]
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
@@ -1212,7 +1312,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
     /**
      * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * "scope", "value": "zones/us-east1-d" }]
      * @return value or {@code null} for none
      */
     public java.util.List<Data> getData() {
@@ -1221,7 +1321,7 @@ public final class Operation extends com.google.api.client.json.GenericJson {
 
     /**
      * [Output Only] Metadata about this warning in key: value format. For example: "data": [ { "key":
-     * "scope", "value": "zones/us-east1-d" }
+     * "scope", "value": "zones/us-east1-d" }]
      * @param data data or {@code null} for none
      */
     public Warnings setData(java.util.List<Data> data) {

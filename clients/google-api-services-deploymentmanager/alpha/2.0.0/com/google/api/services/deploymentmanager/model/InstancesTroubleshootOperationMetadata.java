@@ -17,7 +17,7 @@
 package com.google.api.services.deploymentmanager.model;
 
 /**
- * Metadata for FirewallPolicyRule operations.
+ * [Output Only] Operation metadata for instances.troubleshoot.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
@@ -28,43 +28,40 @@ package com.google.api.services.deploymentmanager.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FirewallPolicyRuleOperationMetadata extends com.google.api.client.json.GenericJson {
+public final class InstancesTroubleshootOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output Only] The priority allocated for the firewall policy rule if query
-   * parameters specified minPriority/maxPriority.
+   * Output only. [Output Only] Serialized output of the troubleshooting diagnostic run.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.Integer allocatedPriority;
+  private java.lang.String troubleshootOutput;
 
   /**
-   * Output only. [Output Only] The priority allocated for the firewall policy rule if query
-   * parameters specified minPriority/maxPriority.
+   * Output only. [Output Only] Serialized output of the troubleshooting diagnostic run.
    * @return value or {@code null} for none
    */
-  public java.lang.Integer getAllocatedPriority() {
-    return allocatedPriority;
+  public java.lang.String getTroubleshootOutput() {
+    return troubleshootOutput;
   }
 
   /**
-   * Output only. [Output Only] The priority allocated for the firewall policy rule if query
-   * parameters specified minPriority/maxPriority.
-   * @param allocatedPriority allocatedPriority or {@code null} for none
+   * Output only. [Output Only] Serialized output of the troubleshooting diagnostic run.
+   * @param troubleshootOutput troubleshootOutput or {@code null} for none
    */
-  public FirewallPolicyRuleOperationMetadata setAllocatedPriority(java.lang.Integer allocatedPriority) {
-    this.allocatedPriority = allocatedPriority;
+  public InstancesTroubleshootOperationMetadata setTroubleshootOutput(java.lang.String troubleshootOutput) {
+    this.troubleshootOutput = troubleshootOutput;
     return this;
   }
 
   @Override
-  public FirewallPolicyRuleOperationMetadata set(String fieldName, Object value) {
-    return (FirewallPolicyRuleOperationMetadata) super.set(fieldName, value);
+  public InstancesTroubleshootOperationMetadata set(String fieldName, Object value) {
+    return (InstancesTroubleshootOperationMetadata) super.set(fieldName, value);
   }
 
   @Override
-  public FirewallPolicyRuleOperationMetadata clone() {
-    return (FirewallPolicyRuleOperationMetadata) super.clone();
+  public InstancesTroubleshootOperationMetadata clone() {
+    return (InstancesTroubleshootOperationMetadata) super.clone();
   }
 
 }

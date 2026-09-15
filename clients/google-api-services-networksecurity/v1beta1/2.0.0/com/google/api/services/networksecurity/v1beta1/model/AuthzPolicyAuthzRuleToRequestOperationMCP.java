@@ -30,7 +30,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class AuthzPolicyAuthzRuleToRequestOperationMCP extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. If specified, matches on the MCP protocol’s non-access specific methods namely: *
+   * Optional. If specified, matches on the MCP protocol's non-access specific methods namely: *
    * initialize * completion/ * logging/ * notifications/ * ping Defaults to
    * SKIP_BASE_PROTOCOL_METHODS if not specified.
    * The value may be {@code null}.
@@ -49,7 +49,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperationMCP extends com.google.
   private java.util.List<AuthzPolicyAuthzRuleToRequestOperationMCPMethod> methods;
 
   /**
-   * Optional. If specified, matches on the MCP protocol’s non-access specific methods namely: *
+   * Optional. If specified, matches on the MCP protocol's non-access specific methods namely: *
    * initialize * completion/ * logging/ * notifications/ * ping Defaults to
    * SKIP_BASE_PROTOCOL_METHODS if not specified.
    * @return value or {@code null} for none
@@ -59,7 +59,7 @@ public final class AuthzPolicyAuthzRuleToRequestOperationMCP extends com.google.
   }
 
   /**
-   * Optional. If specified, matches on the MCP protocol’s non-access specific methods namely: *
+   * Optional. If specified, matches on the MCP protocol's non-access specific methods namely: *
    * initialize * completion/ * logging/ * notifications/ * ping Defaults to
    * SKIP_BASE_PROTOCOL_METHODS if not specified.
    * @param baseProtocolMethodsOption baseProtocolMethodsOption or {@code null} for none

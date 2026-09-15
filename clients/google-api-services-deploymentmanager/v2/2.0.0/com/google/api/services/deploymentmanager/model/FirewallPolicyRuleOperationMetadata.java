@@ -17,7 +17,7 @@
 package com.google.api.services.deploymentmanager.model;
 
 /**
- * Model definition for FirewallPolicyRuleOperationMetadata.
+ * Metadata for FirewallPolicyRule operations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Deployment Manager V2 API. For a detailed
@@ -31,16 +31,16 @@ package com.google.api.services.deploymentmanager.model;
 public final class FirewallPolicyRuleOperationMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * The priority allocated for the firewall policy rule if query parameters specified
-   * minPriority/maxPriority.
+   * Output only. [Output Only] The priority allocated for the firewall policy rule if query
+   * parameters specified minPriority/maxPriority.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer allocatedPriority;
 
   /**
-   * The priority allocated for the firewall policy rule if query parameters specified
-   * minPriority/maxPriority.
+   * Output only. [Output Only] The priority allocated for the firewall policy rule if query
+   * parameters specified minPriority/maxPriority.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getAllocatedPriority() {
@@ -48,8 +48,8 @@ public final class FirewallPolicyRuleOperationMetadata extends com.google.api.cl
   }
 
   /**
-   * The priority allocated for the firewall policy rule if query parameters specified
-   * minPriority/maxPriority.
+   * Output only. [Output Only] The priority allocated for the firewall policy rule if query
+   * parameters specified minPriority/maxPriority.
    * @param allocatedPriority allocatedPriority or {@code null} for none
    */
   public FirewallPolicyRuleOperationMetadata setAllocatedPriority(java.lang.Integer allocatedPriority) {

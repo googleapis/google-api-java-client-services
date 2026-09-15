@@ -38,6 +38,13 @@ public final class ObjectCustomContextPayload extends com.google.api.client.json
   private com.google.api.client.util.DateTime createTime;
 
   /**
+   * The type URL of the object context's extended data.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String extendedDataTypeUrl;
+
+  /**
    * The time at which the object context was last updated in RFC 3339 format.
    * The value may be {@code null}.
    */
@@ -65,6 +72,23 @@ public final class ObjectCustomContextPayload extends com.google.api.client.json
    */
   public ObjectCustomContextPayload setCreateTime(com.google.api.client.util.DateTime createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * The type URL of the object context's extended data.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExtendedDataTypeUrl() {
+    return extendedDataTypeUrl;
+  }
+
+  /**
+   * The type URL of the object context's extended data.
+   * @param extendedDataTypeUrl extendedDataTypeUrl or {@code null} for none
+   */
+  public ObjectCustomContextPayload setExtendedDataTypeUrl(java.lang.String extendedDataTypeUrl) {
+    this.extendedDataTypeUrl = extendedDataTypeUrl;
     return this;
   }
 

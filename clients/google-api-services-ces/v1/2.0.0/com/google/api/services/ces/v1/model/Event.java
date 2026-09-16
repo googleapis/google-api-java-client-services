@@ -38,6 +38,13 @@ public final class Event extends com.google.api.client.json.GenericJson {
   private java.lang.String event;
 
   /**
+   * Optional. Additional variables associated with the event.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> variables;
+
+  /**
    * Required. The name of the event.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setEvent(java.lang.String event) {
     this.event = event;
+    return this;
+  }
+
+  /**
+   * Optional. Additional variables associated with the event.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getVariables() {
+    return variables;
+  }
+
+  /**
+   * Optional. Additional variables associated with the event.
+   * @param variables variables or {@code null} for none
+   */
+  public Event setVariables(java.util.Map<String, java.lang.Object> variables) {
+    this.variables = variables;
     return this;
   }
 

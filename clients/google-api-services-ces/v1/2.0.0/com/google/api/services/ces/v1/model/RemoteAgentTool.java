@@ -52,11 +52,34 @@ public final class RemoteAgentTool extends com.google.api.client.json.GenericJso
   private java.lang.String description;
 
   /**
+   * Optional. Mapping of input variable names of remote agent to GECX variable names.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> inputVariableMapping;
+
+  /**
    * Required. The name of the tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Optional. Mapping of output variable names of remote agent to GECX variable names.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> outputVariableMapping;
+
+  /**
+   * Optional. When enabled, the interaction between the CXAS app and the remote agent will share
+   * the same context. If the remote agent returns a context_id, it will be persisted for the
+   * entirety of the session for this remote agent tool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean statefulAgent;
 
   /**
    * Required. The agent card of the remote agent that this tool invokes.
@@ -110,6 +133,23 @@ public final class RemoteAgentTool extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * Optional. Mapping of input variable names of remote agent to GECX variable names.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getInputVariableMapping() {
+    return inputVariableMapping;
+  }
+
+  /**
+   * Optional. Mapping of input variable names of remote agent to GECX variable names.
+   * @param inputVariableMapping inputVariableMapping or {@code null} for none
+   */
+  public RemoteAgentTool setInputVariableMapping(java.util.Map<String, java.lang.String> inputVariableMapping) {
+    this.inputVariableMapping = inputVariableMapping;
+    return this;
+  }
+
+  /**
    * Required. The name of the tool.
    * @return value or {@code null} for none
    */
@@ -123,6 +163,44 @@ public final class RemoteAgentTool extends com.google.api.client.json.GenericJso
    */
   public RemoteAgentTool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Mapping of output variable names of remote agent to GECX variable names.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getOutputVariableMapping() {
+    return outputVariableMapping;
+  }
+
+  /**
+   * Optional. Mapping of output variable names of remote agent to GECX variable names.
+   * @param outputVariableMapping outputVariableMapping or {@code null} for none
+   */
+  public RemoteAgentTool setOutputVariableMapping(java.util.Map<String, java.lang.String> outputVariableMapping) {
+    this.outputVariableMapping = outputVariableMapping;
+    return this;
+  }
+
+  /**
+   * Optional. When enabled, the interaction between the CXAS app and the remote agent will share
+   * the same context. If the remote agent returns a context_id, it will be persisted for the
+   * entirety of the session for this remote agent tool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getStatefulAgent() {
+    return statefulAgent;
+  }
+
+  /**
+   * Optional. When enabled, the interaction between the CXAS app and the remote agent will share
+   * the same context. If the remote agent returns a context_id, it will be persisted for the
+   * entirety of the session for this remote agent tool.
+   * @param statefulAgent statefulAgent or {@code null} for none
+   */
+  public RemoteAgentTool setStatefulAgent(java.lang.Boolean statefulAgent) {
+    this.statefulAgent = statefulAgent;
     return this;
   }
 

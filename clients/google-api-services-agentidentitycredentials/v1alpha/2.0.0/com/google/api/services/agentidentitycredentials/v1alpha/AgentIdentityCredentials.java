@@ -214,6 +214,149 @@ public class AgentIdentityCredentials extends com.google.api.client.googleapis.s
         public class Credentials {
 
           /**
+           * Swaps an input credential for a target credential as per the rules and provider defined in the
+           * given auth provider.
+           *
+           * Create a request for the method "credentials.exchange".
+           *
+           * This request holds the parameters needed by the agentidentitycredentials server.  After setting
+           * any optional parameters, call the {@link Exchange#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param authProvider Required. The resource name of the auth provider. Format:
+           *        `projects/{project}/locations/{location}/authProviders/{auth_provider}`
+           * @param content the {@link com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaExchangeCredentialsRequest}
+           * @return the request
+           */
+          public Exchange exchange(java.lang.String authProvider, com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaExchangeCredentialsRequest content) throws java.io.IOException {
+            Exchange result = new Exchange(authProvider, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Exchange extends AgentIdentityCredentialsRequest<com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaExchangeCredentialsResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+authProvider}/credentials:exchange";
+
+            private final java.util.regex.Pattern AUTH_PROVIDER_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
+
+            /**
+             * Swaps an input credential for a target credential as per the rules and provider defined in the
+             * given auth provider.
+             *
+             * Create a request for the method "credentials.exchange".
+             *
+             * This request holds the parameters needed by the the agentidentitycredentials server.  After
+             * setting any optional parameters, call the {@link Exchange#execute()} method to invoke the
+             * remote operation. <p> {@link
+             * Exchange#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param authProvider Required. The resource name of the auth provider. Format:
+           *        `projects/{project}/locations/{location}/authProviders/{auth_provider}`
+             * @param content the {@link com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaExchangeCredentialsRequest}
+             * @since 1.13
+             */
+            protected Exchange(java.lang.String authProvider, com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaExchangeCredentialsRequest content) {
+              super(AgentIdentityCredentials.this, "POST", REST_PATH, content, com.google.api.services.agentidentitycredentials.v1alpha.model.GoogleCloudAgentidentitycredentialsV1alphaExchangeCredentialsResponse.class);
+              this.authProvider = com.google.api.client.util.Preconditions.checkNotNull(authProvider, "Required parameter authProvider must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(AUTH_PROVIDER_PATTERN.matcher(authProvider).matches(),
+                    "Parameter authProvider must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
+              }
+            }
+
+            @Override
+            public Exchange set$Xgafv(java.lang.String $Xgafv) {
+              return (Exchange) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Exchange setAccessToken(java.lang.String accessToken) {
+              return (Exchange) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Exchange setAlt(java.lang.String alt) {
+              return (Exchange) super.setAlt(alt);
+            }
+
+            @Override
+            public Exchange setCallback(java.lang.String callback) {
+              return (Exchange) super.setCallback(callback);
+            }
+
+            @Override
+            public Exchange setFields(java.lang.String fields) {
+              return (Exchange) super.setFields(fields);
+            }
+
+            @Override
+            public Exchange setKey(java.lang.String key) {
+              return (Exchange) super.setKey(key);
+            }
+
+            @Override
+            public Exchange setOauthToken(java.lang.String oauthToken) {
+              return (Exchange) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Exchange setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Exchange) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Exchange setQuotaUser(java.lang.String quotaUser) {
+              return (Exchange) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Exchange setUploadType(java.lang.String uploadType) {
+              return (Exchange) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Exchange setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Exchange) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the auth provider. Format:
+             * `projects/{project}/locations/{location}/authProviders/{auth_provider}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String authProvider;
+
+            /** Required. The resource name of the auth provider. Format:
+           `projects/{project}/locations/{location}/authProviders/{auth_provider}`
+             */
+            public java.lang.String getAuthProvider() {
+              return authProvider;
+            }
+
+            /**
+             * Required. The resource name of the auth provider. Format:
+             * `projects/{project}/locations/{location}/authProviders/{auth_provider}`
+             */
+            public Exchange setAuthProvider(java.lang.String authProvider) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(AUTH_PROVIDER_PATTERN.matcher(authProvider).matches(),
+                    "Parameter authProvider must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
+              }
+              this.authProvider = authProvider;
+              return this;
+            }
+
+            @Override
+            public Exchange set(String parameterName, Object value) {
+              return (Exchange) super.set(parameterName, value);
+            }
+          }
+          /**
            * Finalizes the credentials after a successful consent flow.
            *
            * Create a request for the method "credentials.finalize".

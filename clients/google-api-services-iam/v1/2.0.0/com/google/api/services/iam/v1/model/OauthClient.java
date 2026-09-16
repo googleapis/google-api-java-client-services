@@ -32,7 +32,7 @@ package com.google.api.services.iam.v1.model;
 public final class OauthClient extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The list of OAuth grant types is allowed for the OauthClient.
+   * Optional. The list of OAuth grant types is allowed for the OauthClient.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,7 +115,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Required. The list of OAuth grant types is allowed for the OauthClient.
+   * Optional. The list of OAuth grant types is allowed for the OauthClient.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedGrantTypes() {
@@ -123,7 +123,7 @@ public final class OauthClient extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The list of OAuth grant types is allowed for the OauthClient.
+   * Optional. The list of OAuth grant types is allowed for the OauthClient.
    * @param allowedGrantTypes allowedGrantTypes or {@code null} for none
    */
   public OauthClient setAllowedGrantTypes(java.util.List<java.lang.String> allowedGrantTypes) {

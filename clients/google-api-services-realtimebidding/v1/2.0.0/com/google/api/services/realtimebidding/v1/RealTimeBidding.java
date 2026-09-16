@@ -4603,6 +4603,139 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
     public class Creatives {
 
       /**
+       * Adds a list of deals to a creative, which submits the creative for publisher review. Returns the
+       * updated creative.
+       *
+       * Create a request for the method "creatives.addDeals".
+       *
+       * This request holds the parameters needed by the realtimebidding server.  After setting any
+       * optional parameters, call the {@link AddDeals#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the creative to add the deals to. See creative.name.
+       * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddDealsRequest}
+       * @return the request
+       */
+      public AddDeals addDeals(java.lang.String name, com.google.api.services.realtimebidding.v1.model.AddDealsRequest content) throws java.io.IOException {
+        AddDeals result = new AddDeals(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class AddDeals extends RealTimeBiddingRequest<com.google.api.services.realtimebidding.v1.model.Creative> {
+
+        private static final String REST_PATH = "v1/{+name}:addDeals";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^buyers/[^/]+/creatives/[^/]+$");
+
+        /**
+         * Adds a list of deals to a creative, which submits the creative for publisher review. Returns
+         * the updated creative.
+         *
+         * Create a request for the method "creatives.addDeals".
+         *
+         * This request holds the parameters needed by the the realtimebidding server.  After setting any
+         * optional parameters, call the {@link AddDeals#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * AddDeals#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the creative to add the deals to. See creative.name.
+         * @param content the {@link com.google.api.services.realtimebidding.v1.model.AddDealsRequest}
+         * @since 1.13
+         */
+        protected AddDeals(java.lang.String name, com.google.api.services.realtimebidding.v1.model.AddDealsRequest content) {
+          super(RealTimeBidding.this, "POST", REST_PATH, content, com.google.api.services.realtimebidding.v1.model.Creative.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^buyers/[^/]+/creatives/[^/]+$");
+          }
+        }
+
+        @Override
+        public AddDeals set$Xgafv(java.lang.String $Xgafv) {
+          return (AddDeals) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public AddDeals setAccessToken(java.lang.String accessToken) {
+          return (AddDeals) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public AddDeals setAlt(java.lang.String alt) {
+          return (AddDeals) super.setAlt(alt);
+        }
+
+        @Override
+        public AddDeals setCallback(java.lang.String callback) {
+          return (AddDeals) super.setCallback(callback);
+        }
+
+        @Override
+        public AddDeals setFields(java.lang.String fields) {
+          return (AddDeals) super.setFields(fields);
+        }
+
+        @Override
+        public AddDeals setKey(java.lang.String key) {
+          return (AddDeals) super.setKey(key);
+        }
+
+        @Override
+        public AddDeals setOauthToken(java.lang.String oauthToken) {
+          return (AddDeals) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public AddDeals setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (AddDeals) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public AddDeals setQuotaUser(java.lang.String quotaUser) {
+          return (AddDeals) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public AddDeals setUploadType(java.lang.String uploadType) {
+          return (AddDeals) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public AddDeals setUploadProtocol(java.lang.String uploadProtocol) {
+          return (AddDeals) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Name of the creative to add the deals to. See creative.name. */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the creative to add the deals to. See creative.name.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Name of the creative to add the deals to. See creative.name. */
+        public AddDeals setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^buyers/[^/]+/creatives/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public AddDeals set(String parameterName, Object value) {
+          return (AddDeals) super.set(parameterName, value);
+        }
+      }
+      /**
        * Creates a creative.
        *
        * Create a request for the method "creatives.create".

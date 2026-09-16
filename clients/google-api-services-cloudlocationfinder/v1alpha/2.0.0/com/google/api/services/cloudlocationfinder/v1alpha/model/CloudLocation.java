@@ -72,6 +72,13 @@ public final class CloudLocation extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
+   * Optional. GCP-specific attributes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcpAttributes gcpAttributes;
+
+  /**
    * Identifier. Name of the cloud location. Unique name of the cloud location including project and
    * location using the form:
    * `projects/{project_id}/locations/{location}/cloudLocations/{cloud_location}`
@@ -181,6 +188,23 @@ public final class CloudLocation extends com.google.api.client.json.GenericJson 
    */
   public CloudLocation setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. GCP-specific attributes.
+   * @return value or {@code null} for none
+   */
+  public GcpAttributes getGcpAttributes() {
+    return gcpAttributes;
+  }
+
+  /**
+   * Optional. GCP-specific attributes.
+   * @param gcpAttributes gcpAttributes or {@code null} for none
+   */
+  public CloudLocation setGcpAttributes(GcpAttributes gcpAttributes) {
+    this.gcpAttributes = gcpAttributes;
     return this;
   }
 

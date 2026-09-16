@@ -121,6 +121,13 @@ public final class Guardrail extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. Guardrail that runs supervisor intervention.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GuardrailSupervisor supervisor;
+
+  /**
    * Output only. Timestamp when the guardrail was last updated.
    * The value may be {@code null}.
    */
@@ -340,6 +347,23 @@ public final class Guardrail extends com.google.api.client.json.GenericJson {
    */
   public Guardrail setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Guardrail that runs supervisor intervention.
+   * @return value or {@code null} for none
+   */
+  public GuardrailSupervisor getSupervisor() {
+    return supervisor;
+  }
+
+  /**
+   * Optional. Guardrail that runs supervisor intervention.
+   * @param supervisor supervisor or {@code null} for none
+   */
+  public Guardrail setSupervisor(GuardrailSupervisor supervisor) {
+    this.supervisor = supervisor;
     return this;
   }
 

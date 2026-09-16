@@ -17,7 +17,7 @@
 package com.google.api.services.ces.v1beta.model;
 
 /**
- * Event input.
+ * Guardrail that runs supervisor intervention.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a
@@ -28,64 +28,64 @@ package com.google.api.services.ces.v1beta.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class Event extends com.google.api.client.json.GenericJson {
+public final class GuardrailSupervisor extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The name of the event.
+   * Optional. The detection mode of the supervisor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String event;
+  private java.lang.String detectionMode;
 
   /**
-   * Optional. Additional variables associated with the event.
+   * Optional. The type of the supervisor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> variables;
+  private java.lang.String type;
 
   /**
-   * Required. The name of the event.
+   * Optional. The detection mode of the supervisor.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEvent() {
-    return event;
+  public java.lang.String getDetectionMode() {
+    return detectionMode;
   }
 
   /**
-   * Required. The name of the event.
-   * @param event event or {@code null} for none
+   * Optional. The detection mode of the supervisor.
+   * @param detectionMode detectionMode or {@code null} for none
    */
-  public Event setEvent(java.lang.String event) {
-    this.event = event;
+  public GuardrailSupervisor setDetectionMode(java.lang.String detectionMode) {
+    this.detectionMode = detectionMode;
     return this;
   }
 
   /**
-   * Optional. Additional variables associated with the event.
+   * Optional. The type of the supervisor.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getVariables() {
-    return variables;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * Optional. Additional variables associated with the event.
-   * @param variables variables or {@code null} for none
+   * Optional. The type of the supervisor.
+   * @param type type or {@code null} for none
    */
-  public Event setVariables(java.util.Map<String, java.lang.Object> variables) {
-    this.variables = variables;
+  public GuardrailSupervisor setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public Event set(String fieldName, Object value) {
-    return (Event) super.set(fieldName, value);
+  public GuardrailSupervisor set(String fieldName, Object value) {
+    return (GuardrailSupervisor) super.set(fieldName, value);
   }
 
   @Override
-  public Event clone() {
-    return (Event) super.clone();
+  public GuardrailSupervisor clone() {
+    return (GuardrailSupervisor) super.clone();
   }
 
 }

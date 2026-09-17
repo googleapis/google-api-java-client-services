@@ -79,7 +79,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.lang.String displayUrlBreadcrumb2;
 
   /**
-   * The domain of the display URL.
+   * Output only. The domain of the display URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,7 +223,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The domain of the display URL.
+   * Output only. The domain of the display URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -231,7 +231,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The domain of the display URL.
+   * Output only. The domain of the display URL.
    * @param domain domain or {@code null} for none
    */
   public VideoPerformanceAd setDomain(java.lang.String domain) {

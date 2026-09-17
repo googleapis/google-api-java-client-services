@@ -194,7 +194,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
       public class InstanceOSPoliciesCompliances {
 
         /**
-         * Get OS policies compliance data for the specified Compute Engine VM instance.
+         * Deprecated: Use GetOSPolicyAssignmentReport instead. Get OS policies compliance data for the
+         * specified Compute Engine VM instance.
          *
          * Create a request for the method "instanceOSPoliciesCompliances.get".
          *
@@ -221,7 +222,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instanceOSPoliciesCompliances/[^/]+$");
 
           /**
-           * Get OS policies compliance data for the specified Compute Engine VM instance.
+           * Deprecated: Use GetOSPolicyAssignmentReport instead. Get OS policies compliance data for the
+           * specified Compute Engine VM instance.
            *
            * Create a request for the method "instanceOSPoliciesCompliances.get".
            *
@@ -351,7 +353,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * List OS policies compliance data for all Compute Engine VM instances in the specified zone.
+         * Deprecated: Use ListOSPolicyAssignmentReports instead. List OS policies compliance data for all
+         * Compute Engine VM instances in the specified zone.
          *
          * Create a request for the method "instanceOSPoliciesCompliances.list".
          *
@@ -376,7 +379,8 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * List OS policies compliance data for all Compute Engine VM instances in the specified zone.
+           * Deprecated: Use ListOSPolicyAssignmentReports instead. List OS policies compliance data for all
+           * Compute Engine VM instances in the specified zone.
            *
            * Create a request for the method "instanceOSPoliciesCompliances.list".
            *

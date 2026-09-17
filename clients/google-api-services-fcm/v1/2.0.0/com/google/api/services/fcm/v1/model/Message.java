@@ -71,7 +71,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private FcmOptions fcmOptions;
 
   /**
-   * Firebase Installation ID to send a message to.
+   * [Firebase Installation ID (FID)](/docs/cloud-messaging/android/get-started#access-firebase-
+   * installation-id) to send a message to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,8 +94,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private Notification notification;
 
   /**
-   * Deprecated: Use `fid` instead. Registration token to send a message to. During the transition
-   * period, this field also accepts a Firebase Installation ID (FID).
+   * Deprecated: Use `fid` instead. During the transition period, this field also accepts a Firebase
+   * Installation ID (FID). Registration token to send a message to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -211,7 +212,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Firebase Installation ID to send a message to.
+   * [Firebase Installation ID (FID)](/docs/cloud-messaging/android/get-started#access-firebase-
+   * installation-id) to send a message to.
    * @return value or {@code null} for none
    */
   public java.lang.String getFid() {
@@ -219,7 +221,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Firebase Installation ID to send a message to.
+   * [Firebase Installation ID (FID)](/docs/cloud-messaging/android/get-started#access-firebase-
+   * installation-id) to send a message to.
    * @param fid fid or {@code null} for none
    */
   public Message setFid(java.lang.String fid) {
@@ -264,8 +267,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated: Use `fid` instead. Registration token to send a message to. During the transition
-   * period, this field also accepts a Firebase Installation ID (FID).
+   * Deprecated: Use `fid` instead. During the transition period, this field also accepts a Firebase
+   * Installation ID (FID). Registration token to send a message to.
    * @return value or {@code null} for none
    */
   public java.lang.String getToken() {
@@ -273,8 +276,8 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deprecated: Use `fid` instead. Registration token to send a message to. During the transition
-   * period, this field also accepts a Firebase Installation ID (FID).
+   * Deprecated: Use `fid` instead. During the transition period, this field also accepts a Firebase
+   * Installation ID (FID). Registration token to send a message to.
    * @param token token or {@code null} for none
    */
   public Message setToken(java.lang.String token) {

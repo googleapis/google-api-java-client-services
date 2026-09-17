@@ -174,7 +174,9 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
     public class Messages {
 
       /**
-       * Send a message to specified target (a registration token, topic or condition).
+       * Send a message to specified target (a [Firebase Installation ID (FID)](/docs/cloud-
+       * messaging/android/get-started#access-firebase-installation-id), registration token, topic, or
+       * condition).
        *
        * Create a request for the method "messages.send".
        *
@@ -201,7 +203,9 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
             java.util.regex.Pattern.compile("^projects/[^/]+$");
 
         /**
-         * Send a message to specified target (a registration token, topic or condition).
+         * Send a message to specified target (a [Firebase Installation ID (FID)](/docs/cloud-
+         * messaging/android/get-started#access-firebase-installation-id), registration token, topic, or
+         * condition).
          *
          * Create a request for the method "messages.send".
          *
@@ -318,6 +322,902 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the Registrations collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code FirebaseCloudMessaging fcm = new FirebaseCloudMessaging(...);}
+     *   {@code FirebaseCloudMessaging.Registrations.List request = fcm.registrations().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Registrations registrations() {
+      return new Registrations();
+    }
+
+    /**
+     * The "registrations" collection of methods.
+     */
+    public class Registrations {
+
+      /**
+       * An accessor for creating requests from the TopicSubscriptions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code FirebaseCloudMessaging fcm = new FirebaseCloudMessaging(...);}
+       *   {@code FirebaseCloudMessaging.TopicSubscriptions.List request = fcm.topicSubscriptions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TopicSubscriptions topicSubscriptions() {
+        return new TopicSubscriptions();
+      }
+
+      /**
+       * The "topicSubscriptions" collection of methods.
+       */
+      public class TopicSubscriptions {
+
+        /**
+         * Creates a TopicSubscription. Subscribes an app installation instance (by registration_id, either
+         * FID or FCM Token) to a topicSubscription. Returns a TopicSubscription if it is created
+         * successfully. If the subscription already exists, returns error of ALREADY_EXISTS.
+         *
+         * Create a request for the method "topicSubscriptions.create".
+         *
+         * This request holds the parameters needed by the fcm server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this subscription will be created. Format:
+         *        projects/{project}/registrations/{registration} The {registration} part can be an FID or
+         *        an FCM Token.
+         * @param content the {@link com.google.api.services.fcm.v1.model.TopicSubscription}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.fcm.v1.model.TopicSubscription content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends FirebaseCloudMessagingRequest<com.google.api.services.fcm.v1.model.TopicSubscription> {
+
+          private static final String REST_PATH = "v1/{+parent}/topicSubscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Creates a TopicSubscription. Subscribes an app installation instance (by registration_id,
+           * either FID or FCM Token) to a topicSubscription. Returns a TopicSubscription if it is created
+           * successfully. If the subscription already exists, returns error of ALREADY_EXISTS.
+           *
+           * Create a request for the method "topicSubscriptions.create".
+           *
+           * This request holds the parameters needed by the the fcm server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this subscription will be created. Format:
+         *        projects/{project}/registrations/{registration} The {registration} part can be an FID or
+         *        an FCM Token.
+           * @param content the {@link com.google.api.services.fcm.v1.model.TopicSubscription}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.fcm.v1.model.TopicSubscription content) {
+            super(FirebaseCloudMessaging.this, "POST", REST_PATH, content, com.google.api.services.fcm.v1.model.TopicSubscription.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this subscription will be created. Format:
+           * projects/{project}/registrations/{registration} The {registration} part can be an FID
+           * or an FCM Token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this subscription will be created. Format:
+         projects/{project}/registrations/{registration} The {registration} part can be an FID or an FCM
+         Token.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this subscription will be created. Format:
+           * projects/{project}/registrations/{registration} The {registration} part can be an FID
+           * or an FCM Token.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the subscription, which is the topic name. This will become
+           * the last segment of the TopicSubscription's resource name. Topic names match the
+           * pattern of "[a-zA-Z0-9-_.~%]{1,900}".
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String topicName;
+
+          /** Required. The ID to use for the subscription, which is the topic name. This will become the last
+         segment of the TopicSubscription's resource name. Topic names match the pattern of
+         "[a-zA-Z0-9-_.~%]{1,900}".
+           */
+          public java.lang.String getTopicName() {
+            return topicName;
+          }
+
+          /**
+           * Required. The ID to use for the subscription, which is the topic name. This will become
+           * the last segment of the TopicSubscription's resource name. Topic names match the
+           * pattern of "[a-zA-Z0-9-_.~%]{1,900}".
+           */
+          public Create setTopicName(java.lang.String topicName) {
+            this.topicName = topicName;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a TopicSubscription.
+         *
+         * Create a request for the method "topicSubscriptions.delete".
+         *
+         * This request holds the parameters needed by the fcm server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the topic subscription to delete. Format:
+         *        projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends FirebaseCloudMessagingRequest<com.google.api.services.fcm.v1.model.Empty> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+
+          /**
+           * Deletes a TopicSubscription.
+           *
+           * Create a request for the method "topicSubscriptions.delete".
+           *
+           * This request holds the parameters needed by the the fcm server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the topic subscription to delete. Format:
+         *        projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(FirebaseCloudMessaging.this, "DELETE", REST_PATH, null, com.google.api.services.fcm.v1.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the topic subscription to delete. Format:
+           * projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the topic subscription to delete. Format:
+         projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the topic subscription to delete. Format:
+           * projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the topic subscription is not found, the request will
+           * succeed but no action will be taken on the server.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the topic subscription is not found, the request will succeed but no
+         action will be taken on the server.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the topic subscription is not found, the request will
+           * succeed but no action will be taken on the server.
+           */
+          public Delete setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a TopicSubscription.
+         *
+         * Create a request for the method "topicSubscriptions.get".
+         *
+         * This request holds the parameters needed by the fcm server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the topic subscription to retrieve. Format:
+         *        projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseCloudMessagingRequest<com.google.api.services.fcm.v1.model.TopicSubscription> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+
+          /**
+           * Gets a TopicSubscription.
+           *
+           * Create a request for the method "topicSubscriptions.get".
+           *
+           * This request holds the parameters needed by the the fcm server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the topic subscription to retrieve. Format:
+         *        projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(FirebaseCloudMessaging.this, "GET", REST_PATH, null, com.google.api.services.fcm.v1.model.TopicSubscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the topic subscription to retrieve. Format:
+           * projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the topic subscription to retrieve. Format:
+         projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the topic subscription to retrieve. Format:
+           * projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists TopicSubscriptions for a given app instance.
+         *
+         * Create a request for the method "topicSubscriptions.list".
+         *
+         * This request holds the parameters needed by the fcm server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource, which owns this collection of subscriptions. Format:
+         *        projects/{project}/registrations/{registration} The {registration} part can be an FID or
+         *        an FCM Token.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseCloudMessagingRequest<com.google.api.services.fcm.v1.model.ListTopicSubscriptionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/topicSubscriptions";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/registrations/[^/]+$");
+
+          /**
+           * Lists TopicSubscriptions for a given app instance.
+           *
+           * Create a request for the method "topicSubscriptions.list".
+           *
+           * This request holds the parameters needed by the the fcm server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource, which owns this collection of subscriptions. Format:
+         *        projects/{project}/registrations/{registration} The {registration} part can be an FID or
+         *        an FCM Token.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(FirebaseCloudMessaging.this, "GET", REST_PATH, null, com.google.api.services.fcm.v1.model.ListTopicSubscriptionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource, which owns this collection of subscriptions. Format:
+           * projects/{project}/registrations/{registration} The {registration} part can be an FID
+           * or an FCM Token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource, which owns this collection of subscriptions. Format:
+         projects/{project}/registrations/{registration} The {registration} part can be an FID or an FCM
+         Token.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource, which owns this collection of subscriptions. Format:
+           * projects/{project}/registrations/{registration} The {registration} part can be an FID
+           * or an FCM Token.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of subscriptions to return. The service may return fewer
+           * than this value. If unspecified, at most 1000 subscriptions will be returned. The
+           * maximum value is 2000; values above 2000 will be coerced to 2000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of subscriptions to return. The service may return fewer than this
+         value. If unspecified, at most 1000 subscriptions will be returned. The maximum value is 2000;
+         values above 2000 will be coerced to 2000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of subscriptions to return. The service may return fewer
+           * than this value. If unspecified, at most 1000 subscriptions will be returned. The
+           * maximum value is 2000; values above 2000 will be coerced to 2000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListTopicSubscriptions` call. Provide
+           * this to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListTopicSubscriptions` call. Provide this to
+         retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListTopicSubscriptions` call. Provide
+           * this to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a TopicSubscription. Subscribes an app installation instance by registration_id, either
+         * FID or FCM Token, to a topicSubscription. Returns an existing TopicSubscription or creates a new
+         * one if it does not exist.
+         *
+         * Create a request for the method "topicSubscriptions.patch".
+         *
+         * This request holds the parameters needed by the fcm server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the subscription. Format:
+         *        projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription} The
+         *        {registration} part contains the registration ID (e.g., FID).
+         * @param content the {@link com.google.api.services.fcm.v1.model.TopicSubscription}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.fcm.v1.model.TopicSubscription content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseCloudMessagingRequest<com.google.api.services.fcm.v1.model.TopicSubscription> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+
+          /**
+           * Updates a TopicSubscription. Subscribes an app installation instance by registration_id, either
+           * FID or FCM Token, to a topicSubscription. Returns an existing TopicSubscription or creates a
+           * new one if it does not exist.
+           *
+           * Create a request for the method "topicSubscriptions.patch".
+           *
+           * This request holds the parameters needed by the the fcm server.  After setting any optional
+           * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the subscription. Format:
+         *        projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription} The
+         *        {registration} part contains the registration ID (e.g., FID).
+           * @param content the {@link com.google.api.services.fcm.v1.model.TopicSubscription}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.fcm.v1.model.TopicSubscription content) {
+            super(FirebaseCloudMessaging.this, "PATCH", REST_PATH, content, com.google.api.services.fcm.v1.model.TopicSubscription.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the subscription. Format:
+           * projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           * The {registration} part contains the registration ID (e.g., FID).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the subscription. Format:
+         projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription} The
+         {registration} part contains the registration ID (e.g., FID).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the subscription. Format:
+           * projects/{project}/registrations/{registration}/topicSubscriptions/{topicSubscription}
+           * The {registration} part contains the registration ID (e.g., FID).
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/registrations/[^/]+/topicSubscriptions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the topic subscription is not found, a new topic
+           * subscription will be created.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the topic subscription is not found, a new topic subscription will be
+         created.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the topic subscription is not found, a new topic
+           * subscription will be created.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

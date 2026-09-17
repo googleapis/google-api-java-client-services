@@ -37,7 +37,7 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
   private String activeStartTime;
 
   /**
-   * Required. The requested device
+   * Required. The requested device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +121,7 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The requested device
+   * Required. The requested device.
    * @return value or {@code null} for none
    */
   public AndroidDevice getAndroidDevice() {
@@ -129,7 +129,7 @@ public final class DeviceSession extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. The requested device
+   * Required. The requested device.
    * @param androidDevice androidDevice or {@code null} for none
    */
   public DeviceSession setAndroidDevice(AndroidDevice androidDevice) {

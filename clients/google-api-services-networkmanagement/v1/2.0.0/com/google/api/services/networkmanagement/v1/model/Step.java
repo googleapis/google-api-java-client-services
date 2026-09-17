@@ -109,6 +109,13 @@ public final class Step extends com.google.api.client.json.GenericJson {
   private DirectVpcEgressConnectionInfo directVpcEgressConnection;
 
   /**
+   * Display information of a serverless direct VPC ingress connection for Cloud Run.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DirectVpcIngressConnectionInfo directVpcIngressConnection;
+
+  /**
    * Display information of a DMS Private Connection.
    * The value may be {@code null}.
    */
@@ -527,6 +534,23 @@ public final class Step extends com.google.api.client.json.GenericJson {
    */
   public Step setDirectVpcEgressConnection(DirectVpcEgressConnectionInfo directVpcEgressConnection) {
     this.directVpcEgressConnection = directVpcEgressConnection;
+    return this;
+  }
+
+  /**
+   * Display information of a serverless direct VPC ingress connection for Cloud Run.
+   * @return value or {@code null} for none
+   */
+  public DirectVpcIngressConnectionInfo getDirectVpcIngressConnection() {
+    return directVpcIngressConnection;
+  }
+
+  /**
+   * Display information of a serverless direct VPC ingress connection for Cloud Run.
+   * @param directVpcIngressConnection directVpcIngressConnection or {@code null} for none
+   */
+  public Step setDirectVpcIngressConnection(DirectVpcIngressConnectionInfo directVpcIngressConnection) {
+    this.directVpcIngressConnection = directVpcIngressConnection;
     return this;
   }
 

@@ -30,6 +30,26 @@ package com.google.api.services.compute.model;
 public final class CapacityHistoryRequestInstanceProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Local SSDs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CapacityHistoryRequestInstancePropertiesAttachedDisk> disks;
+
+  /**
+   * Accelerators configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AcceleratorConfig> guestAccelerators;
+
+  static {
+    // hack to force ProGuard to consider AcceleratorConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(AcceleratorConfig.class);
+  }
+
+  /**
    * The machine type for the VM, such as `n2-standard-4`.
    * The value may be {@code null}.
    */
@@ -42,6 +62,40 @@ public final class CapacityHistoryRequestInstanceProperties extends com.google.a
    */
   @com.google.api.client.util.Key
   private CapacityHistoryRequestInstancePropertiesScheduling scheduling;
+
+  /**
+   * Local SSDs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CapacityHistoryRequestInstancePropertiesAttachedDisk> getDisks() {
+    return disks;
+  }
+
+  /**
+   * Local SSDs.
+   * @param disks disks or {@code null} for none
+   */
+  public CapacityHistoryRequestInstanceProperties setDisks(java.util.List<CapacityHistoryRequestInstancePropertiesAttachedDisk> disks) {
+    this.disks = disks;
+    return this;
+  }
+
+  /**
+   * Accelerators configuration.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AcceleratorConfig> getGuestAccelerators() {
+    return guestAccelerators;
+  }
+
+  /**
+   * Accelerators configuration.
+   * @param guestAccelerators guestAccelerators or {@code null} for none
+   */
+  public CapacityHistoryRequestInstanceProperties setGuestAccelerators(java.util.List<AcceleratorConfig> guestAccelerators) {
+    this.guestAccelerators = guestAccelerators;
+    return this;
+  }
 
   /**
    * The machine type for the VM, such as `n2-standard-4`.

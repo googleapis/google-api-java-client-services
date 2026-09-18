@@ -51,7 +51,7 @@ public final class GlobalFrontendSettings extends com.google.api.client.json.Gen
   private java.lang.String description;
 
   /**
-   * Output only. For optimistic locking
+   * Output only. For optimistic locking.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +134,7 @@ public final class GlobalFrontendSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. For optimistic locking
+   * Output only. For optimistic locking.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -142,7 +142,7 @@ public final class GlobalFrontendSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * Output only. For optimistic locking
+   * Output only. For optimistic locking.
    * @param etag etag or {@code null} for none
    */
   public GlobalFrontendSettings setEtag(java.lang.String etag) {

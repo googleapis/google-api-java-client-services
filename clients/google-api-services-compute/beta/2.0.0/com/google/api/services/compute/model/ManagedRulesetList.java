@@ -36,6 +36,7 @@ public final class ManagedRulesetList extends com.google.api.client.json.Generic
   private java.lang.String id;
 
   /**
+   * The list of managed rulesets.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,6 +76,7 @@ public final class ManagedRulesetList extends com.google.api.client.json.Generic
   }
 
   /**
+   * The list of managed rulesets.
    * @return value or {@code null} for none
    */
   public java.util.List<ManagedRuleset> getItems() {
@@ -82,6 +84,7 @@ public final class ManagedRulesetList extends com.google.api.client.json.Generic
   }
 
   /**
+   * The list of managed rulesets.
    * @param items items or {@code null} for none
    */
   public ManagedRulesetList setItems(java.util.List<ManagedRuleset> items) {

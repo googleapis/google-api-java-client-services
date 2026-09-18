@@ -94,6 +94,13 @@ public final class GoogleChromeManagementVersionsV1ConnectorConfigDetails extend
   private GoogleChromeManagementVersionsV1PubSubXdrConfig pubSubXdrConfig;
 
   /**
+   * Secure gateway connector config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementVersionsV1SecureGatewayConfig secureGatewayConfig;
+
+  /**
    * Splunk connector config.
    * The value may be {@code null}.
    */
@@ -250,6 +257,23 @@ public final class GoogleChromeManagementVersionsV1ConnectorConfigDetails extend
    */
   public GoogleChromeManagementVersionsV1ConnectorConfigDetails setPubSubXdrConfig(GoogleChromeManagementVersionsV1PubSubXdrConfig pubSubXdrConfig) {
     this.pubSubXdrConfig = pubSubXdrConfig;
+    return this;
+  }
+
+  /**
+   * Secure gateway connector config.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1SecureGatewayConfig getSecureGatewayConfig() {
+    return secureGatewayConfig;
+  }
+
+  /**
+   * Secure gateway connector config.
+   * @param secureGatewayConfig secureGatewayConfig or {@code null} for none
+   */
+  public GoogleChromeManagementVersionsV1ConnectorConfigDetails setSecureGatewayConfig(GoogleChromeManagementVersionsV1SecureGatewayConfig secureGatewayConfig) {
+    this.secureGatewayConfig = secureGatewayConfig;
     return this;
   }
 

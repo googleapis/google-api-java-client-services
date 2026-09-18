@@ -866,6 +866,796 @@ public class CloudAuditManager extends com.google.api.client.googleapis.services
 
       }
       /**
+       * An accessor for creating requests from the AuditSchedules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudAuditManager auditmanager = new CloudAuditManager(...);}
+       *   {@code CloudAuditManager.AuditSchedules.List request = auditmanager.auditSchedules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AuditSchedules auditSchedules() {
+        return new AuditSchedules();
+      }
+
+      /**
+       * The "auditSchedules" collection of methods.
+       */
+      public class AuditSchedules {
+
+        /**
+         * Creates a new audit schedule in a given project and location.
+         *
+         * Create a request for the method "auditSchedules.create".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+         * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.auditmanager.v1.model.AuditSchedule content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+parent}/auditSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new audit schedule in a given project and location.
+           *
+           * Create a request for the method "auditSchedules.create".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+           * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.auditmanager.v1.model.AuditSchedule content) {
+            super(CloudAuditManager.this, "POST", REST_PATH, content, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Project or folder that this audit schedule is for, in one of the following
+           * formats: * `projects/{project}/locations/{location}` *
+           * `folders/{folder}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Project or folder that this audit schedule is for, in one of the following
+           * formats: * `projects/{project}/locations/{location}` *
+           * `folders/{folder}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. ID to use for the audit schedule, which becomes the final component of the
+           * audit schedule's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String auditScheduleId;
+
+          /** Required. ID to use for the audit schedule, which becomes the final component of the audit
+         schedule's resource name.
+           */
+          public java.lang.String getAuditScheduleId() {
+            return auditScheduleId;
+          }
+
+          /**
+           * Required. ID to use for the audit schedule, which becomes the final component of the
+           * audit schedule's resource name.
+           */
+          public Create setAuditScheduleId(java.lang.String auditScheduleId) {
+            this.auditScheduleId = auditScheduleId;
+            return this;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not create the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If `true`, only validates the request and does not create the audit schedule. This
+         executes standard request validation (such as schema, framework existence, scope, and IAM checks)
+         and skips the apply phase. Use this field for the following purposes: * **Infrastructure as Code
+         (IaC)**: Allow tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without
+         creating real resources or incurring costs. * **User Interface Validation**: Enable real-time form
+         and permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+         your scripts, permissions, and parameters safely without consuming resource quotas.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not create the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single audit schedule.
+         *
+         * Create a request for the method "auditSchedules.get".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         *        `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+
+          /**
+           * Gets details of a single audit schedule.
+           *
+           * Create a request for the method "auditSchedules.get".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         *        `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudAuditManager.this, "GET", REST_PATH, null, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the audit schedule to retrieve, in one of the following formats: *
+           * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the audit schedule to retrieve, in one of the following formats: *
+           * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists audit schedules in a given project and location.
+         *
+         * Create a request for the method "auditSchedules.list".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent for the audit schedule, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         *        `organizations/{organization}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.ListAuditSchedulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/auditSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists audit schedules in a given project and location.
+           *
+           * Create a request for the method "auditSchedules.list".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent for the audit schedule, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         *        `organizations/{organization}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudAuditManager.this, "GET", REST_PATH, null, com.google.api.services.auditmanager.v1.model.ListAuditSchedulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent for the audit schedule, in one of the following formats: *
+           * `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+           * `organizations/{organization}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent for the audit schedule, in one of the following formats: *
+         `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `organizations/{organization}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent for the audit schedule, in one of the following formats: *
+           * `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+           * `organizations/{organization}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of items to return in a single page. The service might return
+           * fewer items than this value. If unspecified, the service picks an appropriate default.
+           * The maximum value is 100; values above 100 are reduced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of items to return in a single page. The service might return fewer items
+         than this value. If unspecified, the service picks an appropriate default. The maximum value is
+         100; values above 100 are reduced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of items to return in a single page. The service might return
+           * fewer items than this value. If unspecified, the service picks an appropriate default.
+           * The maximum value is 100; values above 100 are reduced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call, to retrieve the next page of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous call, to retrieve the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call, to retrieve the next page of
+           * results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing audit schedule.
+         *
+         * Create a request for the method "auditSchedules.patch".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Unique identifier for the audit schedule. Format:
+         *        projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         *        folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         *        organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+         * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.auditmanager.v1.model.AuditSchedule content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+
+          /**
+           * Updates an existing audit schedule.
+           *
+           * Create a request for the method "auditSchedules.patch".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Unique identifier for the audit schedule. Format:
+         *        projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         *        folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         *        organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.auditmanager.v1.model.AuditSchedule content) {
+            super(CloudAuditManager.this, "PATCH", REST_PATH, content, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Unique identifier for the audit schedule. Format:
+           * projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+           * folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+           * organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Unique identifier for the audit schedule. Format:
+         projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Unique identifier for the audit schedule. Format:
+           * projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+           * folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+           * organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^folders/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. List of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. List of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. List of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not update the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If `true`, only validates the request and does not update the audit schedule. This
+         executes standard request validation (such as schema, framework existence, scope, and IAM checks)
+         and skips the apply phase. Use this field for the following purposes: * **Infrastructure as Code
+         (IaC)**: Allow tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without
+         creating real resources or incurring costs. * **User Interface Validation**: Enable real-time form
+         and permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+         your scripts, permissions, and parameters safely without consuming resource quotas.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not update the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the AuditScopeReports collection.
        *
        * <p>The typical use is:</p>
@@ -2725,6 +3515,796 @@ public class CloudAuditManager extends com.google.api.client.googleapis.services
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the AuditSchedules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudAuditManager auditmanager = new CloudAuditManager(...);}
+       *   {@code CloudAuditManager.AuditSchedules.List request = auditmanager.auditSchedules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AuditSchedules auditSchedules() {
+        return new AuditSchedules();
+      }
+
+      /**
+       * The "auditSchedules" collection of methods.
+       */
+      public class AuditSchedules {
+
+        /**
+         * Creates a new audit schedule in a given project and location.
+         *
+         * Create a request for the method "auditSchedules.create".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+         * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.auditmanager.v1.model.AuditSchedule content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+parent}/auditSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new audit schedule in a given project and location.
+           *
+           * Create a request for the method "auditSchedules.create".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+           * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.auditmanager.v1.model.AuditSchedule content) {
+            super(CloudAuditManager.this, "POST", REST_PATH, content, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Project or folder that this audit schedule is for, in one of the following
+           * formats: * `projects/{project}/locations/{location}` *
+           * `folders/{folder}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Project or folder that this audit schedule is for, in one of the following
+           * formats: * `projects/{project}/locations/{location}` *
+           * `folders/{folder}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. ID to use for the audit schedule, which becomes the final component of the
+           * audit schedule's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String auditScheduleId;
+
+          /** Required. ID to use for the audit schedule, which becomes the final component of the audit
+         schedule's resource name.
+           */
+          public java.lang.String getAuditScheduleId() {
+            return auditScheduleId;
+          }
+
+          /**
+           * Required. ID to use for the audit schedule, which becomes the final component of the
+           * audit schedule's resource name.
+           */
+          public Create setAuditScheduleId(java.lang.String auditScheduleId) {
+            this.auditScheduleId = auditScheduleId;
+            return this;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not create the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If `true`, only validates the request and does not create the audit schedule. This
+         executes standard request validation (such as schema, framework existence, scope, and IAM checks)
+         and skips the apply phase. Use this field for the following purposes: * **Infrastructure as Code
+         (IaC)**: Allow tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without
+         creating real resources or incurring costs. * **User Interface Validation**: Enable real-time form
+         and permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+         your scripts, permissions, and parameters safely without consuming resource quotas.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not create the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single audit schedule.
+         *
+         * Create a request for the method "auditSchedules.get".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         *        `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+
+          /**
+           * Gets details of a single audit schedule.
+           *
+           * Create a request for the method "auditSchedules.get".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         *        `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudAuditManager.this, "GET", REST_PATH, null, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the audit schedule to retrieve, in one of the following formats: *
+           * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the audit schedule to retrieve, in one of the following formats: *
+           * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists audit schedules in a given project and location.
+         *
+         * Create a request for the method "auditSchedules.list".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent for the audit schedule, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         *        `organizations/{organization}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.ListAuditSchedulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/auditSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists audit schedules in a given project and location.
+           *
+           * Create a request for the method "auditSchedules.list".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent for the audit schedule, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         *        `organizations/{organization}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudAuditManager.this, "GET", REST_PATH, null, com.google.api.services.auditmanager.v1.model.ListAuditSchedulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent for the audit schedule, in one of the following formats: *
+           * `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+           * `organizations/{organization}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent for the audit schedule, in one of the following formats: *
+         `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `organizations/{organization}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent for the audit schedule, in one of the following formats: *
+           * `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+           * `organizations/{organization}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of items to return in a single page. The service might return
+           * fewer items than this value. If unspecified, the service picks an appropriate default.
+           * The maximum value is 100; values above 100 are reduced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of items to return in a single page. The service might return fewer items
+         than this value. If unspecified, the service picks an appropriate default. The maximum value is
+         100; values above 100 are reduced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of items to return in a single page. The service might return
+           * fewer items than this value. If unspecified, the service picks an appropriate default.
+           * The maximum value is 100; values above 100 are reduced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call, to retrieve the next page of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous call, to retrieve the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call, to retrieve the next page of
+           * results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing audit schedule.
+         *
+         * Create a request for the method "auditSchedules.patch".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Unique identifier for the audit schedule. Format:
+         *        projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         *        folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         *        organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+         * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.auditmanager.v1.model.AuditSchedule content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+
+          /**
+           * Updates an existing audit schedule.
+           *
+           * Create a request for the method "auditSchedules.patch".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Unique identifier for the audit schedule. Format:
+         *        projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         *        folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         *        organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.auditmanager.v1.model.AuditSchedule content) {
+            super(CloudAuditManager.this, "PATCH", REST_PATH, content, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Unique identifier for the audit schedule. Format:
+           * projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+           * folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+           * organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Unique identifier for the audit schedule. Format:
+         projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Unique identifier for the audit schedule. Format:
+           * projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+           * folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+           * organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. List of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. List of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. List of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not update the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If `true`, only validates the request and does not update the audit schedule. This
+         executes standard request validation (such as schema, framework existence, scope, and IAM checks)
+         and skips the apply phase. Use this field for the following purposes: * **Infrastructure as Code
+         (IaC)**: Allow tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without
+         creating real resources or incurring costs. * **User Interface Validation**: Enable real-time form
+         and permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+         your scripts, permissions, and parameters safely without consuming resource quotas.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not update the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -5628,6 +7208,796 @@ public class CloudAuditManager extends com.google.api.client.googleapis.services
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the AuditSchedules collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code CloudAuditManager auditmanager = new CloudAuditManager(...);}
+       *   {@code CloudAuditManager.AuditSchedules.List request = auditmanager.auditSchedules().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AuditSchedules auditSchedules() {
+        return new AuditSchedules();
+      }
+
+      /**
+       * The "auditSchedules" collection of methods.
+       */
+      public class AuditSchedules {
+
+        /**
+         * Creates a new audit schedule in a given project and location.
+         *
+         * Create a request for the method "auditSchedules.create".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+         * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.auditmanager.v1.model.AuditSchedule content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+parent}/auditSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new audit schedule in a given project and location.
+           *
+           * Create a request for the method "auditSchedules.create".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+           * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.auditmanager.v1.model.AuditSchedule content) {
+            super(CloudAuditManager.this, "POST", REST_PATH, content, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Project or folder that this audit schedule is for, in one of the following
+           * formats: * `projects/{project}/locations/{location}` *
+           * `folders/{folder}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Project or folder that this audit schedule is for, in one of the following formats: *
+         `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Project or folder that this audit schedule is for, in one of the following
+           * formats: * `projects/{project}/locations/{location}` *
+           * `folders/{folder}/locations/{location}`
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. ID to use for the audit schedule, which becomes the final component of the
+           * audit schedule's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String auditScheduleId;
+
+          /** Required. ID to use for the audit schedule, which becomes the final component of the audit
+         schedule's resource name.
+           */
+          public java.lang.String getAuditScheduleId() {
+            return auditScheduleId;
+          }
+
+          /**
+           * Required. ID to use for the audit schedule, which becomes the final component of the
+           * audit schedule's resource name.
+           */
+          public Create setAuditScheduleId(java.lang.String auditScheduleId) {
+            this.auditScheduleId = auditScheduleId;
+            return this;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not create the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If `true`, only validates the request and does not create the audit schedule. This
+         executes standard request validation (such as schema, framework existence, scope, and IAM checks)
+         and skips the apply phase. Use this field for the following purposes: * **Infrastructure as Code
+         (IaC)**: Allow tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without
+         creating real resources or incurring costs. * **User Interface Validation**: Enable real-time form
+         and permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+         your scripts, permissions, and parameters safely without consuming resource quotas.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not create the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          public Create setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single audit schedule.
+         *
+         * Create a request for the method "auditSchedules.get".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         *        `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+
+          /**
+           * Gets details of a single audit schedule.
+           *
+           * Create a request for the method "auditSchedules.get".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         *        `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         *        `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(CloudAuditManager.this, "GET", REST_PATH, null, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the audit schedule to retrieve, in one of the following formats: *
+           * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the audit schedule to retrieve, in one of the following formats: *
+         `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+         `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+         `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the audit schedule to retrieve, in one of the following formats: *
+           * `projects/{project}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}` *
+           * `organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists audit schedules in a given project and location.
+         *
+         * Create a request for the method "auditSchedules.list".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. Parent for the audit schedule, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         *        `organizations/{organization}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.ListAuditSchedulesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/auditSchedules";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists audit schedules in a given project and location.
+           *
+           * Create a request for the method "auditSchedules.list".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. Parent for the audit schedule, in one of the following formats: *
+         *        `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         *        `organizations/{organization}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(CloudAuditManager.this, "GET", REST_PATH, null, com.google.api.services.auditmanager.v1.model.ListAuditSchedulesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Parent for the audit schedule, in one of the following formats: *
+           * `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+           * `organizations/{organization}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. Parent for the audit schedule, in one of the following formats: *
+         `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `organizations/{organization}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. Parent for the audit schedule, in one of the following formats: *
+           * `projects/{project}/locations/{location}` * `folders/{folder}/locations/{location}` *
+           * `organizations/{organization}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Maximum number of items to return in a single page. The service might return
+           * fewer items than this value. If unspecified, the service picks an appropriate default.
+           * The maximum value is 100; values above 100 are reduced to 100.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. Maximum number of items to return in a single page. The service might return fewer items
+         than this value. If unspecified, the service picks an appropriate default. The maximum value is
+         100; values above 100 are reduced to 100.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. Maximum number of items to return in a single page. The service might return
+           * fewer items than this value. If unspecified, the service picks an appropriate default.
+           * The maximum value is 100; values above 100 are reduced to 100.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call, to retrieve the next page of
+           * results.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous call, to retrieve the next page of results.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous call, to retrieve the next page of
+           * results.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates an existing audit schedule.
+         *
+         * Create a request for the method "auditSchedules.patch".
+         *
+         * This request holds the parameters needed by the auditmanager server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Unique identifier for the audit schedule. Format:
+         *        projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         *        folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         *        organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+         * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.auditmanager.v1.model.AuditSchedule content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends CloudAuditManagerRequest<com.google.api.services.auditmanager.v1.model.AuditSchedule> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+
+          /**
+           * Updates an existing audit schedule.
+           *
+           * Create a request for the method "auditSchedules.patch".
+           *
+           * This request holds the parameters needed by the the auditmanager server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Unique identifier for the audit schedule. Format:
+         *        projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         *        folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         *        organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           * @param content the {@link com.google.api.services.auditmanager.v1.model.AuditSchedule}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.auditmanager.v1.model.AuditSchedule content) {
+            super(CloudAuditManager.this, "PATCH", REST_PATH, content, com.google.api.services.auditmanager.v1.model.AuditSchedule.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Unique identifier for the audit schedule. Format:
+           * projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+           * folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+           * organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Unique identifier for the audit schedule. Format:
+         projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+         folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+         organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Unique identifier for the audit schedule. Format:
+           * projects/{project}/locations/{location}/auditSchedules/{audit_schedule}
+           * folders/{folder}/locations/{location}/auditSchedules/{audit_schedule}
+           * organizations/{organization}/locations/{location}/auditSchedules/{audit_schedule}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/auditSchedules/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /** Optional. List of fields to update. */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. List of fields to update.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /** Optional. List of fields to update. */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not update the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. If `true`, only validates the request and does not update the audit schedule. This
+         executes standard request validation (such as schema, framework existence, scope, and IAM checks)
+         and skips the apply phase. Use this field for the following purposes: * **Infrastructure as Code
+         (IaC)**: Allow tools like Terraform to run dry-run mutations (e.g., `terraform plan`) without
+         creating real resources or incurring costs. * **User Interface Validation**: Enable real-time form
+         and permission validation in custom UIs before submitting requests. * **CI/CD & Automation**: Test
+         your scripts, permissions, and parameters safely without consuming resource quotas.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. If `true`, only validates the request and does not update the audit schedule.
+           * This executes standard request validation (such as schema, framework existence, scope,
+           * and IAM checks) and skips the apply phase. Use this field for the following purposes: *
+           * **Infrastructure as Code (IaC)**: Allow tools like Terraform to run dry-run mutations
+           * (e.g., `terraform plan`) without creating real resources or incurring costs. * **User
+           * Interface Validation**: Enable real-time form and permission validation in custom UIs
+           * before submitting requests. * **CI/CD & Automation**: Test your scripts, permissions,
+           * and parameters safely without consuming resource quotas.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 

@@ -31,13 +31,6 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class DocumentQuery extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The data model to query against.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String dataModel;
-
-  /**
    * Required. The query string.
    * The value may be {@code null}.
    */
@@ -50,23 +43,6 @@ public final class DocumentQuery extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String queryType;
-
-  /**
-   * Required. The data model to query against.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getDataModel() {
-    return dataModel;
-  }
-
-  /**
-   * Required. The data model to query against.
-   * @param dataModel dataModel or {@code null} for none
-   */
-  public DocumentQuery setDataModel(java.lang.String dataModel) {
-    this.dataModel = dataModel;
-    return this;
-  }
 
   /**
    * Required. The query string.

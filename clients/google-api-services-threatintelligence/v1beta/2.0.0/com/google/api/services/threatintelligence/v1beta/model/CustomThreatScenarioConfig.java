@@ -60,6 +60,13 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
   private LegacyMetadata legacyMonitorMetadata;
 
   /**
+   * Optional. The custom threat scenario type used to create this configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scenarioType;
+
+  /**
    * Output only. The compiled Lucene query string.
    * @return value or {@code null} for none
    */
@@ -126,6 +133,23 @@ public final class CustomThreatScenarioConfig extends com.google.api.client.json
    */
   public CustomThreatScenarioConfig setLegacyMonitorMetadata(LegacyMetadata legacyMonitorMetadata) {
     this.legacyMonitorMetadata = legacyMonitorMetadata;
+    return this;
+  }
+
+  /**
+   * Optional. The custom threat scenario type used to create this configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScenarioType() {
+    return scenarioType;
+  }
+
+  /**
+   * Optional. The custom threat scenario type used to create this configuration.
+   * @param scenarioType scenarioType or {@code null} for none
+   */
+  public CustomThreatScenarioConfig setScenarioType(java.lang.String scenarioType) {
+    this.scenarioType = scenarioType;
     return this;
   }
 

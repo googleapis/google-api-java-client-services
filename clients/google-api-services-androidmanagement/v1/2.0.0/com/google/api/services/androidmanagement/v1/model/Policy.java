@@ -141,6 +141,14 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String autofillPolicy;
 
   /**
+   * Optional. Controls whether the backup service is disabled. Supported only on fully managed
+   * devices running Android 8 and above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupService;
+
+  /**
    * This field has no effect.
    * The value may be {@code null}.
    */
@@ -1139,6 +1147,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setAutofillPolicy(java.lang.String autofillPolicy) {
     this.autofillPolicy = autofillPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether the backup service is disabled. Supported only on fully managed
+   * devices running Android 8 and above.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupService() {
+    return backupService;
+  }
+
+  /**
+   * Optional. Controls whether the backup service is disabled. Supported only on fully managed
+   * devices running Android 8 and above.
+   * @param backupService backupService or {@code null} for none
+   */
+  public Policy setBackupService(java.lang.String backupService) {
+    this.backupService = backupService;
     return this;
   }
 

@@ -17,9 +17,11 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A user in Google Chat. When returned as an output from a request, if your Chat app [authenticates
- * as a user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
- * output for a `User` resource only populates the user's `name` and `type`.
+ * If your Chat app [authenticates as a
+ * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the output
+ * for a `User` resource (such as in the Messages and Memberships APIs) only populates the `name`
+ * and `type` fields for both internal and external users, unless they are members of the space or
+ * have prior affinity with the calling user.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:
@@ -32,7 +34,14 @@ package com.google.api.services.chat.v1.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The user's display name.
+   * Output only. The user's display name. Populated for both app authentication and user
+   * authentication. This field is always populated for requests made with [app
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+   * When calling the Messages and Memberships APIs with [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
+   * this field is populated for both internal and external users for the `sender` of a message,
+   * users within `annotations` (such as user mentions), and within `Membership` resources, provided
+   * the user is a member of the space or has prior affinity with the calling user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +55,9 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String domainId;
 
   /**
-   * Output only. When `true`, the user is deleted or their profile is not visible.
+   * Output only. When `true`, the user is deleted or their profile is not visible, such as when a
+   * user is mentioned in a space without being a member and without prior affinity with the calling
+   * user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +87,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Output only. The user's display name.
+   * Output only. The user's display name. Populated for both app authentication and user
+   * authentication. This field is always populated for requests made with [app
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+   * When calling the Messages and Memberships APIs with [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
+   * this field is populated for both internal and external users for the `sender` of a message,
+   * users within `annotations` (such as user mentions), and within `Membership` resources, provided
+   * the user is a member of the space or has prior affinity with the calling user.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -84,7 +102,14 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The user's display name.
+   * Output only. The user's display name. Populated for both app authentication and user
+   * authentication. This field is always populated for requests made with [app
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+   * When calling the Messages and Memberships APIs with [user
+   * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
+   * this field is populated for both internal and external users for the `sender` of a message,
+   * users within `annotations` (such as user mentions), and within `Membership` resources, provided
+   * the user is a member of the space or has prior affinity with the calling user.
    * @param displayName displayName or {@code null} for none
    */
   public User setDisplayName(java.lang.String displayName) {
@@ -110,7 +135,9 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. When `true`, the user is deleted or their profile is not visible.
+   * Output only. When `true`, the user is deleted or their profile is not visible, such as when a
+   * user is mentioned in a space without being a member and without prior affinity with the calling
+   * user.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsAnonymous() {
@@ -118,7 +145,9 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. When `true`, the user is deleted or their profile is not visible.
+   * Output only. When `true`, the user is deleted or their profile is not visible, such as when a
+   * user is mentioned in a space without being a member and without prior affinity with the calling
+   * user.
    * @param isAnonymous isAnonymous or {@code null} for none
    */
   public User setIsAnonymous(java.lang.Boolean isAnonymous) {

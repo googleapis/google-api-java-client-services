@@ -34071,7 +34071,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link GetVmExtension#execute()} method to invoke the remote operation.
      *
      * @param folder Folder ID for this request.
-     * @param extensionName
+     * @param extensionName Required. Name of the VM extension for this request.
      * @return the request
      */
     public GetVmExtension getVmExtension(java.lang.String folder, java.lang.String extensionName) throws java.io.IOException {
@@ -34099,7 +34099,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param folder Folder ID for this request.
-       * @param extensionName
+       * @param extensionName Required. Name of the VM extension for this request.
        * @since 1.13
        */
       protected GetVmExtension(java.lang.String folder, java.lang.String extensionName) {
@@ -34204,16 +34204,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Required. Name of the VM extension for this request. */
       @com.google.api.client.util.Key
       private java.lang.String extensionName;
 
-      /**
-
+      /** Required. Name of the VM extension for this request.
        */
       public java.lang.String getExtensionName() {
         return extensionName;
       }
 
+      /** Required. Name of the VM extension for this request. */
       public GetVmExtension setExtensionName(java.lang.String extensionName) {
         this.extensionName = extensionName;
         return this;
@@ -35899,7 +35900,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param folder Folder ID for this request.
      * @param zone Name of the zone for this request.
-     * @param extensionName
+     * @param extensionName Required. Name of the VM extension for this request.
      * @return the request
      */
     public GetVmExtension getVmExtension(java.lang.String folder, java.lang.String zone, java.lang.String extensionName) throws java.io.IOException {
@@ -35934,7 +35935,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param folder Folder ID for this request.
        * @param zone Name of the zone for this request.
-       * @param extensionName
+       * @param extensionName Required. Name of the VM extension for this request.
        * @since 1.13
        */
       protected GetVmExtension(java.lang.String folder, java.lang.String zone, java.lang.String extensionName) {
@@ -36071,16 +36072,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Required. Name of the VM extension for this request. */
       @com.google.api.client.util.Key
       private java.lang.String extensionName;
 
-      /**
-
+      /** Required. Name of the VM extension for this request.
        */
       public java.lang.String getExtensionName() {
         return extensionName;
       }
 
+      /** Required. Name of the VM extension for this request. */
       public GetVmExtension setExtensionName(java.lang.String extensionName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(EXTENSION_NAME_PATTERN.matcher(extensionName).matches(),
@@ -46150,7 +46152,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the compute server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param project
+     * @param project Required. Project ID for this request.
      * @return the request
      */
     public Get get(java.lang.String project) throws java.io.IOException {
@@ -46173,7 +46175,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
+       * @param project Required. Project ID for this request.
        * @since 1.13
        */
       protected Get(java.lang.String project) {
@@ -46251,16 +46253,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return (Get) super.setUserIp(userIp);
       }
 
+      /** Required. Project ID for this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Required. Project ID for this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Required. Project ID for this request. */
       public Get setProject(java.lang.String project) {
         this.project = project;
         return this;
@@ -46279,7 +46282,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * This request holds the parameters needed by the compute server.  After setting any optional
      * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
      *
-     * @param project
+     * @param project Required. Project ID for this request.
      * @param content the {@link com.google.api.services.compute.model.GlobalFrontendSettings}
      * @return the request
      */
@@ -46303,7 +46306,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param project
+       * @param project Required. Project ID for this request.
        * @param content the {@link com.google.api.services.compute.model.GlobalFrontendSettings}
        * @since 1.13
        */
@@ -46372,47 +46375,49 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return (Patch) super.setUserIp(userIp);
       }
 
+      /** Required. Project ID for this request. */
       @com.google.api.client.util.Key
       private java.lang.String project;
 
-      /**
-
+      /** Required. Project ID for this request.
        */
       public java.lang.String getProject() {
         return project;
       }
 
+      /** Required. Project ID for this request. */
       public Patch setProject(java.lang.String project) {
         this.project = project;
         return this;
       }
 
+      /** An optional request ID to identify requests. */
       @com.google.api.client.util.Key
       private java.lang.String requestId;
 
-      /**
-
+      /** An optional request ID to identify requests.
        */
       public java.lang.String getRequestId() {
         return requestId;
       }
 
+      /** An optional request ID to identify requests. */
       public Patch setRequestId(java.lang.String requestId) {
         this.requestId = requestId;
         return this;
       }
 
-      /** e.g., "type" */
+      /** Field mask to support patch. E.g., "type". */
       @com.google.api.client.util.Key
       private String updateMask;
 
-      /** e.g., "type"
+      /** Field mask to support patch. E.g., "type".
        */
       public String getUpdateMask() {
         return updateMask;
       }
 
-      /** e.g., "type" */
+      /** Field mask to support patch. E.g., "type". */
       public Patch setUpdateMask(String updateMask) {
         this.updateMask = updateMask;
         return this;
@@ -52574,7 +52579,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link GetVmExtension#execute()} method to invoke the remote operation.
      *
      * @param project Project ID for this request.
-     * @param extensionName
+     * @param extensionName Required. Name of the VM extension for this request.
      * @return the request
      */
     public GetVmExtension getVmExtension(java.lang.String project, java.lang.String extensionName) throws java.io.IOException {
@@ -52602,7 +52607,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param project Project ID for this request.
-       * @param extensionName
+       * @param extensionName Required. Name of the VM extension for this request.
        * @since 1.13
        */
       protected GetVmExtension(java.lang.String project, java.lang.String extensionName) {
@@ -52707,16 +52712,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Required. Name of the VM extension for this request. */
       @com.google.api.client.util.Key
       private java.lang.String extensionName;
 
-      /**
-
+      /** Required. Name of the VM extension for this request.
        */
       public java.lang.String getExtensionName() {
         return extensionName;
       }
 
+      /** Required. Name of the VM extension for this request. */
       public GetVmExtension setExtensionName(java.lang.String extensionName) {
         this.extensionName = extensionName;
         return this;
@@ -142899,7 +142905,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      * parameters, call the {@link GetVmExtension#execute()} method to invoke the remote operation.
      *
      * @param organization Organization ID for this request.
-     * @param extensionName
+     * @param extensionName Required. Name of the VM extension for this request.
      * @return the request
      */
     public GetVmExtension getVmExtension(java.lang.String organization, java.lang.String extensionName) throws java.io.IOException {
@@ -142927,7 +142933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        * constructor. </p>
        *
        * @param organization Organization ID for this request.
-       * @param extensionName
+       * @param extensionName Required. Name of the VM extension for this request.
        * @since 1.13
        */
       protected GetVmExtension(java.lang.String organization, java.lang.String extensionName) {
@@ -143032,16 +143038,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Required. Name of the VM extension for this request. */
       @com.google.api.client.util.Key
       private java.lang.String extensionName;
 
-      /**
-
+      /** Required. Name of the VM extension for this request.
        */
       public java.lang.String getExtensionName() {
         return extensionName;
       }
 
+      /** Required. Name of the VM extension for this request. */
       public GetVmExtension setExtensionName(java.lang.String extensionName) {
         this.extensionName = extensionName;
         return this;
@@ -151103,7 +151110,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param organization Organization ID for this request.
      * @param zone Name of the zone for this request.
-     * @param extensionName
+     * @param extensionName Required. Name of the VM extension for this request.
      * @return the request
      */
     public GetVmExtension getVmExtension(java.lang.String organization, java.lang.String zone, java.lang.String extensionName) throws java.io.IOException {
@@ -151138,7 +151145,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param organization Organization ID for this request.
        * @param zone Name of the zone for this request.
-       * @param extensionName
+       * @param extensionName Required. Name of the VM extension for this request.
        * @since 1.13
        */
       protected GetVmExtension(java.lang.String organization, java.lang.String zone, java.lang.String extensionName) {
@@ -151275,16 +151282,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Required. Name of the VM extension for this request. */
       @com.google.api.client.util.Key
       private java.lang.String extensionName;
 
-      /**
-
+      /** Required. Name of the VM extension for this request.
        */
       public java.lang.String getExtensionName() {
         return extensionName;
       }
 
+      /** Required. Name of the VM extension for this request. */
       public GetVmExtension setExtensionName(java.lang.String extensionName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(EXTENSION_NAME_PATTERN.matcher(extensionName).matches(),
@@ -317065,7 +317073,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
      *
      * @param project Project ID for this request.
      * @param zone Name of the zone for this request.
-     * @param extensionName
+     * @param extensionName Required. Name of the VM extension for this request.
      * @return the request
      */
     public GetVmExtension getVmExtension(java.lang.String project, java.lang.String zone, java.lang.String extensionName) throws java.io.IOException {
@@ -317100,7 +317108,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
        *
        * @param project Project ID for this request.
        * @param zone Name of the zone for this request.
-       * @param extensionName
+       * @param extensionName Required. Name of the VM extension for this request.
        * @since 1.13
        */
       protected GetVmExtension(java.lang.String project, java.lang.String zone, java.lang.String extensionName) {
@@ -317237,16 +317245,17 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return this;
       }
 
+      /** Required. Name of the VM extension for this request. */
       @com.google.api.client.util.Key
       private java.lang.String extensionName;
 
-      /**
-
+      /** Required. Name of the VM extension for this request.
        */
       public java.lang.String getExtensionName() {
         return extensionName;
       }
 
+      /** Required. Name of the VM extension for this request. */
       public GetVmExtension setExtensionName(java.lang.String extensionName) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(EXTENSION_NAME_PATTERN.matcher(extensionName).matches(),

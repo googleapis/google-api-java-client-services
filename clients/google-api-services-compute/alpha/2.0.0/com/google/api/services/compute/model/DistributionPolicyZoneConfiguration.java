@@ -30,12 +30,42 @@ package com.google.api.services.compute.model;
 public final class DistributionPolicyZoneConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The maximum size of the group in this zone. This value can be either a fixed number
+   * or, a percentage. If you set a percentage, the number of instances is rounded up if necessary.
+   * If unset, it is interpreted as unbounded.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private FixedOrPercent maxSize;
+
+  /**
    * The URL of thezone. The zone must exist in the region where the managed instance group is
    * located.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Optional. The maximum size of the group in this zone. This value can be either a fixed number
+   * or, a percentage. If you set a percentage, the number of instances is rounded up if necessary.
+   * If unset, it is interpreted as unbounded.
+   * @return value or {@code null} for none
+   */
+  public FixedOrPercent getMaxSize() {
+    return maxSize;
+  }
+
+  /**
+   * Optional. The maximum size of the group in this zone. This value can be either a fixed number
+   * or, a percentage. If you set a percentage, the number of instances is rounded up if necessary.
+   * If unset, it is interpreted as unbounded.
+   * @param maxSize maxSize or {@code null} for none
+   */
+  public DistributionPolicyZoneConfiguration setMaxSize(FixedOrPercent maxSize) {
+    this.maxSize = maxSize;
+    return this;
+  }
 
   /**
    * The URL of thezone. The zone must exist in the region where the managed instance group is

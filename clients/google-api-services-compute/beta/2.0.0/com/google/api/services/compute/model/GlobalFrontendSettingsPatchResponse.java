@@ -30,12 +30,14 @@ package com.google.api.services.compute.model;
 public final class GlobalFrontendSettingsPatchResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Operation resource for this long-running operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Operation operation;
 
   /**
+   * The Operation resource for this long-running operation.
    * @return value or {@code null} for none
    */
   public Operation getOperation() {
@@ -43,6 +45,7 @@ public final class GlobalFrontendSettingsPatchResponse extends com.google.api.cl
   }
 
   /**
+   * The Operation resource for this long-running operation.
    * @param operation operation or {@code null} for none
    */
   public GlobalFrontendSettingsPatchResponse setOperation(Operation operation) {

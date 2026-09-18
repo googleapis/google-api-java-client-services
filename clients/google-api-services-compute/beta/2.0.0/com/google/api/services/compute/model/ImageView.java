@@ -30,12 +30,14 @@ package com.google.api.services.compute.model;
 public final class ImageView extends com.google.api.client.json.GenericJson {
 
   /**
+   * The Image resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Image image;
 
   /**
+   * The Image resource.
    * @return value or {@code null} for none
    */
   public Image getImage() {
@@ -43,6 +45,7 @@ public final class ImageView extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The Image resource.
    * @param image image or {@code null} for none
    */
   public ImageView setImage(Image image) {

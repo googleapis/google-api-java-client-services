@@ -30,6 +30,13 @@ package com.google.api.services.compute.model;
 public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Constraints applied to instance flexibility spreading and selection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceGroupManagerInstanceFlexibilityPolicyConstraints constraints;
+
+  /**
    * Named instance selections configuring properties that the group will use when creating new VMs.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class InstanceGroupManagerInstanceFlexibilityPolicy extends com.goo
    */
   @com.google.api.client.util.Key
   private InstanceGroupManagerInstanceFlexibilityPolicyProvisioningModelMix provisioningModelMix;
+
+  /**
+   * Constraints applied to instance flexibility spreading and selection.
+   * @return value or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicyConstraints getConstraints() {
+    return constraints;
+  }
+
+  /**
+   * Constraints applied to instance flexibility spreading and selection.
+   * @param constraints constraints or {@code null} for none
+   */
+  public InstanceGroupManagerInstanceFlexibilityPolicy setConstraints(InstanceGroupManagerInstanceFlexibilityPolicyConstraints constraints) {
+    this.constraints = constraints;
+    return this;
+  }
 
   /**
    * Named instance selections configuring properties that the group will use when creating new VMs.

@@ -17,7 +17,7 @@
 package com.google.api.services.compute.model;
 
 /**
- * Represents a read-only view of a global Image resource.
+ * AttachedDisk modeled after Instance's AttachedDisk.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Compute Engine API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.compute.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class ImageView extends com.google.api.client.json.GenericJson {
+public final class CapacityHistoryRequestInstancePropertiesAttachedDisk extends com.google.api.client.json.GenericJson {
 
   /**
-   * The Image resource.
+   * Specifies the type of the disk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private Image image;
+  private java.lang.String type;
 
   /**
-   * The Image resource.
+   * Specifies the type of the disk.
    * @return value or {@code null} for none
    */
-  public Image getImage() {
-    return image;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * The Image resource.
-   * @param image image or {@code null} for none
+   * Specifies the type of the disk.
+   * @param type type or {@code null} for none
    */
-  public ImageView setImage(Image image) {
-    this.image = image;
+  public CapacityHistoryRequestInstancePropertiesAttachedDisk setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public ImageView set(String fieldName, Object value) {
-    return (ImageView) super.set(fieldName, value);
+  public CapacityHistoryRequestInstancePropertiesAttachedDisk set(String fieldName, Object value) {
+    return (CapacityHistoryRequestInstancePropertiesAttachedDisk) super.set(fieldName, value);
   }
 
   @Override
-  public ImageView clone() {
-    return (ImageView) super.clone();
+  public CapacityHistoryRequestInstancePropertiesAttachedDisk clone() {
+    return (CapacityHistoryRequestInstancePropertiesAttachedDisk) super.clone();
   }
 
 }

@@ -57,6 +57,14 @@ public final class CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelecti
   private java.util.List<java.lang.String> machineTypes;
 
   /**
+   * Optional. Rank when prioritizing the shape flexibilities. The instance selections are
+   * considered in the ascending order of the rank. If not set, defaults to 0.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long rank;
+
+  /**
    * Local SSDs.
    * @return value or {@code null} for none
    */
@@ -104,6 +112,25 @@ public final class CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelecti
    */
   public CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelection setMachineTypes(java.util.List<java.lang.String> machineTypes) {
     this.machineTypes = machineTypes;
+    return this;
+  }
+
+  /**
+   * Optional. Rank when prioritizing the shape flexibilities. The instance selections are
+   * considered in the ascending order of the rank. If not set, defaults to 0.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getRank() {
+    return rank;
+  }
+
+  /**
+   * Optional. Rank when prioritizing the shape flexibilities. The instance selections are
+   * considered in the ascending order of the rank. If not set, defaults to 0.
+   * @param rank rank or {@code null} for none
+   */
+  public CapacityAdviceRequestInstanceFlexibilityPolicyInstanceSelection setRank(java.lang.Long rank) {
+    this.rank = rank;
     return this;
   }
 

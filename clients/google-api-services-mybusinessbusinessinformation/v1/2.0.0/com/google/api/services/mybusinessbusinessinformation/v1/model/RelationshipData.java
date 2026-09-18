@@ -31,28 +31,28 @@ package com.google.api.services.mybusinessbusinessinformation.v1.model;
 public final class RelationshipData extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of children locations that this location has relations with.
+   * Optional. The list of children locations that this location has relations with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<RelevantLocation> childrenLocations;
 
   /**
-   * The resource name of the Chain that this location is member of. How to find Chain ID
+   * Optional. The resource name of the Chain that this location is member of. How to find Chain ID
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parentChain;
 
   /**
-   * The parent location that this location has relations with.
+   * Optional. The parent location that this location has relations with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private RelevantLocation parentLocation;
 
   /**
-   * The list of children locations that this location has relations with.
+   * Optional. The list of children locations that this location has relations with.
    * @return value or {@code null} for none
    */
   public java.util.List<RelevantLocation> getChildrenLocations() {
@@ -60,7 +60,7 @@ public final class RelationshipData extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of children locations that this location has relations with.
+   * Optional. The list of children locations that this location has relations with.
    * @param childrenLocations childrenLocations or {@code null} for none
    */
   public RelationshipData setChildrenLocations(java.util.List<RelevantLocation> childrenLocations) {
@@ -69,7 +69,7 @@ public final class RelationshipData extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the Chain that this location is member of. How to find Chain ID
+   * Optional. The resource name of the Chain that this location is member of. How to find Chain ID
    * @return value or {@code null} for none
    */
   public java.lang.String getParentChain() {
@@ -77,7 +77,7 @@ public final class RelationshipData extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The resource name of the Chain that this location is member of. How to find Chain ID
+   * Optional. The resource name of the Chain that this location is member of. How to find Chain ID
    * @param parentChain parentChain or {@code null} for none
    */
   public RelationshipData setParentChain(java.lang.String parentChain) {
@@ -86,7 +86,7 @@ public final class RelationshipData extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The parent location that this location has relations with.
+   * Optional. The parent location that this location has relations with.
    * @return value or {@code null} for none
    */
   public RelevantLocation getParentLocation() {
@@ -94,7 +94,7 @@ public final class RelationshipData extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The parent location that this location has relations with.
+   * Optional. The parent location that this location has relations with.
    * @param parentLocation parentLocation or {@code null} for none
    */
   public RelationshipData setParentLocation(RelevantLocation parentLocation) {

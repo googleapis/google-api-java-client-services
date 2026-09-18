@@ -2443,7 +2443,7 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
      * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Google identifier for this location in the form: `locations/{location_id}`.
+     * @param name Identifier. Google identifier for this location in the form: `locations/{location_id}`.
      * @param content the {@link com.google.api.services.mybusinessbusinessinformation.v1.model.Location}
      * @return the request
      */
@@ -2471,7 +2471,7 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
        * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Google identifier for this location in the form: `locations/{location_id}`.
+       * @param name Identifier. Google identifier for this location in the form: `locations/{location_id}`.
        * @param content the {@link com.google.api.services.mybusinessbusinessinformation.v1.model.Location}
        * @since 1.13
        */
@@ -2540,17 +2540,21 @@ public class MyBusinessBusinessInformation extends com.google.api.client.googlea
         return (Patch) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Google identifier for this location in the form: `locations/{location_id}`. */
+      /**
+       * Identifier. Google identifier for this location in the form: `locations/{location_id}`.
+       */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Google identifier for this location in the form: `locations/{location_id}`.
+      /** Identifier. Google identifier for this location in the form: `locations/{location_id}`.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Google identifier for this location in the form: `locations/{location_id}`. */
+      /**
+       * Identifier. Google identifier for this location in the form: `locations/{location_id}`.
+       */
       public Patch setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

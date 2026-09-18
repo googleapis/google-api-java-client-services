@@ -39,7 +39,7 @@ public final class ServiceAreaBusiness extends com.google.api.client.json.Generi
   private java.lang.String businessType;
 
   /**
-   * The area that this business serves defined through a set of places.
+   * Optional. The area that this business serves defined through a set of places.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class ServiceAreaBusiness extends com.google.api.client.json.Generi
   }
 
   /**
-   * The area that this business serves defined through a set of places.
+   * Optional. The area that this business serves defined through a set of places.
    * @return value or {@code null} for none
    */
   public Places getPlaces() {
@@ -87,7 +87,7 @@ public final class ServiceAreaBusiness extends com.google.api.client.json.Generi
   }
 
   /**
-   * The area that this business serves defined through a set of places.
+   * Optional. The area that this business serves defined through a set of places.
    * @param places places or {@code null} for none
    */
   public ServiceAreaBusiness setPlaces(Places places) {

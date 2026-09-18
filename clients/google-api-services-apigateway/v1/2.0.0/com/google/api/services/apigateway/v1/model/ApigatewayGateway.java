@@ -46,8 +46,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   private String createTime;
 
   /**
-   * Output only. The default API Gateway host name of the form
-   * `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+   * Output only. The default hostname that serves traffic for this Gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,8 +146,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The default API Gateway host name of the form
-   * `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+   * Output only. The default hostname that serves traffic for this Gateway.
    * @return value or {@code null} for none
    */
   public java.lang.String getDefaultHostname() {
@@ -156,8 +154,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. The default API Gateway host name of the form
-   * `{gateway_id}-{hash}.{region_code}.gateway.dev`.
+   * Output only. The default hostname that serves traffic for this Gateway.
    * @param defaultHostname defaultHostname or {@code null} for none
    */
   public ApigatewayGateway setDefaultHostname(java.lang.String defaultHostname) {

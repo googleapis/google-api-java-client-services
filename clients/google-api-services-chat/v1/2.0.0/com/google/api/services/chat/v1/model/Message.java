@@ -283,9 +283,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * output populates the
+   * output only populates the
    * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
-   * `type`.
+   * `type` fields for both internal and external users, unless they are members of the space or
+   * have a prior affinity, like a direct message (DM) conversation, with the calling user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -829,9 +830,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * output populates the
+   * output only populates the
    * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
-   * `type`.
+   * `type` fields for both internal and external users, unless they are members of the space or
+   * have a prior affinity, like a direct message (DM) conversation, with the calling user.
    * @return value or {@code null} for none
    */
   public User getSender() {
@@ -841,9 +843,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The user who created the message. If your Chat app [authenticates as a
    * user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user), the
-   * output populates the
+   * output only populates the
    * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
-   * `type`.
+   * `type` fields for both internal and external users, unless they are members of the space or
+   * have a prior affinity, like a direct message (DM) conversation, with the calling user.
    * @param sender sender or {@code null} for none
    */
   public Message setSender(User sender) {

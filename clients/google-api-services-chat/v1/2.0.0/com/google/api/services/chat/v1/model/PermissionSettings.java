@@ -88,6 +88,20 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
   private PermissionSetting useAtMentionAll;
 
   /**
+   * Optional. Setting for viewing space membership. Must be specified together with
+   * `AccessPermissionSettings.view_space_membership_setting` in the update mask and request body
+   * when updating who can view space membership. When restricting view access to specific roles
+   * (for example, space managers or assistant managers only), specify the desired role permissions
+   * here and provide an empty `AccessPermissionSettings.view_space_membership_setting` in the same
+   * request. If a target audience is configured in
+   * `AccessPermissionSettings.view_space_membership_setting`, this setting must be granted to all
+   * members.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PermissionSetting viewSpaceMembership;
+
+  /**
    * Optional. Setting for managing apps in a space.
    * @return value or {@code null} for none
    */
@@ -220,6 +234,37 @@ public final class PermissionSettings extends com.google.api.client.json.Generic
    */
   public PermissionSettings setUseAtMentionAll(PermissionSetting useAtMentionAll) {
     this.useAtMentionAll = useAtMentionAll;
+    return this;
+  }
+
+  /**
+   * Optional. Setting for viewing space membership. Must be specified together with
+   * `AccessPermissionSettings.view_space_membership_setting` in the update mask and request body
+   * when updating who can view space membership. When restricting view access to specific roles
+   * (for example, space managers or assistant managers only), specify the desired role permissions
+   * here and provide an empty `AccessPermissionSettings.view_space_membership_setting` in the same
+   * request. If a target audience is configured in
+   * `AccessPermissionSettings.view_space_membership_setting`, this setting must be granted to all
+   * members.
+   * @return value or {@code null} for none
+   */
+  public PermissionSetting getViewSpaceMembership() {
+    return viewSpaceMembership;
+  }
+
+  /**
+   * Optional. Setting for viewing space membership. Must be specified together with
+   * `AccessPermissionSettings.view_space_membership_setting` in the update mask and request body
+   * when updating who can view space membership. When restricting view access to specific roles
+   * (for example, space managers or assistant managers only), specify the desired role permissions
+   * here and provide an empty `AccessPermissionSettings.view_space_membership_setting` in the same
+   * request. If a target audience is configured in
+   * `AccessPermissionSettings.view_space_membership_setting`, this setting must be granted to all
+   * members.
+   * @param viewSpaceMembership viewSpaceMembership or {@code null} for none
+   */
+  public PermissionSettings setViewSpaceMembership(PermissionSetting viewSpaceMembership) {
+    this.viewSpaceMembership = viewSpaceMembership;
     return this;
   }
 

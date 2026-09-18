@@ -44,6 +44,18 @@ public final class AccessPermissionSettings extends com.google.api.client.json.G
   private AccessPermissionSetting joinSpaceSetting;
 
   /**
+   * Optional. Access permission setting for viewing space membership. Must be specified together
+   * with `PermissionSettings.view_space_membership` in the update mask and request body when
+   * updating who can view space membership. When granting view access to a target audience, you
+   * must also grant `PermissionSettings.view_space_membership` to all members in the same request.
+   * To remove an existing target audience (for example, to restrict view access to space managers
+   * or assistant managers only), specify an empty `AccessPermissionSetting` (with no `principals`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AccessPermissionSetting viewSpaceMembershipSetting;
+
+  /**
    * Optional. Access permission setting for discovering the space.
    * @return value or {@code null} for none
    */
@@ -74,6 +86,33 @@ public final class AccessPermissionSettings extends com.google.api.client.json.G
    */
   public AccessPermissionSettings setJoinSpaceSetting(AccessPermissionSetting joinSpaceSetting) {
     this.joinSpaceSetting = joinSpaceSetting;
+    return this;
+  }
+
+  /**
+   * Optional. Access permission setting for viewing space membership. Must be specified together
+   * with `PermissionSettings.view_space_membership` in the update mask and request body when
+   * updating who can view space membership. When granting view access to a target audience, you
+   * must also grant `PermissionSettings.view_space_membership` to all members in the same request.
+   * To remove an existing target audience (for example, to restrict view access to space managers
+   * or assistant managers only), specify an empty `AccessPermissionSetting` (with no `principals`).
+   * @return value or {@code null} for none
+   */
+  public AccessPermissionSetting getViewSpaceMembershipSetting() {
+    return viewSpaceMembershipSetting;
+  }
+
+  /**
+   * Optional. Access permission setting for viewing space membership. Must be specified together
+   * with `PermissionSettings.view_space_membership` in the update mask and request body when
+   * updating who can view space membership. When granting view access to a target audience, you
+   * must also grant `PermissionSettings.view_space_membership` to all members in the same request.
+   * To remove an existing target audience (for example, to restrict view access to space managers
+   * or assistant managers only), specify an empty `AccessPermissionSetting` (with no `principals`).
+   * @param viewSpaceMembershipSetting viewSpaceMembershipSetting or {@code null} for none
+   */
+  public AccessPermissionSettings setViewSpaceMembershipSetting(AccessPermissionSetting viewSpaceMembershipSetting) {
+    this.viewSpaceMembershipSetting = viewSpaceMembershipSetting;
     return this;
   }
 

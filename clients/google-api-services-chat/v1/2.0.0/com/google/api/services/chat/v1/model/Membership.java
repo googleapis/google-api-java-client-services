@@ -68,9 +68,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Google Chat user or app the membership corresponds to. If your Chat app
    * [authenticates as a user](https://developers.google.com/workspace/chat/authenticate-authorize-
-   * chat-user), the output populates the
+   * chat-user), the output only populates the
    * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
-   * `type`.
+   * `type` fields for both internal and external users, unless they are members of the space or
+   * have a prior affinity, like a direct message (DM) conversation, with the calling user.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -184,9 +185,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Google Chat user or app the membership corresponds to. If your Chat app
    * [authenticates as a user](https://developers.google.com/workspace/chat/authenticate-authorize-
-   * chat-user), the output populates the
+   * chat-user), the output only populates the
    * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
-   * `type`.
+   * `type` fields for both internal and external users, unless they are members of the space or
+   * have a prior affinity, like a direct message (DM) conversation, with the calling user.
    * @return value or {@code null} for none
    */
   public User getMember() {
@@ -196,9 +198,10 @@ public final class Membership extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The Google Chat user or app the membership corresponds to. If your Chat app
    * [authenticates as a user](https://developers.google.com/workspace/chat/authenticate-authorize-
-   * chat-user), the output populates the
+   * chat-user), the output only populates the
    * [user](https://developers.google.com/workspace/chat/api/reference/rest/v1/User) `name` and
-   * `type`.
+   * `type` fields for both internal and external users, unless they are members of the space or
+   * have a prior affinity, like a direct message (DM) conversation, with the calling user.
    * @param member member or {@code null} for none
    */
   public Membership setMember(User member) {

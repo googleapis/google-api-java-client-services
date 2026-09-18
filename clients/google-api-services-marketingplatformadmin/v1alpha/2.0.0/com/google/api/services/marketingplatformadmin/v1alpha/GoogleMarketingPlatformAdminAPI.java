@@ -736,6 +736,687 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
     }
 
     /**
+     * An accessor for creating requests from the AdminAccessBindings collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleMarketingPlatformAdminAPI marketingplatformadmin = new GoogleMarketingPlatformAdminAPI(...);}
+     *   {@code GoogleMarketingPlatformAdminAPI.AdminAccessBindings.List request = marketingplatformadmin.adminAccessBindings().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public AdminAccessBindings adminAccessBindings() {
+      return new AdminAccessBindings();
+    }
+
+    /**
+     * The "adminAccessBindings" collection of methods.
+     */
+    public class AdminAccessBindings {
+
+      /**
+       * Creates an admin access binding in the specified GMP organization.
+       *
+       * Create a request for the method "adminAccessBindings.create".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent organization, which owns this Admin Access Binding. Format:
+       *        organizations/{org_id}
+       * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/adminAccessBindings";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates an admin access binding in the specified GMP organization.
+         *
+         * Create a request for the method "adminAccessBindings.create".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent organization, which owns this Admin Access Binding. Format:
+       *        organizations/{org_id}
+         * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding content) {
+          super(GoogleMarketingPlatformAdminAPI.this, "POST", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent organization, which owns this Admin Access Binding. Format:
+         * organizations/{org_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent organization, which owns this Admin Access Binding. Format:
+       organizations/{org_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent organization, which owns this Admin Access Binding. Format:
+         * organizations/{org_id}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Looks up a single admin access binding.
+       *
+       * Create a request for the method "adminAccessBindings.get".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the AdminAccessBinding to retrieve. Format:
+       *        organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/adminAccessBindings/[^/]+$");
+
+        /**
+         * Looks up a single admin access binding.
+         *
+         * Create a request for the method "adminAccessBindings.get".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the AdminAccessBinding to retrieve. Format:
+       *        organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/adminAccessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the AdminAccessBinding to retrieve. Format:
+         * organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the AdminAccessBinding to retrieve. Format:
+       organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the AdminAccessBinding to retrieve. Format:
+         * organizations/{org_id}/adminAccessBindings/{admin_access_binding_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/adminAccessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a list of admin access bindings in the specified GMP organization.
+       *
+       * Create a request for the method "adminAccessBindings.list".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent organization, which owns this collection of Admin Access Bindings. Format:
+       *        organizations/{org_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.ListAdminAccessBindingsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/adminAccessBindings";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Returns a list of admin access bindings in the specified GMP organization.
+         *
+         * Create a request for the method "adminAccessBindings.list".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent organization, which owns this collection of Admin Access Bindings. Format:
+       *        organizations/{org_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.ListAdminAccessBindingsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent organization, which owns this collection of Admin Access Bindings.
+         * Format: organizations/{org_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent organization, which owns this collection of Admin Access Bindings. Format:
+       organizations/{org_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent organization, which owns this collection of Admin Access Bindings.
+         * Format: organizations/{org_id}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of Admin Access Bindings to return in one call. The service
+         * may return fewer than this value. If unspecified, at most 50 Admin Access Bindings will
+         * be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of Admin Access Bindings to return in one call. The service may return
+       fewer than this value. If unspecified, at most 50 Admin Access Bindings will be returned. The
+       maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of Admin Access Bindings to return in one call. The service
+         * may return fewer than this value. If unspecified, at most 50 Admin Access Bindings will
+         * be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous ListAdminAccessBindings call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAdminAccessBindings` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous ListAdminAccessBindings call. Provide this to
+       retrieve the subsequent page. When paginating, all other parameters provided to
+       `ListAdminAccessBindings` must match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous ListAdminAccessBindings call. Provide
+         * this to retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListAdminAccessBindings` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates an admin access binding in the specified GMP organization.
+       *
+       * Create a request for the method "adminAccessBindings.patch".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The resource name of this AdminAccessBinding. Format:
+       *        organizations/{org_id}/adminAccessBindings/{admin_access_binding_id} Example:
+       *        "organizations/123abc/adminAccessBindings/456def"
+       * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/adminAccessBindings/[^/]+$");
+
+        /**
+         * Updates an admin access binding in the specified GMP organization.
+         *
+         * Create a request for the method "adminAccessBindings.patch".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of this AdminAccessBinding. Format:
+       *        organizations/{org_id}/adminAccessBindings/{admin_access_binding_id} Example:
+       *        "organizations/123abc/adminAccessBindings/456def"
+         * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding content) {
+          super(GoogleMarketingPlatformAdminAPI.this, "PATCH", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.AdminAccessBinding.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/adminAccessBindings/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of this AdminAccessBinding. Format:
+         * organizations/{org_id}/adminAccessBindings/{admin_access_binding_id} Example:
+         * "organizations/123abc/adminAccessBindings/456def"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of this AdminAccessBinding. Format:
+       organizations/{org_id}/adminAccessBindings/{admin_access_binding_id} Example:
+       "organizations/123abc/adminAccessBindings/456def"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of this AdminAccessBinding. Format:
+         * organizations/{org_id}/adminAccessBindings/{admin_access_binding_id} Example:
+         * "organizations/123abc/adminAccessBindings/456def"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/adminAccessBindings/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to update. Field names must be in snake case (for example,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update. Field names must be in snake case (for example,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to update. Field names must be in snake case (for example,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the AnalyticsAccountLinks collection.
      *
      * <p>The typical use is:</p>
@@ -1388,6 +2069,1637 @@ public class GoogleMarketingPlatformAdminAPI extends com.google.api.client.googl
         }
       }
 
+    }
+    /**
+     * An accessor for creating requests from the UserGroups collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code GoogleMarketingPlatformAdminAPI marketingplatformadmin = new GoogleMarketingPlatformAdminAPI(...);}
+     *   {@code GoogleMarketingPlatformAdminAPI.UserGroups.List request = marketingplatformadmin.userGroups().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public UserGroups userGroups() {
+      return new UserGroups();
+    }
+
+    /**
+     * The "userGroups" collection of methods.
+     */
+    public class UserGroups {
+
+      /**
+       * Creates a user group in the specified GMP organization.
+       *
+       * Create a request for the method "userGroups.create".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this UserGroup will be created. Format: organizations/{org_id}
+       * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/userGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a user group in the specified GMP organization.
+         *
+         * Create a request for the method "userGroups.create".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this UserGroup will be created. Format: organizations/{org_id}
+         * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup content) {
+          super(GoogleMarketingPlatformAdminAPI.this, "POST", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this UserGroup will be created. Format:
+         * organizations/{org_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this UserGroup will be created. Format: organizations/{org_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this UserGroup will be created. Format:
+         * organizations/{org_id}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes a user group in the specified GMP organization.
+       *
+       * Create a request for the method "userGroups.delete".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the user group to delete. Format:
+       *        organizations/{org_id}/userGroups/{user_group_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.Empty> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+$");
+
+        /**
+         * Deletes a user group in the specified GMP organization.
+         *
+         * Create a request for the method "userGroups.delete".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the user group to delete. Format:
+       *        organizations/{org_id}/userGroups/{user_group_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(GoogleMarketingPlatformAdminAPI.this, "DELETE", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.Empty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/userGroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the user group to delete. Format:
+         * organizations/{org_id}/userGroups/{user_group_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the user group to delete. Format:
+       organizations/{org_id}/userGroups/{user_group_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the user group to delete. Format:
+         * organizations/{org_id}/userGroups/{user_group_id}
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/userGroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Looks up a single user group.
+       *
+       * Create a request for the method "userGroups.get".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the UserGroup to retrieve. Format:
+       *        organizations/{org_id}/userGroups/{user_group_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+$");
+
+        /**
+         * Looks up a single user group.
+         *
+         * Create a request for the method "userGroups.get".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the UserGroup to retrieve. Format:
+       *        organizations/{org_id}/userGroups/{user_group_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/userGroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the UserGroup to retrieve. Format:
+         * organizations/{org_id}/userGroups/{user_group_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the UserGroup to retrieve. Format:
+       organizations/{org_id}/userGroups/{user_group_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the UserGroup to retrieve. Format:
+         * organizations/{org_id}/userGroups/{user_group_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/userGroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Returns a list of user groups in the specified GMP organization.
+       *
+       * Create a request for the method "userGroups.list".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent org where this UserGroup will be listed. Format: organizations/{org_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.ListUserGroupsResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+parent}/userGroups";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Returns a list of user groups in the specified GMP organization.
+         *
+         * Create a request for the method "userGroups.list".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent org where this UserGroup will be listed. Format: organizations/{org_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.ListUserGroupsResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent org where this UserGroup will be listed. Format:
+         * organizations/{org_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent org where this UserGroup will be listed. Format: organizations/{org_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent org where this UserGroup will be listed. Format:
+         * organizations/{org_id}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of user groups to return in one call. The service may return
+         * fewer than this value. If unspecified, at most 50 user groups will be returned. The
+         * maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of user groups to return in one call. The service may return fewer
+       than this value. If unspecified, at most 50 user groups will be returned. The maximum value is
+       1000; values above 1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of user groups to return in one call. The service may return
+         * fewer than this value. If unspecified, at most 50 user groups will be returned. The
+         * maximum value is 1000; values above 1000 will be coerced to 1000.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous ListUserGroups call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListUserGroups` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous ListUserGroups call. Provide this to retrieve the
+       subsequent page. When paginating, all other parameters provided to `ListUserGroups` must match the
+       call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous ListUserGroups call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `ListUserGroups` must match the call that provided the page token.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates a user group in the specified GMP organization.
+       *
+       * Create a request for the method "userGroups.patch".
+       *
+       * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. Resource name of this UserGroup. Format:
+       *        organizations/{org_id}/userGroups/{user_group_id} Example:
+       *        "organizations/123abc/userGroups/456def"
+       * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+$");
+
+        /**
+         * Updates a user group in the specified GMP organization.
+         *
+         * Create a request for the method "userGroups.patch".
+         *
+         * This request holds the parameters needed by the the marketingplatformadmin server.  After
+         * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. Resource name of this UserGroup. Format:
+       *        organizations/{org_id}/userGroups/{user_group_id} Example:
+       *        "organizations/123abc/userGroups/456def"
+         * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup content) {
+          super(GoogleMarketingPlatformAdminAPI.this, "PATCH", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroup.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/userGroups/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. Resource name of this UserGroup. Format:
+         * organizations/{org_id}/userGroups/{user_group_id} Example:
+         * "organizations/123abc/userGroups/456def"
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Resource name of this UserGroup. Format:
+       organizations/{org_id}/userGroups/{user_group_id} Example: "organizations/123abc/userGroups/456def"
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. Resource name of this UserGroup. Format:
+         * organizations/{org_id}/userGroups/{user_group_id} Example:
+         * "organizations/123abc/userGroups/456def"
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/userGroups/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Required. The list of fields to update. Field names must be in snake case (for example,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Required. The list of fields to update. Field names must be in snake case (for example,
+       "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+       with the string "*" to match all fields.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Required. The list of fields to update. Field names must be in snake case (for example,
+         * "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use
+         * one path with the string "*" to match all fields.
+         */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+      /**
+       * An accessor for creating requests from the Members collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code GoogleMarketingPlatformAdminAPI marketingplatformadmin = new GoogleMarketingPlatformAdminAPI(...);}
+       *   {@code GoogleMarketingPlatformAdminAPI.Members.List request = marketingplatformadmin.members().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Members members() {
+        return new Members();
+      }
+
+      /**
+       * The "members" collection of methods.
+       */
+      public class Members {
+
+        /**
+         * Adds a member to the specified GMP user group.
+         *
+         * Create a request for the method "members.create".
+         *
+         * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this UserGroupMember will be created. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}
+         * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/members";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+$");
+
+          /**
+           * Adds a member to the specified GMP user group.
+           *
+           * Create a request for the method "members.create".
+           *
+           * This request holds the parameters needed by the the marketingplatformadmin server.  After
+           * setting any optional parameters, call the {@link Create#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this UserGroupMember will be created. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}
+           * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember content) {
+            super(GoogleMarketingPlatformAdminAPI.this, "POST", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this UserGroupMember will be created. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this UserGroupMember will be created. Format:
+         organizations/{org_id}/userGroups/{user_group_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this UserGroupMember will be created. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a member in the specified GMP user group.
+         *
+         * Create a request for the method "members.delete".
+         *
+         * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the user group member to delete. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.Empty> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+
+          /**
+           * Deletes a member in the specified GMP user group.
+           *
+           * Create a request for the method "members.delete".
+           *
+           * This request holds the parameters needed by the the marketingplatformadmin server.  After
+           * setting any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the user group member to delete. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(GoogleMarketingPlatformAdminAPI.this, "DELETE", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.Empty.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the user group member to delete. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the user group member to delete. Format:
+         organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the user group member to delete. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Looks up a single user group member.
+         *
+         * Create a request for the method "members.get".
+         *
+         * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the user group member to retrieve. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+
+          /**
+           * Looks up a single user group member.
+           *
+           * Create a request for the method "members.get".
+           *
+           * This request holds the parameters needed by the the marketingplatformadmin server.  After
+           * setting any optional parameters, call the {@link Get#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the user group member to retrieve. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the user group member to retrieve. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the user group member to retrieve. Format:
+         organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the user group member to retrieve. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}/members/{member_id}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Returns a list of members in the specified user group.
+         *
+         * Create a request for the method "members.list".
+         *
+         * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent user group where this UserGroupMember will be listed. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.ListUserGroupMembersResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/members";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+$");
+
+          /**
+           * Returns a list of members in the specified user group.
+           *
+           * Create a request for the method "members.list".
+           *
+           * This request holds the parameters needed by the the marketingplatformadmin server.  After
+           * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent user group where this UserGroupMember will be listed. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(GoogleMarketingPlatformAdminAPI.this, "GET", REST_PATH, null, com.google.api.services.marketingplatformadmin.v1alpha.model.ListUserGroupMembersResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent user group where this UserGroupMember will be listed. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent user group where this UserGroupMember will be listed. Format:
+         organizations/{org_id}/userGroups/{user_group_id}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent user group where this UserGroupMember will be listed. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of user group members to return in one call. The service
+           * may return fewer than this value. If unspecified, at most 50 user group members will be
+           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of user group members to return in one call. The service may return
+         fewer than this value. If unspecified, at most 50 user group members will be returned. The maximum
+         value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of user group members to return in one call. The service
+           * may return fewer than this value. If unspecified, at most 50 user group members will be
+           * returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous ListUserGroupMembers call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListUserGroupMembers` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous ListUserGroupMembers call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListUserGroupMembers` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous ListUserGroupMembers call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListUserGroupMembers` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates a member in the specified GMP user group.
+         *
+         * Create a request for the method "members.patch".
+         *
+         * This request holds the parameters needed by the marketingplatformadmin server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of this UserGroupMember. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}/members/{member_id} Example:
+         *        "organizations/123abc/userGroups/456def/members/789ghi"
+         * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends GoogleMarketingPlatformAdminAPIRequest<com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember> {
+
+          private static final String REST_PATH = "v1alpha/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+
+          /**
+           * Updates a member in the specified GMP user group.
+           *
+           * Create a request for the method "members.patch".
+           *
+           * This request holds the parameters needed by the the marketingplatformadmin server.  After
+           * setting any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of this UserGroupMember. Format:
+         *        organizations/{org_id}/userGroups/{user_group_id}/members/{member_id} Example:
+         *        "organizations/123abc/userGroups/456def/members/789ghi"
+           * @param content the {@link com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember content) {
+            super(GoogleMarketingPlatformAdminAPI.this, "PATCH", REST_PATH, content, com.google.api.services.marketingplatformadmin.v1alpha.model.UserGroupMember.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of this UserGroupMember. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}/members/{member_id} Example:
+           * "organizations/123abc/userGroups/456def/members/789ghi"
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of this UserGroupMember. Format:
+         organizations/{org_id}/userGroups/{user_group_id}/members/{member_id} Example:
+         "organizations/123abc/userGroups/456def/members/789ghi"
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of this UserGroupMember. Format:
+           * organizations/{org_id}/userGroups/{user_group_id}/members/{member_id} Example:
+           * "organizations/123abc/userGroups/456def/members/789ghi"
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^organizations/[^/]+/userGroups/[^/]+/members/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. The list of fields to update. Field names must be in snake case (for example,
+           * "field_to_update"). Omitted fields will not be updated. To replace the entire entity,
+           * use one path with the string "*" to match all fields.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. The list of fields to update. Field names must be in snake case (for example,
+         "field_to_update"). Omitted fields will not be updated. To replace the entire entity, use one path
+         with the string "*" to match all fields.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. The list of fields to update. Field names must be in snake case (for example,
+           * "field_to_update"). Omitted fields will not be updated. To replace the entire entity,
+           * use one path with the string "*" to match all fields.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
     }
   }
 

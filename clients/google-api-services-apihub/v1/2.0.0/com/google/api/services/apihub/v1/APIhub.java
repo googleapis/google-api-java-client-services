@@ -5071,7 +5071,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
             /**
              * Delete an operation in an API version and we can delete only the operations created via create
              * API. If the operation was created by parsing the spec, then it can be deleted by editing or
-             * deleting the spec.
+             * deleting the spec. Deleting an operation will also remove any links between the operation and
+             * deployments.
              *
              * Create a request for the method "operations.delete".
              *
@@ -5099,7 +5100,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               /**
                * Delete an operation in an API version and we can delete only the operations created via create
                * API. If the operation was created by parsing the spec, then it can be deleted by editing or
-               * deleting the spec.
+               * deleting the spec. Deleting an operation will also remove any links between the operation and
+               * deployments.
                *
                * Create a request for the method "operations.delete".
                *
@@ -6116,7 +6118,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               }
             }
             /**
-             * Delete a spec. Deleting a spec will also delete the associated operations from the version.
+             * Delete a spec. Deleting a spec will also delete the associated operations from the version and
+             * remove any links between the spec and deployments.
              *
              * Create a request for the method "specs.delete".
              *
@@ -6141,7 +6144,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
                   java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apis/[^/]+/versions/[^/]+/specs/[^/]+$");
 
               /**
-               * Delete a spec. Deleting a spec will also delete the associated operations from the version.
+               * Delete a spec. Deleting a spec will also delete the associated operations from the version and
+               * remove any links between the spec and deployments.
                *
                * Create a request for the method "specs.delete".
                *
@@ -10357,7 +10361,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
           }
         }
         /**
-         * Delete a deployment resource in the API hub.
+         * Deletes a deployment resource in the API hub. A deployment can only be deleted after its links to
+         * any versions, specs, and API operations have been removed.
          *
          * Create a request for the method "deployments.delete".
          *
@@ -10382,7 +10387,8 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/deployments/[^/]+$");
 
           /**
-           * Delete a deployment resource in the API hub.
+           * Deletes a deployment resource in the API hub. A deployment can only be deleted after its links
+           * to any versions, specs, and API operations have been removed.
            *
            * Create a request for the method "deployments.delete".
            *

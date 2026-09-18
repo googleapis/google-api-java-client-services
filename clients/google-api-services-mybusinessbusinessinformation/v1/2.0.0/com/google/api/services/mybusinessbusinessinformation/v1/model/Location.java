@@ -87,7 +87,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.util.List<MoreHours> moreHours;
 
   /**
-   * Google identifier for this location in the form: `locations/{location_id}`.
+   * Identifier. Google identifier for this location in the form: `locations/{location_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -326,7 +326,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google identifier for this location in the form: `locations/{location_id}`.
+   * Identifier. Google identifier for this location in the form: `locations/{location_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -334,7 +334,7 @@ public final class Location extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Google identifier for this location in the form: `locations/{location_id}`.
+   * Identifier. Google identifier for this location in the form: `locations/{location_id}`.
    * @param name name or {@code null} for none
    */
   public Location setName(java.lang.String name) {

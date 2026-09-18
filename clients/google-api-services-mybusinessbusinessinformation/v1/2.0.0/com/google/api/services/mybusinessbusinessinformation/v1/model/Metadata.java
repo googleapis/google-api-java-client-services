@@ -66,8 +66,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canOperateHealthData;
 
   /**
-   * Output only. Indicates if the listing can manage local posts. Deprecated: This field is no
-   * longer populated and will be removed in a future version.
+   * Output only. Deprecated: This field is no longer populated and will be removed in a future
+   * version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,9 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean hasVoiceOfMerchant;
 
   /**
-   * Output only.
+   * Output only. Indicates whether the location is classified as a particularly personal place.
+   * This means there are restrictions on Location History features. If you believe this was a
+   * mistake, see the [help center article](https://support.google.com/business/answer/3480441).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,8 +231,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates if the listing can manage local posts. Deprecated: This field is no
-   * longer populated and will be removed in a future version.
+   * Output only. Deprecated: This field is no longer populated and will be removed in a future
+   * version.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanOperateLocalPost() {
@@ -238,8 +240,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates if the listing can manage local posts. Deprecated: This field is no
-   * longer populated and will be removed in a future version.
+   * Output only. Deprecated: This field is no longer populated and will be removed in a future
+   * version.
    * @param canOperateLocalPost canOperateLocalPost or {@code null} for none
    */
   public Metadata setCanOperateLocalPost(java.lang.Boolean canOperateLocalPost) {
@@ -341,7 +343,9 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.
+   * Output only. Indicates whether the location is classified as a particularly personal place.
+   * This means there are restrictions on Location History features. If you believe this was a
+   * mistake, see the [help center article](https://support.google.com/business/answer/3480441).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIsParticularlyPersonalPlace() {
@@ -349,7 +353,9 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only.
+   * Output only. Indicates whether the location is classified as a particularly personal place.
+   * This means there are restrictions on Location History features. If you believe this was a
+   * mistake, see the [help center article](https://support.google.com/business/answer/3480441).
    * @param isParticularlyPersonalPlace isParticularlyPersonalPlace or {@code null} for none
    */
   public Metadata setIsParticularlyPersonalPlace(java.lang.Boolean isParticularlyPersonalPlace) {

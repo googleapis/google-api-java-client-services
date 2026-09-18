@@ -31,7 +31,7 @@ package com.google.api.services.mybusinessbusinessinformation.v1.model;
 public final class Places extends com.google.api.client.json.GenericJson {
 
   /**
-   * The areas represented by place IDs. Limited to a maximum of 20 places.
+   * Optional. The areas represented by place IDs. Limited to a maximum of 20 places.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class Places extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The areas represented by place IDs. Limited to a maximum of 20 places.
+   * Optional. The areas represented by place IDs. Limited to a maximum of 20 places.
    * @return value or {@code null} for none
    */
   public java.util.List<PlaceInfo> getPlaceInfos() {
@@ -52,7 +52,7 @@ public final class Places extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The areas represented by place IDs. Limited to a maximum of 20 places.
+   * Optional. The areas represented by place IDs. Limited to a maximum of 20 places.
    * @param placeInfos placeInfos or {@code null} for none
    */
   public Places setPlaceInfos(java.util.List<PlaceInfo> placeInfos) {

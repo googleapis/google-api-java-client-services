@@ -17,7 +17,7 @@
 package com.google.api.services.gkebackup.v1.model;
 
 /**
- * Log entry for Backup and Restore Job for resources using BackupPlan based protection. Next Id: 27
+ * Log entry for Backup and Restore Job for resources using BackupPlan based protection. Next Id: 28
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup for GKE API. For a detailed explanation see:
@@ -35,6 +35,13 @@ public final class BDRBackupRestoreJobLog extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String autoProtectionPolicy;
+
+  /**
+   * The auto-protection policy binding that created the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoProtectionPolicyBinding;
 
   /**
    * Backup consistency time.
@@ -226,6 +233,23 @@ public final class BDRBackupRestoreJobLog extends com.google.api.client.json.Gen
    */
   public BDRBackupRestoreJobLog setAutoProtectionPolicy(java.lang.String autoProtectionPolicy) {
     this.autoProtectionPolicy = autoProtectionPolicy;
+    return this;
+  }
+
+  /**
+   * The auto-protection policy binding that created the backup.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoProtectionPolicyBinding() {
+    return autoProtectionPolicyBinding;
+  }
+
+  /**
+   * The auto-protection policy binding that created the backup.
+   * @param autoProtectionPolicyBinding autoProtectionPolicyBinding or {@code null} for none
+   */
+  public BDRBackupRestoreJobLog setAutoProtectionPolicyBinding(java.lang.String autoProtectionPolicyBinding) {
+    this.autoProtectionPolicyBinding = autoProtectionPolicyBinding;
     return this;
   }
 

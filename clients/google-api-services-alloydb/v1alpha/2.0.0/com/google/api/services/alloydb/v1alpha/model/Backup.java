@@ -104,6 +104,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Output only. The edition of the cluster this backup was created from. Any restored cluster
+   * created from this backup will have the same edition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Optional. The encryption config can be specified to encrypt the backup with a customer-managed
    * encryption key (CMEK). When this field is not specified, the backup will then use default
    * encryption scheme to protect the user data.
@@ -404,6 +412,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. The edition of the cluster this backup was created from. Any restored cluster
+   * created from this backup will have the same edition.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Output only. The edition of the cluster this backup was created from. Any restored cluster
+   * created from this backup will have the same edition.
+   * @param edition edition or {@code null} for none
+   */
+  public Backup setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

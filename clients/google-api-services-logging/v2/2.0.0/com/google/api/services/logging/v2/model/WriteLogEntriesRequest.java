@@ -83,7 +83,7 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity" The permission
    * logging.logEntries.create is needed on each project, organization, billing account, or folder
    * that is receiving new log entries, whether the resource is specified in logName or in an
-   * individual log entry.
+   * individual log entry.Only platform services can write logs to billing accounts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +206,7 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity" The permission
    * logging.logEntries.create is needed on each project, organization, billing account, or folder
    * that is receiving new log entries, whether the resource is specified in logName or in an
-   * individual log entry.
+   * individual log entry.Only platform services can write logs to billing accounts.
    * @return value or {@code null} for none
    */
   public java.lang.String getLogName() {
@@ -222,7 +222,7 @@ public final class WriteLogEntriesRequest extends com.google.api.client.json.Gen
    * "organizations/123/logs/cloudaudit.googleapis.com%2Factivity" The permission
    * logging.logEntries.create is needed on each project, organization, billing account, or folder
    * that is receiving new log entries, whether the resource is specified in logName or in an
-   * individual log entry.
+   * individual log entry.Only platform services can write logs to billing accounts.
    * @param logName logName or {@code null} for none
    */
   public WriteLogEntriesRequest setLogName(java.lang.String logName) {

@@ -56,6 +56,15 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfig
   private java.lang.String displayName;
 
   /**
+   * Output only. Groups models that render together in the selector. Models sharing a value form
+   * one group; empty means the model belongs to no group. Compared for equality only -- never
+   * parsed, and never shown to a user, so it is not localized.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String family;
+
+  /**
    * Output only. GM3-compatible icon token associated with the model (e.g. `rocket_launch`, `bolt`,
    * `graph_5`).
    * The value may be {@code null}.
@@ -162,6 +171,27 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfig
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Output only. Groups models that render together in the selector. Models sharing a value form
+   * one group; empty means the model belongs to no group. Compared for equality only -- never
+   * parsed, and never shown to a user, so it is not localized.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFamily() {
+    return family;
+  }
+
+  /**
+   * Output only. Groups models that render together in the selector. Models sharing a value form
+   * one group; empty means the model belongs to no group. Compared for equality only -- never
+   * parsed, and never shown to a user, so it is not localized.
+   * @param family family or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1WidgetConfigUiSettingsModelConfigInfoResolvedModel setFamily(java.lang.String family) {
+    this.family = family;
     return this;
   }
 

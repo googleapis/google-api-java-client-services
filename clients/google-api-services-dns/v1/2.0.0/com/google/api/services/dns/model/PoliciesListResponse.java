@@ -30,7 +30,7 @@ package com.google.api.services.dns.model;
 public final class PoliciesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class PoliciesListResponse extends com.google.api.client.json.Gener
   private java.util.List<Policy> policies;
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -64,7 +64,7 @@ public final class PoliciesListResponse extends com.google.api.client.json.Gener
   }
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * @param kind kind or {@code null} for none
    */
   public PoliciesListResponse setKind(java.lang.String kind) {

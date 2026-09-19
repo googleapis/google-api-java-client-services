@@ -30,7 +30,7 @@ package com.google.api.services.dns.model;
 public final class ManagedZonesListResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class ManagedZonesListResponse extends com.google.api.client.json.G
   private java.lang.String nextPageToken;
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -70,7 +70,7 @@ public final class ManagedZonesListResponse extends com.google.api.client.json.G
   }
 
   /**
-   * Type of resource.
+   * Output only. Type of resource.
    * @param kind kind or {@code null} for none
    */
   public ManagedZonesListResponse setKind(java.lang.String kind) {

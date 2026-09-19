@@ -59,7 +59,6 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   private java.util.List<java.lang.String> rrdatas;
 
   /**
-   * As defined in RFC 4034 (section 3.2).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -150,7 +149,6 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * As defined in RFC 4034 (section 3.2).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSignatureRrdatas() {
@@ -158,7 +156,6 @@ public final class ResourceRecordSet extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * As defined in RFC 4034 (section 3.2).
    * @param signatureRrdatas signatureRrdatas or {@code null} for none
    */
   public ResourceRecordSet setSignatureRrdatas(java.util.List<java.lang.String> signatureRrdatas) {

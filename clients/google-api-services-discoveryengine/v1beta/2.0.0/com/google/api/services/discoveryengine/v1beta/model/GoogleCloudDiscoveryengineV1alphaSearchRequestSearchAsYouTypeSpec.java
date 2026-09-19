@@ -37,6 +37,21 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouType
   private java.lang.String condition;
 
   /**
+   * Optional. The list of fields to be used for Search As You Type scoring.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpecField> fields;
+
+  /**
+   * Optional. Search As You Type score threshold for filtering purpose. We keep the result if
+   * `score` >= `score_threshold`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double scoreThreshold;
+
+  /**
    * The condition under which search as you type should occur. Default to Condition.DISABLED.
    * @return value or {@code null} for none
    */
@@ -50,6 +65,42 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouType
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec setCondition(java.lang.String condition) {
     this.condition = condition;
+    return this;
+  }
+
+  /**
+   * Optional. The list of fields to be used for Search As You Type scoring.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpecField> getFields() {
+    return fields;
+  }
+
+  /**
+   * Optional. The list of fields to be used for Search As You Type scoring.
+   * @param fields fields or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec setFields(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpecField> fields) {
+    this.fields = fields;
+    return this;
+  }
+
+  /**
+   * Optional. Search As You Type score threshold for filtering purpose. We keep the result if
+   * `score` >= `score_threshold`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getScoreThreshold() {
+    return scoreThreshold;
+  }
+
+  /**
+   * Optional. Search As You Type score threshold for filtering purpose. We keep the result if
+   * `score` >= `score_threshold`.
+   * @param scoreThreshold scoreThreshold or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaSearchRequestSearchAsYouTypeSpec setScoreThreshold(java.lang.Double scoreThreshold) {
+    this.scoreThreshold = scoreThreshold;
     return this;
   }
 

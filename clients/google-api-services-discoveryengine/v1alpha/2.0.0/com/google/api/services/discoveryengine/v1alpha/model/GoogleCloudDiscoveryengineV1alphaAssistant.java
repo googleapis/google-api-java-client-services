@@ -102,7 +102,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
 
   /**
    * Optional. Indicates whether Knowledge Catalog is enabled for this specific assistant. When
-   * enabled, it powers discovery context using organizational data.
+   * enabled, it powers discovery context using organizational data. If unspecified, defaults to
+   * true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -299,7 +300,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
 
   /**
    * Optional. Indicates whether Knowledge Catalog is enabled for this specific assistant. When
-   * enabled, it powers discovery context using organizational data.
+   * enabled, it powers discovery context using organizational data. If unspecified, defaults to
+   * true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getKnowledgeCatalogEnabled() {
@@ -308,7 +310,8 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
 
   /**
    * Optional. Indicates whether Knowledge Catalog is enabled for this specific assistant. When
-   * enabled, it powers discovery context using organizational data.
+   * enabled, it powers discovery context using organizational data. If unspecified, defaults to
+   * true.
    * @param knowledgeCatalogEnabled knowledgeCatalogEnabled or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAssistant setKnowledgeCatalogEnabled(java.lang.Boolean knowledgeCatalogEnabled) {

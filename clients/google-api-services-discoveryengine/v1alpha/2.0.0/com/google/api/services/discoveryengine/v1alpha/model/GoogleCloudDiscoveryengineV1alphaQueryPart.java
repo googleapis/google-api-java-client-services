@@ -76,6 +76,14 @@ public final class GoogleCloudDiscoveryengineV1alphaQueryPart extends com.google
   private java.lang.String uiJsonPayload;
 
   /**
+   * Reference to a user-supplied file attached to a long-running-agent (Sobi) task. See
+   * `UserSuppliedSobiArtifactReference` above.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaQueryPartUserSuppliedSobiArtifactReference userSuppliedSobiArtifactReference;
+
+  /**
    * Other VAIS Document references.
    * @return value or {@code null} for none
    */
@@ -180,6 +188,25 @@ public final class GoogleCloudDiscoveryengineV1alphaQueryPart extends com.google
    */
   public GoogleCloudDiscoveryengineV1alphaQueryPart setUiJsonPayload(java.lang.String uiJsonPayload) {
     this.uiJsonPayload = uiJsonPayload;
+    return this;
+  }
+
+  /**
+   * Reference to a user-supplied file attached to a long-running-agent (Sobi) task. See
+   * `UserSuppliedSobiArtifactReference` above.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaQueryPartUserSuppliedSobiArtifactReference getUserSuppliedSobiArtifactReference() {
+    return userSuppliedSobiArtifactReference;
+  }
+
+  /**
+   * Reference to a user-supplied file attached to a long-running-agent (Sobi) task. See
+   * `UserSuppliedSobiArtifactReference` above.
+   * @param userSuppliedSobiArtifactReference userSuppliedSobiArtifactReference or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaQueryPart setUserSuppliedSobiArtifactReference(GoogleCloudDiscoveryengineV1alphaQueryPartUserSuppliedSobiArtifactReference userSuppliedSobiArtifactReference) {
+    this.userSuppliedSobiArtifactReference = userSuppliedSobiArtifactReference;
     return this;
   }
 

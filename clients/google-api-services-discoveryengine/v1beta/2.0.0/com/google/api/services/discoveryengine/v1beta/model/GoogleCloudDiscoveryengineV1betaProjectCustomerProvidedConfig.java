@@ -37,6 +37,13 @@ public final class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig
   private GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig notebooklmConfig;
 
   /**
+   * Optional. Resource-level access control config for Gemini Enterprise users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigResourceAccessControlConfig resourceAccessControlConfig;
+
+  /**
    * Optional. Configuration for NotebookLM settings.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig
    */
   public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig setNotebooklmConfig(GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigNotebooklmConfig notebooklmConfig) {
     this.notebooklmConfig = notebooklmConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Resource-level access control config for Gemini Enterprise users.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigResourceAccessControlConfig getResourceAccessControlConfig() {
+    return resourceAccessControlConfig;
+  }
+
+  /**
+   * Optional. Resource-level access control config for Gemini Enterprise users.
+   * @param resourceAccessControlConfig resourceAccessControlConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfig setResourceAccessControlConfig(GoogleCloudDiscoveryengineV1betaProjectCustomerProvidedConfigResourceAccessControlConfig resourceAccessControlConfig) {
+    this.resourceAccessControlConfig = resourceAccessControlConfig;
     return this;
   }
 

@@ -30,6 +30,15 @@ package com.google.api.services.sqladmin.model;
 public final class DiskEncryptionConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether to enforce CMEK log encryption at source. When enforced, transaction logs are
+   * encrypted prior to being uploaded to Cloud Storage. If not enforced, then CMEK logs are
+   * encrypted by the Cloud Storage service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean cmekSourceLogEncryptionEnforced;
+
+  /**
    * Optional. If true, enables Confidential Mode for the instance's Hyperdisk Balanced volumes.
    * Only supported for zonal C4A instances currently.
    * The value may be {@code null}.
@@ -50,6 +59,27 @@ public final class DiskEncryptionConfiguration extends com.google.api.client.jso
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyName;
+
+  /**
+   * Optional. Whether to enforce CMEK log encryption at source. When enforced, transaction logs are
+   * encrypted prior to being uploaded to Cloud Storage. If not enforced, then CMEK logs are
+   * encrypted by the Cloud Storage service.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getCmekSourceLogEncryptionEnforced() {
+    return cmekSourceLogEncryptionEnforced;
+  }
+
+  /**
+   * Optional. Whether to enforce CMEK log encryption at source. When enforced, transaction logs are
+   * encrypted prior to being uploaded to Cloud Storage. If not enforced, then CMEK logs are
+   * encrypted by the Cloud Storage service.
+   * @param cmekSourceLogEncryptionEnforced cmekSourceLogEncryptionEnforced or {@code null} for none
+   */
+  public DiskEncryptionConfiguration setCmekSourceLogEncryptionEnforced(java.lang.Boolean cmekSourceLogEncryptionEnforced) {
+    this.cmekSourceLogEncryptionEnforced = cmekSourceLogEncryptionEnforced;
+    return this;
+  }
 
   /**
    * Optional. If true, enables Confidential Mode for the instance's Hyperdisk Balanced volumes.

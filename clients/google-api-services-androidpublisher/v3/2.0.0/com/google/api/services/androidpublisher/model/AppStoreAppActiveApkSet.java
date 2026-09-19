@@ -36,6 +36,15 @@ package com.google.api.services.androidpublisher.model;
 public final class AppStoreAppActiveApkSet extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Whether all APKs referenced in this active APK set are published on Play Store (or
+   * derived from an app bundle published on Play Store). When this is set, version_code must be
+   * provided.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean alreadyPublishedOnPlay;
+
+  /**
    * Required. The ID for the main base application module. Example: base.apk or app.apk.
    * The value may be {@code null}.
    */
@@ -49,6 +58,34 @@ public final class AppStoreAppActiveApkSet extends com.google.api.client.json.Ge
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> splitApkId;
+
+  /**
+   * Optional. Version code for the version this APK set represents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long versionCode;
+
+  /**
+   * Optional. Whether all APKs referenced in this active APK set are published on Play Store (or
+   * derived from an app bundle published on Play Store). When this is set, version_code must be
+   * provided.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAlreadyPublishedOnPlay() {
+    return alreadyPublishedOnPlay;
+  }
+
+  /**
+   * Optional. Whether all APKs referenced in this active APK set are published on Play Store (or
+   * derived from an app bundle published on Play Store). When this is set, version_code must be
+   * provided.
+   * @param alreadyPublishedOnPlay alreadyPublishedOnPlay or {@code null} for none
+   */
+  public AppStoreAppActiveApkSet setAlreadyPublishedOnPlay(java.lang.Boolean alreadyPublishedOnPlay) {
+    this.alreadyPublishedOnPlay = alreadyPublishedOnPlay;
+    return this;
+  }
 
   /**
    * Required. The ID for the main base application module. Example: base.apk or app.apk.
@@ -83,6 +120,23 @@ public final class AppStoreAppActiveApkSet extends com.google.api.client.json.Ge
    */
   public AppStoreAppActiveApkSet setSplitApkId(java.util.List<java.lang.String> splitApkId) {
     this.splitApkId = splitApkId;
+    return this;
+  }
+
+  /**
+   * Optional. Version code for the version this APK set represents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getVersionCode() {
+    return versionCode;
+  }
+
+  /**
+   * Optional. Version code for the version this APK set represents.
+   * @param versionCode versionCode or {@code null} for none
+   */
+  public AppStoreAppActiveApkSet setVersionCode(java.lang.Long versionCode) {
+    this.versionCode = versionCode;
     return this;
   }
 

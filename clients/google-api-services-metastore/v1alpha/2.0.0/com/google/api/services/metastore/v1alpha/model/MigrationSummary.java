@@ -44,7 +44,7 @@ public final class MigrationSummary extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The UTC time when this report was finalized.
+   * Output only. The UTC time when the source metadata read was initiated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,6 +56,13 @@ public final class MigrationSummary extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean dryRun;
+
+  /**
+   * Output only. The UTC time when the report was written.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String endTime;
 
   /**
    * Output only. The Dataproc Metastore service name (format: projects/locations/services) on which
@@ -83,7 +90,7 @@ public final class MigrationSummary extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The UTC time when this report was finalized.
+   * Output only. The UTC time when the source metadata read was initiated.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -91,7 +98,7 @@ public final class MigrationSummary extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. The UTC time when this report was finalized.
+   * Output only. The UTC time when the source metadata read was initiated.
    * @param createTime createTime or {@code null} for none
    */
   public MigrationSummary setCreateTime(String createTime) {
@@ -113,6 +120,23 @@ public final class MigrationSummary extends com.google.api.client.json.GenericJs
    */
   public MigrationSummary setDryRun(java.lang.Boolean dryRun) {
     this.dryRun = dryRun;
+    return this;
+  }
+
+  /**
+   * Output only. The UTC time when the report was written.
+   * @return value or {@code null} for none
+   */
+  public String getEndTime() {
+    return endTime;
+  }
+
+  /**
+   * Output only. The UTC time when the report was written.
+   * @param endTime endTime or {@code null} for none
+   */
+  public MigrationSummary setEndTime(String endTime) {
+    this.endTime = endTime;
     return this;
   }
 

@@ -139,11 +139,44 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private String startTime;
 
   /**
+   * The context for the `StartWorkloadCapture` operation, which contains details to start recording
+   * the workload (SQL queries) on a Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StartWorkloadCaptureContext startWorkloadCaptureContext;
+
+  /**
+   * The context for the `StartWorkloadReplay` operation, which contains details about starting the
+   * execution of a captured workload (recorded read and write SQL queries) on a replay instance
+   * (the Cloud SQL instance where the recorded SQL queries are executed).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StartWorkloadReplayContext startWorkloadReplayContext;
+
+  /**
    * The status of an operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * The context for the `StopWorkloadCapture` operation, which contains details to stop recording
+   * the workload (SQL queries) on a Cloud SQL instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StopWorkloadCaptureContext stopWorkloadCaptureContext;
+
+  /**
+   * The context for the `StopWorkloadReplay` operation, which contains details about stopping the
+   * execution of a captured workload (recorded read and write SQL queries) on a replay instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private StopWorkloadReplayContext stopWorkloadReplayContext;
 
   /**
    * Optional. The sub operation based on the operation type.
@@ -438,6 +471,46 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * The context for the `StartWorkloadCapture` operation, which contains details to start recording
+   * the workload (SQL queries) on a Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public StartWorkloadCaptureContext getStartWorkloadCaptureContext() {
+    return startWorkloadCaptureContext;
+  }
+
+  /**
+   * The context for the `StartWorkloadCapture` operation, which contains details to start recording
+   * the workload (SQL queries) on a Cloud SQL instance.
+   * @param startWorkloadCaptureContext startWorkloadCaptureContext or {@code null} for none
+   */
+  public Operation setStartWorkloadCaptureContext(StartWorkloadCaptureContext startWorkloadCaptureContext) {
+    this.startWorkloadCaptureContext = startWorkloadCaptureContext;
+    return this;
+  }
+
+  /**
+   * The context for the `StartWorkloadReplay` operation, which contains details about starting the
+   * execution of a captured workload (recorded read and write SQL queries) on a replay instance
+   * (the Cloud SQL instance where the recorded SQL queries are executed).
+   * @return value or {@code null} for none
+   */
+  public StartWorkloadReplayContext getStartWorkloadReplayContext() {
+    return startWorkloadReplayContext;
+  }
+
+  /**
+   * The context for the `StartWorkloadReplay` operation, which contains details about starting the
+   * execution of a captured workload (recorded read and write SQL queries) on a replay instance
+   * (the Cloud SQL instance where the recorded SQL queries are executed).
+   * @param startWorkloadReplayContext startWorkloadReplayContext or {@code null} for none
+   */
+  public Operation setStartWorkloadReplayContext(StartWorkloadReplayContext startWorkloadReplayContext) {
+    this.startWorkloadReplayContext = startWorkloadReplayContext;
+    return this;
+  }
+
+  /**
    * The status of an operation.
    * @return value or {@code null} for none
    */
@@ -451,6 +524,44 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * The context for the `StopWorkloadCapture` operation, which contains details to stop recording
+   * the workload (SQL queries) on a Cloud SQL instance.
+   * @return value or {@code null} for none
+   */
+  public StopWorkloadCaptureContext getStopWorkloadCaptureContext() {
+    return stopWorkloadCaptureContext;
+  }
+
+  /**
+   * The context for the `StopWorkloadCapture` operation, which contains details to stop recording
+   * the workload (SQL queries) on a Cloud SQL instance.
+   * @param stopWorkloadCaptureContext stopWorkloadCaptureContext or {@code null} for none
+   */
+  public Operation setStopWorkloadCaptureContext(StopWorkloadCaptureContext stopWorkloadCaptureContext) {
+    this.stopWorkloadCaptureContext = stopWorkloadCaptureContext;
+    return this;
+  }
+
+  /**
+   * The context for the `StopWorkloadReplay` operation, which contains details about stopping the
+   * execution of a captured workload (recorded read and write SQL queries) on a replay instance.
+   * @return value or {@code null} for none
+   */
+  public StopWorkloadReplayContext getStopWorkloadReplayContext() {
+    return stopWorkloadReplayContext;
+  }
+
+  /**
+   * The context for the `StopWorkloadReplay` operation, which contains details about stopping the
+   * execution of a captured workload (recorded read and write SQL queries) on a replay instance.
+   * @param stopWorkloadReplayContext stopWorkloadReplayContext or {@code null} for none
+   */
+  public Operation setStopWorkloadReplayContext(StopWorkloadReplayContext stopWorkloadReplayContext) {
+    this.stopWorkloadReplayContext = stopWorkloadReplayContext;
     return this;
   }
 

@@ -533,6 +533,256 @@ public class Chromewebstore extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * Fetch user reviews for an item.
+       *
+       * Create a request for the method "items.fetchReviews".
+       *
+       * This request holds the parameters needed by the chromewebstore server.  After setting any
+       * optional parameters, call the {@link FetchReviews#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The item resource name whose reviews are being fetched. Format:
+       *        publishers/{publisher_id}/items/{item_id}
+       * @return the request
+       */
+      public FetchReviews fetchReviews(java.lang.String name) throws java.io.IOException {
+        FetchReviews result = new FetchReviews(name);
+        initialize(result);
+        return result;
+      }
+
+      public class FetchReviews extends ChromewebstoreRequest<com.google.api.services.chromewebstore.v2.model.FetchItemReviewsResponse> {
+
+        private static final String REST_PATH = "v2/{+name}:fetchReviews";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^publishers/[^/]+/items/[^/]+$");
+
+        /**
+         * Fetch user reviews for an item.
+         *
+         * Create a request for the method "items.fetchReviews".
+         *
+         * This request holds the parameters needed by the the chromewebstore server.  After setting any
+         * optional parameters, call the {@link FetchReviews#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * FetchReviews#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The item resource name whose reviews are being fetched. Format:
+       *        publishers/{publisher_id}/items/{item_id}
+         * @since 1.13
+         */
+        protected FetchReviews(java.lang.String name) {
+          super(Chromewebstore.this, "GET", REST_PATH, null, com.google.api.services.chromewebstore.v2.model.FetchItemReviewsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FetchReviews set$Xgafv(java.lang.String $Xgafv) {
+          return (FetchReviews) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FetchReviews setAccessToken(java.lang.String accessToken) {
+          return (FetchReviews) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FetchReviews setAlt(java.lang.String alt) {
+          return (FetchReviews) super.setAlt(alt);
+        }
+
+        @Override
+        public FetchReviews setCallback(java.lang.String callback) {
+          return (FetchReviews) super.setCallback(callback);
+        }
+
+        @Override
+        public FetchReviews setFields(java.lang.String fields) {
+          return (FetchReviews) super.setFields(fields);
+        }
+
+        @Override
+        public FetchReviews setKey(java.lang.String key) {
+          return (FetchReviews) super.setKey(key);
+        }
+
+        @Override
+        public FetchReviews setOauthToken(java.lang.String oauthToken) {
+          return (FetchReviews) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FetchReviews setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FetchReviews) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FetchReviews setQuotaUser(java.lang.String quotaUser) {
+          return (FetchReviews) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FetchReviews setUploadType(java.lang.String uploadType) {
+          return (FetchReviews) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FetchReviews setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FetchReviews) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The item resource name whose reviews are being fetched. Format:
+         * publishers/{publisher_id}/items/{item_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The item resource name whose reviews are being fetched. Format:
+       publishers/{publisher_id}/items/{item_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The item resource name whose reviews are being fetched. Format:
+         * publishers/{publisher_id}/items/{item_id}
+         */
+        public FetchReviews setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. A filter to apply to the reviews. Only equality comparison on rating is
+         * supported, e.g. `rating = 5`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter to apply to the reviews. Only equality comparison on rating is supported, e.g.
+       `rating = 5`.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A filter to apply to the reviews. Only equality comparison on rating is
+         * supported, e.g. `rating = 5`.
+         */
+        public FetchReviews setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. An optional comma-separated list of fields by which to sort the results.
+         * Supported fields are `rating` and `create_time`. Supported orders are `asc` (default) and
+         * `desc`. Example: "rating desc, create_time".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. An optional comma-separated list of fields by which to sort the results. Supported fields
+       are `rating` and `create_time`. Supported orders are `asc` (default) and `desc`. Example: "rating
+       desc, create_time".
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. An optional comma-separated list of fields by which to sort the results.
+         * Supported fields are `rating` and `create_time`. Supported orders are `asc` (default) and
+         * `desc`. Example: "rating desc, create_time".
+         */
+        public FetchReviews setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of reviews to return. The service may return fewer than this
+         * value. If unspecified, at most 50 reviews will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of reviews to return. The service may return fewer than this value. If
+       unspecified, at most 50 reviews will be returned. The maximum value is 200; values above 200 will
+       be coerced to 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of reviews to return. The service may return fewer than this
+         * value. If unspecified, at most 50 reviews will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        public FetchReviews setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FetchItemReviews` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `FetchItemReviews` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `FetchItemReviews` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `FetchItemReviews` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FetchItemReviews` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `FetchItemReviews` must match the call that provided the page token.
+         */
+        public FetchReviews setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FetchReviews set(String parameterName, Object value) {
+          return (FetchReviews) super.set(parameterName, value);
+        }
+      }
+      /**
        * Fetch the status of an item.
        *
        * Create a request for the method "items.fetchStatus".

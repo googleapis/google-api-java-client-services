@@ -4185,29 +4185,6 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
         return this;
       }
 
-      /**
-       * For mutating operation requests only. An optional identifier specified by the client. Must
-       * be unique for operation resources in the Operations collection.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String clientOperationId;
-
-      /** For mutating operation requests only. An optional identifier specified by the client. Must be
-     unique for operation resources in the Operations collection.
-       */
-      public java.lang.String getClientOperationId() {
-        return clientOperationId;
-      }
-
-      /**
-       * For mutating operation requests only. An optional identifier specified by the client. Must
-       * be unique for operation resources in the Operations collection.
-       */
-      public Get setClientOperationId(java.lang.String clientOperationId) {
-        this.clientOperationId = clientOperationId;
-        return this;
-      }
-
       @Override
       public Get set(String parameterName, Object value) {
         return (Get) super.set(parameterName, value);

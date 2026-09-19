@@ -17826,11 +17826,17 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
      * Creates a user. Mutate calls immediately following user creation might sometimes fail as the user
      * isn't fully created due to propagation delay in our backends. Check the error details for the
      * "User creation is not complete" message to see if this is the case. Retrying the calls after some
-     * time can help in this case. If `resolveConflictAccount` is set to `true`, a `202` response code
-     * means that a conflicting unmanaged account exists and was invited to join the organization. A
-     * `409` response code means that a conflicting account exists so the user wasn't created based on
-     * the [handling unmanaged user accounts](https://support.google.com/a/answer/11112794) option
-     * selected.
+     * time can help in this case. If `resolve_conflict_account` is set to `true`, the option selected
+     * for [Find and add unmanaged users](https://knowledge.workspace.google.com/admin/users/find-and-
+     * add-unmanaged-users) will apply to resolve conflicting accounts: - A `200` response code
+     * indicates the user was created (or replaced an existing unmanaged personal account). - A `202`
+     * response code means that a conflicting unmanaged personal account exists and was invited to join
+     * the organization. - A `409` response code means that a conflicting account exists so the user
+     * wasn't created (e.g. based on the option selected to preserve the account, or if the email
+     * conflicts with an unmanaged work account or existing managed user). For details on resolving
+     * duplicate account errors, see [Resolve duplicate account
+     * errors](https://knowledge.workspace.google.com/p/duplicate-account-errors) and [Transfer
+     * unmanaged work accounts](https://knowledge.workspace.google.com/p/unmanaged-work-accounts).
      *
      * Create a request for the method "users.insert".
      *
@@ -17854,11 +17860,18 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
        * Creates a user. Mutate calls immediately following user creation might sometimes fail as the
        * user isn't fully created due to propagation delay in our backends. Check the error details for
        * the "User creation is not complete" message to see if this is the case. Retrying the calls
-       * after some time can help in this case. If `resolveConflictAccount` is set to `true`, a `202`
-       * response code means that a conflicting unmanaged account exists and was invited to join the
-       * organization. A `409` response code means that a conflicting account exists so the user wasn't
-       * created based on the [handling unmanaged user
-       * accounts](https://support.google.com/a/answer/11112794) option selected.
+       * after some time can help in this case. If `resolve_conflict_account` is set to `true`, the
+       * option selected for [Find and add unmanaged
+       * users](https://knowledge.workspace.google.com/admin/users/find-and-add-unmanaged-users) will
+       * apply to resolve conflicting accounts: - A `200` response code indicates the user was created
+       * (or replaced an existing unmanaged personal account). - A `202` response code means that a
+       * conflicting unmanaged personal account exists and was invited to join the organization. - A
+       * `409` response code means that a conflicting account exists so the user wasn't created (e.g.
+       * based on the option selected to preserve the account, or if the email conflicts with an
+       * unmanaged work account or existing managed user). For details on resolving duplicate account
+       * errors, see [Resolve duplicate account
+       * errors](https://knowledge.workspace.google.com/p/duplicate-account-errors) and [Transfer
+       * unmanaged work accounts](https://knowledge.workspace.google.com/p/unmanaged-work-accounts).
        *
        * Create a request for the method "users.insert".
        *
@@ -17934,22 +17947,25 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
       }
 
       /**
-       * Optional. If set to `true`, the option selected for [handling unmanaged user
-       * accounts](https://support.google.com/a/answer/11112794) will apply. Default: `false`
+       * Optional. Applies the option selected for [Find and add unmanaged
+       * users](https://knowledge.workspace.google.com/admin/users/find-and-add-unmanaged-users) to
+       * resolve conflicting accounts when set to `true`. Default: `false`
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean resolveConflictAccount;
 
-      /** Optional. If set to `true`, the option selected for [handling unmanaged user
-     accounts](https://support.google.com/a/answer/11112794) will apply. Default: `false`
+      /** Optional. Applies the option selected for [Find and add unmanaged
+     users](https://knowledge.workspace.google.com/admin/users/find-and-add-unmanaged-users) to resolve
+     conflicting accounts when set to `true`. Default: `false`
        */
       public java.lang.Boolean getResolveConflictAccount() {
         return resolveConflictAccount;
       }
 
       /**
-       * Optional. If set to `true`, the option selected for [handling unmanaged user
-       * accounts](https://support.google.com/a/answer/11112794) will apply. Default: `false`
+       * Optional. Applies the option selected for [Find and add unmanaged
+       * users](https://knowledge.workspace.google.com/admin/users/find-and-add-unmanaged-users) to
+       * resolve conflicting accounts when set to `true`. Default: `false`
        */
       public Insert setResolveConflictAccount(java.lang.Boolean resolveConflictAccount) {
         this.resolveConflictAccount = resolveConflictAccount;

@@ -6047,17 +6047,17 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Whether to copy the comments associated with the file. */
+      /** Whether to copy the open (unresolved) comments associated with the file. */
       @com.google.api.client.util.Key
       private java.lang.Boolean copyComments;
 
-      /** Whether to copy the comments associated with the file. [default: false]
+      /** Whether to copy the open (unresolved) comments associated with the file. [default: false]
        */
       public java.lang.Boolean getCopyComments() {
         return copyComments;
       }
 
-      /** Whether to copy the comments associated with the file. */
+      /** Whether to copy the open (unresolved) comments associated with the file. */
       public Copy setCopyComments(java.lang.Boolean copyComments) {
         this.copyComments = copyComments;
         return this;
@@ -6080,7 +6080,7 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
        * </p>
        *
        * <p>
-       * Whether to copy the comments associated with the file.
+       * Whether to copy the open (unresolved) comments associated with the file.
        * </p>
        */
       public boolean isCopyComments() {

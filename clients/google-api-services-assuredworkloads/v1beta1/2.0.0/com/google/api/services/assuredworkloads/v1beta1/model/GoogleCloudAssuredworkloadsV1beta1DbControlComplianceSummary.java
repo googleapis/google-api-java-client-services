@@ -94,11 +94,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary 
   private java.lang.String name;
 
   /**
+   * Output only. Number of organization policy findings for this control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long orgPolicyFindingCount;
+
+  /**
    * Output only. The overall evaluation status of the control.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String overallEvaluationState;
+
+  /**
+   * Output only. Number of resource findings for this control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long resourceFindingCount;
 
   /**
    * The list of similar controls.
@@ -253,6 +267,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary 
   }
 
   /**
+   * Output only. Number of organization policy findings for this control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrgPolicyFindingCount() {
+    return orgPolicyFindingCount;
+  }
+
+  /**
+   * Output only. Number of organization policy findings for this control.
+   * @param orgPolicyFindingCount orgPolicyFindingCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary setOrgPolicyFindingCount(java.lang.Long orgPolicyFindingCount) {
+    this.orgPolicyFindingCount = orgPolicyFindingCount;
+    return this;
+  }
+
+  /**
    * Output only. The overall evaluation status of the control.
    * @return value or {@code null} for none
    */
@@ -266,6 +297,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary 
    */
   public GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary setOverallEvaluationState(java.lang.String overallEvaluationState) {
     this.overallEvaluationState = overallEvaluationState;
+    return this;
+  }
+
+  /**
+   * Output only. Number of resource findings for this control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getResourceFindingCount() {
+    return resourceFindingCount;
+  }
+
+  /**
+   * Output only. Number of resource findings for this control.
+   * @param resourceFindingCount resourceFindingCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary setResourceFindingCount(java.lang.Long resourceFindingCount) {
+    this.resourceFindingCount = resourceFindingCount;
     return this;
   }
 

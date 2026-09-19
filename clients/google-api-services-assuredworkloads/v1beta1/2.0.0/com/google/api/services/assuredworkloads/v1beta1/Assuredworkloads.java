@@ -4304,61 +4304,61 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * A custom filter for filtering by properties of a workload. At this time, only filtering
-           * by labels is supported.
+           * Optional. A custom filter for filtering by properties of a workload. At this time, only
+           * filtering by labels is supported.
            */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** A custom filter for filtering by properties of a workload. At this time, only filtering by labels
-         is supported.
+          /** Optional. A custom filter for filtering by properties of a workload. At this time, only filtering
+         by labels is supported.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
           /**
-           * A custom filter for filtering by properties of a workload. At this time, only filtering
-           * by labels is supported.
+           * Optional. A custom filter for filtering by properties of a workload. At this time, only
+           * filtering by labels is supported.
            */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Page size. */
+          /** Optional. Page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Page size.
+          /** Optional. Page size.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Page size. */
+          /** Optional. Page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * Page token returned from previous request. Page token contains context from previous
-           * request. Page token needs to be passed in the second and following requests.
+           * Optional. Page token returned from previous request. Page token contains context from
+           * previous request. Page token needs to be passed in the second and following requests.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token returned from previous request. Page token contains context from previous request. Page
-         token needs to be passed in the second and following requests.
+          /** Optional. Page token returned from previous request. Page token contains context from previous
+         request. Page token needs to be passed in the second and following requests.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Page token returned from previous request. Page token contains context from previous
-           * request. Page token needs to be passed in the second and following requests.
+           * Optional. Page token returned from previous request. Page token contains context from
+           * previous request. Page token needs to be passed in the second and following requests.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

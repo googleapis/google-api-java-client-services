@@ -45,6 +45,20 @@ public final class GoogleCloudAssuredworkloadsV1CloudControlAssessmentDetails ex
   private java.lang.Integer findingsCount;
 
   /**
+   * Output only. Number of organization policy findings for the cloud control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long orgPolicyFindingCount;
+
+  /**
+   * Output only. Number of resource findings for the cloud control.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long resourceFindingCount;
+
+  /**
    * Output only. The evaluation status of the cloud control.
    * @return value or {@code null} for none
    */
@@ -75,6 +89,40 @@ public final class GoogleCloudAssuredworkloadsV1CloudControlAssessmentDetails ex
    */
   public GoogleCloudAssuredworkloadsV1CloudControlAssessmentDetails setFindingsCount(java.lang.Integer findingsCount) {
     this.findingsCount = findingsCount;
+    return this;
+  }
+
+  /**
+   * Output only. Number of organization policy findings for the cloud control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getOrgPolicyFindingCount() {
+    return orgPolicyFindingCount;
+  }
+
+  /**
+   * Output only. Number of organization policy findings for the cloud control.
+   * @param orgPolicyFindingCount orgPolicyFindingCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1CloudControlAssessmentDetails setOrgPolicyFindingCount(java.lang.Long orgPolicyFindingCount) {
+    this.orgPolicyFindingCount = orgPolicyFindingCount;
+    return this;
+  }
+
+  /**
+   * Output only. Number of resource findings for the cloud control.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getResourceFindingCount() {
+    return resourceFindingCount;
+  }
+
+  /**
+   * Output only. Number of resource findings for the cloud control.
+   * @param resourceFindingCount resourceFindingCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1CloudControlAssessmentDetails setResourceFindingCount(java.lang.Long resourceFindingCount) {
+    this.resourceFindingCount = resourceFindingCount;
     return this;
   }
 

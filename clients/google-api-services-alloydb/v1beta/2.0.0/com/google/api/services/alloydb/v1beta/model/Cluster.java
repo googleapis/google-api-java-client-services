@@ -138,6 +138,14 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
+   * Optional. Edition of the cluster. If left unspecified, the cluster behaves as
+   * `EDITION_ALLOYDB`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String edition;
+
+  /**
    * Optional. The encryption config can be specified to encrypt the data disks and other persistent
    * data resources of a cluster with a customer-managed encryption key (CMEK). When this field is
    * not specified, the cluster will then use default encryption scheme to protect the user data.
@@ -589,6 +597,25 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Edition of the cluster. If left unspecified, the cluster behaves as
+   * `EDITION_ALLOYDB`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEdition() {
+    return edition;
+  }
+
+  /**
+   * Optional. Edition of the cluster. If left unspecified, the cluster behaves as
+   * `EDITION_ALLOYDB`.
+   * @param edition edition or {@code null} for none
+   */
+  public Cluster setEdition(java.lang.String edition) {
+    this.edition = edition;
     return this;
   }
 

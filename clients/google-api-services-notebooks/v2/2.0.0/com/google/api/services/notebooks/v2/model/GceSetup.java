@@ -163,6 +163,14 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
   private ShieldedInstanceConfig shieldedInstanceConfig;
 
   /**
+   * Output only. Represents system-managed metadata for this instance: the subset of `metadata`
+   * whose keys are recognized Workbench system keys.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> systemMetadata;
+
+  /**
    * Optional. The Compute Engine network tags to add to runtime (see [Add network
    * tags](https://cloud.google.com/vpc/docs/add-remove-network-tags)).
    * The value may be {@code null}.
@@ -464,6 +472,25 @@ public final class GceSetup extends com.google.api.client.json.GenericJson {
    */
   public GceSetup setShieldedInstanceConfig(ShieldedInstanceConfig shieldedInstanceConfig) {
     this.shieldedInstanceConfig = shieldedInstanceConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Represents system-managed metadata for this instance: the subset of `metadata`
+   * whose keys are recognized Workbench system keys.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getSystemMetadata() {
+    return systemMetadata;
+  }
+
+  /**
+   * Output only. Represents system-managed metadata for this instance: the subset of `metadata`
+   * whose keys are recognized Workbench system keys.
+   * @param systemMetadata systemMetadata or {@code null} for none
+   */
+  public GceSetup setSystemMetadata(java.util.Map<String, java.lang.String> systemMetadata) {
+    this.systemMetadata = systemMetadata;
     return this;
   }
 

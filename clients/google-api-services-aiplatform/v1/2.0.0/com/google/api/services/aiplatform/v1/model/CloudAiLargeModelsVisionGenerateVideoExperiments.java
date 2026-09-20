@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.google.api.client.json.GenericJson {
 
   /**
+   * If false, when a non-subscription customer tries to call an experimental feature, the request
+   * will be rejected. This field has no effect for subscription customers.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowMeteredBilling;
+
+  /**
    * Optional. If true, anchors the last frame in video generation by generating a custom border
    * mask.
    * The value may be {@code null}.
@@ -141,6 +149,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig outpaintConfig;
 
   /**
+   * Configuration for Pro Edit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig proEdit;
+
+  /**
    * Prompt chunks for "ProModel" prompting. If set, the prompt will not be rewritten, and top-level
    * prompt ignored.
    * The value may be {@code null}.
@@ -210,6 +225,25 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   @com.google.api.client.util.Key
   private java.lang.Float videoTransformStrength;
+
+  /**
+   * If false, when a non-subscription customer tries to call an experimental feature, the request
+   * will be rejected. This field has no effect for subscription customers.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowMeteredBilling() {
+    return allowMeteredBilling;
+  }
+
+  /**
+   * If false, when a non-subscription customer tries to call an experimental feature, the request
+   * will be rejected. This field has no effect for subscription customers.
+   * @param allowMeteredBilling allowMeteredBilling or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setAllowMeteredBilling(java.lang.Boolean allowMeteredBilling) {
+    this.allowMeteredBilling = allowMeteredBilling;
+    return this;
+  }
 
   /**
    * Optional. If true, anchors the last frame in video generation by generating a custom border
@@ -475,6 +509,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setOutpaintConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig outpaintConfig) {
     this.outpaintConfig = outpaintConfig;
+    return this;
+  }
+
+  /**
+   * Configuration for Pro Edit.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig getProEdit() {
+    return proEdit;
+  }
+
+  /**
+   * Configuration for Pro Edit.
+   * @param proEdit proEdit or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setProEdit(CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig proEdit) {
+    this.proEdit = proEdit;
     return this;
   }
 

@@ -90,6 +90,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
   private java.lang.String name;
 
   /**
+   * Optional. Configures garbage collection of Runtime Revisions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineRevisionGarbageCollectionStrategy revisionGarbageCollectionStrategy;
+
+  /**
    * Optional. Configurations of the ReasoningEngine
    * The value may be {@code null}.
    */
@@ -249,6 +256,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngine extends com.googl
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngine setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configures garbage collection of Runtime Revisions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineRevisionGarbageCollectionStrategy getRevisionGarbageCollectionStrategy() {
+    return revisionGarbageCollectionStrategy;
+  }
+
+  /**
+   * Optional. Configures garbage collection of Runtime Revisions.
+   * @param revisionGarbageCollectionStrategy revisionGarbageCollectionStrategy or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngine setRevisionGarbageCollectionStrategy(GoogleCloudAiplatformV1beta1ReasoningEngineRevisionGarbageCollectionStrategy revisionGarbageCollectionStrategy) {
+    this.revisionGarbageCollectionStrategy = revisionGarbageCollectionStrategy;
     return this;
   }
 

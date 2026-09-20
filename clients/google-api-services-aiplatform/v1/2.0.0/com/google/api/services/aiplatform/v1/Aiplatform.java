@@ -37764,7 +37764,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Agent> {
+        public class Patch extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation> {
 
           private static final String REST_PATH = "v1/{+name}";
 
@@ -37788,7 +37788,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected Patch(java.lang.String name, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Agent content) {
-            super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1Agent.class);
+            super(Aiplatform.this, "PATCH", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleLongrunningOperation.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

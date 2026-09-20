@@ -45,6 +45,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponseVideo extends co
   private CloudAiLargeModelsVisionGenerateVideoExperiments experimentsMetadata;
 
   /**
+   * Optional response returned from experimental requests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionExperimentsResponse experimentsResponse;
+
+  /**
    * Cloud Storage URI where the generated video is written.
    * The value may be {@code null}.
    */
@@ -91,6 +98,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoResponseVideo extends co
    */
   public CloudAiLargeModelsVisionGenerateVideoResponseVideo setExperimentsMetadata(CloudAiLargeModelsVisionGenerateVideoExperiments experimentsMetadata) {
     this.experimentsMetadata = experimentsMetadata;
+    return this;
+  }
+
+  /**
+   * Optional response returned from experimental requests.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionExperimentsResponse getExperimentsResponse() {
+    return experimentsResponse;
+  }
+
+  /**
+   * Optional response returned from experimental requests.
+   * @param experimentsResponse experimentsResponse or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoResponseVideo setExperimentsResponse(CloudAiLargeModelsVisionExperimentsResponse experimentsResponse) {
+    this.experimentsResponse = experimentsResponse;
     return this;
   }
 

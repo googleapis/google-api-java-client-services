@@ -94,6 +94,13 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private java.lang.String object__;
 
   /**
+   * Optional. Observability settings for this agent's sessions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ObservabilityConfig observabilityConfig;
+
+  /**
    * Optional. The instructions for the agent to follow. These instructions are passed to the LLM as
    * a system instruction.
    * The value may be {@code null}.
@@ -264,6 +271,23 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Agent setObject(java.lang.String object__) {
     this.object__ = object__;
+    return this;
+  }
+
+  /**
+   * Optional. Observability settings for this agent's sessions.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ObservabilityConfig getObservabilityConfig() {
+    return observabilityConfig;
+  }
+
+  /**
+   * Optional. Observability settings for this agent's sessions.
+   * @param observabilityConfig observabilityConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setObservabilityConfig(GoogleCloudAiplatformV1beta1ObservabilityConfig observabilityConfig) {
+    this.observabilityConfig = observabilityConfig;
     return this;
   }
 

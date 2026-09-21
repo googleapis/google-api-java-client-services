@@ -45,7 +45,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand e
   private java.lang.String commandState;
 
   /**
-   * Required. Type of the remote command. The only supported command_type is "clearBrowsingData".
+   * Required. Type of the remote command. Supported commands: "clearBrowsingData" and
+   * "extensionUpdateCheck".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand e
 
   /**
    * Required. Payload of the remote command. The payload for "clearBrowsingData" command supports:
-   * - fields "clearCache" and "clearCookies" - values of boolean type.
+   * - fields "clearCache" and "clearCookies" - values of boolean type. The payload for
+   * "extensionUpdateCheck" should be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,7 +118,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand e
   }
 
   /**
-   * Required. Type of the remote command. The only supported command_type is "clearBrowsingData".
+   * Required. Type of the remote command. Supported commands: "clearBrowsingData" and
+   * "extensionUpdateCheck".
    * @return value or {@code null} for none
    */
   public java.lang.String getCommandType() {
@@ -124,7 +127,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand e
   }
 
   /**
-   * Required. Type of the remote command. The only supported command_type is "clearBrowsingData".
+   * Required. Type of the remote command. Supported commands: "clearBrowsingData" and
+   * "extensionUpdateCheck".
    * @param commandType commandType or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand setCommandType(java.lang.String commandType) {
@@ -170,7 +174,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand e
 
   /**
    * Required. Payload of the remote command. The payload for "clearBrowsingData" command supports:
-   * - fields "clearCache" and "clearCookies" - values of boolean type.
+   * - fields "clearCache" and "clearCookies" - values of boolean type. The payload for
+   * "extensionUpdateCheck" should be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getPayload() {
@@ -179,7 +184,8 @@ public final class GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand e
 
   /**
    * Required. Payload of the remote command. The payload for "clearBrowsingData" command supports:
-   * - fields "clearCache" and "clearCookies" - values of boolean type.
+   * - fields "clearCache" and "clearCookies" - values of boolean type. The payload for
+   * "extensionUpdateCheck" should be empty.
    * @param payload payload or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ChromeBrowserProfileCommand setPayload(java.util.Map<String, java.lang.Object> payload) {

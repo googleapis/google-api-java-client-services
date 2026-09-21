@@ -47,6 +47,13 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
   private ExportMetadataEncryptionKey exportEncryptionKey;
 
   /**
+   * Overall export metrics, timing, and component telemetry.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExportMetrics exportMetrics;
+
+  /**
    * List of files created as part of export artifact (excluding the metadata). The paths are
    * relative to the folder containing the metadata.
    * The value may be {@code null}.
@@ -124,6 +131,23 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
    */
   public ExportMetadata setExportEncryptionKey(ExportMetadataEncryptionKey exportEncryptionKey) {
     this.exportEncryptionKey = exportEncryptionKey;
+    return this;
+  }
+
+  /**
+   * Overall export metrics, timing, and component telemetry.
+   * @return value or {@code null} for none
+   */
+  public ExportMetrics getExportMetrics() {
+    return exportMetrics;
+  }
+
+  /**
+   * Overall export metrics, timing, and component telemetry.
+   * @param exportMetrics exportMetrics or {@code null} for none
+   */
+  public ExportMetadata setExportMetrics(ExportMetrics exportMetrics) {
+    this.exportMetrics = exportMetrics;
     return this;
   }
 

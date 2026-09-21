@@ -13475,6 +13475,768 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
   }
 
   /**
+   * An accessor for creating requests from the WorkloadCaptures collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code SQLAdmin sqladmin = new SQLAdmin(...);}
+   *   {@code SQLAdmin.WorkloadCaptures.List request = sqladmin.workloadCaptures().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public WorkloadCaptures workloadCaptures() {
+    return new WorkloadCaptures();
+  }
+
+  /**
+   * The "workloadCaptures" collection of methods.
+   */
+  public class WorkloadCaptures {
+
+    /**
+     * Lists all captured workloads associated with the instance.
+     *
+     * Create a request for the method "workloadCaptures.list".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String instance) throws java.io.IOException {
+      List result = new List(project, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends SQLAdminRequest<com.google.api.services.sqladmin.model.WorkloadCapturesListResponse> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/workloadCaptures";
+
+      /**
+       * Lists all captured workloads associated with the instance.
+       *
+       * Create a request for the method "workloadCaptures.list".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String instance) {
+        super(SQLAdmin.this, "GET", REST_PATH, null, com.google.api.services.sqladmin.model.WorkloadCapturesListResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public List setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public List setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Starts capturing the SQL queries, transactions, and other operations executed on the primary
+     * instance. This traffic is securely stored and forms a "captured workload". This workload can be
+     * replayed later on a different instance to safely test performance impacts, database upgrades,
+     * configuration changes etc. before applying them to production.
+     *
+     * Create a request for the method "workloadCaptures.start".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Start#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest}
+     * @return the request
+     */
+    public Start start(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest content) throws java.io.IOException {
+      Start result = new Start(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Start extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/workloadCaptures:start";
+
+      /**
+       * Starts capturing the SQL queries, transactions, and other operations executed on the primary
+       * instance. This traffic is securely stored and forms a "captured workload". This workload can be
+       * replayed later on a different instance to safely test performance impacts, database upgrades,
+       * configuration changes etc. before applying them to production.
+       *
+       * Create a request for the method "workloadCaptures.start".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Start#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Start#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest}
+       * @since 1.13
+       */
+      protected Start(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public Start set$Xgafv(java.lang.String $Xgafv) {
+        return (Start) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Start setAccessToken(java.lang.String accessToken) {
+        return (Start) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Start setAlt(java.lang.String alt) {
+        return (Start) super.setAlt(alt);
+      }
+
+      @Override
+      public Start setCallback(java.lang.String callback) {
+        return (Start) super.setCallback(callback);
+      }
+
+      @Override
+      public Start setFields(java.lang.String fields) {
+        return (Start) super.setFields(fields);
+      }
+
+      @Override
+      public Start setKey(java.lang.String key) {
+        return (Start) super.setKey(key);
+      }
+
+      @Override
+      public Start setOauthToken(java.lang.String oauthToken) {
+        return (Start) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Start setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Start) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Start setQuotaUser(java.lang.String quotaUser) {
+        return (Start) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Start setUploadType(java.lang.String uploadType) {
+        return (Start) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Start setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Start) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public Start setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public Start setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public Start set(String parameterName, Object value) {
+        return (Start) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Starts executing a captured workload on a separate Cloud SQL instance provisioned for workload
+     * replay. This target instance simulates the production environment without affecting the primary
+     * instance.
+     *
+     * Create a request for the method "workloadCaptures.startReplay".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link StartReplay#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param workloadId Required. The ID of the workload to replay.
+     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest}
+     * @return the request
+     */
+    public StartReplay startReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest content) throws java.io.IOException {
+      StartReplay result = new StartReplay(project, instance, workloadId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class StartReplay extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/workloadCaptures/{workloadId}:startReplay";
+
+      /**
+       * Starts executing a captured workload on a separate Cloud SQL instance provisioned for workload
+       * replay. This target instance simulates the production environment without affecting the primary
+       * instance.
+       *
+       * Create a request for the method "workloadCaptures.startReplay".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link StartReplay#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * StartReplay#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param workloadId Required. The ID of the workload to replay.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest}
+       * @since 1.13
+       */
+      protected StartReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        this.workloadId = com.google.api.client.util.Preconditions.checkNotNull(workloadId, "Required parameter workloadId must be specified.");
+      }
+
+      @Override
+      public StartReplay set$Xgafv(java.lang.String $Xgafv) {
+        return (StartReplay) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public StartReplay setAccessToken(java.lang.String accessToken) {
+        return (StartReplay) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public StartReplay setAlt(java.lang.String alt) {
+        return (StartReplay) super.setAlt(alt);
+      }
+
+      @Override
+      public StartReplay setCallback(java.lang.String callback) {
+        return (StartReplay) super.setCallback(callback);
+      }
+
+      @Override
+      public StartReplay setFields(java.lang.String fields) {
+        return (StartReplay) super.setFields(fields);
+      }
+
+      @Override
+      public StartReplay setKey(java.lang.String key) {
+        return (StartReplay) super.setKey(key);
+      }
+
+      @Override
+      public StartReplay setOauthToken(java.lang.String oauthToken) {
+        return (StartReplay) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public StartReplay setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (StartReplay) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public StartReplay setQuotaUser(java.lang.String quotaUser) {
+        return (StartReplay) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public StartReplay setUploadType(java.lang.String uploadType) {
+        return (StartReplay) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public StartReplay setUploadProtocol(java.lang.String uploadProtocol) {
+        return (StartReplay) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public StartReplay setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public StartReplay setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      /** Required. The ID of the workload to replay. */
+      @com.google.api.client.util.Key
+      private java.lang.String workloadId;
+
+      /** Required. The ID of the workload to replay.
+       */
+      public java.lang.String getWorkloadId() {
+        return workloadId;
+      }
+
+      /** Required. The ID of the workload to replay. */
+      public StartReplay setWorkloadId(java.lang.String workloadId) {
+        this.workloadId = workloadId;
+        return this;
+      }
+
+      @Override
+      public StartReplay set(String parameterName, Object value) {
+        return (StartReplay) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Stops capturing the query traffic and related operations executed on the primary instance.
+     *
+     * Create a request for the method "workloadCaptures.stop".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link Stop#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest}
+     * @return the request
+     */
+    public Stop stop(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest content) throws java.io.IOException {
+      Stop result = new Stop(project, instance, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Stop extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/workloadCaptures:stop";
+
+      /**
+       * Stops capturing the query traffic and related operations executed on the primary instance.
+       *
+       * Create a request for the method "workloadCaptures.stop".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link Stop#execute()} method to invoke the remote operation. <p>
+       * {@link Stop#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest}
+       * @since 1.13
+       */
+      protected Stop(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+      }
+
+      @Override
+      public Stop set$Xgafv(java.lang.String $Xgafv) {
+        return (Stop) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Stop setAccessToken(java.lang.String accessToken) {
+        return (Stop) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Stop setAlt(java.lang.String alt) {
+        return (Stop) super.setAlt(alt);
+      }
+
+      @Override
+      public Stop setCallback(java.lang.String callback) {
+        return (Stop) super.setCallback(callback);
+      }
+
+      @Override
+      public Stop setFields(java.lang.String fields) {
+        return (Stop) super.setFields(fields);
+      }
+
+      @Override
+      public Stop setKey(java.lang.String key) {
+        return (Stop) super.setKey(key);
+      }
+
+      @Override
+      public Stop setOauthToken(java.lang.String oauthToken) {
+        return (Stop) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Stop setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Stop) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Stop setQuotaUser(java.lang.String quotaUser) {
+        return (Stop) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Stop setUploadType(java.lang.String uploadType) {
+        return (Stop) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Stop setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Stop) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public Stop setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public Stop setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      @Override
+      public Stop set(String parameterName, Object value) {
+        return (Stop) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Stops executing a captured workload on the separate Cloud SQL instance.
+     *
+     * Create a request for the method "workloadCaptures.stopReplay".
+     *
+     * This request holds the parameters needed by the sqladmin server.  After setting any optional
+     * parameters, call the {@link StopReplay#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID of the project that contains the instance.
+     * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+     * @param workloadId Required. The ID of the workload to replay.
+     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest}
+     * @return the request
+     */
+    public StopReplay stopReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest content) throws java.io.IOException {
+      StopReplay result = new StopReplay(project, instance, workloadId, content);
+      initialize(result);
+      return result;
+    }
+
+    public class StopReplay extends SQLAdminRequest<com.google.api.services.sqladmin.model.Operation> {
+
+      private static final String REST_PATH = "v1/projects/{project}/instances/{instance}/workloadCaptures/{workloadId}:stopReplay";
+
+      /**
+       * Stops executing a captured workload on the separate Cloud SQL instance.
+       *
+       * Create a request for the method "workloadCaptures.stopReplay".
+       *
+       * This request holds the parameters needed by the the sqladmin server.  After setting any
+       * optional parameters, call the {@link StopReplay#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * StopReplay#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID of the project that contains the instance.
+       * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
+       * @param workloadId Required. The ID of the workload to replay.
+       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest}
+       * @since 1.13
+       */
+      protected StopReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest content) {
+        super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        this.workloadId = com.google.api.client.util.Preconditions.checkNotNull(workloadId, "Required parameter workloadId must be specified.");
+      }
+
+      @Override
+      public StopReplay set$Xgafv(java.lang.String $Xgafv) {
+        return (StopReplay) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public StopReplay setAccessToken(java.lang.String accessToken) {
+        return (StopReplay) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public StopReplay setAlt(java.lang.String alt) {
+        return (StopReplay) super.setAlt(alt);
+      }
+
+      @Override
+      public StopReplay setCallback(java.lang.String callback) {
+        return (StopReplay) super.setCallback(callback);
+      }
+
+      @Override
+      public StopReplay setFields(java.lang.String fields) {
+        return (StopReplay) super.setFields(fields);
+      }
+
+      @Override
+      public StopReplay setKey(java.lang.String key) {
+        return (StopReplay) super.setKey(key);
+      }
+
+      @Override
+      public StopReplay setOauthToken(java.lang.String oauthToken) {
+        return (StopReplay) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public StopReplay setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (StopReplay) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public StopReplay setQuotaUser(java.lang.String quotaUser) {
+        return (StopReplay) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public StopReplay setUploadType(java.lang.String uploadType) {
+        return (StopReplay) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public StopReplay setUploadProtocol(java.lang.String uploadProtocol) {
+        return (StopReplay) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID of the project that contains the instance.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID of the project that contains the instance. */
+      public StopReplay setProject(java.lang.String project) {
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Required. Cloud SQL instance ID. This does not include the project ID. */
+      public StopReplay setInstance(java.lang.String instance) {
+        this.instance = instance;
+        return this;
+      }
+
+      /** Required. The ID of the workload to replay. */
+      @com.google.api.client.util.Key
+      private java.lang.String workloadId;
+
+      /** Required. The ID of the workload to replay.
+       */
+      public java.lang.String getWorkloadId() {
+        return workloadId;
+      }
+
+      /** Required. The ID of the workload to replay. */
+      public StopReplay setWorkloadId(java.lang.String workloadId) {
+        this.workloadId = workloadId;
+        return this;
+      }
+
+      @Override
+      public StopReplay set(String parameterName, Object value) {
+        return (StopReplay) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link SQLAdmin}.
    *
    * <p>

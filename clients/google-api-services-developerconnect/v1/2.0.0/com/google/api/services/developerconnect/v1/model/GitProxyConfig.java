@@ -17,7 +17,8 @@
 package com.google.api.services.developerconnect.v1.model;
 
 /**
- * The git proxy configuration.
+ * Configuration for proxies. For legacy reasons, this message is named `GitProxyConfig`, but it
+ * includes settings for both Git and HTTP proxy.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Developer Connect API. For a detailed explanation

@@ -63,6 +63,14 @@ public final class QueryTemplate extends com.google.api.client.json.GenericJson 
   private java.lang.String documentation;
 
   /**
+   * Optional. Encryption configuration for the query template. If set, the customer-managed KMS key
+   * is used to encrypt the query template definition body.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EncryptionConfig encryptionConfiguration;
+
+  /**
    * Output only. The resource name of the QueryTemplate. e.g.
    * `projects/myproject/locations/us/dataExchanges/123/queryTemplates/456`
    * The value may be {@code null}.
@@ -180,6 +188,25 @@ public final class QueryTemplate extends com.google.api.client.json.GenericJson 
    */
   public QueryTemplate setDocumentation(java.lang.String documentation) {
     this.documentation = documentation;
+    return this;
+  }
+
+  /**
+   * Optional. Encryption configuration for the query template. If set, the customer-managed KMS key
+   * is used to encrypt the query template definition body.
+   * @return value or {@code null} for none
+   */
+  public EncryptionConfig getEncryptionConfiguration() {
+    return encryptionConfiguration;
+  }
+
+  /**
+   * Optional. Encryption configuration for the query template. If set, the customer-managed KMS key
+   * is used to encrypt the query template definition body.
+   * @param encryptionConfiguration encryptionConfiguration or {@code null} for none
+   */
+  public QueryTemplate setEncryptionConfiguration(EncryptionConfig encryptionConfiguration) {
+    this.encryptionConfiguration = encryptionConfiguration;
     return this;
   }
 

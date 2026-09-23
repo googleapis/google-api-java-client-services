@@ -115,7 +115,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. The fully-qualified name of the `CustomDomain`.
+   * Identifier. The fully-qualified name of the `CustomDomain`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -359,7 +359,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully-qualified name of the `CustomDomain`.
+   * Identifier. The fully-qualified name of the `CustomDomain`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -367,7 +367,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The fully-qualified name of the `CustomDomain`.
+   * Identifier. The fully-qualified name of the `CustomDomain`.
    * @param name name or {@code null} for none
    */
   public CustomDomain setName(java.lang.String name) {

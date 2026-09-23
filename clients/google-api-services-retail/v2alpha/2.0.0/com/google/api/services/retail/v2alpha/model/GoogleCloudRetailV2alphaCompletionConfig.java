@@ -54,6 +54,14 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
   private GoogleCloudRetailV2alphaCompletionDataInputConfig denylistInputConfig;
 
   /**
+   * Optional. If set to true, the conversational shopping agent prompts will be served. Default
+   * value is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAgentPrompts;
+
+  /**
    * Output only. Name of the LRO corresponding to the latest allowlist import. Can use GetOperation
    * API to retrieve the latest state of the Long Running Operation.
    * The value may be {@code null}.
@@ -169,6 +177,25 @@ public final class GoogleCloudRetailV2alphaCompletionConfig extends com.google.a
    */
   public GoogleCloudRetailV2alphaCompletionConfig setDenylistInputConfig(GoogleCloudRetailV2alphaCompletionDataInputConfig denylistInputConfig) {
     this.denylistInputConfig = denylistInputConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, the conversational shopping agent prompts will be served. Default
+   * value is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAgentPrompts() {
+    return enableAgentPrompts;
+  }
+
+  /**
+   * Optional. If set to true, the conversational shopping agent prompts will be served. Default
+   * value is false.
+   * @param enableAgentPrompts enableAgentPrompts or {@code null} for none
+   */
+  public GoogleCloudRetailV2alphaCompletionConfig setEnableAgentPrompts(java.lang.Boolean enableAgentPrompts) {
+    this.enableAgentPrompts = enableAgentPrompts;
     return this;
   }
 

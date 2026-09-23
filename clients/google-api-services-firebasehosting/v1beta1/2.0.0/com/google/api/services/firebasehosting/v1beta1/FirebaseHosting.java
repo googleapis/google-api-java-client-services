@@ -3617,7 +3617,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the firebasehosting server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. The fully-qualified name of the `CustomDomain`.
+         * @param name Identifier. The fully-qualified name of the `CustomDomain`.
          * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CustomDomain}
          * @return the request
          */
@@ -3645,7 +3645,7 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. The fully-qualified name of the `CustomDomain`.
+           * @param name Identifier. The fully-qualified name of the `CustomDomain`.
            * @param content the {@link com.google.api.services.firebasehosting.v1beta1.model.CustomDomain}
            * @since 1.13
            */
@@ -3714,17 +3714,17 @@ public class FirebaseHosting extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Output only. The fully-qualified name of the `CustomDomain`. */
+          /** Identifier. The fully-qualified name of the `CustomDomain`. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. The fully-qualified name of the `CustomDomain`.
+          /** Identifier. The fully-qualified name of the `CustomDomain`.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Output only. The fully-qualified name of the `CustomDomain`. */
+          /** Identifier. The fully-qualified name of the `CustomDomain`. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

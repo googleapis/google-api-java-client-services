@@ -2803,7 +2803,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Retrieves the Capability Config identified by the specified `name` (for example,
+       * Retrieves the CapabilityConfig identified by the specified `name` (for example,
        * `folders/123456789/capabilityConfigs/my-capability-config`).
        *
        * Create a request for the method "capabilityConfigs.get".
@@ -2832,7 +2832,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^folders/[^/]+/capabilityConfigs/[^/]+$");
 
         /**
-         * Retrieves the Capability Config identified by the specified `name` (for example,
+         * Retrieves the CapabilityConfig identified by the specified `name` (for example,
          * `folders/123456789/capabilityConfigs/my-capability-config`).
          *
          * Create a request for the method "capabilityConfigs.get".
@@ -5824,7 +5824,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Retrieves the Capability Config identified by the specified `name` (for example,
+       * Retrieves the CapabilityConfig identified by the specified `name` (for example,
        * `folders/123456789/capabilityConfigs/my-capability-config`).
        *
        * Create a request for the method "capabilityConfigs.get".
@@ -5853,7 +5853,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^organizations/[^/]+/capabilityConfigs/[^/]+$");
 
         /**
-         * Retrieves the Capability Config identified by the specified `name` (for example,
+         * Retrieves the CapabilityConfig identified by the specified `name` (for example,
          * `folders/123456789/capabilityConfigs/my-capability-config`).
          *
          * Create a request for the method "capabilityConfigs.get".
@@ -8491,7 +8491,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Retrieves the Capability Config identified by the specified `name` (for example,
+       * Retrieves the CapabilityConfig identified by the specified `name` (for example,
        * `folders/123456789/capabilityConfigs/my-capability-config`).
        *
        * Create a request for the method "capabilityConfigs.get".
@@ -8520,7 +8520,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^projects/[^/]+/capabilityConfigs/[^/]+$");
 
         /**
-         * Retrieves the Capability Config identified by the specified `name` (for example,
+         * Retrieves the CapabilityConfig identified by the specified `name` (for example,
          * `folders/123456789/capabilityConfigs/my-capability-config`).
          *
          * Create a request for the method "capabilityConfigs.get".

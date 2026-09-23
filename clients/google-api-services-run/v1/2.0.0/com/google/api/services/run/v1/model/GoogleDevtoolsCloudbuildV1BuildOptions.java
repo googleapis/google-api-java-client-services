@@ -126,6 +126,13 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   private java.lang.String requestedVerifyOption;
 
   /**
+   * Output only. Worker release resolved from the release channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolvedWorkerRelease;
+
+  /**
    * A list of global environment variables, which are encrypted using a Cloud Key Management
    * Service crypto key. These values must be specified in the build's `Secret`. These variables
    * will be available to all build steps in this build.
@@ -167,6 +174,14 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    */
   @com.google.api.client.util.Key
   private java.lang.String workerPool;
+
+  /**
+   * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
+   * run this build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerRelease;
 
   /**
    * Option to include built-in and custom substitutions as env variables for all build steps.
@@ -397,6 +412,23 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   }
 
   /**
+   * Output only. Worker release resolved from the release channel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolvedWorkerRelease() {
+    return resolvedWorkerRelease;
+  }
+
+  /**
+   * Output only. Worker release resolved from the release channel.
+   * @param resolvedWorkerRelease resolvedWorkerRelease or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1BuildOptions setResolvedWorkerRelease(java.lang.String resolvedWorkerRelease) {
+    this.resolvedWorkerRelease = resolvedWorkerRelease;
+    return this;
+  }
+
+  /**
    * A list of global environment variables, which are encrypted using a Cloud Key Management
    * Service crypto key. These values must be specified in the build's `Secret`. These variables
    * will be available to all build steps in this build.
@@ -494,6 +526,25 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
    */
   public GoogleDevtoolsCloudbuildV1BuildOptions setWorkerPool(java.lang.String workerPool) {
     this.workerPool = workerPool;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
+   * run this build.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerRelease() {
+    return workerRelease;
+  }
+
+  /**
+   * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
+   * run this build.
+   * @param workerRelease workerRelease or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1BuildOptions setWorkerRelease(java.lang.String workerRelease) {
+    this.workerRelease = workerRelease;
     return this;
   }
 

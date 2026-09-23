@@ -38,9 +38,12 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
    * representing the authentication credential issued by the provider. * `google`: The Google
    * attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom
    * attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the
-   * attribute condition expression is 4096 characters. If unspecified, all valid authentication
-   * credential are accepted. The following example shows how to only allow credentials with a
-   * mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```
+   * `attribute_condition` expression is 4,096 characters. Providing a condition longer than this
+   * will result in an error. If unspecified, all valid authentication credentials are accepted.
+   * However, multi-tenant identity providers (such as GitHub or Terraform Cloud) require an
+   * `attribute_condition` to prevent token spoofing. The following example shows how to only allow
+   * credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups"
+   * ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,9 +166,12 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
    * representing the authentication credential issued by the provider. * `google`: The Google
    * attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom
    * attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the
-   * attribute condition expression is 4096 characters. If unspecified, all valid authentication
-   * credential are accepted. The following example shows how to only allow credentials with a
-   * mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```
+   * `attribute_condition` expression is 4,096 characters. Providing a condition longer than this
+   * will result in an error. If unspecified, all valid authentication credentials are accepted.
+   * However, multi-tenant identity providers (such as GitHub or Terraform Cloud) require an
+   * `attribute_condition` to prevent token spoofing. The following example shows how to only allow
+   * credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups"
+   * ```
    * @return value or {@code null} for none
    */
   public java.lang.String getAttributeCondition() {
@@ -180,9 +186,12 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
    * representing the authentication credential issued by the provider. * `google`: The Google
    * attributes mapped from the assertion in the `attribute_mappings`. * `attribute`: The custom
    * attributes mapped from the assertion in the `attribute_mappings`. The maximum length of the
-   * attribute condition expression is 4096 characters. If unspecified, all valid authentication
-   * credential are accepted. The following example shows how to only allow credentials with a
-   * mapped `google.groups` value of `admins`: ``` "'admins' in google.groups" ```
+   * `attribute_condition` expression is 4,096 characters. Providing a condition longer than this
+   * will result in an error. If unspecified, all valid authentication credentials are accepted.
+   * However, multi-tenant identity providers (such as GitHub or Terraform Cloud) require an
+   * `attribute_condition` to prevent token spoofing. The following example shows how to only allow
+   * credentials with a mapped `google.groups` value of `admins`: ``` "'admins' in google.groups"
+   * ```
    * @param attributeCondition attributeCondition or {@code null} for none
    */
   public WorkloadIdentityPoolProvider setAttributeCondition(java.lang.String attributeCondition) {

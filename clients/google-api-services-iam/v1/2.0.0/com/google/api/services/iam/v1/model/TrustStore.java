@@ -61,9 +61,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If set to True, the trust bundle will include the private ca managed identity
-   * regional root public certificates. Important: `trust_default_shared_ca` is only supported for
-   * managed identity trust domain resource.
+   * Optional. Determines whether the trust bundle includes the private CA managed identity regional
+   * root public certificates. Important: `trust_default_shared_ca` is only supported for managed
+   * identity trust domain resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,9 +110,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If set to True, the trust bundle will include the private ca managed identity
-   * regional root public certificates. Important: `trust_default_shared_ca` is only supported for
-   * managed identity trust domain resource.
+   * Optional. Determines whether the trust bundle includes the private CA managed identity regional
+   * root public certificates. Important: `trust_default_shared_ca` is only supported for managed
+   * identity trust domain resource.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrustDefaultSharedCa() {
@@ -120,9 +120,9 @@ public final class TrustStore extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. If set to True, the trust bundle will include the private ca managed identity
-   * regional root public certificates. Important: `trust_default_shared_ca` is only supported for
-   * managed identity trust domain resource.
+   * Optional. Determines whether the trust bundle includes the private CA managed identity regional
+   * root public certificates. Important: `trust_default_shared_ca` is only supported for managed
+   * identity trust domain resource.
    * @param trustDefaultSharedCa trustDefaultSharedCa or {@code null} for none
    */
   public TrustStore setTrustDefaultSharedCa(java.lang.Boolean trustDefaultSharedCa) {

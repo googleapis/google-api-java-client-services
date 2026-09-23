@@ -36747,7 +36747,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the metadata feed, in the format
-         *        projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+         *        projects/{project_id_or_number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -36775,7 +36775,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the metadata feed, in the format
-         *        projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+         *        projects/{project_id_or_number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -36845,13 +36845,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the metadata feed, in the format projects/{project_id_or
-           * _number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+           * _number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the metadata feed, in the format
-         projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+         projects/{project_id_or_number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -36859,7 +36859,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the metadata feed, in the format projects/{project_id_or
-           * _number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+           * _number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -36885,7 +36885,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the metadata feed, in the format
-         *        projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+         *        projects/{project_id_or_number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -36912,7 +36912,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The resource name of the metadata feed, in the format
-         *        projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+         *        projects/{project_id_or_number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -36992,13 +36992,13 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the metadata feed, in the format projects/{project_id_or
-           * _number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+           * _number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the metadata feed, in the format
-         projects/{project_id_or_number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+         projects/{project_id_or_number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            */
           public java.lang.String getName() {
             return name;
@@ -37006,7 +37006,7 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
 
           /**
            * Required. The resource name of the metadata feed, in the format projects/{project_id_or
-           * _number}/locations/{location_id}/MetadataFeeds/{metadata_feed_id}.
+           * _number}/locations/{location_id}/metadataFeeds/{metadata_feed_id}.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {

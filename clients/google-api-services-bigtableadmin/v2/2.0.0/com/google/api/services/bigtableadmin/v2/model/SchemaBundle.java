@@ -31,6 +31,13 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class SchemaBundle extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Schema for Avros.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AvroSchema avroSchema;
+
+  /**
    * Optional. The etag for this schema bundle. This may be sent on update and delete requests to
    * ensure the client has an up-to-date value before proceeding. The server returns an ABORTED
    * error on a mismatched etag.
@@ -53,6 +60,23 @@ public final class SchemaBundle extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ProtoSchema protoSchema;
+
+  /**
+   * Optional. Schema for Avros.
+   * @return value or {@code null} for none
+   */
+  public AvroSchema getAvroSchema() {
+    return avroSchema;
+  }
+
+  /**
+   * Optional. Schema for Avros.
+   * @param avroSchema avroSchema or {@code null} for none
+   */
+  public SchemaBundle setAvroSchema(AvroSchema avroSchema) {
+    this.avroSchema = avroSchema;
+    return this;
+  }
 
   /**
    * Optional. The etag for this schema bundle. This may be sent on update and delete requests to

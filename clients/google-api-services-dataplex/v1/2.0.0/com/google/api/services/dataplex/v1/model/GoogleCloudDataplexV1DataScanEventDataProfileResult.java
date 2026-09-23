@@ -30,11 +30,35 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataScanEventDataProfileResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Dataplex Compute Units (DCUs) used in the data scan job.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double dcuConsumed;
+
+  /**
    * The count of rows processed in the data scan job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long rowCount;
+
+  /**
+   * Dataplex Compute Units (DCUs) used in the data scan job.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getDcuConsumed() {
+    return dcuConsumed;
+  }
+
+  /**
+   * Dataplex Compute Units (DCUs) used in the data scan job.
+   * @param dcuConsumed dcuConsumed or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataProfileResult setDcuConsumed(java.lang.Double dcuConsumed) {
+    this.dcuConsumed = dcuConsumed;
+    return this;
+  }
 
   /**
    * The count of rows processed in the data scan job.

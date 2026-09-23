@@ -45,6 +45,13 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
   private String createTime;
 
   /**
+   * Data documentation result for data documentation (insights) scan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataScanEventDataDocumentationResult dataDocumentation;
+
+  /**
    * Data profile result for data profile type data scan.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class GoogleCloudDataplexV1DataScanEvent extends com.google.api.cli
    */
   public GoogleCloudDataplexV1DataScanEvent setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Data documentation result for data documentation (insights) scan.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEventDataDocumentationResult getDataDocumentation() {
+    return dataDocumentation;
+  }
+
+  /**
+   * Data documentation result for data documentation (insights) scan.
+   * @param dataDocumentation dataDocumentation or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataScanEvent setDataDocumentation(GoogleCloudDataplexV1DataScanEventDataDocumentationResult dataDocumentation) {
+    this.dataDocumentation = dataDocumentation;
     return this;
   }
 

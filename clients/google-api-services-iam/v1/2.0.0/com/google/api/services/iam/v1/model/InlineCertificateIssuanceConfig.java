@@ -70,8 +70,8 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   private java.lang.Integer rotationWindowPercentage;
 
   /**
-   * Optional. If set to true, the trust domain will utilize the GCP-provisioned default CA. A
-   * default CA in the same region as the workload will be selected to issue the certificate.
+   * Optional. Determines whether the trust domain utilizes the Google Cloud-provisioned default CA.
+   * A default CA in the same region as the workload will be selected to issue the certificate.
    * Enabling this will clear any existing `ca_pools` configuration to provision the certificates.
    * NOTE: This field is mutually exclusive with `ca_pools`. If this flag is enabled, certificates
    * will be automatically provisioned from the default shared CAs. This flag should not be set if
@@ -170,8 +170,8 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. If set to true, the trust domain will utilize the GCP-provisioned default CA. A
-   * default CA in the same region as the workload will be selected to issue the certificate.
+   * Optional. Determines whether the trust domain utilizes the Google Cloud-provisioned default CA.
+   * A default CA in the same region as the workload will be selected to issue the certificate.
    * Enabling this will clear any existing `ca_pools` configuration to provision the certificates.
    * NOTE: This field is mutually exclusive with `ca_pools`. If this flag is enabled, certificates
    * will be automatically provisioned from the default shared CAs. This flag should not be set if
@@ -183,8 +183,8 @@ public final class InlineCertificateIssuanceConfig extends com.google.api.client
   }
 
   /**
-   * Optional. If set to true, the trust domain will utilize the GCP-provisioned default CA. A
-   * default CA in the same region as the workload will be selected to issue the certificate.
+   * Optional. Determines whether the trust domain utilizes the Google Cloud-provisioned default CA.
+   * A default CA in the same region as the workload will be selected to issue the certificate.
    * Enabling this will clear any existing `ca_pools` configuration to provision the certificates.
    * NOTE: This field is mutually exclusive with `ca_pools`. If this flag is enabled, certificates
    * will be automatically provisioned from the default shared CAs. This flag should not be set if

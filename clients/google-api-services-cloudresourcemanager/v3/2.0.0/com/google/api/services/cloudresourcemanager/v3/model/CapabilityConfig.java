@@ -51,7 +51,7 @@ public final class CapabilityConfig extends com.google.api.client.json.GenericJs
    * Optional. Human-readable non-unique display name of the CapabilityConfig. When present it must
    * be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters,
    * numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My
-   * Capability Config`
+   * CapabilityConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,7 +147,7 @@ public final class CapabilityConfig extends com.google.api.client.json.GenericJs
    * Optional. Human-readable non-unique display name of the CapabilityConfig. When present it must
    * be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters,
    * numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My
-   * Capability Config`
+   * CapabilityConfig`
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -158,7 +158,7 @@ public final class CapabilityConfig extends com.google.api.client.json.GenericJs
    * Optional. Human-readable non-unique display name of the CapabilityConfig. When present it must
    * be between 4 to 30 characters. Allowed characters are: lowercase and uppercase letters,
    * numbers, hyphen, single-quote, double-quote, space, and exclamation point. Example: `My
-   * Capability Config`
+   * CapabilityConfig`
    * @param displayName displayName or {@code null} for none
    */
   public CapabilityConfig setDisplayName(java.lang.String displayName) {

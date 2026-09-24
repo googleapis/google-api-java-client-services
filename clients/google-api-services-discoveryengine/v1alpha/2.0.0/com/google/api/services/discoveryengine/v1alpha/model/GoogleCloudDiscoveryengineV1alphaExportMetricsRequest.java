@@ -37,6 +37,16 @@ public final class GoogleCloudDiscoveryengineV1alphaExportMetricsRequest extends
   private GoogleCloudDiscoveryengineV1alphaOutputConfig outputConfig;
 
   /**
+   * Optional. The earliest date (inclusive), interpreted in the UTC time zone, whose metrics are
+   * included in the export. If unset, defaults to 30 days before the current UTC date. The value
+   * must be a valid calendar date that is not in the future and not older than 180 days (the source
+   * data retention window); otherwise the request fails with `INVALID_ARGUMENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleTypeDate startDate;
+
+  /**
    * Required. The output location of the data.
    * @return value or {@code null} for none
    */
@@ -50,6 +60,29 @@ public final class GoogleCloudDiscoveryengineV1alphaExportMetricsRequest extends
    */
   public GoogleCloudDiscoveryengineV1alphaExportMetricsRequest setOutputConfig(GoogleCloudDiscoveryengineV1alphaOutputConfig outputConfig) {
     this.outputConfig = outputConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The earliest date (inclusive), interpreted in the UTC time zone, whose metrics are
+   * included in the export. If unset, defaults to 30 days before the current UTC date. The value
+   * must be a valid calendar date that is not in the future and not older than 180 days (the source
+   * data retention window); otherwise the request fails with `INVALID_ARGUMENT`.
+   * @return value or {@code null} for none
+   */
+  public GoogleTypeDate getStartDate() {
+    return startDate;
+  }
+
+  /**
+   * Optional. The earliest date (inclusive), interpreted in the UTC time zone, whose metrics are
+   * included in the export. If unset, defaults to 30 days before the current UTC date. The value
+   * must be a valid calendar date that is not in the future and not older than 180 days (the source
+   * data retention window); otherwise the request fails with `INVALID_ARGUMENT`.
+   * @param startDate startDate or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaExportMetricsRequest setStartDate(GoogleTypeDate startDate) {
+    this.startDate = startDate;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionInfo extends com.g
   private java.lang.Integer selectedPosition;
 
   /**
-   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   * Optional. End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionInfo extends com.g
   }
 
   /**
-   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   * Optional. End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
    * @return value or {@code null} for none
    */
   public java.lang.String getSelectedSuggestion() {
@@ -70,7 +70,7 @@ public final class GoogleCloudDiscoveryengineV1alphaCompletionInfo extends com.g
   }
 
   /**
-   * End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
+   * Optional. End user selected CompleteQueryResponse.QuerySuggestion.suggestion.
    * @param selectedSuggestion selectedSuggestion or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaCompletionInfo setSelectedSuggestion(java.lang.String selectedSuggestion) {

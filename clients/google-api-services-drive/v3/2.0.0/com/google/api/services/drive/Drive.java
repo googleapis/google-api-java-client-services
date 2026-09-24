@@ -10318,8 +10318,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Creates a permission for a file or shared drive. For more information, see [Share files, folders,
      * and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
-     * **Warning:** Concurrent permissions operations on the same file aren't supported; only the last
-     * update is applied.
+     * **Warning:** Concurrent permission modifications (such as update or delete) on the same file,
+     * folder, or shared drive aren't supported across any users or clients; only the last update is
+     * applied.
      *
      * Create a request for the method "permissions.create".
      *
@@ -10343,8 +10344,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Creates a permission for a file or shared drive. For more information, see [Share files,
        * folders, and drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing).
-       * **Warning:** Concurrent permissions operations on the same file aren't supported; only the last
-       * update is applied.
+       * **Warning:** Concurrent permission modifications (such as update or delete) on the same file,
+       * folder, or shared drive aren't supported across any users or clients; only the last update is
+       * applied.
        *
        * Create a request for the method "permissions.create".
        *
@@ -10842,8 +10844,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Deletes a permission. For more information, see [Share files, folders, and
      * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
-     * Concurrent permissions operations on the same file aren't supported; only the last update is
-     * applied.
+     * Concurrent permission modifications (such as update or delete) on the same file, folder, or
+     * shared drive aren't supported across any users or clients; only the last update is applied.
      *
      * Create a request for the method "permissions.delete".
      *
@@ -10867,8 +10869,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Deletes a permission. For more information, see [Share files, folders, and
        * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
-       * Concurrent permissions operations on the same file aren't supported; only the last update is
-       * applied.
+       * Concurrent permission modifications (such as update or delete) on the same file, folder, or
+       * shared drive aren't supported across any users or clients; only the last update is applied.
        *
        * Create a request for the method "permissions.delete".
        *
@@ -11834,8 +11836,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Updates a permission with patch semantics. For more information, see [Share files, folders, and
      * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
-     * Concurrent permissions operations on the same file aren't supported; only the last update is
-     * applied.
+     * Concurrent permission modifications (such as update or delete) on the same file, folder, or
+     * shared drive aren't supported across any users or clients; only the last update is applied.
      *
      * Create a request for the method "permissions.update".
      *
@@ -11860,8 +11862,8 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Updates a permission with patch semantics. For more information, see [Share files, folders, and
        * drives](https://developers.google.com/workspace/drive/api/guides/manage-sharing). **Warning:**
-       * Concurrent permissions operations on the same file aren't supported; only the last update is
-       * applied.
+       * Concurrent permission modifications (such as update or delete) on the same file, folder, or
+       * shared drive aren't supported across any users or clients; only the last update is applied.
        *
        * Create a request for the method "permissions.update".
        *

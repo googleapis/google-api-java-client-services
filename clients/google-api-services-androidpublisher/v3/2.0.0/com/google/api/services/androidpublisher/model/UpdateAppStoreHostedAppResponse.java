@@ -30,6 +30,36 @@ package com.google.api.services.androidpublisher.model;
 @SuppressWarnings("javadoc")
 public final class UpdateAppStoreHostedAppResponse extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Unique identifier for the specific version of the hosted app submitted in this update. This
+   * identifier can be used to correlate publishing signals (such as those returned by
+   * ListHostedAppsPublishingSignals) with this specific app update.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String updateId;
+
+  /**
+   * Unique identifier for the specific version of the hosted app submitted in this update. This
+   * identifier can be used to correlate publishing signals (such as those returned by
+   * ListHostedAppsPublishingSignals) with this specific app update.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getUpdateId() {
+    return updateId;
+  }
+
+  /**
+   * Unique identifier for the specific version of the hosted app submitted in this update. This
+   * identifier can be used to correlate publishing signals (such as those returned by
+   * ListHostedAppsPublishingSignals) with this specific app update.
+   * @param updateId updateId or {@code null} for none
+   */
+  public UpdateAppStoreHostedAppResponse setUpdateId(java.lang.String updateId) {
+    this.updateId = updateId;
+    return this;
+  }
+
   @Override
   public UpdateAppStoreHostedAppResponse set(String fieldName, Object value) {
     return (UpdateAppStoreHostedAppResponse) super.set(fieldName, value);

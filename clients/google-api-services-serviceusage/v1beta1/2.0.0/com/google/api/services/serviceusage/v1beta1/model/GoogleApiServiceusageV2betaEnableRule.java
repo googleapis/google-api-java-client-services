@@ -30,11 +30,35 @@ package com.google.api.services.serviceusage.v1beta1.model;
 public final class GoogleApiServiceusageV2betaEnableRule extends com.google.api.client.json.GenericJson {
 
   /**
+   * The names of the catalogs that are enabled. Example: `catalogs/default-cloud-services`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> catalogs;
+
+  /**
    * The names of the services that are enabled. Example: `services/storage.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> services;
+
+  /**
+   * The names of the catalogs that are enabled. Example: `catalogs/default-cloud-services`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCatalogs() {
+    return catalogs;
+  }
+
+  /**
+   * The names of the catalogs that are enabled. Example: `catalogs/default-cloud-services`.
+   * @param catalogs catalogs or {@code null} for none
+   */
+  public GoogleApiServiceusageV2betaEnableRule setCatalogs(java.util.List<java.lang.String> catalogs) {
+    this.catalogs = catalogs;
+    return this;
+  }
 
   /**
    * The names of the services that are enabled. Example: `services/storage.googleapis.com`.

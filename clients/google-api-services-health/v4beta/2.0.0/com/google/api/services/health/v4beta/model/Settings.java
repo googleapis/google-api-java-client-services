@@ -81,7 +81,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    * Example: `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-generated
    * Google Health API user ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer to the authenticated
-   * user.
+   * user. This field is read-only.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -264,7 +264,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    * Example: `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-generated
    * Google Health API user ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer to the authenticated
-   * user.
+   * user. This field is read-only.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -276,7 +276,7 @@ public final class Settings extends com.google.api.client.json.GenericJson {
    * Example: `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-generated
    * Google Health API user ID, a string of 1-63 characters consisting of lowercase and uppercase
    * letters, numbers, and hyphens. The literal `me` can also be used to refer to the authenticated
-   * user.
+   * user. This field is read-only.
    * @param name name or {@code null} for none
    */
   public Settings setName(java.lang.String name) {

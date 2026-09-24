@@ -39,7 +39,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   private java.lang.String deviceType;
 
   /**
-   * Output only. Bid multiplier allows you to show your ads more or less frequently based on the
+   * Optional. Bid multiplier allows you to show your ads more or less frequently based on the
    * device type. It will apply a multiplier on the original bid price. When this field is 0, it
    * indicates this field is not applicable instead of multiplying 0 on the original bid price. For
    * example, if the bid price without multiplier is $10.0 and the multiplier is 1.5 for Tablet, the
@@ -68,7 +68,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   }
 
   /**
-   * Output only. Bid multiplier allows you to show your ads more or less frequently based on the
+   * Optional. Bid multiplier allows you to show your ads more or less frequently based on the
    * device type. It will apply a multiplier on the original bid price. When this field is 0, it
    * indicates this field is not applicable instead of multiplying 0 on the original bid price. For
    * example, if the bid price without multiplier is $10.0 and the multiplier is 1.5 for Tablet, the
@@ -81,7 +81,7 @@ public final class DeviceTypeAssignedTargetingOptionDetails extends com.google.a
   }
 
   /**
-   * Output only. Bid multiplier allows you to show your ads more or less frequently based on the
+   * Optional. Bid multiplier allows you to show your ads more or less frequently based on the
    * device type. It will apply a multiplier on the original bid price. When this field is 0, it
    * indicates this field is not applicable instead of multiplying 0 on the original bid price. For
    * example, if the bid price without multiplier is $10.0 and the multiplier is 1.5 for Tablet, the

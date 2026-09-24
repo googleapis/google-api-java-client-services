@@ -137,6 +137,20 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
   private java.lang.String name;
 
   /**
+   * Output only. The version-independent label of the connector backing this collection, mirroring
+   * `DataConnector.tag`. Unlike the version-pinned data store id it survives a connector version
+   * upgrade, so an upgraded connector keeps the same tag. Not a unique key. As `DataConnector.tag`
+   * documents, several connectors may share a tag under the same (project, location, collection,
+   * data_source), and tag-based lookup resolves to the one with the greatest create_time. Clients
+   * must not treat this as a connector identifier. Empty when the connector was created before the
+   * tag-write launch, and for synthetic placeholder entries, which have no underlying
+   * `DataConnector`. Populated only when `ConnectorsFeature.enable_connector_tag` is on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String tag;
+
+  /**
    * Output only. The auth uri of the connector source.
    * @return value or {@code null} for none
    */
@@ -367,6 +381,37 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionCompon
    */
   public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. The version-independent label of the connector backing this collection, mirroring
+   * `DataConnector.tag`. Unlike the version-pinned data store id it survives a connector version
+   * upgrade, so an upgraded connector keeps the same tag. Not a unique key. As `DataConnector.tag`
+   * documents, several connectors may share a tag under the same (project, location, collection,
+   * data_source), and tag-based lookup resolves to the one with the greatest create_time. Clients
+   * must not treat this as a connector identifier. Empty when the connector was created before the
+   * tag-write launch, and for synthetic placeholder entries, which have no underlying
+   * `DataConnector`. Populated only when `ConnectorsFeature.enable_connector_tag` is on.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTag() {
+    return tag;
+  }
+
+  /**
+   * Output only. The version-independent label of the connector backing this collection, mirroring
+   * `DataConnector.tag`. Unlike the version-pinned data store id it survives a connector version
+   * upgrade, so an upgraded connector keeps the same tag. Not a unique key. As `DataConnector.tag`
+   * documents, several connectors may share a tag under the same (project, location, collection,
+   * data_source), and tag-based lookup resolves to the one with the greatest create_time. Clients
+   * must not treat this as a connector identifier. Empty when the connector was created before the
+   * tag-write launch, and for synthetic placeholder entries, which have no underlying
+   * `DataConnector`. Populated only when `ConnectorsFeature.enable_connector_tag` is on.
+   * @param tag tag or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigCollectionComponent setTag(java.lang.String tag) {
+    this.tag = tag;
     return this;
   }
 

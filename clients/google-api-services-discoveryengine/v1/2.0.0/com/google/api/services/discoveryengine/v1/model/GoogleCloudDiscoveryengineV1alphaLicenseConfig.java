@@ -44,6 +44,14 @@ public final class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends com.go
   private java.lang.Boolean autoRenew;
 
   /**
+   * Output only. The name of the BillingAccountLicenseConfig from which this LicenseConfig is
+   * assigned, if this field is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String billingAccountLicenseConfig;
+
+  /**
    * Output only. Indication of whether the subscription is terminated earlier than the expiration
    * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
    * The value may be {@code null}.
@@ -163,6 +171,25 @@ public final class GoogleCloudDiscoveryengineV1alphaLicenseConfig extends com.go
    */
   public GoogleCloudDiscoveryengineV1alphaLicenseConfig setAutoRenew(java.lang.Boolean autoRenew) {
     this.autoRenew = autoRenew;
+    return this;
+  }
+
+  /**
+   * Output only. The name of the BillingAccountLicenseConfig from which this LicenseConfig is
+   * assigned, if this field is set.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBillingAccountLicenseConfig() {
+    return billingAccountLicenseConfig;
+  }
+
+  /**
+   * Output only. The name of the BillingAccountLicenseConfig from which this LicenseConfig is
+   * assigned, if this field is set.
+   * @param billingAccountLicenseConfig billingAccountLicenseConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaLicenseConfig setBillingAccountLicenseConfig(java.lang.String billingAccountLicenseConfig) {
+    this.billingAccountLicenseConfig = billingAccountLicenseConfig;
     return this;
   }
 

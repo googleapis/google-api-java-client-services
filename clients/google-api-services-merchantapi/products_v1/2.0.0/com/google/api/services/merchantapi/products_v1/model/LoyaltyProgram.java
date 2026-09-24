@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.products_v1.model;
 
 /**
- * A message that represents loyalty program.
+ * A message that represents loyalty program. For more information on loyalty programs, see
+ * [Overview of loyalty programs](/merchant/api/guides/loyalty/loyalty-programs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

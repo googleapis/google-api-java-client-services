@@ -30,21 +30,31 @@ package com.google.api.services.merchantapi.products_v1.model;
 public final class Warranty extends com.google.api.client.json.GenericJson {
 
   /**
-   * The warranty duration in months.
+   * The warranty duration in units. Default is in months, can be overridden by the `duration_unit`
+   * field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long duration;
 
   /**
-   * The warranty mileage.
+   * The unit for the warranty duration. Assumed to be `MONTH` if equal to
+   * `WARRANTY_DURATION_UNIT_UNSPECIFIED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String durationUnit;
+
+  /**
+   * The warranty mileage (only applies to vehicles).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Mileage mileage;
 
   /**
-   * The warranty duration in months.
+   * The warranty duration in units. Default is in months, can be overridden by the `duration_unit`
+   * field.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDuration() {
@@ -52,7 +62,8 @@ public final class Warranty extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The warranty duration in months.
+   * The warranty duration in units. Default is in months, can be overridden by the `duration_unit`
+   * field.
    * @param duration duration or {@code null} for none
    */
   public Warranty setDuration(java.lang.Long duration) {
@@ -61,7 +72,26 @@ public final class Warranty extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The warranty mileage.
+   * The unit for the warranty duration. Assumed to be `MONTH` if equal to
+   * `WARRANTY_DURATION_UNIT_UNSPECIFIED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDurationUnit() {
+    return durationUnit;
+  }
+
+  /**
+   * The unit for the warranty duration. Assumed to be `MONTH` if equal to
+   * `WARRANTY_DURATION_UNIT_UNSPECIFIED`.
+   * @param durationUnit durationUnit or {@code null} for none
+   */
+  public Warranty setDurationUnit(java.lang.String durationUnit) {
+    this.durationUnit = durationUnit;
+    return this;
+  }
+
+  /**
+   * The warranty mileage (only applies to vehicles).
    * @return value or {@code null} for none
    */
   public Mileage getMileage() {
@@ -69,7 +99,7 @@ public final class Warranty extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The warranty mileage.
+   * The warranty mileage (only applies to vehicles).
    * @param mileage mileage or {@code null} for none
    */
   public Warranty setMileage(Mileage mileage) {

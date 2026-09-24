@@ -2687,7 +2687,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
      *        `users/1234567890/profile` or `users/me/profile` The {user} ID is a system-generated
      *        Google Health API user ID, a string of 1-63 characters consisting of lowercase and
      *        uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
-     *        authenticated user.
+     *        authenticated user. This field is read-only.
      * @param content the {@link com.google.api.services.health.v4.model.Profile}
      * @return the request
      */
@@ -2719,7 +2719,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
      *        `users/1234567890/profile` or `users/me/profile` The {user} ID is a system-generated
      *        Google Health API user ID, a string of 1-63 characters consisting of lowercase and
      *        uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
-     *        authenticated user.
+     *        authenticated user. This field is read-only.
        * @param content the {@link com.google.api.services.health.v4.model.Profile}
        * @since 1.13
        */
@@ -2793,7 +2793,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
        * Example: `users/1234567890/profile` or `users/me/profile` The {user} ID is a system-
        * generated Google Health API user ID, a string of 1-63 characters consisting of lowercase
        * and uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to
-       * the authenticated user.
+       * the authenticated user. This field is read-only.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -2801,7 +2801,8 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
       /** Identifier. The resource name of this Profile resource. Format: `users/{user}/profile` Example:
      `users/1234567890/profile` or `users/me/profile` The {user} ID is a system-generated Google Health
      API user ID, a string of 1-63 characters consisting of lowercase and uppercase letters, numbers,
-     and hyphens. The literal `me` can also be used to refer to the authenticated user.
+     and hyphens. The literal `me` can also be used to refer to the authenticated user. This field is
+     read-only.
        */
       public java.lang.String getName() {
         return name;
@@ -2812,7 +2813,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
        * Example: `users/1234567890/profile` or `users/me/profile` The {user} ID is a system-
        * generated Google Health API user ID, a string of 1-63 characters consisting of lowercase
        * and uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to
-       * the authenticated user.
+       * the authenticated user. This field is read-only.
        */
       public UpdateProfile setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -2857,7 +2858,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
      *        `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-generated
      *        Google Health API user ID, a string of 1-63 characters consisting of lowercase and
      *        uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
-     *        authenticated user.
+     *        authenticated user. This field is read-only.
      * @param content the {@link com.google.api.services.health.v4.model.Settings}
      * @return the request
      */
@@ -2889,7 +2890,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
      *        `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-generated
      *        Google Health API user ID, a string of 1-63 characters consisting of lowercase and
      *        uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to the
-     *        authenticated user.
+     *        authenticated user. This field is read-only.
        * @param content the {@link com.google.api.services.health.v4.model.Settings}
        * @since 1.13
        */
@@ -2963,7 +2964,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
        * Example: `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-
        * generated Google Health API user ID, a string of 1-63 characters consisting of lowercase
        * and uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to
-       * the authenticated user.
+       * the authenticated user. This field is read-only.
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
@@ -2971,7 +2972,8 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
       /** Identifier. The resource name of this Settings resource. Format: `users/{user}/settings` Example:
      `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-generated Google
      Health API user ID, a string of 1-63 characters consisting of lowercase and uppercase letters,
-     numbers, and hyphens. The literal `me` can also be used to refer to the authenticated user.
+     numbers, and hyphens. The literal `me` can also be used to refer to the authenticated user. This
+     field is read-only.
        */
       public java.lang.String getName() {
         return name;
@@ -2982,7 +2984,7 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
        * Example: `users/1234567890/settings` or `users/me/settings` The {user} ID is a system-
        * generated Google Health API user ID, a string of 1-63 characters consisting of lowercase
        * and uppercase letters, numbers, and hyphens. The literal `me` can also be used to refer to
-       * the authenticated user.
+       * the authenticated user. This field is read-only.
        */
       public UpdateSettings setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -4569,7 +4571,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
            * Excludes manually logged data. - `users/me/dataSourceFamilies/google-sources` -
            * Includes first-party Google data, such as data from tracker devices, manually logged
-           * data, and Health Connect.
+           * data, and Health Connect. - `users/me/dataSourceFamilies/self-sources` - Includes only
+           * the data the calling client wrote through this API, that is, data points whose data
+           * source was registered through this API with the same OAuth client ID as the caller.
+           * Callers that were only granted write scopes for the requested data type may only read
+           * the data they wrote themselves: their requests are implicitly restricted to `self-
+           * sources`, and requesting any other data source family fails with `PERMISSION_DENIED`.
+           * If no data point matches the requested data source family, the response is an empty
+           * list rather than an error.
            */
           @com.google.api.client.util.Key
           private java.lang.String dataSourceFamily;
@@ -4580,7 +4589,13 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          sources. - `users/me/dataSourceFamilies/google-wearables` - Includes data from Google and Fitbit
          tracker devices (such as Fitbit trackers and Pixel Watch). Excludes manually logged data. -
          `users/me/dataSourceFamilies/google-sources` - Includes first-party Google data, such as data from
-         tracker devices, manually logged data, and Health Connect.
+         tracker devices, manually logged data, and Health Connect. - `users/me/dataSourceFamilies/self-
+         sources` - Includes only the data the calling client wrote through this API, that is, data points
+         whose data source was registered through this API with the same OAuth client ID as the caller.
+         Callers that were only granted write scopes for the requested data type may only read the data they
+         wrote themselves: their requests are implicitly restricted to `self-sources`, and requesting any
+         other data source family fails with `PERMISSION_DENIED`. If no data point matches the requested
+         data source family, the response is an empty list rather than an error.
            */
           public java.lang.String getDataSourceFamily() {
             return dataSourceFamily;
@@ -4594,7 +4609,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
            * Excludes manually logged data. - `users/me/dataSourceFamilies/google-sources` -
            * Includes first-party Google data, such as data from tracker devices, manually logged
-           * data, and Health Connect.
+           * data, and Health Connect. - `users/me/dataSourceFamilies/self-sources` - Includes only
+           * the data the calling client wrote through this API, that is, data points whose data
+           * source was registered through this API with the same OAuth client ID as the caller.
+           * Callers that were only granted write scopes for the requested data type may only read
+           * the data they wrote themselves: their requests are implicitly restricted to `self-
+           * sources`, and requesting any other data source family fails with `PERMISSION_DENIED`.
+           * If no data point matches the requested data source family, the response is an empty
+           * list rather than an error.
            */
           public Reconcile setDataSourceFamily(java.lang.String dataSourceFamily) {
             this.dataSourceFamily = dataSourceFamily;

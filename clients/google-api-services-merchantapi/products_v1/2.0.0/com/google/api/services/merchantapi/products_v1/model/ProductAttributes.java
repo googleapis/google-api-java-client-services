@@ -1179,7 +1179,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String virtualModelLink;
 
   /**
-   * The [warranty](https://support.google.com/google-ads/answer/15957626) of the vehicle.
+   * The [warranty](https://support.google.com/merchants/answer/15957626) of the product.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -3860,7 +3860,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The [warranty](https://support.google.com/google-ads/answer/15957626) of the vehicle.
+   * The [warranty](https://support.google.com/merchants/answer/15957626) of the product.
    * @return value or {@code null} for none
    */
   public Warranty getWarranty() {
@@ -3868,7 +3868,7 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The [warranty](https://support.google.com/google-ads/answer/15957626) of the vehicle.
+   * The [warranty](https://support.google.com/merchants/answer/15957626) of the product.
    * @param warranty warranty or {@code null} for none
    */
   public ProductAttributes setWarranty(Warranty warranty) {

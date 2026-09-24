@@ -49,7 +49,7 @@ public final class CompetitiveVisibilityCompetitorView extends com.google.api.cl
   private Date date;
 
   /**
-   * Domain of your competitor or your domain, if 'is_your_domain' is true. Required in the `SELECT`
+   * Domain of your competitor or your domain, if `is_your_domain` is true. Required in the `SELECT`
    * clause. Cannot be filtered on in the 'WHERE' clause.
    * The value may be {@code null}.
    */
@@ -164,7 +164,7 @@ public final class CompetitiveVisibilityCompetitorView extends com.google.api.cl
   }
 
   /**
-   * Domain of your competitor or your domain, if 'is_your_domain' is true. Required in the `SELECT`
+   * Domain of your competitor or your domain, if `is_your_domain` is true. Required in the `SELECT`
    * clause. Cannot be filtered on in the 'WHERE' clause.
    * @return value or {@code null} for none
    */
@@ -173,7 +173,7 @@ public final class CompetitiveVisibilityCompetitorView extends com.google.api.cl
   }
 
   /**
-   * Domain of your competitor or your domain, if 'is_your_domain' is true. Required in the `SELECT`
+   * Domain of your competitor or your domain, if `is_your_domain` is true. Required in the `SELECT`
    * clause. Cannot be filtered on in the 'WHERE' clause.
    * @param domain domain or {@code null} for none
    */

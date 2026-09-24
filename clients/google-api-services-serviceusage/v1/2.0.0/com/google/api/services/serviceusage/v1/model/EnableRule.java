@@ -17,7 +17,7 @@
 package com.google.api.services.serviceusage.v1.model;
 
 /**
- * The consumer policy rule that defines enabled services and groups.
+ * The consumer policy rule that defines enabled services and catalogs.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Service Usage API. For a detailed explanation see:
@@ -30,11 +30,11 @@ package com.google.api.services.serviceusage.v1.model;
 public final class EnableRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Deprecated: EnableType is not supported.
+   * The names of the catalogs that are enabled. Example: `catalogs/default-cloud-services`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String enableType;
+  private java.util.List<java.lang.String> catalogs;
 
   /**
    * The names of the services that are enabled. Example: `services/storage.googleapis.com`.
@@ -53,19 +53,19 @@ public final class EnableRule extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> values;
 
   /**
-   * Deprecated: EnableType is not supported.
+   * The names of the catalogs that are enabled. Example: `catalogs/default-cloud-services`.
    * @return value or {@code null} for none
    */
-  public java.lang.String getEnableType() {
-    return enableType;
+  public java.util.List<java.lang.String> getCatalogs() {
+    return catalogs;
   }
 
   /**
-   * Deprecated: EnableType is not supported.
-   * @param enableType enableType or {@code null} for none
+   * The names of the catalogs that are enabled. Example: `catalogs/default-cloud-services`.
+   * @param catalogs catalogs or {@code null} for none
    */
-  public EnableRule setEnableType(java.lang.String enableType) {
-    this.enableType = enableType;
+  public EnableRule setCatalogs(java.util.List<java.lang.String> catalogs) {
+    this.catalogs = catalogs;
     return this;
   }
 

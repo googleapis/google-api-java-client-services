@@ -57,7 +57,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Immutable. The resource name for the endpoint in the format
+   * Identifier. The resource name for the endpoint in the format
    * `projects/locations/namespaces/services/endpoints`.
    * The value may be {@code null}.
    */
@@ -145,7 +145,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the endpoint in the format
+   * Identifier. The resource name for the endpoint in the format
    * `projects/locations/namespaces/services/endpoints`.
    * @return value or {@code null} for none
    */
@@ -154,7 +154,7 @@ public final class Endpoint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the endpoint in the format
+   * Identifier. The resource name for the endpoint in the format
    * `projects/locations/namespaces/services/endpoints`.
    * @param name name or {@code null} for none
    */

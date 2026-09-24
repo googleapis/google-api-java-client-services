@@ -40,7 +40,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
+   * Identifier. The resource name for the namespace in the format `projects/locations/namespaces`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
+   * Identifier. The resource name for the namespace in the format `projects/locations/namespaces`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -81,7 +81,7 @@ public final class Namespace extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
+   * Identifier. The resource name for the namespace in the format `projects/locations/namespaces`.
    * @param name name or {@code null} for none
    */
   public Namespace setName(java.lang.String name) {

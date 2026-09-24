@@ -63,7 +63,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the service in the format
+   * Identifier. The resource name for the service in the format
    * `projects/locations/namespaces/services`.
    * The value may be {@code null}.
    */
@@ -134,7 +134,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the service in the format
+   * Identifier. The resource name for the service in the format
    * `projects/locations/namespaces/services`.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Immutable. The resource name for the service in the format
+   * Identifier. The resource name for the service in the format
    * `projects/locations/namespaces/services`.
    * @param name name or {@code null} for none
    */

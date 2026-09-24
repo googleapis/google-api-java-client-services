@@ -47,6 +47,13 @@ public final class FindingDetail extends com.google.api.client.json.GenericJson 
   private java.lang.String detailType;
 
   /**
+   * Domain Monitoring finding detail type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DomainMonitoringFindingDetail domainMonitoring;
+
+  /**
    * Initial Access Broker finding detail type.
    * The value may be {@code null}.
    */
@@ -100,6 +107,23 @@ public final class FindingDetail extends com.google.api.client.json.GenericJson 
    */
   public FindingDetail setDetailType(java.lang.String detailType) {
     this.detailType = detailType;
+    return this;
+  }
+
+  /**
+   * Domain Monitoring finding detail type.
+   * @return value or {@code null} for none
+   */
+  public DomainMonitoringFindingDetail getDomainMonitoring() {
+    return domainMonitoring;
+  }
+
+  /**
+   * Domain Monitoring finding detail type.
+   * @param domainMonitoring domainMonitoring or {@code null} for none
+   */
+  public FindingDetail setDomainMonitoring(DomainMonitoringFindingDetail domainMonitoring) {
+    this.domainMonitoring = domainMonitoring;
     return this;
   }
 

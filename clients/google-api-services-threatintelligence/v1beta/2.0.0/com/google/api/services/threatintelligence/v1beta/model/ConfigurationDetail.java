@@ -61,6 +61,13 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
   private DomainConfiguration domainConfiguration;
 
   /**
+   * Domain Monitoring detail config.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DomainMonitoringConfig domainMonitoring;
+
+  /**
    * Technology Watchlist detail config.
    * The value may be {@code null}.
    */
@@ -134,6 +141,23 @@ public final class ConfigurationDetail extends com.google.api.client.json.Generi
    */
   public ConfigurationDetail setDomainConfiguration(DomainConfiguration domainConfiguration) {
     this.domainConfiguration = domainConfiguration;
+    return this;
+  }
+
+  /**
+   * Domain Monitoring detail config.
+   * @return value or {@code null} for none
+   */
+  public DomainMonitoringConfig getDomainMonitoring() {
+    return domainMonitoring;
+  }
+
+  /**
+   * Domain Monitoring detail config.
+   * @param domainMonitoring domainMonitoring or {@code null} for none
+   */
+  public ConfigurationDetail setDomainMonitoring(DomainMonitoringConfig domainMonitoring) {
+    this.domainMonitoring = domainMonitoring;
     return this;
   }
 

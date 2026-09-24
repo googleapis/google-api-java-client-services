@@ -31,11 +31,25 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class InitialAccessBrokerAlertDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to accommodate multiple
+   * discovery documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> discoveryDocumentIds;
+
+  /**
+   * Output only. New structured metadata payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DiscoveryDocument> discoveryDocuments;
+
+  static {
+    // hack to force ProGuard to consider DiscoveryDocument used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(DiscoveryDocument.class);
+  }
 
   /**
    * Required. The severity of the Initial Access Broker (IAB) alert. Allowed values are: * `LOW` *
@@ -46,7 +60,8 @@ public final class InitialAccessBrokerAlertDetail extends com.google.api.client.
   private java.lang.String severity;
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to accommodate multiple
+   * discovery documents.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDiscoveryDocumentIds() {
@@ -54,11 +69,29 @@ public final class InitialAccessBrokerAlertDetail extends com.google.api.client.
   }
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to accommodate multiple
+   * discovery documents.
    * @param discoveryDocumentIds discoveryDocumentIds or {@code null} for none
    */
   public InitialAccessBrokerAlertDetail setDiscoveryDocumentIds(java.util.List<java.lang.String> discoveryDocumentIds) {
     this.discoveryDocumentIds = discoveryDocumentIds;
+    return this;
+  }
+
+  /**
+   * Output only. New structured metadata payload.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DiscoveryDocument> getDiscoveryDocuments() {
+    return discoveryDocuments;
+  }
+
+  /**
+   * Output only. New structured metadata payload.
+   * @param discoveryDocuments discoveryDocuments or {@code null} for none
+   */
+  public InitialAccessBrokerAlertDetail setDiscoveryDocuments(java.util.List<DiscoveryDocument> discoveryDocuments) {
+    this.discoveryDocuments = discoveryDocuments;
     return this;
   }
 

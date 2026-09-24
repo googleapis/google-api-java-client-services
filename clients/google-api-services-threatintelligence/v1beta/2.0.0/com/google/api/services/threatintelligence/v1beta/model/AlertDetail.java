@@ -46,6 +46,13 @@ public final class AlertDetail extends com.google.api.client.json.GenericJson {
   private java.lang.String detailType;
 
   /**
+   * Domain Monitoring alert detail type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DomainMonitoringAlertDetail domainMonitoring;
+
+  /**
    * Initial Access Broker alert detail type.
    * The value may be {@code null}.
    */
@@ -99,6 +106,23 @@ public final class AlertDetail extends com.google.api.client.json.GenericJson {
    */
   public AlertDetail setDetailType(java.lang.String detailType) {
     this.detailType = detailType;
+    return this;
+  }
+
+  /**
+   * Domain Monitoring alert detail type.
+   * @return value or {@code null} for none
+   */
+  public DomainMonitoringAlertDetail getDomainMonitoring() {
+    return domainMonitoring;
+  }
+
+  /**
+   * Domain Monitoring alert detail type.
+   * @param domainMonitoring domainMonitoring or {@code null} for none
+   */
+  public AlertDetail setDomainMonitoring(DomainMonitoringAlertDetail domainMonitoring) {
+    this.domainMonitoring = domainMonitoring;
     return this;
   }
 

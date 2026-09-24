@@ -116,6 +116,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated: Layer details are captured per file location in FileLocation.layer_details. Top-
+   * level layer details is not persisted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -340,6 +342,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated: Layer details are captured per file location in FileLocation.layer_details. Top-
+   * level layer details is not persisted.
    * @return value or {@code null} for none
    */
   public LayerDetails getLayerDetails() {
@@ -347,6 +351,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deprecated: Layer details are captured per file location in FileLocation.layer_details. Top-
+   * level layer details is not persisted.
    * @param layerDetails layerDetails or {@code null} for none
    */
   public PackageData setLayerDetails(LayerDetails layerDetails) {

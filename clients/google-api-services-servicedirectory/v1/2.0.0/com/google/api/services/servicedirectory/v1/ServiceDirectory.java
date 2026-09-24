@@ -1424,7 +1424,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the servicedirectory server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
+         * @param name Identifier. The resource name for the namespace in the format `projects/locations/namespaces`.
          * @param content the {@link com.google.api.services.servicedirectory.v1.model.Namespace}
          * @return the request
          */
@@ -1452,7 +1452,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
+           * @param name Identifier. The resource name for the namespace in the format `projects/locations/namespaces`.
            * @param content the {@link com.google.api.services.servicedirectory.v1.model.Namespace}
            * @since 1.13
            */
@@ -1522,20 +1522,20 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Immutable. The resource name for the namespace in the format
+           * Identifier. The resource name for the namespace in the format
            * `projects/locations/namespaces`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. The resource name for the namespace in the format `projects/locations/namespaces`.
+          /** Identifier. The resource name for the namespace in the format `projects/locations/namespaces`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. The resource name for the namespace in the format
+           * Identifier. The resource name for the namespace in the format
            * `projects/locations/namespaces`.
            */
           public Patch setName(java.lang.String name) {
@@ -2729,7 +2729,8 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the servicedirectory server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Immutable. The resource name for the service in the format `projects/locations/namespaces/services`.
+           * @param name Identifier. The resource name for the service in the format
+           *        `projects/locations/namespaces/services`.
            * @param content the {@link com.google.api.services.servicedirectory.v1.model.Service}
            * @return the request
            */
@@ -2757,7 +2758,8 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Immutable. The resource name for the service in the format `projects/locations/namespaces/services`.
+             * @param name Identifier. The resource name for the service in the format
+           *        `projects/locations/namespaces/services`.
              * @param content the {@link com.google.api.services.servicedirectory.v1.model.Service}
              * @since 1.13
              */
@@ -2827,13 +2829,13 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Immutable. The resource name for the service in the format
+             * Identifier. The resource name for the service in the format
              * `projects/locations/namespaces/services`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Immutable. The resource name for the service in the format
+            /** Identifier. The resource name for the service in the format
            `projects/locations/namespaces/services`.
              */
             public java.lang.String getName() {
@@ -2841,7 +2843,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Immutable. The resource name for the service in the format
+             * Identifier. The resource name for the service in the format
              * `projects/locations/namespaces/services`.
              */
             public Patch setName(java.lang.String name) {
@@ -4030,7 +4032,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
              * This request holds the parameters needed by the servicedirectory server.  After setting any
              * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
              *
-             * @param name Immutable. The resource name for the endpoint in the format
+             * @param name Identifier. The resource name for the endpoint in the format
              *        `projects/locations/namespaces/services/endpoints`.
              * @param content the {@link com.google.api.services.servicedirectory.v1.model.Endpoint}
              * @return the request
@@ -4059,7 +4061,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
                * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
                * be called to initialize this instance immediately after invoking the constructor. </p>
                *
-               * @param name Immutable. The resource name for the endpoint in the format
+               * @param name Identifier. The resource name for the endpoint in the format
              *        `projects/locations/namespaces/services/endpoints`.
                * @param content the {@link com.google.api.services.servicedirectory.v1.model.Endpoint}
                * @since 1.13
@@ -4130,13 +4132,13 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
 
               /**
-               * Immutable. The resource name for the endpoint in the format
+               * Identifier. The resource name for the endpoint in the format
                * `projects/locations/namespaces/services/endpoints`.
                */
               @com.google.api.client.util.Key
               private java.lang.String name;
 
-              /** Immutable. The resource name for the endpoint in the format
+              /** Identifier. The resource name for the endpoint in the format
              `projects/locations/namespaces/services/endpoints`.
                */
               public java.lang.String getName() {
@@ -4144,7 +4146,7 @@ public class ServiceDirectory extends com.google.api.client.googleapis.services.
               }
 
               /**
-               * Immutable. The resource name for the endpoint in the format
+               * Identifier. The resource name for the endpoint in the format
                * `projects/locations/namespaces/services/endpoints`.
                */
               public Patch setName(java.lang.String name) {

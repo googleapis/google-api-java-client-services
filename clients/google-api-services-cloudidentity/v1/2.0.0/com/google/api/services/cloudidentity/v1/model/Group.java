@@ -73,9 +73,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   private DynamicGroupMetadata dynamicGroupMetadata;
 
   /**
-   * Optional. External identifiers associated with the `Group`. Enables external identity providers
-   * and directory sync tools to link their native unique identifiers with this group. Currently,
-   * the only allowable namespace is `"system/external"`.
+   * Optional. External identifiers associated with the `Group`. Allows external identity providers
+   * and directory sync tools link their native unique identifiers with this group. The only
+   * supported namespace is `system/external`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -226,9 +226,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. External identifiers associated with the `Group`. Enables external identity providers
-   * and directory sync tools to link their native unique identifiers with this group. Currently,
-   * the only allowable namespace is `"system/external"`.
+   * Optional. External identifiers associated with the `Group`. Allows external identity providers
+   * and directory sync tools link their native unique identifiers with this group. The only
+   * supported namespace is `system/external`.
    * @return value or {@code null} for none
    */
   public java.util.List<ExternalId> getExternalIds() {
@@ -236,9 +236,9 @@ public final class Group extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. External identifiers associated with the `Group`. Enables external identity providers
-   * and directory sync tools to link their native unique identifiers with this group. Currently,
-   * the only allowable namespace is `"system/external"`.
+   * Optional. External identifiers associated with the `Group`. Allows external identity providers
+   * and directory sync tools link their native unique identifiers with this group. The only
+   * supported namespace is `system/external`.
    * @param externalIds externalIds or {@code null} for none
    */
   public Group setExternalIds(java.util.List<ExternalId> externalIds) {

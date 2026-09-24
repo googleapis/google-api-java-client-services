@@ -17,9 +17,8 @@
 package com.google.api.services.cloudidentity.v1.model;
 
 /**
- * An external identifier for an entity in the Cloud Identity Groups API. Used to link a `Group` in
- * Cloud Identity Groups API with a corresponding entity in an external identity system or
- * directory.
+ * Represents an external identifier that links a Group in the Cloud Identity Groups API with a
+ * corresponding entity in an external directory or identity provider.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Identity API. For a detailed explanation see:
@@ -33,16 +32,16 @@ public final class ExternalId extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The unique identifier assigned by the external identity provider. The API does not
-   * enforce uniqueness of IDs across entities, but clients should ensure IDs are unique within
-   * their namespace.
+   * enforce unique IDs across entities, but clients **must** ensure IDs are unique within their
+   * namespace.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Required. The namespace in which the entity exists. Cannot be empty. Currently, the only
-   * allowable namespace is `"system/external"`.
+   * Required. The namespace in which the entity exists. The only supported namespace is
+   * `system/external`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,8 +49,8 @@ public final class ExternalId extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The unique identifier assigned by the external identity provider. The API does not
-   * enforce uniqueness of IDs across entities, but clients should ensure IDs are unique within
-   * their namespace.
+   * enforce unique IDs across entities, but clients **must** ensure IDs are unique within their
+   * namespace.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -60,8 +59,8 @@ public final class ExternalId extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The unique identifier assigned by the external identity provider. The API does not
-   * enforce uniqueness of IDs across entities, but clients should ensure IDs are unique within
-   * their namespace.
+   * enforce unique IDs across entities, but clients **must** ensure IDs are unique within their
+   * namespace.
    * @param id id or {@code null} for none
    */
   public ExternalId setId(java.lang.String id) {
@@ -70,8 +69,8 @@ public final class ExternalId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The namespace in which the entity exists. Cannot be empty. Currently, the only
-   * allowable namespace is `"system/external"`.
+   * Required. The namespace in which the entity exists. The only supported namespace is
+   * `system/external`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNamespace() {
@@ -79,8 +78,8 @@ public final class ExternalId extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The namespace in which the entity exists. Cannot be empty. Currently, the only
-   * allowable namespace is `"system/external"`.
+   * Required. The namespace in which the entity exists. The only supported namespace is
+   * `system/external`.
    * @param namespace namespace or {@code null} for none
    */
   public ExternalId setNamespace(java.lang.String namespace) {

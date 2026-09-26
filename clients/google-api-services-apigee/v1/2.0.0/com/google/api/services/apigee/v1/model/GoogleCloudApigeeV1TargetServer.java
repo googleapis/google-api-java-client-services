@@ -55,7 +55,7 @@ public final class GoogleCloudApigeeV1TargetServer extends com.google.api.client
   private java.lang.Boolean isEnabled;
 
   /**
-   * Required. The resource id of this target server. Values must match the regular expression
+   * Required. The resource id of this target server.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GoogleCloudApigeeV1TargetServer extends com.google.api.client
   }
 
   /**
-   * Required. The resource id of this target server. Values must match the regular expression
+   * Required. The resource id of this target server.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -151,7 +151,7 @@ public final class GoogleCloudApigeeV1TargetServer extends com.google.api.client
   }
 
   /**
-   * Required. The resource id of this target server. Values must match the regular expression
+   * Required. The resource id of this target server.
    * @param name name or {@code null} for none
    */
   public GoogleCloudApigeeV1TargetServer setName(java.lang.String name) {

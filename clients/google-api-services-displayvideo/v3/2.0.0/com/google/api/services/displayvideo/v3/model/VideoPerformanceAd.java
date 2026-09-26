@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v3.model;
 public final class VideoPerformanceAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of text assets shown on the call-to-action button.
+   * Optional. The list of text assets shown on the call-to-action button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> actionButtonLabels;
 
   /**
-   * The list of companion banners used by this ad.
+   * Optional. The list of companion banners used by this ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,28 +51,28 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The custom parameters and accompanying values to add to the tracking URL.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> customParameters;
 
   /**
-   * The list of descriptions shown on the call-to-action banner.
+   * Optional. The list of descriptions shown on the call-to-action banner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> descriptions;
 
   /**
-   * The first piece after the domain in the display URL.
+   * Optional. The first piece after the domain in the display URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayUrlBreadcrumb1;
 
   /**
-   * The second piece after the domain in the display URL.
+   * Optional. The second piece after the domain in the display URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,42 +86,42 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.lang.String domain;
 
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finalUrl;
 
   /**
-   * The list of headlines shown on the call-to-action banner.
+   * Optional. The list of headlines shown on the call-to-action banner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> headlines;
 
   /**
-   * The list of long headlines shown on the call-to-action banner.
+   * Optional. The list of long headlines shown on the call-to-action banner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> longHeadlines;
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingUrl;
 
   /**
-   * The list of YouTube video assets used by this ad.
+   * Required. The list of YouTube video assets used by this ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<YoutubeVideoDetails> videos;
 
   /**
-   * The list of text assets shown on the call-to-action button.
+   * Optional. The list of text assets shown on the call-to-action button.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getActionButtonLabels() {
@@ -129,7 +129,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of text assets shown on the call-to-action button.
+   * Optional. The list of text assets shown on the call-to-action button.
    * @param actionButtonLabels actionButtonLabels or {@code null} for none
    */
   public VideoPerformanceAd setActionButtonLabels(java.util.List<java.lang.String> actionButtonLabels) {
@@ -138,7 +138,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of companion banners used by this ad.
+   * Optional. The list of companion banners used by this ad.
    * @return value or {@code null} for none
    */
   public java.util.List<ImageAsset> getCompanionBanners() {
@@ -146,7 +146,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of companion banners used by this ad.
+   * Optional. The list of companion banners used by this ad.
    * @param companionBanners companionBanners or {@code null} for none
    */
   public VideoPerformanceAd setCompanionBanners(java.util.List<ImageAsset> companionBanners) {
@@ -155,7 +155,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The custom parameters and accompanying values to add to the tracking URL.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -163,7 +163,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The custom parameters and accompanying values to add to the tracking URL.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public VideoPerformanceAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {
@@ -172,7 +172,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of descriptions shown on the call-to-action banner.
+   * Optional. The list of descriptions shown on the call-to-action banner.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDescriptions() {
@@ -180,7 +180,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of descriptions shown on the call-to-action banner.
+   * Optional. The list of descriptions shown on the call-to-action banner.
    * @param descriptions descriptions or {@code null} for none
    */
   public VideoPerformanceAd setDescriptions(java.util.List<java.lang.String> descriptions) {
@@ -189,7 +189,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The first piece after the domain in the display URL.
+   * Optional. The first piece after the domain in the display URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayUrlBreadcrumb1() {
@@ -197,7 +197,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The first piece after the domain in the display URL.
+   * Optional. The first piece after the domain in the display URL.
    * @param displayUrlBreadcrumb1 displayUrlBreadcrumb1 or {@code null} for none
    */
   public VideoPerformanceAd setDisplayUrlBreadcrumb1(java.lang.String displayUrlBreadcrumb1) {
@@ -206,7 +206,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The second piece after the domain in the display URL.
+   * Optional. The second piece after the domain in the display URL.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayUrlBreadcrumb2() {
@@ -214,7 +214,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The second piece after the domain in the display URL.
+   * Optional. The second piece after the domain in the display URL.
    * @param displayUrlBreadcrumb2 displayUrlBreadcrumb2 or {@code null} for none
    */
   public VideoPerformanceAd setDisplayUrlBreadcrumb2(java.lang.String displayUrlBreadcrumb2) {
@@ -240,7 +240,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinalUrl() {
@@ -248,7 +248,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click the ad.
    * @param finalUrl finalUrl or {@code null} for none
    */
   public VideoPerformanceAd setFinalUrl(java.lang.String finalUrl) {
@@ -257,7 +257,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of headlines shown on the call-to-action banner.
+   * Optional. The list of headlines shown on the call-to-action banner.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getHeadlines() {
@@ -265,7 +265,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of headlines shown on the call-to-action banner.
+   * Optional. The list of headlines shown on the call-to-action banner.
    * @param headlines headlines or {@code null} for none
    */
   public VideoPerformanceAd setHeadlines(java.util.List<java.lang.String> headlines) {
@@ -274,7 +274,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of long headlines shown on the call-to-action banner.
+   * Optional. The list of long headlines shown on the call-to-action banner.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLongHeadlines() {
@@ -282,7 +282,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of long headlines shown on the call-to-action banner.
+   * Optional. The list of long headlines shown on the call-to-action banner.
    * @param longHeadlines longHeadlines or {@code null} for none
    */
   public VideoPerformanceAd setLongHeadlines(java.util.List<java.lang.String> longHeadlines) {
@@ -291,7 +291,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -299,7 +299,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public VideoPerformanceAd setTrackingUrl(java.lang.String trackingUrl) {
@@ -308,7 +308,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of YouTube video assets used by this ad.
+   * Required. The list of YouTube video assets used by this ad.
    * @return value or {@code null} for none
    */
   public java.util.List<YoutubeVideoDetails> getVideos() {
@@ -316,7 +316,7 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of YouTube video assets used by this ad.
+   * Required. The list of YouTube video assets used by this ad.
    * @param videos videos or {@code null} for none
    */
   public VideoPerformanceAd setVideos(java.util.List<YoutubeVideoDetails> videos) {

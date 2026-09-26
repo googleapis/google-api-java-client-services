@@ -38,6 +38,14 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
   private Errors errors;
 
   /**
+   * Output only. Show timestamp only if there is an error. The field value should match
+   * corresponding timestamp in listErrors.RFC3339 text format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String timestamp;
+
+  /**
    * Output only. [Output Only] Encountered errors during the last attempt to create or delete the
    * instance.
    * @return value or {@code null} for none
@@ -53,6 +61,25 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
    */
   public ManagedInstanceLastAttempt setErrors(Errors errors) {
     this.errors = errors;
+    return this;
+  }
+
+  /**
+   * Output only. Show timestamp only if there is an error. The field value should match
+   * corresponding timestamp in listErrors.RFC3339 text format.
+   * @return value or {@code null} for none
+   */
+  public String getTimestamp() {
+    return timestamp;
+  }
+
+  /**
+   * Output only. Show timestamp only if there is an error. The field value should match
+   * corresponding timestamp in listErrors.RFC3339 text format.
+   * @param timestamp timestamp or {@code null} for none
+   */
+  public ManagedInstanceLastAttempt setTimestamp(String timestamp) {
+    this.timestamp = timestamp;
     return this;
   }
 
@@ -353,4 +380,5 @@ public final class ManagedInstanceLastAttempt extends com.google.api.client.json
       }
     }
   }
+
 }

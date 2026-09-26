@@ -53,10 +53,14 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    *
    * `destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'`
    *
-   * The following example is a valid match expression for private NAT:
+   * The following examples are valid match expressions for private NAT:
    *
-   * `nexthop.hub == '//networkconnectivity.googleapis.com/projects/my-
+   * (NAT 44) `nexthop.hub == '//networkconnectivity.googleapis.com/projects/my-
    * project/locations/global/hubs/hub-1'`
+   *
+   * `nexthop.is_hybrid`
+   *
+   * (NAT 64) `isIPv6(source.ip)`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,10 +118,14 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    *
    * `destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'`
    *
-   * The following example is a valid match expression for private NAT:
+   * The following examples are valid match expressions for private NAT:
    *
-   * `nexthop.hub == '//networkconnectivity.googleapis.com/projects/my-
+   * (NAT 44) `nexthop.hub == '//networkconnectivity.googleapis.com/projects/my-
    * project/locations/global/hubs/hub-1'`
+   *
+   * `nexthop.is_hybrid`
+   *
+   * (NAT 64) `isIPv6(source.ip)`
    * @return value or {@code null} for none
    */
   public java.lang.String getMatch() {
@@ -134,10 +142,14 @@ public final class RouterNatRule extends com.google.api.client.json.GenericJson 
    *
    * `destination.ip == '1.1.0.1' || destination.ip == '8.8.8.8'`
    *
-   * The following example is a valid match expression for private NAT:
+   * The following examples are valid match expressions for private NAT:
    *
-   * `nexthop.hub == '//networkconnectivity.googleapis.com/projects/my-
+   * (NAT 44) `nexthop.hub == '//networkconnectivity.googleapis.com/projects/my-
    * project/locations/global/hubs/hub-1'`
+   *
+   * `nexthop.is_hybrid`
+   *
+   * (NAT 64) `isIPv6(source.ip)`
    * @param match match or {@code null} for none
    */
   public RouterNatRule setMatch(java.lang.String match) {

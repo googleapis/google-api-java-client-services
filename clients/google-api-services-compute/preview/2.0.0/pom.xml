@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-compute</artifactId>
-  <version>preview-rev20260910-2.0.0</version>
-  <name>Compute Engine API preview-rev20260910-2.0.0</name>
+  <version>preview-rev20260916-2.0.0</version>
+  <name>Compute Engine API preview-rev20260916-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

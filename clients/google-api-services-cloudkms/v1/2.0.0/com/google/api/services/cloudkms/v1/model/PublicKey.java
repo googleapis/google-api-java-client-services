@@ -38,8 +38,7 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   private java.lang.String algorithm;
 
   /**
-   * The name of the CryptoKeyVersion public key. Provided here for verification. NOTE: This field
-   * is in Beta.
+   * The name of the CryptoKeyVersion public key. Provided here for verification.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +62,7 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    * your computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed `2^32-1`, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -109,8 +108,7 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the CryptoKeyVersion public key. Provided here for verification. NOTE: This field
-   * is in Beta.
+   * The name of the CryptoKeyVersion public key. Provided here for verification.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -118,8 +116,7 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The name of the CryptoKeyVersion public key. Provided here for verification. NOTE: This field
-   * is in Beta.
+   * The name of the CryptoKeyVersion public key. Provided here for verification.
    * @param name name or {@code null} for none
    */
   public PublicKey setName(java.lang.String name) {
@@ -158,7 +155,7 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    * your computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed `2^32-1`, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPemCrc32c() {
@@ -173,7 +170,7 @@ public final class PublicKey extends com.google.api.client.json.GenericJson {
    * your computation of the CRC32C checksum. Note: This field is defined as int64 for reasons of
    * compatibility across different languages. However, it is a non-negative integer, which will
    * never exceed `2^32-1`, and can be safely downconverted to uint32 in languages that support this
-   * type. NOTE: This field is in Beta.
+   * type.
    * @param pemCrc32c pemCrc32c or {@code null} for none
    */
   public PublicKey setPemCrc32c(java.lang.Long pemCrc32c) {

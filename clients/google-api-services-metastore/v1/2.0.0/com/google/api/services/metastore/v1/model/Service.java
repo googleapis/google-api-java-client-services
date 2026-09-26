@@ -89,6 +89,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The Lakehouse proxy routing configuration for the metastore service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LakehouseProxyConfig lakehouseProxyConfig;
+
+  /**
    * Optional. The one hour maintenance window of the metastore service. This specifies when the
    * service can be restarted for maintenance purposes in UTC time. Maintenance window is not needed
    * for services with the SPANNER database type.
@@ -352,6 +359,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
    */
   public Service setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The Lakehouse proxy routing configuration for the metastore service.
+   * @return value or {@code null} for none
+   */
+  public LakehouseProxyConfig getLakehouseProxyConfig() {
+    return lakehouseProxyConfig;
+  }
+
+  /**
+   * Output only. The Lakehouse proxy routing configuration for the metastore service.
+   * @param lakehouseProxyConfig lakehouseProxyConfig or {@code null} for none
+   */
+  public Service setLakehouseProxyConfig(LakehouseProxyConfig lakehouseProxyConfig) {
+    this.lakehouseProxyConfig = lakehouseProxyConfig;
     return this;
   }
 

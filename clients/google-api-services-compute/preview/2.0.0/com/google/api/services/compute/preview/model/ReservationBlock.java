@@ -30,6 +30,13 @@ package com.google.api.services.compute.preview.model;
 public final class ReservationBlock extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. [Output Only] Resource status for the reservation block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationBlockBlockStatus blockStatus;
+
+  /**
    * Output only. [Output Only] The number of resources that are allocated in this reservation
    * block.
    * The value may be {@code null}.
@@ -149,6 +156,23 @@ public final class ReservationBlock extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.String zone;
+
+  /**
+   * Output only. [Output Only] Resource status for the reservation block.
+   * @return value or {@code null} for none
+   */
+  public ReservationBlockBlockStatus getBlockStatus() {
+    return blockStatus;
+  }
+
+  /**
+   * Output only. [Output Only] Resource status for the reservation block.
+   * @param blockStatus blockStatus or {@code null} for none
+   */
+  public ReservationBlock setBlockStatus(ReservationBlockBlockStatus blockStatus) {
+    this.blockStatus = blockStatus;
+    return this;
+  }
 
   /**
    * Output only. [Output Only] The number of resources that are allocated in this reservation

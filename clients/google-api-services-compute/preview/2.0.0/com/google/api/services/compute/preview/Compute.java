@@ -80797,6 +80797,308 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Initiates diagnostic troubleshooting on the specified instance. This operation cannot be
+     * cancelled.
+     *
+     * Create a request for the method "instances.troubleshoot".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Troubleshoot#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param zone The name of the zone for this request.
+     * @param instance Name of the instance scoping this request.
+     * @return the request
+     */
+    public Troubleshoot troubleshoot(java.lang.String project, java.lang.String zone, java.lang.String instance) throws java.io.IOException {
+      Troubleshoot result = new Troubleshoot(project, zone, instance);
+      initialize(result);
+      return result;
+    }
+
+    public class Troubleshoot extends ComputeRequest<com.google.api.services.compute.preview.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/troubleshoot";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern INSTANCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Initiates diagnostic troubleshooting on the specified instance. This operation cannot be
+       * cancelled.
+       *
+       * Create a request for the method "instances.troubleshoot".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Troubleshoot#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Troubleshoot#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param zone The name of the zone for this request.
+       * @param instance Name of the instance scoping this request.
+       * @since 1.13
+       */
+      protected Troubleshoot(java.lang.String project, java.lang.String zone, java.lang.String instance) {
+        super(Compute.this, "POST", REST_PATH, null, com.google.api.services.compute.preview.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Troubleshoot set$Xgafv(java.lang.String $Xgafv) {
+        return (Troubleshoot) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Troubleshoot setAccessToken(java.lang.String accessToken) {
+        return (Troubleshoot) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Troubleshoot setAlt(java.lang.String alt) {
+        return (Troubleshoot) super.setAlt(alt);
+      }
+
+      @Override
+      public Troubleshoot setCallback(java.lang.String callback) {
+        return (Troubleshoot) super.setCallback(callback);
+      }
+
+      @Override
+      public Troubleshoot setFields(java.lang.String fields) {
+        return (Troubleshoot) super.setFields(fields);
+      }
+
+      @Override
+      public Troubleshoot setKey(java.lang.String key) {
+        return (Troubleshoot) super.setKey(key);
+      }
+
+      @Override
+      public Troubleshoot setOauthToken(java.lang.String oauthToken) {
+        return (Troubleshoot) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Troubleshoot setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Troubleshoot) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Troubleshoot setQuotaUser(java.lang.String quotaUser) {
+        return (Troubleshoot) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Troubleshoot setUploadType(java.lang.String uploadType) {
+        return (Troubleshoot) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Troubleshoot setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Troubleshoot) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Troubleshoot setUserIp(java.lang.String userIp) {
+        return (Troubleshoot) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Troubleshoot setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** The name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** The name of the zone for this request. */
+      public Troubleshoot setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name of the instance scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String instance;
+
+      /** Name of the instance scoping this request.
+       */
+      public java.lang.String getInstance() {
+        return instance;
+      }
+
+      /** Name of the instance scoping this request. */
+      public Troubleshoot setInstance(java.lang.String instance) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INSTANCE_PATTERN.matcher(instance).matches(),
+              "Parameter instance must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.instance = instance;
+        return this;
+      }
+
+      /**
+       * Input only. Timestamp representing the end of the troubleshooting window in RFC3339 text
+       * format. If omitted, defaults to 'now'.
+       */
+      @com.google.api.client.util.Key("params.endTime")
+      private java.lang.String paramsEndTime;
+
+      /** Input only. Timestamp representing the end of the troubleshooting window in RFC3339 text format. If
+     omitted, defaults to 'now'.
+       */
+      public java.lang.String getParamsEndTime() {
+        return paramsEndTime;
+      }
+
+      /**
+       * Input only. Timestamp representing the end of the troubleshooting window in RFC3339 text
+       * format. If omitted, defaults to 'now'.
+       */
+      public Troubleshoot setParamsEndTime(java.lang.String paramsEndTime) {
+        this.paramsEndTime = paramsEndTime;
+        return this;
+      }
+
+      /**
+       * Input only. Timestamp representing the beginning of the troubleshooting window in RFC3339
+       * text format. If omitted, defaults to the last 12 hours.
+       */
+      @com.google.api.client.util.Key("params.startTime")
+      private java.lang.String paramsStartTime;
+
+      /** Input only. Timestamp representing the beginning of the troubleshooting window in RFC3339 text
+     format. If omitted, defaults to the last 12 hours.
+       */
+      public java.lang.String getParamsStartTime() {
+        return paramsStartTime;
+      }
+
+      /**
+       * Input only. Timestamp representing the beginning of the troubleshooting window in RFC3339
+       * text format. If omitted, defaults to the last 12 hours.
+       */
+      public Troubleshoot setParamsStartTime(java.lang.String paramsStartTime) {
+        this.paramsStartTime = paramsStartTime;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Troubleshoot setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Troubleshoot set(String parameterName, Object value) {
+        return (Troubleshoot) super.set(parameterName, value);
+      }
+    }
+    /**
      * Updates an instance only if the necessary resources are available. This method can update only a
      * specific set of instance properties. See Updating a running instance for a list of updatable
      * instance properties.

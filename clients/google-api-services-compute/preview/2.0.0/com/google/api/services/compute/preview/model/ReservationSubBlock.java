@@ -134,6 +134,13 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
   private java.lang.String status;
 
   /**
+   * Output only. [Output Only] Resource status for the reservation subBlock.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ReservationSubBlockSubBlockStatus subBlockStatus;
+
+  /**
    * Output only. [Output Only] Zone in which the reservation subBlock resides.
    * The value may be {@code null}.
    */
@@ -387,6 +394,23 @@ public final class ReservationSubBlock extends com.google.api.client.json.Generi
    */
   public ReservationSubBlock setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] Resource status for the reservation subBlock.
+   * @return value or {@code null} for none
+   */
+  public ReservationSubBlockSubBlockStatus getSubBlockStatus() {
+    return subBlockStatus;
+  }
+
+  /**
+   * Output only. [Output Only] Resource status for the reservation subBlock.
+   * @param subBlockStatus subBlockStatus or {@code null} for none
+   */
+  public ReservationSubBlock setSubBlockStatus(ReservationSubBlockSubBlockStatus subBlockStatus) {
+    this.subBlockStatus = subBlockStatus;
     return this;
   }
 

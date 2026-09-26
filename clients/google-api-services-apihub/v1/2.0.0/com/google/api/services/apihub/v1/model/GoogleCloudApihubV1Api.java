@@ -166,6 +166,16 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
   private java.lang.String selectedVersion;
 
   /**
+   * Optional. The type of the service. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-service-type` attribute. The
+   * cardinality of this attribute is 1. All values should be from the list of allowed values
+   * defined for the attribute.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudApihubV1AttributeValues serviceType;
+
+  /**
    * Output only. The list of sources and metadata from the sources of the API resource.
    * The value may be {@code null}.
    */
@@ -524,6 +534,29 @@ public final class GoogleCloudApihubV1Api extends com.google.api.client.json.Gen
    */
   public GoogleCloudApihubV1Api setSelectedVersion(java.lang.String selectedVersion) {
     this.selectedVersion = selectedVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The type of the service. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-service-type` attribute. The
+   * cardinality of this attribute is 1. All values should be from the list of allowed values
+   * defined for the attribute.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudApihubV1AttributeValues getServiceType() {
+    return serviceType;
+  }
+
+  /**
+   * Optional. The type of the service. This maps to the following system defined attribute:
+   * `projects/{project}/locations/{location}/attributes/system-service-type` attribute. The
+   * cardinality of this attribute is 1. All values should be from the list of allowed values
+   * defined for the attribute.
+   * @param serviceType serviceType or {@code null} for none
+   */
+  public GoogleCloudApihubV1Api setServiceType(GoogleCloudApihubV1AttributeValues serviceType) {
+    this.serviceType = serviceType;
     return this;
   }
 

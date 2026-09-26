@@ -18,7 +18,7 @@ package com.google.api.services.sts.v1.model;
 
 /**
  * Response message for GetOpenIdProviderConfig. Message fields are defined in
- * https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse
+ * https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfigurationResponse.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Token Service API. For a detailed
@@ -40,8 +40,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   private java.lang.String authorizationEndpoint;
 
   /**
-   * JSON array containing a list of the JWS signing algorithms (alg values) supported by the OP for
-   * the ID token to encode the claims in a JWT [JWT]. Note: Currently always "["RS256"]".
+   * JSON array that contains a list of the JWS signing algorithms (alg values) supported by the OP
+   * for the ID token to encode the claims in a JWT. Supported value: `RS256`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("id_token_signing_alg_values_supported")
@@ -56,23 +56,23 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   private java.lang.String issuer;
 
   /**
-   * URL of the OP's JWK Set [JWK] document, which MUST use the https scheme.
+   * URL of the OP's JWK Set document, which MUST use the https scheme.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("jwks_uri")
   private java.lang.String jwksUri;
 
   /**
-   * JSON array containing a list of the OAuth 2.0 response_type values that this OP supports. Note:
-   * Currently always "["id_token"]".
+   * JSON array that contains a list of the OAuth 2.0 response_type values that this OP supports.
+   * Supported value: `id_token`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("response_types_supported")
   private java.util.List<java.lang.String> responseTypesSupported;
 
   /**
-   * JSON array containing a list of the subject identifier types that this OP supports. Note:
-   * Currently always "["public"]".
+   * JSON array that contains a list of the subject identifier types that this OP supports.
+   * Supported value: `public`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key("subject_types_supported")
@@ -106,8 +106,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * JSON array containing a list of the JWS signing algorithms (alg values) supported by the OP for
-   * the ID token to encode the claims in a JWT [JWT]. Note: Currently always "["RS256"]".
+   * JSON array that contains a list of the JWS signing algorithms (alg values) supported by the OP
+   * for the ID token to encode the claims in a JWT. Supported value: `RS256`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIdTokenSigningAlgValuesSupported() {
@@ -115,8 +115,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * JSON array containing a list of the JWS signing algorithms (alg values) supported by the OP for
-   * the ID token to encode the claims in a JWT [JWT]. Note: Currently always "["RS256"]".
+   * JSON array that contains a list of the JWS signing algorithms (alg values) supported by the OP
+   * for the ID token to encode the claims in a JWT. Supported value: `RS256`.
    * @param idTokenSigningAlgValuesSupported idTokenSigningAlgValuesSupported or {@code null} for none
    */
   public GoogleIdentityStsV1OpenIdProviderConfig setIdTokenSigningAlgValuesSupported(java.util.List<java.lang.String> idTokenSigningAlgValuesSupported) {
@@ -144,7 +144,7 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * URL of the OP's JWK Set [JWK] document, which MUST use the https scheme.
+   * URL of the OP's JWK Set document, which MUST use the https scheme.
    * @return value or {@code null} for none
    */
   public java.lang.String getJwksUri() {
@@ -152,7 +152,7 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * URL of the OP's JWK Set [JWK] document, which MUST use the https scheme.
+   * URL of the OP's JWK Set document, which MUST use the https scheme.
    * @param jwksUri jwksUri or {@code null} for none
    */
   public GoogleIdentityStsV1OpenIdProviderConfig setJwksUri(java.lang.String jwksUri) {
@@ -161,8 +161,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * JSON array containing a list of the OAuth 2.0 response_type values that this OP supports. Note:
-   * Currently always "["id_token"]".
+   * JSON array that contains a list of the OAuth 2.0 response_type values that this OP supports.
+   * Supported value: `id_token`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResponseTypesSupported() {
@@ -170,8 +170,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * JSON array containing a list of the OAuth 2.0 response_type values that this OP supports. Note:
-   * Currently always "["id_token"]".
+   * JSON array that contains a list of the OAuth 2.0 response_type values that this OP supports.
+   * Supported value: `id_token`.
    * @param responseTypesSupported responseTypesSupported or {@code null} for none
    */
   public GoogleIdentityStsV1OpenIdProviderConfig setResponseTypesSupported(java.util.List<java.lang.String> responseTypesSupported) {
@@ -180,8 +180,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * JSON array containing a list of the subject identifier types that this OP supports. Note:
-   * Currently always "["public"]".
+   * JSON array that contains a list of the subject identifier types that this OP supports.
+   * Supported value: `public`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubjectTypesSupported() {
@@ -189,8 +189,8 @@ public final class GoogleIdentityStsV1OpenIdProviderConfig extends com.google.ap
   }
 
   /**
-   * JSON array containing a list of the subject identifier types that this OP supports. Note:
-   * Currently always "["public"]".
+   * JSON array that contains a list of the subject identifier types that this OP supports.
+   * Supported value: `public`.
    * @param subjectTypesSupported subjectTypesSupported or {@code null} for none
    */
   public GoogleIdentityStsV1OpenIdProviderConfig setSubjectTypesSupported(java.util.List<java.lang.String> subjectTypesSupported) {

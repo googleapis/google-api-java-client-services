@@ -31,14 +31,6 @@ package com.google.api.services.ces.v1.model;
 public final class SynthesizeSpeechConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
-   * Storage URI to the consent audio for voice cloning.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String consentAudioGcsUri;
-
-  /**
    * Optional. The instruction used to synthesize speech when using a generative model.
    * The value may be {@code null}.
    */
@@ -71,35 +63,6 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String voice;
-
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
-   * Storage URI to the audio sample for voice cloning. The audio sample should be a mono-channel,
-   * 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-sa-
-   * ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage object.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String voiceSampleGcsUri;
-
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
-   * Storage URI to the consent audio for voice cloning.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getConsentAudioGcsUri() {
-    return consentAudioGcsUri;
-  }
-
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
-   * Storage URI to the consent audio for voice cloning.
-   * @param consentAudioGcsUri consentAudioGcsUri or {@code null} for none
-   */
-  public SynthesizeSpeechConfig setConsentAudioGcsUri(java.lang.String consentAudioGcsUri) {
-    this.consentAudioGcsUri = consentAudioGcsUri;
-    return this;
-  }
 
   /**
    * Optional. The instruction used to synthesize speech when using a generative model.
@@ -178,29 +141,6 @@ public final class SynthesizeSpeechConfig extends com.google.api.client.json.Gen
    */
   public SynthesizeSpeechConfig setVoice(java.lang.String voice) {
     this.voice = voice;
-    return this;
-  }
-
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
-   * Storage URI to the audio sample for voice cloning. The audio sample should be a mono-channel,
-   * 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-sa-
-   * ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage object.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getVoiceSampleGcsUri() {
-    return voiceSampleGcsUri;
-  }
-
-  /**
-   * Optional. Deprecated: Use `custom_voice_samples` in AudioProcessingConfig instead. The Cloud
-   * Storage URI to the audio sample for voice cloning. The audio sample should be a mono-channel,
-   * 24kHz WAV file. Note: Please make sure the CES service agent `service-@gcp-sa-
-   * ces.iam.gserviceaccount.com` has `storage.objects.get` permission to the Cloud Storage object.
-   * @param voiceSampleGcsUri voiceSampleGcsUri or {@code null} for none
-   */
-  public SynthesizeSpeechConfig setVoiceSampleGcsUri(java.lang.String voiceSampleGcsUri) {
-    this.voiceSampleGcsUri = voiceSampleGcsUri;
     return this;
   }
 

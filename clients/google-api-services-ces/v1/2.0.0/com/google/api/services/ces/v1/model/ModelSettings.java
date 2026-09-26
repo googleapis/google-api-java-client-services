@@ -48,6 +48,13 @@ public final class ModelSettings extends com.google.api.client.json.GenericJson 
   private java.lang.Double temperature;
 
   /**
+   * Optional. The thinking level of the model.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thinkingLevel;
+
+  /**
    * Optional. The LLM model that the agent should use. If not set, the agent will inherit the model
    * from its parent agent.
    * @return value or {@code null} for none
@@ -84,6 +91,23 @@ public final class ModelSettings extends com.google.api.client.json.GenericJson 
    */
   public ModelSettings setTemperature(java.lang.Double temperature) {
     this.temperature = temperature;
+    return this;
+  }
+
+  /**
+   * Optional. The thinking level of the model.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThinkingLevel() {
+    return thinkingLevel;
+  }
+
+  /**
+   * Optional. The thinking level of the model.
+   * @param thinkingLevel thinkingLevel or {@code null} for none
+   */
+  public ModelSettings setThinkingLevel(java.lang.String thinkingLevel) {
+    this.thinkingLevel = thinkingLevel;
     return this;
   }
 

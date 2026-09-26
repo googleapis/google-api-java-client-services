@@ -30,6 +30,14 @@ package com.google.api.services.slides.v1.model;
 public final class BatchUpdatePresentationResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentUpdateState;
+
+  /**
    * The presentation the updates were applied to.
    * The value may be {@code null}.
    */
@@ -50,6 +58,25 @@ public final class BatchUpdatePresentationResponse extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private WriteControl writeControl;
+
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentUpdateState() {
+    return commentUpdateState;
+  }
+
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentUpdateState commentUpdateState or {@code null} for none
+   */
+  public BatchUpdatePresentationResponse setCommentUpdateState(java.lang.String commentUpdateState) {
+    this.commentUpdateState = commentUpdateState;
+    return this;
+  }
 
   /**
    * The presentation the updates were applied to.

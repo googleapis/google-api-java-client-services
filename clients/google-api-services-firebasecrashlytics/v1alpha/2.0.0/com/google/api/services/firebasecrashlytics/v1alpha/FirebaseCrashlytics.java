@@ -857,6 +857,60 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
             return this;
           }
 
+          /**
+           * Optional. Filters events by custom keys
+           * (https://firebase.google.com/docs/crashlytics/customize-crash-reports#add-keys).
+           * Supported forms: * Equality: `custom_keys.level = "vip"` or `custom_keys.level:"vip"` *
+           * Presence: `custom_keys.level:*` * OR across values of one key: `custom_keys.level =
+           * "vip" OR custom_keys.level = "enterprise"` * AND across different keys:
+           * `custom_keys.level = "vip" AND custom_keys.region = "us"` Keys are case-sensitive. Keys
+           * and values containing spaces must be double-quoted, for example `custom_keys."app
+           * state" = "background"`. OR across different keys, repeating a key within an AND, NOT,
+           * and comparators other than `=` and `:` are rejected with INVALID_ARGUMENT. Wildcards
+           * are not supported in values; use `custom_keys.:*` to match events that set a key to any
+           * value. Only supported for Android and iOS. This filter expression applies in addition
+           * to the `filter` field above. The syntax is a subset of AIP-160
+           * (https://google.aip.dev/160).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filterExpression;
+
+          /** Optional. Filters events by custom keys (https://firebase.google.com/docs/crashlytics/customize-
+         crash-reports#add-keys). Supported forms: * Equality: `custom_keys.level = "vip"` or
+         `custom_keys.level:"vip"` * Presence: `custom_keys.level:*` * OR across values of one key:
+         `custom_keys.level = "vip" OR custom_keys.level = "enterprise"` * AND across different keys:
+         `custom_keys.level = "vip" AND custom_keys.region = "us"` Keys are case-sensitive. Keys and values
+         containing spaces must be double-quoted, for example `custom_keys."app state" = "background"`. OR
+         across different keys, repeating a key within an AND, NOT, and comparators other than `=` and `:`
+         are rejected with INVALID_ARGUMENT. Wildcards are not supported in values; use `custom_keys.:*` to
+         match events that set a key to any value. Only supported for Android and iOS. This filter
+         expression applies in addition to the `filter` field above. The syntax is a subset of AIP-160
+         (https://google.aip.dev/160).
+           */
+          public java.lang.String getFilterExpression() {
+            return filterExpression;
+          }
+
+          /**
+           * Optional. Filters events by custom keys
+           * (https://firebase.google.com/docs/crashlytics/customize-crash-reports#add-keys).
+           * Supported forms: * Equality: `custom_keys.level = "vip"` or `custom_keys.level:"vip"` *
+           * Presence: `custom_keys.level:*` * OR across values of one key: `custom_keys.level =
+           * "vip" OR custom_keys.level = "enterprise"` * AND across different keys:
+           * `custom_keys.level = "vip" AND custom_keys.region = "us"` Keys are case-sensitive. Keys
+           * and values containing spaces must be double-quoted, for example `custom_keys."app
+           * state" = "background"`. OR across different keys, repeating a key within an AND, NOT,
+           * and comparators other than `=` and `:` are rejected with INVALID_ARGUMENT. Wildcards
+           * are not supported in values; use `custom_keys.:*` to match events that set a key to any
+           * value. Only supported for Android and iOS. This filter expression applies in addition
+           * to the `filter` field above. The syntax is a subset of AIP-160
+           * (https://google.aip.dev/160).
+           */
+          public List setFilterExpression(java.lang.String filterExpression) {
+            this.filterExpression = filterExpression;
+            return this;
+          }
+
           /** Optional. The maximum number of events per page. If omitted, defaults to 10. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;

@@ -31,21 +31,21 @@ package com.google.api.services.displayvideo.v2.model;
 public final class NonSkippableAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Common ad attributes.
+   * Required. Common ad attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CommonInStreamAttribute commonInStreamAttribute;
 
   /**
-   * The custom parameters and accompanying values to add to the tracking URL.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> customParameters;
 
   /**
-   * Common ad attributes.
+   * Required. Common ad attributes.
    * @return value or {@code null} for none
    */
   public CommonInStreamAttribute getCommonInStreamAttribute() {
@@ -53,7 +53,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Common ad attributes.
+   * Required. Common ad attributes.
    * @param commonInStreamAttribute commonInStreamAttribute or {@code null} for none
    */
   public NonSkippableAd setCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {
@@ -62,7 +62,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The custom parameters and accompanying values to add to the tracking URL.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getCustomParameters() {
@@ -70,7 +70,7 @@ public final class NonSkippableAd extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The custom parameters and accompanying values to add to the tracking URL.
+   * Optional. The custom parameters and accompanying values to add to the tracking URL.
    * @param customParameters customParameters or {@code null} for none
    */
   public NonSkippableAd setCustomParameters(java.util.Map<String, java.lang.String> customParameters) {

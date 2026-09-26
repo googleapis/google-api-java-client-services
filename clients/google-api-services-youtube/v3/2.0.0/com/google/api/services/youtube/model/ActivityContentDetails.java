@@ -55,24 +55,6 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
   private ActivityContentDetailsComment comment;
 
   /**
-   * The `favorite` object contains information about a video that was marked as a favorite video.
-   * This property is only present if the `snippet.type` is `favorite`. Deprecated: This property is
-   * no longer returned.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ActivityContentDetailsFavorite favorite;
-
-  /**
-   * The `like` object contains information about a resource that received a positive (like) rating.
-   * This property is only present if the `snippet.type` is `like`. Deprecated: This property is no
-   * longer returned.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private ActivityContentDetailsLike like;
-
-  /**
    * The `playlistItem` object contains information about a new playlist item. This property is only
    * present if the `snippet.type` is `playlistItem`.
    * The value may be {@code null}.
@@ -106,8 +88,7 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
 
   /**
    * The `subscription` object contains information about a channel that a user subscribed to. This
-   * property is only present if the `snippet.type` is `subscription`. Deprecated: This property is
-   * no longer returned.
+   * property is only present if the `snippet.type` is `subscription`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,48 +156,6 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
    */
   public ActivityContentDetails setComment(ActivityContentDetailsComment comment) {
     this.comment = comment;
-    return this;
-  }
-
-  /**
-   * The `favorite` object contains information about a video that was marked as a favorite video.
-   * This property is only present if the `snippet.type` is `favorite`. Deprecated: This property is
-   * no longer returned.
-   * @return value or {@code null} for none
-   */
-  public ActivityContentDetailsFavorite getFavorite() {
-    return favorite;
-  }
-
-  /**
-   * The `favorite` object contains information about a video that was marked as a favorite video.
-   * This property is only present if the `snippet.type` is `favorite`. Deprecated: This property is
-   * no longer returned.
-   * @param favorite favorite or {@code null} for none
-   */
-  public ActivityContentDetails setFavorite(ActivityContentDetailsFavorite favorite) {
-    this.favorite = favorite;
-    return this;
-  }
-
-  /**
-   * The `like` object contains information about a resource that received a positive (like) rating.
-   * This property is only present if the `snippet.type` is `like`. Deprecated: This property is no
-   * longer returned.
-   * @return value or {@code null} for none
-   */
-  public ActivityContentDetailsLike getLike() {
-    return like;
-  }
-
-  /**
-   * The `like` object contains information about a resource that received a positive (like) rating.
-   * This property is only present if the `snippet.type` is `like`. Deprecated: This property is no
-   * longer returned.
-   * @param like like or {@code null} for none
-   */
-  public ActivityContentDetails setLike(ActivityContentDetailsLike like) {
-    this.like = like;
     return this;
   }
 
@@ -298,8 +237,7 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
 
   /**
    * The `subscription` object contains information about a channel that a user subscribed to. This
-   * property is only present if the `snippet.type` is `subscription`. Deprecated: This property is
-   * no longer returned.
+   * property is only present if the `snippet.type` is `subscription`.
    * @return value or {@code null} for none
    */
   public ActivityContentDetailsSubscription getSubscription() {
@@ -308,8 +246,7 @@ public final class ActivityContentDetails extends com.google.api.client.json.Gen
 
   /**
    * The `subscription` object contains information about a channel that a user subscribed to. This
-   * property is only present if the `snippet.type` is `subscription`. Deprecated: This property is
-   * no longer returned.
+   * property is only present if the `snippet.type` is `subscription`.
    * @param subscription subscription or {@code null} for none
    */
   public ActivityContentDetails setSubscription(ActivityContentDetailsSubscription subscription) {

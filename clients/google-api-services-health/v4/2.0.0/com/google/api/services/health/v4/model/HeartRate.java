@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class HeartRate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The heart rate value in beats per minute.
+   * Required. The heart rate value in beats per minute. Must be in the range `[1, 300]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -51,7 +51,7 @@ public final class HeartRate extends com.google.api.client.json.GenericJson {
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. The heart rate value in beats per minute.
+   * Required. The heart rate value in beats per minute. Must be in the range `[1, 300]`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBeatsPerMinute() {
@@ -59,7 +59,7 @@ public final class HeartRate extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The heart rate value in beats per minute.
+   * Required. The heart rate value in beats per minute. Must be in the range `[1, 300]`.
    * @param beatsPerMinute beatsPerMinute or {@code null} for none
    */
   public HeartRate setBeatsPerMinute(java.lang.Long beatsPerMinute) {

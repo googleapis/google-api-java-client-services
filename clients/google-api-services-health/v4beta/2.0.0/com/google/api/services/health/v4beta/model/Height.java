@@ -30,7 +30,7 @@ package com.google.api.services.health.v4beta.model;
 public final class Height extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Height of the user in millimeters.
+   * Required. Height of the user in millimeters. Must be in the range `[0, 3000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,7 +44,7 @@ public final class Height extends com.google.api.client.json.GenericJson {
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. Height of the user in millimeters.
+   * Required. Height of the user in millimeters. Must be in the range `[0, 3000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getHeightMillimeters() {
@@ -52,7 +52,7 @@ public final class Height extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Height of the user in millimeters.
+   * Required. Height of the user in millimeters. Must be in the range `[0, 3000]`.
    * @param heightMillimeters heightMillimeters or {@code null} for none
    */
   public Height setHeightMillimeters(java.lang.Long heightMillimeters) {

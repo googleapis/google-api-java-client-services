@@ -44,7 +44,7 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. Weight of a user in grams.
+   * Required. Weight of a user in grams. Must be in the range `[0, 1000000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Weight of a user in grams.
+   * Required. Weight of a user in grams. Must be in the range `[0, 1000000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getWeightGrams() {
@@ -93,7 +93,7 @@ public final class Weight extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Weight of a user in grams.
+   * Required. Weight of a user in grams. Must be in the range `[0, 1000000]`.
    * @param weightGrams weightGrams or {@code null} for none
    */
   public Weight setWeightGrams(java.lang.Double weightGrams) {

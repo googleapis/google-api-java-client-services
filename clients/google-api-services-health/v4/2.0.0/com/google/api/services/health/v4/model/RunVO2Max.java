@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class RunVO2Max extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Run VO2 max value in ml/kg/min.
+   * Required. Run VO2 max value in ml/kg/min. Must be in the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class RunVO2Max extends com.google.api.client.json.GenericJson {
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. Run VO2 max value in ml/kg/min.
+   * Required. Run VO2 max value in ml/kg/min. Must be in the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRunVo2Max() {
@@ -52,7 +52,7 @@ public final class RunVO2Max extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Run VO2 max value in ml/kg/min.
+   * Required. Run VO2 max value in ml/kg/min. Must be in the range `[0, 100]`.
    * @param runVo2Max runVo2Max or {@code null} for none
    */
   public RunVO2Max setRunVo2Max(java.lang.Double runVo2Max) {

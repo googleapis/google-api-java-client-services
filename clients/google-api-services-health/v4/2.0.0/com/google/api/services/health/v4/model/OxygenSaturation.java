@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class OxygenSaturation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The oxygen saturation percentage. Valid values are from 0 to 100.
+   * Required. The oxygen saturation percentage. Must be in the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class OxygenSaturation extends com.google.api.client.json.GenericJs
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. The oxygen saturation percentage. Valid values are from 0 to 100.
+   * Required. The oxygen saturation percentage. Must be in the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPercentage() {
@@ -52,7 +52,7 @@ public final class OxygenSaturation extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. The oxygen saturation percentage. Valid values are from 0 to 100.
+   * Required. The oxygen saturation percentage. Must be in the range `[0, 100]`.
    * @param percentage percentage or {@code null} for none
    */
   public OxygenSaturation setPercentage(java.lang.Double percentage) {

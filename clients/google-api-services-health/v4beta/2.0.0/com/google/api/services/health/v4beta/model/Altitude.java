@@ -30,7 +30,8 @@ package com.google.api.services.health.v4beta.model;
 public final class Altitude extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Altitude gain in millimeters over the observed interval.
+   * Required. Altitude gain in millimeters over the observed interval. Must be in the range
+   * `[-1000000000, 1000000000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,7 +45,8 @@ public final class Altitude extends com.google.api.client.json.GenericJson {
   private ObservationTimeInterval interval;
 
   /**
-   * Required. Altitude gain in millimeters over the observed interval.
+   * Required. Altitude gain in millimeters over the observed interval. Must be in the range
+   * `[-1000000000, 1000000000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getGainMillimeters() {
@@ -52,7 +54,8 @@ public final class Altitude extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Altitude gain in millimeters over the observed interval.
+   * Required. Altitude gain in millimeters over the observed interval. Must be in the range
+   * `[-1000000000, 1000000000]`.
    * @param gainMillimeters gainMillimeters or {@code null} for none
    */
   public Altitude setGainMillimeters(java.lang.Long gainMillimeters) {

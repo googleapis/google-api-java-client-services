@@ -37,7 +37,8 @@ public final class ActiveEnergyBurned extends com.google.api.client.json.Generic
   private ObservationTimeInterval interval;
 
   /**
-   * Required. Energy burned during an activity, measured in kilocalories.
+   * Required. Energy burned during an activity, measured in kilocalories. Must be in the range `[0,
+   * 1000000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +62,8 @@ public final class ActiveEnergyBurned extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Energy burned during an activity, measured in kilocalories.
+   * Required. Energy burned during an activity, measured in kilocalories. Must be in the range `[0,
+   * 1000000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getKcal() {
@@ -69,7 +71,8 @@ public final class ActiveEnergyBurned extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Energy burned during an activity, measured in kilocalories.
+   * Required. Energy burned during an activity, measured in kilocalories. Must be in the range `[0,
+   * 1000000]`.
    * @param kcal kcal or {@code null} for none
    */
   public ActiveEnergyBurned setKcal(java.lang.Double kcal) {

@@ -30,6 +30,14 @@ package com.google.api.services.slides.v1.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddCommentReplyResponse addCommentReply;
+
+  /**
    * The result of creating an image.
    * The value may be {@code null}.
    */
@@ -93,6 +101,14 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private GroupObjectsResponse groupObjects;
 
   /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertCommentResponse insertComment;
+
+  /**
    * The result of replacing all shapes matching some criteria with an image.
    * The value may be {@code null}.
    */
@@ -112,6 +128,25 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ReplaceAllTextResponse replaceAllText;
+
+  /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public AddCommentReplyResponse getAddCommentReply() {
+    return addCommentReply;
+  }
+
+  /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param addCommentReply addCommentReply or {@code null} for none
+   */
+  public Response setAddCommentReply(AddCommentReplyResponse addCommentReply) {
+    this.addCommentReply = addCommentReply;
+    return this;
+  }
 
   /**
    * The result of creating an image.
@@ -263,6 +298,25 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setGroupObjects(GroupObjectsResponse groupObjects) {
     this.groupObjects = groupObjects;
+    return this;
+  }
+
+  /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public InsertCommentResponse getInsertComment() {
+    return insertComment;
+  }
+
+  /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param insertComment insertComment or {@code null} for none
+   */
+  public Response setInsertComment(InsertCommentResponse insertComment) {
+    this.insertComment = insertComment;
     return this;
   }
 

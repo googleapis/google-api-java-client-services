@@ -30,6 +30,28 @@ package com.google.api.services.slides.v1.model;
 public final class Presentation extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The comment threads associated with the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CommentThread> comments;
+
+  static {
+    // hack to force ProGuard to consider CommentThread used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CommentThread.class);
+  }
+
+  /**
+   * Output only. The comments view mode applied to the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentsViewMode;
+
+  /**
    * The layouts in the presentation. A layout is a template that determines how content is arranged
    * and styled on the slides that inherit from that layout.
    * The value may be {@code null}.
@@ -128,6 +150,44 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Output only. The comment threads associated with the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CommentThread> getComments() {
+    return comments;
+  }
+
+  /**
+   * Output only. The comment threads associated with the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param comments comments or {@code null} for none
+   */
+  public Presentation setComments(java.util.List<CommentThread> comments) {
+    this.comments = comments;
+    return this;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentsViewMode() {
+    return commentsViewMode;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentsViewMode commentsViewMode or {@code null} for none
+   */
+  public Presentation setCommentsViewMode(java.lang.String commentsViewMode) {
+    this.commentsViewMode = commentsViewMode;
+    return this;
+  }
 
   /**
    * The layouts in the presentation. A layout is a template that determines how content is arranged

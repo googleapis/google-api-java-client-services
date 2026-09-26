@@ -529,6 +529,32 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
         return this;
       }
 
+      /**
+       * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet
+       * with comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is
+       * used. [Developer Preview](https://developers.google.com/workspace/preview).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String commentsViewMode;
+
+      /** The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
+     comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+     [Developer Preview](https://developers.google.com/workspace/preview).
+       */
+      public java.lang.String getCommentsViewMode() {
+        return commentsViewMode;
+      }
+
+      /**
+       * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet
+       * with comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is
+       * used. [Developer Preview](https://developers.google.com/workspace/preview).
+       */
+      public Get setCommentsViewMode(java.lang.String commentsViewMode) {
+        this.commentsViewMode = commentsViewMode;
+        return this;
+      }
+
       /** True if tables should be excluded in the banded ranges. False if not set. */
       @com.google.api.client.util.Key
       private java.lang.Boolean excludeTablesInBandedRanges;

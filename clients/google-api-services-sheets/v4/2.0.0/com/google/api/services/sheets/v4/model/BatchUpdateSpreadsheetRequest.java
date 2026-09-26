@@ -30,6 +30,16 @@ package com.google.api.services.sheets.v4.model;
 public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
+   * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+   * Meaningful only if include_spreadsheet_in_response is 'true'. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentsViewMode;
+
+  /**
    * Determines if the update response should include the spreadsheet resource.
    * The value may be {@code null}.
    */
@@ -59,6 +69,29 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> responseRanges;
+
+  /**
+   * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
+   * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+   * Meaningful only if include_spreadsheet_in_response is 'true'. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentsViewMode() {
+    return commentsViewMode;
+  }
+
+  /**
+   * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
+   * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+   * Meaningful only if include_spreadsheet_in_response is 'true'. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentsViewMode commentsViewMode or {@code null} for none
+   */
+  public BatchUpdateSpreadsheetRequest setCommentsViewMode(java.lang.String commentsViewMode) {
+    this.commentsViewMode = commentsViewMode;
+    return this;
+  }
 
   /**
    * Determines if the update response should include the spreadsheet resource.

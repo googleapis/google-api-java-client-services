@@ -42,6 +42,22 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOp
   private java.lang.String name;
 
   /**
+   * Output only. OUTPUT_ONLY. Worker release resolved from the release channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String resolvedWorkerRelease;
+
+  /**
+   * Output only. OUTPUT_ONLY. The release or release channel used to run the Build. This is set to
+   * the same value as `PrivatePoolV1Config.WorkerConfig.worker_release` for the UI to easily
+   * access.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerRelease;
+
+  /**
    * The `WorkerPool` resource to execute the build on. You must have `cloudbuild.workerpools.use`
    * on the project hosting the WorkerPool. Format
    * projects/{project}/locations/{location}/workerPools/{workerPoolId}
@@ -59,6 +75,44 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOp
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. OUTPUT_ONLY. Worker release resolved from the release channel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getResolvedWorkerRelease() {
+    return resolvedWorkerRelease;
+  }
+
+  /**
+   * Output only. OUTPUT_ONLY. Worker release resolved from the release channel.
+   * @param resolvedWorkerRelease resolvedWorkerRelease or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption setResolvedWorkerRelease(java.lang.String resolvedWorkerRelease) {
+    this.resolvedWorkerRelease = resolvedWorkerRelease;
+    return this;
+  }
+
+  /**
+   * Output only. OUTPUT_ONLY. The release or release channel used to run the Build. This is set to
+   * the same value as `PrivatePoolV1Config.WorkerConfig.worker_release` for the UI to easily
+   * access.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerRelease() {
+    return workerRelease;
+  }
+
+  /**
+   * Output only. OUTPUT_ONLY. The release or release channel used to run the Build. This is set to
+   * the same value as `PrivatePoolV1Config.WorkerConfig.worker_release` for the UI to easily
+   * access.
+   * @param workerRelease workerRelease or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildOptionsPoolOption setWorkerRelease(java.lang.String workerRelease) {
+    this.workerRelease = workerRelease;
     return this;
   }
 

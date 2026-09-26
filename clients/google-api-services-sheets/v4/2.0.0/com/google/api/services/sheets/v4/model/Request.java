@@ -44,6 +44,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private AddChartRequest addChart;
 
   /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddCommentReplyRequest addCommentReply;
+
+  /**
    * Adds a new conditional format rule.
    * The value may be {@code null}.
    */
@@ -178,6 +186,21 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private DeleteBandingRequest deleteBanding;
 
   /**
+   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteCommentRequest deleteComment;
+
+  /**
+   * Deletes a reply Post from a CommentThread [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteCommentReplyRequest deleteCommentReply;
+
+  /**
    * Deletes an existing conditional format rule.
    * The value may be {@code null}.
    */
@@ -288,6 +311,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private FindReplaceRequest findReplace;
+
+  /**
+   * Inserts a CommentThread into the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertCommentRequest insertComment;
 
   /**
    * Inserts new rows or columns in a sheet.
@@ -414,6 +445,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateChartSpecRequest updateChartSpec;
+
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateCommentPostRequest updateCommentPost;
 
   /**
    * Updates an existing conditional format rule.
@@ -544,6 +583,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAddChart(AddChartRequest addChart) {
     this.addChart = addChart;
+    return this;
+  }
+
+  /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public AddCommentReplyRequest getAddCommentReply() {
+    return addCommentReply;
+  }
+
+  /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param addCommentReply addCommentReply or {@code null} for none
+   */
+  public Request setAddCommentReply(AddCommentReplyRequest addCommentReply) {
+    this.addCommentReply = addCommentReply;
     return this;
   }
 
@@ -873,6 +931,42 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public DeleteCommentRequest getDeleteComment() {
+    return deleteComment;
+  }
+
+  /**
+   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param deleteComment deleteComment or {@code null} for none
+   */
+  public Request setDeleteComment(DeleteCommentRequest deleteComment) {
+    this.deleteComment = deleteComment;
+    return this;
+  }
+
+  /**
+   * Deletes a reply Post from a CommentThread [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public DeleteCommentReplyRequest getDeleteCommentReply() {
+    return deleteCommentReply;
+  }
+
+  /**
+   * Deletes a reply Post from a CommentThread [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param deleteCommentReply deleteCommentReply or {@code null} for none
+   */
+  public Request setDeleteCommentReply(DeleteCommentReplyRequest deleteCommentReply) {
+    this.deleteCommentReply = deleteCommentReply;
+    return this;
+  }
+
+  /**
    * Deletes an existing conditional format rule.
    * @return value or {@code null} for none
    */
@@ -1141,6 +1235,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setFindReplace(FindReplaceRequest findReplace) {
     this.findReplace = findReplace;
+    return this;
+  }
+
+  /**
+   * Inserts a CommentThread into the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public InsertCommentRequest getInsertComment() {
+    return insertComment;
+  }
+
+  /**
+   * Inserts a CommentThread into the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param insertComment insertComment or {@code null} for none
+   */
+  public Request setInsertComment(InsertCommentRequest insertComment) {
+    this.insertComment = insertComment;
     return this;
   }
 
@@ -1447,6 +1560,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateChartSpec(UpdateChartSpecRequest updateChartSpec) {
     this.updateChartSpec = updateChartSpec;
+    return this;
+  }
+
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public UpdateCommentPostRequest getUpdateCommentPost() {
+    return updateCommentPost;
+  }
+
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param updateCommentPost updateCommentPost or {@code null} for none
+   */
+  public Request setUpdateCommentPost(UpdateCommentPostRequest updateCommentPost) {
+    this.updateCommentPost = updateCommentPost;
     return this;
   }
 

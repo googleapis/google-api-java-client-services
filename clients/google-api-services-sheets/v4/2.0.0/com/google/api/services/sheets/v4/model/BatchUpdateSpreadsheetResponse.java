@@ -30,6 +30,14 @@ package com.google.api.services.sheets.v4.model;
 public final class BatchUpdateSpreadsheetResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentUpdateState;
+
+  /**
    * The reply of the updates. This maps 1:1 with the updates, although replies to some requests may
    * be empty.
    * The value may be {@code null}.
@@ -51,6 +59,25 @@ public final class BatchUpdateSpreadsheetResponse extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private Spreadsheet updatedSpreadsheet;
+
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentUpdateState() {
+    return commentUpdateState;
+  }
+
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentUpdateState commentUpdateState or {@code null} for none
+   */
+  public BatchUpdateSpreadsheetResponse setCommentUpdateState(java.lang.String commentUpdateState) {
+    this.commentUpdateState = commentUpdateState;
+    return this;
+  }
 
   /**
    * The reply of the updates. This maps 1:1 with the updates, although replies to some requests may

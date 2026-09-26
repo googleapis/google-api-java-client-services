@@ -112,7 +112,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.lang.String unitFilter;
 
   /**
-   * Required. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
+   * Optional. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
    * this rollout kind will target the units of this unit kind. In other words, this defines the
    * population of target units to be upgraded by rollouts.
    * The value may be {@code null}.
@@ -333,7 +333,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
+   * Optional. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
    * this rollout kind will target the units of this unit kind. In other words, this defines the
    * population of target units to be upgraded by rollouts.
    * @return value or {@code null} for none
@@ -343,7 +343,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
+   * Optional. Immutable. UnitKind that this rollout kind corresponds to. Rollouts stemming from
    * this rollout kind will target the units of this unit kind. In other words, this defines the
    * population of target units to be upgraded by rollouts.
    * @param unitKind unitKind or {@code null} for none

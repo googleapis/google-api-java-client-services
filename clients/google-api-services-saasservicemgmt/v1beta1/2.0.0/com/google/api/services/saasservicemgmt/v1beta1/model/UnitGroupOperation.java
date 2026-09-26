@@ -48,6 +48,14 @@ public final class UnitGroupOperation extends com.google.api.client.json.Generic
   private String createTime;
 
   /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
    * can be used to confirm that the client and server agree on the ordering of a resource being
    * written.
@@ -128,6 +136,25 @@ public final class UnitGroupOperation extends com.google.api.client.json.Generic
    */
   public UnitGroupOperation setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public UnitGroupOperation setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 

@@ -54,14 +54,15 @@ public final class GoogleCloudApihubV1ExternalApi extends com.google.api.client.
   private String createTime;
 
   /**
-   * Optional. Description of the external API. Max length is 2000 characters (Unicode Code Points).
+   * Optional. Description of the external API. Max length is 500000 characters (Unicode Code
+   * Points).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. Display name of the external API. Max length is 63 characters (Unicode Code Points).
+   * Required. Display name of the external API. Max length is 500 characters (Unicode Code Points).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +144,8 @@ public final class GoogleCloudApihubV1ExternalApi extends com.google.api.client.
   }
 
   /**
-   * Optional. Description of the external API. Max length is 2000 characters (Unicode Code Points).
+   * Optional. Description of the external API. Max length is 500000 characters (Unicode Code
+   * Points).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -151,7 +153,8 @@ public final class GoogleCloudApihubV1ExternalApi extends com.google.api.client.
   }
 
   /**
-   * Optional. Description of the external API. Max length is 2000 characters (Unicode Code Points).
+   * Optional. Description of the external API. Max length is 500000 characters (Unicode Code
+   * Points).
    * @param description description or {@code null} for none
    */
   public GoogleCloudApihubV1ExternalApi setDescription(java.lang.String description) {
@@ -160,7 +163,7 @@ public final class GoogleCloudApihubV1ExternalApi extends com.google.api.client.
   }
 
   /**
-   * Required. Display name of the external API. Max length is 63 characters (Unicode Code Points).
+   * Required. Display name of the external API. Max length is 500 characters (Unicode Code Points).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -168,7 +171,7 @@ public final class GoogleCloudApihubV1ExternalApi extends com.google.api.client.
   }
 
   /**
-   * Required. Display name of the external API. Max length is 63 characters (Unicode Code Points).
+   * Required. Display name of the external API. Max length is 500 characters (Unicode Code Points).
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudApihubV1ExternalApi setDisplayName(java.lang.String displayName) {

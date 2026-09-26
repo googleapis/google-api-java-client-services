@@ -68,7 +68,7 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
   private String createTime;
 
   /**
-   * Required. The display name for this plugin instance. Max length is 255 characters.
+   * Required. The display name for this plugin instance. Max length is 500 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -197,7 +197,7 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
   }
 
   /**
-   * Required. The display name for this plugin instance. Max length is 255 characters.
+   * Required. The display name for this plugin instance. Max length is 500 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -205,7 +205,7 @@ public final class GoogleCloudApihubV1PluginInstance extends com.google.api.clie
   }
 
   /**
-   * Required. The display name for this plugin instance. Max length is 255 characters.
+   * Required. The display name for this plugin instance. Max length is 500 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudApihubV1PluginInstance setDisplayName(java.lang.String displayName) {

@@ -128,6 +128,14 @@ public final class Task extends com.google.api.client.json.GenericJson {
   private java.lang.Integer responseCount;
 
   /**
+   * Optional. Specifies the task-level RetryConfig. If present, this overrides the
+   * Queue.retry_config for this task.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RetryConfig retryConfig;
+
+  /**
    * The time when the task is scheduled to be attempted or retried. `schedule_time` will be
    * truncated to the nearest microsecond.
    * The value may be {@code null}.
@@ -362,6 +370,25 @@ public final class Task extends com.google.api.client.json.GenericJson {
    */
   public Task setResponseCount(java.lang.Integer responseCount) {
     this.responseCount = responseCount;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the task-level RetryConfig. If present, this overrides the
+   * Queue.retry_config for this task.
+   * @return value or {@code null} for none
+   */
+  public RetryConfig getRetryConfig() {
+    return retryConfig;
+  }
+
+  /**
+   * Optional. Specifies the task-level RetryConfig. If present, this overrides the
+   * Queue.retry_config for this task.
+   * @param retryConfig retryConfig or {@code null} for none
+   */
+  public Task setRetryConfig(RetryConfig retryConfig) {
+    this.retryConfig = retryConfig;
     return this;
   }
 

@@ -214,8 +214,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
         public class Openid {
 
           /**
-           * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
-           * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
+           * Fetches the signing keys for an agentic or managed workload identity pool and returns them in JWK
+           * Set format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
            * system pools are supported. **Preview** This feature is subject to the "Pre-GA Offerings Terms"
            * in the General Service Terms section of the [Service Specific
            * Terms](https://cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and
@@ -227,7 +227,7 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the sts server.  After setting any optional
            * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           * @param name Required. The name of the pool whose JWKs need to be retrieved. Format:
            *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
            *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
            *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
@@ -250,9 +250,9 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
 
             /**
              * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
-             * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
-             * system pools are supported. **Preview** This feature is subject to the "Pre-GA Offerings Terms"
-             * in the General Service Terms section of the [Service Specific
+             * JWK Set format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only
+             * agentic system pools are supported. **Preview** This feature is subject to the "Pre-GA
+             * Offerings Terms" in the General Service Terms section of the [Service Specific
              * Terms](https://cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is"
              * and might have limited support. For more information, see the [launch stage
              * descriptions](https://cloud.google.com/products#product-launch-stages).
@@ -265,7 +265,7 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
              * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+             * @param name Required. The name of the pool whose JWKs need to be retrieved. Format:
            *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
            *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
            *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
@@ -349,8 +349,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
-             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Required. The name of the pool whose JWKs need to be retrieved. Format: 'organization
+             * s/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
              * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
@@ -359,7 +359,7 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the pool whose JWKS needs to be retrieved. Format:
+            /** Required. The name of the pool whose JWKs need to be retrieved. Format:
            'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
            'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s):
            'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.goog' '
@@ -371,8 +371,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
-             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Required. The name of the pool whose JWKs need to be retrieved. Format: 'organization
+             * s/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
              * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
@@ -687,8 +687,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
         public class Openid {
 
           /**
-           * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
-           * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
+           * Fetches the signing keys for an agentic or managed workload identity pool and returns them in JWK
+           * Set format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
            * system pools are supported. **Preview** This feature is subject to the "Pre-GA Offerings Terms"
            * in the General Service Terms section of the [Service Specific
            * Terms](https://cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is" and
@@ -700,7 +700,7 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
            * This request holds the parameters needed by the sts server.  After setting any optional
            * parameters, call the {@link GetJwks#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+           * @param name Required. The name of the pool whose JWKs need to be retrieved. Format:
            *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
            *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
            *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
@@ -723,9 +723,9 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
 
             /**
              * Fetches the signing keys for an agentic or managed workload identity pool and returns them in
-             * JWKs format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only agentic
-             * system pools are supported. **Preview** This feature is subject to the "Pre-GA Offerings Terms"
-             * in the General Service Terms section of the [Service Specific
+             * JWK Set format, defined in [RFC 7517](https://tools.ietf.org/html/rfc7517). For now, only
+             * agentic system pools are supported. **Preview** This feature is subject to the "Pre-GA
+             * Offerings Terms" in the General Service Terms section of the [Service Specific
              * Terms](https://cloud.google.com/terms/service-terms#1). Pre-GA features are available "as is"
              * and might have limited support. For more information, see the [launch stage
              * descriptions](https://cloud.google.com/products#product-launch-stages).
@@ -738,7 +738,7 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
              * GetJwks#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The name of the pool whose JWKS needs to be retrieved. Format:
+             * @param name Required. The name of the pool whose JWKs need to be retrieved. Format:
            *        'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
            *        'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s): '
            *        organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id
@@ -822,8 +822,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
-             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Required. The name of the pool whose JWKs need to be retrieved. Format: 'organization
+             * s/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
              * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag
@@ -832,7 +832,7 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The name of the pool whose JWKS needs to be retrieved. Format:
+            /** Required. The name of the pool whose JWKs need to be retrieved. Format:
            'organizations/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
            'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}' Example(s):
            'organizations/1234/locations/global/workloadIdentityPools/agents.global.org-1234.system.id.goog' '
@@ -844,8 +844,8 @@ public class CloudSecurityToken extends com.google.api.client.googleapis.service
             }
 
             /**
-             * Required. The name of the pool whose JWKS needs to be retrieved. Format: 'organizatio
-             * ns/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
+             * Required. The name of the pool whose JWKs need to be retrieved. Format: 'organization
+             * s/{ORGANIZATION_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * 'projects/{PROJECT_NUMBER}/locations/global/workloadIdentityPools/{POOL_ID}'
              * Example(s): 'organizations/1234/locations/global/workloadIdentityPools/agents.global.
              * org-1234.system.id.goog' 'projects/12345678/locations/global/workloadIdentityPools/ag

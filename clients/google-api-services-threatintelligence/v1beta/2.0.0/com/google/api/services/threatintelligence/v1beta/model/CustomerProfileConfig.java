@@ -120,6 +120,13 @@ public final class CustomerProfileConfig extends com.google.api.client.json.Gene
   private CustomerProfileSummary summary;
 
   /**
+   * Optional. Technologies associated with the organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomerProfileTechnology> technologies;
+
+  /**
    * Optional. Technology presence of the organization.
    * The value may be {@code null}.
    */
@@ -317,6 +324,23 @@ public final class CustomerProfileConfig extends com.google.api.client.json.Gene
    */
   public CustomerProfileConfig setSummary(CustomerProfileSummary summary) {
     this.summary = summary;
+    return this;
+  }
+
+  /**
+   * Optional. Technologies associated with the organization.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomerProfileTechnology> getTechnologies() {
+    return technologies;
+  }
+
+  /**
+   * Optional. Technologies associated with the organization.
+   * @param technologies technologies or {@code null} for none
+   */
+  public CustomerProfileConfig setTechnologies(java.util.List<CustomerProfileTechnology> technologies) {
+    this.technologies = technologies;
     return this;
   }
 

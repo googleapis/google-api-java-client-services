@@ -31,6 +31,14 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class DiscoveryDocument extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Detailed communication context metadata for documents originating from deep and dark
+   * web communication channels.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommunicationContext communicationContext;
+
+  /**
    * Output only. The identifier of the discovery document.
    * The value may be {@code null}.
    */
@@ -44,6 +52,25 @@ public final class DiscoveryDocument extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String documentType;
+
+  /**
+   * Optional. Detailed communication context metadata for documents originating from deep and dark
+   * web communication channels.
+   * @return value or {@code null} for none
+   */
+  public CommunicationContext getCommunicationContext() {
+    return communicationContext;
+  }
+
+  /**
+   * Optional. Detailed communication context metadata for documents originating from deep and dark
+   * web communication channels.
+   * @param communicationContext communicationContext or {@code null} for none
+   */
+  public DiscoveryDocument setCommunicationContext(CommunicationContext communicationContext) {
+    this.communicationContext = communicationContext;
+    return this;
+  }
 
   /**
    * Output only. The identifier of the discovery document.

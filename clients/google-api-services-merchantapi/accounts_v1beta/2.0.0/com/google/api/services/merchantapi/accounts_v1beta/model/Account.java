@@ -59,6 +59,13 @@ public final class Account extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adultContent;
 
   /**
+   * Output only. URI (typically a URL) of the store's homepage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String homePageUri;
+
+  /**
    * Required. The account's [BCP-47 language code](https://tools.ietf.org/html/bcp47), such as `en-
    * US` or `sr-Latn`.
    * The value may be {@code null}.
@@ -143,6 +150,23 @@ public final class Account extends com.google.api.client.json.GenericJson {
    */
   public Account setAdultContent(java.lang.Boolean adultContent) {
     this.adultContent = adultContent;
+    return this;
+  }
+
+  /**
+   * Output only. URI (typically a URL) of the store's homepage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getHomePageUri() {
+    return homePageUri;
+  }
+
+  /**
+   * Output only. URI (typically a URL) of the store's homepage.
+   * @param homePageUri homePageUri or {@code null} for none
+   */
+  public Account setHomePageUri(java.lang.String homePageUri) {
+    this.homePageUri = homePageUri;
     return this;
   }
 

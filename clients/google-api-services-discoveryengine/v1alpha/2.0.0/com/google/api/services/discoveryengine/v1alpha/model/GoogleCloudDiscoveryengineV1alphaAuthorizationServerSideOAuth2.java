@@ -41,6 +41,17 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
   private java.lang.String authorizationUri;
 
   /**
+   * Optional. Whether the OAuth token exchange uses HTTP Basic authentication
+   * (`client_secret_basic`) instead of sending the client credentials in the request body
+   * (`client_secret_post`). When `true`, the credentials (`client_id:client_secret`) are Base64
+   * encoded and sent in the `Authorization` header. Some OAuth providers (e.g. Splunk) require
+   * `client_secret_basic`. When `false` or unset, the default `client_secret_post` is used.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean basicAuthenticationEnabled;
+
+  /**
    * Required. The OAuth2 client ID.
    * The value may be {@code null}.
    */
@@ -100,6 +111,31 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
    */
   public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2 setAuthorizationUri(java.lang.String authorizationUri) {
     this.authorizationUri = authorizationUri;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the OAuth token exchange uses HTTP Basic authentication
+   * (`client_secret_basic`) instead of sending the client credentials in the request body
+   * (`client_secret_post`). When `true`, the credentials (`client_id:client_secret`) are Base64
+   * encoded and sent in the `Authorization` header. Some OAuth providers (e.g. Splunk) require
+   * `client_secret_basic`. When `false` or unset, the default `client_secret_post` is used.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getBasicAuthenticationEnabled() {
+    return basicAuthenticationEnabled;
+  }
+
+  /**
+   * Optional. Whether the OAuth token exchange uses HTTP Basic authentication
+   * (`client_secret_basic`) instead of sending the client credentials in the request body
+   * (`client_secret_post`). When `true`, the credentials (`client_id:client_secret`) are Base64
+   * encoded and sent in the `Authorization` header. Some OAuth providers (e.g. Splunk) require
+   * `client_secret_basic`. When `false` or unset, the default `client_secret_post` is used.
+   * @param basicAuthenticationEnabled basicAuthenticationEnabled or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2 setBasicAuthenticationEnabled(java.lang.Boolean basicAuthenticationEnabled) {
+    this.basicAuthenticationEnabled = basicAuthenticationEnabled;
     return this;
   }
 

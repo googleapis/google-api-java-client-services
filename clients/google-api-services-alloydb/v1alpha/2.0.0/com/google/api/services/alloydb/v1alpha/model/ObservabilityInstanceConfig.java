@@ -81,7 +81,8 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
 
   /**
    * Indicates whether to track active query plans for an instance. If not set, the default value is
-   * "off". Can only be enabled if track_active_queries is enabled.
+   * "off". Can only be enabled if track_active_queries is enabled. Deprecated: Use
+   * track_active_queries instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -234,7 +235,8 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
 
   /**
    * Indicates whether to track active query plans for an instance. If not set, the default value is
-   * "off". Can only be enabled if track_active_queries is enabled.
+   * "off". Can only be enabled if track_active_queries is enabled. Deprecated: Use
+   * track_active_queries instead.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getTrackActiveQueryPlan() {
@@ -243,7 +245,8 @@ public final class ObservabilityInstanceConfig extends com.google.api.client.jso
 
   /**
    * Indicates whether to track active query plans for an instance. If not set, the default value is
-   * "off". Can only be enabled if track_active_queries is enabled.
+   * "off". Can only be enabled if track_active_queries is enabled. Deprecated: Use
+   * track_active_queries instead.
    * @param trackActiveQueryPlan trackActiveQueryPlan or {@code null} for none
    */
   public ObservabilityInstanceConfig setTrackActiveQueryPlan(java.lang.Boolean trackActiveQueryPlan) {

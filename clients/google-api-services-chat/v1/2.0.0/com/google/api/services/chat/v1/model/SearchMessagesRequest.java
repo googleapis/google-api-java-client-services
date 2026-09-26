@@ -42,20 +42,23 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    * `space.display_name`: Supports the operator `:` (has) and filters spaces based on a partial
    * match of their display name. Results are limited to the top five space matches. For example,
    * `space.display_name:Project` searches for messages in the top five spaces that contain the word
-   * "Project" in their display names. - `attachment`: Supports the operator `:*` (has any) to check
-   * for the presence of attachments. If `attachment:*` is specified, only messages that have at
-   * least one attachment are returned. - `annotations.user_mentions.user.name`: The resource name
-   * of the mentioned user (`users/{user}`). Only supports `:` (has). For example:
+   * "Project" in their display names. - `space.space_type`: The type of the space. Only supports
+   * `=`. For example, `space.space_type="DIRECT_MESSAGE"` returns only messages from direct
+   * messages. The possible values are `DIRECT_MESSAGE`, `GROUP_CHAT`, and `SPACE`. - `attachment`:
+   * Supports the operator `:*` (has any) to check for the presence of attachments. If
+   * `attachment:*` is specified, only messages that have at least one attachment are returned. -
+   * `annotations.user_mentions.user.name`: The resource name of the mentioned user
+   * (`users/{user}`). Only supports `:` (has). For example:
    * `annotations.user_mentions.user.name:"users/1234567890"` returns only messages that contain a
    * mention to the specified user. Alternatively, the alias `me` can be used to filter for messages
    * that mention the caller user, for example: `annotations.user_mentions.user.name:users/me`. You
    * can also use the e-mail as an alias for `{user}`, for example, `users/example@gmail.com`. For
    * advanced filtering, the following functions are also available: - `has_link()`: Returns only
    * messages that have at least one hyperlink in the message text. - `is_unread()`: Filters out
-   * messages that have been read by the calling user. Using the `space.display_name` filter
-   * requires that the calling credentials include one of the following [authorization
-   * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
-   * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+   * messages that have been read by the calling user. Using the `space.display_name` or the
+   * `space.space_type` filters requires that the calling credentials include one of the following
+   * [authorization scopes](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.spaces.readonly` -
    * `https://www.googleapis.com/auth/chat.spaces` Using the `is_unread()` filter requires that the
    * calling credentials include one of the following [authorization
    * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
@@ -74,9 +77,11 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    * but not a mix of both. For example: `space.display_name:Project AND space.display_name:Tasks`
    * returns messages that are in spaces with display names containing both `Project` and `Tasks`,
    * whereas `space.display_name:Project OR space.display_name:Tasks` returns messages that are in
-   * spaces with display names containing either `Project` or `Tasks` or both. -
-   * `annotations.user_mentions.user.name` supports the operators `AND` and `OR`, but not a mix of
-   * both. For example: `annotations.user_mentions.user.name:"users/1234567890" AND
+   * spaces with display names containing either `Project` or `Tasks` or both. - `space.space_type`
+   * supports only the `OR` operator, for example: `space.space_type = "DIRECT_MESSAGE" OR
+   * space.space_type = "GROUP_CHAT"`. - `annotations.user_mentions.user.name` supports the
+   * operators `AND` and `OR`, but not a mix of both. For example:
+   * `annotations.user_mentions.user.name:"users/1234567890" AND
    * annotations.user_mentions.user.name:"users/0987654321"` returns only messages that mentions
    * both users, whereas `annotations.user_mentions.user.name:"users/1234567890" OR
    * annotations.user_mentions.user.name:"users/0987654321"` returns messages that mention either
@@ -155,20 +160,23 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    * `space.display_name`: Supports the operator `:` (has) and filters spaces based on a partial
    * match of their display name. Results are limited to the top five space matches. For example,
    * `space.display_name:Project` searches for messages in the top five spaces that contain the word
-   * "Project" in their display names. - `attachment`: Supports the operator `:*` (has any) to check
-   * for the presence of attachments. If `attachment:*` is specified, only messages that have at
-   * least one attachment are returned. - `annotations.user_mentions.user.name`: The resource name
-   * of the mentioned user (`users/{user}`). Only supports `:` (has). For example:
+   * "Project" in their display names. - `space.space_type`: The type of the space. Only supports
+   * `=`. For example, `space.space_type="DIRECT_MESSAGE"` returns only messages from direct
+   * messages. The possible values are `DIRECT_MESSAGE`, `GROUP_CHAT`, and `SPACE`. - `attachment`:
+   * Supports the operator `:*` (has any) to check for the presence of attachments. If
+   * `attachment:*` is specified, only messages that have at least one attachment are returned. -
+   * `annotations.user_mentions.user.name`: The resource name of the mentioned user
+   * (`users/{user}`). Only supports `:` (has). For example:
    * `annotations.user_mentions.user.name:"users/1234567890"` returns only messages that contain a
    * mention to the specified user. Alternatively, the alias `me` can be used to filter for messages
    * that mention the caller user, for example: `annotations.user_mentions.user.name:users/me`. You
    * can also use the e-mail as an alias for `{user}`, for example, `users/example@gmail.com`. For
    * advanced filtering, the following functions are also available: - `has_link()`: Returns only
    * messages that have at least one hyperlink in the message text. - `is_unread()`: Filters out
-   * messages that have been read by the calling user. Using the `space.display_name` filter
-   * requires that the calling credentials include one of the following [authorization
-   * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
-   * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+   * messages that have been read by the calling user. Using the `space.display_name` or the
+   * `space.space_type` filters requires that the calling credentials include one of the following
+   * [authorization scopes](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.spaces.readonly` -
    * `https://www.googleapis.com/auth/chat.spaces` Using the `is_unread()` filter requires that the
    * calling credentials include one of the following [authorization
    * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
@@ -187,9 +195,11 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    * but not a mix of both. For example: `space.display_name:Project AND space.display_name:Tasks`
    * returns messages that are in spaces with display names containing both `Project` and `Tasks`,
    * whereas `space.display_name:Project OR space.display_name:Tasks` returns messages that are in
-   * spaces with display names containing either `Project` or `Tasks` or both. -
-   * `annotations.user_mentions.user.name` supports the operators `AND` and `OR`, but not a mix of
-   * both. For example: `annotations.user_mentions.user.name:"users/1234567890" AND
+   * spaces with display names containing either `Project` or `Tasks` or both. - `space.space_type`
+   * supports only the `OR` operator, for example: `space.space_type = "DIRECT_MESSAGE" OR
+   * space.space_type = "GROUP_CHAT"`. - `annotations.user_mentions.user.name` supports the
+   * operators `AND` and `OR`, but not a mix of both. For example:
+   * `annotations.user_mentions.user.name:"users/1234567890" AND
    * annotations.user_mentions.user.name:"users/0987654321"` returns only messages that mentions
    * both users, whereas `annotations.user_mentions.user.name:"users/1234567890" OR
    * annotations.user_mentions.user.name:"users/0987654321"` returns messages that mention either
@@ -223,20 +233,23 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    * `space.display_name`: Supports the operator `:` (has) and filters spaces based on a partial
    * match of their display name. Results are limited to the top five space matches. For example,
    * `space.display_name:Project` searches for messages in the top five spaces that contain the word
-   * "Project" in their display names. - `attachment`: Supports the operator `:*` (has any) to check
-   * for the presence of attachments. If `attachment:*` is specified, only messages that have at
-   * least one attachment are returned. - `annotations.user_mentions.user.name`: The resource name
-   * of the mentioned user (`users/{user}`). Only supports `:` (has). For example:
+   * "Project" in their display names. - `space.space_type`: The type of the space. Only supports
+   * `=`. For example, `space.space_type="DIRECT_MESSAGE"` returns only messages from direct
+   * messages. The possible values are `DIRECT_MESSAGE`, `GROUP_CHAT`, and `SPACE`. - `attachment`:
+   * Supports the operator `:*` (has any) to check for the presence of attachments. If
+   * `attachment:*` is specified, only messages that have at least one attachment are returned. -
+   * `annotations.user_mentions.user.name`: The resource name of the mentioned user
+   * (`users/{user}`). Only supports `:` (has). For example:
    * `annotations.user_mentions.user.name:"users/1234567890"` returns only messages that contain a
    * mention to the specified user. Alternatively, the alias `me` can be used to filter for messages
    * that mention the caller user, for example: `annotations.user_mentions.user.name:users/me`. You
    * can also use the e-mail as an alias for `{user}`, for example, `users/example@gmail.com`. For
    * advanced filtering, the following functions are also available: - `has_link()`: Returns only
    * messages that have at least one hyperlink in the message text. - `is_unread()`: Filters out
-   * messages that have been read by the calling user. Using the `space.display_name` filter
-   * requires that the calling credentials include one of the following [authorization
-   * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
-   * `https://www.googleapis.com/auth/chat.spaces.readonly` -
+   * messages that have been read by the calling user. Using the `space.display_name` or the
+   * `space.space_type` filters requires that the calling credentials include one of the following
+   * [authorization scopes](https://developers.google.com/workspace/chat/authenticate-
+   * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.spaces.readonly` -
    * `https://www.googleapis.com/auth/chat.spaces` Using the `is_unread()` filter requires that the
    * calling credentials include one of the following [authorization
    * scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes): -
@@ -255,9 +268,11 @@ public final class SearchMessagesRequest extends com.google.api.client.json.Gene
    * but not a mix of both. For example: `space.display_name:Project AND space.display_name:Tasks`
    * returns messages that are in spaces with display names containing both `Project` and `Tasks`,
    * whereas `space.display_name:Project OR space.display_name:Tasks` returns messages that are in
-   * spaces with display names containing either `Project` or `Tasks` or both. -
-   * `annotations.user_mentions.user.name` supports the operators `AND` and `OR`, but not a mix of
-   * both. For example: `annotations.user_mentions.user.name:"users/1234567890" AND
+   * spaces with display names containing either `Project` or `Tasks` or both. - `space.space_type`
+   * supports only the `OR` operator, for example: `space.space_type = "DIRECT_MESSAGE" OR
+   * space.space_type = "GROUP_CHAT"`. - `annotations.user_mentions.user.name` supports the
+   * operators `AND` and `OR`, but not a mix of both. For example:
+   * `annotations.user_mentions.user.name:"users/1234567890" AND
    * annotations.user_mentions.user.name:"users/0987654321"` returns only messages that mentions
    * both users, whereas `annotations.user_mentions.user.name:"users/1234567890" OR
    * annotations.user_mentions.user.name:"users/0987654321"` returns messages that mention either

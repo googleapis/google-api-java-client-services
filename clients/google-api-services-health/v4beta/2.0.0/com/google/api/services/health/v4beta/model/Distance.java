@@ -37,7 +37,8 @@ public final class Distance extends com.google.api.client.json.GenericJson {
   private ObservationTimeInterval interval;
 
   /**
-   * Required. Distance in millimeters over the observed interval.
+   * Required. Distance in millimeters over the observed interval. Must be in the range `[0,
+   * 1000000000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -61,7 +62,8 @@ public final class Distance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Distance in millimeters over the observed interval.
+   * Required. Distance in millimeters over the observed interval. Must be in the range `[0,
+   * 1000000000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMillimeters() {
@@ -69,7 +71,8 @@ public final class Distance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Distance in millimeters over the observed interval.
+   * Required. Distance in millimeters over the observed interval. Must be in the range `[0,
+   * 1000000000]`.
    * @param millimeters millimeters or {@code null} for none
    */
   public Distance setMillimeters(java.lang.Long millimeters) {

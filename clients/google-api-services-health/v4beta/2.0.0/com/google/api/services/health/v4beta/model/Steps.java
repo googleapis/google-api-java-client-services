@@ -30,7 +30,7 @@ package com.google.api.services.health.v4beta.model;
 public final class Steps extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Number of steps in the recorded interval.
+   * Required. Number of steps in the recorded interval. Must be in the range `[0, 1000000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -44,7 +44,7 @@ public final class Steps extends com.google.api.client.json.GenericJson {
   private ObservationTimeInterval interval;
 
   /**
-   * Required. Number of steps in the recorded interval.
+   * Required. Number of steps in the recorded interval. Must be in the range `[0, 1000000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getCount() {
@@ -52,7 +52,7 @@ public final class Steps extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Number of steps in the recorded interval.
+   * Required. Number of steps in the recorded interval. Must be in the range `[0, 1000000]`.
    * @param count count or {@code null} for none
    */
   public Steps setCount(java.lang.Long count) {

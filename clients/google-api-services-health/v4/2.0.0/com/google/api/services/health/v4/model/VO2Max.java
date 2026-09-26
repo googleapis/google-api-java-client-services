@@ -44,7 +44,8 @@ public final class VO2Max extends com.google.api.client.json.GenericJson {
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. VO2 max value measured as in ml consumed oxygen / kg of body weight / min.
+   * Required. VO2 max value measured as in ml consumed oxygen / kg of body weight / min. Must be in
+   * the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class VO2Max extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. VO2 max value measured as in ml consumed oxygen / kg of body weight / min.
+   * Required. VO2 max value measured as in ml consumed oxygen / kg of body weight / min. Must be in
+   * the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getVo2Max() {
@@ -93,7 +95,8 @@ public final class VO2Max extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. VO2 max value measured as in ml consumed oxygen / kg of body weight / min.
+   * Required. VO2 max value measured as in ml consumed oxygen / kg of body weight / min. Must be in
+   * the range `[0, 100]`.
    * @param vo2Max vo2Max or {@code null} for none
    */
   public VO2Max setVo2Max(java.lang.Double vo2Max) {

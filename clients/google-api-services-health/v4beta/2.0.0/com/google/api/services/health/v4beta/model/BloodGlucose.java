@@ -30,7 +30,7 @@ package com.google.api.services.health.v4beta.model;
 public final class BloodGlucose extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Blood glucose level concentration in mg/dL.
+   * Required. Blood glucose level concentration in mg/dL. Must be in the range `[0, 900]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class BloodGlucose extends com.google.api.client.json.GenericJson {
   private java.lang.String specimen;
 
   /**
-   * Required. Blood glucose level concentration in mg/dL.
+   * Required. Blood glucose level concentration in mg/dL. Must be in the range `[0, 900]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getBloodGlucoseMilligramsPerDeciliter() {
@@ -87,7 +87,7 @@ public final class BloodGlucose extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Blood glucose level concentration in mg/dL.
+   * Required. Blood glucose level concentration in mg/dL. Must be in the range `[0, 900]`.
    * @param bloodGlucoseMilligramsPerDeciliter bloodGlucoseMilligramsPerDeciliter or {@code null} for none
    */
   public BloodGlucose setBloodGlucoseMilligramsPerDeciliter(java.lang.Double bloodGlucoseMilligramsPerDeciliter) {

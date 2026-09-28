@@ -3630,6 +3630,219 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
   }
 
   /**
+   * An accessor for creating requests from the Users collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DataManager datamanager = new DataManager(...);}
+   *   {@code DataManager.Users.List request = datamanager.users().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Users users() {
+    return new Users();
+  }
+
+  /**
+   * The "users" collection of methods.
+   */
+  public class Users {
+
+    /**
+     * Create a request for the method "users.ingest".
+     *
+     * This request holds the parameters needed by the datamanager server.  After setting any optional
+     * parameters, call the {@link Ingest#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.datamanager.v1.model.IngestUsersRequest}
+     * @return the request
+     */
+    public Ingest ingest(com.google.api.services.datamanager.v1.model.IngestUsersRequest content) throws java.io.IOException {
+      Ingest result = new Ingest(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Ingest extends DataManagerRequest<com.google.api.services.datamanager.v1.model.IngestUsersResponse> {
+
+      private static final String REST_PATH = "v1/users:ingest";
+
+      /**
+       * Create a request for the method "users.ingest".
+       *
+       * This request holds the parameters needed by the the datamanager server.  After setting any
+       * optional parameters, call the {@link Ingest#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Ingest#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.datamanager.v1.model.IngestUsersRequest}
+       * @since 1.13
+       */
+      protected Ingest(com.google.api.services.datamanager.v1.model.IngestUsersRequest content) {
+        super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.IngestUsersResponse.class);
+      }
+
+      @Override
+      public Ingest set$Xgafv(java.lang.String $Xgafv) {
+        return (Ingest) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Ingest setAccessToken(java.lang.String accessToken) {
+        return (Ingest) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Ingest setAlt(java.lang.String alt) {
+        return (Ingest) super.setAlt(alt);
+      }
+
+      @Override
+      public Ingest setCallback(java.lang.String callback) {
+        return (Ingest) super.setCallback(callback);
+      }
+
+      @Override
+      public Ingest setFields(java.lang.String fields) {
+        return (Ingest) super.setFields(fields);
+      }
+
+      @Override
+      public Ingest setKey(java.lang.String key) {
+        return (Ingest) super.setKey(key);
+      }
+
+      @Override
+      public Ingest setOauthToken(java.lang.String oauthToken) {
+        return (Ingest) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Ingest setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Ingest) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Ingest setQuotaUser(java.lang.String quotaUser) {
+        return (Ingest) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Ingest setUploadType(java.lang.String uploadType) {
+        return (Ingest) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Ingest setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Ingest) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Ingest set(String parameterName, Object value) {
+        return (Ingest) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Create a request for the method "users.remove".
+     *
+     * This request holds the parameters needed by the datamanager server.  After setting any optional
+     * parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+     *
+     * @param content the {@link com.google.api.services.datamanager.v1.model.RemoveUsersRequest}
+     * @return the request
+     */
+    public Remove remove(com.google.api.services.datamanager.v1.model.RemoveUsersRequest content) throws java.io.IOException {
+      Remove result = new Remove(content);
+      initialize(result);
+      return result;
+    }
+
+    public class Remove extends DataManagerRequest<com.google.api.services.datamanager.v1.model.RemoveUsersResponse> {
+
+      private static final String REST_PATH = "v1/users:remove";
+
+      /**
+       * Create a request for the method "users.remove".
+       *
+       * This request holds the parameters needed by the the datamanager server.  After setting any
+       * optional parameters, call the {@link Remove#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Remove#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param content the {@link com.google.api.services.datamanager.v1.model.RemoveUsersRequest}
+       * @since 1.13
+       */
+      protected Remove(com.google.api.services.datamanager.v1.model.RemoveUsersRequest content) {
+        super(DataManager.this, "POST", REST_PATH, content, com.google.api.services.datamanager.v1.model.RemoveUsersResponse.class);
+      }
+
+      @Override
+      public Remove set$Xgafv(java.lang.String $Xgafv) {
+        return (Remove) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Remove setAccessToken(java.lang.String accessToken) {
+        return (Remove) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Remove setAlt(java.lang.String alt) {
+        return (Remove) super.setAlt(alt);
+      }
+
+      @Override
+      public Remove setCallback(java.lang.String callback) {
+        return (Remove) super.setCallback(callback);
+      }
+
+      @Override
+      public Remove setFields(java.lang.String fields) {
+        return (Remove) super.setFields(fields);
+      }
+
+      @Override
+      public Remove setKey(java.lang.String key) {
+        return (Remove) super.setKey(key);
+      }
+
+      @Override
+      public Remove setOauthToken(java.lang.String oauthToken) {
+        return (Remove) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Remove setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Remove) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Remove setQuotaUser(java.lang.String quotaUser) {
+        return (Remove) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Remove setUploadType(java.lang.String uploadType) {
+        return (Remove) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Remove setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Remove) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Remove set(String parameterName, Object value) {
+        return (Remove) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link DataManager}.
    *
    * <p>

@@ -31,14 +31,15 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementVersionsV1CrowdStrikeConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be at most 50 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String apiKey;
 
   /**
-   * Required. Host to identify the customer specific server to receive the events.
+   * Required. Host to identify the customer specific server to receive the events. Must be at most
+   * 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,7 @@ public final class GoogleChromeManagementVersionsV1CrowdStrikeConfig extends com
   private GoogleChromeManagementVersionsV1ReportingSettings reportingSettings;
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be at most 50 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKey() {
@@ -60,7 +61,7 @@ public final class GoogleChromeManagementVersionsV1CrowdStrikeConfig extends com
   }
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be at most 50 characters.
    * @param apiKey apiKey or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1CrowdStrikeConfig setApiKey(java.lang.String apiKey) {
@@ -69,7 +70,8 @@ public final class GoogleChromeManagementVersionsV1CrowdStrikeConfig extends com
   }
 
   /**
-   * Required. Host to identify the customer specific server to receive the events.
+   * Required. Host to identify the customer specific server to receive the events. Must be at most
+   * 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -77,7 +79,8 @@ public final class GoogleChromeManagementVersionsV1CrowdStrikeConfig extends com
   }
 
   /**
-   * Required. Host to identify the customer specific server to receive the events.
+   * Required. Host to identify the customer specific server to receive the events. Must be at most
+   * 256 characters.
    * @param host host or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1CrowdStrikeConfig setHost(java.lang.String host) {

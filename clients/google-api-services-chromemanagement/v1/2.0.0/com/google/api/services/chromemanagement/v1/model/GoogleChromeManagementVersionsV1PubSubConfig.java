@@ -38,7 +38,7 @@ public final class GoogleChromeManagementVersionsV1PubSubConfig extends com.goog
   private GoogleChromeManagementVersionsV1ReportingSettings reportingSettings;
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most 1000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleChromeManagementVersionsV1PubSubConfig extends com.goog
   }
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most 1000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopicFullPath() {
@@ -70,7 +70,7 @@ public final class GoogleChromeManagementVersionsV1PubSubConfig extends com.goog
   }
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most 1000 characters.
    * @param topicFullPath topicFullPath or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1PubSubConfig setTopicFullPath(java.lang.String topicFullPath) {

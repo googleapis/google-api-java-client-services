@@ -31,7 +31,7 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be 39 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,6 +40,7 @@ public final class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends co
   /**
    * Required. Host of ingestion API endpoint. Allows customer to upload events to servers in
    * specific geographical regions. Existing configs that don't have this setting default to US.
+   * Must be at most 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends co
   private GoogleChromeManagementVersionsV1ReportingSettings reportingSettings;
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be 39 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getApiKey() {
@@ -61,7 +62,7 @@ public final class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends co
   }
 
   /**
-   * Required. Input only. API key to use on the ingestion API.
+   * Required. Input only. API key to use on the ingestion API. Must be 39 characters.
    * @param apiKey apiKey or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1GoogleSecOpsConfig setApiKey(java.lang.String apiKey) {
@@ -72,6 +73,7 @@ public final class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends co
   /**
    * Required. Host of ingestion API endpoint. Allows customer to upload events to servers in
    * specific geographical regions. Existing configs that don't have this setting default to US.
+   * Must be at most 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -81,6 +83,7 @@ public final class GoogleChromeManagementVersionsV1GoogleSecOpsConfig extends co
   /**
    * Required. Host of ingestion API endpoint. Allows customer to upload events to servers in
    * specific geographical regions. Existing configs that don't have this setting default to US.
+   * Must be at most 256 characters.
    * @param host host or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1GoogleSecOpsConfig setHost(java.lang.String host) {

@@ -38,7 +38,7 @@ public final class GoogleChromeManagementVersionsV1ConnectorConfig extends com.g
   private GoogleChromeManagementVersionsV1ConnectorConfigDetails details;
 
   /**
-   * Required. The display name of the config.
+   * Required. The display name of the config. Must be at most 100 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class GoogleChromeManagementVersionsV1ConnectorConfig extends com.g
   }
 
   /**
-   * Required. The display name of the config.
+   * Required. The display name of the config. Must be at most 100 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -91,7 +91,7 @@ public final class GoogleChromeManagementVersionsV1ConnectorConfig extends com.g
   }
 
   /**
-   * Required. The display name of the config.
+   * Required. The display name of the config. Must be at most 100 characters.
    * @param displayName displayName or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1ConnectorConfig setDisplayName(java.lang.String displayName) {

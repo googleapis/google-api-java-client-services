@@ -31,8 +31,16 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class InitialAccessBrokerFindingDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the document that triggered the IAB finding. This ID can be
-   * used to retrieve the content of the document for further analysis.
+   * Optional. The discovery document associated with the IAB finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiscoveryDocument discoveryDocument;
+
+  /**
+   * Optional. Deprecated: Use `discovery_document` instead. The unique identifier of the document
+   * that triggered the IAB finding. This ID can be used to retrieve the content of the document for
+   * further analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,8 +63,26 @@ public final class InitialAccessBrokerFindingDetail extends com.google.api.clien
   private java.lang.String severity;
 
   /**
-   * Required. The unique identifier of the document that triggered the IAB finding. This ID can be
-   * used to retrieve the content of the document for further analysis.
+   * Optional. The discovery document associated with the IAB finding.
+   * @return value or {@code null} for none
+   */
+  public DiscoveryDocument getDiscoveryDocument() {
+    return discoveryDocument;
+  }
+
+  /**
+   * Optional. The discovery document associated with the IAB finding.
+   * @param discoveryDocument discoveryDocument or {@code null} for none
+   */
+  public InitialAccessBrokerFindingDetail setDiscoveryDocument(DiscoveryDocument discoveryDocument) {
+    this.discoveryDocument = discoveryDocument;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: Use `discovery_document` instead. The unique identifier of the document
+   * that triggered the IAB finding. This ID can be used to retrieve the content of the document for
+   * further analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentId() {
@@ -64,8 +90,9 @@ public final class InitialAccessBrokerFindingDetail extends com.google.api.clien
   }
 
   /**
-   * Required. The unique identifier of the document that triggered the IAB finding. This ID can be
-   * used to retrieve the content of the document for further analysis.
+   * Optional. Deprecated: Use `discovery_document` instead. The unique identifier of the document
+   * that triggered the IAB finding. This ID can be used to retrieve the content of the document for
+   * further analysis.
    * @param documentId documentId or {@code null} for none
    */
   public InitialAccessBrokerFindingDetail setDocumentId(java.lang.String documentId) {

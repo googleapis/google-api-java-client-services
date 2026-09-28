@@ -31,56 +31,56 @@ package com.google.api.services.displayvideo.v4.model;
 public final class CommonInStreamAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * The text on the call-to-action button.
+   * Optional. The text on the call-to-action button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String actionButtonLabel;
 
   /**
-   * The headline of the call-to-action banner.
+   * Optional. The headline of the call-to-action banner.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String actionHeadline;
 
   /**
-   * The image which shows next to the video ad.
+   * Optional. The image which shows next to the video ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ImageAsset companionBanner;
 
   /**
-   * The webpage address that appears with the ad.
+   * Required. The webpage address that appears with the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayUrl;
 
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String finalUrl;
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String trackingUrl;
 
   /**
-   * The YouTube video of the ad.
+   * Required. The YouTube video of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private YoutubeVideoDetails video;
 
   /**
-   * The text on the call-to-action button.
+   * Optional. The text on the call-to-action button.
    * @return value or {@code null} for none
    */
   public java.lang.String getActionButtonLabel() {
@@ -88,7 +88,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The text on the call-to-action button.
+   * Optional. The text on the call-to-action button.
    * @param actionButtonLabel actionButtonLabel or {@code null} for none
    */
   public CommonInStreamAttribute setActionButtonLabel(java.lang.String actionButtonLabel) {
@@ -97,7 +97,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The headline of the call-to-action banner.
+   * Optional. The headline of the call-to-action banner.
    * @return value or {@code null} for none
    */
   public java.lang.String getActionHeadline() {
@@ -105,7 +105,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The headline of the call-to-action banner.
+   * Optional. The headline of the call-to-action banner.
    * @param actionHeadline actionHeadline or {@code null} for none
    */
   public CommonInStreamAttribute setActionHeadline(java.lang.String actionHeadline) {
@@ -114,7 +114,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The image which shows next to the video ad.
+   * Optional. The image which shows next to the video ad.
    * @return value or {@code null} for none
    */
   public ImageAsset getCompanionBanner() {
@@ -122,7 +122,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The image which shows next to the video ad.
+   * Optional. The image which shows next to the video ad.
    * @param companionBanner companionBanner or {@code null} for none
    */
   public CommonInStreamAttribute setCompanionBanner(ImageAsset companionBanner) {
@@ -131,7 +131,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The webpage address that appears with the ad.
+   * Required. The webpage address that appears with the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayUrl() {
@@ -139,7 +139,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The webpage address that appears with the ad.
+   * Required. The webpage address that appears with the ad.
    * @param displayUrl displayUrl or {@code null} for none
    */
   public CommonInStreamAttribute setDisplayUrl(java.lang.String displayUrl) {
@@ -148,7 +148,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click the ad.
    * @return value or {@code null} for none
    */
   public java.lang.String getFinalUrl() {
@@ -156,7 +156,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The URL address of the webpage that people reach after they click the ad.
+   * Required. The URL address of the webpage that people reach after they click the ad.
    * @param finalUrl finalUrl or {@code null} for none
    */
   public CommonInStreamAttribute setFinalUrl(java.lang.String finalUrl) {
@@ -165,7 +165,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -173,7 +173,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public CommonInStreamAttribute setTrackingUrl(java.lang.String trackingUrl) {
@@ -182,7 +182,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The YouTube video of the ad.
+   * Required. The YouTube video of the ad.
    * @return value or {@code null} for none
    */
   public YoutubeVideoDetails getVideo() {
@@ -190,7 +190,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * The YouTube video of the ad.
+   * Required. The YouTube video of the ad.
    * @param video video or {@code null} for none
    */
   public CommonInStreamAttribute setVideo(YoutubeVideoDetails video) {

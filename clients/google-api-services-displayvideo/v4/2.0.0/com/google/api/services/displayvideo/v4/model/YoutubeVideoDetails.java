@@ -38,7 +38,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   private java.lang.String id;
 
   /**
-   * The reason why the video data is not available.
+   * Output only. The reason why the video data is not available.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +69,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The reason why the video data is not available.
+   * Output only. The reason why the video data is not available.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnavailableReason() {
@@ -77,7 +77,7 @@ public final class YoutubeVideoDetails extends com.google.api.client.json.Generi
   }
 
   /**
-   * The reason why the video data is not available.
+   * Output only. The reason why the video data is not available.
    * @param unavailableReason unavailableReason or {@code null} for none
    */
   public YoutubeVideoDetails setUnavailableReason(java.lang.String unavailableReason) {

@@ -31,14 +31,14 @@ package com.google.api.services.displayvideo.v2.model;
 public final class BumperAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Common ad attributes.
+   * Required. Common ad attributes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CommonInStreamAttribute commonInStreamAttribute;
 
   /**
-   * Common ad attributes.
+   * Required. Common ad attributes.
    * @return value or {@code null} for none
    */
   public CommonInStreamAttribute getCommonInStreamAttribute() {
@@ -46,7 +46,7 @@ public final class BumperAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Common ad attributes.
+   * Required. Common ad attributes.
    * @param commonInStreamAttribute commonInStreamAttribute or {@code null} for none
    */
   public BumperAd setCommonInStreamAttribute(CommonInStreamAttribute commonInStreamAttribute) {

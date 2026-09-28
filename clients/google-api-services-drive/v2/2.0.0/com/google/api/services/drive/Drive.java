@@ -12270,8 +12270,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
   public class Permissions {
 
     /**
-     * Deletes a permission from a file or shared drive. **Warning:** Concurrent permissions operations
-     * on the same file are not supported; only the last update is applied.
+     * Deletes a permission from a file or shared drive. **Warning:** Concurrent permission
+     * modifications (such as update or delete) on the same file, folder, or shared drive aren't
+     * supported across any users or clients; only the last update is applied.
      *
      * Create a request for the method "permissions.delete".
      *
@@ -12293,8 +12294,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Deletes a permission from a file or shared drive. **Warning:** Concurrent permissions
-       * operations on the same file are not supported; only the last update is applied.
+       * Deletes a permission from a file or shared drive. **Warning:** Concurrent permission
+       * modifications (such as update or delete) on the same file, folder, or shared drive aren't
+       * supported across any users or clients; only the last update is applied.
        *
        * Create a request for the method "permissions.delete".
        *
@@ -13001,8 +13003,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Inserts a permission for a file or shared drive. **Warning:** Concurrent permissions operations
-     * on the same file are not supported; only the last update is applied.
+     * Inserts a permission for a file or shared drive. **Warning:** Concurrent permission modifications
+     * (such as update or delete) on the same file, folder, or shared drive aren't supported across any
+     * users or clients; only the last update is applied.
      *
      * Create a request for the method "permissions.insert".
      *
@@ -13024,8 +13027,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions";
 
       /**
-       * Inserts a permission for a file or shared drive. **Warning:** Concurrent permissions operations
-       * on the same file are not supported; only the last update is applied.
+       * Inserts a permission for a file or shared drive. **Warning:** Concurrent permission
+       * modifications (such as update or delete) on the same file, folder, or shared drive aren't
+       * supported across any users or clients; only the last update is applied.
        *
        * Create a request for the method "permissions.insert".
        *
@@ -13817,8 +13821,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a permission using patch semantics. **Warning:** Concurrent permissions operations on the
-     * same file are not supported; only the last update is applied.
+     * Updates a permission using patch semantics. **Warning:** Concurrent permission modifications
+     * (such as update or delete) on the same file, folder, or shared drive aren't supported across any
+     * users or clients; only the last update is applied.
      *
      * Create a request for the method "permissions.patch".
      *
@@ -13841,8 +13846,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Updates a permission using patch semantics. **Warning:** Concurrent permissions operations on
-       * the same file are not supported; only the last update is applied.
+       * Updates a permission using patch semantics. **Warning:** Concurrent permission modifications
+       * (such as update or delete) on the same file, folder, or shared drive aren't supported across
+       * any users or clients; only the last update is applied.
        *
        * Create a request for the method "permissions.patch".
        *
@@ -14233,8 +14239,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       }
     }
     /**
-     * Updates a permission. **Warning:** Concurrent permissions operations on the same file are not
-     * supported; only the last update is applied.
+     * Updates a permission. **Warning:** Concurrent permission modifications (such as update or delete)
+     * on the same file, folder, or shared drive aren't supported across any users or clients; only the
+     * last update is applied.
      *
      * Create a request for the method "permissions.update".
      *
@@ -14257,8 +14264,9 @@ public class Drive extends com.google.api.client.googleapis.services.json.Abstra
       private static final String REST_PATH = "files/{fileId}/permissions/{permissionId}";
 
       /**
-       * Updates a permission. **Warning:** Concurrent permissions operations on the same file are not
-       * supported; only the last update is applied.
+       * Updates a permission. **Warning:** Concurrent permission modifications (such as update or
+       * delete) on the same file, folder, or shared drive aren't supported across any users or clients;
+       * only the last update is applied.
        *
        * Create a request for the method "permissions.update".
        *

@@ -492,8 +492,8 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
        * This request holds the parameters needed by the webcontentpublisher server.  After setting any
        * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent organization whose publications to list. Format:
-       *        `organizations/{organization}`.
+       * @param parent Required. The parent organization whose publications to list, or "organizations/-" for all
+       *        organizations a user has access to. Format: `organizations/{organization}`.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -520,8 +520,8 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
          * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent organization whose publications to list. Format:
-       *        `organizations/{organization}`.
+         * @param parent Required. The parent organization whose publications to list, or "organizations/-" for all
+       *        organizations a user has access to. Format: `organizations/{organization}`.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -600,22 +600,22 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
         }
 
         /**
-         * Required. The parent organization whose publications to list. Format:
-         * `organizations/{organization}`.
+         * Required. The parent organization whose publications to list, or "organizations/-" for
+         * all organizations a user has access to. Format: `organizations/{organization}`.
          */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent organization whose publications to list. Format:
-       `organizations/{organization}`.
+        /** Required. The parent organization whose publications to list, or "organizations/-" for all
+       organizations a user has access to. Format: `organizations/{organization}`.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
         /**
-         * Required. The parent organization whose publications to list. Format:
-         * `organizations/{organization}`.
+         * Required. The parent organization whose publications to list, or "organizations/-" for
+         * all organizations a user has access to. Format: `organizations/{organization}`.
          */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {

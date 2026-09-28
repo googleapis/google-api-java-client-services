@@ -110,6 +110,13 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private java.lang.String urlFilteringProfile;
 
   /**
+   * Optional. Reference to a SecurityProfile with the WildFire configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String wildfireAnalysisProfile;
+
+  /**
    * Output only. Resource creation timestamp.
    * @return value or {@code null} for none
    */
@@ -299,6 +306,23 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
    */
   public SecurityProfileGroup setUrlFilteringProfile(java.lang.String urlFilteringProfile) {
     this.urlFilteringProfile = urlFilteringProfile;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the WildFire configuration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWildfireAnalysisProfile() {
+    return wildfireAnalysisProfile;
+  }
+
+  /**
+   * Optional. Reference to a SecurityProfile with the WildFire configuration.
+   * @param wildfireAnalysisProfile wildfireAnalysisProfile or {@code null} for none
+   */
+  public SecurityProfileGroup setWildfireAnalysisProfile(java.lang.String wildfireAnalysisProfile) {
+    this.wildfireAnalysisProfile = wildfireAnalysisProfile;
     return this;
   }
 

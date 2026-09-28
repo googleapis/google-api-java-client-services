@@ -52,7 +52,7 @@ public final class CoreBodyTemperature extends com.google.api.client.json.Generi
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. The core body temperature in Celsius.
+   * Required. The core body temperature in Celsius. Must be in the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,7 +110,7 @@ public final class CoreBodyTemperature extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The core body temperature in Celsius.
+   * Required. The core body temperature in Celsius. Must be in the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getTemperatureCelsius() {
@@ -118,7 +118,7 @@ public final class CoreBodyTemperature extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. The core body temperature in Celsius.
+   * Required. The core body temperature in Celsius. Must be in the range `[0, 100]`.
    * @param temperatureCelsius temperatureCelsius or {@code null} for none
    */
   public CoreBodyTemperature setTemperatureCelsius(java.lang.Double temperatureCelsius) {

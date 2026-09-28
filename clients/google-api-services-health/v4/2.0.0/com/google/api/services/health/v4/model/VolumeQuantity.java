@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class VolumeQuantity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Value representing the volume in milliliters.
+   * Required. Value representing the volume in milliliters. Must be in the range `[0, 100000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class VolumeQuantity extends com.google.api.client.json.GenericJson
   private java.lang.String userProvidedUnit;
 
   /**
-   * Required. Value representing the volume in milliliters.
+   * Required. Value representing the volume in milliliters. Must be in the range `[0, 100000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getMilliliters() {
@@ -53,7 +53,7 @@ public final class VolumeQuantity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Value representing the volume in milliliters.
+   * Required. Value representing the volume in milliliters. Must be in the range `[0, 100000]`.
    * @param milliliters milliliters or {@code null} for none
    */
   public VolumeQuantity setMilliliters(java.lang.Double milliliters) {

@@ -40,6 +40,29 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private Body body;
 
   /**
+   * Output only. The comments associated with the document. Only populated if the commentsViewMode
+   * parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CommentThread> comments;
+
+  static {
+    // hack to force ProGuard to consider CommentThread used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CommentThread.class);
+  }
+
+  /**
+   * Output only. The comments view mode applied to the document. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentsViewMode;
+
+  /**
    * Output only. The ID of the document.
    * The value may be {@code null}.
    */
@@ -173,6 +196,15 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges;
 
   /**
+   * Output only. The suggestions associated with the document. Only populated if the
+   * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SuggestionThread> suggestions;
+
+  /**
    * Output only. The suggestions view mode applied to the document. Note: When editing a document,
    * changes must be based on a document with SUGGESTIONS_INLINE.
    * The value may be {@code null}.
@@ -215,6 +247,46 @@ public final class Document extends com.google.api.client.json.GenericJson {
    */
   public Document setBody(Body body) {
     this.body = body;
+    return this;
+  }
+
+  /**
+   * Output only. The comments associated with the document. Only populated if the commentsViewMode
+   * parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CommentThread> getComments() {
+    return comments;
+  }
+
+  /**
+   * Output only. The comments associated with the document. Only populated if the commentsViewMode
+   * parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`). [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param comments comments or {@code null} for none
+   */
+  public Document setComments(java.util.List<CommentThread> comments) {
+    this.comments = comments;
+    return this;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the document. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentsViewMode() {
+    return commentsViewMode;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the document. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentsViewMode commentsViewMode or {@code null} for none
+   */
+  public Document setCommentsViewMode(java.lang.String commentsViewMode) {
+    this.commentsViewMode = commentsViewMode;
     return this;
   }
 
@@ -520,6 +592,27 @@ public final class Document extends com.google.api.client.json.GenericJson {
    */
   public Document setSuggestedNamedStylesChanges(java.util.Map<String, SuggestedNamedStyles> suggestedNamedStylesChanges) {
     this.suggestedNamedStylesChanges = suggestedNamedStylesChanges;
+    return this;
+  }
+
+  /**
+   * Output only. The suggestions associated with the document. Only populated if the
+   * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SuggestionThread> getSuggestions() {
+    return suggestions;
+  }
+
+  /**
+   * Output only. The suggestions associated with the document. Only populated if the
+   * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param suggestions suggestions or {@code null} for none
+   */
+  public Document setSuggestions(java.util.List<SuggestionThread> suggestions) {
+    this.suggestions = suggestions;
     return this;
   }
 

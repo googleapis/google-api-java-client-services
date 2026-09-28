@@ -511,6 +511,50 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
       }
 
       /**
+       * The comments view mode to apply to the document. This allows viewing the document with
+       * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+       * If you set comments_view_mode to any value, you must also set include_tabs_content to
+       * `true` or use a field mask that references the Document.tabs field (or any subfield). If
+       * you set comments_view_mode to COMMENTS_VIEW_MODE_INCLUDED, you must also explicitly set
+       * suggestions_view_mode to SUGGESTIONS_INLINE. If you set comments_view_mode to
+       * COMMENTS_VIEW_MODE_INCLUDED or COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not
+       * set suggestions_view_mode to PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED.
+       * [Developer Preview](https://developers.google.com/workspace/preview).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String commentsViewMode;
+
+      /** The comments view mode to apply to the document. This allows viewing the document with comments
+     omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used. If you set
+     comments_view_mode to any value, you must also set include_tabs_content to `true` or use a field
+     mask that references the Document.tabs field (or any subfield). If you set comments_view_mode to
+     COMMENTS_VIEW_MODE_INCLUDED, you must also explicitly set suggestions_view_mode to
+     SUGGESTIONS_INLINE. If you set comments_view_mode to COMMENTS_VIEW_MODE_INCLUDED or
+     COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not set suggestions_view_mode to
+     PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED. [Developer
+     Preview](https://developers.google.com/workspace/preview).
+       */
+      public java.lang.String getCommentsViewMode() {
+        return commentsViewMode;
+      }
+
+      /**
+       * The comments view mode to apply to the document. This allows viewing the document with
+       * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
+       * If you set comments_view_mode to any value, you must also set include_tabs_content to
+       * `true` or use a field mask that references the Document.tabs field (or any subfield). If
+       * you set comments_view_mode to COMMENTS_VIEW_MODE_INCLUDED, you must also explicitly set
+       * suggestions_view_mode to SUGGESTIONS_INLINE. If you set comments_view_mode to
+       * COMMENTS_VIEW_MODE_INCLUDED or COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not
+       * set suggestions_view_mode to PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED.
+       * [Developer Preview](https://developers.google.com/workspace/preview).
+       */
+      public Get setCommentsViewMode(java.lang.String commentsViewMode) {
+        this.commentsViewMode = commentsViewMode;
+        return this;
+      }
+
+      /**
        * Whether to populate the `Document.tabs` field instead of the text content fields like
        * `body` and `documentStyle` on `Document`. - When `true`: Document content populates in the
        * `Document.tabs` field instead of the text content fields in `Document`. - When `false`: The

@@ -37,6 +37,21 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
   private Body body;
 
   /**
+   * The comment anchors in a document tab, keyed by anchor ID. Only populated if the
+   * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, CommentAnchor> commentAnchors;
+
+  static {
+    // hack to force ProGuard to consider CommentAnchor used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CommentAnchor.class);
+  }
+
+  /**
    * The style of the document tab.
    * The value may be {@code null}.
    */
@@ -127,6 +142,27 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
    */
   public DocumentTab setBody(Body body) {
     this.body = body;
+    return this;
+  }
+
+  /**
+   * The comment anchors in a document tab, keyed by anchor ID. Only populated if the
+   * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, CommentAnchor> getCommentAnchors() {
+    return commentAnchors;
+  }
+
+  /**
+   * The comment anchors in a document tab, keyed by anchor ID. Only populated if the
+   * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
+   * [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param commentAnchors commentAnchors or {@code null} for none
+   */
+  public DocumentTab setCommentAnchors(java.util.Map<String, CommentAnchor> commentAnchors) {
+    this.commentAnchors = commentAnchors;
     return this;
   }
 

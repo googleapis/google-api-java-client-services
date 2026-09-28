@@ -44,6 +44,14 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private AddChartResponse addChart;
 
   /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddCommentReplyResponse addCommentReply;
+
+  /**
    * A reply from adding a data source.
    * The value may be {@code null}.
    */
@@ -163,6 +171,14 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private FindReplaceResponse findReplace;
 
   /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertCommentResponse insertComment;
+
+  /**
    * A reply from refreshing data source objects.
    * The value may be {@code null}.
    */
@@ -235,6 +251,25 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setAddChart(AddChartResponse addChart) {
     this.addChart = addChart;
+    return this;
+  }
+
+  /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public AddCommentReplyResponse getAddCommentReply() {
+    return addCommentReply;
+  }
+
+  /**
+   * The result of creating a reply. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param addCommentReply addCommentReply or {@code null} for none
+   */
+  public Response setAddCommentReply(AddCommentReplyResponse addCommentReply) {
+    this.addCommentReply = addCommentReply;
     return this;
   }
 
@@ -524,6 +559,25 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setFindReplace(FindReplaceResponse findReplace) {
     this.findReplace = findReplace;
+    return this;
+  }
+
+  /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public InsertCommentResponse getInsertComment() {
+    return insertComment;
+  }
+
+  /**
+   * The result of creating a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param insertComment insertComment or {@code null} for none
+   */
+  public Response setInsertComment(InsertCommentResponse insertComment) {
+    this.insertComment = insertComment;
     return this;
   }
 

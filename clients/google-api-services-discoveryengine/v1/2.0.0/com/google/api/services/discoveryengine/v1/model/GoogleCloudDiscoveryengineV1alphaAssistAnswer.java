@@ -37,6 +37,17 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswer extends com.goo
   private java.util.List<java.lang.String> assistSkippedReasons;
 
   /**
+   * Output only. Maps an internal connector agent name (the machine identifier embedded in tool
+   * names, e.g. `custom_mcp__agent`) to the connector's human-readable display name. Populated at
+   * serving time for custom MCP / agent gateway connectors so user-facing surfaces (e.g. the tool-
+   * call chip) can show the connector name instead of its internal identifier. Empty when there are
+   * no such connectors.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> connectorDisplayNames;
+
+  /**
    * Optional. The field contains information about the various policy checks' results like the
    * banned phrases or the Model Armor checks. This field is populated only if the assist call was
    * skipped due to a policy violation.
@@ -82,6 +93,31 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswer extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaAssistAnswer setAssistSkippedReasons(java.util.List<java.lang.String> assistSkippedReasons) {
     this.assistSkippedReasons = assistSkippedReasons;
+    return this;
+  }
+
+  /**
+   * Output only. Maps an internal connector agent name (the machine identifier embedded in tool
+   * names, e.g. `custom_mcp__agent`) to the connector's human-readable display name. Populated at
+   * serving time for custom MCP / agent gateway connectors so user-facing surfaces (e.g. the tool-
+   * call chip) can show the connector name instead of its internal identifier. Empty when there are
+   * no such connectors.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getConnectorDisplayNames() {
+    return connectorDisplayNames;
+  }
+
+  /**
+   * Output only. Maps an internal connector agent name (the machine identifier embedded in tool
+   * names, e.g. `custom_mcp__agent`) to the connector's human-readable display name. Populated at
+   * serving time for custom MCP / agent gateway connectors so user-facing surfaces (e.g. the tool-
+   * call chip) can show the connector name instead of its internal identifier. Empty when there are
+   * no such connectors.
+   * @param connectorDisplayNames connectorDisplayNames or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistAnswer setConnectorDisplayNames(java.util.Map<String, java.lang.String> connectorDisplayNames) {
+    this.connectorDisplayNames = connectorDisplayNames;
     return this;
   }
 

@@ -31,7 +31,7 @@ package com.google.api.services.chromemanagement.v1.model;
 public final class GoogleChromeManagementVersionsV1PubSubXdrConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most 1000 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +45,7 @@ public final class GoogleChromeManagementVersionsV1PubSubXdrConfig extends com.g
   private GoogleChromeManagementVersionsV1XdrSettings xdrSettings;
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most 1000 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getTopicFullPath() {
@@ -53,7 +53,7 @@ public final class GoogleChromeManagementVersionsV1PubSubXdrConfig extends com.g
   }
 
   /**
-   * Required. The full path to the topic to send the event to.
+   * Required. The full path to the topic to send the event to. Must be at most 1000 characters.
    * @param topicFullPath topicFullPath or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1PubSubXdrConfig setTopicFullPath(java.lang.String topicFullPath) {

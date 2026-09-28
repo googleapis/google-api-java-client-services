@@ -32,14 +32,15 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
 
   /**
    * Required. Input only. The data input's HTTP Event Collector token to use as an Authorization
-   * header.
+   * header. Must be at most 50 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String hecToken;
 
   /**
-   * Required. Host to identify the customer specific server to receive the events.
+   * Required. Host to identify the customer specific server to receive the events. Must be at most
+   * 256 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,6 +62,7 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
 
   /**
    * Optional. Optional source name to override the default one set in the Splunk admin console.
+   * Must be at most 100 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +77,7 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
 
   /**
    * Required. Input only. The data input's HTTP Event Collector token to use as an Authorization
-   * header.
+   * header. Must be at most 50 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getHecToken() {
@@ -84,7 +86,7 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
 
   /**
    * Required. Input only. The data input's HTTP Event Collector token to use as an Authorization
-   * header.
+   * header. Must be at most 50 characters.
    * @param hecToken hecToken or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1SplunkConfig setHecToken(java.lang.String hecToken) {
@@ -93,7 +95,8 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
   }
 
   /**
-   * Required. Host to identify the customer specific server to receive the events.
+   * Required. Host to identify the customer specific server to receive the events. Must be at most
+   * 256 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -101,7 +104,8 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
   }
 
   /**
-   * Required. Host to identify the customer specific server to receive the events.
+   * Required. Host to identify the customer specific server to receive the events. Must be at most
+   * 256 characters.
    * @param host host or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1SplunkConfig setHost(java.lang.String host) {
@@ -145,6 +149,7 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
 
   /**
    * Optional. Optional source name to override the default one set in the Splunk admin console.
+   * Must be at most 100 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getSource() {
@@ -153,6 +158,7 @@ public final class GoogleChromeManagementVersionsV1SplunkConfig extends com.goog
 
   /**
    * Optional. Optional source name to override the default one set in the Splunk admin console.
+   * Must be at most 100 characters.
    * @param source source or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1SplunkConfig setSource(java.lang.String source) {

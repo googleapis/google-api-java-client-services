@@ -38,7 +38,8 @@ public final class GoogleChromeManagementVersionsV1SecureGatewayConfig extends c
   private java.util.List<java.lang.String> enabledPlatforms;
 
   /**
-   * Required. The resource ID of the secure gateway connector config.
+   * Required. The resource ID of the secure gateway connector config. Must be at most 256
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +63,8 @@ public final class GoogleChromeManagementVersionsV1SecureGatewayConfig extends c
   }
 
   /**
-   * Required. The resource ID of the secure gateway connector config.
+   * Required. The resource ID of the secure gateway connector config. Must be at most 256
+   * characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceId() {
@@ -70,7 +72,8 @@ public final class GoogleChromeManagementVersionsV1SecureGatewayConfig extends c
   }
 
   /**
-   * Required. The resource ID of the secure gateway connector config.
+   * Required. The resource ID of the secure gateway connector config. Must be at most 256
+   * characters.
    * @param resourceId resourceId or {@code null} for none
    */
   public GoogleChromeManagementVersionsV1SecureGatewayConfig setResourceId(java.lang.String resourceId) {

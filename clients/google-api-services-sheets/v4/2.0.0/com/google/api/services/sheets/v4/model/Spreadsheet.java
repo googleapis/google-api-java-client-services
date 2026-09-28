@@ -30,6 +30,28 @@ package com.google.api.services.sheets.v4.model;
 public final class Spreadsheet extends com.google.api.client.json.GenericJson {
 
   /**
+   * The comment threads associated with the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CommentThread> comments;
+
+  static {
+    // hack to force ProGuard to consider CommentThread used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CommentThread.class);
+  }
+
+  /**
+   * Output only. The comments view mode applied to the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentsViewMode;
+
+  /**
    * Output only. A list of data source refresh schedules.
    * The value may be {@code null}.
    */
@@ -114,6 +136,44 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String spreadsheetUrl;
+
+  /**
+   * The comment threads associated with the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CommentThread> getComments() {
+    return comments;
+  }
+
+  /**
+   * The comment threads associated with the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param comments comments or {@code null} for none
+   */
+  public Spreadsheet setComments(java.util.List<CommentThread> comments) {
+    this.comments = comments;
+    return this;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentsViewMode() {
+    return commentsViewMode;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the spreadsheet. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentsViewMode commentsViewMode or {@code null} for none
+   */
+  public Spreadsheet setCommentsViewMode(java.lang.String commentsViewMode) {
+    this.commentsViewMode = commentsViewMode;
+    return this;
+  }
 
   /**
    * Output only. A list of data source refresh schedules.

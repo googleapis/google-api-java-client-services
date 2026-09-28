@@ -87,10 +87,10 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private java.lang.String id;
 
   /**
-   * The labels with user-defined metadata for the request. It is used for billing and reporting
-   * only. Label keys and values can be no longer than 63 characters (Unicode codepoints) and can
-   * only contain lowercase letters, numeric characters, underscores, and dashes. International
-   * characters are allowed. Label values are optional. Label keys must start with a letter.
+   * The labels with user-defined metadata for the request. Label keys and values can be no longer
+   * than 63 characters (Unicode codepoints) and can only contain lowercase letters, numeric
+   * characters, underscores, and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private GenaiVertexV1beta1StepList stepList;
 
   /**
-   * Required. Output only. The steps that make up the interaction.
+   * Required. Output only. The steps that make up the interaction, when included in the response.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -348,10 +348,10 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * The labels with user-defined metadata for the request. It is used for billing and reporting
-   * only. Label keys and values can be no longer than 63 characters (Unicode codepoints) and can
-   * only contain lowercase letters, numeric characters, underscores, and dashes. International
-   * characters are allowed. Label values are optional. Label keys must start with a letter.
+   * The labels with user-defined metadata for the request. Label keys and values can be no longer
+   * than 63 characters (Unicode codepoints) and can only contain lowercase letters, numeric
+   * characters, underscores, and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -359,10 +359,10 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * The labels with user-defined metadata for the request. It is used for billing and reporting
-   * only. Label keys and values can be no longer than 63 characters (Unicode codepoints) and can
-   * only contain lowercase letters, numeric characters, underscores, and dashes. International
-   * characters are allowed. Label values are optional. Label keys must start with a letter.
+   * The labels with user-defined metadata for the request. Label keys and values can be no longer
+   * than 63 characters (Unicode codepoints) and can only contain lowercase letters, numeric
+   * characters, underscores, and dashes. International characters are allowed. Label values are
+   * optional. Label keys must start with a letter.
    * @param labels labels or {@code null} for none
    */
   public GenaiVertexV1beta1Interaction setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -577,7 +577,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Required. Output only. The steps that make up the interaction.
+   * Required. Output only. The steps that make up the interaction, when included in the response.
    * @return value or {@code null} for none
    */
   public java.util.List<GenaiVertexV1beta1Step> getSteps() {
@@ -585,7 +585,7 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   }
 
   /**
-   * Required. Output only. The steps that make up the interaction.
+   * Required. Output only. The steps that make up the interaction, when included in the response.
    * @param steps steps or {@code null} for none
    */
   public GenaiVertexV1beta1Interaction setSteps(java.util.List<GenaiVertexV1beta1Step> steps) {

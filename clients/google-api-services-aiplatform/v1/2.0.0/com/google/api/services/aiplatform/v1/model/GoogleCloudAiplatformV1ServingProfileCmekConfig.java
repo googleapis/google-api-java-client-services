@@ -14,10 +14,10 @@
  * Modify at your own risk.
  */
 
-package com.google.api.services.aiplatform.v1beta1.model;
+package com.google.api.services.aiplatform.v1.model;
 
 /**
- * Server response confirming that a new interaction was created.
+ * Configuration for Customer-Managed Encryption Keys (CMEK).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GenaiVertexV1beta1InteractionCreatedSseEvent extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudAiplatformV1ServingProfileCmekConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Partial interaction resource emitted when the stream is created.
+   * Required. The customer-managed encryption key spec for the Serving Profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Interaction interaction;
+  private GoogleCloudAiplatformV1EncryptionSpec encryptionSpec;
 
   /**
-   * Required. Partial interaction resource emitted when the stream is created.
+   * Required. The customer-managed encryption key spec for the Serving Profile.
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1Interaction getInteraction() {
-    return interaction;
+  public GoogleCloudAiplatformV1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
   }
 
   /**
-   * Required. Partial interaction resource emitted when the stream is created.
-   * @param interaction interaction or {@code null} for none
+   * Required. The customer-managed encryption key spec for the Serving Profile.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
    */
-  public GenaiVertexV1beta1InteractionCreatedSseEvent setInteraction(GenaiVertexV1beta1Interaction interaction) {
-    this.interaction = interaction;
+  public GoogleCloudAiplatformV1ServingProfileCmekConfig setEncryptionSpec(GoogleCloudAiplatformV1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 
   @Override
-  public GenaiVertexV1beta1InteractionCreatedSseEvent set(String fieldName, Object value) {
-    return (GenaiVertexV1beta1InteractionCreatedSseEvent) super.set(fieldName, value);
+  public GoogleCloudAiplatformV1ServingProfileCmekConfig set(String fieldName, Object value) {
+    return (GoogleCloudAiplatformV1ServingProfileCmekConfig) super.set(fieldName, value);
   }
 
   @Override
-  public GenaiVertexV1beta1InteractionCreatedSseEvent clone() {
-    return (GenaiVertexV1beta1InteractionCreatedSseEvent) super.clone();
+  public GoogleCloudAiplatformV1ServingProfileCmekConfig clone() {
+    return (GoogleCloudAiplatformV1ServingProfileCmekConfig) super.clone();
   }
 
 }

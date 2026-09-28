@@ -115046,7 +115046,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class InteractionsHttp {
 
         /**
-         * Cancels an interaction.
+         * Cancels an interaction by id. This only applies to background interactions that are still
+         * running.
          *
          * Create a request for the method "interactionsHttp.cancel".
          *
@@ -115070,7 +115071,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
 
           /**
-           * Cancels an interaction.
+           * Cancels an interaction by id. This only applies to background interactions that are still
+           * running.
            *
            * Create a request for the method "interactionsHttp.cancel".
            *
@@ -115179,7 +115181,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Generates a set of responses from the model.
+         * Creates a new interaction.
          *
          * Create a request for the method "interactionsHttp.create".
          *
@@ -115205,7 +115207,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Generates a set of responses from the model.
+           * Creates a new interaction.
            *
            * Create a request for the method "interactionsHttp.create".
            *
@@ -115319,7 +115321,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Gets an interaction.
+         * Retrieves the full details of a single interaction based on its `Interaction.id`.
          *
          * Create a request for the method "interactionsHttp.get".
          *
@@ -115343,7 +115345,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
 
           /**
-           * Gets an interaction.
+           * Retrieves the full details of a single interaction based on its `Interaction.id`.
            *
            * Create a request for the method "interactionsHttp.get".
            *

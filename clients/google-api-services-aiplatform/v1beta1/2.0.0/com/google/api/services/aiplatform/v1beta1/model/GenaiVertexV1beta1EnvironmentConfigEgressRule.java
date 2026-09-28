@@ -17,9 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * A network egress rule that controls which external domains the environment is allowed to reach.
- * Each rule identifies a target domain and, optionally, a set of HTTP headers to inject into every
- * matching outbound request.
+ * A single domain allowlist rule with optional header injection.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -32,8 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1EnvironmentConfigEgressRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * The domain pattern to match for this rule. Use an exact hostname (e.g., `github.com`), a
-   * wildcard prefix (e.g., `*.googleapis.com`), or `*` to match all domains.
+   * Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to
+   * allow all domains.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +46,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigEgressRule extends com.goo
   private java.util.Map<String, java.lang.String> transform;
 
   /**
-   * The domain pattern to match for this rule. Use an exact hostname (e.g., `github.com`), a
-   * wildcard prefix (e.g., `*.googleapis.com`), or `*` to match all domains.
+   * Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to
+   * allow all domains.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -57,8 +55,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigEgressRule extends com.goo
   }
 
   /**
-   * The domain pattern to match for this rule. Use an exact hostname (e.g., `github.com`), a
-   * wildcard prefix (e.g., `*.googleapis.com`), or `*` to match all domains.
+   * Domain to allow outbound requests to. Supports wildcards (e.g. '*.googleapis.com'). Use '*' to
+   * allow all domains.
    * @param domain domain or {@code null} for none
    */
   public GenaiVertexV1beta1EnvironmentConfigEgressRule setDomain(java.lang.String domain) {

@@ -37,16 +37,17 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfi
   private java.lang.String globPattern;
 
   /**
-   * Horizontal offset in pixels to shift the input frame from center. Positive values shift right,
-   * negative values shift left. Optional. Default is 0 (centered).
+   * Horizontal offset in pixels of the frame's left edge from the canvas's left edge. Values
+   * outside the canvas crop the frame. Optional. Default is 0 (frame flush with the canvas's left
+   * edge).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer horizontalOffset;
 
   /**
-   * Vertical offset in pixels to shift the input frame from center. Positive values shift down,
-   * negative values shift up. Optional. Default is 0 (centered).
+   * Vertical offset in pixels of the frame's top edge from the canvas's top edge. Values outside
+   * the canvas crop the frame. Optional. Default is 0 (frame flush with the canvas's top edge).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +69,9 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfi
   }
 
   /**
-   * Horizontal offset in pixels to shift the input frame from center. Positive values shift right,
-   * negative values shift left. Optional. Default is 0 (centered).
+   * Horizontal offset in pixels of the frame's left edge from the canvas's left edge. Values
+   * outside the canvas crop the frame. Optional. Default is 0 (frame flush with the canvas's left
+   * edge).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getHorizontalOffset() {
@@ -77,8 +79,9 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfi
   }
 
   /**
-   * Horizontal offset in pixels to shift the input frame from center. Positive values shift right,
-   * negative values shift left. Optional. Default is 0 (centered).
+   * Horizontal offset in pixels of the frame's left edge from the canvas's left edge. Values
+   * outside the canvas crop the frame. Optional. Default is 0 (frame flush with the canvas's left
+   * edge).
    * @param horizontalOffset horizontalOffset or {@code null} for none
    */
   public CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfigFrameSource setHorizontalOffset(java.lang.Integer horizontalOffset) {
@@ -87,8 +90,8 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfi
   }
 
   /**
-   * Vertical offset in pixels to shift the input frame from center. Positive values shift down,
-   * negative values shift up. Optional. Default is 0 (centered).
+   * Vertical offset in pixels of the frame's top edge from the canvas's top edge. Values outside
+   * the canvas crop the frame. Optional. Default is 0 (frame flush with the canvas's top edge).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getVerticalOffset() {
@@ -96,8 +99,8 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfi
   }
 
   /**
-   * Vertical offset in pixels to shift the input frame from center. Positive values shift down,
-   * negative values shift up. Optional. Default is 0 (centered).
+   * Vertical offset in pixels of the frame's top edge from the canvas's top edge. Values outside
+   * the canvas crop the frame. Optional. Default is 0 (frame flush with the canvas's top edge).
    * @param verticalOffset verticalOffset or {@code null} for none
    */
   public CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfigFrameSource setVerticalOffset(java.lang.Integer verticalOffset) {

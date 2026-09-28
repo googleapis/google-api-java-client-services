@@ -94,13 +94,6 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   private java.lang.String parentId;
 
   /**
-   * The ID of the post the comment refers to, if any.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String postId;
-
-  /**
    * The date and time when the comment was originally published.
    * The value may be {@code null}.
    */
@@ -299,23 +292,6 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    */
   public CommentSnippet setParentId(java.lang.String parentId) {
     this.parentId = parentId;
-    return this;
-  }
-
-  /**
-   * The ID of the post the comment refers to, if any.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPostId() {
-    return postId;
-  }
-
-  /**
-   * The ID of the post the comment refers to, if any.
-   * @param postId postId or {@code null} for none
-   */
-  public CommentSnippet setPostId(java.lang.String postId) {
-    this.postId = postId;
     return this;
   }
 

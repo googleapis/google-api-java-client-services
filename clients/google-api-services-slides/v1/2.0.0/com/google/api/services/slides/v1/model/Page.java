@@ -30,6 +30,45 @@ package com.google.api.services.slides.v1.model;
 public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The comment anchors present on the page. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CommentAnchor> commentAnchors;
+
+  static {
+    // hack to force ProGuard to consider CommentAnchor used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CommentAnchor.class);
+  }
+
+  /**
+   * Output only. The comment threads associated with the page. Only populated if the page was
+   * fetched via a GetPageRequest with a populated comments_view_mode. Otherwise, comments are
+   * returned in the Presentation via the GetPresentationRequest. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CommentThread> comments;
+
+  static {
+    // hack to force ProGuard to consider CommentThread used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CommentThread.class);
+  }
+
+  /**
+   * Output only. The comments view mode applied to the page. Only populated if the page was fetched
+   * via a GetPageRequest with a populated comments_view_mode. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentsViewMode;
+
+  /**
    * Layout specific properties. Only set if page_type = LAYOUT.
    * The value may be {@code null}.
    */
@@ -99,6 +138,69 @@ public final class Page extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SlideProperties slideProperties;
+
+  /**
+   * Output only. The comment anchors present on the page. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CommentAnchor> getCommentAnchors() {
+    return commentAnchors;
+  }
+
+  /**
+   * Output only. The comment anchors present on the page. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentAnchors commentAnchors or {@code null} for none
+   */
+  public Page setCommentAnchors(java.util.List<CommentAnchor> commentAnchors) {
+    this.commentAnchors = commentAnchors;
+    return this;
+  }
+
+  /**
+   * Output only. The comment threads associated with the page. Only populated if the page was
+   * fetched via a GetPageRequest with a populated comments_view_mode. Otherwise, comments are
+   * returned in the Presentation via the GetPresentationRequest. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CommentThread> getComments() {
+    return comments;
+  }
+
+  /**
+   * Output only. The comment threads associated with the page. Only populated if the page was
+   * fetched via a GetPageRequest with a populated comments_view_mode. Otherwise, comments are
+   * returned in the Presentation via the GetPresentationRequest. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param comments comments or {@code null} for none
+   */
+  public Page setComments(java.util.List<CommentThread> comments) {
+    this.comments = comments;
+    return this;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the page. Only populated if the page was fetched
+   * via a GetPageRequest with a populated comments_view_mode. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentsViewMode() {
+    return commentsViewMode;
+  }
+
+  /**
+   * Output only. The comments view mode applied to the page. Only populated if the page was fetched
+   * via a GetPageRequest with a populated comments_view_mode. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentsViewMode commentsViewMode or {@code null} for none
+   */
+  public Page setCommentsViewMode(java.lang.String commentsViewMode) {
+    this.commentsViewMode = commentsViewMode;
+    return this;
+  }
 
   /**
    * Layout specific properties. Only set if page_type = LAYOUT.

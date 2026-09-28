@@ -30,6 +30,14 @@ package com.google.api.services.slides.v1.model;
 public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddCommentReplyRequest addCommentReply;
+
+  /**
    * Creates an image.
    * The value may be {@code null}.
    */
@@ -86,6 +94,21 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private CreateVideoRequest createVideo;
 
   /**
+   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteCommentRequest deleteComment;
+
+  /**
+   * Deletes a reply Post from a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteCommentReplyRequest deleteCommentReply;
+
+  /**
    * Deletes a page or page element from the presentation.
    * The value may be {@code null}.
    */
@@ -133,6 +156,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private GroupObjectsRequest groupObjects;
+
+  /**
+   * Inserts a CommentThread into the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertCommentRequest insertComment;
 
   /**
    * Inserts columns into a table.
@@ -218,6 +249,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UnmergeTableCellsRequest unmergeTableCells;
+
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateCommentPostRequest updateCommentPost;
 
   /**
    * Updates the properties of an Image.
@@ -337,6 +376,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private UpdateVideoPropertiesRequest updateVideoProperties;
+
+  /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public AddCommentReplyRequest getAddCommentReply() {
+    return addCommentReply;
+  }
+
+  /**
+   * Adds a reply to a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param addCommentReply addCommentReply or {@code null} for none
+   */
+  public Request setAddCommentReply(AddCommentReplyRequest addCommentReply) {
+    this.addCommentReply = addCommentReply;
+    return this;
+  }
 
   /**
    * Creates an image.
@@ -475,6 +533,42 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public DeleteCommentRequest getDeleteComment() {
+    return deleteComment;
+  }
+
+  /**
+   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * @param deleteComment deleteComment or {@code null} for none
+   */
+  public Request setDeleteComment(DeleteCommentRequest deleteComment) {
+    this.deleteComment = deleteComment;
+    return this;
+  }
+
+  /**
+   * Deletes a reply Post from a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public DeleteCommentReplyRequest getDeleteCommentReply() {
+    return deleteCommentReply;
+  }
+
+  /**
+   * Deletes a reply Post from a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param deleteCommentReply deleteCommentReply or {@code null} for none
+   */
+  public Request setDeleteCommentReply(DeleteCommentReplyRequest deleteCommentReply) {
+    this.deleteCommentReply = deleteCommentReply;
+    return this;
+  }
+
+  /**
    * Deletes a page or page element from the presentation.
    * @return value or {@code null} for none
    */
@@ -590,6 +684,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setGroupObjects(GroupObjectsRequest groupObjects) {
     this.groupObjects = groupObjects;
+    return this;
+  }
+
+  /**
+   * Inserts a CommentThread into the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public InsertCommentRequest getInsertComment() {
+    return insertComment;
+  }
+
+  /**
+   * Inserts a CommentThread into the presentation. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param insertComment insertComment or {@code null} for none
+   */
+  public Request setInsertComment(InsertCommentRequest insertComment) {
+    this.insertComment = insertComment;
     return this;
   }
 
@@ -796,6 +909,25 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUnmergeTableCells(UnmergeTableCellsRequest unmergeTableCells) {
     this.unmergeTableCells = unmergeTableCells;
+    return this;
+  }
+
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public UpdateCommentPostRequest getUpdateCommentPost() {
+    return updateCommentPost;
+  }
+
+  /**
+   * Updates an existing post (head post or reply) of a CommentThread. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param updateCommentPost updateCommentPost or {@code null} for none
+   */
+  public Request setUpdateCommentPost(UpdateCommentPostRequest updateCommentPost) {
+    this.updateCommentPost = updateCommentPost;
     return this;
   }
 

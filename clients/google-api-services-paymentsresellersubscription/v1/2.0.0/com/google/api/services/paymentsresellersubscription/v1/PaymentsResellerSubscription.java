@@ -2375,6 +2375,29 @@ public class PaymentsResellerSubscription extends com.google.api.client.googleap
           }
 
           /**
+           * Optional. An idempotency ID for the request. A random UUID is recommended. Restricted
+           * to 36 ASCII characters.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An idempotency ID for the request. A random UUID is recommended. Restricted to 36 ASCII
+         characters.
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An idempotency ID for the request. A random UUID is recommended. Restricted
+           * to 36 ASCII characters.
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
            * Required. The list of fields to update. Only a limited set of fields can be updated.
            * The allowed fields are the following: -
            * `product_payload.googleHomePayload.googleStructureId`

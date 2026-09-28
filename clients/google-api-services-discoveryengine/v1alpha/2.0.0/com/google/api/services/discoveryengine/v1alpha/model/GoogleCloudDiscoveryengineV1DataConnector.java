@@ -404,9 +404,13 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   /**
    * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
    * by multiple connectors under the same (project, location, collection, data_source); tag-based
-   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
-   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
-   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * lookup returns the one with the greatest create_time. Optional at Create time. If the caller
+   * omits `tag`, the server auto-derives one from the collection_id (falling back to data_source,
+   * else a time-based `t-` sentinel). The auto-derived tag is subject to the same immutability
+   * guarantee as a caller-supplied one, so callers who care about the exact tag value should
+   * provide it explicitly rather than relying on the server default. Agent Designer resolves
+   * connectors via (data_source, tag) when set, falling back to the legacy resource-name lookup
+   * when unset, so connectors created before the tag-write launch continue to work without a
    * backfill.
    * The value may be {@code null}.
    */
@@ -1291,9 +1295,13 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   /**
    * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
    * by multiple connectors under the same (project, location, collection, data_source); tag-based
-   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
-   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
-   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * lookup returns the one with the greatest create_time. Optional at Create time. If the caller
+   * omits `tag`, the server auto-derives one from the collection_id (falling back to data_source,
+   * else a time-based `t-` sentinel). The auto-derived tag is subject to the same immutability
+   * guarantee as a caller-supplied one, so callers who care about the exact tag value should
+   * provide it explicitly rather than relying on the server default. Agent Designer resolves
+   * connectors via (data_source, tag) when set, falling back to the legacy resource-name lookup
+   * when unset, so connectors created before the tag-write launch continue to work without a
    * backfill.
    * @return value or {@code null} for none
    */
@@ -1304,9 +1312,13 @@ public final class GoogleCloudDiscoveryengineV1DataConnector extends com.google.
   /**
    * Optional. Immutable. User-facing, version-independent label for this connector. May be shared
    * by multiple connectors under the same (project, location, collection, data_source); tag-based
-   * lookup returns the one with the greatest create_time. Optional at Create time. Agent Designer
-   * resolves connectors via (data_source, tag) when set, falling back to the legacy resource-name
-   * lookup when unset, so connectors created before the tag-write launch continue to work without a
+   * lookup returns the one with the greatest create_time. Optional at Create time. If the caller
+   * omits `tag`, the server auto-derives one from the collection_id (falling back to data_source,
+   * else a time-based `t-` sentinel). The auto-derived tag is subject to the same immutability
+   * guarantee as a caller-supplied one, so callers who care about the exact tag value should
+   * provide it explicitly rather than relying on the server default. Agent Designer resolves
+   * connectors via (data_source, tag) when set, falling back to the legacy resource-name lookup
+   * when unset, so connectors created before the tag-write launch continue to work without a
    * backfill.
    * @param tag tag or {@code null} for none
    */

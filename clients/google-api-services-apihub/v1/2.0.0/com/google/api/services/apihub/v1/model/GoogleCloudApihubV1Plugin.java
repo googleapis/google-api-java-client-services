@@ -53,14 +53,14 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   private String createTime;
 
   /**
-   * Optional. The plugin description. Max length is 2000 characters (Unicode code points).
+   * Optional. The plugin description. Max length is 500000 characters (Unicode code points).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
-   * Required. The display name of the plugin. Max length is 50 characters (Unicode code points).
+   * Required. The display name of the plugin. Max length is 500 characters (Unicode code points).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +201,7 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The plugin description. Max length is 2000 characters (Unicode code points).
+   * Optional. The plugin description. Max length is 500000 characters (Unicode code points).
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -209,7 +209,7 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   }
 
   /**
-   * Optional. The plugin description. Max length is 2000 characters (Unicode code points).
+   * Optional. The plugin description. Max length is 500000 characters (Unicode code points).
    * @param description description or {@code null} for none
    */
   public GoogleCloudApihubV1Plugin setDescription(java.lang.String description) {
@@ -218,7 +218,7 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   }
 
   /**
-   * Required. The display name of the plugin. Max length is 50 characters (Unicode code points).
+   * Required. The display name of the plugin. Max length is 500 characters (Unicode code points).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -226,7 +226,7 @@ public final class GoogleCloudApihubV1Plugin extends com.google.api.client.json.
   }
 
   /**
-   * Required. The display name of the plugin. Max length is 50 characters (Unicode code points).
+   * Required. The display name of the plugin. Max length is 500 characters (Unicode code points).
    * @param displayName displayName or {@code null} for none
    */
   public GoogleCloudApihubV1Plugin setDisplayName(java.lang.String displayName) {

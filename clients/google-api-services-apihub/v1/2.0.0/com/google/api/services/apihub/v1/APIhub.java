@@ -5030,7 +5030,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
                * already used by another operation resource in the API hub. * If not provided, a
                * system generated id will be used. This value should be 4-500 characters, overall
                * resource name which will be of format `projects/{project}/locations/{location}/apis
-               * /{api}/versions/{version}/operations/{operation}`, its length is limited to 700
+               * /{api}/versions/{version}/operations/{operation}`, its length is limited to 1000
                * characters, and valid characters are /a-z[0-9]-_/.
                */
               @com.google.api.client.util.Key
@@ -5042,7 +5042,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
              the API hub. * If not provided, a system generated id will be used. This value should be 4-500
              characters, overall resource name which will be of format
              `projects/{project}/locations/{location}/apis/{api}/versions/{version}/operations/{operation}`, its
-             length is limited to 700 characters, and valid characters are /a-z[0-9]-_/.
+             length is limited to 1000 characters, and valid characters are /a-z[0-9]-_/.
                */
               public java.lang.String getApiOperationId() {
                 return apiOperationId;
@@ -5055,7 +5055,7 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
                * already used by another operation resource in the API hub. * If not provided, a
                * system generated id will be used. This value should be 4-500 characters, overall
                * resource name which will be of format `projects/{project}/locations/{location}/apis
-               * /{api}/versions/{version}/operations/{operation}`, its length is limited to 700
+               * /{api}/versions/{version}/operations/{operation}`, its length is limited to 1000
                * characters, and valid characters are /a-z[0-9]-_/.
                */
               public Create setApiOperationId(java.lang.String apiOperationId) {

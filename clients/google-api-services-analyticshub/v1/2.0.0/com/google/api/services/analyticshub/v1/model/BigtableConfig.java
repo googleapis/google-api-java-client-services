@@ -17,10 +17,9 @@
 package com.google.api.services.analyticshub.v1.model;
 
 /**
- * Configuration for a Bigtable subscription. The Pub/Sub message will be written to a Bigtable row
- * as follows: - row key: subscription name, message ID hash, and message ID delimited by `#`. -
- * columns: message bytes written to a single column family `data` with an empty-string column
- * qualifier. - cell timestamp: the message publish timestamp.
+ * Configuration for a Bigtable subscription, which will write a Pub/Sub message to a Bigtable row.
+ * See the ColumnFamilyMapping documentation below for details on how the row keys and columns will
+ * be written.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:
@@ -39,6 +38,14 @@ public final class BigtableConfig extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String appProfileId;
+
+  /**
+   * Optional. Configuration that allows writing row keys and/or columns based on fields in the
+   * input message. The input message format must be JSON if this field is set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ColumnFamilyMapping columnFamilyMapping;
 
   /**
    * Optional. The service account to use to write to Bigtable. The subscription creator or updater
@@ -86,6 +93,25 @@ public final class BigtableConfig extends com.google.api.client.json.GenericJson
    */
   public BigtableConfig setAppProfileId(java.lang.String appProfileId) {
     this.appProfileId = appProfileId;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration that allows writing row keys and/or columns based on fields in the
+   * input message. The input message format must be JSON if this field is set.
+   * @return value or {@code null} for none
+   */
+  public ColumnFamilyMapping getColumnFamilyMapping() {
+    return columnFamilyMapping;
+  }
+
+  /**
+   * Optional. Configuration that allows writing row keys and/or columns based on fields in the
+   * input message. The input message format must be JSON if this field is set.
+   * @param columnFamilyMapping columnFamilyMapping or {@code null} for none
+   */
+  public BigtableConfig setColumnFamilyMapping(ColumnFamilyMapping columnFamilyMapping) {
+    this.columnFamilyMapping = columnFamilyMapping;
     return this;
   }
 

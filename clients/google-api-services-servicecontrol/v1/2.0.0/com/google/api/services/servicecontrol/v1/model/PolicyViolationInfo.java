@@ -37,13 +37,6 @@ public final class PolicyViolationInfo extends com.google.api.client.json.Generi
   private OrgPolicyViolationInfo orgPolicyViolationInfo;
 
   /**
-   * Indicates the regional access boundary policy violations for this resource.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private RabPolicyViolationInfo rabPolicyViolationInfo;
-
-  /**
    * Indicates the orgpolicy violations for this resource.
    * @return value or {@code null} for none
    */
@@ -57,23 +50,6 @@ public final class PolicyViolationInfo extends com.google.api.client.json.Generi
    */
   public PolicyViolationInfo setOrgPolicyViolationInfo(OrgPolicyViolationInfo orgPolicyViolationInfo) {
     this.orgPolicyViolationInfo = orgPolicyViolationInfo;
-    return this;
-  }
-
-  /**
-   * Indicates the regional access boundary policy violations for this resource.
-   * @return value or {@code null} for none
-   */
-  public RabPolicyViolationInfo getRabPolicyViolationInfo() {
-    return rabPolicyViolationInfo;
-  }
-
-  /**
-   * Indicates the regional access boundary policy violations for this resource.
-   * @param rabPolicyViolationInfo rabPolicyViolationInfo or {@code null} for none
-   */
-  public PolicyViolationInfo setRabPolicyViolationInfo(RabPolicyViolationInfo rabPolicyViolationInfo) {
-    this.rabPolicyViolationInfo = rabPolicyViolationInfo;
     return this;
   }
 

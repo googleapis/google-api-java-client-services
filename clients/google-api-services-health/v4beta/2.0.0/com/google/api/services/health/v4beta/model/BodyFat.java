@@ -30,7 +30,7 @@ package com.google.api.services.health.v4beta.model;
 public final class BodyFat extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Body fat percentage, in range [0, 100].
+   * Required. Body fat percentage. Must be in the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class BodyFat extends com.google.api.client.json.GenericJson {
   private ObservationSampleTime sampleTime;
 
   /**
-   * Required. Body fat percentage, in range [0, 100].
+   * Required. Body fat percentage. Must be in the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getPercentage() {
@@ -52,7 +52,7 @@ public final class BodyFat extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Body fat percentage, in range [0, 100].
+   * Required. Body fat percentage. Must be in the range `[0, 100]`.
    * @param percentage percentage or {@code null} for none
    */
   public BodyFat setPercentage(java.lang.Double percentage) {

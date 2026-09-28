@@ -31,7 +31,8 @@ package com.google.api.services.health.v4beta.model;
 public final class DailyOxygenSaturation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The average value of the oxygen saturation samples during the sleep.
+   * Required. The average value of the oxygen saturation samples during the sleep. Must be in the
+   * range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,6 +47,7 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
 
   /**
    * Required. The lower bound of the confidence interval of oxygen saturation samples during sleep.
+   * Must be in the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,13 +62,15 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
 
   /**
    * Required. The upper bound of the confidence interval of oxygen saturation samples during sleep.
+   * Must be in the range `[0, 100]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double upperBoundPercentage;
 
   /**
-   * Required. The average value of the oxygen saturation samples during the sleep.
+   * Required. The average value of the oxygen saturation samples during the sleep. Must be in the
+   * range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getAveragePercentage() {
@@ -74,7 +78,8 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The average value of the oxygen saturation samples during the sleep.
+   * Required. The average value of the oxygen saturation samples during the sleep. Must be in the
+   * range `[0, 100]`.
    * @param averagePercentage averagePercentage or {@code null} for none
    */
   public DailyOxygenSaturation setAveragePercentage(java.lang.Double averagePercentage) {
@@ -101,6 +106,7 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
 
   /**
    * Required. The lower bound of the confidence interval of oxygen saturation samples during sleep.
+   * Must be in the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getLowerBoundPercentage() {
@@ -109,6 +115,7 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
 
   /**
    * Required. The lower bound of the confidence interval of oxygen saturation samples during sleep.
+   * Must be in the range `[0, 100]`.
    * @param lowerBoundPercentage lowerBoundPercentage or {@code null} for none
    */
   public DailyOxygenSaturation setLowerBoundPercentage(java.lang.Double lowerBoundPercentage) {
@@ -135,6 +142,7 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
 
   /**
    * Required. The upper bound of the confidence interval of oxygen saturation samples during sleep.
+   * Must be in the range `[0, 100]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getUpperBoundPercentage() {
@@ -143,6 +151,7 @@ public final class DailyOxygenSaturation extends com.google.api.client.json.Gene
 
   /**
    * Required. The upper bound of the confidence interval of oxygen saturation samples during sleep.
+   * Must be in the range `[0, 100]`.
    * @param upperBoundPercentage upperBoundPercentage or {@code null} for none
    */
   public DailyOxygenSaturation setUpperBoundPercentage(java.lang.Double upperBoundPercentage) {

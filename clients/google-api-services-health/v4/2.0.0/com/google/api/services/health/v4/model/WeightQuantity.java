@@ -30,7 +30,7 @@ package com.google.api.services.health.v4.model;
 public final class WeightQuantity extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The weight value in grams.
+   * Required. The weight value in grams. Must be in the range `[0, 100000]`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class WeightQuantity extends com.google.api.client.json.GenericJson
   private java.lang.String userProvidedUnit;
 
   /**
-   * Required. The weight value in grams.
+   * Required. The weight value in grams. Must be in the range `[0, 100000]`.
    * @return value or {@code null} for none
    */
   public java.lang.Double getGrams() {
@@ -52,7 +52,7 @@ public final class WeightQuantity extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The weight value in grams.
+   * Required. The weight value in grams. Must be in the range `[0, 100000]`.
    * @param grams grams or {@code null} for none
    */
   public WeightQuantity setGrams(java.lang.Double grams) {

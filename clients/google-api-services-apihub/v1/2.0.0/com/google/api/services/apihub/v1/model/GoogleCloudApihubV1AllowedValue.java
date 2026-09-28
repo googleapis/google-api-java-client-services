@@ -48,8 +48,8 @@ public final class GoogleCloudApihubV1AllowedValue extends com.google.api.client
    * throw an error if the specified id is already used by another allowed value in the same
    * attribute resource. * If not provided, a system generated id derived from the display name will
    * be used. In this case, the service will handle conflict resolution by adding a system generated
-   * suffix in case of duplicates. This value should be 4-63 characters, and valid characters are
-   * /a-z-/.
+   * suffix in case of duplicates. This value should be 3-500 characters, and valid characters are
+   * /a-z[0-9]-_/.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,8 @@ public final class GoogleCloudApihubV1AllowedValue extends com.google.api.client
    * throw an error if the specified id is already used by another allowed value in the same
    * attribute resource. * If not provided, a system generated id derived from the display name will
    * be used. In this case, the service will handle conflict resolution by adding a system generated
-   * suffix in case of duplicates. This value should be 4-63 characters, and valid characters are
-   * /a-z-/.
+   * suffix in case of duplicates. This value should be 3-500 characters, and valid characters are
+   * /a-z[0-9]-_/.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -115,8 +115,8 @@ public final class GoogleCloudApihubV1AllowedValue extends com.google.api.client
    * throw an error if the specified id is already used by another allowed value in the same
    * attribute resource. * If not provided, a system generated id derived from the display name will
    * be used. In this case, the service will handle conflict resolution by adding a system generated
-   * suffix in case of duplicates. This value should be 4-63 characters, and valid characters are
-   * /a-z-/.
+   * suffix in case of duplicates. This value should be 3-500 characters, and valid characters are
+   * /a-z[0-9]-_/.
    * @param id id or {@code null} for none
    */
   public GoogleCloudApihubV1AllowedValue setId(java.lang.String id) {

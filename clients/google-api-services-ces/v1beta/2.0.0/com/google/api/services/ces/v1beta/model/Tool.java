@@ -144,6 +144,14 @@ public final class Tool extends com.google.api.client.json.GenericJson {
   private PythonFunction pythonFunction;
 
   /**
+   * Output only. Indicates whether the tool is read-only. If true, the tool cannot be modified by
+   * the user.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readOnly;
+
+  /**
    * Optional. The remote agent tool.
    * The value may be {@code null}.
    */
@@ -454,6 +462,25 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   public Tool setPythonFunction(PythonFunction pythonFunction) {
     this.pythonFunction = pythonFunction;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the tool is read-only. If true, the tool cannot be modified by
+   * the user.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadOnly() {
+    return readOnly;
+  }
+
+  /**
+   * Output only. Indicates whether the tool is read-only. If true, the tool cannot be modified by
+   * the user.
+   * @param readOnly readOnly or {@code null} for none
+   */
+  public Tool setReadOnly(java.lang.Boolean readOnly) {
+    this.readOnly = readOnly;
     return this;
   }
 

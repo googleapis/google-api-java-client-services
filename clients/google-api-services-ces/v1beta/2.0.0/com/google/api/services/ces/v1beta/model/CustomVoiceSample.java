@@ -67,12 +67,26 @@ public final class CustomVoiceSample extends com.google.api.client.json.GenericJ
   private java.lang.String voiceInstruction;
 
   /**
+   * Optional. Instruction mode for the voice sample. If unspecified, defaults to NO_INSTRUCTION.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String voiceInstructionMode;
+
+  /**
    * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
    * be a mono-channel, 24kHz WAV file.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String voiceSampleGcsUri;
+
+  /**
+   * Output only. Warning messages encountered during voice clone processing (e.g. low audio level).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomVoiceSampleWarning> warnings;
 
   /**
    * Optional. Consent audio for voice cloning.
@@ -192,6 +206,23 @@ public final class CustomVoiceSample extends com.google.api.client.json.GenericJ
   }
 
   /**
+   * Optional. Instruction mode for the voice sample. If unspecified, defaults to NO_INSTRUCTION.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVoiceInstructionMode() {
+    return voiceInstructionMode;
+  }
+
+  /**
+   * Optional. Instruction mode for the voice sample. If unspecified, defaults to NO_INSTRUCTION.
+   * @param voiceInstructionMode voiceInstructionMode or {@code null} for none
+   */
+  public CustomVoiceSample setVoiceInstructionMode(java.lang.String voiceInstructionMode) {
+    this.voiceInstructionMode = voiceInstructionMode;
+    return this;
+  }
+
+  /**
    * Optional. The Cloud Storage URI to the audio sample for voice cloning. The audio sample should
    * be a mono-channel, 24kHz WAV file.
    * @return value or {@code null} for none
@@ -207,6 +238,23 @@ public final class CustomVoiceSample extends com.google.api.client.json.GenericJ
    */
   public CustomVoiceSample setVoiceSampleGcsUri(java.lang.String voiceSampleGcsUri) {
     this.voiceSampleGcsUri = voiceSampleGcsUri;
+    return this;
+  }
+
+  /**
+   * Output only. Warning messages encountered during voice clone processing (e.g. low audio level).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomVoiceSampleWarning> getWarnings() {
+    return warnings;
+  }
+
+  /**
+   * Output only. Warning messages encountered during voice clone processing (e.g. low audio level).
+   * @param warnings warnings or {@code null} for none
+   */
+  public CustomVoiceSample setWarnings(java.util.List<CustomVoiceSampleWarning> warnings) {
+    this.warnings = warnings;
     return this;
   }
 

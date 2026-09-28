@@ -885,6 +885,144 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
       public class Apps {
 
         /**
+         * Runs the Chat AI assistant agent for the specified assistant session.
+         *
+         * Create a request for the method "apps.chatAiAssistant".
+         *
+         * This request holds the parameters needed by the ces server.  After setting any optional
+         * parameters, call the {@link ChatAiAssistant#execute()} method to invoke the remote operation.
+         *
+         * @param app Required. The app to run assistant for. Format: `projects/{project}/locations/{location}/apps/{app}`
+         * @param content the {@link com.google.api.services.ces.v1beta.model.ChatAiAssistantRequest}
+         * @return the request
+         */
+        public ChatAiAssistant chatAiAssistant(java.lang.String app, com.google.api.services.ces.v1beta.model.ChatAiAssistantRequest content) throws java.io.IOException {
+          ChatAiAssistant result = new ChatAiAssistant(app, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ChatAiAssistant extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.ChatAiAssistantResponse> {
+
+          private static final String REST_PATH = "v1beta/{+app}:chatAiAssistant";
+
+          private final java.util.regex.Pattern APP_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+          /**
+           * Runs the Chat AI assistant agent for the specified assistant session.
+           *
+           * Create a request for the method "apps.chatAiAssistant".
+           *
+           * This request holds the parameters needed by the the ces server.  After setting any optional
+           * parameters, call the {@link ChatAiAssistant#execute()} method to invoke the remote operation.
+           * <p> {@link ChatAiAssistant#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+           * lientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param app Required. The app to run assistant for. Format: `projects/{project}/locations/{location}/apps/{app}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.ChatAiAssistantRequest}
+           * @since 1.13
+           */
+          protected ChatAiAssistant(java.lang.String app, com.google.api.services.ces.v1beta.model.ChatAiAssistantRequest content) {
+            super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.ChatAiAssistantResponse.class);
+            this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                  "Parameter app must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public ChatAiAssistant set$Xgafv(java.lang.String $Xgafv) {
+            return (ChatAiAssistant) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ChatAiAssistant setAccessToken(java.lang.String accessToken) {
+            return (ChatAiAssistant) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ChatAiAssistant setAlt(java.lang.String alt) {
+            return (ChatAiAssistant) super.setAlt(alt);
+          }
+
+          @Override
+          public ChatAiAssistant setCallback(java.lang.String callback) {
+            return (ChatAiAssistant) super.setCallback(callback);
+          }
+
+          @Override
+          public ChatAiAssistant setFields(java.lang.String fields) {
+            return (ChatAiAssistant) super.setFields(fields);
+          }
+
+          @Override
+          public ChatAiAssistant setKey(java.lang.String key) {
+            return (ChatAiAssistant) super.setKey(key);
+          }
+
+          @Override
+          public ChatAiAssistant setOauthToken(java.lang.String oauthToken) {
+            return (ChatAiAssistant) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ChatAiAssistant setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ChatAiAssistant) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ChatAiAssistant setQuotaUser(java.lang.String quotaUser) {
+            return (ChatAiAssistant) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ChatAiAssistant setUploadType(java.lang.String uploadType) {
+            return (ChatAiAssistant) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ChatAiAssistant setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ChatAiAssistant) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The app to run assistant for. Format:
+           * `projects/{project}/locations/{location}/apps/{app}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String app;
+
+          /** Required. The app to run assistant for. Format:
+         `projects/{project}/locations/{location}/apps/{app}`
+           */
+          public java.lang.String getApp() {
+            return app;
+          }
+
+          /**
+           * Required. The app to run assistant for. Format:
+           * `projects/{project}/locations/{location}/apps/{app}`
+           */
+          public ChatAiAssistant setApp(java.lang.String app) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                  "Parameter app must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+            this.app = app;
+            return this;
+          }
+
+          @Override
+          public ChatAiAssistant set(String parameterName, Object value) {
+            return (ChatAiAssistant) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates a new app in the given project and location.
          *
          * Create a request for the method "apps.create".
@@ -1591,6 +1729,153 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
           @Override
           public GenerateAppResource set(String parameterName, Object value) {
             return (GenerateAppResource) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Generates personalized onboarding suggestions for the AI assistant zero state: classifies the
+         * requesting user (new / exploring / returning) from their assistant-session history in the app and
+         * returns suggestion chips (resume a session, continue work, or start something new) to render
+         * before any message is sent.
+         *
+         * Create a request for the method "apps.generateOnboardingSuggestions".
+         *
+         * This request holds the parameters needed by the ces server.  After setting any optional
+         * parameters, call the {@link GenerateOnboardingSuggestions#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The app whose zero state is being rendered. Format:
+         *        `projects/{project}/locations/{location}/apps/{app}`
+         * @param content the {@link com.google.api.services.ces.v1beta.model.GenerateOnboardingSuggestionsRequest}
+         * @return the request
+         */
+        public GenerateOnboardingSuggestions generateOnboardingSuggestions(java.lang.String name, com.google.api.services.ces.v1beta.model.GenerateOnboardingSuggestionsRequest content) throws java.io.IOException {
+          GenerateOnboardingSuggestions result = new GenerateOnboardingSuggestions(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateOnboardingSuggestions extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.GenerateOnboardingSuggestionsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+name}:generateOnboardingSuggestions";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+          /**
+           * Generates personalized onboarding suggestions for the AI assistant zero state: classifies the
+           * requesting user (new / exploring / returning) from their assistant-session history in the app
+           * and returns suggestion chips (resume a session, continue work, or start something new) to
+           * render before any message is sent.
+           *
+           * Create a request for the method "apps.generateOnboardingSuggestions".
+           *
+           * This request holds the parameters needed by the the ces server.  After setting any optional
+           * parameters, call the {@link GenerateOnboardingSuggestions#execute()} method to invoke the
+           * remote operation. <p> {@link GenerateOnboardingSuggestions#initialize(com.google.api.client.goo
+           * gleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The app whose zero state is being rendered. Format:
+         *        `projects/{project}/locations/{location}/apps/{app}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.GenerateOnboardingSuggestionsRequest}
+           * @since 1.13
+           */
+          protected GenerateOnboardingSuggestions(java.lang.String name, com.google.api.services.ces.v1beta.model.GenerateOnboardingSuggestionsRequest content) {
+            super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.GenerateOnboardingSuggestionsResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateOnboardingSuggestions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setAccessToken(java.lang.String accessToken) {
+            return (GenerateOnboardingSuggestions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setAlt(java.lang.String alt) {
+            return (GenerateOnboardingSuggestions) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setCallback(java.lang.String callback) {
+            return (GenerateOnboardingSuggestions) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setFields(java.lang.String fields) {
+            return (GenerateOnboardingSuggestions) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setKey(java.lang.String key) {
+            return (GenerateOnboardingSuggestions) super.setKey(key);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setOauthToken(java.lang.String oauthToken) {
+            return (GenerateOnboardingSuggestions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateOnboardingSuggestions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateOnboardingSuggestions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setUploadType(java.lang.String uploadType) {
+            return (GenerateOnboardingSuggestions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateOnboardingSuggestions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The app whose zero state is being rendered. Format:
+           * `projects/{project}/locations/{location}/apps/{app}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The app whose zero state is being rendered. Format:
+         `projects/{project}/locations/{location}/apps/{app}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The app whose zero state is being rendered. Format:
+           * `projects/{project}/locations/{location}/apps/{app}`
+           */
+          public GenerateOnboardingSuggestions setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateOnboardingSuggestions set(String parameterName, Object value) {
+            return (GenerateOnboardingSuggestions) super.set(parameterName, value);
           }
         }
         /**
@@ -2682,6 +2967,144 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
           @Override
           public RetrieveToolSchema set(String parameterName, Object value) {
             return (RetrieveToolSchema) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Runs the assistant agent for the specified assistant session.
+         *
+         * Create a request for the method "apps.runAssistant".
+         *
+         * This request holds the parameters needed by the ces server.  After setting any optional
+         * parameters, call the {@link RunAssistant#execute()} method to invoke the remote operation.
+         *
+         * @param app Required. The app to run assistant for. Format: `projects/{project}/locations/{location}/apps/{app}`
+         * @param content the {@link com.google.api.services.ces.v1beta.model.RunAssistantRequest}
+         * @return the request
+         */
+        public RunAssistant runAssistant(java.lang.String app, com.google.api.services.ces.v1beta.model.RunAssistantRequest content) throws java.io.IOException {
+          RunAssistant result = new RunAssistant(app, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RunAssistant extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.RunAssistantResponse> {
+
+          private static final String REST_PATH = "v1beta/{+app}:runAssistant";
+
+          private final java.util.regex.Pattern APP_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+          /**
+           * Runs the assistant agent for the specified assistant session.
+           *
+           * Create a request for the method "apps.runAssistant".
+           *
+           * This request holds the parameters needed by the the ces server.  After setting any optional
+           * parameters, call the {@link RunAssistant#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * RunAssistant#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param app Required. The app to run assistant for. Format: `projects/{project}/locations/{location}/apps/{app}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.RunAssistantRequest}
+           * @since 1.13
+           */
+          protected RunAssistant(java.lang.String app, com.google.api.services.ces.v1beta.model.RunAssistantRequest content) {
+            super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.RunAssistantResponse.class);
+            this.app = com.google.api.client.util.Preconditions.checkNotNull(app, "Required parameter app must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                  "Parameter app must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+          }
+
+          @Override
+          public RunAssistant set$Xgafv(java.lang.String $Xgafv) {
+            return (RunAssistant) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RunAssistant setAccessToken(java.lang.String accessToken) {
+            return (RunAssistant) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RunAssistant setAlt(java.lang.String alt) {
+            return (RunAssistant) super.setAlt(alt);
+          }
+
+          @Override
+          public RunAssistant setCallback(java.lang.String callback) {
+            return (RunAssistant) super.setCallback(callback);
+          }
+
+          @Override
+          public RunAssistant setFields(java.lang.String fields) {
+            return (RunAssistant) super.setFields(fields);
+          }
+
+          @Override
+          public RunAssistant setKey(java.lang.String key) {
+            return (RunAssistant) super.setKey(key);
+          }
+
+          @Override
+          public RunAssistant setOauthToken(java.lang.String oauthToken) {
+            return (RunAssistant) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RunAssistant setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RunAssistant) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RunAssistant setQuotaUser(java.lang.String quotaUser) {
+            return (RunAssistant) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RunAssistant setUploadType(java.lang.String uploadType) {
+            return (RunAssistant) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RunAssistant setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RunAssistant) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The app to run assistant for. Format:
+           * `projects/{project}/locations/{location}/apps/{app}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String app;
+
+          /** Required. The app to run assistant for. Format:
+         `projects/{project}/locations/{location}/apps/{app}`
+           */
+          public java.lang.String getApp() {
+            return app;
+          }
+
+          /**
+           * Required. The app to run assistant for. Format:
+           * `projects/{project}/locations/{location}/apps/{app}`
+           */
+          public RunAssistant setApp(java.lang.String app) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(APP_PATTERN.matcher(app).matches(),
+                  "Parameter app must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+            }
+            this.app = app;
+            return this;
+          }
+
+          @Override
+          public RunAssistant set(String parameterName, Object value) {
+            return (RunAssistant) super.set(parameterName, value);
           }
         }
         /**
@@ -3848,6 +4271,943 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             @Override
             public Patch set(String parameterName, Object value) {
               return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the AssistantSessions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CustomerEngagementSuite ces = new CustomerEngagementSuite(...);}
+         *   {@code CustomerEngagementSuite.AssistantSessions.List request = ces.assistantSessions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public AssistantSessions assistantSessions() {
+          return new AssistantSessions();
+        }
+
+        /**
+         * The "assistantSessions" collection of methods.
+         */
+        public class AssistantSessions {
+
+          /**
+           * Cancels the assistant session's in-flight turn, if any: the explicit user stop for a turn running
+           * detached from any stream. A cancel landing on a task that does not host the turn preempts it
+           * through the session turn epoch instead, ending it within one lease renewal.
+           *
+           * Create a request for the method "assistantSessions.cancelAssistantTurn".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link CancelAssistantTurn#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The assistant session whose in-flight turn to cancel.
+           * @param content the {@link com.google.api.services.ces.v1beta.model.CancelAssistantTurnRequest}
+           * @return the request
+           */
+          public CancelAssistantTurn cancelAssistantTurn(java.lang.String name, com.google.api.services.ces.v1beta.model.CancelAssistantTurnRequest content) throws java.io.IOException {
+            CancelAssistantTurn result = new CancelAssistantTurn(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CancelAssistantTurn extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.CancelAssistantTurnResponse> {
+
+            private static final String REST_PATH = "v1beta/{+name}:cancelAssistantTurn";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+
+            /**
+             * Cancels the assistant session's in-flight turn, if any: the explicit user stop for a turn
+             * running detached from any stream. A cancel landing on a task that does not host the turn
+             * preempts it through the session turn epoch instead, ending it within one lease renewal.
+             *
+             * Create a request for the method "assistantSessions.cancelAssistantTurn".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link CancelAssistantTurn#execute()} method to invoke the remote
+             * operation. <p> {@link CancelAssistantTurn#initialize(com.google.api.client.googleapis.services.
+             * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The assistant session whose in-flight turn to cancel.
+             * @param content the {@link com.google.api.services.ces.v1beta.model.CancelAssistantTurnRequest}
+             * @since 1.13
+             */
+            protected CancelAssistantTurn(java.lang.String name, com.google.api.services.ces.v1beta.model.CancelAssistantTurnRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.CancelAssistantTurnResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public CancelAssistantTurn set$Xgafv(java.lang.String $Xgafv) {
+              return (CancelAssistantTurn) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CancelAssistantTurn setAccessToken(java.lang.String accessToken) {
+              return (CancelAssistantTurn) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CancelAssistantTurn setAlt(java.lang.String alt) {
+              return (CancelAssistantTurn) super.setAlt(alt);
+            }
+
+            @Override
+            public CancelAssistantTurn setCallback(java.lang.String callback) {
+              return (CancelAssistantTurn) super.setCallback(callback);
+            }
+
+            @Override
+            public CancelAssistantTurn setFields(java.lang.String fields) {
+              return (CancelAssistantTurn) super.setFields(fields);
+            }
+
+            @Override
+            public CancelAssistantTurn setKey(java.lang.String key) {
+              return (CancelAssistantTurn) super.setKey(key);
+            }
+
+            @Override
+            public CancelAssistantTurn setOauthToken(java.lang.String oauthToken) {
+              return (CancelAssistantTurn) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CancelAssistantTurn setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CancelAssistantTurn) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CancelAssistantTurn setQuotaUser(java.lang.String quotaUser) {
+              return (CancelAssistantTurn) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CancelAssistantTurn setUploadType(java.lang.String uploadType) {
+              return (CancelAssistantTurn) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CancelAssistantTurn setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CancelAssistantTurn) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The assistant session whose in-flight turn to cancel. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The assistant session whose in-flight turn to cancel.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The assistant session whose in-flight turn to cancel. */
+            public CancelAssistantTurn setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CancelAssistantTurn set(String parameterName, Object value) {
+              return (CancelAssistantTurn) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Creates a new assistant session in the given app.
+           *
+           * Create a request for the method "assistantSessions.create".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The app to create the assistant session in Format:
+           *        `projects/{project}/locations/{location}/apps/{app}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.CreateAssistantSessionRequest}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.ces.v1beta.model.CreateAssistantSessionRequest content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.AssistantSession> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/assistantSessions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+            /**
+             * Creates a new assistant session in the given app.
+             *
+             * Create a request for the method "assistantSessions.create".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The app to create the assistant session in Format:
+           *        `projects/{project}/locations/{location}/apps/{app}`
+             * @param content the {@link com.google.api.services.ces.v1beta.model.CreateAssistantSessionRequest}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.ces.v1beta.model.CreateAssistantSessionRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.AssistantSession.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The app to create the assistant session in Format:
+             * `projects/{project}/locations/{location}/apps/{app}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The app to create the assistant session in Format:
+           `projects/{project}/locations/{location}/apps/{app}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The app to create the assistant session in Format:
+             * `projects/{project}/locations/{location}/apps/{app}`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes the specified assistant session.
+           *
+           * Create a request for the method "assistantSessions.delete".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the assistant session to delete. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.Empty> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+
+            /**
+             * Deletes the specified assistant session.
+             *
+             * Create a request for the method "assistantSessions.delete".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the assistant session to delete. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(CustomerEngagementSuite.this, "DELETE", REST_PATH, null, com.google.api.services.ces.v1beta.model.Empty.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the assistant session to delete. Format: `projects/{project}/lo
+             * cations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the assistant session to delete. Format:
+           `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the assistant session to delete. Format: `projects/{project}/lo
+             * cations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of the specified assistant session.
+           *
+           * Create a request for the method "assistantSessions.get".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the assistant session to retrieve. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.AssistantSession> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+
+            /**
+             * Gets details of the specified assistant session.
+             *
+             * Create a request for the method "assistantSessions.get".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+             * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the assistant session to retrieve. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(CustomerEngagementSuite.this, "GET", REST_PATH, null, com.google.api.services.ces.v1beta.model.AssistantSession.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the assistant session to retrieve. Format: `projects/{project}/
+             * locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the assistant session to retrieve. Format:
+           `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the assistant session to retrieve. Format: `projects/{project}/
+             * locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all assistant sessions in the given app.
+           *
+           * Create a request for the method "assistantSessions.list".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The app to list assistant sessions from. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.ListAssistantSessionsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/assistantSessions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+
+            /**
+             * Lists all assistant sessions in the given app.
+             *
+             * Create a request for the method "assistantSessions.list".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The app to list assistant sessions from. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CustomerEngagementSuite.this, "GET", REST_PATH, null, com.google.api.services.ces.v1beta.model.ListAssistantSessionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The app to list assistant sessions from. Format:
+             * `projects/{project}/locations/{location}/apps/{app}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The app to list assistant sessions from. Format:
+           `projects/{project}/locations/{location}/apps/{app}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The app to list assistant sessions from. Format:
+             * `projects/{project}/locations/{location}/apps/{app}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter to be applied when listing the assistant sessions. See
+             * https://google.aip.dev/160 for more details.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter to be applied when listing the assistant sessions. See https://google.aip.dev/160
+           for more details.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter to be applied when listing the assistant sessions. See
+             * https://google.aip.dev/160 for more details.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
+           will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, server will pick an appropriate default.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous list
+             * AssistantService.ListAssistantSessions call.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. The next_page_token value returned from a previous list
+           AssistantService.ListAssistantSessions call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. The next_page_token value returned from a previous list
+             * AssistantService.ListAssistantSessions call.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Runs the Chat AI assistant agent for the specified assistant session in a streaming fashion.
+           *
+           * Create a request for the method "assistantSessions.streamChatAiAssistant".
+           *
+           * This request holds the parameters needed by the ces server.  After setting any optional
+           * parameters, call the {@link StreamChatAiAssistant#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The assistant session to be used to run the assistant. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+           * @param content the {@link com.google.api.services.ces.v1beta.model.StreamChatAiAssistantRequest}
+           * @return the request
+           */
+          public StreamChatAiAssistant streamChatAiAssistant(java.lang.String name, com.google.api.services.ces.v1beta.model.StreamChatAiAssistantRequest content) throws java.io.IOException {
+            StreamChatAiAssistant result = new StreamChatAiAssistant(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class StreamChatAiAssistant extends CustomerEngagementSuiteRequest<com.google.api.services.ces.v1beta.model.StreamChatAiAssistantResponse> {
+
+            private static final String REST_PATH = "v1beta/{+name}:streamChatAiAssistant";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+
+            /**
+             * Runs the Chat AI assistant agent for the specified assistant session in a streaming fashion.
+             *
+             * Create a request for the method "assistantSessions.streamChatAiAssistant".
+             *
+             * This request holds the parameters needed by the the ces server.  After setting any optional
+             * parameters, call the {@link StreamChatAiAssistant#execute()} method to invoke the remote
+             * operation. <p> {@link StreamChatAiAssistant#initialize(com.google.api.client.googleapis.service
+             * s.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The assistant session to be used to run the assistant. Format:
+           *        `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             * @param content the {@link com.google.api.services.ces.v1beta.model.StreamChatAiAssistantRequest}
+             * @since 1.13
+             */
+            protected StreamChatAiAssistant(java.lang.String name, com.google.api.services.ces.v1beta.model.StreamChatAiAssistantRequest content) {
+              super(CustomerEngagementSuite.this, "POST", REST_PATH, content, com.google.api.services.ces.v1beta.model.StreamChatAiAssistantResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+            }
+
+            @Override
+            public StreamChatAiAssistant set$Xgafv(java.lang.String $Xgafv) {
+              return (StreamChatAiAssistant) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public StreamChatAiAssistant setAccessToken(java.lang.String accessToken) {
+              return (StreamChatAiAssistant) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public StreamChatAiAssistant setAlt(java.lang.String alt) {
+              return (StreamChatAiAssistant) super.setAlt(alt);
+            }
+
+            @Override
+            public StreamChatAiAssistant setCallback(java.lang.String callback) {
+              return (StreamChatAiAssistant) super.setCallback(callback);
+            }
+
+            @Override
+            public StreamChatAiAssistant setFields(java.lang.String fields) {
+              return (StreamChatAiAssistant) super.setFields(fields);
+            }
+
+            @Override
+            public StreamChatAiAssistant setKey(java.lang.String key) {
+              return (StreamChatAiAssistant) super.setKey(key);
+            }
+
+            @Override
+            public StreamChatAiAssistant setOauthToken(java.lang.String oauthToken) {
+              return (StreamChatAiAssistant) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public StreamChatAiAssistant setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (StreamChatAiAssistant) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public StreamChatAiAssistant setQuotaUser(java.lang.String quotaUser) {
+              return (StreamChatAiAssistant) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public StreamChatAiAssistant setUploadType(java.lang.String uploadType) {
+              return (StreamChatAiAssistant) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public StreamChatAiAssistant setUploadProtocol(java.lang.String uploadProtocol) {
+              return (StreamChatAiAssistant) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The assistant session to be used to run the assistant. Format: `projects/{p
+             * roject}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The assistant session to be used to run the assistant. Format:
+           `projects/{project}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The assistant session to be used to run the assistant. Format: `projects/{p
+             * roject}/locations/{location}/apps/{app}/assistantSessions/{assistant_session}`
+             */
+            public StreamChatAiAssistant setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public StreamChatAiAssistant set(String parameterName, Object value) {
+              return (StreamChatAiAssistant) super.set(parameterName, value);
             }
           }
 

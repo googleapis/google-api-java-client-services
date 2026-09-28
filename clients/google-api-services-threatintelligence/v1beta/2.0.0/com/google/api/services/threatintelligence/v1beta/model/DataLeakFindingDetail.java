@@ -31,8 +31,16 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class DataLeakFindingDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The unique identifier of the document that triggered the Data Leak finding. This ID
-   * can be used to retrieve the content of the document for further analysis.
+   * Optional. The discovery document associated with the Data Leak finding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DiscoveryDocument discoveryDocument;
+
+  /**
+   * Optional. Deprecated: Use `discovery_document` instead. The unique identifier of the document
+   * that triggered the Data Leak finding. This ID can be used to retrieve the content of the
+   * document for further analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +64,26 @@ public final class DataLeakFindingDetail extends com.google.api.client.json.Gene
   private java.lang.String severity;
 
   /**
-   * Required. The unique identifier of the document that triggered the Data Leak finding. This ID
-   * can be used to retrieve the content of the document for further analysis.
+   * Optional. The discovery document associated with the Data Leak finding.
+   * @return value or {@code null} for none
+   */
+  public DiscoveryDocument getDiscoveryDocument() {
+    return discoveryDocument;
+  }
+
+  /**
+   * Optional. The discovery document associated with the Data Leak finding.
+   * @param discoveryDocument discoveryDocument or {@code null} for none
+   */
+  public DataLeakFindingDetail setDiscoveryDocument(DiscoveryDocument discoveryDocument) {
+    this.discoveryDocument = discoveryDocument;
+    return this;
+  }
+
+  /**
+   * Optional. Deprecated: Use `discovery_document` instead. The unique identifier of the document
+   * that triggered the Data Leak finding. This ID can be used to retrieve the content of the
+   * document for further analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getDocumentId() {
@@ -65,8 +91,9 @@ public final class DataLeakFindingDetail extends com.google.api.client.json.Gene
   }
 
   /**
-   * Required. The unique identifier of the document that triggered the Data Leak finding. This ID
-   * can be used to retrieve the content of the document for further analysis.
+   * Optional. Deprecated: Use `discovery_document` instead. The unique identifier of the document
+   * that triggered the Data Leak finding. This ID can be used to retrieve the content of the
+   * document for further analysis.
    * @param documentId documentId or {@code null} for none
    */
   public DataLeakFindingDetail setDocumentId(java.lang.String documentId) {

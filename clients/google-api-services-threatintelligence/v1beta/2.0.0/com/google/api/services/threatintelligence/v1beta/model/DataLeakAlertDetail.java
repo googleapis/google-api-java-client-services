@@ -31,11 +31,19 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class DataLeakAlertDetail extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to accommodate multiple
+   * discovery documents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> discoveryDocumentIds;
+
+  /**
+   * Output only. New structured metadata payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DiscoveryDocument> discoveryDocuments;
 
   /**
    * Required. The severity of the Data Leak alert. Allowed values are: * `LOW` * `MEDIUM` * `HIGH`
@@ -46,7 +54,8 @@ public final class DataLeakAlertDetail extends com.google.api.client.json.Generi
   private java.lang.String severity;
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to accommodate multiple
+   * discovery documents.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDiscoveryDocumentIds() {
@@ -54,11 +63,29 @@ public final class DataLeakAlertDetail extends com.google.api.client.json.Generi
   }
 
   /**
-   * Required. Array of ids to accommodate multiple discovery documents
+   * Optional. Deprecated: Use `discovery_documents` instead. Array of ids to accommodate multiple
+   * discovery documents.
    * @param discoveryDocumentIds discoveryDocumentIds or {@code null} for none
    */
   public DataLeakAlertDetail setDiscoveryDocumentIds(java.util.List<java.lang.String> discoveryDocumentIds) {
     this.discoveryDocumentIds = discoveryDocumentIds;
+    return this;
+  }
+
+  /**
+   * Output only. New structured metadata payload.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DiscoveryDocument> getDiscoveryDocuments() {
+    return discoveryDocuments;
+  }
+
+  /**
+   * Output only. New structured metadata payload.
+   * @param discoveryDocuments discoveryDocuments or {@code null} for none
+   */
+  public DataLeakAlertDetail setDiscoveryDocuments(java.util.List<DiscoveryDocument> discoveryDocuments) {
+    this.discoveryDocuments = discoveryDocuments;
     return this;
   }
 

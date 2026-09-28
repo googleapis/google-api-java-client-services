@@ -54,13 +54,6 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
   private java.lang.Boolean isPublic;
 
   /**
-   * The ID of the post the comments refer to, if any.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String postId;
-
-  /**
    * The top level comment of this thread.
    * The value may be {@code null}.
    */
@@ -135,23 +128,6 @@ public final class CommentThreadSnippet extends com.google.api.client.json.Gener
    */
   public CommentThreadSnippet setIsPublic(java.lang.Boolean isPublic) {
     this.isPublic = isPublic;
-    return this;
-  }
-
-  /**
-   * The ID of the post the comments refer to, if any.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getPostId() {
-    return postId;
-  }
-
-  /**
-   * The ID of the post the comments refer to, if any.
-   * @param postId postId or {@code null} for none
-   */
-  public CommentThreadSnippet setPostId(java.lang.String postId) {
-    this.postId = postId;
     return this;
   }
 

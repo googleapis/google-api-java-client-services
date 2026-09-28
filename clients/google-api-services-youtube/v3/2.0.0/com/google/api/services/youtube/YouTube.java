@@ -3489,7 +3489,10 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * content owners to authenticate once and get access to all their video and channel data,
        * without having to provide authentication credentials for each individual channel. The
        * actual CMS account that the user authenticates with needs to be linked to the specified
-       * YouTube content owner.
+       * YouTube content owner. This parameter must be provided if the request is authenticated with
+       * credentials for a CMS content owner user acting on a managed channel. If omitted, the
+       * request executes under the authenticated user's direct context and returns an HTTP 403
+       * Forbidden error.
        */
       @com.google.api.client.util.Key
       private java.lang.String onBehalfOfContentOwner;
@@ -3499,7 +3502,10 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
      partners that own and manage many different YouTube channels. It allows content owners to
      authenticate once and get access to all their video and channel data, without having to provide
      authentication credentials for each individual channel. The actual CMS account that the user
-     authenticates with needs to be linked to the specified YouTube content owner.
+     authenticates with needs to be linked to the specified YouTube content owner. This parameter must
+     be provided if the request is authenticated with credentials for a CMS content owner user acting on
+     a managed channel. If omitted, the request executes under the authenticated user's direct context
+     and returns an HTTP 403 Forbidden error.
        */
       public java.lang.String getOnBehalfOfContentOwner() {
         return onBehalfOfContentOwner;
@@ -3512,7 +3518,10 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * content owners to authenticate once and get access to all their video and channel data,
        * without having to provide authentication credentials for each individual channel. The
        * actual CMS account that the user authenticates with needs to be linked to the specified
-       * YouTube content owner.
+       * YouTube content owner. This parameter must be provided if the request is authenticated with
+       * credentials for a CMS content owner user acting on a managed channel. If omitted, the
+       * request executes under the authenticated user's direct context and returns an HTTP 403
+       * Forbidden error.
        */
       public Update setOnBehalfOfContentOwner(java.lang.String onBehalfOfContentOwner) {
         this.onBehalfOfContentOwner = onBehalfOfContentOwner;
@@ -3947,22 +3956,6 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
-        return this;
-      }
-
-      /** Returns the comment threads of the specified post. */
-      @com.google.api.client.util.Key
-      private java.lang.String postId;
-
-      /** Returns the comment threads of the specified post.
-       */
-      public java.lang.String getPostId() {
-        return postId;
-      }
-
-      /** Returns the comment threads of the specified post. */
-      public List setPostId(java.lang.String postId) {
-        this.postId = postId;
         return this;
       }
 

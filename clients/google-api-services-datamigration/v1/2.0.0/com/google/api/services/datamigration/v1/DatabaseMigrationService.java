@@ -3577,6 +3577,548 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           }
         }
         /**
+         * An internal, RPC only method that returns a list of the (filtered) entities with minimal
+         * information required for the entities tree view.
+         *
+         * Create a request for the method "conversionWorkspaces.fetchEntitiesStatusView".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link FetchEntitiesStatusView#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param conversionWorkspace Required. Name of the conversion workspace resource whose database entities are described. Must be
+         *        in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @return the request
+         */
+        public FetchEntitiesStatusView fetchEntitiesStatusView(java.lang.String conversionWorkspace) throws java.io.IOException {
+          FetchEntitiesStatusView result = new FetchEntitiesStatusView(conversionWorkspace);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchEntitiesStatusView extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.FetchEntitiesStatusViewResponse> {
+
+          private static final String REST_PATH = "v1/{+conversionWorkspace}:fetchEntitiesStatusView";
+
+          private final java.util.regex.Pattern CONVERSION_WORKSPACE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * An internal, RPC only method that returns a list of the (filtered) entities with minimal
+           * information required for the entities tree view.
+           *
+           * Create a request for the method "conversionWorkspaces.fetchEntitiesStatusView".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link FetchEntitiesStatusView#execute()} method to invoke the
+           * remote operation. <p> {@link FetchEntitiesStatusView#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param conversionWorkspace Required. Name of the conversion workspace resource whose database entities are described. Must be
+         *        in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @since 1.13
+           */
+          protected FetchEntitiesStatusView(java.lang.String conversionWorkspace) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.FetchEntitiesStatusViewResponse.class);
+            this.conversionWorkspace = com.google.api.client.util.Preconditions.checkNotNull(conversionWorkspace, "Required parameter conversionWorkspace must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchEntitiesStatusView set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchEntitiesStatusView) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setAccessToken(java.lang.String accessToken) {
+            return (FetchEntitiesStatusView) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setAlt(java.lang.String alt) {
+            return (FetchEntitiesStatusView) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setCallback(java.lang.String callback) {
+            return (FetchEntitiesStatusView) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setFields(java.lang.String fields) {
+            return (FetchEntitiesStatusView) super.setFields(fields);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setKey(java.lang.String key) {
+            return (FetchEntitiesStatusView) super.setKey(key);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setOauthToken(java.lang.String oauthToken) {
+            return (FetchEntitiesStatusView) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchEntitiesStatusView) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setQuotaUser(java.lang.String quotaUser) {
+            return (FetchEntitiesStatusView) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setUploadType(java.lang.String uploadType) {
+            return (FetchEntitiesStatusView) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchEntitiesStatusView setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchEntitiesStatusView) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whose database entities are
+           * described. Must be in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspace;
+
+          /** Required. Name of the conversion workspace resource whose database entities are described. Must be
+         in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getConversionWorkspace() {
+            return conversionWorkspace;
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource whose database entities are
+           * described. Must be in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public FetchEntitiesStatusView setConversionWorkspace(java.lang.String conversionWorkspace) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.conversionWorkspace = conversionWorkspace;
+            return this;
+          }
+
+          /** Optional. The view to fetch. If not specified, FULL is used. */
+          @com.google.api.client.util.Key
+          private java.lang.String fetchView;
+
+          /** Optional. The view to fetch. If not specified, FULL is used.
+           */
+          public java.lang.String getFetchView() {
+            return fetchView;
+          }
+
+          /** Optional. The view to fetch. If not specified, FULL is used. */
+          public FetchEntitiesStatusView setFetchView(java.lang.String fetchView) {
+            this.fetchView = fetchView;
+            return this;
+          }
+
+          /** Optional. Filter the returned entities based on AIP-160 standard. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Filter the returned entities based on AIP-160 standard.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Filter the returned entities based on AIP-160 standard. */
+          public FetchEntitiesStatusView setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of entities to return. The service may return fewer
+           * entities than the value specifies. Default is 100000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of entities to return. The service may return fewer entities than the
+         value specifies. Default is 100000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of entities to return. The service may return fewer
+           * entities than the value specifies. Default is 100000.
+           */
+          public FetchEntitiesStatusView setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The nextPageToken value received in the previous call to
+           * conversionWorkspace.FetchEntitiesStatusView, used in the subsequent request to retrieve
+           * the next page of results. On first call this should be left blank. When paginating, all
+           * other parameters provided to conversionWorkspace.FetchEntitiesStatusView must match the
+           * call that provided the page token, except for the page_size parameter.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The nextPageToken value received in the previous call to
+         conversionWorkspace.FetchEntitiesStatusView, used in the subsequent request to retrieve the next
+         page of results. On first call this should be left blank. When paginating, all other parameters
+         provided to conversionWorkspace.FetchEntitiesStatusView must match the call that provided the page
+         token, except for the page_size parameter.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The nextPageToken value received in the previous call to
+           * conversionWorkspace.FetchEntitiesStatusView, used in the subsequent request to retrieve
+           * the next page of results. On first call this should be left blank. When paginating, all
+           * other parameters provided to conversionWorkspace.FetchEntitiesStatusView must match the
+           * call that provided the page token, except for the page_size parameter.
+           */
+          public FetchEntitiesStatusView setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Required. The tree to fetch. */
+          @com.google.api.client.util.Key
+          private java.lang.String tree;
+
+          /** Required. The tree to fetch.
+           */
+          public java.lang.String getTree() {
+            return tree;
+          }
+
+          /** Required. The tree to fetch. */
+          public FetchEntitiesStatusView setTree(java.lang.String tree) {
+            this.tree = tree;
+            return this;
+          }
+
+          @Override
+          public FetchEntitiesStatusView set(String parameterName, Object value) {
+            return (FetchEntitiesStatusView) super.set(parameterName, value);
+          }
+        }
+        /**
+         * List issues of conversion workspace operations e.g. conversion.
+         *
+         * Create a request for the method "conversionWorkspaces.fetchIssues".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link FetchIssues#execute()} method to invoke the remote operation.
+         *
+         * @param conversionWorkspace Required. Conversion workspace with issues to fetch. Must be in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @return the request
+         */
+        public FetchIssues fetchIssues(java.lang.String conversionWorkspace) throws java.io.IOException {
+          FetchIssues result = new FetchIssues(conversionWorkspace);
+          initialize(result);
+          return result;
+        }
+
+        public class FetchIssues extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.FetchIssuesResponse> {
+
+          private static final String REST_PATH = "v1/{+conversionWorkspace}:fetchIssues";
+
+          private final java.util.regex.Pattern CONVERSION_WORKSPACE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * List issues of conversion workspace operations e.g. conversion.
+           *
+           * Create a request for the method "conversionWorkspaces.fetchIssues".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link FetchIssues#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * FetchIssues#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param conversionWorkspace Required. Conversion workspace with issues to fetch. Must be in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @since 1.13
+           */
+          protected FetchIssues(java.lang.String conversionWorkspace) {
+            super(DatabaseMigrationService.this, "GET", REST_PATH, null, com.google.api.services.datamigration.v1.model.FetchIssuesResponse.class);
+            this.conversionWorkspace = com.google.api.client.util.Preconditions.checkNotNull(conversionWorkspace, "Required parameter conversionWorkspace must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public FetchIssues set$Xgafv(java.lang.String $Xgafv) {
+            return (FetchIssues) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public FetchIssues setAccessToken(java.lang.String accessToken) {
+            return (FetchIssues) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public FetchIssues setAlt(java.lang.String alt) {
+            return (FetchIssues) super.setAlt(alt);
+          }
+
+          @Override
+          public FetchIssues setCallback(java.lang.String callback) {
+            return (FetchIssues) super.setCallback(callback);
+          }
+
+          @Override
+          public FetchIssues setFields(java.lang.String fields) {
+            return (FetchIssues) super.setFields(fields);
+          }
+
+          @Override
+          public FetchIssues setKey(java.lang.String key) {
+            return (FetchIssues) super.setKey(key);
+          }
+
+          @Override
+          public FetchIssues setOauthToken(java.lang.String oauthToken) {
+            return (FetchIssues) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public FetchIssues setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (FetchIssues) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public FetchIssues setQuotaUser(java.lang.String quotaUser) {
+            return (FetchIssues) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public FetchIssues setUploadType(java.lang.String uploadType) {
+            return (FetchIssues) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public FetchIssues setUploadProtocol(java.lang.String uploadProtocol) {
+            return (FetchIssues) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Conversion workspace with issues to fetch. Must be in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspace;
+
+          /** Required. Conversion workspace with issues to fetch. Must be in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getConversionWorkspace() {
+            return conversionWorkspace;
+          }
+
+          /**
+           * Required. Conversion workspace with issues to fetch. Must be in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public FetchIssues setConversionWorkspace(java.lang.String conversionWorkspace) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.conversionWorkspace = conversionWorkspace;
+            return this;
+          }
+
+          /**
+           * Optional. If 'true', gets all issues matching the filter. Otherwise, for each entity
+           * only the issues matching the DdlKind chosen for application on the destination are
+           * returned.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allIssues;
+
+          /** Optional. If 'true', gets all issues matching the filter. Otherwise, for each entity only the
+         issues matching the DdlKind chosen for application on the destination are returned.
+           */
+          public java.lang.Boolean getAllIssues() {
+            return allIssues;
+          }
+
+          /**
+           * Optional. If 'true', gets all issues matching the filter. Otherwise, for each entity
+           * only the issues matching the DdlKind chosen for application on the destination are
+           * returned.
+           */
+          public FetchIssues setAllIssues(java.lang.Boolean allIssues) {
+            this.allIssues = allIssues;
+            return this;
+          }
+
+          /**
+           * Optional. AIP-160 standard filter. Supporting both entity and issue fields. Supported
+           * fields: - `name` / `fullname`: The entity full name. - `type`: The entity type (e.g.
+           * `TABLE`, `VIEW`, `INDEX`, `TRIGGER`). - `ddlkind`: The kind of DDL (e.g.
+           * `DDL_KIND_SOURCE`, `DDL_KIND_AI`, `DDL_KIND_DETERMINISTIC`). - `issue.severity`: The
+           * severity of the issue (e.g. `INFO`, `WARNING`, `ERROR`). - `issue.state`: The state of
+           * the issue (e.g. `OPEN`, `RESOLVED`). - `issue.origin`: The origin of the issue (e.g.
+           * `DETERMINISTIC`, `AI`). - `issue.category_id`: The category ID of the issue. -
+           * `issue.group_id`: The group ID of the issue.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. AIP-160 standard filter. Supporting both entity and issue fields. Supported fields: -
+         `name` / `fullname`: The entity full name. - `type`: The entity type (e.g. `TABLE`, `VIEW`,
+         `INDEX`, `TRIGGER`). - `ddlkind`: The kind of DDL (e.g. `DDL_KIND_SOURCE`, `DDL_KIND_AI`,
+         `DDL_KIND_DETERMINISTIC`). - `issue.severity`: The severity of the issue (e.g. `INFO`, `WARNING`,
+         `ERROR`). - `issue.state`: The state of the issue (e.g. `OPEN`, `RESOLVED`). - `issue.origin`: The
+         origin of the issue (e.g. `DETERMINISTIC`, `AI`). - `issue.category_id`: The category ID of the
+         issue. - `issue.group_id`: The group ID of the issue.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. AIP-160 standard filter. Supporting both entity and issue fields. Supported
+           * fields: - `name` / `fullname`: The entity full name. - `type`: The entity type (e.g.
+           * `TABLE`, `VIEW`, `INDEX`, `TRIGGER`). - `ddlkind`: The kind of DDL (e.g.
+           * `DDL_KIND_SOURCE`, `DDL_KIND_AI`, `DDL_KIND_DETERMINISTIC`). - `issue.severity`: The
+           * severity of the issue (e.g. `INFO`, `WARNING`, `ERROR`). - `issue.state`: The state of
+           * the issue (e.g. `OPEN`, `RESOLVED`). - `issue.origin`: The origin of the issue (e.g.
+           * `DETERMINISTIC`, `AI`). - `issue.category_id`: The category ID of the issue. -
+           * `issue.group_id`: The group ID of the issue.
+           */
+          public FetchIssues setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of issues to return. The service may return fewer issues
+           * than the value specifies.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of issues to return. The service may return fewer issues than the
+         value specifies.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of issues to return. The service may return fewer issues
+           * than the value specifies.
+           */
+          public FetchIssues setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The FetchIssuesResponse.next_page_token value received in the previous call
+           * to FetchIssues, used in the subsequent request to retrieve the next page of results. On
+           * first call this should be left blank. When paginating, all other parameters provided to
+           * FetchIssues must match the call that provided the page token, except for the page_size
+           * parameter.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The FetchIssuesResponse.next_page_token value received in the previous call to
+         FetchIssues, used in the subsequent request to retrieve the next page of results. On first call
+         this should be left blank. When paginating, all other parameters provided to FetchIssues must match
+         the call that provided the page token, except for the page_size parameter.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The FetchIssuesResponse.next_page_token value received in the previous call
+           * to FetchIssues, used in the subsequent request to retrieve the next page of results. On
+           * first call this should be left blank. When paginating, all other parameters provided to
+           * FetchIssues must match the call that provided the page token, except for the page_size
+           * parameter.
+           */
+          public FetchIssues setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. The tree to fetch issues from. If not specified, source tree is assumed. */
+          @com.google.api.client.util.Key
+          private java.lang.String tree;
+
+          /** Optional. The tree to fetch issues from. If not specified, source tree is assumed.
+           */
+          public java.lang.String getTree() {
+            return tree;
+          }
+
+          /** Optional. The tree to fetch issues from. If not specified, source tree is assumed. */
+          public FetchIssues setTree(java.lang.String tree) {
+            this.tree = tree;
+            return this;
+          }
+
+          @Override
+          public FetchIssues set(String parameterName, Object value) {
+            return (FetchIssues) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single conversion workspace.
          *
          * Create a request for the method "conversionWorkspaces.get".
@@ -4823,6 +5365,146 @@ public class DatabaseMigrationService extends com.google.api.client.googleapis.s
           @Override
           public Seed set(String parameterName, Object value) {
             return (Seed) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the draft DDL of an entity.
+         *
+         * Create a request for the method "conversionWorkspaces.setDraftEntityDdl".
+         *
+         * This request holds the parameters needed by the datamigration server.  After setting any optional
+         * parameters, call the {@link SetDraftEntityDdl#execute()} method to invoke the remote operation.
+         *
+         * @param conversionWorkspace Required. Name of the conversion workspace resource in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+         * @param content the {@link com.google.api.services.datamigration.v1.model.SetDraftEntityDdlRequest}
+         * @return the request
+         */
+        public SetDraftEntityDdl setDraftEntityDdl(java.lang.String conversionWorkspace, com.google.api.services.datamigration.v1.model.SetDraftEntityDdlRequest content) throws java.io.IOException {
+          SetDraftEntityDdl result = new SetDraftEntityDdl(conversionWorkspace, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetDraftEntityDdl extends DatabaseMigrationServiceRequest<com.google.api.services.datamigration.v1.model.SetDraftEntityDdlResponse> {
+
+          private static final String REST_PATH = "v1/{+conversionWorkspace}:setDraftEntityDdl";
+
+          private final java.util.regex.Pattern CONVERSION_WORKSPACE_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+
+          /**
+           * Updates the draft DDL of an entity.
+           *
+           * Create a request for the method "conversionWorkspaces.setDraftEntityDdl".
+           *
+           * This request holds the parameters needed by the the datamigration server.  After setting any
+           * optional parameters, call the {@link SetDraftEntityDdl#execute()} method to invoke the remote
+           * operation. <p> {@link SetDraftEntityDdl#initialize(com.google.api.client.googleapis.services.Ab
+           * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param conversionWorkspace Required. Name of the conversion workspace resource in the form of:
+         *        projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           * @param content the {@link com.google.api.services.datamigration.v1.model.SetDraftEntityDdlRequest}
+           * @since 1.13
+           */
+          protected SetDraftEntityDdl(java.lang.String conversionWorkspace, com.google.api.services.datamigration.v1.model.SetDraftEntityDdlRequest content) {
+            super(DatabaseMigrationService.this, "POST", REST_PATH, content, com.google.api.services.datamigration.v1.model.SetDraftEntityDdlResponse.class);
+            this.conversionWorkspace = com.google.api.client.util.Preconditions.checkNotNull(conversionWorkspace, "Required parameter conversionWorkspace must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetDraftEntityDdl set$Xgafv(java.lang.String $Xgafv) {
+            return (SetDraftEntityDdl) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetDraftEntityDdl setAccessToken(java.lang.String accessToken) {
+            return (SetDraftEntityDdl) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetDraftEntityDdl setAlt(java.lang.String alt) {
+            return (SetDraftEntityDdl) super.setAlt(alt);
+          }
+
+          @Override
+          public SetDraftEntityDdl setCallback(java.lang.String callback) {
+            return (SetDraftEntityDdl) super.setCallback(callback);
+          }
+
+          @Override
+          public SetDraftEntityDdl setFields(java.lang.String fields) {
+            return (SetDraftEntityDdl) super.setFields(fields);
+          }
+
+          @Override
+          public SetDraftEntityDdl setKey(java.lang.String key) {
+            return (SetDraftEntityDdl) super.setKey(key);
+          }
+
+          @Override
+          public SetDraftEntityDdl setOauthToken(java.lang.String oauthToken) {
+            return (SetDraftEntityDdl) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetDraftEntityDdl setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetDraftEntityDdl) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetDraftEntityDdl setQuotaUser(java.lang.String quotaUser) {
+            return (SetDraftEntityDdl) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetDraftEntityDdl setUploadType(java.lang.String uploadType) {
+            return (SetDraftEntityDdl) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetDraftEntityDdl setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetDraftEntityDdl) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String conversionWorkspace;
+
+          /** Required. Name of the conversion workspace resource in the form of:
+         projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public java.lang.String getConversionWorkspace() {
+            return conversionWorkspace;
+          }
+
+          /**
+           * Required. Name of the conversion workspace resource in the form of:
+           * projects/{project}/locations/{location}/conversionWorkspaces/{conversion_workspace}.
+           */
+          public SetDraftEntityDdl setConversionWorkspace(java.lang.String conversionWorkspace) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(CONVERSION_WORKSPACE_PATTERN.matcher(conversionWorkspace).matches(),
+                  "Parameter conversionWorkspace must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/conversionWorkspaces/[^/]+$");
+            }
+            this.conversionWorkspace = conversionWorkspace;
+            return this;
+          }
+
+          @Override
+          public SetDraftEntityDdl set(String parameterName, Object value) {
+            return (SetDraftEntityDdl) super.set(parameterName, value);
           }
         }
         /**

@@ -77,6 +77,13 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   private java.lang.Boolean hasUncommittedChanges;
 
   /**
+   * Optional. Output only. The timestamp when the workspace was last applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String latestApplyTime;
+
+  /**
    * Output only. The latest commit ID.
    * The value may be {@code null}.
    */
@@ -89,6 +96,13 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private String latestCommitTime;
+
+  /**
+   * Optional. Output only. The timestamp when the workspace was last converted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String latestConvertTime;
 
   /**
    * Full name of the workspace resource, in the form of:
@@ -230,6 +244,23 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
   }
 
   /**
+   * Optional. Output only. The timestamp when the workspace was last applied.
+   * @return value or {@code null} for none
+   */
+  public String getLatestApplyTime() {
+    return latestApplyTime;
+  }
+
+  /**
+   * Optional. Output only. The timestamp when the workspace was last applied.
+   * @param latestApplyTime latestApplyTime or {@code null} for none
+   */
+  public ConversionWorkspace setLatestApplyTime(String latestApplyTime) {
+    this.latestApplyTime = latestApplyTime;
+    return this;
+  }
+
+  /**
    * Output only. The latest commit ID.
    * @return value or {@code null} for none
    */
@@ -260,6 +291,23 @@ public final class ConversionWorkspace extends com.google.api.client.json.Generi
    */
   public ConversionWorkspace setLatestCommitTime(String latestCommitTime) {
     this.latestCommitTime = latestCommitTime;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The timestamp when the workspace was last converted.
+   * @return value or {@code null} for none
+   */
+  public String getLatestConvertTime() {
+    return latestConvertTime;
+  }
+
+  /**
+   * Optional. Output only. The timestamp when the workspace was last converted.
+   * @param latestConvertTime latestConvertTime or {@code null} for none
+   */
+  public ConversionWorkspace setLatestConvertTime(String latestConvertTime) {
+    this.latestConvertTime = latestConvertTime;
     return this;
   }
 

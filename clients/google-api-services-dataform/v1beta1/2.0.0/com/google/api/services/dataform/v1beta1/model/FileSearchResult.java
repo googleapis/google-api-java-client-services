@@ -30,14 +30,14 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class FileSearchResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * File system path relative to the workspace root.
+   * File system path relative to the file tree root.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String path;
 
   /**
-   * File system path relative to the workspace root.
+   * File system path relative to the file tree root.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -45,7 +45,7 @@ public final class FileSearchResult extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * File system path relative to the workspace root.
+   * File system path relative to the file tree root.
    * @param path path or {@code null} for none
    */
   public FileSearchResult setPath(java.lang.String path) {

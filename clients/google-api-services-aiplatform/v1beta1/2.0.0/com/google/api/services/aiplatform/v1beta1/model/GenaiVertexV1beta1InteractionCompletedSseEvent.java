@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Model definition for GenaiVertexV1beta1InteractionCompletedSseEvent.
+ * Signals that the Interaction completed. Sent when the Interaction receives Complete/Cancel or
+ * naturally terminates. No more input can be sent to the Interaction after this.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -30,16 +31,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1InteractionCompletedSseEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The completed interaction with empty outputs to reduce the payload size. Use the
-   * preceding ContentDelta events for the actual output.
+   * Required. Partial completed interaction resource emitted at the end of the stream.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GenaiVertexV1beta1Interaction interaction;
 
   /**
-   * Required. The completed interaction with empty outputs to reduce the payload size. Use the
-   * preceding ContentDelta events for the actual output.
+   * Required. Partial completed interaction resource emitted at the end of the stream.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1Interaction getInteraction() {
@@ -47,8 +46,7 @@ public final class GenaiVertexV1beta1InteractionCompletedSseEvent extends com.go
   }
 
   /**
-   * Required. The completed interaction with empty outputs to reduce the payload size. Use the
-   * preceding ContentDelta events for the actual output.
+   * Required. Partial completed interaction resource emitted at the end of the stream.
    * @param interaction interaction or {@code null} for none
    */
   public GenaiVertexV1beta1InteractionCompletedSseEvent setInteraction(GenaiVertexV1beta1Interaction interaction) {

@@ -89,6 +89,16 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
   private java.lang.String name;
 
   /**
+   * Optional. Configuration for attaching a persistent disk (PD) to each SandboxEnvironment created
+   * from this template. When unset (or when `enabled` is `false`), sandboxes created from this
+   * template are not backed by a persistent disk and rely on ephemeral storage only. See
+   * PersistentDiskConfig for details.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersistentDiskConfig persistentDiskConfig;
+
+  /**
    * Output only. The state of the sandbox environment template.
    * The value may be {@code null}.
    */
@@ -243,6 +253,29 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for attaching a persistent disk (PD) to each SandboxEnvironment created
+   * from this template. When unset (or when `enabled` is `false`), sandboxes created from this
+   * template are not backed by a persistent disk and rely on ephemeral storage only. See
+   * PersistentDiskConfig for details.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersistentDiskConfig getPersistentDiskConfig() {
+    return persistentDiskConfig;
+  }
+
+  /**
+   * Optional. Configuration for attaching a persistent disk (PD) to each SandboxEnvironment created
+   * from this template. When unset (or when `enabled` is `false`), sandboxes created from this
+   * template are not backed by a persistent disk and rely on ephemeral storage only. See
+   * PersistentDiskConfig for details.
+   * @param persistentDiskConfig persistentDiskConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setPersistentDiskConfig(GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersistentDiskConfig persistentDiskConfig) {
+    this.persistentDiskConfig = persistentDiskConfig;
     return this;
   }
 

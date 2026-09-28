@@ -77,6 +77,17 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   private GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints languageHints;
 
   /**
+   * Optional. Configures transcription mode. Supported values: `VERBATIM`, `SMART`. If unspecified,
+   * defaults to `VERBATIM` transcription. In `SMART` mode, the model performs disfluency removal
+   * (eliminating filler words, repetitions, and false starts), light grammatical cleanup, automatic
+   * formatting (paragraphs, bullet points, numbered lists), and minor user edits (inline self-
+   * corrections). Timestamps and diarization are incompatible with mode `SMART`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Optional. Configures word-level timestamp generation.
    * The value may be {@code null}.
    */
@@ -192,6 +203,31 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
    */
   public GoogleCloudAiplatformV1AudioTranscriptionConfig setLanguageHints(GoogleCloudAiplatformV1AudioTranscriptionConfigLanguageHints languageHints) {
     this.languageHints = languageHints;
+    return this;
+  }
+
+  /**
+   * Optional. Configures transcription mode. Supported values: `VERBATIM`, `SMART`. If unspecified,
+   * defaults to `VERBATIM` transcription. In `SMART` mode, the model performs disfluency removal
+   * (eliminating filler words, repetitions, and false starts), light grammatical cleanup, automatic
+   * formatting (paragraphs, bullet points, numbered lists), and minor user edits (inline self-
+   * corrections). Timestamps and diarization are incompatible with mode `SMART`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. Configures transcription mode. Supported values: `VERBATIM`, `SMART`. If unspecified,
+   * defaults to `VERBATIM` transcription. In `SMART` mode, the model performs disfluency removal
+   * (eliminating filler words, repetitions, and false starts), light grammatical cleanup, automatic
+   * formatting (paragraphs, bullet points, numbered lists), and minor user edits (inline self-
+   * corrections). Timestamps and diarization are incompatible with mode `SMART`.
+   * @param mode mode or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1AudioTranscriptionConfig setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

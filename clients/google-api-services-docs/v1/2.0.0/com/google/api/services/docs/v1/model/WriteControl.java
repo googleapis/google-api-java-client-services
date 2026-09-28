@@ -57,6 +57,15 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
   private java.lang.String targetRevisionId;
 
   /**
+   * How the request updates should be applied to the document. If unspecified, the request updates
+   * will be applied as normal edits. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String writeMode;
+
+  /**
    * The optional revision ID of the document the write request is applied to. If this is not the
    * latest revision of the document, the request is not processed and returns a 400 bad request
    * error. When a required revision ID is returned in a response, it indicates the revision ID of
@@ -113,6 +122,27 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
    */
   public WriteControl setTargetRevisionId(java.lang.String targetRevisionId) {
     this.targetRevisionId = targetRevisionId;
+    return this;
+  }
+
+  /**
+   * How the request updates should be applied to the document. If unspecified, the request updates
+   * will be applied as normal edits. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWriteMode() {
+    return writeMode;
+  }
+
+  /**
+   * How the request updates should be applied to the document. If unspecified, the request updates
+   * will be applied as normal edits. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param writeMode writeMode or {@code null} for none
+   */
+  public WriteControl setWriteMode(java.lang.String writeMode) {
+    this.writeMode = writeMode;
     return this;
   }
 

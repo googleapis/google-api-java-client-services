@@ -30,6 +30,14 @@ package com.google.api.services.docs.v1.model;
 public final class BatchUpdateDocumentResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String commentUpdateState;
+
+  /**
    * The ID of the document to which the updates were applied to.
    * The value may be {@code null}.
    */
@@ -45,11 +53,38 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
   private java.util.List<Response> replies;
 
   /**
+   * The suggestions which were affected by each update. This maps 1:1 with the updates. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SuggestionResponse> suggestionResponses;
+
+  /**
    * The updated write control after applying the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WriteControl writeControl;
+
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCommentUpdateState() {
+    return commentUpdateState;
+  }
+
+  /**
+   * Whether comment updates were applied in the batch request. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param commentUpdateState commentUpdateState or {@code null} for none
+   */
+  public BatchUpdateDocumentResponse setCommentUpdateState(java.lang.String commentUpdateState) {
+    this.commentUpdateState = commentUpdateState;
+    return this;
+  }
 
   /**
    * The ID of the document to which the updates were applied to.
@@ -84,6 +119,25 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
    */
   public BatchUpdateDocumentResponse setReplies(java.util.List<Response> replies) {
     this.replies = replies;
+    return this;
+  }
+
+  /**
+   * The suggestions which were affected by each update. This maps 1:1 with the updates. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SuggestionResponse> getSuggestionResponses() {
+    return suggestionResponses;
+  }
+
+  /**
+   * The suggestions which were affected by each update. This maps 1:1 with the updates. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param suggestionResponses suggestionResponses or {@code null} for none
+   */
+  public BatchUpdateDocumentResponse setSuggestionResponses(java.util.List<SuggestionResponse> suggestionResponses) {
+    this.suggestionResponses = suggestionResponses;
     return this;
   }
 

@@ -30,6 +30,14 @@ package com.google.api.services.docs.v1.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
+   * The result of adding a reply to a comment or suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AddCommentReplyResponse addCommentReply;
+
+  /**
    * The result of adding a document tab.
    * The value may be {@code null}.
    */
@@ -65,6 +73,14 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private CreateNamedRangeResponse createNamedRange;
 
   /**
+   * The result of inserting a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertCommentResponse insertComment;
+
+  /**
    * The result of inserting an inline image.
    * The value may be {@code null}.
    */
@@ -84,6 +100,25 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private ReplaceAllTextResponse replaceAllText;
+
+  /**
+   * The result of adding a reply to a comment or suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public AddCommentReplyResponse getAddCommentReply() {
+    return addCommentReply;
+  }
+
+  /**
+   * The result of adding a reply to a comment or suggestion. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param addCommentReply addCommentReply or {@code null} for none
+   */
+  public Response setAddCommentReply(AddCommentReplyResponse addCommentReply) {
+    this.addCommentReply = addCommentReply;
+    return this;
+  }
 
   /**
    * The result of adding a document tab.
@@ -167,6 +202,25 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setCreateNamedRange(CreateNamedRangeResponse createNamedRange) {
     this.createNamedRange = createNamedRange;
+    return this;
+  }
+
+  /**
+   * The result of inserting a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @return value or {@code null} for none
+   */
+  public InsertCommentResponse getInsertComment() {
+    return insertComment;
+  }
+
+  /**
+   * The result of inserting a comment. [Developer
+   * Preview](https://developers.google.com/workspace/preview).
+   * @param insertComment insertComment or {@code null} for none
+   */
+  public Response setInsertComment(InsertCommentResponse insertComment) {
+    this.insertComment = insertComment;
     return this;
   }
 

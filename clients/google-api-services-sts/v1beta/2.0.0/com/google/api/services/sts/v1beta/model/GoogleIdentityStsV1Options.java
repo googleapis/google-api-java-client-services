@@ -42,7 +42,7 @@ public final class GoogleIdentityStsV1Options extends com.google.api.client.json
   private GoogleIdentityStsV1AccessBoundary accessBoundary;
 
   /**
-   * The unpadded, url-escaped, base64-encoded SHA-256 hash of the certificate's DER encoding. It
+   * The unpadded, URL-escaped, base64-encoded SHA-256 hash of the certificate's DER encoding. It
    * must be 43 characters long. The resulting token will be bound to this value.
    * The value may be {@code null}.
    */
@@ -81,7 +81,7 @@ public final class GoogleIdentityStsV1Options extends com.google.api.client.json
   }
 
   /**
-   * The unpadded, url-escaped, base64-encoded SHA-256 hash of the certificate's DER encoding. It
+   * The unpadded, URL-escaped, base64-encoded SHA-256 hash of the certificate's DER encoding. It
    * must be 43 characters long. The resulting token will be bound to this value.
    * @return value or {@code null} for none
    */
@@ -90,7 +90,7 @@ public final class GoogleIdentityStsV1Options extends com.google.api.client.json
   }
 
   /**
-   * The unpadded, url-escaped, base64-encoded SHA-256 hash of the certificate's DER encoding. It
+   * The unpadded, URL-escaped, base64-encoded SHA-256 hash of the certificate's DER encoding. It
    * must be 43 characters long. The resulting token will be bound to this value.
    * @param bindCertFingerprint bindCertFingerprint or {@code null} for none
    */

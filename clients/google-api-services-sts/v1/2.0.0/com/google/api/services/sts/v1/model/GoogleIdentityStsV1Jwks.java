@@ -31,7 +31,7 @@ package com.google.api.services.sts.v1.model;
 public final class GoogleIdentityStsV1Jwks extends com.google.api.client.json.GenericJson {
 
   /**
-   * The JWKS for this OP.
+   * The JWKs for this OP.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +44,7 @@ public final class GoogleIdentityStsV1Jwks extends com.google.api.client.json.Ge
   }
 
   /**
-   * The JWKS for this OP.
+   * The JWKs for this OP.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleIdentityStsV1Jwk> getKeys() {
@@ -52,7 +52,7 @@ public final class GoogleIdentityStsV1Jwks extends com.google.api.client.json.Ge
   }
 
   /**
-   * The JWKS for this OP.
+   * The JWKs for this OP.
    * @param keys keys or {@code null} for none
    */
   public GoogleIdentityStsV1Jwks setKeys(java.util.List<GoogleIdentityStsV1Jwk> keys) {

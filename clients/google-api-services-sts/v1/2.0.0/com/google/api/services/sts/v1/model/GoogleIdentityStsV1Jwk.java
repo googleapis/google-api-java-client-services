@@ -19,7 +19,7 @@ package com.google.api.services.sts.v1.model;
 /**
  * A JSON web key set (JWK) See also https://datatracker.ietf.org/doc/html/rfc7517 and
  * https://github.com/spiffe/spiffe/blob/main/standards/JWT-SVID.md#6-representation-in-the-spiffe-
- * bundle
+ * bundle.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Security Token Service API. For a detailed

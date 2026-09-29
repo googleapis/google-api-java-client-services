@@ -31,6 +31,22 @@ package com.google.api.services.firebasecrashlytics.v1alpha.model;
 public final class IntervalMetrics extends com.google.api.client.json.GenericJson {
 
   /**
+   * Mobile only. Percentage of crash-free sessions. (total_sessions_count -
+   * impacted_sessions_count) / total_sessions_count * 100.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float crashFreeSessionsPercentage;
+
+  /**
+   * Mobile only. Percentage of crash-free users. (total_users_count - impacted_users_count) /
+   * total_users_count * 100
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float crashFreeUsersPercentage;
+
+  /**
    * The end of the interval covered by the computation.
    * The value may be {@code null}.
    */
@@ -45,6 +61,13 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
   private java.lang.Long eventsCount;
 
   /**
+   * The number of distinct sessions in the set of events.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long impactedSessionsCount;
+
+  /**
    * The number of distinct users in the set of events.
    * The value may be {@code null}.
    */
@@ -52,7 +75,8 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
   private java.lang.Long impactedUsersCount;
 
   /**
-   * The number of distinct sessions in the set of events.
+   * Deprecated: Prefer `impacted_sessions_count`. The number of distinct sessions in the set of
+   * events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -64,6 +88,58 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private String startTime;
+
+  /**
+   * The number of distinct sessions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalSessionsCount;
+
+  /**
+   * The number of distinct users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long totalUsersCount;
+
+  /**
+   * Mobile only. Percentage of crash-free sessions. (total_sessions_count -
+   * impacted_sessions_count) / total_sessions_count * 100.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCrashFreeSessionsPercentage() {
+    return crashFreeSessionsPercentage;
+  }
+
+  /**
+   * Mobile only. Percentage of crash-free sessions. (total_sessions_count -
+   * impacted_sessions_count) / total_sessions_count * 100.
+   * @param crashFreeSessionsPercentage crashFreeSessionsPercentage or {@code null} for none
+   */
+  public IntervalMetrics setCrashFreeSessionsPercentage(java.lang.Float crashFreeSessionsPercentage) {
+    this.crashFreeSessionsPercentage = crashFreeSessionsPercentage;
+    return this;
+  }
+
+  /**
+   * Mobile only. Percentage of crash-free users. (total_users_count - impacted_users_count) /
+   * total_users_count * 100
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getCrashFreeUsersPercentage() {
+    return crashFreeUsersPercentage;
+  }
+
+  /**
+   * Mobile only. Percentage of crash-free users. (total_users_count - impacted_users_count) /
+   * total_users_count * 100
+   * @param crashFreeUsersPercentage crashFreeUsersPercentage or {@code null} for none
+   */
+  public IntervalMetrics setCrashFreeUsersPercentage(java.lang.Float crashFreeUsersPercentage) {
+    this.crashFreeUsersPercentage = crashFreeUsersPercentage;
+    return this;
+  }
 
   /**
    * The end of the interval covered by the computation.
@@ -100,6 +176,23 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
   }
 
   /**
+   * The number of distinct sessions in the set of events.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getImpactedSessionsCount() {
+    return impactedSessionsCount;
+  }
+
+  /**
+   * The number of distinct sessions in the set of events.
+   * @param impactedSessionsCount impactedSessionsCount or {@code null} for none
+   */
+  public IntervalMetrics setImpactedSessionsCount(java.lang.Long impactedSessionsCount) {
+    this.impactedSessionsCount = impactedSessionsCount;
+    return this;
+  }
+
+  /**
    * The number of distinct users in the set of events.
    * @return value or {@code null} for none
    */
@@ -117,7 +210,8 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of distinct sessions in the set of events.
+   * Deprecated: Prefer `impacted_sessions_count`. The number of distinct sessions in the set of
+   * events.
    * @return value or {@code null} for none
    */
   public java.lang.Long getSessionsCount() {
@@ -125,7 +219,8 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The number of distinct sessions in the set of events.
+   * Deprecated: Prefer `impacted_sessions_count`. The number of distinct sessions in the set of
+   * events.
    * @param sessionsCount sessionsCount or {@code null} for none
    */
   public IntervalMetrics setSessionsCount(java.lang.Long sessionsCount) {
@@ -147,6 +242,40 @@ public final class IntervalMetrics extends com.google.api.client.json.GenericJso
    */
   public IntervalMetrics setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * The number of distinct sessions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalSessionsCount() {
+    return totalSessionsCount;
+  }
+
+  /**
+   * The number of distinct sessions.
+   * @param totalSessionsCount totalSessionsCount or {@code null} for none
+   */
+  public IntervalMetrics setTotalSessionsCount(java.lang.Long totalSessionsCount) {
+    this.totalSessionsCount = totalSessionsCount;
+    return this;
+  }
+
+  /**
+   * The number of distinct users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getTotalUsersCount() {
+    return totalUsersCount;
+  }
+
+  /**
+   * The number of distinct users.
+   * @param totalUsersCount totalUsersCount or {@code null} for none
+   */
+  public IntervalMetrics setTotalUsersCount(java.lang.Long totalUsersCount) {
+    this.totalUsersCount = totalUsersCount;
     return this;
   }
 

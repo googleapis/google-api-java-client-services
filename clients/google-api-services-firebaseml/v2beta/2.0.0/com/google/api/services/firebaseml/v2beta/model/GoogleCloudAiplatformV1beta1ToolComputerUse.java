@@ -30,6 +30,13 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Disabled safety policies for computer use.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> disabledSafetyPolicies;
+
+  /**
    * Optional. Enables the prompt injection detection check on computer-use request.
    * The value may be {@code null}.
    */
@@ -53,6 +60,23 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedPredefinedFunctions;
+
+  /**
+   * Optional. Disabled safety policies for computer use.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDisabledSafetyPolicies() {
+    return disabledSafetyPolicies;
+  }
+
+  /**
+   * Optional. Disabled safety policies for computer use.
+   * @param disabledSafetyPolicies disabledSafetyPolicies or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolComputerUse setDisabledSafetyPolicies(java.util.List<java.lang.String> disabledSafetyPolicies) {
+    this.disabledSafetyPolicies = disabledSafetyPolicies;
+    return this;
+  }
 
   /**
    * Optional. Enables the prompt injection detection check on computer-use request.

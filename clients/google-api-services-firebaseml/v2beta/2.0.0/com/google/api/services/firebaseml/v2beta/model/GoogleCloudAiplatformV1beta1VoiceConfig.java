@@ -45,6 +45,15 @@ public final class GoogleCloudAiplatformV1beta1VoiceConfig extends com.google.ap
   private GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig replicatedVoiceConfig;
 
   /**
+   * Optional. The speaker identifier for synthesis. Supported formats: * Speaker name for prebuilt
+   * voices (for example, `Orus` or `Kore`). * Voice ID for stored voices (for example,
+   * `voice_xxx`). * Voice replication key (for example, `voicekey_xxx`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String voice;
+
+  /**
    * The configuration for a prebuilt voice.
    * @return value or {@code null} for none
    */
@@ -77,6 +86,27 @@ public final class GoogleCloudAiplatformV1beta1VoiceConfig extends com.google.ap
    */
   public GoogleCloudAiplatformV1beta1VoiceConfig setReplicatedVoiceConfig(GoogleCloudAiplatformV1beta1ReplicatedVoiceConfig replicatedVoiceConfig) {
     this.replicatedVoiceConfig = replicatedVoiceConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The speaker identifier for synthesis. Supported formats: * Speaker name for prebuilt
+   * voices (for example, `Orus` or `Kore`). * Voice ID for stored voices (for example,
+   * `voice_xxx`). * Voice replication key (for example, `voicekey_xxx`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVoice() {
+    return voice;
+  }
+
+  /**
+   * Optional. The speaker identifier for synthesis. Supported formats: * Speaker name for prebuilt
+   * voices (for example, `Orus` or `Kore`). * Voice ID for stored voices (for example,
+   * `voice_xxx`). * Voice replication key (for example, `voicekey_xxx`).
+   * @param voice voice or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1VoiceConfig setVoice(java.lang.String voice) {
+    this.voice = voice;
     return this;
   }
 

@@ -56,6 +56,14 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
+   * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
+   * run this build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workerRelease;
+
+  /**
    * Size of the disk attached to the worker, in GB. See [Worker pool config
    * file](https://cloud.google.com/build/docs/private-pools/worker-pool-config-file-schema).
    * Specify a value of up to 4000. If `0` is specified, Cloud Build will use a standard disk size.
@@ -113,6 +121,25 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
    */
   public WorkerConfig setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
+   * run this build.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkerRelease() {
+    return workerRelease;
+  }
+
+  /**
+   * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
+   * run this build.
+   * @param workerRelease workerRelease or {@code null} for none
+   */
+  public WorkerConfig setWorkerRelease(java.lang.String workerRelease) {
+    this.workerRelease = workerRelease;
     return this;
   }
 

@@ -45,7 +45,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
   private java.lang.String description;
 
   /**
-   * Optional. Labels as key-value pairs
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Optional. The resource name of the multicast group created by the admin in the same zone as
-   * this multicast group consumer activation. Use the following format: //
+   * this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroups`. This field is deprecated. Use
    * multicast_group_range_activation instead.
    * The value may be {@code null}.
@@ -81,7 +81,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Required. The resource name of the multicast group range activation created by the admin in the
-   * same zone as this multicast group consumer activation. Use the following format: //
+   * same zone as this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroupRangeActivations`.
    * The value may be {@code null}.
    */
@@ -113,9 +113,9 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Output only. [Output only] The Google-generated UUID for the resource. This value is unique
-   * across all multicast group consumer activation resources. If a group consumer activation is
-   * deleted and another with the same name is created, the new group consumer activation is
-   * assigned a different unique_id.
+   * across all multicast group consumer activation resources. If a multicast group consumer
+   * activation is deleted and another with the same name is created, the new multicast group
+   * consumer activation is assigned a different unique_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
   }
 
   /**
-   * Optional. Labels as key-value pairs
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -174,7 +174,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
   }
 
   /**
-   * Optional. Labels as key-value pairs
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public MulticastGroupConsumerActivation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -226,7 +226,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Optional. The resource name of the multicast group created by the admin in the same zone as
-   * this multicast group consumer activation. Use the following format: //
+   * this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroups`. This field is deprecated. Use
    * multicast_group_range_activation instead.
    * @return value or {@code null} for none
@@ -237,7 +237,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Optional. The resource name of the multicast group created by the admin in the same zone as
-   * this multicast group consumer activation. Use the following format: //
+   * this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroups`. This field is deprecated. Use
    * multicast_group_range_activation instead.
    * @param multicastGroup multicastGroup or {@code null} for none
@@ -249,7 +249,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Required. The resource name of the multicast group range activation created by the admin in the
-   * same zone as this multicast group consumer activation. Use the following format: //
+   * same zone as this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroupRangeActivations`.
    * @return value or {@code null} for none
    */
@@ -259,7 +259,7 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Required. The resource name of the multicast group range activation created by the admin in the
-   * same zone as this multicast group consumer activation. Use the following format: //
+   * same zone as this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroupRangeActivations`.
    * @param multicastGroupRangeActivation multicastGroupRangeActivation or {@code null} for none
    */
@@ -325,9 +325,9 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Output only. [Output only] The Google-generated UUID for the resource. This value is unique
-   * across all multicast group consumer activation resources. If a group consumer activation is
-   * deleted and another with the same name is created, the new group consumer activation is
-   * assigned a different unique_id.
+   * across all multicast group consumer activation resources. If a multicast group consumer
+   * activation is deleted and another with the same name is created, the new multicast group
+   * consumer activation is assigned a different unique_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueId() {
@@ -336,9 +336,9 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
 
   /**
    * Output only. [Output only] The Google-generated UUID for the resource. This value is unique
-   * across all multicast group consumer activation resources. If a group consumer activation is
-   * deleted and another with the same name is created, the new group consumer activation is
-   * assigned a different unique_id.
+   * across all multicast group consumer activation resources. If a multicast group consumer
+   * activation is deleted and another with the same name is created, the new multicast group
+   * consumer activation is assigned a different unique_id.
    * @param uniqueId uniqueId or {@code null} for none
    */
   public MulticastGroupConsumerActivation setUniqueId(java.lang.String uniqueId) {

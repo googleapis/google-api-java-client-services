@@ -3235,7 +3235,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Used to specify the fields to be overwritten in the `AuthzExtension` resource
+           * Optional. Used to specify the fields to be overwritten in the `AuthzExtension` resource
            * by the update. The fields specified in the `update_mask` are relative to the resource,
            * not the full request. A field is overwritten if it is in the mask. If the user does not
            * specify a mask, then all fields are overwritten.
@@ -3243,7 +3243,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Used to specify the fields to be overwritten in the `AuthzExtension` resource by the
+          /** Optional. Used to specify the fields to be overwritten in the `AuthzExtension` resource by the
          update. The fields specified in the `update_mask` are relative to the resource, not the full
          request. A field is overwritten if it is in the mask. If the user does not specify a mask, then all
          fields are overwritten.
@@ -3253,7 +3253,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Used to specify the fields to be overwritten in the `AuthzExtension` resource
+           * Optional. Used to specify the fields to be overwritten in the `AuthzExtension` resource
            * by the update. The fields specified in the `update_mask` are relative to the resource,
            * not the full request. A field is overwritten if it is in the mask. If the user does not
            * specify a mask, then all fields are overwritten.
@@ -16992,6 +16992,46 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees this for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID version 4 with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees this for 60 minutes after the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID version 4 with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees this for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID version 4 with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
           /** Required. Short name of the ServiceBinding resource to be created. */
           @com.google.api.client.util.Key
           private java.lang.String serviceBindingId;
@@ -17143,6 +17183,46 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
                   "^projects/[^/]+/locations/[^/]+/serviceBindings/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees this for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID version 4 with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees this for 60 minutes after the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID version 4 with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees this for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID version 4 with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -17618,6 +17698,46 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
                   "^projects/[^/]+/locations/[^/]+/serviceBindings/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees this for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID version 4 with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server can ignore the request if it has already been completed. The
+         server guarantees this for 60 minutes after the first request. For example, consider a situation
+         where you make an initial request and the request times out. If you make the request again with the
+         same request ID, the server ignores the second request. This prevents clients from accidentally
+         creating duplicate commitments. The request ID must be a valid UUID version 4 with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server can ignore the request if it has
+           * already been completed. The server guarantees this for 60 minutes after the first
+           * request. For example, consider a situation where you make an initial request and the
+           * request times out. If you make the request again with the same request ID, the server
+           * ignores the second request. This prevents clients from accidentally creating duplicate
+           * commitments. The request ID must be a valid UUID version 4 with the exception that zero
+           * UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 

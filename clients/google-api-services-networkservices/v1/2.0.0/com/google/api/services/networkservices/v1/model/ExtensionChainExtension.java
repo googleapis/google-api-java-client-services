@@ -163,7 +163,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
    * contain `REQUEST_HEADERS` event. For the `AuthzExtension` resource, this field is optional.
    * `REQUEST_HEADERS` is the only supported event. If unspecified, `REQUEST_HEADERS` event is
-   * assumed as supported.
+   * assumed as supported. For the `CdnEdgeExtension` resource, this field is optional. Eligible
+   * values are `REQUEST_HEADERS` and `RESPONSE_HEADERS`. If unspecified, both are assumed as
+   * supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -469,7 +471,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
    * contain `REQUEST_HEADERS` event. For the `AuthzExtension` resource, this field is optional.
    * `REQUEST_HEADERS` is the only supported event. If unspecified, `REQUEST_HEADERS` event is
-   * assumed as supported.
+   * assumed as supported. For the `CdnEdgeExtension` resource, this field is optional. Eligible
+   * values are `REQUEST_HEADERS` and `RESPONSE_HEADERS`. If unspecified, both are assumed as
+   * supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedEvents() {
@@ -483,7 +487,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * assumed as supported. For the `LbEdgeExtension` resource, this field is required and must only
    * contain `REQUEST_HEADERS` event. For the `AuthzExtension` resource, this field is optional.
    * `REQUEST_HEADERS` is the only supported event. If unspecified, `REQUEST_HEADERS` event is
-   * assumed as supported.
+   * assumed as supported. For the `CdnEdgeExtension` resource, this field is optional. Eligible
+   * values are `REQUEST_HEADERS` and `RESPONSE_HEADERS`. If unspecified, both are assumed as
+   * supported.
    * @param supportedEvents supportedEvents or {@code null} for none
    */
   public ExtensionChainExtension setSupportedEvents(java.util.List<java.lang.String> supportedEvents) {

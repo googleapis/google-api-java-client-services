@@ -44,7 +44,7 @@ public final class MulticastConsumerAssociation extends com.google.api.client.js
   private java.lang.String description;
 
   /**
-   * Optional. Labels as key-value pairs
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,9 +102,9 @@ public final class MulticastConsumerAssociation extends com.google.api.client.js
 
   /**
    * Output only. [Output only] The Google-generated UUID for the resource. This value is unique
-   * across all multicast consumer association resources. If a consumer association is deleted and
-   * another with the same name is created, the new consumer association is assigned a different
-   * unique_id.
+   * across all multicast consumer association resources. If a multicast consumer association is
+   * deleted and another with the same name is created, the new multicast consumer association is
+   * assigned a different unique_id.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class MulticastConsumerAssociation extends com.google.api.client.js
   }
 
   /**
-   * Optional. Labels as key-value pairs
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -161,7 +161,7 @@ public final class MulticastConsumerAssociation extends com.google.api.client.js
   }
 
   /**
-   * Optional. Labels as key-value pairs
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public MulticastConsumerAssociation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -289,9 +289,9 @@ public final class MulticastConsumerAssociation extends com.google.api.client.js
 
   /**
    * Output only. [Output only] The Google-generated UUID for the resource. This value is unique
-   * across all multicast consumer association resources. If a consumer association is deleted and
-   * another with the same name is created, the new consumer association is assigned a different
-   * unique_id.
+   * across all multicast consumer association resources. If a multicast consumer association is
+   * deleted and another with the same name is created, the new multicast consumer association is
+   * assigned a different unique_id.
    * @return value or {@code null} for none
    */
   public java.lang.String getUniqueId() {
@@ -300,9 +300,9 @@ public final class MulticastConsumerAssociation extends com.google.api.client.js
 
   /**
    * Output only. [Output only] The Google-generated UUID for the resource. This value is unique
-   * across all multicast consumer association resources. If a consumer association is deleted and
-   * another with the same name is created, the new consumer association is assigned a different
-   * unique_id.
+   * across all multicast consumer association resources. If a multicast consumer association is
+   * deleted and another with the same name is created, the new multicast consumer association is
+   * assigned a different unique_id.
    * @param uniqueId uniqueId or {@code null} for none
    */
   public MulticastConsumerAssociation setUniqueId(java.lang.String uniqueId) {

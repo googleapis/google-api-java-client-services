@@ -30,11 +30,18 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class DnsPeeringConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The domain to peer.
+   * Optional. Deprecated: Use `domains` instead. The domain to peer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
+
+  /**
+   * Optional. The domains to peer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> domains;
 
   /**
    * Optional. The target network resource name for DNS peering. Format:
@@ -45,7 +52,7 @@ public final class DnsPeeringConfig extends com.google.api.client.json.GenericJs
   private java.lang.String targetNetwork;
 
   /**
-   * Optional. The domain to peer.
+   * Optional. Deprecated: Use `domains` instead. The domain to peer.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -53,11 +60,28 @@ public final class DnsPeeringConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. The domain to peer.
+   * Optional. Deprecated: Use `domains` instead. The domain to peer.
    * @param domain domain or {@code null} for none
    */
   public DnsPeeringConfig setDomain(java.lang.String domain) {
     this.domain = domain;
+    return this;
+  }
+
+  /**
+   * Optional. The domains to peer.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDomains() {
+    return domains;
+  }
+
+  /**
+   * Optional. The domains to peer.
+   * @param domains domains or {@code null} for none
+   */
+  public DnsPeeringConfig setDomains(java.util.List<java.lang.String> domains) {
+    this.domains = domains;
     return this;
   }
 

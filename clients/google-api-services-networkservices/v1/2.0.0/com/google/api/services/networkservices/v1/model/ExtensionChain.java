@@ -32,8 +32,8 @@ public final class ExtensionChain extends com.google.api.client.json.GenericJson
   /**
    * Required. A set of extensions to execute for the matching request. At least one extension is
    * required. Up to 3 extensions can be defined for each extension chain for `LbTrafficExtension`
-   * resource. `LbRouteExtension` and `LbEdgeExtension` chains are limited to 1 extension per
-   * extension chain.
+   * resource. `LbRouteExtension`, `LbEdgeExtension`, and `LbTcpExtension` chains are limited to 1
+   * extension per extension chain.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,8 +59,8 @@ public final class ExtensionChain extends com.google.api.client.json.GenericJson
   /**
    * Required. A set of extensions to execute for the matching request. At least one extension is
    * required. Up to 3 extensions can be defined for each extension chain for `LbTrafficExtension`
-   * resource. `LbRouteExtension` and `LbEdgeExtension` chains are limited to 1 extension per
-   * extension chain.
+   * resource. `LbRouteExtension`, `LbEdgeExtension`, and `LbTcpExtension` chains are limited to 1
+   * extension per extension chain.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionChainExtension> getExtensions() {
@@ -70,8 +70,8 @@ public final class ExtensionChain extends com.google.api.client.json.GenericJson
   /**
    * Required. A set of extensions to execute for the matching request. At least one extension is
    * required. Up to 3 extensions can be defined for each extension chain for `LbTrafficExtension`
-   * resource. `LbRouteExtension` and `LbEdgeExtension` chains are limited to 1 extension per
-   * extension chain.
+   * resource. `LbRouteExtension`, `LbEdgeExtension`, and `LbTcpExtension` chains are limited to 1
+   * extension per extension chain.
    * @param extensions extensions or {@code null} for none
    */
   public ExtensionChain setExtensions(java.util.List<ExtensionChainExtension> extensions) {

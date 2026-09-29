@@ -49,7 +49,7 @@ public final class LbTcpExtension extends com.google.api.client.json.GenericJson
    * Required. A set of ordered extension chains that contain the match conditions and extensions to
    * execute. Match conditions for each extension chain are evaluated in sequence for a given
    * request. The first extension chain that has a condition that matches the request is executed.
-   * Any subsequent extension chains do not execute. Limited to 5 extension chains per resource.
+   * Any subsequent extension chains do not execute. Limited to 1 extension chain per resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -142,7 +142,7 @@ public final class LbTcpExtension extends com.google.api.client.json.GenericJson
    * Required. A set of ordered extension chains that contain the match conditions and extensions to
    * execute. Match conditions for each extension chain are evaluated in sequence for a given
    * request. The first extension chain that has a condition that matches the request is executed.
-   * Any subsequent extension chains do not execute. Limited to 5 extension chains per resource.
+   * Any subsequent extension chains do not execute. Limited to 1 extension chain per resource.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionChain> getExtensionChains() {
@@ -153,7 +153,7 @@ public final class LbTcpExtension extends com.google.api.client.json.GenericJson
    * Required. A set of ordered extension chains that contain the match conditions and extensions to
    * execute. Match conditions for each extension chain are evaluated in sequence for a given
    * request. The first extension chain that has a condition that matches the request is executed.
-   * Any subsequent extension chains do not execute. Limited to 5 extension chains per resource.
+   * Any subsequent extension chains do not execute. Limited to 1 extension chain per resource.
    * @param extensionChains extensionChains or {@code null} for none
    */
   public LbTcpExtension setExtensionChains(java.util.List<ExtensionChain> extensionChains) {

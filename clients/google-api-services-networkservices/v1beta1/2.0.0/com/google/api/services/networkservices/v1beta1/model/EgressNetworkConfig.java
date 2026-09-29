@@ -17,7 +17,7 @@
 package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * Model definition for EgressNetworkConfig.
+ * Egress network config
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -43,6 +43,13 @@ public final class EgressNetworkConfig extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String networkAttachment;
+
+  /**
+   * Optional. The TLS configuration for the egress traffic.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private EgressNetworkConfigTlsConfig tlsConfig;
 
   /**
    * Optional. Deprecated: Use tls_config instead. The trust config resource name. Format:
@@ -92,6 +99,23 @@ public final class EgressNetworkConfig extends com.google.api.client.json.Generi
    */
   public EgressNetworkConfig setNetworkAttachment(java.lang.String networkAttachment) {
     this.networkAttachment = networkAttachment;
+    return this;
+  }
+
+  /**
+   * Optional. The TLS configuration for the egress traffic.
+   * @return value or {@code null} for none
+   */
+  public EgressNetworkConfigTlsConfig getTlsConfig() {
+    return tlsConfig;
+  }
+
+  /**
+   * Optional. The TLS configuration for the egress traffic.
+   * @param tlsConfig tlsConfig or {@code null} for none
+   */
+  public EgressNetworkConfig setTlsConfig(EgressNetworkConfigTlsConfig tlsConfig) {
+    this.tlsConfig = tlsConfig;
     return this;
   }
 

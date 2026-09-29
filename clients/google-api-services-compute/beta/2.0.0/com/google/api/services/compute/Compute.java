@@ -100098,6 +100098,223 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Sets name of an interconnect.
+     *
+     * Create a request for the method "interconnects.setName".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link SetName#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param interconnect Name of the interconnect to update.
+     * @param content the {@link com.google.api.services.compute.model.InterconnectsSetNameRequest}
+     * @return the request
+     */
+    public SetName setName(java.lang.String project, java.lang.String interconnect, com.google.api.services.compute.model.InterconnectsSetNameRequest content) throws java.io.IOException {
+      SetName result = new SetName(project, interconnect, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetName extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}/setName";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern INTERCONNECT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Sets name of an interconnect.
+       *
+       * Create a request for the method "interconnects.setName".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link SetName#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SetName#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param interconnect Name of the interconnect to update.
+       * @param content the {@link com.google.api.services.compute.model.InterconnectsSetNameRequest}
+       * @since 1.13
+       */
+      protected SetName(java.lang.String project, java.lang.String interconnect, com.google.api.services.compute.model.InterconnectsSetNameRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.interconnect = com.google.api.client.util.Preconditions.checkNotNull(interconnect, "Required parameter interconnect must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTERCONNECT_PATTERN.matcher(interconnect).matches(),
+              "Parameter interconnect must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+      }
+
+      @Override
+      public SetName set$Xgafv(java.lang.String $Xgafv) {
+        return (SetName) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetName setAccessToken(java.lang.String accessToken) {
+        return (SetName) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetName setAlt(java.lang.String alt) {
+        return (SetName) super.setAlt(alt);
+      }
+
+      @Override
+      public SetName setCallback(java.lang.String callback) {
+        return (SetName) super.setCallback(callback);
+      }
+
+      @Override
+      public SetName setFields(java.lang.String fields) {
+        return (SetName) super.setFields(fields);
+      }
+
+      @Override
+      public SetName setKey(java.lang.String key) {
+        return (SetName) super.setKey(key);
+      }
+
+      @Override
+      public SetName setOauthToken(java.lang.String oauthToken) {
+        return (SetName) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetName setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetName) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetName setQuotaUser(java.lang.String quotaUser) {
+        return (SetName) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetName setUploadType(java.lang.String uploadType) {
+        return (SetName) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetName setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetName) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetName setUserIp(java.lang.String userIp) {
+        return (SetName) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public SetName setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the interconnect to update. */
+      @com.google.api.client.util.Key
+      private java.lang.String interconnect;
+
+      /** Name of the interconnect to update.
+       */
+      public java.lang.String getInterconnect() {
+        return interconnect;
+      }
+
+      /** Name of the interconnect to update. */
+      public SetName setInterconnect(java.lang.String interconnect) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(INTERCONNECT_PATTERN.matcher(interconnect).matches(),
+              "Parameter interconnect must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.interconnect = interconnect;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public SetName setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public SetName set(String parameterName, Object value) {
+        return (SetName) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns permissions that a caller has on the specified resource.
      *
      * Create a request for the method "interconnects.testIamPermissions".

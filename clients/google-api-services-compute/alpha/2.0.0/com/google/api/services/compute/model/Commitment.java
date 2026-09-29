@@ -255,10 +255,10 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
    * GRAPHICS_OPTIMIZED_G4,GRAPHICS_OPTIMIZED_G4_VGPU,MEMORY_OPTIMIZED,
    * MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3,STORAGE_OPTIMIZED_Z4DS,
-   * STORAGE_OPTIMIZED_Z4DH,STORAGE_OPTIMIZED_Z4D4T. For example, type MEMORY_OPTIMIZED specifies a
-   * commitment that applies only to eligible resources of memory optimized M1 and M2 machine
-   * series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of
-   * general purpose N1 machine series.
+   * STORAGE_OPTIMIZED_Z4DH,STORAGE_OPTIMIZED_Z4D4T,STORAGE_OPTIMIZED_Z4M. For example, type
+   * MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory
+   * optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies
+   * only to eligible resources of general purpose N1 machine series.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -769,10 +769,10 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
    * GRAPHICS_OPTIMIZED_G4,GRAPHICS_OPTIMIZED_G4_VGPU,MEMORY_OPTIMIZED,
    * MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3,STORAGE_OPTIMIZED_Z4DS,
-   * STORAGE_OPTIMIZED_Z4DH,STORAGE_OPTIMIZED_Z4D4T. For example, type MEMORY_OPTIMIZED specifies a
-   * commitment that applies only to eligible resources of memory optimized M1 and M2 machine
-   * series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of
-   * general purpose N1 machine series.
+   * STORAGE_OPTIMIZED_Z4DH,STORAGE_OPTIMIZED_Z4D4T,STORAGE_OPTIMIZED_Z4M. For example, type
+   * MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory
+   * optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies
+   * only to eligible resources of general purpose N1 machine series.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -791,10 +791,10 @@ public final class Commitment extends com.google.api.client.json.GenericJson {
    * GENERAL_PURPOSE_N2D,GENERAL_PURPOSE_N4, GENERAL_PURPOSE_T2D,GRAPHICS_OPTIMIZED,
    * GRAPHICS_OPTIMIZED_G4,GRAPHICS_OPTIMIZED_G4_VGPU,MEMORY_OPTIMIZED,
    * MEMORY_OPTIMIZED_M3,MEMORY_OPTIMIZED_X4, STORAGE_OPTIMIZED_Z3,STORAGE_OPTIMIZED_Z4DS,
-   * STORAGE_OPTIMIZED_Z4DH,STORAGE_OPTIMIZED_Z4D4T. For example, type MEMORY_OPTIMIZED specifies a
-   * commitment that applies only to eligible resources of memory optimized M1 and M2 machine
-   * series. Type GENERAL_PURPOSE specifies a commitment that applies only to eligible resources of
-   * general purpose N1 machine series.
+   * STORAGE_OPTIMIZED_Z4DH,STORAGE_OPTIMIZED_Z4D4T,STORAGE_OPTIMIZED_Z4M. For example, type
+   * MEMORY_OPTIMIZED specifies a commitment that applies only to eligible resources of memory
+   * optimized M1 and M2 machine series. Type GENERAL_PURPOSE specifies a commitment that applies
+   * only to eligible resources of general purpose N1 machine series.
    * @param type type or {@code null} for none
    */
   public Commitment setType(java.lang.String type) {

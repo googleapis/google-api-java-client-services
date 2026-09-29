@@ -63,6 +63,22 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
   private AutoscalingPolicyTimeAggregation timeAggregation;
 
   /**
+   * The upper bound of the utilization range. Must be a float value in the range
+   * ('utilization_min', 1]. A value of 0.0 is equivalent to leaving the field unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double utilizationMax;
+
+  /**
+   * The lower bound of the utilization range. Must be a float value in the range (0,
+   * 'utilization_max']. A value of 0.0 is equivalent to leaving the field unset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double utilizationMin;
+
+  /**
    * Defines a target range for CPU utilization. The values of `min_utilization` and
    * `max_utilization` must be in the range (0.0, 1.0].
    *
@@ -171,6 +187,44 @@ public final class AutoscalingPolicyCpuUtilization extends com.google.api.client
    */
   public AutoscalingPolicyCpuUtilization setTimeAggregation(AutoscalingPolicyTimeAggregation timeAggregation) {
     this.timeAggregation = timeAggregation;
+    return this;
+  }
+
+  /**
+   * The upper bound of the utilization range. Must be a float value in the range
+   * ('utilization_min', 1]. A value of 0.0 is equivalent to leaving the field unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUtilizationMax() {
+    return utilizationMax;
+  }
+
+  /**
+   * The upper bound of the utilization range. Must be a float value in the range
+   * ('utilization_min', 1]. A value of 0.0 is equivalent to leaving the field unset.
+   * @param utilizationMax utilizationMax or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setUtilizationMax(java.lang.Double utilizationMax) {
+    this.utilizationMax = utilizationMax;
+    return this;
+  }
+
+  /**
+   * The lower bound of the utilization range. Must be a float value in the range (0,
+   * 'utilization_max']. A value of 0.0 is equivalent to leaving the field unset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getUtilizationMin() {
+    return utilizationMin;
+  }
+
+  /**
+   * The lower bound of the utilization range. Must be a float value in the range (0,
+   * 'utilization_max']. A value of 0.0 is equivalent to leaving the field unset.
+   * @param utilizationMin utilizationMin or {@code null} for none
+   */
+  public AutoscalingPolicyCpuUtilization setUtilizationMin(java.lang.Double utilizationMin) {
+    this.utilizationMin = utilizationMin;
     return this;
   }
 

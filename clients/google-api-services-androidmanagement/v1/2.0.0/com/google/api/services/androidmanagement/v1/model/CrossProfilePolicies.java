@@ -41,26 +41,27 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   private java.lang.String crossProfileAppFunctions;
 
   /**
-   * Whether text copied from one profile (personal or work) can be pasted in the other profile.
+   * Optional. Whether text copied from one profile (personal or work) can be pasted in the other
+   * profile.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String crossProfileCopyPaste;
 
   /**
-   * Whether data from one profile (personal or work) can be shared with apps in the other profile.
-   * Specifically controls simple data sharing via intents. Management of other cross-profile
-   * communication channels, such as contact search, copy/paste, or connected work & personal apps,
-   * are configured separately.
+   * Optional. Whether data from one profile (personal or work) can be shared with apps in the other
+   * profile. Specifically controls simple data sharing via intents. Management of other cross-
+   * profile communication channels, such as contact search, copy/paste, or connected work &
+   * personal apps, are configured separately.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String crossProfileDataSharing;
 
   /**
-   * List of apps which are excluded from the ShowWorkContactsInPersonalProfile setting. For this to
-   * be set, ShowWorkContactsInPersonalProfile must be set to one of the following values:
-   * SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these exemptions act as a
+   * Optional. List of apps which are excluded from the ShowWorkContactsInPersonalProfile setting.
+   * For this to be set, ShowWorkContactsInPersonalProfile must be set to one of the following
+   * values: SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these exemptions act as a
    * blocklist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these exemptions
    * act as an allowlist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED_EXCEPT_SYSTEM. In this
    * case, these exemptions act as an allowlist, in addition to the already allowlisted system
@@ -72,7 +73,7 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   private PackageNameList exemptionsToShowWorkContactsInPersonalProfile;
 
   /**
-   * Whether personal apps can access contacts stored in the work profile.See also
+   * Optional. Whether personal apps can access contacts stored in the work profile.See also
    * exemptions_to_show_work_contacts_in_personal_profile.
    * The value may be {@code null}.
    */
@@ -80,8 +81,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   private java.lang.String showWorkContactsInPersonalProfile;
 
   /**
-   * Specifies the default behaviour for work profile widgets. If the policy does not specify
-   * work_profile_widgets for a specific application, it will behave according to the value
+   * Optional. Specifies the default behaviour for work profile widgets. If the policy does not
+   * specify work_profile_widgets for a specific application, it will behave according to the value
    * specified here.
    * The value may be {@code null}.
    */
@@ -108,7 +109,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether text copied from one profile (personal or work) can be pasted in the other profile.
+   * Optional. Whether text copied from one profile (personal or work) can be pasted in the other
+   * profile.
    * @return value or {@code null} for none
    */
   public java.lang.String getCrossProfileCopyPaste() {
@@ -116,7 +118,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether text copied from one profile (personal or work) can be pasted in the other profile.
+   * Optional. Whether text copied from one profile (personal or work) can be pasted in the other
+   * profile.
    * @param crossProfileCopyPaste crossProfileCopyPaste or {@code null} for none
    */
   public CrossProfilePolicies setCrossProfileCopyPaste(java.lang.String crossProfileCopyPaste) {
@@ -125,10 +128,10 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether data from one profile (personal or work) can be shared with apps in the other profile.
-   * Specifically controls simple data sharing via intents. Management of other cross-profile
-   * communication channels, such as contact search, copy/paste, or connected work & personal apps,
-   * are configured separately.
+   * Optional. Whether data from one profile (personal or work) can be shared with apps in the other
+   * profile. Specifically controls simple data sharing via intents. Management of other cross-
+   * profile communication channels, such as contact search, copy/paste, or connected work &
+   * personal apps, are configured separately.
    * @return value or {@code null} for none
    */
   public java.lang.String getCrossProfileDataSharing() {
@@ -136,10 +139,10 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether data from one profile (personal or work) can be shared with apps in the other profile.
-   * Specifically controls simple data sharing via intents. Management of other cross-profile
-   * communication channels, such as contact search, copy/paste, or connected work & personal apps,
-   * are configured separately.
+   * Optional. Whether data from one profile (personal or work) can be shared with apps in the other
+   * profile. Specifically controls simple data sharing via intents. Management of other cross-
+   * profile communication channels, such as contact search, copy/paste, or connected work &
+   * personal apps, are configured separately.
    * @param crossProfileDataSharing crossProfileDataSharing or {@code null} for none
    */
   public CrossProfilePolicies setCrossProfileDataSharing(java.lang.String crossProfileDataSharing) {
@@ -148,9 +151,9 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * List of apps which are excluded from the ShowWorkContactsInPersonalProfile setting. For this to
-   * be set, ShowWorkContactsInPersonalProfile must be set to one of the following values:
-   * SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these exemptions act as a
+   * Optional. List of apps which are excluded from the ShowWorkContactsInPersonalProfile setting.
+   * For this to be set, ShowWorkContactsInPersonalProfile must be set to one of the following
+   * values: SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these exemptions act as a
    * blocklist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these exemptions
    * act as an allowlist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED_EXCEPT_SYSTEM. In this
    * case, these exemptions act as an allowlist, in addition to the already allowlisted system
@@ -163,9 +166,9 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * List of apps which are excluded from the ShowWorkContactsInPersonalProfile setting. For this to
-   * be set, ShowWorkContactsInPersonalProfile must be set to one of the following values:
-   * SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these exemptions act as a
+   * Optional. List of apps which are excluded from the ShowWorkContactsInPersonalProfile setting.
+   * For this to be set, ShowWorkContactsInPersonalProfile must be set to one of the following
+   * values: SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_ALLOWED. In this case, these exemptions act as a
    * blocklist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED. In this case, these exemptions
    * act as an allowlist. SHOW_WORK_CONTACTS_IN_PERSONAL_PROFILE_DISALLOWED_EXCEPT_SYSTEM. In this
    * case, these exemptions act as an allowlist, in addition to the already allowlisted system
@@ -179,7 +182,7 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether personal apps can access contacts stored in the work profile.See also
+   * Optional. Whether personal apps can access contacts stored in the work profile.See also
    * exemptions_to_show_work_contacts_in_personal_profile.
    * @return value or {@code null} for none
    */
@@ -188,7 +191,7 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether personal apps can access contacts stored in the work profile.See also
+   * Optional. Whether personal apps can access contacts stored in the work profile.See also
    * exemptions_to_show_work_contacts_in_personal_profile.
    * @param showWorkContactsInPersonalProfile showWorkContactsInPersonalProfile or {@code null} for none
    */
@@ -198,8 +201,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the default behaviour for work profile widgets. If the policy does not specify
-   * work_profile_widgets for a specific application, it will behave according to the value
+   * Optional. Specifies the default behaviour for work profile widgets. If the policy does not
+   * specify work_profile_widgets for a specific application, it will behave according to the value
    * specified here.
    * @return value or {@code null} for none
    */
@@ -208,8 +211,8 @@ public final class CrossProfilePolicies extends com.google.api.client.json.Gener
   }
 
   /**
-   * Specifies the default behaviour for work profile widgets. If the policy does not specify
-   * work_profile_widgets for a specific application, it will behave according to the value
+   * Optional. Specifies the default behaviour for work profile widgets. If the policy does not
+   * specify work_profile_widgets for a specific application, it will behave according to the value
    * specified here.
    * @param workProfileWidgetsDefault workProfileWidgetsDefault or {@code null} for none
    */

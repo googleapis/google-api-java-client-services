@@ -32,45 +32,46 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class KioskCustomization extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies whether the Settings app is allowed in kiosk mode.
+   * Optional. Specifies whether the Settings app is allowed in kiosk mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String deviceSettings;
 
   /**
-   * Sets the behavior of a device in kiosk mode when a user presses and holds (long-presses) the
-   * Power button.
+   * Optional. Sets the behavior of a device in kiosk mode when a user presses and holds (long-
+   * presses) the Power button.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String powerButtonActions;
 
   /**
-   * Specifies whether system info and notifications are disabled in kiosk mode.
+   * Optional. Specifies whether system info and notifications are disabled in kiosk mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String statusBar;
 
   /**
-   * Specifies whether system error dialogs for crashed or unresponsive apps are blocked in kiosk
-   * mode. When blocked, the system will force-stop the app as if the user chooses the "close app"
-   * option on the UI.
+   * Optional. Specifies whether system error dialogs for crashed or unresponsive apps are blocked
+   * in kiosk mode. When blocked, the system will force-stop the app as if the user chooses the
+   * "close app" option on the UI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String systemErrorWarnings;
 
   /**
-   * Specifies which navigation features are enabled (e.g. Home, Overview buttons) in kiosk mode.
+   * Optional. Specifies which navigation features are enabled (e.g. Home, Overview buttons) in
+   * kiosk mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String systemNavigation;
 
   /**
-   * Specifies whether the Settings app is allowed in kiosk mode.
+   * Optional. Specifies whether the Settings app is allowed in kiosk mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceSettings() {
@@ -78,7 +79,7 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether the Settings app is allowed in kiosk mode.
+   * Optional. Specifies whether the Settings app is allowed in kiosk mode.
    * @param deviceSettings deviceSettings or {@code null} for none
    */
   public KioskCustomization setDeviceSettings(java.lang.String deviceSettings) {
@@ -87,8 +88,8 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Sets the behavior of a device in kiosk mode when a user presses and holds (long-presses) the
-   * Power button.
+   * Optional. Sets the behavior of a device in kiosk mode when a user presses and holds (long-
+   * presses) the Power button.
    * @return value or {@code null} for none
    */
   public java.lang.String getPowerButtonActions() {
@@ -96,8 +97,8 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Sets the behavior of a device in kiosk mode when a user presses and holds (long-presses) the
-   * Power button.
+   * Optional. Sets the behavior of a device in kiosk mode when a user presses and holds (long-
+   * presses) the Power button.
    * @param powerButtonActions powerButtonActions or {@code null} for none
    */
   public KioskCustomization setPowerButtonActions(java.lang.String powerButtonActions) {
@@ -106,7 +107,7 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether system info and notifications are disabled in kiosk mode.
+   * Optional. Specifies whether system info and notifications are disabled in kiosk mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatusBar() {
@@ -114,7 +115,7 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether system info and notifications are disabled in kiosk mode.
+   * Optional. Specifies whether system info and notifications are disabled in kiosk mode.
    * @param statusBar statusBar or {@code null} for none
    */
   public KioskCustomization setStatusBar(java.lang.String statusBar) {
@@ -123,9 +124,9 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether system error dialogs for crashed or unresponsive apps are blocked in kiosk
-   * mode. When blocked, the system will force-stop the app as if the user chooses the "close app"
-   * option on the UI.
+   * Optional. Specifies whether system error dialogs for crashed or unresponsive apps are blocked
+   * in kiosk mode. When blocked, the system will force-stop the app as if the user chooses the
+   * "close app" option on the UI.
    * @return value or {@code null} for none
    */
   public java.lang.String getSystemErrorWarnings() {
@@ -133,9 +134,9 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies whether system error dialogs for crashed or unresponsive apps are blocked in kiosk
-   * mode. When blocked, the system will force-stop the app as if the user chooses the "close app"
-   * option on the UI.
+   * Optional. Specifies whether system error dialogs for crashed or unresponsive apps are blocked
+   * in kiosk mode. When blocked, the system will force-stop the app as if the user chooses the
+   * "close app" option on the UI.
    * @param systemErrorWarnings systemErrorWarnings or {@code null} for none
    */
   public KioskCustomization setSystemErrorWarnings(java.lang.String systemErrorWarnings) {
@@ -144,7 +145,8 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies which navigation features are enabled (e.g. Home, Overview buttons) in kiosk mode.
+   * Optional. Specifies which navigation features are enabled (e.g. Home, Overview buttons) in
+   * kiosk mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getSystemNavigation() {
@@ -152,7 +154,8 @@ public final class KioskCustomization extends com.google.api.client.json.Generic
   }
 
   /**
-   * Specifies which navigation features are enabled (e.g. Home, Overview buttons) in kiosk mode.
+   * Optional. Specifies which navigation features are enabled (e.g. Home, Overview buttons) in
+   * kiosk mode.
    * @param systemNavigation systemNavigation or {@code null} for none
    */
   public KioskCustomization setSystemNavigation(java.lang.String systemNavigation) {

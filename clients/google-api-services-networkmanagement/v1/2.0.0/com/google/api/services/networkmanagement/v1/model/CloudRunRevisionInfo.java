@@ -38,6 +38,14 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
   private java.lang.String displayName;
 
   /**
+   * IP address of a Cloud Run revision. If the Cloud Run revision is in dual-stack subnetwork, this
+   * is the IP address relevant to the trace. Populated for `ARRIVE_AT_CLOUD_RUN_REVISION` steps.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipAddress;
+
+  /**
    * Location in which this revision is deployed.
    * The value may be {@code null}.
    */
@@ -63,7 +71,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`. Mutually exclusive
+   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}` Mutually exclusive
    * with `service_uri`.
    * The value may be {@code null}.
    */
@@ -84,6 +92,25 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
    */
   public CloudRunRevisionInfo setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * IP address of a Cloud Run revision. If the Cloud Run revision is in dual-stack subnetwork, this
+   * is the IP address relevant to the trace. Populated for `ARRIVE_AT_CLOUD_RUN_REVISION` steps.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpAddress() {
+    return ipAddress;
+  }
+
+  /**
+   * IP address of a Cloud Run revision. If the Cloud Run revision is in dual-stack subnetwork, this
+   * is the IP address relevant to the trace. Populated for `ARRIVE_AT_CLOUD_RUN_REVISION` steps.
+   * @param ipAddress ipAddress or {@code null} for none
+   */
+  public CloudRunRevisionInfo setIpAddress(java.lang.String ipAddress) {
+    this.ipAddress = ipAddress;
     return this;
   }
 
@@ -146,7 +173,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`. Mutually exclusive
+   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}` Mutually exclusive
    * with `service_uri`.
    * @return value or {@code null} for none
    */
@@ -156,7 +183,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}`. Mutually exclusive
+   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}` Mutually exclusive
    * with `service_uri`.
    * @param workerPoolUri workerPoolUri or {@code null} for none
    */

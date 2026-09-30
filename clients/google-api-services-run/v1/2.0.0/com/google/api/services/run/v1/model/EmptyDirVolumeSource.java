@@ -17,8 +17,8 @@
 package com.google.api.services.run.v1.model;
 
 /**
- * In memory (tmpfs) ephemeral storage. It is ephemeral in the sense that when the sandbox is taken
- * down, the data is destroyed with it (it does not persist across sandbox runs).
+ * In memory or disk-backed ephemeral storage. It is ephemeral in the sense that when the sandbox is
+ * taken down, the data is destroyed with it (it does not persist across sandbox runs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -32,7 +32,7 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
 
   /**
    * The medium on which the data is stored. The default is "" which means to use the node's default
-   * medium. Must be an empty string (default) or Memory. More info:
+   * medium. Must be an empty string (default), `Memory`, or `Disk`. More info:
    * https://kubernetes.io/docs/concepts/storage/volumes#emptydir
    * The value may be {@code null}.
    */
@@ -53,7 +53,7 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
 
   /**
    * The medium on which the data is stored. The default is "" which means to use the node's default
-   * medium. Must be an empty string (default) or Memory. More info:
+   * medium. Must be an empty string (default), `Memory`, or `Disk`. More info:
    * https://kubernetes.io/docs/concepts/storage/volumes#emptydir
    * @return value or {@code null} for none
    */
@@ -63,7 +63,7 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
 
   /**
    * The medium on which the data is stored. The default is "" which means to use the node's default
-   * medium. Must be an empty string (default) or Memory. More info:
+   * medium. Must be an empty string (default), `Memory`, or `Disk`. More info:
    * https://kubernetes.io/docs/concepts/storage/volumes#emptydir
    * @param medium medium or {@code null} for none
    */

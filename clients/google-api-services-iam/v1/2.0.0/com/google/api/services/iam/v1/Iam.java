@@ -6573,6 +6573,156 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
+         * Revokes all sessions for a given WorkforcePoolSubject.
+         *
+         * Create a request for the method "subjects.revokeSessions".
+         *
+         * This request holds the parameters needed by the iam server.  After setting any optional
+         * parameters, call the {@link RevokeSessions#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
+         *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
+         *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+         *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
+         * @param content the {@link com.google.api.services.iam.v1.model.RevokeWorkforcePoolSubjectSessionsRequest}
+         * @return the request
+         */
+        public RevokeSessions revokeSessions(java.lang.String name, com.google.api.services.iam.v1.model.RevokeWorkforcePoolSubjectSessionsRequest content) throws java.io.IOException {
+          RevokeSessions result = new RevokeSessions(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RevokeSessions extends IamRequest<com.google.api.services.iam.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:revokeSessions";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/subjects/[^/]+$");
+
+          /**
+           * Revokes all sessions for a given WorkforcePoolSubject.
+           *
+           * Create a request for the method "subjects.revokeSessions".
+           *
+           * This request holds the parameters needed by the the iam server.  After setting any optional
+           * parameters, call the {@link RevokeSessions#execute()} method to invoke the remote operation.
+           * <p> {@link RevokeSessions#initialize(com.google.api.client.googleapis.services.AbstractGoogleCl
+           * ientRequest)} must be called to initialize this instance immediately after invoking the
+           * constructor. </p>
+           *
+           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
+         *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
+         *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+         *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
+           * @param content the {@link com.google.api.services.iam.v1.model.RevokeWorkforcePoolSubjectSessionsRequest}
+           * @since 1.13
+           */
+          protected RevokeSessions(java.lang.String name, com.google.api.services.iam.v1.model.RevokeWorkforcePoolSubjectSessionsRequest content) {
+            super(Iam.this, "POST", REST_PATH, content, com.google.api.services.iam.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/[^/]+/workforcePools/[^/]+/subjects/[^/]+$");
+            }
+          }
+
+          @Override
+          public RevokeSessions set$Xgafv(java.lang.String $Xgafv) {
+            return (RevokeSessions) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RevokeSessions setAccessToken(java.lang.String accessToken) {
+            return (RevokeSessions) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RevokeSessions setAlt(java.lang.String alt) {
+            return (RevokeSessions) super.setAlt(alt);
+          }
+
+          @Override
+          public RevokeSessions setCallback(java.lang.String callback) {
+            return (RevokeSessions) super.setCallback(callback);
+          }
+
+          @Override
+          public RevokeSessions setFields(java.lang.String fields) {
+            return (RevokeSessions) super.setFields(fields);
+          }
+
+          @Override
+          public RevokeSessions setKey(java.lang.String key) {
+            return (RevokeSessions) super.setKey(key);
+          }
+
+          @Override
+          public RevokeSessions setOauthToken(java.lang.String oauthToken) {
+            return (RevokeSessions) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RevokeSessions setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RevokeSessions) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RevokeSessions setQuotaUser(java.lang.String quotaUser) {
+            return (RevokeSessions) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RevokeSessions setUploadType(java.lang.String uploadType) {
+            return (RevokeSessions) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RevokeSessions setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RevokeSessions) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
+           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
+           * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+           * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
+         be escaped, because all URLs need to conform to the "When to Escape and Unescape" section of
+         [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+         `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
+           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
+           * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+           * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
+           */
+          public RevokeSessions setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^locations/[^/]+/workforcePools/[^/]+/subjects/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RevokeSessions set(String parameterName, Object value) {
+            return (RevokeSessions) super.set(parameterName, value);
+          }
+        }
+        /**
          * Undeletes a WorkforcePoolSubject, as long as it was deleted fewer than 30 days ago.
          *
          * Create a request for the method "subjects.undelete".

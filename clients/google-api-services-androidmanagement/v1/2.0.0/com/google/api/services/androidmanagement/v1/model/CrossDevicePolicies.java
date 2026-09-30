@@ -49,6 +49,16 @@ public final class CrossDevicePolicies extends com.google.api.client.json.Generi
   private java.lang.String nearbyNotificationStreaming;
 
   /**
+   * Optional. Controls the task continuity handoff
+   * (https://developer.android.com/partners/android-17/features#handoff) feature. This policy
+   * applies to the entire device for fully managed devices, and to the work profile for devices
+   * with a work profile. Requires Android 17 QPR1 or higher.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskContinuityHandoff;
+
+  /**
    * Optional. Manages video streaming of apps on the device for fully managed devices or in the
    * work profile for devices with work profiles to nearby devices. This is supported on Android 13
    * and above.
@@ -87,6 +97,29 @@ public final class CrossDevicePolicies extends com.google.api.client.json.Generi
    */
   public CrossDevicePolicies setNearbyNotificationStreaming(java.lang.String nearbyNotificationStreaming) {
     this.nearbyNotificationStreaming = nearbyNotificationStreaming;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the task continuity handoff
+   * (https://developer.android.com/partners/android-17/features#handoff) feature. This policy
+   * applies to the entire device for fully managed devices, and to the work profile for devices
+   * with a work profile. Requires Android 17 QPR1 or higher.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskContinuityHandoff() {
+    return taskContinuityHandoff;
+  }
+
+  /**
+   * Optional. Controls the task continuity handoff
+   * (https://developer.android.com/partners/android-17/features#handoff) feature. This policy
+   * applies to the entire device for fully managed devices, and to the work profile for devices
+   * with a work profile. Requires Android 17 QPR1 or higher.
+   * @param taskContinuityHandoff taskContinuityHandoff or {@code null} for none
+   */
+  public CrossDevicePolicies setTaskContinuityHandoff(java.lang.String taskContinuityHandoff) {
+    this.taskContinuityHandoff = taskContinuityHandoff;
     return this;
   }
 

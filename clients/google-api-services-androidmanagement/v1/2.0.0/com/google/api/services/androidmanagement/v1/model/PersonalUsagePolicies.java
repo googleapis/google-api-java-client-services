@@ -52,6 +52,13 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
   private java.lang.Boolean cameraDisabled;
 
   /**
+   * Optional. Policies controlling cross-device communication in the personal profile.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PersonalCrossDevicePolicies crossDevicePolicies;
+
+  /**
    * Controls how long the work profile can stay off. The minimum duration must be at least 3 days.
    * Other details are as follows: - If the duration is set to 0, the feature is turned off. - If
    * the duration is set to a value smaller than the minimum duration, the feature returns an error.
@@ -146,6 +153,23 @@ public final class PersonalUsagePolicies extends com.google.api.client.json.Gene
    */
   public PersonalUsagePolicies setCameraDisabled(java.lang.Boolean cameraDisabled) {
     this.cameraDisabled = cameraDisabled;
+    return this;
+  }
+
+  /**
+   * Optional. Policies controlling cross-device communication in the personal profile.
+   * @return value or {@code null} for none
+   */
+  public PersonalCrossDevicePolicies getCrossDevicePolicies() {
+    return crossDevicePolicies;
+  }
+
+  /**
+   * Optional. Policies controlling cross-device communication in the personal profile.
+   * @param crossDevicePolicies crossDevicePolicies or {@code null} for none
+   */
+  public PersonalUsagePolicies setCrossDevicePolicies(PersonalCrossDevicePolicies crossDevicePolicies) {
+    this.crossDevicePolicies = crossDevicePolicies;
     return this;
   }
 

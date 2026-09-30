@@ -31,47 +31,48 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class PasswordRequirements extends com.google.api.client.json.GenericJson {
 
   /**
-   * Number of incorrect device-unlock passwords that can be entered before a device is wiped. A
-   * value of 0 means there is no restriction.
+   * Optional. Number of incorrect device-unlock passwords that can be entered before a device is
+   * wiped. A value of 0 means there is no restriction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer maximumFailedPasswordsForWipe;
 
   /**
-   * Password expiration timeout.
+   * Optional. Password expiration timeout.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String passwordExpirationTimeout;
 
   /**
-   * The length of the password history. After setting this field, the user won't be able to enter a
-   * new password that is the same as any password in the history. A value of 0 means there is no
-   * restriction.
+   * Optional. The length of the password history. After setting this field, the user won't be able
+   * to enter a new password that is the same as any password in the history. A value of 0 means
+   * there is no restriction.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer passwordHistoryLength;
 
   /**
-   * The minimum allowed password length. A value of 0 means there is no restriction. Only enforced
-   * when password_quality is NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or COMPLEX.
+   * Optional. The minimum allowed password length. A value of 0 means there is no restriction. Only
+   * enforced when password_quality is NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or
+   * COMPLEX.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer passwordMinimumLength;
 
   /**
-   * Minimum number of letters required in the password. Only enforced when password_quality is
-   * COMPLEX.
+   * Optional. Minimum number of letters required in the password. Only enforced when
+   * password_quality is COMPLEX.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer passwordMinimumLetters;
 
   /**
-   * Minimum number of lower case letters required in the password. Only enforced when
+   * Optional. Minimum number of lower case letters required in the password. Only enforced when
    * password_quality is COMPLEX.
    * The value may be {@code null}.
    */
@@ -79,15 +80,15 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.Integer passwordMinimumLowerCase;
 
   /**
-   * Minimum number of non-letter characters (numerical digits or symbols) required in the password.
-   * Only enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of non-letter characters (numerical digits or symbols) required in the
+   * password. Only enforced when password_quality is COMPLEX.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer passwordMinimumNonLetter;
 
   /**
-   * Minimum number of numerical digits required in the password. Only enforced when
+   * Optional. Minimum number of numerical digits required in the password. Only enforced when
    * password_quality is COMPLEX.
    * The value may be {@code null}.
    */
@@ -95,15 +96,15 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.Integer passwordMinimumNumeric;
 
   /**
-   * Minimum number of symbols required in the password. Only enforced when password_quality is
-   * COMPLEX.
+   * Optional. Minimum number of symbols required in the password. Only enforced when
+   * password_quality is COMPLEX.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer passwordMinimumSymbols;
 
   /**
-   * Minimum number of upper case letters required in the password. Only enforced when
+   * Optional. Minimum number of upper case letters required in the password. Only enforced when
    * password_quality is COMPLEX.
    * The value may be {@code null}.
    */
@@ -111,21 +112,21 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.Integer passwordMinimumUpperCase;
 
   /**
-   * The required password quality.
+   * Optional. The required password quality.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String passwordQuality;
 
   /**
-   * The scope that the password requirement applies to.
+   * Optional. The scope that the password requirement applies to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String passwordScope;
 
   /**
-   * The length of time after a device or work profile is unlocked using a strong form of
+   * Optional. The length of time after a device or work profile is unlocked using a strong form of
    * authentication (password, PIN, pattern) that it can be unlocked using any other authentication
    * method (e.g. fingerprint, trust agents, face). After the specified time period elapses, only
    * strong forms of authentication can be used to unlock the device or work profile.
@@ -135,19 +136,19 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   private java.lang.String requirePasswordUnlock;
 
   /**
-   * Controls whether a unified lock is allowed for the device and the work profile, on devices
-   * running Android 9 and above with a work profile. This can be set only if password_scope is set
-   * to SCOPE_PROFILE, the policy will be rejected otherwise. If user has not set a separate work
-   * lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is reported
-   * with nonComplianceReason set to USER_ACTION.
+   * Optional. Controls whether a unified lock is allowed for the device and the work profile, on
+   * devices running Android 9 and above with a work profile. This can be set only if password_scope
+   * is set to SCOPE_PROFILE, the policy will be rejected otherwise. If user has not set a separate
+   * work lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
+   * reported with nonComplianceReason set to USER_ACTION.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String unifiedLockSettings;
 
   /**
-   * Number of incorrect device-unlock passwords that can be entered before a device is wiped. A
-   * value of 0 means there is no restriction.
+   * Optional. Number of incorrect device-unlock passwords that can be entered before a device is
+   * wiped. A value of 0 means there is no restriction.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMaximumFailedPasswordsForWipe() {
@@ -155,8 +156,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Number of incorrect device-unlock passwords that can be entered before a device is wiped. A
-   * value of 0 means there is no restriction.
+   * Optional. Number of incorrect device-unlock passwords that can be entered before a device is
+   * wiped. A value of 0 means there is no restriction.
    * @param maximumFailedPasswordsForWipe maximumFailedPasswordsForWipe or {@code null} for none
    */
   public PasswordRequirements setMaximumFailedPasswordsForWipe(java.lang.Integer maximumFailedPasswordsForWipe) {
@@ -165,7 +166,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Password expiration timeout.
+   * Optional. Password expiration timeout.
    * @return value or {@code null} for none
    */
   public String getPasswordExpirationTimeout() {
@@ -173,7 +174,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Password expiration timeout.
+   * Optional. Password expiration timeout.
    * @param passwordExpirationTimeout passwordExpirationTimeout or {@code null} for none
    */
   public PasswordRequirements setPasswordExpirationTimeout(String passwordExpirationTimeout) {
@@ -182,9 +183,9 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The length of the password history. After setting this field, the user won't be able to enter a
-   * new password that is the same as any password in the history. A value of 0 means there is no
-   * restriction.
+   * Optional. The length of the password history. After setting this field, the user won't be able
+   * to enter a new password that is the same as any password in the history. A value of 0 means
+   * there is no restriction.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPasswordHistoryLength() {
@@ -192,9 +193,9 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The length of the password history. After setting this field, the user won't be able to enter a
-   * new password that is the same as any password in the history. A value of 0 means there is no
-   * restriction.
+   * Optional. The length of the password history. After setting this field, the user won't be able
+   * to enter a new password that is the same as any password in the history. A value of 0 means
+   * there is no restriction.
    * @param passwordHistoryLength passwordHistoryLength or {@code null} for none
    */
   public PasswordRequirements setPasswordHistoryLength(java.lang.Integer passwordHistoryLength) {
@@ -203,8 +204,9 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The minimum allowed password length. A value of 0 means there is no restriction. Only enforced
-   * when password_quality is NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or COMPLEX.
+   * Optional. The minimum allowed password length. A value of 0 means there is no restriction. Only
+   * enforced when password_quality is NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or
+   * COMPLEX.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPasswordMinimumLength() {
@@ -212,8 +214,9 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The minimum allowed password length. A value of 0 means there is no restriction. Only enforced
-   * when password_quality is NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or COMPLEX.
+   * Optional. The minimum allowed password length. A value of 0 means there is no restriction. Only
+   * enforced when password_quality is NUMERIC, NUMERIC_COMPLEX, ALPHABETIC, ALPHANUMERIC, or
+   * COMPLEX.
    * @param passwordMinimumLength passwordMinimumLength or {@code null} for none
    */
   public PasswordRequirements setPasswordMinimumLength(java.lang.Integer passwordMinimumLength) {
@@ -222,8 +225,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of letters required in the password. Only enforced when password_quality is
-   * COMPLEX.
+   * Optional. Minimum number of letters required in the password. Only enforced when
+   * password_quality is COMPLEX.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPasswordMinimumLetters() {
@@ -231,8 +234,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of letters required in the password. Only enforced when password_quality is
-   * COMPLEX.
+   * Optional. Minimum number of letters required in the password. Only enforced when
+   * password_quality is COMPLEX.
    * @param passwordMinimumLetters passwordMinimumLetters or {@code null} for none
    */
   public PasswordRequirements setPasswordMinimumLetters(java.lang.Integer passwordMinimumLetters) {
@@ -241,7 +244,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of lower case letters required in the password. Only enforced when
+   * Optional. Minimum number of lower case letters required in the password. Only enforced when
    * password_quality is COMPLEX.
    * @return value or {@code null} for none
    */
@@ -250,7 +253,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of lower case letters required in the password. Only enforced when
+   * Optional. Minimum number of lower case letters required in the password. Only enforced when
    * password_quality is COMPLEX.
    * @param passwordMinimumLowerCase passwordMinimumLowerCase or {@code null} for none
    */
@@ -260,8 +263,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of non-letter characters (numerical digits or symbols) required in the password.
-   * Only enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of non-letter characters (numerical digits or symbols) required in the
+   * password. Only enforced when password_quality is COMPLEX.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPasswordMinimumNonLetter() {
@@ -269,8 +272,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of non-letter characters (numerical digits or symbols) required in the password.
-   * Only enforced when password_quality is COMPLEX.
+   * Optional. Minimum number of non-letter characters (numerical digits or symbols) required in the
+   * password. Only enforced when password_quality is COMPLEX.
    * @param passwordMinimumNonLetter passwordMinimumNonLetter or {@code null} for none
    */
   public PasswordRequirements setPasswordMinimumNonLetter(java.lang.Integer passwordMinimumNonLetter) {
@@ -279,7 +282,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of numerical digits required in the password. Only enforced when
+   * Optional. Minimum number of numerical digits required in the password. Only enforced when
    * password_quality is COMPLEX.
    * @return value or {@code null} for none
    */
@@ -288,7 +291,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of numerical digits required in the password. Only enforced when
+   * Optional. Minimum number of numerical digits required in the password. Only enforced when
    * password_quality is COMPLEX.
    * @param passwordMinimumNumeric passwordMinimumNumeric or {@code null} for none
    */
@@ -298,8 +301,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of symbols required in the password. Only enforced when password_quality is
-   * COMPLEX.
+   * Optional. Minimum number of symbols required in the password. Only enforced when
+   * password_quality is COMPLEX.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPasswordMinimumSymbols() {
@@ -307,8 +310,8 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of symbols required in the password. Only enforced when password_quality is
-   * COMPLEX.
+   * Optional. Minimum number of symbols required in the password. Only enforced when
+   * password_quality is COMPLEX.
    * @param passwordMinimumSymbols passwordMinimumSymbols or {@code null} for none
    */
   public PasswordRequirements setPasswordMinimumSymbols(java.lang.Integer passwordMinimumSymbols) {
@@ -317,7 +320,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of upper case letters required in the password. Only enforced when
+   * Optional. Minimum number of upper case letters required in the password. Only enforced when
    * password_quality is COMPLEX.
    * @return value or {@code null} for none
    */
@@ -326,7 +329,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Minimum number of upper case letters required in the password. Only enforced when
+   * Optional. Minimum number of upper case letters required in the password. Only enforced when
    * password_quality is COMPLEX.
    * @param passwordMinimumUpperCase passwordMinimumUpperCase or {@code null} for none
    */
@@ -336,7 +339,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The required password quality.
+   * Optional. The required password quality.
    * @return value or {@code null} for none
    */
   public java.lang.String getPasswordQuality() {
@@ -344,7 +347,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The required password quality.
+   * Optional. The required password quality.
    * @param passwordQuality passwordQuality or {@code null} for none
    */
   public PasswordRequirements setPasswordQuality(java.lang.String passwordQuality) {
@@ -353,7 +356,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The scope that the password requirement applies to.
+   * Optional. The scope that the password requirement applies to.
    * @return value or {@code null} for none
    */
   public java.lang.String getPasswordScope() {
@@ -361,7 +364,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The scope that the password requirement applies to.
+   * Optional. The scope that the password requirement applies to.
    * @param passwordScope passwordScope or {@code null} for none
    */
   public PasswordRequirements setPasswordScope(java.lang.String passwordScope) {
@@ -370,7 +373,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The length of time after a device or work profile is unlocked using a strong form of
+   * Optional. The length of time after a device or work profile is unlocked using a strong form of
    * authentication (password, PIN, pattern) that it can be unlocked using any other authentication
    * method (e.g. fingerprint, trust agents, face). After the specified time period elapses, only
    * strong forms of authentication can be used to unlock the device or work profile.
@@ -381,7 +384,7 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * The length of time after a device or work profile is unlocked using a strong form of
+   * Optional. The length of time after a device or work profile is unlocked using a strong form of
    * authentication (password, PIN, pattern) that it can be unlocked using any other authentication
    * method (e.g. fingerprint, trust agents, face). After the specified time period elapses, only
    * strong forms of authentication can be used to unlock the device or work profile.
@@ -393,11 +396,11 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Controls whether a unified lock is allowed for the device and the work profile, on devices
-   * running Android 9 and above with a work profile. This can be set only if password_scope is set
-   * to SCOPE_PROFILE, the policy will be rejected otherwise. If user has not set a separate work
-   * lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is reported
-   * with nonComplianceReason set to USER_ACTION.
+   * Optional. Controls whether a unified lock is allowed for the device and the work profile, on
+   * devices running Android 9 and above with a work profile. This can be set only if password_scope
+   * is set to SCOPE_PROFILE, the policy will be rejected otherwise. If user has not set a separate
+   * work lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
+   * reported with nonComplianceReason set to USER_ACTION.
    * @return value or {@code null} for none
    */
   public java.lang.String getUnifiedLockSettings() {
@@ -405,11 +408,11 @@ public final class PasswordRequirements extends com.google.api.client.json.Gener
   }
 
   /**
-   * Controls whether a unified lock is allowed for the device and the work profile, on devices
-   * running Android 9 and above with a work profile. This can be set only if password_scope is set
-   * to SCOPE_PROFILE, the policy will be rejected otherwise. If user has not set a separate work
-   * lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is reported
-   * with nonComplianceReason set to USER_ACTION.
+   * Optional. Controls whether a unified lock is allowed for the device and the work profile, on
+   * devices running Android 9 and above with a work profile. This can be set only if password_scope
+   * is set to SCOPE_PROFILE, the policy will be rejected otherwise. If user has not set a separate
+   * work lock and this field is set to REQUIRE_SEPARATE_WORK_LOCK, a NonComplianceDetail is
+   * reported with nonComplianceReason set to USER_ACTION.
    * @param unifiedLockSettings unifiedLockSettings or {@code null} for none
    */
   public PasswordRequirements setUnifiedLockSettings(java.lang.String unifiedLockSettings) {

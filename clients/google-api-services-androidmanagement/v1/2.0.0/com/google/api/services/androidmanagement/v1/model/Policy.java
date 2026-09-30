@@ -265,7 +265,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private CrossDevicePolicies crossDevicePolicies;
 
   /**
-   * Cross-profile policies applied on the device.
+   * Optional. Cross-profile policies applied on the device.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -429,8 +429,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean kioskCustomLauncherEnabled;
 
   /**
-   * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
-   * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * Optional. Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode,
+   * set kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -559,8 +559,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean outgoingCallsDisabled;
 
   /**
-   * Password requirement policies. Different policies can be set for work profile or fully managed
-   * devices by setting the password_scope field in the policy.
+   * Optional. Password requirement policies. Different policies can be set for work profile or
+   * fully managed devices by setting the password_scope field in the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1417,7 +1417,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cross-profile policies applied on the device.
+   * Optional. Cross-profile policies applied on the device.
    * @return value or {@code null} for none
    */
   public CrossProfilePolicies getCrossProfilePolicies() {
@@ -1425,7 +1425,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Cross-profile policies applied on the device.
+   * Optional. Cross-profile policies applied on the device.
    * @param crossProfilePolicies crossProfilePolicies or {@code null} for none
    */
   public Policy setCrossProfilePolicies(CrossProfilePolicies crossProfilePolicies) {
@@ -1793,8 +1793,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
-   * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * Optional. Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode,
+   * set kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
    * @return value or {@code null} for none
    */
   public KioskCustomization getKioskCustomization() {
@@ -1802,8 +1802,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
-   * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * Optional. Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode,
+   * set kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
    * @param kioskCustomization kioskCustomization or {@code null} for none
    */
   public Policy setKioskCustomization(KioskCustomization kioskCustomization) {
@@ -2089,8 +2089,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirement policies. Different policies can be set for work profile or fully managed
-   * devices by setting the password_scope field in the policy.
+   * Optional. Password requirement policies. Different policies can be set for work profile or
+   * fully managed devices by setting the password_scope field in the policy.
    * @return value or {@code null} for none
    */
   public java.util.List<PasswordRequirements> getPasswordPolicies() {
@@ -2098,8 +2098,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Password requirement policies. Different policies can be set for work profile or fully managed
-   * devices by setting the password_scope field in the policy.
+   * Optional. Password requirement policies. Different policies can be set for work profile or
+   * fully managed devices by setting the password_scope field in the policy.
    * @param passwordPolicies passwordPolicies or {@code null} for none
    */
   public Policy setPasswordPolicies(java.util.List<PasswordRequirements> passwordPolicies) {

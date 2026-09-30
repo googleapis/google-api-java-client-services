@@ -32,7 +32,7 @@ package com.google.api.services.health.v4.model;
 public final class HeartRateVariability extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Metadata used in 1P surfaces.
+   * Optional. Additional information about the heart rate variability measurement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +61,7 @@ public final class HeartRateVariability extends com.google.api.client.json.Gener
   private java.lang.Double standardDeviationMilliseconds;
 
   /**
-   * Optional. Metadata used in 1P surfaces.
+   * Optional. Additional information about the heart rate variability measurement.
    * @return value or {@code null} for none
    */
   public HeartRateVariabilityMetadata getMetadata() {
@@ -69,7 +69,7 @@ public final class HeartRateVariability extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Metadata used in 1P surfaces.
+   * Optional. Additional information about the heart rate variability measurement.
    * @param metadata metadata or {@code null} for none
    */
   public HeartRateVariability setMetadata(HeartRateVariabilityMetadata metadata) {

@@ -14118,6 +14118,207 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
         return (Update) super.set(parameterName, value);
       }
     }
+    /**
+     * Retrieves a specific object context with its extended data for a given object.
+     *
+     * Create a request for the method "objects.viewFullContext".
+     *
+     * This request holds the parameters needed by the storage server.  After setting any optional
+     * parameters, call the {@link ViewFullContext#execute()} method to invoke the remote operation.
+     *
+     * @param bucket Name of the bucket in which the object resides.
+     * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
+     *        [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
+     * @param contextKey Key identifying the object context to retrieve.
+     * @return the request
+     */
+    public ViewFullContext viewFullContext(java.lang.String bucket, java.lang.String object__, java.lang.String contextKey) throws java.io.IOException {
+      ViewFullContext result = new ViewFullContext(bucket, object__, contextKey);
+      initialize(result);
+      return result;
+    }
+
+    public class ViewFullContext extends StorageRequest<com.google.api.services.storage.model.ObjectFullContext> {
+
+      private static final String REST_PATH = "b/{bucket}/o/{object}/viewFullContext";
+
+      /**
+       * Retrieves a specific object context with its extended data for a given object.
+       *
+       * Create a request for the method "objects.viewFullContext".
+       *
+       * This request holds the parameters needed by the the storage server.  After setting any optional
+       * parameters, call the {@link ViewFullContext#execute()} method to invoke the remote operation.
+       * <p> {@link ViewFullContext#initialize(com.google.api.client.googleapis.services.AbstractGoogleC
+       * lientRequest)} must be called to initialize this instance immediately after invoking the
+       * constructor. </p>
+       *
+       * @param bucket Name of the bucket in which the object resides.
+       * @param object__ Name of the object. For information about how to URL encode object names to be path safe, see
+     *        [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+     *        endpoints#encoding).
+       * @param contextKey Key identifying the object context to retrieve.
+       * @since 1.13
+       */
+      protected ViewFullContext(java.lang.String bucket, java.lang.String object__, java.lang.String contextKey) {
+        super(Storage.this, "GET", REST_PATH, null, com.google.api.services.storage.model.ObjectFullContext.class);
+        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
+        this.object__ = com.google.api.client.util.Preconditions.checkNotNull(object__, "Required parameter object__ must be specified.");
+        this.contextKey = com.google.api.client.util.Preconditions.checkNotNull(contextKey, "Required parameter contextKey must be specified.");
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public ViewFullContext setAlt(java.lang.String alt) {
+        return (ViewFullContext) super.setAlt(alt);
+      }
+
+      @Override
+      public ViewFullContext setFields(java.lang.String fields) {
+        return (ViewFullContext) super.setFields(fields);
+      }
+
+      @Override
+      public ViewFullContext setKey(java.lang.String key) {
+        return (ViewFullContext) super.setKey(key);
+      }
+
+      @Override
+      public ViewFullContext setOauthToken(java.lang.String oauthToken) {
+        return (ViewFullContext) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public ViewFullContext setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (ViewFullContext) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public ViewFullContext setQuotaUser(java.lang.String quotaUser) {
+        return (ViewFullContext) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public ViewFullContext setUploadType(java.lang.String uploadType) {
+        return (ViewFullContext) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public ViewFullContext setUserIp(java.lang.String userIp) {
+        return (ViewFullContext) super.setUserIp(userIp);
+      }
+
+      /** Name of the bucket in which the object resides. */
+      @com.google.api.client.util.Key
+      private java.lang.String bucket;
+
+      /** Name of the bucket in which the object resides.
+       */
+      public java.lang.String getBucket() {
+        return bucket;
+      }
+
+      /** Name of the bucket in which the object resides. */
+      public ViewFullContext setBucket(java.lang.String bucket) {
+        this.bucket = bucket;
+        return this;
+      }
+
+      /**
+       * Name of the object. For information about how to URL encode object names to be path safe,
+       * see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
+       */
+      @com.google.api.client.util.Key("object")
+      private java.lang.String object__;
+
+      /** Name of the object. For information about how to URL encode object names to be path safe, see
+     [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-endpoints#encoding).
+       */
+      public java.lang.String getObject() {
+        return object__;
+      }
+
+      /**
+       * Name of the object. For information about how to URL encode object names to be path safe,
+       * see [Encoding URI Path Parts](https://cloud.google.com/storage/docs/request-
+       * endpoints#encoding).
+       */
+      public ViewFullContext setObject(java.lang.String object__) {
+        this.object__ = object__;
+        return this;
+      }
+
+      /** Key identifying the object context to retrieve. */
+      @com.google.api.client.util.Key
+      private java.lang.String contextKey;
+
+      /** Key identifying the object context to retrieve.
+       */
+      public java.lang.String getContextKey() {
+        return contextKey;
+      }
+
+      /** Key identifying the object context to retrieve. */
+      public ViewFullContext setContextKey(java.lang.String contextKey) {
+        this.contextKey = contextKey;
+        return this;
+      }
+
+      /**
+       * If present, selects a specific revision of this object (as opposed to the latest version,
+       * the default).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long generation;
+
+      /** If present, selects a specific revision of this object (as opposed to the latest version, the
+     default).
+       */
+      public java.lang.Long getGeneration() {
+        return generation;
+      }
+
+      /**
+       * If present, selects a specific revision of this object (as opposed to the latest version,
+       * the default).
+       */
+      public ViewFullContext setGeneration(java.lang.Long generation) {
+        this.generation = generation;
+        return this;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      @com.google.api.client.util.Key
+      private java.lang.String userProject;
+
+      /** The project to be billed for this request. Required for Requester Pays buckets.
+       */
+      public java.lang.String getUserProject() {
+        return userProject;
+      }
+
+      /** The project to be billed for this request. Required for Requester Pays buckets. */
+      public ViewFullContext setUserProject(java.lang.String userProject) {
+        this.userProject = userProject;
+        return this;
+      }
+
+      @Override
+      public ViewFullContext set(String parameterName, Object value) {
+        return (ViewFullContext) super.set(parameterName, value);
+      }
+    }
 
   }
 

@@ -46,9 +46,7 @@ public final class PolicyTopicEntry extends com.google.api.client.json.GenericJs
   private java.lang.String helpCenterUrl;
 
   /**
-   * Whether or not the policy topic is missing a certificate. Some policy topics require a
-   * certificate to unblock serving in some regions. For more information about creative
-   * certification, refer to: https://support.google.com/authorizedbuyers/answer/7450776
+   * Whether or not the policy topic is missing a certificate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,9 +97,7 @@ public final class PolicyTopicEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether or not the policy topic is missing a certificate. Some policy topics require a
-   * certificate to unblock serving in some regions. For more information about creative
-   * certification, refer to: https://support.google.com/authorizedbuyers/answer/7450776
+   * Whether or not the policy topic is missing a certificate.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getMissingCertificate() {
@@ -109,9 +105,7 @@ public final class PolicyTopicEntry extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Whether or not the policy topic is missing a certificate. Some policy topics require a
-   * certificate to unblock serving in some regions. For more information about creative
-   * certification, refer to: https://support.google.com/authorizedbuyers/answer/7450776
+   * Whether or not the policy topic is missing a certificate.
    * @param missingCertificate missingCertificate or {@code null} for none
    */
   public PolicyTopicEntry setMissingCertificate(java.lang.Boolean missingCertificate) {

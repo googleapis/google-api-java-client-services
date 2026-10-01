@@ -21,12 +21,12 @@ package com.google.api.services.billingbudgets.v1.model;
  * events used to generate a budget notification email. When a threshold is crossed (spend exceeds
  * the specified percentages of the budget), budget alert emails are sent to the email recipients
  * you specify in the [NotificationsRule](#notificationsrule). Threshold rules also affect the
- * fields included in the [JSON data object](https://cloud.google.com/billing/docs/how-to/budgets-
- * programmatic-notifications#notification_format) sent to a Pub/Sub topic. Threshold rules are
- * _required_ if using email notifications. Threshold rules are _optional_ if only setting a
- * [`pubsubTopic` NotificationsRule](#NotificationsRule), unless you want your JSON data object to
+ * fields included in the [JSON data object](https://docs.cloud.google.com/billing/docs/how-
+ * to/budgets-programmatic-notifications#notification-format) sent to a Pub/Sub topic. Threshold
+ * rules are _required_ if using email notifications. Threshold rules are _optional_ if only setting
+ * a [`pubsubTopic` NotificationsRule](#NotificationsRule), unless you want your JSON data object to
  * include data about the thresholds you set. For more information, see [set budget threshold rules
- * and actions](https://cloud.google.com/billing/docs/how-to/budgets#budget-actions).
+ * and actions](https://docs.cloud.google.com/billing/docs/how-to/budgets#budget-actions).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Billing Budget API. For a detailed explanation
@@ -41,7 +41,8 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRule extends com.google.a
 
   /**
    * Optional. The type of basis used to determine if spend has passed the threshold. Behavior
-   * defaults to CURRENT_SPEND if not set.
+   * defaults to CURRENT_SPEND if not set. When `spend_cap` is set on the budget, must be
+   * `CURRENT_SPEND` or `BASIS_UNSPECIFIED`. `FORECASTED_SPEND` is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +50,9 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRule extends com.google.a
 
   /**
    * Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5
-   * = 50%. Validation: non-negative number.
+   * = 50%. Validation: non-negative number. When `spend_cap` is set on the budget,
+   * `threshold_rules` must contain exactly three rules with `threshold_percent` values of `0.5`,
+   * `0.8`, and `1.0` (50%, 80%, and 100%).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +60,8 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRule extends com.google.a
 
   /**
    * Optional. The type of basis used to determine if spend has passed the threshold. Behavior
-   * defaults to CURRENT_SPEND if not set.
+   * defaults to CURRENT_SPEND if not set. When `spend_cap` is set on the budget, must be
+   * `CURRENT_SPEND` or `BASIS_UNSPECIFIED`. `FORECASTED_SPEND` is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getSpendBasis() {
@@ -66,7 +70,8 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRule extends com.google.a
 
   /**
    * Optional. The type of basis used to determine if spend has passed the threshold. Behavior
-   * defaults to CURRENT_SPEND if not set.
+   * defaults to CURRENT_SPEND if not set. When `spend_cap` is set on the budget, must be
+   * `CURRENT_SPEND` or `BASIS_UNSPECIFIED`. `FORECASTED_SPEND` is not supported.
    * @param spendBasis spendBasis or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1ThresholdRule setSpendBasis(java.lang.String spendBasis) {
@@ -76,7 +81,9 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRule extends com.google.a
 
   /**
    * Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5
-   * = 50%. Validation: non-negative number.
+   * = 50%. Validation: non-negative number. When `spend_cap` is set on the budget,
+   * `threshold_rules` must contain exactly three rules with `threshold_percent` values of `0.5`,
+   * `0.8`, and `1.0` (50%, 80%, and 100%).
    * @return value or {@code null} for none
    */
   public java.lang.Double getThresholdPercent() {
@@ -85,7 +92,9 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRule extends com.google.a
 
   /**
    * Required. Send an alert when this threshold is exceeded. This is a 1.0-based percentage, so 0.5
-   * = 50%. Validation: non-negative number.
+   * = 50%. Validation: non-negative number. When `spend_cap` is set on the budget,
+   * `threshold_rules` must contain exactly three rules with `threshold_percent` values of `0.5`,
+   * `0.8`, and `1.0` (50%, 80%, and 100%).
    * @param thresholdPercent thresholdPercent or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1ThresholdRule setThresholdPercent(java.lang.Double thresholdPercent) {

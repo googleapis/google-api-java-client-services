@@ -31,7 +31,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A description of the space. For example, describe the space's discussion topic,
-   * functional purpose, or participants. Supports up to 150 characters.
+   * functional purpose, or participants. Supports up to 4,096 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A description of the space. For example, describe the space's discussion topic,
-   * functional purpose, or participants. Supports up to 150 characters.
+   * functional purpose, or participants. Supports up to 4,096 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -55,7 +55,7 @@ public final class SpaceDetails extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. A description of the space. For example, describe the space's discussion topic,
-   * functional purpose, or participants. Supports up to 150 characters.
+   * functional purpose, or participants. Supports up to 4,096 characters.
    * @param description description or {@code null} for none
    */
   public SpaceDetails setDescription(java.lang.String description) {

@@ -55,7 +55,7 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
-   * operations per second that the disk can handle. Values must be between 3000 and 100,000.
+   * operations per second that the disk can handle. Values must be between 3,000 and 100,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -63,7 +63,7 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
 
   /**
    * Optional. Indicates how much throughput to provision for the disk. This sets the number of
-   * throughput mb per second that the disk can handle. Values must be between 1 and 2,400.
+   * throughput MB per second that the disk can handle. Values must be between 1 and 2,400.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -142,7 +142,7 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
-   * operations per second that the disk can handle. Values must be between 3000 and 100,000.
+   * operations per second that the disk can handle. Values must be between 3,000 and 100,000.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedIops() {
@@ -151,7 +151,7 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
 
   /**
    * Optional. Indicates how many IOPS to provision for the disk. This sets the number of I/O
-   * operations per second that the disk can handle. Values must be between 3000 and 100,000.
+   * operations per second that the disk can handle. Values must be between 3,000 and 100,000.
    * @param provisionedIops provisionedIops or {@code null} for none
    */
   public GceHyperdiskBalancedHighAvailability setProvisionedIops(java.lang.Long provisionedIops) {
@@ -161,7 +161,7 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
 
   /**
    * Optional. Indicates how much throughput to provision for the disk. This sets the number of
-   * throughput mb per second that the disk can handle. Values must be between 1 and 2,400.
+   * throughput MB per second that the disk can handle. Values must be between 1 and 2,400.
    * @return value or {@code null} for none
    */
   public java.lang.Long getProvisionedThroughput() {
@@ -170,7 +170,7 @@ public final class GceHyperdiskBalancedHighAvailability extends com.google.api.c
 
   /**
    * Optional. Indicates how much throughput to provision for the disk. This sets the number of
-   * throughput mb per second that the disk can handle. Values must be between 1 and 2,400.
+   * throughput MB per second that the disk can handle. Values must be between 1 and 2,400.
    * @param provisionedThroughput provisionedThroughput or {@code null} for none
    */
   public GceHyperdiskBalancedHighAvailability setProvisionedThroughput(java.lang.Long provisionedThroughput) {

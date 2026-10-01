@@ -288,7 +288,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * idle_timeout and running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time, regardless of whether or not
    * the workstations are idle. Note: This timeout applies to workstations in the following states:
-   * * STATE_RUNNING * STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
+   * - STATE_RUNNING - STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
    * duration terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults to
    * `"43200s"` (12 hours). A value of `"0s"` indicates that workstations using this configuration
    * should never time out. If encryption_key is set, it must be greater than `"0s"` and less than
@@ -826,7 +826,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * idle_timeout and running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time, regardless of whether or not
    * the workstations are idle. Note: This timeout applies to workstations in the following states:
-   * * STATE_RUNNING * STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
+   * - STATE_RUNNING - STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
    * duration terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults to
    * `"43200s"` (12 hours). A value of `"0s"` indicates that workstations using this configuration
    * should never time out. If encryption_key is set, it must be greater than `"0s"` and less than
@@ -845,7 +845,7 @@ public final class WorkstationConfig extends com.google.api.client.json.GenericJ
    * idle_timeout and running_timeout fields are independent of each other. Note that the
    * running_timeout field stops workstations after the specified time, regardless of whether or not
    * the workstations are idle. Note: This timeout applies to workstations in the following states:
-   * * STATE_RUNNING * STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
+   * - STATE_RUNNING - STATE_SUSPENDED Suspending a workstation does not reset this timeout. Provide
    * duration terminated by `s` for seconds—for example, `"54000s"` (15 hours). Defaults to
    * `"43200s"` (12 hours). A value of `"0s"` indicates that workstations using this configuration
    * should never time out. If encryption_key is set, it must be greater than `"0s"` and less than

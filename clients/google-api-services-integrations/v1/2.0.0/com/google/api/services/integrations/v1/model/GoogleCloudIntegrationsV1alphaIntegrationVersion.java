@@ -127,10 +127,10 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Parameters that are expected to be passed to the integration when an event is
-   * triggered. This consists of all the parameters that are expected in the integration execution.
-   * This gives the user the ability to provide default values, add information like PII and also
-   * provide data types of each parameter.
+   * Optional. Deprecated: Use `integration_parameters` instead. Parameters that are expected to be
+   * passed to the integration when an event is triggered. This consists of all the parameters that
+   * are expected in the integration execution. This gives the user the ability to provide default
+   * values, add information like PII and also provide data types of each parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,8 +215,8 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   private java.util.List<GoogleCloudIntegrationsV1alphaTaskConfig> taskConfigs;
 
   /**
-   * Optional. Task configuration for the integration. It's optional, but the integration doesn't do
-   * anything without task_configs.
+   * Optional. Deprecated: Use `task_configs` instead. Task configuration for the integration. It's
+   * optional, but the integration doesn't do anything without task_configs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -245,7 +245,7 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   private java.util.List<GoogleCloudIntegrationsV1alphaTriggerConfig> triggerConfigs;
 
   /**
-   * Optional. Trigger configurations.
+   * Optional. Deprecated: Use `trigger_configs` instead. Trigger configurations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -459,10 +459,10 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Parameters that are expected to be passed to the integration when an event is
-   * triggered. This consists of all the parameters that are expected in the integration execution.
-   * This gives the user the ability to provide default values, add information like PII and also
-   * provide data types of each parameter.
+   * Optional. Deprecated: Use `integration_parameters` instead. Parameters that are expected to be
+   * passed to the integration when an event is triggered. This consists of all the parameters that
+   * are expected in the integration execution. This gives the user the ability to provide default
+   * values, add information like PII and also provide data types of each parameter.
    * @return value or {@code null} for none
    */
   public EnterpriseCrmFrontendsEventbusProtoWorkflowParameters getIntegrationParametersInternal() {
@@ -470,10 +470,10 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Parameters that are expected to be passed to the integration when an event is
-   * triggered. This consists of all the parameters that are expected in the integration execution.
-   * This gives the user the ability to provide default values, add information like PII and also
-   * provide data types of each parameter.
+   * Optional. Deprecated: Use `integration_parameters` instead. Parameters that are expected to be
+   * passed to the integration when an event is triggered. This consists of all the parameters that
+   * are expected in the integration execution. This gives the user the ability to provide default
+   * values, add information like PII and also provide data types of each parameter.
    * @param integrationParametersInternal integrationParametersInternal or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setIntegrationParametersInternal(EnterpriseCrmFrontendsEventbusProtoWorkflowParameters integrationParametersInternal) {
@@ -668,8 +668,8 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Task configuration for the integration. It's optional, but the integration doesn't do
-   * anything without task_configs.
+   * Optional. Deprecated: Use `task_configs` instead. Task configuration for the integration. It's
+   * optional, but the integration doesn't do anything without task_configs.
    * @return value or {@code null} for none
    */
   public java.util.List<EnterpriseCrmFrontendsEventbusProtoTaskConfig> getTaskConfigsInternal() {
@@ -677,8 +677,8 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Task configuration for the integration. It's optional, but the integration doesn't do
-   * anything without task_configs.
+   * Optional. Deprecated: Use `task_configs` instead. Task configuration for the integration. It's
+   * optional, but the integration doesn't do anything without task_configs.
    * @param taskConfigsInternal taskConfigsInternal or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setTaskConfigsInternal(java.util.List<EnterpriseCrmFrontendsEventbusProtoTaskConfig> taskConfigsInternal) {
@@ -725,7 +725,7 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Trigger configurations.
+   * Optional. Deprecated: Use `trigger_configs` instead. Trigger configurations.
    * @return value or {@code null} for none
    */
   public java.util.List<EnterpriseCrmFrontendsEventbusProtoTriggerConfig> getTriggerConfigsInternal() {
@@ -733,7 +733,7 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
-   * Optional. Trigger configurations.
+   * Optional. Deprecated: Use `trigger_configs` instead. Trigger configurations.
    * @param triggerConfigsInternal triggerConfigsInternal or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setTriggerConfigsInternal(java.util.List<EnterpriseCrmFrontendsEventbusProtoTriggerConfig> triggerConfigsInternal) {

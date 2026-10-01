@@ -38,7 +38,7 @@ public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionRespo
   private java.lang.String content;
 
   /**
-   * List containing String represendation for multiple file with type.
+   * List containing String representation for multiple file with type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionRespo
   }
 
   /**
-   * List containing String represendation for multiple file with type.
+   * List containing String representation for multiple file with type.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> getFiles() {
@@ -70,7 +70,7 @@ public final class GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionRespo
   }
 
   /**
-   * List containing String represendation for multiple file with type.
+   * List containing String representation for multiple file with type.
    * @param files files or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaDownloadIntegrationVersionResponse setFiles(java.util.List<GoogleCloudIntegrationsV1alphaSerializedFile> files) {

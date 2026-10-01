@@ -38,6 +38,14 @@ public final class GoogleCloudIntegrationsV1alphaCustomerConfig extends com.goog
   private GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig;
 
   /**
+   * Optional. True if every integration in this region should run under the hardened end-user-
+   * credential flow. See go/ip-euc-harden.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableEucHardenedFlow;
+
+  /**
    * Optional. Indicates if the client should be allowed to make HTTP calls. True if http call
    * feature should be turned on for this region.
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class GoogleCloudIntegrationsV1alphaCustomerConfig extends com.goog
    */
   public GoogleCloudIntegrationsV1alphaCustomerConfig setCloudKmsConfig(GoogleCloudIntegrationsV1alphaCloudKmsConfig cloudKmsConfig) {
     this.cloudKmsConfig = cloudKmsConfig;
+    return this;
+  }
+
+  /**
+   * Optional. True if every integration in this region should run under the hardened end-user-
+   * credential flow. See go/ip-euc-harden.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableEucHardenedFlow() {
+    return enableEucHardenedFlow;
+  }
+
+  /**
+   * Optional. True if every integration in this region should run under the hardened end-user-
+   * credential flow. See go/ip-euc-harden.
+   * @param enableEucHardenedFlow enableEucHardenedFlow or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaCustomerConfig setEnableEucHardenedFlow(java.lang.Boolean enableEucHardenedFlow) {
+    this.enableEucHardenedFlow = enableEucHardenedFlow;
     return this;
   }
 

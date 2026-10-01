@@ -51,6 +51,21 @@ public final class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends
   private String createTime;
 
   /**
+   * Output only. List of event subscriptions which are using the webhook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> eventSubscriptions;
+
+  /**
+   * Output only. List of event types for the webhook. This is the event types subscribed by the
+   * current webhook.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> eventTypes;
+
+  /**
    * Output only. ID to uniquely identify webhook.
    * The value may be {@code null}.
    */
@@ -109,6 +124,42 @@ public final class GoogleCloudConnectorsV1EventingRuntimeDataWebhookData extends
    */
   public GoogleCloudConnectorsV1EventingRuntimeDataWebhookData setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. List of event subscriptions which are using the webhook.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEventSubscriptions() {
+    return eventSubscriptions;
+  }
+
+  /**
+   * Output only. List of event subscriptions which are using the webhook.
+   * @param eventSubscriptions eventSubscriptions or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeDataWebhookData setEventSubscriptions(java.util.List<java.lang.String> eventSubscriptions) {
+    this.eventSubscriptions = eventSubscriptions;
+    return this;
+  }
+
+  /**
+   * Output only. List of event types for the webhook. This is the event types subscribed by the
+   * current webhook.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getEventTypes() {
+    return eventTypes;
+  }
+
+  /**
+   * Output only. List of event types for the webhook. This is the event types subscribed by the
+   * current webhook.
+   * @param eventTypes eventTypes or {@code null} for none
+   */
+  public GoogleCloudConnectorsV1EventingRuntimeDataWebhookData setEventTypes(java.util.List<java.lang.String> eventTypes) {
+    this.eventTypes = eventTypes;
     return this;
   }
 

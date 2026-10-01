@@ -150,6 +150,13 @@ public final class Alert extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Output only. System taxonomy tags associated with this alert.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> tags;
+
+  /**
    * Optional. AI summary of the alert.
    * @return value or {@code null} for none
    */
@@ -430,6 +437,23 @@ public final class Alert extends com.google.api.client.json.GenericJson {
    */
   public Alert setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. System taxonomy tags associated with this alert.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Output only. System taxonomy tags associated with this alert.
+   * @param tags tags or {@code null} for none
+   */
+  public Alert setTags(java.util.List<java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

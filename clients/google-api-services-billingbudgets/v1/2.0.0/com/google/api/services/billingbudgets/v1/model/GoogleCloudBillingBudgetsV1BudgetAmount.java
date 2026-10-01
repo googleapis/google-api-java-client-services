@@ -33,7 +33,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   /**
    * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can
    * only be set when the budget's time period is a Filter.calendar_period. It cannot be set in
-   * combination with Filter.custom_period.
+   * combination with Filter.custom_period. Not supported when `spend_cap` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +43,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
    * A specified amount to use as the budget. `currency_code` is optional. If specified when
    * creating a budget, it must match the currency of the billing account. If specified when
    * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
-   * is provided on output.
+   * is provided on output. Must be set when `spend_cap` is set; must be non-negative (>= 0).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   /**
    * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can
    * only be set when the budget's time period is a Filter.calendar_period. It cannot be set in
-   * combination with Filter.custom_period.
+   * combination with Filter.custom_period. Not supported when `spend_cap` is set.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1LastPeriodAmount getLastPeriodAmount() {
@@ -62,7 +62,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
   /**
    * Use the last period's actual spend as the budget for the present period. LastPeriodAmount can
    * only be set when the budget's time period is a Filter.calendar_period. It cannot be set in
-   * combination with Filter.custom_period.
+   * combination with Filter.custom_period. Not supported when `spend_cap` is set.
    * @param lastPeriodAmount lastPeriodAmount or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1BudgetAmount setLastPeriodAmount(GoogleCloudBillingBudgetsV1LastPeriodAmount lastPeriodAmount) {
@@ -74,7 +74,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
    * A specified amount to use as the budget. `currency_code` is optional. If specified when
    * creating a budget, it must match the currency of the billing account. If specified when
    * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
-   * is provided on output.
+   * is provided on output. Must be set when `spend_cap` is set; must be non-negative (>= 0).
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getSpecifiedAmount() {
@@ -85,7 +85,7 @@ public final class GoogleCloudBillingBudgetsV1BudgetAmount extends com.google.ap
    * A specified amount to use as the budget. `currency_code` is optional. If specified when
    * creating a budget, it must match the currency of the billing account. If specified when
    * updating a budget, it must match the currency_code of the existing budget. The `currency_code`
-   * is provided on output.
+   * is provided on output. Must be set when `spend_cap` is set; must be non-negative (>= 0).
    * @param specifiedAmount specifiedAmount or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1BudgetAmount setSpecifiedAmount(GoogleTypeMoney specifiedAmount) {

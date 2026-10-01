@@ -34,7 +34,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. Specifies to track usage for recurring calendar period. For example, assume that
    * CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the
    * current calendar month is April, May, June. After that, it tracks usage from July 1 to
-   * September 30 when the current calendar month is July, August, September, so on.
+   * September 30 when the current calendar month is July, August, September, so on. When
+   * `spend_cap` is set, must be `MONTH` (or `usage_period` left unset, which defaults to `MONTH`).
+   * `QUARTER` and `YEAR` are not supported for spend caps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,16 +46,17 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
    * credit types to be subtracted from gross cost to determine the spend for threshold
    * calculations. See [a list of acceptable credit type
-   * values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
-   * If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be
-   * empty.
+   * values](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery-tables/detailed-
+   * usage#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS,
+   * this field must be empty. Not supported when `spend_cap` is set; must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> creditTypes;
 
   /**
-   * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
+   * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`. Must be set to
+   * `EXCLUDE_ALL_CREDITS` when `spend_cap` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +64,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. Specifies to track usage from any start date (required) to any end date (optional).
-   * This time period is static, it does not recur.
+   * This time period is static, it does not recur. Not supported when `spend_cap` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +74,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. A single label and value pair specifying that usage from only this set of labeled
    * resources should be included in the budget. If omitted, the report includes all labeled and
    * unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name":
-   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
+   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._ Not
+   * supported when `spend_cap` is set; must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +84,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report includes all
-   * usage for the billing account, regardless of which project the usage occurred on.
+   * usage for the billing account, regardless of which project the usage occurred on. Must be set
+   * when `spend_cap` is set; must contain exactly one project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +96,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * `organizations/{organizationId}`, specifying that usage from only this set of folders and
    * organizations should be included in the budget. If omitted, the budget includes all usage that
    * the billing account pays for. If the folder or organization contains projects that are paid for
-   * by a different Cloud Billing account, the budget *doesn't* apply to those projects.
+   * by a different Cloud Billing account, the budget *doesn't* apply to those projects. Not
+   * supported when `spend_cap` is set; must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +107,10 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
    * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
-   * https://cloud.google.com/billing/v1/how-tos/catalog-api.
+   * https://docs.cloud.google.com/billing/v1/how-tos/catalog-api. When `spend_cap` is set, the
+   * services filter must be set and must contain exactly one service from this list of eligible
+   * services: https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps#eligible-
+   * services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +121,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
    * set to the name of the parent account, usage from the parent account is included. If the field
    * is omitted, the report includes usage from the parent account and all subaccounts, if they
-   * exist.
+   * exist. Not supported when `spend_cap` is set; must be empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +131,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. Specifies to track usage for recurring calendar period. For example, assume that
    * CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the
    * current calendar month is April, May, June. After that, it tracks usage from July 1 to
-   * September 30 when the current calendar month is July, August, September, so on.
+   * September 30 when the current calendar month is July, August, September, so on. When
+   * `spend_cap` is set, must be `MONTH` (or `usage_period` left unset, which defaults to `MONTH`).
+   * `QUARTER` and `YEAR` are not supported for spend caps.
    * @return value or {@code null} for none
    */
   public java.lang.String getCalendarPeriod() {
@@ -133,7 +144,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. Specifies to track usage for recurring calendar period. For example, assume that
    * CalendarPeriod.QUARTER is set. The budget tracks usage from April 1 to June 30, when the
    * current calendar month is April, May, June. After that, it tracks usage from July 1 to
-   * September 30 when the current calendar month is July, August, September, so on.
+   * September 30 when the current calendar month is July, August, September, so on. When
+   * `spend_cap` is set, must be `MONTH` (or `usage_period` left unset, which defaults to `MONTH`).
+   * `QUARTER` and `YEAR` are not supported for spend caps.
    * @param calendarPeriod calendarPeriod or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setCalendarPeriod(java.lang.String calendarPeriod) {
@@ -145,9 +158,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
    * credit types to be subtracted from gross cost to determine the spend for threshold
    * calculations. See [a list of acceptable credit type
-   * values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
-   * If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be
-   * empty.
+   * values](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery-tables/detailed-
+   * usage#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS,
+   * this field must be empty. Not supported when `spend_cap` is set; must be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCreditTypes() {
@@ -158,9 +171,9 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. If Filter.credit_types_treatment is INCLUDE_SPECIFIED_CREDITS, this is a list of
    * credit types to be subtracted from gross cost to determine the spend for threshold
    * calculations. See [a list of acceptable credit type
-   * values](https://cloud.google.com/billing/docs/how-to/export-data-bigquery-tables#credits-type).
-   * If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS, this field must be
-   * empty.
+   * values](https://docs.cloud.google.com/billing/docs/how-to/export-data-bigquery-tables/detailed-
+   * usage#credits-type). If Filter.credit_types_treatment is **not** INCLUDE_SPECIFIED_CREDITS,
+   * this field must be empty. Not supported when `spend_cap` is set; must be empty.
    * @param creditTypes creditTypes or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setCreditTypes(java.util.List<java.lang.String> creditTypes) {
@@ -169,7 +182,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   }
 
   /**
-   * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
+   * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`. Must be set to
+   * `EXCLUDE_ALL_CREDITS` when `spend_cap` is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getCreditTypesTreatment() {
@@ -177,7 +191,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   }
 
   /**
-   * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
+   * Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`. Must be set to
+   * `EXCLUDE_ALL_CREDITS` when `spend_cap` is set.
    * @param creditTypesTreatment creditTypesTreatment or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setCreditTypesTreatment(java.lang.String creditTypesTreatment) {
@@ -187,7 +202,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. Specifies to track usage from any start date (required) to any end date (optional).
-   * This time period is static, it does not recur.
+   * This time period is static, it does not recur. Not supported when `spend_cap` is set.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1CustomPeriod getCustomPeriod() {
@@ -196,7 +211,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
 
   /**
    * Optional. Specifies to track usage from any start date (required) to any end date (optional).
-   * This time period is static, it does not recur.
+   * This time period is static, it does not recur. Not supported when `spend_cap` is set.
    * @param customPeriod customPeriod or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setCustomPeriod(GoogleCloudBillingBudgetsV1CustomPeriod customPeriod) {
@@ -208,7 +223,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. A single label and value pair specifying that usage from only this set of labeled
    * resources should be included in the budget. If omitted, the report includes all labeled and
    * unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name":
-   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
+   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._ Not
+   * supported when `spend_cap` is set; must be empty.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.util.List<java.lang.Object>> getLabels() {
@@ -219,7 +235,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. A single label and value pair specifying that usage from only this set of labeled
    * resources should be included in the budget. If omitted, the report includes all labeled and
    * unlabeled usage. An object containing a single `"key": value` pair. Example: `{ "name":
-   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._
+   * "wrench" }`. _Currently, multiple entries or multiple values per entry are not allowed._ Not
+   * supported when `spend_cap` is set; must be empty.
    * @param labels labels or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setLabels(java.util.Map<String, java.util.List<java.lang.Object>> labels) {
@@ -230,7 +247,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report includes all
-   * usage for the billing account, regardless of which project the usage occurred on.
+   * usage for the billing account, regardless of which project the usage occurred on. Must be set
+   * when `spend_cap` is set; must contain exactly one project.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getProjects() {
@@ -240,7 +258,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
   /**
    * Optional. A set of projects of the form `projects/{project}`, specifying that usage from only
    * this set of projects should be included in the budget. If omitted, the report includes all
-   * usage for the billing account, regardless of which project the usage occurred on.
+   * usage for the billing account, regardless of which project the usage occurred on. Must be set
+   * when `spend_cap` is set; must contain exactly one project.
    * @param projects projects or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setProjects(java.util.List<java.lang.String> projects) {
@@ -253,7 +272,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * `organizations/{organizationId}`, specifying that usage from only this set of folders and
    * organizations should be included in the budget. If omitted, the budget includes all usage that
    * the billing account pays for. If the folder or organization contains projects that are paid for
-   * by a different Cloud Billing account, the budget *doesn't* apply to those projects.
+   * by a different Cloud Billing account, the budget *doesn't* apply to those projects. Not
+   * supported when `spend_cap` is set; must be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceAncestors() {
@@ -265,7 +285,8 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * `organizations/{organizationId}`, specifying that usage from only this set of folders and
    * organizations should be included in the budget. If omitted, the budget includes all usage that
    * the billing account pays for. If the folder or organization contains projects that are paid for
-   * by a different Cloud Billing account, the budget *doesn't* apply to those projects.
+   * by a different Cloud Billing account, the budget *doesn't* apply to those projects. Not
+   * supported when `spend_cap` is set; must be empty.
    * @param resourceAncestors resourceAncestors or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setResourceAncestors(java.util.List<java.lang.String> resourceAncestors) {
@@ -277,7 +298,10 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
    * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
-   * https://cloud.google.com/billing/v1/how-tos/catalog-api.
+   * https://docs.cloud.google.com/billing/v1/how-tos/catalog-api. When `spend_cap` is set, the
+   * services filter must be set and must contain exactly one service from this list of eligible
+   * services: https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps#eligible-
+   * services.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getServices() {
@@ -288,7 +312,10 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * Optional. A set of services of the form `services/{service_id}`, specifying that usage from
    * only this set of services should be included in the budget. If omitted, the report includes
    * usage for all the services. The service names are available through the Catalog API:
-   * https://cloud.google.com/billing/v1/how-tos/catalog-api.
+   * https://docs.cloud.google.com/billing/v1/how-tos/catalog-api. When `spend_cap` is set, the
+   * services filter must be set and must contain exactly one service from this list of eligible
+   * services: https://docs.cloud.google.com/billing/docs/how-to/budgets-spend-caps#eligible-
+   * services.
    * @param services services or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setServices(java.util.List<java.lang.String> services) {
@@ -301,7 +328,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
    * set to the name of the parent account, usage from the parent account is included. If the field
    * is omitted, the report includes usage from the parent account and all subaccounts, if they
-   * exist.
+   * exist. Not supported when `spend_cap` is set; must be empty.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSubaccounts() {
@@ -313,7 +340,7 @@ public final class GoogleCloudBillingBudgetsV1Filter extends com.google.api.clie
    * usage from only this set of subaccounts should be included in the budget. If a subaccount is
    * set to the name of the parent account, usage from the parent account is included. If the field
    * is omitted, the report includes usage from the parent account and all subaccounts, if they
-   * exist.
+   * exist. Not supported when `spend_cap` is set; must be empty.
    * @param subaccounts subaccounts or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Filter setSubaccounts(java.util.List<java.lang.String> subaccounts) {

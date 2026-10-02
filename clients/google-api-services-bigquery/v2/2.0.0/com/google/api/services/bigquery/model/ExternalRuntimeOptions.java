@@ -84,6 +84,14 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
   private java.lang.String runtimeVersion;
 
   /**
+   * Optional. List of volume mounts for the Python UDF container that executes the managed
+   * function.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ExternalVolumeMount> volumeMounts;
+
+  /**
    * Optional. Amount of CPU provisioned for a Python UDF container instance. For more information,
    * see [Configure container limits for Python UDFs](https://cloud.google.com/bigquery/docs/user-
    * defined-functions-python#configure-container-limits)
@@ -206,6 +214,25 @@ public final class ExternalRuntimeOptions extends com.google.api.client.json.Gen
    */
   public ExternalRuntimeOptions setRuntimeVersion(java.lang.String runtimeVersion) {
     this.runtimeVersion = runtimeVersion;
+    return this;
+  }
+
+  /**
+   * Optional. List of volume mounts for the Python UDF container that executes the managed
+   * function.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ExternalVolumeMount> getVolumeMounts() {
+    return volumeMounts;
+  }
+
+  /**
+   * Optional. List of volume mounts for the Python UDF container that executes the managed
+   * function.
+   * @param volumeMounts volumeMounts or {@code null} for none
+   */
+  public ExternalRuntimeOptions setVolumeMounts(java.util.List<ExternalVolumeMount> volumeMounts) {
+    this.volumeMounts = volumeMounts;
     return this;
   }
 

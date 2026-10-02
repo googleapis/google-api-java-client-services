@@ -209,7 +209,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * [`DELETE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-
    * language) statement. * `MERGE`:
    * [`MERGE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-
-   * language) statement. * `CREATE_TABLE`: [`CREATE
+   * language) statement. * `TRUNCATE_TABLE`: [`TRUNCATE
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-
+   * syntax#truncate_table_statement) statement. * `CREATE_TABLE`: [`CREATE
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
    * [`CREATE TABLE AS SELECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
@@ -229,11 +231,29 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_row_access_policy_statement) statement. * `CREATE_SCHEMA`: [`CREATE
    * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_schema_statement) statement. * `CREATE_EXTERNAL_SCHEMA`: [`CREATE EXTERNAL
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_schema_statement) statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE
+   * EXTERNAL TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_table_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE
+   * SNAPSHOT TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
    * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_search_index_statement) statement. * `DROP_TABLE`: [`DROP
+   * language#create_search_index_statement) statement. * `CREATE_VECTOR_INDEX`: [`CREATE VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_vector_index_statement) statement. * `CREATE_CONNECTION`: [`CREATE
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_connection_statement) statement. * `CREATE_DATA_POLICY`: [`CREATE
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_data_policy_statement) statement. * `CREATE_PROPERTY_GRAPH`: [`CREATE PROPERTY
+   * GRAPH`](https://cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-
+   * statements#gql_create_graph) statement. * `CREATE_CAPACITY`: [`CREATE
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_capacity_statement) statement. * `CREATE_RESERVATION`: [`CREATE
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_reservation_statement) statement. * `CREATE_ASSIGNMENT`: [`CREATE
+   * ASSIGNMENT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_assignment_statement) statement. * `DROP_TABLE`: [`DROP
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_table_statement) statement. * `DROP_EXTERNAL_TABLE`: [`DROP EXTERNAL
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
@@ -243,21 +263,37 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
    * drop-model) statement. * `DROP_MATERIALIZED_VIEW`: [`DROP MATERIALIZED
    * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION` : [`DROP
+   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION`: [`DROP
    * FUNCTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION` : [`DROP TABLE
+   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION`: [`DROP TABLE
    * FUNCTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_table_function) statement. * `DROP_PROCEDURE`: [`DROP
    * PROCEDURE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_procedure_statement) statement. * `DROP_SEARCH_INDEX`: [`DROP SEARCH
    * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_search_index) statement. * `DROP_SCHEMA`: [`DROP
+   * language#drop_search_index) statement. * `DROP_VECTOR_INDEX`: [`DROP VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_vector_index) statement. * `DROP_SCHEMA`: [`DROP
    * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
+   * language#drop_schema_statement) statement. * `UNDROP_SCHEMA`: [`UNDROP
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#undrop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_snapshot_table_statement) statement. * `DROP_ROW_ACCESS_POLICY`: [`DROP [ALL] ROW
    * ACCESS POLICY|POLICIES`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * definition-language#drop_row_access_policy_statement) statement. * `ALTER_TABLE`: [`ALTER
+   * definition-language#drop_row_access_policy_statement) statement. * `DROP_CONNECTION`: [`DROP
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_connection_statement) statement. * `DROP_DATA_POLICY`: [`DROP
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_data_policy) statement. * `DROP_PROPERTY_GRAPH`: [`DROP PROPERTY
+   * GRAPH`](https://cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-
+   * statements#gql_drop_graph) statement. * `DROP_CAPACITY`: [`DROP
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_capacity_statement) statement. * `DROP_RESERVATION`: [`DROP
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_reservation_statement) statement. * `DROP_ASSIGNMENT`: [`DROP
+   * ASSIGNMENT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_assignment_statement) statement. * `ALTER_TABLE`: [`ALTER
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#alter_table_set_options_statement) statement. * `ALTER_VIEW`: [`ALTER
    * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
@@ -265,21 +301,62 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * MATERIALIZED VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
    * definition-language#alter_materialized_view_set_options_statement) statement. * `ALTER_SCHEMA`:
    * [`ALTER SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#alter_schema_set_options_statement) statement. * `SCRIPT`:
-   * [`SCRIPT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).
-   * * `TRUNCATE_TABLE`: [`TRUNCATE
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-
-   * syntax#truncate_table_statement) statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_external_table_statement) statement. * `EXPORT_DATA`: [`EXPORT
-   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/other-
+   * language#alter_schema_set_options_statement) statement. * `ALTER_MODEL`: [`ALTER
+   * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * alter-model) statement. * `ALTER_SEARCH_INDEX`: [`ALTER SEARCH
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_search_index_statement) statement. * `ALTER_VECTOR_INDEX`: [`ALTER VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_vector_index_rebuild_statement) statement. * `ALTER_CONNECTION`: [`ALTER
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_connection_set_options_statement) statement. * `ALTER_DATA_POLICY`: [`ALTER
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_data_policy_statement) statement. * `ALTER_PROJECT`: [`ALTER
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_project_set_options_statement) statement. * `ALTER_ORGANIZATION`: [`ALTER
+   * ORGANIZATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_organization_set_options_statement) statement. * `ALTER_BI_CAPACITY`: [`ALTER
+   * BI_CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_bi_capacity_set_options_statement) statement. * `ALTER_CAPACITY`: [`ALTER
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_capacity_set_options_statement) statement. * `ALTER_RESERVATION`: [`ALTER
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_reservation_set_options_statement) statement. * `SCRIPT`:
+   * [`SCRIPT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language)
+   * statement. * `CALL`: [`CALL`](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/procedural-language#call) statement. * `BEGIN_TRANSACTION`: [`BEGIN
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#begin_transaction) statement. * `COMMIT_TRANSACTION`: [`COMMIT
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#commit_transaction) statement. * `ROLLBACK_TRANSACTION`: [`ROLLBACK
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#rollback_transaction) statement. * `EXPORT_DATA`: [`EXPORT
+   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/export-
    * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT
    * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
-   * export-model) statement. * `LOAD_DATA`: [`LOAD
-   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/other-
-   * statements#load_data_statement) statement. * `CALL`:
-   * [`CALL`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
-   * language#call) statement.
+   * export-model) statement. * `EXPORT_METADATA`: [`EXPORT TABLE
+   * METADATA`](https://cloud.google.com/bigquery/docs/biglake-iceberg-tables-in-bigquery)
+   * statement, for BigLake Iceberg tables. * `LOAD_DATA`: [`LOAD
+   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/load-
+   * statements#load_data_statement) statement. * `GRANT_ON_SCHEMA`: [`GRANT ... ON
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `GRANT_ON_TABLE`: [`GRANT ... ON
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. Also used for `GRANT ... ON EXTERNAL TABLE`. *
+   * `GRANT_ON_VIEW`: [`GRANT ... ON
+   * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `GRANT_ON_PROJECT`: [`GRANT ... ON
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `REVOKE_ON_SCHEMA`: [`REVOKE ... ON
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. * `REVOKE_ON_TABLE`: [`REVOKE ... ON
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. Also used for `REVOKE ... ON EXTERNAL TABLE`. *
+   * `REVOKE_ON_VIEW`: [`REVOKE ... ON
+   * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. * `REVOKE_ON_PROJECT`: [`REVOKE ... ON
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -712,7 +789,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * [`DELETE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-
    * language) statement. * `MERGE`:
    * [`MERGE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-
-   * language) statement. * `CREATE_TABLE`: [`CREATE
+   * language) statement. * `TRUNCATE_TABLE`: [`TRUNCATE
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-
+   * syntax#truncate_table_statement) statement. * `CREATE_TABLE`: [`CREATE
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
    * [`CREATE TABLE AS SELECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
@@ -732,11 +811,29 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_row_access_policy_statement) statement. * `CREATE_SCHEMA`: [`CREATE
    * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_schema_statement) statement. * `CREATE_EXTERNAL_SCHEMA`: [`CREATE EXTERNAL
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_schema_statement) statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE
+   * EXTERNAL TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_table_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE
+   * SNAPSHOT TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
    * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_search_index_statement) statement. * `DROP_TABLE`: [`DROP
+   * language#create_search_index_statement) statement. * `CREATE_VECTOR_INDEX`: [`CREATE VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_vector_index_statement) statement. * `CREATE_CONNECTION`: [`CREATE
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_connection_statement) statement. * `CREATE_DATA_POLICY`: [`CREATE
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_data_policy_statement) statement. * `CREATE_PROPERTY_GRAPH`: [`CREATE PROPERTY
+   * GRAPH`](https://cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-
+   * statements#gql_create_graph) statement. * `CREATE_CAPACITY`: [`CREATE
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_capacity_statement) statement. * `CREATE_RESERVATION`: [`CREATE
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_reservation_statement) statement. * `CREATE_ASSIGNMENT`: [`CREATE
+   * ASSIGNMENT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_assignment_statement) statement. * `DROP_TABLE`: [`DROP
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_table_statement) statement. * `DROP_EXTERNAL_TABLE`: [`DROP EXTERNAL
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
@@ -746,21 +843,37 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
    * drop-model) statement. * `DROP_MATERIALIZED_VIEW`: [`DROP MATERIALIZED
    * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION` : [`DROP
+   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION`: [`DROP
    * FUNCTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION` : [`DROP TABLE
+   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION`: [`DROP TABLE
    * FUNCTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_table_function) statement. * `DROP_PROCEDURE`: [`DROP
    * PROCEDURE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_procedure_statement) statement. * `DROP_SEARCH_INDEX`: [`DROP SEARCH
    * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_search_index) statement. * `DROP_SCHEMA`: [`DROP
+   * language#drop_search_index) statement. * `DROP_VECTOR_INDEX`: [`DROP VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_vector_index) statement. * `DROP_SCHEMA`: [`DROP
    * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
+   * language#drop_schema_statement) statement. * `UNDROP_SCHEMA`: [`UNDROP
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#undrop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_snapshot_table_statement) statement. * `DROP_ROW_ACCESS_POLICY`: [`DROP [ALL] ROW
    * ACCESS POLICY|POLICIES`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * definition-language#drop_row_access_policy_statement) statement. * `ALTER_TABLE`: [`ALTER
+   * definition-language#drop_row_access_policy_statement) statement. * `DROP_CONNECTION`: [`DROP
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_connection_statement) statement. * `DROP_DATA_POLICY`: [`DROP
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_data_policy) statement. * `DROP_PROPERTY_GRAPH`: [`DROP PROPERTY
+   * GRAPH`](https://cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-
+   * statements#gql_drop_graph) statement. * `DROP_CAPACITY`: [`DROP
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_capacity_statement) statement. * `DROP_RESERVATION`: [`DROP
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_reservation_statement) statement. * `DROP_ASSIGNMENT`: [`DROP
+   * ASSIGNMENT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_assignment_statement) statement. * `ALTER_TABLE`: [`ALTER
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#alter_table_set_options_statement) statement. * `ALTER_VIEW`: [`ALTER
    * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
@@ -768,21 +881,62 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * MATERIALIZED VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
    * definition-language#alter_materialized_view_set_options_statement) statement. * `ALTER_SCHEMA`:
    * [`ALTER SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#alter_schema_set_options_statement) statement. * `SCRIPT`:
-   * [`SCRIPT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).
-   * * `TRUNCATE_TABLE`: [`TRUNCATE
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-
-   * syntax#truncate_table_statement) statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_external_table_statement) statement. * `EXPORT_DATA`: [`EXPORT
-   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/other-
+   * language#alter_schema_set_options_statement) statement. * `ALTER_MODEL`: [`ALTER
+   * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * alter-model) statement. * `ALTER_SEARCH_INDEX`: [`ALTER SEARCH
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_search_index_statement) statement. * `ALTER_VECTOR_INDEX`: [`ALTER VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_vector_index_rebuild_statement) statement. * `ALTER_CONNECTION`: [`ALTER
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_connection_set_options_statement) statement. * `ALTER_DATA_POLICY`: [`ALTER
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_data_policy_statement) statement. * `ALTER_PROJECT`: [`ALTER
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_project_set_options_statement) statement. * `ALTER_ORGANIZATION`: [`ALTER
+   * ORGANIZATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_organization_set_options_statement) statement. * `ALTER_BI_CAPACITY`: [`ALTER
+   * BI_CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_bi_capacity_set_options_statement) statement. * `ALTER_CAPACITY`: [`ALTER
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_capacity_set_options_statement) statement. * `ALTER_RESERVATION`: [`ALTER
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_reservation_set_options_statement) statement. * `SCRIPT`:
+   * [`SCRIPT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language)
+   * statement. * `CALL`: [`CALL`](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/procedural-language#call) statement. * `BEGIN_TRANSACTION`: [`BEGIN
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#begin_transaction) statement. * `COMMIT_TRANSACTION`: [`COMMIT
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#commit_transaction) statement. * `ROLLBACK_TRANSACTION`: [`ROLLBACK
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#rollback_transaction) statement. * `EXPORT_DATA`: [`EXPORT
+   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/export-
    * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT
    * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
-   * export-model) statement. * `LOAD_DATA`: [`LOAD
-   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/other-
-   * statements#load_data_statement) statement. * `CALL`:
-   * [`CALL`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
-   * language#call) statement.
+   * export-model) statement. * `EXPORT_METADATA`: [`EXPORT TABLE
+   * METADATA`](https://cloud.google.com/bigquery/docs/biglake-iceberg-tables-in-bigquery)
+   * statement, for BigLake Iceberg tables. * `LOAD_DATA`: [`LOAD
+   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/load-
+   * statements#load_data_statement) statement. * `GRANT_ON_SCHEMA`: [`GRANT ... ON
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `GRANT_ON_TABLE`: [`GRANT ... ON
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. Also used for `GRANT ... ON EXTERNAL TABLE`. *
+   * `GRANT_ON_VIEW`: [`GRANT ... ON
+   * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `GRANT_ON_PROJECT`: [`GRANT ... ON
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `REVOKE_ON_SCHEMA`: [`REVOKE ... ON
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. * `REVOKE_ON_TABLE`: [`REVOKE ... ON
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. Also used for `REVOKE ... ON EXTERNAL TABLE`. *
+   * `REVOKE_ON_VIEW`: [`REVOKE ... ON
+   * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. * `REVOKE_ON_PROJECT`: [`REVOKE ... ON
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatementType() {
@@ -802,7 +956,9 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * [`DELETE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-
    * language) statement. * `MERGE`:
    * [`MERGE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-manipulation-
-   * language) statement. * `CREATE_TABLE`: [`CREATE
+   * language) statement. * `TRUNCATE_TABLE`: [`TRUNCATE
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-
+   * syntax#truncate_table_statement) statement. * `CREATE_TABLE`: [`CREATE
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_table_statement) statement, without `AS SELECT`. * `CREATE_TABLE_AS_SELECT`:
    * [`CREATE TABLE AS SELECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
@@ -822,11 +978,29 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_row_access_policy_statement) statement. * `CREATE_SCHEMA`: [`CREATE
    * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_schema_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE SNAPSHOT
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_schema_statement) statement. * `CREATE_EXTERNAL_SCHEMA`: [`CREATE EXTERNAL
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_schema_statement) statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE
+   * EXTERNAL TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_external_table_statement) statement. * `CREATE_SNAPSHOT_TABLE`: [`CREATE
+   * SNAPSHOT TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#create_snapshot_table_statement) statement. * `CREATE_SEARCH_INDEX`: [`CREATE SEARCH
    * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_search_index_statement) statement. * `DROP_TABLE`: [`DROP
+   * language#create_search_index_statement) statement. * `CREATE_VECTOR_INDEX`: [`CREATE VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_vector_index_statement) statement. * `CREATE_CONNECTION`: [`CREATE
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_connection_statement) statement. * `CREATE_DATA_POLICY`: [`CREATE
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_data_policy_statement) statement. * `CREATE_PROPERTY_GRAPH`: [`CREATE PROPERTY
+   * GRAPH`](https://cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-
+   * statements#gql_create_graph) statement. * `CREATE_CAPACITY`: [`CREATE
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_capacity_statement) statement. * `CREATE_RESERVATION`: [`CREATE
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_reservation_statement) statement. * `CREATE_ASSIGNMENT`: [`CREATE
+   * ASSIGNMENT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#create_assignment_statement) statement. * `DROP_TABLE`: [`DROP
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_table_statement) statement. * `DROP_EXTERNAL_TABLE`: [`DROP EXTERNAL
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
@@ -836,21 +1010,37 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
    * drop-model) statement. * `DROP_MATERIALIZED_VIEW`: [`DROP MATERIALIZED
    * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION` : [`DROP
+   * language#drop_materialized_view_statement) statement. * `DROP_FUNCTION`: [`DROP
    * FUNCTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION` : [`DROP TABLE
+   * language#drop_function_statement) statement. * `DROP_TABLE_FUNCTION`: [`DROP TABLE
    * FUNCTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_table_function) statement. * `DROP_PROCEDURE`: [`DROP
    * PROCEDURE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_procedure_statement) statement. * `DROP_SEARCH_INDEX`: [`DROP SEARCH
    * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_search_index) statement. * `DROP_SCHEMA`: [`DROP
+   * language#drop_search_index) statement. * `DROP_VECTOR_INDEX`: [`DROP VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_vector_index) statement. * `DROP_SCHEMA`: [`DROP
    * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#drop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
+   * language#drop_schema_statement) statement. * `UNDROP_SCHEMA`: [`UNDROP
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#undrop_schema_statement) statement. * `DROP_SNAPSHOT_TABLE`: [`DROP SNAPSHOT
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#drop_snapshot_table_statement) statement. * `DROP_ROW_ACCESS_POLICY`: [`DROP [ALL] ROW
    * ACCESS POLICY|POLICIES`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
-   * definition-language#drop_row_access_policy_statement) statement. * `ALTER_TABLE`: [`ALTER
+   * definition-language#drop_row_access_policy_statement) statement. * `DROP_CONNECTION`: [`DROP
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_connection_statement) statement. * `DROP_DATA_POLICY`: [`DROP
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_data_policy) statement. * `DROP_PROPERTY_GRAPH`: [`DROP PROPERTY
+   * GRAPH`](https://cloud.google.com/bigquery/docs/reference/standard-sql/graph-schema-
+   * statements#gql_drop_graph) statement. * `DROP_CAPACITY`: [`DROP
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_capacity_statement) statement. * `DROP_RESERVATION`: [`DROP
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_reservation_statement) statement. * `DROP_ASSIGNMENT`: [`DROP
+   * ASSIGNMENT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#drop_assignment_statement) statement. * `ALTER_TABLE`: [`ALTER
    * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
    * language#alter_table_set_options_statement) statement. * `ALTER_VIEW`: [`ALTER
    * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
@@ -858,21 +1048,62 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
    * MATERIALIZED VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-
    * definition-language#alter_materialized_view_set_options_statement) statement. * `ALTER_SCHEMA`:
    * [`ALTER SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#alter_schema_set_options_statement) statement. * `SCRIPT`:
-   * [`SCRIPT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language).
-   * * `TRUNCATE_TABLE`: [`TRUNCATE
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/dml-
-   * syntax#truncate_table_statement) statement. * `CREATE_EXTERNAL_TABLE`: [`CREATE EXTERNAL
-   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
-   * language#create_external_table_statement) statement. * `EXPORT_DATA`: [`EXPORT
-   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/other-
+   * language#alter_schema_set_options_statement) statement. * `ALTER_MODEL`: [`ALTER
+   * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
+   * alter-model) statement. * `ALTER_SEARCH_INDEX`: [`ALTER SEARCH
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_search_index_statement) statement. * `ALTER_VECTOR_INDEX`: [`ALTER VECTOR
+   * INDEX`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_vector_index_rebuild_statement) statement. * `ALTER_CONNECTION`: [`ALTER
+   * CONNECTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_connection_set_options_statement) statement. * `ALTER_DATA_POLICY`: [`ALTER
+   * DATA_POLICY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_data_policy_statement) statement. * `ALTER_PROJECT`: [`ALTER
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_project_set_options_statement) statement. * `ALTER_ORGANIZATION`: [`ALTER
+   * ORGANIZATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_organization_set_options_statement) statement. * `ALTER_BI_CAPACITY`: [`ALTER
+   * BI_CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_bi_capacity_set_options_statement) statement. * `ALTER_CAPACITY`: [`ALTER
+   * CAPACITY`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_capacity_set_options_statement) statement. * `ALTER_RESERVATION`: [`ALTER
+   * RESERVATION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-
+   * language#alter_reservation_set_options_statement) statement. * `SCRIPT`:
+   * [`SCRIPT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-language)
+   * statement. * `CALL`: [`CALL`](https://cloud.google.com/bigquery/docs/reference/standard-
+   * sql/procedural-language#call) statement. * `BEGIN_TRANSACTION`: [`BEGIN
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#begin_transaction) statement. * `COMMIT_TRANSACTION`: [`COMMIT
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#commit_transaction) statement. * `ROLLBACK_TRANSACTION`: [`ROLLBACK
+   * TRANSACTION`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
+   * language#rollback_transaction) statement. * `EXPORT_DATA`: [`EXPORT
+   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/export-
    * statements#export_data_statement) statement. * `EXPORT_MODEL`: [`EXPORT
    * MODEL`](https://cloud.google.com/bigquery-ml/docs/reference/standard-sql/bigqueryml-syntax-
-   * export-model) statement. * `LOAD_DATA`: [`LOAD
-   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/other-
-   * statements#load_data_statement) statement. * `CALL`:
-   * [`CALL`](https://cloud.google.com/bigquery/docs/reference/standard-sql/procedural-
-   * language#call) statement.
+   * export-model) statement. * `EXPORT_METADATA`: [`EXPORT TABLE
+   * METADATA`](https://cloud.google.com/bigquery/docs/biglake-iceberg-tables-in-bigquery)
+   * statement, for BigLake Iceberg tables. * `LOAD_DATA`: [`LOAD
+   * DATA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/load-
+   * statements#load_data_statement) statement. * `GRANT_ON_SCHEMA`: [`GRANT ... ON
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `GRANT_ON_TABLE`: [`GRANT ... ON
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. Also used for `GRANT ... ON EXTERNAL TABLE`. *
+   * `GRANT_ON_VIEW`: [`GRANT ... ON
+   * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `GRANT_ON_PROJECT`: [`GRANT ... ON
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#grant_statement) statement. * `REVOKE_ON_SCHEMA`: [`REVOKE ... ON
+   * SCHEMA`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. * `REVOKE_ON_TABLE`: [`REVOKE ... ON
+   * TABLE`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. Also used for `REVOKE ... ON EXTERNAL TABLE`. *
+   * `REVOKE_ON_VIEW`: [`REVOKE ... ON
+   * VIEW`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement. * `REVOKE_ON_PROJECT`: [`REVOKE ... ON
+   * PROJECT`](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-control-
+   * language#revoke_statement) statement.
    * @param statementType statementType or {@code null} for none
    */
   public QueryResponse setStatementType(java.lang.String statementType) {

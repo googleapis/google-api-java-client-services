@@ -253,6 +253,15 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   private java.lang.String reservation;
 
   /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of a query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecureContext secureContext;
+
+  /**
    * Optional. Optional: Specifies the maximum amount of time, in milliseconds, that the client is
    * willing to wait for the query to complete. By default, this limit is 10 seconds (10,000
    * milliseconds). If the query is complete, the jobComplete field in the response is true. If the
@@ -784,6 +793,27 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
    */
   public QueryRequest setReservation(java.lang.String reservation) {
     this.reservation = reservation;
+    return this;
+  }
+
+  /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of a query.
+   * @return value or {@code null} for none
+   */
+  public SecureContext getSecureContext() {
+    return secureContext;
+  }
+
+  /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of a query.
+   * @param secureContext secureContext or {@code null} for none
+   */
+  public QueryRequest setSecureContext(SecureContext secureContext) {
+    this.secureContext = secureContext;
     return this;
   }
 

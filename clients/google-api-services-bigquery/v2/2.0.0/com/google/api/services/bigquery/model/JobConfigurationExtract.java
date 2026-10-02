@@ -82,6 +82,14 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   private ModelExtractOptions modelExtractOptions;
 
   /**
+   * Optional. Applicable to formats: PARQUET. If enabled, BigQuery to Parquet export will write the
+   * native Parquet Geography type instead of the default GeoParquet type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean nativeGeographyExportEnabled;
+
+  /**
    * Optional. Whether to print out a header row in the results. Default is true. Not applicable
    * when extracting models.
    * The value may be {@code null}.
@@ -228,6 +236,25 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
    */
   public JobConfigurationExtract setModelExtractOptions(ModelExtractOptions modelExtractOptions) {
     this.modelExtractOptions = modelExtractOptions;
+    return this;
+  }
+
+  /**
+   * Optional. Applicable to formats: PARQUET. If enabled, BigQuery to Parquet export will write the
+   * native Parquet Geography type instead of the default GeoParquet type.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getNativeGeographyExportEnabled() {
+    return nativeGeographyExportEnabled;
+  }
+
+  /**
+   * Optional. Applicable to formats: PARQUET. If enabled, BigQuery to Parquet export will write the
+   * native Parquet Geography type instead of the default GeoParquet type.
+   * @param nativeGeographyExportEnabled nativeGeographyExportEnabled or {@code null} for none
+   */
+  public JobConfigurationExtract setNativeGeographyExportEnabled(java.lang.Boolean nativeGeographyExportEnabled) {
+    this.nativeGeographyExportEnabled = nativeGeographyExportEnabled;
     return this;
   }
 

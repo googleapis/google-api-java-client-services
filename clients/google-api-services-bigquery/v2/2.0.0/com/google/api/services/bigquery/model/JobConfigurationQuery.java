@@ -215,6 +215,15 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
   private ScriptOptions scriptOptions;
 
   /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of a query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecureContext secureContext;
+
+  /**
    * Output only. System variables for GoogleSQL queries. A system variable is output if the
    * variable is settable and its value differs from the system default. "@@" prefix is not included
    * in the name of the System variables.
@@ -774,6 +783,27 @@ public final class JobConfigurationQuery extends com.google.api.client.json.Gene
    */
   public JobConfigurationQuery setScriptOptions(ScriptOptions scriptOptions) {
     this.scriptOptions = scriptOptions;
+    return this;
+  }
+
+  /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of a query.
+   * @return value or {@code null} for none
+   */
+  public SecureContext getSecureContext() {
+    return secureContext;
+  }
+
+  /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of a query.
+   * @param secureContext secureContext or {@code null} for none
+   */
+  public JobConfigurationQuery setSecureContext(SecureContext secureContext) {
+    this.secureContext = secureContext;
     return this;
   }
 

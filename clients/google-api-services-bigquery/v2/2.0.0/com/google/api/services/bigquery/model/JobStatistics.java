@@ -90,7 +90,10 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long finalExecutionDurationMs;
 
   /**
-   * Output only. Regions where the global query accesses data.
+   * Output only. The list of remote regions from which a global query accesses data. This field is
+   * populated only for parent global query jobs in the primary execution region. It is empty for
+   * child global query jobs and single-region queries. For more information, see [Global
+   * queries](https://cloud.google.com/bigquery/docs/global-queries).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +114,12 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   private java.lang.Long numChildJobs;
 
   /**
-   * Output only. The global query that created this job.
+   * Output only. Reference to the parent global query job, if this is a child global query job.
+   * This field is populated only for child global query jobs (remote subqueries or cross-region
+   * table copy jobs) executed in remote regions on behalf of a global query. It contains the
+   * project ID, job ID, and location of the parent global query job. It is unset for parent global
+   * query jobs and single-region queries. For more information, see [Global
+   * queries](https://cloud.google.com/bigquery/docs/global-queries).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,7 +148,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The reservation group path of the reservation assigned to this job. This field has
-   * a limit of 10 nested reservation groups. This is to maintain consistency between reservatins
+   * a limit of 10 nested reservation groups. This is to maintain consistency between reservations
    * info schema and jobs info schema. The first reservation group is the root reservation group and
    * the last is the leaf or lowest level reservation group.
    * The value may be {@code null}.
@@ -369,7 +377,10 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Regions where the global query accesses data.
+   * Output only. The list of remote regions from which a global query accesses data. This field is
+   * populated only for parent global query jobs in the primary execution region. It is empty for
+   * child global query jobs and single-region queries. For more information, see [Global
+   * queries](https://cloud.google.com/bigquery/docs/global-queries).
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGlobalQueryRemoteRegions() {
@@ -377,7 +388,10 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Regions where the global query accesses data.
+   * Output only. The list of remote regions from which a global query accesses data. This field is
+   * populated only for parent global query jobs in the primary execution region. It is empty for
+   * child global query jobs and single-region queries. For more information, see [Global
+   * queries](https://cloud.google.com/bigquery/docs/global-queries).
    * @param globalQueryRemoteRegions globalQueryRemoteRegions or {@code null} for none
    */
   public JobStatistics setGlobalQueryRemoteRegions(java.util.List<java.lang.String> globalQueryRemoteRegions) {
@@ -420,7 +434,12 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The global query that created this job.
+   * Output only. Reference to the parent global query job, if this is a child global query job.
+   * This field is populated only for child global query jobs (remote subqueries or cross-region
+   * table copy jobs) executed in remote regions on behalf of a global query. It contains the
+   * project ID, job ID, and location of the parent global query job. It is unset for parent global
+   * query jobs and single-region queries. For more information, see [Global
+   * queries](https://cloud.google.com/bigquery/docs/global-queries).
    * @return value or {@code null} for none
    */
   public JobReference getParentGlobalQueryJob() {
@@ -428,7 +447,12 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The global query that created this job.
+   * Output only. Reference to the parent global query job, if this is a child global query job.
+   * This field is populated only for child global query jobs (remote subqueries or cross-region
+   * table copy jobs) executed in remote regions on behalf of a global query. It contains the
+   * project ID, job ID, and location of the parent global query job. It is unset for parent global
+   * query jobs and single-region queries. For more information, see [Global
+   * queries](https://cloud.google.com/bigquery/docs/global-queries).
    * @param parentGlobalQueryJob parentGlobalQueryJob or {@code null} for none
    */
   public JobStatistics setParentGlobalQueryJob(JobReference parentGlobalQueryJob) {
@@ -489,7 +513,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The reservation group path of the reservation assigned to this job. This field has
-   * a limit of 10 nested reservation groups. This is to maintain consistency between reservatins
+   * a limit of 10 nested reservation groups. This is to maintain consistency between reservations
    * info schema and jobs info schema. The first reservation group is the root reservation group and
    * the last is the leaf or lowest level reservation group.
    * @return value or {@code null} for none
@@ -500,7 +524,7 @@ public final class JobStatistics extends com.google.api.client.json.GenericJson 
 
   /**
    * Output only. The reservation group path of the reservation assigned to this job. This field has
-   * a limit of 10 nested reservation groups. This is to maintain consistency between reservatins
+   * a limit of 10 nested reservation groups. This is to maintain consistency between reservations
    * info schema and jobs info schema. The first reservation group is the root reservation group and
    * the last is the leaf or lowest level reservation group.
    * @param reservationGroupPath reservationGroupPath or {@code null} for none

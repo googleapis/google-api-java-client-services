@@ -21,9 +21,13 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
  * for adding functionality to a Merchant Center accounts. A typical example of this is the [Free
  * product listings](https://support.google.com/merchants/answer/13889434) program, which enables
  * products from a business's store to be shown across Google for free. The following list is the
- * available set of program resource IDs accessible through the API: * `checkout` * `free-listings`
- * * `product-ratings` * `shopping-ads` * `ucp-integration` (limited access) * `youtube-affiliate` *
- * `youtube-shopping-checkout`
+ * available set of program resource IDs accessible through the API: *
+ * [`checkout`](https://developers.google.com/merchant/api/guides/products/checkout-settings) *
+ * `free-listings` * [`loyalty`](https://developers.google.com/merchant/api/guides/loyalty/loyalty-
+ * programs) * `product-ratings` * `shopping-ads` * [`ucp-integration` (limited access)](https://dev
+ * elopers.google.com/merchant/api/reference/rest/accounts_v1alpha/accounts.programs.ucpSettings) *
+ * [`youtube-affiliate`](https://support.google.com/merchants/answer/14815513) * `youtube-shopping-
+ * checkout`
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

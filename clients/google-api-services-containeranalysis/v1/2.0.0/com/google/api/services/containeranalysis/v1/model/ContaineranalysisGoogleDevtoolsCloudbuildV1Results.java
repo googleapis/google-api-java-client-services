@@ -132,6 +132,13 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
   private java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage> pythonPackages;
 
   /**
+   * Output only. Aggregated metrics for the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ContaineranalysisGoogleDevtoolsCloudbuildV1BuildResourceUsage resourceUsage;
+
+  /**
    * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
    * populated when artifacts are uploaded to Cloud Storage.
    * @return value or {@code null} for none
@@ -342,6 +349,23 @@ public final class ContaineranalysisGoogleDevtoolsCloudbuildV1Results extends co
    */
   public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setPythonPackages(java.util.List<ContaineranalysisGoogleDevtoolsCloudbuildV1UploadedPythonPackage> pythonPackages) {
     this.pythonPackages = pythonPackages;
+    return this;
+  }
+
+  /**
+   * Output only. Aggregated metrics for the build.
+   * @return value or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1BuildResourceUsage getResourceUsage() {
+    return resourceUsage;
+  }
+
+  /**
+   * Output only. Aggregated metrics for the build.
+   * @param resourceUsage resourceUsage or {@code null} for none
+   */
+  public ContaineranalysisGoogleDevtoolsCloudbuildV1Results setResourceUsage(ContaineranalysisGoogleDevtoolsCloudbuildV1BuildResourceUsage resourceUsage) {
+    this.resourceUsage = resourceUsage;
     return this;
   }
 

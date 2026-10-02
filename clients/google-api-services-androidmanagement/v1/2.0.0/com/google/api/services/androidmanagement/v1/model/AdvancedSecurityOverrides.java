@@ -31,14 +31,15 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class AdvancedSecurityOverrides extends com.google.api.client.json.GenericJson {
 
   /**
-   * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
-   * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
-   * Criteria Mode increases certain security components on a device, see CommonCriteriaMode for
-   * details.Warning: Common Criteria Mode enforces a strict security model typically only required
-   * for IT products used in national security systems and other highly sensitive organizations.
-   * Standard device use may be affected. Only enabled if required. If Common Criteria Mode is
-   * turned off after being enabled previously, all user-configured Wi-Fi networks may be lost and
-   * any enterprise-configured Wi-Fi networks that require user input may need to be reconfigured.
+   * Optional. Controls Common Criteria Mode—security standards defined in the Common Criteria for
+   * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).
+   * Enabling Common Criteria Mode increases certain security components on a device, see
+   * CommonCriteriaMode for details.Warning: Common Criteria Mode enforces a strict security model
+   * typically only required for IT products used in national security systems and other highly
+   * sensitive organizations. Standard device use may be affected. Only enabled if required. If
+   * Common Criteria Mode is turned off after being enabled previously, all user-configured Wi-Fi
+   * networks may be lost and any enterprise-configured Wi-Fi networks that require user input may
+   * need to be reconfigured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,7 +54,7 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String contentProtectionPolicy;
 
   /**
-   * Controls access to developer settings: developer options and safe boot. Replaces
+   * Optional. Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated). On personally-owned
    * devices with a work profile, setting this policy will not disable safe boot. In this case, a
    * NonComplianceDetail with MANAGEMENT_MODE is reported.
@@ -63,8 +64,9 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String developerSettings;
 
   /**
-   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
-   * is enforced. Replaces ensureVerifyAppsEnabled (deprecated).
+   * Optional. Whether Google Play Protect verification
+   * (https://support.google.com/accounts/answer/2812853) is enforced. Replaces
+   * ensureVerifyAppsEnabled (deprecated).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,32 +83,33 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   private java.lang.String mtePolicy;
 
   /**
-   * Personal apps that can read work profile notifications using a NotificationListenerService (htt
-   * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
-   * By default, no personal apps (aside from system apps) can read work notifications. Each value
-   * in the list must be a package name.
+   * Optional. Personal apps that can read work profile notifications using a
+   * NotificationListenerService (https://developer.android.com/reference/android/service/notificati
+   * on/NotificationListenerService). By default, no personal apps (aside from system apps) can read
+   * work notifications. Each value in the list must be a package name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> personalAppsThatCanReadWorkNotifications;
 
   /**
-   * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces
-   * install_unknown_sources_allowed (deprecated).
+   * Optional. The policy for untrusted apps (apps from unknown sources) enforced on the device.
+   * Replaces install_unknown_sources_allowed (deprecated).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String untrustedAppsPolicy;
 
   /**
-   * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
-   * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
-   * Criteria Mode increases certain security components on a device, see CommonCriteriaMode for
-   * details.Warning: Common Criteria Mode enforces a strict security model typically only required
-   * for IT products used in national security systems and other highly sensitive organizations.
-   * Standard device use may be affected. Only enabled if required. If Common Criteria Mode is
-   * turned off after being enabled previously, all user-configured Wi-Fi networks may be lost and
-   * any enterprise-configured Wi-Fi networks that require user input may need to be reconfigured.
+   * Optional. Controls Common Criteria Mode—security standards defined in the Common Criteria for
+   * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).
+   * Enabling Common Criteria Mode increases certain security components on a device, see
+   * CommonCriteriaMode for details.Warning: Common Criteria Mode enforces a strict security model
+   * typically only required for IT products used in national security systems and other highly
+   * sensitive organizations. Standard device use may be affected. Only enabled if required. If
+   * Common Criteria Mode is turned off after being enabled previously, all user-configured Wi-Fi
+   * networks may be lost and any enterprise-configured Wi-Fi networks that require user input may
+   * need to be reconfigured.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommonCriteriaMode() {
@@ -114,14 +117,15 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Controls Common Criteria Mode—security standards defined in the Common Criteria for Information
-   * Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC). Enabling Common
-   * Criteria Mode increases certain security components on a device, see CommonCriteriaMode for
-   * details.Warning: Common Criteria Mode enforces a strict security model typically only required
-   * for IT products used in national security systems and other highly sensitive organizations.
-   * Standard device use may be affected. Only enabled if required. If Common Criteria Mode is
-   * turned off after being enabled previously, all user-configured Wi-Fi networks may be lost and
-   * any enterprise-configured Wi-Fi networks that require user input may need to be reconfigured.
+   * Optional. Controls Common Criteria Mode—security standards defined in the Common Criteria for
+   * Information Technology Security Evaluation (https://www.commoncriteriaportal.org/) (CC).
+   * Enabling Common Criteria Mode increases certain security components on a device, see
+   * CommonCriteriaMode for details.Warning: Common Criteria Mode enforces a strict security model
+   * typically only required for IT products used in national security systems and other highly
+   * sensitive organizations. Standard device use may be affected. Only enabled if required. If
+   * Common Criteria Mode is turned off after being enabled previously, all user-configured Wi-Fi
+   * networks may be lost and any enterprise-configured Wi-Fi networks that require user input may
+   * need to be reconfigured.
    * @param commonCriteriaMode commonCriteriaMode or {@code null} for none
    */
   public AdvancedSecurityOverrides setCommonCriteriaMode(java.lang.String commonCriteriaMode) {
@@ -149,7 +153,7 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Controls access to developer settings: developer options and safe boot. Replaces
+   * Optional. Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated). On personally-owned
    * devices with a work profile, setting this policy will not disable safe boot. In this case, a
    * NonComplianceDetail with MANAGEMENT_MODE is reported.
@@ -160,7 +164,7 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Controls access to developer settings: developer options and safe boot. Replaces
+   * Optional. Controls access to developer settings: developer options and safe boot. Replaces
    * safeBootDisabled (deprecated) and debuggingFeaturesAllowed (deprecated). On personally-owned
    * devices with a work profile, setting this policy will not disable safe boot. In this case, a
    * NonComplianceDetail with MANAGEMENT_MODE is reported.
@@ -172,8 +176,9 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
-   * is enforced. Replaces ensureVerifyAppsEnabled (deprecated).
+   * Optional. Whether Google Play Protect verification
+   * (https://support.google.com/accounts/answer/2812853) is enforced. Replaces
+   * ensureVerifyAppsEnabled (deprecated).
    * @return value or {@code null} for none
    */
   public java.lang.String getGooglePlayProtectVerifyApps() {
@@ -181,8 +186,9 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Whether Google Play Protect verification (https://support.google.com/accounts/answer/2812853)
-   * is enforced. Replaces ensureVerifyAppsEnabled (deprecated).
+   * Optional. Whether Google Play Protect verification
+   * (https://support.google.com/accounts/answer/2812853) is enforced. Replaces
+   * ensureVerifyAppsEnabled (deprecated).
    * @param googlePlayProtectVerifyApps googlePlayProtectVerifyApps or {@code null} for none
    */
   public AdvancedSecurityOverrides setGooglePlayProtectVerifyApps(java.lang.String googlePlayProtectVerifyApps) {
@@ -214,10 +220,10 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Personal apps that can read work profile notifications using a NotificationListenerService (htt
-   * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
-   * By default, no personal apps (aside from system apps) can read work notifications. Each value
-   * in the list must be a package name.
+   * Optional. Personal apps that can read work profile notifications using a
+   * NotificationListenerService (https://developer.android.com/reference/android/service/notificati
+   * on/NotificationListenerService). By default, no personal apps (aside from system apps) can read
+   * work notifications. Each value in the list must be a package name.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPersonalAppsThatCanReadWorkNotifications() {
@@ -225,10 +231,10 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * Personal apps that can read work profile notifications using a NotificationListenerService (htt
-   * ps://developer.android.com/reference/android/service/notification/NotificationListenerService).
-   * By default, no personal apps (aside from system apps) can read work notifications. Each value
-   * in the list must be a package name.
+   * Optional. Personal apps that can read work profile notifications using a
+   * NotificationListenerService (https://developer.android.com/reference/android/service/notificati
+   * on/NotificationListenerService). By default, no personal apps (aside from system apps) can read
+   * work notifications. Each value in the list must be a package name.
    * @param personalAppsThatCanReadWorkNotifications personalAppsThatCanReadWorkNotifications or {@code null} for none
    */
   public AdvancedSecurityOverrides setPersonalAppsThatCanReadWorkNotifications(java.util.List<java.lang.String> personalAppsThatCanReadWorkNotifications) {
@@ -237,8 +243,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces
-   * install_unknown_sources_allowed (deprecated).
+   * Optional. The policy for untrusted apps (apps from unknown sources) enforced on the device.
+   * Replaces install_unknown_sources_allowed (deprecated).
    * @return value or {@code null} for none
    */
   public java.lang.String getUntrustedAppsPolicy() {
@@ -246,8 +252,8 @@ public final class AdvancedSecurityOverrides extends com.google.api.client.json.
   }
 
   /**
-   * The policy for untrusted apps (apps from unknown sources) enforced on the device. Replaces
-   * install_unknown_sources_allowed (deprecated).
+   * Optional. The policy for untrusted apps (apps from unknown sources) enforced on the device.
+   * Replaces install_unknown_sources_allowed (deprecated).
    * @param untrustedAppsPolicy untrustedAppsPolicy or {@code null} for none
    */
   public AdvancedSecurityOverrides setUntrustedAppsPolicy(java.lang.String untrustedAppsPolicy) {

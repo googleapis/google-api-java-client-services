@@ -90,11 +90,10 @@ public final class Session extends com.google.api.client.json.GenericJson {
   private RuntimeInfo runtimeInfo;
 
   /**
-   * Optional. The session template used by the session.Only resource names, including project ID
-   * and location, are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/
-   * locations/[dataproc_region]/sessionTemplates/[template_id] *
-   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]The template
-   * must be in the same project and Dataproc region as the session.
+   * Optional. The session template used by the session.Resource names and short template IDs are
+   * valid. Examples: *
+   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id] *
+   * [template_id]The template must be in the same project and Dataproc region as the session.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -295,11 +294,10 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The session template used by the session.Only resource names, including project ID
-   * and location, are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/
-   * locations/[dataproc_region]/sessionTemplates/[template_id] *
-   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]The template
-   * must be in the same project and Dataproc region as the session.
+   * Optional. The session template used by the session.Resource names and short template IDs are
+   * valid. Examples: *
+   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id] *
+   * [template_id]The template must be in the same project and Dataproc region as the session.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionTemplate() {
@@ -307,11 +305,10 @@ public final class Session extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The session template used by the session.Only resource names, including project ID
-   * and location, are valid.Example: * https://www.googleapis.com/compute/v1/projects/[project_id]/
-   * locations/[dataproc_region]/sessionTemplates/[template_id] *
-   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id]The template
-   * must be in the same project and Dataproc region as the session.
+   * Optional. The session template used by the session.Resource names and short template IDs are
+   * valid. Examples: *
+   * projects/[project_id]/locations/[dataproc_region]/sessionTemplates/[template_id] *
+   * [template_id]The template must be in the same project and Dataproc region as the session.
    * @param sessionTemplate sessionTemplate or {@code null} for none
    */
   public Session setSessionTemplate(java.lang.String sessionTemplate) {

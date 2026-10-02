@@ -60,6 +60,13 @@ public final class ApplicationAttemptInfo extends com.google.api.client.json.Gen
   private String endTime;
 
   /**
+   * Output only. The event log path for the application attempt.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eventLogPath;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +156,23 @@ public final class ApplicationAttemptInfo extends com.google.api.client.json.Gen
    */
   public ApplicationAttemptInfo setEndTime(String endTime) {
     this.endTime = endTime;
+    return this;
+  }
+
+  /**
+   * Output only. The event log path for the application attempt.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEventLogPath() {
+    return eventLogPath;
+  }
+
+  /**
+   * Output only. The event log path for the application attempt.
+   * @param eventLogPath eventLogPath or {@code null} for none
+   */
+  public ApplicationAttemptInfo setEventLogPath(java.lang.String eventLogPath) {
+    this.eventLogPath = eventLogPath;
     return this;
   }
 

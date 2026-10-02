@@ -129,7 +129,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private ControlPlaneEndpointsConfig controlPlaneEndpointsConfig;
 
   /**
-   * Configuration for the fine-grained cost management feature.
+   * Configuration for the fine-grained cost allocation feature.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -970,7 +970,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the fine-grained cost management feature.
+   * Configuration for the fine-grained cost allocation feature.
    * @return value or {@code null} for none
    */
   public CostManagementConfig getCostManagementConfig() {
@@ -978,7 +978,7 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration for the fine-grained cost management feature.
+   * Configuration for the fine-grained cost allocation feature.
    * @param costManagementConfig costManagementConfig or {@code null} for none
    */
   public Cluster setCostManagementConfig(CostManagementConfig costManagementConfig) {

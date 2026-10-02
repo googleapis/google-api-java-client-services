@@ -32,6 +32,13 @@ package com.google.api.services.bigqueryconnection.v1.model;
 public final class SalesforceDataCloudProperties extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossCloudCacheOptions crossCloudCacheOptions;
+
+  /**
    * Output only. A unique Google-owned and Google-generated service account identity for the
    * connection.
    * The value may be {@code null}.
@@ -52,6 +59,23 @@ public final class SalesforceDataCloudProperties extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private java.lang.String tenantId;
+
+  /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * @return value or {@code null} for none
+   */
+  public CrossCloudCacheOptions getCrossCloudCacheOptions() {
+    return crossCloudCacheOptions;
+  }
+
+  /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * @param crossCloudCacheOptions crossCloudCacheOptions or {@code null} for none
+   */
+  public SalesforceDataCloudProperties setCrossCloudCacheOptions(CrossCloudCacheOptions crossCloudCacheOptions) {
+    this.crossCloudCacheOptions = crossCloudCacheOptions;
+    return this;
+  }
 
   /**
    * Output only. A unique Google-owned and Google-generated service account identity for the

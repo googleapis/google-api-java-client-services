@@ -45,6 +45,13 @@ public final class AzureProperties extends com.google.api.client.json.GenericJso
   private java.lang.String clientId;
 
   /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossCloudCacheOptions crossCloudCacheOptions;
+
+  /**
    * The id of customer's directory that host the data.
    * The value may be {@code null}.
    */
@@ -111,6 +118,23 @@ public final class AzureProperties extends com.google.api.client.json.GenericJso
    */
   public AzureProperties setClientId(java.lang.String clientId) {
     this.clientId = clientId;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * @return value or {@code null} for none
+   */
+  public CrossCloudCacheOptions getCrossCloudCacheOptions() {
+    return crossCloudCacheOptions;
+  }
+
+  /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * @param crossCloudCacheOptions crossCloudCacheOptions or {@code null} for none
+   */
+  public AzureProperties setCrossCloudCacheOptions(CrossCloudCacheOptions crossCloudCacheOptions) {
+    this.crossCloudCacheOptions = crossCloudCacheOptions;
     return this;
   }
 

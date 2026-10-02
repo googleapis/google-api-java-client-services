@@ -75,6 +75,14 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Optional. Controls how instances within this Cluster are allowed to exist in multiple Zones
+   * within the Region. Only one of zone_uri or multi_zone_config must be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private MultiZoneConfig multiZoneConfig;
+
+  /**
    * Optional. The Compute Engine network to be used for machine communications. Cannot be specified
    * with subnetwork_uri. If neither network_uri nor subnetwork_uri is specified, the "default"
    * network of the project is used, if it exists. Cannot be a Custom Subnet Network (see Using
@@ -279,6 +287,25 @@ public final class GceClusterConfig extends com.google.api.client.json.GenericJs
    */
   public GceClusterConfig setMetadata(java.util.Map<String, java.lang.String> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional. Controls how instances within this Cluster are allowed to exist in multiple Zones
+   * within the Region. Only one of zone_uri or multi_zone_config must be set.
+   * @return value or {@code null} for none
+   */
+  public MultiZoneConfig getMultiZoneConfig() {
+    return multiZoneConfig;
+  }
+
+  /**
+   * Optional. Controls how instances within this Cluster are allowed to exist in multiple Zones
+   * within the Region. Only one of zone_uri or multi_zone_config must be set.
+   * @param multiZoneConfig multiZoneConfig or {@code null} for none
+   */
+  public GceClusterConfig setMultiZoneConfig(MultiZoneConfig multiZoneConfig) {
+    this.multiZoneConfig = multiZoneConfig;
     return this;
   }
 

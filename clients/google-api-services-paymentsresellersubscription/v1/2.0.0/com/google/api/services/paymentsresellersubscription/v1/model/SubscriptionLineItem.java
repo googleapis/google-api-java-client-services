@@ -103,6 +103,13 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
   private SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails;
 
   /**
+   * Optional. Output only. The plan type of the line item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String planType;
+
+  /**
    * Required. Product resource name that identifies the product associated with this line item. The
    * format is 'partners/{partner_id}/products/{product_id}'.
    * The value may be {@code null}.
@@ -299,6 +306,23 @@ public final class SubscriptionLineItem extends com.google.api.client.json.Gener
    */
   public SubscriptionLineItem setOneTimeRecurrenceDetails(SubscriptionLineItemOneTimeRecurrenceDetails oneTimeRecurrenceDetails) {
     this.oneTimeRecurrenceDetails = oneTimeRecurrenceDetails;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The plan type of the line item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlanType() {
+    return planType;
+  }
+
+  /**
+   * Optional. Output only. The plan type of the line item.
+   * @param planType planType or {@code null} for none
+   */
+  public SubscriptionLineItem setPlanType(java.lang.String planType) {
+    this.planType = planType;
     return this;
   }
 

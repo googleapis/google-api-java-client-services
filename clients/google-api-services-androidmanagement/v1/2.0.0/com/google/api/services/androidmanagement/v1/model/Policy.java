@@ -55,7 +55,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean adjustVolumeDisabled;
 
   /**
-   * Advanced security settings. In most cases, setting these is not needed.
+   * Optional. Advanced security settings. In most cases, setting these is not needed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -831,7 +831,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean unmuteMicrophoneDisabled;
 
   /**
-   * Configuration of device activity logging.
+   * Optional. Configuration of device activity logging.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -961,7 +961,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advanced security settings. In most cases, setting these is not needed.
+   * Optional. Advanced security settings. In most cases, setting these is not needed.
    * @return value or {@code null} for none
    */
   public AdvancedSecurityOverrides getAdvancedSecurityOverrides() {
@@ -969,7 +969,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Advanced security settings. In most cases, setting these is not needed.
+   * Optional. Advanced security settings. In most cases, setting these is not needed.
    * @param advancedSecurityOverrides advancedSecurityOverrides or {@code null} for none
    */
   public Policy setAdvancedSecurityOverrides(AdvancedSecurityOverrides advancedSecurityOverrides) {
@@ -2687,7 +2687,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration of device activity logging.
+   * Optional. Configuration of device activity logging.
    * @return value or {@code null} for none
    */
   public UsageLog getUsageLog() {
@@ -2695,7 +2695,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Configuration of device activity logging.
+   * Optional. Configuration of device activity logging.
    * @param usageLog usageLog or {@code null} for none
    */
   public Policy setUsageLog(UsageLog usageLog) {

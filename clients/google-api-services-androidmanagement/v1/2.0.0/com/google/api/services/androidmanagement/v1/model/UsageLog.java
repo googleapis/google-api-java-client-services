@@ -32,24 +32,24 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class UsageLog extends com.google.api.client.json.GenericJson {
 
   /**
-   * Specifies which log types are enabled. Note that users will receive on-device messaging when
-   * usage logging is enabled.
+   * Optional. Specifies which log types are enabled. Note that users will receive on-device
+   * messaging when usage logging is enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> enabledLogTypes;
 
   /**
-   * Specifies which of the enabled log types can be uploaded over mobile data. By default logs are
-   * queued for upload when the device connects to WiFi.
+   * Optional. Specifies which of the enabled log types can be uploaded over mobile data. By default
+   * logs are queued for upload when the device connects to WiFi.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> uploadOnCellularAllowed;
 
   /**
-   * Specifies which log types are enabled. Note that users will receive on-device messaging when
-   * usage logging is enabled.
+   * Optional. Specifies which log types are enabled. Note that users will receive on-device
+   * messaging when usage logging is enabled.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEnabledLogTypes() {
@@ -57,8 +57,8 @@ public final class UsageLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which log types are enabled. Note that users will receive on-device messaging when
-   * usage logging is enabled.
+   * Optional. Specifies which log types are enabled. Note that users will receive on-device
+   * messaging when usage logging is enabled.
    * @param enabledLogTypes enabledLogTypes or {@code null} for none
    */
   public UsageLog setEnabledLogTypes(java.util.List<java.lang.String> enabledLogTypes) {
@@ -67,8 +67,8 @@ public final class UsageLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which of the enabled log types can be uploaded over mobile data. By default logs are
-   * queued for upload when the device connects to WiFi.
+   * Optional. Specifies which of the enabled log types can be uploaded over mobile data. By default
+   * logs are queued for upload when the device connects to WiFi.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUploadOnCellularAllowed() {
@@ -76,8 +76,8 @@ public final class UsageLog extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Specifies which of the enabled log types can be uploaded over mobile data. By default logs are
-   * queued for upload when the device connects to WiFi.
+   * Optional. Specifies which of the enabled log types can be uploaded over mobile data. By default
+   * logs are queued for upload when the device connects to WiFi.
    * @param uploadOnCellularAllowed uploadOnCellularAllowed or {@code null} for none
    */
   public UsageLog setUploadOnCellularAllowed(java.util.List<java.lang.String> uploadOnCellularAllowed) {

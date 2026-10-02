@@ -45,8 +45,12 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private CaseClassification classification;
 
   /**
-   * A user-supplied email address to send case update notifications for. This should only be used
-   * in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+   * A user-supplied email address to send case update notifications for. This field must be set
+   * when the request is authenticated using a Workforce Identity Federation (BYOID) flow and must
+   * not be set otherwise. When unset, the contact email is inferred from the authenticated user's
+   * credentials. If you use a service account to create the case and its inferred email address
+   * cannot receive emails, you should add appropriate contact emails in the
+   * `subscriber_email_addresses` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,8 +64,8 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   private String createTime;
 
   /**
-   * The user who created the case. Note: The name and email will be obfuscated if the case was
-   * created by Google Support.
+   * The user who created the case. This field is ignored on input. Note: The name and email will be
+   * obfuscated if the case was created by Google Support.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,8 +179,12 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A user-supplied email address to send case update notifications for. This should only be used
-   * in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+   * A user-supplied email address to send case update notifications for. This field must be set
+   * when the request is authenticated using a Workforce Identity Federation (BYOID) flow and must
+   * not be set otherwise. When unset, the contact email is inferred from the authenticated user's
+   * credentials. If you use a service account to create the case and its inferred email address
+   * cannot receive emails, you should add appropriate contact emails in the
+   * `subscriber_email_addresses` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getContactEmail() {
@@ -184,8 +192,12 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * A user-supplied email address to send case update notifications for. This should only be used
-   * in BYOID flows, where we cannot infer the user's email address directly from their EUCs.
+   * A user-supplied email address to send case update notifications for. This field must be set
+   * when the request is authenticated using a Workforce Identity Federation (BYOID) flow and must
+   * not be set otherwise. When unset, the contact email is inferred from the authenticated user's
+   * credentials. If you use a service account to create the case and its inferred email address
+   * cannot receive emails, you should add appropriate contact emails in the
+   * `subscriber_email_addresses` field.
    * @param contactEmail contactEmail or {@code null} for none
    */
   public CloudSupportCase setContactEmail(java.lang.String contactEmail) {
@@ -211,8 +223,8 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The user who created the case. Note: The name and email will be obfuscated if the case was
-   * created by Google Support.
+   * The user who created the case. This field is ignored on input. Note: The name and email will be
+   * obfuscated if the case was created by Google Support.
    * @return value or {@code null} for none
    */
   public Actor getCreator() {
@@ -220,8 +232,8 @@ public final class CloudSupportCase extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The user who created the case. Note: The name and email will be obfuscated if the case was
-   * created by Google Support.
+   * The user who created the case. This field is ignored on input. Note: The name and email will be
+   * obfuscated if the case was created by Google Support.
    * @param creator creator or {@code null} for none
    */
   public CloudSupportCase setCreator(Actor creator) {

@@ -283,16 +283,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String material;
 
   /**
-   * Maximum rating score of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Maximum rating score of the product. Required if `rating` is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxRating;
 
   /**
-   * Minimum rating score of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Minimum rating score of the product. Required if `rating` is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -392,15 +390,14 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * Average rating score of the product. The value must be within the range of [`min_rating`,
    * `max_rating`], inclusive. When displayed on the product page, this rating is normalized to a
    * scale of [1, 5] with one decimal place. If provided, `review_count`, `min_rating`, and
-   * `max_rating` are also required. This field is for an upcoming feature and is not yet used.
+   * `max_rating` are also required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Double rating;
 
   /**
-   * Number of reviews of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Number of reviews of the product. Required if `rating` is provided.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -1047,8 +1044,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum rating score of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Maximum rating score of the product. Required if `rating` is provided.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMaxRating() {
@@ -1056,8 +1052,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maximum rating score of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Maximum rating score of the product. Required if `rating` is provided.
    * @param maxRating maxRating or {@code null} for none
    */
   public Attributes setMaxRating(java.lang.Long maxRating) {
@@ -1066,8 +1061,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum rating score of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Minimum rating score of the product. Required if `rating` is provided.
    * @return value or {@code null} for none
    */
   public java.lang.Long getMinRating() {
@@ -1075,8 +1069,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Minimum rating score of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Minimum rating score of the product. Required if `rating` is provided.
    * @param minRating minRating or {@code null} for none
    */
   public Attributes setMinRating(java.lang.Long minRating) {
@@ -1304,7 +1297,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * Average rating score of the product. The value must be within the range of [`min_rating`,
    * `max_rating`], inclusive. When displayed on the product page, this rating is normalized to a
    * scale of [1, 5] with one decimal place. If provided, `review_count`, `min_rating`, and
-   * `max_rating` are also required. This field is for an upcoming feature and is not yet used.
+   * `max_rating` are also required.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRating() {
@@ -1315,7 +1308,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    * Average rating score of the product. The value must be within the range of [`min_rating`,
    * `max_rating`], inclusive. When displayed on the product page, this rating is normalized to a
    * scale of [1, 5] with one decimal place. If provided, `review_count`, `min_rating`, and
-   * `max_rating` are also required. This field is for an upcoming feature and is not yet used.
+   * `max_rating` are also required.
    * @param rating rating or {@code null} for none
    */
   public Attributes setRating(java.lang.Double rating) {
@@ -1324,8 +1317,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of reviews of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Number of reviews of the product. Required if `rating` is provided.
    * @return value or {@code null} for none
    */
   public java.lang.Long getReviewCount() {
@@ -1333,8 +1325,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Number of reviews of the product. Required if `rating` is provided. This field is for an
-   * upcoming feature and is not yet used.
+   * Number of reviews of the product. Required if `rating` is provided.
    * @param reviewCount reviewCount or {@code null} for none
    */
   public Attributes setReviewCount(java.lang.Long reviewCount) {

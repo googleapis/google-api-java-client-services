@@ -162,6 +162,20 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
   private java.util.List<GoogleCloudContactcenterinsightsV1RuntimeAnnotation> runtimeAnnotations;
 
   /**
+   * Output only. Whether this resource is zone isolated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * The time at which the conversation started.
    * The value may be {@code null}.
    */
@@ -510,6 +524,40 @@ public final class GoogleCloudContactcenterinsightsV1Conversation extends com.go
    */
   public GoogleCloudContactcenterinsightsV1Conversation setRuntimeAnnotations(java.util.List<GoogleCloudContactcenterinsightsV1RuntimeAnnotation> runtimeAnnotations) {
     this.runtimeAnnotations = runtimeAnnotations;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Conversation setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1Conversation setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

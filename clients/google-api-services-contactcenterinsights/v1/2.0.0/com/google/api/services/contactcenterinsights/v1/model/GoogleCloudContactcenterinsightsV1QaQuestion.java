@@ -113,6 +113,20 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
   private java.lang.String questionType;
 
   /**
+   * Output only. Whether this resource is zone isolated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Questions are tagged for categorization and scoring. Tags can either be: - Default Tags: These
    * are predefined categories. They are identified by their string value (e.g., "BUSINESS",
    * "COMPLIANCE", and "CUSTOMER"). - Custom Tags: These are user-defined categories. They are
@@ -333,6 +347,40 @@ public final class GoogleCloudContactcenterinsightsV1QaQuestion extends com.goog
    */
   public GoogleCloudContactcenterinsightsV1QaQuestion setQuestionType(java.lang.String questionType) {
     this.questionType = questionType;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestion setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1QaQuestion setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

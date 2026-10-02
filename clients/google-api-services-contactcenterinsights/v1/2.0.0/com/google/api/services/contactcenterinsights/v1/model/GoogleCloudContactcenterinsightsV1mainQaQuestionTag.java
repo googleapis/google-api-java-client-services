@@ -65,6 +65,20 @@ public final class GoogleCloudContactcenterinsightsV1mainQaQuestionTag extends c
   private java.util.List<java.lang.String> qaQuestionIds;
 
   /**
+   * Output only. Whether this resource is zone isolated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Output only. The most recent time at which the question tag was updated.
    * The value may be {@code null}.
    */
@@ -146,6 +160,40 @@ public final class GoogleCloudContactcenterinsightsV1mainQaQuestionTag extends c
    */
   public GoogleCloudContactcenterinsightsV1mainQaQuestionTag setQaQuestionIds(java.util.List<java.lang.String> qaQuestionIds) {
     this.qaQuestionIds = qaQuestionIds;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainQaQuestionTag setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainQaQuestionTag setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

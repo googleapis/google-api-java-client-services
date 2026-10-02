@@ -62,6 +62,20 @@ public final class GoogleCloudContactcenterinsightsV1mainDataset extends com.goo
   private java.lang.String name;
 
   /**
+   * Output only. Whether this resource is zone isolated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Optional. Option TTL for the dataset.
    * The value may be {@code null}.
    */
@@ -149,6 +163,40 @@ public final class GoogleCloudContactcenterinsightsV1mainDataset extends com.goo
    */
   public GoogleCloudContactcenterinsightsV1mainDataset setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainDataset setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainDataset setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

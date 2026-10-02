@@ -67,7 +67,8 @@ public final class GoogleCloudContactcenterinsightsV1mainBulkAnalyzeConversation
   private java.util.List<GoogleRpcStatus> partialErrors;
 
   /**
-   * Output only. If true, the labeling rules will be re-evaluated for the conversations.
+   * Output only. Deprecated: Use `request.annotator_selector.run_auto_labeling_annotator` instead.
+   * If true, the labeling rules will be re-evaluated for the conversations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,7 +177,8 @@ public final class GoogleCloudContactcenterinsightsV1mainBulkAnalyzeConversation
   }
 
   /**
-   * Output only. If true, the labeling rules will be re-evaluated for the conversations.
+   * Output only. Deprecated: Use `request.annotator_selector.run_auto_labeling_annotator` instead.
+   * If true, the labeling rules will be re-evaluated for the conversations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRelabel() {
@@ -184,7 +186,8 @@ public final class GoogleCloudContactcenterinsightsV1mainBulkAnalyzeConversation
   }
 
   /**
-   * Output only. If true, the labeling rules will be re-evaluated for the conversations.
+   * Output only. Deprecated: Use `request.annotator_selector.run_auto_labeling_annotator` instead.
+   * If true, the labeling rules will be re-evaluated for the conversations.
    * @param relabel relabel or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1mainBulkAnalyzeConversationsMetadata setRelabel(java.lang.Boolean relabel) {

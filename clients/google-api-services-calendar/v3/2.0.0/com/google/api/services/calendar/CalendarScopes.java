@@ -71,6 +71,9 @@ public class CalendarScopes {
   /** See and download any calendar you can access using your Google Calendar. */
   public static final String CALENDAR_READONLY = "https://www.googleapis.com/auth/calendar.readonly";
 
+  /** View and edit your Calendar settings. */
+  public static final String CALENDAR_SETTINGS = "https://www.googleapis.com/auth/calendar.settings";
+
   /** View your Calendar settings. */
   public static final String CALENDAR_SETTINGS_READONLY = "https://www.googleapis.com/auth/calendar.settings.readonly";
 
@@ -97,6 +100,7 @@ public class CalendarScopes {
     set.add(CALENDAR_EVENTS_READONLY);
     set.add(CALENDAR_FREEBUSY);
     set.add(CALENDAR_READONLY);
+    set.add(CALENDAR_SETTINGS);
     set.add(CALENDAR_SETTINGS_READONLY);
     return java.util.Collections.unmodifiableSet(set);
   }

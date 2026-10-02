@@ -38,6 +38,13 @@ public final class AwsProperties extends com.google.api.client.json.GenericJson 
   private AwsAccessRole accessRole;
 
   /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossCloudCacheOptions crossCloudCacheOptions;
+
+  /**
    * Authentication using Google owned service account to assume into customer's AWS IAM Role.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class AwsProperties extends com.google.api.client.json.GenericJson 
    */
   public AwsProperties setAccessRole(AwsAccessRole accessRole) {
     this.accessRole = accessRole;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * @return value or {@code null} for none
+   */
+  public CrossCloudCacheOptions getCrossCloudCacheOptions() {
+    return crossCloudCacheOptions;
+  }
+
+  /**
+   * Optional. Configuration options for cross-cloud caching of data and metadata files.
+   * @param crossCloudCacheOptions crossCloudCacheOptions or {@code null} for none
+   */
+  public AwsProperties setCrossCloudCacheOptions(CrossCloudCacheOptions crossCloudCacheOptions) {
+    this.crossCloudCacheOptions = crossCloudCacheOptions;
     return this;
   }
 

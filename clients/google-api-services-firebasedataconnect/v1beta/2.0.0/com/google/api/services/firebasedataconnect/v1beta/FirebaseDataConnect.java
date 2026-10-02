@@ -5708,6 +5708,157 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
             }
           }
           /**
+           * Executes SQL migration steps against the active database schema. This operation compares
+           * submitted migration steps against the schema migration ledger (`firebasesql.schema_migrations`),
+           * executes unapplied DDL, and records applied steps. It does NOT persist the GraphQL schema to the
+           * control plane.
+           *
+           * Create a request for the method "schemas.migrate".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link Migrate#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. Resource name of the target schema:
+           *        projects/{project}/locations/{location}/services/{service}/schemas/{schema} Note: Only
+           *        `schemas/main` is supported (singleton schema per service).
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.MigrateSchemaRequest}
+           * @return the request
+           */
+          public Migrate migrate(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.MigrateSchemaRequest content) throws java.io.IOException {
+            Migrate result = new Migrate(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Migrate extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+name}:migrate";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+/schemas/[^/]+$");
+
+            /**
+             * Executes SQL migration steps against the active database schema. This operation compares
+             * submitted migration steps against the schema migration ledger
+             * (`firebasesql.schema_migrations`), executes unapplied DDL, and records applied steps. It does
+             * NOT persist the GraphQL schema to the control plane.
+             *
+             * Create a request for the method "schemas.migrate".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link Migrate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * Migrate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. Resource name of the target schema:
+           *        projects/{project}/locations/{location}/services/{service}/schemas/{schema} Note: Only
+           *        `schemas/main` is supported (singleton schema per service).
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1beta.model.MigrateSchemaRequest}
+             * @since 1.13
+             */
+            protected Migrate(java.lang.String name, com.google.api.services.firebasedataconnect.v1beta.model.MigrateSchemaRequest content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1beta.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/schemas/[^/]+$");
+              }
+            }
+
+            @Override
+            public Migrate set$Xgafv(java.lang.String $Xgafv) {
+              return (Migrate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Migrate setAccessToken(java.lang.String accessToken) {
+              return (Migrate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Migrate setAlt(java.lang.String alt) {
+              return (Migrate) super.setAlt(alt);
+            }
+
+            @Override
+            public Migrate setCallback(java.lang.String callback) {
+              return (Migrate) super.setCallback(callback);
+            }
+
+            @Override
+            public Migrate setFields(java.lang.String fields) {
+              return (Migrate) super.setFields(fields);
+            }
+
+            @Override
+            public Migrate setKey(java.lang.String key) {
+              return (Migrate) super.setKey(key);
+            }
+
+            @Override
+            public Migrate setOauthToken(java.lang.String oauthToken) {
+              return (Migrate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Migrate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Migrate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Migrate setQuotaUser(java.lang.String quotaUser) {
+              return (Migrate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Migrate setUploadType(java.lang.String uploadType) {
+              return (Migrate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Migrate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Migrate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Resource name of the target schema:
+             * projects/{project}/locations/{location}/services/{service}/schemas/{schema} Note:
+             * Only `schemas/main` is supported (singleton schema per service).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Resource name of the target schema:
+           projects/{project}/locations/{location}/services/{service}/schemas/{schema} Note: Only
+           `schemas/main` is supported (singleton schema per service).
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Resource name of the target schema:
+             * projects/{project}/locations/{location}/services/{service}/schemas/{schema} Note:
+             * Only `schemas/main` is supported (singleton schema per service).
+             */
+            public Migrate setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+/schemas/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Migrate set(String parameterName, Object value) {
+              return (Migrate) super.set(parameterName, value);
+            }
+          }
+          /**
            * Updates the parameters of a single Schema, and creates a new SchemaRevision with the updated
            * Schema.
            *

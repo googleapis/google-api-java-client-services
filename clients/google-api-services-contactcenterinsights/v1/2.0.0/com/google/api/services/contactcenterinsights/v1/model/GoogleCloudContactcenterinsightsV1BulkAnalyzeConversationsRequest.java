@@ -60,7 +60,8 @@ public final class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsReq
   private java.lang.String parent;
 
   /**
-   * Optional. If true, the labeling rules will be re-evaluated for the conversations.
+   * Optional. Deprecated: Use `annotator_selector.run_auto_labeling_annotator` instead. If true,
+   * the labeling rules will be re-evaluated for the conversations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,8 @@ public final class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsReq
   }
 
   /**
-   * Optional. If true, the labeling rules will be re-evaluated for the conversations.
+   * Optional. Deprecated: Use `annotator_selector.run_auto_labeling_annotator` instead. If true,
+   * the labeling rules will be re-evaluated for the conversations.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRelabel() {
@@ -145,7 +147,8 @@ public final class GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsReq
   }
 
   /**
-   * Optional. If true, the labeling rules will be re-evaluated for the conversations.
+   * Optional. Deprecated: Use `annotator_selector.run_auto_labeling_annotator` instead. If true,
+   * the labeling rules will be re-evaluated for the conversations.
    * @param relabel relabel or {@code null} for none
    */
   public GoogleCloudContactcenterinsightsV1BulkAnalyzeConversationsRequest setRelabel(java.lang.Boolean relabel) {

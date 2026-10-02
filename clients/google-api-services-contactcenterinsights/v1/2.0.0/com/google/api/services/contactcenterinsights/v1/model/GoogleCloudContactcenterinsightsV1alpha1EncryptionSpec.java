@@ -50,6 +50,20 @@ public final class GoogleCloudContactcenterinsightsV1alpha1EncryptionSpec extend
   private java.lang.String name;
 
   /**
+   * Output only. Whether this resource is zone isolated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzi;
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean satisfiesPzs;
+
+  /**
    * Required. The name of customer-managed encryption key that is used to secure a resource and its
    * sub-resources. If empty, the resource is secured by our default encryption key. Only the key in
    * the same location as this resource is allowed to be used for encryption. Format:
@@ -88,6 +102,40 @@ public final class GoogleCloudContactcenterinsightsV1alpha1EncryptionSpec extend
    */
   public GoogleCloudContactcenterinsightsV1alpha1EncryptionSpec setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzi() {
+    return satisfiesPzi;
+  }
+
+  /**
+   * Output only. Whether this resource is zone isolated.
+   * @param satisfiesPzi satisfiesPzi or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1EncryptionSpec setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
+    this.satisfiesPzi = satisfiesPzi;
+    return this;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSatisfiesPzs() {
+    return satisfiesPzs;
+  }
+
+  /**
+   * Output only. Whether this resource is zone separated.
+   * @param satisfiesPzs satisfiesPzs or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1EncryptionSpec setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
+    this.satisfiesPzs = satisfiesPzs;
     return this;
   }
 

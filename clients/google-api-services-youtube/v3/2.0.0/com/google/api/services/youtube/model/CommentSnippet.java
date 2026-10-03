@@ -72,6 +72,15 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
   private java.lang.String channelId;
 
   /**
+   * Output only. The URL of the image or animated GIF attached to the comment, if any. This
+   * property is only present when a comment contains an image or GIF. The URL is served as a signed
+   * link with a six-hour time to live (TTL) and expires six hours after retrieval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageUrl;
+
+  /**
    * The total number of likes this comment has received.
    * The value may be {@code null}.
    */
@@ -239,6 +248,27 @@ public final class CommentSnippet extends com.google.api.client.json.GenericJson
    */
   public CommentSnippet setChannelId(java.lang.String channelId) {
     this.channelId = channelId;
+    return this;
+  }
+
+  /**
+   * Output only. The URL of the image or animated GIF attached to the comment, if any. This
+   * property is only present when a comment contains an image or GIF. The URL is served as a signed
+   * link with a six-hour time to live (TTL) and expires six hours after retrieval.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageUrl() {
+    return imageUrl;
+  }
+
+  /**
+   * Output only. The URL of the image or animated GIF attached to the comment, if any. This
+   * property is only present when a comment contains an image or GIF. The URL is served as a signed
+   * link with a six-hour time to live (TTL) and expires six hours after retrieval.
+   * @param imageUrl imageUrl or {@code null} for none
+   */
+  public CommentSnippet setImageUrl(java.lang.String imageUrl) {
+    this.imageUrl = imageUrl;
     return this;
   }
 

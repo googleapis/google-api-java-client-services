@@ -211,6 +211,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private ObservabilityInstanceConfig observabilityConfig;
 
   /**
+   * Output only. Instance level observability information, contains the effective values of
+   * observability settings for this instance, by merging customer's provided
+   * `ObservabilityInstanceConfig` with the Observability defaults.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ObservabilityInstanceInfo observabilityInstanceInfo;
+
+  /**
    * Output only. All outbound public IP addresses configured for the instance.
    * The value may be {@code null}.
    */
@@ -245,6 +254,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private QueryInsightsInstanceConfig queryInsightsConfig;
+
+  /**
+   * Output only. Instance level Query Insights information, which is read-only and available in the
+   * output only. Contains the effective query insights settings for this instance, by merging
+   * customer's provided `QueryInsightsInstanceConfig` with the Query Insights defaults.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private QueryInsightsInstanceInfo queryInsightsInfo;
 
   /**
    * Read pool instance configuration. This is required if the value of instanceType is READ_POOL.
@@ -723,6 +741,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Instance level observability information, contains the effective values of
+   * observability settings for this instance, by merging customer's provided
+   * `ObservabilityInstanceConfig` with the Observability defaults.
+   * @return value or {@code null} for none
+   */
+  public ObservabilityInstanceInfo getObservabilityInstanceInfo() {
+    return observabilityInstanceInfo;
+  }
+
+  /**
+   * Output only. Instance level observability information, contains the effective values of
+   * observability settings for this instance, by merging customer's provided
+   * `ObservabilityInstanceConfig` with the Observability defaults.
+   * @param observabilityInstanceInfo observabilityInstanceInfo or {@code null} for none
+   */
+  public Instance setObservabilityInstanceInfo(ObservabilityInstanceInfo observabilityInstanceInfo) {
+    this.observabilityInstanceInfo = observabilityInstanceInfo;
+    return this;
+  }
+
+  /**
    * Output only. All outbound public IP addresses configured for the instance.
    * @return value or {@code null} for none
    */
@@ -806,6 +845,27 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setQueryInsightsConfig(QueryInsightsInstanceConfig queryInsightsConfig) {
     this.queryInsightsConfig = queryInsightsConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Instance level Query Insights information, which is read-only and available in the
+   * output only. Contains the effective query insights settings for this instance, by merging
+   * customer's provided `QueryInsightsInstanceConfig` with the Query Insights defaults.
+   * @return value or {@code null} for none
+   */
+  public QueryInsightsInstanceInfo getQueryInsightsInfo() {
+    return queryInsightsInfo;
+  }
+
+  /**
+   * Output only. Instance level Query Insights information, which is read-only and available in the
+   * output only. Contains the effective query insights settings for this instance, by merging
+   * customer's provided `QueryInsightsInstanceConfig` with the Query Insights defaults.
+   * @param queryInsightsInfo queryInsightsInfo or {@code null} for none
+   */
+  public Instance setQueryInsightsInfo(QueryInsightsInstanceInfo queryInsightsInfo) {
+    this.queryInsightsInfo = queryInsightsInfo;
     return this;
   }
 

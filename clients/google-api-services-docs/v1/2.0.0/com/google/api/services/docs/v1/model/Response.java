@@ -45,6 +45,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private AddDocumentTabResponse addDocumentTab;
 
   /**
+   * The result of creating a dropdown definition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateDropdownDefinitionResponse createDropdownDefinition;
+
+  /**
    * The result of creating a footer.
    * The value may be {@code null}.
    */
@@ -79,6 +86,13 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private InsertCommentResponse insertComment;
+
+  /**
+   * The result of inserting a dropdown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertDropdownResponse insertDropdown;
 
   /**
    * The result of inserting an inline image.
@@ -134,6 +148,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setAddDocumentTab(AddDocumentTabResponse addDocumentTab) {
     this.addDocumentTab = addDocumentTab;
+    return this;
+  }
+
+  /**
+   * The result of creating a dropdown definition.
+   * @return value or {@code null} for none
+   */
+  public CreateDropdownDefinitionResponse getCreateDropdownDefinition() {
+    return createDropdownDefinition;
+  }
+
+  /**
+   * The result of creating a dropdown definition.
+   * @param createDropdownDefinition createDropdownDefinition or {@code null} for none
+   */
+  public Response setCreateDropdownDefinition(CreateDropdownDefinitionResponse createDropdownDefinition) {
+    this.createDropdownDefinition = createDropdownDefinition;
     return this;
   }
 
@@ -221,6 +252,23 @@ public final class Response extends com.google.api.client.json.GenericJson {
    */
   public Response setInsertComment(InsertCommentResponse insertComment) {
     this.insertComment = insertComment;
+    return this;
+  }
+
+  /**
+   * The result of inserting a dropdown.
+   * @return value or {@code null} for none
+   */
+  public InsertDropdownResponse getInsertDropdown() {
+    return insertDropdown;
+  }
+
+  /**
+   * The result of inserting a dropdown.
+   * @param insertDropdown insertDropdown or {@code null} for none
+   */
+  public Response setInsertDropdown(InsertDropdownResponse insertDropdown) {
+    this.insertDropdown = insertDropdown;
     return this;
   }
 

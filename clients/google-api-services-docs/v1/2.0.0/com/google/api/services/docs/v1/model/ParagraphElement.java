@@ -51,6 +51,13 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
   private DateElement dateElement;
 
   /**
+   * A paragraph element that represents a dropdown menu.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Dropdown dropdown;
+
+  /**
    * The zero-base end index of this paragraph element, exclusive, in UTF-16 code units.
    * The value may be {@code null}.
    */
@@ -169,6 +176,23 @@ public final class ParagraphElement extends com.google.api.client.json.GenericJs
    */
   public ParagraphElement setDateElement(DateElement dateElement) {
     this.dateElement = dateElement;
+    return this;
+  }
+
+  /**
+   * A paragraph element that represents a dropdown menu.
+   * @return value or {@code null} for none
+   */
+  public Dropdown getDropdown() {
+    return dropdown;
+  }
+
+  /**
+   * A paragraph element that represents a dropdown menu.
+   * @param dropdown dropdown or {@code null} for none
+   */
+  public ParagraphElement setDropdown(Dropdown dropdown) {
+    this.dropdown = dropdown;
     return this;
   }
 

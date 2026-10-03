@@ -52,6 +52,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private AddDocumentTabRequest addDocumentTab;
 
   /**
+   * Creates a DropdownDefinition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CreateDropdownDefinitionRequest createDropdownDefinition;
+
+  /**
    * Creates a footer.
    * The value may be {@code null}.
    */
@@ -107,6 +114,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private DeleteContentRangeRequest deleteContentRange;
+
+  /**
+   * Deletes a DropdownDefinition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeleteDropdownDefinitionRequest deleteDropdownDefinition;
 
   /**
    * Deletes a footer from the document.
@@ -185,6 +199,13 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private InsertDateRequest insertDate;
+
+  /**
+   * Inserts a Dropdown at the specified location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InsertDropdownRequest insertDropdown;
 
   /**
    * Inserts an inline image at the specified location.
@@ -321,6 +342,20 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateDocumentTabPropertiesRequest updateDocumentTabProperties;
 
   /**
+   * Updates the properties of a DropdownDefinition.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateDropdownDefinitionPropertiesRequest updateDropdownDefinitionProperties;
+
+  /**
+   * Updates the properties of a Dropdown.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UpdateDropdownPropertiesRequest updateDropdownProperties;
+
+  /**
    * Updates a named style.
    * The value may be {@code null}.
    */
@@ -419,6 +454,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setAddDocumentTab(AddDocumentTabRequest addDocumentTab) {
     this.addDocumentTab = addDocumentTab;
+    return this;
+  }
+
+  /**
+   * Creates a DropdownDefinition.
+   * @return value or {@code null} for none
+   */
+  public CreateDropdownDefinitionRequest getCreateDropdownDefinition() {
+    return createDropdownDefinition;
+  }
+
+  /**
+   * Creates a DropdownDefinition.
+   * @param createDropdownDefinition createDropdownDefinition or {@code null} for none
+   */
+  public Request setCreateDropdownDefinition(CreateDropdownDefinitionRequest createDropdownDefinition) {
+    this.createDropdownDefinition = createDropdownDefinition;
     return this;
   }
 
@@ -557,6 +609,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setDeleteContentRange(DeleteContentRangeRequest deleteContentRange) {
     this.deleteContentRange = deleteContentRange;
+    return this;
+  }
+
+  /**
+   * Deletes a DropdownDefinition.
+   * @return value or {@code null} for none
+   */
+  public DeleteDropdownDefinitionRequest getDeleteDropdownDefinition() {
+    return deleteDropdownDefinition;
+  }
+
+  /**
+   * Deletes a DropdownDefinition.
+   * @param deleteDropdownDefinition deleteDropdownDefinition or {@code null} for none
+   */
+  public Request setDeleteDropdownDefinition(DeleteDropdownDefinitionRequest deleteDropdownDefinition) {
+    this.deleteDropdownDefinition = deleteDropdownDefinition;
     return this;
   }
 
@@ -746,6 +815,23 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setInsertDate(InsertDateRequest insertDate) {
     this.insertDate = insertDate;
+    return this;
+  }
+
+  /**
+   * Inserts a Dropdown at the specified location.
+   * @return value or {@code null} for none
+   */
+  public InsertDropdownRequest getInsertDropdown() {
+    return insertDropdown;
+  }
+
+  /**
+   * Inserts a Dropdown at the specified location.
+   * @param insertDropdown insertDropdown or {@code null} for none
+   */
+  public Request setInsertDropdown(InsertDropdownRequest insertDropdown) {
+    this.insertDropdown = insertDropdown;
     return this;
   }
 
@@ -1071,6 +1157,40 @@ public final class Request extends com.google.api.client.json.GenericJson {
    */
   public Request setUpdateDocumentTabProperties(UpdateDocumentTabPropertiesRequest updateDocumentTabProperties) {
     this.updateDocumentTabProperties = updateDocumentTabProperties;
+    return this;
+  }
+
+  /**
+   * Updates the properties of a DropdownDefinition.
+   * @return value or {@code null} for none
+   */
+  public UpdateDropdownDefinitionPropertiesRequest getUpdateDropdownDefinitionProperties() {
+    return updateDropdownDefinitionProperties;
+  }
+
+  /**
+   * Updates the properties of a DropdownDefinition.
+   * @param updateDropdownDefinitionProperties updateDropdownDefinitionProperties or {@code null} for none
+   */
+  public Request setUpdateDropdownDefinitionProperties(UpdateDropdownDefinitionPropertiesRequest updateDropdownDefinitionProperties) {
+    this.updateDropdownDefinitionProperties = updateDropdownDefinitionProperties;
+    return this;
+  }
+
+  /**
+   * Updates the properties of a Dropdown.
+   * @return value or {@code null} for none
+   */
+  public UpdateDropdownPropertiesRequest getUpdateDropdownProperties() {
+    return updateDropdownProperties;
+  }
+
+  /**
+   * Updates the properties of a Dropdown.
+   * @param updateDropdownProperties updateDropdownProperties or {@code null} for none
+   */
+  public Request setUpdateDropdownProperties(UpdateDropdownPropertiesRequest updateDropdownProperties) {
+    this.updateDropdownProperties = updateDropdownProperties;
     return this;
   }
 

@@ -299,6 +299,20 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
   private SedentaryPeriod sedentaryPeriod;
 
   /**
+   * Optional. Data for points in the `skin-temperature` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SkinTemperature skinTemperature;
+
+  /**
+   * Optional. Data for points in the `skin-temperature-sensors` sample data type collection.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SkinTemperatureSensors skinTemperatureSensors;
+
+  /**
    * Optional. Data for points in the `sleep` session data type collection.
    * The value may be {@code null}.
    */
@@ -993,6 +1007,40 @@ public final class DataPoint extends com.google.api.client.json.GenericJson {
    */
   public DataPoint setSedentaryPeriod(SedentaryPeriod sedentaryPeriod) {
     this.sedentaryPeriod = sedentaryPeriod;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `skin-temperature` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public SkinTemperature getSkinTemperature() {
+    return skinTemperature;
+  }
+
+  /**
+   * Optional. Data for points in the `skin-temperature` sample data type collection.
+   * @param skinTemperature skinTemperature or {@code null} for none
+   */
+  public DataPoint setSkinTemperature(SkinTemperature skinTemperature) {
+    this.skinTemperature = skinTemperature;
+    return this;
+  }
+
+  /**
+   * Optional. Data for points in the `skin-temperature-sensors` sample data type collection.
+   * @return value or {@code null} for none
+   */
+  public SkinTemperatureSensors getSkinTemperatureSensors() {
+    return skinTemperatureSensors;
+  }
+
+  /**
+   * Optional. Data for points in the `skin-temperature-sensors` sample data type collection.
+   * @param skinTemperatureSensors skinTemperatureSensors or {@code null} for none
+   */
+  public DataPoint setSkinTemperatureSensors(SkinTemperatureSensors skinTemperatureSensors) {
+    this.skinTemperatureSensors = skinTemperatureSensors;
     return this;
   }
 

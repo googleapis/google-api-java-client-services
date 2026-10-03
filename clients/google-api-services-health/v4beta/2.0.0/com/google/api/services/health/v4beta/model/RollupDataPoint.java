@@ -166,6 +166,13 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
   private SedentaryPeriodRollupValue sedentaryPeriod;
 
   /**
+   * Returned by default when rolling up data points from the `skin-temperature` data type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SkinTemperatureRollupValue skinTemperature;
+
+  /**
    * Start time of the window this value aggregates over
    * The value may be {@code null}.
    */
@@ -528,6 +535,23 @@ public final class RollupDataPoint extends com.google.api.client.json.GenericJso
    */
   public RollupDataPoint setSedentaryPeriod(SedentaryPeriodRollupValue sedentaryPeriod) {
     this.sedentaryPeriod = sedentaryPeriod;
+    return this;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `skin-temperature` data type.
+   * @return value or {@code null} for none
+   */
+  public SkinTemperatureRollupValue getSkinTemperature() {
+    return skinTemperature;
+  }
+
+  /**
+   * Returned by default when rolling up data points from the `skin-temperature` data type.
+   * @param skinTemperature skinTemperature or {@code null} for none
+   */
+  public RollupDataPoint setSkinTemperature(SkinTemperatureRollupValue skinTemperature) {
+    this.skinTemperature = skinTemperature;
     return this;
   }
 

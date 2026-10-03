@@ -39,6 +39,13 @@ public final class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends com.g
   private java.util.List<java.lang.String> iamRoles;
 
   /**
+   * Output only. The state of the iam role application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * Optional. IAM roles granted on the resource to this access group. Role name follows
    * https://cloud.google.com/iam/docs/reference/rest/v1/roles.Example: [
    * "roles/bigquery.dataViewer" ]
@@ -56,6 +63,23 @@ public final class GoogleCloudDataplexV1DataAssetAccessGroupConfig extends com.g
    */
   public GoogleCloudDataplexV1DataAssetAccessGroupConfig setIamRoles(java.util.List<java.lang.String> iamRoles) {
     this.iamRoles = iamRoles;
+    return this;
+  }
+
+  /**
+   * Output only. The state of the iam role application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The state of the iam role application.
+   * @param state state or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataAssetAccessGroupConfig setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

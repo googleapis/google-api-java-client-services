@@ -31,6 +31,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataProductAccessGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Default IAM role configuration to be applied on the data assets associated with this
+   * data product, for this access group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataProductAccessGroupDefaultIamRoleConfig defaultIamRoleConfig;
+
+  /**
    * Optional. Description of the access group.
    * The value may be {@code null}.
    */
@@ -58,6 +66,25 @@ public final class GoogleCloudDataplexV1DataProductAccessGroup extends com.googl
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataProductPrincipal principal;
+
+  /**
+   * Optional. Default IAM role configuration to be applied on the data assets associated with this
+   * data product, for this access group.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProductAccessGroupDefaultIamRoleConfig getDefaultIamRoleConfig() {
+    return defaultIamRoleConfig;
+  }
+
+  /**
+   * Optional. Default IAM role configuration to be applied on the data assets associated with this
+   * data product, for this access group.
+   * @param defaultIamRoleConfig defaultIamRoleConfig or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataProductAccessGroup setDefaultIamRoleConfig(GoogleCloudDataplexV1DataProductAccessGroupDefaultIamRoleConfig defaultIamRoleConfig) {
+    this.defaultIamRoleConfig = defaultIamRoleConfig;
+    return this;
+  }
 
   /**
    * Optional. Description of the access group.

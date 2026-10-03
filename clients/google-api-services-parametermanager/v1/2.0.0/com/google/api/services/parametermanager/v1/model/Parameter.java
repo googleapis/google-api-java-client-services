@@ -31,7 +31,7 @@ package com.google.api.services.parametermanager.v1.model;
 public final class Parameter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,15 +62,14 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Identifier. [Output only] The resource name of the Parameter in the format
-   * `projects/locations/parameters`.
+   * Identifier. The resource name of the Parameter in the format `projects/locations/parameters`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. [Output-only] policy member strings of a Google Cloud resource.
+   * Output only. Policy member strings of a Google Cloud resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,14 +87,14 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> tags;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -103,7 +102,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp
    * @param createTime createTime or {@code null} for none
    */
   public Parameter setCreateTime(String createTime) {
@@ -169,8 +168,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. [Output only] The resource name of the Parameter in the format
-   * `projects/locations/parameters`.
+   * Identifier. The resource name of the Parameter in the format `projects/locations/parameters`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -178,8 +176,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Identifier. [Output only] The resource name of the Parameter in the format
-   * `projects/locations/parameters`.
+   * Identifier. The resource name of the Parameter in the format `projects/locations/parameters`.
    * @param name name or {@code null} for none
    */
   public Parameter setName(java.lang.String name) {
@@ -188,7 +185,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output-only] policy member strings of a Google Cloud resource.
+   * Output only. Policy member strings of a Google Cloud resource.
    * @return value or {@code null} for none
    */
   public ResourcePolicyMember getPolicyMember() {
@@ -196,7 +193,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output-only] policy member strings of a Google Cloud resource.
+   * Output only. Policy member strings of a Google Cloud resource.
    * @param policyMember policyMember or {@code null} for none
    */
   public Parameter setPolicyMember(ResourcePolicyMember policyMember) {
@@ -230,7 +227,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -238,7 +235,7 @@ public final class Parameter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp
    * @param updateTime updateTime or {@code null} for none
    */
   public Parameter setUpdateTime(String updateTime) {

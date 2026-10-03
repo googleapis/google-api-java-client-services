@@ -1303,8 +1303,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
          * This request holds the parameters needed by the parametermanager server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. [Output only] The resource name of the Parameter in the format
-         *        `projects/locations/parameters`.
+         * @param name Identifier. The resource name of the Parameter in the format `projects/locations/parameters`.
          * @param content the {@link com.google.api.services.parametermanager.v1.model.Parameter}
          * @return the request
          */
@@ -1332,8 +1331,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. [Output only] The resource name of the Parameter in the format
-         *        `projects/locations/parameters`.
+           * @param name Identifier. The resource name of the Parameter in the format `projects/locations/parameters`.
            * @param content the {@link com.google.api.services.parametermanager.v1.model.Parameter}
            * @since 1.13
            */
@@ -1403,21 +1401,20 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Identifier. [Output only] The resource name of the Parameter in the format
+           * Identifier. The resource name of the Parameter in the format
            * `projects/locations/parameters`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. [Output only] The resource name of the Parameter in the format
-         `projects/locations/parameters`.
+          /** Identifier. The resource name of the Parameter in the format `projects/locations/parameters`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Identifier. [Output only] The resource name of the Parameter in the format
+           * Identifier. The resource name of the Parameter in the format
            * `projects/locations/parameters`.
            */
           public Patch setName(java.lang.String name) {
@@ -2301,7 +2298,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the parametermanager server.  After setting any
            * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Identifier. [Output only] The resource name of the ParameterVersion in the format
+           * @param name Identifier. The resource name of the ParameterVersion in the format
            *        `projects/locations/parameters/versions`.
            * @param content the {@link com.google.api.services.parametermanager.v1.model.ParameterVersion}
            * @return the request
@@ -2330,7 +2327,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Identifier. [Output only] The resource name of the ParameterVersion in the format
+             * @param name Identifier. The resource name of the ParameterVersion in the format
            *        `projects/locations/parameters/versions`.
              * @param content the {@link com.google.api.services.parametermanager.v1.model.ParameterVersion}
              * @since 1.13
@@ -2401,13 +2398,13 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Identifier. [Output only] The resource name of the ParameterVersion in the format
+             * Identifier. The resource name of the ParameterVersion in the format
              * `projects/locations/parameters/versions`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Identifier. [Output only] The resource name of the ParameterVersion in the format
+            /** Identifier. The resource name of the ParameterVersion in the format
            `projects/locations/parameters/versions`.
              */
             public java.lang.String getName() {
@@ -2415,7 +2412,7 @@ public class ParameterManager extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Identifier. [Output only] The resource name of the ParameterVersion in the format
+             * Identifier. The resource name of the ParameterVersion in the format
              * `projects/locations/parameters/versions`.
              */
             public Patch setName(java.lang.String name) {

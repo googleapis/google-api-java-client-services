@@ -17,7 +17,7 @@
 package com.google.api.services.parametermanager.v1.model;
 
 /**
- * Message describing RenderTemplateVersionResponse resource
+ * Message describing response for `RenderTemplateVersion` method
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Parameter Manager API. For a detailed explanation
@@ -31,8 +31,8 @@ package com.google.api.services.parametermanager.v1.model;
 public final class RenderTemplateVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The resource name of the ParameterVersion used to render the template version in
-   * the format `projects/locations/parameters/versions`.
+   * The resource name of the ParameterVersion used to render the template version in the format
+   * `projects/locations/parameters/versions`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,16 +46,15 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   private TemplateVersionPayload payload;
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (TemplateVersionPayload) which has all the variables resolved using the provided parameter
-   * version.
+   * Server generated rendered version of the user provided payload data (TemplateVersionPayload)
+   * which has all the variables resolved using the provided parameter version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String renderedPayload;
 
   /**
-   * Output only. Format of the template version.
+   * Format of the template version.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +68,8 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   private java.lang.String templateVersion;
 
   /**
-   * Output only. The resource name of the ParameterVersion used to render the template version in
-   * the format `projects/locations/parameters/versions`.
+   * The resource name of the ParameterVersion used to render the template version in the format
+   * `projects/locations/parameters/versions`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParameterVersion() {
@@ -78,8 +77,8 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. The resource name of the ParameterVersion used to render the template version in
-   * the format `projects/locations/parameters/versions`.
+   * The resource name of the ParameterVersion used to render the template version in the format
+   * `projects/locations/parameters/versions`.
    * @param parameterVersion parameterVersion or {@code null} for none
    */
   public RenderTemplateVersionResponse setParameterVersion(java.lang.String parameterVersion) {
@@ -105,9 +104,8 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (TemplateVersionPayload) which has all the variables resolved using the provided parameter
-   * version.
+   * Server generated rendered version of the user provided payload data (TemplateVersionPayload)
+   * which has all the variables resolved using the provided parameter version.
    * @see #decodeRenderedPayload()
    * @return value or {@code null} for none
    */
@@ -116,9 +114,8 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (TemplateVersionPayload) which has all the variables resolved using the provided parameter
-   * version.
+   * Server generated rendered version of the user provided payload data (TemplateVersionPayload)
+   * which has all the variables resolved using the provided parameter version.
    * @see #getRenderedPayload()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -129,9 +126,8 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (TemplateVersionPayload) which has all the variables resolved using the provided parameter
-   * version.
+   * Server generated rendered version of the user provided payload data (TemplateVersionPayload)
+   * which has all the variables resolved using the provided parameter version.
    * @see #encodeRenderedPayload()
    * @param renderedPayload renderedPayload or {@code null} for none
    */
@@ -141,9 +137,8 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (TemplateVersionPayload) which has all the variables resolved using the provided parameter
-   * version.
+   * Server generated rendered version of the user provided payload data (TemplateVersionPayload)
+   * which has all the variables resolved using the provided parameter version.
    * @see #setRenderedPayload()
    *
    * <p>
@@ -158,7 +153,7 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Format of the template version.
+   * Format of the template version.
    * @return value or {@code null} for none
    */
   public java.lang.String getTemplateFormat() {
@@ -166,7 +161,7 @@ public final class RenderTemplateVersionResponse extends com.google.api.client.j
   }
 
   /**
-   * Output only. Format of the template version.
+   * Format of the template version.
    * @param templateFormat templateFormat or {@code null} for none
    */
   public RenderTemplateVersionResponse setTemplateFormat(java.lang.String templateFormat) {

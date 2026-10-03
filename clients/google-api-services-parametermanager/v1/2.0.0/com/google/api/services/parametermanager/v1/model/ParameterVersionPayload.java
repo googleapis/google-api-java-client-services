@@ -38,8 +38,8 @@ public final class ParameterVersionPayload extends com.google.api.client.json.Ge
   private java.lang.String data;
 
   /**
-   * Optional. [Optional] The integrity checksum of the payload. If provided, the server will verify
-   * that the checksum matches the payload. If not provided, the server will generate the checksum.
+   * Optional. The integrity checksum of the payload. If provided, the server will verify that the
+   * checksum matches the payload. If not provided, the server will generate the checksum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -91,8 +91,8 @@ public final class ParameterVersionPayload extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. [Optional] The integrity checksum of the payload. If provided, the server will verify
-   * that the checksum matches the payload. If not provided, the server will generate the checksum.
+   * Optional. The integrity checksum of the payload. If provided, the server will verify that the
+   * checksum matches the payload. If not provided, the server will generate the checksum.
    * @return value or {@code null} for none
    */
   public java.lang.Long getDataCrc32c() {
@@ -100,8 +100,8 @@ public final class ParameterVersionPayload extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. [Optional] The integrity checksum of the payload. If provided, the server will verify
-   * that the checksum matches the payload. If not provided, the server will generate the checksum.
+   * Optional. The integrity checksum of the payload. If provided, the server will verify that the
+   * checksum matches the payload. If not provided, the server will generate the checksum.
    * @param dataCrc32c dataCrc32c or {@code null} for none
    */
   public ParameterVersionPayload setDataCrc32c(java.lang.Long dataCrc32c) {

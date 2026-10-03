@@ -59,6 +59,13 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
   private DocumentStyle documentStyle;
 
   /**
+   * The dropdown definitions in a document tab, keyed by dropdown definition ID.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, DropdownDefinition> dropdownDefinitions;
+
+  /**
    * The footers in the document tab, keyed by footer ID.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
    */
   public DocumentTab setDocumentStyle(DocumentStyle documentStyle) {
     this.documentStyle = documentStyle;
+    return this;
+  }
+
+  /**
+   * The dropdown definitions in a document tab, keyed by dropdown definition ID.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, DropdownDefinition> getDropdownDefinitions() {
+    return dropdownDefinitions;
+  }
+
+  /**
+   * The dropdown definitions in a document tab, keyed by dropdown definition ID.
+   * @param dropdownDefinitions dropdownDefinitions or {@code null} for none
+   */
+  public DocumentTab setDropdownDefinitions(java.util.Map<String, DropdownDefinition> dropdownDefinitions) {
+    this.dropdownDefinitions = dropdownDefinitions;
     return this;
   }
 

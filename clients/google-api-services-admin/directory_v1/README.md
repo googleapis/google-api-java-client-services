@@ -39,6 +39,6 @@ dependencies {
 }
 ```
 
-[javadoc]: https://googleapis.dev/java/google-api-services-admin-directory/latest/index.html
+[javadoc]: https://javadoc.io/doc/com.google.apis/google-api-services-admin-directory/latest/index.html
 [google-api-client]: https://github.com/googleapis/google-api-java-client/
 [api-explorer]: https://developers.google.com/apis-explorer/#p/admin/v1/

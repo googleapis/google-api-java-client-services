@@ -31,14 +31,14 @@ package com.google.api.services.parametermanager.v1.model;
 public final class ParameterVersion extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Output only. [Output only] The source of the checksum.
+   * Optional. Output only. The source of the checksum.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String checksumSource;
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,16 +55,16 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   private java.lang.Boolean disabled;
 
   /**
-   * Optional. Output only. [Output only] The resource name of the KMS key version used to encrypt
-   * the ParameterVersion payload. This field is populated only if the Parameter resource has
-   * customer managed encryption key (CMEK) configured.
+   * Optional. Output only. The resource name of the KMS key version used to encrypt the
+   * ParameterVersion payload. This field is populated only if the Parameter resource has customer
+   * managed encryption key (CMEK) configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kmsKeyVersion;
 
   /**
-   * Identifier. [Output only] The resource name of the ParameterVersion in the format
+   * Identifier. The resource name of the ParameterVersion in the format
    * `projects/locations/parameters/versions`.
    * The value may be {@code null}.
    */
@@ -80,14 +80,14 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   private ParameterVersionPayload payload;
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Output only. [Output only] The source of the checksum.
+   * Optional. Output only. The source of the checksum.
    * @return value or {@code null} for none
    */
   public java.lang.String getChecksumSource() {
@@ -95,7 +95,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Output only. [Output only] The source of the checksum.
+   * Optional. Output only. The source of the checksum.
    * @param checksumSource checksumSource or {@code null} for none
    */
   public ParameterVersion setChecksumSource(java.lang.String checksumSource) {
@@ -104,7 +104,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -112,7 +112,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output only] Create time stamp
+   * Output only. Create time stamp
    * @param createTime createTime or {@code null} for none
    */
   public ParameterVersion setCreateTime(String createTime) {
@@ -144,9 +144,9 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Output only. [Output only] The resource name of the KMS key version used to encrypt
-   * the ParameterVersion payload. This field is populated only if the Parameter resource has
-   * customer managed encryption key (CMEK) configured.
+   * Optional. Output only. The resource name of the KMS key version used to encrypt the
+   * ParameterVersion payload. This field is populated only if the Parameter resource has customer
+   * managed encryption key (CMEK) configured.
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyVersion() {
@@ -154,9 +154,9 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Output only. [Output only] The resource name of the KMS key version used to encrypt
-   * the ParameterVersion payload. This field is populated only if the Parameter resource has
-   * customer managed encryption key (CMEK) configured.
+   * Optional. Output only. The resource name of the KMS key version used to encrypt the
+   * ParameterVersion payload. This field is populated only if the Parameter resource has customer
+   * managed encryption key (CMEK) configured.
    * @param kmsKeyVersion kmsKeyVersion or {@code null} for none
    */
   public ParameterVersion setKmsKeyVersion(java.lang.String kmsKeyVersion) {
@@ -165,7 +165,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Identifier. [Output only] The resource name of the ParameterVersion in the format
+   * Identifier. The resource name of the ParameterVersion in the format
    * `projects/locations/parameters/versions`.
    * @return value or {@code null} for none
    */
@@ -174,7 +174,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Identifier. [Output only] The resource name of the ParameterVersion in the format
+   * Identifier. The resource name of the ParameterVersion in the format
    * `projects/locations/parameters/versions`.
    * @param name name or {@code null} for none
    */
@@ -203,7 +203,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -211,7 +211,7 @@ public final class ParameterVersion extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output only] Update time stamp
+   * Output only. Update time stamp
    * @param updateTime updateTime or {@code null} for none
    */
   public ParameterVersion setUpdateTime(String updateTime) {

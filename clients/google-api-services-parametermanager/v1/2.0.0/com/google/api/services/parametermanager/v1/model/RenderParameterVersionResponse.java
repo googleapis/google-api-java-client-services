@@ -17,7 +17,7 @@
 package com.google.api.services.parametermanager.v1.model;
 
 /**
- * Message describing RenderParameterVersionResponse resource
+ * Message describing response of the `RenderParameterVersion` method
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Parameter Manager API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.parametermanager.v1.model;
 public final class RenderParameterVersionResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Resource identifier of a ParameterVersion in the format
+   * Resource identifier of a ParameterVersion in the format
    * `projects/locations/parameters/versions`.
    * The value may be {@code null}.
    */
@@ -46,17 +46,16 @@ public final class RenderParameterVersionResponse extends com.google.api.client.
   private ParameterVersionPayload payload;
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (ParameterVersionPayload) which has substitutions of all (if any) references to a SecretManager
-   * SecretVersion resources. This substitution only works for a Parameter which is in JSON or YAML
-   * format.
+   * Server generated rendered version of the user provided payload data (ParameterVersionPayload)
+   * which has substitutions of all (if any) references to a SecretManager SecretVersion resources.
+   * This substitution only works for a Parameter which is in JSON or YAML format.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String renderedPayload;
 
   /**
-   * Output only. Resource identifier of a ParameterVersion in the format
+   * Resource identifier of a ParameterVersion in the format
    * `projects/locations/parameters/versions`.
    * @return value or {@code null} for none
    */
@@ -65,7 +64,7 @@ public final class RenderParameterVersionResponse extends com.google.api.client.
   }
 
   /**
-   * Output only. Resource identifier of a ParameterVersion in the format
+   * Resource identifier of a ParameterVersion in the format
    * `projects/locations/parameters/versions`.
    * @param parameterVersion parameterVersion or {@code null} for none
    */
@@ -92,10 +91,9 @@ public final class RenderParameterVersionResponse extends com.google.api.client.
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (ParameterVersionPayload) which has substitutions of all (if any) references to a SecretManager
-   * SecretVersion resources. This substitution only works for a Parameter which is in JSON or YAML
-   * format.
+   * Server generated rendered version of the user provided payload data (ParameterVersionPayload)
+   * which has substitutions of all (if any) references to a SecretManager SecretVersion resources.
+   * This substitution only works for a Parameter which is in JSON or YAML format.
    * @see #decodeRenderedPayload()
    * @return value or {@code null} for none
    */
@@ -104,10 +102,9 @@ public final class RenderParameterVersionResponse extends com.google.api.client.
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (ParameterVersionPayload) which has substitutions of all (if any) references to a SecretManager
-   * SecretVersion resources. This substitution only works for a Parameter which is in JSON or YAML
-   * format.
+   * Server generated rendered version of the user provided payload data (ParameterVersionPayload)
+   * which has substitutions of all (if any) references to a SecretManager SecretVersion resources.
+   * This substitution only works for a Parameter which is in JSON or YAML format.
    * @see #getRenderedPayload()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -118,10 +115,9 @@ public final class RenderParameterVersionResponse extends com.google.api.client.
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (ParameterVersionPayload) which has substitutions of all (if any) references to a SecretManager
-   * SecretVersion resources. This substitution only works for a Parameter which is in JSON or YAML
-   * format.
+   * Server generated rendered version of the user provided payload data (ParameterVersionPayload)
+   * which has substitutions of all (if any) references to a SecretManager SecretVersion resources.
+   * This substitution only works for a Parameter which is in JSON or YAML format.
    * @see #encodeRenderedPayload()
    * @param renderedPayload renderedPayload or {@code null} for none
    */
@@ -131,10 +127,9 @@ public final class RenderParameterVersionResponse extends com.google.api.client.
   }
 
   /**
-   * Output only. Server generated rendered version of the user provided payload data
-   * (ParameterVersionPayload) which has substitutions of all (if any) references to a SecretManager
-   * SecretVersion resources. This substitution only works for a Parameter which is in JSON or YAML
-   * format.
+   * Server generated rendered version of the user provided payload data (ParameterVersionPayload)
+   * which has substitutions of all (if any) references to a SecretManager SecretVersion resources.
+   * This substitution only works for a Parameter which is in JSON or YAML format.
    * @see #setRenderedPayload()
    *
    * <p>

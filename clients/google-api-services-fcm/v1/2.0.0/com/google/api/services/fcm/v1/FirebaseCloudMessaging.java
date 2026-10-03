@@ -176,7 +176,8 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
       /**
        * Send a message to specified target (a [Firebase Installation ID (FID)](/docs/cloud-
        * messaging/android/get-started#access-firebase-installation-id), registration token, topic, or
-       * condition).
+       * condition). If duplicate fields or parameters are provided in a request (such as repeated JSON
+       * keys in the request body or duplicate query parameters), the last occurrence takes precedence.
        *
        * Create a request for the method "messages.send".
        *
@@ -205,7 +206,8 @@ public class FirebaseCloudMessaging extends com.google.api.client.googleapis.ser
         /**
          * Send a message to specified target (a [Firebase Installation ID (FID)](/docs/cloud-
          * messaging/android/get-started#access-firebase-installation-id), registration token, topic, or
-         * condition).
+         * condition). If duplicate fields or parameters are provided in a request (such as repeated JSON
+         * keys in the request body or duplicate query parameters), the last occurrence takes precedence.
          *
          * Create a request for the method "messages.send".
          *

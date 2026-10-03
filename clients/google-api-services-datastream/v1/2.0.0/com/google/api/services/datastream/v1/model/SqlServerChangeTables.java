@@ -29,6 +29,30 @@ package com.google.api.services.datastream.v1.model;
 @SuppressWarnings("javadoc")
 public final class SqlServerChangeTables extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. DDL configuration for change tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SqlServerDdlConfig ddlConfig;
+
+  /**
+   * Optional. DDL configuration for change tables.
+   * @return value or {@code null} for none
+   */
+  public SqlServerDdlConfig getDdlConfig() {
+    return ddlConfig;
+  }
+
+  /**
+   * Optional. DDL configuration for change tables.
+   * @param ddlConfig ddlConfig or {@code null} for none
+   */
+  public SqlServerChangeTables setDdlConfig(SqlServerDdlConfig ddlConfig) {
+    this.ddlConfig = ddlConfig;
+    return this;
+  }
+
   @Override
   public SqlServerChangeTables set(String fieldName, Object value) {
     return (SqlServerChangeTables) super.set(fieldName, value);

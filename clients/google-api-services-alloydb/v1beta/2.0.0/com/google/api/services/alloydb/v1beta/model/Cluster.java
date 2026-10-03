@@ -169,6 +169,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Configuration that allows the customer to create an AlloyDB Express cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExpressConfig expressConfig;
+
+  /**
    * Optional. Deprecated and unused. This field will be removed in the near future.
    * The value may be {@code null}.
    */
@@ -671,6 +678,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setEtag(java.lang.String etag) {
     this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration that allows the customer to create an AlloyDB Express cluster.
+   * @return value or {@code null} for none
+   */
+  public ExpressConfig getExpressConfig() {
+    return expressConfig;
+  }
+
+  /**
+   * Optional. Configuration that allows the customer to create an AlloyDB Express cluster.
+   * @param expressConfig expressConfig or {@code null} for none
+   */
+  public Cluster setExpressConfig(ExpressConfig expressConfig) {
+    this.expressConfig = expressConfig;
     return this;
   }
 

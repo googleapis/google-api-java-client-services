@@ -38,7 +38,8 @@ public final class AndroidNativeBinary extends com.google.api.client.json.Generi
 
   /**
    * Optional. Arguments for running the binary file. The flags will be appended to the command line
-   * that invokes the binary. The number of options is limited to 100.
+   * that invokes the binary. Limits: - Maximum number of entries: 64 - Maximum entry size: 1024
+   * bytes (UTF-8)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,9 +47,9 @@ public final class AndroidNativeBinary extends com.google.api.client.json.Generi
 
   /**
    * Optional. A map of environment variables to set for the binary process. The keys are the
-   * variable names and the values are the variable values. The maximum number of entries is 100.
-   * Each key is limited to 128 characters and must conform to POSIX standards. Each value is
-   * limited to 2048 characters. The total size of all environment variables must not exceed 16 KiB.
+   * variable names and the values are the variable values. Limits: - Maximum number of entries: 32
+   * - Maximum key size: 64 bytes (UTF-8) - Key regex: `a-zA-Z_*` - Maximum value size: 1024 bytes
+   * (UTF-8)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +81,8 @@ public final class AndroidNativeBinary extends com.google.api.client.json.Generi
 
   /**
    * Optional. Arguments for running the binary file. The flags will be appended to the command line
-   * that invokes the binary. The number of options is limited to 100.
+   * that invokes the binary. Limits: - Maximum number of entries: 64 - Maximum entry size: 1024
+   * bytes (UTF-8)
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getArgs() {
@@ -89,7 +91,8 @@ public final class AndroidNativeBinary extends com.google.api.client.json.Generi
 
   /**
    * Optional. Arguments for running the binary file. The flags will be appended to the command line
-   * that invokes the binary. The number of options is limited to 100.
+   * that invokes the binary. Limits: - Maximum number of entries: 64 - Maximum entry size: 1024
+   * bytes (UTF-8)
    * @param args args or {@code null} for none
    */
   public AndroidNativeBinary setArgs(java.util.List<java.lang.String> args) {
@@ -99,9 +102,9 @@ public final class AndroidNativeBinary extends com.google.api.client.json.Generi
 
   /**
    * Optional. A map of environment variables to set for the binary process. The keys are the
-   * variable names and the values are the variable values. The maximum number of entries is 100.
-   * Each key is limited to 128 characters and must conform to POSIX standards. Each value is
-   * limited to 2048 characters. The total size of all environment variables must not exceed 16 KiB.
+   * variable names and the values are the variable values. Limits: - Maximum number of entries: 32
+   * - Maximum key size: 64 bytes (UTF-8) - Key regex: `a-zA-Z_*` - Maximum value size: 1024 bytes
+   * (UTF-8)
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnvVars() {
@@ -110,9 +113,9 @@ public final class AndroidNativeBinary extends com.google.api.client.json.Generi
 
   /**
    * Optional. A map of environment variables to set for the binary process. The keys are the
-   * variable names and the values are the variable values. The maximum number of entries is 100.
-   * Each key is limited to 128 characters and must conform to POSIX standards. Each value is
-   * limited to 2048 characters. The total size of all environment variables must not exceed 16 KiB.
+   * variable names and the values are the variable values. Limits: - Maximum number of entries: 32
+   * - Maximum key size: 64 bytes (UTF-8) - Key regex: `a-zA-Z_*` - Maximum value size: 1024 bytes
+   * (UTF-8)
    * @param envVars envVars or {@code null} for none
    */
   public AndroidNativeBinary setEnvVars(java.util.Map<String, java.lang.String> envVars) {

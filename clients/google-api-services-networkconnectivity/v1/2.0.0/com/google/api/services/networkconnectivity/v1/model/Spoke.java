@@ -57,7 +57,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. The list of fields waiting for hub administrator's approval.
+   * Output only. The list of fields waiting for hub administrator's approval.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -229,7 +229,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of fields waiting for hub administrator's approval.
+   * Output only. The list of fields waiting for hub administrator's approval.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFieldPathsPendingUpdate() {
@@ -237,7 +237,7 @@ public final class Spoke extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of fields waiting for hub administrator's approval.
+   * Output only. The list of fields waiting for hub administrator's approval.
    * @param fieldPathsPendingUpdate fieldPathsPendingUpdate or {@code null} for none
    */
   public Spoke setFieldPathsPendingUpdate(java.util.List<java.lang.String> fieldPathsPendingUpdate) {

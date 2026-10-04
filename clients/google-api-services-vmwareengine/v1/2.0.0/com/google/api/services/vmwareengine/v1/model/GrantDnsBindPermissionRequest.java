@@ -31,7 +31,11 @@ public final class GrantDnsBindPermissionRequest extends com.google.api.client.j
 
   /**
    * Required. The consumer provided user/service account which needs to be granted permission to
-   * bind with the intranet VPC corresponding to the consumer project.
+   * bind with the intranet VPC corresponding to the consumer project. Principal can be a user or a
+   * service account. For example, to specify the user `user@example.com`, use `"principal":
+   * {"user": "user@example.com"}` and to specify the service account `service-
+   * account@gserviceaccount.com`, use `"principal": {"serviceAccount": "service-
+   * account@gserviceaccount.com"}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +58,11 @@ public final class GrantDnsBindPermissionRequest extends com.google.api.client.j
 
   /**
    * Required. The consumer provided user/service account which needs to be granted permission to
-   * bind with the intranet VPC corresponding to the consumer project.
+   * bind with the intranet VPC corresponding to the consumer project. Principal can be a user or a
+   * service account. For example, to specify the user `user@example.com`, use `"principal":
+   * {"user": "user@example.com"}` and to specify the service account `service-
+   * account@gserviceaccount.com`, use `"principal": {"serviceAccount": "service-
+   * account@gserviceaccount.com"}`.
    * @return value or {@code null} for none
    */
   public Principal getPrincipal() {
@@ -63,7 +71,11 @@ public final class GrantDnsBindPermissionRequest extends com.google.api.client.j
 
   /**
    * Required. The consumer provided user/service account which needs to be granted permission to
-   * bind with the intranet VPC corresponding to the consumer project.
+   * bind with the intranet VPC corresponding to the consumer project. Principal can be a user or a
+   * service account. For example, to specify the user `user@example.com`, use `"principal":
+   * {"user": "user@example.com"}` and to specify the service account `service-
+   * account@gserviceaccount.com`, use `"principal": {"serviceAccount": "service-
+   * account@gserviceaccount.com"}`.
    * @param principal principal or {@code null} for none
    */
   public GrantDnsBindPermissionRequest setPrincipal(Principal principal) {

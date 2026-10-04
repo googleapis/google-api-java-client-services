@@ -5332,6 +5332,29 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
+            /**
+             * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for
+             * fetching violations.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for fetching
+           violations.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for
+             * fetching violations.
+             */
+            public Get setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
             @Override
             public Get set(String parameterName, Object value) {
               return (Get) super.set(parameterName, value);
@@ -5578,6 +5601,28 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             /** Optional. Page token returned from previous request. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. Specifies the violation view(AssuredWorkloads or DataBoundary) for fetching
+             * violations.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. Specifies the violation view(AssuredWorkloads or DataBoundary) for fetching violations.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. Specifies the violation view(AssuredWorkloads or DataBoundary) for fetching
+             * violations.
+             */
+            public List setView(java.lang.String view) {
+              this.view = view;
               return this;
             }
 

@@ -68,9 +68,8 @@ public final class BulkDeleteResourcesRequest extends com.google.api.client.json
   private java.lang.String until;
 
   /**
-   * Optional. If set to true, the request will only perform a dry run. By default (once the
-   * behavior change is fully rolled out), this will default to true. During the transition period,
-   * the default depends on the Mendel flag status for the project.
+   * Optional. If set to `true`, the request will only perform a dry run. By default this will
+   * default to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,9 +171,8 @@ public final class BulkDeleteResourcesRequest extends com.google.api.client.json
   }
 
   /**
-   * Optional. If set to true, the request will only perform a dry run. By default (once the
-   * behavior change is fully rolled out), this will default to true. During the transition period,
-   * the default depends on the Mendel flag status for the project.
+   * Optional. If set to `true`, the request will only perform a dry run. By default this will
+   * default to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getValidateOnly() {
@@ -182,9 +180,8 @@ public final class BulkDeleteResourcesRequest extends com.google.api.client.json
   }
 
   /**
-   * Optional. If set to true, the request will only perform a dry run. By default (once the
-   * behavior change is fully rolled out), this will default to true. During the transition period,
-   * the default depends on the Mendel flag status for the project.
+   * Optional. If set to `true`, the request will only perform a dry run. By default this will
+   * default to `false`.
    * @param validateOnly validateOnly or {@code null} for none
    */
   public BulkDeleteResourcesRequest setValidateOnly(java.lang.Boolean validateOnly) {

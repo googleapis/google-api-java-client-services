@@ -37,6 +37,13 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   private ApiKeyParams apiKey;
 
   /**
+   * Parameters for Connector Reference authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectorReferenceAuthProvider connectorReferenceAuthProvider;
+
+  /**
    * Parameters for Gemini Enterprise authentication.
    * The value may be {@code null}.
    */
@@ -58,6 +65,13 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
   private TwoLeggedOAuth twoLeggedOauth;
 
   /**
+   * Parameters for Cross-App Access authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CrossAppAccessAuthProvider xaaAuthProvider;
+
+  /**
    * Parameters for API key authentication.
    * @return value or {@code null} for none
    */
@@ -71,6 +85,23 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
    */
   public AuthProviderTypeParams setApiKey(ApiKeyParams apiKey) {
     this.apiKey = apiKey;
+    return this;
+  }
+
+  /**
+   * Parameters for Connector Reference authentication.
+   * @return value or {@code null} for none
+   */
+  public ConnectorReferenceAuthProvider getConnectorReferenceAuthProvider() {
+    return connectorReferenceAuthProvider;
+  }
+
+  /**
+   * Parameters for Connector Reference authentication.
+   * @param connectorReferenceAuthProvider connectorReferenceAuthProvider or {@code null} for none
+   */
+  public AuthProviderTypeParams setConnectorReferenceAuthProvider(ConnectorReferenceAuthProvider connectorReferenceAuthProvider) {
+    this.connectorReferenceAuthProvider = connectorReferenceAuthProvider;
     return this;
   }
 
@@ -122,6 +153,23 @@ public final class AuthProviderTypeParams extends com.google.api.client.json.Gen
    */
   public AuthProviderTypeParams setTwoLeggedOauth(TwoLeggedOAuth twoLeggedOauth) {
     this.twoLeggedOauth = twoLeggedOauth;
+    return this;
+  }
+
+  /**
+   * Parameters for Cross-App Access authentication.
+   * @return value or {@code null} for none
+   */
+  public CrossAppAccessAuthProvider getXaaAuthProvider() {
+    return xaaAuthProvider;
+  }
+
+  /**
+   * Parameters for Cross-App Access authentication.
+   * @param xaaAuthProvider xaaAuthProvider or {@code null} for none
+   */
+  public AuthProviderTypeParams setXaaAuthProvider(CrossAppAccessAuthProvider xaaAuthProvider) {
+    this.xaaAuthProvider = xaaAuthProvider;
     return this;
   }
 

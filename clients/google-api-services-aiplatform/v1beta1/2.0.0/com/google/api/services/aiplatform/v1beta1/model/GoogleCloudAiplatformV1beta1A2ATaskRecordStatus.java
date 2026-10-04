@@ -30,14 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1A2ATaskRecordStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The status message associated with the state.
+   * Optional. The status message associated with the state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1A2ATaskRecordMessage message;
 
   /**
-   * Output only. The current state of the task.
+   * Optional. The current state of the task.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecordStatus extends com.g
   private String timestamp;
 
   /**
-   * Output only. The status message associated with the state.
+   * Optional. The status message associated with the state.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2ATaskRecordMessage getMessage() {
@@ -59,7 +59,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecordStatus extends com.g
   }
 
   /**
-   * Output only. The status message associated with the state.
+   * Optional. The status message associated with the state.
    * @param message message or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2ATaskRecordStatus setMessage(GoogleCloudAiplatformV1beta1A2ATaskRecordMessage message) {
@@ -68,7 +68,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecordStatus extends com.g
   }
 
   /**
-   * Output only. The current state of the task.
+   * Optional. The current state of the task.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -76,7 +76,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecordStatus extends com.g
   }
 
   /**
-   * Output only. The current state of the task.
+   * Optional. The current state of the task.
    * @param state state or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2ATaskRecordStatus setState(java.lang.String state) {

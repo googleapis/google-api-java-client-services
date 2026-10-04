@@ -30,25 +30,25 @@ package com.google.api.services.aiplatform.v1.model;
 public final class CloudAiLargeModelsVisionExperimentsResponseProEditResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * The output structured prompt produced by this edit.
+   * The output structured prompt (JSON string) produced by this edit.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> structuredPrompt;
+  private java.lang.String structuredPrompt;
 
   /**
-   * The output structured prompt produced by this edit.
+   * The output structured prompt (JSON string) produced by this edit.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getStructuredPrompt() {
+  public java.lang.String getStructuredPrompt() {
     return structuredPrompt;
   }
 
   /**
-   * The output structured prompt produced by this edit.
+   * The output structured prompt (JSON string) produced by this edit.
    * @param structuredPrompt structuredPrompt or {@code null} for none
    */
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult setStructuredPrompt(java.util.Map<String, java.lang.Object> structuredPrompt) {
+  public CloudAiLargeModelsVisionExperimentsResponseProEditResult setStructuredPrompt(java.lang.String structuredPrompt) {
     this.structuredPrompt = structuredPrompt;
     return this;
   }

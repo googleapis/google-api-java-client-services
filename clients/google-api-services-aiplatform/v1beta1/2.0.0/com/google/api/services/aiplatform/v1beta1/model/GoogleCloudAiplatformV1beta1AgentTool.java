@@ -18,6 +18,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * A tool provides a list of actions available to the Agent during the process of executing a task.
+ * Example JSON for an MCP server tool: { "type": "mcp_server", "name": "my-mcp-server", "url":
+ * "https://api.example.com/mcp", "headers": { "Authorization": "Bearer token123" } }
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -56,11 +58,10 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   private java.lang.String type;
 
   /**
-   * Optional. Temporary: the tool's runtime reference, consumed by CreateAgent to create the
-   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`. It is duplicated here
-   * (the resource name is already in `name`) only because the Agent service is not yet connected to
-   * Agent Registry to derive it from `name`; the Task Service instead resolves it from Agent
-   * Registry (GetMcpServer / GetEndpoint) at task creation.
+   * Optional. Fallback for the tool's runtime reference, consumed by `CreateAgent` to create the
+   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`, and optional: the
+   * Agent service derives the runtime reference from `name` via Agent Registry (`GetMcpServer` /
+   * `GetEndpoint`), and reads this only when that lookup yields none.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,11 +129,10 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. Temporary: the tool's runtime reference, consumed by CreateAgent to create the
-   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`. It is duplicated here
-   * (the resource name is already in `name`) only because the Agent service is not yet connected to
-   * Agent Registry to derive it from `name`; the Task Service instead resolves it from Agent
-   * Registry (GetMcpServer / GetEndpoint) at task creation.
+   * Optional. Fallback for the tool's runtime reference, consumed by `CreateAgent` to create the
+   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`, and optional: the
+   * Agent service derives the runtime reference from `name` via Agent Registry (`GetMcpServer` /
+   * `GetEndpoint`), and reads this only when that lookup yields none.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrl() {
@@ -140,11 +140,10 @@ public final class GoogleCloudAiplatformV1beta1AgentTool extends com.google.api.
   }
 
   /**
-   * Optional. Temporary: the tool's runtime reference, consumed by CreateAgent to create the
-   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`. It is duplicated here
-   * (the resource name is already in `name`) only because the Agent service is not yet connected to
-   * Agent Registry to derive it from `name`; the Task Service instead resolves it from Agent
-   * Registry (GetMcpServer / GetEndpoint) at task creation.
+   * Optional. Fallback for the tool's runtime reference, consumed by `CreateAgent` to create the
+   * downstream AI App. Applicable when `type` is `mcp_server` or `endpoint`, and optional: the
+   * Agent service derives the runtime reference from `name` via Agent Registry (`GetMcpServer` /
+   * `GetEndpoint`), and reads this only when that lookup yields none.
    * @param url url or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1AgentTool setUrl(java.lang.String url) {

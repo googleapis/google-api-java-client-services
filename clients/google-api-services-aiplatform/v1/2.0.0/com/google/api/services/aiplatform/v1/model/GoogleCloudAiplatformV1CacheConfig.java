@@ -44,6 +44,16 @@ public final class GoogleCloudAiplatformV1CacheConfig extends com.google.api.cli
   private java.lang.String name;
 
   /**
+   * Optional. Project-level retention type for implicit caching. On `GetCacheConfig` this is
+   * populated with the retention the project gets: a project that has stated no preference reports
+   * `DURABLE`. On `UpdateCacheConfig`, leaving it unset means the project states no preference.
+   * Whether that clears an existing preference depends on `update_mask`; see that field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1CacheConfigRetentionConfig retentionConfig;
+
+  /**
    * If set to true, disables GenAI caching. Otherwise caching is enabled.
    * @return value or {@code null} for none
    */
@@ -74,6 +84,29 @@ public final class GoogleCloudAiplatformV1CacheConfig extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1CacheConfig setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Project-level retention type for implicit caching. On `GetCacheConfig` this is
+   * populated with the retention the project gets: a project that has stated no preference reports
+   * `DURABLE`. On `UpdateCacheConfig`, leaving it unset means the project states no preference.
+   * Whether that clears an existing preference depends on `update_mask`; see that field.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CacheConfigRetentionConfig getRetentionConfig() {
+    return retentionConfig;
+  }
+
+  /**
+   * Optional. Project-level retention type for implicit caching. On `GetCacheConfig` this is
+   * populated with the retention the project gets: a project that has stated no preference reports
+   * `DURABLE`. On `UpdateCacheConfig`, leaving it unset means the project states no preference.
+   * Whether that clears an existing preference depends on `update_mask`; see that field.
+   * @param retentionConfig retentionConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1CacheConfig setRetentionConfig(GoogleCloudAiplatformV1CacheConfigRetentionConfig retentionConfig) {
+    this.retentionConfig = retentionConfig;
     return this;
   }
 

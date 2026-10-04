@@ -51,6 +51,13 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
   private GenaiVertexV1beta1PlaceCitation placeCitation;
 
   /**
+   * Speech annotation for text content.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1SpeechAnnotation speechMetadata;
+
+  /**
    * Start of segment of the response that is attributed to this source. Index indicates the start
    * of the segment, measured in bytes.
    * The value may be {@code null}.
@@ -121,6 +128,23 @@ public final class GenaiVertexV1beta1TextContentAnnotation extends com.google.ap
    */
   public GenaiVertexV1beta1TextContentAnnotation setPlaceCitation(GenaiVertexV1beta1PlaceCitation placeCitation) {
     this.placeCitation = placeCitation;
+    return this;
+  }
+
+  /**
+   * Speech annotation for text content.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1SpeechAnnotation getSpeechMetadata() {
+    return speechMetadata;
+  }
+
+  /**
+   * Speech annotation for text content.
+   * @param speechMetadata speechMetadata or {@code null} for none
+   */
+  public GenaiVertexV1beta1TextContentAnnotation setSpeechMetadata(GenaiVertexV1beta1SpeechAnnotation speechMetadata) {
+    this.speechMetadata = speechMetadata;
     return this;
   }
 

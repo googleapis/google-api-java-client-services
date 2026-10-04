@@ -17,7 +17,8 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Result metadata from a Pro Edit operation.
+ * Parameters for prompted voice generation. Required in `CreateVoice` when `type` is `"prompted"`.
+ * Returned in `CreateVoice`, `GetVoice`, and `ListVoices` responses for prompted voices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +28,43 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionExperimentsResponseProEditResult extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1VoicePromptedVoice extends com.google.api.client.json.GenericJson {
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
+   * Required. The natural-language prompt describing the desired voice, e.g. "A deep, booming male
+   * voice of a massive evil ogre in his middle years."
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String structuredPrompt;
+  private java.lang.String input;
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
+   * Required. The natural-language prompt describing the desired voice, e.g. "A deep, booming male
+   * voice of a massive evil ogre in his middle years."
    * @return value or {@code null} for none
    */
-  public java.lang.String getStructuredPrompt() {
-    return structuredPrompt;
+  public java.lang.String getInput() {
+    return input;
   }
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
-   * @param structuredPrompt structuredPrompt or {@code null} for none
+   * Required. The natural-language prompt describing the desired voice, e.g. "A deep, booming male
+   * voice of a massive evil ogre in his middle years."
+   * @param input input or {@code null} for none
    */
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult setStructuredPrompt(java.lang.String structuredPrompt) {
-    this.structuredPrompt = structuredPrompt;
+  public GenaiVertexV1beta1VoicePromptedVoice setInput(java.lang.String input) {
+    this.input = input;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionExperimentsResponseProEditResult) super.set(fieldName, value);
+  public GenaiVertexV1beta1VoicePromptedVoice set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1VoicePromptedVoice) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult clone() {
-    return (CloudAiLargeModelsVisionExperimentsResponseProEditResult) super.clone();
+  public GenaiVertexV1beta1VoicePromptedVoice clone() {
+    return (GenaiVertexV1beta1VoicePromptedVoice) super.clone();
   }
 
 }

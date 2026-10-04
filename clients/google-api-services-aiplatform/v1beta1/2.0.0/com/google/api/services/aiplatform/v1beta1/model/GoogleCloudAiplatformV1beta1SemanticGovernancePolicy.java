@@ -78,6 +78,17 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicy extends 
   private java.lang.String displayName;
 
   /**
+   * Optional. If true, this policy is evaluated and its result is reported, but the policy is not
+   * enforced: a violation does not block the agent's action. Use this to validate a policy against
+   * real traffic before turning enforcement on. Defaults to `false`, meaning the policy is
+   * enforced. This setting applies only to this policy. If the SemanticGovernancePolicyEngine for
+   * the project is itself in dry run, every policy behaves as dry run regardless of this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean dryRun;
+
+  /**
    * Optional. Used to perform consistent read-modify-write transactions. If provided, the request
    * will only succeed if the etag matches the current value. Otherwise, an ABORTED error will be
    * returned.
@@ -223,6 +234,31 @@ public final class GoogleCloudAiplatformV1beta1SemanticGovernancePolicy extends 
    */
   public GoogleCloudAiplatformV1beta1SemanticGovernancePolicy setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. If true, this policy is evaluated and its result is reported, but the policy is not
+   * enforced: a violation does not block the agent's action. Use this to validate a policy against
+   * real traffic before turning enforcement on. Defaults to `false`, meaning the policy is
+   * enforced. This setting applies only to this policy. If the SemanticGovernancePolicyEngine for
+   * the project is itself in dry run, every policy behaves as dry run regardless of this field.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDryRun() {
+    return dryRun;
+  }
+
+  /**
+   * Optional. If true, this policy is evaluated and its result is reported, but the policy is not
+   * enforced: a violation does not block the agent's action. Use this to validate a policy against
+   * real traffic before turning enforcement on. Defaults to `false`, meaning the policy is
+   * enforced. This setting applies only to this policy. If the SemanticGovernancePolicyEngine for
+   * the project is itself in dry run, every policy behaves as dry run regardless of this field.
+   * @param dryRun dryRun or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SemanticGovernancePolicy setDryRun(java.lang.Boolean dryRun) {
+    this.dryRun = dryRun;
     return this;
   }
 

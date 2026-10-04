@@ -95,6 +95,13 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
   private java.lang.String experiment;
 
   /**
+   * Output only. The Cloud Storage metrics URI associated with this TuningJob.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String gcsMetricsUri;
+
+  /**
    * Optional. The labels with user-defined metadata to organize TuningJob and generated resources
    * such as Model and Endpoint. Label keys and values can be no longer than 64 characters (Unicode
    * codepoints), can only contain lowercase letters, numeric characters, underscores and dashes.
@@ -329,6 +336,23 @@ public final class GoogleCloudAiplatformV1TuningJob extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1TuningJob setExperiment(java.lang.String experiment) {
     this.experiment = experiment;
+    return this;
+  }
+
+  /**
+   * Output only. The Cloud Storage metrics URI associated with this TuningJob.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGcsMetricsUri() {
+    return gcsMetricsUri;
+  }
+
+  /**
+   * Output only. The Cloud Storage metrics URI associated with this TuningJob.
+   * @param gcsMetricsUri gcsMetricsUri or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1TuningJob setGcsMetricsUri(java.lang.String gcsMetricsUri) {
+    this.gcsMetricsUri = gcsMetricsUri;
     return this;
   }
 

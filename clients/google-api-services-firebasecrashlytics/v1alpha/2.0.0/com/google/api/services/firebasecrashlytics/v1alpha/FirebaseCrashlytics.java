@@ -2443,6 +2443,29 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
           }
 
           /**
+           * Optional. Controls whether metrics are raw observed values (mobile and web) or
+           * extrapolated values (web only). If omitted, defaults to OBSERVED.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String metricsMode;
+
+          /** Optional. Controls whether metrics are raw observed values (mobile and web) or extrapolated values
+         (web only). If omitted, defaults to OBSERVED.
+           */
+          public java.lang.String getMetricsMode() {
+            return metricsMode;
+          }
+
+          /**
+           * Optional. Controls whether metrics are raw observed values (mobile and web) or
+           * extrapolated values (web only). If omitted, defaults to OBSERVED.
+           */
+          public Get setMetricsMode(java.lang.String metricsMode) {
+            this.metricsMode = metricsMode;
+            return this;
+          }
+
+          /**
            * Optional. The maximum number of result groups to return. If omitted, defaults to 25.
            */
           @com.google.api.client.util.Key

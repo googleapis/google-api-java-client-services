@@ -47,6 +47,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   private String acknowledgementTime;
 
   /**
+   * Output only. List of compliance frameworks that are affected by this violation. This field is
+   * only populated when using `VIOLATION_VIEW_DATA_BOUNDARY`. e.g. "FedRAMP High", "NIST 800-53".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> affectedFrameworks;
+
+  /**
    * Optional. Output only. Violation Id of the org-policy violation due to which the resource
    * violation is caused. Empty for org-policy violations.
    * The value may be {@code null}.
@@ -76,6 +84,14 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   @com.google.api.client.util.Key
   private java.lang.String category;
+
+  /**
+   * Optional. Output only. The number of resource violations for particular org policy violation.
+   * This will be 0 in case of resource violation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer childResourceViolationCount;
 
   /**
    * Output only. Description for the Violation. e.g. OrgPolicy gcp.resourceLocations has non
@@ -141,6 +157,13 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1ViolationRemediation remediation;
+
+  /**
+   * Output only. Contains the remediation instructions for the violation in markdown format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String remediationMarkdown;
 
   /**
    * Output only. Time of the event which fixed the Violation. If the violation is ACTIVE this will
@@ -226,6 +249,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
   }
 
   /**
+   * Output only. List of compliance frameworks that are affected by this violation. This field is
+   * only populated when using `VIOLATION_VIEW_DATA_BOUNDARY`. e.g. "FedRAMP High", "NIST 800-53".
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAffectedFrameworks() {
+    return affectedFrameworks;
+  }
+
+  /**
+   * Output only. List of compliance frameworks that are affected by this violation. This field is
+   * only populated when using `VIOLATION_VIEW_DATA_BOUNDARY`. e.g. "FedRAMP High", "NIST 800-53".
+   * @param affectedFrameworks affectedFrameworks or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setAffectedFrameworks(java.util.List<java.lang.String> affectedFrameworks) {
+    this.affectedFrameworks = affectedFrameworks;
+    return this;
+  }
+
+  /**
    * Optional. Output only. Violation Id of the org-policy violation due to which the resource
    * violation is caused. Empty for org-policy violations.
    * @return value or {@code null} for none
@@ -296,6 +338,25 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setCategory(java.lang.String category) {
     this.category = category;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. The number of resource violations for particular org policy violation.
+   * This will be 0 in case of resource violation.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getChildResourceViolationCount() {
+    return childResourceViolationCount;
+  }
+
+  /**
+   * Optional. Output only. The number of resource violations for particular org policy violation.
+   * This will be 0 in case of resource violation.
+   * @param childResourceViolationCount childResourceViolationCount or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setChildResourceViolationCount(java.lang.Integer childResourceViolationCount) {
+    this.childResourceViolationCount = childResourceViolationCount;
     return this;
   }
 
@@ -450,6 +511,23 @@ public final class GoogleCloudAssuredworkloadsV1beta1Violation extends com.googl
    */
   public GoogleCloudAssuredworkloadsV1beta1Violation setRemediation(GoogleCloudAssuredworkloadsV1beta1ViolationRemediation remediation) {
     this.remediation = remediation;
+    return this;
+  }
+
+  /**
+   * Output only. Contains the remediation instructions for the violation in markdown format.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRemediationMarkdown() {
+    return remediationMarkdown;
+  }
+
+  /**
+   * Output only. Contains the remediation instructions for the violation in markdown format.
+   * @param remediationMarkdown remediationMarkdown or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1beta1Violation setRemediationMarkdown(java.lang.String remediationMarkdown) {
+    this.remediationMarkdown = remediationMarkdown;
     return this;
   }
 

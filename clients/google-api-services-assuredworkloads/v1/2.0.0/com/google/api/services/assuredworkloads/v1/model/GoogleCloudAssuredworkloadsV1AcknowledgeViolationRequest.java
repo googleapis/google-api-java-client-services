@@ -56,6 +56,14 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   private java.lang.String nonCompliantOrgPolicy;
 
   /**
+   * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for acknowledging
+   * violations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String view;
+
+  /**
    * Optional. Acknowledge type of specified violation.
    * @return value or {@code null} for none
    */
@@ -111,6 +119,25 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
    */
   public GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest setNonCompliantOrgPolicy(java.lang.String nonCompliantOrgPolicy) {
     this.nonCompliantOrgPolicy = nonCompliantOrgPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for acknowledging
+   * violations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getView() {
+    return view;
+  }
+
+  /**
+   * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for acknowledging
+   * violations.
+   * @param view view or {@code null} for none
+   */
+  public GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest setView(java.lang.String view) {
+    this.view = view;
     return this;
   }
 

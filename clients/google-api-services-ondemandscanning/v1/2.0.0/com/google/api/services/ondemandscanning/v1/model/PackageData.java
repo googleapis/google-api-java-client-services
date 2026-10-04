@@ -124,10 +124,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   private LayerDetails layerDetails;
 
   /**
-   * The list of licenses found that are related to a given package. Note that licenses may also be
-   * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
-   * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
-   * be stored there, as one source can have multiple binaries with different licenses.
+   * Deprecated: Top-level licenses is not persisted in the legacy Packages table. Licenses are
+   * captured in BinarySourceInfo or PackagesV2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -361,10 +359,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of licenses found that are related to a given package. Note that licenses may also be
-   * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
-   * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
-   * be stored there, as one source can have multiple binaries with different licenses.
+   * Deprecated: Top-level licenses is not persisted in the legacy Packages table. Licenses are
+   * captured in BinarySourceInfo or PackagesV2.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLicenses() {
@@ -372,10 +368,8 @@ public final class PackageData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The list of licenses found that are related to a given package. Note that licenses may also be
-   * stored on the BinarySourceInfo. If there is no BinarySourceInfo (because there's no concept of
-   * source vs binary), then it will be stored here, while if there are BinarySourceInfos, it will
-   * be stored there, as one source can have multiple binaries with different licenses.
+   * Deprecated: Top-level licenses is not persisted in the legacy Packages table. Licenses are
+   * captured in BinarySourceInfo or PackagesV2.
    * @param licenses licenses or {@code null} for none
    */
   public PackageData setLicenses(java.util.List<java.lang.String> licenses) {

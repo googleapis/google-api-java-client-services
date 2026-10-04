@@ -2859,6 +2859,149 @@ public class AgentIdentity extends com.google.api.client.googleapis.services.jso
           }
         }
         /**
+         * Resolves an authorization for a user on an auth provider, creating one if it does not exist or
+         * returning an existing one.
+         *
+         * Create a request for the method "authProviders.resolveAuthorization".
+         *
+         * This request holds the parameters needed by the agentidentity server.  After setting any optional
+         * parameters, call the {@link ResolveAuthorization#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The name of the auth provider to resolve authorization for. Format:
+         *        projects/{project}/locations/{location}/authProviders/{auth_provider}
+         * @param content the {@link com.google.api.services.agentidentity.v1beta.model.ResolveAuthorizationRequest}
+         * @return the request
+         */
+        public ResolveAuthorization resolveAuthorization(java.lang.String name, com.google.api.services.agentidentity.v1beta.model.ResolveAuthorizationRequest content) throws java.io.IOException {
+          ResolveAuthorization result = new ResolveAuthorization(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ResolveAuthorization extends AgentIdentityRequest<com.google.api.services.agentidentity.v1beta.model.ResolveAuthorizationResponse> {
+
+          private static final String REST_PATH = "v1beta/{+name}:resolveAuthorization";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
+
+          /**
+           * Resolves an authorization for a user on an auth provider, creating one if it does not exist or
+           * returning an existing one.
+           *
+           * Create a request for the method "authProviders.resolveAuthorization".
+           *
+           * This request holds the parameters needed by the the agentidentity server.  After setting any
+           * optional parameters, call the {@link ResolveAuthorization#execute()} method to invoke the
+           * remote operation. <p> {@link ResolveAuthorization#initialize(com.google.api.client.googleapis.s
+           * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the auth provider to resolve authorization for. Format:
+         *        projects/{project}/locations/{location}/authProviders/{auth_provider}
+           * @param content the {@link com.google.api.services.agentidentity.v1beta.model.ResolveAuthorizationRequest}
+           * @since 1.13
+           */
+          protected ResolveAuthorization(java.lang.String name, com.google.api.services.agentidentity.v1beta.model.ResolveAuthorizationRequest content) {
+            super(AgentIdentity.this, "POST", REST_PATH, content, com.google.api.services.agentidentity.v1beta.model.ResolveAuthorizationResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
+            }
+          }
+
+          @Override
+          public ResolveAuthorization set$Xgafv(java.lang.String $Xgafv) {
+            return (ResolveAuthorization) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ResolveAuthorization setAccessToken(java.lang.String accessToken) {
+            return (ResolveAuthorization) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ResolveAuthorization setAlt(java.lang.String alt) {
+            return (ResolveAuthorization) super.setAlt(alt);
+          }
+
+          @Override
+          public ResolveAuthorization setCallback(java.lang.String callback) {
+            return (ResolveAuthorization) super.setCallback(callback);
+          }
+
+          @Override
+          public ResolveAuthorization setFields(java.lang.String fields) {
+            return (ResolveAuthorization) super.setFields(fields);
+          }
+
+          @Override
+          public ResolveAuthorization setKey(java.lang.String key) {
+            return (ResolveAuthorization) super.setKey(key);
+          }
+
+          @Override
+          public ResolveAuthorization setOauthToken(java.lang.String oauthToken) {
+            return (ResolveAuthorization) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ResolveAuthorization setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ResolveAuthorization) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ResolveAuthorization setQuotaUser(java.lang.String quotaUser) {
+            return (ResolveAuthorization) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ResolveAuthorization setUploadType(java.lang.String uploadType) {
+            return (ResolveAuthorization) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ResolveAuthorization setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ResolveAuthorization) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the auth provider to resolve authorization for. Format:
+           * projects/{project}/locations/{location}/authProviders/{auth_provider}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the auth provider to resolve authorization for. Format:
+         projects/{project}/locations/{location}/authProviders/{auth_provider}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the auth provider to resolve authorization for. Format:
+           * projects/{project}/locations/{location}/authProviders/{auth_provider}
+           */
+          public ResolveAuthorization setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/authProviders/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ResolveAuthorization set(String parameterName, Object value) {
+            return (ResolveAuthorization) super.set(parameterName, value);
+          }
+        }
+        /**
          * Revokes all authorizations for a specific user on an auth provider. This deletes all
          * authorization records associated with the user and auth provider, effectively revoking access
          * across all agents.

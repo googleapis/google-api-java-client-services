@@ -91,6 +91,22 @@ public final class SolarPotential extends com.google.api.client.json.GenericJson
   private java.lang.Float maxSunshineHoursPerYear;
 
   /**
+   * Details for each obstacle detected on the rooftop. An obstacle is defined as any non-buildable
+   * area where solar panels cannot be placed due to physical barriers (vents, chimneys, etc.). This
+   * field is only populated if ROOF_GEOMETRY is included in the request's
+   * FindClosestBuildingInsightsRequest.additional_insights.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Obstacle> obstacles;
+
+  static {
+    // hack to force ProGuard to consider Obstacle used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Obstacle.class);
+  }
+
+  /**
    * Capacity, in watts, of the panel used in the calculations.
    * The value may be {@code null}.
    */
@@ -292,6 +308,29 @@ public final class SolarPotential extends com.google.api.client.json.GenericJson
    */
   public SolarPotential setMaxSunshineHoursPerYear(java.lang.Float maxSunshineHoursPerYear) {
     this.maxSunshineHoursPerYear = maxSunshineHoursPerYear;
+    return this;
+  }
+
+  /**
+   * Details for each obstacle detected on the rooftop. An obstacle is defined as any non-buildable
+   * area where solar panels cannot be placed due to physical barriers (vents, chimneys, etc.). This
+   * field is only populated if ROOF_GEOMETRY is included in the request's
+   * FindClosestBuildingInsightsRequest.additional_insights.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Obstacle> getObstacles() {
+    return obstacles;
+  }
+
+  /**
+   * Details for each obstacle detected on the rooftop. An obstacle is defined as any non-buildable
+   * area where solar panels cannot be placed due to physical barriers (vents, chimneys, etc.). This
+   * field is only populated if ROOF_GEOMETRY is included in the request's
+   * FindClosestBuildingInsightsRequest.additional_insights.
+   * @param obstacles obstacles or {@code null} for none
+   */
+  public SolarPotential setObstacles(java.util.List<Obstacle> obstacles) {
+    this.obstacles = obstacles;
     return this;
   }
 

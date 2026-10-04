@@ -70,6 +70,19 @@ public final class RoofSegmentSizeAndSunshineStats extends com.google.api.client
   private java.lang.Float planeHeightAtCenterMeters;
 
   /**
+   * Output only. A GeoJSON representation of the detailed geometry for the roof segment plane. The
+   * polygon represents the physical roof facet, excluding overlapping vegetation and internal
+   * cutouts (e.g., courtyards). This field is only populated if ROOF_GEOMETRY is included in the
+   * request's FindClosestBuildingInsightsRequest.additional_insights parameter. The GeoJSON data
+   * must be in RFC 7946 format and represent a Polygon for a single contiguous area. The Polygon
+   * will be represented by several loops when it contains holes. Example: { "type": "Polygon",
+   * "coordinates": [ [ [-1, -1, 0], [-1, 0, 0], [0, 0, 0], [-1, -1, 0] ] ] }
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> polygonGeojson;
+
+  /**
    * Total size and sunlight quantiles for the roof segment.
    * The value may be {@code null}.
    */
@@ -168,6 +181,35 @@ public final class RoofSegmentSizeAndSunshineStats extends com.google.api.client
    */
   public RoofSegmentSizeAndSunshineStats setPlaneHeightAtCenterMeters(java.lang.Float planeHeightAtCenterMeters) {
     this.planeHeightAtCenterMeters = planeHeightAtCenterMeters;
+    return this;
+  }
+
+  /**
+   * Output only. A GeoJSON representation of the detailed geometry for the roof segment plane. The
+   * polygon represents the physical roof facet, excluding overlapping vegetation and internal
+   * cutouts (e.g., courtyards). This field is only populated if ROOF_GEOMETRY is included in the
+   * request's FindClosestBuildingInsightsRequest.additional_insights parameter. The GeoJSON data
+   * must be in RFC 7946 format and represent a Polygon for a single contiguous area. The Polygon
+   * will be represented by several loops when it contains holes. Example: { "type": "Polygon",
+   * "coordinates": [ [ [-1, -1, 0], [-1, 0, 0], [0, 0, 0], [-1, -1, 0] ] ] }
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getPolygonGeojson() {
+    return polygonGeojson;
+  }
+
+  /**
+   * Output only. A GeoJSON representation of the detailed geometry for the roof segment plane. The
+   * polygon represents the physical roof facet, excluding overlapping vegetation and internal
+   * cutouts (e.g., courtyards). This field is only populated if ROOF_GEOMETRY is included in the
+   * request's FindClosestBuildingInsightsRequest.additional_insights parameter. The GeoJSON data
+   * must be in RFC 7946 format and represent a Polygon for a single contiguous area. The Polygon
+   * will be represented by several loops when it contains holes. Example: { "type": "Polygon",
+   * "coordinates": [ [ [-1, -1, 0], [-1, 0, 0], [0, 0, 0], [-1, -1, 0] ] ] }
+   * @param polygonGeojson polygonGeojson or {@code null} for none
+   */
+  public RoofSegmentSizeAndSunshineStats setPolygonGeojson(java.util.Map<String, java.lang.Object> polygonGeojson) {
+    this.polygonGeojson = polygonGeojson;
     return this;
   }
 

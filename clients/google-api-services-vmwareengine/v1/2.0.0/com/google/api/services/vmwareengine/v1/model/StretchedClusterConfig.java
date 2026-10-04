@@ -31,9 +31,9 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Zone that will remain operational when connection between the two zones is lost.
-   * Specify the resource name of a zone that belongs to the region of the private cloud. For
-   * example: `projects/{project}/locations/europe-west3-a` where `{project}` can either be a
-   * project number or a project ID.
+   * Specify the resource name or ID of a zone that belongs to the region of the private cloud. For
+   * example: `projects/{project}/locations/europe-west3-a` or `europe-west3-a`, where `{project}`
+   * can either be a project number or a project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -41,9 +41,9 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Additional zone for a higher level of availability and load balancing. Specify the
-   * resource name of a zone that belongs to the region of the private cloud. For example:
-   * `projects/{project}/locations/europe-west3-b` where `{project}` can either be a project number
-   * or a project ID.
+   * resource name or ID of a zone that belongs to the region of the private cloud. For example:
+   * `projects/{project}/locations/europe-west3-b` or `europe-west3-b`, where `{project}` can either
+   * be a project number or a project ID.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,9 +51,9 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Zone that will remain operational when connection between the two zones is lost.
-   * Specify the resource name of a zone that belongs to the region of the private cloud. For
-   * example: `projects/{project}/locations/europe-west3-a` where `{project}` can either be a
-   * project number or a project ID.
+   * Specify the resource name or ID of a zone that belongs to the region of the private cloud. For
+   * example: `projects/{project}/locations/europe-west3-a` or `europe-west3-a`, where `{project}`
+   * can either be a project number or a project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getPreferredLocation() {
@@ -62,9 +62,9 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Zone that will remain operational when connection between the two zones is lost.
-   * Specify the resource name of a zone that belongs to the region of the private cloud. For
-   * example: `projects/{project}/locations/europe-west3-a` where `{project}` can either be a
-   * project number or a project ID.
+   * Specify the resource name or ID of a zone that belongs to the region of the private cloud. For
+   * example: `projects/{project}/locations/europe-west3-a` or `europe-west3-a`, where `{project}`
+   * can either be a project number or a project ID.
    * @param preferredLocation preferredLocation or {@code null} for none
    */
   public StretchedClusterConfig setPreferredLocation(java.lang.String preferredLocation) {
@@ -74,9 +74,9 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Additional zone for a higher level of availability and load balancing. Specify the
-   * resource name of a zone that belongs to the region of the private cloud. For example:
-   * `projects/{project}/locations/europe-west3-b` where `{project}` can either be a project number
-   * or a project ID.
+   * resource name or ID of a zone that belongs to the region of the private cloud. For example:
+   * `projects/{project}/locations/europe-west3-b` or `europe-west3-b`, where `{project}` can either
+   * be a project number or a project ID.
    * @return value or {@code null} for none
    */
   public java.lang.String getSecondaryLocation() {
@@ -85,9 +85,9 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
 
   /**
    * Required. Additional zone for a higher level of availability and load balancing. Specify the
-   * resource name of a zone that belongs to the region of the private cloud. For example:
-   * `projects/{project}/locations/europe-west3-b` where `{project}` can either be a project number
-   * or a project ID.
+   * resource name or ID of a zone that belongs to the region of the private cloud. For example:
+   * `projects/{project}/locations/europe-west3-b` or `europe-west3-b`, where `{project}` can either
+   * be a project number or a project ID.
    * @param secondaryLocation secondaryLocation or {@code null} for none
    */
   public StretchedClusterConfig setSecondaryLocation(java.lang.String secondaryLocation) {

@@ -8990,8 +8990,10 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           }
         }
         /**
-         * Modifies a `PrivateCloud` resource. Only the following fields can be updated: `description`. Only
-         * fields specified in `updateMask` are applied. During operation processing, the resource is
+         * Modifies a `PrivateCloud` resource. Only the following fields can be updated: `description`,
+         * `encryption_config`. If `updateMask` is provided, only fields specified in it are applied. If
+         * `updateMask` is not provided, the default behavior is to update the `description`. It is advised
+         * to provide an `updateMask` to avoid confusion. During operation processing, the resource is
          * temporarily in the `ACTIVE` state before the operation fully completes. For that period of time,
          * you can't update the resource. Use the operation status to determine when the processing fully
          * completes.
@@ -9021,11 +9023,13 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/privateClouds/[^/]+$");
 
           /**
-           * Modifies a `PrivateCloud` resource. Only the following fields can be updated: `description`.
-           * Only fields specified in `updateMask` are applied. During operation processing, the resource is
-           * temporarily in the `ACTIVE` state before the operation fully completes. For that period of
-           * time, you can't update the resource. Use the operation status to determine when the processing
-           * fully completes.
+           * Modifies a `PrivateCloud` resource. Only the following fields can be updated: `description`,
+           * `encryption_config`. If `updateMask` is provided, only fields specified in it are applied. If
+           * `updateMask` is not provided, the default behavior is to update the `description`. It is
+           * advised to provide an `updateMask` to avoid confusion. During operation processing, the
+           * resource is temporarily in the `ACTIVE` state before the operation fully completes. For that
+           * period of time, you can't update the resource. Use the operation status to determine when the
+           * processing fully completes.
            *
            * Create a request for the method "privateClouds.patch".
            *
@@ -9166,7 +9170,8 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Required. Field mask is used to specify the fields to be overwritten in the
            * `PrivateCloud` resource by the update. The fields specified in `updateMask` are
            * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           * the mask. If the user does not provide a mask then only the description field will be
+           * overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
@@ -9174,7 +9179,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
           /** Required. Field mask is used to specify the fields to be overwritten in the `PrivateCloud` resource
          by the update. The fields specified in `updateMask` are relative to the resource, not the full
          request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
-         all fields will be overwritten.
+         only the description field will be overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -9184,7 +9189,8 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * Required. Field mask is used to specify the fields to be overwritten in the
            * `PrivateCloud` resource by the update. The fields specified in `updateMask` are
            * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           * the mask. If the user does not provide a mask then only the description field will be
+           * overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

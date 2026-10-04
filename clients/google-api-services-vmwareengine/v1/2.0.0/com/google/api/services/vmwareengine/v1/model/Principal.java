@@ -18,7 +18,10 @@ package com.google.api.services.vmwareengine.v1.model;
 
 /**
  * Users/Service accounts which have access for DNS binding on the intranet VPC corresponding to the
- * consumer project.
+ * consumer project. Principal can be a user or a service account. For example: For specifying user
+ * `user@example.com` use `{"user": "user@example.com"}` and for specifying service account
+ * `service-account@gserviceaccount.com` use `{"serviceAccount": "service-
+ * account@gserviceaccount.com"}`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the VMware Engine API. For a detailed explanation see:

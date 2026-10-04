@@ -117,7 +117,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecord extends com.google.
   private java.util.Map<String, java.lang.Object> serviceMetadata;
 
   /**
-   * Output only. The status of the task, including the state, status message, and timestamp.
+   * Optional. The status of the task, including the state, status message, and timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +125,9 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecord extends com.google.
 
   /**
    * Optional. Input only. The TTL (Time To Live) for the task. If not set, the task will expire in
-   * 24 hours by default. Valid range: (0 seconds, 1000 days]
+   * 24 hours by default. Valid range: [1 second, 1000 days], at second precision. The `nanos`
+   * component MUST be zero; sub-second TTLs are not supported because the task's expiration is
+   * persisted at second granularity.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -356,7 +358,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecord extends com.google.
   }
 
   /**
-   * Output only. The status of the task, including the state, status message, and timestamp.
+   * Optional. The status of the task, including the state, status message, and timestamp.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2ATaskRecordStatus getStatus() {
@@ -364,7 +366,7 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecord extends com.google.
   }
 
   /**
-   * Output only. The status of the task, including the state, status message, and timestamp.
+   * Optional. The status of the task, including the state, status message, and timestamp.
    * @param status status or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2ATaskRecord setStatus(GoogleCloudAiplatformV1beta1A2ATaskRecordStatus status) {
@@ -374,7 +376,9 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecord extends com.google.
 
   /**
    * Optional. Input only. The TTL (Time To Live) for the task. If not set, the task will expire in
-   * 24 hours by default. Valid range: (0 seconds, 1000 days]
+   * 24 hours by default. Valid range: [1 second, 1000 days], at second precision. The `nanos`
+   * component MUST be zero; sub-second TTLs are not supported because the task's expiration is
+   * persisted at second granularity.
    * @return value or {@code null} for none
    */
   public String getTtl() {
@@ -383,7 +387,9 @@ public final class GoogleCloudAiplatformV1beta1A2ATaskRecord extends com.google.
 
   /**
    * Optional. Input only. The TTL (Time To Live) for the task. If not set, the task will expire in
-   * 24 hours by default. Valid range: (0 seconds, 1000 days]
+   * 24 hours by default. Valid range: [1 second, 1000 days], at second precision. The `nanos`
+   * component MUST be zero; sub-second TTLs are not supported because the task's expiration is
+   * persisted at second granularity.
    * @param ttl ttl or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1A2ATaskRecord setTtl(String ttl) {

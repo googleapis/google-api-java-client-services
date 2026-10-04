@@ -46924,6 +46924,58 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
+      /**
+       * Optional. The list of fields of `cache_config` to update. Supported paths are
+       * `disable_cache`, `retention_config` (and its subfields such as
+       * `retention_config.retention_type`), and the special value `*`; any other path returns
+       * `INVALID_ARGUMENT`. Fields not covered by the mask keep their stored value. If the mask is
+       * omitted, it is treated as an implied mask covering the fields populated in `cache_config`,
+       * so updating one field never clears another. `retention_config` is covered only when the
+       * request carries it. `disable_cache` is always covered: it is a bare `bool`, so the server
+       * cannot tell a request that omits it from one that sets it to `false`. `*` requests full
+       * replacement of the resource: every settable field is written from the request, clearing
+       * `retention_config` when the request omits it. It cannot be combined with other paths.
+       * Prefer naming fields explicitly -- a caller that sends `*` without knowing about a field
+       * added to `CacheConfig` later would silently reset that field.
+       */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields of `cache_config` to update. Supported paths are `disable_cache`,
+     `retention_config` (and its subfields such as `retention_config.retention_type`), and the special
+     value `*`; any other path returns `INVALID_ARGUMENT`. Fields not covered by the mask keep their
+     stored value. If the mask is omitted, it is treated as an implied mask covering the fields
+     populated in `cache_config`, so updating one field never clears another. `retention_config` is
+     covered only when the request carries it. `disable_cache` is always covered: it is a bare `bool`,
+     so the server cannot tell a request that omits it from one that sets it to `false`. `*` requests
+     full replacement of the resource: every settable field is written from the request, clearing
+     `retention_config` when the request omits it. It cannot be combined with other paths. Prefer naming
+     fields explicitly -- a caller that sends `*` without knowing about a field added to `CacheConfig`
+     later would silently reset that field.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /**
+       * Optional. The list of fields of `cache_config` to update. Supported paths are
+       * `disable_cache`, `retention_config` (and its subfields such as
+       * `retention_config.retention_type`), and the special value `*`; any other path returns
+       * `INVALID_ARGUMENT`. Fields not covered by the mask keep their stored value. If the mask is
+       * omitted, it is treated as an implied mask covering the fields populated in `cache_config`,
+       * so updating one field never clears another. `retention_config` is covered only when the
+       * request carries it. `disable_cache` is always covered: it is a bare `bool`, so the server
+       * cannot tell a request that omits it from one that sets it to `false`. `*` requests full
+       * replacement of the resource: every settable field is written from the request, clearing
+       * `retention_config` when the request omits it. It cannot be combined with other paths.
+       * Prefer naming fields explicitly -- a caller that sends `*` without knowing about a field
+       * added to `CacheConfig` later would silently reset that field.
+       */
+      public UpdateCacheConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
       @Override
       public UpdateCacheConfig set(String parameterName, Object value) {
         return (UpdateCacheConfig) super.set(parameterName, value);
@@ -205913,16 +205965,17 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Optional. The user defined ID to use for the A2ATaskRecord, which will become the
              * final component of the A2ATaskRecord resource name. If not provided, Vertex AI will
              * generate a value for this ID. This value may be up to 63 characters, and valid
-             * characters are `[a-z0-9-]`. The first character must be a letter, and the last
-             * character must be a letter or number.
+             * characters are `[a-z0-9-]`. The first and last characters must be a letter or number.
+             * This accepts A2A task IDs such as UUIDs, which may start with a digit.
              */
             @com.google.api.client.util.Key
             private java.lang.String a2aTaskRecordId;
 
             /** Optional. The user defined ID to use for the A2ATaskRecord, which will become the final component
            of the A2ATaskRecord resource name. If not provided, Vertex AI will generate a value for this ID.
-           This value may be up to 63 characters, and valid characters are `[a-z0-9-]`. The first character
-           must be a letter, and the last character must be a letter or number.
+           This value may be up to 63 characters, and valid characters are `[a-z0-9-]`. The first and last
+           characters must be a letter or number. This accepts A2A task IDs such as UUIDs, which may start
+           with a digit.
              */
             public java.lang.String getA2aTaskRecordId() {
               return a2aTaskRecordId;
@@ -205932,8 +205985,8 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * Optional. The user defined ID to use for the A2ATaskRecord, which will become the
              * final component of the A2ATaskRecord resource name. If not provided, Vertex AI will
              * generate a value for this ID. This value may be up to 63 characters, and valid
-             * characters are `[a-z0-9-]`. The first character must be a letter, and the last
-             * character must be a letter or number.
+             * characters are `[a-z0-9-]`. The first and last characters must be a letter or number.
+             * This accepts A2A task IDs such as UUIDs, which may start with a digit.
              */
             public Create setA2aTaskRecordId(java.lang.String a2aTaskRecordId) {
               this.a2aTaskRecordId = a2aTaskRecordId;
@@ -219597,6 +219650,891 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Voices collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+       *   {@code Aiplatform.Voices.List request = aiplatform.voices().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Voices voices() {
+        return new Voices();
+      }
+
+      /**
+       * The "voices" collection of methods.
+       */
+      public class Voices {
+
+        /**
+         * Creates a custom voice from a natural-language prompt (`VOICE_TYPE_PROMPTED`) or from reference
+         * and consent audio recordings (`VOICE_TYPE_REPLICATED`).
+         *
+         * Create a request for the method "voices.create".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this voice will be created. Format:
+         *        `projects/{project}/locations/{location}` Supported only by the Vertex API.
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GenaiVertexV1beta1Voice> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/voices:create";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a custom voice from a natural-language prompt (`VOICE_TYPE_PROMPTED`) or from reference
+           * and consent audio recordings (`VOICE_TYPE_REPLICATED`).
+           *
+           * Create a request for the method "voices.create".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this voice will be created. Format:
+         *        `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1CreateVoiceRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GenaiVertexV1beta1Voice.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this voice will be created. Format:
+           * `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this voice will be created. Format:
+         `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this voice will be created. Format:
+           * `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a custom stored voice (`store = true`) by resource name. Prebuilt catalog voices
+         * (`"prebuilt"`) cannot be deleted.
+         *
+         * Create a request for the method "voices.delete".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the custom stored voice to delete (for example,
+         *        `voices/voice_abc123def456`).
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1DeleteVoiceResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:delete";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+
+          /**
+           * Deletes a custom stored voice (`store = true`) by resource name. Prebuilt catalog voices
+           * (`"prebuilt"`) cannot be deleted.
+           *
+           * Create a request for the method "voices.delete".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the custom stored voice to delete (for example,
+         *        `voices/voice_abc123def456`).
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1DeleteVoiceResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the custom stored voice to delete (for example,
+           * `voices/voice_abc123def456`).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the custom stored voice to delete (for example,
+         `voices/voice_abc123def456`).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the custom stored voice to delete (for example,
+           * `voices/voice_abc123def456`).
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a custom stored voice (`store = true`) by resource name. Prebuilt catalog voices
+         * (`VOICE_TYPE_PREBUILT`) cannot be retrieved via `GetVoice`; use `ListVoices` instead.
+         *
+         * Create a request for the method "voices.get".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the custom stored voice to retrieve (for example,
+         *        `voices/voice_abc123def456`).
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GenaiVertexV1beta1Voice> {
+
+          private static final String REST_PATH = "v1beta1/{+name}:get";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+
+          /**
+           * Gets a custom stored voice (`store = true`) by resource name. Prebuilt catalog voices
+           * (`VOICE_TYPE_PREBUILT`) cannot be retrieved via `GetVoice`; use `ListVoices` instead.
+           *
+           * Create a request for the method "voices.get".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the custom stored voice to retrieve (for example,
+         *        `voices/voice_abc123def456`).
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GenaiVertexV1beta1Voice.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the custom stored voice to retrieve (for example,
+           * `voices/voice_abc123def456`).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the custom stored voice to retrieve (for example,
+         `voices/voice_abc123def456`).
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the custom stored voice to retrieve (for example,
+           * `voices/voice_abc123def456`).
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/voices/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists custom stored voices owned by the caller as well as prebuilt system voices from Google's
+         * voice catalog.
+         *
+         * Create a request for the method "voices.list".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent that owns this collection of voices. Format:
+         *        `projects/{project}/locations/{location}` Supported only by the Vertex API.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1ListVoicesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/voices:list";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists custom stored voices owned by the caller as well as prebuilt system voices from Google's
+           * voice catalog.
+           *
+           * Create a request for the method "voices.list".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent that owns this collection of voices. Format:
+         *        `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLearningVertexApiInteractionsV1beta1ListVoicesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent that owns this collection of voices. Format:
+           * `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent that owns this collection of voices. Format:
+         `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent that owns this collection of voices. Format:
+           * `projects/{project}/locations/{location}` Supported only by the Vertex API.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by accent description (e.g. "American", "British"). Case-insensitive
+           * exact match. If multiple values are specified, matches voices with any of the specified
+           * accents (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> accent;
+
+          /** Optional. Filter by accent description (e.g. "American", "British"). Case-insensitive exact match.
+         If multiple values are specified, matches voices with any of the specified accents (OR).
+           */
+          public java.util.List<java.lang.String> getAccent() {
+            return accent;
+          }
+
+          /**
+           * Optional. Filter by accent description (e.g. "American", "British"). Case-insensitive
+           * exact match. If multiple values are specified, matches voices with any of the specified
+           * accents (OR).
+           */
+          public List setAccent(java.util.List<java.lang.String> accent) {
+            this.accent = accent;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by intended context or domain (e.g. "News, Commercial"). Case-
+           * insensitive exact match. If multiple values are specified, matches voices with any of
+           * the specified contexts (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> context;
+
+          /** Optional. Filter by intended context or domain (e.g. "News, Commercial"). Case-insensitive exact
+         match. If multiple values are specified, matches voices with any of the specified contexts (OR).
+           */
+          public java.util.List<java.lang.String> getContext() {
+            return context;
+          }
+
+          /**
+           * Optional. Filter by intended context or domain (e.g. "News, Commercial"). Case-
+           * insensitive exact match. If multiple values are specified, matches voices with any of
+           * the specified contexts (OR).
+           */
+          public List setContext(java.util.List<java.lang.String> context) {
+            this.context = context;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by gender presentation (e.g. "female", "male", "neutral"). Case-
+           * insensitive exact match. If multiple values are specified, matches voices with any of
+           * the specified genders (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> gender;
+
+          /** Optional. Filter by gender presentation (e.g. "female", "male", "neutral"). Case-insensitive exact
+         match. If multiple values are specified, matches voices with any of the specified genders (OR).
+           */
+          public java.util.List<java.lang.String> getGender() {
+            return gender;
+          }
+
+          /**
+           * Optional. Filter by gender presentation (e.g. "female", "male", "neutral"). Case-
+           * insensitive exact match. If multiple values are specified, matches voices with any of
+           * the specified genders (OR).
+           */
+          public List setGender(java.util.List<java.lang.String> gender) {
+            this.gender = gender;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by BCP-47 language code (e.g. "en-US"). Case-insensitive exact match.
+           * If multiple values are specified, matches voices with any of the specified language
+           * codes (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> languageCode;
+
+          /** Optional. Filter by BCP-47 language code (e.g. "en-US"). Case-insensitive exact match. If multiple
+         values are specified, matches voices with any of the specified language codes (OR).
+           */
+          public java.util.List<java.lang.String> getLanguageCode() {
+            return languageCode;
+          }
+
+          /**
+           * Optional. Filter by BCP-47 language code (e.g. "en-US"). Case-insensitive exact match.
+           * If multiple values are specified, matches voices with any of the specified language
+           * codes (OR).
+           */
+          public List setLanguageCode(java.util.List<java.lang.String> languageCode) {
+            this.languageCode = languageCode;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of voices to return per page. The service may return fewer
+           * than this value. If unspecified, at most 50 voices are returned. The maximum value is
+           * 1000; values above 1000 are coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of voices to return per page. The service may return fewer than this
+         value. If unspecified, at most 50 voices are returned. The maximum value is 1000; values above 1000
+         are coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of voices to return per page. The service may return fewer
+           * than this value. If unspecified, at most 50 voices are returned. The maximum value is
+           * 1000; values above 1000 are coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * A page token, received from a previous `ListVoices` call. Provide this to retrieve the
+           * subsequent page. When paginating, all filter query parameters (`language_code`,
+           * `region_code`, `accent`, `persona`, `context`, `gender`, `pitch`, `type`, and `search`)
+           * must match the call that returned this token; otherwise the request fails with
+           * `INVALID_ARGUMENT`. `page_size` may change between pages.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** A page token, received from a previous `ListVoices` call. Provide this to retrieve the subsequent
+         page. When paginating, all filter query parameters (`language_code`, `region_code`, `accent`,
+         `persona`, `context`, `gender`, `pitch`, `type`, and `search`) must match the call that returned
+         this token; otherwise the request fails with `INVALID_ARGUMENT`. `page_size` may change between
+         pages.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * A page token, received from a previous `ListVoices` call. Provide this to retrieve the
+           * subsequent page. When paginating, all filter query parameters (`language_code`,
+           * `region_code`, `accent`, `persona`, `context`, `gender`, `pitch`, `type`, and `search`)
+           * must match the call that returned this token; otherwise the request fails with
+           * `INVALID_ARGUMENT`. `page_size` may change between pages.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by vocal persona (e.g. "Warm, Friendly"). Case-insensitive exact
+           * match. If multiple values are specified, matches voices with any of the specified
+           * personas (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> persona;
+
+          /** Optional. Filter by vocal persona (e.g. "Warm, Friendly"). Case-insensitive exact match. If
+         multiple values are specified, matches voices with any of the specified personas (OR).
+           */
+          public java.util.List<java.lang.String> getPersona() {
+            return persona;
+          }
+
+          /**
+           * Optional. Filter by vocal persona (e.g. "Warm, Friendly"). Case-insensitive exact
+           * match. If multiple values are specified, matches voices with any of the specified
+           * personas (OR).
+           */
+          public List setPersona(java.util.List<java.lang.String> persona) {
+            this.persona = persona;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by vocal pitch. Accepts `"low"`, `"medium"`, `"high"` (case-
+           * insensitive). If multiple values are specified, matches voices with any of the
+           * specified pitches (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> pitch;
+
+          /** Optional. Filter by vocal pitch. Accepts `"low"`, `"medium"`, `"high"` (case-insensitive). If
+         multiple values are specified, matches voices with any of the specified pitches (OR).
+           */
+          public java.util.List<java.lang.String> getPitch() {
+            return pitch;
+          }
+
+          /**
+           * Optional. Filter by vocal pitch. Accepts `"low"`, `"medium"`, `"high"` (case-
+           * insensitive). If multiple values are specified, matches voices with any of the
+           * specified pitches (OR).
+           */
+          public List setPitch(java.util.List<java.lang.String> pitch) {
+            this.pitch = pitch;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by ISO 3166-1 alpha-2 or UN M.49 region code (e.g. "US", "001"). Case-
+           * insensitive exact match. If multiple values are specified, matches voices with any of
+           * the specified region codes (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> regionCode;
+
+          /** Optional. Filter by ISO 3166-1 alpha-2 or UN M.49 region code (e.g. "US", "001"). Case-insensitive
+         exact match. If multiple values are specified, matches voices with any of the specified region
+         codes (OR).
+           */
+          public java.util.List<java.lang.String> getRegionCode() {
+            return regionCode;
+          }
+
+          /**
+           * Optional. Filter by ISO 3166-1 alpha-2 or UN M.49 region code (e.g. "US", "001"). Case-
+           * insensitive exact match. If multiple values are specified, matches voices with any of
+           * the specified region codes (OR).
+           */
+          public List setRegionCode(java.util.List<java.lang.String> regionCode) {
+            this.regionCode = regionCode;
+            return this;
+          }
+
+          /**
+           * Optional. Free-text substring search query matched case-insensitively against both
+           * `display_name` and `description`. Maximum 2048 bytes.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String search;
+
+          /** Optional. Free-text substring search query matched case-insensitively against both `display_name`
+         and `description`. Maximum 2048 bytes.
+           */
+          public java.lang.String getSearch() {
+            return search;
+          }
+
+          /**
+           * Optional. Free-text substring search query matched case-insensitively against both
+           * `display_name` and `description`. Maximum 2048 bytes.
+           */
+          public List setSearch(java.lang.String search) {
+            this.search = search;
+            return this;
+          }
+
+          /**
+           * Optional. Filter by voice type. Accepts `"prebuilt"`, `"replicated"`, `"prompted"`
+           * (case-insensitive). If multiple values are specified, matches voices with any of the
+           * specified types (OR).
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> type;
+
+          /** Optional. Filter by voice type. Accepts `"prebuilt"`, `"replicated"`, `"prompted"` (case-
+         insensitive). If multiple values are specified, matches voices with any of the specified types
+         (OR).
+           */
+          public java.util.List<java.lang.String> getType() {
+            return type;
+          }
+
+          /**
+           * Optional. Filter by voice type. Accepts `"prebuilt"`, `"replicated"`, `"prompted"`
+           * (case-insensitive). If multiple values are specified, matches voices with any of the
+           * specified types (OR).
+           */
+          public List setType(java.util.List<java.lang.String> type) {
+            this.type = type;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
       }
     }
     /**

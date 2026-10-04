@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Result metadata from a Pro Edit operation.
+ * Speech annotation for text content.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,64 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionExperimentsResponseProEditResult extends com.google.api.client.json.GenericJson {
+public final class GenaiVertexV1beta1SpeechAnnotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
+   * The speaker to associate with this turn.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String structuredPrompt;
+  private java.lang.String speaker;
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
+   * Style instruction for the speech synthesis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String style;
+
+  /**
+   * The speaker to associate with this turn.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStructuredPrompt() {
-    return structuredPrompt;
+  public java.lang.String getSpeaker() {
+    return speaker;
   }
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
-   * @param structuredPrompt structuredPrompt or {@code null} for none
+   * The speaker to associate with this turn.
+   * @param speaker speaker or {@code null} for none
    */
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult setStructuredPrompt(java.lang.String structuredPrompt) {
-    this.structuredPrompt = structuredPrompt;
+  public GenaiVertexV1beta1SpeechAnnotation setSpeaker(java.lang.String speaker) {
+    this.speaker = speaker;
+    return this;
+  }
+
+  /**
+   * Style instruction for the speech synthesis.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStyle() {
+    return style;
+  }
+
+  /**
+   * Style instruction for the speech synthesis.
+   * @param style style or {@code null} for none
+   */
+  public GenaiVertexV1beta1SpeechAnnotation setStyle(java.lang.String style) {
+    this.style = style;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionExperimentsResponseProEditResult) super.set(fieldName, value);
+  public GenaiVertexV1beta1SpeechAnnotation set(String fieldName, Object value) {
+    return (GenaiVertexV1beta1SpeechAnnotation) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult clone() {
-    return (CloudAiLargeModelsVisionExperimentsResponseProEditResult) super.clone();
+  public GenaiVertexV1beta1SpeechAnnotation clone() {
+    return (GenaiVertexV1beta1SpeechAnnotation) super.clone();
   }
 
 }

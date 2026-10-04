@@ -103,6 +103,14 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
   private GoogleCloudAiplatformV1beta1PartMediaResolution mediaResolution;
 
   /**
+   * Optional. Turn-level metadata for speech generation (e.g. Daikon speaker/style). May be set
+   * alongside `text` to attach speaker and style information to a text part.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SpeechMetadata speechMetadata;
+
+  /**
    * Optional. The text content of the part. When sent from the VSCode Gemini Code Assist extension,
    * references to @mentioned items will be converted to markdown boldface text. For example `@my-
    * repo` will be converted to and sent as `**my-repo**` by the IDE agent.
@@ -295,6 +303,25 @@ public final class GoogleCloudAiplatformV1beta1Part extends com.google.api.clien
    */
   public GoogleCloudAiplatformV1beta1Part setMediaResolution(GoogleCloudAiplatformV1beta1PartMediaResolution mediaResolution) {
     this.mediaResolution = mediaResolution;
+    return this;
+  }
+
+  /**
+   * Optional. Turn-level metadata for speech generation (e.g. Daikon speaker/style). May be set
+   * alongside `text` to attach speaker and style information to a text part.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SpeechMetadata getSpeechMetadata() {
+    return speechMetadata;
+  }
+
+  /**
+   * Optional. Turn-level metadata for speech generation (e.g. Daikon speaker/style). May be set
+   * alongside `text` to attach speaker and style information to a text part.
+   * @param speechMetadata speechMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Part setSpeechMetadata(GoogleCloudAiplatformV1beta1SpeechMetadata speechMetadata) {
+    this.speechMetadata = speechMetadata;
     return this;
   }
 

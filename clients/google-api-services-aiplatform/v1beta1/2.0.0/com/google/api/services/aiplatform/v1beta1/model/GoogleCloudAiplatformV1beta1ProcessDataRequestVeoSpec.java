@@ -30,11 +30,44 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1ProcessDataRequestVeoSpec extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The mode of Veo Outpainting data processing to perform. Required (`DATA_PREPARATION`
+   * or `OUTPAINTING`) when `process_type` is `VEO_OUTPAINTING` (`OUTPAINTING_MODE_UNSPECIFIED` is
+   * rejected with `INVALID_ARGUMENT`). Must not be set when `process_type` is not `VEO_OUTPAINTING`
+   * (rejected with `INVALID_ARGUMENT`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String outpaintingMode;
+
+  /**
    * Optional. The type of data processing to perform.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String processType;
+
+  /**
+   * Optional. The mode of Veo Outpainting data processing to perform. Required (`DATA_PREPARATION`
+   * or `OUTPAINTING`) when `process_type` is `VEO_OUTPAINTING` (`OUTPAINTING_MODE_UNSPECIFIED` is
+   * rejected with `INVALID_ARGUMENT`). Must not be set when `process_type` is not `VEO_OUTPAINTING`
+   * (rejected with `INVALID_ARGUMENT`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOutpaintingMode() {
+    return outpaintingMode;
+  }
+
+  /**
+   * Optional. The mode of Veo Outpainting data processing to perform. Required (`DATA_PREPARATION`
+   * or `OUTPAINTING`) when `process_type` is `VEO_OUTPAINTING` (`OUTPAINTING_MODE_UNSPECIFIED` is
+   * rejected with `INVALID_ARGUMENT`). Must not be set when `process_type` is not `VEO_OUTPAINTING`
+   * (rejected with `INVALID_ARGUMENT`).
+   * @param outpaintingMode outpaintingMode or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ProcessDataRequestVeoSpec setOutpaintingMode(java.lang.String outpaintingMode) {
+    this.outpaintingMode = outpaintingMode;
+    return this;
+  }
 
   /**
    * Optional. The type of data processing to perform.

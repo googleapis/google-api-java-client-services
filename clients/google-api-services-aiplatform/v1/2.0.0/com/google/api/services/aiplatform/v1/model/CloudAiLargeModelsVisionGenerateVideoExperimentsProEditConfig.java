@@ -45,12 +45,12 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig
   private java.lang.String fromOperationId;
 
   /**
-   * A JSON object containing the user's modified URF. The URF Editing Preamble will diff this
+   * A JSON string containing the user's modified URF. The URF Editing Preamble will diff this
    * against the original URF to determine what changed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> structuredPrompt;
+  private java.lang.String structuredPrompt;
 
   /**
    * A text string containing the user's edit instruction. Will be applied to the original URF.
@@ -89,20 +89,20 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig
   }
 
   /**
-   * A JSON object containing the user's modified URF. The URF Editing Preamble will diff this
+   * A JSON string containing the user's modified URF. The URF Editing Preamble will diff this
    * against the original URF to determine what changed.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getStructuredPrompt() {
+  public java.lang.String getStructuredPrompt() {
     return structuredPrompt;
   }
 
   /**
-   * A JSON object containing the user's modified URF. The URF Editing Preamble will diff this
+   * A JSON string containing the user's modified URF. The URF Editing Preamble will diff this
    * against the original URF to determine what changed.
    * @param structuredPrompt structuredPrompt or {@code null} for none
    */
-  public CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig setStructuredPrompt(java.util.Map<String, java.lang.Object> structuredPrompt) {
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsProEditConfig setStructuredPrompt(java.lang.String structuredPrompt) {
     this.structuredPrompt = structuredPrompt;
     return this;
   }

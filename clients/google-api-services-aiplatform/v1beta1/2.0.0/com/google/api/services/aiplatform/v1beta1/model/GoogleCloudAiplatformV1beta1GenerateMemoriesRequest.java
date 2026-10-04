@@ -117,6 +117,15 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
   private java.util.Map<String, java.lang.String> scope;
 
   /**
+   * Optional. The time zone of the conversation or caller, used as the baseline for resolving
+   * relative time expressions (e.g., "yesterday") and formatting timestamps. If not set, "UTC" is
+   * used. Must be a valid IANA Time Zone Database name, e.g. "America/New_York".
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * Defines a Vertex Session as the source content from which to generate memories.
    * The value may be {@code null}.
    */
@@ -327,6 +336,27 @@ public final class GoogleCloudAiplatformV1beta1GenerateMemoriesRequest extends c
    */
   public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setScope(java.util.Map<String, java.lang.String> scope) {
     this.scope = scope;
+    return this;
+  }
+
+  /**
+   * Optional. The time zone of the conversation or caller, used as the baseline for resolving
+   * relative time expressions (e.g., "yesterday") and formatting timestamps. If not set, "UTC" is
+   * used. Must be a valid IANA Time Zone Database name, e.g. "America/New_York".
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. The time zone of the conversation or caller, used as the baseline for resolving
+   * relative time expressions (e.g., "yesterday") and formatting timestamps. If not set, "UTC" is
+   * used. Must be a valid IANA Time Zone Database name, e.g. "America/New_York".
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateMemoriesRequest setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

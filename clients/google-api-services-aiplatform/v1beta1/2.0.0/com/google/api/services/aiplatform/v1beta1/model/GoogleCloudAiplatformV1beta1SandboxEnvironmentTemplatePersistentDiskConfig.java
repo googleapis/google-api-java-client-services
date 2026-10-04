@@ -43,6 +43,19 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersist
   private java.lang.Boolean enabled;
 
   /**
+   * Optional. The absolute path inside the sandbox container at which the persistent disk is
+   * mounted. Defaults to `/workspace` when unset. Ignored when `enabled` is `false`. Only writes
+   * beneath this path land on the disk. Writes elsewhere go to the container's writable layer,
+   * which counts against the container's ephemeral storage and is lost when the sandbox's runtime
+   * is torn down, so this should be the directory the workload actually writes to. Paths that would
+   * shadow the container's system directories (for example `/etc`, `/proc`, or `/usr` itself) are
+   * rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mountPath;
+
+  /**
    * Optional. The size of the persistent disk in GB. Must be non-negative. When `enabled` is
    * `true`, a positive value is required; when unset or zero while enabled, the service applies a
    * default size. Ignored when `enabled` is `false`.
@@ -71,6 +84,35 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersist
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersistentDiskConfig setEnabled(java.lang.Boolean enabled) {
     this.enabled = enabled;
+    return this;
+  }
+
+  /**
+   * Optional. The absolute path inside the sandbox container at which the persistent disk is
+   * mounted. Defaults to `/workspace` when unset. Ignored when `enabled` is `false`. Only writes
+   * beneath this path land on the disk. Writes elsewhere go to the container's writable layer,
+   * which counts against the container's ephemeral storage and is lost when the sandbox's runtime
+   * is torn down, so this should be the directory the workload actually writes to. Paths that would
+   * shadow the container's system directories (for example `/etc`, `/proc`, or `/usr` itself) are
+   * rejected.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMountPath() {
+    return mountPath;
+  }
+
+  /**
+   * Optional. The absolute path inside the sandbox container at which the persistent disk is
+   * mounted. Defaults to `/workspace` when unset. Ignored when `enabled` is `false`. Only writes
+   * beneath this path land on the disk. Writes elsewhere go to the container's writable layer,
+   * which counts against the container's ephemeral storage and is lost when the sandbox's runtime
+   * is torn down, so this should be the directory the workload actually writes to. Paths that would
+   * shadow the container's system directories (for example `/etc`, `/proc`, or `/usr` itself) are
+   * rejected.
+   * @param mountPath mountPath or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplatePersistentDiskConfig setMountPath(java.lang.String mountPath) {
+    this.mountPath = mountPath;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
- * Result metadata from a Pro Edit operation.
+ * Request message for `VoicesHttpService.CreateVoiceHttp`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Platform API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.aiplatform.v1beta1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudAiLargeModelsVisionExperimentsResponseProEditResult extends com.google.api.client.json.GenericJson {
+public final class GoogleLearningVertexApiInteractionsV1beta1CreateVoiceHttpTranscoderRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
+   * Required. The request body containing the `CreateVoiceRequest` payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String structuredPrompt;
+  private GoogleApiHttpBody httpBody;
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
+   * Required. The request body containing the `CreateVoiceRequest` payload.
    * @return value or {@code null} for none
    */
-  public java.lang.String getStructuredPrompt() {
-    return structuredPrompt;
+  public GoogleApiHttpBody getHttpBody() {
+    return httpBody;
   }
 
   /**
-   * The output structured prompt (JSON string) produced by this edit.
-   * @param structuredPrompt structuredPrompt or {@code null} for none
+   * Required. The request body containing the `CreateVoiceRequest` payload.
+   * @param httpBody httpBody or {@code null} for none
    */
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult setStructuredPrompt(java.lang.String structuredPrompt) {
-    this.structuredPrompt = structuredPrompt;
+  public GoogleLearningVertexApiInteractionsV1beta1CreateVoiceHttpTranscoderRequest setHttpBody(GoogleApiHttpBody httpBody) {
+    this.httpBody = httpBody;
     return this;
   }
 
   @Override
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult set(String fieldName, Object value) {
-    return (CloudAiLargeModelsVisionExperimentsResponseProEditResult) super.set(fieldName, value);
+  public GoogleLearningVertexApiInteractionsV1beta1CreateVoiceHttpTranscoderRequest set(String fieldName, Object value) {
+    return (GoogleLearningVertexApiInteractionsV1beta1CreateVoiceHttpTranscoderRequest) super.set(fieldName, value);
   }
 
   @Override
-  public CloudAiLargeModelsVisionExperimentsResponseProEditResult clone() {
-    return (CloudAiLargeModelsVisionExperimentsResponseProEditResult) super.clone();
+  public GoogleLearningVertexApiInteractionsV1beta1CreateVoiceHttpTranscoderRequest clone() {
+    return (GoogleLearningVertexApiInteractionsV1beta1CreateVoiceHttpTranscoderRequest) super.clone();
   }
 
 }

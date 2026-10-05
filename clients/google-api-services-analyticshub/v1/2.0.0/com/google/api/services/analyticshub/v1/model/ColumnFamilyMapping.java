@@ -49,10 +49,10 @@ public final class ColumnFamilyMapping extends com.google.api.client.json.Generi
   private DelimitedKey delimitedKey;
 
   /**
-   * Optional. If set, the row key is constructed from the field names of the table's structured row
-   * key (https://docs.cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if the
-   * field is nullable in the structured row key, then it need not be present in the message; null
-   * will be used instead.
+   * Optional. If set, the row key is constructed from the field names of the table's [structured
+   * row key](https://cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if the field
+   * is nullable in the structured row key, then it need not be present in the message; `null` will
+   * be used instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,10 +80,10 @@ public final class ColumnFamilyMapping extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. If set, the row key is constructed from the field names of the table's structured row
-   * key (https://docs.cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if the
-   * field is nullable in the structured row key, then it need not be present in the message; null
-   * will be used instead.
+   * Optional. If set, the row key is constructed from the field names of the table's [structured
+   * row key](https://cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if the field
+   * is nullable in the structured row key, then it need not be present in the message; `null` will
+   * be used instead.
    * @return value or {@code null} for none
    */
   public RowKeySchema getRowKeySchema() {
@@ -91,10 +91,10 @@ public final class ColumnFamilyMapping extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. If set, the row key is constructed from the field names of the table's structured row
-   * key (https://docs.cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if the
-   * field is nullable in the structured row key, then it need not be present in the message; null
-   * will be used instead.
+   * Optional. If set, the row key is constructed from the field names of the table's [structured
+   * row key](https://cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if the field
+   * is nullable in the structured row key, then it need not be present in the message; `null` will
+   * be used instead.
    * @param rowKeySchema rowKeySchema or {@code null} for none
    */
   public ColumnFamilyMapping setRowKeySchema(RowKeySchema rowKeySchema) {

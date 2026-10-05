@@ -18,9 +18,9 @@ package com.google.api.services.analyticshub.v1.model;
 
 /**
  * Row key definition that reads the input message fields based on the field names of the table's
- * structured row key (https://docs.cloud.google.com/bigtable/docs/manage-row-key-schemas). Note
- * that if the field is nullable in the structured row key, then it need not be present in the
- * message; null will be used instead.
+ * [structured row key](https://cloud.google.com/bigtable/docs/manage-row-key-schemas). Note that if
+ * the field is nullable in the structured row key, then it need not be present in the message;
+ * `null` will be used instead.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Analytics Hub API. For a detailed explanation see:

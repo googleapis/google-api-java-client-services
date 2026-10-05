@@ -202,9 +202,9 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
 
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing" See
-   * https://{$universe.dns_names.final_documentation_domain}/pubsub/docs/tags for more information
-   * on using tags with Pub/Sub resources.
+   * "123/environment": "production", "123/costCenter": "marketing" See [Create and manage
+   * tags](https://cloud.google.com/pubsub/docs/tags) for more information on using tags with
+   * Pub/Sub resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -599,9 +599,9 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
 
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing" See
-   * https://{$universe.dns_names.final_documentation_domain}/pubsub/docs/tags for more information
-   * on using tags with Pub/Sub resources.
+   * "123/environment": "production", "123/costCenter": "marketing" See [Create and manage
+   * tags](https://cloud.google.com/pubsub/docs/tags) for more information on using tags with
+   * Pub/Sub resources.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getTags() {
@@ -610,9 +610,9 @@ public final class GooglePubsubV1Subscription extends com.google.api.client.json
 
   /**
    * Optional. Input only. Immutable. Tag keys/values directly bound to this resource. For example:
-   * "123/environment": "production", "123/costCenter": "marketing" See
-   * https://{$universe.dns_names.final_documentation_domain}/pubsub/docs/tags for more information
-   * on using tags with Pub/Sub resources.
+   * "123/environment": "production", "123/costCenter": "marketing" See [Create and manage
+   * tags](https://cloud.google.com/pubsub/docs/tags) for more information on using tags with
+   * Pub/Sub resources.
    * @param tags tags or {@code null} for none
    */
   public GooglePubsubV1Subscription setTags(java.util.Map<String, java.lang.String> tags) {

@@ -33,6 +33,12 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String companionAgent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean disableHighLatencyFeaturesSyncDelivery;
 
   /**
@@ -70,6 +76,21 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggesti
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useUnredactedConversationData;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCompanionAgent() {
+    return companionAgent;
+  }
+
+  /**
+   * @param companionAgent companionAgent or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1HumanAgentAssistantConfigSuggestionConfig setCompanionAgent(java.lang.String companionAgent) {
+    this.companionAgent = companionAgent;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

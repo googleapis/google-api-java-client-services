@@ -39,6 +39,12 @@ public final class GoogleCloudDialogflowV2SuggestionResult extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2GenerateCompanionSuggestionsResponse generateCompanionSuggestionsResponse;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2GenerateSuggestionsResponse generateSuggestionsResponse;
 
   /**
@@ -77,6 +83,21 @@ public final class GoogleCloudDialogflowV2SuggestionResult extends com.google.ap
    */
   public GoogleCloudDialogflowV2SuggestionResult setError(GoogleRpcStatus error) {
     this.error = error;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2GenerateCompanionSuggestionsResponse getGenerateCompanionSuggestionsResponse() {
+    return generateCompanionSuggestionsResponse;
+  }
+
+  /**
+   * @param generateCompanionSuggestionsResponse generateCompanionSuggestionsResponse or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SuggestionResult setGenerateCompanionSuggestionsResponse(GoogleCloudDialogflowV2GenerateCompanionSuggestionsResponse generateCompanionSuggestionsResponse) {
+    this.generateCompanionSuggestionsResponse = generateCompanionSuggestionsResponse;
     return this;
   }
 

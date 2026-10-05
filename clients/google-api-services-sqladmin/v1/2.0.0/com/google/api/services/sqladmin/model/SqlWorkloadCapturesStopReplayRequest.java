@@ -30,14 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Contains details about the stop workload replay operation.
+   * Required. Contains details about the stop workload replay operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StopWorkloadReplayContext stopWorkloadReplayContext;
 
   /**
-   * Optional. Contains details about the stop workload replay operation.
+   * Required. Contains details about the stop workload replay operation.
    * @return value or {@code null} for none
    */
   public StopWorkloadReplayContext getStopWorkloadReplayContext() {
@@ -45,7 +45,7 @@ public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.c
   }
 
   /**
-   * Optional. Contains details about the stop workload replay operation.
+   * Required. Contains details about the stop workload replay operation.
    * @param stopWorkloadReplayContext stopWorkloadReplayContext or {@code null} for none
    */
   public SqlWorkloadCapturesStopReplayRequest setStopWorkloadReplayContext(StopWorkloadReplayContext stopWorkloadReplayContext) {

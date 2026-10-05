@@ -31,14 +31,14 @@ package com.google.api.services.sqladmin.model;
 public final class SqlWorkloadCapturesStartReplayRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Contains details about the start workload replay operation.
+   * Required. Contains details about the start workload replay operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StartWorkloadReplayContext startWorkloadReplayContext;
 
   /**
-   * Optional. Contains details about the start workload replay operation.
+   * Required. Contains details about the start workload replay operation.
    * @return value or {@code null} for none
    */
   public StartWorkloadReplayContext getStartWorkloadReplayContext() {
@@ -46,7 +46,7 @@ public final class SqlWorkloadCapturesStartReplayRequest extends com.google.api.
   }
 
   /**
-   * Optional. Contains details about the start workload replay operation.
+   * Required. Contains details about the start workload replay operation.
    * @param startWorkloadReplayContext startWorkloadReplayContext or {@code null} for none
    */
   public SqlWorkloadCapturesStartReplayRequest setStartWorkloadReplayContext(StartWorkloadReplayContext startWorkloadReplayContext) {

@@ -3140,6 +3140,14 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
     private com.google.api.client.util.DateTime effectiveTime;
 
     /**
+     * The bucket's hard delete pause configuration. If set, soft-deleted objects in the bucket will
+     * not be permanently deleted until the hard delete pause is disabled.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private HardDeletePause hardDeletePause;
+
+    /**
      * The duration in seconds that soft-deleted objects in the bucket will be retained and cannot be
      * permanently deleted.
      * The value may be {@code null}.
@@ -3163,6 +3171,25 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
      */
     public SoftDeletePolicy setEffectiveTime(com.google.api.client.util.DateTime effectiveTime) {
       this.effectiveTime = effectiveTime;
+      return this;
+    }
+
+    /**
+     * The bucket's hard delete pause configuration. If set, soft-deleted objects in the bucket will
+     * not be permanently deleted until the hard delete pause is disabled.
+     * @return value or {@code null} for none
+     */
+    public HardDeletePause getHardDeletePause() {
+      return hardDeletePause;
+    }
+
+    /**
+     * The bucket's hard delete pause configuration. If set, soft-deleted objects in the bucket will
+     * not be permanently deleted until the hard delete pause is disabled.
+     * @param hardDeletePause hardDeletePause or {@code null} for none
+     */
+    public SoftDeletePolicy setHardDeletePause(HardDeletePause hardDeletePause) {
+      this.hardDeletePause = hardDeletePause;
       return this;
     }
 
@@ -3195,6 +3222,74 @@ public final class Bucket extends com.google.api.client.json.GenericJson {
       return (SoftDeletePolicy) super.clone();
     }
 
+    /**
+     * The bucket's hard delete pause configuration. If set, soft-deleted objects in the bucket will not
+     * be permanently deleted until the hard delete pause is disabled.
+     */
+    public static final class HardDeletePause extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Server-determined value that indicates the time from which the hard delete pause became
+       * effective. This value is in RFC 3339 format.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private com.google.api.client.util.DateTime effectiveTime;
+
+      /**
+       * Whether hard deletions are paused.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean enabled;
+
+      /**
+       * Server-determined value that indicates the time from which the hard delete pause became
+       * effective. This value is in RFC 3339 format.
+       * @return value or {@code null} for none
+       */
+      public com.google.api.client.util.DateTime getEffectiveTime() {
+        return effectiveTime;
+      }
+
+      /**
+       * Server-determined value that indicates the time from which the hard delete pause became
+       * effective. This value is in RFC 3339 format.
+       * @param effectiveTime effectiveTime or {@code null} for none
+       */
+      public HardDeletePause setEffectiveTime(com.google.api.client.util.DateTime effectiveTime) {
+        this.effectiveTime = effectiveTime;
+        return this;
+      }
+
+      /**
+       * Whether hard deletions are paused.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Boolean getEnabled() {
+        return enabled;
+      }
+
+      /**
+       * Whether hard deletions are paused.
+       * @param enabled enabled or {@code null} for none
+       */
+      public HardDeletePause setEnabled(java.lang.Boolean enabled) {
+        this.enabled = enabled;
+        return this;
+      }
+
+      @Override
+      public HardDeletePause set(String fieldName, Object value) {
+        return (HardDeletePause) super.set(fieldName, value);
+      }
+
+      @Override
+      public HardDeletePause clone() {
+        return (HardDeletePause) super.clone();
+      }
+
+    }
   }
 
   /**

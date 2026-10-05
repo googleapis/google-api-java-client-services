@@ -39,6 +39,12 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2beta1AgentAssistantFeedbackCompanionFeedback companionFeedback;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String documentCorrectness;
 
   /**
@@ -77,6 +83,21 @@ public final class GoogleCloudDialogflowV2beta1AgentAssistantFeedback extends co
    */
   public GoogleCloudDialogflowV2beta1AgentAssistantFeedback setAnswerRelevance(java.lang.String answerRelevance) {
     this.answerRelevance = answerRelevance;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantFeedbackCompanionFeedback getCompanionFeedback() {
+    return companionFeedback;
+  }
+
+  /**
+   * @param companionFeedback companionFeedback or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1AgentAssistantFeedback setCompanionFeedback(GoogleCloudDialogflowV2beta1AgentAssistantFeedbackCompanionFeedback companionFeedback) {
+    this.companionFeedback = companionFeedback;
     return this;
   }
 

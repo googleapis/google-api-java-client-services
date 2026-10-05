@@ -39,6 +39,12 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2CompanionSuggestion companionSuggestion;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2DialogflowAssistAnswer dialogflowAssistAnswer;
 
   /**
@@ -54,6 +60,12 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
   private GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDialogflowV2StreamingReactiveCompanionSuggestionsResponseReactiveModeResponse reactiveCompanionSuggestion;
+
+  /**
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2ArticleAnswer getArticleSuggestionAnswer() {
@@ -65,6 +77,21 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord setArticleSuggestionAnswer(GoogleCloudDialogflowV2ArticleAnswer articleSuggestionAnswer) {
     this.articleSuggestionAnswer = articleSuggestionAnswer;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2CompanionSuggestion getCompanionSuggestion() {
+    return companionSuggestion;
+  }
+
+  /**
+   * @param companionSuggestion companionSuggestion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AgentAssistantRecord setCompanionSuggestion(GoogleCloudDialogflowV2CompanionSuggestion companionSuggestion) {
+    this.companionSuggestion = companionSuggestion;
     return this;
   }
 
@@ -110,6 +137,21 @@ public final class GoogleCloudDialogflowV2AgentAssistantRecord extends com.googl
    */
   public GoogleCloudDialogflowV2AgentAssistantRecord setGeneratorSuggestion(GoogleCloudDialogflowV2GeneratorSuggestion generatorSuggestion) {
     this.generatorSuggestion = generatorSuggestion;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2StreamingReactiveCompanionSuggestionsResponseReactiveModeResponse getReactiveCompanionSuggestion() {
+    return reactiveCompanionSuggestion;
+  }
+
+  /**
+   * @param reactiveCompanionSuggestion reactiveCompanionSuggestion or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AgentAssistantRecord setReactiveCompanionSuggestion(GoogleCloudDialogflowV2StreamingReactiveCompanionSuggestionsResponseReactiveModeResponse reactiveCompanionSuggestion) {
+    this.reactiveCompanionSuggestion = reactiveCompanionSuggestion;
     return this;
   }
 

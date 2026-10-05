@@ -18583,6 +18583,159 @@ public class CloudHealthcare extends com.google.api.client.googleapis.services.j
             }
           }
           /**
+           * Executes and materializes a cohort definition from a FHIR store. This method returns an Operation
+           * that can be used to track the status of the cohort execution by calling GetOperation. Immediate
+           * fatal errors appear in the error field, errors are also logged to Cloud Logging (see [Viewing
+           * error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-tos/logging)).
+           * Otherwise, when the operation finishes, a detailed response of type ExecuteCohortResponse is
+           * returned in the response field. The metadata field type for this operation is OperationMetadata.
+           *
+           * Create a request for the method "fhirStores.executeCohort".
+           *
+           * This request holds the parameters needed by the healthcare server.  After setting any optional
+           * parameters, call the {@link ExecuteCohort#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the FHIR store to query, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+           * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExecuteCohortRequest}
+           * @return the request
+           */
+          public ExecuteCohort executeCohort(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExecuteCohortRequest content) throws java.io.IOException {
+            ExecuteCohort result = new ExecuteCohort(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ExecuteCohort extends CloudHealthcareRequest<com.google.api.services.healthcare.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:executeCohort";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+
+            /**
+             * Executes and materializes a cohort definition from a FHIR store. This method returns an
+             * Operation that can be used to track the status of the cohort execution by calling GetOperation.
+             * Immediate fatal errors appear in the error field, errors are also logged to Cloud Logging (see
+             * [Viewing error logs in Cloud Logging](https://cloud.google.com/healthcare/docs/how-
+             * tos/logging)). Otherwise, when the operation finishes, a detailed response of type
+             * ExecuteCohortResponse is returned in the response field. The metadata field type for this
+             * operation is OperationMetadata.
+             *
+             * Create a request for the method "fhirStores.executeCohort".
+             *
+             * This request holds the parameters needed by the the healthcare server.  After setting any
+             * optional parameters, call the {@link ExecuteCohort#execute()} method to invoke the remote
+             * operation. <p> {@link ExecuteCohort#initialize(com.google.api.client.googleapis.services.Abstra
+             * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The name of the FHIR store to query, in the format
+           *        `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_stor
+           *        e_id}`.
+             * @param content the {@link com.google.api.services.healthcare.v1beta1.model.ExecuteCohortRequest}
+             * @since 1.13
+             */
+            protected ExecuteCohort(java.lang.String name, com.google.api.services.healthcare.v1beta1.model.ExecuteCohortRequest content) {
+              super(CloudHealthcare.this, "POST", REST_PATH, content, com.google.api.services.healthcare.v1beta1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public ExecuteCohort set$Xgafv(java.lang.String $Xgafv) {
+              return (ExecuteCohort) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ExecuteCohort setAccessToken(java.lang.String accessToken) {
+              return (ExecuteCohort) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ExecuteCohort setAlt(java.lang.String alt) {
+              return (ExecuteCohort) super.setAlt(alt);
+            }
+
+            @Override
+            public ExecuteCohort setCallback(java.lang.String callback) {
+              return (ExecuteCohort) super.setCallback(callback);
+            }
+
+            @Override
+            public ExecuteCohort setFields(java.lang.String fields) {
+              return (ExecuteCohort) super.setFields(fields);
+            }
+
+            @Override
+            public ExecuteCohort setKey(java.lang.String key) {
+              return (ExecuteCohort) super.setKey(key);
+            }
+
+            @Override
+            public ExecuteCohort setOauthToken(java.lang.String oauthToken) {
+              return (ExecuteCohort) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ExecuteCohort setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ExecuteCohort) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ExecuteCohort setQuotaUser(java.lang.String quotaUser) {
+              return (ExecuteCohort) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ExecuteCohort setUploadType(java.lang.String uploadType) {
+              return (ExecuteCohort) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ExecuteCohort setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ExecuteCohort) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the FHIR store to query, in the format `projects/{project_id}/l
+             * ocations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the FHIR store to query, in the format
+           `projects/{project_id}/locations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the FHIR store to query, in the format `projects/{project_id}/l
+             * ocations/{location_id}/datasets/{dataset_id}/fhirStores/{fhir_store_id}`.
+             */
+            public ExecuteCohort setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/datasets/[^/]+/fhirStores/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ExecuteCohort set(String parameterName, Object value) {
+              return (ExecuteCohort) super.set(parameterName, value);
+            }
+          }
+          /**
            * Explains all the permitted/denied actor, purpose and environment for a given resource. FHIR
            * Consent is not supported in DSTU2 or R5.
            *

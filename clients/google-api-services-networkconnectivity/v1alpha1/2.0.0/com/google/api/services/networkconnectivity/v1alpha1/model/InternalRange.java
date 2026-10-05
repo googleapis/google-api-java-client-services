@@ -140,6 +140,14 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
   private java.lang.Integer prefixLength;
 
   /**
+   * Optional. The purpose of this internal range. Defines the intended use of the range and any
+   * restrictions associated with it. If not specified, it defaults to VPC_SUBNET.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String purpose;
+
+  /**
    * Output only. Status of the Internal Range.
    * The value may be {@code null}.
    */
@@ -432,6 +440,25 @@ public final class InternalRange extends com.google.api.client.json.GenericJson 
    */
   public InternalRange setPrefixLength(java.lang.Integer prefixLength) {
     this.prefixLength = prefixLength;
+    return this;
+  }
+
+  /**
+   * Optional. The purpose of this internal range. Defines the intended use of the range and any
+   * restrictions associated with it. If not specified, it defaults to VPC_SUBNET.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPurpose() {
+    return purpose;
+  }
+
+  /**
+   * Optional. The purpose of this internal range. Defines the intended use of the range and any
+   * restrictions associated with it. If not specified, it defaults to VPC_SUBNET.
+   * @param purpose purpose or {@code null} for none
+   */
+  public InternalRange setPurpose(java.lang.String purpose) {
+    this.purpose = purpose;
     return this;
   }
 

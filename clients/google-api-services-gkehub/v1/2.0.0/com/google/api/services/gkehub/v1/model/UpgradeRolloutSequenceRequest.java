@@ -61,6 +61,15 @@ public final class UpgradeRolloutSequenceRequest extends com.google.api.client.j
   private java.lang.Boolean patchOnly;
 
   /**
+   * Optional. If set to true, conflicting rollouts will be paused, to allow this rollout to
+   * progress through the sequence. Conflicting rollouts running on the first stage will be
+   * canceled, to allow this rollout to be created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean prioritized;
+
+  /**
    * Optional. Overrides the soak duration for all stages of the rollout.
    * The value may be {@code null}.
    */
@@ -167,6 +176,27 @@ public final class UpgradeRolloutSequenceRequest extends com.google.api.client.j
    */
   public UpgradeRolloutSequenceRequest setPatchOnly(java.lang.Boolean patchOnly) {
     this.patchOnly = patchOnly;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, conflicting rollouts will be paused, to allow this rollout to
+   * progress through the sequence. Conflicting rollouts running on the first stage will be
+   * canceled, to allow this rollout to be created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrioritized() {
+    return prioritized;
+  }
+
+  /**
+   * Optional. If set to true, conflicting rollouts will be paused, to allow this rollout to
+   * progress through the sequence. Conflicting rollouts running on the first stage will be
+   * canceled, to allow this rollout to be created.
+   * @param prioritized prioritized or {@code null} for none
+   */
+  public UpgradeRolloutSequenceRequest setPrioritized(java.lang.Boolean prioritized) {
+    this.prioritized = prioritized;
     return this;
   }
 

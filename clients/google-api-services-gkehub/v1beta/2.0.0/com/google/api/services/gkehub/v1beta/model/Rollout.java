@@ -111,6 +111,15 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Optional. If set to true, conflicting rollouts will be paused, to allow this rollout to
+   * progress through the sequence. Conflicting rollouts running on the first stage will be
+   * canceled, to allow this rollout to be created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean prioritized;
+
+  /**
    * Optional. Immutable. The full, unique resource name of the rollout sequence that initiatied
    * this Rollout. In the format of
    * `projects/{project}/locations/global/rolloutSequences/{rollout_sequence}`.
@@ -378,6 +387,27 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, conflicting rollouts will be paused, to allow this rollout to
+   * progress through the sequence. Conflicting rollouts running on the first stage will be
+   * canceled, to allow this rollout to be created.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPrioritized() {
+    return prioritized;
+  }
+
+  /**
+   * Optional. If set to true, conflicting rollouts will be paused, to allow this rollout to
+   * progress through the sequence. Conflicting rollouts running on the first stage will be
+   * canceled, to allow this rollout to be created.
+   * @param prioritized prioritized or {@code null} for none
+   */
+  public Rollout setPrioritized(java.lang.Boolean prioritized) {
+    this.prioritized = prioritized;
     return this;
   }
 

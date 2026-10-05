@@ -184,6 +184,14 @@ public final class Node extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Output only. Protection tier for the workload which specifies the workload expectations in the
+   * event of infrastructure failures at data center (e.g. power and/or cooling failures).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String protectionTier;
+
+  /**
    * Output only. The qualified name of the QueuedResource that requested this Node.
    * The value may be {@code null}.
    */
@@ -571,6 +579,25 @@ public final class Node extends com.google.api.client.json.GenericJson {
    */
   public Node setNetworkEndpoints(java.util.List<NetworkEndpoint> networkEndpoints) {
     this.networkEndpoints = networkEndpoints;
+    return this;
+  }
+
+  /**
+   * Output only. Protection tier for the workload which specifies the workload expectations in the
+   * event of infrastructure failures at data center (e.g. power and/or cooling failures).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProtectionTier() {
+    return protectionTier;
+  }
+
+  /**
+   * Output only. Protection tier for the workload which specifies the workload expectations in the
+   * event of infrastructure failures at data center (e.g. power and/or cooling failures).
+   * @param protectionTier protectionTier or {@code null} for none
+   */
+  public Node setProtectionTier(java.lang.String protectionTier) {
+    this.protectionTier = protectionTier;
     return this;
   }
 

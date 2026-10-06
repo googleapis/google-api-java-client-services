@@ -59,8 +59,8 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   private java.lang.Integer pageSize;
 
   /**
-   * Optional. The `next_page_token` from a previous request, if any. All other request fields need
-   * to be the same as in the initial request when the page token is specified.
+   * Optional. The next_page_token from a previous request, if any. All other request fields need to
+   * be the same as in the initial request when the page token is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +151,8 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The `next_page_token` from a previous request, if any. All other request fields need
-   * to be the same as in the initial request when the page token is specified.
+   * Optional. The next_page_token from a previous request, if any. All other request fields need to
+   * be the same as in the initial request when the page token is specified.
    * @return value or {@code null} for none
    */
   public java.lang.String getPageToken() {
@@ -160,8 +160,8 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The `next_page_token` from a previous request, if any. All other request fields need
-   * to be the same as in the initial request when the page token is specified.
+   * Optional. The next_page_token from a previous request, if any. All other request fields need to
+   * be the same as in the initial request when the page token is specified.
    * @param pageToken pageToken or {@code null} for none
    */
   public DailyRollUpDataPointsRequest setPageToken(java.lang.String pageToken) {

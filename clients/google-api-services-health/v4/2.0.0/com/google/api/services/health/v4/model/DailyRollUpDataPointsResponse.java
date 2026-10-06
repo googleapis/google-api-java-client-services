@@ -30,11 +30,38 @@ package com.google.api.services.health.v4.model;
 public final class DailyRollUpDataPointsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
    * Values for each aggregation time window.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<DailyRollupDataPoint> rollupDataPoints;
+
+  /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
+  }
+
+  /**
+   * A token, which can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
+   * @param nextPageToken nextPageToken or {@code null} for none
+   */
+  public DailyRollUpDataPointsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
+    return this;
+  }
 
   /**
    * Values for each aggregation time window.

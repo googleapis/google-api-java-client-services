@@ -467,7 +467,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String microphoneAccess;
 
   /**
-   * The minimum allowed Android API level.
+   * The minimum allowed Android API level. A NonComplianceDetail with OS_NOT_PERMITTED is reported
+   * if the Android API level of the device is lower than this value.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1884,7 +1885,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The minimum allowed Android API level.
+   * The minimum allowed Android API level. A NonComplianceDetail with OS_NOT_PERMITTED is reported
+   * if the Android API level of the device is lower than this value.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getMinimumApiLevel() {
@@ -1892,7 +1894,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The minimum allowed Android API level.
+   * The minimum allowed Android API level. A NonComplianceDetail with OS_NOT_PERMITTED is reported
+   * if the Android API level of the device is lower than this value.
    * @param minimumApiLevel minimumApiLevel or {@code null} for none
    */
   public Policy setMinimumApiLevel(java.lang.Integer minimumApiLevel) {

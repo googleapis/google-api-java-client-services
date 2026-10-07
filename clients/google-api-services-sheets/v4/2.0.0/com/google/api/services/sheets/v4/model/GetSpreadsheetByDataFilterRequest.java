@@ -32,7 +32,6 @@ public final class GetSpreadsheetByDataFilterRequest extends com.google.api.clie
   /**
    * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
    * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +68,6 @@ public final class GetSpreadsheetByDataFilterRequest extends com.google.api.clie
   /**
    * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
    * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentsViewMode() {
@@ -79,7 +77,6 @@ public final class GetSpreadsheetByDataFilterRequest extends com.google.api.clie
   /**
    * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
    * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @param commentsViewMode commentsViewMode or {@code null} for none
    */
   public GetSpreadsheetByDataFilterRequest setCommentsViewMode(java.lang.String commentsViewMode) {

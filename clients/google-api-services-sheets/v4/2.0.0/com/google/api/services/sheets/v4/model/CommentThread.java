@@ -17,8 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Represents a single comment thread inside a spreadsheet. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Represents a single comment thread inside a spreadsheet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

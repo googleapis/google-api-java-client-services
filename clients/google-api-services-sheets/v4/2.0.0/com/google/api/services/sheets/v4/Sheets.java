@@ -532,14 +532,13 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet
        * with comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is
-       * used. [Developer Preview](https://developers.google.com/workspace/preview).
+       * used.
        */
       @com.google.api.client.util.Key
       private java.lang.String commentsViewMode;
 
       /** The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
      comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-     [Developer Preview](https://developers.google.com/workspace/preview).
        */
       public java.lang.String getCommentsViewMode() {
         return commentsViewMode;
@@ -548,7 +547,7 @@ public class Sheets extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet
        * with comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is
-       * used. [Developer Preview](https://developers.google.com/workspace/preview).
+       * used.
        */
       public Get setCommentsViewMode(java.lang.String commentsViewMode) {
         this.commentsViewMode = commentsViewMode;

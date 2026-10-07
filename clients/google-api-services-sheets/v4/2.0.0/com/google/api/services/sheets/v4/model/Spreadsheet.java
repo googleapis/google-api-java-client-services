@@ -30,8 +30,7 @@ package com.google.api.services.sheets.v4.model;
 public final class Spreadsheet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The comment threads associated with the spreadsheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The comment threads associated with the spreadsheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +43,7 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comments view mode applied to the spreadsheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comments view mode applied to the spreadsheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,8 +136,7 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
   private java.lang.String spreadsheetUrl;
 
   /**
-   * The comment threads associated with the spreadsheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The comment threads associated with the spreadsheet.
    * @return value or {@code null} for none
    */
   public java.util.List<CommentThread> getComments() {
@@ -147,8 +144,7 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The comment threads associated with the spreadsheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The comment threads associated with the spreadsheet.
    * @param comments comments or {@code null} for none
    */
   public Spreadsheet setComments(java.util.List<CommentThread> comments) {
@@ -157,8 +153,7 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comments view mode applied to the spreadsheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comments view mode applied to the spreadsheet.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentsViewMode() {
@@ -166,8 +161,7 @@ public final class Spreadsheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comments view mode applied to the spreadsheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comments view mode applied to the spreadsheet.
    * @param commentsViewMode commentsViewMode or {@code null} for none
    */
   public Spreadsheet setCommentsViewMode(java.lang.String commentsViewMode) {

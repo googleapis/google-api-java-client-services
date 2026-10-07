@@ -18,8 +18,7 @@ package com.google.api.services.sheets.v4.model;
 
 /**
  * A location in the spreadsheet that is tied to a CommentThread with the same anchorId. Note:
- * Multiple anchors may refer to the same location. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Multiple anchors may refer to the same location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

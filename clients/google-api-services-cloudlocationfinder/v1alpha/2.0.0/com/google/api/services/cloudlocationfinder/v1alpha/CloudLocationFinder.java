@@ -892,14 +892,16 @@ public class CloudLocationFinder extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. The maximum number of cloud locations to return per page. The service might
-           * return fewer cloud locations than this value. If unspecified, server will pick an
-           * appropriate default.
+           * return fewer cloud locations than this value. If unspecified, at most 500 cloud
+           * locations will be returned. The maximum value is 1000; values above 1000 will be
+           * coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. The maximum number of cloud locations to return per page. The service might return fewer
-         cloud locations than this value. If unspecified, server will pick an appropriate default.
+         cloud locations than this value. If unspecified, at most 500 cloud locations will be returned. The
+         maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -907,8 +909,9 @@ public class CloudLocationFinder extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. The maximum number of cloud locations to return per page. The service might
-           * return fewer cloud locations than this value. If unspecified, server will pick an
-           * appropriate default.
+           * return fewer cloud locations than this value. If unspecified, at most 500 cloud
+           * locations will be returned. The maximum value is 1000; values above 1000 will be
+           * coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -1094,14 +1097,15 @@ public class CloudLocationFinder extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. The maximum number of cloud locations to return. The service might return
-           * fewer cloud locations than this value. If unspecified, server will pick an appropriate
-           * default.
+           * fewer cloud locations than this value. If unspecified, at most 500 cloud locations will
+           * be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
           /** Optional. The maximum number of cloud locations to return. The service might return fewer cloud
-         locations than this value. If unspecified, server will pick an appropriate default.
+         locations than this value. If unspecified, at most 500 cloud locations will be returned. The
+         maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
@@ -1109,8 +1113,8 @@ public class CloudLocationFinder extends com.google.api.client.googleapis.servic
 
           /**
            * Optional. The maximum number of cloud locations to return. The service might return
-           * fewer cloud locations than this value. If unspecified, server will pick an appropriate
-           * default.
+           * fewer cloud locations than this value. If unspecified, at most 500 cloud locations will
+           * be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
            */
           public Search setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;

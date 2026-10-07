@@ -17,8 +17,7 @@
 package com.google.api.services.sheets.v4.model;
 
 /**
- * Inserts a CommentThread into the spreadsheet. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Inserts a CommentThread into the spreadsheet.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Sheets API. For a detailed explanation see:

@@ -32,8 +32,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   /**
    * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
    * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-   * Meaningful only if include_spreadsheet_in_response is 'true'. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Meaningful only if include_spreadsheet_in_response is 'true'.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,8 +72,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   /**
    * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
    * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-   * Meaningful only if include_spreadsheet_in_response is 'true'. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Meaningful only if include_spreadsheet_in_response is 'true'.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentsViewMode() {
@@ -84,8 +82,7 @@ public final class BatchUpdateSpreadsheetRequest extends com.google.api.client.j
   /**
    * The comments view mode to apply to the spreadsheet. This allows viewing the spreadsheet with
    * comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-   * Meaningful only if include_spreadsheet_in_response is 'true'. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Meaningful only if include_spreadsheet_in_response is 'true'.
    * @param commentsViewMode commentsViewMode or {@code null} for none
    */
   public BatchUpdateSpreadsheetRequest setCommentsViewMode(java.lang.String commentsViewMode) {

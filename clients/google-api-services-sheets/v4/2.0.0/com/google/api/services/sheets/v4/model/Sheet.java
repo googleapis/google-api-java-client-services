@@ -76,8 +76,7 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The comment anchors on this sheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The comment anchors on this sheet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -275,8 +274,7 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The comment anchors on this sheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The comment anchors on this sheet.
    * @return value or {@code null} for none
    */
   public java.util.List<CommentAnchor> getCommentAnchors() {
@@ -284,8 +282,7 @@ public final class Sheet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The comment anchors on this sheet. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The comment anchors on this sheet.
    * @param commentAnchors commentAnchors or {@code null} for none
    */
   public Sheet setCommentAnchors(java.util.List<CommentAnchor> commentAnchors) {

@@ -75,6 +75,13 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest exte
   private GoogleCloudDocumentaiV1beta3ProcessorVersion processorVersion;
 
   /**
+   * Optional. Options to override structures in the base processor version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiV1beta3ProcessorVersionOverrides processorVersionOverrides;
+
+  /**
    * Optional. The processor version to use as a base for training. This processor version must be a
    * child of `parent`. Format: `projects/{project}/locations/{location}/processors/{processor}/proc
    * essorVersions/{processorVersion}`.
@@ -177,6 +184,23 @@ public final class GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest exte
    */
   public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest setProcessorVersion(GoogleCloudDocumentaiV1beta3ProcessorVersion processorVersion) {
     this.processorVersion = processorVersion;
+    return this;
+  }
+
+  /**
+   * Optional. Options to override structures in the base processor version.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3ProcessorVersionOverrides getProcessorVersionOverrides() {
+    return processorVersionOverrides;
+  }
+
+  /**
+   * Optional. Options to override structures in the base processor version.
+   * @param processorVersionOverrides processorVersionOverrides or {@code null} for none
+   */
+  public GoogleCloudDocumentaiV1beta3TrainProcessorVersionRequest setProcessorVersionOverrides(GoogleCloudDocumentaiV1beta3ProcessorVersionOverrides processorVersionOverrides) {
+    this.processorVersionOverrides = processorVersionOverrides;
     return this;
   }
 

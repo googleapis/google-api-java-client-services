@@ -82,6 +82,14 @@ public final class GoogleCloudDocumentaiUiv1beta3ProcessorVersion extends com.go
   private java.lang.Boolean googleManaged;
 
   /**
+   * Output only. The grounding settings of the processor version. This can only be set using
+   * TrainProcessorVersionRequest to override the default grounding settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDocumentaiUiv1beta3GroundingSettings groundingSettings;
+
+  /**
    * Output only. The KMS key name used for encryption.
    * The value may be {@code null}.
    */
@@ -261,6 +269,25 @@ public final class GoogleCloudDocumentaiUiv1beta3ProcessorVersion extends com.go
    */
   public GoogleCloudDocumentaiUiv1beta3ProcessorVersion setGoogleManaged(java.lang.Boolean googleManaged) {
     this.googleManaged = googleManaged;
+    return this;
+  }
+
+  /**
+   * Output only. The grounding settings of the processor version. This can only be set using
+   * TrainProcessorVersionRequest to override the default grounding settings.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3GroundingSettings getGroundingSettings() {
+    return groundingSettings;
+  }
+
+  /**
+   * Output only. The grounding settings of the processor version. This can only be set using
+   * TrainProcessorVersionRequest to override the default grounding settings.
+   * @param groundingSettings groundingSettings or {@code null} for none
+   */
+  public GoogleCloudDocumentaiUiv1beta3ProcessorVersion setGroundingSettings(GoogleCloudDocumentaiUiv1beta3GroundingSettings groundingSettings) {
+    this.groundingSettings = groundingSettings;
     return this;
   }
 

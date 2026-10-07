@@ -31,16 +31,14 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.maven.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.maven.registry/".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.maven.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.maven.registry/".
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -48,8 +46,7 @@ public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRe
   }
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.maven.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.maven.registry/".
    * @param uri uri or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigMavenRepositoryCustomRepository setUri(java.lang.String uri) {

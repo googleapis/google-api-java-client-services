@@ -31,7 +31,7 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigPythonRepositoryCustomRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
+   * An https uri reference to the upstream remote repository, for ex:
    * "https://my.python.registry/".
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigPythonR
   private java.lang.String uri;
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
+   * An https uri reference to the upstream remote repository, for ex:
    * "https://my.python.registry/".
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigPythonR
   }
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
+   * An https uri reference to the upstream remote repository, for ex:
    * "https://my.python.registry/".
    * @param uri uri or {@code null} for none
    */

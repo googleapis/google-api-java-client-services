@@ -31,16 +31,14 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepositoryCustomRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.apt.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.apt.registry/".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.apt.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.apt.registry/".
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -48,8 +46,7 @@ public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepo
   }
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.apt.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.apt.registry/".
    * @param uri uri or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigAptRepositoryCustomRepository setUri(java.lang.String uri) {

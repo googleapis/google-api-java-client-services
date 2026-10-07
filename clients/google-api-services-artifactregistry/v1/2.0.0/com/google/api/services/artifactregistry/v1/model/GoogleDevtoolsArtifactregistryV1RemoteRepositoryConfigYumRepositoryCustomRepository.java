@@ -31,16 +31,14 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.yum.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.yum.registry/".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.yum.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.yum.registry/".
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -48,8 +46,7 @@ public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepo
   }
 
   /**
-   * An http/https uri reference to the upstream remote repository, for ex:
-   * "https://my.yum.registry/".
+   * An https uri reference to the upstream remote repository, for ex: "https://my.yum.registry/".
    * @param uri uri or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigYumRepositoryCustomRepository setUri(java.lang.String uri) {

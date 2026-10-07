@@ -31,16 +31,14 @@ package com.google.api.services.artifactregistry.v1.model;
 public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigDockerRepositoryCustomRepository extends com.google.api.client.json.GenericJson {
 
   /**
-   * An http/https uri reference to the custom remote repository, for ex:
-   * "https://registry-1.docker.io".
+   * An https uri reference to the custom remote repository, for ex: "https://registry-1.docker.io".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
 
   /**
-   * An http/https uri reference to the custom remote repository, for ex:
-   * "https://registry-1.docker.io".
+   * An https uri reference to the custom remote repository, for ex: "https://registry-1.docker.io".
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -48,8 +46,7 @@ public final class GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigDockerR
   }
 
   /**
-   * An http/https uri reference to the custom remote repository, for ex:
-   * "https://registry-1.docker.io".
+   * An https uri reference to the custom remote repository, for ex: "https://registry-1.docker.io".
    * @param uri uri or {@code null} for none
    */
   public GoogleDevtoolsArtifactregistryV1RemoteRepositoryConfigDockerRepositoryCustomRepository setUri(java.lang.String uri) {

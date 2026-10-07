@@ -38,6 +38,13 @@ public final class EffectiveVpcFlowLogsConfig extends com.google.api.client.json
   private java.lang.String aggregationInterval;
 
   /**
+   * Optional. Configures whether connection logging is enabled for VPC Flow Logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionLogging;
+
+  /**
    * Determines whether to include cross project annotations in the logs. This field is available
    * only for organization configurations. If not specified in org configs will be set to
    * CROSS_PROJECT_METADATA_ENABLED.
@@ -153,6 +160,23 @@ public final class EffectiveVpcFlowLogsConfig extends com.google.api.client.json
    */
   public EffectiveVpcFlowLogsConfig setAggregationInterval(java.lang.String aggregationInterval) {
     this.aggregationInterval = aggregationInterval;
+    return this;
+  }
+
+  /**
+   * Optional. Configures whether connection logging is enabled for VPC Flow Logs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionLogging() {
+    return connectionLogging;
+  }
+
+  /**
+   * Optional. Configures whether connection logging is enabled for VPC Flow Logs.
+   * @param connectionLogging connectionLogging or {@code null} for none
+   */
+  public EffectiveVpcFlowLogsConfig setConnectionLogging(java.lang.String connectionLogging) {
+    this.connectionLogging = connectionLogging;
     return this;
   }
 

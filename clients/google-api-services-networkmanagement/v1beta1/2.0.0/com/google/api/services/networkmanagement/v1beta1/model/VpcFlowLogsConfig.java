@@ -38,6 +38,13 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
   private java.lang.String aggregationInterval;
 
   /**
+   * Optional. Configures whether connection logging is enabled for VPC Flow Logs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String connectionLogging;
+
+  /**
    * Output only. The time the config was created.
    * The value may be {@code null}.
    */
@@ -180,6 +187,23 @@ public final class VpcFlowLogsConfig extends com.google.api.client.json.GenericJ
    */
   public VpcFlowLogsConfig setAggregationInterval(java.lang.String aggregationInterval) {
     this.aggregationInterval = aggregationInterval;
+    return this;
+  }
+
+  /**
+   * Optional. Configures whether connection logging is enabled for VPC Flow Logs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getConnectionLogging() {
+    return connectionLogging;
+  }
+
+  /**
+   * Optional. Configures whether connection logging is enabled for VPC Flow Logs.
+   * @param connectionLogging connectionLogging or {@code null} for none
+   */
+  public VpcFlowLogsConfig setConnectionLogging(java.lang.String connectionLogging) {
+    this.connectionLogging = connectionLogging;
     return this;
   }
 

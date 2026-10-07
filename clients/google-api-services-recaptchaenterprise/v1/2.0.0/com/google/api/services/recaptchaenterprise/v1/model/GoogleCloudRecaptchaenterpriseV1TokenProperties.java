@@ -46,8 +46,16 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   private java.lang.String androidPackageName;
 
   /**
+   * Output only. Information collected by the reCAPTCHA Enterprise client-side integration when the
+   * token is generated.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRecaptchaenterpriseV1TokenPropertiesClientProperties clientProperties;
+
+  /**
    * Output only. Indicates a failure collecting reCAPTCHA signals at token generation. This might
-   * be a transient condition, or persistent for a user’s environment.
+   * be a transient condition, or persistent for a user's environment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +135,27 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
   }
 
   /**
+   * Output only. Information collected by the reCAPTCHA Enterprise client-side integration when the
+   * token is generated.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1TokenPropertiesClientProperties getClientProperties() {
+    return clientProperties;
+  }
+
+  /**
+   * Output only. Information collected by the reCAPTCHA Enterprise client-side integration when the
+   * token is generated.
+   * @param clientProperties clientProperties or {@code null} for none
+   */
+  public GoogleCloudRecaptchaenterpriseV1TokenProperties setClientProperties(GoogleCloudRecaptchaenterpriseV1TokenPropertiesClientProperties clientProperties) {
+    this.clientProperties = clientProperties;
+    return this;
+  }
+
+  /**
    * Output only. Indicates a failure collecting reCAPTCHA signals at token generation. This might
-   * be a transient condition, or persistent for a user’s environment.
+   * be a transient condition, or persistent for a user's environment.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClientSignalsFailed() {
@@ -137,7 +164,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TokenProperties extends com.g
 
   /**
    * Output only. Indicates a failure collecting reCAPTCHA signals at token generation. This might
-   * be a transient condition, or persistent for a user’s environment.
+   * be a transient condition, or persistent for a user's environment.
    * @param clientSignalsFailed clientSignalsFailed or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TokenProperties setClientSignalsFailed(java.lang.Boolean clientSignalsFailed) {

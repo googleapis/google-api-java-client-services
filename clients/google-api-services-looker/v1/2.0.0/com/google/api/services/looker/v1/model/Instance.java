@@ -45,6 +45,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private AdminSettings adminSettings;
 
   /**
+   * Optional. Auth type for the Looker instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AuthType authType;
+
+  /**
    * Optional. Indicates whether catalog integration is disabled for the Looker instance.
    * The value may be {@code null}.
    */
@@ -345,6 +352,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setAdminSettings(AdminSettings adminSettings) {
     this.adminSettings = adminSettings;
+    return this;
+  }
+
+  /**
+   * Optional. Auth type for the Looker instance.
+   * @return value or {@code null} for none
+   */
+  public AuthType getAuthType() {
+    return authType;
+  }
+
+  /**
+   * Optional. Auth type for the Looker instance.
+   * @param authType authType or {@code null} for none
+   */
+  public Instance setAuthType(AuthType authType) {
+    this.authType = authType;
     return this;
   }
 

@@ -19,7 +19,7 @@ package com.google.api.services.slides.v1.model;
 /**
  * Contains a list of all locations in a `Page` that are anchored to a CommentThread via the same
  * anchorId. Multiple separate anchors may refer to the same location, either within a `Page` or
- * across different pages, [Developer Preview](https://developers.google.com/workspace/preview).
+ * across different pages,
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

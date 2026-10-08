@@ -30,8 +30,7 @@ package com.google.api.services.slides.v1.model;
 public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
-   * Adds a reply to a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Adds a reply to a CommentThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,15 +93,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private CreateVideoRequest createVideo;
 
   /**
-   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a CommentThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeleteCommentRequest deleteComment;
 
   /**
-   * Deletes a reply Post from a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Deletes a reply Post from a CommentThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +156,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private GroupObjectsRequest groupObjects;
 
   /**
-   * Inserts a CommentThread into the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Inserts a CommentThread into the presentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,8 +248,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UnmergeTableCellsRequest unmergeTableCells;
 
   /**
-   * Updates an existing post (head post or reply) of a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Updates an existing post (head post or reply) of a CommentThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -378,8 +374,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateVideoPropertiesRequest updateVideoProperties;
 
   /**
-   * Adds a reply to a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Adds a reply to a CommentThread.
    * @return value or {@code null} for none
    */
   public AddCommentReplyRequest getAddCommentReply() {
@@ -387,8 +382,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Adds a reply to a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Adds a reply to a CommentThread.
    * @param addCommentReply addCommentReply or {@code null} for none
    */
   public Request setAddCommentReply(AddCommentReplyRequest addCommentReply) {
@@ -533,7 +527,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a CommentThread.
    * @return value or {@code null} for none
    */
   public DeleteCommentRequest getDeleteComment() {
@@ -541,7 +535,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a CommentThread.
    * @param deleteComment deleteComment or {@code null} for none
    */
   public Request setDeleteComment(DeleteCommentRequest deleteComment) {
@@ -550,8 +544,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a reply Post from a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Deletes a reply Post from a CommentThread.
    * @return value or {@code null} for none
    */
   public DeleteCommentReplyRequest getDeleteCommentReply() {
@@ -559,8 +552,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a reply Post from a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Deletes a reply Post from a CommentThread.
    * @param deleteCommentReply deleteCommentReply or {@code null} for none
    */
   public Request setDeleteCommentReply(DeleteCommentReplyRequest deleteCommentReply) {
@@ -688,8 +680,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inserts a CommentThread into the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Inserts a CommentThread into the presentation.
    * @return value or {@code null} for none
    */
   public InsertCommentRequest getInsertComment() {
@@ -697,8 +688,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inserts a CommentThread into the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Inserts a CommentThread into the presentation.
    * @param insertComment insertComment or {@code null} for none
    */
   public Request setInsertComment(InsertCommentRequest insertComment) {
@@ -913,8 +903,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Updates an existing post (head post or reply) of a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Updates an existing post (head post or reply) of a CommentThread.
    * @return value or {@code null} for none
    */
   public UpdateCommentPostRequest getUpdateCommentPost() {
@@ -922,8 +911,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Updates an existing post (head post or reply) of a CommentThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Updates an existing post (head post or reply) of a CommentThread.
    * @param updateCommentPost updateCommentPost or {@code null} for none
    */
   public Request setUpdateCommentPost(UpdateCommentPostRequest updateCommentPost) {

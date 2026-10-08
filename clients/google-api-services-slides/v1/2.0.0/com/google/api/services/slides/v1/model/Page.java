@@ -30,8 +30,7 @@ package com.google.api.services.slides.v1.model;
 public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The comment anchors present on the page. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comment anchors present on the page.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +45,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The comment threads associated with the page. Only populated if the page was
    * fetched via a GetPageRequest with a populated comments_view_mode. Otherwise, comments are
-   * returned in the Presentation via the GetPresentationRequest. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * returned in the Presentation via the GetPresentationRequest.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +59,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The comments view mode applied to the page. Only populated if the page was fetched
-   * via a GetPageRequest with a populated comments_view_mode. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * via a GetPageRequest with a populated comments_view_mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -140,8 +137,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   private SlideProperties slideProperties;
 
   /**
-   * Output only. The comment anchors present on the page. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comment anchors present on the page.
    * @return value or {@code null} for none
    */
   public java.util.List<CommentAnchor> getCommentAnchors() {
@@ -149,8 +145,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comment anchors present on the page. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comment anchors present on the page.
    * @param commentAnchors commentAnchors or {@code null} for none
    */
   public Page setCommentAnchors(java.util.List<CommentAnchor> commentAnchors) {
@@ -161,8 +156,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The comment threads associated with the page. Only populated if the page was
    * fetched via a GetPageRequest with a populated comments_view_mode. Otherwise, comments are
-   * returned in the Presentation via the GetPresentationRequest. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * returned in the Presentation via the GetPresentationRequest.
    * @return value or {@code null} for none
    */
   public java.util.List<CommentThread> getComments() {
@@ -172,8 +166,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
   /**
    * Output only. The comment threads associated with the page. Only populated if the page was
    * fetched via a GetPageRequest with a populated comments_view_mode. Otherwise, comments are
-   * returned in the Presentation via the GetPresentationRequest. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * returned in the Presentation via the GetPresentationRequest.
    * @param comments comments or {@code null} for none
    */
   public Page setComments(java.util.List<CommentThread> comments) {
@@ -183,8 +176,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The comments view mode applied to the page. Only populated if the page was fetched
-   * via a GetPageRequest with a populated comments_view_mode. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * via a GetPageRequest with a populated comments_view_mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentsViewMode() {
@@ -193,8 +185,7 @@ public final class Page extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The comments view mode applied to the page. Only populated if the page was fetched
-   * via a GetPageRequest with a populated comments_view_mode. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * via a GetPageRequest with a populated comments_view_mode.
    * @param commentsViewMode commentsViewMode or {@code null} for none
    */
   public Page setCommentsViewMode(java.lang.String commentsViewMode) {

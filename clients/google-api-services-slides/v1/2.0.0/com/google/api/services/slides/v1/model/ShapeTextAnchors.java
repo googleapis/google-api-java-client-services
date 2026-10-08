@@ -17,8 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Represents text ranges within a shape covered by a comment anchor. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Represents text ranges within a shape covered by a comment anchor.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

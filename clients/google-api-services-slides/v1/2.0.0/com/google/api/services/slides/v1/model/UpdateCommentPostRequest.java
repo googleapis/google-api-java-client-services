@@ -18,7 +18,7 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * Updates a Post in a CommentThread. Returns a 400 bad request error if: - The requesting user is
- * not the author of the post. [Developer Preview](https://developers.google.com/workspace/preview).
+ * not the author of the post.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

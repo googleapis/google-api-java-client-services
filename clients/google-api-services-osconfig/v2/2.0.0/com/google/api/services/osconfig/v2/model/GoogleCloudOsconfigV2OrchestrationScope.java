@@ -30,9 +30,12 @@ package com.google.api.services.osconfig.v2.model;
 public final class GoogleCloudOsconfigV2OrchestrationScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Selectors of the orchestration scope. There is a logical AND between each selector
-   * defined. When there is no explicit `ResourceHierarchySelector` selector specified, the scope is
-   * by default bounded to the parent of the policy orchestrator resource.
+   * Optional. Selectors of the orchestration scope. Each `Selector` entry can specify either a
+   * `ResourceHierarchySelector` or a `LocationSelector`, but not both. To filter by both resource
+   * hierarchy and location, specify separate `Selector` entries for each selector type. There is a
+   * logical AND between each selector defined. When there is no explicit
+   * `ResourceHierarchySelector` selector specified, the scope is by default bounded to the parent
+   * of the policy orchestrator resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +48,12 @@ public final class GoogleCloudOsconfigV2OrchestrationScope extends com.google.ap
   }
 
   /**
-   * Optional. Selectors of the orchestration scope. There is a logical AND between each selector
-   * defined. When there is no explicit `ResourceHierarchySelector` selector specified, the scope is
-   * by default bounded to the parent of the policy orchestrator resource.
+   * Optional. Selectors of the orchestration scope. Each `Selector` entry can specify either a
+   * `ResourceHierarchySelector` or a `LocationSelector`, but not both. To filter by both resource
+   * hierarchy and location, specify separate `Selector` entries for each selector type. There is a
+   * logical AND between each selector defined. When there is no explicit
+   * `ResourceHierarchySelector` selector specified, the scope is by default bounded to the parent
+   * of the policy orchestrator resource.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudOsconfigV2OrchestrationScopeSelector> getSelectors() {
@@ -55,9 +61,12 @@ public final class GoogleCloudOsconfigV2OrchestrationScope extends com.google.ap
   }
 
   /**
-   * Optional. Selectors of the orchestration scope. There is a logical AND between each selector
-   * defined. When there is no explicit `ResourceHierarchySelector` selector specified, the scope is
-   * by default bounded to the parent of the policy orchestrator resource.
+   * Optional. Selectors of the orchestration scope. Each `Selector` entry can specify either a
+   * `ResourceHierarchySelector` or a `LocationSelector`, but not both. To filter by both resource
+   * hierarchy and location, specify separate `Selector` entries for each selector type. There is a
+   * logical AND between each selector defined. When there is no explicit
+   * `ResourceHierarchySelector` selector specified, the scope is by default bounded to the parent
+   * of the policy orchestrator resource.
    * @param selectors selectors or {@code null} for none
    */
   public GoogleCloudOsconfigV2OrchestrationScope setSelectors(java.util.List<GoogleCloudOsconfigV2OrchestrationScopeSelector> selectors) {

@@ -36,6 +36,13 @@ public final class PolicyAlternativeNameServerConfig extends com.google.api.clie
   private java.lang.String kind;
 
   /**
+   * The list of outbound endpoints to use for queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<PolicyAlternativeNameServerConfigOutboundEndpoint> outboundEndpoints;
+
+  /**
    * Sets an alternative name server for the associated networks. When specified, all DNS queries
    * are forwarded to a name server that you choose. Names such as .internal are not available when
    * an alternative name server is specified.
@@ -56,6 +63,23 @@ public final class PolicyAlternativeNameServerConfig extends com.google.api.clie
    */
   public PolicyAlternativeNameServerConfig setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The list of outbound endpoints to use for queries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<PolicyAlternativeNameServerConfigOutboundEndpoint> getOutboundEndpoints() {
+    return outboundEndpoints;
+  }
+
+  /**
+   * The list of outbound endpoints to use for queries.
+   * @param outboundEndpoints outboundEndpoints or {@code null} for none
+   */
+  public PolicyAlternativeNameServerConfig setOutboundEndpoints(java.util.List<PolicyAlternativeNameServerConfigOutboundEndpoint> outboundEndpoints) {
+    this.outboundEndpoints = outboundEndpoints;
     return this;
   }
 

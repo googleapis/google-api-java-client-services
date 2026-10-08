@@ -1197,6 +1197,407 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
   }
 
   /**
+   * An accessor for creating requests from the Locations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dns dns = new Dns(...);}
+   *   {@code Dns.Locations.List request = dns.locations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Locations locations() {
+    return new Locations();
+  }
+
+  /**
+   * The "locations" collection of methods.
+   */
+  public class Locations {
+
+    /**
+     * Gets information about a location.
+     *
+     * Create a request for the method "locations.get".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Resource name for the location.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DnsRequest<com.google.api.services.dns.model.Location> {
+
+      private static final String REST_PATH = "dns/v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+      /**
+       * Gets information about a location.
+       *
+       * Create a request for the method "locations.get".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Resource name for the location.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.Location.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Resource name for the location. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Resource name for the location.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Resource name for the location. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists information about the supported locations for this service. This method lists locations
+     * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
+     * locations**: If `name` is empty, the method lists the public locations available to all projects.
+     * * **Project-specific locations**: If `name` follows the format `projects/{project}`, the method
+     * lists locations visible to that specific project. This includes public, private, or other
+     * project-specific locations enabled for the project. For gRPC and client library implementations,
+     * the resource name is passed as the `name` field. For direct service calls, the resource name is
+     * incorporated into the request path based on the specific service implementation and version.
+     *
+     * Create a request for the method "locations.list".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param name The resource that owns the locations collection, if applicable.
+     * @return the request
+     */
+    public List list(java.lang.String name) throws java.io.IOException {
+      List result = new List(name);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DnsRequest<com.google.api.services.dns.model.ListLocationsResponse> {
+
+      private static final String REST_PATH = "dns/v1/{+name}/locations";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+$");
+
+      /**
+       * Lists information about the supported locations for this service. This method lists locations
+       * based on the resource scope provided in the ListLocationsRequest.name field: * **Global
+       * locations**: If `name` is empty, the method lists the public locations available to all
+       * projects. * **Project-specific locations**: If `name` follows the format `projects/{project}`,
+       * the method lists locations visible to that specific project. This includes public, private, or
+       * other project-specific locations enabled for the project. For gRPC and client library
+       * implementations, the resource name is passed as the `name` field. For direct service calls, the
+       * resource name is incorporated into the request path based on the specific service
+       * implementation and version.
+       *
+       * Create a request for the method "locations.list".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The resource that owns the locations collection, if applicable.
+       * @since 1.13
+       */
+      protected List(java.lang.String name) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ListLocationsResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The resource that owns the locations collection, if applicable. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The resource that owns the locations collection, if applicable.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The resource that owns the locations collection, if applicable. */
+      public List setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+       * for internal usage.
+       */
+      @com.google.api.client.util.Key
+      private java.util.List<java.lang.String> extraLocationTypes;
+
+      /** Optional. Do not use this field unless explicitly documented otherwise. This is primarily for
+     internal usage.
+       */
+      public java.util.List<java.lang.String> getExtraLocationTypes() {
+        return extraLocationTypes;
+      }
+
+      /**
+       * Optional. Do not use this field unless explicitly documented otherwise. This is primarily
+       * for internal usage.
+       */
+      public List setExtraLocationTypes(java.util.List<java.lang.String> extraLocationTypes) {
+        this.extraLocationTypes = extraLocationTypes;
+        return this;
+      }
+
+      /**
+       * A filter to narrow down results to a preferred subset. The filtering language accepts
+       * strings like `"displayName=tokyo"`, and is documented in more detail in
+       * [AIP-160](https://google.aip.dev/160).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter to narrow down results to a preferred subset. The filtering language accepts strings like
+     `"displayName=tokyo"`, and is documented in more detail in [AIP-160](https://google.aip.dev/160).
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter to narrow down results to a preferred subset. The filtering language accepts
+       * strings like `"displayName=tokyo"`, and is documented in more detail in
+       * [AIP-160](https://google.aip.dev/160).
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** The maximum number of results to return. If not set, the service selects a default. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The maximum number of results to return. If not set, the service selects a default.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The maximum number of results to return. If not set, the service selects a default. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * A page token received from the `next_page_token` field in the response. Send that page
+       * token to receive the subsequent page.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** A page token received from the `next_page_token` field in the response. Send that page token to
+     receive the subsequent page.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * A page token received from the `next_page_token` field in the response. Send that page
+       * token to receive the subsequent page.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the ManagedZoneOperations collection.
    *
    * <p>The typical use is:</p>
@@ -3063,6 +3464,1622 @@ public class Dns extends com.google.api.client.googleapis.services.json.Abstract
       @Override
       public Update set(String parameterName, Object value) {
         return (Update) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the Operations collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dns dns = new Dns(...);}
+   *   {@code Dns.Operations.List request = dns.operations().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Operations operations() {
+    return new Operations();
+  }
+
+  /**
+   * The "operations" collection of methods.
+   */
+  public class Operations {
+
+    /**
+     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+     * methods to check whether the cancellation succeeded or whether the operation completed despite
+     * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+     * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+     * `Code.CANCELLED`.
+     *
+     * Create a request for the method "operations.cancel".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource to be cancelled.
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String name) throws java.io.IOException {
+      Cancel result = new Cancel(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends DnsRequest<com.google.api.services.dns.model.Empty> {
+
+      private static final String REST_PATH = "dns/v1/{+name}:cancel";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+      /**
+       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
+       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
+       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
+       * methods to check whether the cancellation succeeded or whether the operation completed despite
+       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
+       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
+       * `Code.CANCELLED`.
+       *
+       * Create a request for the method "operations.cancel".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource to be cancelled.
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String name) {
+        super(Dns.this, "POST", REST_PATH, null, com.google.api.services.dns.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+        }
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource to be cancelled. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource to be cancelled.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource to be cancelled. */
+      public Cancel setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a long-running operation. This method indicates that the client is no longer interested
+     * in the operation result. It does not cancel the operation. If the server doesn't support this
+     * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+     *
+     * Create a request for the method "operations.delete".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource to be deleted.
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DnsRequest<com.google.api.services.dns.model.Empty> {
+
+      private static final String REST_PATH = "dns/v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+      /**
+       * Deletes a long-running operation. This method indicates that the client is no longer interested
+       * in the operation result. It does not cancel the operation. If the server doesn't support this
+       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
+       *
+       * Create a request for the method "operations.delete".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource to be deleted.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(Dns.this, "DELETE", REST_PATH, null, com.google.api.services.dns.model.Empty.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource to be deleted. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource to be deleted.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource to be deleted. */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets the latest state of a long-running operation. Clients can use this method to poll the
+     * operation result at intervals as recommended by the API service.
+     *
+     * Create a request for the method "operations.get".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation resource.
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DnsRequest<com.google.api.services.dns.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "dns/v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+
+      /**
+       * Gets the latest state of a long-running operation. Clients can use this method to poll the
+       * operation result at intervals as recommended by the API service.
+       *
+       * Create a request for the method "operations.get".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation resource.
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.GoogleLongrunningOperation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation resource. */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/operations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists operations that match the specified filter in the request. If the server doesn't support
+     * this method, it returns `UNIMPLEMENTED`.
+     *
+     * Create a request for the method "operations.list".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param name The name of the operation's parent resource.
+     * @return the request
+     */
+    public List list(java.lang.String name) throws java.io.IOException {
+      List result = new List(name);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DnsRequest<com.google.api.services.dns.model.GoogleLongrunningListOperationsResponse> {
+
+      private static final String REST_PATH = "dns/v1/{+name}/operations";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+      /**
+       * Lists operations that match the specified filter in the request. If the server doesn't support
+       * this method, it returns `UNIMPLEMENTED`.
+       *
+       * Create a request for the method "operations.list".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name The name of the operation's parent resource.
+       * @since 1.13
+       */
+      protected List(java.lang.String name) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.GoogleLongrunningListOperationsResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** The name of the operation's parent resource. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** The name of the operation's parent resource.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** The name of the operation's parent resource. */
+      public List setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** The standard list filter. */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** The standard list filter.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /** The standard list filter. */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /** The standard list page size. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** The standard list page size.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** The standard list page size. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** The standard list page token. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** The standard list page token.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** The standard list page token. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      /**
+       * When set to `true`, operations that are reachable are returned as normal, and those that
+       * are unreachable are returned in the ListOperationsResponse.unreachable field. This can only
+       * be `true` when reading across collections. For example, when `parent` is set to
+       * `"projects/example/locations/-"`. This field is not supported by default and will result in
+       * an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
+       * product specific documentation.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean returnPartialSuccess;
+
+      /** When set to `true`, operations that are reachable are returned as normal, and those that are
+     unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
+     when reading across collections. For example, when `parent` is set to
+     `"projects/example/locations/-"`. This field is not supported by default and will result in an
+     `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
+     documentation.
+       */
+      public java.lang.Boolean getReturnPartialSuccess() {
+        return returnPartialSuccess;
+      }
+
+      /**
+       * When set to `true`, operations that are reachable are returned as normal, and those that
+       * are unreachable are returned in the ListOperationsResponse.unreachable field. This can only
+       * be `true` when reading across collections. For example, when `parent` is set to
+       * `"projects/example/locations/-"`. This field is not supported by default and will result in
+       * an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
+       * product specific documentation.
+       */
+      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
+        this.returnPartialSuccess = returnPartialSuccess;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the OutboundEndpoints collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Dns dns = new Dns(...);}
+   *   {@code Dns.OutboundEndpoints.List request = dns.outboundEndpoints().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public OutboundEndpoints outboundEndpoints() {
+    return new OutboundEndpoints();
+  }
+
+  /**
+   * The "outboundEndpoints" collection of methods.
+   */
+  public class OutboundEndpoints {
+
+    /**
+     * Creates a new Outbound Endpoint.
+     *
+     * Create a request for the method "outboundEndpoints.create".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The parent project and location where this OutboundEndpoint will be created. Format:
+     *        projects/{project}/locations/{location}
+     * @param content the {@link com.google.api.services.dns.model.OutboundEndpoint}
+     * @return the request
+     */
+    public Create create(java.lang.String parent, com.google.api.services.dns.model.OutboundEndpoint content) throws java.io.IOException {
+      Create result = new Create(parent, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Create extends DnsRequest<com.google.api.services.dns.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "dns/v1/{+parent}/outboundEndpoints";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+      /**
+       * Creates a new Outbound Endpoint.
+       *
+       * Create a request for the method "outboundEndpoints.create".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Create#execute()} method to invoke the remote operation. <p> {@link
+       * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The parent project and location where this OutboundEndpoint will be created. Format:
+     *        projects/{project}/locations/{location}
+       * @param content the {@link com.google.api.services.dns.model.OutboundEndpoint}
+       * @since 1.13
+       */
+      protected Create(java.lang.String parent, com.google.api.services.dns.model.OutboundEndpoint content) {
+        super(Dns.this, "POST", REST_PATH, content, com.google.api.services.dns.model.GoogleLongrunningOperation.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public Create set$Xgafv(java.lang.String $Xgafv) {
+        return (Create) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Create setAccessToken(java.lang.String accessToken) {
+        return (Create) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Create setAlt(java.lang.String alt) {
+        return (Create) super.setAlt(alt);
+      }
+
+      @Override
+      public Create setCallback(java.lang.String callback) {
+        return (Create) super.setCallback(callback);
+      }
+
+      @Override
+      public Create setFields(java.lang.String fields) {
+        return (Create) super.setFields(fields);
+      }
+
+      @Override
+      public Create setKey(java.lang.String key) {
+        return (Create) super.setKey(key);
+      }
+
+      @Override
+      public Create setOauthToken(java.lang.String oauthToken) {
+        return (Create) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Create) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Create setQuotaUser(java.lang.String quotaUser) {
+        return (Create) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Create setUploadType(java.lang.String uploadType) {
+        return (Create) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Create setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Create) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The parent project and location where this OutboundEndpoint will be created.
+       * Format: projects/{project}/locations/{location}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent project and location where this OutboundEndpoint will be created. Format:
+     projects/{project}/locations/{location}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent project and location where this OutboundEndpoint will be created.
+       * Format: projects/{project}/locations/{location}
+       */
+      public Create setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Create setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      /**
+       * Required. The ID to use for the OutboundEndpoint, which will become the final component of
+       * the OutboundEndpoint's resource name.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String outboundEndpointId;
+
+      /** Required. The ID to use for the OutboundEndpoint, which will become the final component of the
+     OutboundEndpoint's resource name.
+       */
+      public java.lang.String getOutboundEndpointId() {
+        return outboundEndpointId;
+      }
+
+      /**
+       * Required. The ID to use for the OutboundEndpoint, which will become the final component of
+       * the OutboundEndpoint's resource name.
+       */
+      public Create setOutboundEndpointId(java.lang.String outboundEndpointId) {
+        this.outboundEndpointId = outboundEndpointId;
+        return this;
+      }
+
+      /** Optional. An optional request ID to identify requests. */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. An optional request ID to identify requests.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /** Optional. An optional request ID to identify requests. */
+      public Create setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Create set(String parameterName, Object value) {
+        return (Create) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a previously created Outbound Endpoint.
+     *
+     * Create a request for the method "outboundEndpoints.delete".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the OutboundEndpoint to delete. Format:
+     *        projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+     * @return the request
+     */
+    public Delete delete(java.lang.String name) throws java.io.IOException {
+      Delete result = new Delete(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends DnsRequest<com.google.api.services.dns.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "dns/v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+
+      /**
+       * Deletes a previously created Outbound Endpoint.
+       *
+       * Create a request for the method "outboundEndpoints.delete".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the OutboundEndpoint to delete. Format:
+     *        projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       * @since 1.13
+       */
+      protected Delete(java.lang.String name) {
+        super(Dns.this, "DELETE", REST_PATH, null, com.google.api.services.dns.model.GoogleLongrunningOperation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the OutboundEndpoint to delete. Format:
+       * projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the OutboundEndpoint to delete. Format:
+     projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the OutboundEndpoint to delete. Format:
+       * projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       */
+      public Delete setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Delete setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      /** Optional. An optional request ID to identify requests. */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. An optional request ID to identify requests.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /** Optional. An optional request ID to identify requests. */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fetches the representation of an existing Outbound Endpoint.
+     *
+     * Create a request for the method "outboundEndpoints.get".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the OutboundEndpoint to retrieve. Format:
+     *        projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+     * @return the request
+     */
+    public Get get(java.lang.String name) throws java.io.IOException {
+      Get result = new Get(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends DnsRequest<com.google.api.services.dns.model.OutboundEndpoint> {
+
+      private static final String REST_PATH = "dns/v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+
+      /**
+       * Fetches the representation of an existing Outbound Endpoint.
+       *
+       * Create a request for the method "outboundEndpoints.get".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the OutboundEndpoint to retrieve. Format:
+     *        projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       * @since 1.13
+       */
+      protected Get(java.lang.String name) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.OutboundEndpoint.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the OutboundEndpoint to retrieve. Format:
+       * projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the OutboundEndpoint to retrieve. Format:
+     projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the OutboundEndpoint to retrieve. Format:
+       * projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}
+       */
+      public Get setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Get setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Enumerates all Outbound Endpoints associated with a project.
+     *
+     * Create a request for the method "outboundEndpoints.list".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param parent Required. The parent project and location from which to list resources. Format:
+     *        projects/{project}/locations/{location}
+     * @return the request
+     */
+    public List list(java.lang.String parent) throws java.io.IOException {
+      List result = new List(parent);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends DnsRequest<com.google.api.services.dns.model.ListOutboundEndpointsResponse> {
+
+      private static final String REST_PATH = "dns/v1/{+parent}/outboundEndpoints";
+
+      private final java.util.regex.Pattern PARENT_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+      /**
+       * Enumerates all Outbound Endpoints associated with a project.
+       *
+       * Create a request for the method "outboundEndpoints.list".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param parent Required. The parent project and location from which to list resources. Format:
+     *        projects/{project}/locations/{location}
+       * @since 1.13
+       */
+      protected List(java.lang.String parent) {
+        super(Dns.this, "GET", REST_PATH, null, com.google.api.services.dns.model.ListOutboundEndpointsResponse.class);
+        this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The parent project and location from which to list resources. Format:
+       * projects/{project}/locations/{location}
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String parent;
+
+      /** Required. The parent project and location from which to list resources. Format:
+     projects/{project}/locations/{location}
+       */
+      public java.lang.String getParent() {
+        return parent;
+      }
+
+      /**
+       * Required. The parent project and location from which to list resources. Format:
+       * projects/{project}/locations/{location}
+       */
+      public List setParent(java.lang.String parent) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+              "Parameter parent must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+$");
+        }
+        this.parent = parent;
+        return this;
+      }
+
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /**
+
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      public List setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      /** Optional. The maximum number of results to return. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of results to return.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /** Optional. The maximum number of results to return. */
+      public List setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /** Optional. A page token received from a previous List call. */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A page token received from a previous List call.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /** Optional. A page token received from a previous List call. */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Updates an existing Outbound Endpoint.
+     *
+     * Create a request for the method "outboundEndpoints.patch".
+     *
+     * This request holds the parameters needed by the dns server.  After setting any optional
+     * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+     *
+     * @param name Identifier. The resource name of the OutboundEndpoint. Format:
+     *        `projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}`
+     * @param content the {@link com.google.api.services.dns.model.OutboundEndpoint}
+     * @return the request
+     */
+    public Patch patch(java.lang.String name, com.google.api.services.dns.model.OutboundEndpoint content) throws java.io.IOException {
+      Patch result = new Patch(name, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Patch extends DnsRequest<com.google.api.services.dns.model.GoogleLongrunningOperation> {
+
+      private static final String REST_PATH = "dns/v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+
+      /**
+       * Updates an existing Outbound Endpoint.
+       *
+       * Create a request for the method "outboundEndpoints.patch".
+       *
+       * This request holds the parameters needed by the the dns server.  After setting any optional
+       * parameters, call the {@link Patch#execute()} method to invoke the remote operation. <p> {@link
+       * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Identifier. The resource name of the OutboundEndpoint. Format:
+     *        `projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}`
+       * @param content the {@link com.google.api.services.dns.model.OutboundEndpoint}
+       * @since 1.13
+       */
+      protected Patch(java.lang.String name, com.google.api.services.dns.model.OutboundEndpoint content) {
+        super(Dns.this, "PATCH", REST_PATH, content, com.google.api.services.dns.model.GoogleLongrunningOperation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+        }
+      }
+
+      @Override
+      public Patch set$Xgafv(java.lang.String $Xgafv) {
+        return (Patch) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Patch setAccessToken(java.lang.String accessToken) {
+        return (Patch) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Patch setAlt(java.lang.String alt) {
+        return (Patch) super.setAlt(alt);
+      }
+
+      @Override
+      public Patch setCallback(java.lang.String callback) {
+        return (Patch) super.setCallback(callback);
+      }
+
+      @Override
+      public Patch setFields(java.lang.String fields) {
+        return (Patch) super.setFields(fields);
+      }
+
+      @Override
+      public Patch setKey(java.lang.String key) {
+        return (Patch) super.setKey(key);
+      }
+
+      @Override
+      public Patch setOauthToken(java.lang.String oauthToken) {
+        return (Patch) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Patch) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Patch setQuotaUser(java.lang.String quotaUser) {
+        return (Patch) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Patch setUploadType(java.lang.String uploadType) {
+        return (Patch) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Patch) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The resource name of the OutboundEndpoint. Format:
+       * `projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The resource name of the OutboundEndpoint. Format:
+     `projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The resource name of the OutboundEndpoint. Format:
+       * `projects/{project}/locations/{location}/outboundEndpoints/{outboundEndpoint}`
+       */
+      public Patch setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^projects/[^/]+/locations/[^/]+/outboundEndpoints/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String clientOperationId;
+
+      /** For mutating operation requests only. An optional identifier specified by the client. Must be
+     unique for operation resources in the Operations collection.
+       */
+      public java.lang.String getClientOperationId() {
+        return clientOperationId;
+      }
+
+      /**
+       * For mutating operation requests only. An optional identifier specified by the client. Must
+       * be unique for operation resources in the Operations collection.
+       */
+      public Patch setClientOperationId(java.lang.String clientOperationId) {
+        this.clientOperationId = clientOperationId;
+        return this;
+      }
+
+      /** Optional. An optional request ID to identify requests. */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** Optional. An optional request ID to identify requests.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /** Optional. An optional request ID to identify requests. */
+      public Patch setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      /** Required. The list of fields to be updated. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Required. The list of fields to be updated.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Required. The list of fields to be updated. */
+      public Patch setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public Patch set(String parameterName, Object value) {
+        return (Patch) super.set(parameterName, value);
       }
     }
 

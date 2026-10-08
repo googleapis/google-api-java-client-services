@@ -53,6 +53,15 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
   private GoogleCloudAiplatformV1beta1Content content;
 
   /**
+   * Output only. An optional opaque continuation token returned when `finish_reason` is
+   * `CONTINUATION`. Clients can pass this token in a subsequent `GenerateContentRequest` to
+   * continue generation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String continuationToken;
+
+  /**
    * Output only. Describes the reason the model stopped generating tokens in more detail. This
    * field is returned only when `finish_reason` is set.
    * The value may be {@code null}.
@@ -161,6 +170,59 @@ public final class GoogleCloudAiplatformV1beta1Candidate extends com.google.api.
    */
   public GoogleCloudAiplatformV1beta1Candidate setContent(GoogleCloudAiplatformV1beta1Content content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Output only. An optional opaque continuation token returned when `finish_reason` is
+   * `CONTINUATION`. Clients can pass this token in a subsequent `GenerateContentRequest` to
+   * continue generation.
+   * @see #decodeContinuationToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContinuationToken() {
+    return continuationToken;
+  }
+
+  /**
+   * Output only. An optional opaque continuation token returned when `finish_reason` is
+   * `CONTINUATION`. Clients can pass this token in a subsequent `GenerateContentRequest` to
+   * continue generation.
+   * @see #getContinuationToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContinuationToken() {
+    return com.google.api.client.util.Base64.decodeBase64(continuationToken);
+  }
+
+  /**
+   * Output only. An optional opaque continuation token returned when `finish_reason` is
+   * `CONTINUATION`. Clients can pass this token in a subsequent `GenerateContentRequest` to
+   * continue generation.
+   * @see #encodeContinuationToken()
+   * @param continuationToken continuationToken or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Candidate setContinuationToken(java.lang.String continuationToken) {
+    this.continuationToken = continuationToken;
+    return this;
+  }
+
+  /**
+   * Output only. An optional opaque continuation token returned when `finish_reason` is
+   * `CONTINUATION`. Clients can pass this token in a subsequent `GenerateContentRequest` to
+   * continue generation.
+   * @see #setContinuationToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudAiplatformV1beta1Candidate encodeContinuationToken(byte[] continuationToken) {
+    this.continuationToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(continuationToken);
     return this;
   }
 

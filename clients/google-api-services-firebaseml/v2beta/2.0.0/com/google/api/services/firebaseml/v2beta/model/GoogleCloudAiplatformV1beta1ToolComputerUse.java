@@ -17,7 +17,7 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Tool to support computer use.
+ * A tool that enables the model to interact directly with a computer environment.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:
@@ -30,39 +30,38 @@ package com.google.api.services.firebaseml.v2beta.model;
 public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Disabled safety policies for computer use.
+   * Optional. A list of safety policies to disable for the computer use tool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> disabledSafetyPolicies;
 
   /**
-   * Optional. Enables the prompt injection detection check on computer-use request.
+   * Optional. Whether to enable the prompt injection detection check on the computer use request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enablePromptInjectionDetection;
 
   /**
-   * Required. The environment being operated.
+   * Required. The target environment where the computer use tool operates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String environment;
 
   /**
-   * Optional. By default, [predefined functions](https://cloud.google.com/vertex-ai/generative-
-   * ai/docs/computer-use#supported-actions) are included in the final model call. Some of them can
-   * be explicitly excluded from being automatically included. This can serve two purposes: 1. Using
-   * a more restricted / different action space. 2. Improving the definitions / instructions of
-   * predefined functions.
+   * Optional. A list of predefined functions to explicitly exclude from the model call. By default,
+   * [predefined functions](https://cloud.google.com/vertex-ai/generative-ai/docs/computer-
+   * use#supported-actions) are included. Excluding functions allows for a more restricted action
+   * space or custom definitions for predefined functions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedPredefinedFunctions;
 
   /**
-   * Optional. Disabled safety policies for computer use.
+   * Optional. A list of safety policies to disable for the computer use tool.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDisabledSafetyPolicies() {
@@ -70,7 +69,7 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. Disabled safety policies for computer use.
+   * Optional. A list of safety policies to disable for the computer use tool.
    * @param disabledSafetyPolicies disabledSafetyPolicies or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolComputerUse setDisabledSafetyPolicies(java.util.List<java.lang.String> disabledSafetyPolicies) {
@@ -79,7 +78,7 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. Enables the prompt injection detection check on computer-use request.
+   * Optional. Whether to enable the prompt injection detection check on the computer use request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnablePromptInjectionDetection() {
@@ -87,7 +86,7 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. Enables the prompt injection detection check on computer-use request.
+   * Optional. Whether to enable the prompt injection detection check on the computer use request.
    * @param enablePromptInjectionDetection enablePromptInjectionDetection or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolComputerUse setEnablePromptInjectionDetection(java.lang.Boolean enablePromptInjectionDetection) {
@@ -96,7 +95,7 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Required. The environment being operated.
+   * Required. The target environment where the computer use tool operates.
    * @return value or {@code null} for none
    */
   public java.lang.String getEnvironment() {
@@ -104,7 +103,7 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Required. The environment being operated.
+   * Required. The target environment where the computer use tool operates.
    * @param environment environment or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolComputerUse setEnvironment(java.lang.String environment) {
@@ -113,11 +112,10 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. By default, [predefined functions](https://cloud.google.com/vertex-ai/generative-
-   * ai/docs/computer-use#supported-actions) are included in the final model call. Some of them can
-   * be explicitly excluded from being automatically included. This can serve two purposes: 1. Using
-   * a more restricted / different action space. 2. Improving the definitions / instructions of
-   * predefined functions.
+   * Optional. A list of predefined functions to explicitly exclude from the model call. By default,
+   * [predefined functions](https://cloud.google.com/vertex-ai/generative-ai/docs/computer-
+   * use#supported-actions) are included. Excluding functions allows for a more restricted action
+   * space or custom definitions for predefined functions.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedPredefinedFunctions() {
@@ -125,11 +123,10 @@ public final class GoogleCloudAiplatformV1beta1ToolComputerUse extends com.googl
   }
 
   /**
-   * Optional. By default, [predefined functions](https://cloud.google.com/vertex-ai/generative-
-   * ai/docs/computer-use#supported-actions) are included in the final model call. Some of them can
-   * be explicitly excluded from being automatically included. This can serve two purposes: 1. Using
-   * a more restricted / different action space. 2. Improving the definitions / instructions of
-   * predefined functions.
+   * Optional. A list of predefined functions to explicitly exclude from the model call. By default,
+   * [predefined functions](https://cloud.google.com/vertex-ai/generative-ai/docs/computer-
+   * use#supported-actions) are included. Excluding functions allows for a more restricted action
+   * space or custom definitions for predefined functions.
    * @param excludedPredefinedFunctions excludedPredefinedFunctions or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ToolComputerUse setExcludedPredefinedFunctions(java.util.List<java.lang.String> excludedPredefinedFunctions) {

@@ -55,6 +55,15 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   }
 
   /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String continuationToken;
+
+  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -153,6 +162,59 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
    */
   public GoogleCloudAiplatformV1beta1GenerateContentRequest setContents(java.util.List<GoogleCloudAiplatformV1beta1Content> contents) {
     this.contents = contents;
+    return this;
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #decodeContinuationToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContinuationToken() {
+    return continuationToken;
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #getContinuationToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContinuationToken() {
+    return com.google.api.client.util.Base64.decodeBase64(continuationToken);
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #encodeContinuationToken()
+   * @param continuationToken continuationToken or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setContinuationToken(java.lang.String continuationToken) {
+    this.continuationToken = continuationToken;
+    return this;
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #setContinuationToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest encodeContinuationToken(byte[] continuationToken) {
+    this.continuationToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(continuationToken);
     return this;
   }
 

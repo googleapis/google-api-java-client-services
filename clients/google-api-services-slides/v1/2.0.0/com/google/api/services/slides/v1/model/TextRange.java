@@ -17,8 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Specifies a contiguous range of text within a shape or table cell's text. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Specifies a contiguous range of text within a shape or table cell's text.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

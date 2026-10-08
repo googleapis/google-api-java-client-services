@@ -531,14 +531,13 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * The comments view mode to apply to the presentation. This allows viewing the presentation
        * with comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is
-       * used. [Developer Preview](https://developers.google.com/workspace/preview).
+       * used.
        */
       @com.google.api.client.util.Key
       private java.lang.String commentsViewMode;
 
       /** The comments view mode to apply to the presentation. This allows viewing the presentation with
      comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-     [Developer Preview](https://developers.google.com/workspace/preview).
        */
       public java.lang.String getCommentsViewMode() {
         return commentsViewMode;
@@ -547,7 +546,7 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
       /**
        * The comments view mode to apply to the presentation. This allows viewing the presentation
        * with comments omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is
-       * used. [Developer Preview](https://developers.google.com/workspace/preview).
+       * used.
        */
       public Get setCommentsViewMode(java.lang.String commentsViewMode) {
         this.commentsViewMode = commentsViewMode;
@@ -722,14 +721,12 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * The comments view mode to apply to the page. This allows viewing the page with comments
          * omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-         * [Developer Preview](https://developers.google.com/workspace/preview).
          */
         @com.google.api.client.util.Key
         private java.lang.String commentsViewMode;
 
         /** The comments view mode to apply to the page. This allows viewing the page with comments omitted or
-       included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used. [Developer
-       Preview](https://developers.google.com/workspace/preview).
+       included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
          */
         public java.lang.String getCommentsViewMode() {
           return commentsViewMode;
@@ -738,7 +735,6 @@ public class Slides extends com.google.api.client.googleapis.services.json.Abstr
         /**
          * The comments view mode to apply to the page. This allows viewing the page with comments
          * omitted or included. If one is not specified, COMMENTS_VIEW_MODE_OMITTED is used.
-         * [Developer Preview](https://developers.google.com/workspace/preview).
          */
         public Get setCommentsViewMode(java.lang.String commentsViewMode) {
           this.commentsViewMode = commentsViewMode;

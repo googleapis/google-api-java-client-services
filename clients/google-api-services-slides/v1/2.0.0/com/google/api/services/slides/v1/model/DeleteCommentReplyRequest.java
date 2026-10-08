@@ -19,7 +19,7 @@ package com.google.api.services.slides.v1.model;
 /**
  * Deletes a reply Post from a CommentThread. Returns a 400 bad request error if: - The requesting
  * user is not the author of the post. - The reply post contains a comment action. - The reply post
- * contains an assignee. [Developer Preview](https://developers.google.com/workspace/preview).
+ * contains an assignee.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

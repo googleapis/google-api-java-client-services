@@ -17,8 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * Inserts a CommentThread into the presentation. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Inserts a CommentThread into the presentation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

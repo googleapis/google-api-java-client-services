@@ -17,8 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * An anchor to a specific range of text within a Shape's text. [Developer
- * Preview](https://developers.google.com/workspace/preview). To insert comments in speaker notes,
+ * An anchor to a specific range of text within a Shape's text. To insert comments in speaker notes,
  * use the ShapeTextAnchor with the speaker notes object ID.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

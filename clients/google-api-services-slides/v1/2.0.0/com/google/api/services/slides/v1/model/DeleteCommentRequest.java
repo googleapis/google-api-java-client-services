@@ -18,7 +18,7 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * Deletes a CommentThread. Returns a 400 bad request error if the requesting user is not the author
- * of the headPost. [Developer Preview](https://developers.google.com/workspace/preview).
+ * of the headPost.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

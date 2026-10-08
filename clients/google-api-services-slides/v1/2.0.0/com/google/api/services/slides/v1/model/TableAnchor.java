@@ -18,8 +18,7 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * An anchor to a specific range of cells within a Table. Used to anchor a comment to all of the
- * text in each cell in a range within a table. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * text in each cell in a range within a table.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

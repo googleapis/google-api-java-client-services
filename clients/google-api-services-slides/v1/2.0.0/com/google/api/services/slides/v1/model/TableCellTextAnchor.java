@@ -17,8 +17,7 @@
 package com.google.api.services.slides.v1.model;
 
 /**
- * An anchor to a specific range of text within a TableCell's TextElement. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * An anchor to a specific range of text within a TableCell's TextElement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

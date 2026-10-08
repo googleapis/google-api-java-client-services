@@ -18,7 +18,6 @@ package com.google.api.services.slides.v1.model;
 
 /**
  * Represents comment anchor data tied to a Slides object, for example a `Page` or PageElement.
- * [Developer Preview](https://developers.google.com/workspace/preview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Slides API. For a detailed explanation see:

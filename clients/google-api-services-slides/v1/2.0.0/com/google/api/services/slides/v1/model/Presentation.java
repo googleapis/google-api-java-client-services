@@ -30,8 +30,7 @@ package com.google.api.services.slides.v1.model;
 public final class Presentation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The comment threads associated with the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comment threads associated with the presentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,8 +43,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comments view mode applied to the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comments view mode applied to the presentation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -152,8 +150,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * Output only. The comment threads associated with the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comment threads associated with the presentation.
    * @return value or {@code null} for none
    */
   public java.util.List<CommentThread> getComments() {
@@ -161,8 +158,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comment threads associated with the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comment threads associated with the presentation.
    * @param comments comments or {@code null} for none
    */
   public Presentation setComments(java.util.List<CommentThread> comments) {
@@ -171,8 +167,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comments view mode applied to the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comments view mode applied to the presentation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentsViewMode() {
@@ -180,8 +175,7 @@ public final class Presentation extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The comments view mode applied to the presentation. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Output only. The comments view mode applied to the presentation.
    * @param commentsViewMode commentsViewMode or {@code null} for none
    */
   public Presentation setCommentsViewMode(java.lang.String commentsViewMode) {

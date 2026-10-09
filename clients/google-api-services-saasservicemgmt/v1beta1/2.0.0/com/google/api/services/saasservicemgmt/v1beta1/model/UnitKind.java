@@ -87,6 +87,14 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultRelease;
 
   /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String deleteTime;
+
+  /**
    * Optional. Immutable. List of other unit kinds that this release will depend on. Dependencies
    * will be automatically provisioned if not found. Maximum 10.
    * The value may be {@code null}.
@@ -298,6 +306,25 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   public UnitKind setDefaultRelease(java.lang.String defaultRelease) {
     this.defaultRelease = defaultRelease;
+    return this;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @return value or {@code null} for none
+   */
+  public String getDeleteTime() {
+    return deleteTime;
+  }
+
+  /**
+   * Output only. The timestamp when the resource was marked for deletion (deletion is an
+   * asynchronous operation).
+   * @param deleteTime deleteTime or {@code null} for none
+   */
+  public UnitKind setDeleteTime(String deleteTime) {
+    this.deleteTime = deleteTime;
     return this;
   }
 

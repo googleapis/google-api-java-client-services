@@ -18,7 +18,7 @@ package com.google.api.services.saasservicemgmt.v1beta1.model;
 
 /**
  * A unit of deployment that has its lifecycle via a CRUD API using an actuation engine under the
- * hood (e.g. based on Terraform, Helm or a custom implementation provided by a service producer). A
+ * hood (e.g. based on Terraform, or a custom implementation provided by a service producer). A
  * building block of a SaaS Tenant.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -153,8 +153,8 @@ public final class Unit extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Set of key/value pairs corresponding to output variables from execution
-   * of actuation templates. The variables are declared in actuation configs (e.g in helm chart or
-   * terraform) and the values are fetched and returned by the actuation engine upon completion of
+   * of actuation templates. The variables are declared in actuation configs (in Terraform for
+   * example) and the values are fetched and returned by the actuation engine upon completion of
    * execution.
    * The value may be {@code null}.
    */
@@ -546,8 +546,8 @@ public final class Unit extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Set of key/value pairs corresponding to output variables from execution
-   * of actuation templates. The variables are declared in actuation configs (e.g in helm chart or
-   * terraform) and the values are fetched and returned by the actuation engine upon completion of
+   * of actuation templates. The variables are declared in actuation configs (in Terraform for
+   * example) and the values are fetched and returned by the actuation engine upon completion of
    * execution.
    * @return value or {@code null} for none
    */
@@ -557,8 +557,8 @@ public final class Unit extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Output only. Set of key/value pairs corresponding to output variables from execution
-   * of actuation templates. The variables are declared in actuation configs (e.g in helm chart or
-   * terraform) and the values are fetched and returned by the actuation engine upon completion of
+   * of actuation templates. The variables are declared in actuation configs (in Terraform for
+   * example) and the values are fetched and returned by the actuation engine upon completion of
    * execution.
    * @param outputVariables outputVariables or {@code null} for none
    */

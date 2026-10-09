@@ -4825,6 +4825,1279 @@ public class FirebaseDataConnect extends com.google.api.client.googleapis.servic
 
         }
         /**
+         * An accessor for creating requests from the Postgrest collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code FirebaseDataConnect firebasedataconnect = new FirebaseDataConnect(...);}
+         *   {@code FirebaseDataConnect.Postgrest.List request = firebasedataconnect.postgrest().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Postgrest postgrest() {
+          return new Postgrest();
+        }
+
+        /**
+         * The "postgrest" collection of methods.
+         */
+        public class Postgrest {
+
+          /**
+           * Executes a dynamic DELETE mutation on rows matching the URL filters.
+           *
+           * Create a request for the method "postgrest.postgrestDelete".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link PostgrestDelete#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+           * @param firebasedataconnectTable Required. The name of the table to delete from.
+           * @return the request
+           */
+          public PostgrestDelete postgrestDelete(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable) throws java.io.IOException {
+            PostgrestDelete result = new PostgrestDelete(firebasedataconnectService, firebasedataconnectTable);
+            initialize(result);
+            return result;
+          }
+
+          public class PostgrestDelete extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}";
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_TABLE_PATTERN =
+                java.util.regex.Pattern.compile("^.*$");
+
+            /**
+             * Executes a dynamic DELETE mutation on rows matching the URL filters.
+             *
+             * Create a request for the method "postgrest.postgrestDelete".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link PostgrestDelete#execute()} method to invoke the remote
+             * operation. <p> {@link PostgrestDelete#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectTable Required. The name of the table to delete from.
+             * @since 1.13
+             */
+            protected PostgrestDelete(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable) {
+              super(FirebaseDataConnect.this, "DELETE", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+              this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectTable = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectTable, "Required parameter firebasedataconnectTable must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+            }
+
+            @Override
+            public PostgrestDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (PostgrestDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public PostgrestDelete setAccessToken(java.lang.String accessToken) {
+              return (PostgrestDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public PostgrestDelete setAlt(java.lang.String alt) {
+              return (PostgrestDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public PostgrestDelete setCallback(java.lang.String callback) {
+              return (PostgrestDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public PostgrestDelete setFields(java.lang.String fields) {
+              return (PostgrestDelete) super.setFields(fields);
+            }
+
+            @Override
+            public PostgrestDelete setKey(java.lang.String key) {
+              return (PostgrestDelete) super.setKey(key);
+            }
+
+            @Override
+            public PostgrestDelete setOauthToken(java.lang.String oauthToken) {
+              return (PostgrestDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public PostgrestDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (PostgrestDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public PostgrestDelete setQuotaUser(java.lang.String quotaUser) {
+              return (PostgrestDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public PostgrestDelete setUploadType(java.lang.String uploadType) {
+              return (PostgrestDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public PostgrestDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (PostgrestDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectService;
+
+            /** Required. The resource name of the service, in the format:
+           `projects/{project}/locations/{location}/services/{service}`
+             */
+            public java.lang.String getFirebasedataconnectService() {
+              return firebasedataconnectService;
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            public PostgrestDelete setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectService = firebasedataconnectService;
+              return this;
+            }
+
+            /** Required. The name of the table to delete from. */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectTable;
+
+            /** Required. The name of the table to delete from.
+             */
+            public java.lang.String getFirebasedataconnectTable() {
+              return firebasedataconnectTable;
+            }
+
+            /** Required. The name of the table to delete from. */
+            public PostgrestDelete setFirebasedataconnectTable(java.lang.String firebasedataconnectTable) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+              this.firebasedataconnectTable = firebasedataconnectTable;
+              return this;
+            }
+
+            @Override
+            public PostgrestDelete set(String parameterName, Object value) {
+              return (PostgrestDelete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Executes a dynamic INSERT (create) or UPSERT mutation on a target table.
+           *
+           * Create a request for the method "postgrest.postgrestInsert".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link PostgrestInsert#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+           * @param firebasedataconnectTable Required. The name of the table to insert into.
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+           * @return the request
+           */
+          public PostgrestInsert postgrestInsert(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) throws java.io.IOException {
+            PostgrestInsert result = new PostgrestInsert(firebasedataconnectService, firebasedataconnectTable, content);
+            initialize(result);
+            return result;
+          }
+
+          public class PostgrestInsert extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}";
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_TABLE_PATTERN =
+                java.util.regex.Pattern.compile("^.*$");
+
+            /**
+             * Executes a dynamic INSERT (create) or UPSERT mutation on a target table.
+             *
+             * Create a request for the method "postgrest.postgrestInsert".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link PostgrestInsert#execute()} method to invoke the remote
+             * operation. <p> {@link PostgrestInsert#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectTable Required. The name of the table to insert into.
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+             * @since 1.13
+             */
+            protected PostgrestInsert(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) {
+              super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+              this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectTable = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectTable, "Required parameter firebasedataconnectTable must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+            }
+
+            @Override
+            public PostgrestInsert set$Xgafv(java.lang.String $Xgafv) {
+              return (PostgrestInsert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public PostgrestInsert setAccessToken(java.lang.String accessToken) {
+              return (PostgrestInsert) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public PostgrestInsert setAlt(java.lang.String alt) {
+              return (PostgrestInsert) super.setAlt(alt);
+            }
+
+            @Override
+            public PostgrestInsert setCallback(java.lang.String callback) {
+              return (PostgrestInsert) super.setCallback(callback);
+            }
+
+            @Override
+            public PostgrestInsert setFields(java.lang.String fields) {
+              return (PostgrestInsert) super.setFields(fields);
+            }
+
+            @Override
+            public PostgrestInsert setKey(java.lang.String key) {
+              return (PostgrestInsert) super.setKey(key);
+            }
+
+            @Override
+            public PostgrestInsert setOauthToken(java.lang.String oauthToken) {
+              return (PostgrestInsert) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public PostgrestInsert setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (PostgrestInsert) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public PostgrestInsert setQuotaUser(java.lang.String quotaUser) {
+              return (PostgrestInsert) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public PostgrestInsert setUploadType(java.lang.String uploadType) {
+              return (PostgrestInsert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public PostgrestInsert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (PostgrestInsert) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectService;
+
+            /** Required. The resource name of the service, in the format:
+           `projects/{project}/locations/{location}/services/{service}`
+             */
+            public java.lang.String getFirebasedataconnectService() {
+              return firebasedataconnectService;
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            public PostgrestInsert setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectService = firebasedataconnectService;
+              return this;
+            }
+
+            /** Required. The name of the table to insert into. */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectTable;
+
+            /** Required. The name of the table to insert into.
+             */
+            public java.lang.String getFirebasedataconnectTable() {
+              return firebasedataconnectTable;
+            }
+
+            /** Required. The name of the table to insert into. */
+            public PostgrestInsert setFirebasedataconnectTable(java.lang.String firebasedataconnectTable) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+              this.firebasedataconnectTable = firebasedataconnectTable;
+              return this;
+            }
+
+            @Override
+            public PostgrestInsert set(String parameterName, Object value) {
+              return (PostgrestInsert) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Executes a dynamic SELECT (read) query on a target PostgreSQL table. Projections, filters,
+           * sorting, and embeddings are mapped from the HTTP URL query parameters.
+           *
+           * Create a request for the method "postgrest.postgrestSelect".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link PostgrestSelect#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+           * @param firebasedataconnectTable Required. The name of the table to select from.
+           * @return the request
+           */
+          public PostgrestSelect postgrestSelect(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable) throws java.io.IOException {
+            PostgrestSelect result = new PostgrestSelect(firebasedataconnectService, firebasedataconnectTable);
+            initialize(result);
+            return result;
+          }
+
+          public class PostgrestSelect extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}";
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_TABLE_PATTERN =
+                java.util.regex.Pattern.compile("^.*$");
+
+            /**
+             * Executes a dynamic SELECT (read) query on a target PostgreSQL table. Projections, filters,
+             * sorting, and embeddings are mapped from the HTTP URL query parameters.
+             *
+             * Create a request for the method "postgrest.postgrestSelect".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link PostgrestSelect#execute()} method to invoke the remote
+             * operation. <p> {@link PostgrestSelect#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectTable Required. The name of the table to select from.
+             * @since 1.13
+             */
+            protected PostgrestSelect(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable) {
+              super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+              this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectTable = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectTable, "Required parameter firebasedataconnectTable must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public PostgrestSelect set$Xgafv(java.lang.String $Xgafv) {
+              return (PostgrestSelect) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public PostgrestSelect setAccessToken(java.lang.String accessToken) {
+              return (PostgrestSelect) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public PostgrestSelect setAlt(java.lang.String alt) {
+              return (PostgrestSelect) super.setAlt(alt);
+            }
+
+            @Override
+            public PostgrestSelect setCallback(java.lang.String callback) {
+              return (PostgrestSelect) super.setCallback(callback);
+            }
+
+            @Override
+            public PostgrestSelect setFields(java.lang.String fields) {
+              return (PostgrestSelect) super.setFields(fields);
+            }
+
+            @Override
+            public PostgrestSelect setKey(java.lang.String key) {
+              return (PostgrestSelect) super.setKey(key);
+            }
+
+            @Override
+            public PostgrestSelect setOauthToken(java.lang.String oauthToken) {
+              return (PostgrestSelect) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public PostgrestSelect setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (PostgrestSelect) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public PostgrestSelect setQuotaUser(java.lang.String quotaUser) {
+              return (PostgrestSelect) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public PostgrestSelect setUploadType(java.lang.String uploadType) {
+              return (PostgrestSelect) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public PostgrestSelect setUploadProtocol(java.lang.String uploadProtocol) {
+              return (PostgrestSelect) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectService;
+
+            /** Required. The resource name of the service, in the format:
+           `projects/{project}/locations/{location}/services/{service}`
+             */
+            public java.lang.String getFirebasedataconnectService() {
+              return firebasedataconnectService;
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            public PostgrestSelect setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectService = firebasedataconnectService;
+              return this;
+            }
+
+            /** Required. The name of the table to select from. */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectTable;
+
+            /** Required. The name of the table to select from.
+             */
+            public java.lang.String getFirebasedataconnectTable() {
+              return firebasedataconnectTable;
+            }
+
+            /** Required. The name of the table to select from. */
+            public PostgrestSelect setFirebasedataconnectTable(java.lang.String firebasedataconnectTable) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+              this.firebasedataconnectTable = firebasedataconnectTable;
+              return this;
+            }
+
+            @Override
+            public PostgrestSelect set(String parameterName, Object value) {
+              return (PostgrestSelect) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Executes a dynamic UPDATE (modify) mutation on rows matching the URL filters.
+           *
+           * Create a request for the method "postgrest.postgrestUpdate".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link PostgrestUpdate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+           * @param firebasedataconnectTable Required. The name of the table to update.
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+           * @return the request
+           */
+          public PostgrestUpdate postgrestUpdate(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) throws java.io.IOException {
+            PostgrestUpdate result = new PostgrestUpdate(firebasedataconnectService, firebasedataconnectTable, content);
+            initialize(result);
+            return result;
+          }
+
+          public class PostgrestUpdate extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}";
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_TABLE_PATTERN =
+                java.util.regex.Pattern.compile("^.*$");
+
+            /**
+             * Executes a dynamic UPDATE (modify) mutation on rows matching the URL filters.
+             *
+             * Create a request for the method "postgrest.postgrestUpdate".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link PostgrestUpdate#execute()} method to invoke the remote
+             * operation. <p> {@link PostgrestUpdate#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectTable Required. The name of the table to update.
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+             * @since 1.13
+             */
+            protected PostgrestUpdate(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) {
+              super(FirebaseDataConnect.this, "PATCH", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+              this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectTable = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectTable, "Required parameter firebasedataconnectTable must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+            }
+
+            @Override
+            public PostgrestUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (PostgrestUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public PostgrestUpdate setAccessToken(java.lang.String accessToken) {
+              return (PostgrestUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public PostgrestUpdate setAlt(java.lang.String alt) {
+              return (PostgrestUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public PostgrestUpdate setCallback(java.lang.String callback) {
+              return (PostgrestUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public PostgrestUpdate setFields(java.lang.String fields) {
+              return (PostgrestUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public PostgrestUpdate setKey(java.lang.String key) {
+              return (PostgrestUpdate) super.setKey(key);
+            }
+
+            @Override
+            public PostgrestUpdate setOauthToken(java.lang.String oauthToken) {
+              return (PostgrestUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public PostgrestUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (PostgrestUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public PostgrestUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (PostgrestUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public PostgrestUpdate setUploadType(java.lang.String uploadType) {
+              return (PostgrestUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public PostgrestUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (PostgrestUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectService;
+
+            /** Required. The resource name of the service, in the format:
+           `projects/{project}/locations/{location}/services/{service}`
+             */
+            public java.lang.String getFirebasedataconnectService() {
+              return firebasedataconnectService;
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            public PostgrestUpdate setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectService = firebasedataconnectService;
+              return this;
+            }
+
+            /** Required. The name of the table to update. */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectTable;
+
+            /** Required. The name of the table to update.
+             */
+            public java.lang.String getFirebasedataconnectTable() {
+              return firebasedataconnectTable;
+            }
+
+            /** Required. The name of the table to update. */
+            public PostgrestUpdate setFirebasedataconnectTable(java.lang.String firebasedataconnectTable) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+              this.firebasedataconnectTable = firebasedataconnectTable;
+              return this;
+            }
+
+            @Override
+            public PostgrestUpdate set(String parameterName, Object value) {
+              return (PostgrestUpdate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Executes a dynamic UPSERT (replace or create) mutation on a target table identified by primary
+           * key filters.
+           *
+           * Create a request for the method "postgrest.postgrestUpsert".
+           *
+           * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+           * optional parameters, call the {@link PostgrestUpsert#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+           * @param firebasedataconnectTable Required. The name of the table to upsert into.
+           * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+           * @return the request
+           */
+          public PostgrestUpsert postgrestUpsert(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) throws java.io.IOException {
+            PostgrestUpsert result = new PostgrestUpsert(firebasedataconnectService, firebasedataconnectTable, content);
+            initialize(result);
+            return result;
+          }
+
+          public class PostgrestUpsert extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+            private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/{+firebasedataconnectTable}";
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+            private final java.util.regex.Pattern FIREBASEDATACONNECT_TABLE_PATTERN =
+                java.util.regex.Pattern.compile("^.*$");
+
+            /**
+             * Executes a dynamic UPSERT (replace or create) mutation on a target table identified by primary
+             * key filters.
+             *
+             * Create a request for the method "postgrest.postgrestUpsert".
+             *
+             * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+             * any optional parameters, call the {@link PostgrestUpsert#execute()} method to invoke the remote
+             * operation. <p> {@link PostgrestUpsert#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+           *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectTable Required. The name of the table to upsert into.
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+             * @since 1.13
+             */
+            protected PostgrestUpsert(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectTable, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) {
+              super(FirebaseDataConnect.this, "PUT", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+              this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectTable = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectTable, "Required parameter firebasedataconnectTable must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+            }
+
+            @Override
+            public PostgrestUpsert set$Xgafv(java.lang.String $Xgafv) {
+              return (PostgrestUpsert) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public PostgrestUpsert setAccessToken(java.lang.String accessToken) {
+              return (PostgrestUpsert) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public PostgrestUpsert setAlt(java.lang.String alt) {
+              return (PostgrestUpsert) super.setAlt(alt);
+            }
+
+            @Override
+            public PostgrestUpsert setCallback(java.lang.String callback) {
+              return (PostgrestUpsert) super.setCallback(callback);
+            }
+
+            @Override
+            public PostgrestUpsert setFields(java.lang.String fields) {
+              return (PostgrestUpsert) super.setFields(fields);
+            }
+
+            @Override
+            public PostgrestUpsert setKey(java.lang.String key) {
+              return (PostgrestUpsert) super.setKey(key);
+            }
+
+            @Override
+            public PostgrestUpsert setOauthToken(java.lang.String oauthToken) {
+              return (PostgrestUpsert) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public PostgrestUpsert setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (PostgrestUpsert) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public PostgrestUpsert setQuotaUser(java.lang.String quotaUser) {
+              return (PostgrestUpsert) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public PostgrestUpsert setUploadType(java.lang.String uploadType) {
+              return (PostgrestUpsert) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public PostgrestUpsert setUploadProtocol(java.lang.String uploadProtocol) {
+              return (PostgrestUpsert) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectService;
+
+            /** Required. The resource name of the service, in the format:
+           `projects/{project}/locations/{location}/services/{service}`
+             */
+            public java.lang.String getFirebasedataconnectService() {
+              return firebasedataconnectService;
+            }
+
+            /**
+             * Required. The resource name of the service, in the format:
+             * `projects/{project}/locations/{location}/services/{service}`
+             */
+            public PostgrestUpsert setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                    "Parameter firebasedataconnectService must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+              }
+              this.firebasedataconnectService = firebasedataconnectService;
+              return this;
+            }
+
+            /** Required. The name of the table to upsert into. */
+            @com.google.api.client.util.Key
+            private java.lang.String firebasedataconnectTable;
+
+            /** Required. The name of the table to upsert into.
+             */
+            public java.lang.String getFirebasedataconnectTable() {
+              return firebasedataconnectTable;
+            }
+
+            /** Required. The name of the table to upsert into. */
+            public PostgrestUpsert setFirebasedataconnectTable(java.lang.String firebasedataconnectTable) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_TABLE_PATTERN.matcher(firebasedataconnectTable).matches(),
+                    "Parameter firebasedataconnectTable must conform to the pattern " +
+                    "^.*$");
+              }
+              this.firebasedataconnectTable = firebasedataconnectTable;
+              return this;
+            }
+
+            @Override
+            public PostgrestUpsert set(String parameterName, Object value) {
+              return (PostgrestUpsert) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the Rpc collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code FirebaseDataConnect firebasedataconnect = new FirebaseDataConnect(...);}
+           *   {@code FirebaseDataConnect.Rpc.List request = firebasedataconnect.rpc().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public Rpc rpc() {
+            return new Rpc();
+          }
+
+          /**
+           * The "rpc" collection of methods.
+           */
+          public class Rpc {
+
+            /**
+             * Executes a PostgreSQL database function.
+             *
+             * Create a request for the method "rpc.postgrestCallFunction".
+             *
+             * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+             * optional parameters, call the {@link PostgrestCallFunction#execute()} method to invoke the remote
+             * operation.
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+             *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectFunction Required. The name of the database function.
+             * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+             * @return the request
+             */
+            public PostgrestCallFunction postgrestCallFunction(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectFunction, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) throws java.io.IOException {
+              PostgrestCallFunction result = new PostgrestCallFunction(firebasedataconnectService, firebasedataconnectFunction, content);
+              initialize(result);
+              return result;
+            }
+
+            public class PostgrestCallFunction extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/rpc/{+firebasedataconnectFunction}";
+
+              private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+              private final java.util.regex.Pattern FIREBASEDATACONNECT_FUNCTION_PATTERN =
+                  java.util.regex.Pattern.compile("^.*$");
+
+              /**
+               * Executes a PostgreSQL database function.
+               *
+               * Create a request for the method "rpc.postgrestCallFunction".
+               *
+               * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+               * any optional parameters, call the {@link PostgrestCallFunction#execute()} method to invoke the
+               * remote operation. <p> {@link PostgrestCallFunction#initialize(com.google.api.client.googleapis.
+               * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param firebasedataconnectService Required. The resource name of the service, in the format:
+             *        `projects/{project}/locations/{location}/services/{service}`
+               * @param firebasedataconnectFunction Required. The name of the database function.
+               * @param content the {@link com.google.api.services.firebasedataconnect.v1.model.HttpBody}
+               * @since 1.13
+               */
+              protected PostgrestCallFunction(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectFunction, com.google.api.services.firebasedataconnect.v1.model.HttpBody content) {
+                super(FirebaseDataConnect.this, "POST", REST_PATH, content, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+                this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                      "Parameter firebasedataconnectService must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+                }
+                this.firebasedataconnectFunction = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectFunction, "Required parameter firebasedataconnectFunction must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_FUNCTION_PATTERN.matcher(firebasedataconnectFunction).matches(),
+                      "Parameter firebasedataconnectFunction must conform to the pattern " +
+                      "^.*$");
+                }
+              }
+
+              @Override
+              public PostgrestCallFunction set$Xgafv(java.lang.String $Xgafv) {
+                return (PostgrestCallFunction) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public PostgrestCallFunction setAccessToken(java.lang.String accessToken) {
+                return (PostgrestCallFunction) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public PostgrestCallFunction setAlt(java.lang.String alt) {
+                return (PostgrestCallFunction) super.setAlt(alt);
+              }
+
+              @Override
+              public PostgrestCallFunction setCallback(java.lang.String callback) {
+                return (PostgrestCallFunction) super.setCallback(callback);
+              }
+
+              @Override
+              public PostgrestCallFunction setFields(java.lang.String fields) {
+                return (PostgrestCallFunction) super.setFields(fields);
+              }
+
+              @Override
+              public PostgrestCallFunction setKey(java.lang.String key) {
+                return (PostgrestCallFunction) super.setKey(key);
+              }
+
+              @Override
+              public PostgrestCallFunction setOauthToken(java.lang.String oauthToken) {
+                return (PostgrestCallFunction) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public PostgrestCallFunction setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (PostgrestCallFunction) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public PostgrestCallFunction setQuotaUser(java.lang.String quotaUser) {
+                return (PostgrestCallFunction) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public PostgrestCallFunction setUploadType(java.lang.String uploadType) {
+                return (PostgrestCallFunction) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public PostgrestCallFunction setUploadProtocol(java.lang.String uploadProtocol) {
+                return (PostgrestCallFunction) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the service, in the format:
+               * `projects/{project}/locations/{location}/services/{service}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String firebasedataconnectService;
+
+              /** Required. The resource name of the service, in the format:
+             `projects/{project}/locations/{location}/services/{service}`
+               */
+              public java.lang.String getFirebasedataconnectService() {
+                return firebasedataconnectService;
+              }
+
+              /**
+               * Required. The resource name of the service, in the format:
+               * `projects/{project}/locations/{location}/services/{service}`
+               */
+              public PostgrestCallFunction setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                      "Parameter firebasedataconnectService must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+                }
+                this.firebasedataconnectService = firebasedataconnectService;
+                return this;
+              }
+
+              /** Required. The name of the database function. */
+              @com.google.api.client.util.Key
+              private java.lang.String firebasedataconnectFunction;
+
+              /** Required. The name of the database function.
+               */
+              public java.lang.String getFirebasedataconnectFunction() {
+                return firebasedataconnectFunction;
+              }
+
+              /** Required. The name of the database function. */
+              public PostgrestCallFunction setFirebasedataconnectFunction(java.lang.String firebasedataconnectFunction) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_FUNCTION_PATTERN.matcher(firebasedataconnectFunction).matches(),
+                      "Parameter firebasedataconnectFunction must conform to the pattern " +
+                      "^.*$");
+                }
+                this.firebasedataconnectFunction = firebasedataconnectFunction;
+                return this;
+              }
+
+              @Override
+              public PostgrestCallFunction set(String parameterName, Object value) {
+                return (PostgrestCallFunction) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Executes a read-only PostgreSQL database function.
+             *
+             * Create a request for the method "rpc.postgrestQueryFunction".
+             *
+             * This request holds the parameters needed by the firebasedataconnect server.  After setting any
+             * optional parameters, call the {@link PostgrestQueryFunction#execute()} method to invoke the
+             * remote operation.
+             *
+             * @param firebasedataconnectService Required. The resource name of the service, in the format:
+             *        `projects/{project}/locations/{location}/services/{service}`
+             * @param firebasedataconnectFunction Required. The name of the database function.
+             * @return the request
+             */
+            public PostgrestQueryFunction postgrestQueryFunction(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectFunction) throws java.io.IOException {
+              PostgrestQueryFunction result = new PostgrestQueryFunction(firebasedataconnectService, firebasedataconnectFunction);
+              initialize(result);
+              return result;
+            }
+
+            public class PostgrestQueryFunction extends FirebaseDataConnectRequest<com.google.api.services.firebasedataconnect.v1.model.HttpBody> {
+
+              private static final String REST_PATH = "v1/{+firebasedataconnectService}/postgrest/rpc/{+firebasedataconnectFunction}";
+
+              private final java.util.regex.Pattern FIREBASEDATACONNECT_SERVICE_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+
+              private final java.util.regex.Pattern FIREBASEDATACONNECT_FUNCTION_PATTERN =
+                  java.util.regex.Pattern.compile("^.*$");
+
+              /**
+               * Executes a read-only PostgreSQL database function.
+               *
+               * Create a request for the method "rpc.postgrestQueryFunction".
+               *
+               * This request holds the parameters needed by the the firebasedataconnect server.  After setting
+               * any optional parameters, call the {@link PostgrestQueryFunction#execute()} method to invoke the
+               * remote operation. <p> {@link PostgrestQueryFunction#initialize(com.google.api.client.googleapis
+               * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+               * after invoking the constructor. </p>
+               *
+               * @param firebasedataconnectService Required. The resource name of the service, in the format:
+             *        `projects/{project}/locations/{location}/services/{service}`
+               * @param firebasedataconnectFunction Required. The name of the database function.
+               * @since 1.13
+               */
+              protected PostgrestQueryFunction(java.lang.String firebasedataconnectService, java.lang.String firebasedataconnectFunction) {
+                super(FirebaseDataConnect.this, "GET", REST_PATH, null, com.google.api.services.firebasedataconnect.v1.model.HttpBody.class);
+                this.firebasedataconnectService = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectService, "Required parameter firebasedataconnectService must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                      "Parameter firebasedataconnectService must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+                }
+                this.firebasedataconnectFunction = com.google.api.client.util.Preconditions.checkNotNull(firebasedataconnectFunction, "Required parameter firebasedataconnectFunction must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_FUNCTION_PATTERN.matcher(firebasedataconnectFunction).matches(),
+                      "Parameter firebasedataconnectFunction must conform to the pattern " +
+                      "^.*$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public PostgrestQueryFunction set$Xgafv(java.lang.String $Xgafv) {
+                return (PostgrestQueryFunction) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public PostgrestQueryFunction setAccessToken(java.lang.String accessToken) {
+                return (PostgrestQueryFunction) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public PostgrestQueryFunction setAlt(java.lang.String alt) {
+                return (PostgrestQueryFunction) super.setAlt(alt);
+              }
+
+              @Override
+              public PostgrestQueryFunction setCallback(java.lang.String callback) {
+                return (PostgrestQueryFunction) super.setCallback(callback);
+              }
+
+              @Override
+              public PostgrestQueryFunction setFields(java.lang.String fields) {
+                return (PostgrestQueryFunction) super.setFields(fields);
+              }
+
+              @Override
+              public PostgrestQueryFunction setKey(java.lang.String key) {
+                return (PostgrestQueryFunction) super.setKey(key);
+              }
+
+              @Override
+              public PostgrestQueryFunction setOauthToken(java.lang.String oauthToken) {
+                return (PostgrestQueryFunction) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public PostgrestQueryFunction setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (PostgrestQueryFunction) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public PostgrestQueryFunction setQuotaUser(java.lang.String quotaUser) {
+                return (PostgrestQueryFunction) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public PostgrestQueryFunction setUploadType(java.lang.String uploadType) {
+                return (PostgrestQueryFunction) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public PostgrestQueryFunction setUploadProtocol(java.lang.String uploadProtocol) {
+                return (PostgrestQueryFunction) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The resource name of the service, in the format:
+               * `projects/{project}/locations/{location}/services/{service}`
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String firebasedataconnectService;
+
+              /** Required. The resource name of the service, in the format:
+             `projects/{project}/locations/{location}/services/{service}`
+               */
+              public java.lang.String getFirebasedataconnectService() {
+                return firebasedataconnectService;
+              }
+
+              /**
+               * Required. The resource name of the service, in the format:
+               * `projects/{project}/locations/{location}/services/{service}`
+               */
+              public PostgrestQueryFunction setFirebasedataconnectService(java.lang.String firebasedataconnectService) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_SERVICE_PATTERN.matcher(firebasedataconnectService).matches(),
+                      "Parameter firebasedataconnectService must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/services/[^/]+$");
+                }
+                this.firebasedataconnectService = firebasedataconnectService;
+                return this;
+              }
+
+              /** Required. The name of the database function. */
+              @com.google.api.client.util.Key
+              private java.lang.String firebasedataconnectFunction;
+
+              /** Required. The name of the database function.
+               */
+              public java.lang.String getFirebasedataconnectFunction() {
+                return firebasedataconnectFunction;
+              }
+
+              /** Required. The name of the database function. */
+              public PostgrestQueryFunction setFirebasedataconnectFunction(java.lang.String firebasedataconnectFunction) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(FIREBASEDATACONNECT_FUNCTION_PATTERN.matcher(firebasedataconnectFunction).matches(),
+                      "Parameter firebasedataconnectFunction must conform to the pattern " +
+                      "^.*$");
+                }
+                this.firebasedataconnectFunction = firebasedataconnectFunction;
+                return this;
+              }
+
+              @Override
+              public PostgrestQueryFunction set(String parameterName, Object value) {
+                return (PostgrestQueryFunction) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+        /**
          * An accessor for creating requests from the Schemas collection.
          *
          * <p>The typical use is:</p>

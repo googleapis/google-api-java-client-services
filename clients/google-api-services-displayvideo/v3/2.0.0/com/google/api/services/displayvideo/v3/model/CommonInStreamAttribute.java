@@ -73,7 +73,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   private java.lang.String trackingUrl;
 
   /**
-   * Required. The YouTube video of the ad.
+   * Required. Immutable. The YouTube video of the ad.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +182,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The YouTube video of the ad.
+   * Required. Immutable. The YouTube video of the ad.
    * @return value or {@code null} for none
    */
   public YoutubeVideoDetails getVideo() {
@@ -190,7 +190,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. The YouTube video of the ad.
+   * Required. Immutable. The YouTube video of the ad.
    * @param video video or {@code null} for none
    */
   public CommonInStreamAttribute setVideo(YoutubeVideoDetails video) {

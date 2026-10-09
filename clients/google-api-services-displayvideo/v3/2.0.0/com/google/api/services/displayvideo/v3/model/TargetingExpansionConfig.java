@@ -32,22 +32,6 @@ package com.google.api.services.displayvideo.v3.model;
 public final class TargetingExpansionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Magnitude of expansion for eligible first-party user lists under this ad group.
-   * This field only applies to YouTube and Partners line item and ad group resources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String audienceExpansionLevel;
-
-  /**
-   * Output only. Whether to exclude seed list for audience expansion. This field only applies to
-   * YouTube and Partners line item and ad group resources.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.Boolean audienceExpansionSeedListExcluded;
-
-  /**
    * Required. Whether to enable Optimized Targeting for the line item. Optimized targeting is not
    * compatible with all bid strategies. Attempting to set this field to `true` for a line item
    * using the BiddingStrategy field fixed_bid or one of the following combinations of
@@ -72,44 +56,6 @@ public final class TargetingExpansionConfig extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean excludeDemographicExpansion;
-
-  /**
-   * Output only. Magnitude of expansion for eligible first-party user lists under this ad group.
-   * This field only applies to YouTube and Partners line item and ad group resources.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getAudienceExpansionLevel() {
-    return audienceExpansionLevel;
-  }
-
-  /**
-   * Output only. Magnitude of expansion for eligible first-party user lists under this ad group.
-   * This field only applies to YouTube and Partners line item and ad group resources.
-   * @param audienceExpansionLevel audienceExpansionLevel or {@code null} for none
-   */
-  public TargetingExpansionConfig setAudienceExpansionLevel(java.lang.String audienceExpansionLevel) {
-    this.audienceExpansionLevel = audienceExpansionLevel;
-    return this;
-  }
-
-  /**
-   * Output only. Whether to exclude seed list for audience expansion. This field only applies to
-   * YouTube and Partners line item and ad group resources.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Boolean getAudienceExpansionSeedListExcluded() {
-    return audienceExpansionSeedListExcluded;
-  }
-
-  /**
-   * Output only. Whether to exclude seed list for audience expansion. This field only applies to
-   * YouTube and Partners line item and ad group resources.
-   * @param audienceExpansionSeedListExcluded audienceExpansionSeedListExcluded or {@code null} for none
-   */
-  public TargetingExpansionConfig setAudienceExpansionSeedListExcluded(java.lang.Boolean audienceExpansionSeedListExcluded) {
-    this.audienceExpansionSeedListExcluded = audienceExpansionSeedListExcluded;
-    return this;
-  }
 
   /**
    * Required. Whether to enable Optimized Targeting for the line item. Optimized targeting is not

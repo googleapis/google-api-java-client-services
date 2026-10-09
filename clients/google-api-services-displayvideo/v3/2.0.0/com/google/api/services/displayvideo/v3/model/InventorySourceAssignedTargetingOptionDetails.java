@@ -18,7 +18,8 @@ package com.google.api.services.displayvideo.v3.model;
 
 /**
  * Targeting details for inventory source. This will be populated in the details field of an
- * AssignedTargetingOption when targeting_type is `TARGETING_TYPE_INVENTORY_SOURCE`.
+ * AssignedTargetingOption when targeting_type is one of `TARGETING_TYPE_INVENTORY_SOURCE` or
+ * `TARGETING_TYPE_INVENTORY_SOURCE_DEAL`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation

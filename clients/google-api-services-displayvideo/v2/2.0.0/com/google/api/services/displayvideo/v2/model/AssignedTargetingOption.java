@@ -272,7 +272,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Inventory source details. This field will be populated when the targeting_type is
-   * `TARGETING_TYPE_INVENTORY_SOURCE`.
+   * `TARGETING_TYPE_INVENTORY_SOURCE` or `TARGETING_TYPE_INVENTORY_SOURCE_DEAL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1043,7 +1043,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Inventory source details. This field will be populated when the targeting_type is
-   * `TARGETING_TYPE_INVENTORY_SOURCE`.
+   * `TARGETING_TYPE_INVENTORY_SOURCE` or `TARGETING_TYPE_INVENTORY_SOURCE_DEAL`.
    * @return value or {@code null} for none
    */
   public InventorySourceAssignedTargetingOptionDetails getInventorySourceDetails() {
@@ -1052,7 +1052,7 @@ public final class AssignedTargetingOption extends com.google.api.client.json.Ge
 
   /**
    * Inventory source details. This field will be populated when the targeting_type is
-   * `TARGETING_TYPE_INVENTORY_SOURCE`.
+   * `TARGETING_TYPE_INVENTORY_SOURCE` or `TARGETING_TYPE_INVENTORY_SOURCE_DEAL`.
    * @param inventorySourceDetails inventorySourceDetails or {@code null} for none
    */
   public AssignedTargetingOption setInventorySourceDetails(InventorySourceAssignedTargetingOptionDetails inventorySourceDetails) {

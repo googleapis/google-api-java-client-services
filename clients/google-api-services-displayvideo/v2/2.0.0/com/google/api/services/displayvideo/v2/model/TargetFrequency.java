@@ -41,7 +41,7 @@ public final class TargetFrequency extends com.google.api.client.json.GenericJso
 
   /**
    * The unit of time in which the target frequency will be applied. The following time unit is
-   * applicable: * `TIME_UNIT_WEEKS`
+   * applicable: * `TIME_UNIT_WEEKS` * `TIME_UNIT_MONTHS`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,7 +49,7 @@ public final class TargetFrequency extends com.google.api.client.json.GenericJso
 
   /**
    * The number of time_unit the target frequency will last. The following restrictions apply based
-   * on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1
+   * on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1 * `TIME_UNIT_MONTHS` - must be 1
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class TargetFrequency extends com.google.api.client.json.GenericJso
 
   /**
    * The unit of time in which the target frequency will be applied. The following time unit is
-   * applicable: * `TIME_UNIT_WEEKS`
+   * applicable: * `TIME_UNIT_WEEKS` * `TIME_UNIT_MONTHS`
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeUnit() {
@@ -85,7 +85,7 @@ public final class TargetFrequency extends com.google.api.client.json.GenericJso
 
   /**
    * The unit of time in which the target frequency will be applied. The following time unit is
-   * applicable: * `TIME_UNIT_WEEKS`
+   * applicable: * `TIME_UNIT_WEEKS` * `TIME_UNIT_MONTHS`
    * @param timeUnit timeUnit or {@code null} for none
    */
   public TargetFrequency setTimeUnit(java.lang.String timeUnit) {
@@ -95,7 +95,7 @@ public final class TargetFrequency extends com.google.api.client.json.GenericJso
 
   /**
    * The number of time_unit the target frequency will last. The following restrictions apply based
-   * on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1
+   * on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1 * `TIME_UNIT_MONTHS` - must be 1
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimeUnitCount() {
@@ -104,7 +104,7 @@ public final class TargetFrequency extends com.google.api.client.json.GenericJso
 
   /**
    * The number of time_unit the target frequency will last. The following restrictions apply based
-   * on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1
+   * on the value of time_unit: * `TIME_UNIT_WEEKS` - must be 1 * `TIME_UNIT_MONTHS` - must be 1
    * @param timeUnitCount timeUnitCount or {@code null} for none
    */
   public TargetFrequency setTimeUnitCount(java.lang.Integer timeUnitCount) {

@@ -1628,6 +1628,202 @@ public class DeviceRun extends com.google.api.client.googleapis.services.json.Ab
       public class Sessions {
 
         /**
+         * Retrieves multiple automation sessions in a single batch request. Sessions are returned in the
+         * same order as the `names` in the request. If any of the requested sessions does not exist, the
+         * whole request fails with `NOT_FOUND` and no sessions are returned. When calling this method over
+         * HTTP/REST with a large number of `names`, the request URL may exceed the maximum URL length
+         * (about 16 KB) and be rejected. In that case, send a `POST` request to the same URL with the
+         * `X-HTTP-Method-Override: GET` header and pass the request parameters in a JSON
+         * (`application/json`) or form-encoded (`application/x-www-form-urlencoded`) body. See
+         * https://cloud.google.com/apis/docs/http#long_request_urls.
+         *
+         * Create a request for the method "sessions.batchGet".
+         *
+         * This request holds the parameters needed by the devicerun server.  After setting any optional
+         * parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource shared by all sessions being retrieved. Format:
+         *        `projects/{project}/locations/{location}`. The `parent` field in the
+         *        `BatchGetSessionsRequest` message must match the `parent` of all `Session` resource names
+         *        in `names`.
+         * @return the request
+         */
+        public BatchGet batchGet(java.lang.String parent) throws java.io.IOException {
+          BatchGet result = new BatchGet(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchGet extends DeviceRunRequest<com.google.api.services.devicerun.v1alpha.model.BatchGetSessionsResponse> {
+
+          private static final String REST_PATH = "v1alpha/{+parent}/sessions:batchGet";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Retrieves multiple automation sessions in a single batch request. Sessions are returned in the
+           * same order as the `names` in the request. If any of the requested sessions does not exist, the
+           * whole request fails with `NOT_FOUND` and no sessions are returned. When calling this method
+           * over HTTP/REST with a large number of `names`, the request URL may exceed the maximum URL
+           * length (about 16 KB) and be rejected. In that case, send a `POST` request to the same URL with
+           * the `X-HTTP-Method-Override: GET` header and pass the request parameters in a JSON
+           * (`application/json`) or form-encoded (`application/x-www-form-urlencoded`) body. See
+           * https://cloud.google.com/apis/docs/http#long_request_urls.
+           *
+           * Create a request for the method "sessions.batchGet".
+           *
+           * This request holds the parameters needed by the the devicerun server.  After setting any
+           * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource shared by all sessions being retrieved. Format:
+         *        `projects/{project}/locations/{location}`. The `parent` field in the
+         *        `BatchGetSessionsRequest` message must match the `parent` of all `Session` resource names
+         *        in `names`.
+           * @since 1.13
+           */
+          protected BatchGet(java.lang.String parent) {
+            super(DeviceRun.this, "GET", REST_PATH, null, com.google.api.services.devicerun.v1alpha.model.BatchGetSessionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public BatchGet set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchGet) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchGet setAccessToken(java.lang.String accessToken) {
+            return (BatchGet) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchGet setAlt(java.lang.String alt) {
+            return (BatchGet) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchGet setCallback(java.lang.String callback) {
+            return (BatchGet) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchGet setFields(java.lang.String fields) {
+            return (BatchGet) super.setFields(fields);
+          }
+
+          @Override
+          public BatchGet setKey(java.lang.String key) {
+            return (BatchGet) super.setKey(key);
+          }
+
+          @Override
+          public BatchGet setOauthToken(java.lang.String oauthToken) {
+            return (BatchGet) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchGet setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchGet) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchGet setQuotaUser(java.lang.String quotaUser) {
+            return (BatchGet) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchGet setUploadType(java.lang.String uploadType) {
+            return (BatchGet) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchGet setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchGet) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource shared by all sessions being retrieved. Format:
+           * `projects/{project}/locations/{location}`. The `parent` field in the
+           * `BatchGetSessionsRequest` message must match the `parent` of all `Session` resource
+           * names in `names`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource shared by all sessions being retrieved. Format:
+         `projects/{project}/locations/{location}`. The `parent` field in the `BatchGetSessionsRequest`
+         message must match the `parent` of all `Session` resource names in `names`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource shared by all sessions being retrieved. Format:
+           * `projects/{project}/locations/{location}`. The `parent` field in the
+           * `BatchGetSessionsRequest` message must match the `parent` of all `Session` resource
+           * names in `names`.
+           */
+          public BatchGet setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The names of the sessions to retrieve. A maximum of 500 sessions can be
+           * retrieved in a batch. Format:
+           * `projects/{project}/locations/{location}/sessions/{session}`.
+           */
+          @com.google.api.client.util.Key
+          private java.util.List<java.lang.String> names;
+
+          /** Required. The names of the sessions to retrieve. A maximum of 500 sessions can be retrieved in a
+         batch. Format: `projects/{project}/locations/{location}/sessions/{session}`.
+           */
+          public java.util.List<java.lang.String> getNames() {
+            return names;
+          }
+
+          /**
+           * Required. The names of the sessions to retrieve. A maximum of 500 sessions can be
+           * retrieved in a batch. Format:
+           * `projects/{project}/locations/{location}/sessions/{session}`.
+           */
+          public BatchGet setNames(java.util.List<java.lang.String> names) {
+            this.names = names;
+            return this;
+          }
+
+          @Override
+          public BatchGet set(String parameterName, Object value) {
+            return (BatchGet) super.set(parameterName, value);
+          }
+        }
+        /**
          * Cancels an in-progress automation session. This RPC returns immediately and cancellation proceeds
          * asynchronously. If the session is already finished, this RPC will have no effect.
          *

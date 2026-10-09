@@ -30,49 +30,48 @@ package com.google.api.services.networkservices.v1.model;
 public final class ExtensionBindingMatchConditionStringMatch extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The input string must have the substring specified here. Note: empty contains match
-   * is not allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc.def``
+   * Optional. The input string must contain the substring specified here. An empty substring is not
+   * allowed. Examples: * `abc` matches the value `xyz.abc.def`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String contains;
 
   /**
-   * Optional. The input string must match exactly the string specified here. Examples: * ``abc``
-   * only matches the value ``abc``.
+   * Optional. The input string must match exactly the string specified here. Examples: * `abc` only
+   * matches the value `abc`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exact;
 
   /**
-   * Optional. If true, indicates the exact/prefix/suffix/contains matching should be case
-   * insensitive. For example, the matcher ``data`` will match both input string ``Data`` and
-   * ``data`` if set to true.
+   * Optional. If true, the `exact`, `prefix`, `suffix`, or `contains` match is case insensitive.
+   * For example, the matcher `data` matches both `Data` and `data` when set to true.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean ignoreCase;
 
   /**
-   * Optional. The input string must have the prefix specified here. Note: empty prefix is not
-   * allowed. Examples: * ``abc`` matches the value ``abc.xyz``
+   * Optional. The input string must have the prefix specified here. An empty prefix is not allowed.
+   * Examples: * `abc` matches the value `abc.xyz`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String prefix;
 
   /**
-   * Optional. The input string must have the suffix specified here. Note: empty prefix is not
-   * allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc``
+   * Optional. The input string must have the suffix specified here. An empty suffix is not allowed.
+   * Examples: * `abc` matches the value `xyz.abc`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String suffix;
 
   /**
-   * Optional. The input string must have the substring specified here. Note: empty contains match
-   * is not allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc.def``
+   * Optional. The input string must contain the substring specified here. An empty substring is not
+   * allowed. Examples: * `abc` matches the value `xyz.abc.def`.
    * @return value or {@code null} for none
    */
   public java.lang.String getContains() {
@@ -80,8 +79,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must have the substring specified here. Note: empty contains match
-   * is not allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc.def``
+   * Optional. The input string must contain the substring specified here. An empty substring is not
+   * allowed. Examples: * `abc` matches the value `xyz.abc.def`.
    * @param contains contains or {@code null} for none
    */
   public ExtensionBindingMatchConditionStringMatch setContains(java.lang.String contains) {
@@ -90,8 +89,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must match exactly the string specified here. Examples: * ``abc``
-   * only matches the value ``abc``.
+   * Optional. The input string must match exactly the string specified here. Examples: * `abc` only
+   * matches the value `abc`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExact() {
@@ -99,8 +98,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must match exactly the string specified here. Examples: * ``abc``
-   * only matches the value ``abc``.
+   * Optional. The input string must match exactly the string specified here. Examples: * `abc` only
+   * matches the value `abc`.
    * @param exact exact or {@code null} for none
    */
   public ExtensionBindingMatchConditionStringMatch setExact(java.lang.String exact) {
@@ -109,9 +108,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. If true, indicates the exact/prefix/suffix/contains matching should be case
-   * insensitive. For example, the matcher ``data`` will match both input string ``Data`` and
-   * ``data`` if set to true.
+   * Optional. If true, the `exact`, `prefix`, `suffix`, or `contains` match is case insensitive.
+   * For example, the matcher `data` matches both `Data` and `data` when set to true.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getIgnoreCase() {
@@ -119,9 +117,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. If true, indicates the exact/prefix/suffix/contains matching should be case
-   * insensitive. For example, the matcher ``data`` will match both input string ``Data`` and
-   * ``data`` if set to true.
+   * Optional. If true, the `exact`, `prefix`, `suffix`, or `contains` match is case insensitive.
+   * For example, the matcher `data` matches both `Data` and `data` when set to true.
    * @param ignoreCase ignoreCase or {@code null} for none
    */
   public ExtensionBindingMatchConditionStringMatch setIgnoreCase(java.lang.Boolean ignoreCase) {
@@ -130,8 +127,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must have the prefix specified here. Note: empty prefix is not
-   * allowed. Examples: * ``abc`` matches the value ``abc.xyz``
+   * Optional. The input string must have the prefix specified here. An empty prefix is not allowed.
+   * Examples: * `abc` matches the value `abc.xyz`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrefix() {
@@ -139,8 +136,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must have the prefix specified here. Note: empty prefix is not
-   * allowed. Examples: * ``abc`` matches the value ``abc.xyz``
+   * Optional. The input string must have the prefix specified here. An empty prefix is not allowed.
+   * Examples: * `abc` matches the value `abc.xyz`.
    * @param prefix prefix or {@code null} for none
    */
   public ExtensionBindingMatchConditionStringMatch setPrefix(java.lang.String prefix) {
@@ -149,8 +146,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must have the suffix specified here. Note: empty prefix is not
-   * allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc``
+   * Optional. The input string must have the suffix specified here. An empty suffix is not allowed.
+   * Examples: * `abc` matches the value `xyz.abc`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSuffix() {
@@ -158,8 +155,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must have the suffix specified here. Note: empty prefix is not
-   * allowed, please use regex instead. Examples: * ``abc`` matches the value ``xyz.abc``
+   * Optional. The input string must have the suffix specified here. An empty suffix is not allowed.
+   * Examples: * `abc` matches the value `xyz.abc`.
    * @param suffix suffix or {@code null} for none
    */
   public ExtensionBindingMatchConditionStringMatch setSuffix(java.lang.String suffix) {

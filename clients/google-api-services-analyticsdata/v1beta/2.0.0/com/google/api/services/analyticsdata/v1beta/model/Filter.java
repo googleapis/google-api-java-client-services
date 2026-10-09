@@ -38,7 +38,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   private BetweenFilter betweenFilter;
 
   /**
-   * A filter for empty values such as "(not set)" and "" values.
+   * A filter for empty values such as `(not set)` and `""` values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A filter for empty values such as "(not set)" and "" values.
+   * A filter for empty values such as `(not set)` and `""` values.
    * @return value or {@code null} for none
    */
   public EmptyFilter getEmptyFilter() {
@@ -100,7 +100,7 @@ public final class Filter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A filter for empty values such as "(not set)" and "" values.
+   * A filter for empty values such as `(not set)` and `""` values.
    * @param emptyFilter emptyFilter or {@code null} for none
    */
   public Filter setEmptyFilter(EmptyFilter emptyFilter) {

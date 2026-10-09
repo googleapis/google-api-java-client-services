@@ -17,7 +17,7 @@
 package com.google.api.services.health.v4beta.model;
 
 /**
- * // SkinTemperature // Skin temperature measurement.
+ * Skin temperature measurement.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Health API. For a detailed explanation see:

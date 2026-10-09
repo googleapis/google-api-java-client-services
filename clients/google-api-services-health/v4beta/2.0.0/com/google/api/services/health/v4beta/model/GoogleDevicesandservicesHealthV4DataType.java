@@ -32,16 +32,20 @@ package com.google.api.services.health.v4beta.model;
 public final class GoogleDevicesandservicesHealthV4DataType extends com.google.api.client.json.GenericJson {
 
   /**
-   * Identifier. The resource name of the data type. Format: `users/{user}/dataTypes/{data_type}`
-   * See DataPoint.name for examples and possible values.
+   * Identifier. The resource name of the data type. Format: `users/{user}/dataTypes/{data_type}`,
+   * e.g.: - `users/me/dataTypes/steps` - `users/1234567890/dataTypes/steps` The `{user}` can be
+   * either the alias `me` or the authenticated user's numeric Health User ID (retrieved via
+   * GetIdentity). See DataPoint.name for examples and possible values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Identifier. The resource name of the data type. Format: `users/{user}/dataTypes/{data_type}`
-   * See DataPoint.name for examples and possible values.
+   * Identifier. The resource name of the data type. Format: `users/{user}/dataTypes/{data_type}`,
+   * e.g.: - `users/me/dataTypes/steps` - `users/1234567890/dataTypes/steps` The `{user}` can be
+   * either the alias `me` or the authenticated user's numeric Health User ID (retrieved via
+   * GetIdentity). See DataPoint.name for examples and possible values.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -49,8 +53,10 @@ public final class GoogleDevicesandservicesHealthV4DataType extends com.google.a
   }
 
   /**
-   * Identifier. The resource name of the data type. Format: `users/{user}/dataTypes/{data_type}`
-   * See DataPoint.name for examples and possible values.
+   * Identifier. The resource name of the data type. Format: `users/{user}/dataTypes/{data_type}`,
+   * e.g.: - `users/me/dataTypes/steps` - `users/1234567890/dataTypes/steps` The `{user}` can be
+   * either the alias `me` or the authenticated user's numeric Health User ID (retrieved via
+   * GetIdentity). See DataPoint.name for examples and possible values.
    * @param name name or {@code null} for none
    */
   public GoogleDevicesandservicesHealthV4DataType setName(java.lang.String name) {

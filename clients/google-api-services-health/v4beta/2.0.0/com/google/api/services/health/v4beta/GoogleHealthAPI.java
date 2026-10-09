@@ -3066,11 +3066,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the health server.  After setting any optional
          * parameters, call the {@link BatchDelete#execute()} method to invoke the remote operation.
          *
-         * @param parent Optional. Parent (data type) for the Data Point collection Format: `users/me/dataTypes/{data_type}`,
-         *        e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/-` For a list of the supported
-         *        data types see the DataPoint data union field. Deleting data points across multiple data
-         *        type collections is supported following https://aip.dev/159. If this is set, the parent of
-         *        all of the data points specified in `names` must match this field.
+         * @param parent Optional. Parent (data type) for the Data Point collection Format:
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/-` -
+         *        `users/1234567890/dataTypes/-` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         *        supported data types see the DataPoint data union field. Deleting data points across
+         *        multiple data type collections is supported following https://aip.dev/159. If this is set,
+         *        the parent of all of the data points specified in `names` must match this field.
          * @param content the {@link com.google.api.services.health.v4beta.model.BatchDeleteDataPointsRequest}
          * @return the request
          */
@@ -3098,11 +3101,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * BatchDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Optional. Parent (data type) for the Data Point collection Format: `users/me/dataTypes/{data_type}`,
-         *        e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/-` For a list of the supported
-         *        data types see the DataPoint data union field. Deleting data points across multiple data
-         *        type collections is supported following https://aip.dev/159. If this is set, the parent of
-         *        all of the data points specified in `names` must match this field.
+           * @param parent Optional. Parent (data type) for the Data Point collection Format:
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/-` -
+         *        `users/1234567890/dataTypes/-` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         *        supported data types see the DataPoint data union field. Deleting data points across
+         *        multiple data type collections is supported following https://aip.dev/159. If this is set,
+         *        the parent of all of the data points specified in `names` must match this field.
            * @param content the {@link com.google.api.services.health.v4beta.model.BatchDeleteDataPointsRequest}
            * @since 1.13
            */
@@ -3173,20 +3179,26 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Parent (data type) for the Data Point collection Format:
-           * `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/-` For a list of the supported data types see the DataPoint data
-           * union field. Deleting data points across multiple data type collections is supported
-           * following https://aip.dev/159. If this is set, the parent of all of the data points
-           * specified in `names` must match this field.
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/-` -
+           * `users/1234567890/dataTypes/-` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the DataPoint data union field. Deleting data points
+           * across multiple data type collections is supported following https://aip.dev/159. If
+           * this is set, the parent of all of the data points specified in `names` must match this
+           * field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Optional. Parent (data type) for the Data Point collection Format:
-         `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/-` For a
-         list of the supported data types see the DataPoint data union field. Deleting data points across
-         multiple data type collections is supported following https://aip.dev/159. If this is set, the
-         parent of all of the data points specified in `names` must match this field.
+         `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         `users/1234567890/dataTypes/steps` - `users/me/dataTypes/-` - `users/1234567890/dataTypes/-` The
+         `{user}` can be either the alias `me` or the authenticated user's numeric Health User ID (retrieved
+         via GetIdentity). For a list of the supported data types see the DataPoint data union field.
+         Deleting data points across multiple data type collections is supported following
+         https://aip.dev/159. If this is set, the parent of all of the data points specified in `names` must
+         match this field.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3194,11 +3206,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Parent (data type) for the Data Point collection Format:
-           * `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/-` For a list of the supported data types see the DataPoint data
-           * union field. Deleting data points across multiple data type collections is supported
-           * following https://aip.dev/159. If this is set, the parent of all of the data points
-           * specified in `names` must match this field.
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/-` -
+           * `users/1234567890/dataTypes/-` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the DataPoint data union field. Deleting data points
+           * across multiple data type collections is supported following https://aip.dev/159. If
+           * this is set, the parent of all of the data points specified in `names` must match this
+           * field.
            */
           public BatchDelete setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3224,7 +3239,9 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The parent resource name where the data point will be created. Format:
-         *        `users/{user}/dataTypes/{data_type}`
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity).
          * @param content the {@link com.google.api.services.health.v4beta.model.DataPoint}
          * @return the request
          */
@@ -3252,7 +3269,9 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The parent resource name where the data point will be created. Format:
-         *        `users/{user}/dataTypes/{data_type}`
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity).
            * @param content the {@link com.google.api.services.health.v4beta.model.DataPoint}
            * @since 1.13
            */
@@ -3323,13 +3342,17 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource name where the data point will be created. Format:
-           * `users/{user}/dataTypes/{data_type}`
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity).
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The parent resource name where the data point will be created. Format:
-         `users/{user}/dataTypes/{data_type}`
+         `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         `users/1234567890/dataTypes/steps` The `{user}` can be either the alias `me` or the authenticated
+         user's numeric Health User ID (retrieved via GetIdentity).
            */
           public java.lang.String getParent() {
             return parent;
@@ -3337,7 +3360,9 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The parent resource name where the data point will be created. Format:
-           * `users/{user}/dataTypes/{data_type}`
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity).
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3364,8 +3389,10 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          *
          * @param parent Required. Parent data type of the Data Point collection. Format:
          *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-         *        `users/me/dataTypes/distance` For a list of the supported data types see the
-         *        DailyRollupDataPoint value union field.
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+         *        `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         *        supported data types see the DailyRollupDataPoint value union field.
          * @param content the {@link com.google.api.services.health.v4beta.model.DailyRollUpDataPointsRequest}
          * @return the request
          */
@@ -3395,8 +3422,10 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. Parent data type of the Data Point collection. Format:
          *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-         *        `users/me/dataTypes/distance` For a list of the supported data types see the
-         *        DailyRollupDataPoint value union field.
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+         *        `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         *        supported data types see the DailyRollupDataPoint value union field.
            * @param content the {@link com.google.api.services.health.v4beta.model.DailyRollUpDataPointsRequest}
            * @since 1.13
            */
@@ -3468,16 +3497,20 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /**
            * Required. Parent data type of the Data Point collection. Format:
            * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/distance` For a list of the supported data types see the
-           * DailyRollupDataPoint value union field.
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+           * `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the DailyRollupDataPoint value union field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent data type of the Data Point collection. Format:
          `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-         `users/me/dataTypes/distance` For a list of the supported data types see the DailyRollupDataPoint
-         value union field.
+         `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+         `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+         authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         supported data types see the DailyRollupDataPoint value union field.
            */
           public java.lang.String getParent() {
             return parent;
@@ -3486,8 +3519,10 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /**
            * Required. Parent data type of the Data Point collection. Format:
            * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/distance` For a list of the supported data types see the
-           * DailyRollupDataPoint value union field.
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+           * `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the DailyRollupDataPoint value union field.
            */
           public DailyRollUp setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -3506,13 +3541,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
         }
         /**
          * Exports exercise data in TCX format. **IMPORTANT:** HTTP clients must append `?alt=media` to the
-         * request URL to download the raw TCX file. Example: `https://health.googleapis.com/v4/users/me/dat
-         * aTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media` Without `alt=media`, the
-         * server returns a JSON response (`ExportExerciseTcxResponse`) which is intended primarily for gRPC
-         * clients. **Note:** While the Authorization section below states that any one of the listed scopes
-         * is accepted, this specific method requires the user to provide both one of the
-         * `activity_and_fitness` scopes (`normal` or `readonly`) AND one of the `location` scopes (`normal`
-         * or `readonly`) in their access token to succeed.
+         * request URL to download the raw TCX file. ## Examples: ## `https://health.googleapis.com/v4/users
+         * /me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media` `https://health.google
+         * apis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=medi
+         * a` Without `alt=media`, the server returns a JSON response (`ExportExerciseTcxResponse`) which is
+         * intended primarily for gRPC clients. **Note:** While the Authorization section below states that
+         * any one of the listed scopes is accepted, this specific method requires the user to provide both
+         * one of the `activity_and_fitness` scopes (`normal` or `readonly`) AND one of the `location`
+         * scopes (`normal` or `readonly`) in their access token to succeed.
          *
          * Create a request for the method "dataPoints.exportExerciseTcx".
          *
@@ -3520,10 +3556,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * parameters, call the {@link ExportExerciseTcx#execute()} method to invoke the remote operation.
          *
          * @param name Required. The resource name of the exercise data point to export. Format:
-         *        `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Example:
-         *        `users/me/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` is the alias
-         *        `"me"` currently. Future versions may support user IDs. The `{data_point}` ID maps to the
-         *        exercise ID, which is a long integer.
+         *        `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Examples: -
+         *        `users/me/dataTypes/exercise/dataPoints/2026443605080188808` -
+         *        `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` can be
+         *        either the alias `me` or the authenticated user's numeric Health User ID (retrieved via
+         *        GetIdentity). The `{data_point}` ID maps to the exercise ID, which is a long integer.
          * @return the request
          */
         public ExportExerciseTcx exportExerciseTcx(java.lang.String name) throws java.io.IOException {
@@ -3541,13 +3578,15 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Exports exercise data in TCX format. **IMPORTANT:** HTTP clients must append `?alt=media` to
-           * the request URL to download the raw TCX file. Example: `https://health.googleapis.com/v4/users/
-           * me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media` Without `alt=media`,
-           * the server returns a JSON response (`ExportExerciseTcxResponse`) which is intended primarily
-           * for gRPC clients. **Note:** While the Authorization section below states that any one of the
-           * listed scopes is accepted, this specific method requires the user to provide both one of the
-           * `activity_and_fitness` scopes (`normal` or `readonly`) AND one of the `location` scopes
-           * (`normal` or `readonly`) in their access token to succeed.
+           * the request URL to download the raw TCX file. ## Examples: ## `https://health.googleapis.com/v4
+           * /users/me/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTcx?alt=media` `https://healt
+           * h.googleapis.com/v4/users/1234567890/dataTypes/exercise/dataPoints/EXERCISE_ID:exportExerciseTc
+           * x?alt=media` Without `alt=media`, the server returns a JSON response
+           * (`ExportExerciseTcxResponse`) which is intended primarily for gRPC clients. **Note:** While the
+           * Authorization section below states that any one of the listed scopes is accepted, this specific
+           * method requires the user to provide both one of the `activity_and_fitness` scopes (`normal` or
+           * `readonly`) AND one of the `location` scopes (`normal` or `readonly`) in their access token to
+           * succeed.
            *
            * Create a request for the method "dataPoints.exportExerciseTcx".
            *
@@ -3558,10 +3597,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * constructor. </p>
            *
            * @param name Required. The resource name of the exercise data point to export. Format:
-         *        `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Example:
-         *        `users/me/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` is the alias
-         *        `"me"` currently. Future versions may support user IDs. The `{data_point}` ID maps to the
-         *        exercise ID, which is a long integer.
+         *        `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Examples: -
+         *        `users/me/dataTypes/exercise/dataPoints/2026443605080188808` -
+         *        `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` can be
+         *        either the alias `me` or the authenticated user's numeric Health User ID (retrieved via
+         *        GetIdentity). The `{data_point}` ID maps to the exercise ID, which is a long integer.
            * @since 1.13
            */
           protected ExportExerciseTcx(java.lang.String name) {
@@ -3665,19 +3705,22 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The resource name of the exercise data point to export. Format:
-           * `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Example:
-           * `users/me/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` is the alias
-           * `"me"` currently. Future versions may support user IDs. The `{data_point}` ID maps to
-           * the exercise ID, which is a long integer.
+           * `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Examples: -
+           * `users/me/dataTypes/exercise/dataPoints/2026443605080188808` -
+           * `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` can
+           * be either the alias `me` or the authenticated user's numeric Health User ID (retrieved
+           * via GetIdentity). The `{data_point}` ID maps to the exercise ID, which is a long
+           * integer.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The resource name of the exercise data point to export. Format:
-         `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Example:
-         `users/me/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` is the alias `"me"`
-         currently. Future versions may support user IDs. The `{data_point}` ID maps to the exercise ID,
-         which is a long integer.
+         `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Examples: -
+         `users/me/dataTypes/exercise/dataPoints/2026443605080188808` -
+         `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` can be either the
+         alias `me` or the authenticated user's numeric Health User ID (retrieved via GetIdentity). The
+         `{data_point}` ID maps to the exercise ID, which is a long integer.
            */
           public java.lang.String getName() {
             return name;
@@ -3685,10 +3728,12 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The resource name of the exercise data point to export. Format:
-           * `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Example:
-           * `users/me/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` is the alias
-           * `"me"` currently. Future versions may support user IDs. The `{data_point}` ID maps to
-           * the exercise ID, which is a long integer.
+           * `users/{user}/dataTypes/exercise/dataPoints/{data_point}` Examples: -
+           * `users/me/dataTypes/exercise/dataPoints/2026443605080188808` -
+           * `users/1234567890/dataTypes/exercise/dataPoints/2026443605080188808` The `{user}` can
+           * be either the alias `me` or the authenticated user's numeric Health User ID (retrieved
+           * via GetIdentity). The `{data_point}` ID maps to the exercise ID, which is a long
+           * integer.
            */
           public ExportExerciseTcx setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3737,8 +3782,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
          * @param name Required. The name of the data point to retrieve. Format:
-         *        `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
-         *        examples and possible values.
+         *        `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+         *        `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+         *        `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+         *        `{user}` can be either the alias `me` or the authenticated user's numeric Health User ID
+         *        (retrieved via GetIdentity). See DataPoint.name for examples and possible values.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -3765,8 +3813,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param name Required. The name of the data point to retrieve. Format:
-         *        `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
-         *        examples and possible values.
+         *        `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+         *        `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+         *        `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+         *        `{user}` can be either the alias `me` or the authenticated user's numeric Health User ID
+         *        (retrieved via GetIdentity). See DataPoint.name for examples and possible values.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -3846,15 +3897,21 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The name of the data point to retrieve. Format:
-           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
-           * examples and possible values.
+           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+           * `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+           * `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+           * `{user}` can be either the alias `me` or the authenticated user's numeric Health User
+           * ID (retrieved via GetIdentity). See DataPoint.name for examples and possible values.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
           /** Required. The name of the data point to retrieve. Format:
-         `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for examples and
-         possible values.
+         `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+         `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+         `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The `{user}` can
+         be either the alias `me` or the authenticated user's numeric Health User ID (retrieved via
+         GetIdentity). See DataPoint.name for examples and possible values.
            */
           public java.lang.String getName() {
             return name;
@@ -3862,8 +3919,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The name of the data point to retrieve. Format:
-           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` See DataPoint.name for
-           * examples and possible values.
+           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+           * `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+           * `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+           * `{user}` can be either the alias `me` or the authenticated user's numeric Health User
+           * ID (retrieved via GetIdentity). See DataPoint.name for examples and possible values.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -3888,8 +3948,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the health server.  After setting any optional
          * parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent data type of the Data Point collection. Format: `users/me/dataTypes/{data_type}`,
-         *        e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/weight` For a list of the
+         * @param parent Required. Parent data type of the Data Point collection. Format:
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/weight` -
+         *        `users/1234567890/dataTypes/weight` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
          *        supported data types see the DataPoint data union field.
          * @return the request
          */
@@ -3916,8 +3979,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
            * called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent data type of the Data Point collection. Format: `users/me/dataTypes/{data_type}`,
-         *        e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/weight` For a list of the
+           * @param parent Required. Parent data type of the Data Point collection. Format:
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/weight` -
+         *        `users/1234567890/dataTypes/weight` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
          *        supported data types see the DataPoint data union field.
            * @since 1.13
            */
@@ -3998,16 +4064,21 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Parent data type of the Data Point collection. Format:
-           * `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/weight` For a list of the supported data types see the DataPoint
-           * data union field.
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/weight` -
+           * `users/1234567890/dataTypes/weight` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the DataPoint data union field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent data type of the Data Point collection. Format: `users/me/dataTypes/{data_type}`,
-         e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/weight` For a list of the supported data
-         types see the DataPoint data union field.
+          /** Required. Parent data type of the Data Point collection. Format:
+         `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         `users/1234567890/dataTypes/steps` - `users/me/dataTypes/weight` -
+         `users/1234567890/dataTypes/weight` The `{user}` can be either the alias `me` or the authenticated
+         user's numeric Health User ID (retrieved via GetIdentity). For a list of the supported data types
+         see the DataPoint data union field.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4015,9 +4086,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Parent data type of the Data Point collection. Format:
-           * `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/weight` For a list of the supported data types see the DataPoint
-           * data union field.
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/weight` -
+           * `users/1234567890/dataTypes/weight` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the DataPoint data union field.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4032,23 +4105,26 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /**
            * Optional. The data source family name to filter by. If empty, data points from all
            * available data sources will be returned. Format:
-           * `users/me/dataSourceFamilies/{data_source_family}` The supported values are: -
-           * `users/me/dataSourceFamilies/all-sources` - Default value. Includes data from all
-           * available data sources. - `users/me/dataSourceFamilies/google-wearables` - Includes
+           * `users/{user}/dataSourceFamilies/{data_source_family}` The `{user}` can be either the
+           * alias `me` or the authenticated user's numeric Health User ID, retrieved via
+           * GetIdentity (e.g. `users/me/dataSourceFamilies/...` or
+           * `users/1234567890/dataSourceFamilies/...`). The supported values are: -
+           * `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes data from all
+           * available data sources. - `users/{user}/dataSourceFamilies/google-wearables` - Includes
            * data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
-           * Excludes manually logged data. - `users/me/dataSourceFamilies/google-sources` -
+           * Excludes manually logged data. - `users/{user}/dataSourceFamilies/google-sources` -
            * Includes first-party Google data, such as data from tracker devices, manually logged
-           * data, and Health Connect. - `users/me/dataSourceFamilies/self-sources` - Includes only
-           * the data the calling client wrote through this API, that is, data points whose data
-           * source was registered through this API with the same OAuth client ID as the caller.
-           * Callers that were only granted write scopes for the requested data types may only read
-           * the data they wrote themselves: their requests are implicitly restricted to `self-
-           * sources`, and requesting any other data source family fails with `PERMISSION_DENIED`.
-           * If no data point matches the requested data source family, the response is an empty
-           * list rather than an error. Filtering by data source family is not supported for the
-           * `sleep`, `food` and `food-measurement-unit` data types, because the underlying listing
-           * implementation cannot restrict results by data source. Such requests fail with
-           * `INVALID_ARGUMENT` when the data source family is set explicitly, and with
+           * data, and Health Connect. - `users/{user}/dataSourceFamilies/self-sources` - Includes
+           * only the data the calling client wrote through this API, that is, data points whose
+           * data source was registered through this API with the same OAuth client ID as the
+           * caller. Callers that were only granted write scopes for the requested data types may
+           * only read the data they wrote themselves: their requests are implicitly restricted to
+           * `self-sources`, and requesting any other data source family fails with
+           * `PERMISSION_DENIED`. If no data point matches the requested data source family, the
+           * response is an empty list rather than an error. Filtering by data source family is not
+           * supported for the `sleep`, `food` and `food-measurement-unit` data types, because the
+           * underlying listing implementation cannot restrict results by data source. Such requests
+           * fail with `INVALID_ARGUMENT` when the data source family is set explicitly, and with
            * `PERMISSION_DENIED` when the restriction is only implied by the caller's scopes. For
            * `sleep`, use ReconcileDataPoints instead.
            */
@@ -4056,13 +4132,16 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           private java.lang.String dataSourceFamily;
 
           /** Optional. The data source family name to filter by. If empty, data points from all available data
-         sources will be returned. Format: `users/me/dataSourceFamilies/{data_source_family}` The supported
-         values are: - `users/me/dataSourceFamilies/all-sources` - Default value. Includes data from all
-         available data sources. - `users/me/dataSourceFamilies/google-wearables` - Includes data from
-         Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch). Excludes manually
-         logged data. - `users/me/dataSourceFamilies/google-sources` - Includes first-party Google data,
-         such as data from tracker devices, manually logged data, and Health Connect. -
-         `users/me/dataSourceFamilies/self-sources` - Includes only the data the calling client wrote
+         sources will be returned. Format: `users/{user}/dataSourceFamilies/{data_source_family}` The
+         `{user}` can be either the alias `me` or the authenticated user's numeric Health User ID, retrieved
+         via GetIdentity (e.g. `users/me/dataSourceFamilies/...` or
+         `users/1234567890/dataSourceFamilies/...`). The supported values are: -
+         `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes data from all available
+         data sources. - `users/{user}/dataSourceFamilies/google-wearables` - Includes data from Google and
+         Fitbit tracker devices (such as Fitbit trackers and Pixel Watch). Excludes manually logged data. -
+         `users/{user}/dataSourceFamilies/google-sources` - Includes first-party Google data, such as data
+         from tracker devices, manually logged data, and Health Connect. -
+         `users/{user}/dataSourceFamilies/self-sources` - Includes only the data the calling client wrote
          through this API, that is, data points whose data source was registered through this API with the
          same OAuth client ID as the caller. Callers that were only granted write scopes for the requested
          data types may only read the data they wrote themselves: their requests are implicitly restricted
@@ -4081,23 +4160,26 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /**
            * Optional. The data source family name to filter by. If empty, data points from all
            * available data sources will be returned. Format:
-           * `users/me/dataSourceFamilies/{data_source_family}` The supported values are: -
-           * `users/me/dataSourceFamilies/all-sources` - Default value. Includes data from all
-           * available data sources. - `users/me/dataSourceFamilies/google-wearables` - Includes
+           * `users/{user}/dataSourceFamilies/{data_source_family}` The `{user}` can be either the
+           * alias `me` or the authenticated user's numeric Health User ID, retrieved via
+           * GetIdentity (e.g. `users/me/dataSourceFamilies/...` or
+           * `users/1234567890/dataSourceFamilies/...`). The supported values are: -
+           * `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes data from all
+           * available data sources. - `users/{user}/dataSourceFamilies/google-wearables` - Includes
            * data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
-           * Excludes manually logged data. - `users/me/dataSourceFamilies/google-sources` -
+           * Excludes manually logged data. - `users/{user}/dataSourceFamilies/google-sources` -
            * Includes first-party Google data, such as data from tracker devices, manually logged
-           * data, and Health Connect. - `users/me/dataSourceFamilies/self-sources` - Includes only
-           * the data the calling client wrote through this API, that is, data points whose data
-           * source was registered through this API with the same OAuth client ID as the caller.
-           * Callers that were only granted write scopes for the requested data types may only read
-           * the data they wrote themselves: their requests are implicitly restricted to `self-
-           * sources`, and requesting any other data source family fails with `PERMISSION_DENIED`.
-           * If no data point matches the requested data source family, the response is an empty
-           * list rather than an error. Filtering by data source family is not supported for the
-           * `sleep`, `food` and `food-measurement-unit` data types, because the underlying listing
-           * implementation cannot restrict results by data source. Such requests fail with
-           * `INVALID_ARGUMENT` when the data source family is set explicitly, and with
+           * data, and Health Connect. - `users/{user}/dataSourceFamilies/self-sources` - Includes
+           * only the data the calling client wrote through this API, that is, data points whose
+           * data source was registered through this API with the same OAuth client ID as the
+           * caller. Callers that were only granted write scopes for the requested data types may
+           * only read the data they wrote themselves: their requests are implicitly restricted to
+           * `self-sources`, and requesting any other data source family fails with
+           * `PERMISSION_DENIED`. If no data point matches the requested data source family, the
+           * response is an empty list rather than an error. Filtering by data source family is not
+           * supported for the `sleep`, `food` and `food-measurement-unit` data types, because the
+           * underlying listing implementation cannot restrict results by data source. Such requests
+           * fail with `INVALID_ARGUMENT` when the data source family is set explicitly, and with
            * `PERMISSION_DENIED` when the restriction is only implied by the caller's scopes. For
            * `sleep`, use ReconcileDataPoints instead.
            */
@@ -4322,12 +4404,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * @param name Identifier. Data point name, only supported for the subset of identifiable data types. For the
          *        majority of the data types, individual data points do not need to be identified and this
          *        field would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
-         *        Example: `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
-         *        The `{user}` ID is a system-generated identifier, as described in Identity.health_user_id.
-         *        The `{data_type}` ID corresponds to the kebab-case version of the field names in the
-         *        DataPoint data union field, e.g. `heart-rate` for the `heart_rate` field. The
-         *        `{data_point}` ID can be client-provided or system-generated. If client-provided, it must
-         *        be a string of 4-63 characters, containing only lowercase letters, numbers, and hyphens.
+         *        ## Examples: ## `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+         *        `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+         *        `{user}` can be either the alias `me` or the authenticated user's numeric Health User ID,
+         *        which can be retrieved by calling GetIdentity (see Identity.health_user_id). The
+         *        `{data_type}` ID corresponds to the kebab-case version of the field names in the DataPoint
+         *        data union field, e.g. `heart-rate` for the `heart_rate` field. The `{data_point}` ID can
+         *        be client-provided or system-generated. If client-provided, it must be a string of 4-63
+         *        characters, containing only lowercase letters, numbers, and hyphens.
          * @param content the {@link com.google.api.services.health.v4beta.model.DataPoint}
          * @return the request
          */
@@ -4358,12 +4442,14 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * @param name Identifier. Data point name, only supported for the subset of identifiable data types. For the
          *        majority of the data types, individual data points do not need to be identified and this
          *        field would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}`
-         *        Example: `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
-         *        The `{user}` ID is a system-generated identifier, as described in Identity.health_user_id.
-         *        The `{data_type}` ID corresponds to the kebab-case version of the field names in the
-         *        DataPoint data union field, e.g. `heart-rate` for the `heart_rate` field. The
-         *        `{data_point}` ID can be client-provided or system-generated. If client-provided, it must
-         *        be a string of 4-63 characters, containing only lowercase letters, numbers, and hyphens.
+         *        ## Examples: ## `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+         *        `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+         *        `{user}` can be either the alias `me` or the authenticated user's numeric Health User ID,
+         *        which can be retrieved by calling GetIdentity (see Identity.health_user_id). The
+         *        `{data_type}` ID corresponds to the kebab-case version of the field names in the DataPoint
+         *        data union field, e.g. `heart-rate` for the `heart_rate` field. The `{data_point}` ID can
+         *        be client-provided or system-generated. If client-provided, it must be a string of 4-63
+         *        characters, containing only lowercase letters, numbers, and hyphens.
            * @param content the {@link com.google.api.services.health.v4beta.model.DataPoint}
            * @since 1.13
            */
@@ -4436,10 +4522,12 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * Identifier. Data point name, only supported for the subset of identifiable data types.
            * For the majority of the data types, individual data points do not need to be identified
            * and this field would be empty. Format:
-           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
-           * `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
-           * `{user}` ID is a system-generated identifier, as described in Identity.health_user_id.
-           * The `{data_type}` ID corresponds to the kebab-case version of the field names in the
+           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+           * `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+           * `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+           * `{user}` can be either the alias `me` or the authenticated user's numeric Health User
+           * ID, which can be retrieved by calling GetIdentity (see Identity.health_user_id). The
+           * `{data_type}` ID corresponds to the kebab-case version of the field names in the
            * DataPoint data union field, e.g. `heart-rate` for the `heart_rate` field. The
            * `{data_point}` ID can be client-provided or system-generated. If client-provided, it
            * must be a string of 4-63 characters, containing only lowercase letters, numbers, and
@@ -4450,13 +4538,15 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /** Identifier. Data point name, only supported for the subset of identifiable data types. For the
          majority of the data types, individual data points do not need to be identified and this field
-         would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
-         `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The `{user}` ID is
-         a system-generated identifier, as described in Identity.health_user_id. The `{data_type}` ID
-         corresponds to the kebab-case version of the field names in the DataPoint data union field, e.g.
-         `heart-rate` for the `heart_rate` field. The `{data_point}` ID can be client-provided or system-
-         generated. If client-provided, it must be a string of 4-63 characters, containing only lowercase
-         letters, numbers, and hyphens.
+         would be empty. Format: `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples:
+         ## `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+         `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The `{user}` can
+         be either the alias `me` or the authenticated user's numeric Health User ID, which can be retrieved
+         by calling GetIdentity (see Identity.health_user_id). The `{data_type}` ID corresponds to the
+         kebab-case version of the field names in the DataPoint data union field, e.g. `heart-rate` for the
+         `heart_rate` field. The `{data_point}` ID can be client-provided or system-generated. If client-
+         provided, it must be a string of 4-63 characters, containing only lowercase letters, numbers, and
+         hyphens.
            */
           public java.lang.String getName() {
             return name;
@@ -4466,10 +4556,12 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * Identifier. Data point name, only supported for the subset of identifiable data types.
            * For the majority of the data types, individual data points do not need to be identified
            * and this field would be empty. Format:
-           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` Example:
-           * `users/abcd1234/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
-           * `{user}` ID is a system-generated identifier, as described in Identity.health_user_id.
-           * The `{data_type}` ID corresponds to the kebab-case version of the field names in the
+           * `users/{user}/dataTypes/{data_type}/dataPoints/{data_point}` ## Examples: ##
+           * `users/me/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef`
+           * `users/1234567890/dataTypes/sleep/dataPoints/a1b2c3d4-e5f6-7890-1234-567890abcdef` The
+           * `{user}` can be either the alias `me` or the authenticated user's numeric Health User
+           * ID, which can be retrieved by calling GetIdentity (see Identity.health_user_id). The
+           * `{data_type}` ID corresponds to the kebab-case version of the field names in the
            * DataPoint data union field, e.g. `heart-rate` for the `heart_rate` field. The
            * `{data_point}` ID can be client-provided or system-generated. If client-provided, it
            * must be a string of 4-63 characters, containing only lowercase letters, numbers, and
@@ -4498,8 +4590,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the health server.  After setting any optional
          * parameters, call the {@link Reconcile#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent data type of the Data Point collection. Format: `users/me/dataTypes/{data_type}`,
-         *        e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/heart-rate` For a list of the
+         * @param parent Required. Parent data type of the Data Point collection. Format:
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/heart-rate` -
+         *        `users/1234567890/dataTypes/heart-rate` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
          *        supported data types see the DataPoint data union field.
          * @return the request
          */
@@ -4527,8 +4622,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            * Reconcile#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent data type of the Data Point collection. Format: `users/me/dataTypes/{data_type}`,
-         *        e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/heart-rate` For a list of the
+           * @param parent Required. Parent data type of the Data Point collection. Format:
+         *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/heart-rate` -
+         *        `users/1234567890/dataTypes/heart-rate` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
          *        supported data types see the DataPoint data union field.
            * @since 1.13
            */
@@ -4609,16 +4707,21 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Parent data type of the Data Point collection. Format:
-           * `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/heart-rate` For a list of the supported data types see the
-           * DataPoint data union field.
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/heart-rate` -
+           * `users/1234567890/dataTypes/heart-rate` The `{user}` can be either the alias `me` or
+           * the authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list
+           * of the supported data types see the DataPoint data union field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent data type of the Data Point collection. Format: `users/me/dataTypes/{data_type}`,
-         e.g.: - `users/me/dataTypes/steps` - `users/me/dataTypes/heart-rate` For a list of the supported
-         data types see the DataPoint data union field.
+          /** Required. Parent data type of the Data Point collection. Format:
+         `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+         `users/1234567890/dataTypes/steps` - `users/me/dataTypes/heart-rate` -
+         `users/1234567890/dataTypes/heart-rate` The `{user}` can be either the alias `me` or the
+         authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         supported data types see the DataPoint data union field.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4626,9 +4729,11 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Parent data type of the Data Point collection. Format:
-           * `users/me/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/heart-rate` For a list of the supported data types see the
-           * DataPoint data union field.
+           * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/heart-rate` -
+           * `users/1234567890/dataTypes/heart-rate` The `{user}` can be either the alias `me` or
+           * the authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list
+           * of the supported data types see the DataPoint data union field.
            */
           public Reconcile setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4642,37 +4747,44 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. The data source family name to reconcile. If empty, data points from all data
-           * sources will be reconciled. Format: `users/me/dataSourceFamilies/{data_source_family}`
-           * - `users/me/dataSourceFamilies/all-sources` - Default value. Includes data from all
-           * available data sources. - `users/me/dataSourceFamilies/google-wearables` - Includes
+           * sources will be reconciled. Format:
+           * `users/{user}/dataSourceFamilies/{data_source_family}` The `{user}` can be either the
+           * alias `me` or the authenticated user's numeric Health User ID, retrieved via
+           * GetIdentity (e.g. `users/me/dataSourceFamilies/...` or
+           * `users/1234567890/dataSourceFamilies/...`). The supported values are: -
+           * `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes data from all
+           * available data sources. - `users/{user}/dataSourceFamilies/google-wearables` - Includes
            * data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
-           * Excludes manually logged data. - `users/me/dataSourceFamilies/google-sources` -
+           * Excludes manually logged data. - `users/{user}/dataSourceFamilies/google-sources` -
            * Includes first-party Google data, such as data from tracker devices, manually logged
-           * data, and Health Connect. - `users/me/dataSourceFamilies/self-sources` - Includes only
-           * the data the calling client wrote through this API, that is, data points whose data
-           * source was registered through this API with the same OAuth client ID as the caller.
-           * Callers that were only granted write scopes for the requested data type may only read
-           * the data they wrote themselves: their requests are implicitly restricted to `self-
-           * sources`, and requesting any other data source family fails with `PERMISSION_DENIED`.
-           * If no data point matches the requested data source family, the response is an empty
-           * list rather than an error.
+           * data, and Health Connect. - `users/{user}/dataSourceFamilies/self-sources` - Includes
+           * only the data the calling client wrote through this API, that is, data points whose
+           * data source was registered through this API with the same OAuth client ID as the
+           * caller. Callers that were only granted write scopes for the requested data type may
+           * only read the data they wrote themselves: their requests are implicitly restricted to
+           * `self-sources`, and requesting any other data source family fails with
+           * `PERMISSION_DENIED`. If no data point matches the requested data source family, the
+           * response is an empty list rather than an error.
            */
           @com.google.api.client.util.Key
           private java.lang.String dataSourceFamily;
 
           /** Optional. The data source family name to reconcile. If empty, data points from all data sources
-         will be reconciled. Format: `users/me/dataSourceFamilies/{data_source_family}` -
-         `users/me/dataSourceFamilies/all-sources` - Default value. Includes data from all available data
-         sources. - `users/me/dataSourceFamilies/google-wearables` - Includes data from Google and Fitbit
-         tracker devices (such as Fitbit trackers and Pixel Watch). Excludes manually logged data. -
-         `users/me/dataSourceFamilies/google-sources` - Includes first-party Google data, such as data from
-         tracker devices, manually logged data, and Health Connect. - `users/me/dataSourceFamilies/self-
-         sources` - Includes only the data the calling client wrote through this API, that is, data points
-         whose data source was registered through this API with the same OAuth client ID as the caller.
-         Callers that were only granted write scopes for the requested data type may only read the data they
-         wrote themselves: their requests are implicitly restricted to `self-sources`, and requesting any
-         other data source family fails with `PERMISSION_DENIED`. If no data point matches the requested
-         data source family, the response is an empty list rather than an error.
+         will be reconciled. Format: `users/{user}/dataSourceFamilies/{data_source_family}` The `{user}` can
+         be either the alias `me` or the authenticated user's numeric Health User ID, retrieved via
+         GetIdentity (e.g. `users/me/dataSourceFamilies/...` or `users/1234567890/dataSourceFamilies/...`).
+         The supported values are: - `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes
+         data from all available data sources. - `users/{user}/dataSourceFamilies/google-wearables` -
+         Includes data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
+         Excludes manually logged data. - `users/{user}/dataSourceFamilies/google-sources` - Includes first-
+         party Google data, such as data from tracker devices, manually logged data, and Health Connect. -
+         `users/{user}/dataSourceFamilies/self-sources` - Includes only the data the calling client wrote
+         through this API, that is, data points whose data source was registered through this API with the
+         same OAuth client ID as the caller. Callers that were only granted write scopes for the requested
+         data type may only read the data they wrote themselves: their requests are implicitly restricted to
+         `self-sources`, and requesting any other data source family fails with `PERMISSION_DENIED`. If no
+         data point matches the requested data source family, the response is an empty list rather than an
+         error.
            */
           public java.lang.String getDataSourceFamily() {
             return dataSourceFamily;
@@ -4680,20 +4792,24 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. The data source family name to reconcile. If empty, data points from all data
-           * sources will be reconciled. Format: `users/me/dataSourceFamilies/{data_source_family}`
-           * - `users/me/dataSourceFamilies/all-sources` - Default value. Includes data from all
-           * available data sources. - `users/me/dataSourceFamilies/google-wearables` - Includes
+           * sources will be reconciled. Format:
+           * `users/{user}/dataSourceFamilies/{data_source_family}` The `{user}` can be either the
+           * alias `me` or the authenticated user's numeric Health User ID, retrieved via
+           * GetIdentity (e.g. `users/me/dataSourceFamilies/...` or
+           * `users/1234567890/dataSourceFamilies/...`). The supported values are: -
+           * `users/{user}/dataSourceFamilies/all-sources` - Default value. Includes data from all
+           * available data sources. - `users/{user}/dataSourceFamilies/google-wearables` - Includes
            * data from Google and Fitbit tracker devices (such as Fitbit trackers and Pixel Watch).
-           * Excludes manually logged data. - `users/me/dataSourceFamilies/google-sources` -
+           * Excludes manually logged data. - `users/{user}/dataSourceFamilies/google-sources` -
            * Includes first-party Google data, such as data from tracker devices, manually logged
-           * data, and Health Connect. - `users/me/dataSourceFamilies/self-sources` - Includes only
-           * the data the calling client wrote through this API, that is, data points whose data
-           * source was registered through this API with the same OAuth client ID as the caller.
-           * Callers that were only granted write scopes for the requested data type may only read
-           * the data they wrote themselves: their requests are implicitly restricted to `self-
-           * sources`, and requesting any other data source family fails with `PERMISSION_DENIED`.
-           * If no data point matches the requested data source family, the response is an empty
-           * list rather than an error.
+           * data, and Health Connect. - `users/{user}/dataSourceFamilies/self-sources` - Includes
+           * only the data the calling client wrote through this API, that is, data points whose
+           * data source was registered through this API with the same OAuth client ID as the
+           * caller. Callers that were only granted write scopes for the requested data type may
+           * only read the data they wrote themselves: their requests are implicitly restricted to
+           * `self-sources`, and requesting any other data source family fails with
+           * `PERMISSION_DENIED`. If no data point matches the requested data source family, the
+           * response is an empty list rather than an error.
            */
           public Reconcile setDataSourceFamily(java.lang.String dataSourceFamily) {
             this.dataSourceFamily = dataSourceFamily;
@@ -4785,8 +4901,10 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
          *
          * @param parent Required. Parent data type of the Data Point collection. Format:
          *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-         *        `users/me/dataTypes/distance` For a list of the supported data types see the
-         *        RollupDataPoint value union field.
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+         *        `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         *        supported data types see the RollupDataPoint value union field.
          * @param content the {@link com.google.api.services.health.v4beta.model.RollUpDataPointsRequest}
          * @return the request
          */
@@ -4815,8 +4933,10 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
            *
            * @param parent Required. Parent data type of the Data Point collection. Format:
          *        `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-         *        `users/me/dataTypes/distance` For a list of the supported data types see the
-         *        RollupDataPoint value union field.
+         *        `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+         *        `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+         *        authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         *        supported data types see the RollupDataPoint value union field.
            * @param content the {@link com.google.api.services.health.v4beta.model.RollUpDataPointsRequest}
            * @since 1.13
            */
@@ -4888,16 +5008,20 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /**
            * Required. Parent data type of the Data Point collection. Format:
            * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/distance` For a list of the supported data types see the
-           * RollupDataPoint value union field.
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+           * `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the RollupDataPoint value union field.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. Parent data type of the Data Point collection. Format:
          `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-         `users/me/dataTypes/distance` For a list of the supported data types see the RollupDataPoint value
-         union field.
+         `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+         `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+         authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of the
+         supported data types see the RollupDataPoint value union field.
            */
           public java.lang.String getParent() {
             return parent;
@@ -4906,8 +5030,10 @@ public class GoogleHealthAPI extends com.google.api.client.googleapis.services.j
           /**
            * Required. Parent data type of the Data Point collection. Format:
            * `users/{user}/dataTypes/{data_type}`, e.g.: - `users/me/dataTypes/steps` -
-           * `users/me/dataTypes/distance` For a list of the supported data types see the
-           * RollupDataPoint value union field.
+           * `users/1234567890/dataTypes/steps` - `users/me/dataTypes/distance` -
+           * `users/1234567890/dataTypes/distance` The `{user}` can be either the alias `me` or the
+           * authenticated user's numeric Health User ID (retrieved via GetIdentity). For a list of
+           * the supported data types see the RollupDataPoint value union field.
            */
           public RollUp setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {

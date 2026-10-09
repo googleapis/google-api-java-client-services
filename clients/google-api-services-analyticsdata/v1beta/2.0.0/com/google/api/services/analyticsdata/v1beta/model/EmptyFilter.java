@@ -17,7 +17,10 @@
 package com.google.api.services.analyticsdata.v1beta.model;
 
 /**
- * Filter for empty values.
+ * Filter for empty values. Matches dimension values that are `""` or `(not set)` values. Use this
+ * filter to match rows with missing or unpopulated dimension values, or combine it with
+ * `not_expression` to exclude them from a report without filtering for both `""` and `(not set)`
+ * separately.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Analytics Data API. For a detailed explanation

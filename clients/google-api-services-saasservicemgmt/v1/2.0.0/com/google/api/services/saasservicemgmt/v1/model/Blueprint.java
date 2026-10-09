@@ -18,7 +18,7 @@ package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
  * Blueprints are OCI Images that contain all of the artifacts needed to provision a unit. Metadata
- * such as, type of the engine used to actuate the blueprint (e.g. terraform, helm etc) and version
+ * such as, type of the engine used to actuate the blueprint (Terraform, for example) and version
  * will come from the image manifest. If the hostname is omitted, it will be assumed to be the
  * regional path to Artifact Registry (eg. us-east1-docker.pkg.dev).
  *
@@ -34,7 +34,7 @@ package com.google.api.services.saasservicemgmt.v1.model;
 public final class Blueprint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g. terraform, helm etc.
+   * Output only. Type of the engine used to actuate the blueprint. (Terraform, for example)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,7 +56,7 @@ public final class Blueprint extends com.google.api.client.json.GenericJson {
   private java.lang.String version;
 
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g. terraform, helm etc.
+   * Output only. Type of the engine used to actuate the blueprint. (Terraform, for example)
    * @return value or {@code null} for none
    */
   public java.lang.String getEngine() {
@@ -64,7 +64,7 @@ public final class Blueprint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Type of the engine used to actuate the blueprint. e.g. terraform, helm etc.
+   * Output only. Type of the engine used to actuate the blueprint. (Terraform, for example)
    * @param engine engine or {@code null} for none
    */
   public Blueprint setEngine(java.lang.String engine) {

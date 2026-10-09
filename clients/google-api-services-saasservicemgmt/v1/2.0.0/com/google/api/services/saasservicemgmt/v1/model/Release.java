@@ -18,7 +18,7 @@ package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
  * A new version to be propagated and deployed to units. This includes pointers to packaged
- * blueprints for actuation (e.g Helm or Terraform configuration packages) via artifact registry.
+ * blueprints for actuation via Artifact Registry.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation

@@ -103,7 +103,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string against Unit. The
+   * Optional. [CEL](https://github.com/google/cel-spec) formatted filter string against Unit. The
    * filter will be applied to determine the eligible unit population. This filter can only reduce,
    * but not expand the scope of the rollout.
    * The value may be {@code null}.
@@ -312,7 +312,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string against Unit. The
+   * Optional. [CEL](https://github.com/google/cel-spec) formatted filter string against Unit. The
    * filter will be applied to determine the eligible unit population. This filter can only reduce,
    * but not expand the scope of the rollout.
    * @return value or {@code null} for none
@@ -322,7 +322,7 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. CEL(https://github.com/google/cel-spec) formatted filter string against Unit. The
+   * Optional. [CEL](https://github.com/google/cel-spec) formatted filter string against Unit. The
    * filter will be applied to determine the eligible unit population. This filter can only reduce,
    * but not expand the scope of the rollout.
    * @param unitFilter unitFilter or {@code null} for none

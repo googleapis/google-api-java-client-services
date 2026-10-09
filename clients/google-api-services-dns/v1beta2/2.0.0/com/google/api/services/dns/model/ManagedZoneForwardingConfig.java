@@ -36,6 +36,13 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
   private java.lang.String kind;
 
   /**
+   * The list of outbound endpoints to use for queries.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ManagedZoneForwardingConfigOutboundEndpoint> outboundEndpoints;
+
+  /**
    * List of target name servers to forward to. Cloud DNS selects the best available name server if
    * more than one target is given.
    * The value may be {@code null}.
@@ -55,6 +62,23 @@ public final class ManagedZoneForwardingConfig extends com.google.api.client.jso
    */
   public ManagedZoneForwardingConfig setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * The list of outbound endpoints to use for queries.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ManagedZoneForwardingConfigOutboundEndpoint> getOutboundEndpoints() {
+    return outboundEndpoints;
+  }
+
+  /**
+   * The list of outbound endpoints to use for queries.
+   * @param outboundEndpoints outboundEndpoints or {@code null} for none
+   */
+  public ManagedZoneForwardingConfig setOutboundEndpoints(java.util.List<ManagedZoneForwardingConfigOutboundEndpoint> outboundEndpoints) {
+    this.outboundEndpoints = outboundEndpoints;
     return this;
   }
 

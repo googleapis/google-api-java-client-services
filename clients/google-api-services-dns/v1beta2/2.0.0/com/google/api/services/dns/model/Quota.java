@@ -126,6 +126,20 @@ public final class Quota extends com.google.api.client.json.GenericJson {
   private java.lang.Integer networksPerResponsePolicy;
 
   /**
+   * Maximum allowed number of outbound endpoints per managed zone.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer outboundEndpointsPerManagedZone;
+
+  /**
+   * Maximum allowed number of outbound endpoints per policy.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer outboundEndpointsPerPolicy;
+
+  /**
    * Maximum allowed number of consumer peering zones per target network owned by this producer
    * project
    * The value may be {@code null}.
@@ -447,6 +461,40 @@ public final class Quota extends com.google.api.client.json.GenericJson {
    */
   public Quota setNetworksPerResponsePolicy(java.lang.Integer networksPerResponsePolicy) {
     this.networksPerResponsePolicy = networksPerResponsePolicy;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of outbound endpoints per managed zone.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOutboundEndpointsPerManagedZone() {
+    return outboundEndpointsPerManagedZone;
+  }
+
+  /**
+   * Maximum allowed number of outbound endpoints per managed zone.
+   * @param outboundEndpointsPerManagedZone outboundEndpointsPerManagedZone or {@code null} for none
+   */
+  public Quota setOutboundEndpointsPerManagedZone(java.lang.Integer outboundEndpointsPerManagedZone) {
+    this.outboundEndpointsPerManagedZone = outboundEndpointsPerManagedZone;
+    return this;
+  }
+
+  /**
+   * Maximum allowed number of outbound endpoints per policy.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getOutboundEndpointsPerPolicy() {
+    return outboundEndpointsPerPolicy;
+  }
+
+  /**
+   * Maximum allowed number of outbound endpoints per policy.
+   * @param outboundEndpointsPerPolicy outboundEndpointsPerPolicy or {@code null} for none
+   */
+  public Quota setOutboundEndpointsPerPolicy(java.lang.Integer outboundEndpointsPerPolicy) {
+    this.outboundEndpointsPerPolicy = outboundEndpointsPerPolicy;
     return this;
   }
 

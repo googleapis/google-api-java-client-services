@@ -37,16 +37,19 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
    * drained under the integration's run-as service account, exactly as a real Cloud Scheduler,
    * cron, Pub/Sub, Salesforce or connector fire would be. That is the only way to verify the
    * credential path an asynchronous trigger actually takes; a synchronous test always carries the
-   * caller's own credential and so exercises the opposite branch. When `true`: * Only the
-   * **published** (`ACTIVE`) version runs. The asynchronous path resolves the integration from
-   * storage by `trigger_id`, so a draft cannot be tested this way. `integration_version` must
-   * therefore carry only `name`; supplying any other field is rejected, rather than silently
-   * running something other than what was passed. * The response carries `execution_id` only.
-   * `execution_failed`, `event_parameters`, `parameters` and `parameter_entries` describe a
-   * finished run and are left unset, because nothing has run yet. In particular, do not read
-   * `execution_failed` as a pass signal. * The run is real, with real side effects, quota and
-   * concurrency. No actual Pub/Sub push or Cloud Scheduler tick occurs; only the enqueue is
-   * simulated, which does not change the credential path.
+   * caller's own credential and so exercises the opposite branch. When `true`: * The version named
+   * by `integration_version.name` runs. A name ending in `/versions/{version}` runs that exact
+   * version, published or draft; a name without one runs the published (`ACTIVE`) version on the
+   * trigger. Either way the integration is resolved from storage, so `integration_version` must
+   * carry only `name`; supplying any other field is rejected, rather than silently running
+   * something other than what was passed. * A draft is validated before it is enqueued, including
+   * the check that the caller may act as the integration's run-as service account. Testing a draft
+   * therefore fails fast on a configuration a publish would reject. * The response carries
+   * `execution_id` only. `execution_failed`, `event_parameters`, `parameters` and
+   * `parameter_entries` describe a finished run and are left unset, because nothing has run yet. In
+   * particular, do not read `execution_failed` as a pass signal. * The run is real, with real side
+   * effects, quota and concurrency. No actual Pub/Sub push or Cloud Scheduler tick occurs; only the
+   * enqueue is simulated, which does not change the credential path.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,6 +68,18 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> configParameters;
+
+  /**
+   * Optional. The credential flow to run the test under. Applies to synchronous tests only. When
+   * unset, the default depends on when the test runs: before the EUC hardening cutover it is
+   * `CREDENTIAL_MODE_CURRENT`; from the cutover on it is `CREDENTIAL_MODE_HARDENED`, whatever the
+   * integration's stored disposition. Where the hardened flow cannot be evaluated, an unset mode
+   * runs `CREDENTIAL_MODE_CURRENT` instead of failing. The response's `credential_mode` reports the
+   * mode that ran.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String credentialMode;
 
   /**
    * Optional. custom deadline of the rpc
@@ -119,16 +134,19 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
    * drained under the integration's run-as service account, exactly as a real Cloud Scheduler,
    * cron, Pub/Sub, Salesforce or connector fire would be. That is the only way to verify the
    * credential path an asynchronous trigger actually takes; a synchronous test always carries the
-   * caller's own credential and so exercises the opposite branch. When `true`: * Only the
-   * **published** (`ACTIVE`) version runs. The asynchronous path resolves the integration from
-   * storage by `trigger_id`, so a draft cannot be tested this way. `integration_version` must
-   * therefore carry only `name`; supplying any other field is rejected, rather than silently
-   * running something other than what was passed. * The response carries `execution_id` only.
-   * `execution_failed`, `event_parameters`, `parameters` and `parameter_entries` describe a
-   * finished run and are left unset, because nothing has run yet. In particular, do not read
-   * `execution_failed` as a pass signal. * The run is real, with real side effects, quota and
-   * concurrency. No actual Pub/Sub push or Cloud Scheduler tick occurs; only the enqueue is
-   * simulated, which does not change the credential path.
+   * caller's own credential and so exercises the opposite branch. When `true`: * The version named
+   * by `integration_version.name` runs. A name ending in `/versions/{version}` runs that exact
+   * version, published or draft; a name without one runs the published (`ACTIVE`) version on the
+   * trigger. Either way the integration is resolved from storage, so `integration_version` must
+   * carry only `name`; supplying any other field is rejected, rather than silently running
+   * something other than what was passed. * A draft is validated before it is enqueued, including
+   * the check that the caller may act as the integration's run-as service account. Testing a draft
+   * therefore fails fast on a configuration a publish would reject. * The response carries
+   * `execution_id` only. `execution_failed`, `event_parameters`, `parameters` and
+   * `parameter_entries` describe a finished run and are left unset, because nothing has run yet. In
+   * particular, do not read `execution_failed` as a pass signal. * The run is real, with real side
+   * effects, quota and concurrency. No actual Pub/Sub push or Cloud Scheduler tick occurs; only the
+   * enqueue is simulated, which does not change the credential path.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getAsyncExecution() {
@@ -142,16 +160,19 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
    * drained under the integration's run-as service account, exactly as a real Cloud Scheduler,
    * cron, Pub/Sub, Salesforce or connector fire would be. That is the only way to verify the
    * credential path an asynchronous trigger actually takes; a synchronous test always carries the
-   * caller's own credential and so exercises the opposite branch. When `true`: * Only the
-   * **published** (`ACTIVE`) version runs. The asynchronous path resolves the integration from
-   * storage by `trigger_id`, so a draft cannot be tested this way. `integration_version` must
-   * therefore carry only `name`; supplying any other field is rejected, rather than silently
-   * running something other than what was passed. * The response carries `execution_id` only.
-   * `execution_failed`, `event_parameters`, `parameters` and `parameter_entries` describe a
-   * finished run and are left unset, because nothing has run yet. In particular, do not read
-   * `execution_failed` as a pass signal. * The run is real, with real side effects, quota and
-   * concurrency. No actual Pub/Sub push or Cloud Scheduler tick occurs; only the enqueue is
-   * simulated, which does not change the credential path.
+   * caller's own credential and so exercises the opposite branch. When `true`: * The version named
+   * by `integration_version.name` runs. A name ending in `/versions/{version}` runs that exact
+   * version, published or draft; a name without one runs the published (`ACTIVE`) version on the
+   * trigger. Either way the integration is resolved from storage, so `integration_version` must
+   * carry only `name`; supplying any other field is rejected, rather than silently running
+   * something other than what was passed. * A draft is validated before it is enqueued, including
+   * the check that the caller may act as the integration's run-as service account. Testing a draft
+   * therefore fails fast on a configuration a publish would reject. * The response carries
+   * `execution_id` only. `execution_failed`, `event_parameters`, `parameters` and
+   * `parameter_entries` describe a finished run and are left unset, because nothing has run yet. In
+   * particular, do not read `execution_failed` as a pass signal. * The run is real, with real side
+   * effects, quota and concurrency. No actual Pub/Sub push or Cloud Scheduler tick occurs; only the
+   * enqueue is simulated, which does not change the credential path.
    * @param asyncExecution asyncExecution or {@code null} for none
    */
   public GoogleCloudIntegrationsV1alphaTestIntegrationsRequest setAsyncExecution(java.lang.Boolean asyncExecution) {
@@ -190,6 +211,33 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsRequest extends
    */
   public GoogleCloudIntegrationsV1alphaTestIntegrationsRequest setConfigParameters(java.util.Map<String, java.lang.Object> configParameters) {
     this.configParameters = configParameters;
+    return this;
+  }
+
+  /**
+   * Optional. The credential flow to run the test under. Applies to synchronous tests only. When
+   * unset, the default depends on when the test runs: before the EUC hardening cutover it is
+   * `CREDENTIAL_MODE_CURRENT`; from the cutover on it is `CREDENTIAL_MODE_HARDENED`, whatever the
+   * integration's stored disposition. Where the hardened flow cannot be evaluated, an unset mode
+   * runs `CREDENTIAL_MODE_CURRENT` instead of failing. The response's `credential_mode` reports the
+   * mode that ran.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCredentialMode() {
+    return credentialMode;
+  }
+
+  /**
+   * Optional. The credential flow to run the test under. Applies to synchronous tests only. When
+   * unset, the default depends on when the test runs: before the EUC hardening cutover it is
+   * `CREDENTIAL_MODE_CURRENT`; from the cutover on it is `CREDENTIAL_MODE_HARDENED`, whatever the
+   * integration's stored disposition. Where the hardened flow cannot be evaluated, an unset mode
+   * runs `CREDENTIAL_MODE_CURRENT` instead of failing. The response's `credential_mode` reports the
+   * mode that ran.
+   * @param credentialMode credentialMode or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTestIntegrationsRequest setCredentialMode(java.lang.String credentialMode) {
+    this.credentialMode = credentialMode;
     return this;
   }
 

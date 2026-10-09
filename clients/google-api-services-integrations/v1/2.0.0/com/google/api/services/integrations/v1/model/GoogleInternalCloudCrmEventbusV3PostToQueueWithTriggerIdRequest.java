@@ -18,7 +18,7 @@ package com.google.api.services.integrations.v1.model;
 
 /**
  * LINT.IfChange Use this request to post all workflows associated with a given trigger id. Next
- * available id: 13
+ * available id: 14
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Application Integration API. For a detailed
@@ -119,6 +119,15 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   @com.google.api.client.util.Key
   private java.lang.String userGeneratedExecutionId;
+
+  /**
+   * Optional. Pins the enqueue to this exact version rather than the ACTIVE one on the trigger, so
+   * an unpublished draft can be tested. Requires client_id, and the version is validated before it
+   * is enqueued; see integrationplatform/api/executionsservice/README.md.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workflowId;
 
   /**
    * Optional. If provided, the workflow_name is used to filter all the matched workflows having
@@ -337,6 +346,27 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
    */
   public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setUserGeneratedExecutionId(java.lang.String userGeneratedExecutionId) {
     this.userGeneratedExecutionId = userGeneratedExecutionId;
+    return this;
+  }
+
+  /**
+   * Optional. Pins the enqueue to this exact version rather than the ACTIVE one on the trigger, so
+   * an unpublished draft can be tested. Requires client_id, and the version is validated before it
+   * is enqueued; see integrationplatform/api/executionsservice/README.md.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkflowId() {
+    return workflowId;
+  }
+
+  /**
+   * Optional. Pins the enqueue to this exact version rather than the ACTIVE one on the trigger, so
+   * an unpublished draft can be tested. Requires client_id, and the version is validated before it
+   * is enqueued; see integrationplatform/api/executionsservice/README.md.
+   * @param workflowId workflowId or {@code null} for none
+   */
+  public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setWorkflowId(java.lang.String workflowId) {
+    this.workflowId = workflowId;
     return this;
   }
 

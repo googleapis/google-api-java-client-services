@@ -17,8 +17,8 @@
 package com.google.api.services.gmail.model;
 
 /**
- * Metadata for private keys managed by an external key access control list service. For details
- * about managing key access, see [Google Workspace CSE API
+ * Metadata for a cryptographic key managed by an external key access control list service. For
+ * details about managing key access, see [Google Workspace CSE API
  * Reference](https://developers.google.com/workspace/cse/reference).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -32,21 +32,21 @@ package com.google.api.services.gmail.model;
 public final class KaclsKeyMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opaque data generated and used by the key access control list service. Maximum size: 8 KiB.
+   * Opaque data generated and used by the key access control list service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kaclsData;
 
   /**
-   * The URI of the key access control list service that manages the private key.
+   * The URI of the key access control list service that manages the key.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kaclsUri;
 
   /**
-   * Opaque data generated and used by the key access control list service. Maximum size: 8 KiB.
+   * Opaque data generated and used by the key access control list service.
    * @return value or {@code null} for none
    */
   public java.lang.String getKaclsData() {
@@ -54,7 +54,7 @@ public final class KaclsKeyMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Opaque data generated and used by the key access control list service. Maximum size: 8 KiB.
+   * Opaque data generated and used by the key access control list service.
    * @param kaclsData kaclsData or {@code null} for none
    */
   public KaclsKeyMetadata setKaclsData(java.lang.String kaclsData) {
@@ -63,7 +63,7 @@ public final class KaclsKeyMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The URI of the key access control list service that manages the private key.
+   * The URI of the key access control list service that manages the key.
    * @return value or {@code null} for none
    */
   public java.lang.String getKaclsUri() {
@@ -71,7 +71,7 @@ public final class KaclsKeyMetadata extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The URI of the key access control list service that manages the private key.
+   * The URI of the key access control list service that manages the key.
    * @param kaclsUri kaclsUri or {@code null} for none
    */
   public KaclsKeyMetadata setKaclsUri(java.lang.String kaclsUri) {

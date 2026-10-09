@@ -37,7 +37,8 @@ public final class CsePrivateKeyMetadata extends com.google.api.client.json.Gene
   private HardwareKeyMetadata hardwareKeyMetadata;
 
   /**
-   * Metadata for a private key instance managed by an external key access control list service.
+   * Metadata for a private key instance managed by an external key access control list service. The
+   * maximum size of the KACLS data field is 8 KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class CsePrivateKeyMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Metadata for a private key instance managed by an external key access control list service.
+   * Metadata for a private key instance managed by an external key access control list service. The
+   * maximum size of the KACLS data field is 8 KiB.
    * @return value or {@code null} for none
    */
   public KaclsKeyMetadata getKaclsKeyMetadata() {
@@ -76,7 +78,8 @@ public final class CsePrivateKeyMetadata extends com.google.api.client.json.Gene
   }
 
   /**
-   * Metadata for a private key instance managed by an external key access control list service.
+   * Metadata for a private key instance managed by an external key access control list service. The
+   * maximum size of the KACLS data field is 8 KiB.
    * @param kaclsKeyMetadata kaclsKeyMetadata or {@code null} for none
    */
   public CsePrivateKeyMetadata setKaclsKeyMetadata(KaclsKeyMetadata kaclsKeyMetadata) {

@@ -32,20 +32,18 @@ package com.google.api.services.displayvideo.v3.model;
 public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. An enum for the DV360 Sensitive category content classified to be EXCLUDED.
-   * **Starting on *October 1, 2026*, this field will only accept
-   * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` or `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`. All other
-   * values will be deprecated and no longer be accepted.**
+   * Required. An enum for the Display & Video 360 Sensitive category content classified to be
+   * EXCLUDED. This field only accepts the following values: * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` *
+   * `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String excludedSensitiveCategory;
 
   /**
-   * Required. An enum for the DV360 Sensitive category content classified to be EXCLUDED.
-   * **Starting on *October 1, 2026*, this field will only accept
-   * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` or `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`. All other
-   * values will be deprecated and no longer be accepted.**
+   * Required. An enum for the Display & Video 360 Sensitive category content classified to be
+   * EXCLUDED. This field only accepts the following values: * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` *
+   * `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`
    * @return value or {@code null} for none
    */
   public java.lang.String getExcludedSensitiveCategory() {
@@ -53,10 +51,9 @@ public final class SensitiveCategoryAssignedTargetingOptionDetails extends com.g
   }
 
   /**
-   * Required. An enum for the DV360 Sensitive category content classified to be EXCLUDED.
-   * **Starting on *October 1, 2026*, this field will only accept
-   * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` or `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`. All other
-   * values will be deprecated and no longer be accepted.**
+   * Required. An enum for the Display & Video 360 Sensitive category content classified to be
+   * EXCLUDED. This field only accepts the following values: * `SENSITIVE_CATEGORY_EMBEDDED_VIDEO` *
+   * `SENSITIVE_CATEGORY_LIVE_STREAMING_VIDEO`
    * @param excludedSensitiveCategory excludedSensitiveCategory or {@code null} for none
    */
   public SensitiveCategoryAssignedTargetingOptionDetails setExcludedSensitiveCategory(java.lang.String excludedSensitiveCategory) {

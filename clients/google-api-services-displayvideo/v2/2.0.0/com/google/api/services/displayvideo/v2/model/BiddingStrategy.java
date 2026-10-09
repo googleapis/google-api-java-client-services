@@ -72,6 +72,14 @@ public final class BiddingStrategy extends com.google.api.client.json.GenericJso
   private PerformanceGoalBidStrategy performanceGoalAutoBid;
 
   /**
+   * A bid strategy used by YouTube and Partners resources. It can only be used for a YouTube and
+   * Partners line item or ad group entity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private YoutubeAndPartnersBiddingStrategy youtubeAndPartnersBid;
+
+  /**
    * A bid strategy used by Demand Gen resources. It can only be used for a Demand Gen line item or
    * ad group entity.
    * @return value or {@code null} for none
@@ -162,6 +170,25 @@ public final class BiddingStrategy extends com.google.api.client.json.GenericJso
    */
   public BiddingStrategy setPerformanceGoalAutoBid(PerformanceGoalBidStrategy performanceGoalAutoBid) {
     this.performanceGoalAutoBid = performanceGoalAutoBid;
+    return this;
+  }
+
+  /**
+   * A bid strategy used by YouTube and Partners resources. It can only be used for a YouTube and
+   * Partners line item or ad group entity.
+   * @return value or {@code null} for none
+   */
+  public YoutubeAndPartnersBiddingStrategy getYoutubeAndPartnersBid() {
+    return youtubeAndPartnersBid;
+  }
+
+  /**
+   * A bid strategy used by YouTube and Partners resources. It can only be used for a YouTube and
+   * Partners line item or ad group entity.
+   * @param youtubeAndPartnersBid youtubeAndPartnersBid or {@code null} for none
+   */
+  public BiddingStrategy setYoutubeAndPartnersBid(YoutubeAndPartnersBiddingStrategy youtubeAndPartnersBid) {
+    this.youtubeAndPartnersBid = youtubeAndPartnersBid;
     return this;
   }
 

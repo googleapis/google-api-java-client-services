@@ -33,14 +33,14 @@ package com.google.api.services.displayvideo.v4.model;
 public final class SensitiveCategoryTargetingOptionDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. An enum for the DV360 Sensitive category content classifier.
+   * Output only. An enum for the Display & Video 360 Sensitive category content classifier.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sensitiveCategory;
 
   /**
-   * Output only. An enum for the DV360 Sensitive category content classifier.
+   * Output only. An enum for the Display & Video 360 Sensitive category content classifier.
    * @return value or {@code null} for none
    */
   public java.lang.String getSensitiveCategory() {
@@ -48,7 +48,7 @@ public final class SensitiveCategoryTargetingOptionDetails extends com.google.ap
   }
 
   /**
-   * Output only. An enum for the DV360 Sensitive category content classifier.
+   * Output only. An enum for the Display & Video 360 Sensitive category content classifier.
    * @param sensitiveCategory sensitiveCategory or {@code null} for none
    */
   public SensitiveCategoryTargetingOptionDetails setSensitiveCategory(java.lang.String sensitiveCategory) {

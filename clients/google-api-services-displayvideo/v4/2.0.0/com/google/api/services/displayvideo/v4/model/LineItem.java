@@ -243,7 +243,7 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> warningMessages;
 
   /**
-   * Output only. Settings specific to YouTube and Partners line items.
+   * Optional. Settings specific to YouTube and Partners line items.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -755,7 +755,7 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Settings specific to YouTube and Partners line items.
+   * Optional. Settings specific to YouTube and Partners line items.
    * @return value or {@code null} for none
    */
   public YoutubeAndPartnersSettings getYoutubeAndPartnersSettings() {
@@ -763,7 +763,7 @@ public final class LineItem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Settings specific to YouTube and Partners line items.
+   * Optional. Settings specific to YouTube and Partners line items.
    * @param youtubeAndPartnersSettings youtubeAndPartnersSettings or {@code null} for none
    */
   public LineItem setYoutubeAndPartnersSettings(YoutubeAndPartnersSettings youtubeAndPartnersSettings) {

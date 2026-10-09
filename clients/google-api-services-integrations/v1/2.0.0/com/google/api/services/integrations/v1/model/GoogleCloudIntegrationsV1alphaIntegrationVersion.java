@@ -94,6 +94,15 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
   }
 
   /**
+   * Output only. The EUC hardening disposition of this version. Set by the service when the
+   * integration is first created and inherited unchanged by every later version, so all versions of
+   * an integration report the same value.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eucHardeningDisposition;
+
+  /**
    * Optional. Config Parameters that are expected to be passed to the integration when an
    * integration is published. This consists of all the parameters that are expected to provide
    * configuration in the integration execution. This gives the user the ability to provide default
@@ -407,6 +416,27 @@ public final class GoogleCloudIntegrationsV1alphaIntegrationVersion extends com.
    */
   public GoogleCloudIntegrationsV1alphaIntegrationVersion setErrorCatcherConfigs(java.util.List<GoogleCloudIntegrationsV1alphaErrorCatcherConfig> errorCatcherConfigs) {
     this.errorCatcherConfigs = errorCatcherConfigs;
+    return this;
+  }
+
+  /**
+   * Output only. The EUC hardening disposition of this version. Set by the service when the
+   * integration is first created and inherited unchanged by every later version, so all versions of
+   * an integration report the same value.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEucHardeningDisposition() {
+    return eucHardeningDisposition;
+  }
+
+  /**
+   * Output only. The EUC hardening disposition of this version. Set by the service when the
+   * integration is first created and inherited unchanged by every later version, so all versions of
+   * an integration report the same value.
+   * @param eucHardeningDisposition eucHardeningDisposition or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaIntegrationVersion setEucHardeningDisposition(java.lang.String eucHardeningDisposition) {
+    this.eucHardeningDisposition = eucHardeningDisposition;
     return this;
   }
 

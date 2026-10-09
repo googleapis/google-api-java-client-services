@@ -31,6 +31,21 @@ package com.google.api.services.integrations.v1.model;
 public final class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
+   * The credential flow the test ran under. Unset for asynchronous tests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String credentialMode;
+
+  /**
+   * The EUC hardening disposition stored for the tested integration, read before the run. Unset for
+   * asynchronous tests.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String eucHardeningDisposition;
+
+  /**
    * Details for the integration that were executed.
    * The value may be {@code null}.
    */
@@ -50,6 +65,22 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extend
    */
   @com.google.api.client.util.Key
   private java.lang.String executionId;
+
+  /**
+   * The credential paths the hardened flow covers for this test: each one that a task in the tested
+   * integration reaches and that the server running the test hardens, whatever the credential mode.
+   * A `CREDENTIAL_MODE_CURRENT` test of an integration not stored as hardened usually lists none,
+   * and a `CREDENTIAL_MODE_HARDENED` response with no paths means nothing in this integration was
+   * hardened. Empty where the hardened flow is switched off. Unset for asynchronous tests. Derived
+   * from the integration's task types before the run: it reports presence in the graph, not
+   * execution, so a task on a branch that did not run is still counted, as is a Call Integration
+   * task that runs as a configured service account. A sub-integration's own tasks are not included;
+   * each runs under its own stored disposition. Integration Connectors tasks and Cloud Scheduler
+   * triggers are never reported: the services they call do not yet accept the hardened credential.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> hardenedPaths;
 
   /**
    * Parameters are a part of Event and can be used to communicate between different tasks that are
@@ -72,6 +103,42 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extend
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, GoogleCloudIntegrationsV1alphaValueType> parameters;
+
+  /**
+   * The credential flow the test ran under. Unset for asynchronous tests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCredentialMode() {
+    return credentialMode;
+  }
+
+  /**
+   * The credential flow the test ran under. Unset for asynchronous tests.
+   * @param credentialMode credentialMode or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse setCredentialMode(java.lang.String credentialMode) {
+    this.credentialMode = credentialMode;
+    return this;
+  }
+
+  /**
+   * The EUC hardening disposition stored for the tested integration, read before the run. Unset for
+   * asynchronous tests.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEucHardeningDisposition() {
+    return eucHardeningDisposition;
+  }
+
+  /**
+   * The EUC hardening disposition stored for the tested integration, read before the run. Unset for
+   * asynchronous tests.
+   * @param eucHardeningDisposition eucHardeningDisposition or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse setEucHardeningDisposition(java.lang.String eucHardeningDisposition) {
+    this.eucHardeningDisposition = eucHardeningDisposition;
+    return this;
+  }
 
   /**
    * Details for the integration that were executed.
@@ -121,6 +188,41 @@ public final class GoogleCloudIntegrationsV1alphaTestIntegrationsResponse extend
    */
   public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse setExecutionId(java.lang.String executionId) {
     this.executionId = executionId;
+    return this;
+  }
+
+  /**
+   * The credential paths the hardened flow covers for this test: each one that a task in the tested
+   * integration reaches and that the server running the test hardens, whatever the credential mode.
+   * A `CREDENTIAL_MODE_CURRENT` test of an integration not stored as hardened usually lists none,
+   * and a `CREDENTIAL_MODE_HARDENED` response with no paths means nothing in this integration was
+   * hardened. Empty where the hardened flow is switched off. Unset for asynchronous tests. Derived
+   * from the integration's task types before the run: it reports presence in the graph, not
+   * execution, so a task on a branch that did not run is still counted, as is a Call Integration
+   * task that runs as a configured service account. A sub-integration's own tasks are not included;
+   * each runs under its own stored disposition. Integration Connectors tasks and Cloud Scheduler
+   * triggers are never reported: the services they call do not yet accept the hardened credential.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getHardenedPaths() {
+    return hardenedPaths;
+  }
+
+  /**
+   * The credential paths the hardened flow covers for this test: each one that a task in the tested
+   * integration reaches and that the server running the test hardens, whatever the credential mode.
+   * A `CREDENTIAL_MODE_CURRENT` test of an integration not stored as hardened usually lists none,
+   * and a `CREDENTIAL_MODE_HARDENED` response with no paths means nothing in this integration was
+   * hardened. Empty where the hardened flow is switched off. Unset for asynchronous tests. Derived
+   * from the integration's task types before the run: it reports presence in the graph, not
+   * execution, so a task on a branch that did not run is still counted, as is a Call Integration
+   * task that runs as a configured service account. A sub-integration's own tasks are not included;
+   * each runs under its own stored disposition. Integration Connectors tasks and Cloud Scheduler
+   * triggers are never reported: the services they call do not yet accept the hardened credential.
+   * @param hardenedPaths hardenedPaths or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaTestIntegrationsResponse setHardenedPaths(java.util.List<java.lang.String> hardenedPaths) {
+    this.hardenedPaths = hardenedPaths;
     return this;
   }
 

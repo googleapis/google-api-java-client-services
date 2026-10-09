@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-devicerun</artifactId>
-  <version>v1alpha-rev20261001-2.0.0</version>
-  <name>Device Run API v1alpha-rev20261001-2.0.0</name>
+  <version>v1alpha-rev20261006-2.0.0</version>
+  <name>Device Run API v1alpha-rev20261006-2.0.0</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

@@ -70,9 +70,10 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Optional. A list of match conditions to match against the incoming request. The extension will
-   * be invoked if at least one condition matches the request, or if no match conditions are
-   * specified. Limited to 5 conditions.
+   * Optional. A list of match conditions to evaluate against the incoming request. The extension is
+   * invoked if the request matches at least one condition, or if no match conditions are specified.
+   * A request matches a condition only if it matches every field that is set in that condition.
+   * Limited to 5 conditions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +88,8 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. Priority
-   * of extension bindings are used to determine the order in which extension bindings are applied
-   * to a request.
+   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. The
+   * priority determines the order in which extension bindings are applied to a request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,8 +97,8 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The name of the extension that this binding should attach to target resources.
-   * Format: For Google-provided extensions, specify the service endpoint (see [Model Armor
-   * integration](https://docs.cloud.google.com/model-armor/integrations))
+   * Format: For Google-provided extensions, specify the service endpoint, for example
+   * `modelarmor.us-central1.rep.googleapis.com`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -106,15 +106,17 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Additional metadata that should be passed to the attached extension with each
-   * request.
+   * request. This field is subject to the following limitations: * The total size of the metadata
+   * must be less than 1 KiB. * The total number of keys must be less than 16. * The length of each
+   * key must be less than 64 characters. * The length of each value must be less than 1024
+   * characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> producerMetadata;
 
   /**
-   * Required. Specifies a target to which this `ExtensionBinding` should be attached. The target
-   * can be either a single resource or a scope of resources.
+   * Required. Specifies a target to which this `ExtensionBinding` should be attached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -223,9 +225,10 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A list of match conditions to match against the incoming request. The extension will
-   * be invoked if at least one condition matches the request, or if no match conditions are
-   * specified. Limited to 5 conditions.
+   * Optional. A list of match conditions to evaluate against the incoming request. The extension is
+   * invoked if the request matches at least one condition, or if no match conditions are specified.
+   * A request matches a condition only if it matches every field that is set in that condition.
+   * Limited to 5 conditions.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionBindingMatchCondition> getMatchConditions() {
@@ -233,9 +236,10 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. A list of match conditions to match against the incoming request. The extension will
-   * be invoked if at least one condition matches the request, or if no match conditions are
-   * specified. Limited to 5 conditions.
+   * Optional. A list of match conditions to evaluate against the incoming request. The extension is
+   * invoked if the request matches at least one condition, or if no match conditions are specified.
+   * A request matches a condition only if it matches every field that is set in that condition.
+   * Limited to 5 conditions.
    * @param matchConditions matchConditions or {@code null} for none
    */
   public ExtensionBinding setMatchConditions(java.util.List<ExtensionBindingMatchCondition> matchConditions) {
@@ -263,9 +267,8 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. Priority
-   * of extension bindings are used to determine the order in which extension bindings are applied
-   * to a request.
+   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. The
+   * priority determines the order in which extension bindings are applied to a request.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -273,9 +276,8 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. Priority
-   * of extension bindings are used to determine the order in which extension bindings are applied
-   * to a request.
+   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. The
+   * priority determines the order in which extension bindings are applied to a request.
    * @param priority priority or {@code null} for none
    */
   public ExtensionBinding setPriority(java.lang.Integer priority) {
@@ -285,8 +287,8 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The name of the extension that this binding should attach to target resources.
-   * Format: For Google-provided extensions, specify the service endpoint (see [Model Armor
-   * integration](https://docs.cloud.google.com/model-armor/integrations))
+   * Format: For Google-provided extensions, specify the service endpoint, for example
+   * `modelarmor.us-central1.rep.googleapis.com`.
    * @return value or {@code null} for none
    */
   public java.lang.String getProducerExtension() {
@@ -295,8 +297,8 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The name of the extension that this binding should attach to target resources.
-   * Format: For Google-provided extensions, specify the service endpoint (see [Model Armor
-   * integration](https://docs.cloud.google.com/model-armor/integrations))
+   * Format: For Google-provided extensions, specify the service endpoint, for example
+   * `modelarmor.us-central1.rep.googleapis.com`.
    * @param producerExtension producerExtension or {@code null} for none
    */
   public ExtensionBinding setProducerExtension(java.lang.String producerExtension) {
@@ -306,7 +308,10 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Additional metadata that should be passed to the attached extension with each
-   * request.
+   * request. This field is subject to the following limitations: * The total size of the metadata
+   * must be less than 1 KiB. * The total number of keys must be less than 16. * The length of each
+   * key must be less than 64 characters. * The length of each value must be less than 1024
+   * characters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getProducerMetadata() {
@@ -315,7 +320,10 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Additional metadata that should be passed to the attached extension with each
-   * request.
+   * request. This field is subject to the following limitations: * The total size of the metadata
+   * must be less than 1 KiB. * The total number of keys must be less than 16. * The length of each
+   * key must be less than 64 characters. * The length of each value must be less than 1024
+   * characters.
    * @param producerMetadata producerMetadata or {@code null} for none
    */
   public ExtensionBinding setProducerMetadata(java.util.Map<String, java.lang.String> producerMetadata) {
@@ -324,8 +332,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Specifies a target to which this `ExtensionBinding` should be attached. The target
-   * can be either a single resource or a scope of resources.
+   * Required. Specifies a target to which this `ExtensionBinding` should be attached.
    * @return value or {@code null} for none
    */
   public ExtensionBindingTarget getTarget() {
@@ -333,8 +340,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Specifies a target to which this `ExtensionBinding` should be attached. The target
-   * can be either a single resource or a scope of resources.
+   * Required. Specifies a target to which this `ExtensionBinding` should be attached.
    * @param target target or {@code null} for none
    */
   public ExtensionBinding setTarget(ExtensionBindingTarget target) {

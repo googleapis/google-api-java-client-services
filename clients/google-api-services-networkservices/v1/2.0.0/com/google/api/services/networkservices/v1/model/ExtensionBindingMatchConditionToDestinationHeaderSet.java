@@ -30,9 +30,9 @@ package com.google.api.services.networkservices.v1.model;
 public final class ExtensionBindingMatchConditionToDestinationHeaderSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A list of headers to match against in http header. If multiple header matches are
-   * provided, they will be evaluated as an AND, i.e. all header matches must match for the request
-   * to match.
+   * Required. A list of HTTP headers to match against. If multiple header matches are provided,
+   * they are evaluated as an AND, meaning that all header matches must match for the request to
+   * match. Limited to 10 headers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,9 +45,9 @@ public final class ExtensionBindingMatchConditionToDestinationHeaderSet extends 
   }
 
   /**
-   * Required. A list of headers to match against in http header. If multiple header matches are
-   * provided, they will be evaluated as an AND, i.e. all header matches must match for the request
-   * to match.
+   * Required. A list of HTTP headers to match against. If multiple header matches are provided,
+   * they are evaluated as an AND, meaning that all header matches must match for the request to
+   * match. Limited to 10 headers.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionBindingMatchConditionHeaderMatch> getHeaders() {
@@ -55,9 +55,9 @@ public final class ExtensionBindingMatchConditionToDestinationHeaderSet extends 
   }
 
   /**
-   * Required. A list of headers to match against in http header. If multiple header matches are
-   * provided, they will be evaluated as an AND, i.e. all header matches must match for the request
-   * to match.
+   * Required. A list of HTTP headers to match against. If multiple header matches are provided,
+   * they are evaluated as an AND, meaning that all header matches must match for the request to
+   * match. Limited to 10 headers.
    * @param headers headers or {@code null} for none
    */
   public ExtensionBindingMatchConditionToDestinationHeaderSet setHeaders(java.util.List<ExtensionBindingMatchConditionHeaderMatch> headers) {

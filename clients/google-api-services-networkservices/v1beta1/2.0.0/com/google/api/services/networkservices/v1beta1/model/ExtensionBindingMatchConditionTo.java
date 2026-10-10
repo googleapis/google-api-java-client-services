@@ -30,10 +30,11 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class ExtensionBindingMatchConditionTo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Describes properties of destination of a request. Within a destination, the match
-   * follows AND semantics across fields and OR semantics within a field, i.e. a match occurs when
-   * ANY path matches AND ANY header matches and ANY method matches. At least one of destination or
-   * not_destination must be specified.
+   * Optional. Describes properties of the destination of a request. A request matches the
+   * destination only if it matches every field that is set. Fields that are not set are always
+   * considered a match. For example, if only `hosts` and `paths` are set, a request matches when
+   * any host matches and any path matches. At least one of `destination` or `not_destination` must
+   * be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -49,10 +50,11 @@ public final class ExtensionBindingMatchConditionTo extends com.google.api.clien
   private ExtensionBindingMatchConditionToDestination notDestination;
 
   /**
-   * Optional. Describes properties of destination of a request. Within a destination, the match
-   * follows AND semantics across fields and OR semantics within a field, i.e. a match occurs when
-   * ANY path matches AND ANY header matches and ANY method matches. At least one of destination or
-   * not_destination must be specified.
+   * Optional. Describes properties of the destination of a request. A request matches the
+   * destination only if it matches every field that is set. Fields that are not set are always
+   * considered a match. For example, if only `hosts` and `paths` are set, a request matches when
+   * any host matches and any path matches. At least one of `destination` or `not_destination` must
+   * be specified.
    * @return value or {@code null} for none
    */
   public ExtensionBindingMatchConditionToDestination getDestination() {
@@ -60,10 +62,11 @@ public final class ExtensionBindingMatchConditionTo extends com.google.api.clien
   }
 
   /**
-   * Optional. Describes properties of destination of a request. Within a destination, the match
-   * follows AND semantics across fields and OR semantics within a field, i.e. a match occurs when
-   * ANY path matches AND ANY header matches and ANY method matches. At least one of destination or
-   * not_destination must be specified.
+   * Optional. Describes properties of the destination of a request. A request matches the
+   * destination only if it matches every field that is set. Fields that are not set are always
+   * considered a match. For example, if only `hosts` and `paths` are set, a request matches when
+   * any host matches and any path matches. At least one of `destination` or `not_destination` must
+   * be specified.
    * @param destination destination or {@code null} for none
    */
   public ExtensionBindingMatchConditionTo setDestination(ExtensionBindingMatchConditionToDestination destination) {

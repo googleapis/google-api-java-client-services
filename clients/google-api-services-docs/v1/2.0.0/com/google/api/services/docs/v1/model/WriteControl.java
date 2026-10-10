@@ -58,8 +58,7 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
    * How the request updates should be applied to the document. If unspecified, the request updates
-   * will be applied as normal edits. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * will be applied as normal edits.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,8 +126,7 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
    * How the request updates should be applied to the document. If unspecified, the request updates
-   * will be applied as normal edits. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * will be applied as normal edits.
    * @return value or {@code null} for none
    */
   public java.lang.String getWriteMode() {
@@ -137,8 +135,7 @@ public final class WriteControl extends com.google.api.client.json.GenericJson {
 
   /**
    * How the request updates should be applied to the document. If unspecified, the request updates
-   * will be applied as normal edits. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * will be applied as normal edits.
    * @param writeMode writeMode or {@code null} for none
    */
   public WriteControl setWriteMode(java.lang.String writeMode) {

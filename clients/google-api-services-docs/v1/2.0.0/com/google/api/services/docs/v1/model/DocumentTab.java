@@ -39,7 +39,6 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
   /**
    * The comment anchors in a document tab, keyed by anchor ID. Only populated if the
    * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -155,7 +154,6 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
   /**
    * The comment anchors in a document tab, keyed by anchor ID. Only populated if the
    * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
   public java.util.Map<String, CommentAnchor> getCommentAnchors() {
@@ -165,7 +163,6 @@ public final class DocumentTab extends com.google.api.client.json.GenericJson {
   /**
    * The comment anchors in a document tab, keyed by anchor ID. Only populated if the
    * commentsViewMode parameter is set to require comments (such as `COMMENTS_VIEW_MODE_INCLUDED`).
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @param commentAnchors commentAnchors or {@code null} for none
    */
   public DocumentTab setCommentAnchors(java.util.Map<String, CommentAnchor> commentAnchors) {

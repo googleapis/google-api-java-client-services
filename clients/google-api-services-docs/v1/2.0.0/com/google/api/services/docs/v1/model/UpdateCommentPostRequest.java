@@ -19,7 +19,6 @@ package com.google.api.services.docs.v1.model;
 /**
  * Updates a Post in a CommentThread or SuggestionThread. Returns a 400 bad request error if: - The
  * post is the headPost of a SuggestionThread. - The requesting user is not the author of the post.
- * [Developer Preview](https://developers.google.com/workspace/preview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

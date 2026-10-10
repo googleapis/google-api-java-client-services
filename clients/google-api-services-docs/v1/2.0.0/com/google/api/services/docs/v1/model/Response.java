@@ -30,8 +30,7 @@ package com.google.api.services.docs.v1.model;
 public final class Response extends com.google.api.client.json.GenericJson {
 
   /**
-   * The result of adding a reply to a comment or suggestion. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The result of adding a reply to a comment or suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,8 +79,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private CreateNamedRangeResponse createNamedRange;
 
   /**
-   * The result of inserting a comment. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The result of inserting a comment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +114,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   private ReplaceAllTextResponse replaceAllText;
 
   /**
-   * The result of adding a reply to a comment or suggestion. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The result of adding a reply to a comment or suggestion.
    * @return value or {@code null} for none
    */
   public AddCommentReplyResponse getAddCommentReply() {
@@ -125,8 +122,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The result of adding a reply to a comment or suggestion. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The result of adding a reply to a comment or suggestion.
    * @param addCommentReply addCommentReply or {@code null} for none
    */
   public Response setAddCommentReply(AddCommentReplyResponse addCommentReply) {
@@ -237,8 +233,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The result of inserting a comment. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The result of inserting a comment.
    * @return value or {@code null} for none
    */
   public InsertCommentResponse getInsertComment() {
@@ -246,8 +241,7 @@ public final class Response extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The result of inserting a comment. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The result of inserting a comment.
    * @param insertComment insertComment or {@code null} for none
    */
   public Response setInsertComment(InsertCommentResponse insertComment) {

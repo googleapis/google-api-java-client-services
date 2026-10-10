@@ -18,7 +18,7 @@ package com.google.api.services.docs.v1.model;
 
 /**
  * Deletes a suggestion. Returns a 403 forbidden error if the requesting user is not the author of
- * the suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+ * the suggestion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

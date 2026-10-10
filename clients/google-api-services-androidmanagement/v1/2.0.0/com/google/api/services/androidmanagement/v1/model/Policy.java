@@ -430,7 +430,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode,
-   * set kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * set kioskCustomLauncherEnabled to true or specify an app in the policy with the KIOSK role.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1795,7 +1795,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode,
-   * set kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * set kioskCustomLauncherEnabled to true or specify an app in the policy with the KIOSK role.
    * @return value or {@code null} for none
    */
   public KioskCustomization getKioskCustomization() {
@@ -1804,7 +1804,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode,
-   * set kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+   * set kioskCustomLauncherEnabled to true or specify an app in the policy with the KIOSK role.
    * @param kioskCustomization kioskCustomization or {@code null} for none
    */
   public Policy setKioskCustomization(KioskCustomization kioskCustomization) {

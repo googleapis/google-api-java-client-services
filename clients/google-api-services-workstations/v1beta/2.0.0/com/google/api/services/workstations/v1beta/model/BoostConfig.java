@@ -57,6 +57,14 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer bootDiskSizeGb;
 
   /**
+   * Optional. Indicates if this boost config is eligible for automatic failover when the service
+   * cannot provision the default VM type. Defaults to `false`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean enableAutomaticFailover;
+
+  /**
    * Optional. Whether to enable nested virtualization on boosted Cloud Workstations VMs running
    * using this boost configuration. Defaults to false. Nested virtualization lets you run virtual
    * machine (VM) instances inside your workstation. Before enabling nested virtualization, consider
@@ -154,6 +162,25 @@ public final class BoostConfig extends com.google.api.client.json.GenericJson {
    */
   public BoostConfig setBootDiskSizeGb(java.lang.Integer bootDiskSizeGb) {
     this.bootDiskSizeGb = bootDiskSizeGb;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates if this boost config is eligible for automatic failover when the service
+   * cannot provision the default VM type. Defaults to `false`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getEnableAutomaticFailover() {
+    return enableAutomaticFailover;
+  }
+
+  /**
+   * Optional. Indicates if this boost config is eligible for automatic failover when the service
+   * cannot provision the default VM type. Defaults to `false`.
+   * @param enableAutomaticFailover enableAutomaticFailover or {@code null} for none
+   */
+  public BoostConfig setEnableAutomaticFailover(java.lang.Boolean enableAutomaticFailover) {
+    this.enableAutomaticFailover = enableAutomaticFailover;
     return this;
   }
 

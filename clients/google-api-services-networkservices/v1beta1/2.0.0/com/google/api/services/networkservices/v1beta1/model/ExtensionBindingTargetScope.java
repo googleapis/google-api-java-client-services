@@ -30,21 +30,30 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class ExtensionBindingTargetScope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Parent resource name specification, in the format: `projects/{project_number}`.
+   * Required. The parent resource that defines the scope, in the format
+   * `projects/{project_number}`. When the scope is a project, the binding applies to the resources
+   * that meet all of the following conditions: * The resource belongs to the specified project. *
+   * The resource is in the same location as the `ExtensionBinding`. * The resource type is listed
+   * in `resource_types`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String parent;
 
   /**
-   * Required. Type of the resource to which the binding should attach. Limited to 1 resource type.
+   * Required. The types of resources to which the binding should attach. Limited to 1 resource
+   * type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> resourceTypes;
 
   /**
-   * Required. Parent resource name specification, in the format: `projects/{project_number}`.
+   * Required. The parent resource that defines the scope, in the format
+   * `projects/{project_number}`. When the scope is a project, the binding applies to the resources
+   * that meet all of the following conditions: * The resource belongs to the specified project. *
+   * The resource is in the same location as the `ExtensionBinding`. * The resource type is listed
+   * in `resource_types`.
    * @return value or {@code null} for none
    */
   public java.lang.String getParent() {
@@ -52,7 +61,11 @@ public final class ExtensionBindingTargetScope extends com.google.api.client.jso
   }
 
   /**
-   * Required. Parent resource name specification, in the format: `projects/{project_number}`.
+   * Required. The parent resource that defines the scope, in the format
+   * `projects/{project_number}`. When the scope is a project, the binding applies to the resources
+   * that meet all of the following conditions: * The resource belongs to the specified project. *
+   * The resource is in the same location as the `ExtensionBinding`. * The resource type is listed
+   * in `resource_types`.
    * @param parent parent or {@code null} for none
    */
   public ExtensionBindingTargetScope setParent(java.lang.String parent) {
@@ -61,7 +74,8 @@ public final class ExtensionBindingTargetScope extends com.google.api.client.jso
   }
 
   /**
-   * Required. Type of the resource to which the binding should attach. Limited to 1 resource type.
+   * Required. The types of resources to which the binding should attach. Limited to 1 resource
+   * type.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResourceTypes() {
@@ -69,7 +83,8 @@ public final class ExtensionBindingTargetScope extends com.google.api.client.jso
   }
 
   /**
-   * Required. Type of the resource to which the binding should attach. Limited to 1 resource type.
+   * Required. The types of resources to which the binding should attach. Limited to 1 resource
+   * type.
    * @param resourceTypes resourceTypes or {@code null} for none
    */
   public ExtensionBindingTargetScope setResourceTypes(java.util.List<java.lang.String> resourceTypes) {

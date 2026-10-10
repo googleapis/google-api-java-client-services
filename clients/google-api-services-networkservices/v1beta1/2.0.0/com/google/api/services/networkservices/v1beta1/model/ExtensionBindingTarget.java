@@ -30,8 +30,10 @@ package com.google.api.services.networkservices.v1beta1.model;
 public final class ExtensionBindingTarget extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The reference to the target resource, to which this binding should attach. Exactly
-   * one of `resources` or `scope` must be set.
+   * Optional. The references to the target resources to which this binding should attach. Exactly
+   * one of `resources` or `scope` must be set. For AI Application resources, specify the full
+   * resource name in the format:
+   * `projects/{project}/locations/{location}/applications/{application}`. Limited to 1 resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,8 +48,10 @@ public final class ExtensionBindingTarget extends com.google.api.client.json.Gen
   private ExtensionBindingTargetScope scope;
 
   /**
-   * Optional. The reference to the target resource, to which this binding should attach. Exactly
-   * one of `resources` or `scope` must be set.
+   * Optional. The references to the target resources to which this binding should attach. Exactly
+   * one of `resources` or `scope` must be set. For AI Application resources, specify the full
+   * resource name in the format:
+   * `projects/{project}/locations/{location}/applications/{application}`. Limited to 1 resource.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -55,8 +59,10 @@ public final class ExtensionBindingTarget extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The reference to the target resource, to which this binding should attach. Exactly
-   * one of `resources` or `scope` must be set.
+   * Optional. The references to the target resources to which this binding should attach. Exactly
+   * one of `resources` or `scope` must be set. For AI Application resources, specify the full
+   * resource name in the format:
+   * `projects/{project}/locations/{location}/applications/{application}`. Limited to 1 resource.
    * @param resources resources or {@code null} for none
    */
   public ExtensionBindingTarget setResources(java.util.List<java.lang.String> resources) {

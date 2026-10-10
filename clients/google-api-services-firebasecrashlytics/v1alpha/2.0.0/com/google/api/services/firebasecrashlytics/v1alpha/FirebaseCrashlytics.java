@@ -2466,19 +2466,22 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
           }
 
           /**
-           * Optional. The maximum number of result groups to return. If omitted, defaults to 25.
+           * Optional. The maximum number of result groups to return. The maximum value is 100;
+           * values above 100 will be coerced to 100. If omitted, defaults to 25.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. The maximum number of result groups to return. If omitted, defaults to 25.
+          /** Optional. The maximum number of result groups to return. The maximum value is 100; values above 100
+         will be coerced to 100. If omitted, defaults to 25.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. The maximum number of result groups to return. If omitted, defaults to 25.
+           * Optional. The maximum number of result groups to return. The maximum value is 100;
+           * values above 100 will be coerced to 100. If omitted, defaults to 25.
            */
           public Get setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -2508,6 +2511,22 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
            */
           public Get setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
+            return this;
+          }
+
+          /** Optional. Response view. If not set, defaults to `REPORT_VIEW_FULL`. */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Response view. If not set, defaults to `REPORT_VIEW_FULL`.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /** Optional. Response view. If not set, defaults to `REPORT_VIEW_FULL`. */
+          public Get setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 
@@ -2647,6 +2666,29 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
                   "^projects/[^/]+/apps/[^/]+$");
             }
             this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. Response view. If not set, defaults to `REPORT_VIEW_BASIC`.
+           * `REPORT_VIEW_FULL` is not supported for list operations.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String view;
+
+          /** Optional. Response view. If not set, defaults to `REPORT_VIEW_BASIC`. `REPORT_VIEW_FULL` is not
+         supported for list operations.
+           */
+          public java.lang.String getView() {
+            return view;
+          }
+
+          /**
+           * Optional. Response view. If not set, defaults to `REPORT_VIEW_BASIC`.
+           * `REPORT_VIEW_FULL` is not supported for list operations.
+           */
+          public List setView(java.lang.String view) {
+            this.view = view;
             return this;
           }
 

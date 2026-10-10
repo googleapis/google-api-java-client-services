@@ -34,6 +34,12 @@ public final class GoogleCloudSecuritycenterV1NotificationMessage extends com.go
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean deletedFinding;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private Finding finding;
 
   /**
@@ -47,6 +53,21 @@ public final class GoogleCloudSecuritycenterV1NotificationMessage extends com.go
    */
   @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV1Resource resource;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletedFinding() {
+    return deletedFinding;
+  }
+
+  /**
+   * @param deletedFinding deletedFinding or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV1NotificationMessage setDeletedFinding(java.lang.Boolean deletedFinding) {
+    this.deletedFinding = deletedFinding;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

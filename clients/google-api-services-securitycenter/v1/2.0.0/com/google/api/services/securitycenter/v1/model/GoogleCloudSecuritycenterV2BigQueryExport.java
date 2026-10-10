@@ -52,6 +52,12 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean deletionNotificationsEnabled;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
@@ -126,6 +132,21 @@ public final class GoogleCloudSecuritycenterV2BigQueryExport extends com.google.
    */
   public GoogleCloudSecuritycenterV2BigQueryExport setDataset(java.lang.String dataset) {
     this.dataset = dataset;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionNotificationsEnabled() {
+    return deletionNotificationsEnabled;
+  }
+
+  /**
+   * @param deletionNotificationsEnabled deletionNotificationsEnabled or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2BigQueryExport setDeletionNotificationsEnabled(java.lang.Boolean deletionNotificationsEnabled) {
+    this.deletionNotificationsEnabled = deletionNotificationsEnabled;
     return this;
   }
 

@@ -34,6 +34,12 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean deletionNotificationsEnabled;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String description;
 
   /**
@@ -59,6 +65,21 @@ public final class NotificationConfig extends com.google.api.client.json.Generic
    */
   @com.google.api.client.util.Key
   private StreamingConfig streamingConfig;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionNotificationsEnabled() {
+    return deletionNotificationsEnabled;
+  }
+
+  /**
+   * @param deletionNotificationsEnabled deletionNotificationsEnabled or {@code null} for none
+   */
+  public NotificationConfig setDeletionNotificationsEnabled(java.lang.Boolean deletionNotificationsEnabled) {
+    this.deletionNotificationsEnabled = deletionNotificationsEnabled;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

@@ -55,6 +55,13 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
   private java.util.List<AuthorizationInfo> authorizationInfo;
 
   /**
+   * Information set when the caller is an agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CallerAgent callerAgent;
+
+  /**
    * Other service-specific data about the request, response, and other information associated with
    * the current audited event.
    * The value may be {@code null}.
@@ -218,6 +225,23 @@ public final class AuditLog extends com.google.api.client.json.GenericJson {
    */
   public AuditLog setAuthorizationInfo(java.util.List<AuthorizationInfo> authorizationInfo) {
     this.authorizationInfo = authorizationInfo;
+    return this;
+  }
+
+  /**
+   * Information set when the caller is an agent.
+   * @return value or {@code null} for none
+   */
+  public CallerAgent getCallerAgent() {
+    return callerAgent;
+  }
+
+  /**
+   * Information set when the caller is an agent.
+   * @param callerAgent callerAgent or {@code null} for none
+   */
+  public AuditLog setCallerAgent(CallerAgent callerAgent) {
+    this.callerAgent = callerAgent;
     return this;
   }
 

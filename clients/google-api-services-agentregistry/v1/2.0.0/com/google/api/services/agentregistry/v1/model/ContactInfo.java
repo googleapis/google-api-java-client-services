@@ -17,7 +17,7 @@
 package com.google.api.services.agentregistry.v1.model;
 
 /**
- * The spec of the MCP Server.
+ * Contact information of stakeholders.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Registry API. For a detailed explanation see:
@@ -27,67 +27,64 @@ package com.google.api.services.agentregistry.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class McpServerSpec extends com.google.api.client.json.GenericJson {
+public final class ContactInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
+   * Optional. Contact's name. Can have a maximum length of 63 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> content;
+  private java.lang.String displayName;
 
   /**
-   * Required. Immutable. The type of the MCP Server spec content.
+   * Required. Email address of the contacts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String type;
+  private java.lang.String email;
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
+   * Optional. Contact's name. Can have a maximum length of 63 characters.
    * @return value or {@code null} for none
    */
-  public java.util.Map<String, java.lang.Object> getContent() {
-    return content;
+  public java.lang.String getDisplayName() {
+    return displayName;
   }
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
-   * @param content content or {@code null} for none
+   * Optional. Contact's name. Can have a maximum length of 63 characters.
+   * @param displayName displayName or {@code null} for none
    */
-  public McpServerSpec setContent(java.util.Map<String, java.lang.Object> content) {
-    this.content = content;
+  public ContactInfo setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 
   /**
-   * Required. Immutable. The type of the MCP Server spec content.
+   * Required. Email address of the contacts.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getEmail() {
+    return email;
   }
 
   /**
-   * Required. Immutable. The type of the MCP Server spec content.
-   * @param type type or {@code null} for none
+   * Required. Email address of the contacts.
+   * @param email email or {@code null} for none
    */
-  public McpServerSpec setType(java.lang.String type) {
-    this.type = type;
+  public ContactInfo setEmail(java.lang.String email) {
+    this.email = email;
     return this;
   }
 
   @Override
-  public McpServerSpec set(String fieldName, Object value) {
-    return (McpServerSpec) super.set(fieldName, value);
+  public ContactInfo set(String fieldName, Object value) {
+    return (ContactInfo) super.set(fieldName, value);
   }
 
   @Override
-  public McpServerSpec clone() {
-    return (McpServerSpec) super.clone();
+  public ContactInfo clone() {
+    return (ContactInfo) super.clone();
   }
 
 }

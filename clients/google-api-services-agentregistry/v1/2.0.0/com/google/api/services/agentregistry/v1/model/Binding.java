@@ -68,7 +68,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The target Agent of the Binding.
+   * Optional. The source Agent of the Binding.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +180,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target Agent of the Binding.
+   * Optional. The source Agent of the Binding.
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -188,7 +188,7 @@ public final class Binding extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The target Agent of the Binding.
+   * Optional. The source Agent of the Binding.
    * @param source source or {@code null} for none
    */
   public Binding setSource(Source source) {

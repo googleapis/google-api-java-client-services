@@ -38,7 +38,7 @@ public final class AgentSpec extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> content;
 
   /**
-   * Required. The type of the agent spec content.
+   * Required. Immutable. The type of the agent spec content.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,7 +64,7 @@ public final class AgentSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the agent spec content.
+   * Required. Immutable. The type of the agent spec content.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,7 +72,7 @@ public final class AgentSpec extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The type of the agent spec content.
+   * Required. Immutable. The type of the agent spec content.
    * @param type type or {@code null} for none
    */
   public AgentSpec setType(java.lang.String type) {

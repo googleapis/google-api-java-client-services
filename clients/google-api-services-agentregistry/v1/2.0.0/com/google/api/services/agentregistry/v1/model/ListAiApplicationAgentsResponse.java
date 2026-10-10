@@ -17,7 +17,7 @@
 package com.google.api.services.agentregistry.v1.model;
 
 /**
- * The spec of the MCP Server.
+ * Message for response to listing Agents under an AI Application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Registry API. For a detailed explanation see:
@@ -27,67 +27,70 @@ package com.google.api.services.agentregistry.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class McpServerSpec extends com.google.api.client.json.GenericJson {
+public final class ListAiApplicationAgentsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
+   * The list of Agents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> content;
+  private java.util.List<Agent> agents;
 
-  /**
-   * Required. Immutable. The type of the MCP Server spec content.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String type;
-
-  /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.Object> getContent() {
-    return content;
+  static {
+    // hack to force ProGuard to consider Agent used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(Agent.class);
   }
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
-   * @param content content or {@code null} for none
+   * A token identifying a page of results the server should return.
+   * The value may be {@code null}.
    */
-  public McpServerSpec setContent(java.util.Map<String, java.lang.Object> content) {
-    this.content = content;
+  @com.google.api.client.util.Key
+  private java.lang.String nextPageToken;
+
+  /**
+   * The list of Agents.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Agent> getAgents() {
+    return agents;
+  }
+
+  /**
+   * The list of Agents.
+   * @param agents agents or {@code null} for none
+   */
+  public ListAiApplicationAgentsResponse setAgents(java.util.List<Agent> agents) {
+    this.agents = agents;
     return this;
   }
 
   /**
-   * Required. Immutable. The type of the MCP Server spec content.
+   * A token identifying a page of results the server should return.
    * @return value or {@code null} for none
    */
-  public java.lang.String getType() {
-    return type;
+  public java.lang.String getNextPageToken() {
+    return nextPageToken;
   }
 
   /**
-   * Required. Immutable. The type of the MCP Server spec content.
-   * @param type type or {@code null} for none
+   * A token identifying a page of results the server should return.
+   * @param nextPageToken nextPageToken or {@code null} for none
    */
-  public McpServerSpec setType(java.lang.String type) {
-    this.type = type;
+  public ListAiApplicationAgentsResponse setNextPageToken(java.lang.String nextPageToken) {
+    this.nextPageToken = nextPageToken;
     return this;
   }
 
   @Override
-  public McpServerSpec set(String fieldName, Object value) {
-    return (McpServerSpec) super.set(fieldName, value);
+  public ListAiApplicationAgentsResponse set(String fieldName, Object value) {
+    return (ListAiApplicationAgentsResponse) super.set(fieldName, value);
   }
 
   @Override
-  public McpServerSpec clone() {
-    return (McpServerSpec) super.clone();
+  public ListAiApplicationAgentsResponse clone() {
+    return (ListAiApplicationAgentsResponse) super.clone();
   }
 
 }

@@ -131,6 +131,13 @@ public final class GoogleDevtoolsCloudbuildV1Results extends com.google.api.clie
   private java.util.List<GoogleDevtoolsCloudbuildV1UploadedPythonPackage> pythonPackages;
 
   /**
+   * Output only. Aggregated metrics for the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleDevtoolsCloudbuildV1BuildResourceUsage resourceUsage;
+
+  /**
    * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
    * populated when artifacts are uploaded to Cloud Storage.
    * @return value or {@code null} for none
@@ -341,6 +348,23 @@ public final class GoogleDevtoolsCloudbuildV1Results extends com.google.api.clie
    */
   public GoogleDevtoolsCloudbuildV1Results setPythonPackages(java.util.List<GoogleDevtoolsCloudbuildV1UploadedPythonPackage> pythonPackages) {
     this.pythonPackages = pythonPackages;
+    return this;
+  }
+
+  /**
+   * Output only. Aggregated metrics for the build.
+   * @return value or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1BuildResourceUsage getResourceUsage() {
+    return resourceUsage;
+  }
+
+  /**
+   * Output only. Aggregated metrics for the build.
+   * @param resourceUsage resourceUsage or {@code null} for none
+   */
+  public GoogleDevtoolsCloudbuildV1Results setResourceUsage(GoogleDevtoolsCloudbuildV1BuildResourceUsage resourceUsage) {
+    this.resourceUsage = resourceUsage;
     return this;
   }
 

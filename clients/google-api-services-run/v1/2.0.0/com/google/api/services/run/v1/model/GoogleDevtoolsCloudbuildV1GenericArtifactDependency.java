@@ -30,7 +30,8 @@ package com.google.api.services.run.v1.model;
 public final class GoogleDevtoolsCloudbuildV1GenericArtifactDependency extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Where the artifact files should be placed on the worker.
+   * Optional. Where the artifact files should be placed on the worker. Required when specified in
+   * `Build.dependencies`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class GoogleDevtoolsCloudbuildV1GenericArtifactDependency extends c
   private java.lang.String resource;
 
   /**
-   * Required. Where the artifact files should be placed on the worker.
+   * Optional. Where the artifact files should be placed on the worker. Required when specified in
+   * `Build.dependencies`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestPath() {
@@ -53,7 +55,8 @@ public final class GoogleDevtoolsCloudbuildV1GenericArtifactDependency extends c
   }
 
   /**
-   * Required. Where the artifact files should be placed on the worker.
+   * Optional. Where the artifact files should be placed on the worker. Required when specified in
+   * `Build.dependencies`.
    * @param destPath destPath or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1GenericArtifactDependency setDestPath(java.lang.String destPath) {

@@ -35,6 +35,18 @@ package com.google.api.services.discoveryengine.v1alpha.model;
 public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfo extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The `model_id` a client must send when the end-user picks the "Auto" entry (the
+   * empty `model_id`). Populated only for surfaces known to have no true "Auto" mode, where leaving
+   * the model unset would fall back to a platform default rather than a backend-chosen model. Empty
+   * on every other surface, where "Auto" is resolved server-side, and when none of the surface's
+   * ranked models is available. When set, it is always one of the non-empty `model_id`s present in
+   * `resolved_models`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoModelId;
+
+  /**
    * Output only. The `model_id` of the model that should be selected by default in the model
    * selector when the end-user has not made an explicit choice. The value is always one of the
    * `model_id`s present in `resolved_models`.
@@ -50,6 +62,33 @@ public final class GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelC
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfoResolvedModel> resolvedModels;
+
+  /**
+   * Output only. The `model_id` a client must send when the end-user picks the "Auto" entry (the
+   * empty `model_id`). Populated only for surfaces known to have no true "Auto" mode, where leaving
+   * the model unset would fall back to a platform default rather than a backend-chosen model. Empty
+   * on every other surface, where "Auto" is resolved server-side, and when none of the surface's
+   * ranked models is available. When set, it is always one of the non-empty `model_id`s present in
+   * `resolved_models`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoModelId() {
+    return autoModelId;
+  }
+
+  /**
+   * Output only. The `model_id` a client must send when the end-user picks the "Auto" entry (the
+   * empty `model_id`). Populated only for surfaces known to have no true "Auto" mode, where leaving
+   * the model unset would fall back to a platform default rather than a backend-chosen model. Empty
+   * on every other surface, where "Auto" is resolved server-side, and when none of the surface's
+   * ranked models is available. When set, it is always one of the non-empty `model_id`s present in
+   * `resolved_models`.
+   * @param autoModelId autoModelId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaWidgetConfigUiSettingsModelConfigInfo setAutoModelId(java.lang.String autoModelId) {
+    this.autoModelId = autoModelId;
+    return this;
+  }
 
   /**
    * Output only. The `model_id` of the model that should be selected by default in the model

@@ -65,6 +65,14 @@ public final class GoogleCloudDiscoveryengineV1FeedbackConversationInfo extends 
   private java.lang.String session;
 
   /**
+   * Optional. The full resource name of the Sobi task if the conversation was handled by a long-
+   * running agent task. Format: projects/{project}/locations/{location}/tasks/{task_id}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String taskName;
+
+  /**
    * Optional. The token which could be used to fetch the answer log.
    * @return value or {@code null} for none
    */
@@ -146,6 +154,25 @@ public final class GoogleCloudDiscoveryengineV1FeedbackConversationInfo extends 
    */
   public GoogleCloudDiscoveryengineV1FeedbackConversationInfo setSession(java.lang.String session) {
     this.session = session;
+    return this;
+  }
+
+  /**
+   * Optional. The full resource name of the Sobi task if the conversation was handled by a long-
+   * running agent task. Format: projects/{project}/locations/{location}/tasks/{task_id}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTaskName() {
+    return taskName;
+  }
+
+  /**
+   * Optional. The full resource name of the Sobi task if the conversation was handled by a long-
+   * running agent task. Format: projects/{project}/locations/{location}/tasks/{task_id}
+   * @param taskName taskName or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1FeedbackConversationInfo setTaskName(java.lang.String taskName) {
+    this.taskName = taskName;
     return this;
   }
 

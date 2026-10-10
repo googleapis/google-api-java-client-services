@@ -30,8 +30,7 @@ package com.google.api.services.docs.v1.model;
 public final class BatchUpdateDocumentResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Whether comment updates were applied in the batch request. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Whether comment updates were applied in the batch request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -53,8 +52,7 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
   private java.util.List<Response> replies;
 
   /**
-   * The suggestions which were affected by each update. This maps 1:1 with the updates. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The suggestions which were affected by each update. This maps 1:1 with the updates.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +66,7 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
   private WriteControl writeControl;
 
   /**
-   * Whether comment updates were applied in the batch request. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Whether comment updates were applied in the batch request.
    * @return value or {@code null} for none
    */
   public java.lang.String getCommentUpdateState() {
@@ -77,8 +74,7 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
   }
 
   /**
-   * Whether comment updates were applied in the batch request. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Whether comment updates were applied in the batch request.
    * @param commentUpdateState commentUpdateState or {@code null} for none
    */
   public BatchUpdateDocumentResponse setCommentUpdateState(java.lang.String commentUpdateState) {
@@ -123,8 +119,7 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
   }
 
   /**
-   * The suggestions which were affected by each update. This maps 1:1 with the updates. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The suggestions which were affected by each update. This maps 1:1 with the updates.
    * @return value or {@code null} for none
    */
   public java.util.List<SuggestionResponse> getSuggestionResponses() {
@@ -132,8 +127,7 @@ public final class BatchUpdateDocumentResponse extends com.google.api.client.jso
   }
 
   /**
-   * The suggestions which were affected by each update. This maps 1:1 with the updates. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * The suggestions which were affected by each update. This maps 1:1 with the updates.
    * @param suggestionResponses suggestionResponses or {@code null} for none
    */
   public BatchUpdateDocumentResponse setSuggestionResponses(java.util.List<SuggestionResponse> suggestionResponses) {

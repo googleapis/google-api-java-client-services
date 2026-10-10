@@ -519,7 +519,6 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
        * suggestions_view_mode to SUGGESTIONS_INLINE. If you set comments_view_mode to
        * COMMENTS_VIEW_MODE_INCLUDED or COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not
        * set suggestions_view_mode to PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED.
-       * [Developer Preview](https://developers.google.com/workspace/preview).
        */
       @com.google.api.client.util.Key
       private java.lang.String commentsViewMode;
@@ -531,8 +530,7 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
      COMMENTS_VIEW_MODE_INCLUDED, you must also explicitly set suggestions_view_mode to
      SUGGESTIONS_INLINE. If you set comments_view_mode to COMMENTS_VIEW_MODE_INCLUDED or
      COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not set suggestions_view_mode to
-     PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED. [Developer
-     Preview](https://developers.google.com/workspace/preview).
+     PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED.
        */
       public java.lang.String getCommentsViewMode() {
         return commentsViewMode;
@@ -547,7 +545,6 @@ public class Docs extends com.google.api.client.googleapis.services.json.Abstrac
        * suggestions_view_mode to SUGGESTIONS_INLINE. If you set comments_view_mode to
        * COMMENTS_VIEW_MODE_INCLUDED or COMMENTS_VIEW_MODE_DEFAULT_FOR_CURRENT_ACCESS, you may not
        * set suggestions_view_mode to PREVIEW_WITHOUT_SUGGESTIONS or PREVIEW_SUGGESTIONS_ACCEPTED.
-       * [Developer Preview](https://developers.google.com/workspace/preview).
        */
       public Get setCommentsViewMode(java.lang.String commentsViewMode) {
         this.commentsViewMode = commentsViewMode;

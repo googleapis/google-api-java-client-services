@@ -18,8 +18,7 @@ package com.google.api.services.docs.v1.model;
 
 /**
  * One or more locations in the document that are tied to CommentThreads with the same anchorId.
- * Note: Multiple anchors may refer to the same location. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * Note: Multiple anchors may refer to the same location.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

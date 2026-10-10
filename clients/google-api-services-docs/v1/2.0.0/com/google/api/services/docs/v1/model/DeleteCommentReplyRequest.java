@@ -19,8 +19,7 @@ package com.google.api.services.docs.v1.model;
 /**
  * Deletes a reply Post from a CommentThread or SuggestionThread. Returns a 400 bad request error
  * if: - The requesting user is not the author of the post. - The reply post contains an action. -
- * The reply post contains an assignee. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * The reply post contains an assignee.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

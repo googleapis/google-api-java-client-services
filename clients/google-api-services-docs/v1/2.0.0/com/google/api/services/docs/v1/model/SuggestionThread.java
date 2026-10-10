@@ -18,8 +18,7 @@ package com.google.api.services.docs.v1.model;
 
 /**
  * Represents a single suggestion thread. Suggestion threads are created as a byproduct of saving
- * changes to the document while in suggestion mode, and cannot be created directly. [Developer
- * Preview](https://developers.google.com/workspace/preview).
+ * changes to the document while in suggestion mode, and cannot be created directly.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Docs API. For a detailed explanation see:

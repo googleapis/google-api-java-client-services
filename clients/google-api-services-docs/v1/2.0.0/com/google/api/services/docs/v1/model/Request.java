@@ -30,15 +30,14 @@ package com.google.api.services.docs.v1.model;
 public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
-   * Accepts a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Accepts a suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AcceptSuggestionRequest acceptSuggestion;
 
   /**
-   * Adds a reply to a CommentThread or SuggestionThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Adds a reply to a CommentThread or SuggestionThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,15 +93,14 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private CreateParagraphBulletsRequest createParagraphBullets;
 
   /**
-   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a CommentThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeleteCommentRequest deleteComment;
 
   /**
-   * Deletes a reply Post from a CommentThread or SuggestionThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Deletes a reply Post from a CommentThread or SuggestionThread.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +156,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private DeletePositionedObjectRequest deletePositionedObject;
 
   /**
-   * Deletes a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -186,8 +184,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private DeleteTableRowRequest deleteTableRow;
 
   /**
-   * Inserts a CommentThread into the document. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Inserts a CommentThread into the document.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -285,7 +282,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private PinTableHeaderRowsRequest pinTableHeaderRows;
 
   /**
-   * Rejects a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Rejects a suggestion.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -321,7 +318,6 @@ public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
    * Updates an existing post (head post or reply) of a CommentThread or SuggestionThread.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -405,7 +401,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   private UpdateTextStyleRequest updateTextStyle;
 
   /**
-   * Accepts a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Accepts a suggestion.
    * @return value or {@code null} for none
    */
   public AcceptSuggestionRequest getAcceptSuggestion() {
@@ -413,7 +409,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Accepts a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Accepts a suggestion.
    * @param acceptSuggestion acceptSuggestion or {@code null} for none
    */
   public Request setAcceptSuggestion(AcceptSuggestionRequest acceptSuggestion) {
@@ -422,8 +418,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Adds a reply to a CommentThread or SuggestionThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Adds a reply to a CommentThread or SuggestionThread.
    * @return value or {@code null} for none
    */
   public AddCommentReplyRequest getAddCommentReply() {
@@ -431,8 +426,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Adds a reply to a CommentThread or SuggestionThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Adds a reply to a CommentThread or SuggestionThread.
    * @param addCommentReply addCommentReply or {@code null} for none
    */
   public Request setAddCommentReply(AddCommentReplyRequest addCommentReply) {
@@ -560,7 +554,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a CommentThread.
    * @return value or {@code null} for none
    */
   public DeleteCommentRequest getDeleteComment() {
@@ -568,7 +562,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a CommentThread. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a CommentThread.
    * @param deleteComment deleteComment or {@code null} for none
    */
   public Request setDeleteComment(DeleteCommentRequest deleteComment) {
@@ -577,8 +571,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a reply Post from a CommentThread or SuggestionThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Deletes a reply Post from a CommentThread or SuggestionThread.
    * @return value or {@code null} for none
    */
   public DeleteCommentReplyRequest getDeleteCommentReply() {
@@ -586,8 +579,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a reply Post from a CommentThread or SuggestionThread. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Deletes a reply Post from a CommentThread or SuggestionThread.
    * @param deleteCommentReply deleteCommentReply or {@code null} for none
    */
   public Request setDeleteCommentReply(DeleteCommentReplyRequest deleteCommentReply) {
@@ -715,7 +707,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a suggestion.
    * @return value or {@code null} for none
    */
   public DeleteSuggestionRequest getDeleteSuggestion() {
@@ -723,7 +715,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Deletes a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Deletes a suggestion.
    * @param deleteSuggestion deleteSuggestion or {@code null} for none
    */
   public Request setDeleteSuggestion(DeleteSuggestionRequest deleteSuggestion) {
@@ -783,8 +775,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inserts a CommentThread into the document. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Inserts a CommentThread into the document.
    * @return value or {@code null} for none
    */
   public InsertCommentRequest getInsertComment() {
@@ -792,8 +783,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Inserts a CommentThread into the document. [Developer
-   * Preview](https://developers.google.com/workspace/preview).
+   * Inserts a CommentThread into the document.
    * @param insertComment insertComment or {@code null} for none
    */
   public Request setInsertComment(InsertCommentRequest insertComment) {
@@ -1023,7 +1013,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rejects a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Rejects a suggestion.
    * @return value or {@code null} for none
    */
   public RejectSuggestionRequest getRejectSuggestion() {
@@ -1031,7 +1021,7 @@ public final class Request extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Rejects a suggestion. [Developer Preview](https://developers.google.com/workspace/preview).
+   * Rejects a suggestion.
    * @param rejectSuggestion rejectSuggestion or {@code null} for none
    */
   public Request setRejectSuggestion(RejectSuggestionRequest rejectSuggestion) {
@@ -1109,7 +1099,6 @@ public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
    * Updates an existing post (head post or reply) of a CommentThread or SuggestionThread.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @return value or {@code null} for none
    */
   public UpdateCommentPostRequest getUpdateCommentPost() {
@@ -1118,7 +1107,6 @@ public final class Request extends com.google.api.client.json.GenericJson {
 
   /**
    * Updates an existing post (head post or reply) of a CommentThread or SuggestionThread.
-   * [Developer Preview](https://developers.google.com/workspace/preview).
    * @param updateCommentPost updateCommentPost or {@code null} for none
    */
   public Request setUpdateCommentPost(UpdateCommentPostRequest updateCommentPost) {

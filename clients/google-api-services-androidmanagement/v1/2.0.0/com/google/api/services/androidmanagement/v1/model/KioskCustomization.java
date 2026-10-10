@@ -18,7 +18,7 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * Settings controlling the behavior of a device in kiosk mode. To enable kiosk mode, set
- * kioskCustomLauncherEnabled to true or specify an app in the policy with installType KIOSK.
+ * kioskCustomLauncherEnabled to true or specify an app in the policy with the KIOSK role.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation

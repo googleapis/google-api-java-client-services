@@ -17,7 +17,7 @@
 package com.google.api.services.agentregistry.v1.model;
 
 /**
- * The spec of the MCP Server.
+ * Environment of the Application, Service, or Workload
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Agent Registry API. For a detailed explanation see:
@@ -27,44 +27,17 @@ package com.google.api.services.agentregistry.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class McpServerSpec extends com.google.api.client.json.GenericJson {
+public final class Environment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.Map<String, java.lang.Object> content;
-
-  /**
-   * Required. Immutable. The type of the MCP Server spec content.
+   * Required. Environment Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String type;
 
   /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
-   * @return value or {@code null} for none
-   */
-  public java.util.Map<String, java.lang.Object> getContent() {
-    return content;
-  }
-
-  /**
-   * Optional. The content of the MCP Server spec. This payload is validated against the schema for
-   * the specified type. The content size is limited to `10KB`.
-   * @param content content or {@code null} for none
-   */
-  public McpServerSpec setContent(java.util.Map<String, java.lang.Object> content) {
-    this.content = content;
-    return this;
-  }
-
-  /**
-   * Required. Immutable. The type of the MCP Server spec content.
+   * Required. Environment Type.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -72,22 +45,22 @@ public final class McpServerSpec extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Required. Immutable. The type of the MCP Server spec content.
+   * Required. Environment Type.
    * @param type type or {@code null} for none
    */
-  public McpServerSpec setType(java.lang.String type) {
+  public Environment setType(java.lang.String type) {
     this.type = type;
     return this;
   }
 
   @Override
-  public McpServerSpec set(String fieldName, Object value) {
-    return (McpServerSpec) super.set(fieldName, value);
+  public Environment set(String fieldName, Object value) {
+    return (Environment) super.set(fieldName, value);
   }
 
   @Override
-  public McpServerSpec clone() {
-    return (McpServerSpec) super.clone();
+  public Environment clone() {
+    return (Environment) super.clone();
   }
 
 }

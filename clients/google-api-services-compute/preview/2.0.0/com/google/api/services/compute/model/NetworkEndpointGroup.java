@@ -133,6 +133,14 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   private java.lang.String network;
 
   /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
    * Type of network endpoints in this network endpoint group. Can be one ofGCE_VM_IP,
    * GCE_VM_IP_PORT,NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT,INTERNET_IP_PORT,
    * SERVERLESS,PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
@@ -171,6 +179,15 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Optional. The service class ID associated with this resource. Can only be used with
+   * network_attachment. It is not possible to use on its own; however, network_attachment can be
+   * used without service_class_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceClassId;
 
   /**
    * Output only. [Output only] Number of network endpoints in the network endpoint group.
@@ -413,6 +430,25 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
   }
 
   /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * Optional. The URL of the network attachment that this resource belongs
+   * to.projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public NetworkEndpointGroup setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
+    return this;
+  }
+
+  /**
    * Type of network endpoints in this network endpoint group. Can be one ofGCE_VM_IP,
    * GCE_VM_IP_PORT,NON_GCP_PRIVATE_IP_PORT, INTERNET_FQDN_PORT,INTERNET_IP_PORT,
    * SERVERLESS,PRIVATE_SERVICE_CONNECT, GCE_VM_IP_PORTMAP.
@@ -504,6 +540,27 @@ public final class NetworkEndpointGroup extends com.google.api.client.json.Gener
    */
   public NetworkEndpointGroup setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Optional. The service class ID associated with this resource. Can only be used with
+   * network_attachment. It is not possible to use on its own; however, network_attachment can be
+   * used without service_class_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceClassId() {
+    return serviceClassId;
+  }
+
+  /**
+   * Optional. The service class ID associated with this resource. Can only be used with
+   * network_attachment. It is not possible to use on its own; however, network_attachment can be
+   * used without service_class_id.
+   * @param serviceClassId serviceClassId or {@code null} for none
+   */
+  public NetworkEndpointGroup setServiceClassId(java.lang.String serviceClassId) {
+    this.serviceClassId = serviceClassId;
     return this;
   }
 

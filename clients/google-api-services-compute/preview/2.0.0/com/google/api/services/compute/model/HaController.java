@@ -107,6 +107,14 @@ public final class HaController extends com.google.api.client.json.GenericJson {
   private HaControllerNetworkingAutoConfiguration networkingAutoConfiguration;
 
   /**
+   * Input only. Additional parameters passed with the request, but not persisted as part of the
+   * resource. Both `params: null` and `params: {}` are treated identically as a no-op.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private HaControllerParams params;
+
+  /**
    * Output only. [Output Only] URL of the region where the resource resides. You must specify this
    * field as part of the HTTP request URL. It is not settable as a field in the request body.
    * The value may be {@code null}.
@@ -327,6 +335,25 @@ public final class HaController extends com.google.api.client.json.GenericJson {
    */
   public HaController setNetworkingAutoConfiguration(HaControllerNetworkingAutoConfiguration networkingAutoConfiguration) {
     this.networkingAutoConfiguration = networkingAutoConfiguration;
+    return this;
+  }
+
+  /**
+   * Input only. Additional parameters passed with the request, but not persisted as part of the
+   * resource. Both `params: null` and `params: {}` are treated identically as a no-op.
+   * @return value or {@code null} for none
+   */
+  public HaControllerParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. Additional parameters passed with the request, but not persisted as part of the
+   * resource. Both `params: null` and `params: {}` are treated identically as a no-op.
+   * @param params params or {@code null} for none
+   */
+  public HaController setParams(HaControllerParams params) {
+    this.params = params;
     return this;
   }
 

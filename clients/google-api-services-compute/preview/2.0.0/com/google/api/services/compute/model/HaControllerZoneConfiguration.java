@@ -30,6 +30,29 @@ package com.google.api.services.compute.model;
 public final class HaControllerZoneConfiguration extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The network interface configuration of a VM instance in this zone, keyed by the name
+   * of the network interface. A VM network interface uses the nicN naming format, where N is a
+   * value between 0 and 7. The default interface is nic0. Use this field to choose the internal IP
+   * addresses of the VM instance in this zone instead of letting Compute Engine assign them
+   * automatically.               - Each key must be a name of a network interface that exists on
+   * the VM instance. Otherwise, the request fails.       - Network interfaces that are omitted are
+   * assigned an ephemeral       internal IP address.       - Every zone must configure the same
+   * network interfaces and the       same IP address families.       - For the zone that currently
+   * holds the VM instance, this field       is populated automatically, and any addresses you
+   * specify must       match the instance's current addresses.       - Only internal IP addresses
+   * are supported, and this field can       only be set when the HA Controller is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, HaControllerInstanceNetworkInterface> instanceNetworkInterfaces;
+
+  static {
+    // hack to force ProGuard to consider HaControllerInstanceNetworkInterface used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(HaControllerInstanceNetworkInterface.class);
+  }
+
+  /**
    * A set of node affinity configurations. Refer toConfiguring node affinity for more information.
    * Overrides reservationAffinity.
    * The value may be {@code null}.
@@ -43,6 +66,43 @@ public final class HaControllerZoneConfiguration extends com.google.api.client.j
    */
   @com.google.api.client.util.Key
   private HaControllerZoneConfigurationReservationAffinity reservationAffinity;
+
+  /**
+   * Optional. The network interface configuration of a VM instance in this zone, keyed by the name
+   * of the network interface. A VM network interface uses the nicN naming format, where N is a
+   * value between 0 and 7. The default interface is nic0. Use this field to choose the internal IP
+   * addresses of the VM instance in this zone instead of letting Compute Engine assign them
+   * automatically.               - Each key must be a name of a network interface that exists on
+   * the VM instance. Otherwise, the request fails.       - Network interfaces that are omitted are
+   * assigned an ephemeral       internal IP address.       - Every zone must configure the same
+   * network interfaces and the       same IP address families.       - For the zone that currently
+   * holds the VM instance, this field       is populated automatically, and any addresses you
+   * specify must       match the instance's current addresses.       - Only internal IP addresses
+   * are supported, and this field can       only be set when the HA Controller is created.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, HaControllerInstanceNetworkInterface> getInstanceNetworkInterfaces() {
+    return instanceNetworkInterfaces;
+  }
+
+  /**
+   * Optional. The network interface configuration of a VM instance in this zone, keyed by the name
+   * of the network interface. A VM network interface uses the nicN naming format, where N is a
+   * value between 0 and 7. The default interface is nic0. Use this field to choose the internal IP
+   * addresses of the VM instance in this zone instead of letting Compute Engine assign them
+   * automatically.               - Each key must be a name of a network interface that exists on
+   * the VM instance. Otherwise, the request fails.       - Network interfaces that are omitted are
+   * assigned an ephemeral       internal IP address.       - Every zone must configure the same
+   * network interfaces and the       same IP address families.       - For the zone that currently
+   * holds the VM instance, this field       is populated automatically, and any addresses you
+   * specify must       match the instance's current addresses.       - Only internal IP addresses
+   * are supported, and this field can       only be set when the HA Controller is created.
+   * @param instanceNetworkInterfaces instanceNetworkInterfaces or {@code null} for none
+   */
+  public HaControllerZoneConfiguration setInstanceNetworkInterfaces(java.util.Map<String, HaControllerInstanceNetworkInterface> instanceNetworkInterfaces) {
+    this.instanceNetworkInterfaces = instanceNetworkInterfaces;
+    return this;
+  }
 
   /**
    * A set of node affinity configurations. Refer toConfiguring node affinity for more information.

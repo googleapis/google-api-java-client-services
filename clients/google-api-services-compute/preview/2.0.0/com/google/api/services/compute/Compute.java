@@ -6038,6 +6038,1087 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the AliasNetworkEndpoints collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.AliasNetworkEndpoints.List request = compute.aliasNetworkEndpoints().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public AliasNetworkEndpoints aliasNetworkEndpoints() {
+    return new AliasNetworkEndpoints();
+  }
+
+  /**
+   * The "aliasNetworkEndpoints" collection of methods.
+   */
+  public class AliasNetworkEndpoints {
+
+    /**
+     * Deletes the specified AliasNetworkEndpoint.
+     *
+     * Create a request for the method "aliasNetworkEndpoints.delete".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID for this request.
+     * @param zone Required. Name of the zone scoping this request.
+     * @param aliasNetworkEndpoint Required. Name of the AliasNetworkEndpoint resource to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String project, java.lang.String zone, java.lang.String aliasNetworkEndpoint) throws java.io.IOException {
+      Delete result = new Delete(project, zone, aliasNetworkEndpoint);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/aliasNetworkEndpoints/{aliasNetworkEndpoint}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern ALIAS_NETWORK_ENDPOINT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Deletes the specified AliasNetworkEndpoint.
+       *
+       * Create a request for the method "aliasNetworkEndpoints.delete".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID for this request.
+       * @param zone Required. Name of the zone scoping this request.
+       * @param aliasNetworkEndpoint Required. Name of the AliasNetworkEndpoint resource to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String project, java.lang.String zone, java.lang.String aliasNetworkEndpoint) {
+        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.aliasNetworkEndpoint = com.google.api.client.util.Preconditions.checkNotNull(aliasNetworkEndpoint, "Required parameter aliasNetworkEndpoint must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ALIAS_NETWORK_ENDPOINT_PATTERN.matcher(aliasNetworkEndpoint).matches(),
+              "Parameter aliasNetworkEndpoint must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID for this request. */
+      public Delete setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Name of the zone scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Required. Name of the zone scoping this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Required. Name of the zone scoping this request. */
+      public Delete setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Required. Name of the AliasNetworkEndpoint resource to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String aliasNetworkEndpoint;
+
+      /** Required. Name of the AliasNetworkEndpoint resource to delete.
+       */
+      public java.lang.String getAliasNetworkEndpoint() {
+        return aliasNetworkEndpoint;
+      }
+
+      /** Required. Name of the AliasNetworkEndpoint resource to delete. */
+      public Delete setAliasNetworkEndpoint(java.lang.String aliasNetworkEndpoint) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ALIAS_NETWORK_ENDPOINT_PATTERN.matcher(aliasNetworkEndpoint).matches(),
+              "Parameter aliasNetworkEndpoint must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.aliasNetworkEndpoint = aliasNetworkEndpoint;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns the specified AliasNetworkEndpoint resource.
+     *
+     * Create a request for the method "aliasNetworkEndpoints.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID for this request.
+     * @param zone Required. Name of the zone scoping this request.
+     * @param aliasNetworkEndpoint Required. Name of the AliasNetworkEndpoint resource to return.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String zone, java.lang.String aliasNetworkEndpoint) throws java.io.IOException {
+      Get result = new Get(project, zone, aliasNetworkEndpoint);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.AliasNetworkEndpoint> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/aliasNetworkEndpoints/{aliasNetworkEndpoint}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern ALIAS_NETWORK_ENDPOINT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns the specified AliasNetworkEndpoint resource.
+       *
+       * Create a request for the method "aliasNetworkEndpoints.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID for this request.
+       * @param zone Required. Name of the zone scoping this request.
+       * @param aliasNetworkEndpoint Required. Name of the AliasNetworkEndpoint resource to return.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String zone, java.lang.String aliasNetworkEndpoint) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.AliasNetworkEndpoint.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.aliasNetworkEndpoint = com.google.api.client.util.Preconditions.checkNotNull(aliasNetworkEndpoint, "Required parameter aliasNetworkEndpoint must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ALIAS_NETWORK_ENDPOINT_PATTERN.matcher(aliasNetworkEndpoint).matches(),
+              "Parameter aliasNetworkEndpoint must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID for this request. */
+      public Get setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Name of the zone scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Required. Name of the zone scoping this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Required. Name of the zone scoping this request. */
+      public Get setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Required. Name of the AliasNetworkEndpoint resource to return. */
+      @com.google.api.client.util.Key
+      private java.lang.String aliasNetworkEndpoint;
+
+      /** Required. Name of the AliasNetworkEndpoint resource to return.
+       */
+      public java.lang.String getAliasNetworkEndpoint() {
+        return aliasNetworkEndpoint;
+      }
+
+      /** Required. Name of the AliasNetworkEndpoint resource to return. */
+      public Get setAliasNetworkEndpoint(java.lang.String aliasNetworkEndpoint) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ALIAS_NETWORK_ENDPOINT_PATTERN.matcher(aliasNetworkEndpoint).matches(),
+              "Parameter aliasNetworkEndpoint must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.aliasNetworkEndpoint = aliasNetworkEndpoint;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates an AliasNetworkEndpoint in the specified project and zone using the data included in the
+     * request.
+     *
+     * Create a request for the method "aliasNetworkEndpoints.insert".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID for this request.
+     * @param zone Required. Name of the zone scoping this request.
+     * @param content the {@link com.google.api.services.compute.model.AliasNetworkEndpoint}
+     * @return the request
+     */
+    public Insert insert(java.lang.String project, java.lang.String zone, com.google.api.services.compute.model.AliasNetworkEndpoint content) throws java.io.IOException {
+      Insert result = new Insert(project, zone, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/aliasNetworkEndpoints";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Creates an AliasNetworkEndpoint in the specified project and zone using the data included in
+       * the request.
+       *
+       * Create a request for the method "aliasNetworkEndpoints.insert".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID for this request.
+       * @param zone Required. Name of the zone scoping this request.
+       * @param content the {@link com.google.api.services.compute.model.AliasNetworkEndpoint}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String project, java.lang.String zone, com.google.api.services.compute.model.AliasNetworkEndpoint content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID for this request. */
+      public Insert setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Name of the zone scoping this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Required. Name of the zone scoping this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Required. Name of the zone scoping this request. */
+      public Insert setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       */
+      public Insert setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Retrieves a list of AliasNetworkEndpoints available to the specified project.
+     *
+     * Create a request for the method "aliasNetworkEndpoints.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Required. Project ID for this request.
+     * @param zone Required. Name of the zone of this request.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String zone) throws java.io.IOException {
+      List result = new List(project, zone);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.AliasNetworkEndpointList> {
+
+      private static final String REST_PATH = "projects/{project}/zones/{zone}/aliasNetworkEndpoints";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Retrieves a list of AliasNetworkEndpoints available to the specified project.
+       *
+       * Create a request for the method "aliasNetworkEndpoints.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Required. Project ID for this request.
+       * @param zone Required. Name of the zone of this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String zone) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.AliasNetworkEndpointList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Required. Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Required. Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Required. Project ID for this request. */
+      public List setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Required. Name of the zone of this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Required. Name of the zone of this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Required. Name of the zone of this request. */
+      public List setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. Most Compute resources support
+     two types of filter expressions: expressions that support regular expressions and expressions that
+     follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in
+     one request.
+
+     If you want to use AIP-160, your expression must specify the field name, an operator, and the value
+     that you want to use for filtering. The value must be a string, a number, or a boolean. The
+     operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     `example-instance` by specifying `name != example-instance`.
+
+     The `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ```
+
+     You can also filter nested fields. For example, you could specify `scheduling.automaticRestart =
+     false` to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based onresource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default,
+     each expression is an `AND` expression. However, you can include `AND` and `OR` expressions
+     explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
+     AND (scheduling.automaticRestart = true) ```
+
+     If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against
+     a single un-parenthesized expression with or without quotes or against multiple parenthesized
+     expressions. Examples:
+
+     `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted
+     literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+
+     The literal value is interpreted as a regular expression using GoogleRE2 library syntax. The
+     literal value must match the entire field.
+
+     For example, to filter for instances that do not end with name "instance", you would use `name ne
+     .*instance`.
+
+     You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Autoscalers collection.
    *
    * <p>The typical use is:</p>

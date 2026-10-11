@@ -2352,6 +2352,860 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
       }
     }
     /**
+     * An accessor for creating requests from the ChromeBrowsers collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+     *   {@code ChromeManagement.ChromeBrowsers.List request = chromemanagement.chromeBrowsers().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public ChromeBrowsers chromeBrowsers() {
+      return new ChromeBrowsers();
+    }
+
+    /**
+     * The "chromeBrowsers" collection of methods.
+     */
+    public class ChromeBrowsers {
+
+      /**
+       * Deletes the data collected from a Chrome browser profile.
+       *
+       * Create a request for the method "chromeBrowsers.delete".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/chromeBrowsers/[^/]+$");
+
+        /**
+         * Deletes the data collected from a Chrome browser profile.
+         *
+         * Create a request for the method "chromeBrowsers.delete".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(ChromeManagement.this, "DELETE", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleProtobufEmpty.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/chromeBrowsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id} */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/chromeBrowsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves a single Chrome Browser identified by its customer ID and resource ID.
+       *
+       * Create a request for the method "chromeBrowsers.get".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/chromeBrowsers/[^/]+$");
+
+        /**
+         * Retrieves a single Chrome Browser identified by its customer ID and resource ID.
+         *
+         * Create a request for the method "chromeBrowsers.get".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/chromeBrowsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id} */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/chromeBrowsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves all Chrome Browsers of a customer (paginated).
+       *
+       * Create a request for the method "chromeBrowsers.list".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: customers/{customer_id}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListChromeBrowsersResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/chromeBrowsers";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Retrieves all Chrome Browsers of a customer (paginated).
+         *
+         * Create a request for the method "chromeBrowsers.list".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: customers/{customer_id}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListChromeBrowsersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: customers/{customer_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: customers/{customer_id} */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The filter used to filter browsers. The following fields can be used in the
+         * filter: * `browser_permanent_id` * `last_policy_fetch_time` * `os_platform` *
+         * `os_architecture` * `os_version` * `machine_name` * `annotated_location` *
+         * `annotated_user` * `annotated_asset_id` * `annotated_note` * `org_unit_path` *
+         * `org_unit_id` * `last_registration_time` * `os_platform_version` * `browser_version` *
+         * `last_status_report_time` * `extension_count` * `policy_count` * `last_device_user` *
+         * `last_activity_time` * `device_id_collision` The following functions can be used in the
+         * filter: * `in_group(string)`: Filters browsers that belong to the specified Cloud
+         * Identity group resource name (e.g. `in_group("groups/{group_id}")`). Any of the above
+         * fields or functions can be used to specify a filter, and filtering by multiple fields or
+         * functions is supported with AND operator. String type, Integer type fields and enum type
+         * fields support `=` and `:` operators. The timestamp type fields support `=`, `<=` and
+         * `>=` operators. Timestamps expect an RFC-3339 formatted string (e.g.
+         * 2012-04-21T11:30:00-04:00). Wildcard `*` is only supported for `machine_name`,
+         * `annotated_asset_id`, and `browser_version`. In addition, global string literal filtering
+         * without a field name is supported: a single term (e.g., `ABC`) matches if any indexed
+         * string field contains `ABC`, and multiple terms joined by `AND` or whitespace (e.g.,
+         * `machine AND 73` or `machine 73`) match browsers where every term appears in at least one
+         * indexed string field (whereas a single quoted phrase like `"machine 73"` matches the
+         * contiguous phrase within a single field).
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. The filter used to filter browsers. The following fields can be used in the filter: *
+       `browser_permanent_id` * `last_policy_fetch_time` * `os_platform` * `os_architecture` *
+       `os_version` * `machine_name` * `annotated_location` * `annotated_user` * `annotated_asset_id` *
+       `annotated_note` * `org_unit_path` * `org_unit_id` * `last_registration_time` *
+       `os_platform_version` * `browser_version` * `last_status_report_time` * `extension_count` *
+       `policy_count` * `last_device_user` * `last_activity_time` * `device_id_collision` The following
+       functions can be used in the filter: * `in_group(string)`: Filters browsers that belong to the
+       specified Cloud Identity group resource name (e.g. `in_group("groups/{group_id}")`). Any of the
+       above fields or functions can be used to specify a filter, and filtering by multiple fields or
+       functions is supported with AND operator. String type, Integer type fields and enum type fields
+       support `=` and `:` operators. The timestamp type fields support `=`, `<=` and `>=` operators.
+       Timestamps expect an RFC-3339 formatted string (e.g. 2012-04-21T11:30:00-04:00). Wildcard `*` is
+       only supported for `machine_name`, `annotated_asset_id`, and `browser_version`. In addition, global
+       string literal filtering without a field name is supported: a single term (e.g., `ABC`) matches if
+       any indexed string field contains `ABC`, and multiple terms joined by `AND` or whitespace (e.g.,
+       `machine AND 73` or `machine 73`) match browsers where every term appears in at least one indexed
+       string field (whereas a single quoted phrase like `"machine 73"` matches the contiguous phrase
+       within a single field).
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. The filter used to filter browsers. The following fields can be used in the
+         * filter: * `browser_permanent_id` * `last_policy_fetch_time` * `os_platform` *
+         * `os_architecture` * `os_version` * `machine_name` * `annotated_location` *
+         * `annotated_user` * `annotated_asset_id` * `annotated_note` * `org_unit_path` *
+         * `org_unit_id` * `last_registration_time` * `os_platform_version` * `browser_version` *
+         * `last_status_report_time` * `extension_count` * `policy_count` * `last_device_user` *
+         * `last_activity_time` * `device_id_collision` The following functions can be used in the
+         * filter: * `in_group(string)`: Filters browsers that belong to the specified Cloud
+         * Identity group resource name (e.g. `in_group("groups/{group_id}")`). Any of the above
+         * fields or functions can be used to specify a filter, and filtering by multiple fields or
+         * functions is supported with AND operator. String type, Integer type fields and enum type
+         * fields support `=` and `:` operators. The timestamp type fields support `=`, `<=` and
+         * `>=` operators. Timestamps expect an RFC-3339 formatted string (e.g.
+         * 2012-04-21T11:30:00-04:00). Wildcard `*` is only supported for `machine_name`,
+         * `annotated_asset_id`, and `browser_version`. In addition, global string literal filtering
+         * without a field name is supported: a single term (e.g., `ABC`) matches if any indexed
+         * string field contains `ABC`, and multiple terms joined by `AND` or whitespace (e.g.,
+         * `machine AND 73` or `machine 73`) match browsers where every term appears in at least one
+         * indexed string field (whereas a single quoted phrase like `"machine 73"` matches the
+         * contiguous phrase within a single field).
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. The fields used to specify the ordering of the results. The supported fields
+         * are: * `browser_permanent_id` * `last_sync` * `annotated_user` * `annotated_location` *
+         * `annotated_asset_id` * `annotated_notes` * `org_unit_path` * `os_version` *
+         * `enrollment_date` * `extension_count` * `policy_count` * `last_signed_in_user` *
+         * `machine_name` * `browser_version_channel` * `os_platform_version` * `last_activity_time`
+         * * `browser_version` By default, sorting is in ascending order, to specify descending
+         * order for a field, a suffix ` desc` should be added to the field name. The default
+         * ordering is the descending order of `last_status_report_time`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. The fields used to specify the ordering of the results. The supported fields are: *
+       `browser_permanent_id` * `last_sync` * `annotated_user` * `annotated_location` *
+       `annotated_asset_id` * `annotated_notes` * `org_unit_path` * `os_version` * `enrollment_date` *
+       `extension_count` * `policy_count` * `last_signed_in_user` * `machine_name` *
+       `browser_version_channel` * `os_platform_version` * `last_activity_time` * `browser_version` By
+       default, sorting is in ascending order, to specify descending order for a field, a suffix ` desc`
+       should be added to the field name. The default ordering is the descending order of
+       `last_status_report_time`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. The fields used to specify the ordering of the results. The supported fields
+         * are: * `browser_permanent_id` * `last_sync` * `annotated_user` * `annotated_location` *
+         * `annotated_asset_id` * `annotated_notes` * `org_unit_path` * `os_version` *
+         * `enrollment_date` * `extension_count` * `policy_count` * `last_signed_in_user` *
+         * `machine_name` * `browser_version_channel` * `os_platform_version` * `last_activity_time`
+         * * `browser_version` By default, sorting is in ascending order, to specify descending
+         * order for a field, a suffix ` desc` should be added to the field name. The default
+         * ordering is the descending order of `last_status_report_time`.
+         */
+        public List setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. Token to specify next page in the list. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Token to specify next page in the list.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. Token to specify next page in the list. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Moves managed Chrome Browsers to a new Organizational Unit (OU). If there is an error while
+       * moving any of the browsers, none of the browsers will be moved.
+       *
+       * Create a request for the method "chromeBrowsers.move".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Move#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. Format: customers/{customer_id}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveChromeBrowsersRequest}
+       * @return the request
+       */
+      public Move move(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveChromeBrowsersRequest content) throws java.io.IOException {
+        Move result = new Move(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Move extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveChromeBrowsersResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/chromeBrowsers:move";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Moves managed Chrome Browsers to a new Organizational Unit (OU). If there is an error while
+         * moving any of the browsers, none of the browsers will be moved.
+         *
+         * Create a request for the method "chromeBrowsers.move".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Move#execute()} method to invoke the remote operation. <p>
+         * {@link Move#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. Format: customers/{customer_id}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveChromeBrowsersRequest}
+         * @since 1.13
+         */
+        protected Move(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveChromeBrowsersRequest content) {
+          super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1MoveChromeBrowsersResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Move set$Xgafv(java.lang.String $Xgafv) {
+          return (Move) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Move setAccessToken(java.lang.String accessToken) {
+          return (Move) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Move setAlt(java.lang.String alt) {
+          return (Move) super.setAlt(alt);
+        }
+
+        @Override
+        public Move setCallback(java.lang.String callback) {
+          return (Move) super.setCallback(callback);
+        }
+
+        @Override
+        public Move setFields(java.lang.String fields) {
+          return (Move) super.setFields(fields);
+        }
+
+        @Override
+        public Move setKey(java.lang.String key) {
+          return (Move) super.setKey(key);
+        }
+
+        @Override
+        public Move setOauthToken(java.lang.String oauthToken) {
+          return (Move) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Move setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Move) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Move setQuotaUser(java.lang.String quotaUser) {
+          return (Move) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Move setUploadType(java.lang.String uploadType) {
+          return (Move) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Move setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Move) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. Format: customers/{customer_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. Format: customers/{customer_id}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /** Required. Format: customers/{customer_id} */
+        public Move setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public Move set(String parameterName, Object value) {
+          return (Move) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates annotation information for a Chrome Browser.
+       *
+       * Create a request for the method "chromeBrowsers.patch".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/chromeBrowsers/[^/]+$");
+
+        /**
+         * Updates annotation information for a Chrome Browser.
+         *
+         * Create a request for the method "chromeBrowsers.patch".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser content) {
+          super(ChromeManagement.this, "PATCH", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ChromeBrowser.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/chromeBrowsers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Identifier. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id} */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Identifier. Format: customers/{customer_id}/chromeBrowsers/{browser_permanent_id} */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/chromeBrowsers/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The update mask that can be used to specify which fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The update mask that can be used to specify which fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The update mask that can be used to specify which fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
      * An accessor for creating requests from the ConnectorConfigs collection.
      *
      * <p>The typical use is:</p>
@@ -3135,6 +3989,696 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
         @Override
         public Patch set(String parameterName, Object value) {
           return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
+    /**
+     * An accessor for creating requests from the EnrollmentTokens collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code ChromeManagement chromemanagement = new ChromeManagement(...);}
+     *   {@code ChromeManagement.EnrollmentTokens.List request = chromemanagement.enrollmentTokens().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public EnrollmentTokens enrollmentTokens() {
+      return new EnrollmentTokens();
+    }
+
+    /**
+     * The "enrollmentTokens" collection of methods.
+     */
+    public class EnrollmentTokens {
+
+      /**
+       * Creates a new enrollment token for a browser device. Creation fails if there is already an active
+       * token for this customer under the same org unit.
+       *
+       * Create a request for the method "enrollmentTokens.create".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this enrollment token will be created. Format:
+       *        customers/{customer}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken> {
+
+        private static final String REST_PATH = "v1/{+parent}/enrollmentTokens";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Creates a new enrollment token for a browser device. Creation fails if there is already an
+         * active token for this customer under the same org unit.
+         *
+         * Create a request for the method "enrollmentTokens.create".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this enrollment token will be created. Format:
+       *        customers/{customer}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken content) {
+          super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this enrollment token will be created. Format:
+         * customers/{customer}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this enrollment token will be created. Format:
+       customers/{customer}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this enrollment token will be created. Format:
+         * customers/{customer}
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The ID to use for the enrollment token, which will become the final component
+         * of the enrollment token's resource name. This value must be local-unique under the
+         * customer and is optional. If not provided, it will be auto-generated. If provided, it
+         * must be 1-63 characters long and match the regular expression `[a-zA-Z0-9._-]+`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String enrollmentTokenId;
+
+        /** Optional. The ID to use for the enrollment token, which will become the final component of the
+       enrollment token's resource name. This value must be local-unique under the customer and is
+       optional. If not provided, it will be auto-generated. If provided, it must be 1-63 characters long
+       and match the regular expression `[a-zA-Z0-9._-]+`.
+         */
+        public java.lang.String getEnrollmentTokenId() {
+          return enrollmentTokenId;
+        }
+
+        /**
+         * Optional. The ID to use for the enrollment token, which will become the final component
+         * of the enrollment token's resource name. This value must be local-unique under the
+         * customer and is optional. If not provided, it will be auto-generated. If provided, it
+         * must be 1-63 characters long and match the regular expression `[a-zA-Z0-9._-]+`.
+         */
+        public Create setEnrollmentTokenId(java.lang.String enrollmentTokenId) {
+          this.enrollmentTokenId = enrollmentTokenId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Gets a browser device enrollment token.
+       *
+       * Create a request for the method "enrollmentTokens.get".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the enrollment token to retrieve. Format:
+       *        customers/{customer}/enrollmentTokens/{token_permanent_id}
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/enrollmentTokens/[^/]+$");
+
+        /**
+         * Gets a browser device enrollment token.
+         *
+         * Create a request for the method "enrollmentTokens.get".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the enrollment token to retrieve. Format:
+       *        customers/{customer}/enrollmentTokens/{token_permanent_id}
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/enrollmentTokens/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the enrollment token to retrieve. Format:
+         * customers/{customer}/enrollmentTokens/{token_permanent_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the enrollment token to retrieve. Format:
+       customers/{customer}/enrollmentTokens/{token_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the enrollment token to retrieve. Format:
+         * customers/{customer}/enrollmentTokens/{token_permanent_id}
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/enrollmentTokens/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists all browser device enrollment tokens.
+       *
+       * Create a request for the method "enrollmentTokens.list".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource where this enrollment token will be created. Format:
+       *        customers/{customer}
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListEnrollmentTokensResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}/enrollmentTokens";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+$");
+
+        /**
+         * Lists all browser device enrollment tokens.
+         *
+         * Create a request for the method "enrollmentTokens.list".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource where this enrollment token will be created. Format:
+       *        customers/{customer}
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(ChromeManagement.this, "GET", REST_PATH, null, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1ListEnrollmentTokensResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource where this enrollment token will be created. Format:
+         * customers/{customer}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource where this enrollment token will be created. Format:
+       customers/{customer}
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource where this enrollment token will be created. Format:
+         * customers/{customer}
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^customers/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. Filter to apply to list results. The following fields can be used in the
+         * filter: * device_type (currently only 'CHROME_BROWSER' is supported) * token_state
+         * (supported values: 'ACTIVE', 'EXPIRED', 'REVOKED') * org_unit_path The full path of the
+         * org unit, such as /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not
+         * the full path.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. Filter to apply to list results. The following fields can be used in the filter: *
+       device_type (currently only 'CHROME_BROWSER' is supported) * token_state (supported values:
+       'ACTIVE', 'EXPIRED', 'REVOKED') * org_unit_path The full path of the org unit, such as
+       /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not the full path.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. Filter to apply to list results. The following fields can be used in the
+         * filter: * device_type (currently only 'CHROME_BROWSER' is supported) * token_state
+         * (supported values: 'ACTIVE', 'EXPIRED', 'REVOKED') * org_unit_path The full path of the
+         * org unit, such as /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not
+         * the full path.
+         */
+        public List setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /** Optional. Maximum number of results to return. Maximum and default are 100. */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /** Optional. Token to specify next page in the list. */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. Token to specify next page in the list.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /** Optional. Token to specify next page in the list. */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Revokes a browser device enrollment token.
+       *
+       * Create a request for the method "enrollmentTokens.revoke".
+       *
+       * This request holds the parameters needed by the chromemanagement server.  After setting any
+       * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the enrollment token to revoke. Format:
+       *        customers/{customer}/enrollmentTokens/{token_permanent_id}
+       * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1RevokeEnrollmentTokenRequest}
+       * @return the request
+       */
+      public Revoke revoke(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1RevokeEnrollmentTokenRequest content) throws java.io.IOException {
+        Revoke result = new Revoke(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Revoke extends ChromeManagementRequest<com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken> {
+
+        private static final String REST_PATH = "v1/{+name}:revoke";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^customers/[^/]+/enrollmentTokens/[^/]+$");
+
+        /**
+         * Revokes a browser device enrollment token.
+         *
+         * Create a request for the method "enrollmentTokens.revoke".
+         *
+         * This request holds the parameters needed by the the chromemanagement server.  After setting any
+         * optional parameters, call the {@link Revoke#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Revoke#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the enrollment token to revoke. Format:
+       *        customers/{customer}/enrollmentTokens/{token_permanent_id}
+         * @param content the {@link com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1RevokeEnrollmentTokenRequest}
+         * @since 1.13
+         */
+        protected Revoke(java.lang.String name, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1RevokeEnrollmentTokenRequest content) {
+          super(ChromeManagement.this, "POST", REST_PATH, content, com.google.api.services.chromemanagement.v1.model.GoogleChromeManagementVersionsV1EnrollmentToken.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/enrollmentTokens/[^/]+$");
+          }
+        }
+
+        @Override
+        public Revoke set$Xgafv(java.lang.String $Xgafv) {
+          return (Revoke) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Revoke setAccessToken(java.lang.String accessToken) {
+          return (Revoke) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Revoke setAlt(java.lang.String alt) {
+          return (Revoke) super.setAlt(alt);
+        }
+
+        @Override
+        public Revoke setCallback(java.lang.String callback) {
+          return (Revoke) super.setCallback(callback);
+        }
+
+        @Override
+        public Revoke setFields(java.lang.String fields) {
+          return (Revoke) super.setFields(fields);
+        }
+
+        @Override
+        public Revoke setKey(java.lang.String key) {
+          return (Revoke) super.setKey(key);
+        }
+
+        @Override
+        public Revoke setOauthToken(java.lang.String oauthToken) {
+          return (Revoke) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Revoke setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Revoke) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Revoke setQuotaUser(java.lang.String quotaUser) {
+          return (Revoke) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Revoke setUploadType(java.lang.String uploadType) {
+          return (Revoke) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Revoke setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Revoke) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the enrollment token to revoke. Format:
+         * customers/{customer}/enrollmentTokens/{token_permanent_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the enrollment token to revoke. Format:
+       customers/{customer}/enrollmentTokens/{token_permanent_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the enrollment token to revoke. Format:
+         * customers/{customer}/enrollmentTokens/{token_permanent_id}
+         */
+        public Revoke setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^customers/[^/]+/enrollmentTokens/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Revoke set(String parameterName, Object value) {
+          return (Revoke) super.set(parameterName, value);
         }
       }
 

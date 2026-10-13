@@ -30,8 +30,8 @@ package com.google.api.services.alloydb.v1beta.model;
 public final class ReadPoolConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Optional. Autoscaling configuration for the read pool instance. If not set, the read pool
+   * instance will not be autoscaled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,8 +45,8 @@ public final class ReadPoolConfig extends com.google.api.client.json.GenericJson
   private java.lang.Integer nodeCount;
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Optional. Autoscaling configuration for the read pool instance. If not set, the read pool
+   * instance will not be autoscaled.
    * @return value or {@code null} for none
    */
   public AutoScalingConfig getAutoScalingConfig() {
@@ -54,8 +54,8 @@ public final class ReadPoolConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Autoscaling configuration for the read pool instance. If not set, the read pool instance will
-   * not be autoscaled.
+   * Optional. Autoscaling configuration for the read pool instance. If not set, the read pool
+   * instance will not be autoscaled.
    * @param autoScalingConfig autoScalingConfig or {@code null} for none
    */
   public ReadPoolConfig setAutoScalingConfig(AutoScalingConfig autoScalingConfig) {

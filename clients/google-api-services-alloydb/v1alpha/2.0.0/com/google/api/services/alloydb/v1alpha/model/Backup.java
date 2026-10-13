@@ -104,8 +104,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Output only. The edition of the cluster this backup was created from. Any restored cluster
-   * created from this backup will have the same edition.
+   * Output only. Deprecated: Use `express_config` instead. Output only. The edition of the cluster
+   * this backup was created from. Any restored cluster created from this backup will have the same
+   * edition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +150,14 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String expiryTime;
+
+  /**
+   * Output only. The Express configuration of the cluster this backup was created from. Any
+   * restored cluster created from this backup will have the same Express configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExpressConfig expressConfig;
 
   /**
    * Labels as key value pairs
@@ -416,8 +425,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The edition of the cluster this backup was created from. Any restored cluster
-   * created from this backup will have the same edition.
+   * Output only. Deprecated: Use `express_config` instead. Output only. The edition of the cluster
+   * this backup was created from. Any restored cluster created from this backup will have the same
+   * edition.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -425,8 +435,9 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The edition of the cluster this backup was created from. Any restored cluster
-   * created from this backup will have the same edition.
+   * Output only. Deprecated: Use `express_config` instead. Output only. The edition of the cluster
+   * this backup was created from. Any restored cluster created from this backup will have the same
+   * edition.
    * @param edition edition or {@code null} for none
    */
   public Backup setEdition(java.lang.String edition) {
@@ -524,6 +535,25 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setExpiryTime(String expiryTime) {
     this.expiryTime = expiryTime;
+    return this;
+  }
+
+  /**
+   * Output only. The Express configuration of the cluster this backup was created from. Any
+   * restored cluster created from this backup will have the same Express configuration.
+   * @return value or {@code null} for none
+   */
+  public ExpressConfig getExpressConfig() {
+    return expressConfig;
+  }
+
+  /**
+   * Output only. The Express configuration of the cluster this backup was created from. Any
+   * restored cluster created from this backup will have the same Express configuration.
+   * @param expressConfig expressConfig or {@code null} for none
+   */
+  public Backup setExpressConfig(ExpressConfig expressConfig) {
+    this.expressConfig = expressConfig;
     return this;
   }
 

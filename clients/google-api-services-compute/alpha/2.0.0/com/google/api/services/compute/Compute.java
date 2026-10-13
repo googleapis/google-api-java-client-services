@@ -141763,262 +141763,6 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
-   * An accessor for creating requests from the OrgVmExtensionPolicies collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Compute compute = new Compute(...);}
-   *   {@code Compute.OrgVmExtensionPolicies.List request = compute.orgVmExtensionPolicies().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public OrgVmExtensionPolicies orgVmExtensionPolicies() {
-    return new OrgVmExtensionPolicies();
-  }
-
-  /**
-   * The "orgVmExtensionPolicies" collection of methods.
-   */
-  public class OrgVmExtensionPolicies {
-
-    /**
-     * Deletes a specified zone VM extension policy within an organization.
-     *
-     * Create a request for the method "orgVmExtensionPolicies.delete".
-     *
-     * This request holds the parameters needed by the compute server.  After setting any optional
-     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-     *
-     * @param organization Organization ID for this request.
-     * @param zone Name of the zone for this request.
-     * @param vmExtensionPolicy Name of the zone VM extension policy to delete.
-     * @return the request
-     */
-    public Delete delete(java.lang.String organization, java.lang.String zone, java.lang.String vmExtensionPolicy) throws java.io.IOException {
-      Delete result = new Delete(organization, zone, vmExtensionPolicy);
-      initialize(result);
-      return result;
-    }
-
-    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
-
-      private static final String REST_PATH = "{+organization}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}";
-
-      private final java.util.regex.Pattern ORGANIZATION_PATTERN =
-          java.util.regex.Pattern.compile("organizations/[0-9]{0,20}");
-
-      private final java.util.regex.Pattern ZONE_PATTERN =
-          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
-
-      /**
-       * Deletes a specified zone VM extension policy within an organization.
-       *
-       * Create a request for the method "orgVmExtensionPolicies.delete".
-       *
-       * This request holds the parameters needed by the the compute server.  After setting any optional
-       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
-       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param organization Organization ID for this request.
-       * @param zone Name of the zone for this request.
-       * @param vmExtensionPolicy Name of the zone VM extension policy to delete.
-       * @since 1.13
-       */
-      protected Delete(java.lang.String organization, java.lang.String zone, java.lang.String vmExtensionPolicy) {
-        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
-        this.organization = com.google.api.client.util.Preconditions.checkNotNull(organization, "Required parameter organization must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
-              "Parameter organization must conform to the pattern " +
-              "organizations/[0-9]{0,20}");
-        }
-        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
-              "Parameter zone must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
-        }
-        this.vmExtensionPolicy = com.google.api.client.util.Preconditions.checkNotNull(vmExtensionPolicy, "Required parameter vmExtensionPolicy must be specified.");
-      }
-
-      @Override
-      public Delete set$Xgafv(java.lang.String $Xgafv) {
-        return (Delete) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Delete setAccessToken(java.lang.String accessToken) {
-        return (Delete) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Delete setAlt(java.lang.String alt) {
-        return (Delete) super.setAlt(alt);
-      }
-
-      @Override
-      public Delete setCallback(java.lang.String callback) {
-        return (Delete) super.setCallback(callback);
-      }
-
-      @Override
-      public Delete setFields(java.lang.String fields) {
-        return (Delete) super.setFields(fields);
-      }
-
-      @Override
-      public Delete setKey(java.lang.String key) {
-        return (Delete) super.setKey(key);
-      }
-
-      @Override
-      public Delete setOauthToken(java.lang.String oauthToken) {
-        return (Delete) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Delete) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Delete setQuotaUser(java.lang.String quotaUser) {
-        return (Delete) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Delete setUploadType(java.lang.String uploadType) {
-        return (Delete) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Delete) super.setUploadProtocol(uploadProtocol);
-      }
-
-      @Override
-      public Delete setUserIp(java.lang.String userIp) {
-        return (Delete) super.setUserIp(userIp);
-      }
-
-      /** Organization ID for this request. */
-      @com.google.api.client.util.Key
-      private java.lang.String organization;
-
-      /** Organization ID for this request.
-       */
-      public java.lang.String getOrganization() {
-        return organization;
-      }
-
-      /** Organization ID for this request. */
-      public Delete setOrganization(java.lang.String organization) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
-              "Parameter organization must conform to the pattern " +
-              "organizations/[0-9]{0,20}");
-        }
-        this.organization = organization;
-        return this;
-      }
-
-      /** Name of the zone for this request. */
-      @com.google.api.client.util.Key
-      private java.lang.String zone;
-
-      /** Name of the zone for this request.
-       */
-      public java.lang.String getZone() {
-        return zone;
-      }
-
-      /** Name of the zone for this request. */
-      public Delete setZone(java.lang.String zone) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
-              "Parameter zone must conform to the pattern " +
-              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
-        }
-        this.zone = zone;
-        return this;
-      }
-
-      /** Name of the zone VM extension policy to delete. */
-      @com.google.api.client.util.Key
-      private java.lang.String vmExtensionPolicy;
-
-      /** Name of the zone VM extension policy to delete.
-       */
-      public java.lang.String getVmExtensionPolicy() {
-        return vmExtensionPolicy;
-      }
-
-      /** Name of the zone VM extension policy to delete. */
-      public Delete setVmExtensionPolicy(java.lang.String vmExtensionPolicy) {
-        this.vmExtensionPolicy = vmExtensionPolicy;
-        return this;
-      }
-
-      /**
-       * An optional request ID to identify requests. Specify a unique request ID so that if you
-       * must retry your request, the server will know to ignore the request if it has already been
-       * completed.
-       *
-       * For example, consider a situation where you make an initial request and the request times
-       * out. If you make the request again with the same request ID, the server can check if
-       * original operation with the same request ID was received, and if so, will ignore the second
-       * request. This prevents clients from accidentally creating duplicate commitments.
-       *
-       * The request ID must be a valid UUID with the exception that zero UUID is not supported
-       * (00000000-0000-0000-0000-000000000000).
-       */
-      @com.google.api.client.util.Key
-      private java.lang.String requestId;
-
-      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
-     your request, the server will know to ignore the request if it has already been completed.
-
-     For example, consider a situation where you make an initial request and the request times out. If
-     you make the request again with the same request ID, the server can check if original operation
-     with the same request ID was received, and if so, will ignore the second request. This prevents
-     clients from accidentally creating duplicate commitments.
-
-     The request ID must be a valid UUID with the exception that zero UUID is not supported
-     (00000000-0000-0000-0000-000000000000).
-       */
-      public java.lang.String getRequestId() {
-        return requestId;
-      }
-
-      /**
-       * An optional request ID to identify requests. Specify a unique request ID so that if you
-       * must retry your request, the server will know to ignore the request if it has already been
-       * completed.
-       *
-       * For example, consider a situation where you make an initial request and the request times
-       * out. If you make the request again with the same request ID, the server can check if
-       * original operation with the same request ID was received, and if so, will ignore the second
-       * request. This prevents clients from accidentally creating duplicate commitments.
-       *
-       * The request ID must be a valid UUID with the exception that zero UUID is not supported
-       * (00000000-0000-0000-0000-000000000000).
-       */
-      public Delete setRequestId(java.lang.String requestId) {
-        this.requestId = requestId;
-        return this;
-      }
-
-      @Override
-      public Delete set(String parameterName, Object value) {
-        return (Delete) super.set(parameterName, value);
-      }
-    }
-
-  }
-
-  /**
    * An accessor for creating requests from the OrganizationGlobalVmExtensionPolicies collection.
    *
    * <p>The typical use is:</p>
@@ -150893,6 +150637,239 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
    */
   public class OrganizationZoneVmExtensionPolicies {
 
+    /**
+     * Deletes a specified zone VM extension policy within an organization.
+     *
+     * Create a request for the method "organizationZoneVmExtensionPolicies.delete".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param organization Organization ID for this request.
+     * @param zone Name of the zone for this request.
+     * @param vmExtensionPolicy Name of the zone VM extension policy to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String organization, java.lang.String zone, java.lang.String vmExtensionPolicy) throws java.io.IOException {
+      Delete result = new Delete(organization, zone, vmExtensionPolicy);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+organization}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}";
+
+      private final java.util.regex.Pattern ORGANIZATION_PATTERN =
+          java.util.regex.Pattern.compile("organizations/[0-9]{0,20}");
+
+      private final java.util.regex.Pattern ZONE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Deletes a specified zone VM extension policy within an organization.
+       *
+       * Create a request for the method "organizationZoneVmExtensionPolicies.delete".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param organization Organization ID for this request.
+       * @param zone Name of the zone for this request.
+       * @param vmExtensionPolicy Name of the zone VM extension policy to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String organization, java.lang.String zone, java.lang.String vmExtensionPolicy) {
+        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.organization = com.google.api.client.util.Preconditions.checkNotNull(organization, "Required parameter organization must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
+              "Parameter organization must conform to the pattern " +
+              "organizations/[0-9]{0,20}");
+        }
+        this.zone = com.google.api.client.util.Preconditions.checkNotNull(zone, "Required parameter zone must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.vmExtensionPolicy = com.google.api.client.util.Preconditions.checkNotNull(vmExtensionPolicy, "Required parameter vmExtensionPolicy must be specified.");
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Organization ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String organization;
+
+      /** Organization ID for this request.
+       */
+      public java.lang.String getOrganization() {
+        return organization;
+      }
+
+      /** Organization ID for this request. */
+      public Delete setOrganization(java.lang.String organization) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ORGANIZATION_PATTERN.matcher(organization).matches(),
+              "Parameter organization must conform to the pattern " +
+              "organizations/[0-9]{0,20}");
+        }
+        this.organization = organization;
+        return this;
+      }
+
+      /** Name of the zone for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String zone;
+
+      /** Name of the zone for this request.
+       */
+      public java.lang.String getZone() {
+        return zone;
+      }
+
+      /** Name of the zone for this request. */
+      public Delete setZone(java.lang.String zone) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ZONE_PATTERN.matcher(zone).matches(),
+              "Parameter zone must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.zone = zone;
+        return this;
+      }
+
+      /** Name of the zone VM extension policy to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String vmExtensionPolicy;
+
+      /** Name of the zone VM extension policy to delete.
+       */
+      public java.lang.String getVmExtensionPolicy() {
+        return vmExtensionPolicy;
+      }
+
+      /** Name of the zone VM extension policy to delete. */
+      public Delete setVmExtensionPolicy(java.lang.String vmExtensionPolicy) {
+        this.vmExtensionPolicy = vmExtensionPolicy;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
     /**
      * Retrieves details of a specific zone VM extension policy within an organization.
      *

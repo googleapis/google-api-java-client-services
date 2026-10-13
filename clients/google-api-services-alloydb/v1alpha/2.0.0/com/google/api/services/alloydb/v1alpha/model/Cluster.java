@@ -138,8 +138,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String displayName;
 
   /**
-   * Optional. Edition of the cluster. If left unspecified, the cluster behaves as
-   * `EDITION_ALLOYDB`.
+   * Optional. Deprecated: Use `express_config` instead. Edition of the cluster. If left
+   * unspecified, the cluster behaves as `EDITION_ALLOYDB`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -615,8 +615,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Edition of the cluster. If left unspecified, the cluster behaves as
-   * `EDITION_ALLOYDB`.
+   * Optional. Deprecated: Use `express_config` instead. Edition of the cluster. If left
+   * unspecified, the cluster behaves as `EDITION_ALLOYDB`.
    * @return value or {@code null} for none
    */
   public java.lang.String getEdition() {
@@ -624,8 +624,8 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Edition of the cluster. If left unspecified, the cluster behaves as
-   * `EDITION_ALLOYDB`.
+   * Optional. Deprecated: Use `express_config` instead. Edition of the cluster. If left
+   * unspecified, the cluster behaves as `EDITION_ALLOYDB`.
    * @param edition edition or {@code null} for none
    */
   public Cluster setEdition(java.lang.String edition) {

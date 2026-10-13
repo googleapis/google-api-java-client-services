@@ -255,8 +255,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private PscInstanceInfo pscInstanceInfo;
 
   /**
-   * Output only. The public IP addresses for the Instance. This is available ONLY when
-   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * Output only. The public IP address for the Instance. This is available ONLY when
+   * `enable_public_ip` is set or when you have upgraded from an Express Instance that has public
+   * DNS enabled. This field is not available for Express Instances. This is the connection endpoint
+   * for an end-user application.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -870,8 +872,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The public IP addresses for the Instance. This is available ONLY when
-   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * Output only. The public IP address for the Instance. This is available ONLY when
+   * `enable_public_ip` is set or when you have upgraded from an Express Instance that has public
+   * DNS enabled. This field is not available for Express Instances. This is the connection endpoint
+   * for an end-user application.
    * @return value or {@code null} for none
    */
   public java.lang.String getPublicIpAddress() {
@@ -879,8 +883,10 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The public IP addresses for the Instance. This is available ONLY when
-   * enable_public_ip is set. This is the connection endpoint for an end-user application.
+   * Output only. The public IP address for the Instance. This is available ONLY when
+   * `enable_public_ip` is set or when you have upgraded from an Express Instance that has public
+   * DNS enabled. This field is not available for Express Instances. This is the connection endpoint
+   * for an end-user application.
    * @param publicIpAddress publicIpAddress or {@code null} for none
    */
   public Instance setPublicIpAddress(java.lang.String publicIpAddress) {

@@ -37,6 +37,13 @@ public final class PreCheckMajorVersionUpgradeContext extends com.google.api.cli
   private java.lang.String kind;
 
   /**
+   * Optional. The maximum allowed runtime for the precheck operation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String maxRuntime;
+
+  /**
    * Output only. The responses from the precheck operation.
    * The value may be {@code null}.
    */
@@ -64,6 +71,23 @@ public final class PreCheckMajorVersionUpgradeContext extends com.google.api.cli
    */
   public PreCheckMajorVersionUpgradeContext setKind(java.lang.String kind) {
     this.kind = kind;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum allowed runtime for the precheck operation.
+   * @return value or {@code null} for none
+   */
+  public String getMaxRuntime() {
+    return maxRuntime;
+  }
+
+  /**
+   * Optional. The maximum allowed runtime for the precheck operation.
+   * @param maxRuntime maxRuntime or {@code null} for none
+   */
+  public PreCheckMajorVersionUpgradeContext setMaxRuntime(String maxRuntime) {
+    this.maxRuntime = maxRuntime;
     return this;
   }
 

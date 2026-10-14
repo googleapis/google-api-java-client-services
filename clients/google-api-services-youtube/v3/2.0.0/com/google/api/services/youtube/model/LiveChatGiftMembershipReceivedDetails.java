@@ -31,7 +31,7 @@ public final class LiveChatGiftMembershipReceivedDetails extends com.google.api.
 
   /**
    * The ID of the membership gifting message that is related to this gift membership. This ID will
-   * always refer to a message whose type is 'membershipGiftingEvent'.
+   * always refer to a message whose type is `membershipGiftingEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class LiveChatGiftMembershipReceivedDetails extends com.google.api.
 
   /**
    * The ID of the membership gifting message that is related to this gift membership. This ID will
-   * always refer to a message whose type is 'membershipGiftingEvent'.
+   * always refer to a message whose type is `membershipGiftingEvent`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAssociatedMembershipGiftingMessageId() {
@@ -66,7 +66,7 @@ public final class LiveChatGiftMembershipReceivedDetails extends com.google.api.
 
   /**
    * The ID of the membership gifting message that is related to this gift membership. This ID will
-   * always refer to a message whose type is 'membershipGiftingEvent'.
+   * always refer to a message whose type is `membershipGiftingEvent`.
    * @param associatedMembershipGiftingMessageId associatedMembershipGiftingMessageId or {@code null} for none
    */
   public LiveChatGiftMembershipReceivedDetails setAssociatedMembershipGiftingMessageId(java.lang.String associatedMembershipGiftingMessageId) {

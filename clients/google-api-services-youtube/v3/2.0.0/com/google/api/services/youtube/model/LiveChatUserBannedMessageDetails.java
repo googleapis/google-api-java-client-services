@@ -30,7 +30,7 @@ package com.google.api.services.youtube.model;
 public final class LiveChatUserBannedMessageDetails extends com.google.api.client.json.GenericJson {
 
   /**
-   * The duration of the ban. This property is only present if the banType is temporary.
+   * The duration of the ban. This property is only present if the `banType` is `temporary`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -51,7 +51,7 @@ public final class LiveChatUserBannedMessageDetails extends com.google.api.clien
   private ChannelProfileDetails bannedUserDetails;
 
   /**
-   * The duration of the ban. This property is only present if the banType is temporary.
+   * The duration of the ban. This property is only present if the `banType` is `temporary`.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getBanDurationSeconds() {
@@ -59,7 +59,7 @@ public final class LiveChatUserBannedMessageDetails extends com.google.api.clien
   }
 
   /**
-   * The duration of the ban. This property is only present if the banType is temporary.
+   * The duration of the ban. This property is only present if the `banType` is `temporary`.
    * @param banDurationSeconds banDurationSeconds or {@code null} for none
    */
   public LiveChatUserBannedMessageDetails setBanDurationSeconds(java.math.BigInteger banDurationSeconds) {

@@ -64,7 +64,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#liveChatMessageListResponse".
+   * `"youtube#liveChatMessageListResponse"`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   private TokenPagination tokenPagination;
 
   /**
-   * The visitorId identifies the visitor.
+   * Identifies the visitor.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -178,7 +178,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#liveChatMessageListResponse".
+   * `"youtube#liveChatMessageListResponse"`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKind() {
@@ -187,7 +187,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
 
   /**
    * Identifies what kind of resource this is. Value: the fixed string
-   * "youtube#liveChatMessageListResponse".
+   * `"youtube#liveChatMessageListResponse"`.
    * @param kind kind or {@code null} for none
    */
   public LiveChatMessageListResponse setKind(java.lang.String kind) {
@@ -277,7 +277,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * The visitorId identifies the visitor.
+   * Identifies the visitor.
    * @return value or {@code null} for none
    */
   public java.lang.String getVisitorId() {
@@ -285,7 +285,7 @@ public final class LiveChatMessageListResponse extends com.google.api.client.jso
   }
 
   /**
-   * The visitorId identifies the visitor.
+   * Identifies the visitor.
    * @param visitorId visitorId or {@code null} for none
    */
   public LiveChatMessageListResponse setVisitorId(java.lang.String visitorId) {

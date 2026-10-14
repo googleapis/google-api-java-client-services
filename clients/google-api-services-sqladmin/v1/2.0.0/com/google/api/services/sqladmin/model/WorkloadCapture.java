@@ -30,6 +30,13 @@ package com.google.api.services.sqladmin.model;
 public final class WorkloadCapture extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The base backup ID associated with the workload capture.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String backupId;
+
+  /**
    * Output only. The end time of the workload capture.
    * The value may be {@code null}.
    */
@@ -77,6 +84,23 @@ public final class WorkloadCapture extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.lang.String workloadId;
+
+  /**
+   * Output only. The base backup ID associated with the workload capture.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBackupId() {
+    return backupId;
+  }
+
+  /**
+   * Output only. The base backup ID associated with the workload capture.
+   * @param backupId backupId or {@code null} for none
+   */
+  public WorkloadCapture setBackupId(java.lang.String backupId) {
+    this.backupId = backupId;
+    return this;
+  }
 
   /**
    * Output only. The end time of the workload capture.

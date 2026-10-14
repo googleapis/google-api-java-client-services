@@ -30,6 +30,14 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class GitRemoteSettings extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Resource name for the Account Connector used for personal authentication. Must be in
+   * the format `projects/locations/accountConnectors`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String accountConnector;
+
+  /**
    * Optional. The name of the Secret Manager secret version to use as an authentication token for
    * Git operations. Must be in the format `projects/secrets/versions`.
    * The value may be {@code null}.
@@ -82,6 +90,25 @@ public final class GitRemoteSettings extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String url;
+
+  /**
+   * Optional. Resource name for the Account Connector used for personal authentication. Must be in
+   * the format `projects/locations/accountConnectors`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAccountConnector() {
+    return accountConnector;
+  }
+
+  /**
+   * Optional. Resource name for the Account Connector used for personal authentication. Must be in
+   * the format `projects/locations/accountConnectors`
+   * @param accountConnector accountConnector or {@code null} for none
+   */
+  public GitRemoteSettings setAccountConnector(java.lang.String accountConnector) {
+    this.accountConnector = accountConnector;
+    return this;
+  }
 
   /**
    * Optional. The name of the Secret Manager secret version to use as an authentication token for

@@ -39,6 +39,13 @@ public final class ReportGroup extends com.google.api.client.json.GenericJson {
   private Browser browser;
 
   /**
+   * Custom attribute metrics group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CustomAttribute customAttribute;
+
+  /**
    * Device metrics group.
    * The value may be {@code null}.
    */
@@ -116,6 +123,23 @@ public final class ReportGroup extends com.google.api.client.json.GenericJson {
    */
   public ReportGroup setBrowser(Browser browser) {
     this.browser = browser;
+    return this;
+  }
+
+  /**
+   * Custom attribute metrics group.
+   * @return value or {@code null} for none
+   */
+  public CustomAttribute getCustomAttribute() {
+    return customAttribute;
+  }
+
+  /**
+   * Custom attribute metrics group.
+   * @param customAttribute customAttribute or {@code null} for none
+   */
+  public ReportGroup setCustomAttribute(CustomAttribute customAttribute) {
+    this.customAttribute = customAttribute;
     return this;
   }
 

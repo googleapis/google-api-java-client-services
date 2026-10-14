@@ -31,6 +31,19 @@ package com.google.api.services.ondemandscanning.v1.model;
 public final class LayerDetails extends com.google.api.client.json.GenericJson {
 
   /**
+   * Attributes attached to this layer by plugins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<LayerAttribute> attributes;
+
+  static {
+    // hack to force ProGuard to consider LayerAttribute used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(LayerAttribute.class);
+  }
+
+  /**
    * The base images the layer is found within.
    * The value may be {@code null}.
    */
@@ -72,6 +85,23 @@ public final class LayerDetails extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.Integer index;
+
+  /**
+   * Attributes attached to this layer by plugins.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<LayerAttribute> getAttributes() {
+    return attributes;
+  }
+
+  /**
+   * Attributes attached to this layer by plugins.
+   * @param attributes attributes or {@code null} for none
+   */
+  public LayerDetails setAttributes(java.util.List<LayerAttribute> attributes) {
+    this.attributes = attributes;
+    return this;
+  }
 
   /**
    * The base images the layer is found within.

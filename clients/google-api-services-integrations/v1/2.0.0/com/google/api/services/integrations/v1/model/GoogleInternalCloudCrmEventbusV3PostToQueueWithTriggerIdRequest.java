@@ -121,9 +121,10 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
   private java.lang.String userGeneratedExecutionId;
 
   /**
-   * Optional. Pins the enqueue to this exact version rather than the ACTIVE one on the trigger, so
-   * an unpublished draft can be tested. Requires client_id, and the version is validated before it
-   * is enqueued; see integrationplatform/api/executionsservice/README.md.
+   * Optional. Pins the enqueue to this exact version. Requires client_id, and only an ACTIVE
+   * version is accepted: the drain re-resolves by trigger id, so nothing else could run. Unset by
+   * every caller today; draft support is b/570602030. See
+   * integrationplatform/api/executionsservice/README.md.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -350,9 +351,10 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
   }
 
   /**
-   * Optional. Pins the enqueue to this exact version rather than the ACTIVE one on the trigger, so
-   * an unpublished draft can be tested. Requires client_id, and the version is validated before it
-   * is enqueued; see integrationplatform/api/executionsservice/README.md.
+   * Optional. Pins the enqueue to this exact version. Requires client_id, and only an ACTIVE
+   * version is accepted: the drain re-resolves by trigger id, so nothing else could run. Unset by
+   * every caller today; draft support is b/570602030. See
+   * integrationplatform/api/executionsservice/README.md.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkflowId() {
@@ -360,9 +362,10 @@ public final class GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdReque
   }
 
   /**
-   * Optional. Pins the enqueue to this exact version rather than the ACTIVE one on the trigger, so
-   * an unpublished draft can be tested. Requires client_id, and the version is validated before it
-   * is enqueued; see integrationplatform/api/executionsservice/README.md.
+   * Optional. Pins the enqueue to this exact version. Requires client_id, and only an ACTIVE
+   * version is accepted: the drain re-resolves by trigger id, so nothing else could run. Unset by
+   * every caller today; draft support is b/570602030. See
+   * integrationplatform/api/executionsservice/README.md.
    * @param workflowId workflowId or {@code null} for none
    */
   public GoogleInternalCloudCrmEventbusV3PostToQueueWithTriggerIdRequest setWorkflowId(java.lang.String workflowId) {

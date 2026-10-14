@@ -31,8 +31,7 @@ package com.google.api.services.dataform.v1beta1.model;
 public final class InvocationConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Configuration for end user authentication. Note that this should not be set when
-   * `service_account` is used.
+   * Optional. Configuration for end user authentication. Do not set if `service_account` is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,8 +95,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   private java.lang.Boolean transitiveDependentsIncluded;
 
   /**
-   * Optional. Configuration for end user authentication. Note that this should not be set when
-   * `service_account` is used.
+   * Optional. Configuration for end user authentication. Do not set if `service_account` is used.
    * @return value or {@code null} for none
    */
   public EndUserAuthenticationConfig getEndUserAuthConfig() {
@@ -105,8 +103,7 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Configuration for end user authentication. Note that this should not be set when
-   * `service_account` is used.
+   * Optional. Configuration for end user authentication. Do not set if `service_account` is used.
    * @param endUserAuthConfig endUserAuthConfig or {@code null} for none
    */
   public InvocationConfig setEndUserAuthConfig(EndUserAuthenticationConfig endUserAuthConfig) {

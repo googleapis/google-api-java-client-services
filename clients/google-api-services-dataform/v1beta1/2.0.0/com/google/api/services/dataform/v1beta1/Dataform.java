@@ -10961,6 +10961,197 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Fetches a Workspace's history of commits.
+           *
+           * Create a request for the method "workspaces.fetchHistory".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link FetchHistory#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The workspace's name.
+           * @return the request
+           */
+          public FetchHistory fetchHistory(java.lang.String name) throws java.io.IOException {
+            FetchHistory result = new FetchHistory(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchHistory extends DataformRequest<com.google.api.services.dataform.v1beta1.model.FetchWorkspaceHistoryResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}:fetchHistory";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+
+            /**
+             * Fetches a Workspace's history of commits.
+             *
+             * Create a request for the method "workspaces.fetchHistory".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link FetchHistory#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * FetchHistory#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The workspace's name.
+             * @since 1.13
+             */
+            protected FetchHistory(java.lang.String name) {
+              super(Dataform.this, "GET", REST_PATH, null, com.google.api.services.dataform.v1beta1.model.FetchWorkspaceHistoryResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchHistory set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchHistory) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchHistory setAccessToken(java.lang.String accessToken) {
+              return (FetchHistory) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchHistory setAlt(java.lang.String alt) {
+              return (FetchHistory) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchHistory setCallback(java.lang.String callback) {
+              return (FetchHistory) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchHistory setFields(java.lang.String fields) {
+              return (FetchHistory) super.setFields(fields);
+            }
+
+            @Override
+            public FetchHistory setKey(java.lang.String key) {
+              return (FetchHistory) super.setKey(key);
+            }
+
+            @Override
+            public FetchHistory setOauthToken(java.lang.String oauthToken) {
+              return (FetchHistory) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchHistory setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchHistory) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchHistory setQuotaUser(java.lang.String quotaUser) {
+              return (FetchHistory) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchHistory setUploadType(java.lang.String uploadType) {
+              return (FetchHistory) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchHistory setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchHistory) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The workspace's name. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The workspace's name.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The workspace's name. */
+            public FetchHistory setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+/workspaces/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of commits to return. The server may return fewer items than
+             * requested. If unspecified, the server will pick an appropriate default.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of commits to return. The server may return fewer items than requested. If
+           unspecified, the server will pick an appropriate default.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of commits to return. The server may return fewer items than
+             * requested. If unspecified, the server will pick an appropriate default.
+             */
+            public FetchHistory setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. Page token received from a previous `FetchWorkspaceHistory` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `FetchWorkspaceHistory`, with the exception of `page_size`, must match the call
+             * that provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page token received from a previous `FetchWorkspaceHistory` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `FetchWorkspaceHistory`, with the exception of `page_size`, must match the call that provided the
+           page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. Page token received from a previous `FetchWorkspaceHistory` call. Provide
+             * this to retrieve the subsequent page. When paginating, all other parameters provided
+             * to `FetchWorkspaceHistory`, with the exception of `page_size`, must match the call
+             * that provided the page token.
+             */
+            public FetchHistory setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public FetchHistory set(String parameterName, Object value) {
+              return (FetchHistory) super.set(parameterName, value);
+            }
+          }
+          /**
            * Fetches a single Workspace.
            *
            * Create a request for the method "workspaces.get".

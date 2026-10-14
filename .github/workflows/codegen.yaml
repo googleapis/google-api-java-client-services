@@ -1,3 +1,6 @@
+permissions:
+  contents: read
+
 on:
   schedule:
   # Runs daily at 00:18 UTC.
@@ -7,19 +10,21 @@ on:
 name: codegen
 jobs:
   discovery:
-    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master
+    uses: googleapis/discovery-artifact-manager/.github/workflows/list-services.yml@master # zizmor: ignore[unpinned-uses]
   batch:
     runs-on: 'ubuntu-24.04'
     needs: discovery
     outputs:
       batches: ${{ steps.chunk.outputs.result }}
     steps:
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@211cb3fefb35a799baa5156f9321bb774fe56294 # v5
         id: chunk
+        env:
+          SERVICES_LIST: ${{ needs.discovery.outputs.services }}
         with:
           script: |
             console.log('splitting service names list into batches')
-            const services = ${{ needs.discovery.outputs.services }}
+            const services = JSON.parse(process.env.SERVICES_LIST)
             const excludedServices = ['contentwarehouse']
             const filteredServices = services.filter(service => !excludedServices.includes(service))
             const MAX_BATCH_SIZE = 100
@@ -34,7 +39,7 @@ jobs:
               indices
             }
   generate:
-    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main
+    uses: googleapis/google-api-java-client-services/.github/workflows/generate.yaml@main # zizmor: ignore[unpinned-uses]
     needs: batch
     secrets: inherit
     strategy:

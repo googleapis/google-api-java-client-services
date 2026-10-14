@@ -53,14 +53,14 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private java.lang.String displayMessage;
 
   /**
-   * Details about the funding event, this is only set if the type is 'fanFundingEvent'.
+   * Details about the funding event, this is only set if the type is `fanFundingEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LiveChatFanFundingEventDetails fanFundingEventDetails;
 
   /**
-   * Details about the gift event, this is only set if the type is 'giftEvent'.
+   * Details about the gift event, this is only set if the type is `giftEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Gift Membership Received event, this is only set if the type is
-   * 'giftMembershipReceivedEvent'.
+   * `giftMembershipReceivedEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +89,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Member Milestone Chat event, this is only set if the type is
-   * 'memberMilestoneChatEvent'.
+   * `memberMilestoneChatEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -97,7 +97,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Membership Gifting event, this is only set if the type is
-   * 'membershipGiftingEvent'.
+   * `membershipGiftingEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,14 +117,14 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the New Member Announcement event, this is only set if the type is
-   * 'newSponsorEvent'. Please note that "member" is the new term for "sponsor".
+   * `newSponsorEvent`. The term "member" replaces "sponsor".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LiveChatNewSponsorDetails newSponsorDetails;
 
   /**
-   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   * Details about the poll event, this is only set if the type is `pollEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -138,21 +138,21 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   private com.google.api.client.util.DateTime publishedAt;
 
   /**
-   * Details about the Super Chat event, this is only set if the type is 'superChatEvent'.
+   * Details about the Super Chat event, this is only set if the type is `superChatEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LiveChatSuperChatDetails superChatDetails;
 
   /**
-   * Details about the Super Sticker event, this is only set if the type is 'superStickerEvent'.
+   * Details about the Super Sticker event, this is only set if the type is `superStickerEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private LiveChatSuperStickerDetails superStickerDetails;
 
   /**
-   * Details about the text message, this is only set if the type is 'textMessageEvent'.
+   * Details about the text message, this is only set if the type is `textMessageEvent`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -225,7 +225,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the funding event, this is only set if the type is 'fanFundingEvent'.
+   * Details about the funding event, this is only set if the type is `fanFundingEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatFanFundingEventDetails getFanFundingEventDetails() {
@@ -233,7 +233,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the funding event, this is only set if the type is 'fanFundingEvent'.
+   * Details about the funding event, this is only set if the type is `fanFundingEvent`.
    * @param fanFundingEventDetails fanFundingEventDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setFanFundingEventDetails(LiveChatFanFundingEventDetails fanFundingEventDetails) {
@@ -242,7 +242,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the gift event, this is only set if the type is 'giftEvent'.
+   * Details about the gift event, this is only set if the type is `giftEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatGiftDetails getGiftDetails() {
@@ -250,7 +250,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the gift event, this is only set if the type is 'giftEvent'.
+   * Details about the gift event, this is only set if the type is `giftEvent`.
    * @param giftDetails giftDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setGiftDetails(LiveChatGiftDetails giftDetails) {
@@ -260,7 +260,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Gift Membership Received event, this is only set if the type is
-   * 'giftMembershipReceivedEvent'.
+   * `giftMembershipReceivedEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatGiftMembershipReceivedDetails getGiftMembershipReceivedDetails() {
@@ -269,7 +269,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Gift Membership Received event, this is only set if the type is
-   * 'giftMembershipReceivedEvent'.
+   * `giftMembershipReceivedEvent`.
    * @param giftMembershipReceivedDetails giftMembershipReceivedDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setGiftMembershipReceivedDetails(LiveChatGiftMembershipReceivedDetails giftMembershipReceivedDetails) {
@@ -311,7 +311,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Member Milestone Chat event, this is only set if the type is
-   * 'memberMilestoneChatEvent'.
+   * `memberMilestoneChatEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatMemberMilestoneChatDetails getMemberMilestoneChatDetails() {
@@ -320,7 +320,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Member Milestone Chat event, this is only set if the type is
-   * 'memberMilestoneChatEvent'.
+   * `memberMilestoneChatEvent`.
    * @param memberMilestoneChatDetails memberMilestoneChatDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setMemberMilestoneChatDetails(LiveChatMemberMilestoneChatDetails memberMilestoneChatDetails) {
@@ -330,7 +330,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Membership Gifting event, this is only set if the type is
-   * 'membershipGiftingEvent'.
+   * `membershipGiftingEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatMembershipGiftingDetails getMembershipGiftingDetails() {
@@ -339,7 +339,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the Membership Gifting event, this is only set if the type is
-   * 'membershipGiftingEvent'.
+   * `membershipGiftingEvent`.
    * @param membershipGiftingDetails membershipGiftingDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setMembershipGiftingDetails(LiveChatMembershipGiftingDetails membershipGiftingDetails) {
@@ -379,7 +379,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the New Member Announcement event, this is only set if the type is
-   * 'newSponsorEvent'. Please note that "member" is the new term for "sponsor".
+   * `newSponsorEvent`. The term "member" replaces "sponsor".
    * @return value or {@code null} for none
    */
   public LiveChatNewSponsorDetails getNewSponsorDetails() {
@@ -388,7 +388,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
 
   /**
    * Details about the New Member Announcement event, this is only set if the type is
-   * 'newSponsorEvent'. Please note that "member" is the new term for "sponsor".
+   * `newSponsorEvent`. The term "member" replaces "sponsor".
    * @param newSponsorDetails newSponsorDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setNewSponsorDetails(LiveChatNewSponsorDetails newSponsorDetails) {
@@ -397,7 +397,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   * Details about the poll event, this is only set if the type is `pollEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatPollDetails getPollDetails() {
@@ -405,7 +405,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the poll event, this is only set if the type is 'pollEvent'.
+   * Details about the poll event, this is only set if the type is `pollEvent`.
    * @param pollDetails pollDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setPollDetails(LiveChatPollDetails pollDetails) {
@@ -431,7 +431,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the Super Chat event, this is only set if the type is 'superChatEvent'.
+   * Details about the Super Chat event, this is only set if the type is `superChatEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatSuperChatDetails getSuperChatDetails() {
@@ -439,7 +439,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the Super Chat event, this is only set if the type is 'superChatEvent'.
+   * Details about the Super Chat event, this is only set if the type is `superChatEvent`.
    * @param superChatDetails superChatDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setSuperChatDetails(LiveChatSuperChatDetails superChatDetails) {
@@ -448,7 +448,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the Super Sticker event, this is only set if the type is 'superStickerEvent'.
+   * Details about the Super Sticker event, this is only set if the type is `superStickerEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatSuperStickerDetails getSuperStickerDetails() {
@@ -456,7 +456,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the Super Sticker event, this is only set if the type is 'superStickerEvent'.
+   * Details about the Super Sticker event, this is only set if the type is `superStickerEvent`.
    * @param superStickerDetails superStickerDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setSuperStickerDetails(LiveChatSuperStickerDetails superStickerDetails) {
@@ -465,7 +465,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the text message, this is only set if the type is 'textMessageEvent'.
+   * Details about the text message, this is only set if the type is `textMessageEvent`.
    * @return value or {@code null} for none
    */
   public LiveChatTextMessageDetails getTextMessageDetails() {
@@ -473,7 +473,7 @@ public final class LiveChatMessageSnippet extends com.google.api.client.json.Gen
   }
 
   /**
-   * Details about the text message, this is only set if the type is 'textMessageEvent'.
+   * Details about the text message, this is only set if the type is `textMessageEvent`.
    * @param textMessageDetails textMessageDetails or {@code null} for none
    */
   public LiveChatMessageSnippet setTextMessageDetails(LiveChatTextMessageDetails textMessageDetails) {

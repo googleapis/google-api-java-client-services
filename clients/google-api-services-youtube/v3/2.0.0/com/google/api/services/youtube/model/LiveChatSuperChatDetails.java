@@ -52,7 +52,7 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
 
   /**
    * The tier in which the amount belongs. Lower amounts belong to lower tiers. The lowest tier is
-   * 1.
+   * `1`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,7 +118,7 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
 
   /**
    * The tier in which the amount belongs. Lower amounts belong to lower tiers. The lowest tier is
-   * 1.
+   * `1`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getTier() {
@@ -127,7 +127,7 @@ public final class LiveChatSuperChatDetails extends com.google.api.client.json.G
 
   /**
    * The tier in which the amount belongs. Lower amounts belong to lower tiers. The lowest tier is
-   * 1.
+   * `1`.
    * @param tier tier or {@code null} for none
    */
   public LiveChatSuperChatDetails setTier(java.lang.Long tier) {

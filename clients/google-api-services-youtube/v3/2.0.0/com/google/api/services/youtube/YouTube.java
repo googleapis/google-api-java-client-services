@@ -7468,7 +7468,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
   public class LiveChatMessages {
 
     /**
-     * Deletes a chat message.
+     * Deletes a chat message. A call to this method has a quota cost of 20 units.
      *
      * Create a request for the method "liveChatMessages.delete".
      *
@@ -7489,7 +7489,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "youtube/v3/liveChat/messages";
 
       /**
-       * Deletes a chat message.
+       * Deletes a chat message. A call to this method has a quota cost of 20 units.
        *
        * Create a request for the method "liveChatMessages.delete".
        *
@@ -7582,16 +7582,16 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Inserts a new resource into this collection.
+     * Inserts a new resource into this collection. A call to this method has a quota cost of 20 units.
      *
      * Create a request for the method "liveChatMessages.insert".
      *
      * This request holds the parameters needed by the youtube server.  After setting any optional
      * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
      *
-     * @param part The *part* parameter serves two purposes. It identifies the properties that the write operation will
-     *        set as well as the properties that the API response will include. Set the parameter value
-     *        to snippet.
+     * @param part The `part` parameter serves two purposes. It identifies the properties that the write operation sets
+     *        as well as the properties that the API response includes. Set the parameter value to
+     *        `snippet`.
      * @param content the {@link com.google.api.services.youtube.model.LiveChatMessage}
      * @return the request
      */
@@ -7606,7 +7606,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "youtube/v3/liveChat/messages";
 
       /**
-       * Inserts a new resource into this collection.
+       * Inserts a new resource into this collection. A call to this method has a quota cost of 20
+       * units.
        *
        * Create a request for the method "liveChatMessages.insert".
        *
@@ -7615,9 +7616,9 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param part The *part* parameter serves two purposes. It identifies the properties that the write operation will
-     *        set as well as the properties that the API response will include. Set the parameter value
-     *        to snippet.
+       * @param part The `part` parameter serves two purposes. It identifies the properties that the write operation sets
+     *        as well as the properties that the API response includes. Set the parameter value to
+     *        `snippet`.
        * @param content the {@link com.google.api.services.youtube.model.LiveChatMessage}
        * @since 1.13
        */
@@ -7682,25 +7683,25 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * The *part* parameter serves two purposes. It identifies the properties that the write
-       * operation will set as well as the properties that the API response will include. Set the
-       * parameter value to snippet.
+       * The `part` parameter serves two purposes. It identifies the properties that the write
+       * operation sets as well as the properties that the API response includes. Set the parameter
+       * value to `snippet`.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> part;
 
-      /** The *part* parameter serves two purposes. It identifies the properties that the write operation
-     will set as well as the properties that the API response will include. Set the parameter value to
-     snippet.
+      /** The `part` parameter serves two purposes. It identifies the properties that the write operation
+     sets as well as the properties that the API response includes. Set the parameter value to
+     `snippet`.
        */
       public java.util.List<java.lang.String> getPart() {
         return part;
       }
 
       /**
-       * The *part* parameter serves two purposes. It identifies the properties that the write
-       * operation will set as well as the properties that the API response will include. Set the
-       * parameter value to snippet.
+       * The `part` parameter serves two purposes. It identifies the properties that the write
+       * operation sets as well as the properties that the API response includes. Set the parameter
+       * value to `snippet`.
        */
       public Insert setPart(java.util.List<java.lang.String> part) {
         this.part = part;
@@ -7713,16 +7714,17 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Retrieves a list of resources, possibly filtered.
+     * Retrieves a list of resources, possibly filtered. A call to this method has a quota cost of 5
+     * units.
      *
      * Create a request for the method "liveChatMessages.list".
      *
      * This request holds the parameters needed by the youtube server.  After setting any optional
      * parameters, call the {@link List#execute()} method to invoke the remote operation.
      *
-     * @param liveChatId The id of the live chat for which comments should be returned.
-     * @param part The *part* parameter specifies the liveChatComment resource parts that the API response will
-     *        include. Supported values are id, snippet, and authorDetails.
+     * @param liveChatId The ID of the live chat for which messages should be returned.
+     * @param part The `part` parameter specifies the `liveChatMessage` resource parts that the API response includes.
+     *        Supported values are `id`, `snippet`, and `authorDetails`.
      * @return the request
      */
     public List list(java.lang.String liveChatId, java.util.List<java.lang.String> part) throws java.io.IOException {
@@ -7736,7 +7738,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "youtube/v3/liveChat/messages";
 
       /**
-       * Retrieves a list of resources, possibly filtered.
+       * Retrieves a list of resources, possibly filtered. A call to this method has a quota cost of 5
+       * units.
        *
        * Create a request for the method "liveChatMessages.list".
        *
@@ -7745,9 +7748,9 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
        * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param liveChatId The id of the live chat for which comments should be returned.
-       * @param part The *part* parameter specifies the liveChatComment resource parts that the API response will
-     *        include. Supported values are id, snippet, and authorDetails.
+       * @param liveChatId The ID of the live chat for which messages should be returned.
+       * @param part The `part` parameter specifies the `liveChatMessage` resource parts that the API response includes.
+     *        Supported values are `id`, `snippet`, and `authorDetails`.
        * @since 1.13
        */
       protected List(java.lang.String liveChatId, java.util.List<java.lang.String> part) {
@@ -7821,39 +7824,39 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The id of the live chat for which comments should be returned. */
+      /** The ID of the live chat for which messages should be returned. */
       @com.google.api.client.util.Key
       private java.lang.String liveChatId;
 
-      /** The id of the live chat for which comments should be returned.
+      /** The ID of the live chat for which messages should be returned.
        */
       public java.lang.String getLiveChatId() {
         return liveChatId;
       }
 
-      /** The id of the live chat for which comments should be returned. */
+      /** The ID of the live chat for which messages should be returned. */
       public List setLiveChatId(java.lang.String liveChatId) {
         this.liveChatId = liveChatId;
         return this;
       }
 
       /**
-       * The *part* parameter specifies the liveChatComment resource parts that the API response
-       * will include. Supported values are id, snippet, and authorDetails.
+       * The `part` parameter specifies the `liveChatMessage` resource parts that the API response
+       * includes. Supported values are `id`, `snippet`, and `authorDetails`.
        */
       @com.google.api.client.util.Key
       private java.util.List<java.lang.String> part;
 
-      /** The *part* parameter specifies the liveChatComment resource parts that the API response will
-     include. Supported values are id, snippet, and authorDetails.
+      /** The `part` parameter specifies the `liveChatMessage` resource parts that the API response includes.
+     Supported values are `id`, `snippet`, and `authorDetails`.
        */
       public java.util.List<java.lang.String> getPart() {
         return part;
       }
 
       /**
-       * The *part* parameter specifies the liveChatComment resource parts that the API response
-       * will include. Supported values are id, snippet, and authorDetails.
+       * The `part` parameter specifies the `liveChatMessage` resource parts that the API response
+       * includes. Supported values are `id`, `snippet`, and `authorDetails`.
        */
       public List setPart(java.util.List<java.lang.String> part) {
         this.part = part;
@@ -7877,13 +7880,13 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * The *maxResults* parameter specifies the maximum number of items that should be returned in
+       * The `maxResults` parameter specifies the maximum number of items that should be returned in
        * the result set. Not used in the streaming RPC.
        */
       @com.google.api.client.util.Key
       private java.lang.Long maxResults;
 
-      /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
+      /** The `maxResults` parameter specifies the maximum number of items that should be returned in the
      result set. Not used in the streaming RPC. [default: 500] [minimum: 200] [maximum: 2000]
        */
       public java.lang.Long getMaxResults() {
@@ -7891,7 +7894,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * The *maxResults* parameter specifies the maximum number of items that should be returned in
+       * The `maxResults` parameter specifies the maximum number of items that should be returned in
        * the result set. Not used in the streaming RPC.
        */
       public List setMaxResults(java.lang.Long maxResults) {
@@ -7900,24 +7903,24 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
 
       /**
-       * The *pageToken* parameter identifies a specific page in the result set that should be
-       * returned. In an API response, the nextPageToken property identify other pages that could be
-       * retrieved.
+       * The `pageToken` parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the `nextPageToken` property identifies other pages that
+       * could be retrieved.
        */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** The *pageToken* parameter identifies a specific page in the result set that should be returned. In
-     an API response, the nextPageToken property identify other pages that could be retrieved.
+      /** The `pageToken` parameter identifies a specific page in the result set that should be returned. In
+     an API response, the `nextPageToken` property identifies other pages that could be retrieved.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
       /**
-       * The *pageToken* parameter identifies a specific page in the result set that should be
-       * returned. In an API response, the nextPageToken property identify other pages that could be
-       * retrieved.
+       * The `pageToken` parameter identifies a specific page in the result set that should be
+       * returned. In an API response, the `nextPageToken` property identifies other pages that
+       * could be retrieved.
        */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
@@ -7948,7 +7951,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Transition a durable chat event.
+     * Transitions a durable chat event. A call to this method has a quota cost of 20 units.
      *
      * Create a request for the method "liveChatMessages.transition".
      *
@@ -7968,7 +7971,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "youtube/v3/liveChat/messages/transition";
 
       /**
-       * Transition a durable chat event.
+       * Transitions a durable chat event. A call to this method has a quota cost of 20 units.
        *
        * Create a request for the method "liveChatMessages.transition".
        *
@@ -8039,17 +8042,17 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         return (Transition) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** The ID that uniquely identify the chat message event to transition. */
+      /** The ID that uniquely identifies the chat message event to transition. */
       @com.google.api.client.util.Key
       private java.lang.String id;
 
-      /** The ID that uniquely identify the chat message event to transition.
+      /** The ID that uniquely identifies the chat message event to transition.
        */
       public java.lang.String getId() {
         return id;
       }
 
-      /** The ID that uniquely identify the chat message event to transition. */
+      /** The ID that uniquely identifies the chat message event to transition. */
       public Transition setId(java.lang.String id) {
         this.id = id;
         return this;
@@ -18277,7 +18280,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
         public class Messages {
 
           /**
-           * Allows a user to load live chat through a server-streamed RPC.
+           * Allows a user to load live chat through a server-streamed RPC. A call to this method has a quota
+           * cost of 5 units.
            *
            * Create a request for the method "messages.stream".
            *
@@ -18297,7 +18301,8 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
             private static final String REST_PATH = "youtube/v3/liveChat/messages/stream";
 
             /**
-             * Allows a user to load live chat through a server-streamed RPC.
+             * Allows a user to load live chat through a server-streamed RPC. A call to this method has a
+             * quota cost of 5 units.
              *
              * Create a request for the method "messages.stream".
              *
@@ -18397,30 +18402,30 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
               return this;
             }
 
-            /** The id of the live chat for which comments should be returned. */
+            /** The ID of the live chat for which messages should be returned. */
             @com.google.api.client.util.Key
             private java.lang.String liveChatId;
 
-            /** The id of the live chat for which comments should be returned.
+            /** The ID of the live chat for which messages should be returned.
              */
             public java.lang.String getLiveChatId() {
               return liveChatId;
             }
 
-            /** The id of the live chat for which comments should be returned. */
+            /** The ID of the live chat for which messages should be returned. */
             public Stream setLiveChatId(java.lang.String liveChatId) {
               this.liveChatId = liveChatId;
               return this;
             }
 
             /**
-             * The *maxResults* parameter specifies the maximum number of items that should be
+             * The `maxResults` parameter specifies the maximum number of items that should be
              * returned in the result set. Not used in the streaming RPC.
              */
             @com.google.api.client.util.Key
             private java.lang.Long maxResults;
 
-            /** The *maxResults* parameter specifies the maximum number of items that should be returned in the
+            /** The `maxResults` parameter specifies the maximum number of items that should be returned in the
            result set. Not used in the streaming RPC. [default: 500] [minimum: 200] [maximum: 2000]
              */
             public java.lang.Long getMaxResults() {
@@ -18428,7 +18433,7 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * The *maxResults* parameter specifies the maximum number of items that should be
+             * The `maxResults` parameter specifies the maximum number of items that should be
              * returned in the result set. Not used in the streaming RPC.
              */
             public Stream setMaxResults(java.lang.Long maxResults) {
@@ -18437,24 +18442,24 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * The *pageToken* parameter identifies a specific page in the result set that should be
-             * returned. In an API response, the nextPageToken property identify other pages that
-             * could be retrieved.
+             * The `pageToken` parameter identifies a specific page in the result set that should be
+             * returned. In an API response, the `nextPageToken` property identifies other pages
+             * that could be retrieved.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The *pageToken* parameter identifies a specific page in the result set that should be returned. In
-           an API response, the nextPageToken property identify other pages that could be retrieved.
+            /** The `pageToken` parameter identifies a specific page in the result set that should be returned. In
+           an API response, the `nextPageToken` property identifies other pages that could be retrieved.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * The *pageToken* parameter identifies a specific page in the result set that should be
-             * returned. In an API response, the nextPageToken property identify other pages that
-             * could be retrieved.
+             * The `pageToken` parameter identifies a specific page in the result set that should be
+             * returned. In an API response, the `nextPageToken` property identifies other pages
+             * that could be retrieved.
              */
             public Stream setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -18462,22 +18467,22 @@ public class YouTube extends com.google.api.client.googleapis.services.json.Abst
             }
 
             /**
-             * The *part* parameter specifies the liveChatComment resource parts that the API
-             * response will include. Supported values are id, snippet, and authorDetails.
+             * The `part` parameter specifies the `liveChatMessage` resource parts that the API
+             * response includes. Supported values are `id`, `snippet`, and `authorDetails`.
              */
             @com.google.api.client.util.Key
             private java.util.List<java.lang.String> part;
 
-            /** The *part* parameter specifies the liveChatComment resource parts that the API response will
-           include. Supported values are id, snippet, and authorDetails.
+            /** The `part` parameter specifies the `liveChatMessage` resource parts that the API response includes.
+           Supported values are `id`, `snippet`, and `authorDetails`.
              */
             public java.util.List<java.lang.String> getPart() {
               return part;
             }
 
             /**
-             * The *part* parameter specifies the liveChatComment resource parts that the API
-             * response will include. Supported values are id, snippet, and authorDetails.
+             * The `part` parameter specifies the `liveChatMessage` resource parts that the API
+             * response includes. Supported values are `id`, `snippet`, and `authorDetails`.
              */
             public Stream setPart(java.util.List<java.lang.String> part) {
               this.part = part;

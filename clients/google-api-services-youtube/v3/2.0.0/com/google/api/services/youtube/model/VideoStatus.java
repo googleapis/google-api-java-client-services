@@ -46,7 +46,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * This value explains why a video failed to upload. This property is only present if the
-   * uploadStatus property indicates that the upload failed.
+   * `uploadStatus` property indicates that the upload failed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,11 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean madeForKids;
 
   /**
-   * The video's privacy status.
+   * The video's privacy status. In a `videos.insert` request, if you don't specify a value for this
+   * property, the uploaded video's privacy status defaults to `public`. Certain uploads might
+   * default to `private` based on creator account settings, as explained in the [YouTube Help
+   * Center](https://support.google.com/youtube/answer/157177). Videos uploaded from unverified API
+   * projects are not restricted to private viewing mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,7 +95,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * This value explains why YouTube rejected an uploaded video. This property is only present if
-   * the uploadStatus property indicates that the upload was rejected.
+   * the `uploadStatus` property indicates that the upload was rejected.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,7 +152,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * This value explains why a video failed to upload. This property is only present if the
-   * uploadStatus property indicates that the upload failed.
+   * `uploadStatus` property indicates that the upload failed.
    * @return value or {@code null} for none
    */
   public java.lang.String getFailureReason() {
@@ -157,7 +161,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * This value explains why a video failed to upload. This property is only present if the
-   * uploadStatus property indicates that the upload failed.
+   * `uploadStatus` property indicates that the upload failed.
    * @param failureReason failureReason or {@code null} for none
    */
   public VideoStatus setFailureReason(java.lang.String failureReason) {
@@ -198,7 +202,11 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's privacy status.
+   * The video's privacy status. In a `videos.insert` request, if you don't specify a value for this
+   * property, the uploaded video's privacy status defaults to `public`. Certain uploads might
+   * default to `private` based on creator account settings, as explained in the [YouTube Help
+   * Center](https://support.google.com/youtube/answer/157177). Videos uploaded from unverified API
+   * projects are not restricted to private viewing mode.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrivacyStatus() {
@@ -206,7 +214,11 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The video's privacy status.
+   * The video's privacy status. In a `videos.insert` request, if you don't specify a value for this
+   * property, the uploaded video's privacy status defaults to `public`. Certain uploads might
+   * default to `private` based on creator account settings, as explained in the [YouTube Help
+   * Center](https://support.google.com/youtube/answer/157177). Videos uploaded from unverified API
+   * projects are not restricted to private viewing mode.
    * @param privacyStatus privacyStatus or {@code null} for none
    */
   public VideoStatus setPrivacyStatus(java.lang.String privacyStatus) {
@@ -256,7 +268,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * This value explains why YouTube rejected an uploaded video. This property is only present if
-   * the uploadStatus property indicates that the upload was rejected.
+   * the `uploadStatus` property indicates that the upload was rejected.
    * @return value or {@code null} for none
    */
   public java.lang.String getRejectionReason() {
@@ -265,7 +277,7 @@ public final class VideoStatus extends com.google.api.client.json.GenericJson {
 
   /**
    * This value explains why YouTube rejected an uploaded video. This property is only present if
-   * the uploadStatus property indicates that the upload was rejected.
+   * the `uploadStatus` property indicates that the upload was rejected.
    * @param rejectionReason rejectionReason or {@code null} for none
    */
   public VideoStatus setRejectionReason(java.lang.String rejectionReason) {

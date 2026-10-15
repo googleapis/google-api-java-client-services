@@ -33,9 +33,11 @@ public final class GoogleCloudBillingBudgetsV1SpendCap extends com.google.api.cl
   /**
    * Required. The desired state specified by the user. Valid values for mutation: - `CONFIGURED`:
    * Must be set when creating a spend cap (`CreateBudget`). Also valid when updating
-   * (`UpdateBudget`) to activate the spend cap. - `AWAITING_NEXT_PERIOD`: Valid only when updating
-   * (`UpdateBudget`) to explicitly lift an enforced cap. Supplying any other value will result in
-   * an INVALID_ARGUMENT error.
+   * (`UpdateBudget`) to activate the spend cap. If the spend cap is in state
+   * `AWAITING_NEXT_PERIOD`, `input_state` must be set to `CONFIGURED`. - `AWAITING_NEXT_PERIOD`:
+   * Valid only when updating (`UpdateBudget`) to explicitly lift an enforced cap. Not allowed if
+   * the spend cap is in state `AWAITING_NEXT_PERIOD`. Supplying any other value will result in an
+   * INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,9 +61,11 @@ public final class GoogleCloudBillingBudgetsV1SpendCap extends com.google.api.cl
   /**
    * Required. The desired state specified by the user. Valid values for mutation: - `CONFIGURED`:
    * Must be set when creating a spend cap (`CreateBudget`). Also valid when updating
-   * (`UpdateBudget`) to activate the spend cap. - `AWAITING_NEXT_PERIOD`: Valid only when updating
-   * (`UpdateBudget`) to explicitly lift an enforced cap. Supplying any other value will result in
-   * an INVALID_ARGUMENT error.
+   * (`UpdateBudget`) to activate the spend cap. If the spend cap is in state
+   * `AWAITING_NEXT_PERIOD`, `input_state` must be set to `CONFIGURED`. - `AWAITING_NEXT_PERIOD`:
+   * Valid only when updating (`UpdateBudget`) to explicitly lift an enforced cap. Not allowed if
+   * the spend cap is in state `AWAITING_NEXT_PERIOD`. Supplying any other value will result in an
+   * INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public java.lang.String getInputState() {
@@ -71,9 +75,11 @@ public final class GoogleCloudBillingBudgetsV1SpendCap extends com.google.api.cl
   /**
    * Required. The desired state specified by the user. Valid values for mutation: - `CONFIGURED`:
    * Must be set when creating a spend cap (`CreateBudget`). Also valid when updating
-   * (`UpdateBudget`) to activate the spend cap. - `AWAITING_NEXT_PERIOD`: Valid only when updating
-   * (`UpdateBudget`) to explicitly lift an enforced cap. Supplying any other value will result in
-   * an INVALID_ARGUMENT error.
+   * (`UpdateBudget`) to activate the spend cap. If the spend cap is in state
+   * `AWAITING_NEXT_PERIOD`, `input_state` must be set to `CONFIGURED`. - `AWAITING_NEXT_PERIOD`:
+   * Valid only when updating (`UpdateBudget`) to explicitly lift an enforced cap. Not allowed if
+   * the spend cap is in state `AWAITING_NEXT_PERIOD`. Supplying any other value will result in an
+   * INVALID_ARGUMENT error.
    * @param inputState inputState or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1SpendCap setInputState(java.lang.String inputState) {

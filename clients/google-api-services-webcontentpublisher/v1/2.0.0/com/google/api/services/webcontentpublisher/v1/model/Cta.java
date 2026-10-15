@@ -61,6 +61,13 @@ public final class Cta extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. Configuration specific to survey CTAs. Only populated if type is `SURVEY`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SurveyConfig surveyConfig;
+
+  /**
    * Required. The type of this CTA.
    * The value may be {@code null}.
    */
@@ -136,6 +143,23 @@ public final class Cta extends com.google.api.client.json.GenericJson {
    */
   public Cta setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration specific to survey CTAs. Only populated if type is `SURVEY`.
+   * @return value or {@code null} for none
+   */
+  public SurveyConfig getSurveyConfig() {
+    return surveyConfig;
+  }
+
+  /**
+   * Optional. Configuration specific to survey CTAs. Only populated if type is `SURVEY`.
+   * @param surveyConfig surveyConfig or {@code null} for none
+   */
+  public Cta setSurveyConfig(SurveyConfig surveyConfig) {
+    this.surveyConfig = surveyConfig;
     return this;
   }
 

@@ -485,6 +485,180 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
         }
       }
       /**
+       * Retrieves the catalog of predefined survey questions and answer choices available for a
+       * publication.
+       *
+       * Create a request for the method "publications.getSurveyQuestionCatalog".
+       *
+       * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+       * optional parameters, call the {@link GetSurveyQuestionCatalog#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The resource name of the survey question catalog to retrieve. Format:
+       *        `organizations/{organization}/publications/{publication}/surveyQuestionCatalog`.
+       * @return the request
+       */
+      public GetSurveyQuestionCatalog getSurveyQuestionCatalog(java.lang.String name) throws java.io.IOException {
+        GetSurveyQuestionCatalog result = new GetSurveyQuestionCatalog(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetSurveyQuestionCatalog extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.SurveyQuestionCatalog> {
+
+        private static final String REST_PATH = "v1/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/publications/[^/]+/surveyQuestionCatalog$");
+
+        /**
+         * Retrieves the catalog of predefined survey questions and answer choices available for a
+         * publication.
+         *
+         * Create a request for the method "publications.getSurveyQuestionCatalog".
+         *
+         * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+         * any optional parameters, call the {@link GetSurveyQuestionCatalog#execute()} method to invoke
+         * the remote operation. <p> {@link GetSurveyQuestionCatalog#initialize(com.google.api.client.goog
+         * leapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the survey question catalog to retrieve. Format:
+       *        `organizations/{organization}/publications/{publication}/surveyQuestionCatalog`.
+         * @since 1.13
+         */
+        protected GetSurveyQuestionCatalog(java.lang.String name) {
+          super(WebContentPublisher.this, "GET", REST_PATH, null, com.google.api.services.webcontentpublisher.v1.model.SurveyQuestionCatalog.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/publications/[^/]+/surveyQuestionCatalog$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog set$Xgafv(java.lang.String $Xgafv) {
+          return (GetSurveyQuestionCatalog) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setAccessToken(java.lang.String accessToken) {
+          return (GetSurveyQuestionCatalog) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setAlt(java.lang.String alt) {
+          return (GetSurveyQuestionCatalog) super.setAlt(alt);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setCallback(java.lang.String callback) {
+          return (GetSurveyQuestionCatalog) super.setCallback(callback);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setFields(java.lang.String fields) {
+          return (GetSurveyQuestionCatalog) super.setFields(fields);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setKey(java.lang.String key) {
+          return (GetSurveyQuestionCatalog) super.setKey(key);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setOauthToken(java.lang.String oauthToken) {
+          return (GetSurveyQuestionCatalog) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetSurveyQuestionCatalog) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setQuotaUser(java.lang.String quotaUser) {
+          return (GetSurveyQuestionCatalog) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setUploadType(java.lang.String uploadType) {
+          return (GetSurveyQuestionCatalog) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetSurveyQuestionCatalog) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the survey question catalog to retrieve. Format:
+         * `organizations/{organization}/publications/{publication}/surveyQuestionCatalog`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the survey question catalog to retrieve. Format:
+       `organizations/{organization}/publications/{publication}/surveyQuestionCatalog`.
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the survey question catalog to retrieve. Format:
+         * `organizations/{organization}/publications/{publication}/surveyQuestionCatalog`.
+         */
+        public GetSurveyQuestionCatalog setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/publications/[^/]+/surveyQuestionCatalog$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The BCP-47 language code (e.g., "en-US", "es-419") to override the
+         * publication's configured primary language.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String languageCode;
+
+        /** Optional. The BCP-47 language code (e.g., "en-US", "es-419") to override the publication's
+       configured primary language.
+         */
+        public java.lang.String getLanguageCode() {
+          return languageCode;
+        }
+
+        /**
+         * Optional. The BCP-47 language code (e.g., "en-US", "es-419") to override the
+         * publication's configured primary language.
+         */
+        public GetSurveyQuestionCatalog setLanguageCode(java.lang.String languageCode) {
+          this.languageCode = languageCode;
+          return this;
+        }
+
+        @Override
+        public GetSurveyQuestionCatalog set(String parameterName, Object value) {
+          return (GetSurveyQuestionCatalog) super.set(parameterName, value);
+        }
+      }
+      /**
        * Lists publications.
        *
        * Create a request for the method "publications.list".

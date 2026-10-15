@@ -17,7 +17,7 @@
 package com.google.api.services.displayvideo.v3.model;
 
 /**
- * LINT: LEGACY_NAMES A single ad associated with an ad group.
+ * A single ad associated with an ad group.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Display & Video 360 API. For a detailed explanation
@@ -83,8 +83,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   private BumperAd bumperAd;
 
   /**
-   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
-   * ad info, please leave this field empty.
+   * Optional. The DCM tracking ad info. To remove the DCM tracking ad info, please leave this field
+   * empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -319,8 +319,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
-   * ad info, please leave this field empty.
+   * Optional. The DCM tracking ad info. To remove the DCM tracking ad info, please leave this field
+   * empty.
    * @return value or {@code null} for none
    */
   public DcmTrackingInfo getDcmTrackingInfo() {
@@ -328,8 +328,8 @@ public final class AdGroupAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The DCM tracking ad info. Only valid for Demand Gen ads. To remove the DCM tracking
-   * ad info, please leave this field empty.
+   * Optional. The DCM tracking ad info. To remove the DCM tracking ad info, please leave this field
+   * empty.
    * @param dcmTrackingInfo dcmTrackingInfo or {@code null} for none
    */
   public AdGroupAd setDcmTrackingInfo(DcmTrackingInfo dcmTrackingInfo) {

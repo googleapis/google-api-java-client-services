@@ -31,7 +31,7 @@ package com.google.api.services.displayvideo.v4.model;
 public final class CommonInStreamAttribute extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The text on the call-to-action button.
+   * Optional. The text on the call-to-action button. Must be set if actionHeadline is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,7 +66,9 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   private java.lang.String finalUrl;
 
   /**
-   * Output only. The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes. In v4 and earlier,
+   * this field represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,7 +82,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   private YoutubeVideoDetails video;
 
   /**
-   * Optional. The text on the call-to-action button.
+   * Optional. The text on the call-to-action button. Must be set if actionHeadline is set.
    * @return value or {@code null} for none
    */
   public java.lang.String getActionButtonLabel() {
@@ -88,7 +90,7 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. The text on the call-to-action button.
+   * Optional. The text on the call-to-action button. Must be set if actionHeadline is set.
    * @param actionButtonLabel actionButtonLabel or {@code null} for none
    */
   public CommonInStreamAttribute setActionButtonLabel(java.lang.String actionButtonLabel) {
@@ -165,7 +167,9 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes. In v4 and earlier,
+   * this field represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -173,7 +177,9 @@ public final class CommonInStreamAttribute extends com.google.api.client.json.Ge
   }
 
   /**
-   * Output only. The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes. In v4 and earlier,
+   * this field represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public CommonInStreamAttribute setTrackingUrl(java.lang.String trackingUrl) {

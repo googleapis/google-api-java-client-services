@@ -1463,7 +1463,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
     public class AdGroupAds {
 
       /**
-       * Creates an ad group ad. This method is only supported for Demand Gen ads.
+       * Creates an ad group ad.
        *
        * Create a request for the method "adGroupAds.create".
        *
@@ -1488,7 +1488,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Creates an ad group ad. This method is only supported for Demand Gen ads.
+         * Creates an ad group ad.
          *
          * Create a request for the method "adGroupAds.create".
          *
@@ -1584,7 +1584,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Deletes an ad group ad. This method is only supported for Demand Gen ads.
+       * Deletes an ad group ad.
        *
        * Create a request for the method "adGroupAds.delete".
        *
@@ -1592,7 +1592,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
        * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param advertiserId Required. The ID of the advertiser the ad belongs to.
-       * @param adGroupAdId Required. The ID of the ad to delete. Only Demand Gen ads are supported.
+       * @param adGroupAdId Required. The ID of the ad to delete.
        * @return the request
        */
       public Delete delete(java.lang.Long advertiserId, java.lang.Long adGroupAdId) throws java.io.IOException {
@@ -1612,7 +1612,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Deletes an ad group ad. This method is only supported for Demand Gen ads.
+         * Deletes an ad group ad.
          *
          * Create a request for the method "adGroupAds.delete".
          *
@@ -1623,7 +1623,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param advertiserId Required. The ID of the advertiser the ad belongs to.
-         * @param adGroupAdId Required. The ID of the ad to delete. Only Demand Gen ads are supported.
+         * @param adGroupAdId Required. The ID of the ad to delete.
          * @since 1.13
          */
         protected Delete(java.lang.Long advertiserId, java.lang.Long adGroupAdId) {
@@ -1703,17 +1703,17 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
           return this;
         }
 
-        /** Required. The ID of the ad to delete. Only Demand Gen ads are supported. */
+        /** Required. The ID of the ad to delete. */
         @com.google.api.client.util.Key
         private java.lang.Long adGroupAdId;
 
-        /** Required. The ID of the ad to delete. Only Demand Gen ads are supported.
+        /** Required. The ID of the ad to delete.
          */
         public java.lang.Long getAdGroupAdId() {
           return adGroupAdId;
         }
 
-        /** Required. The ID of the ad to delete. Only Demand Gen ads are supported. */
+        /** Required. The ID of the ad to delete. */
         public Delete setAdGroupAdId(java.lang.Long adGroupAdId) {
           this.adGroupAdId = adGroupAdId;
           return this;
@@ -2132,7 +2132,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
         }
       }
       /**
-       * Updates an ad group ad. This method is only supported for Demand Gen ads.
+       * Updates an ad group ad.
        *
        * Create a request for the method "adGroupAds.patch".
        *
@@ -2161,7 +2161,7 @@ public class DisplayVideo extends com.google.api.client.googleapis.services.json
             java.util.regex.Pattern.compile("^[^/]+$");
 
         /**
-         * Updates an ad group ad. This method is only supported for Demand Gen ads.
+         * Updates an ad group ad.
          *
          * Create a request for the method "adGroupAds.patch".
          *

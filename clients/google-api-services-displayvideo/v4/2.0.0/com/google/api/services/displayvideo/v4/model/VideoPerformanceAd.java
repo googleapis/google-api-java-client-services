@@ -31,7 +31,8 @@ package com.google.api.services.displayvideo.v4.model;
 public final class VideoPerformanceAd extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The list of text assets shown on the call-to-action button.
+   * Optional. The list of text assets shown on the call-to-action button. Must be set if headlines
+   * is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +59,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> customParameters;
 
   /**
-   * Optional. The list of descriptions shown on the call-to-action banner.
+   * Optional. The list of descriptions shown on the call-to-action banner. Must be set unless the
+   * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
+   * which case this field cannot be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +75,8 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.lang.String displayUrlBreadcrumb1;
 
   /**
-   * Optional. The second piece after the domain in the display URL.
+   * Optional. The second piece after the domain in the display URL. Can only be set if
+   * displayUrlBreadcrumb1 is also set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,14 +104,18 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> headlines;
 
   /**
-   * Optional. The list of long headlines shown on the call-to-action banner.
+   * Optional. The list of long headlines shown on the call-to-action banner. Must be set unless the
+   * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
+   * which case this field cannot be set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> longHeadlines;
 
   /**
-   * Output only. The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes. In v4 and earlier,
+   * this field represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -121,7 +129,8 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.util.List<YoutubeVideoDetails> videos;
 
   /**
-   * Optional. The list of text assets shown on the call-to-action button.
+   * Optional. The list of text assets shown on the call-to-action button. Must be set if headlines
+   * is set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getActionButtonLabels() {
@@ -129,7 +138,8 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The list of text assets shown on the call-to-action button.
+   * Optional. The list of text assets shown on the call-to-action button. Must be set if headlines
+   * is set.
    * @param actionButtonLabels actionButtonLabels or {@code null} for none
    */
   public VideoPerformanceAd setActionButtonLabels(java.util.List<java.lang.String> actionButtonLabels) {
@@ -172,7 +182,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The list of descriptions shown on the call-to-action banner.
+   * Optional. The list of descriptions shown on the call-to-action banner. Must be set unless the
+   * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
+   * which case this field cannot be set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDescriptions() {
@@ -180,7 +192,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The list of descriptions shown on the call-to-action banner.
+   * Optional. The list of descriptions shown on the call-to-action banner. Must be set unless the
+   * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
+   * which case this field cannot be set.
    * @param descriptions descriptions or {@code null} for none
    */
   public VideoPerformanceAd setDescriptions(java.util.List<java.lang.String> descriptions) {
@@ -206,7 +220,8 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The second piece after the domain in the display URL.
+   * Optional. The second piece after the domain in the display URL. Can only be set if
+   * displayUrlBreadcrumb1 is also set.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayUrlBreadcrumb2() {
@@ -214,7 +229,8 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The second piece after the domain in the display URL.
+   * Optional. The second piece after the domain in the display URL. Can only be set if
+   * displayUrlBreadcrumb1 is also set.
    * @param displayUrlBreadcrumb2 displayUrlBreadcrumb2 or {@code null} for none
    */
   public VideoPerformanceAd setDisplayUrlBreadcrumb2(java.lang.String displayUrlBreadcrumb2) {
@@ -274,7 +290,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The list of long headlines shown on the call-to-action banner.
+   * Optional. The list of long headlines shown on the call-to-action banner. Must be set unless the
+   * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
+   * which case this field cannot be set.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getLongHeadlines() {
@@ -282,7 +300,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. The list of long headlines shown on the call-to-action banner.
+   * Optional. The list of long headlines shown on the call-to-action banner. Must be set unless the
+   * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
+   * which case this field cannot be set.
    * @param longHeadlines longHeadlines or {@code null} for none
    */
   public VideoPerformanceAd setLongHeadlines(java.util.List<java.lang.String> longHeadlines) {
@@ -291,7 +311,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes. In v4 and earlier,
+   * this field represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -299,7 +321,9 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   }
 
   /**
-   * Output only. The URL address loaded in the background for tracking purposes.
+   * Output only. The URL address loaded in the background for tracking purposes. In v4 and earlier,
+   * this field represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public VideoPerformanceAd setTrackingUrl(java.lang.String trackingUrl) {

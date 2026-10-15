@@ -99,7 +99,11 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
    * `budget_filter`, `amount`, `threshold_rules`, and `notifications_rule`). When
    * `spend_cap.output_state` is `ENFORCED`, only `spend_cap.input_state` can be modified in an
    * `UpdateBudget` request (e.g., setting `input_state` to `AWAITING_NEXT_PERIOD` to lift the cap);
-   * modifying any other budget field while enforced will fail with `FAILED_PRECONDITION`.
+   * modifying any other budget field while enforced will fail with `FAILED_PRECONDITION`. If the
+   * existing resource is a spend cap and an `update_mask` is supplied in an `UpdateBudget` request,
+   * `spend_cap` or `spend_cap.input_state` must be specified in the update mask. To convert a spend
+   * cap budget to a regular budget, specify `spend_cap` in the `update_mask` and omit `spend_cap`
+   * from the budget in the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +264,11 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
    * `budget_filter`, `amount`, `threshold_rules`, and `notifications_rule`). When
    * `spend_cap.output_state` is `ENFORCED`, only `spend_cap.input_state` can be modified in an
    * `UpdateBudget` request (e.g., setting `input_state` to `AWAITING_NEXT_PERIOD` to lift the cap);
-   * modifying any other budget field while enforced will fail with `FAILED_PRECONDITION`.
+   * modifying any other budget field while enforced will fail with `FAILED_PRECONDITION`. If the
+   * existing resource is a spend cap and an `update_mask` is supplied in an `UpdateBudget` request,
+   * `spend_cap` or `spend_cap.input_state` must be specified in the update mask. To convert a spend
+   * cap budget to a regular budget, specify `spend_cap` in the `update_mask` and omit `spend_cap`
+   * from the budget in the request.
    * @return value or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1SpendCap getSpendCap() {
@@ -273,7 +281,11 @@ public final class GoogleCloudBillingBudgetsV1Budget extends com.google.api.clie
    * `budget_filter`, `amount`, `threshold_rules`, and `notifications_rule`). When
    * `spend_cap.output_state` is `ENFORCED`, only `spend_cap.input_state` can be modified in an
    * `UpdateBudget` request (e.g., setting `input_state` to `AWAITING_NEXT_PERIOD` to lift the cap);
-   * modifying any other budget field while enforced will fail with `FAILED_PRECONDITION`.
+   * modifying any other budget field while enforced will fail with `FAILED_PRECONDITION`. If the
+   * existing resource is a spend cap and an `update_mask` is supplied in an `UpdateBudget` request,
+   * `spend_cap` or `spend_cap.input_state` must be specified in the update mask. To convert a spend
+   * cap budget to a regular budget, specify `spend_cap` in the `update_mask` and omit `spend_cap`
+   * from the budget in the request.
    * @param spendCap spendCap or {@code null} for none
    */
   public GoogleCloudBillingBudgetsV1Budget setSpendCap(GoogleCloudBillingBudgetsV1SpendCap spendCap) {

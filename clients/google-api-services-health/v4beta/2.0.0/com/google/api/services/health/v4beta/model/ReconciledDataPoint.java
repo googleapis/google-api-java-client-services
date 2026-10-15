@@ -244,13 +244,6 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
   private SedentaryPeriod sedentaryPeriod;
 
   /**
-   * Data for points in the `skin-temperature` sample data type collection.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private SkinTemperature skinTemperature;
-
-  /**
    * Data for points in the `skin-temperature-sensors` sample data type collection.
    * The value may be {@code null}.
    */
@@ -811,23 +804,6 @@ public final class ReconciledDataPoint extends com.google.api.client.json.Generi
    */
   public ReconciledDataPoint setSedentaryPeriod(SedentaryPeriod sedentaryPeriod) {
     this.sedentaryPeriod = sedentaryPeriod;
-    return this;
-  }
-
-  /**
-   * Data for points in the `skin-temperature` sample data type collection.
-   * @return value or {@code null} for none
-   */
-  public SkinTemperature getSkinTemperature() {
-    return skinTemperature;
-  }
-
-  /**
-   * Data for points in the `skin-temperature` sample data type collection.
-   * @param skinTemperature skinTemperature or {@code null} for none
-   */
-  public ReconciledDataPoint setSkinTemperature(SkinTemperature skinTemperature) {
-    this.skinTemperature = skinTemperature;
     return this;
   }
 

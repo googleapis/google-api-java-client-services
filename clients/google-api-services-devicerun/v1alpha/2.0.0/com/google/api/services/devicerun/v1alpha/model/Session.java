@@ -31,6 +31,13 @@ package com.google.api.services.devicerun.v1alpha.model;
 public final class Session extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The time when the session was created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
    * Identifier. The resource name of the session. Format:
    * `projects/{project}/locations/{location}/sessions/{session}`.
    * The value may be {@code null}.
@@ -51,6 +58,23 @@ public final class Session extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private SessionReport sessionReport;
+
+  /**
+   * Output only. The time when the session was created.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time when the session was created.
+   * @param createTime createTime or {@code null} for none
+   */
+  public Session setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
 
   /**
    * Identifier. The resource name of the session. Format:

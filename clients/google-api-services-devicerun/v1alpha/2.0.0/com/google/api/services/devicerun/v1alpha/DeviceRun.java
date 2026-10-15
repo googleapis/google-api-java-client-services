@@ -2482,20 +2482,20 @@ public class DeviceRun extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Optional. The view of the session to return. If not set, the default BASIC view will be
+           * Optional. The view of the session to return. If not set, the `FULL` view will be
            * returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. The view of the session to return. If not set, the default BASIC view will be returned.
+          /** Optional. The view of the session to return. If not set, the `FULL` view will be returned.
            */
           public java.lang.String getView() {
             return view;
           }
 
           /**
-           * Optional. The view of the session to return. If not set, the default BASIC view will be
+           * Optional. The view of the session to return. If not set, the `FULL` view will be
            * returned.
            */
           public Get setView(java.lang.String view) {
@@ -2752,20 +2752,20 @@ public class DeviceRun extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Optional. The view of the sessions to return. If not set, the `BASIC` view will be
+           * Optional. The view of the sessions to return. If not set, the `FULL` view will be
            * returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. The view of the sessions to return. If not set, the `BASIC` view will be returned.
+          /** Optional. The view of the sessions to return. If not set, the `FULL` view will be returned.
            */
           public java.lang.String getView() {
             return view;
           }
 
           /**
-           * Optional. The view of the sessions to return. If not set, the `BASIC` view will be
+           * Optional. The view of the sessions to return. If not set, the `FULL` view will be
            * returned.
            */
           public List setView(java.lang.String view) {

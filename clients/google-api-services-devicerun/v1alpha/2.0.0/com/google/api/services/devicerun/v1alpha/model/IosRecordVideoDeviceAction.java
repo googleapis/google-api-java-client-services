@@ -17,8 +17,10 @@
 package com.google.api.services.devicerun.v1alpha.model;
 
 /**
- * Records a video of the iOS device screen during the run. The video will be written to a file
- * named `video.mp4` in the execution output directory.
+ * Records videos of the iOS device screen, one per UI test case. Each video covers only the
+ * execution of its test case, and will be written to
+ * `testcases/{test_class}/{test_method}/video.mp4` in the execution output directory. No video is
+ * recorded for unit tests, or on devices running a version earlier than iOS 17.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Device Run API. For a detailed explanation see:
@@ -31,16 +33,16 @@ package com.google.api.services.devicerun.v1alpha.model;
 public final class IosRecordVideoDeviceAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to discard the video if the test passes. If not specified, the default is
-   * false (always keep the video).
+   * Optional. Whether to discard the video of a test case when it passes. If not specified, the
+   * default is `false` (videos of all test cases are kept).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean discardOnPass;
 
   /**
-   * Optional. Whether to discard the video if the test passes. If not specified, the default is
-   * false (always keep the video).
+   * Optional. Whether to discard the video of a test case when it passes. If not specified, the
+   * default is `false` (videos of all test cases are kept).
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDiscardOnPass() {
@@ -48,8 +50,8 @@ public final class IosRecordVideoDeviceAction extends com.google.api.client.json
   }
 
   /**
-   * Optional. Whether to discard the video if the test passes. If not specified, the default is
-   * false (always keep the video).
+   * Optional. Whether to discard the video of a test case when it passes. If not specified, the
+   * default is `false` (videos of all test cases are kept).
    * @param discardOnPass discardOnPass or {@code null} for none
    */
   public IosRecordVideoDeviceAction setDiscardOnPass(java.lang.Boolean discardOnPass) {

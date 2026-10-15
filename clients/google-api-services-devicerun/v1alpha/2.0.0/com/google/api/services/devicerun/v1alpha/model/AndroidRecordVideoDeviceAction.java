@@ -32,7 +32,7 @@ public final class AndroidRecordVideoDeviceAction extends com.google.api.client.
 
   /**
    * Optional. Whether to discard and not upload the recording when the test passes. Default is
-   * false.
+   * `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class AndroidRecordVideoDeviceAction extends com.google.api.client.
 
   /**
    * Optional. Whether to discard and not upload the recording when the test passes. Default is
-   * false.
+   * `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDiscardOnPass() {
@@ -49,7 +49,7 @@ public final class AndroidRecordVideoDeviceAction extends com.google.api.client.
 
   /**
    * Optional. Whether to discard and not upload the recording when the test passes. Default is
-   * false.
+   * `false`.
    * @param discardOnPass discardOnPass or {@code null} for none
    */
   public AndroidRecordVideoDeviceAction setDiscardOnPass(java.lang.Boolean discardOnPass) {

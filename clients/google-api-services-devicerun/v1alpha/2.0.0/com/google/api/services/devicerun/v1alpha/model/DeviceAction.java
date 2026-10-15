@@ -128,7 +128,7 @@ public final class DeviceAction extends com.google.api.client.json.GenericJson {
   private IosPushFilesDeviceAction iosPushFiles;
 
   /**
-   * Records a video of the iOS device screen during the run.
+   * Records videos of the iOS device screen, one per UI test case.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -380,7 +380,7 @@ public final class DeviceAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Records a video of the iOS device screen during the run.
+   * Records videos of the iOS device screen, one per UI test case.
    * @return value or {@code null} for none
    */
   public IosRecordVideoDeviceAction getIosRecordVideo() {
@@ -388,7 +388,7 @@ public final class DeviceAction extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Records a video of the iOS device screen during the run.
+   * Records videos of the iOS device screen, one per UI test case.
    * @param iosRecordVideo iosRecordVideo or {@code null} for none
    */
   public DeviceAction setIosRecordVideo(IosRecordVideoDeviceAction iosRecordVideo) {

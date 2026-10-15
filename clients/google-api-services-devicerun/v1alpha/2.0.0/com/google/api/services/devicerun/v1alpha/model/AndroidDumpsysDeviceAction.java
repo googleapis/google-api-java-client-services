@@ -31,16 +31,16 @@ package com.google.api.services.devicerun.v1alpha.model;
 public final class AndroidDumpsysDeviceAction extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Whether to deliver the dumpsys when the test passes. If false, the dumpsys is skipped
-   * on pass to save time (default behavior). If true, the dumpsys is always delivered.
+   * Optional. Whether to deliver the dumpsys when the test passes. If `false`, the dumpsys is
+   * skipped on pass to save time (default behavior). If `true`, the dumpsys is always delivered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean collectOnPass;
 
   /**
-   * Optional. Whether to deliver the dumpsys when the test passes. If false, the dumpsys is skipped
-   * on pass to save time (default behavior). If true, the dumpsys is always delivered.
+   * Optional. Whether to deliver the dumpsys when the test passes. If `false`, the dumpsys is
+   * skipped on pass to save time (default behavior). If `true`, the dumpsys is always delivered.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCollectOnPass() {
@@ -48,8 +48,8 @@ public final class AndroidDumpsysDeviceAction extends com.google.api.client.json
   }
 
   /**
-   * Optional. Whether to deliver the dumpsys when the test passes. If false, the dumpsys is skipped
-   * on pass to save time (default behavior). If true, the dumpsys is always delivered.
+   * Optional. Whether to deliver the dumpsys when the test passes. If `false`, the dumpsys is
+   * skipped on pass to save time (default behavior). If `true`, the dumpsys is always delivered.
    * @param collectOnPass collectOnPass or {@code null} for none
    */
   public AndroidDumpsysDeviceAction setCollectOnPass(java.lang.Boolean collectOnPass) {

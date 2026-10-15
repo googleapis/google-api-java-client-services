@@ -45,7 +45,9 @@ public final class AudioAd extends com.google.api.client.json.GenericJson {
   private java.lang.String finalUrl;
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * The URL address loaded in the background for tracking purposes. In v4 and earlier, this field
+   * represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +95,9 @@ public final class AudioAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * The URL address loaded in the background for tracking purposes. In v4 and earlier, this field
+   * represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrackingUrl() {
@@ -101,7 +105,9 @@ public final class AudioAd extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URL address loaded in the background for tracking purposes.
+   * The URL address loaded in the background for tracking purposes. In v4 and earlier, this field
+   * represents the tracking URL specified by the user manually. This can be found at
+   * userSpecifiedTrackingUrl in v5.
    * @param trackingUrl trackingUrl or {@code null} for none
    */
   public AudioAd setTrackingUrl(java.lang.String trackingUrl) {

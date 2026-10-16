@@ -45,8 +45,8 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   private java.lang.String entitlementId;
 
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateConnection is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateConnection is hosted. Example:
+   * us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,17 +75,17 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   private java.lang.String ociUrl;
 
   /**
-   * Optional. The name of the OdbNetwork associated with the GoldengateConnection. The format is
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is optional but if
-   * specified, this should match the parent ODBNetwork of the OdbSubnet.
+   * Optional. Immutable. The name of the OdbNetwork associated with the GoldengateConnection. The
+   * format is projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is optional but
+   * if specified, this should match the parent ODBNetwork of the OdbSubnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String odbNetwork;
 
   /**
-   * Optional. The name of the OdbSubnet associated with the GoldengateConnection for IP allocation.
-   * Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the GoldengateConnection for IP
+   * allocation. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * The value may be {@code null}.
    */
@@ -93,7 +93,7 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   private java.lang.String odbSubnet;
 
   /**
-   * Required. The properties of the GoldengateConnection.
+   * Required. Immutable. The properties of the GoldengateConnection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,8 +134,8 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateConnection is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateConnection is hosted. Example:
+   * us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -143,8 +143,8 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateConnection is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateConnection is hosted. Example:
+   * us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public GoldengateConnection setGcpOracleZone(java.lang.String gcpOracleZone) {
@@ -206,9 +206,9 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the GoldengateConnection. The format is
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is optional but if
-   * specified, this should match the parent ODBNetwork of the OdbSubnet.
+   * Optional. Immutable. The name of the OdbNetwork associated with the GoldengateConnection. The
+   * format is projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is optional but
+   * if specified, this should match the parent ODBNetwork of the OdbSubnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getOdbNetwork() {
@@ -216,9 +216,9 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the GoldengateConnection. The format is
-   * projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is optional but if
-   * specified, this should match the parent ODBNetwork of the OdbSubnet.
+   * Optional. Immutable. The name of the OdbNetwork associated with the GoldengateConnection. The
+   * format is projects/{project}/locations/{location}/odbNetworks/{odb_network}. It is optional but
+   * if specified, this should match the parent ODBNetwork of the OdbSubnet.
    * @param odbNetwork odbNetwork or {@code null} for none
    */
   public GoldengateConnection setOdbNetwork(java.lang.String odbNetwork) {
@@ -227,8 +227,8 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The name of the OdbSubnet associated with the GoldengateConnection for IP allocation.
-   * Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the GoldengateConnection for IP
+   * allocation. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @return value or {@code null} for none
    */
@@ -237,8 +237,8 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The name of the OdbSubnet associated with the GoldengateConnection for IP allocation.
-   * Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the GoldengateConnection for IP
+   * allocation. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @param odbSubnet odbSubnet or {@code null} for none
    */
@@ -248,7 +248,7 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The properties of the GoldengateConnection.
+   * Required. Immutable. The properties of the GoldengateConnection.
    * @return value or {@code null} for none
    */
   public GoldengateConnectionProperties getProperties() {
@@ -256,7 +256,7 @@ public final class GoldengateConnection extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The properties of the GoldengateConnection.
+   * Required. Immutable. The properties of the GoldengateConnection.
    * @param properties properties or {@code null} for none
    */
   public GoldengateConnection setProperties(GoldengateConnectionProperties properties) {

@@ -32,7 +32,7 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class AutonomousDatabase extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Immutable. The password for the default ADMIN user. Note: Only one of
+   * Optional. Input only. Immutable. The password for the default ADMIN user. Note: Only one of
    * `admin_password_secret_version` or `admin_password` can be populated.
    * The value may be {@code null}.
    */
@@ -40,9 +40,10 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private java.lang.String adminPassword;
 
   /**
-   * Optional. Immutable. The resource name of a secret version in Secret Manager which contains the
-   * database admin user's password. Format: projects/{project}/secrets/{secret}/versions/{version}.
-   * Note: Only one of `admin_password_secret_version` or `admin_password` can be populated.
+   * Optional. Input only. Immutable. The resource name of a secret version in Secret Manager which
+   * contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,7 +159,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   private SourceConfig sourceConfig;
 
   /**
-   * Optional. Immutable. The password for the default ADMIN user. Note: Only one of
+   * Optional. Input only. Immutable. The password for the default ADMIN user. Note: Only one of
    * `admin_password_secret_version` or `admin_password` can be populated.
    * @return value or {@code null} for none
    */
@@ -167,7 +168,7 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Immutable. The password for the default ADMIN user. Note: Only one of
+   * Optional. Input only. Immutable. The password for the default ADMIN user. Note: Only one of
    * `admin_password_secret_version` or `admin_password` can be populated.
    * @param adminPassword adminPassword or {@code null} for none
    */
@@ -177,9 +178,10 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Immutable. The resource name of a secret version in Secret Manager which contains the
-   * database admin user's password. Format: projects/{project}/secrets/{secret}/versions/{version}.
-   * Note: Only one of `admin_password_secret_version` or `admin_password` can be populated.
+   * Optional. Input only. Immutable. The resource name of a secret version in Secret Manager which
+   * contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdminPasswordSecretVersion() {
@@ -187,9 +189,10 @@ public final class AutonomousDatabase extends com.google.api.client.json.Generic
   }
 
   /**
-   * Optional. Immutable. The resource name of a secret version in Secret Manager which contains the
-   * database admin user's password. Format: projects/{project}/secrets/{secret}/versions/{version}.
-   * Note: Only one of `admin_password_secret_version` or `admin_password` can be populated.
+   * Optional. Input only. Immutable. The resource name of a secret version in Secret Manager which
+   * contains the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    * @param adminPasswordSecretVersion adminPasswordSecretVersion or {@code null} for none
    */
   public AutonomousDatabase setAdminPasswordSecretVersion(java.lang.String adminPasswordSecretVersion) {

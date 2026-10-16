@@ -39,8 +39,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Required. The display name for the System db. The name does not have to be unique within your
-   * project.
+   * Required. Immutable. The display name for the System db. The name does not have to be unique
+   * within your project.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   private java.lang.String entitlementId;
 
   /**
-   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-east4-b-r2. If not
-   * specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
+   * east4-b-r2. If not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   private java.lang.String ociUrl;
 
   /**
-   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the DbSystem. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the OdbSubnet.
    * The value may be {@code null}.
@@ -93,7 +93,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   private java.lang.String odbNetwork;
 
   /**
-   * Required. The name of the OdbSubnet associated with the DbSystem for IP allocation. Format:
+   * Required. Immutable. The name of the OdbSubnet associated with the DbSystem for IP allocation.
+   * Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * The value may be {@code null}.
    */
@@ -101,7 +102,7 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   private java.lang.String odbSubnet;
 
   /**
-   * Optional. The properties of the DbSystem.
+   * Optional. Immutable. The properties of the DbSystem.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +126,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name for the System db. The name does not have to be unique within your
-   * project.
+   * Required. Immutable. The display name for the System db. The name does not have to be unique
+   * within your project.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -134,8 +135,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The display name for the System db. The name does not have to be unique within your
-   * project.
+   * Required. Immutable. The display name for the System db. The name does not have to be unique
+   * within your project.
    * @param displayName displayName or {@code null} for none
    */
   public DbSystem setDisplayName(java.lang.String displayName) {
@@ -161,8 +162,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-east4-b-r2. If not
-   * specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
+   * east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -170,8 +171,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-east4-b-r2. If not
-   * specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle DbSystem is hosted. Example: us-
+   * east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public DbSystem setGcpOracleZone(java.lang.String gcpOracleZone) {
@@ -233,7 +234,7 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the DbSystem. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the OdbSubnet.
    * @return value or {@code null} for none
@@ -243,7 +244,7 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the DbSystem. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the DbSystem. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the OdbSubnet.
    * @param odbNetwork odbNetwork or {@code null} for none
@@ -254,7 +255,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the OdbSubnet associated with the DbSystem for IP allocation. Format:
+   * Required. Immutable. The name of the OdbSubnet associated with the DbSystem for IP allocation.
+   * Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @return value or {@code null} for none
    */
@@ -263,7 +265,8 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the OdbSubnet associated with the DbSystem for IP allocation. Format:
+   * Required. Immutable. The name of the OdbSubnet associated with the DbSystem for IP allocation.
+   * Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @param odbSubnet odbSubnet or {@code null} for none
    */
@@ -273,7 +276,7 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The properties of the DbSystem.
+   * Optional. Immutable. The properties of the DbSystem.
    * @return value or {@code null} for none
    */
   public DbSystemProperties getProperties() {
@@ -281,7 +284,7 @@ public final class DbSystem extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The properties of the DbSystem.
+   * Optional. Immutable. The properties of the DbSystem.
    * @param properties properties or {@code null} for none
    */
   public DbSystem setProperties(DbSystemProperties properties) {

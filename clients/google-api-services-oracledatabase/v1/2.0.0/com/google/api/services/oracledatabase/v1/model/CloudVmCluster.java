@@ -32,7 +32,7 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class CloudVmCluster extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The name of the backup OdbSubnet associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of the backup OdbSubnet associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * The value may be {@code null}.
    */
@@ -40,14 +40,14 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String backupOdbSubnet;
 
   /**
-   * Optional. CIDR range of the backup subnet.
+   * Optional. Immutable. CIDR range of the backup subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String backupSubnetCidr;
 
   /**
-   * Optional. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Immutable. Network settings. CIDR to use for cluster IP allocation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,23 +61,23 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private String createTime;
 
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Required. The name of the Exadata Infrastructure resource on which VM cluster resource is
-   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
-   * res/{cloud_extradata_infrastructure}
+   * Required. Immutable. The name of the Exadata Infrastructure resource on which VM cluster
+   * resource is created, in the following format: projects/{project}/locations/{region}/cloudExadat
+   * aInfrastuctures/{cloud_extradata_infrastructure}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exadataInfrastructure;
 
   /**
-   * Optional. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
    * The value may be {@code null}.
    */
@@ -116,14 +116,15 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String name;
 
   /**
-   * Optional. The name of the VPC network. Format: projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network. Format:
+   * projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Optional. The name of the OdbNetwork associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
    * The value may be {@code null}.
@@ -132,7 +133,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String odbNetwork;
 
   /**
-   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the VM Cluster for IP
+   * allocation. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * The value may be {@code null}.
    */
@@ -140,14 +142,14 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String odbSubnet;
 
   /**
-   * Optional. Various properties of the VM Cluster.
+   * Optional. Immutable. Various properties of the VM Cluster.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CloudVmClusterProperties properties;
 
   /**
-   * Optional. The name of the backup OdbSubnet associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of the backup OdbSubnet associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @return value or {@code null} for none
    */
@@ -156,7 +158,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the backup OdbSubnet associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of the backup OdbSubnet associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @param backupOdbSubnet backupOdbSubnet or {@code null} for none
    */
@@ -166,7 +168,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. CIDR range of the backup subnet.
+   * Optional. Immutable. CIDR range of the backup subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getBackupSubnetCidr() {
@@ -174,7 +176,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. CIDR range of the backup subnet.
+   * Optional. Immutable. CIDR range of the backup subnet.
    * @param backupSubnetCidr backupSubnetCidr or {@code null} for none
    */
   public CloudVmCluster setBackupSubnetCidr(java.lang.String backupSubnetCidr) {
@@ -183,7 +185,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Immutable. Network settings. CIDR to use for cluster IP allocation.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidr() {
@@ -191,7 +193,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Network settings. CIDR to use for cluster IP allocation.
+   * Optional. Immutable. Network settings. CIDR to use for cluster IP allocation.
    * @param cidr cidr or {@code null} for none
    */
   public CloudVmCluster setCidr(java.lang.String cidr) {
@@ -217,7 +219,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -225,7 +227,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    * @param displayName displayName or {@code null} for none
    */
   public CloudVmCluster setDisplayName(java.lang.String displayName) {
@@ -234,9 +236,9 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The name of the Exadata Infrastructure resource on which VM cluster resource is
-   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
-   * res/{cloud_extradata_infrastructure}
+   * Required. Immutable. The name of the Exadata Infrastructure resource on which VM cluster
+   * resource is created, in the following format: projects/{project}/locations/{region}/cloudExadat
+   * aInfrastuctures/{cloud_extradata_infrastructure}
    * @return value or {@code null} for none
    */
   public java.lang.String getExadataInfrastructure() {
@@ -244,9 +246,9 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The name of the Exadata Infrastructure resource on which VM cluster resource is
-   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
-   * res/{cloud_extradata_infrastructure}
+   * Required. Immutable. The name of the Exadata Infrastructure resource on which VM cluster
+   * resource is created, in the following format: projects/{project}/locations/{region}/cloudExadat
+   * aInfrastuctures/{cloud_extradata_infrastructure}
    * @param exadataInfrastructure exadataInfrastructure or {@code null} for none
    */
   public CloudVmCluster setExadataInfrastructure(java.lang.String exadataInfrastructure) {
@@ -255,7 +257,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
    * @return value or {@code null} for none
    */
@@ -264,7 +266,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of ExascaleDbStorageVault associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
    * @param exascaleDbStorageVault exascaleDbStorageVault or {@code null} for none
    */
@@ -348,7 +350,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the VPC network. Format: projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network. Format:
+   * projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -356,7 +359,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the VPC network. Format: projects/{project}/global/networks/{network}
+   * Optional. Immutable. The name of the VPC network. Format:
+   * projects/{project}/global/networks/{network}
    * @param network network or {@code null} for none
    */
   public CloudVmCluster setNetwork(java.lang.String network) {
@@ -365,7 +369,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
    * @return value or {@code null} for none
@@ -375,7 +379,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the VM Cluster. Format:
+   * Optional. Immutable. The name of the OdbNetwork associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
    * @param odbNetwork odbNetwork or {@code null} for none
@@ -386,7 +390,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the VM Cluster for IP
+   * allocation. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @return value or {@code null} for none
    */
@@ -395,7 +400,8 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. The name of the OdbSubnet associated with the VM Cluster for IP allocation. Format:
+   * Optional. Immutable. The name of the OdbSubnet associated with the VM Cluster for IP
+   * allocation. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
    * @param odbSubnet odbSubnet or {@code null} for none
    */
@@ -405,7 +411,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Various properties of the VM Cluster.
+   * Optional. Immutable. Various properties of the VM Cluster.
    * @return value or {@code null} for none
    */
   public CloudVmClusterProperties getProperties() {
@@ -413,7 +419,7 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Various properties of the VM Cluster.
+   * Optional. Immutable. Various properties of the VM Cluster.
    * @param properties properties or {@code null} for none
    */
   public CloudVmCluster setProperties(CloudVmClusterProperties properties) {

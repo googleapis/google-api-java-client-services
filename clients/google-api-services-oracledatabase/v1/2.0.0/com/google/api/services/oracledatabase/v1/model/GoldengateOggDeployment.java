@@ -31,7 +31,7 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class GoldengateOggDeployment extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The Goldengate deployment console password in plain text.
+   * Optional. Input only. The Goldengate deployment console password in plain text.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,7 +102,7 @@ public final class GoldengateOggDeployment extends com.google.api.client.json.Ge
   private java.lang.String passwordSecretId;
 
   /**
-   * Optional. The Goldengate deployment console password in plain text.
+   * Optional. Input only. The Goldengate deployment console password in plain text.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdminPassword() {
@@ -110,7 +110,7 @@ public final class GoldengateOggDeployment extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. The Goldengate deployment console password in plain text.
+   * Optional. Input only. The Goldengate deployment console password in plain text.
    * @param adminPassword adminPassword or {@code null} for none
    */
   public GoldengateOggDeployment setAdminPassword(java.lang.String adminPassword) {

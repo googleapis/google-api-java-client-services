@@ -74,6 +74,13 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
+   * Optional. Input only. The GraphQL source files like `dataconnect.yaml` and `*.gql`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Source graphqlSource;
+
+  /**
    * Optional. Labels as key value pairs.
    * The value may be {@code null}.
    */
@@ -98,7 +105,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. The list of schemas in this service.
+   * Optional. The list of schemas in this service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,11 +118,19 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The source files for service, schemas, and connectors.
+   * Optional. Input only. Deprecated: Use `sql_source` or `graphql_source` instead. The source
+   * files for service, schemas, and connectors.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private Source source;
+
+  /**
+   * Optional. Input only. The SQL source files like `*.sql` for deploying a PostgREST service.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Source sqlSource;
 
   /**
    * Output only. System-assigned, unique identifier.
@@ -221,6 +236,23 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Input only. The GraphQL source files like `dataconnect.yaml` and `*.gql`.
+   * @return value or {@code null} for none
+   */
+  public Source getGraphqlSource() {
+    return graphqlSource;
+  }
+
+  /**
+   * Optional. Input only. The GraphQL source files like `dataconnect.yaml` and `*.gql`.
+   * @param graphqlSource graphqlSource or {@code null} for none
+   */
+  public Service setGraphqlSource(Source graphqlSource) {
+    this.graphqlSource = graphqlSource;
+    return this;
+  }
+
+  /**
    * Optional. Labels as key value pairs.
    * @return value or {@code null} for none
    */
@@ -278,7 +310,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of schemas in this service.
+   * Optional. The list of schemas in this service.
    * @return value or {@code null} for none
    */
   public java.util.List<Schema> getSchemas() {
@@ -286,7 +318,7 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of schemas in this service.
+   * Optional. The list of schemas in this service.
    * @param schemas schemas or {@code null} for none
    */
   public Service setSchemas(java.util.List<Schema> schemas) {
@@ -295,7 +327,8 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The source files for service, schemas, and connectors.
+   * Optional. Input only. Deprecated: Use `sql_source` or `graphql_source` instead. The source
+   * files for service, schemas, and connectors.
    * @return value or {@code null} for none
    */
   public Source getSource() {
@@ -303,11 +336,29 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. The source files for service, schemas, and connectors.
+   * Optional. Input only. Deprecated: Use `sql_source` or `graphql_source` instead. The source
+   * files for service, schemas, and connectors.
    * @param source source or {@code null} for none
    */
   public Service setSource(Source source) {
     this.source = source;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. The SQL source files like `*.sql` for deploying a PostgREST service.
+   * @return value or {@code null} for none
+   */
+  public Source getSqlSource() {
+    return sqlSource;
+  }
+
+  /**
+   * Optional. Input only. The SQL source files like `*.sql` for deploying a PostgREST service.
+   * @param sqlSource sqlSource or {@code null} for none
+   */
+  public Service setSqlSource(Source sqlSource) {
+    this.sqlSource = sqlSource;
     return this;
   }
 

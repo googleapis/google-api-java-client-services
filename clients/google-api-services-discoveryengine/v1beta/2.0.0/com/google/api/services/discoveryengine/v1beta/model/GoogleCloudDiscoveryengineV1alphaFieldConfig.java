@@ -114,6 +114,30 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
   private java.lang.String metatagName;
 
   /**
+   * Optional. If partial_matchable_option is PARTIAL_MATCHABLE_OPTION_ENABLED, field values are
+   * partial matchable. If partial_matchable_option is unset, the server behavior defaults to
+   * PARTIAL_MATCHABLE_OPTION_DISABLED for fields that support setting partial matchable options.
+   * For those fields that do not support setting partial matchable options, the server will skip
+   * partial matchable option setting, and setting partial_matchable_option for those fields will
+   * throw `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String partialMatchableOption;
+
+  /**
+   * Optional. If prefix_matchable_option is PREFIX_MATCHABLE_OPTION_ENABLED, field values are
+   * prefix matchable. If prefix_matchable_option is unset, the server behavior defaults to
+   * PREFIX_MATCHABLE_OPTION_DISABLED for fields that support setting prefix matchable options. For
+   * those fields that do not support setting prefix matchable options, the server will skip prefix
+   * matchable option setting, and setting prefix_matchable_option for those fields will throw
+   * `INVALID_ARGUMENT` error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String prefixMatchableOption;
+
+  /**
    * If recs_filterable_option is FILTERABLE_ENABLED, field values are filterable by filter
    * expression in RecommendationService.Recommend. If FILTERABLE_ENABLED but the field type is
    * numerical, field values are not filterable by text queries in RecommendationService.Recommend.
@@ -361,6 +385,60 @@ public final class GoogleCloudDiscoveryengineV1alphaFieldConfig extends com.goog
    */
   public GoogleCloudDiscoveryengineV1alphaFieldConfig setMetatagName(java.lang.String metatagName) {
     this.metatagName = metatagName;
+    return this;
+  }
+
+  /**
+   * Optional. If partial_matchable_option is PARTIAL_MATCHABLE_OPTION_ENABLED, field values are
+   * partial matchable. If partial_matchable_option is unset, the server behavior defaults to
+   * PARTIAL_MATCHABLE_OPTION_DISABLED for fields that support setting partial matchable options.
+   * For those fields that do not support setting partial matchable options, the server will skip
+   * partial matchable option setting, and setting partial_matchable_option for those fields will
+   * throw `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPartialMatchableOption() {
+    return partialMatchableOption;
+  }
+
+  /**
+   * Optional. If partial_matchable_option is PARTIAL_MATCHABLE_OPTION_ENABLED, field values are
+   * partial matchable. If partial_matchable_option is unset, the server behavior defaults to
+   * PARTIAL_MATCHABLE_OPTION_DISABLED for fields that support setting partial matchable options.
+   * For those fields that do not support setting partial matchable options, the server will skip
+   * partial matchable option setting, and setting partial_matchable_option for those fields will
+   * throw `INVALID_ARGUMENT` error.
+   * @param partialMatchableOption partialMatchableOption or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFieldConfig setPartialMatchableOption(java.lang.String partialMatchableOption) {
+    this.partialMatchableOption = partialMatchableOption;
+    return this;
+  }
+
+  /**
+   * Optional. If prefix_matchable_option is PREFIX_MATCHABLE_OPTION_ENABLED, field values are
+   * prefix matchable. If prefix_matchable_option is unset, the server behavior defaults to
+   * PREFIX_MATCHABLE_OPTION_DISABLED for fields that support setting prefix matchable options. For
+   * those fields that do not support setting prefix matchable options, the server will skip prefix
+   * matchable option setting, and setting prefix_matchable_option for those fields will throw
+   * `INVALID_ARGUMENT` error.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPrefixMatchableOption() {
+    return prefixMatchableOption;
+  }
+
+  /**
+   * Optional. If prefix_matchable_option is PREFIX_MATCHABLE_OPTION_ENABLED, field values are
+   * prefix matchable. If prefix_matchable_option is unset, the server behavior defaults to
+   * PREFIX_MATCHABLE_OPTION_DISABLED for fields that support setting prefix matchable options. For
+   * those fields that do not support setting prefix matchable options, the server will skip prefix
+   * matchable option setting, and setting prefix_matchable_option for those fields will throw
+   * `INVALID_ARGUMENT` error.
+   * @param prefixMatchableOption prefixMatchableOption or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaFieldConfig setPrefixMatchableOption(java.lang.String prefixMatchableOption) {
+    this.prefixMatchableOption = prefixMatchableOption;
     return this;
   }
 

@@ -96,7 +96,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
-   * engines with a single data store, the specs directly under SearchRequest should be used.
+   * engines with a single data store, the specs directly under SearchRequest should be used. On an
+   * engine with multiple data stores, this field is optional. If it's empty, all of the engine's
+   * data stores are searched (blended search). Unless it specifies exactly one data store, some
+   * request fields, such as `order_by` and `query_expansion_spec`, aren't supported and return an
+   * `INVALID_ARGUMENT` error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -652,7 +656,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
-   * engines with a single data store, the specs directly under SearchRequest should be used.
+   * engines with a single data store, the specs directly under SearchRequest should be used. On an
+   * engine with multiple data stores, this field is optional. If it's empty, all of the engine's
+   * data stores are searched (blended search). Unless it specifies exactly one data store, some
+   * request fields, such as `order_by` and `query_expansion_spec`, aren't supported and return an
+   * `INVALID_ARGUMENT` error.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> getDataStoreSpecs() {
@@ -662,7 +670,11 @@ public final class GoogleCloudDiscoveryengineV1alphaSearchRequest extends com.go
   /**
    * Specifications that define the specific DataStores to be searched, along with configurations
    * for those data stores. This is only considered for Engines with multiple data stores. For
-   * engines with a single data store, the specs directly under SearchRequest should be used.
+   * engines with a single data store, the specs directly under SearchRequest should be used. On an
+   * engine with multiple data stores, this field is optional. If it's empty, all of the engine's
+   * data stores are searched (blended search). Unless it specifies exactly one data store, some
+   * request fields, such as `order_by` and `query_expansion_spec`, aren't supported and return an
+   * `INVALID_ARGUMENT` error.
    * @param dataStoreSpecs dataStoreSpecs or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaSearchRequest setDataStoreSpecs(java.util.List<GoogleCloudDiscoveryengineV1alphaSearchRequestDataStoreSpec> dataStoreSpecs) {

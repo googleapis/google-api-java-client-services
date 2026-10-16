@@ -39,7 +39,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   private String createTime;
 
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,8 +54,8 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   private java.lang.String entitlementId;
 
   /**
-   * Optional. The GCP Oracle zone where Oracle Exadata Infrastructure is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle Exadata Infrastructure is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   private java.lang.String name;
 
   /**
-   * Optional. Various properties of the infra.
+   * Optional. Immutable. Various properties of the infra.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,7 +101,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -109,7 +109,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. User friendly name for this resource.
+   * Optional. Immutable. User friendly name for this resource.
    * @param displayName displayName or {@code null} for none
    */
   public CloudExadataInfrastructure setDisplayName(java.lang.String displayName) {
@@ -137,8 +137,8 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle Exadata Infrastructure is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle Exadata Infrastructure is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -146,8 +146,8 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle Exadata Infrastructure is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle Exadata Infrastructure is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public CloudExadataInfrastructure setGcpOracleZone(java.lang.String gcpOracleZone) {
@@ -192,7 +192,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. Various properties of the infra.
+   * Optional. Immutable. Various properties of the infra.
    * @return value or {@code null} for none
    */
   public CloudExadataInfrastructureProperties getProperties() {
@@ -200,7 +200,7 @@ public final class CloudExadataInfrastructure extends com.google.api.client.json
   }
 
   /**
-   * Optional. Various properties of the infra.
+   * Optional. Immutable. Various properties of the infra.
    * @param properties properties or {@code null} for none
    */
   public CloudExadataInfrastructure setProperties(CloudExadataInfrastructureProperties properties) {

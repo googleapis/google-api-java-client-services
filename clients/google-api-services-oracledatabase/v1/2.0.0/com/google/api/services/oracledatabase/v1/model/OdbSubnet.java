@@ -31,7 +31,7 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class OdbSubnet extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The CIDR range of the subnet.
+   * Required. Immutable. The CIDR range of the subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,7 +60,7 @@ public final class OdbSubnet extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. Purpose of the subnet.
+   * Required. Immutable. Purpose of the subnet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,7 +74,7 @@ public final class OdbSubnet extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Required. The CIDR range of the subnet.
+   * Required. Immutable. The CIDR range of the subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getCidrRange() {
@@ -82,7 +82,7 @@ public final class OdbSubnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The CIDR range of the subnet.
+   * Required. Immutable. The CIDR range of the subnet.
    * @param cidrRange cidrRange or {@code null} for none
    */
   public OdbSubnet setCidrRange(java.lang.String cidrRange) {
@@ -144,7 +144,7 @@ public final class OdbSubnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Purpose of the subnet.
+   * Required. Immutable. Purpose of the subnet.
    * @return value or {@code null} for none
    */
   public java.lang.String getPurpose() {
@@ -152,7 +152,7 @@ public final class OdbSubnet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Purpose of the subnet.
+   * Required. Immutable. Purpose of the subnet.
    * @param purpose purpose or {@code null} for none
    */
   public OdbSubnet setPurpose(java.lang.String purpose) {

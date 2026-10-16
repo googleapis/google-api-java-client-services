@@ -39,9 +39,9 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   private String createTime;
 
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does not have to be unique
-   * within your project. The name must be 1-255 characters long and can only contain alphanumeric
-   * characters.
+   * Required. Immutable. The display name for the ExascaleDbStorageVault. The name does not have to
+   * be unique within your project. The name must be 1-255 characters long and can only contain
+   * alphanumeric characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -55,17 +55,17 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   private java.lang.String entitlementId;
 
   /**
-   * Optional. The Exadata Infrastructure resource on which ExascaleDbStorageVault resource is
-   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
-   * res/{cloud_extradata_infrastructure}
+   * Optional. Immutable. The Exadata Infrastructure resource on which ExascaleDbStorageVault
+   * resource is created, in the following format: projects/{project}/locations/{region}/cloudExadat
+   * aInfrastuctures/{cloud_extradata_infrastructure}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String exadataInfrastructure;
 
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,7 +87,7 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   private java.lang.String name;
 
   /**
-   * Required. The properties of the ExascaleDbStorageVault.
+   * Required. Immutable. The properties of the ExascaleDbStorageVault.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,9 +111,9 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does not have to be unique
-   * within your project. The name must be 1-255 characters long and can only contain alphanumeric
-   * characters.
+   * Required. Immutable. The display name for the ExascaleDbStorageVault. The name does not have to
+   * be unique within your project. The name must be 1-255 characters long and can only contain
+   * alphanumeric characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -121,9 +121,9 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The display name for the ExascaleDbStorageVault. The name does not have to be unique
-   * within your project. The name must be 1-255 characters long and can only contain alphanumeric
-   * characters.
+   * Required. Immutable. The display name for the ExascaleDbStorageVault. The name does not have to
+   * be unique within your project. The name must be 1-255 characters long and can only contain
+   * alphanumeric characters.
    * @param displayName displayName or {@code null} for none
    */
   public ExascaleDbStorageVault setDisplayName(java.lang.String displayName) {
@@ -149,9 +149,9 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Exadata Infrastructure resource on which ExascaleDbStorageVault resource is
-   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
-   * res/{cloud_extradata_infrastructure}
+   * Optional. Immutable. The Exadata Infrastructure resource on which ExascaleDbStorageVault
+   * resource is created, in the following format: projects/{project}/locations/{region}/cloudExadat
+   * aInfrastuctures/{cloud_extradata_infrastructure}
    * @return value or {@code null} for none
    */
   public java.lang.String getExadataInfrastructure() {
@@ -159,9 +159,9 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The Exadata Infrastructure resource on which ExascaleDbStorageVault resource is
-   * created, in the following format: projects/{project}/locations/{region}/cloudExadataInfrastuctu
-   * res/{cloud_extradata_infrastructure}
+   * Optional. Immutable. The Exadata Infrastructure resource on which ExascaleDbStorageVault
+   * resource is created, in the following format: projects/{project}/locations/{region}/cloudExadat
+   * aInfrastuctures/{cloud_extradata_infrastructure}
    * @param exadataInfrastructure exadataInfrastructure or {@code null} for none
    */
   public ExascaleDbStorageVault setExadataInfrastructure(java.lang.String exadataInfrastructure) {
@@ -170,8 +170,8 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -179,8 +179,8 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle ExascaleDbStorageVault is hosted.
+   * Example: us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public ExascaleDbStorageVault setGcpOracleZone(java.lang.String gcpOracleZone) {
@@ -225,7 +225,7 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The properties of the ExascaleDbStorageVault.
+   * Required. Immutable. The properties of the ExascaleDbStorageVault.
    * @return value or {@code null} for none
    */
   public ExascaleDbStorageVaultProperties getProperties() {
@@ -233,7 +233,7 @@ public final class ExascaleDbStorageVault extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. The properties of the ExascaleDbStorageVault.
+   * Required. Immutable. The properties of the ExascaleDbStorageVault.
    * @param properties properties or {@code null} for none
    */
   public ExascaleDbStorageVault setProperties(ExascaleDbStorageVaultProperties properties) {

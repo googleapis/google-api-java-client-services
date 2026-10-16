@@ -32,7 +32,7 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class Database extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The password for the default ADMIN user. Note: Only one of
+   * Optional. Input only. The password for the default ADMIN user. Note: Only one of
    * `admin_password_secret_version` or `admin_password` can be populated.
    * The value may be {@code null}.
    */
@@ -40,9 +40,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String adminPassword;
 
   /**
-   * Optional. The resource name of a secret version in Secret Manager which contains the database
-   * admin user's password. Format: projects/{project}/secrets/{secret}/versions/{version}. Note:
-   * Only one of `admin_password_secret_version` or `admin_password` can be populated.
+   * Optional. Input only. The resource name of a secret version in Secret Manager which contains
+   * the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,7 +152,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private DatabaseProperties properties;
 
   /**
-   * Optional. The TDE wallet password for the database. Note: Only one of
+   * Optional. Input only. The TDE wallet password for the database. Note: Only one of
    * `tde_wallet_password_secret_version` or `tde_wallet_password` can be populated.
    * The value may be {@code null}.
    */
@@ -159,17 +160,17 @@ public final class Database extends com.google.api.client.json.GenericJson {
   private java.lang.String tdeWalletPassword;
 
   /**
-   * Optional. The resource name of a secret version in Secret Manager which contains the TDE wallet
-   * password for the database. Format: projects/{project}/secrets/{secret}/versions/{version}.
-   * Note: Only one of `tde_wallet_password_secret_version` or `tde_wallet_password` can be
-   * populated.
+   * Optional. Input only. The resource name of a secret version in Secret Manager which contains
+   * the TDE wallet password for the database. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tdeWalletPasswordSecretVersion;
 
   /**
-   * Optional. The password for the default ADMIN user. Note: Only one of
+   * Optional. Input only. The password for the default ADMIN user. Note: Only one of
    * `admin_password_secret_version` or `admin_password` can be populated.
    * @return value or {@code null} for none
    */
@@ -178,7 +179,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The password for the default ADMIN user. Note: Only one of
+   * Optional. Input only. The password for the default ADMIN user. Note: Only one of
    * `admin_password_secret_version` or `admin_password` can be populated.
    * @param adminPassword adminPassword or {@code null} for none
    */
@@ -188,9 +189,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The resource name of a secret version in Secret Manager which contains the database
-   * admin user's password. Format: projects/{project}/secrets/{secret}/versions/{version}. Note:
-   * Only one of `admin_password_secret_version` or `admin_password` can be populated.
+   * Optional. Input only. The resource name of a secret version in Secret Manager which contains
+   * the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAdminPasswordSecretVersion() {
@@ -198,9 +200,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The resource name of a secret version in Secret Manager which contains the database
-   * admin user's password. Format: projects/{project}/secrets/{secret}/versions/{version}. Note:
-   * Only one of `admin_password_secret_version` or `admin_password` can be populated.
+   * Optional. Input only. The resource name of a secret version in Secret Manager which contains
+   * the database admin user's password. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `admin_password_secret_version` or `admin_password` can be populated.
    * @param adminPasswordSecretVersion adminPasswordSecretVersion or {@code null} for none
    */
   public Database setAdminPasswordSecretVersion(java.lang.String adminPasswordSecretVersion) {
@@ -455,7 +458,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The TDE wallet password for the database. Note: Only one of
+   * Optional. Input only. The TDE wallet password for the database. Note: Only one of
    * `tde_wallet_password_secret_version` or `tde_wallet_password` can be populated.
    * @return value or {@code null} for none
    */
@@ -464,7 +467,7 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The TDE wallet password for the database. Note: Only one of
+   * Optional. Input only. The TDE wallet password for the database. Note: Only one of
    * `tde_wallet_password_secret_version` or `tde_wallet_password` can be populated.
    * @param tdeWalletPassword tdeWalletPassword or {@code null} for none
    */
@@ -474,10 +477,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The resource name of a secret version in Secret Manager which contains the TDE wallet
-   * password for the database. Format: projects/{project}/secrets/{secret}/versions/{version}.
-   * Note: Only one of `tde_wallet_password_secret_version` or `tde_wallet_password` can be
-   * populated.
+   * Optional. Input only. The resource name of a secret version in Secret Manager which contains
+   * the TDE wallet password for the database. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getTdeWalletPasswordSecretVersion() {
@@ -485,10 +488,10 @@ public final class Database extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The resource name of a secret version in Secret Manager which contains the TDE wallet
-   * password for the database. Format: projects/{project}/secrets/{secret}/versions/{version}.
-   * Note: Only one of `tde_wallet_password_secret_version` or `tde_wallet_password` can be
-   * populated.
+   * Optional. Input only. The resource name of a secret version in Secret Manager which contains
+   * the TDE wallet password for the database. Format:
+   * projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+   * `tde_wallet_password_secret_version` or `tde_wallet_password` can be populated.
    * @param tdeWalletPasswordSecretVersion tdeWalletPasswordSecretVersion or {@code null} for none
    */
   public Database setTdeWalletPasswordSecretVersion(java.lang.String tdeWalletPasswordSecretVersion) {

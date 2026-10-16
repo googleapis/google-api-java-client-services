@@ -38,7 +38,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   private String createTime;
 
   /**
-   * Required. The display name for the GoldengateDeployment.
+   * Required. Immutable. The display name for the GoldengateDeployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,8 +52,8 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   private java.lang.String entitlementId;
 
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateDeployment is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateDeployment is hosted. Example:
+   * us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,21 +82,22 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   private java.lang.String ociUrl;
 
   /**
-   * Optional. The name of the OdbNetwork associated with the GoldengateDeployment.
+   * Optional. Immutable. The name of the OdbNetwork associated with the GoldengateDeployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String odbNetwork;
 
   /**
-   * Required. The name of the OdbSubnet associated with the GoldengateDeployment for IP allocation.
+   * Required. Immutable. The name of the OdbSubnet associated with the GoldengateDeployment for IP
+   * allocation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String odbSubnet;
 
   /**
-   * Required. The properties of the GoldengateDeployment.
+   * Required. Immutable. The properties of the GoldengateDeployment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +121,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The display name for the GoldengateDeployment.
+   * Required. Immutable. The display name for the GoldengateDeployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -128,7 +129,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The display name for the GoldengateDeployment.
+   * Required. Immutable. The display name for the GoldengateDeployment.
    * @param displayName displayName or {@code null} for none
    */
   public GoldengateDeployment setDisplayName(java.lang.String displayName) {
@@ -154,8 +155,8 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateDeployment is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateDeployment is hosted. Example:
+   * us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -163,8 +164,8 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The GCP Oracle zone where Oracle GoldengateDeployment is hosted. Example: us-
-   * east4-b-r2. If not specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where Oracle GoldengateDeployment is hosted. Example:
+   * us-east4-b-r2. If not specified, the system will pick a zone based on availability.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public GoldengateDeployment setGcpOracleZone(java.lang.String gcpOracleZone) {
@@ -226,7 +227,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the GoldengateDeployment.
+   * Optional. Immutable. The name of the OdbNetwork associated with the GoldengateDeployment.
    * @return value or {@code null} for none
    */
   public java.lang.String getOdbNetwork() {
@@ -234,7 +235,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. The name of the OdbNetwork associated with the GoldengateDeployment.
+   * Optional. Immutable. The name of the OdbNetwork associated with the GoldengateDeployment.
    * @param odbNetwork odbNetwork or {@code null} for none
    */
   public GoldengateDeployment setOdbNetwork(java.lang.String odbNetwork) {
@@ -243,7 +244,8 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The name of the OdbSubnet associated with the GoldengateDeployment for IP allocation.
+   * Required. Immutable. The name of the OdbSubnet associated with the GoldengateDeployment for IP
+   * allocation.
    * @return value or {@code null} for none
    */
   public java.lang.String getOdbSubnet() {
@@ -251,7 +253,8 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The name of the OdbSubnet associated with the GoldengateDeployment for IP allocation.
+   * Required. Immutable. The name of the OdbSubnet associated with the GoldengateDeployment for IP
+   * allocation.
    * @param odbSubnet odbSubnet or {@code null} for none
    */
   public GoldengateDeployment setOdbSubnet(java.lang.String odbSubnet) {
@@ -260,7 +263,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The properties of the GoldengateDeployment.
+   * Required. Immutable. The properties of the GoldengateDeployment.
    * @return value or {@code null} for none
    */
   public GoldengateDeploymentProperties getProperties() {
@@ -268,7 +271,7 @@ public final class GoldengateDeployment extends com.google.api.client.json.Gener
   }
 
   /**
-   * Required. The properties of the GoldengateDeployment.
+   * Required. Immutable. The properties of the GoldengateDeployment.
    * @param properties properties or {@code null} for none
    */
   public GoldengateDeployment setProperties(GoldengateDeploymentProperties properties) {

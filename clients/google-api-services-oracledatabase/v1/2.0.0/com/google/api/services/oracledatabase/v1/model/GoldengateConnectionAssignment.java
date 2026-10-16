@@ -38,7 +38,7 @@ public final class GoldengateConnectionAssignment extends com.google.api.client.
   private String createTime;
 
   /**
-   * Optional. The display name for the GoldengateConnectionAssignment.
+   * Optional. Immutable. The display name for the GoldengateConnectionAssignment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class GoldengateConnectionAssignment extends com.google.api.client.
   private java.lang.String name;
 
   /**
-   * Required. The properties of the GoldengateConnectionAssignment.
+   * Required. Immutable. The properties of the GoldengateConnectionAssignment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class GoldengateConnectionAssignment extends com.google.api.client.
   }
 
   /**
-   * Optional. The display name for the GoldengateConnectionAssignment.
+   * Optional. Immutable. The display name for the GoldengateConnectionAssignment.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -100,7 +100,7 @@ public final class GoldengateConnectionAssignment extends com.google.api.client.
   }
 
   /**
-   * Optional. The display name for the GoldengateConnectionAssignment.
+   * Optional. Immutable. The display name for the GoldengateConnectionAssignment.
    * @param displayName displayName or {@code null} for none
    */
   public GoldengateConnectionAssignment setDisplayName(java.lang.String displayName) {
@@ -164,7 +164,7 @@ public final class GoldengateConnectionAssignment extends com.google.api.client.
   }
 
   /**
-   * Required. The properties of the GoldengateConnectionAssignment.
+   * Required. Immutable. The properties of the GoldengateConnectionAssignment.
    * @return value or {@code null} for none
    */
   public GoldengateConnectionAssignmentProperties getProperties() {
@@ -172,7 +172,7 @@ public final class GoldengateConnectionAssignment extends com.google.api.client.
   }
 
   /**
-   * Required. The properties of the GoldengateConnectionAssignment.
+   * Required. Immutable. The properties of the GoldengateConnectionAssignment.
    * @param properties properties or {@code null} for none
    */
   public GoldengateConnectionAssignment setProperties(GoldengateConnectionAssignmentProperties properties) {

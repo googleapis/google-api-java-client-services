@@ -4419,6 +4419,217 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the parameters of a single Exadata Infrastructure.
+         *
+         * Create a request for the method "cloudExadataInfrastructures.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the Exadata Infrastructure resource with the format:
+         *        projects/{project}/locations/{region}/cloudExadataInfrastructures/{cloud_exadata_infrastru
+         *        cture}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.CloudExadataInfrastructure}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.CloudExadataInfrastructure content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudExadataInfrastructures/[^/]+$");
+
+          /**
+           * Updates the parameters of a single Exadata Infrastructure.
+           *
+           * Create a request for the method "cloudExadataInfrastructures.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the Exadata Infrastructure resource with the format:
+         *        projects/{project}/locations/{region}/cloudExadataInfrastructures/{cloud_exadata_infrastru
+         *        cture}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.CloudExadataInfrastructure}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.CloudExadataInfrastructure content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudExadataInfrastructures/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the Exadata Infrastructure resource with the format: projects/{
+           * project}/locations/{region}/cloudExadataInfrastructures/{cloud_exadata_infrastructure}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the Exadata Infrastructure resource with the format:
+         projects/{project}/locations/{region}/cloudExadataInfrastructures/{cloud_exadata_infrastructure}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the Exadata Infrastructure resource with the format: projects/{
+           * project}/locations/{region}/cloudExadataInfrastructures/{cloud_exadata_infrastructure}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudExadataInfrastructures/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the Exadata
+           * resource by the update. The fields specified in the `update_mask` are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then the service treats this as an implied field mask
+           * equivalent to all fields that are populated (have a non-empty value). To clear or unset
+           * a field, the field must be explicitly specified in the `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the Exadata resource by the
+         update. The fields specified in the `update_mask` are relative to the resource, not the full
+         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
+         the service treats this as an implied field mask equivalent to all fields that are populated (have
+         a non-empty value). To clear or unset a field, the field must be explicitly specified in the
+         `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the Exadata
+           * resource by the update. The fields specified in the `update_mask` are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. If
+           * the user does not provide a mask then the service treats this as an implied field mask
+           * equivalent to all fields that are populated (have a non-empty value). To clear or unset
+           * a field, the field must be explicitly specified in the `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the DbServers collection.
@@ -5389,6 +5600,211 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single Vm Cluster.
+         *
+         * Create a request for the method "cloudVmClusters.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the VM Cluster resource with the format:
+         *        projects/{project}/locations/{region}/cloudVmClusters/{cloud_vm_cluster}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.CloudVmCluster}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.CloudVmCluster content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+
+          /**
+           * Updates the parameters of a single Vm Cluster.
+           *
+           * Create a request for the method "cloudVmClusters.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the VM Cluster resource with the format:
+         *        projects/{project}/locations/{region}/cloudVmClusters/{cloud_vm_cluster}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.CloudVmCluster}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.CloudVmCluster content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the VM Cluster resource with the format:
+           * projects/{project}/locations/{region}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the VM Cluster resource with the format:
+         projects/{project}/locations/{region}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the VM Cluster resource with the format:
+           * projects/{project}/locations/{region}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the VM Cluster should be updated. A field
+           * specified in the mask is overwritten. If a mask isn't provided, the service treats this
+           * as an implied field mask equivalent to all fields that are populated (have a non-empty
+           * value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the VM Cluster should be updated. A field specified in
+         the mask is overwritten. If a mask isn't provided, the service treats this as an implied field mask
+         equivalent to all fields that are populated (have a non-empty value). To clear or unset a field,
+         the field must be explicitly specified in the `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the VM Cluster should be updated. A field
+           * specified in the mask is overwritten. If a mask isn't provided, the service treats this
+           * as an implied field mask equivalent to all fields that are populated (have a non-empty
+           * value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -7466,6 +7882,208 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the `labels` of a single DbSystem.
+         *
+         * Create a request for the method "dbSystems.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the DbSystem resource in the following format:
+         *        projects/{project}/locations/{region}/dbSystems/{db_system}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.DbSystem}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DbSystem content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+
+          /**
+           * Updates the `labels` of a single DbSystem.
+           *
+           * Create a request for the method "dbSystems.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the DbSystem resource in the following format:
+         *        projects/{project}/locations/{region}/dbSystems/{db_system}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.DbSystem}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DbSystem content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the DbSystem resource in the following format:
+           * projects/{project}/locations/{region}/dbSystems/{db_system}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the DbSystem resource in the following format:
+         projects/{project}/locations/{region}/dbSystems/{db_system}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the DbSystem resource in the following format:
+           * projects/{project}/locations/{region}/dbSystems/{db_system}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/dbSystems/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the DbSystem should be updated. A field
+           * specified in the mask is updated. If a mask isn't provided, the service treats this as
+           * an implied field mask equivalent to all fields that are populated (have a non-empty
+           * value).
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the DbSystem should be updated. A field specified in
+         the mask is updated. If a mask isn't provided, the service treats this as an implied field mask
+         equivalent to all fields that are populated (have a non-empty value).
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the DbSystem should be updated. A field
+           * specified in the mask is updated. If a mask isn't provided, the service treats this as
+           * an implied field mask equivalent to all fields that are populated (have a non-empty
+           * value).
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -10039,6 +10657,213 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the `labels` of a single ExascaleDbStorageVault.
+         *
+         * Create a request for the method "exascaleDbStorageVaults.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the ExascaleDbStorageVault. Format:
+         *        projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault
+         *        }
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.ExascaleDbStorageVault}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.ExascaleDbStorageVault content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/exascaleDbStorageVaults/[^/]+$");
+
+          /**
+           * Updates the `labels` of a single ExascaleDbStorageVault.
+           *
+           * Create a request for the method "exascaleDbStorageVaults.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the ExascaleDbStorageVault. Format:
+         *        projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault
+         *        }
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.ExascaleDbStorageVault}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.ExascaleDbStorageVault content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/exascaleDbStorageVaults/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the ExascaleDbStorageVault. Format: projects/{project}
+           * /locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the ExascaleDbStorageVault. Format:
+         projects/{project}/locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the ExascaleDbStorageVault. Format: projects/{project}
+           * /locations/{location}/exascaleDbStorageVaults/{exascale_db_storage_vault}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/exascaleDbStorageVaults/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the ExascaleDbStorageVault should be
+           * updated. A field specified in the mask is updated. If a mask isn't provided, the
+           * service treats this as an implied field mask equivalent to all fields that are
+           * populated (have a non-empty value). To clear or unset a field, the field must be
+           * explicitly specified in the `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the ExascaleDbStorageVault should be updated. A field
+         specified in the mask is updated. If a mask isn't provided, the service treats this as an implied
+         field mask equivalent to all fields that are populated (have a non-empty value). To clear or unset
+         a field, the field must be explicitly specified in the `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the ExascaleDbStorageVault should be
+           * updated. A field specified in the mask is updated. If a mask isn't provided, the
+           * service treats this as an implied field mask equivalent to all fields that are
+           * populated (have a non-empty value). To clear or unset a field, the field must be
+           * explicitly specified in the `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
 
       }
       /**
@@ -11325,6 +12150,215 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Updates the `labels` of a single GoldengateConnectionAssignment.
+         *
+         * Create a request for the method "goldengateConnectionAssignments.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the GoldengateConnectionAssignment resource in the following format: project
+         *        s/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assi
+         *        gnment}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.GoldengateConnectionAssignment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.GoldengateConnectionAssignment content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateConnectionAssignments/[^/]+$");
+
+          /**
+           * Updates the `labels` of a single GoldengateConnectionAssignment.
+           *
+           * Create a request for the method "goldengateConnectionAssignments.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the GoldengateConnectionAssignment resource in the following format: project
+         *        s/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assi
+         *        gnment}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.GoldengateConnectionAssignment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.GoldengateConnectionAssignment content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/goldengateConnectionAssignments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the GoldengateConnectionAssignment resource in the following
+           * format: projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldenga
+           * te_connection_assignment}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the GoldengateConnectionAssignment resource in the following format: projec
+         ts/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the GoldengateConnectionAssignment resource in the following
+           * format: projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldenga
+           * te_connection_assignment}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/goldengateConnectionAssignments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the GoldengateConnectionAssignment should
+           * be updated. A field specified in the mask is updated. If a mask isn't provided, the
+           * service treats this as an implied field mask equivalent to all fields that are
+           * populated (have a non-empty value). To clear or unset a field, the field must be
+           * explicitly specified in the `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the GoldengateConnectionAssignment should be updated. A
+         field specified in the mask is updated. If a mask isn't provided, the service treats this as an
+         implied field mask equivalent to all fields that are populated (have a non-empty value). To clear
+         or unset a field, the field must be explicitly specified in the `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the GoldengateConnectionAssignment should
+           * be updated. A field specified in the mask is updated. If a mask isn't provided, the
+           * service treats this as an implied field mask equivalent to all fields that are
+           * populated (have a non-empty value). To clear or unset a field, the field must be
+           * explicitly specified in the `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
          * Tests a single GoldengateConnectionAssignment.
          *
          * Create a request for the method "goldengateConnectionAssignments.test".
@@ -12471,6 +13505,211 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the `labels` of a single GoldengateConnection.
+         *
+         * Create a request for the method "goldengateConnections.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the GoldengateConnection resource in the following format:
+         *        projects/{project}/locations/{region}/goldengateConnections/{goldengate_connection}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.GoldengateConnection}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.GoldengateConnection content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateConnections/[^/]+$");
+
+          /**
+           * Updates the `labels` of a single GoldengateConnection.
+           *
+           * Create a request for the method "goldengateConnections.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the GoldengateConnection resource in the following format:
+         *        projects/{project}/locations/{region}/goldengateConnections/{goldengate_connection}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.GoldengateConnection}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.GoldengateConnection content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/goldengateConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the GoldengateConnection resource in the following format:
+           * projects/{project}/locations/{region}/goldengateConnections/{goldengate_connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the GoldengateConnection resource in the following format:
+         projects/{project}/locations/{region}/goldengateConnections/{goldengate_connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the GoldengateConnection resource in the following format:
+           * projects/{project}/locations/{region}/goldengateConnections/{goldengate_connection}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/goldengateConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the GoldengateConnection should be updated.
+           * A field specified in the mask is updated. If a mask isn't provided, the service treats
+           * this as an implied field mask equivalent to all fields that are populated (have a non-
+           * empty value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the GoldengateConnection should be updated. A field
+         specified in the mask is updated. If a mask isn't provided, the service treats this as an implied
+         field mask equivalent to all fields that are populated (have a non-empty value). To clear or unset
+         a field, the field must be explicitly specified in the `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the GoldengateConnection should be updated.
+           * A field specified in the mask is updated. If a mask isn't provided, the service treats
+           * this as an implied field mask equivalent to all fields that are populated (have a non-
+           * empty value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
 
@@ -13944,6 +15183,211 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public List set(String parameterName, Object value) {
             return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the `labels` of a single GoldengateDeployment.
+         *
+         * Create a request for the method "goldengateDeployments.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the GoldengateDeployment resource in the following format:
+         *        projects/{project}/locations/{region}/goldengateDeployments/{goldengate_deployment}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.GoldengateDeployment}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.GoldengateDeployment content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/goldengateDeployments/[^/]+$");
+
+          /**
+           * Updates the `labels` of a single GoldengateDeployment.
+           *
+           * Create a request for the method "goldengateDeployments.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the GoldengateDeployment resource in the following format:
+         *        projects/{project}/locations/{region}/goldengateDeployments/{goldengate_deployment}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.GoldengateDeployment}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.GoldengateDeployment content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/goldengateDeployments/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the GoldengateDeployment resource in the following format:
+           * projects/{project}/locations/{region}/goldengateDeployments/{goldengate_deployment}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the GoldengateDeployment resource in the following format:
+         projects/{project}/locations/{region}/goldengateDeployments/{goldengate_deployment}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the GoldengateDeployment resource in the following format:
+           * projects/{project}/locations/{region}/goldengateDeployments/{goldengate_deployment}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/goldengateDeployments/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the GoldengateDeployment should be updated.
+           * A field specified in the mask is updated. If a mask isn't provided, the service treats
+           * this as an implied field mask equivalent to all fields that are populated (have a non-
+           * empty value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the GoldengateDeployment should be updated. A field
+         specified in the mask is updated. If a mask isn't provided, the service treats this as an implied
+         field mask equivalent to all fields that are populated (have a non-empty value). To clear or unset
+         a field, the field must be explicitly specified in the `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the GoldengateDeployment should be updated.
+           * A field specified in the mask is updated. If a mask isn't provided, the service treats
+           * this as an implied field mask equivalent to all fields that are populated (have a non-
+           * empty value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
           }
         }
         /**
@@ -15744,6 +17188,211 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the `labels` of a single ODB Subnet.
+           *
+           * Create a request for the method "odbSubnets.patch".
+           *
+           * This request holds the parameters needed by the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The name of the OdbSubnet resource in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.OdbSubnet}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.OdbSubnet content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbSubnets/[^/]+$");
+
+            /**
+             * Updates the `labels` of a single ODB Subnet.
+             *
+             * Create a request for the method "odbSubnets.patch".
+             *
+             * This request holds the parameters needed by the the oracledatabase server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The name of the OdbSubnet resource in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+             * @param content the {@link com.google.api.services.oracledatabase.v1.model.OdbSubnet}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.OdbSubnet content) {
+              super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbSubnets/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The name of the OdbSubnet resource in the following format: projects/{pro
+             * ject}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The name of the OdbSubnet resource in the following format:
+           projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The name of the OdbSubnet resource in the following format: projects/{pro
+             * ject}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbSubnets/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An optional ID to identify the request. This value is used to identify
+             * duplicate requests. If you make a request with the same request ID and the original
+             * request is still in progress or completed, the server ignores the second request.
+             * This prevents clients from accidentally creating duplicate commitments. The request
+             * ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+           requests. If you make a request with the same request ID and the original request is still in
+           progress or completed, the server ignores the second request. This prevents clients from
+           accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+           that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional ID to identify the request. This value is used to identify
+             * duplicate requests. If you make a request with the same request ID and the original
+             * request is still in progress or completed, the server ignores the second request.
+             * This prevents clients from accidentally creating duplicate commitments. The request
+             * ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Patch setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Optional. A mask specifying which fields in the OdbSubnet should be updated. A field
+             * specified in the mask is updated. If a mask isn't provided, the service treats this
+             * as an implied field mask equivalent to all fields that are populated (have a non-
+             * empty value). To clear or unset a field, the field must be explicitly specified in
+             * the `update_mask`.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Optional. A mask specifying which fields in the OdbSubnet should be updated. A field specified in
+           the mask is updated. If a mask isn't provided, the service treats this as an implied field mask
+           equivalent to all fields that are populated (have a non-empty value). To clear or unset a field,
+           the field must be explicitly specified in the `update_mask`.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Optional. A mask specifying which fields in the OdbSubnet should be updated. A field
+             * specified in the mask is updated. If a mask isn't provided, the service treats this
+             * as an implied field mask equivalent to all fields that are populated (have a non-
+             * empty value). To clear or unset a field, the field must be explicitly specified in
+             * the `update_mask`.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
             }
           }
 

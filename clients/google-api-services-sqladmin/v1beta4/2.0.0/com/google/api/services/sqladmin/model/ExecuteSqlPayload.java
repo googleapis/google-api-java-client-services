@@ -47,7 +47,8 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   private java.lang.Boolean autoIamAuthn;
 
   /**
-   * Optional. Name of the database on which the statement will be executed.
+   * Optional. Name of the database on which the statement will be executed. For Postgres and SQL
+   * Server it's required, for MySQL it's optional.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,8 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Name of the database on which the statement will be executed.
+   * Optional. Name of the database on which the statement will be executed. For Postgres and SQL
+   * Server it's required, for MySQL it's optional.
    * @return value or {@code null} for none
    */
   public java.lang.String getDatabase() {
@@ -145,7 +147,8 @@ public final class ExecuteSqlPayload extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Name of the database on which the statement will be executed.
+   * Optional. Name of the database on which the statement will be executed. For Postgres and SQL
+   * Server it's required, for MySQL it's optional.
    * @param database database or {@code null} for none
    */
   public ExecuteSqlPayload setDatabase(java.lang.String database) {

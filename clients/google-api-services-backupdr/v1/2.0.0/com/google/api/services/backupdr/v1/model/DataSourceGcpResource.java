@@ -87,6 +87,14 @@ public final class DataSourceGcpResource extends com.google.api.client.json.Gene
   private java.lang.String location;
 
   /**
+   * Output only. NetAppVolumeDataSourceProperties has a subset of NetApp Volume properties that are
+   * useful at the Datasource level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetAppVolumeDataSourceProperties netappVolumeDatasourceProperties;
+
+  /**
    * The type of the Google Cloud resource. Use the Unified Resource Type, eg.
    * compute.googleapis.com/Instance.
    * The value may be {@code null}.
@@ -222,6 +230,25 @@ public final class DataSourceGcpResource extends com.google.api.client.json.Gene
    */
   public DataSourceGcpResource setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Output only. NetAppVolumeDataSourceProperties has a subset of NetApp Volume properties that are
+   * useful at the Datasource level.
+   * @return value or {@code null} for none
+   */
+  public NetAppVolumeDataSourceProperties getNetappVolumeDatasourceProperties() {
+    return netappVolumeDatasourceProperties;
+  }
+
+  /**
+   * Output only. NetAppVolumeDataSourceProperties has a subset of NetApp Volume properties that are
+   * useful at the Datasource level.
+   * @param netappVolumeDatasourceProperties netappVolumeDatasourceProperties or {@code null} for none
+   */
+  public DataSourceGcpResource setNetappVolumeDatasourceProperties(NetAppVolumeDataSourceProperties netappVolumeDatasourceProperties) {
+    this.netappVolumeDatasourceProperties = netappVolumeDatasourceProperties;
     return this;
   }
 

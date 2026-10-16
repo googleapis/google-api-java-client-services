@@ -110,6 +110,13 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * Output only. NetApp volume backup plan association properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetAppVolumeBackupPlanAssociationProperties netappVolumeBackupPlanAssociationProperties;
+
+  /**
    * Required. Immutable. Resource name of workload on which the backup plan is applied. The format
    * can either be the resource name (e.g., "projects/my-project/zones/us-central1-a/instances/my-
    * instance") or the full resource URI (e.g., "https://www.googleapis.com/compute/v1/projects/my-
@@ -330,6 +337,23 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
    */
   public BackupPlanAssociation setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. NetApp volume backup plan association properties.
+   * @return value or {@code null} for none
+   */
+  public NetAppVolumeBackupPlanAssociationProperties getNetappVolumeBackupPlanAssociationProperties() {
+    return netappVolumeBackupPlanAssociationProperties;
+  }
+
+  /**
+   * Output only. NetApp volume backup plan association properties.
+   * @param netappVolumeBackupPlanAssociationProperties netappVolumeBackupPlanAssociationProperties or {@code null} for none
+   */
+  public BackupPlanAssociation setNetappVolumeBackupPlanAssociationProperties(NetAppVolumeBackupPlanAssociationProperties netappVolumeBackupPlanAssociationProperties) {
+    this.netappVolumeBackupPlanAssociationProperties = netappVolumeBackupPlanAssociationProperties;
     return this;
   }
 

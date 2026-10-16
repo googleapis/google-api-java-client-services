@@ -175,6 +175,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Output only. NetApp Volume specific backup properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private NetAppVolumeBackupProperties netappVolumeBackupProperties;
+
+  /**
    * Output only. source resource size in bytes at the time of the backup.
    * The value may be {@code null}.
    */
@@ -562,6 +569,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. NetApp Volume specific backup properties.
+   * @return value or {@code null} for none
+   */
+  public NetAppVolumeBackupProperties getNetappVolumeBackupProperties() {
+    return netappVolumeBackupProperties;
+  }
+
+  /**
+   * Output only. NetApp Volume specific backup properties.
+   * @param netappVolumeBackupProperties netappVolumeBackupProperties or {@code null} for none
+   */
+  public Backup setNetappVolumeBackupProperties(NetAppVolumeBackupProperties netappVolumeBackupProperties) {
+    this.netappVolumeBackupProperties = netappVolumeBackupProperties;
     return this;
   }
 

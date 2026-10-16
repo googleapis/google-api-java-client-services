@@ -31,6 +31,15 @@ package com.google.api.services.iam.v1.model;
 public final class WorkloadIdentityPoolProvider extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A list of the resource names of WorkloadIdentityPoolProviders in the same pool that
+   * are authorized to issue actor tokens for this provider. An actor token represents the identity
+   * of the acting party to whom authority is delegated. At most 3 actor providers can be specified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> actorProviders;
+
+  /**
    * Optional. [A Common Expression Language](https://opensource.google/projects/cel) expression, in
    * plain text, to restrict what otherwise valid authentication credentials issued by the provider
    * should not be accepted. The expression must output a boolean representing whether to allow the
@@ -157,6 +166,27 @@ public final class WorkloadIdentityPoolProvider extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private X509 x509;
+
+  /**
+   * Optional. A list of the resource names of WorkloadIdentityPoolProviders in the same pool that
+   * are authorized to issue actor tokens for this provider. An actor token represents the identity
+   * of the acting party to whom authority is delegated. At most 3 actor providers can be specified.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getActorProviders() {
+    return actorProviders;
+  }
+
+  /**
+   * Optional. A list of the resource names of WorkloadIdentityPoolProviders in the same pool that
+   * are authorized to issue actor tokens for this provider. An actor token represents the identity
+   * of the acting party to whom authority is delegated. At most 3 actor providers can be specified.
+   * @param actorProviders actorProviders or {@code null} for none
+   */
+  public WorkloadIdentityPoolProvider setActorProviders(java.util.List<java.lang.String> actorProviders) {
+    this.actorProviders = actorProviders;
+    return this;
+  }
 
   /**
    * Optional. [A Common Expression Language](https://opensource.google/projects/cel) expression, in

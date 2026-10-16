@@ -44,6 +44,23 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> allowedAudiences;
 
   /**
+   * Optional. The URL to fetch the OIDC discovery document from, overriding the default URL derived
+   * from `issuer_uri`. If not set, `discovery_uri` defaults to `issuer_uri` with `/.well-
+   * known/openid-configuration` appended, as per the OpenID Connect Discovery 1.0 specification. If
+   * set, `discovery_uri` must meet the following requirements: - Must start with `https://`. - Must
+   * not exceed 2000 characters. - The scheme, host, and port must match `issuer_uri`. - The path
+   * must contain `/.well-known/` (where `` is not empty, such as `openid-configuration`) and
+   * conform to the `issuer_uri` topology: - The well-known path segment is inserted before the
+   * issuer path (for example, `https://example.com/.well-known/openid-configuration/tenant1` for
+   * issuer `https://example.com/tenant1`), or - The well-known path segment is appended under the
+   * issuer path (for example, `https://example.com/tenant1/.well-known/openid-configuration` for
+   * issuer `https://example.com/tenant1`).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String discoveryUri;
+
+  /**
    * Required. The OIDC `issuer_uri`. Must be an HTTPS endpoint. Per OpenID Connect Discovery 1.0
    * spec, the OIDC issuer URL is used to locate the provider's public keys (via `jwks_uri`) for
    * verifying tokens like the OIDC ID token. These public key types must be 'EC' or 'RSA'.
@@ -90,6 +107,43 @@ public final class Oidc extends com.google.api.client.json.GenericJson {
    */
   public Oidc setAllowedAudiences(java.util.List<java.lang.String> allowedAudiences) {
     this.allowedAudiences = allowedAudiences;
+    return this;
+  }
+
+  /**
+   * Optional. The URL to fetch the OIDC discovery document from, overriding the default URL derived
+   * from `issuer_uri`. If not set, `discovery_uri` defaults to `issuer_uri` with `/.well-
+   * known/openid-configuration` appended, as per the OpenID Connect Discovery 1.0 specification. If
+   * set, `discovery_uri` must meet the following requirements: - Must start with `https://`. - Must
+   * not exceed 2000 characters. - The scheme, host, and port must match `issuer_uri`. - The path
+   * must contain `/.well-known/` (where `` is not empty, such as `openid-configuration`) and
+   * conform to the `issuer_uri` topology: - The well-known path segment is inserted before the
+   * issuer path (for example, `https://example.com/.well-known/openid-configuration/tenant1` for
+   * issuer `https://example.com/tenant1`), or - The well-known path segment is appended under the
+   * issuer path (for example, `https://example.com/tenant1/.well-known/openid-configuration` for
+   * issuer `https://example.com/tenant1`).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDiscoveryUri() {
+    return discoveryUri;
+  }
+
+  /**
+   * Optional. The URL to fetch the OIDC discovery document from, overriding the default URL derived
+   * from `issuer_uri`. If not set, `discovery_uri` defaults to `issuer_uri` with `/.well-
+   * known/openid-configuration` appended, as per the OpenID Connect Discovery 1.0 specification. If
+   * set, `discovery_uri` must meet the following requirements: - Must start with `https://`. - Must
+   * not exceed 2000 characters. - The scheme, host, and port must match `issuer_uri`. - The path
+   * must contain `/.well-known/` (where `` is not empty, such as `openid-configuration`) and
+   * conform to the `issuer_uri` topology: - The well-known path segment is inserted before the
+   * issuer path (for example, `https://example.com/.well-known/openid-configuration/tenant1` for
+   * issuer `https://example.com/tenant1`), or - The well-known path segment is appended under the
+   * issuer path (for example, `https://example.com/tenant1/.well-known/openid-configuration` for
+   * issuer `https://example.com/tenant1`).
+   * @param discoveryUri discoveryUri or {@code null} for none
+   */
+  public Oidc setDiscoveryUri(java.lang.String discoveryUri) {
+    this.discoveryUri = discoveryUri;
     return this;
   }
 

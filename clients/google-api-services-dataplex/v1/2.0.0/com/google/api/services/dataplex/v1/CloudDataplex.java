@@ -15899,6 +15899,148 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
       public class EntryGroups {
 
         /**
+         * Batch changes metadata within an EntryGroup.
+         *
+         * Create a request for the method "entryGroups.batchChangeMetadata".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link BatchChangeMetadata#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the EntryGroup on which the batch change applies. Format:
+         *        projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1BatchChangeMetadataRequest}
+         * @return the request
+         */
+        public BatchChangeMetadata batchChangeMetadata(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1BatchChangeMetadataRequest content) throws java.io.IOException {
+          BatchChangeMetadata result = new BatchChangeMetadata(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class BatchChangeMetadata extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation> {
+
+          private static final String REST_PATH = "v1/{+name}:batchChangeMetadata";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+          /**
+           * Batch changes metadata within an EntryGroup.
+           *
+           * Create a request for the method "entryGroups.batchChangeMetadata".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link BatchChangeMetadata#execute()} method to invoke the remote
+           * operation. <p> {@link BatchChangeMetadata#initialize(com.google.api.client.googleapis.services.
+           * AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+           * invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the EntryGroup on which the batch change applies. Format:
+         *        projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1BatchChangeMetadataRequest}
+           * @since 1.13
+           */
+          protected BatchChangeMetadata(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1BatchChangeMetadataRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleLongrunningOperation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public BatchChangeMetadata set$Xgafv(java.lang.String $Xgafv) {
+            return (BatchChangeMetadata) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public BatchChangeMetadata setAccessToken(java.lang.String accessToken) {
+            return (BatchChangeMetadata) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public BatchChangeMetadata setAlt(java.lang.String alt) {
+            return (BatchChangeMetadata) super.setAlt(alt);
+          }
+
+          @Override
+          public BatchChangeMetadata setCallback(java.lang.String callback) {
+            return (BatchChangeMetadata) super.setCallback(callback);
+          }
+
+          @Override
+          public BatchChangeMetadata setFields(java.lang.String fields) {
+            return (BatchChangeMetadata) super.setFields(fields);
+          }
+
+          @Override
+          public BatchChangeMetadata setKey(java.lang.String key) {
+            return (BatchChangeMetadata) super.setKey(key);
+          }
+
+          @Override
+          public BatchChangeMetadata setOauthToken(java.lang.String oauthToken) {
+            return (BatchChangeMetadata) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public BatchChangeMetadata setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (BatchChangeMetadata) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public BatchChangeMetadata setQuotaUser(java.lang.String quotaUser) {
+            return (BatchChangeMetadata) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public BatchChangeMetadata setUploadType(java.lang.String uploadType) {
+            return (BatchChangeMetadata) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public BatchChangeMetadata setUploadProtocol(java.lang.String uploadProtocol) {
+            return (BatchChangeMetadata) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the EntryGroup on which the batch change applies.
+           * Format:
+           * projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the EntryGroup on which the batch change applies. Format:
+         projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the EntryGroup on which the batch change applies.
+           * Format:
+           * projects/{project_number_or_id}/locations/{location_id}/entryGroups/{entry_group_id}
+           */
+          public BatchChangeMetadata setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public BatchChangeMetadata set(String parameterName, Object value) {
+            return (BatchChangeMetadata) super.set(parameterName, value);
+          }
+        }
+        /**
          * Creates an EntryGroup.
          *
          * Create a request for the method "entryGroups.create".
@@ -16999,6 +17141,151 @@ public class CloudDataplex extends com.google.api.client.googleapis.services.jso
           @Override
           public Patch set(String parameterName, Object value) {
             return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Submits a catalog change request for multiple resources within an EntryGroup. This method creates
+         * a ChangeRequest resource that must be reviewed and approved before the proposed changes are
+         * applied.
+         *
+         * Create a request for the method "entryGroups.requestBatchMetadataChange".
+         *
+         * This request holds the parameters needed by the dataplex server.  After setting any optional
+         * parameters, call the {@link RequestBatchMetadataChange#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param name Required. The resource name of the Entry Group on which the change applies. Format:
+         *        projects/{project}/locations/{location}/entryGroups/{entry_group}
+         * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestBatchMetadataChangeRequest}
+         * @return the request
+         */
+        public RequestBatchMetadataChange requestBatchMetadataChange(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestBatchMetadataChangeRequest content) throws java.io.IOException {
+          RequestBatchMetadataChange result = new RequestBatchMetadataChange(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class RequestBatchMetadataChange extends CloudDataplexRequest<com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestBatchMetadataChangeResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:requestBatchMetadataChange";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+
+          /**
+           * Submits a catalog change request for multiple resources within an EntryGroup. This method
+           * creates a ChangeRequest resource that must be reviewed and approved before the proposed changes
+           * are applied.
+           *
+           * Create a request for the method "entryGroups.requestBatchMetadataChange".
+           *
+           * This request holds the parameters needed by the the dataplex server.  After setting any
+           * optional parameters, call the {@link RequestBatchMetadataChange#execute()} method to invoke the
+           * remote operation. <p> {@link RequestBatchMetadataChange#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the Entry Group on which the change applies. Format:
+         *        projects/{project}/locations/{location}/entryGroups/{entry_group}
+           * @param content the {@link com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestBatchMetadataChangeRequest}
+           * @since 1.13
+           */
+          protected RequestBatchMetadataChange(java.lang.String name, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestBatchMetadataChangeRequest content) {
+            super(CloudDataplex.this, "POST", REST_PATH, content, com.google.api.services.dataplex.v1.model.GoogleCloudDataplexV1RequestBatchMetadataChangeResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+          }
+
+          @Override
+          public RequestBatchMetadataChange set$Xgafv(java.lang.String $Xgafv) {
+            return (RequestBatchMetadataChange) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setAccessToken(java.lang.String accessToken) {
+            return (RequestBatchMetadataChange) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setAlt(java.lang.String alt) {
+            return (RequestBatchMetadataChange) super.setAlt(alt);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setCallback(java.lang.String callback) {
+            return (RequestBatchMetadataChange) super.setCallback(callback);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setFields(java.lang.String fields) {
+            return (RequestBatchMetadataChange) super.setFields(fields);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setKey(java.lang.String key) {
+            return (RequestBatchMetadataChange) super.setKey(key);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setOauthToken(java.lang.String oauthToken) {
+            return (RequestBatchMetadataChange) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RequestBatchMetadataChange) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setQuotaUser(java.lang.String quotaUser) {
+            return (RequestBatchMetadataChange) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setUploadType(java.lang.String uploadType) {
+            return (RequestBatchMetadataChange) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RequestBatchMetadataChange setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RequestBatchMetadataChange) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Entry Group on which the change applies. Format:
+           * projects/{project}/locations/{location}/entryGroups/{entry_group}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the Entry Group on which the change applies. Format:
+         projects/{project}/locations/{location}/entryGroups/{entry_group}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the Entry Group on which the change applies. Format:
+           * projects/{project}/locations/{location}/entryGroups/{entry_group}
+           */
+          public RequestBatchMetadataChange setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/entryGroups/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public RequestBatchMetadataChange set(String parameterName, Object value) {
+            return (RequestBatchMetadataChange) super.set(parameterName, value);
           }
         }
         /**

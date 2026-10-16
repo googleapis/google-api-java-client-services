@@ -6573,16 +6573,18 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
         }
         /**
-         * Revokes all sessions for a given WorkforcePoolSubject.
+         * Revokes all sessions for the specified WorkforcePoolSubject. Revoking sessions invalidates all
+         * active sessions and previously issued credentials for the subject, requiring the user to re-
+         * authenticate with the identity provider.
          *
          * Create a request for the method "subjects.revokeSessions".
          *
          * This request holds the parameters needed by the iam server.  After setting any optional
          * parameters, call the {@link RevokeSessions#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
-         *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
-         *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+         * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, such as `/` and `:`,
+         *        must be escaped, because all URLs must conform to the "When to Escape and Unescape"
+         *        section of [RFC 3986](https://www.rfc-editor.org/info/rfc3986/). Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
          * @param content the {@link com.google.api.services.iam.v1.model.RevokeWorkforcePoolSubjectSessionsRequest}
          * @return the request
@@ -6601,7 +6603,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
               java.util.regex.Pattern.compile("^locations/[^/]+/workforcePools/[^/]+/subjects/[^/]+$");
 
           /**
-           * Revokes all sessions for a given WorkforcePoolSubject.
+           * Revokes all sessions for the specified WorkforcePoolSubject. Revoking sessions invalidates all
+           * active sessions and previously issued credentials for the subject, requiring the user to re-
+           * authenticate with the identity provider.
            *
            * Create a request for the method "subjects.revokeSessions".
            *
@@ -6611,9 +6615,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
            * ientRequest)} must be called to initialize this instance immediately after invoking the
            * constructor. </p>
            *
-           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
-         *        be escaped, because all URLs need to conform to the "When to Escape and Unescape" section
-         *        of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+           * @param name Required. The resource name of the WorkforcePoolSubject. Special characters, such as `/` and `:`,
+         *        must be escaped, because all URLs must conform to the "When to Escape and Unescape"
+         *        section of [RFC 3986](https://www.rfc-editor.org/info/rfc3986/). Format:
          *        `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            * @param content the {@link com.google.api.services.iam.v1.model.RevokeWorkforcePoolSubjectSessionsRequest}
            * @since 1.13
@@ -6684,17 +6688,17 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
-           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
-           * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, such as
+           * `/` and `:`, must be escaped, because all URLs must conform to the "When to Escape and
+           * Unescape" section of [RFC 3986](https://www.rfc-editor.org/info/rfc3986/). Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The resource name of the WorkforcePoolSubject. Special characters, like `/` and `:`, must
-         be escaped, because all URLs need to conform to the "When to Escape and Unescape" section of
-         [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+          /** Required. The resource name of the WorkforcePoolSubject. Special characters, such as `/` and `:`,
+         must be escaped, because all URLs must conform to the "When to Escape and Unescape" section of [RFC
+         3986](https://www.rfc-editor.org/info/rfc3986/). Format:
          `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
           public java.lang.String getName() {
@@ -6702,9 +6706,9 @@ public class Iam extends com.google.api.client.googleapis.services.json.Abstract
           }
 
           /**
-           * Required. The resource name of the WorkforcePoolSubject. Special characters, like `/`
-           * and `:`, must be escaped, because all URLs need to conform to the "When to Escape and
-           * Unescape" section of [RFC3986](https://www.ietf.org/rfc/rfc2396.txt). Format:
+           * Required. The resource name of the WorkforcePoolSubject. Special characters, such as
+           * `/` and `:`, must be escaped, because all URLs must conform to the "When to Escape and
+           * Unescape" section of [RFC 3986](https://www.rfc-editor.org/info/rfc3986/). Format:
            * `locations/{location}/workforcePools/{workforce_pool_id}/subjects/{subject_id}`
            */
           public RevokeSessions setName(java.lang.String name) {

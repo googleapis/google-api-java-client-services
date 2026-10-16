@@ -47,10 +47,11 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, protected by this
-   * ServicePerimeter that are allowed to be accessed by sources defined in the corresponding
-   * IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter
-   * are allowed.
+   * A list of resources, currently projects, folders, and organizations in the form
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`,
+   * protected by this ServicePerimeter that are allowed to be accessed by sources defined in the
+   * corresponding IngressFrom. If a single `*` is specified, then access to all resources inside
+   * the perimeter are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,10 +85,11 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, protected by this
-   * ServicePerimeter that are allowed to be accessed by sources defined in the corresponding
-   * IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter
-   * are allowed.
+   * A list of resources, currently projects, folders, and organizations in the form
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`,
+   * protected by this ServicePerimeter that are allowed to be accessed by sources defined in the
+   * corresponding IngressFrom. If a single `*` is specified, then access to all resources inside
+   * the perimeter are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -95,10 +97,11 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressTo extends com.goo
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, protected by this
-   * ServicePerimeter that are allowed to be accessed by sources defined in the corresponding
-   * IngressFrom. If a single `*` is specified, then access to all resources inside the perimeter
-   * are allowed.
+   * A list of resources, currently projects, folders, and organizations in the form
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`,
+   * protected by this ServicePerimeter that are allowed to be accessed by sources defined in the
+   * corresponding IngressFrom. If a single `*` is specified, then access to all resources inside
+   * the perimeter are allowed.
    * @param resources resources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1IngressTo setResources(java.util.List<java.lang.String> resources) {

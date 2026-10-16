@@ -17,7 +17,7 @@
 package com.google.api.services.saasservicemgmt.v1.model;
 
 /**
- * FlagUpdate is a UnitOperation that pushes new flag values to Units.
+ * Scope of an application.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the App Lifecycle Manager API. For a detailed explanation
@@ -28,40 +28,40 @@ package com.google.api.services.saasservicemgmt.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class FlagUpdate extends com.google.api.client.json.GenericJson {
+public final class Scope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Flag release being applied by UnitOperation.
+   * Required. Scope Type.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String flagRelease;
+  private java.lang.String type;
 
   /**
-   * Required. Flag release being applied by UnitOperation.
+   * Required. Scope Type.
    * @return value or {@code null} for none
    */
-  public java.lang.String getFlagRelease() {
-    return flagRelease;
+  public java.lang.String getType() {
+    return type;
   }
 
   /**
-   * Required. Flag release being applied by UnitOperation.
-   * @param flagRelease flagRelease or {@code null} for none
+   * Required. Scope Type.
+   * @param type type or {@code null} for none
    */
-  public FlagUpdate setFlagRelease(java.lang.String flagRelease) {
-    this.flagRelease = flagRelease;
+  public Scope setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 
   @Override
-  public FlagUpdate set(String fieldName, Object value) {
-    return (FlagUpdate) super.set(fieldName, value);
+  public Scope set(String fieldName, Object value) {
+    return (Scope) super.set(fieldName, value);
   }
 
   @Override
-  public FlagUpdate clone() {
-    return (FlagUpdate) super.clone();
+  public Scope clone() {
+    return (Scope) super.clone();
   }
 
 }

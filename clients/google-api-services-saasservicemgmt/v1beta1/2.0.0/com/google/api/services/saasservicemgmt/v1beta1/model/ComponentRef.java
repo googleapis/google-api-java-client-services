@@ -38,7 +38,7 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   private java.lang.String component;
 
   /**
-   * Reference to the Composite ApplicationTemplate.
+   * Optional. Reference to the Composite ApplicationTemplate.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the Composite ApplicationTemplate.
+   * Optional. Reference to the Composite ApplicationTemplate.
    * @return value or {@code null} for none
    */
   public CompositeRef getCompositeRef() {
@@ -78,7 +78,7 @@ public final class ComponentRef extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Reference to the Composite ApplicationTemplate.
+   * Optional. Reference to the Composite ApplicationTemplate.
    * @param compositeRef compositeRef or {@code null} for none
    */
   public ComponentRef setCompositeRef(CompositeRef compositeRef) {

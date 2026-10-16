@@ -41,6 +41,24 @@ public final class Saas extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. Reference to composite ApplicationTemplate. When specified, the template components
+   * will be imported into their equivalent UnitKind, Release and Blueprint resources. Deleted
+   * references will not delete imported resources. Should only be specified on source regions, and
+   * be unspecified on replica regions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CompositeRef applicationTemplate;
+
+  /**
+   * Output only. Name of repository in Artifact Registry for system-generated Blueprints, eg.
+   * Blueprints of imported ApplicationTemplates.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String blueprintRepo;
+
+  /**
    * Output only. A set of conditions which indicate the various conditions this resource can have.
    * The value may be {@code null}.
    */
@@ -148,6 +166,48 @@ public final class Saas extends com.google.api.client.json.GenericJson {
    */
   public Saas setAnnotations(java.util.Map<String, java.lang.String> annotations) {
     this.annotations = annotations;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to composite ApplicationTemplate. When specified, the template components
+   * will be imported into their equivalent UnitKind, Release and Blueprint resources. Deleted
+   * references will not delete imported resources. Should only be specified on source regions, and
+   * be unspecified on replica regions.
+   * @return value or {@code null} for none
+   */
+  public CompositeRef getApplicationTemplate() {
+    return applicationTemplate;
+  }
+
+  /**
+   * Optional. Reference to composite ApplicationTemplate. When specified, the template components
+   * will be imported into their equivalent UnitKind, Release and Blueprint resources. Deleted
+   * references will not delete imported resources. Should only be specified on source regions, and
+   * be unspecified on replica regions.
+   * @param applicationTemplate applicationTemplate or {@code null} for none
+   */
+  public Saas setApplicationTemplate(CompositeRef applicationTemplate) {
+    this.applicationTemplate = applicationTemplate;
+    return this;
+  }
+
+  /**
+   * Output only. Name of repository in Artifact Registry for system-generated Blueprints, eg.
+   * Blueprints of imported ApplicationTemplates.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBlueprintRepo() {
+    return blueprintRepo;
+  }
+
+  /**
+   * Output only. Name of repository in Artifact Registry for system-generated Blueprints, eg.
+   * Blueprints of imported ApplicationTemplates.
+   * @param blueprintRepo blueprintRepo or {@code null} for none
+   */
+  public Saas setBlueprintRepo(java.lang.String blueprintRepo) {
+    this.blueprintRepo = blueprintRepo;
     return this;
   }
 

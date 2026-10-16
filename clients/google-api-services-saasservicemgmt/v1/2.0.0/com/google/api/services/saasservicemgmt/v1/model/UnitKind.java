@@ -42,6 +42,20 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. AppParams contains the parameters for creating an AppHub Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AppParams appParams;
+
+  /**
+   * Optional. Reference to component and revision in a composite ApplicationTemplate.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ComponentRef applicationTemplateComponent;
+
+  /**
    * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
    * The value may be {@code null}.
    */
@@ -54,14 +68,6 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String createTime;
-
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
-   * default_flag_revisions present at the time of creation.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> defaultFlagRevisions;
 
   /**
    * Optional. A reference to the Release object to use as default for creating new units of this
@@ -188,6 +194,40 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. AppParams contains the parameters for creating an AppHub Application.
+   * @return value or {@code null} for none
+   */
+  public AppParams getAppParams() {
+    return appParams;
+  }
+
+  /**
+   * Optional. AppParams contains the parameters for creating an AppHub Application.
+   * @param appParams appParams or {@code null} for none
+   */
+  public UnitKind setAppParams(AppParams appParams) {
+    this.appParams = appParams;
+    return this;
+  }
+
+  /**
+   * Optional. Reference to component and revision in a composite ApplicationTemplate.
+   * @return value or {@code null} for none
+   */
+  public ComponentRef getApplicationTemplateComponent() {
+    return applicationTemplateComponent;
+  }
+
+  /**
+   * Optional. Reference to component and revision in a composite ApplicationTemplate.
+   * @param applicationTemplateComponent applicationTemplateComponent or {@code null} for none
+   */
+  public UnitKind setApplicationTemplateComponent(ComponentRef applicationTemplateComponent) {
+    this.applicationTemplateComponent = applicationTemplateComponent;
+    return this;
+  }
+
+  /**
    * Optional. Output only. BoundaryType describes the type of boundary the Unit Kind represents.
    * @return value or {@code null} for none
    */
@@ -218,25 +258,6 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   public UnitKind setCreateTime(String createTime) {
     this.createTime = createTime;
-    return this;
-  }
-
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
-   * default_flag_revisions present at the time of creation.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getDefaultFlagRevisions() {
-    return defaultFlagRevisions;
-  }
-
-  /**
-   * Optional. Default revisions of flags for this UnitKind. Newly created units will use the flag
-   * default_flag_revisions present at the time of creation.
-   * @param defaultFlagRevisions defaultFlagRevisions or {@code null} for none
-   */
-  public UnitKind setDefaultFlagRevisions(java.util.List<java.lang.String> defaultFlagRevisions) {
-    this.defaultFlagRevisions = defaultFlagRevisions;
     return this;
   }
 

@@ -96,9 +96,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. Name of the FlagRelease to be rolled out to the target Units. Release and
-   * FlagRelease are mutually exclusive. Note: `release` comment needs to be adjusted to mention
-   * that "Release and FlagRelease are mutually exclusive" when visibility restriction will be
-   * lifted.
+   * FlagRelease are mutually exclusive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -381,9 +379,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. Name of the FlagRelease to be rolled out to the target Units. Release and
-   * FlagRelease are mutually exclusive. Note: `release` comment needs to be adjusted to mention
-   * that "Release and FlagRelease are mutually exclusive" when visibility restriction will be
-   * lifted.
+   * FlagRelease are mutually exclusive.
    * @return value or {@code null} for none
    */
   public java.lang.String getFlagRelease() {
@@ -392,9 +388,7 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Immutable. Name of the FlagRelease to be rolled out to the target Units. Release and
-   * FlagRelease are mutually exclusive. Note: `release` comment needs to be adjusted to mention
-   * that "Release and FlagRelease are mutually exclusive" when visibility restriction will be
-   * lifted.
+   * FlagRelease are mutually exclusive.
    * @param flagRelease flagRelease or {@code null} for none
    */
   public Rollout setFlagRelease(java.lang.String flagRelease) {

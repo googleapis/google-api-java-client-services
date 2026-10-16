@@ -65,9 +65,9 @@ public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specification of how the flag value should be evaluated. If a bool flag is created
-   * without an evaluation_spec specified, two default variants, "Enabled" (with bool_value = true)
-   * and "Disabled" (with bool_value = false), are created by default, and "Disabled" is set as the
-   * default_target.
+   * without an evaluation_spec specified, two default variants, "Enabled" (with boolean_value =
+   * true) and "Disabled" (with boolean_value = false), are created by default, and "Disabled" is
+   * set as the default_variant.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,9 +238,9 @@ public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specification of how the flag value should be evaluated. If a bool flag is created
-   * without an evaluation_spec specified, two default variants, "Enabled" (with bool_value = true)
-   * and "Disabled" (with bool_value = false), are created by default, and "Disabled" is set as the
-   * default_target.
+   * without an evaluation_spec specified, two default variants, "Enabled" (with boolean_value =
+   * true) and "Disabled" (with boolean_value = false), are created by default, and "Disabled" is
+   * set as the default_variant.
    * @return value or {@code null} for none
    */
   public EvaluationSpec getEvaluationSpec() {
@@ -249,9 +249,9 @@ public final class Flag extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Specification of how the flag value should be evaluated. If a bool flag is created
-   * without an evaluation_spec specified, two default variants, "Enabled" (with bool_value = true)
-   * and "Disabled" (with bool_value = false), are created by default, and "Disabled" is set as the
-   * default_target.
+   * without an evaluation_spec specified, two default variants, "Enabled" (with boolean_value =
+   * true) and "Disabled" (with boolean_value = false), are created by default, and "Disabled" is
+   * set as the default_variant.
    * @param evaluationSpec evaluationSpec or {@code null} for none
    */
   public Flag setEvaluationSpec(EvaluationSpec evaluationSpec) {

@@ -178,6 +178,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
+   * "prod", "123/costCenter": "marketing"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> tags;
+
+  /**
    * Output only. The time at which the instance was most recently updated.
    * The value may be {@code null}.
    */
@@ -522,6 +530,25 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
+   * "prod", "123/costCenter": "marketing"
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getTags() {
+    return tags;
+  }
+
+  /**
+   * Optional. Tag keys/values directly bound to this resource. For example: "123/environment":
+   * "prod", "123/costCenter": "marketing"
+   * @param tags tags or {@code null} for none
+   */
+  public Instance setTags(java.util.Map<String, java.lang.String> tags) {
+    this.tags = tags;
     return this;
   }
 

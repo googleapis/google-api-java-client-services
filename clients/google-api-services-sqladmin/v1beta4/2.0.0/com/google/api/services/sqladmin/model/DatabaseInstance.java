@@ -71,6 +71,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private java.lang.Long currentDiskSize;
 
   /**
+   * Optional. State of the Database Center integration for this instance. When unspecified,
+   * Database Center integration is enabled by default.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String databaseCenterIntegration;
+
+  /**
    * Optional. If true, instance metadata is sent to the Database Center. If false, instance
    * metadata is not sent to the Database Center.
    * The value may be {@code null}.
@@ -380,6 +388,14 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
   private Settings settings;
 
   /**
+   * Optional. Input only. Determines whether the precheck step is skipped during a major version
+   * upgrade.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean skipPrecheck;
+
+  /**
    * The SQL network architecture for the instance.
    * The value may be {@code null}.
    */
@@ -533,6 +549,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setCurrentDiskSize(java.lang.Long currentDiskSize) {
     this.currentDiskSize = currentDiskSize;
+    return this;
+  }
+
+  /**
+   * Optional. State of the Database Center integration for this instance. When unspecified,
+   * Database Center integration is enabled by default.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatabaseCenterIntegration() {
+    return databaseCenterIntegration;
+  }
+
+  /**
+   * Optional. State of the Database Center integration for this instance. When unspecified,
+   * Database Center integration is enabled by default.
+   * @param databaseCenterIntegration databaseCenterIntegration or {@code null} for none
+   */
+  public DatabaseInstance setDatabaseCenterIntegration(java.lang.String databaseCenterIntegration) {
+    this.databaseCenterIntegration = databaseCenterIntegration;
     return this;
   }
 
@@ -1274,6 +1309,25 @@ public final class DatabaseInstance extends com.google.api.client.json.GenericJs
    */
   public DatabaseInstance setSettings(Settings settings) {
     this.settings = settings;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Determines whether the precheck step is skipped during a major version
+   * upgrade.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getSkipPrecheck() {
+    return skipPrecheck;
+  }
+
+  /**
+   * Optional. Input only. Determines whether the precheck step is skipped during a major version
+   * upgrade.
+   * @param skipPrecheck skipPrecheck or {@code null} for none
+   */
+  public DatabaseInstance setSkipPrecheck(java.lang.Boolean skipPrecheck) {
+    this.skipPrecheck = skipPrecheck;
     return this;
   }
 

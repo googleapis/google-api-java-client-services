@@ -48,6 +48,14 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
   private java.lang.String imageDescription;
 
   /**
+   * Output only. The ID of the specific Compute Engine VM image the instance is currently running
+   * (for example, "workbench-instances-2603-20260918-2130-rc0").
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String imageId;
+
+  /**
    * Optional. Use VM image name to find the image.
    * The value may be {@code null}.
    */
@@ -99,6 +107,25 @@ public final class VmImage extends com.google.api.client.json.GenericJson {
    */
   public VmImage setImageDescription(java.lang.String imageDescription) {
     this.imageDescription = imageDescription;
+    return this;
+  }
+
+  /**
+   * Output only. The ID of the specific Compute Engine VM image the instance is currently running
+   * (for example, "workbench-instances-2603-20260918-2130-rc0").
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImageId() {
+    return imageId;
+  }
+
+  /**
+   * Output only. The ID of the specific Compute Engine VM image the instance is currently running
+   * (for example, "workbench-instances-2603-20260918-2130-rc0").
+   * @param imageId imageId or {@code null} for none
+   */
+  public VmImage setImageId(java.lang.String imageId) {
+    this.imageId = imageId;
     return this;
   }
 

@@ -44,6 +44,20 @@ public final class GoogleCloudDataplexV1ChangeRequest extends com.google.api.cli
   private java.lang.String author;
 
   /**
+   * Payload for executing a batch of catalog changes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1BatchChangeMetadataRequest batchChangeMetadataRequest;
+
+  /**
+   * Output only. Result of applying a batch change metadata request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1BatchChangeMetadataResponse batchChangeMetadataResponse;
+
+  /**
    * Output only. The type of change represented by the change_payload. This field is derived from
    * the populated field in the change_payload oneof.
    * The value may be {@code null}.
@@ -270,6 +284,40 @@ public final class GoogleCloudDataplexV1ChangeRequest extends com.google.api.cli
    */
   public GoogleCloudDataplexV1ChangeRequest setAuthor(java.lang.String author) {
     this.author = author;
+    return this;
+  }
+
+  /**
+   * Payload for executing a batch of catalog changes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1BatchChangeMetadataRequest getBatchChangeMetadataRequest() {
+    return batchChangeMetadataRequest;
+  }
+
+  /**
+   * Payload for executing a batch of catalog changes.
+   * @param batchChangeMetadataRequest batchChangeMetadataRequest or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ChangeRequest setBatchChangeMetadataRequest(GoogleCloudDataplexV1BatchChangeMetadataRequest batchChangeMetadataRequest) {
+    this.batchChangeMetadataRequest = batchChangeMetadataRequest;
+    return this;
+  }
+
+  /**
+   * Output only. Result of applying a batch change metadata request.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1BatchChangeMetadataResponse getBatchChangeMetadataResponse() {
+    return batchChangeMetadataResponse;
+  }
+
+  /**
+   * Output only. Result of applying a batch change metadata request.
+   * @param batchChangeMetadataResponse batchChangeMetadataResponse or {@code null} for none
+   */
+  public GoogleCloudDataplexV1ChangeRequest setBatchChangeMetadataResponse(GoogleCloudDataplexV1BatchChangeMetadataResponse batchChangeMetadataResponse) {
+    this.batchChangeMetadataResponse = batchChangeMetadataResponse;
     return this;
   }
 

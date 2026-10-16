@@ -60,7 +60,8 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   /**
    * Optional. You can use String Type annotations to specify special meaning to string fields. The
    * following values are supported: richText: The field must be interpreted as a rich text field.
-   * url: A fully qualified URL link. resource: A service qualified resource reference.
+   * markdown: The field must be interpreted as a markdown field. url: A fully qualified URL link.
+   * resource: A service qualified resource reference.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +146,8 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   /**
    * Optional. You can use String Type annotations to specify special meaning to string fields. The
    * following values are supported: richText: The field must be interpreted as a rich text field.
-   * url: A fully qualified URL link. resource: A service qualified resource reference.
+   * markdown: The field must be interpreted as a markdown field. url: A fully qualified URL link.
+   * resource: A service qualified resource reference.
    * @return value or {@code null} for none
    */
   public java.lang.String getStringType() {
@@ -155,7 +157,8 @@ public final class GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations ex
   /**
    * Optional. You can use String Type annotations to specify special meaning to string fields. The
    * following values are supported: richText: The field must be interpreted as a rich text field.
-   * url: A fully qualified URL link. resource: A service qualified resource reference.
+   * markdown: The field must be interpreted as a markdown field. url: A fully qualified URL link.
+   * resource: A service qualified resource reference.
    * @param stringType stringType or {@code null} for none
    */
   public GoogleCloudDataplexV1AspectTypeMetadataTemplateAnnotations setStringType(java.lang.String stringType) {

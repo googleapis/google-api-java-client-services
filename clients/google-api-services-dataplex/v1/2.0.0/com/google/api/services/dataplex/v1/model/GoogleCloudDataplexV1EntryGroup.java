@@ -30,6 +30,14 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies the configuration for requesting changes in the metadata belonging to the
+   * Entry Group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1EntryGroupChangeRequestConfig changeRequestConfig;
+
+  /**
    * Output only. The time when the EntryGroup was created.
    * The value may be {@code null}.
    */
@@ -95,6 +103,25 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Optional. Specifies the configuration for requesting changes in the metadata belonging to the
+   * Entry Group.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntryGroupChangeRequestConfig getChangeRequestConfig() {
+    return changeRequestConfig;
+  }
+
+  /**
+   * Optional. Specifies the configuration for requesting changes in the metadata belonging to the
+   * Entry Group.
+   * @param changeRequestConfig changeRequestConfig or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntryGroup setChangeRequestConfig(GoogleCloudDataplexV1EntryGroupChangeRequestConfig changeRequestConfig) {
+    this.changeRequestConfig = changeRequestConfig;
+    return this;
+  }
 
   /**
    * Output only. The time when the EntryGroup was created.

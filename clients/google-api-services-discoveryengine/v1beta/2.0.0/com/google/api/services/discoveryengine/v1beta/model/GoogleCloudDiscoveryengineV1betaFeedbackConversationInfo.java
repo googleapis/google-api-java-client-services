@@ -65,12 +65,29 @@ public final class GoogleCloudDiscoveryengineV1betaFeedbackConversationInfo exte
   private java.lang.String session;
 
   /**
+   * Optional. The `TaskServerEvent.seq_num` of the step that opened the rated agent task reply.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long stepSeqNum;
+
+  /**
    * Optional. The full resource name of the Sobi task if the conversation was handled by a long-
-   * running agent task. Format: projects/{project}/locations/{location}/tasks/{task_id}
+   * running agent task. Format (canonical, or the short alias the Task API also accepts):
+   * projects/{project}/locations/{location}/agents/{agent}/tasks/{task}
+   * projects/{project}/locations/{location}/tasks/{task}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String taskName;
+
+  /**
+   * Optional. The runtime trajectory id of the rated agent task turn, as set on
+   * `TaskServerEvent.trajectory_id`. Shared by all steps of the turn.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String trajectoryId;
 
   /**
    * Optional. The token which could be used to fetch the answer log.
@@ -158,8 +175,27 @@ public final class GoogleCloudDiscoveryengineV1betaFeedbackConversationInfo exte
   }
 
   /**
+   * Optional. The `TaskServerEvent.seq_num` of the step that opened the rated agent task reply.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getStepSeqNum() {
+    return stepSeqNum;
+  }
+
+  /**
+   * Optional. The `TaskServerEvent.seq_num` of the step that opened the rated agent task reply.
+   * @param stepSeqNum stepSeqNum or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFeedbackConversationInfo setStepSeqNum(java.lang.Long stepSeqNum) {
+    this.stepSeqNum = stepSeqNum;
+    return this;
+  }
+
+  /**
    * Optional. The full resource name of the Sobi task if the conversation was handled by a long-
-   * running agent task. Format: projects/{project}/locations/{location}/tasks/{task_id}
+   * running agent task. Format (canonical, or the short alias the Task API also accepts):
+   * projects/{project}/locations/{location}/agents/{agent}/tasks/{task}
+   * projects/{project}/locations/{location}/tasks/{task}
    * @return value or {@code null} for none
    */
   public java.lang.String getTaskName() {
@@ -168,11 +204,32 @@ public final class GoogleCloudDiscoveryengineV1betaFeedbackConversationInfo exte
 
   /**
    * Optional. The full resource name of the Sobi task if the conversation was handled by a long-
-   * running agent task. Format: projects/{project}/locations/{location}/tasks/{task_id}
+   * running agent task. Format (canonical, or the short alias the Task API also accepts):
+   * projects/{project}/locations/{location}/agents/{agent}/tasks/{task}
+   * projects/{project}/locations/{location}/tasks/{task}
    * @param taskName taskName or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaFeedbackConversationInfo setTaskName(java.lang.String taskName) {
     this.taskName = taskName;
+    return this;
+  }
+
+  /**
+   * Optional. The runtime trajectory id of the rated agent task turn, as set on
+   * `TaskServerEvent.trajectory_id`. Shared by all steps of the turn.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTrajectoryId() {
+    return trajectoryId;
+  }
+
+  /**
+   * Optional. The runtime trajectory id of the rated agent task turn, as set on
+   * `TaskServerEvent.trajectory_id`. Shared by all steps of the turn.
+   * @param trajectoryId trajectoryId or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1betaFeedbackConversationInfo setTrajectoryId(java.lang.String trajectoryId) {
+    this.trajectoryId = trajectoryId;
     return this;
   }
 

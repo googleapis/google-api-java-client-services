@@ -30,11 +30,47 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1alphaDataStoreFederatedSearchConfigNotebooklmConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Restricts this data store to the given notebooks. When empty, the data store covers
+   * every notebook the querying user can access, which is the existing behaviour. Each entry is a
+   * full notebook resource name, such as `projects/locations/notebooks`. Scoping is enforced on
+   * results as well as requested upstream, so a notebook outside this list cannot appear in a
+   * search response through this data store even if the backend returns one.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> notebooks;
+
+  /**
    * Required. Search config name. Format: projects/locations/global/notebookLmSearchConfigs
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String searchConfig;
+
+  /**
+   * Optional. Restricts this data store to the given notebooks. When empty, the data store covers
+   * every notebook the querying user can access, which is the existing behaviour. Each entry is a
+   * full notebook resource name, such as `projects/locations/notebooks`. Scoping is enforced on
+   * results as well as requested upstream, so a notebook outside this list cannot appear in a
+   * search response through this data store even if the backend returns one.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNotebooks() {
+    return notebooks;
+  }
+
+  /**
+   * Optional. Restricts this data store to the given notebooks. When empty, the data store covers
+   * every notebook the querying user can access, which is the existing behaviour. Each entry is a
+   * full notebook resource name, such as `projects/locations/notebooks`. Scoping is enforced on
+   * results as well as requested upstream, so a notebook outside this list cannot appear in a
+   * search response through this data store even if the backend returns one.
+   * @param notebooks notebooks or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaDataStoreFederatedSearchConfigNotebooklmConfig setNotebooks(java.util.List<java.lang.String> notebooks) {
+    this.notebooks = notebooks;
+    return this;
+  }
 
   /**
    * Required. Search config name. Format: projects/locations/global/notebookLmSearchConfigs

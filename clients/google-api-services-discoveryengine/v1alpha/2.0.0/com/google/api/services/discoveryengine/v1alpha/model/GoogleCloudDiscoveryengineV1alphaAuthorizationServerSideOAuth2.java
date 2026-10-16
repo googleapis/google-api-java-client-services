@@ -74,6 +74,15 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
   private java.lang.Boolean pkceVerificationEnabled;
 
   /**
+   * Optional. Set only when the OAuth provider publishes no public endpoint, in which case a token
+   * exchange has to be routed over the private network the instance is on instead of over public
+   * egress. Leaving it unset keeps the exchange on public egress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2PrivateNetworkConfig privateNetworkConfig;
+
+  /**
    * Optional. The scopes to request. Example: `https://www.googleapis.com/auth/calendar.events` If
    * omitted, no additional scopes are requested beyond those required by the authorization uri. If
    * set, it will overwrite the scopes in the authorization uri when acquiring user authorization.
@@ -189,6 +198,27 @@ public final class GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth
    */
   public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2 setPkceVerificationEnabled(java.lang.Boolean pkceVerificationEnabled) {
     this.pkceVerificationEnabled = pkceVerificationEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Set only when the OAuth provider publishes no public endpoint, in which case a token
+   * exchange has to be routed over the private network the instance is on instead of over public
+   * egress. Leaving it unset keeps the exchange on public egress.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2PrivateNetworkConfig getPrivateNetworkConfig() {
+    return privateNetworkConfig;
+  }
+
+  /**
+   * Optional. Set only when the OAuth provider publishes no public endpoint, in which case a token
+   * exchange has to be routed over the private network the instance is on instead of over public
+   * egress. Leaving it unset keeps the exchange on public egress.
+   * @param privateNetworkConfig privateNetworkConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2 setPrivateNetworkConfig(GoogleCloudDiscoveryengineV1alphaAuthorizationServerSideOAuth2PrivateNetworkConfig privateNetworkConfig) {
+    this.privateNetworkConfig = privateNetworkConfig;
     return this;
   }
 

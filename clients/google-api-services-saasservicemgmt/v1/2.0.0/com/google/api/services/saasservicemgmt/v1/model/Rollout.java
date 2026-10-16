@@ -95,16 +95,6 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. Immutable. Name of the FlagRelease to be rolled out to the target Units. Release and
-   * FlagRelease are mutually exclusive. Note: `release` comment needs to be adjusted to mention
-   * that "Release and FlagRelease are mutually exclusive" when visibility restriction will be
-   * lifted.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String flagRelease;
-
-  /**
    * Optional. The labels on the resource, which can be used for categorization. similar to
    * Kubernetes resource labels.
    * The value may be {@code null}.
@@ -376,29 +366,6 @@ public final class Rollout extends com.google.api.client.json.GenericJson {
    */
   public Rollout setEtag(java.lang.String etag) {
     this.etag = etag;
-    return this;
-  }
-
-  /**
-   * Optional. Immutable. Name of the FlagRelease to be rolled out to the target Units. Release and
-   * FlagRelease are mutually exclusive. Note: `release` comment needs to be adjusted to mention
-   * that "Release and FlagRelease are mutually exclusive" when visibility restriction will be
-   * lifted.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getFlagRelease() {
-    return flagRelease;
-  }
-
-  /**
-   * Optional. Immutable. Name of the FlagRelease to be rolled out to the target Units. Release and
-   * FlagRelease are mutually exclusive. Note: `release` comment needs to be adjusted to mention
-   * that "Release and FlagRelease are mutually exclusive" when visibility restriction will be
-   * lifted.
-   * @param flagRelease flagRelease or {@code null} for none
-   */
-  public Rollout setFlagRelease(java.lang.String flagRelease) {
-    this.flagRelease = flagRelease;
     return this;
   }
 

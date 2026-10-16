@@ -43,6 +43,14 @@ public final class Unit extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
+   * Optional. Reference to the AppHub Application this unit belongs to. All resources deployed in
+   * this Unit will be associated with the specified Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String application;
+
+  /**
    * Optional. Output only. A set of conditions which indicate the various conditions this resource
    * can have.
    * The value may be {@code null}.
@@ -80,13 +88,6 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String etag;
-
-  /**
-   * Optional. Output only. Flag revisions used by this Unit.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.util.List<java.lang.String> flagRevisions;
 
   /**
    * Optional. Output only. Indicates the current input variables deployed by the unit
@@ -262,6 +263,25 @@ public final class Unit extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Reference to the AppHub Application this unit belongs to. All resources deployed in
+   * this Unit will be associated with the specified Application.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApplication() {
+    return application;
+  }
+
+  /**
+   * Optional. Reference to the AppHub Application this unit belongs to. All resources deployed in
+   * this Unit will be associated with the specified Application.
+   * @param application application or {@code null} for none
+   */
+  public Unit setApplication(java.lang.String application) {
+    this.application = application;
+    return this;
+  }
+
+  /**
    * Optional. Output only. A set of conditions which indicate the various conditions this resource
    * can have.
    * @return value or {@code null} for none
@@ -351,23 +371,6 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   public Unit setEtag(java.lang.String etag) {
     this.etag = etag;
-    return this;
-  }
-
-  /**
-   * Optional. Output only. Flag revisions used by this Unit.
-   * @return value or {@code null} for none
-   */
-  public java.util.List<java.lang.String> getFlagRevisions() {
-    return flagRevisions;
-  }
-
-  /**
-   * Optional. Output only. Flag revisions used by this Unit.
-   * @param flagRevisions flagRevisions or {@code null} for none
-   */
-  public Unit setFlagRevisions(java.util.List<java.lang.String> flagRevisions) {
-    this.flagRevisions = flagRevisions;
     return this;
   }
 

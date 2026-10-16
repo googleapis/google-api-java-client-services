@@ -52,8 +52,9 @@ public final class OutboundEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String description;
 
   /**
-   * Required. Immutable. User provided IP address to use for outbound DNS forwarding. This address
-   * must be a free address on the subnetwork.
+   * Optional. Immutable. User provided IP address to use for outbound DNS forwarding. This address
+   * must be a free address on the subnetwork. If omitted, a free IP address from the subnetwork is
+   * automatically allocated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,8 +155,9 @@ public final class OutboundEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Immutable. User provided IP address to use for outbound DNS forwarding. This address
-   * must be a free address on the subnetwork.
+   * Optional. Immutable. User provided IP address to use for outbound DNS forwarding. This address
+   * must be a free address on the subnetwork. If omitted, a free IP address from the subnetwork is
+   * automatically allocated.
    * @return value or {@code null} for none
    */
   public java.lang.String getEndpointIp() {
@@ -163,8 +165,9 @@ public final class OutboundEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Immutable. User provided IP address to use for outbound DNS forwarding. This address
-   * must be a free address on the subnetwork.
+   * Optional. Immutable. User provided IP address to use for outbound DNS forwarding. This address
+   * must be a free address on the subnetwork. If omitted, a free IP address from the subnetwork is
+   * automatically allocated.
    * @param endpointIp endpointIp or {@code null} for none
    */
   public OutboundEndpoint setEndpointIp(java.lang.String endpointIp) {

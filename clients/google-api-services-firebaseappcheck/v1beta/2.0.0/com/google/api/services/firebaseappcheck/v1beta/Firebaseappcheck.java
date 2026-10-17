@@ -8007,6 +8007,580 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
       }
 
       /**
+       * An accessor for creating requests from the Automations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
+       *   {@code Firebaseappcheck.Automations.List request = firebaseappcheck.automations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Automations automations() {
+        return new Automations();
+      }
+
+      /**
+       * The "automations" collection of methods.
+       */
+      public class Automations {
+
+        /**
+         * Gets the specified Automation configuration.
+         *
+         * Create a request for the method "automations.get".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The relative resource name of the Automation to retrieve, in one of the following
+         *        supported formats: ```
+         *        projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{proj
+         *        ect_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{autom
+         *        ation_id} ```
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/automations/[^/]+$");
+
+          /**
+           * Gets the specified Automation configuration.
+           *
+           * Create a request for the method "automations.get".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The relative resource name of the Automation to retrieve, in one of the following
+         *        supported formats: ```
+         *        projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{proj
+         *        ect_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{autom
+         *        ation_id} ```
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/automations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the Automation to retrieve, in one of the
+           * following supported formats: ```
+           * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{p
+           * roject_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/
+           * {automation_id} ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The relative resource name of the Automation to retrieve, in one of the following
+         supported formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id}
+         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{
+         automation_id} ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The relative resource name of the Automation to retrieve, in one of the
+           * following supported formats: ```
+           * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{p
+           * roject_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/
+           * {automation_id} ```
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/automations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists all Automations for the specified service or resource policy.
+         *
+         * Create a request for the method "automations.list".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The relative resource name of the parent service or resource policy for which to list each
+         *        associated Automation, in one of the following formats: ```
+         *        projects/{project_number}/services/{service_id}
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaListAutomationsResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/automations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+$");
+
+          /**
+           * Lists all Automations for the specified service or resource policy.
+           *
+           * Create a request for the method "automations.list".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The relative resource name of the parent service or resource policy for which to list each
+         *        associated Automation, in one of the following formats: ```
+         *        projects/{project_number}/services/{service_id}
+         *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaListAutomationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The relative resource name of the parent service or resource policy for which
+           * to list each associated Automation, in one of the following formats: ```
+           * projects/{project_number}/services/{service_id}
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+           * ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The relative resource name of the parent service or resource policy for which to list
+         each associated Automation, in one of the following formats: ```
+         projects/{project_number}/services/{service_id}
+         projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The relative resource name of the parent service or resource policy for which
+           * to list each associated Automation, in one of the following formats: ```
+           * projects/{project_number}/services/{service_id}
+           * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+           * ```
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * The maximum number of Automations to return in the response. Note that a service or
+           * resource policy can have at most 10 automations. The server may return fewer than this
+           * at its own discretion. If no value is specified (or too large a value is specified),
+           * the server will impose its own limit.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** The maximum number of Automations to return in the response. Note that a service or resource policy
+         can have at most 10 automations. The server may return fewer than this at its own discretion. If no
+         value is specified (or too large a value is specified), the server will impose its own limit.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * The maximum number of Automations to return in the response. Note that a service or
+           * resource policy can have at most 10 automations. The server may return fewer than this
+           * at its own discretion. If no value is specified (or too large a value is specified),
+           * the server will impose its own limit.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Token returned from a previous call to ListAutomations indicating where in the set of
+           * Automations to resume listing. Provide this to retrieve the subsequent page. When
+           * paginating, all other parameters provided to ListAutomations must match the call that
+           * provided the page token; if they do not match, the result is undefined.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Token returned from a previous call to ListAutomations indicating where in the set of Automations
+         to resume listing. Provide this to retrieve the subsequent page. When paginating, all other
+         parameters provided to ListAutomations must match the call that provided the page token; if they do
+         not match, the result is undefined.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Token returned from a previous call to ListAutomations indicating where in the set of
+           * Automations to resume listing. Provide this to retrieve the subsequent page. When
+           * paginating, all other parameters provided to ListAutomations must match the call that
+           * provided the page token; if they do not match, the result is undefined.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the specified Automation.
+         *
+         * Create a request for the method "automations.patch".
+         *
+         * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The relative resource name of the automation object, in one of the following supported
+         *        formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id} p
+         *        rojects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/autom
+         *        ations/{automation_id} ```
+         * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/automations/[^/]+$");
+
+          /**
+           * Updates the specified Automation.
+           *
+           * Create a request for the method "automations.patch".
+           *
+           * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The relative resource name of the automation object, in one of the following supported
+         *        formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id} p
+         *        rojects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/autom
+         *        ations/{automation_id} ```
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation content) {
+            super(Firebaseappcheck.this, "PATCH", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/automations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The relative resource name of the automation object, in one of the
+           * following supported formats: ```
+           * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{p
+           * roject_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/
+           * {automation_id} ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The relative resource name of the automation object, in one of the following supported
+         formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{
+         project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{automation
+         _id} ```
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The relative resource name of the automation object, in one of the
+           * following supported formats: ```
+           * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{p
+           * roject_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/
+           * {automation_id} ```
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/services/[^/]+/automations/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the Automation to update.
+           * Example: `timestamp_condition.enforce_time`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Required. A comma-separated list of names of fields in the Automation to update. Example:
+         `timestamp_condition.enforce_time`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Required. A comma-separated list of names of fields in the Automation to update.
+           * Example: `timestamp_condition.enforce_time`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the ResourcePolicies collection.
        *
        * <p>The typical use is:</p>
@@ -9096,6 +9670,580 @@ public class Firebaseappcheck extends com.google.api.client.googleapis.services.
           }
         }
 
+        /**
+         * An accessor for creating requests from the Automations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Firebaseappcheck firebaseappcheck = new Firebaseappcheck(...);}
+         *   {@code Firebaseappcheck.Automations.List request = firebaseappcheck.automations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Automations automations() {
+          return new Automations();
+        }
+
+        /**
+         * The "automations" collection of methods.
+         */
+        public class Automations {
+
+          /**
+           * Gets the specified Automation configuration.
+           *
+           * Create a request for the method "automations.get".
+           *
+           * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The relative resource name of the Automation to retrieve, in one of the following
+           *        supported formats: ```
+           *        projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{proj
+           *        ect_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{autom
+           *        ation_id} ```
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+/automations/[^/]+$");
+
+            /**
+             * Gets the specified Automation configuration.
+             *
+             * Create a request for the method "automations.get".
+             *
+             * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The relative resource name of the Automation to retrieve, in one of the following
+           *        supported formats: ```
+           *        projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{proj
+           *        ect_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{autom
+           *        ation_id} ```
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+/automations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the Automation to retrieve, in one of the
+             * following supported formats: ```
+             * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/
+             * {project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automati
+             * ons/{automation_id} ```
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The relative resource name of the Automation to retrieve, in one of the following
+           supported formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id}
+           projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{
+           automation_id} ```
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The relative resource name of the Automation to retrieve, in one of the
+             * following supported formats: ```
+             * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/
+             * {project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automati
+             * ons/{automation_id} ```
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+/automations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all Automations for the specified service or resource policy.
+           *
+           * Create a request for the method "automations.list".
+           *
+           * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The relative resource name of the parent service or resource policy for which to list each
+           *        associated Automation, in one of the following formats: ```
+           *        projects/{project_number}/services/{service_id}
+           *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaListAutomationsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/automations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+
+            /**
+             * Lists all Automations for the specified service or resource policy.
+             *
+             * Create a request for the method "automations.list".
+             *
+             * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The relative resource name of the parent service or resource policy for which to list each
+           *        associated Automation, in one of the following formats: ```
+           *        projects/{project_number}/services/{service_id}
+           *        projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Firebaseappcheck.this, "GET", REST_PATH, null, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaListAutomationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The relative resource name of the parent service or resource policy for
+             * which to list each associated Automation, in one of the following formats: ```
+             * projects/{project_number}/services/{service_id}
+             * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+             * ```
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The relative resource name of the parent service or resource policy for which to list
+           each associated Automation, in one of the following formats: ```
+           projects/{project_number}/services/{service_id}
+           projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id} ```
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The relative resource name of the parent service or resource policy for
+             * which to list each associated Automation, in one of the following formats: ```
+             * projects/{project_number}/services/{service_id}
+             * projects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}
+             * ```
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * The maximum number of Automations to return in the response. Note that a service or
+             * resource policy can have at most 10 automations. The server may return fewer than
+             * this at its own discretion. If no value is specified (or too large a value is
+             * specified), the server will impose its own limit.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** The maximum number of Automations to return in the response. Note that a service or resource policy
+           can have at most 10 automations. The server may return fewer than this at its own discretion. If no
+           value is specified (or too large a value is specified), the server will impose its own limit.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * The maximum number of Automations to return in the response. Note that a service or
+             * resource policy can have at most 10 automations. The server may return fewer than
+             * this at its own discretion. If no value is specified (or too large a value is
+             * specified), the server will impose its own limit.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Token returned from a previous call to ListAutomations indicating where in the set of
+             * Automations to resume listing. Provide this to retrieve the subsequent page. When
+             * paginating, all other parameters provided to ListAutomations must match the call that
+             * provided the page token; if they do not match, the result is undefined.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Token returned from a previous call to ListAutomations indicating where in the set of Automations
+           to resume listing. Provide this to retrieve the subsequent page. When paginating, all other
+           parameters provided to ListAutomations must match the call that provided the page token; if they do
+           not match, the result is undefined.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Token returned from a previous call to ListAutomations indicating where in the set of
+             * Automations to resume listing. Provide this to retrieve the subsequent page. When
+             * paginating, all other parameters provided to ListAutomations must match the call that
+             * provided the page token; if they do not match, the result is undefined.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Updates the specified Automation.
+           *
+           * Create a request for the method "automations.patch".
+           *
+           * This request holds the parameters needed by the firebaseappcheck server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           *
+           * @param name Identifier. The relative resource name of the automation object, in one of the following supported
+           *        formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id} p
+           *        rojects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/autom
+           *        ations/{automation_id} ```
+           * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation}
+           * @return the request
+           */
+          public Patch patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation content) throws java.io.IOException {
+            Patch result = new Patch(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Patch extends FirebaseappcheckRequest<com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+/automations/[^/]+$");
+
+            /**
+             * Updates the specified Automation.
+             *
+             * Create a request for the method "automations.patch".
+             *
+             * This request holds the parameters needed by the the firebaseappcheck server.  After setting any
+             * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Identifier. The relative resource name of the automation object, in one of the following supported
+           *        formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id} p
+           *        rojects/{project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/autom
+           *        ations/{automation_id} ```
+             * @param content the {@link com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation}
+             * @since 1.13
+             */
+            protected Patch(java.lang.String name, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation content) {
+              super(Firebaseappcheck.this, "PATCH", REST_PATH, content, com.google.api.services.firebaseappcheck.v1beta.model.GoogleFirebaseAppcheckV1betaAutomation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+/automations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Patch set$Xgafv(java.lang.String $Xgafv) {
+              return (Patch) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Patch setAccessToken(java.lang.String accessToken) {
+              return (Patch) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Patch setAlt(java.lang.String alt) {
+              return (Patch) super.setAlt(alt);
+            }
+
+            @Override
+            public Patch setCallback(java.lang.String callback) {
+              return (Patch) super.setCallback(callback);
+            }
+
+            @Override
+            public Patch setFields(java.lang.String fields) {
+              return (Patch) super.setFields(fields);
+            }
+
+            @Override
+            public Patch setKey(java.lang.String key) {
+              return (Patch) super.setKey(key);
+            }
+
+            @Override
+            public Patch setOauthToken(java.lang.String oauthToken) {
+              return (Patch) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Patch) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Patch setQuotaUser(java.lang.String quotaUser) {
+              return (Patch) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Patch setUploadType(java.lang.String uploadType) {
+              return (Patch) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Patch) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Identifier. The relative resource name of the automation object, in one of the
+             * following supported formats: ```
+             * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/
+             * {project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automati
+             * ons/{automation_id} ```
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Identifier. The relative resource name of the automation object, in one of the following supported
+           formats: ``` projects/{project_number}/services/{service_id}/automations/{automation_id} projects/{
+           project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automations/{automation
+           _id} ```
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Identifier. The relative resource name of the automation object, in one of the
+             * following supported formats: ```
+             * projects/{project_number}/services/{service_id}/automations/{automation_id} projects/
+             * {project_number}/services/{service_id}/resourcePolicies/{resource_policy_id}/automati
+             * ons/{automation_id} ```
+             */
+            public Patch setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/services/[^/]+/resourcePolicies/[^/]+/automations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. A comma-separated list of names of fields in the Automation to update.
+             * Example: `timestamp_condition.enforce_time`.
+             */
+            @com.google.api.client.util.Key
+            private String updateMask;
+
+            /** Required. A comma-separated list of names of fields in the Automation to update. Example:
+           `timestamp_condition.enforce_time`.
+             */
+            public String getUpdateMask() {
+              return updateMask;
+            }
+
+            /**
+             * Required. A comma-separated list of names of fields in the Automation to update.
+             * Example: `timestamp_condition.enforce_time`.
+             */
+            public Patch setUpdateMask(String updateMask) {
+              this.updateMask = updateMask;
+              return this;
+            }
+
+            @Override
+            public Patch set(String parameterName, Object value) {
+              return (Patch) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
     }
   }

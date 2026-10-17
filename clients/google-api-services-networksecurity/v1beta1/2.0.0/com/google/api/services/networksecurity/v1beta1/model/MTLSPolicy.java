@@ -48,6 +48,14 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
   private java.lang.String clientValidationMode;
 
   /**
+   * A list of validation relaxations to apply when `client_validation_mode` is set to
+   * ALLOW_VALIDATION_RELAXATIONS.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> clientValidationRelaxations;
+
+  /**
    * Reference to the TrustConfig from certificatemanager.googleapis.com namespace. If specified,
    * the chain validation will be performed against certificates configured in the given
    * TrustConfig. Allowed only if the policy is to be used with Application Load Balancers.
@@ -95,6 +103,25 @@ public final class MTLSPolicy extends com.google.api.client.json.GenericJson {
    */
   public MTLSPolicy setClientValidationMode(java.lang.String clientValidationMode) {
     this.clientValidationMode = clientValidationMode;
+    return this;
+  }
+
+  /**
+   * A list of validation relaxations to apply when `client_validation_mode` is set to
+   * ALLOW_VALIDATION_RELAXATIONS.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getClientValidationRelaxations() {
+    return clientValidationRelaxations;
+  }
+
+  /**
+   * A list of validation relaxations to apply when `client_validation_mode` is set to
+   * ALLOW_VALIDATION_RELAXATIONS.
+   * @param clientValidationRelaxations clientValidationRelaxations or {@code null} for none
+   */
+  public MTLSPolicy setClientValidationRelaxations(java.util.List<java.lang.String> clientValidationRelaxations) {
+    this.clientValidationRelaxations = clientValidationRelaxations;
     return this;
   }
 

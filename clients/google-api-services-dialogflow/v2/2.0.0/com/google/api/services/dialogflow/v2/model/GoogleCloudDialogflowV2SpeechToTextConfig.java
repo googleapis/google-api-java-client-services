@@ -39,6 +39,12 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean disableInterimInputTranscripts;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean enableWordInfo;
 
   /**
@@ -101,6 +107,21 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfig extends com.google.
    */
   public GoogleCloudDialogflowV2SpeechToTextConfig setAudioEncoding(java.lang.String audioEncoding) {
     this.audioEncoding = audioEncoding;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableInterimInputTranscripts() {
+    return disableInterimInputTranscripts;
+  }
+
+  /**
+   * @param disableInterimInputTranscripts disableInterimInputTranscripts or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2SpeechToTextConfig setDisableInterimInputTranscripts(java.lang.Boolean disableInterimInputTranscripts) {
+    this.disableInterimInputTranscripts = disableInterimInputTranscripts;
     return this;
   }
 

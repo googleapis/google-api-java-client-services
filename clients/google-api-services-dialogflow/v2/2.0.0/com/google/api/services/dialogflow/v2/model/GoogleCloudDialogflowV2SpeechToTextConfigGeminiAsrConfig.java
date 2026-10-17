@@ -39,12 +39,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig exte
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String modelId;
-
-  /**
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
   private java.lang.Integer prefixPaddingMs;
 
   /**
@@ -71,21 +65,6 @@ public final class GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig exte
    */
   public GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig setEndOfSpeechSensitivity(java.lang.String endOfSpeechSensitivity) {
     this.endOfSpeechSensitivity = endOfSpeechSensitivity;
-    return this;
-  }
-
-  /**
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getModelId() {
-    return modelId;
-  }
-
-  /**
-   * @param modelId modelId or {@code null} for none
-   */
-  public GoogleCloudDialogflowV2SpeechToTextConfigGeminiAsrConfig setModelId(java.lang.String modelId) {
-    this.modelId = modelId;
     return this;
   }
 

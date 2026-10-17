@@ -51,6 +51,12 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean disableInterimInputTranscripts;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Boolean disableNoSpeechRecognizedEvent;
 
   /**
@@ -179,6 +185,21 @@ public final class GoogleCloudDialogflowV2beta1InputAudioConfig extends com.goog
    */
   public GoogleCloudDialogflowV2beta1InputAudioConfig setDefaultNoSpeechTimeout(String defaultNoSpeechTimeout) {
     this.defaultNoSpeechTimeout = defaultNoSpeechTimeout;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisableInterimInputTranscripts() {
+    return disableInterimInputTranscripts;
+  }
+
+  /**
+   * @param disableInterimInputTranscripts disableInterimInputTranscripts or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1InputAudioConfig setDisableInterimInputTranscripts(java.lang.Boolean disableInterimInputTranscripts) {
+    this.disableInterimInputTranscripts = disableInterimInputTranscripts;
     return this;
   }
 

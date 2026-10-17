@@ -39,6 +39,15 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private AndroidConfig android;
 
   /**
+   * Optional. Input only. Android specific V2 options for messages sent through FCM connection
+   * server. Mutually exclusive with `android`. Requests with both `AndroidConfig` and
+   * `AndroidConfigV2` will be rejected.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AndroidConfigV2 androidV2;
+
+  /**
    * Input only. [Apple Push Notification Service](https://goo.gl/MXRTPa) specific options.
    * The value may be {@code null}.
    */
@@ -132,6 +141,27 @@ public final class Message extends com.google.api.client.json.GenericJson {
    */
   public Message setAndroid(AndroidConfig android) {
     this.android = android;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Android specific V2 options for messages sent through FCM connection
+   * server. Mutually exclusive with `android`. Requests with both `AndroidConfig` and
+   * `AndroidConfigV2` will be rejected.
+   * @return value or {@code null} for none
+   */
+  public AndroidConfigV2 getAndroidV2() {
+    return androidV2;
+  }
+
+  /**
+   * Optional. Input only. Android specific V2 options for messages sent through FCM connection
+   * server. Mutually exclusive with `android`. Requests with both `AndroidConfig` and
+   * `AndroidConfigV2` will be rejected.
+   * @param androidV2 androidV2 or {@code null} for none
+   */
+  public Message setAndroidV2(AndroidConfigV2 androidV2) {
+    this.androidV2 = androidV2;
     return this;
   }
 

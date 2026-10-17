@@ -37,14 +37,14 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private java.lang.String approvalId;
 
   /**
-   * Output only. The time the approval was completed.
+   * The time the approval was completed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String completeTime;
 
   /**
-   * Output only. The time the approval was created.
+   * The time the approval was created.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private String dueTime;
 
   /**
-   * Output only. The behavior of the approval when the file content changes.
+   * The behavior of the approval when the file content changes.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private java.lang.String kind;
 
   /**
-   * Output only. The most recent time the approval was modified.
+   * The most recent time the approval was modified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private java.util.List<ReviewerResponse> reviewerResponses;
 
   /**
-   * Output only. The status of the approval at the time this resource was requested.
+   * The status of the approval at the time this resource was requested.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -124,7 +124,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time the approval was completed.
+   * The time the approval was completed.
    * @return value or {@code null} for none
    */
   public String getCompleteTime() {
@@ -132,7 +132,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time the approval was completed.
+   * The time the approval was completed.
    * @param completeTime completeTime or {@code null} for none
    */
   public Approval setCompleteTime(String completeTime) {
@@ -141,7 +141,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time the approval was created.
+   * The time the approval was created.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -149,7 +149,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The time the approval was created.
+   * The time the approval was created.
    * @param createTime createTime or {@code null} for none
    */
   public Approval setCreateTime(String createTime) {
@@ -175,7 +175,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The behavior of the approval when the file content changes.
+   * The behavior of the approval when the file content changes.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileContentChangeBehavior() {
@@ -183,7 +183,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The behavior of the approval when the file content changes.
+   * The behavior of the approval when the file content changes.
    * @param fileContentChangeBehavior fileContentChangeBehavior or {@code null} for none
    */
   public Approval setFileContentChangeBehavior(java.lang.String fileContentChangeBehavior) {
@@ -226,7 +226,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The most recent time the approval was modified.
+   * The most recent time the approval was modified.
    * @return value or {@code null} for none
    */
   public String getModifyTime() {
@@ -234,7 +234,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The most recent time the approval was modified.
+   * The most recent time the approval was modified.
    * @param modifyTime modifyTime or {@code null} for none
    */
   public Approval setModifyTime(String modifyTime) {
@@ -260,7 +260,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The status of the approval at the time this resource was requested.
+   * The status of the approval at the time this resource was requested.
    * @return value or {@code null} for none
    */
   public java.lang.String getStatus() {
@@ -268,7 +268,7 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The status of the approval at the time this resource was requested.
+   * The status of the approval at the time this resource was requested.
    * @param status status or {@code null} for none
    */
   public Approval setStatus(java.lang.String status) {

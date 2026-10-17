@@ -88,6 +88,15 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean deletionProtection;
 
   /**
+   * Output only. The effective automated backup policy applied to the table. This represents the
+   * policy actually in effect, which may be a system-default policy if the user has not explicitly
+   * configured one. Views: `SCHEMA_VIEW`, `FULL`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutomatedBackupPolicy effectiveAutomatedBackupPolicy;
+
+  /**
    * Immutable. The granularity at which timestamps are stored in this table. Timestamps not
    * matching the granularity will be rejected. If unspecified at creation time, the value will be
    * set to `MILLIS`. Views: `SCHEMA_VIEW`, `FULL`.
@@ -264,6 +273,27 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setDeletionProtection(java.lang.Boolean deletionProtection) {
     this.deletionProtection = deletionProtection;
+    return this;
+  }
+
+  /**
+   * Output only. The effective automated backup policy applied to the table. This represents the
+   * policy actually in effect, which may be a system-default policy if the user has not explicitly
+   * configured one. Views: `SCHEMA_VIEW`, `FULL`.
+   * @return value or {@code null} for none
+   */
+  public AutomatedBackupPolicy getEffectiveAutomatedBackupPolicy() {
+    return effectiveAutomatedBackupPolicy;
+  }
+
+  /**
+   * Output only. The effective automated backup policy applied to the table. This represents the
+   * policy actually in effect, which may be a system-default policy if the user has not explicitly
+   * configured one. Views: `SCHEMA_VIEW`, `FULL`.
+   * @param effectiveAutomatedBackupPolicy effectiveAutomatedBackupPolicy or {@code null} for none
+   */
+  public Table setEffectiveAutomatedBackupPolicy(AutomatedBackupPolicy effectiveAutomatedBackupPolicy) {
+    this.effectiveAutomatedBackupPolicy = effectiveAutomatedBackupPolicy;
     return this;
   }
 

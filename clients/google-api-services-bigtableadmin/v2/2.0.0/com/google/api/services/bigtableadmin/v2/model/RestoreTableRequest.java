@@ -39,6 +39,14 @@ public final class RestoreTableRequest extends com.google.api.client.json.Generi
   private java.lang.String backup;
 
   /**
+   * Optional. Properties of the table to be restored. Only the fields specified in update_mask will
+   * be used to set the restored table's properties.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Table table;
+
+  /**
    * Required. The id of the table to create and restore to. This table must not already exist. The
    * `table_id` appended to `parent` forms the full table name of the form
    * `projects//instances//tables/`.
@@ -46,6 +54,19 @@ public final class RestoreTableRequest extends com.google.api.client.json.Generi
    */
   @com.google.api.client.util.Key
   private java.lang.String tableId;
+
+  /**
+   * Optional. The list of fields to set on the new table. A mask specifying which fields (e.g.
+   * `deletion_protection`) in the `table` field should be set. This mask is relative to the `table`
+   * field, not to the request message. The wildcard (*) path is currently not supported. Currently
+   * RestoreTable only supports the following fields for modification: * `deletion_protection`:
+   * Defaults to `false` if not set. * `automated_backup_policy`: Defaults to no automated backup
+   * policy if not set. Output-only fields in the mask will be ignored. If any other field not
+   * listed above is included in `update_mask`, it will result in an INVALID_ARGUMENT error.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String updateMask;
 
   /**
    * Name of the backup from which to restore. Values are of the form
@@ -67,6 +88,25 @@ public final class RestoreTableRequest extends com.google.api.client.json.Generi
   }
 
   /**
+   * Optional. Properties of the table to be restored. Only the fields specified in update_mask will
+   * be used to set the restored table's properties.
+   * @return value or {@code null} for none
+   */
+  public Table getTable() {
+    return table;
+  }
+
+  /**
+   * Optional. Properties of the table to be restored. Only the fields specified in update_mask will
+   * be used to set the restored table's properties.
+   * @param table table or {@code null} for none
+   */
+  public RestoreTableRequest setTable(Table table) {
+    this.table = table;
+    return this;
+  }
+
+  /**
    * Required. The id of the table to create and restore to. This table must not already exist. The
    * `table_id` appended to `parent` forms the full table name of the form
    * `projects//instances//tables/`.
@@ -84,6 +124,35 @@ public final class RestoreTableRequest extends com.google.api.client.json.Generi
    */
   public RestoreTableRequest setTableId(java.lang.String tableId) {
     this.tableId = tableId;
+    return this;
+  }
+
+  /**
+   * Optional. The list of fields to set on the new table. A mask specifying which fields (e.g.
+   * `deletion_protection`) in the `table` field should be set. This mask is relative to the `table`
+   * field, not to the request message. The wildcard (*) path is currently not supported. Currently
+   * RestoreTable only supports the following fields for modification: * `deletion_protection`:
+   * Defaults to `false` if not set. * `automated_backup_policy`: Defaults to no automated backup
+   * policy if not set. Output-only fields in the mask will be ignored. If any other field not
+   * listed above is included in `update_mask`, it will result in an INVALID_ARGUMENT error.
+   * @return value or {@code null} for none
+   */
+  public String getUpdateMask() {
+    return updateMask;
+  }
+
+  /**
+   * Optional. The list of fields to set on the new table. A mask specifying which fields (e.g.
+   * `deletion_protection`) in the `table` field should be set. This mask is relative to the `table`
+   * field, not to the request message. The wildcard (*) path is currently not supported. Currently
+   * RestoreTable only supports the following fields for modification: * `deletion_protection`:
+   * Defaults to `false` if not set. * `automated_backup_policy`: Defaults to no automated backup
+   * policy if not set. Output-only fields in the mask will be ignored. If any other field not
+   * listed above is included in `update_mask`, it will result in an INVALID_ARGUMENT error.
+   * @param updateMask updateMask or {@code null} for none
+   */
+  public RestoreTableRequest setUpdateMask(String updateMask) {
+    this.updateMask = updateMask;
     return this;
   }
 

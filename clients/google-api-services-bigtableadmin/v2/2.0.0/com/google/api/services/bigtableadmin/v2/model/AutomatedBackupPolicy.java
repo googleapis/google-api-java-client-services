@@ -31,12 +31,30 @@ package com.google.api.services.bigtableadmin.v2.model;
 public final class AutomatedBackupPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If `true`, automated backups are explicitly disabled on this table. This allows users
+   * to opt out of default enablement.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean disabled;
+
+  /**
    * How frequently automated backups should occur. The only supported value at this time is 24
    * hours. An undefined frequency is treated as 24 hours.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String frequency;
+
+  /**
+   * Optional. The amount of time that the automated backups remain hot. If specified, the backups
+   * created by this policy are `HOT` backups. If not specified, the backups are `STANDARD` backups.
+   * The value must be at least 24 hours and at most 10 days, and can't exceed the policy's
+   * `retention_period`. Only SSD instances support `HOT` automated backups.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String keepHotDuration;
 
   /**
    * Optional. A list of Cloud Bigtable zones where automated backups are allowed to be created. If
@@ -57,6 +75,25 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
   private String retentionPeriod;
 
   /**
+   * Optional. If `true`, automated backups are explicitly disabled on this table. This allows users
+   * to opt out of default enablement.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDisabled() {
+    return disabled;
+  }
+
+  /**
+   * Optional. If `true`, automated backups are explicitly disabled on this table. This allows users
+   * to opt out of default enablement.
+   * @param disabled disabled or {@code null} for none
+   */
+  public AutomatedBackupPolicy setDisabled(java.lang.Boolean disabled) {
+    this.disabled = disabled;
+    return this;
+  }
+
+  /**
    * How frequently automated backups should occur. The only supported value at this time is 24
    * hours. An undefined frequency is treated as 24 hours.
    * @return value or {@code null} for none
@@ -72,6 +109,29 @@ public final class AutomatedBackupPolicy extends com.google.api.client.json.Gene
    */
   public AutomatedBackupPolicy setFrequency(String frequency) {
     this.frequency = frequency;
+    return this;
+  }
+
+  /**
+   * Optional. The amount of time that the automated backups remain hot. If specified, the backups
+   * created by this policy are `HOT` backups. If not specified, the backups are `STANDARD` backups.
+   * The value must be at least 24 hours and at most 10 days, and can't exceed the policy's
+   * `retention_period`. Only SSD instances support `HOT` automated backups.
+   * @return value or {@code null} for none
+   */
+  public String getKeepHotDuration() {
+    return keepHotDuration;
+  }
+
+  /**
+   * Optional. The amount of time that the automated backups remain hot. If specified, the backups
+   * created by this policy are `HOT` backups. If not specified, the backups are `STANDARD` backups.
+   * The value must be at least 24 hours and at most 10 days, and can't exceed the policy's
+   * `retention_period`. Only SSD instances support `HOT` automated backups.
+   * @param keepHotDuration keepHotDuration or {@code null} for none
+   */
+  public AutomatedBackupPolicy setKeepHotDuration(String keepHotDuration) {
+    this.keepHotDuration = keepHotDuration;
     return this;
   }
 

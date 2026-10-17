@@ -51,6 +51,13 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
   private java.lang.String description;
 
   /**
+   * Optional. User-friendly display name for the session template. Can be up to 63 characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String displayName;
+
+  /**
    * Optional. Environment configuration for session execution.
    * The value may be {@code null}.
    */
@@ -159,6 +166,23 @@ public final class SessionTemplate extends com.google.api.client.json.GenericJso
    */
   public SessionTemplate setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Optional. User-friendly display name for the session template. Can be up to 63 characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDisplayName() {
+    return displayName;
+  }
+
+  /**
+   * Optional. User-friendly display name for the session template. Can be up to 63 characters.
+   * @param displayName displayName or {@code null} for none
+   */
+  public SessionTemplate setDisplayName(java.lang.String displayName) {
+    this.displayName = displayName;
     return this;
   }
 

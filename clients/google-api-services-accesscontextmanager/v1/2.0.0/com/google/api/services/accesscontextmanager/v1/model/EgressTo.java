@@ -61,10 +61,11 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, that are allowed to be
-   * accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a
-   * resource in this list. If `*` is specified for `resources`, then this EgressTo rule will
-   * authorize access to all resources outside the perimeter.
+   * A list of resources, currently projects, folders, and organizations in the form `projects/`,
+   * `folders/`, and `organizations/`, that are allowed to be accessed by sources defined in the
+   * corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is
+   * specified for `resources`, then this EgressTo rule will authorize access to all resources
+   * outside the perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -123,10 +124,11 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, that are allowed to be
-   * accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a
-   * resource in this list. If `*` is specified for `resources`, then this EgressTo rule will
-   * authorize access to all resources outside the perimeter.
+   * A list of resources, currently projects, folders, and organizations in the form `projects/`,
+   * `folders/`, and `organizations/`, that are allowed to be accessed by sources defined in the
+   * corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is
+   * specified for `resources`, then this EgressTo rule will authorize access to all resources
+   * outside the perimeter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -134,10 +136,11 @@ public final class EgressTo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * A list of resources, currently only projects in the form `projects/`, that are allowed to be
-   * accessed by sources defined in the corresponding EgressFrom. A request matches if it contains a
-   * resource in this list. If `*` is specified for `resources`, then this EgressTo rule will
-   * authorize access to all resources outside the perimeter.
+   * A list of resources, currently projects, folders, and organizations in the form `projects/`,
+   * `folders/`, and `organizations/`, that are allowed to be accessed by sources defined in the
+   * corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is
+   * specified for `resources`, then this EgressTo rule will authorize access to all resources
+   * outside the perimeter.
    * @param resources resources or {@code null} for none
    */
   public EgressTo setResources(java.util.List<java.lang.String> resources) {

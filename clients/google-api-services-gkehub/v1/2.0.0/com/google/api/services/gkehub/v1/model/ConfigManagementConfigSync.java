@@ -89,8 +89,8 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   private java.lang.Boolean preventDrift;
 
   /**
-   * Optional. Specifies whether the Config Sync repo is in `hierarchical` or `unstructured` mode.
-   * Defaults to `hierarchical`. See https://docs.cloud.google.com/kubernetes-engine/config-
+   * Optional. Specifies whether the Config Sync repo is in `hierarchy` or `unstructured` mode.
+   * Defaults to `hierarchy`. See https://docs.cloud.google.com/kubernetes-engine/config-
    * sync/docs/concepts/configs#organize-configs for an explanation.
    * The value may be {@code null}.
    */
@@ -241,8 +241,8 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Optional. Specifies whether the Config Sync repo is in `hierarchical` or `unstructured` mode.
-   * Defaults to `hierarchical`. See https://docs.cloud.google.com/kubernetes-engine/config-
+   * Optional. Specifies whether the Config Sync repo is in `hierarchy` or `unstructured` mode.
+   * Defaults to `hierarchy`. See https://docs.cloud.google.com/kubernetes-engine/config-
    * sync/docs/concepts/configs#organize-configs for an explanation.
    * @return value or {@code null} for none
    */
@@ -251,8 +251,8 @@ public final class ConfigManagementConfigSync extends com.google.api.client.json
   }
 
   /**
-   * Optional. Specifies whether the Config Sync repo is in `hierarchical` or `unstructured` mode.
-   * Defaults to `hierarchical`. See https://docs.cloud.google.com/kubernetes-engine/config-
+   * Optional. Specifies whether the Config Sync repo is in `hierarchy` or `unstructured` mode.
+   * Defaults to `hierarchy`. See https://docs.cloud.google.com/kubernetes-engine/config-
    * sync/docs/concepts/configs#organize-configs for an explanation.
    * @param sourceFormat sourceFormat or {@code null} for none
    */

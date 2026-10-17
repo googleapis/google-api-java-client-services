@@ -75,8 +75,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC network format:
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently projects,
+   * folders, and VPCs are allowed. Project format: `projects/{project_number}` Folder format:
+   * `folders/{folder_id}` VPC network format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * The value may be {@code null}.
    */
@@ -171,8 +172,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC network format:
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently projects,
+   * folders, and VPCs are allowed. Project format: `projects/{project_number}` Folder format:
+   * `folders/{folder_id}` VPC network format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * @return value or {@code null} for none
    */
@@ -181,8 +183,9 @@ public final class ServicePerimeterConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * A list of Google Cloud resources that are inside of the service perimeter. Currently only
-   * projects and VPCs are allowed. Project format: `projects/{project_number}` VPC network format:
+   * A list of Google Cloud resources that are inside of the service perimeter. Currently projects,
+   * folders, and VPCs are allowed. Project format: `projects/{project_number}` Folder format:
+   * `folders/{folder_id}` VPC network format:
    * `//compute.googleapis.com/projects/{PROJECT_ID}/global/networks/{NAME}`.
    * @param resources resources or {@code null} for none
    */

@@ -31,15 +31,19 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * `gcpserviceaccount`.
+   * `gcpserviceaccount`. Annotates the `RootSync` or `RepoSync` controller's Kubernetes Service
+   * Account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String gcpServiceAccountEmail;
 
   /**
-   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Only specify
-   * when secret_type is `cookiefile`, `token`, or `none`.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Defines an
+   * HTTPS_PROXY environment variable and only accepts `https` or unadorned URLs. For example,
+   * `https://proxy.internal.business.co:443` or `proxy.internal.business.co:443`. If using an
+   * unadorned URL, make sure the communication between your proxy server and Git host is secure.
+   * Rejects `http://` URLs. Only specify when secret_type is `cookiefile`, `token`, or `none`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +81,9 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   private java.lang.String syncRepo;
 
   /**
-   * Optional. Git revision (tag or hash) to check out. Default HEAD.
+   * Optional. Git revision (tag or hash) or branch to sync from. Default `HEAD`. If not `HEAD`,
+   * takes precedence over `sync_branch` field. When using a hash, must be a full hash, and not an
+   * abbreviated form.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +98,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * `gcpserviceaccount`.
+   * `gcpserviceaccount`. Annotates the `RootSync` or `RepoSync` controller's Kubernetes Service
+   * Account.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -101,7 +108,8 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * `gcpserviceaccount`.
+   * `gcpserviceaccount`. Annotates the `RootSync` or `RepoSync` controller's Kubernetes Service
+   * Account.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementGitConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {
@@ -110,8 +118,11 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Only specify
-   * when secret_type is `cookiefile`, `token`, or `none`.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Defines an
+   * HTTPS_PROXY environment variable and only accepts `https` or unadorned URLs. For example,
+   * `https://proxy.internal.business.co:443` or `proxy.internal.business.co:443`. If using an
+   * unadorned URL, make sure the communication between your proxy server and Git host is secure.
+   * Rejects `http://` URLs. Only specify when secret_type is `cookiefile`, `token`, or `none`.
    * @return value or {@code null} for none
    */
   public java.lang.String getHttpsProxy() {
@@ -119,8 +130,11 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Only specify
-   * when secret_type is `cookiefile`, `token`, or `none`.
+   * Optional. URL for the HTTPS proxy to be used when communicating with the Git repo. Defines an
+   * HTTPS_PROXY environment variable and only accepts `https` or unadorned URLs. For example,
+   * `https://proxy.internal.business.co:443` or `proxy.internal.business.co:443`. If using an
+   * unadorned URL, make sure the communication between your proxy server and Git host is secure.
+   * Rejects `http://` URLs. Only specify when secret_type is `cookiefile`, `token`, or `none`.
    * @param httpsProxy httpsProxy or {@code null} for none
    */
   public ConfigManagementGitConfig setHttpsProxy(java.lang.String httpsProxy) {
@@ -203,7 +217,9 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Git revision (tag or hash) to check out. Default HEAD.
+   * Optional. Git revision (tag or hash) or branch to sync from. Default `HEAD`. If not `HEAD`,
+   * takes precedence over `sync_branch` field. When using a hash, must be a full hash, and not an
+   * abbreviated form.
    * @return value or {@code null} for none
    */
   public java.lang.String getSyncRev() {
@@ -211,7 +227,9 @@ public final class ConfigManagementGitConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Git revision (tag or hash) to check out. Default HEAD.
+   * Optional. Git revision (tag or hash) or branch to sync from. Default `HEAD`. If not `HEAD`,
+   * takes precedence over `sync_branch` field. When using a hash, must be a full hash, and not an
+   * abbreviated form.
    * @param syncRev syncRev or {@code null} for none
    */
   public ConfigManagementGitConfig setSyncRev(java.lang.String syncRev) {

@@ -34,7 +34,7 @@ public final class GenaiVertexV1beta1FileCitation extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private GenaiVertexV1beta1Struct customMetadata;
+  private java.util.Map<String, java.lang.Object> customMetadata;
 
   /**
    * The URI of the file.
@@ -75,7 +75,7 @@ public final class GenaiVertexV1beta1FileCitation extends com.google.api.client.
    * User provided metadata about the retrieved context.
    * @return value or {@code null} for none
    */
-  public GenaiVertexV1beta1Struct getCustomMetadata() {
+  public java.util.Map<String, java.lang.Object> getCustomMetadata() {
     return customMetadata;
   }
 
@@ -83,7 +83,7 @@ public final class GenaiVertexV1beta1FileCitation extends com.google.api.client.
    * User provided metadata about the retrieved context.
    * @param customMetadata customMetadata or {@code null} for none
    */
-  public GenaiVertexV1beta1FileCitation setCustomMetadata(GenaiVertexV1beta1Struct customMetadata) {
+  public GenaiVertexV1beta1FileCitation setCustomMetadata(java.util.Map<String, java.lang.Object> customMetadata) {
     this.customMetadata = customMetadata;
     return this;
   }

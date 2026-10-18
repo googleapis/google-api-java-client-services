@@ -37,6 +37,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfi
   private java.lang.String mode;
 
   /**
+   * Smooths the seams between the tiles the model upscales separately.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean tileSmoothing;
+
+  /**
    * Super Res mode. Required.
    * @return value or {@code null} for none
    */
@@ -50,6 +57,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfi
    */
   public CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * Smooths the seams between the tiles the model upscales separately.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getTileSmoothing() {
+    return tileSmoothing;
+  }
+
+  /**
+   * Smooths the seams between the tiles the model upscales separately.
+   * @param tileSmoothing tileSmoothing or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig setTileSmoothing(java.lang.Boolean tileSmoothing) {
+    this.tileSmoothing = tileSmoothing;
     return this;
   }
 

@@ -37,6 +37,21 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
   private GoogleCloudAiplatformV1beta1SchemaPromptSpecAppBuilderData appBuilderData;
 
   /**
+   * Optional. Metadata the model returned with each of `prompt_message.contents`, such as citations
+   * and grounding sources. This maps 1:1 to PromptMessage.contents; an entry is empty when its
+   * content has no metadata.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudAiplatformV1beta1SchemaPromptSpecContentMetadata> contentMetadata;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudAiplatformV1beta1SchemaPromptSpecContentMetadata used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudAiplatformV1beta1SchemaPromptSpecContentMetadata.class);
+  }
+
+  /**
    * Preamble: The context of the prompt.
    * The value may be {@code null}.
    */
@@ -126,6 +141,27 @@ public final class GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt 
    */
   public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setAppBuilderData(GoogleCloudAiplatformV1beta1SchemaPromptSpecAppBuilderData appBuilderData) {
     this.appBuilderData = appBuilderData;
+    return this;
+  }
+
+  /**
+   * Optional. Metadata the model returned with each of `prompt_message.contents`, such as citations
+   * and grounding sources. This maps 1:1 to PromptMessage.contents; an entry is empty when its
+   * content has no metadata.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudAiplatformV1beta1SchemaPromptSpecContentMetadata> getContentMetadata() {
+    return contentMetadata;
+  }
+
+  /**
+   * Optional. Metadata the model returned with each of `prompt_message.contents`, such as citations
+   * and grounding sources. This maps 1:1 to PromptMessage.contents; an entry is empty when its
+   * content has no metadata.
+   * @param contentMetadata contentMetadata or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SchemaPromptSpecStructuredPrompt setContentMetadata(java.util.List<GoogleCloudAiplatformV1beta1SchemaPromptSpecContentMetadata> contentMetadata) {
+    this.contentMetadata = contentMetadata;
     return this;
   }
 

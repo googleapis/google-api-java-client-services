@@ -44,6 +44,14 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
   private GenaiVertexV1beta1Content content;
 
   /**
+   * Opaque token to resume a long decode. Output: set when status is INCOMPLETE and decoding can be
+   * resumed. Input: pass the latest token back unchanged in CreateInteraction to continue decoding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String continuationToken;
+
+  /**
    * Required. Output only. The time at which the response was created in ISO 8601 format (YYYY-MM-
    * DDThh:mm:ssZ).
    * The value may be {@code null}.
@@ -255,6 +263,55 @@ public final class GenaiVertexV1beta1Interaction extends com.google.api.client.j
    */
   public GenaiVertexV1beta1Interaction setContent(GenaiVertexV1beta1Content content) {
     this.content = content;
+    return this;
+  }
+
+  /**
+   * Opaque token to resume a long decode. Output: set when status is INCOMPLETE and decoding can be
+   * resumed. Input: pass the latest token back unchanged in CreateInteraction to continue decoding.
+   * @see #decodeContinuationToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContinuationToken() {
+    return continuationToken;
+  }
+
+  /**
+   * Opaque token to resume a long decode. Output: set when status is INCOMPLETE and decoding can be
+   * resumed. Input: pass the latest token back unchanged in CreateInteraction to continue decoding.
+   * @see #getContinuationToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContinuationToken() {
+    return com.google.api.client.util.Base64.decodeBase64(continuationToken);
+  }
+
+  /**
+   * Opaque token to resume a long decode. Output: set when status is INCOMPLETE and decoding can be
+   * resumed. Input: pass the latest token back unchanged in CreateInteraction to continue decoding.
+   * @see #encodeContinuationToken()
+   * @param continuationToken continuationToken or {@code null} for none
+   */
+  public GenaiVertexV1beta1Interaction setContinuationToken(java.lang.String continuationToken) {
+    this.continuationToken = continuationToken;
+    return this;
+  }
+
+  /**
+   * Opaque token to resume a long decode. Output: set when status is INCOMPLETE and decoding can be
+   * resumed. Input: pass the latest token back unchanged in CreateInteraction to continue decoding.
+   * @see #setContinuationToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GenaiVertexV1beta1Interaction encodeContinuationToken(byte[] continuationToken) {
+    this.continuationToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(continuationToken);
     return this;
   }
 

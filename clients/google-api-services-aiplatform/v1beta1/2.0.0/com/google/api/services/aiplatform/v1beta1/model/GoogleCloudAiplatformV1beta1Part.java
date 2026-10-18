@@ -18,7 +18,7 @@ package com.google.api.services.aiplatform.v1beta1.model;
 
 /**
  * A datatype containing media that is part of a multi-part Content message. A `Part` consists of
- * data which has an associated datatype. A `Part` can only contain one of the accepted types in
+ * data which has an associated datatype. A `Part` must contain one of the accepted types in
  * `Part.data`. For media types that are not text, `Part` must have a fixed IANA MIME type
  * identifying the type and subtype of the media if `inline_data` or `file_data` field is filled
  * with raw bytes.

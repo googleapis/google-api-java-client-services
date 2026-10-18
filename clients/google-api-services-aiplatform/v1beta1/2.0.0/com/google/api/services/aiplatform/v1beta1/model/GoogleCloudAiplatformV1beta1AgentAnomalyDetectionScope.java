@@ -46,6 +46,15 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
   private java.lang.String displayName;
 
   /**
+   * Optional. Immutable. Specifies the customer-managed encryption key spec for a Scope. If set,
+   * this Scope and all sub-resources will be secured by this key. The key is immutable after the
+   * Scope is created and must be a multi-region (`us` or `eu`) key in the same region as the Scope.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Required. Customer-owned Cloud Logging bucket resource names attached to this scope. Format:
    * `projects/{project}/locations/{location}/buckets/{bucket}`.
    * The value may be {@code null}.
@@ -111,6 +120,27 @@ public final class GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope extend
    */
   public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setDisplayName(java.lang.String displayName) {
     this.displayName = displayName;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the customer-managed encryption key spec for a Scope. If set,
+   * this Scope and all sub-resources will be secured by this key. The key is immutable after the
+   * Scope is created and must be a multi-region (`us` or `eu`) key in the same region as the Scope.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the customer-managed encryption key spec for a Scope. If set,
+   * this Scope and all sub-resources will be secured by this key. The key is immutable after the
+   * Scope is created and must be a multi-region (`us` or `eu`) key in the same region as the Scope.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentAnomalyDetectionScope setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
     return this;
   }
 

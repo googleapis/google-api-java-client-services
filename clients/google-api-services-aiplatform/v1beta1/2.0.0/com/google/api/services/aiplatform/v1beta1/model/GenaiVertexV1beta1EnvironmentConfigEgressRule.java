@@ -38,6 +38,14 @@ public final class GenaiVertexV1beta1EnvironmentConfigEgressRule extends com.goo
   private java.lang.String domain;
 
   /**
+   * Network egress mode. Set via the `"allowlist": "disabled"` short form; must be the only rule in
+   * the allowlist and cannot be combined with `domain`, `transform` or `credential`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Headers to inject into requests matching this rule. Key: header name (e.g., "Authorization").
    * Value: header value (e.g., "Bearer your-token").
    * The value may be {@code null}.
@@ -61,6 +69,25 @@ public final class GenaiVertexV1beta1EnvironmentConfigEgressRule extends com.goo
    */
   public GenaiVertexV1beta1EnvironmentConfigEgressRule setDomain(java.lang.String domain) {
     this.domain = domain;
+    return this;
+  }
+
+  /**
+   * Network egress mode. Set via the `"allowlist": "disabled"` short form; must be the only rule in
+   * the allowlist and cannot be combined with `domain`, `transform` or `credential`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Network egress mode. Set via the `"allowlist": "disabled"` short form; must be the only rule in
+   * the allowlist and cannot be combined with `domain`, `transform` or `credential`.
+   * @param mode mode or {@code null} for none
+   */
+  public GenaiVertexV1beta1EnvironmentConfigEgressRule setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

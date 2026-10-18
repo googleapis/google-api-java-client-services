@@ -106,7 +106,9 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the
    * expansion does not occur. This field corresponds to the `env` field of the Kubernetes
    * Containers [v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-
-   * api/v1.23/#container-v1-core).
+   * api/v1.23/#container-v1-core). At most 200 environment variables can be specified. Each
+   * variable (`NAME=value`) must be smaller than 128 KiB, and the total size of all variables must
+   * not exceed 512 KiB.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -393,7 +395,9 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the
    * expansion does not occur. This field corresponds to the `env` field of the Kubernetes
    * Containers [v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-
-   * api/v1.23/#container-v1-core).
+   * api/v1.23/#container-v1-core). At most 200 environment variables can be specified. Each
+   * variable (`NAME=value`) must be smaller than 128 KiB, and the total size of all variables must
+   * not exceed 512 KiB.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAiplatformV1beta1EnvVar> getEnv() {
@@ -409,7 +413,9 @@ public final class GoogleCloudAiplatformV1beta1ModelContainerSpec extends com.go
    * "$(VAR_1) bar" } ] ``` If you switch the order of the variables in the example, then the
    * expansion does not occur. This field corresponds to the `env` field of the Kubernetes
    * Containers [v1 core API](https://kubernetes.io/docs/reference/generated/kubernetes-
-   * api/v1.23/#container-v1-core).
+   * api/v1.23/#container-v1-core). At most 200 environment variables can be specified. Each
+   * variable (`NAME=value`) must be smaller than 128 KiB, and the total size of all variables must
+   * not exceed 512 KiB.
    * @param env env or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ModelContainerSpec setEnv(java.util.List<GoogleCloudAiplatformV1beta1EnvVar> env) {

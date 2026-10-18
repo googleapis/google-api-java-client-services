@@ -131,6 +131,13 @@ public final class Results extends com.google.api.client.json.GenericJson {
   private java.util.List<UploadedPythonPackage> pythonPackages;
 
   /**
+   * Output only. Aggregated metrics for the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private BuildResourceUsage resourceUsage;
+
+  /**
    * Path to the artifact manifest for non-container artifacts uploaded to Cloud Storage. Only
    * populated when artifacts are uploaded to Cloud Storage.
    * @return value or {@code null} for none
@@ -341,6 +348,23 @@ public final class Results extends com.google.api.client.json.GenericJson {
    */
   public Results setPythonPackages(java.util.List<UploadedPythonPackage> pythonPackages) {
     this.pythonPackages = pythonPackages;
+    return this;
+  }
+
+  /**
+   * Output only. Aggregated metrics for the build.
+   * @return value or {@code null} for none
+   */
+  public BuildResourceUsage getResourceUsage() {
+    return resourceUsage;
+  }
+
+  /**
+   * Output only. Aggregated metrics for the build.
+   * @param resourceUsage resourceUsage or {@code null} for none
+   */
+  public Results setResourceUsage(BuildResourceUsage resourceUsage) {
+    this.resourceUsage = resourceUsage;
     return this;
   }
 

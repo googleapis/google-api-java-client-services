@@ -31,7 +31,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * `gcpserviceaccount`.
+   * `gcpserviceaccount`. Annotates the `RootSync` or `RepoSync` controller's Kubernetes Service
+   * Account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +71,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * `gcpserviceaccount`.
+   * `gcpserviceaccount`. Annotates the `RootSync` or `RepoSync` controller's Kubernetes Service
+   * Account.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpServiceAccountEmail() {
@@ -79,7 +81,8 @@ public final class ConfigManagementOciConfig extends com.google.api.client.json.
 
   /**
    * Optional. The Google Cloud Service Account Email used for auth when secret_type is
-   * `gcpserviceaccount`.
+   * `gcpserviceaccount`. Annotates the `RootSync` or `RepoSync` controller's Kubernetes Service
+   * Account.
    * @param gcpServiceAccountEmail gcpServiceAccountEmail or {@code null} for none
    */
   public ConfigManagementOciConfig setGcpServiceAccountEmail(java.lang.String gcpServiceAccountEmail) {

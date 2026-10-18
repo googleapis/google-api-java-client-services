@@ -62,6 +62,7 @@ public final class AutoscalingSchedule extends com.google.api.client.json.Generi
   /**
    * Optional. Specifies the priority of the schedule. If two schedules overlap, the one with the
    * higher priority will be used. The higher the value, the higher the priority of the schedule.
+   * The value must be non-negative; the lowest priority is `0`, which is the default.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -157,6 +158,7 @@ public final class AutoscalingSchedule extends com.google.api.client.json.Generi
   /**
    * Optional. Specifies the priority of the schedule. If two schedules overlap, the one with the
    * higher priority will be used. The higher the value, the higher the priority of the schedule.
+   * The value must be non-negative; the lowest priority is `0`, which is the default.
    * @return value or {@code null} for none
    */
   public java.lang.Long getPriority() {
@@ -166,6 +168,7 @@ public final class AutoscalingSchedule extends com.google.api.client.json.Generi
   /**
    * Optional. Specifies the priority of the schedule. If two schedules overlap, the one with the
    * higher priority will be used. The higher the value, the higher the priority of the schedule.
+   * The value must be non-negative; the lowest priority is `0`, which is the default.
    * @param priority priority or {@code null} for none
    */
   public AutoscalingSchedule setPriority(java.lang.Long priority) {

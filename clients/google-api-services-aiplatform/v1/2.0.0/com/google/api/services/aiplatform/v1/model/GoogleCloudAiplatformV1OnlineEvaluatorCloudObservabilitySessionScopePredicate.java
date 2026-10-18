@@ -51,6 +51,15 @@ public final class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessi
   private GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityNumericPredicate modelCalls;
 
   /**
+   * Filter on the versions that served a session (`service.version` OTel resource attribute);
+   * matches if any of them is listed. At most one is allowed. On Vertex AI Agent Engine, this is
+   * the runtime revision id, currently set only for agents created via v1beta1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityStringPredicate serviceVersion;
+
+  /**
    * Filter on the number of tool call errors within a session.
    * The value may be {@code null}.
    */
@@ -126,6 +135,27 @@ public final class GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessi
    */
   public GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessionScopePredicate setModelCalls(GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityNumericPredicate modelCalls) {
     this.modelCalls = modelCalls;
+    return this;
+  }
+
+  /**
+   * Filter on the versions that served a session (`service.version` OTel resource attribute);
+   * matches if any of them is listed. At most one is allowed. On Vertex AI Agent Engine, this is
+   * the runtime revision id, currently set only for agents created via v1beta1.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityStringPredicate getServiceVersion() {
+    return serviceVersion;
+  }
+
+  /**
+   * Filter on the versions that served a session (`service.version` OTel resource attribute);
+   * matches if any of them is listed. At most one is allowed. On Vertex AI Agent Engine, this is
+   * the runtime revision id, currently set only for agents created via v1beta1.
+   * @param serviceVersion serviceVersion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilitySessionScopePredicate setServiceVersion(GoogleCloudAiplatformV1OnlineEvaluatorCloudObservabilityStringPredicate serviceVersion) {
+    this.serviceVersion = serviceVersion;
     return this;
   }
 

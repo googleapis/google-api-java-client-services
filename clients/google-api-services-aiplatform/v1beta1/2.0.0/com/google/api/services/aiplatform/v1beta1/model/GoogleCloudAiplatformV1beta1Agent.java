@@ -63,6 +63,13 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private java.lang.String description;
 
   /**
+   * Output only. The resolved Agent Identity (SPIFFE principal) of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String effectiveIdentity;
+
+  /**
    * Immutable. The user-specified ID for the agent. This ID becomes the final component of the
    * agent resource name. If not provided, Vertex AI will generate a value for this ID. The ID can
    * be up to 63 characters and must match the regular expression `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
@@ -205,6 +212,23 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Agent setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * Output only. The resolved Agent Identity (SPIFFE principal) of the agent.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEffectiveIdentity() {
+    return effectiveIdentity;
+  }
+
+  /**
+   * Output only. The resolved Agent Identity (SPIFFE principal) of the agent.
+   * @param effectiveIdentity effectiveIdentity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setEffectiveIdentity(java.lang.String effectiveIdentity) {
+    this.effectiveIdentity = effectiveIdentity;
     return this;
   }
 

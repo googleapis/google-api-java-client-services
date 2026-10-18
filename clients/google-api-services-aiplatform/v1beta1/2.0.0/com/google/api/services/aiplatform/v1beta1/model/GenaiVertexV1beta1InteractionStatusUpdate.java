@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1InteractionStatusUpdate extends com.google.api.client.json.GenericJson {
 
   /**
+   * An optional opaque continuation token used to resume decoding from the latest checkpoint after
+   * a disconnected stream.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String continuationToken;
+
+  /**
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,6 +48,62 @@ public final class GenaiVertexV1beta1InteractionStatusUpdate extends com.google.
    */
   @com.google.api.client.util.Key
   private java.lang.String status;
+
+  /**
+   * Model usage statistics up to this checkpoint.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GenaiVertexV1beta1InteractionUsage usage;
+
+  /**
+   * An optional opaque continuation token used to resume decoding from the latest checkpoint after
+   * a disconnected stream.
+   * @see #decodeContinuationToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContinuationToken() {
+    return continuationToken;
+  }
+
+  /**
+   * An optional opaque continuation token used to resume decoding from the latest checkpoint after
+   * a disconnected stream.
+   * @see #getContinuationToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContinuationToken() {
+    return com.google.api.client.util.Base64.decodeBase64(continuationToken);
+  }
+
+  /**
+   * An optional opaque continuation token used to resume decoding from the latest checkpoint after
+   * a disconnected stream.
+   * @see #encodeContinuationToken()
+   * @param continuationToken continuationToken or {@code null} for none
+   */
+  public GenaiVertexV1beta1InteractionStatusUpdate setContinuationToken(java.lang.String continuationToken) {
+    this.continuationToken = continuationToken;
+    return this;
+  }
+
+  /**
+   * An optional opaque continuation token used to resume decoding from the latest checkpoint after
+   * a disconnected stream.
+   * @see #setContinuationToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GenaiVertexV1beta1InteractionStatusUpdate encodeContinuationToken(byte[] continuationToken) {
+    this.continuationToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(continuationToken);
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none
@@ -68,6 +132,23 @@ public final class GenaiVertexV1beta1InteractionStatusUpdate extends com.google.
    */
   public GenaiVertexV1beta1InteractionStatusUpdate setStatus(java.lang.String status) {
     this.status = status;
+    return this;
+  }
+
+  /**
+   * Model usage statistics up to this checkpoint.
+   * @return value or {@code null} for none
+   */
+  public GenaiVertexV1beta1InteractionUsage getUsage() {
+    return usage;
+  }
+
+  /**
+   * Model usage statistics up to this checkpoint.
+   * @param usage usage or {@code null} for none
+   */
+  public GenaiVertexV1beta1InteractionStatusUpdate setUsage(GenaiVertexV1beta1InteractionUsage usage) {
+    this.usage = usage;
     return this;
   }
 

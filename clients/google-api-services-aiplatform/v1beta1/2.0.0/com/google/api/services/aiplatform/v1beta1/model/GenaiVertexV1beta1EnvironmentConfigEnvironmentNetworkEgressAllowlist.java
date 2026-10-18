@@ -30,7 +30,8 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GenaiVertexV1beta1EnvironmentConfigEnvironmentNetworkEgressAllowlist extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of allowed domains and their configurations.
+   * List of allowed domains and their configurations. Set to `"disabled"` to block all network
+   * egress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,7 +44,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigEnvironmentNetworkEgressAl
   }
 
   /**
-   * List of allowed domains and their configurations.
+   * List of allowed domains and their configurations. Set to `"disabled"` to block all network
+   * egress.
    * @return value or {@code null} for none
    */
   public java.util.List<GenaiVertexV1beta1EnvironmentConfigEgressRule> getAllowlist() {
@@ -51,7 +53,8 @@ public final class GenaiVertexV1beta1EnvironmentConfigEnvironmentNetworkEgressAl
   }
 
   /**
-   * List of allowed domains and their configurations.
+   * List of allowed domains and their configurations. Set to `"disabled"` to block all network
+   * egress.
    * @param allowlist allowlist or {@code null} for none
    */
   public GenaiVertexV1beta1EnvironmentConfigEnvironmentNetworkEgressAllowlist setAllowlist(java.util.List<GenaiVertexV1beta1EnvironmentConfigEgressRule> allowlist) {

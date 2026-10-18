@@ -19161,6 +19161,514 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the Interactions collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+   *   {@code Aiplatform.Interactions.List request = aiplatform.interactions().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public Interactions interactions() {
+    return new Interactions();
+  }
+
+  /**
+   * The "interactions" collection of methods.
+   */
+  public class Interactions {
+
+    /**
+     * Cancels an interaction.
+     *
+     * Create a request for the method "interactions.cancel".
+     *
+     * This request holds the parameters needed by the aiplatform server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String name) throws java.io.IOException {
+      Cancel result = new Cancel(name);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GenaiVertexV1Interaction> {
+
+      private static final String REST_PATH = "v1/{+name}:cancel";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^interactions/[^/]+$");
+
+      /**
+       * Cancels an interaction.
+       *
+       * Create a request for the method "interactions.cancel".
+       *
+       * This request holds the parameters needed by the the aiplatform server.  After setting any
+       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String name) {
+        super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GenaiVertexV1Interaction.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^interactions/[^/]+$");
+        }
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the interaction to cancel. Format: `interactions/{interaction}`. */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the interaction to cancel. Format: `interactions/{interaction}`. */
+      public Cancel setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^interactions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fully typed proto, unary version of GetInteraction that returns Interaction proto.
+     *
+     * Create a request for the method "interactions.getPoll".
+     *
+     * This request holds the parameters needed by the aiplatform server.  After setting any optional
+     * parameters, call the {@link GetPoll#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+     * @return the request
+     */
+    public GetPoll getPoll(java.lang.String name) throws java.io.IOException {
+      GetPoll result = new GetPoll(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetPoll extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GenaiVertexV1Interaction> {
+
+      private static final String REST_PATH = "v1/{+name}:poll";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^interactions/[^/]+$");
+
+      /**
+       * Fully typed proto, unary version of GetInteraction that returns Interaction proto.
+       *
+       * Create a request for the method "interactions.getPoll".
+       *
+       * This request holds the parameters needed by the the aiplatform server.  After setting any
+       * optional parameters, call the {@link GetPoll#execute()} method to invoke the remote operation.
+       * <p> {@link
+       * GetPoll#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+       * @since 1.13
+       */
+      protected GetPoll(java.lang.String name) {
+        super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GenaiVertexV1Interaction.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^interactions/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetPoll set$Xgafv(java.lang.String $Xgafv) {
+        return (GetPoll) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetPoll setAccessToken(java.lang.String accessToken) {
+        return (GetPoll) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetPoll setAlt(java.lang.String alt) {
+        return (GetPoll) super.setAlt(alt);
+      }
+
+      @Override
+      public GetPoll setCallback(java.lang.String callback) {
+        return (GetPoll) super.setCallback(callback);
+      }
+
+      @Override
+      public GetPoll setFields(java.lang.String fields) {
+        return (GetPoll) super.setFields(fields);
+      }
+
+      @Override
+      public GetPoll setKey(java.lang.String key) {
+        return (GetPoll) super.setKey(key);
+      }
+
+      @Override
+      public GetPoll setOauthToken(java.lang.String oauthToken) {
+        return (GetPoll) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetPoll setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetPoll) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetPoll setQuotaUser(java.lang.String quotaUser) {
+        return (GetPoll) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetPoll setUploadType(java.lang.String uploadType) {
+        return (GetPoll) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetPoll setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetPoll) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the interaction to retrieve. Format: interactions/{interaction} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the interaction to retrieve. Format: interactions/{interaction} */
+      public GetPoll setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^interactions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String lastEventId;
+
+      /** If set, resumes the interaction stream from the chunk after the event marked by the event id. Can
+     only be used if `stream` is true.
+       */
+      public java.lang.String getLastEventId() {
+        return lastEventId;
+      }
+
+      /**
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
+       */
+      public GetPoll setLastEventId(java.lang.String lastEventId) {
+        this.lastEventId = lastEventId;
+        return this;
+      }
+
+      /** If true, streams the interaction events as Server-Sent Events. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean stream;
+
+      /** If true, streams the interaction events as Server-Sent Events.
+       */
+      public java.lang.Boolean getStream() {
+        return stream;
+      }
+
+      /** If true, streams the interaction events as Server-Sent Events. */
+      public GetPoll setStream(java.lang.Boolean stream) {
+        this.stream = stream;
+        return this;
+      }
+
+      @Override
+      public GetPoll set(String parameterName, Object value) {
+        return (GetPoll) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Fully typed proto, streaming version of GetInteraction that returns Interaction proto.
+     *
+     * Create a request for the method "interactions.getStream".
+     *
+     * This request holds the parameters needed by the aiplatform server.  After setting any optional
+     * parameters, call the {@link GetStream#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+     * @return the request
+     */
+    public GetStream getStream(java.lang.String name) throws java.io.IOException {
+      GetStream result = new GetStream(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetStream extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GenaiVertexV1InteractionStreamingEvent> {
+
+      private static final String REST_PATH = "v1/{+name}:stream";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^interactions/[^/]+$");
+
+      /**
+       * Fully typed proto, streaming version of GetInteraction that returns Interaction proto.
+       *
+       * Create a request for the method "interactions.getStream".
+       *
+       * This request holds the parameters needed by the the aiplatform server.  After setting any
+       * optional parameters, call the {@link GetStream#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetStream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+       * @since 1.13
+       */
+      protected GetStream(java.lang.String name) {
+        super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GenaiVertexV1InteractionStreamingEvent.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^interactions/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetStream set$Xgafv(java.lang.String $Xgafv) {
+        return (GetStream) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetStream setAccessToken(java.lang.String accessToken) {
+        return (GetStream) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetStream setAlt(java.lang.String alt) {
+        return (GetStream) super.setAlt(alt);
+      }
+
+      @Override
+      public GetStream setCallback(java.lang.String callback) {
+        return (GetStream) super.setCallback(callback);
+      }
+
+      @Override
+      public GetStream setFields(java.lang.String fields) {
+        return (GetStream) super.setFields(fields);
+      }
+
+      @Override
+      public GetStream setKey(java.lang.String key) {
+        return (GetStream) super.setKey(key);
+      }
+
+      @Override
+      public GetStream setOauthToken(java.lang.String oauthToken) {
+        return (GetStream) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetStream setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetStream) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetStream setQuotaUser(java.lang.String quotaUser) {
+        return (GetStream) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetStream setUploadType(java.lang.String uploadType) {
+        return (GetStream) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetStream setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetStream) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The name of the interaction to retrieve. Format: interactions/{interaction} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The name of the interaction to retrieve. Format: interactions/{interaction} */
+      public GetStream setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^interactions/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /**
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String lastEventId;
+
+      /** If set, resumes the interaction stream from the chunk after the event marked by the event id. Can
+     only be used if `stream` is true.
+       */
+      public java.lang.String getLastEventId() {
+        return lastEventId;
+      }
+
+      /**
+       * If set, resumes the interaction stream from the chunk after the event marked by the event
+       * id. Can only be used if `stream` is true.
+       */
+      public GetStream setLastEventId(java.lang.String lastEventId) {
+        this.lastEventId = lastEventId;
+        return this;
+      }
+
+      /** If true, streams the interaction events as Server-Sent Events. */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean stream;
+
+      /** If true, streams the interaction events as Server-Sent Events.
+       */
+      public java.lang.Boolean getStream() {
+        return stream;
+      }
+
+      /** If true, streams the interaction events as Server-Sent Events. */
+      public GetStream setStream(java.lang.Boolean stream) {
+        this.stream = stream;
+        return this;
+      }
+
+      @Override
+      public GetStream set(String parameterName, Object value) {
+        return (GetStream) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the Media collection.
    *
    * <p>The typical use is:</p>
@@ -85769,6 +86277,909 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
 
         }
+      }
+      /**
+       * An accessor for creating requests from the Interactions collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+       *   {@code Aiplatform.Interactions.List request = aiplatform.interactions().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Interactions interactions() {
+        return new Interactions();
+      }
+
+      /**
+       * The "interactions" collection of methods.
+       */
+      public class Interactions {
+
+        /**
+         * Creates an interaction.
+         *
+         * Create a request for the method "interactions.create".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId
+         * @param locationsId
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest content) throws java.io.IOException {
+          Create result = new Create(projectsId, locationsId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GenaiVertexV1Interaction> {
+
+          private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/interactions:create";
+
+          /**
+           * Creates an interaction.
+           *
+           * Create a request for the method "interactions.create".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId
+           * @param locationsId
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GenaiVertexV1Interaction.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /**
+
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          public Create setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /**
+
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          public Create setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates an interaction and streams the response.
+         *
+         * Create a request for the method "interactions.createStream".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link CreateStream#execute()} method to invoke the remote operation.
+         *
+         * @param projectsId
+         * @param locationsId
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest}
+         * @return the request
+         */
+        public CreateStream createStream(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest content) throws java.io.IOException {
+          CreateStream result = new CreateStream(projectsId, locationsId, content);
+          initialize(result);
+          return result;
+        }
+
+        public class CreateStream extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GenaiVertexV1InteractionStreamingEvent> {
+
+          private static final String REST_PATH = "v1/projects/{projectsId}/locations/{locationsId}/interactions:createStream";
+
+          /**
+           * Creates an interaction and streams the response.
+           *
+           * Create a request for the method "interactions.createStream".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link CreateStream#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * CreateStream#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param projectsId
+           * @param locationsId
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest}
+           * @since 1.13
+           */
+          protected CreateStream(java.lang.String projectsId, java.lang.String locationsId, com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GenaiVertexV1InteractionStreamingEvent.class);
+            this.projectsId = com.google.api.client.util.Preconditions.checkNotNull(projectsId, "Required parameter projectsId must be specified.");
+            this.locationsId = com.google.api.client.util.Preconditions.checkNotNull(locationsId, "Required parameter locationsId must be specified.");
+          }
+
+          @Override
+          public CreateStream set$Xgafv(java.lang.String $Xgafv) {
+            return (CreateStream) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public CreateStream setAccessToken(java.lang.String accessToken) {
+            return (CreateStream) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public CreateStream setAlt(java.lang.String alt) {
+            return (CreateStream) super.setAlt(alt);
+          }
+
+          @Override
+          public CreateStream setCallback(java.lang.String callback) {
+            return (CreateStream) super.setCallback(callback);
+          }
+
+          @Override
+          public CreateStream setFields(java.lang.String fields) {
+            return (CreateStream) super.setFields(fields);
+          }
+
+          @Override
+          public CreateStream setKey(java.lang.String key) {
+            return (CreateStream) super.setKey(key);
+          }
+
+          @Override
+          public CreateStream setOauthToken(java.lang.String oauthToken) {
+            return (CreateStream) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public CreateStream setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (CreateStream) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public CreateStream setQuotaUser(java.lang.String quotaUser) {
+            return (CreateStream) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public CreateStream setUploadType(java.lang.String uploadType) {
+            return (CreateStream) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public CreateStream setUploadProtocol(java.lang.String uploadProtocol) {
+            return (CreateStream) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String projectsId;
+
+          /**
+
+           */
+          public java.lang.String getProjectsId() {
+            return projectsId;
+          }
+
+          public CreateStream setProjectsId(java.lang.String projectsId) {
+            this.projectsId = projectsId;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String locationsId;
+
+          /**
+
+           */
+          public java.lang.String getLocationsId() {
+            return locationsId;
+          }
+
+          public CreateStream setLocationsId(java.lang.String locationsId) {
+            this.locationsId = locationsId;
+            return this;
+          }
+
+          @Override
+          public CreateStream set(String parameterName, Object value) {
+            return (CreateStream) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes an interaction.
+         *
+         * Create a request for the method "interactions.delete".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the interaction to delete. Format: interactions/{interaction}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GenaiVertexV1DeleteInteractionResponse> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/interactions/[^/]+$");
+
+          /**
+           * Deletes an interaction.
+           *
+           * Create a request for the method "interactions.delete".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the interaction to delete. Format: interactions/{interaction}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GenaiVertexV1DeleteInteractionResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/interactions/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the interaction to delete. Format: interactions/{interaction}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the interaction to delete. Format: interactions/{interaction}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the interaction to delete. Format: interactions/{interaction}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/interactions/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the InteractionsHttp collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+       *   {@code Aiplatform.InteractionsHttp.List request = aiplatform.interactionsHttp().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public InteractionsHttp interactionsHttp() {
+        return new InteractionsHttp();
+      }
+
+      /**
+       * The "interactionsHttp" collection of methods.
+       */
+      public class InteractionsHttp {
+
+        /**
+         * Cancels an interaction by id. This only applies to background interactions that are still
+         * running.
+         *
+         * Create a request for the method "interactionsHttp.cancel".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+         * @return the request
+         */
+        public Cancel cancel(java.lang.String name) throws java.io.IOException {
+          Cancel result = new Cancel(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+          private static final String REST_PATH = "v1/{+name}/cancel";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
+
+          /**
+           * Cancels an interaction by id. This only applies to background interactions that are still
+           * running.
+           *
+           * Create a request for the method "interactionsHttp.cancel".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+           * @since 1.13
+           */
+          protected Cancel(java.lang.String name) {
+            super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
+            }
+          }
+
+          @Override
+          public Cancel set$Xgafv(java.lang.String $Xgafv) {
+            return (Cancel) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Cancel setAccessToken(java.lang.String accessToken) {
+            return (Cancel) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Cancel setAlt(java.lang.String alt) {
+            return (Cancel) super.setAlt(alt);
+          }
+
+          @Override
+          public Cancel setCallback(java.lang.String callback) {
+            return (Cancel) super.setCallback(callback);
+          }
+
+          @Override
+          public Cancel setFields(java.lang.String fields) {
+            return (Cancel) super.setFields(fields);
+          }
+
+          @Override
+          public Cancel setKey(java.lang.String key) {
+            return (Cancel) super.setKey(key);
+          }
+
+          @Override
+          public Cancel setOauthToken(java.lang.String oauthToken) {
+            return (Cancel) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Cancel) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Cancel setQuotaUser(java.lang.String quotaUser) {
+            return (Cancel) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Cancel setUploadType(java.lang.String uploadType) {
+            return (Cancel) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Cancel) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the interaction to cancel. Format: `interactions/{interaction}`.
+           */
+          public Cancel setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Cancel set(String parameterName, Object value) {
+            return (Cancel) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Creates a new interaction.
+         *
+         * Create a request for the method "interactionsHttp.create".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this interaction will be created. Format:
+         *        `projects/{project}/locations/{location}` Supported only by the Vertex API only.
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionHttpRequest}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionHttpRequest content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+          private static final String REST_PATH = "v1/{+parent}/interactionsHttp";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new interaction.
+           *
+           * Create a request for the method "interactionsHttp.create".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this interaction will be created. Format:
+         *        `projects/{project}/locations/{location}` Supported only by the Vertex API only.
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionHttpRequest}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GenaiVertexV1CreateInteractionHttpRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this interaction will be created. Format:
+           * `projects/{project}/locations/{location}` Supported only by the Vertex API only.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this interaction will be created. Format:
+         `projects/{project}/locations/{location}` Supported only by the Vertex API only.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this interaction will be created. Format:
+           * `projects/{project}/locations/{location}` Supported only by the Vertex API only.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Retrieves the full details of a single interaction based on its `Interaction.id`.
+         *
+         * Create a request for the method "interactionsHttp.get".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
+
+          /**
+           * Retrieves the full details of a single interaction based on its `Interaction.id`.
+           *
+           * Create a request for the method "interactionsHttp.get".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1.model.GoogleApiHttpBody.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the interaction to retrieve. Format: interactions/{interaction}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/interactionsHttp/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * If set, resumes the interaction stream from the chunk after the event marked by the
+           * event id. Can only be used if `stream` is true.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String lastEventId;
+
+          /** If set, resumes the interaction stream from the chunk after the event marked by the event id. Can
+         only be used if `stream` is true.
+           */
+          public java.lang.String getLastEventId() {
+            return lastEventId;
+          }
+
+          /**
+           * If set, resumes the interaction stream from the chunk after the event marked by the
+           * event id. Can only be used if `stream` is true.
+           */
+          public Get setLastEventId(java.lang.String lastEventId) {
+            this.lastEventId = lastEventId;
+            return this;
+          }
+
+          /** If true, streams the interaction events as Server-Sent Events. */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean stream;
+
+          /** If true, streams the interaction events as Server-Sent Events.
+           */
+          public java.lang.Boolean getStream() {
+            return stream;
+          }
+
+          /** If true, streams the interaction events as Server-Sent Events. */
+          public Get setStream(java.lang.Boolean stream) {
+            this.stream = stream;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+
       }
       /**
        * An accessor for creating requests from the MemoryBanks collection.

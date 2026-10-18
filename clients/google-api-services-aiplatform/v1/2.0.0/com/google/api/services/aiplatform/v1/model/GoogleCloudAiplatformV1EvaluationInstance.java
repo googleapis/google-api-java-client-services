@@ -38,6 +38,13 @@ public final class GoogleCloudAiplatformV1EvaluationInstance extends com.google.
   private GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData agentData;
 
   /**
+   * Optional. Data used for agent evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1AgentData agentEvalData;
+
+  /**
    * Optional. Source for populating `AgentData` from an Interactions API interaction. If set, no
    * other agent data source fields (`cloud_trace_agent_data_source`, `agent_eval_data`,
    * `agent_data`) may be set. The request will be rejected with INVALID_ARGUMENT if multiple agent
@@ -100,6 +107,23 @@ public final class GoogleCloudAiplatformV1EvaluationInstance extends com.google.
    */
   public GoogleCloudAiplatformV1EvaluationInstance setAgentData(GoogleCloudAiplatformV1EvaluationInstanceDeprecatedAgentData agentData) {
     this.agentData = agentData;
+    return this;
+  }
+
+  /**
+   * Optional. Data used for agent evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1AgentData getAgentEvalData() {
+    return agentEvalData;
+  }
+
+  /**
+   * Optional. Data used for agent evaluation.
+   * @param agentEvalData agentEvalData or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationInstance setAgentEvalData(GoogleCloudAiplatformV1AgentData agentEvalData) {
+    this.agentEvalData = agentEvalData;
     return this;
   }
 

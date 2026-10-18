@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
   private GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityNumericPredicate duration;
 
   /**
+   * Filter on the version that served a trace (`service.version` OTel resource attribute). At most
+   * one is allowed. On Vertex AI Agent Engine, this is the runtime revision id, currently set only
+   * for agents created via v1beta1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityStringPredicate serviceVersion;
+
+  /**
    * Filter on the total token usage within a trace.
    * The value may be {@code null}.
    */
@@ -57,6 +66,27 @@ public final class GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservability
    */
   public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityTraceScopePredicate setDuration(GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityNumericPredicate duration) {
     this.duration = duration;
+    return this;
+  }
+
+  /**
+   * Filter on the version that served a trace (`service.version` OTel resource attribute). At most
+   * one is allowed. On Vertex AI Agent Engine, this is the runtime revision id, currently set only
+   * for agents created via v1beta1.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityStringPredicate getServiceVersion() {
+    return serviceVersion;
+  }
+
+  /**
+   * Filter on the version that served a trace (`service.version` OTel resource attribute). At most
+   * one is allowed. On Vertex AI Agent Engine, this is the runtime revision id, currently set only
+   * for agents created via v1beta1.
+   * @param serviceVersion serviceVersion or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityTraceScopePredicate setServiceVersion(GoogleCloudAiplatformV1beta1OnlineEvaluatorCloudObservabilityStringPredicate serviceVersion) {
+    this.serviceVersion = serviceVersion;
     return this;
   }
 

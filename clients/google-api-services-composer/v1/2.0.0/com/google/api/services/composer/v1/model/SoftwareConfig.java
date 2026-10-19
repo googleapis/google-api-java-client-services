@@ -95,6 +95,21 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
   private java.lang.String imageVersion;
 
   /**
+   * Output only. The list of image versions the environment can be rolled back to, sorted by
+   * last_active_time in descending order (most recent first). This field is supported for Cloud
+   * Composer environments in versions composer-3-airflow-*.*.*-build.* and newer.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ImageVersionRollbackTarget> imageVersionRollbackTargets;
+
+  static {
+    // hack to force ProGuard to consider ImageVersionRollbackTarget used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ImageVersionRollbackTarget.class);
+  }
+
+  /**
    * Optional. Custom Python Package Index (PyPI) packages to be installed in the environment. Keys
    * refer to the lowercase package name such as "numpy" and values are the lowercase extras and
    * version specifier such as "==1.12.0", "[devel,gcp_api]", or "[devel]>=1.8.2, <1.9.2". To
@@ -273,6 +288,27 @@ public final class SoftwareConfig extends com.google.api.client.json.GenericJson
    */
   public SoftwareConfig setImageVersion(java.lang.String imageVersion) {
     this.imageVersion = imageVersion;
+    return this;
+  }
+
+  /**
+   * Output only. The list of image versions the environment can be rolled back to, sorted by
+   * last_active_time in descending order (most recent first). This field is supported for Cloud
+   * Composer environments in versions composer-3-airflow-*.*.*-build.* and newer.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ImageVersionRollbackTarget> getImageVersionRollbackTargets() {
+    return imageVersionRollbackTargets;
+  }
+
+  /**
+   * Output only. The list of image versions the environment can be rolled back to, sorted by
+   * last_active_time in descending order (most recent first). This field is supported for Cloud
+   * Composer environments in versions composer-3-airflow-*.*.*-build.* and newer.
+   * @param imageVersionRollbackTargets imageVersionRollbackTargets or {@code null} for none
+   */
+  public SoftwareConfig setImageVersionRollbackTargets(java.util.List<ImageVersionRollbackTarget> imageVersionRollbackTargets) {
+    this.imageVersionRollbackTargets = imageVersionRollbackTargets;
     return this;
   }
 

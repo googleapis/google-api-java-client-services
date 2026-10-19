@@ -45,6 +45,15 @@ public final class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequestS
   private java.lang.String entitySet;
 
   /**
+   * Optional. Projects to restrict lineage links to. Callers can provide project IDs (for example,
+   * `projects/my-project`) or project numbers (for example, `projects/123456789`). If unspecified,
+   * lineage is returned from all projects.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> projects;
+
+  /**
    * Optional. Time interval to search for lineage. If unspecified, all lineage is returned.
    * Currently, at most one of `start_time` and `end_time` can be set.
    * The value may be {@code null}.
@@ -85,6 +94,27 @@ public final class GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequestS
    */
   public GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequestSearchFilters setEntitySet(java.lang.String entitySet) {
     this.entitySet = entitySet;
+    return this;
+  }
+
+  /**
+   * Optional. Projects to restrict lineage links to. Callers can provide project IDs (for example,
+   * `projects/my-project`) or project numbers (for example, `projects/123456789`). If unspecified,
+   * lineage is returned from all projects.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProjects() {
+    return projects;
+  }
+
+  /**
+   * Optional. Projects to restrict lineage links to. Callers can provide project IDs (for example,
+   * `projects/my-project`) or project numbers (for example, `projects/123456789`). If unspecified,
+   * lineage is returned from all projects.
+   * @param projects projects or {@code null} for none
+   */
+  public GoogleCloudDatacatalogLineageV1SearchLineageStreamingRequestSearchFilters setProjects(java.util.List<java.lang.String> projects) {
+    this.projects = projects;
     return this;
   }
 

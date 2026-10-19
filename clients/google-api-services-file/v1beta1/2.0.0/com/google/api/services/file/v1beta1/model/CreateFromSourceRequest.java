@@ -52,6 +52,14 @@ public final class CreateFromSourceRequest extends com.google.api.client.json.Ge
   private java.lang.Long quota;
 
   /**
+   * Optional. A unique ID used to identify the request, so retries are idempotent. Must be a valid
+   * UUID4; the zero UUID (`00000000-0000-0000-0000-000000000000`) is not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
    * Required. Unique identifier for the volume which also appears in the volumes resource name.
    * The value may be {@code null}.
    */
@@ -108,6 +116,25 @@ public final class CreateFromSourceRequest extends com.google.api.client.json.Ge
    */
   public CreateFromSourceRequest setQuota(java.lang.Long quota) {
     this.quota = quota;
+    return this;
+  }
+
+  /**
+   * Optional. A unique ID used to identify the request, so retries are idempotent. Must be a valid
+   * UUID4; the zero UUID (`00000000-0000-0000-0000-000000000000`) is not supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Optional. A unique ID used to identify the request, so retries are idempotent. Must be a valid
+   * UUID4; the zero UUID (`00000000-0000-0000-0000-000000000000`) is not supported.
+   * @param requestId requestId or {@code null} for none
+   */
+  public CreateFromSourceRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
     return this;
   }
 

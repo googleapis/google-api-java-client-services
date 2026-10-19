@@ -30,18 +30,24 @@ package com.google.api.services.file.v1beta1.model;
 public final class RestoreConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Example: If you want to restore `/mnt/share/dir1/file.txt`, the path pattern must be
-   * `/dir1/file.txt`. If you want to restore `/mnt/share/dir1/`, the path pattern must be `/dir1`.
-   * Currently only single path is supported, Glob patterns are not supported.
+   * Optional. A collection of paths/patterns to restore from the backup. If empty, a full restore
+   * is performed. A valid path is relative to the file share's mount point and must not include a
+   * trailing slash. The path must start with a leading `/`. Example: If you want to restore
+   * `/mnt/share/dir1/file.txt`, the path pattern must be `/dir1/file.txt`. If you want to restore
+   * `/mnt/share/dir1/`, the path pattern must be `/dir1`. Currently only single path is supported,
+   * Glob patterns are not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> pathPatterns;
 
   /**
-   * Optional. Example: If you want to restore `/mnt/share/dir1/file.txt`, the path pattern must be
-   * `/dir1/file.txt`. If you want to restore `/mnt/share/dir1/`, the path pattern must be `/dir1`.
-   * Currently only single path is supported, Glob patterns are not supported.
+   * Optional. A collection of paths/patterns to restore from the backup. If empty, a full restore
+   * is performed. A valid path is relative to the file share's mount point and must not include a
+   * trailing slash. The path must start with a leading `/`. Example: If you want to restore
+   * `/mnt/share/dir1/file.txt`, the path pattern must be `/dir1/file.txt`. If you want to restore
+   * `/mnt/share/dir1/`, the path pattern must be `/dir1`. Currently only single path is supported,
+   * Glob patterns are not supported.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPathPatterns() {
@@ -49,9 +55,12 @@ public final class RestoreConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Example: If you want to restore `/mnt/share/dir1/file.txt`, the path pattern must be
-   * `/dir1/file.txt`. If you want to restore `/mnt/share/dir1/`, the path pattern must be `/dir1`.
-   * Currently only single path is supported, Glob patterns are not supported.
+   * Optional. A collection of paths/patterns to restore from the backup. If empty, a full restore
+   * is performed. A valid path is relative to the file share's mount point and must not include a
+   * trailing slash. The path must start with a leading `/`. Example: If you want to restore
+   * `/mnt/share/dir1/file.txt`, the path pattern must be `/dir1/file.txt`. If you want to restore
+   * `/mnt/share/dir1/`, the path pattern must be `/dir1`. Currently only single path is supported,
+   * Glob patterns are not supported.
    * @param pathPatterns pathPatterns or {@code null} for none
    */
   public RestoreConfig setPathPatterns(java.util.List<java.lang.String> pathPatterns) {

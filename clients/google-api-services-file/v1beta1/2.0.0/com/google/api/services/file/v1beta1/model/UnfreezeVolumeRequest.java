@@ -50,6 +50,14 @@ public final class UnfreezeVolumeRequest extends com.google.api.client.json.Gene
   private java.lang.Long quota;
 
   /**
+   * Optional. A unique ID used to identify the request, so retries are idempotent. Must be a valid
+   * UUID4; the zero UUID (`00000000-0000-0000-0000-000000000000`) is not supported.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
    * Optional. IP ACLs defining permissions/ACLs to apply to the unfrozen volume
    * @return value or {@code null} for none
    */
@@ -80,6 +88,25 @@ public final class UnfreezeVolumeRequest extends com.google.api.client.json.Gene
    */
   public UnfreezeVolumeRequest setQuota(java.lang.Long quota) {
     this.quota = quota;
+    return this;
+  }
+
+  /**
+   * Optional. A unique ID used to identify the request, so retries are idempotent. Must be a valid
+   * UUID4; the zero UUID (`00000000-0000-0000-0000-000000000000`) is not supported.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Optional. A unique ID used to identify the request, so retries are idempotent. Must be a valid
+   * UUID4; the zero UUID (`00000000-0000-0000-0000-000000000000`) is not supported.
+   * @param requestId requestId or {@code null} for none
+   */
+  public UnfreezeVolumeRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
     return this;
   }
 

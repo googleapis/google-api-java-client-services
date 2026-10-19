@@ -38,7 +38,7 @@ public final class DelimitedKey extends com.google.api.client.json.GenericJson {
   private java.lang.String delimiter;
 
   /**
-   * Optional. The key fields to construct from the row key. The fields must be present in the
+   * Required. The key fields to construct from the row key. The fields must be present in the
    * message as a top-level field, i.e. JSON path expressions will not traverse into nested objects.
    * The value may be {@code null}.
    */
@@ -95,7 +95,7 @@ public final class DelimitedKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The key fields to construct from the row key. The fields must be present in the
+   * Required. The key fields to construct from the row key. The fields must be present in the
    * message as a top-level field, i.e. JSON path expressions will not traverse into nested objects.
    * @return value or {@code null} for none
    */
@@ -104,7 +104,7 @@ public final class DelimitedKey extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The key fields to construct from the row key. The fields must be present in the
+   * Required. The key fields to construct from the row key. The fields must be present in the
    * message as a top-level field, i.e. JSON path expressions will not traverse into nested objects.
    * @param keyFields keyFields or {@code null} for none
    */

@@ -53,7 +53,7 @@ public final class GoogleIamV3PolicyBinding extends com.google.api.client.json.G
    * workforce pool, workload pool, service account, and agent identity. Allowed string must be one
    * of: - `iam.googleapis.com/WorkspaceIdentity` - `iam.googleapis.com/WorkforcePoolIdentity` -
    * `iam.googleapis.com/WorkloadPoolIdentity` - `iam.googleapis.com/ServiceAccount` -
-   * `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
+   * `iam.googleapis.com/AgentPoolIdentity`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -175,7 +175,7 @@ public final class GoogleIamV3PolicyBinding extends com.google.api.client.json.G
    * workforce pool, workload pool, service account, and agent identity. Allowed string must be one
    * of: - `iam.googleapis.com/WorkspaceIdentity` - `iam.googleapis.com/WorkforcePoolIdentity` -
    * `iam.googleapis.com/WorkloadPoolIdentity` - `iam.googleapis.com/ServiceAccount` -
-   * `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
+   * `iam.googleapis.com/AgentPoolIdentity`
    * @return value or {@code null} for none
    */
   public GoogleTypeExpr getCondition() {
@@ -197,7 +197,7 @@ public final class GoogleIamV3PolicyBinding extends com.google.api.client.json.G
    * workforce pool, workload pool, service account, and agent identity. Allowed string must be one
    * of: - `iam.googleapis.com/WorkspaceIdentity` - `iam.googleapis.com/WorkforcePoolIdentity` -
    * `iam.googleapis.com/WorkloadPoolIdentity` - `iam.googleapis.com/ServiceAccount` -
-   * `iam.googleapis.com/AgentPoolIdentity` (available in Preview)
+   * `iam.googleapis.com/AgentPoolIdentity`
    * @param condition condition or {@code null} for none
    */
   public GoogleIamV3PolicyBinding setCondition(GoogleTypeExpr condition) {

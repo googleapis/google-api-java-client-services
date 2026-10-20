@@ -313,14 +313,14 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
       }
       /**
        * Gets the CMEK config. Gets the Customer Managed Encryption Key configured with the Cloud Tasks
-       * lcoation. By default there is no kms_key configured.
+       * location. By default there is no `kms_key` configured.
        *
        * Create a request for the method "locations.getCmekConfig".
        *
        * This request holds the parameters needed by the cloudtasks server.  After setting any optional
        * parameters, call the {@link GetCmekConfig#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+       * @param name Required. The config. For example: `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
        * @return the request
        */
       public GetCmekConfig getCmekConfig(java.lang.String name) throws java.io.IOException {
@@ -338,7 +338,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Gets the CMEK config. Gets the Customer Managed Encryption Key configured with the Cloud Tasks
-         * lcoation. By default there is no kms_key configured.
+         * location. By default there is no `kms_key` configured.
          *
          * Create a request for the method "locations.getCmekConfig".
          *
@@ -348,7 +348,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * ctGoogleClientRequest)} must be called to initialize this instance immediately after invoking
          * the constructor. </p>
          *
-         * @param name Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         * @param name Required. The config. For example: `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          * @since 1.13
          */
         protected GetCmekConfig(java.lang.String name) {
@@ -427,19 +427,19 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
         }
 
         /**
-         * Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         * Required. The config. For example: `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+        /** Required. The config. For example: `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
         public java.lang.String getName() {
           return name;
         }
 
         /**
-         * Required. The config. For example: projects/PROJECT_ID/locations/LOCATION_ID/CmekConfig`
+         * Required. The config. For example: `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
         public GetCmekConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -707,7 +707,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
        * parameters, call the {@link UpdateCmekConfig#execute()} method to invoke the remote operation.
        *
        * @param name Output only. The config resource name which includes the project and location and must end in
-       *        'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+       *        'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
        * @param content the {@link com.google.api.services.cloudtasks.v2.model.CmekConfig}
        * @return the request
        */
@@ -738,7 +738,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
          * invoking the constructor. </p>
          *
          * @param name Output only. The config resource name which includes the project and location and must end in
-       *        'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+       *        'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          * @param content the {@link com.google.api.services.cloudtasks.v2.model.CmekConfig}
          * @since 1.13
          */
@@ -809,13 +809,13 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Output only. The config resource name which includes the project and location and must
-         * end in 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         * end in 'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Output only. The config resource name which includes the project and location and must end in
-       'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+       'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
         public java.lang.String getName() {
           return name;
@@ -823,7 +823,7 @@ public class CloudTasks extends com.google.api.client.googleapis.services.json.A
 
         /**
          * Output only. The config resource name which includes the project and location and must
-         * end in 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+         * end in 'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
          */
         public UpdateCmekConfig setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {

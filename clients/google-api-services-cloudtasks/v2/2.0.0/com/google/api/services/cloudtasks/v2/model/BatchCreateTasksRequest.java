@@ -41,7 +41,7 @@ public final class BatchCreateTasksRequest extends com.google.api.client.json.Ge
    * Required. The list of requests to create tasks. The queue specified in parent field of each
    * CreateTaskRequest will be the same. This validation happens on the client side as well as in
    * the handler. BatchCreateTasksRequest.parent will also be the same value as the individual
-   * CreateTaskRequest.parent . The maximum number of requests is 100.
+   * `CreateTaskRequest.parent`. The maximum number of requests is 100.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,7 +70,7 @@ public final class BatchCreateTasksRequest extends com.google.api.client.json.Ge
    * Required. The list of requests to create tasks. The queue specified in parent field of each
    * CreateTaskRequest will be the same. This validation happens on the client side as well as in
    * the handler. BatchCreateTasksRequest.parent will also be the same value as the individual
-   * CreateTaskRequest.parent . The maximum number of requests is 100.
+   * `CreateTaskRequest.parent`. The maximum number of requests is 100.
    * @return value or {@code null} for none
    */
   public java.util.List<CreateTaskRequest> getRequests() {
@@ -81,7 +81,7 @@ public final class BatchCreateTasksRequest extends com.google.api.client.json.Ge
    * Required. The list of requests to create tasks. The queue specified in parent field of each
    * CreateTaskRequest will be the same. This validation happens on the client side as well as in
    * the handler. BatchCreateTasksRequest.parent will also be the same value as the individual
-   * CreateTaskRequest.parent . The maximum number of requests is 100.
+   * `CreateTaskRequest.parent`. The maximum number of requests is 100.
    * @param requests requests or {@code null} for none
    */
   public BatchCreateTasksRequest setRequests(java.util.List<CreateTaskRequest> requests) {

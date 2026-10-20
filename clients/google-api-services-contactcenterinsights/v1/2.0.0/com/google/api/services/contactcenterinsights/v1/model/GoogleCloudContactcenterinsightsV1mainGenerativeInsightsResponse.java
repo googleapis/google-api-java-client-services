@@ -38,6 +38,15 @@ public final class GoogleCloudContactcenterinsightsV1mainGenerativeInsightsRespo
   private java.util.List<GoogleCloudContactcenterinsightsV1mainGenerativeInsightsResponseGenerativeResponse> generativeResponses;
 
   /**
+   * The time zone name from the [IANA Time Zone Database](https://www.iana.org/time-zones) that the
+   * query actually used to group results. Equals the requested `time_zone` when the chart SQL
+   * supports time zones, otherwise `"UTC"`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * The transcript of the generative insights conversation.
    * The value may be {@code null}.
    */
@@ -58,6 +67,27 @@ public final class GoogleCloudContactcenterinsightsV1mainGenerativeInsightsRespo
    */
   public GoogleCloudContactcenterinsightsV1mainGenerativeInsightsResponse setGenerativeResponses(java.util.List<GoogleCloudContactcenterinsightsV1mainGenerativeInsightsResponseGenerativeResponse> generativeResponses) {
     this.generativeResponses = generativeResponses;
+    return this;
+  }
+
+  /**
+   * The time zone name from the [IANA Time Zone Database](https://www.iana.org/time-zones) that the
+   * query actually used to group results. Equals the requested `time_zone` when the chart SQL
+   * supports time zones, otherwise `"UTC"`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * The time zone name from the [IANA Time Zone Database](https://www.iana.org/time-zones) that the
+   * query actually used to group results. Equals the requested `time_zone` when the chart SQL
+   * supports time zones, otherwise `"UTC"`.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1mainGenerativeInsightsResponse setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

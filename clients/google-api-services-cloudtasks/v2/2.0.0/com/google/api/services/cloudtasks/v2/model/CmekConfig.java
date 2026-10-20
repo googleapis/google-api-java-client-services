@@ -42,7 +42,7 @@ public final class CmekConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The config resource name which includes the project and location and must end in
-   * 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+   * 'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,7 +73,7 @@ public final class CmekConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The config resource name which includes the project and location and must end in
-   * 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+   * 'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -82,7 +82,7 @@ public final class CmekConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Output only. The config resource name which includes the project and location and must end in
-   * 'cmekConfig', in the format projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
+   * 'cmekConfig', in the format `projects/PROJECT_ID/locations/LOCATION_ID/cmekConfig`
    * @param name name or {@code null} for none
    */
   public CmekConfig setName(java.lang.String name) {

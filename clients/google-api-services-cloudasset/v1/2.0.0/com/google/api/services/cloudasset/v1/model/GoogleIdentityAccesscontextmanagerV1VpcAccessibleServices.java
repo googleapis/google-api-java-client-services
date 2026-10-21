@@ -44,9 +44,9 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
   }
 
   /**
-   * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction'
-   * is True. You can specify a list of individual services, as well as include the 'RESTRICTED-
-   * SERVICES' value, which automatically includes all of the services protected by the perimeter.
+   * The list of APIs usable within the Service Perimeter. Must be empty unless `enable_restriction`
+   * is `true`. You can specify a list of individual services, as well as include the `'RESTRICTED-
+   * SERVICES'` value, which automatically includes all of the services protected by the perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
 
   /**
    * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in
-   * 'allowed_services'.
+   * `allowed_services`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,9 +87,9 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
   }
 
   /**
-   * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction'
-   * is True. You can specify a list of individual services, as well as include the 'RESTRICTED-
-   * SERVICES' value, which automatically includes all of the services protected by the perimeter.
+   * The list of APIs usable within the Service Perimeter. Must be empty unless `enable_restriction`
+   * is `true`. You can specify a list of individual services, as well as include the `'RESTRICTED-
+   * SERVICES'` value, which automatically includes all of the services protected by the perimeter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedServices() {
@@ -97,9 +97,9 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
   }
 
   /**
-   * The list of APIs usable within the Service Perimeter. Must be empty unless 'enable_restriction'
-   * is True. You can specify a list of individual services, as well as include the 'RESTRICTED-
-   * SERVICES' value, which automatically includes all of the services protected by the perimeter.
+   * The list of APIs usable within the Service Perimeter. Must be empty unless `enable_restriction`
+   * is `true`. You can specify a list of individual services, as well as include the `'RESTRICTED-
+   * SERVICES'` value, which automatically includes all of the services protected by the perimeter.
    * @param allowedServices allowedServices or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices setAllowedServices(java.util.List<java.lang.String> allowedServices) {
@@ -109,7 +109,7 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
 
   /**
    * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in
-   * 'allowed_services'.
+   * `allowed_services`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableRestriction() {
@@ -118,7 +118,7 @@ public final class GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices ext
 
   /**
    * Whether to restrict API calls within the Service Perimeter to the list of APIs specified in
-   * 'allowed_services'.
+   * `allowed_services`.
    * @param enableRestriction enableRestriction or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1VpcAccessibleServices setEnableRestriction(java.lang.Boolean enableRestriction) {

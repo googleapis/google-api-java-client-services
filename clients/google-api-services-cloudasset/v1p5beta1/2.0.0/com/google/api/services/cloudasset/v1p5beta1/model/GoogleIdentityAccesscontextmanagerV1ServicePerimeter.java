@@ -63,9 +63,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String name;
 
   /**
-   * Perimeter type indicator. A single project or VPC network is allowed to be a member of single
-   * regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a
-   * perimeter bridge without being included in regular perimeter. For perimeter bridges, the
+   * Perimeter type indicator. A single project or VPC network is allowed to be a member of a single
+   * regular perimeter, but multiple service perimeter bridges. A project cannot be included in a
+   * perimeter bridge without being included in a regular perimeter. For perimeter bridges, the
    * restricted service list as well as access level lists must be empty.
    * The value may be {@code null}.
    */
@@ -73,16 +73,16 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   private java.lang.String perimeterType;
 
   /**
-   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and
-   * test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed
-   * to be set when the "use_explicit_dry_run_spec" flag is set.
+   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows you to specify
+   * and test ServicePerimeter configuration without enforcing actual access restrictions. Only
+   * allowed to be set when the `use_explicit_dry_run_spec` flag is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig spec;
 
   /**
-   * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and
+   * Current ServicePerimeter configuration. Specifies sets of resources, restricted services, and
    * access levels that determine perimeter content and boundaries.
    * The value may be {@code null}.
    */
@@ -103,8 +103,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
    * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
    * Perimeter. This allows the user to test changes to the enforced config ("status") without
    * actually enforcing them. This testing is done through analyzing the differences between
-   * currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True
-   * if any of the fields in the spec are set to non-default values.
+   * currently enforced and suggested restrictions. `use_explicit_dry_run_spec` must be set to
+   * `true` if any of the fields in the spec are set to non-default values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,9 +172,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Perimeter type indicator. A single project or VPC network is allowed to be a member of single
-   * regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a
-   * perimeter bridge without being included in regular perimeter. For perimeter bridges, the
+   * Perimeter type indicator. A single project or VPC network is allowed to be a member of a single
+   * regular perimeter, but multiple service perimeter bridges. A project cannot be included in a
+   * perimeter bridge without being included in a regular perimeter. For perimeter bridges, the
    * restricted service list as well as access level lists must be empty.
    * @return value or {@code null} for none
    */
@@ -183,9 +183,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Perimeter type indicator. A single project or VPC network is allowed to be a member of single
-   * regular perimeter, but multiple service perimeter bridges. A project cannot be a included in a
-   * perimeter bridge without being included in regular perimeter. For perimeter bridges, the
+   * Perimeter type indicator. A single project or VPC network is allowed to be a member of a single
+   * regular perimeter, but multiple service perimeter bridges. A project cannot be included in a
+   * perimeter bridge without being included in a regular perimeter. For perimeter bridges, the
    * restricted service list as well as access level lists must be empty.
    * @param perimeterType perimeterType or {@code null} for none
    */
@@ -195,9 +195,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and
-   * test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed
-   * to be set when the "use_explicit_dry_run_spec" flag is set.
+   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows you to specify
+   * and test ServicePerimeter configuration without enforcing actual access restrictions. Only
+   * allowed to be set when the `use_explicit_dry_run_spec` flag is set.
    * @return value or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig getSpec() {
@@ -205,9 +205,9 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows to specify and
-   * test ServicePerimeter configuration without enforcing actual access restrictions. Only allowed
-   * to be set when the "use_explicit_dry_run_spec" flag is set.
+   * Proposed (or dry run) ServicePerimeter configuration. This configuration allows you to specify
+   * and test ServicePerimeter configuration without enforcing actual access restrictions. Only
+   * allowed to be set when the `use_explicit_dry_run_spec` flag is set.
    * @param spec spec or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setSpec(GoogleIdentityAccesscontextmanagerV1ServicePerimeterConfig spec) {
@@ -216,7 +216,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and
+   * Current ServicePerimeter configuration. Specifies sets of resources, restricted services, and
    * access levels that determine perimeter content and boundaries.
    * @return value or {@code null} for none
    */
@@ -225,7 +225,7 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
   }
 
   /**
-   * Current ServicePerimeter configuration. Specifies sets of resources, restricted services and
+   * Current ServicePerimeter configuration. Specifies sets of resources, restricted services, and
    * access levels that determine perimeter content and boundaries.
    * @param status status or {@code null} for none
    */
@@ -258,8 +258,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
    * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
    * Perimeter. This allows the user to test changes to the enforced config ("status") without
    * actually enforcing them. This testing is done through analyzing the differences between
-   * currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True
-   * if any of the fields in the spec are set to non-default values.
+   * currently enforced and suggested restrictions. `use_explicit_dry_run_spec` must be set to
+   * `true` if any of the fields in the spec are set to non-default values.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseExplicitDryRunSpec() {
@@ -273,8 +273,8 @@ public final class GoogleIdentityAccesscontextmanagerV1ServicePerimeter extends 
    * explicitly provide a configuration ("spec") to use in a dry-run version of the Service
    * Perimeter. This allows the user to test changes to the enforced config ("status") without
    * actually enforcing them. This testing is done through analyzing the differences between
-   * currently enforced and suggested restrictions. use_explicit_dry_run_spec must bet set to True
-   * if any of the fields in the spec are set to non-default values.
+   * currently enforced and suggested restrictions. `use_explicit_dry_run_spec` must be set to
+   * `true` if any of the fields in the spec are set to non-default values.
    * @param useExplicitDryRunSpec useExplicitDryRunSpec or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1ServicePerimeter setUseExplicitDryRunSpec(java.lang.Boolean useExplicitDryRunSpec) {

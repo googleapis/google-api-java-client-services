@@ -55,8 +55,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   /**
    * A Google Cloud resource from the service perimeter that you want to allow to access data
    * outside the perimeter. This field supports projects, folders, and organizations in the form
-   * `projects/`, `folders/`, and `organizations/`. You can't use `*` in this field to allow all
-   * Google Cloud resources.
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`. You
+   * can't use `*` in this field to allow all Google Cloud resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -115,8 +115,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   /**
    * A Google Cloud resource from the service perimeter that you want to allow to access data
    * outside the perimeter. This field supports projects, folders, and organizations in the form
-   * `projects/`, `folders/`, and `organizations/`. You can't use `*` in this field to allow all
-   * Google Cloud resources.
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`. You
+   * can't use `*` in this field to allow all Google Cloud resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getResource() {
@@ -126,8 +126,8 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressSource extends com.
   /**
    * A Google Cloud resource from the service perimeter that you want to allow to access data
    * outside the perimeter. This field supports projects, folders, and organizations in the form
-   * `projects/`, `folders/`, and `organizations/`. You can't use `*` in this field to allow all
-   * Google Cloud resources.
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`. You
+   * can't use `*` in this field to allow all Google Cloud resources.
    * @param resource resource or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressSource setResource(java.lang.String resource) {

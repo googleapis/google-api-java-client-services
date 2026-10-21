@@ -30,7 +30,7 @@ package com.google.api.services.cloudasset.v1p1beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1IngressSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed
+   * An AccessLevel resource name that allows resources within the ServicePerimeters to be accessed
    * from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter.
    * Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed,
    * resources within the perimeter can only be accessed via Google Cloud calls with request origins
@@ -64,7 +64,7 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressSource extends com
   private java.lang.String resource;
 
   /**
-   * An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed
+   * An AccessLevel resource name that allows resources within the ServicePerimeters to be accessed
    * from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter.
    * Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed,
    * resources within the perimeter can only be accessed via Google Cloud calls with request origins
@@ -77,7 +77,7 @@ public final class GoogleIdentityAccesscontextmanagerV1IngressSource extends com
   }
 
   /**
-   * An AccessLevel resource name that allow resources within the ServicePerimeters to be accessed
+   * An AccessLevel resource name that allows resources within the ServicePerimeters to be accessed
    * from the internet. AccessLevels listed must be in the same policy as this ServicePerimeter.
    * Referencing a nonexistent AccessLevel will cause an error. If no AccessLevel names are listed,
    * resources within the perimeter can only be accessed via Google Cloud calls with request origins

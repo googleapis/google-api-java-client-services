@@ -38,6 +38,13 @@ public final class Scope3FlightEmissions extends com.google.api.client.json.Gene
   private Scope3FlightSegment flight;
 
   /**
+   * Optional. The model version under which the emissions were computed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ModelVersion modelVersion;
+
+  /**
    * Optional. The source of the emissions data.
    * The value may be {@code null}.
    */
@@ -81,6 +88,23 @@ public final class Scope3FlightEmissions extends com.google.api.client.json.Gene
    */
   public Scope3FlightEmissions setFlight(Scope3FlightSegment flight) {
     this.flight = flight;
+    return this;
+  }
+
+  /**
+   * Optional. The model version under which the emissions were computed.
+   * @return value or {@code null} for none
+   */
+  public ModelVersion getModelVersion() {
+    return modelVersion;
+  }
+
+  /**
+   * Optional. The model version under which the emissions were computed.
+   * @param modelVersion modelVersion or {@code null} for none
+   */
+  public Scope3FlightEmissions setModelVersion(ModelVersion modelVersion) {
+    this.modelVersion = modelVersion;
     return this;
   }
 

@@ -38,7 +38,9 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private AvailabilityConfig availabilityConfig;
 
   /**
-   * This value uniquely identifies the live stream bound to the broadcast.
+   * This value uniquely identifies the [`live
+   * stream`](https://developers.google.com/youtube/data/live/reference/rest/v3/liveStreams) bound
+   * to the broadcast.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,9 +130,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
 
   /**
    * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
-   * containing the base-64 encoding of 3D mesh data that follows the Spherical Video V2 RFC
-   * specification for an mshp box, excluding the box size and type but including the following four
-   * reserved zero bytes for the version and flags.
+   * containing the base-64 encoding of 3D mesh data that follows the [Spherical Video V2 RFC
+   * specification](https://github.com/google/spatial-media/blob/master/docs/spherical-
+   * video-v2-rfc.md) for an mshp box, excluding the box size and type but including the following
+   * four reserved zero bytes for the version and flags.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,10 +166,12 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   private java.lang.Boolean recordFromStart;
 
   /**
-   * This setting indicates whether the broadcast should automatically begin with an in-stream slate
-   * when you update the broadcast's status to live. After updating the status, you then need to
-   * send a liveCuepoints.insert request that sets the cuepoint's eventState to end to remove the
-   * in-stream slate and make your broadcast stream visible to viewers.
+   * This setting indicates whether the broadcast should automatically begin with an [in-stream
+   * slate](https://developers.google.com/youtube/data/live/getting-started#Displaying_Slates) when
+   * you update the broadcast's status to live. After updating the status, you then need to send a [
+   * `liveCuepoints.insert`](https://developers.google.com/youtube/data/live/reference/rest/v3/liveC
+   * uepoints/insert) request that sets the cuepoint's eventState to end to remove the in-stream
+   * slate and make your broadcast stream visible to viewers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -199,7 +204,9 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-   * This value uniquely identifies the live stream bound to the broadcast.
+   * This value uniquely identifies the [`live
+   * stream`](https://developers.google.com/youtube/data/live/reference/rest/v3/liveStreams) bound
+   * to the broadcast.
    * @return value or {@code null} for none
    */
   public java.lang.String getBoundStreamId() {
@@ -207,7 +214,9 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-   * This value uniquely identifies the live stream bound to the broadcast.
+   * This value uniquely identifies the [`live
+   * stream`](https://developers.google.com/youtube/data/live/reference/rest/v3/liveStreams) bound
+   * to the broadcast.
    * @param boundStreamId boundStreamId or {@code null} for none
    */
   public LiveBroadcastContentDetails setBoundStreamId(java.lang.String boundStreamId) {
@@ -411,9 +420,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
 
   /**
    * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
-   * containing the base-64 encoding of 3D mesh data that follows the Spherical Video V2 RFC
-   * specification for an mshp box, excluding the box size and type but including the following four
-   * reserved zero bytes for the version and flags.
+   * containing the base-64 encoding of 3D mesh data that follows the [Spherical Video V2 RFC
+   * specification](https://github.com/google/spatial-media/blob/master/docs/spherical-
+   * video-v2-rfc.md) for an mshp box, excluding the box size and type but including the following
+   * four reserved zero bytes for the version and flags.
    * @see #decodeMesh()
    * @return value or {@code null} for none
    */
@@ -423,9 +433,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
 
   /**
    * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
-   * containing the base-64 encoding of 3D mesh data that follows the Spherical Video V2 RFC
-   * specification for an mshp box, excluding the box size and type but including the following four
-   * reserved zero bytes for the version and flags.
+   * containing the base-64 encoding of 3D mesh data that follows the [Spherical Video V2 RFC
+   * specification](https://github.com/google/spatial-media/blob/master/docs/spherical-
+   * video-v2-rfc.md) for an mshp box, excluding the box size and type but including the following
+   * four reserved zero bytes for the version and flags.
    * @see #getMesh()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -437,9 +448,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
 
   /**
    * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
-   * containing the base-64 encoding of 3D mesh data that follows the Spherical Video V2 RFC
-   * specification for an mshp box, excluding the box size and type but including the following four
-   * reserved zero bytes for the version and flags.
+   * containing the base-64 encoding of 3D mesh data that follows the [Spherical Video V2 RFC
+   * specification](https://github.com/google/spatial-media/blob/master/docs/spherical-
+   * video-v2-rfc.md) for an mshp box, excluding the box size and type but including the following
+   * four reserved zero bytes for the version and flags.
    * @see #encodeMesh()
    * @param mesh mesh or {@code null} for none
    */
@@ -450,9 +462,10 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
 
   /**
    * The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string
-   * containing the base-64 encoding of 3D mesh data that follows the Spherical Video V2 RFC
-   * specification for an mshp box, excluding the box size and type but including the following four
-   * reserved zero bytes for the version and flags.
+   * containing the base-64 encoding of 3D mesh data that follows the [Spherical Video V2 RFC
+   * specification](https://github.com/google/spatial-media/blob/master/docs/spherical-
+   * video-v2-rfc.md) for an mshp box, excluding the box size and type but including the following
+   * four reserved zero bytes for the version and flags.
    * @see #setMesh()
    *
    * <p>
@@ -528,10 +541,12 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-   * This setting indicates whether the broadcast should automatically begin with an in-stream slate
-   * when you update the broadcast's status to live. After updating the status, you then need to
-   * send a liveCuepoints.insert request that sets the cuepoint's eventState to end to remove the
-   * in-stream slate and make your broadcast stream visible to viewers.
+   * This setting indicates whether the broadcast should automatically begin with an [in-stream
+   * slate](https://developers.google.com/youtube/data/live/getting-started#Displaying_Slates) when
+   * you update the broadcast's status to live. After updating the status, you then need to send a [
+   * `liveCuepoints.insert`](https://developers.google.com/youtube/data/live/reference/rest/v3/liveC
+   * uepoints/insert) request that sets the cuepoint's eventState to end to remove the in-stream
+   * slate and make your broadcast stream visible to viewers.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getStartWithSlate() {
@@ -539,10 +554,12 @@ public final class LiveBroadcastContentDetails extends com.google.api.client.jso
   }
 
   /**
-   * This setting indicates whether the broadcast should automatically begin with an in-stream slate
-   * when you update the broadcast's status to live. After updating the status, you then need to
-   * send a liveCuepoints.insert request that sets the cuepoint's eventState to end to remove the
-   * in-stream slate and make your broadcast stream visible to viewers.
+   * This setting indicates whether the broadcast should automatically begin with an [in-stream
+   * slate](https://developers.google.com/youtube/data/live/getting-started#Displaying_Slates) when
+   * you update the broadcast's status to live. After updating the status, you then need to send a [
+   * `liveCuepoints.insert`](https://developers.google.com/youtube/data/live/reference/rest/v3/liveC
+   * uepoints/insert) request that sets the cuepoint's eventState to end to remove the in-stream
+   * slate and make your broadcast stream visible to viewers.
    * @param startWithSlate startWithSlate or {@code null} for none
    */
   public LiveBroadcastContentDetails setStartWithSlate(java.lang.Boolean startWithSlate) {

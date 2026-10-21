@@ -21,13 +21,17 @@ package com.google.api.services.youtube.model;
  * can be viewed sequentially and shared with other users. A playlist can contain up to 200 videos,
  * and YouTube does not limit the number of playlists that each user creates. By default, playlists
  * are publicly visible to other users, but playlists can be public or private. YouTube also uses
- * playlists to identify special collections of videos for a channel, such as: - uploaded videos -
- * favorite videos - positively rated (liked) videos - watch history - watch later To be more
+ * playlists to identify special collections of videos for a channel, such as: * uploaded videos *
+ * favorite videos * positively rated (liked) videos * watch history * watch later To be more
  * specific, these lists are associated with a channel, which is a collection of a person, group, or
  * company's videos, playlists, and other YouTube information. You can retrieve the playlist IDs for
- * each of these lists from the channel resource for a given channel. You can then use the
- * playlistItems.list method to retrieve any of those lists. You can also add or remove items from
- * those lists by calling the playlistItems.insert and playlistItems.delete methods.
+ * each of these lists from the [`channel
+ * resource`](https://developers.google.com/youtube/data/reference/rest/v3/channels) for a given
+ * channel. You can then use the [`playlistItems.list`](https://developers.google.com/youtube/data/r
+ * eference/rest/v3/playlistItems/list) method to retrieve any of those lists. You can also add or
+ * remove items from those lists by calling the [`playlistItems.insert`](https://developers.google.c
+ * om/youtube/data/reference/rest/v3/playlistItems/insert) and [`playlistItems.delete`](https://deve
+ * lopers.google.com/youtube/data/reference/rest/v3/playlistItems/delete) methods.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:

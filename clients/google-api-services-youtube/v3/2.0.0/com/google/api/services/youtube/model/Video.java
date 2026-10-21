@@ -179,8 +179,8 @@ public final class Video extends com.google.api.client.json.GenericJson {
   private VideoSuggestions suggestions;
 
   /**
-   * The topicDetails object encapsulates information about Freebase topics associated with the
-   * video.
+   * The topicDetails object encapsulates information about [Freebase](http://www.freebase.com)
+   * topics associated with the video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -542,8 +542,8 @@ public final class Video extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The topicDetails object encapsulates information about Freebase topics associated with the
-   * video.
+   * The topicDetails object encapsulates information about [Freebase](http://www.freebase.com)
+   * topics associated with the video.
    * @return value or {@code null} for none
    */
   public VideoTopicDetails getTopicDetails() {
@@ -551,8 +551,8 @@ public final class Video extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The topicDetails object encapsulates information about Freebase topics associated with the
-   * video.
+   * The topicDetails object encapsulates information about [Freebase](http://www.freebase.com)
+   * topics associated with the video.
    * @param topicDetails topicDetails or {@code null} for none
    */
   public Video setTopicDetails(VideoTopicDetails topicDetails) {

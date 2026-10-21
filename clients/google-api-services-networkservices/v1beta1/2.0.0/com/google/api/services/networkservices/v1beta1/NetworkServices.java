@@ -17811,6 +17811,897 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
       }
       /**
+       * An accessor for creating requests from the TelemetryPolicies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code NetworkServices networkservices = new NetworkServices(...);}
+       *   {@code NetworkServices.TelemetryPolicies.List request = networkservices.telemetryPolicies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public TelemetryPolicies telemetryPolicies() {
+        return new TelemetryPolicies();
+      }
+
+      /**
+       * The "telemetryPolicies" collection of methods.
+       */
+      public class TelemetryPolicies {
+
+        /**
+         * Creates a new TelemetryPolicy in a given project and location.
+         *
+         * Create a request for the method "telemetryPolicies.create".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this policy will be created. Must be in the format
+         *        `projects/{project}/locations/{location}`.
+         * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/telemetryPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new TelemetryPolicy in a given project and location.
+           *
+           * Create a request for the method "telemetryPolicies.create".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this policy will be created. Must be in the format
+         *        `projects/{project}/locations/{location}`.
+           * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy content) {
+            super(NetworkServices.this, "POST", REST_PATH, content, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this policy will be created. Must be in the format
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this policy will be created. Must be in the format
+         `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this policy will be created. Must be in the format
+           * `projects/{project}/locations/{location}`.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the telemetry policy, which will become the final component
+           * of the telemetry policy's resource name. This value must be 4-63 characters long, and
+           * match the regular expression `[a-z]([-a-z0-9]{2,61}[a-z0-9])`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String telemetryPolicyId;
+
+          /** Required. The ID to use for the telemetry policy, which will become the final component of the
+         telemetry policy's resource name. This value must be 4-63 characters long, and match the regular
+         expression `[a-z]([-a-z0-9]{2,61}[a-z0-9])`.
+           */
+          public java.lang.String getTelemetryPolicyId() {
+            return telemetryPolicyId;
+          }
+
+          /**
+           * Required. The ID to use for the telemetry policy, which will become the final component
+           * of the telemetry policy's resource name. This value must be 4-63 characters long, and
+           * match the regular expression `[a-z]([-a-z0-9]{2,61}[a-z0-9])`.
+           */
+          public Create setTelemetryPolicyId(java.lang.String telemetryPolicyId) {
+            this.telemetryPolicyId = telemetryPolicyId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single TelemetryPolicy.
+         *
+         * Create a request for the method "telemetryPolicies.delete".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the TelemetryPolicy to delete. Must be in the format
+         *        `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+
+          /**
+           * Deletes a single TelemetryPolicy.
+           *
+           * Create a request for the method "telemetryPolicies.delete".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the TelemetryPolicy to delete. Must be in the format
+         *        `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(NetworkServices.this, "DELETE", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the TelemetryPolicy to delete. Must be in the format
+           * `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the TelemetryPolicy to delete. Must be in the format
+         `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the TelemetryPolicy to delete. Must be in the format
+           * `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. The etag of the TelemetryPolicy. If this is provided, it must match the
+           * server's etag.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** Optional. The etag of the TelemetryPolicy. If this is provided, it must match the server's etag.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * Optional. The etag of the TelemetryPolicy. If this is provided, it must match the
+           * server's etag.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single TelemetryPolicy.
+         *
+         * Create a request for the method "telemetryPolicies.get".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. A name of the TelemetryPolicy to get. Must be in the format
+         *        `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+
+          /**
+           * Gets details of a single TelemetryPolicy.
+           *
+           * Create a request for the method "telemetryPolicies.get".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. A name of the TelemetryPolicy to get. Must be in the format
+         *        `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. A name of the TelemetryPolicy to get. Must be in the format
+           * `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. A name of the TelemetryPolicy to get. Must be in the format
+         `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. A name of the TelemetryPolicy to get. Must be in the format
+           * `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists TelemetryPolicies in a given project and location.
+         *
+         * Create a request for the method "telemetryPolicies.list".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which the TelemetryPolicies should be listed, specified in
+         *        the format `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.ListTelemetryPoliciesResponse> {
+
+          private static final String REST_PATH = "v1beta1/{+parent}/telemetryPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists TelemetryPolicies in a given project and location.
+           *
+           * Create a request for the method "telemetryPolicies.list".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which the TelemetryPolicies should be listed, specified in
+         *        the format `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(NetworkServices.this, "GET", REST_PATH, null, com.google.api.services.networkservices.v1beta1.model.ListTelemetryPoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which the TelemetryPolicies should be listed,
+           * specified in the format `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which the TelemetryPolicies should be listed, specified in
+         the format `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which the TelemetryPolicies should be listed,
+           * specified in the format `projects/{project}/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of policies to return. The service may return fewer than
+           * this value. If unspecified, at most 50 policies will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of policies to return. The service may return fewer than this value.
+         If unspecified, at most 50 policies will be returned. The maximum value is 1000; values above 1000
+         will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of policies to return. The service may return fewer than
+           * this value. If unspecified, at most 50 policies will be returned. The maximum value is
+           * 1000; values above 1000 will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListTelemetryPolicies` call. Provide
+           * this to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListTelemetryPolicies` call. Provide this to
+         retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListTelemetryPolicies` call. Provide
+           * this to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single TelemetryPolicy.
+         *
+         * Create a request for the method "telemetryPolicies.patch".
+         *
+         * This request holds the parameters needed by the networkservices server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. Represents the resource name of the policy. Format:
+         *        `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`
+         * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends NetworkServicesRequest<com.google.api.services.networkservices.v1beta1.model.Operation> {
+
+          private static final String REST_PATH = "v1beta1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+
+          /**
+           * Updates the parameters of a single TelemetryPolicy.
+           *
+           * Create a request for the method "telemetryPolicies.patch".
+           *
+           * This request holds the parameters needed by the the networkservices server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. Represents the resource name of the policy. Format:
+         *        `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`
+           * @param content the {@link com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.networkservices.v1beta1.model.TelemetryPolicy content) {
+            super(NetworkServices.this, "PATCH", REST_PATH, content, com.google.api.services.networkservices.v1beta1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. Represents the resource name of the policy. Format:
+           * `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. Represents the resource name of the policy. Format:
+         `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. Represents the resource name of the policy. Format:
+           * `projects/{project}/locations/{location}/telemetryPolicies/{telemetry_policy}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/telemetryPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, and the telemetry policy is not found, a new telemetry policy
+           * will be created. In this situation, `update_mask` is ignored.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean allowMissing;
+
+          /** Optional. If set to true, and the telemetry policy is not found, a new telemetry policy will be
+         created. In this situation, `update_mask` is ignored.
+           */
+          public java.lang.Boolean getAllowMissing() {
+            return allowMissing;
+          }
+
+          /**
+           * Optional. If set to true, and the telemetry policy is not found, a new telemetry policy
+           * will be created. In this situation, `update_mask` is ignored.
+           */
+          public Patch setAllowMissing(java.lang.Boolean allowMissing) {
+            this.allowMissing = allowMissing;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * TelemetryPolicy resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the `update_mask` is not provided, the service will treat it as an implied
+           * field mask equivalent to all fields provided in the request message. This means that
+           * only the fields populated in the `telemetry_policy` field will be updated. The special
+           * value `*` can be used to indicate full replacement.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the TelemetryPolicy
+         resource by the update. The fields specified in the update_mask are relative to the resource, not
+         the full request. A field will be overwritten if it is in the mask. If the `update_mask` is not
+         provided, the service will treat it as an implied field mask equivalent to all fields provided in
+         the request message. This means that only the fields populated in the `telemetry_policy` field will
+         be updated. The special value `*` can be used to indicate full replacement.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * TelemetryPolicy resource by the update. The fields specified in the update_mask are
+           * relative to the resource, not the full request. A field will be overwritten if it is in
+           * the mask. If the `update_mask` is not provided, the service will treat it as an implied
+           * field mask equivalent to all fields provided in the request message. This means that
+           * only the fields populated in the `telemetry_policy` field will be updated. The special
+           * value `*` can be used to indicate full replacement.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the TlsRoutes collection.
        *
        * <p>The typical use is:</p>

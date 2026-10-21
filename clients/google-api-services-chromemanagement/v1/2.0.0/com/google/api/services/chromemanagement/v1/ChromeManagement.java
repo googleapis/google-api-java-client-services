@@ -4475,18 +4475,18 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
         /**
          * Optional. Filter to apply to list results. The following fields can be used in the
-         * filter: * device_type (currently only 'CHROME_BROWSER' is supported) * token_state
-         * (supported values: 'ACTIVE', 'EXPIRED', 'REVOKED') * org_unit_path The full path of the
-         * org unit, such as /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not
-         * the full path.
+         * filter: * `device_type` (currently only `"CHROME_BROWSER"` is supported) * `token_state`
+         * (supported values: `"ACTIVE"`, `"EXPIRED"`, `"REVOKED"`) * `org_unit_path` The full path
+         * of the org unit, such as `/Montreal/Sales`. * `org_unit_id` The obfuscated id of the org
+         * unit, not the full path.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
         /** Optional. Filter to apply to list results. The following fields can be used in the filter: *
-       device_type (currently only 'CHROME_BROWSER' is supported) * token_state (supported values:
-       'ACTIVE', 'EXPIRED', 'REVOKED') * org_unit_path The full path of the org unit, such as
-       /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not the full path.
+       `device_type` (currently only `"CHROME_BROWSER"` is supported) * `token_state` (supported values:
+       `"ACTIVE"`, `"EXPIRED"`, `"REVOKED"`) * `org_unit_path` The full path of the org unit, such as
+       `/Montreal/Sales`. * `org_unit_id` The obfuscated id of the org unit, not the full path.
          */
         public java.lang.String getFilter() {
           return filter;
@@ -4494,10 +4494,10 @@ public class ChromeManagement extends com.google.api.client.googleapis.services.
 
         /**
          * Optional. Filter to apply to list results. The following fields can be used in the
-         * filter: * device_type (currently only 'CHROME_BROWSER' is supported) * token_state
-         * (supported values: 'ACTIVE', 'EXPIRED', 'REVOKED') * org_unit_path The full path of the
-         * org unit, such as /Montreal/Sales. * org_unit_id The obfuscated id of the org unit, not
-         * the full path.
+         * filter: * `device_type` (currently only `"CHROME_BROWSER"` is supported) * `token_state`
+         * (supported values: `"ACTIVE"`, `"EXPIRED"`, `"REVOKED"`) * `org_unit_path` The full path
+         * of the org unit, such as `/Montreal/Sales`. * `org_unit_id` The obfuscated id of the org
+         * unit, not the full path.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;

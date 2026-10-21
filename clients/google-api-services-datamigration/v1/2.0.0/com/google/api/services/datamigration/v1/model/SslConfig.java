@@ -58,7 +58,8 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. SSL flags used for establishing SSL connection to the source database. Only source
-   * specific flags are supported. An object containing a list of "key": "value" pairs. Example: {
+   * specific flags are supported. An object containing a list of "key": "value" pairs. Examples: {
+   * "server_certificate_dn": "CN=server.com,OU=RDS,O=Amazon.com,C=US"} or {
    * "server_certificate_hostname": "server.com"}.
    * The value may be {@code null}.
    */
@@ -136,7 +137,8 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. SSL flags used for establishing SSL connection to the source database. Only source
-   * specific flags are supported. An object containing a list of "key": "value" pairs. Example: {
+   * specific flags are supported. An object containing a list of "key": "value" pairs. Examples: {
+   * "server_certificate_dn": "CN=server.com,OU=RDS,O=Amazon.com,C=US"} or {
    * "server_certificate_hostname": "server.com"}.
    * @return value or {@code null} for none
    */
@@ -146,7 +148,8 @@ public final class SslConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. SSL flags used for establishing SSL connection to the source database. Only source
-   * specific flags are supported. An object containing a list of "key": "value" pairs. Example: {
+   * specific flags are supported. An object containing a list of "key": "value" pairs. Examples: {
+   * "server_certificate_dn": "CN=server.com,OU=RDS,O=Amazon.com,C=US"} or {
    * "server_certificate_hostname": "server.com"}.
    * @param sslFlags sslFlags or {@code null} for none
    */

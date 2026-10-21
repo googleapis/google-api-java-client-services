@@ -31,11 +31,38 @@ package com.google.api.services.datamigration.v1.model;
 public final class PromoteMigrationJobRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. If true, the promote operation will perform a failback promote from destination back
+   * to source (only supported when the migration job is in FAILBACK phase).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean failback;
+
+  /**
    * Optional. The object filter to apply to the migration job.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MigrationJobObjectsConfig objectsFilter;
+
+  /**
+   * Optional. If true, the promote operation will perform a failback promote from destination back
+   * to source (only supported when the migration job is in FAILBACK phase).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getFailback() {
+    return failback;
+  }
+
+  /**
+   * Optional. If true, the promote operation will perform a failback promote from destination back
+   * to source (only supported when the migration job is in FAILBACK phase).
+   * @param failback failback or {@code null} for none
+   */
+  public PromoteMigrationJobRequest setFailback(java.lang.Boolean failback) {
+    this.failback = failback;
+    return this;
+  }
 
   /**
    * Optional. The object filter to apply to the migration job.

@@ -90,6 +90,13 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
   private GoogleCloudAiplatformV1beta1ModelArmorConfig modelArmorConfig;
 
   /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1GenerateContentRequestOutputConfig outputConfig;
+
+  /**
    * Optional. Per request settings for blocking unsafe content. Enforced on
    * GenerateContentResponse.candidates.
    * The value may be {@code null}.
@@ -276,6 +283,23 @@ public final class GoogleCloudAiplatformV1beta1GenerateContentRequest extends co
    */
   public GoogleCloudAiplatformV1beta1GenerateContentRequest setModelArmorConfig(GoogleCloudAiplatformV1beta1ModelArmorConfig modelArmorConfig) {
     this.modelArmorConfig = modelArmorConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequestOutputConfig getOutputConfig() {
+    return outputConfig;
+  }
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * @param outputConfig outputConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1GenerateContentRequest setOutputConfig(GoogleCloudAiplatformV1beta1GenerateContentRequestOutputConfig outputConfig) {
+    this.outputConfig = outputConfig;
     return this;
   }
 

@@ -6879,6 +6879,153 @@ public class HangoutsChat extends com.google.api.client.googleapis.services.json
         }
       }
       /**
+       * Replaces the cards included in a message. A Chat app can only replace cards on a human-created
+       * message if the message already contains cards, and the cards were created by the app. If the app
+       * replaces the cards with an empty list, the cards are removed. After removing the cards, the app
+       * cannot add cards back to the message. Requires [app
+       * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+       * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+       * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.bot`
+       *
+       * Create a request for the method "messages.replaceCards".
+       *
+       * This request holds the parameters needed by the chat server.  After setting any optional
+       * parameters, call the {@link ReplaceCards#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The resource name of the message. Format: `spaces/{space}/messages/{message}`
+       * @param content the {@link com.google.api.services.chat.v1.model.ReplaceMessageCardsRequest}
+       * @return the request
+       */
+      public ReplaceCards replaceCards(java.lang.String name, com.google.api.services.chat.v1.model.ReplaceMessageCardsRequest content) throws java.io.IOException {
+        ReplaceCards result = new ReplaceCards(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class ReplaceCards extends HangoutsChatRequest<com.google.api.services.chat.v1.model.ReplaceMessageCardsResponse> {
+
+        private static final String REST_PATH = "v1/{+name}:replaceCards";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^spaces/[^/]+/messages/[^/]+$");
+
+        /**
+         * Replaces the cards included in a message. A Chat app can only replace cards on a human-created
+         * message if the message already contains cards, and the cards were created by the app. If the
+         * app replaces the cards with an empty list, the cards are removed. After removing the cards, the
+         * app cannot add cards back to the message. Requires [app
+         * authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+         * with the [authorization scope](https://developers.google.com/workspace/chat/authenticate-
+         * authorize#chat-api-scopes): - `https://www.googleapis.com/auth/chat.bot`
+         *
+         * Create a request for the method "messages.replaceCards".
+         *
+         * This request holds the parameters needed by the the chat server.  After setting any optional
+         * parameters, call the {@link ReplaceCards#execute()} method to invoke the remote operation. <p>
+         * {@link
+         * ReplaceCards#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the message. Format: `spaces/{space}/messages/{message}`
+         * @param content the {@link com.google.api.services.chat.v1.model.ReplaceMessageCardsRequest}
+         * @since 1.13
+         */
+        protected ReplaceCards(java.lang.String name, com.google.api.services.chat.v1.model.ReplaceMessageCardsRequest content) {
+          super(HangoutsChat.this, "POST", REST_PATH, content, com.google.api.services.chat.v1.model.ReplaceMessageCardsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/messages/[^/]+$");
+          }
+        }
+
+        @Override
+        public ReplaceCards set$Xgafv(java.lang.String $Xgafv) {
+          return (ReplaceCards) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public ReplaceCards setAccessToken(java.lang.String accessToken) {
+          return (ReplaceCards) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public ReplaceCards setAlt(java.lang.String alt) {
+          return (ReplaceCards) super.setAlt(alt);
+        }
+
+        @Override
+        public ReplaceCards setCallback(java.lang.String callback) {
+          return (ReplaceCards) super.setCallback(callback);
+        }
+
+        @Override
+        public ReplaceCards setFields(java.lang.String fields) {
+          return (ReplaceCards) super.setFields(fields);
+        }
+
+        @Override
+        public ReplaceCards setKey(java.lang.String key) {
+          return (ReplaceCards) super.setKey(key);
+        }
+
+        @Override
+        public ReplaceCards setOauthToken(java.lang.String oauthToken) {
+          return (ReplaceCards) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public ReplaceCards setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (ReplaceCards) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public ReplaceCards setQuotaUser(java.lang.String quotaUser) {
+          return (ReplaceCards) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public ReplaceCards setUploadType(java.lang.String uploadType) {
+          return (ReplaceCards) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public ReplaceCards setUploadProtocol(java.lang.String uploadProtocol) {
+          return (ReplaceCards) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the message. Format: `spaces/{space}/messages/{message}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the message. Format: `spaces/{space}/messages/{message}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the message. Format: `spaces/{space}/messages/{message}`
+         */
+        public ReplaceCards setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^spaces/[^/]+/messages/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public ReplaceCards set(String parameterName, Object value) {
+          return (ReplaceCards) super.set(parameterName, value);
+        }
+      }
+      /**
        * Searches for messages in Google Chat that the calling user has access to. Returns a list of
        * messages matching the search criteria. To search across all spaces the user has access to, set
        * `parent` to `spaces/-`. Using any other value for `parent` results in an `INVALID_ARGUMENT`

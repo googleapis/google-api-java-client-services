@@ -52,6 +52,13 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
   private java.lang.String cardId;
 
   /**
+   * Output only. The app that owns the card.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private User ownerUser;
+
+  /**
    * A card. Maximum size is 32 KB.
    * @return value or {@code null} for none
    */
@@ -82,6 +89,23 @@ public final class CardWithId extends com.google.api.client.json.GenericJson {
    */
   public CardWithId setCardId(java.lang.String cardId) {
     this.cardId = cardId;
+    return this;
+  }
+
+  /**
+   * Output only. The app that owns the card.
+   * @return value or {@code null} for none
+   */
+  public User getOwnerUser() {
+    return ownerUser;
+  }
+
+  /**
+   * Output only. The app that owns the card.
+   * @param ownerUser ownerUser or {@code null} for none
+   */
+  public CardWithId setOwnerUser(User ownerUser) {
+    this.ownerUser = ownerUser;
     return this;
   }
 

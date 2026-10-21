@@ -30,7 +30,7 @@ package com.google.api.services.networkservices.v1.model;
 public final class AgentConnectivityTemplate extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Immutable. The path of the access. Maps roughly to ingress/egress, though we keep
+   * Optional. Immutable. The path of the access. Maps roughly to ingress/egress, though we keep
    * CLIENT_TO_AGENT and AGENT_TO_ANYWHERE as carryovers from Agent Gateway's original resource
    * model. The path is immutable once set. Exactly one path can be set.
    * The value may be {@code null}.
@@ -62,7 +62,7 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   private String createTime;
 
   /**
-   * Required. The deployment model for the gateway.
+   * Optional. The deployment model for the gateway.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   private String updateTime;
 
   /**
-   * Required. Immutable. The path of the access. Maps roughly to ingress/egress, though we keep
+   * Optional. Immutable. The path of the access. Maps roughly to ingress/egress, though we keep
    * CLIENT_TO_AGENT and AGENT_TO_ANYWHERE as carryovers from Agent Gateway's original resource
    * model. The path is immutable once set. Exactly one path can be set.
    * @return value or {@code null} for none
@@ -123,7 +123,7 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   }
 
   /**
-   * Required. Immutable. The path of the access. Maps roughly to ingress/egress, though we keep
+   * Optional. Immutable. The path of the access. Maps roughly to ingress/egress, though we keep
    * CLIENT_TO_AGENT and AGENT_TO_ANYWHERE as carryovers from Agent Gateway's original resource
    * model. The path is immutable once set. Exactly one path can be set.
    * @param accessPath accessPath or {@code null} for none
@@ -189,7 +189,7 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   }
 
   /**
-   * Required. The deployment model for the gateway.
+   * Optional. The deployment model for the gateway.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeploymentModel() {
@@ -197,7 +197,7 @@ public final class AgentConnectivityTemplate extends com.google.api.client.json.
   }
 
   /**
-   * Required. The deployment model for the gateway.
+   * Optional. The deployment model for the gateway.
    * @param deploymentModel deploymentModel or {@code null} for none
    */
   public AgentConnectivityTemplate setDeploymentModel(java.lang.String deploymentModel) {

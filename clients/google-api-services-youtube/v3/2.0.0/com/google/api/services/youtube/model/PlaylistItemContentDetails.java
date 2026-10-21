@@ -56,8 +56,9 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
   private java.lang.String startAt;
 
   /**
-   * The ID that YouTube uses to uniquely identify a video. To retrieve the video resource, set the
-   * id query parameter to this value in your API request.
+   * The ID that YouTube uses to uniquely identify a video. To [retrieve the `video`
+   * resource](https://developers.google.com/youtube/data/reference/rest/v3/videos/list), set the id
+   * query parameter to this value in your API request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -132,8 +133,9 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
   }
 
   /**
-   * The ID that YouTube uses to uniquely identify a video. To retrieve the video resource, set the
-   * id query parameter to this value in your API request.
+   * The ID that YouTube uses to uniquely identify a video. To [retrieve the `video`
+   * resource](https://developers.google.com/youtube/data/reference/rest/v3/videos/list), set the id
+   * query parameter to this value in your API request.
    * @return value or {@code null} for none
    */
   public java.lang.String getVideoId() {
@@ -141,8 +143,9 @@ public final class PlaylistItemContentDetails extends com.google.api.client.json
   }
 
   /**
-   * The ID that YouTube uses to uniquely identify a video. To retrieve the video resource, set the
-   * id query parameter to this value in your API request.
+   * The ID that YouTube uses to uniquely identify a video. To [retrieve the `video`
+   * resource](https://developers.google.com/youtube/data/reference/rest/v3/videos/list), set the id
+   * query parameter to this value in your API request.
    * @param videoId videoId or {@code null} for none
    */
   public PlaylistItemContentDetails setVideoId(java.lang.String videoId) {

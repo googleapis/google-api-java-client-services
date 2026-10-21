@@ -30,7 +30,9 @@ package com.google.api.services.youtube.model;
 public final class VideoSnippet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The YouTube video category associated with the video.
+   * The YouTube [video
+   * category](https://developers.google.com/youtube/data/reference/rest/v3/videoCategories/list)
+   * associated with the video.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,7 +121,9 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   private java.lang.String title;
 
   /**
-   * The YouTube video category associated with the video.
+   * The YouTube [video
+   * category](https://developers.google.com/youtube/data/reference/rest/v3/videoCategories/list)
+   * associated with the video.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryId() {
@@ -127,7 +131,9 @@ public final class VideoSnippet extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The YouTube video category associated with the video.
+   * The YouTube [video
+   * category](https://developers.google.com/youtube/data/reference/rest/v3/videoCategories/list)
+   * associated with the video.
    * @param categoryId categoryId or {@code null} for none
    */
   public VideoSnippet setCategoryId(java.lang.String categoryId) {

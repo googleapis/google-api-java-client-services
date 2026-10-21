@@ -30,8 +30,9 @@ package com.google.api.services.youtube.model;
 public final class MonitorStreamInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * If you have set the enableMonitorStream property to true, then this property determines the
-   * length of the live broadcast delay.
+   * If you have set the [`enableMonitorStream`](https://developers.google.com/youtube/data/live/ref
+   * erence/rest/v3/liveBroadcasts#contentDetails.monitorStream.enableMonitorStream) property to
+   * true, then this property determines the length of the live broadcast delay.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +58,9 @@ public final class MonitorStreamInfo extends com.google.api.client.json.GenericJ
   private java.lang.Boolean enableMonitorStream;
 
   /**
-   * If you have set the enableMonitorStream property to true, then this property determines the
-   * length of the live broadcast delay.
+   * If you have set the [`enableMonitorStream`](https://developers.google.com/youtube/data/live/ref
+   * erence/rest/v3/liveBroadcasts#contentDetails.monitorStream.enableMonitorStream) property to
+   * true, then this property determines the length of the live broadcast delay.
    * @return value or {@code null} for none
    */
   public java.lang.Long getBroadcastStreamDelayMs() {
@@ -66,8 +68,9 @@ public final class MonitorStreamInfo extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * If you have set the enableMonitorStream property to true, then this property determines the
-   * length of the live broadcast delay.
+   * If you have set the [`enableMonitorStream`](https://developers.google.com/youtube/data/live/ref
+   * erence/rest/v3/liveBroadcasts#contentDetails.monitorStream.enableMonitorStream) property to
+   * true, then this property determines the length of the live broadcast delay.
    * @param broadcastStreamDelayMs broadcastStreamDelayMs or {@code null} for none
    */
   public MonitorStreamInfo setBroadcastStreamDelayMs(java.lang.Long broadcastStreamDelayMs) {

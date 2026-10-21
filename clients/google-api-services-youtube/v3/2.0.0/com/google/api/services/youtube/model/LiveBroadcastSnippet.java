@@ -46,7 +46,9 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   private com.google.api.client.util.DateTime actualStartTime;
 
   /**
-   * The YouTube video category associated with the video broadcast.
+   * The YouTube [video
+   * category](https://developers.google.com/youtube/data/reference/rest/v3/videoCategories/list)
+   * associated with the video broadcast.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,7 +63,8 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The broadcast's description. As with the title, you can set this field by modifying the
-   * broadcast resource or by setting the description field of the corresponding video resource.
+   * broadcast resource or by setting the [`description`](https://developers.google.com/youtube/data
+   * /reference/rest/v3/videos#snippet.description) field of the corresponding video resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,8 +116,9 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The broadcast's title. Note that the broadcast represents exactly one YouTube video. You can
-   * set this field by modifying the broadcast resource or by setting the title field of the
-   * corresponding video resource.
+   * set this field by modifying the broadcast resource or by setting the
+   * [`title`](https://developers.google.com/youtube/data/reference/rest/v3/videos#snippet.title)
+   * field of the corresponding video resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +163,9 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The YouTube video category associated with the video broadcast.
+   * The YouTube [video
+   * category](https://developers.google.com/youtube/data/reference/rest/v3/videoCategories/list)
+   * associated with the video broadcast.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryId() {
@@ -167,7 +173,9 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
   }
 
   /**
-   * The YouTube video category associated with the video broadcast.
+   * The YouTube [video
+   * category](https://developers.google.com/youtube/data/reference/rest/v3/videoCategories/list)
+   * associated with the video broadcast.
    * @param categoryId categoryId or {@code null} for none
    */
   public LiveBroadcastSnippet setCategoryId(java.lang.String categoryId) {
@@ -194,7 +202,8 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The broadcast's description. As with the title, you can set this field by modifying the
-   * broadcast resource or by setting the description field of the corresponding video resource.
+   * broadcast resource or by setting the [`description`](https://developers.google.com/youtube/data
+   * /reference/rest/v3/videos#snippet.description) field of the corresponding video resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -203,7 +212,8 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The broadcast's description. As with the title, you can set this field by modifying the
-   * broadcast resource or by setting the description field of the corresponding video resource.
+   * broadcast resource or by setting the [`description`](https://developers.google.com/youtube/data
+   * /reference/rest/v3/videos#snippet.description) field of the corresponding video resource.
    * @param description description or {@code null} for none
    */
   public LiveBroadcastSnippet setDescription(java.lang.String description) {
@@ -319,8 +329,9 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The broadcast's title. Note that the broadcast represents exactly one YouTube video. You can
-   * set this field by modifying the broadcast resource or by setting the title field of the
-   * corresponding video resource.
+   * set this field by modifying the broadcast resource or by setting the
+   * [`title`](https://developers.google.com/youtube/data/reference/rest/v3/videos#snippet.title)
+   * field of the corresponding video resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -329,8 +340,9 @@ public final class LiveBroadcastSnippet extends com.google.api.client.json.Gener
 
   /**
    * The broadcast's title. Note that the broadcast represents exactly one YouTube video. You can
-   * set this field by modifying the broadcast resource or by setting the title field of the
-   * corresponding video resource.
+   * set this field by modifying the broadcast resource or by setting the
+   * [`title`](https://developers.google.com/youtube/data/reference/rest/v3/videos#snippet.title)
+   * field of the corresponding video resource.
    * @param title title or {@code null} for none
    */
   public LiveBroadcastSnippet setTitle(java.lang.String title) {

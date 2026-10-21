@@ -20,13 +20,18 @@ package com.google.api.services.youtube.model;
  * A *playlistImage* resource identifies another resource, such as a image, that is associated with
  * a playlist. In addition, the playlistImage resource contains details about the included resource
  * that pertain specifically to how that resource is used in that playlist. YouTube uses playlists
- * to identify special collections of videos for a channel, such as: - uploaded videos - favorite
- * videos - positively rated (liked) videos - watch history To be more specific, these lists are
+ * to identify special collections of videos for a channel, such as: * uploaded videos * favorite
+ * videos * positively rated (liked) videos * watch history To be more specific, these lists are
  * associated with a channel, which is a collection of a person, group, or company's videos,
  * playlists, and other YouTube information. You can retrieve the playlist IDs for each of these
- * lists from the channel resource for a given channel. You can then use the playlistImages.list
- * method to retrieve image data for any of those playlists. You can also add or remove images from
- * those lists by calling the playlistImages.insert and playlistImages.delete methods.
+ * lists from the [`channel
+ * resource`](https://developers.google.com/youtube/data/reference/rest/v3/channels) for a given
+ * channel. You can then use the [`playlistImages.list`](https://developers.google.com/youtube/data/
+ * reference/rest/v3/playlistImages/list) method to retrieve image data for any of those playlists.
+ * You can also add or remove images from those lists by calling the [`playlistImages.insert`](https
+ * ://developers.google.com/youtube/data/reference/rest/v3/playlistImages/insert) and [`playlistImag
+ * es.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistImages/delete)
+ * methods.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the YouTube Data API v3. For a detailed explanation see:

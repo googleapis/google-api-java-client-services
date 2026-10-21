@@ -30,7 +30,8 @@ package com.google.api.services.youtube.model;
 public final class LiveBroadcastStatus extends com.google.api.client.json.GenericJson {
 
   /**
-   * The broadcast's status. The status can be updated using the API's liveBroadcasts.transition
+   * The broadcast's status. The status can be updated using the API's [`liveBroadcasts.transition`]
+   * (https://developers.google.com/youtube/data/live/reference/rest/v3/liveBroadcasts/transition)
    * method.
    * The value may be {@code null}.
    */
@@ -55,7 +56,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   /**
    * The broadcast's privacy status. Note that the broadcast represents exactly one YouTube video,
    * so the privacy settings are identical to those supported for videos. In addition, you can set
-   * this field by modifying the broadcast resource or by setting the privacyStatus field of the
+   * this field by modifying the broadcast resource or by setting the [`privacyStatus`](https://deve
+   * lopers.google.com/youtube/data/reference/rest/v3/videos#status.privacyStatus) field of the
    * corresponding video resource.
    * The value may be {@code null}.
    */
@@ -78,7 +80,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   private java.lang.Boolean selfDeclaredMadeForKids;
 
   /**
-   * The broadcast's status. The status can be updated using the API's liveBroadcasts.transition
+   * The broadcast's status. The status can be updated using the API's [`liveBroadcasts.transition`]
+   * (https://developers.google.com/youtube/data/live/reference/rest/v3/liveBroadcasts/transition)
    * method.
    * @return value or {@code null} for none
    */
@@ -87,7 +90,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   }
 
   /**
-   * The broadcast's status. The status can be updated using the API's liveBroadcasts.transition
+   * The broadcast's status. The status can be updated using the API's [`liveBroadcasts.transition`]
+   * (https://developers.google.com/youtube/data/live/reference/rest/v3/liveBroadcasts/transition)
    * method.
    * @param lifeCycleStatus lifeCycleStatus or {@code null} for none
    */
@@ -135,7 +139,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   /**
    * The broadcast's privacy status. Note that the broadcast represents exactly one YouTube video,
    * so the privacy settings are identical to those supported for videos. In addition, you can set
-   * this field by modifying the broadcast resource or by setting the privacyStatus field of the
+   * this field by modifying the broadcast resource or by setting the [`privacyStatus`](https://deve
+   * lopers.google.com/youtube/data/reference/rest/v3/videos#status.privacyStatus) field of the
    * corresponding video resource.
    * @return value or {@code null} for none
    */
@@ -146,7 +151,8 @@ public final class LiveBroadcastStatus extends com.google.api.client.json.Generi
   /**
    * The broadcast's privacy status. Note that the broadcast represents exactly one YouTube video,
    * so the privacy settings are identical to those supported for videos. In addition, you can set
-   * this field by modifying the broadcast resource or by setting the privacyStatus field of the
+   * this field by modifying the broadcast resource or by setting the [`privacyStatus`](https://deve
+   * lopers.google.com/youtube/data/reference/rest/v3/videos#status.privacyStatus) field of the
    * corresponding video resource.
    * @param privacyStatus privacyStatus or {@code null} for none
    */

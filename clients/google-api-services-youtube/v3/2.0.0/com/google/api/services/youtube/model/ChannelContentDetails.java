@@ -66,48 +66,61 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
   public static final class RelatedPlaylists extends com.google.api.client.json.GenericJson {
 
     /**
-     * The ID of the playlist that contains the channel"s favorite videos. Use the
-     * playlistItems.insert and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s favorite videos. Use the [`playlistItems.ins
+     * ert`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`
+     * playlistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistIte
+     * ms/delete) to add or remove items from that list.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String favorites;
 
     /**
-     * The ID of the playlist that contains the channel"s liked videos. Use the playlistItems.insert
-     * and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s liked videos. Use the [`playlistItems.insert
+     * `](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`pla
+     * ylistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/
+     * delete) to add or remove items from that list.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String likes;
 
     /**
-     * The ID of the playlist that contains the channel"s uploaded videos. Use the videos.insert
-     * method to upload new videos and the videos.delete method to delete previously uploaded videos.
+     * The ID of the playlist that contains the channel"s uploaded videos. Use the
+     * [`videos.insert`](https://developers.google.com/youtube/data/reference/rest/v3/videos/insert)
+     * method to upload new videos and the
+     * [`videos.delete`](https://developers.google.com/youtube/data/reference/rest/v3/videos/delete)
+     * method to delete previously uploaded videos.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String uploads;
 
     /**
-     * The ID of the playlist that contains the channel"s watch history. Use the playlistItems.insert
-     * and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s watch history. Use the [`playlistItems.inser
+     * t`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`pl
+     * aylistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems
+     * /delete) to add or remove items from that list.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String watchHistory;
 
     /**
-     * The ID of the playlist that contains the channel"s watch later playlist. Use the
-     * playlistItems.insert and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s watch later playlist. Use the [`playlistItem
+     * s.insert`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert)
+     * and [`playlistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playl
+     * istItems/delete) to add or remove items from that list.
      * The value may be {@code null}.
      */
     @com.google.api.client.util.Key
     private java.lang.String watchLater;
 
     /**
-     * The ID of the playlist that contains the channel"s favorite videos. Use the
-     * playlistItems.insert and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s favorite videos. Use the [`playlistItems.ins
+     * ert`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`
+     * playlistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistIte
+     * ms/delete) to add or remove items from that list.
      * @return value or {@code null} for none
      */
     public java.lang.String getFavorites() {
@@ -115,8 +128,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s favorite videos. Use the
-     * playlistItems.insert and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s favorite videos. Use the [`playlistItems.ins
+     * ert`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`
+     * playlistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistIte
+     * ms/delete) to add or remove items from that list.
      * @param favorites favorites or {@code null} for none
      */
     public RelatedPlaylists setFavorites(java.lang.String favorites) {
@@ -125,8 +140,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s liked videos. Use the playlistItems.insert
-     * and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s liked videos. Use the [`playlistItems.insert
+     * `](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`pla
+     * ylistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/
+     * delete) to add or remove items from that list.
      * @return value or {@code null} for none
      */
     public java.lang.String getLikes() {
@@ -134,8 +151,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s liked videos. Use the playlistItems.insert
-     * and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s liked videos. Use the [`playlistItems.insert
+     * `](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`pla
+     * ylistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/
+     * delete) to add or remove items from that list.
      * @param likes likes or {@code null} for none
      */
     public RelatedPlaylists setLikes(java.lang.String likes) {
@@ -144,8 +163,11 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s uploaded videos. Use the videos.insert
-     * method to upload new videos and the videos.delete method to delete previously uploaded videos.
+     * The ID of the playlist that contains the channel"s uploaded videos. Use the
+     * [`videos.insert`](https://developers.google.com/youtube/data/reference/rest/v3/videos/insert)
+     * method to upload new videos and the
+     * [`videos.delete`](https://developers.google.com/youtube/data/reference/rest/v3/videos/delete)
+     * method to delete previously uploaded videos.
      * @return value or {@code null} for none
      */
     public java.lang.String getUploads() {
@@ -153,8 +175,11 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s uploaded videos. Use the videos.insert
-     * method to upload new videos and the videos.delete method to delete previously uploaded videos.
+     * The ID of the playlist that contains the channel"s uploaded videos. Use the
+     * [`videos.insert`](https://developers.google.com/youtube/data/reference/rest/v3/videos/insert)
+     * method to upload new videos and the
+     * [`videos.delete`](https://developers.google.com/youtube/data/reference/rest/v3/videos/delete)
+     * method to delete previously uploaded videos.
      * @param uploads uploads or {@code null} for none
      */
     public RelatedPlaylists setUploads(java.lang.String uploads) {
@@ -163,8 +188,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s watch history. Use the playlistItems.insert
-     * and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s watch history. Use the [`playlistItems.inser
+     * t`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`pl
+     * aylistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems
+     * /delete) to add or remove items from that list.
      * @return value or {@code null} for none
      */
     public java.lang.String getWatchHistory() {
@@ -172,8 +199,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s watch history. Use the playlistItems.insert
-     * and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s watch history. Use the [`playlistItems.inser
+     * t`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert) and [`pl
+     * aylistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems
+     * /delete) to add or remove items from that list.
      * @param watchHistory watchHistory or {@code null} for none
      */
     public RelatedPlaylists setWatchHistory(java.lang.String watchHistory) {
@@ -182,8 +211,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s watch later playlist. Use the
-     * playlistItems.insert and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s watch later playlist. Use the [`playlistItem
+     * s.insert`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert)
+     * and [`playlistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playl
+     * istItems/delete) to add or remove items from that list.
      * @return value or {@code null} for none
      */
     public java.lang.String getWatchLater() {
@@ -191,8 +222,10 @@ public final class ChannelContentDetails extends com.google.api.client.json.Gene
     }
 
     /**
-     * The ID of the playlist that contains the channel"s watch later playlist. Use the
-     * playlistItems.insert and playlistItems.delete to add or remove items from that list.
+     * The ID of the playlist that contains the channel"s watch later playlist. Use the [`playlistItem
+     * s.insert`](https://developers.google.com/youtube/data/reference/rest/v3/playlistItems/insert)
+     * and [`playlistItems.delete`](https://developers.google.com/youtube/data/reference/rest/v3/playl
+     * istItems/delete) to add or remove items from that list.
      * @param watchLater watchLater or {@code null} for none
      */
     public RelatedPlaylists setWatchLater(java.lang.String watchLater) {

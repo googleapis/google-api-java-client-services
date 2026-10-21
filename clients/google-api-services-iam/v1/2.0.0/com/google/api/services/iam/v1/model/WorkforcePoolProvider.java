@@ -192,6 +192,13 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.lang.String state;
 
   /**
+   * Optional. The vendor type of the third-party identity provider.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String vendorType;
+
+  /**
    * Optional. A [Common Expression Language](https://opensource.google/projects/cel) expression, in
    * plain text, to restrict what otherwise valid authentication credentials issued by the provider
    * should not be accepted. The expression must output a boolean representing whether to allow the
@@ -552,6 +559,23 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Optional. The vendor type of the third-party identity provider.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getVendorType() {
+    return vendorType;
+  }
+
+  /**
+   * Optional. The vendor type of the third-party identity provider.
+   * @param vendorType vendorType or {@code null} for none
+   */
+  public WorkforcePoolProvider setVendorType(java.lang.String vendorType) {
+    this.vendorType = vendorType;
     return this;
   }
 

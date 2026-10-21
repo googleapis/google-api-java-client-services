@@ -53,7 +53,7 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   private java.lang.String dataSourceFamily;
 
   /**
-   * Optional. The maximum number of data points to return. If unspecified, at most 1440 data points
+   * Optional. The maximum number of data points to return. If unspecified, at most 90 data points
    * will be returned. The maximum page size is 10000; values above that will be truncated
    * accordingly.
    * The value may be {@code null}.
@@ -139,7 +139,7 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The maximum number of data points to return. If unspecified, at most 1440 data points
+   * Optional. The maximum number of data points to return. If unspecified, at most 90 data points
    * will be returned. The maximum page size is 10000; values above that will be truncated
    * accordingly.
    * @return value or {@code null} for none
@@ -149,7 +149,7 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The maximum number of data points to return. If unspecified, at most 1440 data points
+   * Optional. The maximum number of data points to return. If unspecified, at most 90 data points
    * will be returned. The maximum page size is 10000; values above that will be truncated
    * accordingly.
    * @param pageSize pageSize or {@code null} for none

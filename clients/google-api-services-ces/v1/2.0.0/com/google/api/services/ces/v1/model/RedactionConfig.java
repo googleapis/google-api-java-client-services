@@ -40,7 +40,7 @@ public final class RedactionConfig extends com.google.api.client.json.GenericJso
   private java.lang.String deidentifyTemplate;
 
   /**
-   * Optional. If true, redaction will be applied in various logging scenarios, including
+   * Optional. If `true`, redaction will be applied in various logging scenarios, including
    * conversation history, Cloud Logging and audio recording.
    * The value may be {@code null}.
    */
@@ -78,7 +78,7 @@ public final class RedactionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. If true, redaction will be applied in various logging scenarios, including
+   * Optional. If `true`, redaction will be applied in various logging scenarios, including
    * conversation history, Cloud Logging and audio recording.
    * @return value or {@code null} for none
    */
@@ -87,7 +87,7 @@ public final class RedactionConfig extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. If true, redaction will be applied in various logging scenarios, including
+   * Optional. If `true`, redaction will be applied in various logging scenarios, including
    * conversation history, Cloud Logging and audio recording.
    * @param enableRedaction enableRedaction or {@code null} for none
    */

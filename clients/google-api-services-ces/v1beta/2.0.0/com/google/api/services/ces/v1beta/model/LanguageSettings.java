@@ -38,7 +38,7 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   private java.lang.String defaultLanguageCode;
 
   /**
-   * Optional. Enables multilingual support. If true, agents in the app will use pre-built
+   * Optional. Enables multilingual support. If `true`, agents in the app will use pre-built
    * instructions to improve handling of multilingual input.
    * The value may be {@code null}.
    */
@@ -83,7 +83,7 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Enables multilingual support. If true, agents in the app will use pre-built
+   * Optional. Enables multilingual support. If `true`, agents in the app will use pre-built
    * instructions to improve handling of multilingual input.
    * @return value or {@code null} for none
    */
@@ -92,7 +92,7 @@ public final class LanguageSettings extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Enables multilingual support. If true, agents in the app will use pre-built
+   * Optional. Enables multilingual support. If `true`, agents in the app will use pre-built
    * instructions to improve handling of multilingual input.
    * @param enableMultilingualSupport enableMultilingualSupport or {@code null} for none
    */

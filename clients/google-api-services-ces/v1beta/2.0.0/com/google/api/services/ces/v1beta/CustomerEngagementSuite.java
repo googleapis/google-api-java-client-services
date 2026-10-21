@@ -885,7 +885,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
       public class Apps {
 
         /**
-         * Runs the Chat AI assistant agent for the specified assistant session.
+         * Runs Arc, the AI assistant, for the specified assistant session.
          *
          * Create a request for the method "apps.chatAiAssistant".
          *
@@ -910,7 +910,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
 
           /**
-           * Runs the Chat AI assistant agent for the specified assistant session.
+           * Runs Arc, the AI assistant, for the specified assistant session.
            *
            * Create a request for the method "apps.chatAiAssistant".
            *
@@ -1732,10 +1732,10 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
           }
         }
         /**
-         * Generates personalized onboarding suggestions for the AI assistant zero state: classifies the
-         * requesting user (new / exploring / returning) from their assistant-session history in the app and
-         * returns suggestion chips (resume a session, continue work, or start something new) to render
-         * before any message is sent.
+         * Generates personalized onboarding suggestions for the Arc zero state: classifies the requesting
+         * user (new / exploring / returning) from their assistant-session history in the app and returns
+         * suggestion chips (resume a session, continue work, or start something new) to render before any
+         * message is sent.
          *
          * Create a request for the method "apps.generateOnboardingSuggestions".
          *
@@ -1762,10 +1762,10 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+$");
 
           /**
-           * Generates personalized onboarding suggestions for the AI assistant zero state: classifies the
-           * requesting user (new / exploring / returning) from their assistant-session history in the app
-           * and returns suggestion chips (resume a session, continue work, or start something new) to
-           * render before any message is sent.
+           * Generates personalized onboarding suggestions for the Arc zero state: classifies the requesting
+           * user (new / exploring / returning) from their assistant-session history in the app and returns
+           * suggestion chips (resume a session, continue work, or start something new) to render before any
+           * message is sent.
            *
            * Create a request for the method "apps.generateOnboardingSuggestions".
            *
@@ -5070,7 +5070,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
             }
           }
           /**
-           * Runs the Chat AI assistant agent for the specified assistant session in a streaming fashion.
+           * Runs Arc, the AI assistant, for the specified assistant session in a streaming fashion.
            *
            * Create a request for the method "assistantSessions.streamChatAiAssistant".
            *
@@ -5097,7 +5097,7 @@ public class CustomerEngagementSuite extends com.google.api.client.googleapis.se
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/apps/[^/]+/assistantSessions/[^/]+$");
 
             /**
-             * Runs the Chat AI assistant agent for the specified assistant session in a streaming fashion.
+             * Runs Arc, the AI assistant, for the specified assistant session in a streaming fashion.
              *
              * Create a request for the method "assistantSessions.streamChatAiAssistant".
              *

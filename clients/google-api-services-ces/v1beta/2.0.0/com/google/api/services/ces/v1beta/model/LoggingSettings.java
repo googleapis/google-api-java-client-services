@@ -84,6 +84,18 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
   private RedactionConfig redactionConfig;
 
   /**
+   * Optional. Whether the app has to say what may be recorded before anything is kept. When true, a
+   * session starts with recording off and stays off until the client sends
+   * SessionInput.recording_control, which then decides every turn from that point on. This covers
+   * audio recording as well as conversation history, BigQuery export and Cloud Logging. When
+   * `false`, the default, the settings above decide on their own and the client does not have to
+   * send anything.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean requiredRecordingConsent;
+
+  /**
    * Optional. Configures an additional recording of unredacted audio. This can be used to maintain
    * a raw audio copy when audio redaction is enabled, typically for auditing or monitoring
    * purposes.
@@ -224,6 +236,33 @@ public final class LoggingSettings extends com.google.api.client.json.GenericJso
    */
   public LoggingSettings setRedactionConfig(RedactionConfig redactionConfig) {
     this.redactionConfig = redactionConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the app has to say what may be recorded before anything is kept. When true, a
+   * session starts with recording off and stays off until the client sends
+   * SessionInput.recording_control, which then decides every turn from that point on. This covers
+   * audio recording as well as conversation history, BigQuery export and Cloud Logging. When
+   * `false`, the default, the settings above decide on their own and the client does not have to
+   * send anything.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getRequiredRecordingConsent() {
+    return requiredRecordingConsent;
+  }
+
+  /**
+   * Optional. Whether the app has to say what may be recorded before anything is kept. When true, a
+   * session starts with recording off and stays off until the client sends
+   * SessionInput.recording_control, which then decides every turn from that point on. This covers
+   * audio recording as well as conversation history, BigQuery export and Cloud Logging. When
+   * `false`, the default, the settings above decide on their own and the client does not have to
+   * send anything.
+   * @param requiredRecordingConsent requiredRecordingConsent or {@code null} for none
+   */
+  public LoggingSettings setRequiredRecordingConsent(java.lang.Boolean requiredRecordingConsent) {
+    this.requiredRecordingConsent = requiredRecordingConsent;
     return this;
   }
 

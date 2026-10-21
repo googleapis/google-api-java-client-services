@@ -7146,6 +7146,229 @@ public class Classroom extends com.google.api.client.googleapis.services.json.Ab
             }
           }
           /**
+           * Returns a list of student submissions that the requester is permitted to view. This method
+           * returns the following error codes: * `PERMISSION_DENIED` for access errors. * `INVALID_ARGUMENT`
+           * if the request is malformed. * `NOT_FOUND` if one of the identified resources does not exist.
+           *
+           * Create a request for the method "studentSubmissions.list".
+           *
+           * This request holds the parameters needed by the classroom server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param courseId Required. Identifier of the course.
+           * @param itemId Required. Identifier of the `CourseWork` under which the attachment is attached.
+           * @param attachmentId Required. Identifier of the add-on attachment.
+           * @return the request
+           */
+          public List list(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) throws java.io.IOException {
+            List result = new List(courseId, itemId, attachmentId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends ClassroomRequest<com.google.api.services.classroom.model.ListAddOnAttachmentStudentSubmissionsResponse> {
+
+            private static final String REST_PATH = "v1/courses/{courseId}/courseWork/{itemId}/addOnAttachments/{attachmentId}/studentSubmissions";
+
+            /**
+             * Returns a list of student submissions that the requester is permitted to view. This method
+             * returns the following error codes: * `PERMISSION_DENIED` for access errors. *
+             * `INVALID_ARGUMENT` if the request is malformed. * `NOT_FOUND` if one of the identified
+             * resources does not exist.
+             *
+             * Create a request for the method "studentSubmissions.list".
+             *
+             * This request holds the parameters needed by the the classroom server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param courseId Required. Identifier of the course.
+             * @param itemId Required. Identifier of the `CourseWork` under which the attachment is attached.
+             * @param attachmentId Required. Identifier of the add-on attachment.
+             * @since 1.13
+             */
+            protected List(java.lang.String courseId, java.lang.String itemId, java.lang.String attachmentId) {
+              super(Classroom.this, "GET", REST_PATH, null, com.google.api.services.classroom.model.ListAddOnAttachmentStudentSubmissionsResponse.class);
+              this.courseId = com.google.api.client.util.Preconditions.checkNotNull(courseId, "Required parameter courseId must be specified.");
+              this.itemId = com.google.api.client.util.Preconditions.checkNotNull(itemId, "Required parameter itemId must be specified.");
+              this.attachmentId = com.google.api.client.util.Preconditions.checkNotNull(attachmentId, "Required parameter attachmentId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. Identifier of the course. */
+            @com.google.api.client.util.Key
+            private java.lang.String courseId;
+
+            /** Required. Identifier of the course.
+             */
+            public java.lang.String getCourseId() {
+              return courseId;
+            }
+
+            /** Required. Identifier of the course. */
+            public List setCourseId(java.lang.String courseId) {
+              this.courseId = courseId;
+              return this;
+            }
+
+            /** Required. Identifier of the `CourseWork` under which the attachment is attached. */
+            @com.google.api.client.util.Key
+            private java.lang.String itemId;
+
+            /** Required. Identifier of the `CourseWork` under which the attachment is attached.
+             */
+            public java.lang.String getItemId() {
+              return itemId;
+            }
+
+            /** Required. Identifier of the `CourseWork` under which the attachment is attached. */
+            public List setItemId(java.lang.String itemId) {
+              this.itemId = itemId;
+              return this;
+            }
+
+            /** Required. Identifier of the add-on attachment. */
+            @com.google.api.client.util.Key
+            private java.lang.String attachmentId;
+
+            /** Required. Identifier of the add-on attachment.
+             */
+            public java.lang.String getAttachmentId() {
+              return attachmentId;
+            }
+
+            /** Required. Identifier of the add-on attachment. */
+            public List setAttachmentId(java.lang.String attachmentId) {
+              this.attachmentId = attachmentId;
+              return this;
+            }
+
+            /**
+             * Optional. Maximum number of submissions to return. Zero or unspecified indicates that
+             * the server may assign a maximum. The server may return fewer than the specified
+             * number of results.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Maximum number of submissions to return. Zero or unspecified indicates that the server
+           may assign a maximum. The server may return fewer than the specified number of results.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Maximum number of submissions to return. Zero or unspecified indicates that
+             * the server may assign a maximum. The server may return fewer than the specified
+             * number of results.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * `ListAddOnAttachmentStudentSubmissions` call. Provide this to retrieve the subsequent
+             * page. When paginating, all other parameters provided to
+             * `ListAddOnAttachmentStudentSubmissions` must match the call that provided the page
+             * token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListAddOnAttachmentStudentSubmissions` call.
+           Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListAddOnAttachmentStudentSubmissions` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * `ListAddOnAttachmentStudentSubmissions` call. Provide this to retrieve the subsequent
+             * page. When paginating, all other parameters provided to
+             * `ListAddOnAttachmentStudentSubmissions` must match the call that provided the page
+             * token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
            * Updates data associated with an add-on attachment submission. Requires the add-on to have been
            * the original creator of the attachment and the attachment to have a positive `max_points` value
            * set. This method returns the following error codes: * `PERMISSION_DENIED` for access errors. *

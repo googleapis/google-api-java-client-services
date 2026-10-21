@@ -17,13 +17,13 @@
 package com.google.api.services.cloudasset.v1p5beta1.model;
 
 /**
- * `DevicePolicy` specifies device specific restrictions necessary to acquire a given access level.
- * A `DevicePolicy` specifies requirements for requests from devices to be granted access levels, it
+ * `DevicePolicy` specifies device-specific restrictions necessary to acquire a given access level.
+ * A `DevicePolicy` specifies requirements for requests from devices to be granted access levels; it
  * does not do any enforcement on the device. `DevicePolicy` acts as an AND over all specified
  * fields, and each repeated field is an OR over its elements. Any unset fields are ignored. For
- * example, if the proto is { os_type : DESKTOP_WINDOWS, os_type : DESKTOP_LINUX, encryption_status:
- * ENCRYPTED}, then the DevicePolicy will be true for requests originating from encrypted Linux
- * desktops and encrypted Windows desktops.
+ * example, if the proto is `{ os_type : DESKTOP_WINDOWS, os_type : DESKTOP_LINUX,
+ * encryption_status: ENCRYPTED}`, then the `DevicePolicy` will be true for requests originating
+ * from encrypted Linux desktops and encrypted Windows desktops.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Asset API. For a detailed explanation see:
@@ -36,21 +36,21 @@ package com.google.api.services.cloudasset.v1p5beta1.model;
 public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Allowed device management levels, an empty list allows all management levels.
+   * Allowed device management levels. An empty list allows all management levels.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedDeviceManagementLevels;
 
   /**
-   * Allowed encryptions statuses, an empty list allows all statuses.
+   * Allowed encryption statuses. An empty list allows all statuses.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> allowedEncryptionStatuses;
 
   /**
-   * Allowed OS versions, an empty list allows all types and all versions.
+   * Allowed OS versions. An empty list allows all types and all versions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,21 +64,21 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   private java.lang.Boolean requireAdminApproval;
 
   /**
-   * Whether the device needs to be corp owned.
+   * Whether the device needs to be corp-owned.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireCorpOwned;
 
   /**
-   * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+   * Whether or not screenlock is required for the `DevicePolicy` to be true. Defaults to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean requireScreenlock;
 
   /**
-   * Allowed device management levels, an empty list allows all management levels.
+   * Allowed device management levels. An empty list allows all management levels.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedDeviceManagementLevels() {
@@ -86,7 +86,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Allowed device management levels, an empty list allows all management levels.
+   * Allowed device management levels. An empty list allows all management levels.
    * @param allowedDeviceManagementLevels allowedDeviceManagementLevels or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1DevicePolicy setAllowedDeviceManagementLevels(java.util.List<java.lang.String> allowedDeviceManagementLevels) {
@@ -95,7 +95,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Allowed encryptions statuses, an empty list allows all statuses.
+   * Allowed encryption statuses. An empty list allows all statuses.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAllowedEncryptionStatuses() {
@@ -103,7 +103,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Allowed encryptions statuses, an empty list allows all statuses.
+   * Allowed encryption statuses. An empty list allows all statuses.
    * @param allowedEncryptionStatuses allowedEncryptionStatuses or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1DevicePolicy setAllowedEncryptionStatuses(java.util.List<java.lang.String> allowedEncryptionStatuses) {
@@ -112,7 +112,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Allowed OS versions, an empty list allows all types and all versions.
+   * Allowed OS versions. An empty list allows all types and all versions.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleIdentityAccesscontextmanagerV1OsConstraint> getOsConstraints() {
@@ -120,7 +120,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Allowed OS versions, an empty list allows all types and all versions.
+   * Allowed OS versions. An empty list allows all types and all versions.
    * @param osConstraints osConstraints or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1DevicePolicy setOsConstraints(java.util.List<GoogleIdentityAccesscontextmanagerV1OsConstraint> osConstraints) {
@@ -146,7 +146,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Whether the device needs to be corp owned.
+   * Whether the device needs to be corp-owned.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireCorpOwned() {
@@ -154,7 +154,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Whether the device needs to be corp owned.
+   * Whether the device needs to be corp-owned.
    * @param requireCorpOwned requireCorpOwned or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1DevicePolicy setRequireCorpOwned(java.lang.Boolean requireCorpOwned) {
@@ -163,7 +163,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+   * Whether or not screenlock is required for the `DevicePolicy` to be true. Defaults to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireScreenlock() {
@@ -171,7 +171,7 @@ public final class GoogleIdentityAccesscontextmanagerV1DevicePolicy extends com.
   }
 
   /**
-   * Whether or not screenlock is required for the DevicePolicy to be true. Defaults to `false`.
+   * Whether or not screenlock is required for the `DevicePolicy` to be true. Defaults to `false`.
    * @param requireScreenlock requireScreenlock or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1DevicePolicy setRequireScreenlock(java.lang.Boolean requireScreenlock) {

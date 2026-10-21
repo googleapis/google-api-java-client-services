@@ -36,10 +36,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
 
   /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
-   * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
-   * s3n://BUCKET_NAME. For Azure Storage, the supported format is
-   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches if it contains an
-   * external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
+   * supported. For Amazon S3, the supported formats are `s3://BUCKET_NAME`, `s3a://BUCKET_NAME`,
+   * and `s3n://BUCKET_NAME`. For Azure Storage, the supported format is
+   * `azure://myaccount.blob.core.windows.net/CONTAINER_NAME`. A request matches if it contains an
+   * external resource in this list (Example: `s3://bucket/path`). Currently `'*'` is not allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -60,11 +60,11 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of resources, currently projects, folders, and organizations in the form `projects/`,
-   * `folders/`, and `organizations/`, that are allowed to be accessed by sources defined in the
-   * corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is
-   * specified for `resources`, then this EgressTo rule will authorize access to all resources
-   * outside the perimeter.
+   * A list of resources, currently projects, folders, and organizations in the form
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`, that
+   * are allowed to be accessed by sources defined in the corresponding EgressFrom. A request
+   * matches if it contains a resource in this list. If `*` is specified for `resources`, then this
+   * EgressTo rule will authorize access to all resources outside the perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +72,7 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
 
   /**
    * IAM roles that represent the set of operations that the sources specified in the corresponding
-   * EgressFrom. are allowed to perform in this ServicePerimeter.
+   * EgressFrom are allowed to perform in this ServicePerimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -80,10 +80,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
 
   /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
-   * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
-   * s3n://BUCKET_NAME. For Azure Storage, the supported format is
-   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches if it contains an
-   * external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
+   * supported. For Amazon S3, the supported formats are `s3://BUCKET_NAME`, `s3a://BUCKET_NAME`,
+   * and `s3n://BUCKET_NAME`. For Azure Storage, the supported format is
+   * `azure://myaccount.blob.core.windows.net/CONTAINER_NAME`. A request matches if it contains an
+   * external resource in this list (Example: `s3://bucket/path`). Currently `'*'` is not allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExternalResources() {
@@ -92,10 +92,10 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
 
   /**
    * A list of external resources that are allowed to be accessed. Only AWS and Azure resources are
-   * supported. For Amazon S3, the supported formats are s3://BUCKET_NAME, s3a://BUCKET_NAME, and
-   * s3n://BUCKET_NAME. For Azure Storage, the supported format is
-   * azure://myaccount.blob.core.windows.net/CONTAINER_NAME. A request matches if it contains an
-   * external resource in this list (Example: s3://bucket/path). Currently '*' is not allowed.
+   * supported. For Amazon S3, the supported formats are `s3://BUCKET_NAME`, `s3a://BUCKET_NAME`,
+   * and `s3n://BUCKET_NAME`. For Azure Storage, the supported format is
+   * `azure://myaccount.blob.core.windows.net/CONTAINER_NAME`. A request matches if it contains an
+   * external resource in this list (Example: `s3://bucket/path`). Currently `'*'` is not allowed.
    * @param externalResources externalResources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressTo setExternalResources(java.util.List<java.lang.String> externalResources) {
@@ -123,11 +123,11 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of resources, currently projects, folders, and organizations in the form `projects/`,
-   * `folders/`, and `organizations/`, that are allowed to be accessed by sources defined in the
-   * corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is
-   * specified for `resources`, then this EgressTo rule will authorize access to all resources
-   * outside the perimeter.
+   * A list of resources, currently projects, folders, and organizations in the form
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`, that
+   * are allowed to be accessed by sources defined in the corresponding EgressFrom. A request
+   * matches if it contains a resource in this list. If `*` is specified for `resources`, then this
+   * EgressTo rule will authorize access to all resources outside the perimeter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -135,11 +135,11 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
   }
 
   /**
-   * A list of resources, currently projects, folders, and organizations in the form `projects/`,
-   * `folders/`, and `organizations/`, that are allowed to be accessed by sources defined in the
-   * corresponding EgressFrom. A request matches if it contains a resource in this list. If `*` is
-   * specified for `resources`, then this EgressTo rule will authorize access to all resources
-   * outside the perimeter.
+   * A list of resources, currently projects, folders, and organizations in the form
+   * `projects/{project_number}`, `folders/{folder_id}`, and `organizations/{organization_id}`, that
+   * are allowed to be accessed by sources defined in the corresponding EgressFrom. A request
+   * matches if it contains a resource in this list. If `*` is specified for `resources`, then this
+   * EgressTo rule will authorize access to all resources outside the perimeter.
    * @param resources resources or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressTo setResources(java.util.List<java.lang.String> resources) {
@@ -149,7 +149,7 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
 
   /**
    * IAM roles that represent the set of operations that the sources specified in the corresponding
-   * EgressFrom. are allowed to perform in this ServicePerimeter.
+   * EgressFrom are allowed to perform in this ServicePerimeter.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRoles() {
@@ -158,7 +158,7 @@ public final class GoogleIdentityAccesscontextmanagerV1EgressTo extends com.goog
 
   /**
    * IAM roles that represent the set of operations that the sources specified in the corresponding
-   * EgressFrom. are allowed to perform in this ServicePerimeter.
+   * EgressFrom are allowed to perform in this ServicePerimeter.
    * @param roles roles or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1EgressTo setRoles(java.util.List<java.lang.String> roles) {

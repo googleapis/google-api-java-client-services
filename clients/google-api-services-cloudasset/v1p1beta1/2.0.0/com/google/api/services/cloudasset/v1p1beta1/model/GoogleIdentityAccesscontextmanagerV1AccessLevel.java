@@ -62,7 +62,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   private java.lang.String name;
 
   /**
-   * Human readable title. Must be unique within the Policy.
+   * Human-readable title. Must be unique within the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -143,7 +143,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   }
 
   /**
-   * Human readable title. Must be unique within the Policy.
+   * Human-readable title. Must be unique within the policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -151,7 +151,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessLevel extends com.g
   }
 
   /**
-   * Human readable title. Must be unique within the Policy.
+   * Human-readable title. Must be unique within the policy.
    * @param title title or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AccessLevel setTitle(java.lang.String title) {

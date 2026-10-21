@@ -34,7 +34,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
 
   /**
    * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
-   * always be a strongly validated etag, meaning that two Access Policies will be identical if and
+   * always be a strongly validated etag, meaning that two access policies will be identical if and
    * only if their etags are identical. Clients should not expect this to be in any specific format.
    * The value may be {@code null}.
    */
@@ -62,7 +62,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
    * its resources can be referenced. For example, policy A with `scopes=["folders/123"]` has the
    * following behavior: - ServicePerimeter can only restrict projects within `folders/123`. -
    * ServicePerimeter within policy A can only reference access levels defined within policy A. -
-   * Only one policy can include a given scope; thus, attempting to create a second policy which
+   * Only one policy can include a given scope; thus, attempting to create a second policy that
    * includes `folders/123` will result in an error. If no scopes are provided, then any resource
    * within the organization can be restricted. Scopes cannot be modified after a policy is created.
    * Policies can only have a single scope. Format: list of `folders/{folder_number}` or
@@ -73,7 +73,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
   private java.util.List<java.lang.String> scopes;
 
   /**
-   * Required. Human readable title. Does not affect behavior.
+   * Required. Human-readable title. Does not affect behavior.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,7 +81,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
 
   /**
    * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
-   * always be a strongly validated etag, meaning that two Access Policies will be identical if and
+   * always be a strongly validated etag, meaning that two access policies will be identical if and
    * only if their etags are identical. Clients should not expect this to be in any specific format.
    * @return value or {@code null} for none
    */
@@ -91,7 +91,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
 
   /**
    * Output only. An opaque identifier for the current version of the `AccessPolicy`. This will
-   * always be a strongly validated etag, meaning that two Access Policies will be identical if and
+   * always be a strongly validated etag, meaning that two access policies will be identical if and
    * only if their etags are identical. Clients should not expect this to be in any specific format.
    * @param etag etag or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
    * its resources can be referenced. For example, policy A with `scopes=["folders/123"]` has the
    * following behavior: - ServicePerimeter can only restrict projects within `folders/123`. -
    * ServicePerimeter within policy A can only reference access levels defined within policy A. -
-   * Only one policy can include a given scope; thus, attempting to create a second policy which
+   * Only one policy can include a given scope; thus, attempting to create a second policy that
    * includes `folders/123` will result in an error. If no scopes are provided, then any resource
    * within the organization can be restricted. Scopes cannot be modified after a policy is created.
    * Policies can only have a single scope. Format: list of `folders/{folder_number}` or
@@ -159,7 +159,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
    * its resources can be referenced. For example, policy A with `scopes=["folders/123"]` has the
    * following behavior: - ServicePerimeter can only restrict projects within `folders/123`. -
    * ServicePerimeter within policy A can only reference access levels defined within policy A. -
-   * Only one policy can include a given scope; thus, attempting to create a second policy which
+   * Only one policy can include a given scope; thus, attempting to create a second policy that
    * includes `folders/123` will result in an error. If no scopes are provided, then any resource
    * within the organization can be restricted. Scopes cannot be modified after a policy is created.
    * Policies can only have a single scope. Format: list of `folders/{folder_number}` or
@@ -172,7 +172,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
   }
 
   /**
-   * Required. Human readable title. Does not affect behavior.
+   * Required. Human-readable title. Does not affect behavior.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -180,7 +180,7 @@ public final class GoogleIdentityAccesscontextmanagerV1AccessPolicy extends com.
   }
 
   /**
-   * Required. Human readable title. Does not affect behavior.
+   * Required. Human-readable title. Does not affect behavior.
    * @param title title or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1AccessPolicy setTitle(java.lang.String title) {

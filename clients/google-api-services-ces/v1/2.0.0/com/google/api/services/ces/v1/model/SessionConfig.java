@@ -39,9 +39,12 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
   private java.lang.String deployment;
 
   /**
-   * Optional. Whether to enable streaming text outputs from the model. By default, text outputs
-   * from the model are collected before sending to the client. NOTE: This is only supported for
-   * text (non-voice) sessions via StreamRunSession or BidiRunSession.
+   * Optional. Whether to stream text output from the model to the client incrementally as it is
+   * generated. Defaults to `false`. * When disabled, the model's text output is buffered, and each
+   * text output sent to the client is a complete sentence. Clients can render each text output on a
+   * new line. * When enabled, each text output may contain only part of a sentence. Clients should
+   * concatenate consecutive text outputs to render the complete response. NOTE: This is only
+   * supported for text (non-voice) sessions using StreamRunSession or BidiRunSession.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,6 +81,21 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Message.class);
   }
+
+  /**
+   * Optional. Whether to include LLM thought summaries in the session outputs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeLlmThoughtSummary;
+
+  /**
+   * Optional. Whether to include intermediate processing update to the client. If enabled, the
+   * update will be sent back in SessionOutput.progress.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeProgressUpdate;
 
   /**
    * Optional. Configuration for processing the input audio.
@@ -141,9 +159,12 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Whether to enable streaming text outputs from the model. By default, text outputs
-   * from the model are collected before sending to the client. NOTE: This is only supported for
-   * text (non-voice) sessions via StreamRunSession or BidiRunSession.
+   * Optional. Whether to stream text output from the model to the client incrementally as it is
+   * generated. Defaults to `false`. * When disabled, the model's text output is buffered, and each
+   * text output sent to the client is a complete sentence. Clients can render each text output on a
+   * new line. * When enabled, each text output may contain only part of a sentence. Clients should
+   * concatenate consecutive text outputs to render the complete response. NOTE: This is only
+   * supported for text (non-voice) sessions using StreamRunSession or BidiRunSession.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableTextStreaming() {
@@ -151,9 +172,12 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Optional. Whether to enable streaming text outputs from the model. By default, text outputs
-   * from the model are collected before sending to the client. NOTE: This is only supported for
-   * text (non-voice) sessions via StreamRunSession or BidiRunSession.
+   * Optional. Whether to stream text output from the model to the client incrementally as it is
+   * generated. Defaults to `false`. * When disabled, the model's text output is buffered, and each
+   * text output sent to the client is a complete sentence. Clients can render each text output on a
+   * new line. * When enabled, each text output may contain only part of a sentence. Clients should
+   * concatenate consecutive text outputs to render the complete response. NOTE: This is only
+   * supported for text (non-voice) sessions using StreamRunSession or BidiRunSession.
    * @param enableTextStreaming enableTextStreaming or {@code null} for none
    */
   public SessionConfig setEnableTextStreaming(java.lang.Boolean enableTextStreaming) {
@@ -219,6 +243,42 @@ public final class SessionConfig extends com.google.api.client.json.GenericJson 
    */
   public SessionConfig setHistoricalContexts(java.util.List<Message> historicalContexts) {
     this.historicalContexts = historicalContexts;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to include LLM thought summaries in the session outputs.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeLlmThoughtSummary() {
+    return includeLlmThoughtSummary;
+  }
+
+  /**
+   * Optional. Whether to include LLM thought summaries in the session outputs.
+   * @param includeLlmThoughtSummary includeLlmThoughtSummary or {@code null} for none
+   */
+  public SessionConfig setIncludeLlmThoughtSummary(java.lang.Boolean includeLlmThoughtSummary) {
+    this.includeLlmThoughtSummary = includeLlmThoughtSummary;
+    return this;
+  }
+
+  /**
+   * Optional. Whether to include intermediate processing update to the client. If enabled, the
+   * update will be sent back in SessionOutput.progress.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeProgressUpdate() {
+    return includeProgressUpdate;
+  }
+
+  /**
+   * Optional. Whether to include intermediate processing update to the client. If enabled, the
+   * update will be sent back in SessionOutput.progress.
+   * @param includeProgressUpdate includeProgressUpdate or {@code null} for none
+   */
+  public SessionConfig setIncludeProgressUpdate(java.lang.Boolean includeProgressUpdate) {
+    this.includeProgressUpdate = includeProgressUpdate;
     return this;
   }
 

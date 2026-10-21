@@ -17,7 +17,7 @@
 package com.google.api.services.ces.v1.model;
 
 /**
- * A single personalized onboarding suggestion chip for the AI assistant's zero state.
+ * A single personalized onboarding suggestion chip for Arc's zero state.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a

@@ -66,6 +66,16 @@ public final class GuardrailContentFilter extends com.google.api.client.json.Gen
   private java.lang.String matchType;
 
   /**
+   * Optional. Entries of the sensitive words list that this guardrail allows. Only valid when
+   * match_type is SENSITIVE_WORDS. Each value must equal a list entry (case-insensitive,
+   * surrounding whitespace ignored); other values have no effect. Applies to this guardrail only.
+   * At most 1000 entries of up to 256 characters each.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> sensitiveWordsExemptions;
+
+  /**
    * Optional. List of banned phrases. Applies to both user inputs and agent responses.
    * @return value or {@code null} for none
    */
@@ -147,6 +157,29 @@ public final class GuardrailContentFilter extends com.google.api.client.json.Gen
    */
   public GuardrailContentFilter setMatchType(java.lang.String matchType) {
     this.matchType = matchType;
+    return this;
+  }
+
+  /**
+   * Optional. Entries of the sensitive words list that this guardrail allows. Only valid when
+   * match_type is SENSITIVE_WORDS. Each value must equal a list entry (case-insensitive,
+   * surrounding whitespace ignored); other values have no effect. Applies to this guardrail only.
+   * At most 1000 entries of up to 256 characters each.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getSensitiveWordsExemptions() {
+    return sensitiveWordsExemptions;
+  }
+
+  /**
+   * Optional. Entries of the sensitive words list that this guardrail allows. Only valid when
+   * match_type is SENSITIVE_WORDS. Each value must equal a list entry (case-insensitive,
+   * surrounding whitespace ignored); other values have no effect. Applies to this guardrail only.
+   * At most 1000 entries of up to 256 characters each.
+   * @param sensitiveWordsExemptions sensitiveWordsExemptions or {@code null} for none
+   */
+  public GuardrailContentFilter setSensitiveWordsExemptions(java.util.List<java.lang.String> sensitiveWordsExemptions) {
+    this.sensitiveWordsExemptions = sensitiveWordsExemptions;
     return this;
   }
 

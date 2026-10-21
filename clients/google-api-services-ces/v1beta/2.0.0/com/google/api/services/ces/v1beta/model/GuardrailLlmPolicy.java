@@ -74,7 +74,8 @@ public final class GuardrailLlmPolicy extends com.google.api.client.json.Generic
   private java.lang.String policyScope;
 
   /**
-   * Required. Policy prompt.
+   * Required. Policy prompt. Supports session variable placeholders (`{var}`) as well as
+   * `{agent_system_instruction}` to inject the agent's resolved system instructions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -180,7 +181,8 @@ public final class GuardrailLlmPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Policy prompt.
+   * Required. Policy prompt. Supports session variable placeholders (`{var}`) as well as
+   * `{agent_system_instruction}` to inject the agent's resolved system instructions.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrompt() {
@@ -188,7 +190,8 @@ public final class GuardrailLlmPolicy extends com.google.api.client.json.Generic
   }
 
   /**
-   * Required. Policy prompt.
+   * Required. Policy prompt. Supports session variable placeholders (`{var}`) as well as
+   * `{agent_system_instruction}` to inject the agent's resolved system instructions.
    * @param prompt prompt or {@code null} for none
    */
   public GuardrailLlmPolicy setPrompt(java.lang.String prompt) {

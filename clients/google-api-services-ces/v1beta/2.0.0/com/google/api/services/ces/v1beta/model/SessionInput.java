@@ -66,6 +66,22 @@ public final class SessionInput extends com.google.api.client.json.GenericJson {
   private Image image;
 
   /**
+   * Optional. Whether the conversation may be recorded and logged from here on. Use this when the
+   * app, rather than the agent, decides what may be kept: for example when the end user has to
+   * consent to being recorded before anything about the call can be stored. The value stays in
+   * effect until the client sends a different one, so it only needs to be sent when the answer
+   * changes. Whatever is in effect when a turn completes decides that turn, both whether its audio
+   * reaches the recording bucket and whether its transcript reaches conversation history, BigQuery
+   * and Cloud Logging. It covers the agent's side of the turn as well as the end user's. Turns that
+   * complete before the client first sends this are recorded according to the app's logging
+   * settings, as though the field did not exist. If more than one input in the same request sets
+   * it, the last one wins.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String recordingControl;
+
+  /**
    * Optional. Text data from the end user.
    * The value may be {@code null}.
    */
@@ -209,6 +225,41 @@ public final class SessionInput extends com.google.api.client.json.GenericJson {
    */
   public SessionInput setImage(Image image) {
     this.image = image;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the conversation may be recorded and logged from here on. Use this when the
+   * app, rather than the agent, decides what may be kept: for example when the end user has to
+   * consent to being recorded before anything about the call can be stored. The value stays in
+   * effect until the client sends a different one, so it only needs to be sent when the answer
+   * changes. Whatever is in effect when a turn completes decides that turn, both whether its audio
+   * reaches the recording bucket and whether its transcript reaches conversation history, BigQuery
+   * and Cloud Logging. It covers the agent's side of the turn as well as the end user's. Turns that
+   * complete before the client first sends this are recorded according to the app's logging
+   * settings, as though the field did not exist. If more than one input in the same request sets
+   * it, the last one wins.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRecordingControl() {
+    return recordingControl;
+  }
+
+  /**
+   * Optional. Whether the conversation may be recorded and logged from here on. Use this when the
+   * app, rather than the agent, decides what may be kept: for example when the end user has to
+   * consent to being recorded before anything about the call can be stored. The value stays in
+   * effect until the client sends a different one, so it only needs to be sent when the answer
+   * changes. Whatever is in effect when a turn completes decides that turn, both whether its audio
+   * reaches the recording bucket and whether its transcript reaches conversation history, BigQuery
+   * and Cloud Logging. It covers the agent's side of the turn as well as the end user's. Turns that
+   * complete before the client first sends this are recorded according to the app's logging
+   * settings, as though the field did not exist. If more than one input in the same request sets
+   * it, the last one wins.
+   * @param recordingControl recordingControl or {@code null} for none
+   */
+  public SessionInput setRecordingControl(java.lang.String recordingControl) {
+    this.recordingControl = recordingControl;
     return this;
   }
 

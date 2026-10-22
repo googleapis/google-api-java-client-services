@@ -17,7 +17,7 @@
 package com.google.api.services.fcm.v1.model;
 
 /**
- * A Remote Notification message that is sent to an Android device.
+ * A Remote Notification message that is sent to Android devices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase Cloud Messaging API. For a detailed

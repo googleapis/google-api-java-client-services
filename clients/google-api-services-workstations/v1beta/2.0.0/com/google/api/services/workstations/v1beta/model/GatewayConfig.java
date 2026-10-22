@@ -31,11 +31,50 @@ package com.google.api.services.workstations.v1beta.model;
 public final class GatewayConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Specifies VM ports that can be accessed using the standard `$HOSTNAME:$PORT` format
+   * in addition to the service's default `$PORT-$HOSTNAME` format. See [Access HTTP Servers Running
+   * on Workstations] (https://docs.cloud.google.com/workstations/docs/access-http-servers-running-
+   * on-workstations). Note: This only controls the routing URL format. Network-level access is
+   * still controlled by `allowed_ports` on WorkstationConfig. All `allowed_ports` remain accessible
+   * via the default `$PORT-$HOSTNAME` format.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.Integer> directAccessPorts;
+
+  /**
    * Optional. Whether HTTP/2 is enabled for this workstation cluster. Defaults to false.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean http2Enabled;
+
+  /**
+   * Optional. Specifies VM ports that can be accessed using the standard `$HOSTNAME:$PORT` format
+   * in addition to the service's default `$PORT-$HOSTNAME` format. See [Access HTTP Servers Running
+   * on Workstations] (https://docs.cloud.google.com/workstations/docs/access-http-servers-running-
+   * on-workstations). Note: This only controls the routing URL format. Network-level access is
+   * still controlled by `allowed_ports` on WorkstationConfig. All `allowed_ports` remain accessible
+   * via the default `$PORT-$HOSTNAME` format.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.Integer> getDirectAccessPorts() {
+    return directAccessPorts;
+  }
+
+  /**
+   * Optional. Specifies VM ports that can be accessed using the standard `$HOSTNAME:$PORT` format
+   * in addition to the service's default `$PORT-$HOSTNAME` format. See [Access HTTP Servers Running
+   * on Workstations] (https://docs.cloud.google.com/workstations/docs/access-http-servers-running-
+   * on-workstations). Note: This only controls the routing URL format. Network-level access is
+   * still controlled by `allowed_ports` on WorkstationConfig. All `allowed_ports` remain accessible
+   * via the default `$PORT-$HOSTNAME` format.
+   * @param directAccessPorts directAccessPorts or {@code null} for none
+   */
+  public GatewayConfig setDirectAccessPorts(java.util.List<java.lang.Integer> directAccessPorts) {
+    this.directAccessPorts = directAccessPorts;
+    return this;
+  }
 
   /**
    * Optional. Whether HTTP/2 is enabled for this workstation cluster. Defaults to false.

@@ -1,6 +1,6 @@
 # Deep Review API Client Library for Java
 
-Deep Review API for automated conference-quality scientific paper reviews.
+Deep Review API for automated, in-depth document reviews.
 
 This page contains information about getting started with the Deep Review API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-deepreview</artifactId>
-      <version>v1-rev20261016-2.0.0</version>
+      <version>v1-rev20261019-2.0.0</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-deepreview:v1-rev20261016-2.0.0'
+  implementation 'com.google.apis:google-api-services-deepreview:v1-rev20261019-2.0.0'
 }
 ```
 

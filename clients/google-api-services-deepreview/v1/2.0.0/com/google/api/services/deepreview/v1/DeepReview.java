@@ -20,12 +20,12 @@ package com.google.api.services.deepreview.v1;
  * Service definition for DeepReview (v1).
  *
  * <p>
- * Deep Review API for automated conference-quality scientific paper reviews.
+ * Deep Review API for automated, in-depth document reviews.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://research.google/" target="_blank">API Documentation</a>
+ * <a href="https://research.google/deepreview" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

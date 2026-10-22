@@ -46,10 +46,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Per-cluster admission rules. Cluster spec format: `location.clusterId`. There can be
-   * at most one admission rule per cluster spec. A `location` is either a compute zone (e.g. us-
-   * central1-a) or a region (e.g. us-central1). For `clusterId` syntax restrictions see
-   * https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.
+   * Optional. A valid Policy has only one of the following rule maps non-empty, i.e. only one of
+   * cluster_admission_rules, kubernetes_service_account_admission_rules or
+   * istio_service_identity_admission_rules can be non-empty. Per-cluster admission rules. Cluster
+   * spec format: `location.clusterId`. There can be at most one admission rule per cluster spec. A
+   * `location` is either a compute zone (e.g. us-central1-a) or a region (e.g. us-central1). For
+   * `clusterId` syntax restrictions see https://cloud.google.com/container-
+   * engine/reference/rest/v1/projects.zones.clusters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -172,10 +175,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Per-cluster admission rules. Cluster spec format: `location.clusterId`. There can be
-   * at most one admission rule per cluster spec. A `location` is either a compute zone (e.g. us-
-   * central1-a) or a region (e.g. us-central1). For `clusterId` syntax restrictions see
-   * https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.
+   * Optional. A valid Policy has only one of the following rule maps non-empty, i.e. only one of
+   * cluster_admission_rules, kubernetes_service_account_admission_rules or
+   * istio_service_identity_admission_rules can be non-empty. Per-cluster admission rules. Cluster
+   * spec format: `location.clusterId`. There can be at most one admission rule per cluster spec. A
+   * `location` is either a compute zone (e.g. us-central1-a) or a region (e.g. us-central1). For
+   * `clusterId` syntax restrictions see https://cloud.google.com/container-
+   * engine/reference/rest/v1/projects.zones.clusters.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, AdmissionRule> getClusterAdmissionRules() {
@@ -183,10 +189,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Per-cluster admission rules. Cluster spec format: `location.clusterId`. There can be
-   * at most one admission rule per cluster spec. A `location` is either a compute zone (e.g. us-
-   * central1-a) or a region (e.g. us-central1). For `clusterId` syntax restrictions see
-   * https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.
+   * Optional. A valid Policy has only one of the following rule maps non-empty, i.e. only one of
+   * cluster_admission_rules, kubernetes_service_account_admission_rules or
+   * istio_service_identity_admission_rules can be non-empty. Per-cluster admission rules. Cluster
+   * spec format: `location.clusterId`. There can be at most one admission rule per cluster spec. A
+   * `location` is either a compute zone (e.g. us-central1-a) or a region (e.g. us-central1). For
+   * `clusterId` syntax restrictions see https://cloud.google.com/container-
+   * engine/reference/rest/v1/projects.zones.clusters.
    * @param clusterAdmissionRules clusterAdmissionRules or {@code null} for none
    */
   public Policy setClusterAdmissionRules(java.util.Map<String, AdmissionRule> clusterAdmissionRules) {

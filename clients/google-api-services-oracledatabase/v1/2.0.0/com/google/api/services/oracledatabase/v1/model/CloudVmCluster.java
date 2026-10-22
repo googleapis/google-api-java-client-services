@@ -124,6 +124,15 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
+   * Optional. Immutable. The name of the OdbDnsZone for using custom domain name for the VM
+   * Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String odbDnsZone;
+
+  /**
    * Optional. Immutable. The name of the OdbNetwork associated with the VM Cluster. Format:
    * projects/{project}/locations/{location}/odbNetworks/{odb_network} It is optional but if
    * specified, this should match the parent ODBNetwork of the odb_subnet and backup_odb_subnet.
@@ -365,6 +374,27 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
    */
   public CloudVmCluster setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The name of the OdbDnsZone for using custom domain name for the VM
+   * Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getOdbDnsZone() {
+    return odbDnsZone;
+  }
+
+  /**
+   * Optional. Immutable. The name of the OdbDnsZone for using custom domain name for the VM
+   * Cluster. Format:
+   * projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}
+   * @param odbDnsZone odbDnsZone or {@code null} for none
+   */
+  public CloudVmCluster setOdbDnsZone(java.lang.String odbDnsZone) {
+    this.odbDnsZone = odbDnsZone;
     return this;
   }
 

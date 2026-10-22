@@ -6271,6 +6271,1246 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
 
       }
       /**
+       * An accessor for creating requests from the DatabaseConnections collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+       *   {@code OracleDatabase.DatabaseConnections.List request = oracledatabase.databaseConnections().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public DatabaseConnections databaseConnections() {
+        return new DatabaseConnections();
+      }
+
+      /**
+       * The "databaseConnections" collection of methods.
+       */
+      public class DatabaseConnections {
+
+        /**
+         * Creates a new DatabaseConnection in a given project and location.
+         *
+         * Create a request for the method "databaseConnections.create".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent value for the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.DatabaseConnection}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.oracledatabase.v1.model.DatabaseConnection content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/databaseConnections";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new DatabaseConnection in a given project and location.
+           *
+           * Create a request for the method "databaseConnections.create".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent value for the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.DatabaseConnection}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.oracledatabase.v1.model.DatabaseConnection content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent value for the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent value for the DatabaseConnection in the following format:
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent value for the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the DatabaseConnection to create. This value is restricted to
+           * (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length.
+           * The value must start with a letter and end with a letter or a number.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String databaseConnectionId;
+
+          /** Required. The ID of the DatabaseConnection to create. This value is restricted to
+         (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length. The value
+         must start with a letter and end with a letter or a number.
+           */
+          public java.lang.String getDatabaseConnectionId() {
+            return databaseConnectionId;
+          }
+
+          /**
+           * Required. The ID of the DatabaseConnection to create. This value is restricted to
+           * (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length.
+           * The value must start with a letter and end with a letter or a number.
+           */
+          public Create setDatabaseConnectionId(java.lang.String databaseConnectionId) {
+            this.databaseConnectionId = databaseConnectionId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single DatabaseConnection.
+         *
+         * Create a request for the method "databaseConnections.delete".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the resource in the following format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+
+          /**
+           * Deletes a single DatabaseConnection.
+           *
+           * Create a request for the method "databaseConnections.delete".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the resource in the following format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(OracleDatabase.this, "DELETE", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the resource in the following format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the resource in the following format:
+         projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the resource in the following format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Executes a SQL statement on a DatabaseConnection.
+         *
+         * Create a request for the method "databaseConnections.executeSql".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link ExecuteSql#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.ExecuteSqlRequest}
+         * @return the request
+         */
+        public ExecuteSql executeSql(java.lang.String name, com.google.api.services.oracledatabase.v1.model.ExecuteSqlRequest content) throws java.io.IOException {
+          ExecuteSql result = new ExecuteSql(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class ExecuteSql extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ExecuteSqlResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:executeSql";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+
+          /**
+           * Executes a SQL statement on a DatabaseConnection.
+           *
+           * Create a request for the method "databaseConnections.executeSql".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link ExecuteSql#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * ExecuteSql#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.ExecuteSqlRequest}
+           * @since 1.13
+           */
+          protected ExecuteSql(java.lang.String name, com.google.api.services.oracledatabase.v1.model.ExecuteSqlRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.ExecuteSqlResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public ExecuteSql set$Xgafv(java.lang.String $Xgafv) {
+            return (ExecuteSql) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public ExecuteSql setAccessToken(java.lang.String accessToken) {
+            return (ExecuteSql) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public ExecuteSql setAlt(java.lang.String alt) {
+            return (ExecuteSql) super.setAlt(alt);
+          }
+
+          @Override
+          public ExecuteSql setCallback(java.lang.String callback) {
+            return (ExecuteSql) super.setCallback(callback);
+          }
+
+          @Override
+          public ExecuteSql setFields(java.lang.String fields) {
+            return (ExecuteSql) super.setFields(fields);
+          }
+
+          @Override
+          public ExecuteSql setKey(java.lang.String key) {
+            return (ExecuteSql) super.setKey(key);
+          }
+
+          @Override
+          public ExecuteSql setOauthToken(java.lang.String oauthToken) {
+            return (ExecuteSql) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public ExecuteSql setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (ExecuteSql) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public ExecuteSql setQuotaUser(java.lang.String quotaUser) {
+            return (ExecuteSql) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public ExecuteSql setUploadType(java.lang.String uploadType) {
+            return (ExecuteSql) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public ExecuteSql setUploadProtocol(java.lang.String uploadProtocol) {
+            return (ExecuteSql) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DatabaseConnection in the following format:
+         projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          public ExecuteSql setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public ExecuteSql set(String parameterName, Object value) {
+            return (ExecuteSql) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single DatabaseConnection.
+         *
+         * Create a request for the method "databaseConnections.get".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.DatabaseConnection> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+
+          /**
+           * Gets details of a single DatabaseConnection.
+           *
+           * Create a request for the method "databaseConnections.get".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.DatabaseConnection.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DatabaseConnection in the following format:
+         projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}.
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists DatabaseConnections in a given project and location.
+         *
+         * Create a request for the method "databaseConnections.list".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent value for the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListDatabaseConnectionsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/databaseConnections";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists DatabaseConnections in a given project and location.
+           *
+           * Create a request for the method "databaseConnections.list".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent value for the DatabaseConnection in the following format:
+         *        projects/{project}/locations/{location}.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListDatabaseConnectionsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent value for the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent value for the DatabaseConnection in the following format:
+         projects/{project}/locations/{location}.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent value for the DatabaseConnection in the following format:
+           * projects/{project}/locations/{location}.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. An expression for filtering the results of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An expression for filtering the results of the request.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. An expression for filtering the results of the request. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. An expression for ordering the results of the request. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. An expression for ordering the results of the request.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. An expression for ordering the results of the request. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, at most 50
+           * DatabaseConnections will be returned. The maximum value is 1000; values above 1000 will
+           * be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return. If unspecified, at most 50 DatabaseConnections
+         will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of items to return. If unspecified, at most 50
+           * DatabaseConnections will be returned. The maximum value is 1000; values above 1000 will
+           * be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A token identifying a page of results the server should return.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A token identifying a page of results the server should return. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single DatabaseConnection.
+         *
+         * Create a request for the method "databaseConnections.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the DatabaseConnection. Format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.DatabaseConnection}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DatabaseConnection content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+
+          /**
+           * Updates the parameters of a single DatabaseConnection.
+           *
+           * Create a request for the method "databaseConnections.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the DatabaseConnection. Format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.DatabaseConnection}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DatabaseConnection content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the DatabaseConnection. Format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the DatabaseConnection. Format:
+         projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the DatabaseConnection. Format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the DatabaseConnection should be updated. A
+           * field specified in the mask is overwritten. If a mask isn't provided then all the
+           * fields in the DatabaseConnection are overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the DatabaseConnection should be updated. A field
+         specified in the mask is overwritten. If a mask isn't provided then all the fields in the
+         DatabaseConnection are overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the DatabaseConnection should be updated. A
+           * field specified in the mask is overwritten. If a mask isn't provided then all the
+           * fields in the DatabaseConnection are overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Tests connectivity of a DatabaseConnection.
+         *
+         * Create a request for the method "databaseConnections.test".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Test#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the DatabaseConnection to test. Format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.TestDatabaseConnectionRequest}
+         * @return the request
+         */
+        public Test test(java.lang.String name, com.google.api.services.oracledatabase.v1.model.TestDatabaseConnectionRequest content) throws java.io.IOException {
+          Test result = new Test(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Test extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.TestDatabaseConnectionResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:test";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+
+          /**
+           * Tests connectivity of a DatabaseConnection.
+           *
+           * Create a request for the method "databaseConnections.test".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Test#execute()} method to invoke the remote operation. <p>
+           * {@link Test#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the DatabaseConnection to test. Format:
+         *        projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.TestDatabaseConnectionRequest}
+           * @since 1.13
+           */
+          protected Test(java.lang.String name, com.google.api.services.oracledatabase.v1.model.TestDatabaseConnectionRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.TestDatabaseConnectionResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+          }
+
+          @Override
+          public Test set$Xgafv(java.lang.String $Xgafv) {
+            return (Test) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Test setAccessToken(java.lang.String accessToken) {
+            return (Test) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Test setAlt(java.lang.String alt) {
+            return (Test) super.setAlt(alt);
+          }
+
+          @Override
+          public Test setCallback(java.lang.String callback) {
+            return (Test) super.setCallback(callback);
+          }
+
+          @Override
+          public Test setFields(java.lang.String fields) {
+            return (Test) super.setFields(fields);
+          }
+
+          @Override
+          public Test setKey(java.lang.String key) {
+            return (Test) super.setKey(key);
+          }
+
+          @Override
+          public Test setOauthToken(java.lang.String oauthToken) {
+            return (Test) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Test setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Test) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Test setQuotaUser(java.lang.String quotaUser) {
+            return (Test) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Test setUploadType(java.lang.String uploadType) {
+            return (Test) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Test setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Test) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the DatabaseConnection to test. Format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the DatabaseConnection to test. Format:
+         projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the DatabaseConnection to test. Format:
+           * projects/{project}/locations/{location}/databaseConnections/{database_connection}
+           */
+          public Test setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/databaseConnections/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Test set(String parameterName, Object value) {
+            return (Test) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the Databases collection.
        *
        * <p>The typical use is:</p>
@@ -16430,7 +17670,977 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
             return (List) super.set(parameterName, value);
           }
         }
+        /**
+         * Updates the `labels` and `service_connectivity_config` of a single OdbNetwork.
+         *
+         * Create a request for the method "odbNetworks.patch".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The name of the OdbNetwork resource in the following format:
+         *        projects/{project}/locations/{region}/odbNetworks/{odb_network}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.OdbNetwork}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.OdbNetwork content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
 
+        public class Patch extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+
+          /**
+           * Updates the `labels` and `service_connectivity_config` of a single OdbNetwork.
+           *
+           * Create a request for the method "odbNetworks.patch".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The name of the OdbNetwork resource in the following format:
+         *        projects/{project}/locations/{region}/odbNetworks/{odb_network}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.OdbNetwork}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.oracledatabase.v1.model.OdbNetwork content) {
+            super(OracleDatabase.this, "PATCH", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The name of the OdbNetwork resource in the following format:
+           * projects/{project}/locations/{region}/odbNetworks/{odb_network}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The name of the OdbNetwork resource in the following format:
+         projects/{project}/locations/{region}/odbNetworks/{odb_network}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The name of the OdbNetwork resource in the following format:
+           * projects/{project}/locations/{region}/odbNetworks/{odb_network}
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+         requests. If you make a request with the same request ID and the original request is still in
+         progress or completed, the server ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional ID to identify the request. This value is used to identify
+           * duplicate requests. If you make a request with the same request ID and the original
+           * request is still in progress or completed, the server ignores the second request. This
+           * prevents clients from accidentally creating duplicate commitments. The request ID must
+           * be a valid UUID with the exception that zero UUID is not supported
+           * (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the OdbNetwork should be updated. A field
+           * specified in the mask is updated. If a mask isn't provided, the service treats this as
+           * an implied field mask equivalent to all fields that are populated (have a non-empty
+           * value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. A mask specifying which fields in the OdbNetwork should be updated. A field specified in
+         the mask is updated. If a mask isn't provided, the service treats this as an implied field mask
+         equivalent to all fields that are populated (have a non-empty value). To clear or unset a field,
+         the field must be explicitly specified in the `update_mask`.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. A mask specifying which fields in the OdbNetwork should be updated. A field
+           * specified in the mask is updated. If a mask isn't provided, the service treats this as
+           * an implied field mask equivalent to all fields that are populated (have a non-empty
+           * value). To clear or unset a field, the field must be explicitly specified in the
+           * `update_mask`.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the OdbDnsZones collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code OracleDatabase oracledatabase = new OracleDatabase(...);}
+         *   {@code OracleDatabase.OdbDnsZones.List request = oracledatabase.odbDnsZones().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public OdbDnsZones odbDnsZones() {
+          return new OdbDnsZones();
+        }
+
+        /**
+         * The "odbDnsZones" collection of methods.
+         */
+        public class OdbDnsZones {
+
+          /**
+           * Creates a new ODB DNS Zone in a given ODB Network.
+           *
+           * Create a request for the method "odbDnsZones.create".
+           *
+           * This request holds the parameters needed by the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent value for the OdbDnsZone in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.OdbDnsZone}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.oracledatabase.v1.model.OdbDnsZone content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/odbDnsZones";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+
+            /**
+             * Creates a new ODB DNS Zone in a given ODB Network.
+             *
+             * Create a request for the method "odbDnsZones.create".
+             *
+             * This request holds the parameters needed by the the oracledatabase server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent value for the OdbDnsZone in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             * @param content the {@link com.google.api.services.oracledatabase.v1.model.OdbDnsZone}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.oracledatabase.v1.model.OdbDnsZone content) {
+              super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent value for the OdbDnsZone in the following format:
+             * projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent value for the OdbDnsZone in the following format:
+           projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent value for the OdbDnsZone in the following format:
+             * projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID of the OdbDnsZone to create. This value is restricted to
+             * (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length.
+             * The value must start with a letter and end with a letter or a number.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String odbDnsZoneId;
+
+            /** Required. The ID of the OdbDnsZone to create. This value is restricted to
+           (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length. The value
+           must start with a letter and end with a letter or a number.
+             */
+            public java.lang.String getOdbDnsZoneId() {
+              return odbDnsZoneId;
+            }
+
+            /**
+             * Required. The ID of the OdbDnsZone to create. This value is restricted to
+             * (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of 63 characters in length.
+             * The value must start with a letter and end with a letter or a number.
+             */
+            public Create setOdbDnsZoneId(java.lang.String odbDnsZoneId) {
+              this.odbDnsZoneId = odbDnsZoneId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional ID to identify the request. This value is used to identify
+             * duplicate requests. If you make a request with the same request ID and the original
+             * request is still in progress or completed, the server ignores the second request.
+             * This prevents clients from accidentally creating duplicate commitments. The request
+             * ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+           requests. If you make a request with the same request ID and the original request is still in
+           progress or completed, the server ignores the second request. This prevents clients from
+           accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+           that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional ID to identify the request. This value is used to identify
+             * duplicate requests. If you make a request with the same request ID and the original
+             * request is still in progress or completed, the server ignores the second request.
+             * This prevents clients from accidentally creating duplicate commitments. The request
+             * ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single ODB DNS Zone.
+           *
+           * Create a request for the method "odbDnsZones.delete".
+           *
+           * This request holds the parameters needed by the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the resource in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zon
+           *        e}.
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbDnsZones/[^/]+$");
+
+            /**
+             * Deletes a single ODB DNS Zone.
+             *
+             * Create a request for the method "odbDnsZones.delete".
+             *
+             * This request holds the parameters needed by the the oracledatabase server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the resource in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zon
+           *        e}.
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(OracleDatabase.this, "DELETE", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbDnsZones/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the resource in the following format: projects/{project}/locati
+             * ons/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the resource in the following format:
+           projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the resource in the following format: projects/{project}/locati
+             * ons/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbDnsZones/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An optional ID to identify the request. This value is used to identify
+             * duplicate requests. If you make a request with the same request ID and the original
+             * request is still in progress or completed, the server ignores the second request.
+             * This prevents clients from accidentally creating duplicate commitments. The request
+             * ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional ID to identify the request. This value is used to identify duplicate
+           requests. If you make a request with the same request ID and the original request is still in
+           progress or completed, the server ignores the second request. This prevents clients from
+           accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+           that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional ID to identify the request. This value is used to identify
+             * duplicate requests. If you make a request with the same request ID and the original
+             * request is still in progress or completed, the server ignores the second request.
+             * This prevents clients from accidentally creating duplicate commitments. The request
+             * ID must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single ODB DNS Zone.
+           *
+           * Create a request for the method "odbDnsZones.get".
+           *
+           * This request holds the parameters needed by the oracledatabase server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the OdbDnsZone in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zon
+           *        e}.
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.OdbDnsZone> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbDnsZones/[^/]+$");
+
+            /**
+             * Gets details of a single ODB DNS Zone.
+             *
+             * Create a request for the method "odbDnsZones.get".
+             *
+             * This request holds the parameters needed by the the oracledatabase server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the OdbDnsZone in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zon
+           *        e}.
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.OdbDnsZone.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbDnsZones/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the OdbDnsZone in the following format: projects/{project}/loca
+             * tions/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the OdbDnsZone in the following format:
+           projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the OdbDnsZone in the following format: projects/{project}/loca
+             * tions/{location}/odbNetworks/{odb_network}/odbDnsZones/{odb_dns_zone}.
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+/odbDnsZones/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists all the ODB DNS Zones in a given ODB Network.
+           *
+           * Create a request for the method "odbDnsZones.list".
+           *
+           * This request holds the parameters needed by the oracledatabase server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent value for the OdbDnsZone in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.ListOdbDnsZonesResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/odbDnsZones";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+
+            /**
+             * Lists all the ODB DNS Zones in a given ODB Network.
+             *
+             * Create a request for the method "odbDnsZones.list".
+             *
+             * This request holds the parameters needed by the the oracledatabase server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent value for the OdbDnsZone in the following format:
+           *        projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(OracleDatabase.this, "GET", REST_PATH, null, com.google.api.services.oracledatabase.v1.model.ListOdbDnsZonesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent value for the OdbDnsZone in the following format:
+             * projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent value for the OdbDnsZone in the following format:
+           projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent value for the OdbDnsZone in the following format:
+             * projects/{project}/locations/{location}/odbNetworks/{odb_network}.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/odbNetworks/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. An expression for filtering the results of the request. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. An expression for filtering the results of the request.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. An expression for filtering the results of the request. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. An expression for ordering the results of the request. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. An expression for ordering the results of the request.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. An expression for ordering the results of the request. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If unspecified, at most 50
+             * OdbDnsZones will be returned. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of items to return. If unspecified, at most 50 OdbDnsZones will be
+           returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of items to return. If unspecified, at most 50
+             * OdbDnsZones will be returned. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results the server should return.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results the server should return. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
         /**
          * An accessor for creating requests from the OdbSubnets collection.
          *

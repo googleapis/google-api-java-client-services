@@ -76,6 +76,24 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Output only. Indicates whether the OdbNetwork is currently reconciling changes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reconciling;
+
+  /**
+   * Optional. Configuration to enable the service (Oracledatabase@Google Cloud) to establish
+   * connectivity to the database. This should be specified if you intend to associate this
+   * OdbNetwork with a DatabaseConnection resource to `ExecuteSQL` on the database, or to create a
+   * ServiceIntegration with the Database. Please don't specify it otherwise to avoid complicating
+   * the network setup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ServiceConnectivityConfig serviceConnectivityConfig;
+
+  /**
    * Output only. State of the ODB Network.
    * The value may be {@code null}.
    */
@@ -187,6 +205,48 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
    */
   public OdbNetwork setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Output only. Indicates whether the OdbNetwork is currently reconciling changes.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReconciling() {
+    return reconciling;
+  }
+
+  /**
+   * Output only. Indicates whether the OdbNetwork is currently reconciling changes.
+   * @param reconciling reconciling or {@code null} for none
+   */
+  public OdbNetwork setReconciling(java.lang.Boolean reconciling) {
+    this.reconciling = reconciling;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration to enable the service (Oracledatabase@Google Cloud) to establish
+   * connectivity to the database. This should be specified if you intend to associate this
+   * OdbNetwork with a DatabaseConnection resource to `ExecuteSQL` on the database, or to create a
+   * ServiceIntegration with the Database. Please don't specify it otherwise to avoid complicating
+   * the network setup.
+   * @return value or {@code null} for none
+   */
+  public ServiceConnectivityConfig getServiceConnectivityConfig() {
+    return serviceConnectivityConfig;
+  }
+
+  /**
+   * Optional. Configuration to enable the service (Oracledatabase@Google Cloud) to establish
+   * connectivity to the database. This should be specified if you intend to associate this
+   * OdbNetwork with a DatabaseConnection resource to `ExecuteSQL` on the database, or to create a
+   * ServiceIntegration with the Database. Please don't specify it otherwise to avoid complicating
+   * the network setup.
+   * @param serviceConnectivityConfig serviceConnectivityConfig or {@code null} for none
+   */
+  public OdbNetwork setServiceConnectivityConfig(ServiceConnectivityConfig serviceConnectivityConfig) {
+    this.serviceConnectivityConfig = serviceConnectivityConfig;
     return this;
   }
 

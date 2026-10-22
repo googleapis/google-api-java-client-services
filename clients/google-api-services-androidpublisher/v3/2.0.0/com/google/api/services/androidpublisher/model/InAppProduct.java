@@ -46,10 +46,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   private Price defaultPrice;
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Allows developers to give their
-   * subscribers a grace period when the payment for the new recurrence period is declined.
-   * Acceptable values are P0D (zero days), P3D (three days), P7D (seven days), P14D (14 days), and
-   * P30D (30 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -107,23 +105,24 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   private java.lang.String status;
 
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are P1W (one week), P1M
-   * (one month), P3M (three months), P6M (six months), and P1Y (one year).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String subscriptionPeriod;
 
   /**
-   * Details about taxes and legal compliance. Only applicable to subscription products.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private SubscriptionTaxAndComplianceSettings subscriptionTaxesAndComplianceSettings;
 
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
-   * days) and P999D (999 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,10 +165,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Allows developers to give their
-   * subscribers a grace period when the payment for the new recurrence period is declined.
-   * Acceptable values are P0D (zero days), P3D (three days), P7D (seven days), P14D (14 days), and
-   * P30D (30 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getGracePeriod() {
@@ -177,10 +174,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Grace period of the subscription, specified in ISO 8601 format. Allows developers to give their
-   * subscribers a grace period when the payment for the new recurrence period is declined.
-   * Acceptable values are P0D (zero days), P3D (three days), P7D (seven days), P14D (14 days), and
-   * P30D (30 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @param gracePeriod gracePeriod or {@code null} for none
    */
   public InAppProduct setGracePeriod(java.lang.String gracePeriod) {
@@ -312,8 +307,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are P1W (one week), P1M
-   * (one month), P3M (three months), P6M (six months), and P1Y (one year).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getSubscriptionPeriod() {
@@ -321,8 +316,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Subscription period, specified in ISO 8601 format. Acceptable values are P1W (one week), P1M
-   * (one month), P3M (three months), P6M (six months), and P1Y (one year).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @param subscriptionPeriod subscriptionPeriod or {@code null} for none
    */
   public InAppProduct setSubscriptionPeriod(java.lang.String subscriptionPeriod) {
@@ -331,7 +326,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about taxes and legal compliance. Only applicable to subscription products.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @return value or {@code null} for none
    */
   public SubscriptionTaxAndComplianceSettings getSubscriptionTaxesAndComplianceSettings() {
@@ -339,7 +335,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Details about taxes and legal compliance. Only applicable to subscription products.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @param subscriptionTaxesAndComplianceSettings subscriptionTaxesAndComplianceSettings or {@code null} for none
    */
   public InAppProduct setSubscriptionTaxesAndComplianceSettings(SubscriptionTaxAndComplianceSettings subscriptionTaxesAndComplianceSettings) {
@@ -348,8 +345,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
-   * days) and P999D (999 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getTrialPeriod() {
@@ -357,8 +354,8 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Trial period, specified in ISO 8601 format. Acceptable values are anything between P7D (seven
-   * days) and P999D (999 days).
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @param trialPeriod trialPeriod or {@code null} for none
    */
   public InAppProduct setTrialPeriod(java.lang.String trialPeriod) {

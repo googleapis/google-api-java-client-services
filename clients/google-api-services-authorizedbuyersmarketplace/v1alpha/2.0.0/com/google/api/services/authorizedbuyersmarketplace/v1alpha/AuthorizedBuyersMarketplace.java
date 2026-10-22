@@ -9225,6 +9225,186 @@ public class AuthorizedBuyersMarketplace extends com.google.api.client.googleapi
         return (List) super.set(parameterName, value);
       }
     }
+    /**
+     * Searches for media planner accounts matching the given DSP seat ID. For curators, this will
+     * return all matching media planners that have accepted curator terms.
+     *
+     * Create a request for the method "mediaPlanners.search".
+     *
+     * This request holds the parameters needed by the authorizedbuyersmarketplace server.  After
+     * setting any optional parameters, call the {@link Search#execute()} method to invoke the remote
+     * operation.
+     *
+     * @return the request
+     */
+    public Search search() throws java.io.IOException {
+      Search result = new Search();
+      initialize(result);
+      return result;
+    }
+
+    public class Search extends AuthorizedBuyersMarketplaceRequest<com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.SearchMediaPlannersResponse> {
+
+      private static final String REST_PATH = "v1alpha/mediaPlanners:search";
+
+      /**
+       * Searches for media planner accounts matching the given DSP seat ID. For curators, this will
+       * return all matching media planners that have accepted curator terms.
+       *
+       * Create a request for the method "mediaPlanners.search".
+       *
+       * This request holds the parameters needed by the the authorizedbuyersmarketplace server.  After
+       * setting any optional parameters, call the {@link Search#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * Search#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @since 1.13
+       */
+      protected Search() {
+        super(AuthorizedBuyersMarketplace.this, "GET", REST_PATH, null, com.google.api.services.authorizedbuyersmarketplace.v1alpha.model.SearchMediaPlannersResponse.class);
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Search set$Xgafv(java.lang.String $Xgafv) {
+        return (Search) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Search setAccessToken(java.lang.String accessToken) {
+        return (Search) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Search setAlt(java.lang.String alt) {
+        return (Search) super.setAlt(alt);
+      }
+
+      @Override
+      public Search setCallback(java.lang.String callback) {
+        return (Search) super.setCallback(callback);
+      }
+
+      @Override
+      public Search setFields(java.lang.String fields) {
+        return (Search) super.setFields(fields);
+      }
+
+      @Override
+      public Search setKey(java.lang.String key) {
+        return (Search) super.setKey(key);
+      }
+
+      @Override
+      public Search setOauthToken(java.lang.String oauthToken) {
+        return (Search) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Search setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Search) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Search setQuotaUser(java.lang.String quotaUser) {
+        return (Search) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Search setUploadType(java.lang.String uploadType) {
+        return (Search) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Search setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Search) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The DSP seat ID to search for. The DSP seat ID is provided by the media planner.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String dspSeatId;
+
+      /** Required. The DSP seat ID to search for. The DSP seat ID is provided by the media planner.
+       */
+      public java.lang.String getDspSeatId() {
+        return dspSeatId;
+      }
+
+      /**
+       * Required. The DSP seat ID to search for. The DSP seat ID is provided by the media planner.
+       */
+      public Search setDspSeatId(java.lang.String dspSeatId) {
+        this.dspSeatId = dspSeatId;
+        return this;
+      }
+
+      /**
+       * Optional. The maximum number of media planners to return. If unspecified, at most 100 media
+       * planners will be returned. The maximum value is 500; values above 500 will be coerced to
+       * 500.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer pageSize;
+
+      /** Optional. The maximum number of media planners to return. If unspecified, at most 100 media
+     planners will be returned. The maximum value is 500; values above 500 will be coerced to 500.
+       */
+      public java.lang.Integer getPageSize() {
+        return pageSize;
+      }
+
+      /**
+       * Optional. The maximum number of media planners to return. If unspecified, at most 100 media
+       * planners will be returned. The maximum value is 500; values above 500 will be coerced to
+       * 500.
+       */
+      public Search setPageSize(java.lang.Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+      }
+
+      /**
+       * Optional. A token identifying a page of results the server should return. This value is
+       * received from a previous `SearchMediaPlanners` call in
+       * `SearchMediaPlannersResponse.nextPageToken`.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Optional. A token identifying a page of results the server should return. This value is received
+     from a previous `SearchMediaPlanners` call in `SearchMediaPlannersResponse.nextPageToken`.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Optional. A token identifying a page of results the server should return. This value is
+       * received from a previous `SearchMediaPlanners` call in
+       * `SearchMediaPlannersResponse.nextPageToken`.
+       */
+      public Search setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public Search set(String parameterName, Object value) {
+        return (Search) super.set(parameterName, value);
+      }
+    }
 
   }
 

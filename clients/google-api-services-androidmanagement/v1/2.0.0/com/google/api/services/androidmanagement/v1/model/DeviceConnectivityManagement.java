@@ -47,8 +47,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   private java.lang.String bluetoothSharing;
 
   /**
-   * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
-   * limited or no control in configuring Wi-Fi networks.
+   * Optional. Controls Wi-Fi configuring privileges. Based on the option set, user will have either
+   * full or limited or no control in configuring Wi-Fi networks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,24 +72,24 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   private PrivateDnsSettings privateDnsSettings;
 
   /**
-   * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
-   * from using different forms of tethering.
+   * Optional. Controls tethering settings. Based on the value set, the user is partially or fully
+   * disallowed from using different forms of tethering.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tetheringSettings;
 
   /**
-   * Controls what files and/or data can be transferred via USB. Supported only on company-owned
-   * devices.
+   * Optional. Controls what files and/or data can be transferred via USB. Supported only on
+   * company-owned devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String usbDataAccess;
 
   /**
-   * Controls configuring and using Wi-Fi direct settings. Supported on company-owned devices
-   * running Android 13 and above.
+   * Optional. Controls configuring and using Wi-Fi direct settings. Supported on company-owned
+   * devices running Android 13 and above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,9 +103,9 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   private WifiRoamingPolicy wifiRoamingPolicy;
 
   /**
-   * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
-   * which networks can be configured on the device. Supported on company-owned devices running
-   * Android 13 and above.
+   * Optional. Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not
+   * affect which networks can be configured on the device. Supported on company-owned devices
+   * running Android 13 and above.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -148,8 +148,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
-   * limited or no control in configuring Wi-Fi networks.
+   * Optional. Controls Wi-Fi configuring privileges. Based on the option set, user will have either
+   * full or limited or no control in configuring Wi-Fi networks.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfigureWifi() {
@@ -157,8 +157,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls Wi-Fi configuring privileges. Based on the option set, user will have either full or
-   * limited or no control in configuring Wi-Fi networks.
+   * Optional. Controls Wi-Fi configuring privileges. Based on the option set, user will have either
+   * full or limited or no control in configuring Wi-Fi networks.
    * @param configureWifi configureWifi or {@code null} for none
    */
   public DeviceConnectivityManagement setConfigureWifi(java.lang.String configureWifi) {
@@ -207,8 +207,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
-   * from using different forms of tethering.
+   * Optional. Controls tethering settings. Based on the value set, the user is partially or fully
+   * disallowed from using different forms of tethering.
    * @return value or {@code null} for none
    */
   public java.lang.String getTetheringSettings() {
@@ -216,8 +216,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls tethering settings. Based on the value set, the user is partially or fully disallowed
-   * from using different forms of tethering.
+   * Optional. Controls tethering settings. Based on the value set, the user is partially or fully
+   * disallowed from using different forms of tethering.
    * @param tetheringSettings tetheringSettings or {@code null} for none
    */
   public DeviceConnectivityManagement setTetheringSettings(java.lang.String tetheringSettings) {
@@ -226,8 +226,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls what files and/or data can be transferred via USB. Supported only on company-owned
-   * devices.
+   * Optional. Controls what files and/or data can be transferred via USB. Supported only on
+   * company-owned devices.
    * @return value or {@code null} for none
    */
   public java.lang.String getUsbDataAccess() {
@@ -235,8 +235,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls what files and/or data can be transferred via USB. Supported only on company-owned
-   * devices.
+   * Optional. Controls what files and/or data can be transferred via USB. Supported only on
+   * company-owned devices.
    * @param usbDataAccess usbDataAccess or {@code null} for none
    */
   public DeviceConnectivityManagement setUsbDataAccess(java.lang.String usbDataAccess) {
@@ -245,8 +245,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls configuring and using Wi-Fi direct settings. Supported on company-owned devices
-   * running Android 13 and above.
+   * Optional. Controls configuring and using Wi-Fi direct settings. Supported on company-owned
+   * devices running Android 13 and above.
    * @return value or {@code null} for none
    */
   public java.lang.String getWifiDirectSettings() {
@@ -254,8 +254,8 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Controls configuring and using Wi-Fi direct settings. Supported on company-owned devices
-   * running Android 13 and above.
+   * Optional. Controls configuring and using Wi-Fi direct settings. Supported on company-owned
+   * devices running Android 13 and above.
    * @param wifiDirectSettings wifiDirectSettings or {@code null} for none
    */
   public DeviceConnectivityManagement setWifiDirectSettings(java.lang.String wifiDirectSettings) {
@@ -281,9 +281,9 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
-   * which networks can be configured on the device. Supported on company-owned devices running
-   * Android 13 and above.
+   * Optional. Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not
+   * affect which networks can be configured on the device. Supported on company-owned devices
+   * running Android 13 and above.
    * @return value or {@code null} for none
    */
   public WifiSsidPolicy getWifiSsidPolicy() {
@@ -291,9 +291,9 @@ public final class DeviceConnectivityManagement extends com.google.api.client.js
   }
 
   /**
-   * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect
-   * which networks can be configured on the device. Supported on company-owned devices running
-   * Android 13 and above.
+   * Optional. Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not
+   * affect which networks can be configured on the device. Supported on company-owned devices
+   * running Android 13 and above.
    * @param wifiSsidPolicy wifiSsidPolicy or {@code null} for none
    */
   public DeviceConnectivityManagement setWifiSsidPolicy(WifiSsidPolicy wifiSsidPolicy) {

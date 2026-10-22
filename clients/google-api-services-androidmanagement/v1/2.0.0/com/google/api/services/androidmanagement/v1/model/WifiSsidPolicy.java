@@ -33,7 +33,7 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class WifiSsidPolicy extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the Wi-Fi SSID policy to be applied.
+   * Optional. Type of the Wi-Fi SSID policy to be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,7 +57,7 @@ public final class WifiSsidPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of the Wi-Fi SSID policy to be applied.
+   * Optional. Type of the Wi-Fi SSID policy to be applied.
    * @return value or {@code null} for none
    */
   public java.lang.String getWifiSsidPolicyType() {
@@ -65,7 +65,7 @@ public final class WifiSsidPolicy extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Type of the Wi-Fi SSID policy to be applied.
+   * Optional. Type of the Wi-Fi SSID policy to be applied.
    * @param wifiSsidPolicyType wifiSsidPolicyType or {@code null} for none
    */
   public WifiSsidPolicy setWifiSsidPolicyType(java.lang.String wifiSsidPolicyType) {

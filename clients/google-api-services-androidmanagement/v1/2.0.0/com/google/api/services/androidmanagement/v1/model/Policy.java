@@ -313,15 +313,15 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.String defaultPermissionPolicy;
 
   /**
-   * Covers controls for device connectivity such as Wi-Fi, USB data access, keyboard/mouse
-   * connections, and more.
+   * Optional. Covers controls for device connectivity such as Wi-Fi, USB data access,
+   * keyboard/mouse connections, and more.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private DeviceConnectivityManagement deviceConnectivityManagement;
 
   /**
-   * The device owner information to be shown on the lock screen.
+   * Optional. The device owner information to be shown on the lock screen.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -799,7 +799,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
    * Mainline updates) are automatically downloaded and require a device reboot to be installed.
    * Refer to the mainline section in Manage system updates
-   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.If this
+   * policy is set, it takes precedence over unifiedUpdatePolicy for OEM OS updates. For more
+   * information, see unifiedUpdatePolicy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -1517,8 +1519,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Covers controls for device connectivity such as Wi-Fi, USB data access, keyboard/mouse
-   * connections, and more.
+   * Optional. Covers controls for device connectivity such as Wi-Fi, USB data access,
+   * keyboard/mouse connections, and more.
    * @return value or {@code null} for none
    */
   public DeviceConnectivityManagement getDeviceConnectivityManagement() {
@@ -1526,8 +1528,8 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Covers controls for device connectivity such as Wi-Fi, USB data access, keyboard/mouse
-   * connections, and more.
+   * Optional. Covers controls for device connectivity such as Wi-Fi, USB data access,
+   * keyboard/mouse connections, and more.
    * @param deviceConnectivityManagement deviceConnectivityManagement or {@code null} for none
    */
   public Policy setDeviceConnectivityManagement(DeviceConnectivityManagement deviceConnectivityManagement) {
@@ -1536,7 +1538,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The device owner information to be shown on the lock screen.
+   * Optional. The device owner information to be shown on the lock screen.
    * @return value or {@code null} for none
    */
   public UserFacingMessage getDeviceOwnerLockScreenInfo() {
@@ -1544,7 +1546,7 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The device owner information to be shown on the lock screen.
+   * Optional. The device owner information to be shown on the lock screen.
    * @param deviceOwnerLockScreenInfo deviceOwnerLockScreenInfo or {@code null} for none
    */
   public Policy setDeviceOwnerLockScreenInfo(UserFacingMessage deviceOwnerLockScreenInfo) {
@@ -2607,7 +2609,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
    * Mainline updates) are automatically downloaded and require a device reboot to be installed.
    * Refer to the mainline section in Manage system updates
-   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.If this
+   * policy is set, it takes precedence over unifiedUpdatePolicy for OEM OS updates. For more
+   * information, see unifiedUpdatePolicy.
    * @return value or {@code null} for none
    */
   public SystemUpdate getSystemUpdate() {
@@ -2620,7 +2624,9 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    * Play system updates (https://source.android.com/docs/core/ota/modular-system) (also called
    * Mainline updates) are automatically downloaded and require a device reboot to be installed.
    * Refer to the mainline section in Manage system updates
-   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.
+   * (https://developer.android.com/work/dpc/system-updates#mainline) for further details.If this
+   * policy is set, it takes precedence over unifiedUpdatePolicy for OEM OS updates. For more
+   * information, see unifiedUpdatePolicy.
    * @param systemUpdate systemUpdate or {@code null} for none
    */
   public Policy setSystemUpdate(SystemUpdate systemUpdate) {

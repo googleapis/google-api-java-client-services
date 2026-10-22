@@ -67,7 +67,7 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
 
   /**
    * The invoice type for this partner cost. * Required when cost_type is one of: -
-   * `PARTNER_COST_TYPE_ADLOOX` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
+   * `PARTNER_COST_TYPE_PEER39` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
    * `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only for other types.
    * The value may be {@code null}.
    */
@@ -152,7 +152,7 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
 
   /**
    * The invoice type for this partner cost. * Required when cost_type is one of: -
-   * `PARTNER_COST_TYPE_ADLOOX` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
+   * `PARTNER_COST_TYPE_PEER39` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
    * `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only for other types.
    * @return value or {@code null} for none
    */
@@ -162,7 +162,7 @@ public final class PartnerCost extends com.google.api.client.json.GenericJson {
 
   /**
    * The invoice type for this partner cost. * Required when cost_type is one of: -
-   * `PARTNER_COST_TYPE_ADLOOX` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
+   * `PARTNER_COST_TYPE_PEER39` - `PARTNER_COST_TYPE_DOUBLE_VERIFY` -
    * `PARTNER_COST_TYPE_INTEGRAL_AD_SCIENCE`. * Output only for other types.
    * @param invoiceType invoiceType or {@code null} for none
    */

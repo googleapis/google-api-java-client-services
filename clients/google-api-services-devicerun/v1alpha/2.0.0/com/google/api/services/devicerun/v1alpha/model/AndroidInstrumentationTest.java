@@ -74,7 +74,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AndroidInstrumentationTestSmartSharding smartSharding;
+  private SmartSharding smartSharding;
 
   /**
    * Required. The test package to install and run the test.
@@ -113,7 +113,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private AndroidInstrumentationTestUniformSharding uniformSharding;
+  private UniformSharding uniformSharding;
 
   /**
    * Optional. Additional test options to pass to the test runner. Passed to `am instrument` command
@@ -206,7 +206,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * methods and their execution time.
    * @return value or {@code null} for none
    */
-  public AndroidInstrumentationTestSmartSharding getSmartSharding() {
+  public SmartSharding getSmartSharding() {
     return smartSharding;
   }
 
@@ -215,7 +215,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * methods and their execution time.
    * @param smartSharding smartSharding or {@code null} for none
    */
-  public AndroidInstrumentationTest setSmartSharding(AndroidInstrumentationTestSmartSharding smartSharding) {
+  public AndroidInstrumentationTest setSmartSharding(SmartSharding smartSharding) {
     this.smartSharding = smartSharding;
     return this;
   }
@@ -296,7 +296,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * test methods.
    * @return value or {@code null} for none
    */
-  public AndroidInstrumentationTestUniformSharding getUniformSharding() {
+  public UniformSharding getUniformSharding() {
     return uniformSharding;
   }
 
@@ -305,7 +305,7 @@ public final class AndroidInstrumentationTest extends com.google.api.client.json
    * test methods.
    * @param uniformSharding uniformSharding or {@code null} for none
    */
-  public AndroidInstrumentationTest setUniformSharding(AndroidInstrumentationTestUniformSharding uniformSharding) {
+  public AndroidInstrumentationTest setUniformSharding(UniformSharding uniformSharding) {
     this.uniformSharding = uniformSharding;
     return this;
   }

@@ -30,12 +30,28 @@ package com.google.api.services.devicerun.v1alpha.model;
 public final class IosXcTest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Smart sharding strategy to split the job into multiple shards based on the test
+   * methods and their execution time.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SmartSharding smartSharding;
+
+  /**
    * Required. The .zip containing the .xctestrun file and the contents of the
    * DerivedData/Build/Products directory.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private InputFile testsZip;
+
+  /**
+   * Optional. Uniform sharding strategy to split the job into multiple shards with equal number of
+   * test methods.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UniformSharding uniformSharding;
 
   /**
    * Optional. The timeout of the test. Default value: 5 min. Range: [1 min, 3 hours].
@@ -60,6 +76,25 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
   private InputFile xctestrun;
 
   /**
+   * Optional. Smart sharding strategy to split the job into multiple shards based on the test
+   * methods and their execution time.
+   * @return value or {@code null} for none
+   */
+  public SmartSharding getSmartSharding() {
+    return smartSharding;
+  }
+
+  /**
+   * Optional. Smart sharding strategy to split the job into multiple shards based on the test
+   * methods and their execution time.
+   * @param smartSharding smartSharding or {@code null} for none
+   */
+  public IosXcTest setSmartSharding(SmartSharding smartSharding) {
+    this.smartSharding = smartSharding;
+    return this;
+  }
+
+  /**
    * Required. The .zip containing the .xctestrun file and the contents of the
    * DerivedData/Build/Products directory.
    * @return value or {@code null} for none
@@ -75,6 +110,25 @@ public final class IosXcTest extends com.google.api.client.json.GenericJson {
    */
   public IosXcTest setTestsZip(InputFile testsZip) {
     this.testsZip = testsZip;
+    return this;
+  }
+
+  /**
+   * Optional. Uniform sharding strategy to split the job into multiple shards with equal number of
+   * test methods.
+   * @return value or {@code null} for none
+   */
+  public UniformSharding getUniformSharding() {
+    return uniformSharding;
+  }
+
+  /**
+   * Optional. Uniform sharding strategy to split the job into multiple shards with equal number of
+   * test methods.
+   * @param uniformSharding uniformSharding or {@code null} for none
+   */
+  public IosXcTest setUniformSharding(UniformSharding uniformSharding) {
+    this.uniformSharding = uniformSharding;
     return this;
   }
 

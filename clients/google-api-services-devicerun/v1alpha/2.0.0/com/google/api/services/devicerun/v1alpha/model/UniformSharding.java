@@ -17,11 +17,11 @@
 package com.google.api.services.devicerun.v1alpha.model;
 
 /**
- * Uniformly shards test cases given a total number of shards. It will be translated to `-e
- * numShard` and `-e shardIndex` AndroidJUnitRunner arguments. With uniform sharding enabled,
- * specifying either of these sharding arguments via `environment_variables` is invalid. Based on
- * the sharding mechanism AndroidJUnitRunner uses, there is no guarantee that test cases will be
- * distributed uniformly across all shards.
+ * Uniformly shards test cases given a total number of shards. For Android instrumentation tests, it
+ * will be translated to `-e numShard` and `-e shardIndex` AndroidJUnitRunner arguments. With
+ * uniform sharding enabled, specifying either of these sharding arguments via
+ * `environment_variables` is invalid. There is no guarantee that test cases will be distributed
+ * uniformly across all shards.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Device Run API. For a detailed explanation see:
@@ -31,7 +31,7 @@ package com.google.api.services.devicerun.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AndroidInstrumentationTestUniformSharding extends com.google.api.client.json.GenericJson {
+public final class UniformSharding extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The total number of shards to create. This must always be a positive number that is
@@ -58,19 +58,19 @@ public final class AndroidInstrumentationTestUniformSharding extends com.google.
    * shards must be <= 20. - For virtual devices, the number of shards must be <= 200.
    * @param shardCount shardCount or {@code null} for none
    */
-  public AndroidInstrumentationTestUniformSharding setShardCount(java.lang.Integer shardCount) {
+  public UniformSharding setShardCount(java.lang.Integer shardCount) {
     this.shardCount = shardCount;
     return this;
   }
 
   @Override
-  public AndroidInstrumentationTestUniformSharding set(String fieldName, Object value) {
-    return (AndroidInstrumentationTestUniformSharding) super.set(fieldName, value);
+  public UniformSharding set(String fieldName, Object value) {
+    return (UniformSharding) super.set(fieldName, value);
   }
 
   @Override
-  public AndroidInstrumentationTestUniformSharding clone() {
-    return (AndroidInstrumentationTestUniformSharding) super.clone();
+  public UniformSharding clone() {
+    return (UniformSharding) super.clone();
   }
 
 }

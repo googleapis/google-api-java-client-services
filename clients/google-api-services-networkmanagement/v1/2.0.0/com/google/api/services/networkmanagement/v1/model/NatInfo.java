@@ -124,7 +124,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String routerUri;
 
   /**
-   * The number of the NAT rule that was matched.
+   * The number of the NAT rule that was matched. Only valid when `type` is CLOUD_NAT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -363,7 +363,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of the NAT rule that was matched.
+   * The number of the NAT rule that was matched. Only valid when `type` is CLOUD_NAT.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getRuleNumber() {
@@ -371,7 +371,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The number of the NAT rule that was matched.
+   * The number of the NAT rule that was matched. Only valid when `type` is CLOUD_NAT.
    * @param ruleNumber ruleNumber or {@code null} for none
    */
   public NatInfo setRuleNumber(java.lang.Integer ruleNumber) {

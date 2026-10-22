@@ -146,8 +146,8 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
   private java.lang.Integer id;
 
   /**
-   * Contains the URL of an image that is going to be displayed in a notification. If present, it
-   * will override google.firebase.fcm.v1.Notification.image.
+   * An HTTPS URL of an image to display in the notification. If present, it overrides
+   * google.firebase.fcm.v1.Notification.image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -551,8 +551,8 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
   }
 
   /**
-   * Contains the URL of an image that is going to be displayed in a notification. If present, it
-   * will override google.firebase.fcm.v1.Notification.image.
+   * An HTTPS URL of an image to display in the notification. If present, it overrides
+   * google.firebase.fcm.v1.Notification.image.
    * @return value or {@code null} for none
    */
   public java.lang.String getImage() {
@@ -560,8 +560,8 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
   }
 
   /**
-   * Contains the URL of an image that is going to be displayed in a notification. If present, it
-   * will override google.firebase.fcm.v1.Notification.image.
+   * An HTTPS URL of an image to display in the notification. If present, it overrides
+   * google.firebase.fcm.v1.Notification.image.
    * @param image image or {@code null} for none
    */
   public AndroidNotificationV2 setImage(java.lang.String image) {

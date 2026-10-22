@@ -33,7 +33,8 @@ package com.google.api.services.fcm.v1.model;
 public final class AndroidConfigV2 extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Non-urgent background sync message to send to android devices.
+   * Optional. Non-urgent background sync message to send to Android devices. Delivery of these
+   * messages may be delayed or batched to optimize for battery.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +83,8 @@ public final class AndroidConfigV2 extends com.google.api.client.json.GenericJso
   private AndroidFcmOptions fcmOptions;
 
   /**
-   * Optional. User-facing notification to send to android devices.
+   * Optional. User-facing notification to send to Android devices. These messages are delivered
+   * immediately and are not delayed by battery optimizations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -122,7 +124,8 @@ public final class AndroidConfigV2 extends com.google.api.client.json.GenericJso
   private String ttl;
 
   /**
-   * Optional. Non-urgent background sync message to send to android devices.
+   * Optional. Non-urgent background sync message to send to Android devices. Delivery of these
+   * messages may be delayed or batched to optimize for battery.
    * @return value or {@code null} for none
    */
   public AndroidBackgroundSyncMessage getBackgroundSync() {
@@ -130,7 +133,8 @@ public final class AndroidConfigV2 extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Non-urgent background sync message to send to android devices.
+   * Optional. Non-urgent background sync message to send to Android devices. Delivery of these
+   * messages may be delayed or batched to optimize for battery.
    * @param backgroundSync backgroundSync or {@code null} for none
    */
   public AndroidConfigV2 setBackgroundSync(AndroidBackgroundSyncMessage backgroundSync) {
@@ -238,7 +242,8 @@ public final class AndroidConfigV2 extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. User-facing notification to send to android devices.
+   * Optional. User-facing notification to send to Android devices. These messages are delivered
+   * immediately and are not delayed by battery optimizations.
    * @return value or {@code null} for none
    */
   public AndroidRemoteNotification getRemoteNotification() {
@@ -246,7 +251,8 @@ public final class AndroidConfigV2 extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. User-facing notification to send to android devices.
+   * Optional. User-facing notification to send to Android devices. These messages are delivered
+   * immediately and are not delayed by battery optimizations.
    * @param remoteNotification remoteNotification or {@code null} for none
    */
   public AndroidConfigV2 setRemoteNotification(AndroidRemoteNotification remoteNotification) {

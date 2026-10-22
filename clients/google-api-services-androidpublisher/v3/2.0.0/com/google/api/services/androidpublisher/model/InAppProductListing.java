@@ -31,7 +31,8 @@ package com.google.api.services.androidpublisher.model;
 public final class InAppProductListing extends com.google.api.client.json.GenericJson {
 
   /**
-   * Localized entitlement benefits for a subscription.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +53,8 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   private java.lang.String title;
 
   /**
-   * Localized entitlement benefits for a subscription.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getBenefits() {
@@ -60,7 +62,8 @@ public final class InAppProductListing extends com.google.api.client.json.Generi
   }
 
   /**
-   * Localized entitlement benefits for a subscription.
+   * Deprecated: Subscriptions are no longer supported in the InAppProducts API. Use the
+   * Subscriptions API instead.
    * @param benefits benefits or {@code null} for none
    */
   public InAppProductListing setBenefits(java.util.List<java.lang.String> benefits) {

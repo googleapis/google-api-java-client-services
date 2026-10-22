@@ -28,7 +28,7 @@ package com.google.api.services.devicerun.v1alpha.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class AndroidInstrumentationTestSmartSharding extends com.google.api.client.json.GenericJson {
+public final class SmartSharding extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The maximum number of shards to create. If unset or less than 1, system-defined max
@@ -48,8 +48,8 @@ public final class AndroidInstrumentationTestSmartSharding extends com.google.ap
    * cases, the average duration of other known test cases. - A system-chosen, default duration if
    * there are no previous timing records available. Because the actual shard duration can exceed
    * the targeted shard duration, we recommend that you set the targeted value at least 5 minutes
-   * less than the maximum allowed instrumentation timeout. This approach avoids cancelling the
-   * shard before all tests can finish.
+   * less than the maximum allowed test timeout. This approach avoids cancelling the shard before
+   * all tests can finish.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,7 +82,7 @@ public final class AndroidInstrumentationTestSmartSharding extends com.google.ap
    * devices, the number of shards must be <= 200.
    * @param maxShardCount maxShardCount or {@code null} for none
    */
-  public AndroidInstrumentationTestSmartSharding setMaxShardCount(java.lang.Integer maxShardCount) {
+  public SmartSharding setMaxShardCount(java.lang.Integer maxShardCount) {
     this.maxShardCount = maxShardCount;
     return this;
   }
@@ -95,8 +95,8 @@ public final class AndroidInstrumentationTestSmartSharding extends com.google.ap
    * cases, the average duration of other known test cases. - A system-chosen, default duration if
    * there are no previous timing records available. Because the actual shard duration can exceed
    * the targeted shard duration, we recommend that you set the targeted value at least 5 minutes
-   * less than the maximum allowed instrumentation timeout. This approach avoids cancelling the
-   * shard before all tests can finish.
+   * less than the maximum allowed test timeout. This approach avoids cancelling the shard before
+   * all tests can finish.
    * @return value or {@code null} for none
    */
   public String getTargetedShardDuration() {
@@ -111,11 +111,11 @@ public final class AndroidInstrumentationTestSmartSharding extends com.google.ap
    * cases, the average duration of other known test cases. - A system-chosen, default duration if
    * there are no previous timing records available. Because the actual shard duration can exceed
    * the targeted shard duration, we recommend that you set the targeted value at least 5 minutes
-   * less than the maximum allowed instrumentation timeout. This approach avoids cancelling the
-   * shard before all tests can finish.
+   * less than the maximum allowed test timeout. This approach avoids cancelling the shard before
+   * all tests can finish.
    * @param targetedShardDuration targetedShardDuration or {@code null} for none
    */
-  public AndroidInstrumentationTestSmartSharding setTargetedShardDuration(String targetedShardDuration) {
+  public SmartSharding setTargetedShardDuration(String targetedShardDuration) {
     this.targetedShardDuration = targetedShardDuration;
     return this;
   }
@@ -136,19 +136,19 @@ public final class AndroidInstrumentationTestSmartSharding extends com.google.ap
    * shards. This file will be overwritten with the latest timing record after the job is completed.
    * @param timingRecord timingRecord or {@code null} for none
    */
-  public AndroidInstrumentationTestSmartSharding setTimingRecord(InputFile timingRecord) {
+  public SmartSharding setTimingRecord(InputFile timingRecord) {
     this.timingRecord = timingRecord;
     return this;
   }
 
   @Override
-  public AndroidInstrumentationTestSmartSharding set(String fieldName, Object value) {
-    return (AndroidInstrumentationTestSmartSharding) super.set(fieldName, value);
+  public SmartSharding set(String fieldName, Object value) {
+    return (SmartSharding) super.set(fieldName, value);
   }
 
   @Override
-  public AndroidInstrumentationTestSmartSharding clone() {
-    return (AndroidInstrumentationTestSmartSharding) super.clone();
+  public SmartSharding clone() {
+    return (SmartSharding) super.clone();
   }
 
 }

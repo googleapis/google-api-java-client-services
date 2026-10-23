@@ -60,6 +60,10 @@ public final class AcceleratorPodController extends com.google.api.client.json.G
 
   /**
    * Map of management interfaces. Keys must be valid RFC1035 names and at most 63 characters long.
+   * For TYPE_NVLINK_SWITCH_MONITORING interfaces, keys must match the pattern "gnmi-nvswitch-[0-8]"
+   * (e.g., "gnmi-nvswitch-0" through "gnmi-nvswitch-8"). For TYPE_NVLINK_SWITCH_DEBUG interfaces,
+   * keys must match the pattern "gnoi-nvswitch-[0-8]" (e.g., "gnoi-nvswitch-0" through "gnoi-
+   * nvswitch-8").
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -176,6 +180,10 @@ public final class AcceleratorPodController extends com.google.api.client.json.G
 
   /**
    * Map of management interfaces. Keys must be valid RFC1035 names and at most 63 characters long.
+   * For TYPE_NVLINK_SWITCH_MONITORING interfaces, keys must match the pattern "gnmi-nvswitch-[0-8]"
+   * (e.g., "gnmi-nvswitch-0" through "gnmi-nvswitch-8"). For TYPE_NVLINK_SWITCH_DEBUG interfaces,
+   * keys must match the pattern "gnoi-nvswitch-[0-8]" (e.g., "gnoi-nvswitch-0" through "gnoi-
+   * nvswitch-8").
    * @return value or {@code null} for none
    */
   public java.util.Map<String, ManagementInterface> getManagementInterfaces() {
@@ -184,6 +192,10 @@ public final class AcceleratorPodController extends com.google.api.client.json.G
 
   /**
    * Map of management interfaces. Keys must be valid RFC1035 names and at most 63 characters long.
+   * For TYPE_NVLINK_SWITCH_MONITORING interfaces, keys must match the pattern "gnmi-nvswitch-[0-8]"
+   * (e.g., "gnmi-nvswitch-0" through "gnmi-nvswitch-8"). For TYPE_NVLINK_SWITCH_DEBUG interfaces,
+   * keys must match the pattern "gnoi-nvswitch-[0-8]" (e.g., "gnoi-nvswitch-0" through "gnoi-
+   * nvswitch-8").
    * @param managementInterfaces managementInterfaces or {@code null} for none
    */
   public AcceleratorPodController setManagementInterfaces(java.util.Map<String, ManagementInterface> managementInterfaces) {

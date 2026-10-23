@@ -70,6 +70,13 @@ public final class Operation extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
+   * [Output Only] Extended details about the operation's execution.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private OperationDetails details;
+
+  /**
    * [Output Only] The time that this operation was completed. This value is inRFC3339 text format.
    * The value may be {@code null}.
    */
@@ -325,6 +332,23 @@ public final class Operation extends com.google.api.client.json.GenericJson {
    */
   public Operation setDescription(java.lang.String description) {
     this.description = description;
+    return this;
+  }
+
+  /**
+   * [Output Only] Extended details about the operation's execution.
+   * @return value or {@code null} for none
+   */
+  public OperationDetails getDetails() {
+    return details;
+  }
+
+  /**
+   * [Output Only] Extended details about the operation's execution.
+   * @param details details or {@code null} for none
+   */
+  public Operation setDetails(OperationDetails details) {
+    this.details = details;
     return this;
   }
 

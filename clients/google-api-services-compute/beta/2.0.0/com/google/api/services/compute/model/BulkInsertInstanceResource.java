@@ -38,7 +38,10 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   private java.lang.Long count;
 
   /**
-   * A flexible specification of machine type of instances to create.
+   * A specification of alternative machine types to use when creating instances. A single
+   * bulkInsert request can create instances with multiple different machine types based on capacity
+   * and quota availability. This field is supported only for regional bulkInsert requests. For more
+   * information, see About instance flexibility for VMs created in bulk.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +128,10 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * A flexible specification of machine type of instances to create.
+   * A specification of alternative machine types to use when creating instances. A single
+   * bulkInsert request can create instances with multiple different machine types based on capacity
+   * and quota availability. This field is supported only for regional bulkInsert requests. For more
+   * information, see About instance flexibility for VMs created in bulk.
    * @return value or {@code null} for none
    */
   public InstanceFlexibilityPolicy getInstanceFlexibilityPolicy() {
@@ -133,7 +139,10 @@ public final class BulkInsertInstanceResource extends com.google.api.client.json
   }
 
   /**
-   * A flexible specification of machine type of instances to create.
+   * A specification of alternative machine types to use when creating instances. A single
+   * bulkInsert request can create instances with multiple different machine types based on capacity
+   * and quota availability. This field is supported only for regional bulkInsert requests. For more
+   * information, see About instance flexibility for VMs created in bulk.
    * @param instanceFlexibilityPolicy instanceFlexibilityPolicy or {@code null} for none
    */
   public BulkInsertInstanceResource setInstanceFlexibilityPolicy(InstanceFlexibilityPolicy instanceFlexibilityPolicy) {

@@ -93,6 +93,15 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
   private java.lang.String ipv6NexthopAddress;
 
   /**
+   * Output only. The URI of the linked custom hardware resource, CustomHardwareLinkAttachment. This
+   * CustomHardwareLinkAttachment resource is the one that will establish the BGP session from the
+   * Cloud Router.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String linkedCustomHardware;
+
+  /**
    * Output only. URL of the VPN tunnel that this BGP peer controls.
    * The value may be {@code null}.
    */
@@ -322,6 +331,27 @@ public final class RouterStatusBgpPeerStatus extends com.google.api.client.json.
    */
   public RouterStatusBgpPeerStatus setIpv6NexthopAddress(java.lang.String ipv6NexthopAddress) {
     this.ipv6NexthopAddress = ipv6NexthopAddress;
+    return this;
+  }
+
+  /**
+   * Output only. The URI of the linked custom hardware resource, CustomHardwareLinkAttachment. This
+   * CustomHardwareLinkAttachment resource is the one that will establish the BGP session from the
+   * Cloud Router.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLinkedCustomHardware() {
+    return linkedCustomHardware;
+  }
+
+  /**
+   * Output only. The URI of the linked custom hardware resource, CustomHardwareLinkAttachment. This
+   * CustomHardwareLinkAttachment resource is the one that will establish the BGP session from the
+   * Cloud Router.
+   * @param linkedCustomHardware linkedCustomHardware or {@code null} for none
+   */
+  public RouterStatusBgpPeerStatus setLinkedCustomHardware(java.lang.String linkedCustomHardware) {
+    this.linkedCustomHardware = linkedCustomHardware;
     return this;
   }
 

@@ -31,21 +31,21 @@ package com.google.api.services.looker.v1.model;
 public final class CustomDomain extends com.google.api.client.json.GenericJson {
 
   /**
-   * Domain name.
+   * Optional. Domain name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String domain;
 
   /**
-   * Domain state.
+   * Output only. Domain state.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Domain name.
+   * Optional. Domain name.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -53,7 +53,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain name.
+   * Optional. Domain name.
    * @param domain domain or {@code null} for none
    */
   public CustomDomain setDomain(java.lang.String domain) {
@@ -62,7 +62,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain state.
+   * Output only. Domain state.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -70,7 +70,7 @@ public final class CustomDomain extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Domain state.
+   * Output only. Domain state.
    * @param state state or {@code null} for none
    */
   public CustomDomain setState(java.lang.String state) {

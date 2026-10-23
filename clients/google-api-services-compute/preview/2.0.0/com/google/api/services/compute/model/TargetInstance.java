@@ -101,6 +101,14 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
   private java.lang.String network;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetInstanceParams params;
+
+  /**
    * [Output Only] The resource URL for the security policy associated with this target instance.
    * The value may be {@code null}.
    */
@@ -277,6 +285,25 @@ public final class TargetInstance extends com.google.api.client.json.GenericJson
    */
   public TargetInstance setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public TargetInstanceParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public TargetInstance setParams(TargetInstanceParams params) {
+    this.params = params;
     return this;
   }
 

@@ -125,6 +125,14 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TargetPoolParams params;
+
+  /**
    * Output only. [Output Only] URL of the region where the target pool resides.
    * The value may be {@code null}.
    */
@@ -362,6 +370,25 @@ public final class TargetPool extends com.google.api.client.json.GenericJson {
    */
   public TargetPool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @return value or {@code null} for none
+   */
+  public TargetPoolParams getParams() {
+    return params;
+  }
+
+  /**
+   * Input only. [Input Only] Additional params passed with the request, but not persisted as part
+   * of resource payload.
+   * @param params params or {@code null} for none
+   */
+  public TargetPool setParams(TargetPoolParams params) {
+    this.params = params;
     return this;
   }
 

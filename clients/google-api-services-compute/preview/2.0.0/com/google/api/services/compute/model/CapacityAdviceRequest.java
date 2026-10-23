@@ -52,6 +52,14 @@ public final class CapacityAdviceRequest extends com.google.api.client.json.Gene
   private CapacityAdviceRequestInstanceProperties instanceProperties;
 
   /**
+   * Optional. Input only. Client-provided UUID correlating multiple capacity advice requests
+   * belonging to a single logical client-side fanout session.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sessionId;
+
+  /**
    * The number of VM instances to request.
    * The value may be {@code null}.
    */
@@ -106,6 +114,25 @@ public final class CapacityAdviceRequest extends com.google.api.client.json.Gene
    */
   public CapacityAdviceRequest setInstanceProperties(CapacityAdviceRequestInstanceProperties instanceProperties) {
     this.instanceProperties = instanceProperties;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Client-provided UUID correlating multiple capacity advice requests
+   * belonging to a single logical client-side fanout session.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSessionId() {
+    return sessionId;
+  }
+
+  /**
+   * Optional. Input only. Client-provided UUID correlating multiple capacity advice requests
+   * belonging to a single logical client-side fanout session.
+   * @param sessionId sessionId or {@code null} for none
+   */
+  public CapacityAdviceRequest setSessionId(java.lang.String sessionId) {
+    this.sessionId = sessionId;
     return this;
   }
 

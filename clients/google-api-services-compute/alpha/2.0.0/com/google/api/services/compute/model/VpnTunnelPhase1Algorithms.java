@@ -30,30 +30,35 @@ package com.google.api.services.compute.model;
 public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.GenericJson {
 
   /**
+   * Diffie-Hellman groups for IKE phase 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> dh;
 
   /**
+   * Encryption algorithms for IKE phase 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> encryption;
 
   /**
+   * Integrity algorithms for IKE phase 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> integrity;
 
   /**
+   * Pseudo-random functions (PRF) for IKE phase 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> prf;
 
   /**
+   * Diffie-Hellman groups for IKE phase 1.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDh() {
@@ -61,6 +66,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Diffie-Hellman groups for IKE phase 1.
    * @param dh dh or {@code null} for none
    */
   public VpnTunnelPhase1Algorithms setDh(java.util.List<java.lang.String> dh) {
@@ -69,6 +75,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Encryption algorithms for IKE phase 1.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getEncryption() {
@@ -76,6 +83,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Encryption algorithms for IKE phase 1.
    * @param encryption encryption or {@code null} for none
    */
   public VpnTunnelPhase1Algorithms setEncryption(java.util.List<java.lang.String> encryption) {
@@ -84,6 +92,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Integrity algorithms for IKE phase 1.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIntegrity() {
@@ -91,6 +100,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Integrity algorithms for IKE phase 1.
    * @param integrity integrity or {@code null} for none
    */
   public VpnTunnelPhase1Algorithms setIntegrity(java.util.List<java.lang.String> integrity) {
@@ -99,6 +109,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Pseudo-random functions (PRF) for IKE phase 1.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getPrf() {
@@ -106,6 +117,7 @@ public final class VpnTunnelPhase1Algorithms extends com.google.api.client.json.
   }
 
   /**
+   * Pseudo-random functions (PRF) for IKE phase 1.
    * @param prf prf or {@code null} for none
    */
   public VpnTunnelPhase1Algorithms setPrf(java.util.List<java.lang.String> prf) {

@@ -37,6 +37,14 @@ public final class ReservationSubBlocksReportFaultyRequestFaultReason extends co
   private java.lang.String behavior;
 
   /**
+   * The identifier of the specific faulty sub-component (e.g., NVSwitch ID). Optional. If not
+   * specified, all switches in the sub-block are targeted for triage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String componentId;
+
+  /**
    * The description of the fault experienced with the subBlock.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class ReservationSubBlocksReportFaultyRequestFaultReason extends co
    */
   public ReservationSubBlocksReportFaultyRequestFaultReason setBehavior(java.lang.String behavior) {
     this.behavior = behavior;
+    return this;
+  }
+
+  /**
+   * The identifier of the specific faulty sub-component (e.g., NVSwitch ID). Optional. If not
+   * specified, all switches in the sub-block are targeted for triage.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getComponentId() {
+    return componentId;
+  }
+
+  /**
+   * The identifier of the specific faulty sub-component (e.g., NVSwitch ID). Optional. If not
+   * specified, all switches in the sub-block are targeted for triage.
+   * @param componentId componentId or {@code null} for none
+   */
+  public ReservationSubBlocksReportFaultyRequestFaultReason setComponentId(java.lang.String componentId) {
+    this.componentId = componentId;
     return this;
   }
 

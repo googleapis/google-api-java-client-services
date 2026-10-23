@@ -65,6 +65,8 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
 
   /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.
+   * This field also accepts wildcards (*) to replace the leftmost (or first) label of a hostname.
+   * For example, *.example.com will match www.example.com, but not sub1.dev.example.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -163,6 +165,8 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
 
   /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.
+   * This field also accepts wildcards (*) to replace the leftmost (or first) label of a hostname.
+   * For example, *.example.com will match www.example.com, but not sub1.dev.example.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getHost() {
@@ -171,6 +175,8 @@ public final class CacheInvalidationRule extends com.google.api.client.json.Gene
 
   /**
    * If set, this invalidation rule will only apply to requests with a Host header matching host.
+   * This field also accepts wildcards (*) to replace the leftmost (or first) label of a hostname.
+   * For example, *.example.com will match www.example.com, but not sub1.dev.example.com.
    * @param host host or {@code null} for none
    */
   public CacheInvalidationRule setHost(java.lang.String host) {

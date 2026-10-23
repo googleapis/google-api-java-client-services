@@ -170,7 +170,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   private java.lang.String provisioningModel;
 
   /**
-   * Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
+   * Defines whether GCE ACPI G2 Soft Off signal should be skipped during shutdown operation of VM.
+   *
+   * Default is false, meaning there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
    * Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
    * The value may be {@code null}.
    */
@@ -517,7 +519,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
+   * Defines whether GCE ACPI G2 Soft Off signal should be skipped during shutdown operation of VM.
+   *
+   * Default is false, meaning there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
    * Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
    * @return value or {@code null} for none
    */
@@ -526,7 +530,9 @@ public final class Scheduling extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Default is false and there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
+   * Defines whether GCE ACPI G2 Soft Off signal should be skipped during shutdown operation of VM.
+   *
+   * Default is false, meaning there will be 120 seconds between GCE ACPI G2 Soft Off and ACPI G3
    * Mechanical Off for Standard VMs and 30 seconds for Spot VMs.
    * @param skipGuestOsShutdown skipGuestOsShutdown or {@code null} for none
    */

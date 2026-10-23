@@ -30,18 +30,21 @@ package com.google.api.services.compute.model;
 public final class VpnTunnelCipherSuite extends com.google.api.client.json.GenericJson {
 
   /**
+   * Cipher algorithms for IKE phase 1.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VpnTunnelPhase1Algorithms phase1;
 
   /**
+   * Cipher algorithms for IKE phase 2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private VpnTunnelPhase2Algorithms phase2;
 
   /**
+   * Cipher algorithms for IKE phase 1.
    * @return value or {@code null} for none
    */
   public VpnTunnelPhase1Algorithms getPhase1() {
@@ -49,6 +52,7 @@ public final class VpnTunnelCipherSuite extends com.google.api.client.json.Gener
   }
 
   /**
+   * Cipher algorithms for IKE phase 1.
    * @param phase1 phase1 or {@code null} for none
    */
   public VpnTunnelCipherSuite setPhase1(VpnTunnelPhase1Algorithms phase1) {
@@ -57,6 +61,7 @@ public final class VpnTunnelCipherSuite extends com.google.api.client.json.Gener
   }
 
   /**
+   * Cipher algorithms for IKE phase 2.
    * @return value or {@code null} for none
    */
   public VpnTunnelPhase2Algorithms getPhase2() {
@@ -64,6 +69,7 @@ public final class VpnTunnelCipherSuite extends com.google.api.client.json.Gener
   }
 
   /**
+   * Cipher algorithms for IKE phase 2.
    * @param phase2 phase2 or {@code null} for none
    */
   public VpnTunnelCipherSuite setPhase2(VpnTunnelPhase2Algorithms phase2) {

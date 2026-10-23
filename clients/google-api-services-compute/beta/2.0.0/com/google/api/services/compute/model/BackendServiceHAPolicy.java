@@ -39,7 +39,9 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * endpoint that should become the new leader sends    either a Gratuitous ARP (GARP) packet
    * (IPv4) or an ICMPv6 Router    Advertisement(RA) packet (IPv6).  Google Cloud immediately but
    * temporarily associates the forwarding rule IP address with that VM, and    both new and in-
-   * flight packets are quickly delivered to that VM.
+   * flight packets are quickly delivered to that VM.    - HA_CONTROLLER: The Backend Service is
+   * managed by a High Availability    Controller. Failover and leader election are exclusively
+   * managed by the    HA Controller service.
    *
    * Note the important properties of the Fast IP Move functionality:        - The GARP/RA-initiated
    * re-routing stays active for approximately 20    minutes. After triggering fast failover, you
@@ -108,7 +110,9 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * endpoint that should become the new leader sends    either a Gratuitous ARP (GARP) packet
    * (IPv4) or an ICMPv6 Router    Advertisement(RA) packet (IPv6).  Google Cloud immediately but
    * temporarily associates the forwarding rule IP address with that VM, and    both new and in-
-   * flight packets are quickly delivered to that VM.
+   * flight packets are quickly delivered to that VM.    - HA_CONTROLLER: The Backend Service is
+   * managed by a High Availability    Controller. Failover and leader election are exclusively
+   * managed by the    HA Controller service.
    *
    * Note the important properties of the Fast IP Move functionality:        - The GARP/RA-initiated
    * re-routing stays active for approximately 20    minutes. After triggering fast failover, you
@@ -163,7 +167,9 @@ public final class BackendServiceHAPolicy extends com.google.api.client.json.Gen
    * endpoint that should become the new leader sends    either a Gratuitous ARP (GARP) packet
    * (IPv4) or an ICMPv6 Router    Advertisement(RA) packet (IPv6).  Google Cloud immediately but
    * temporarily associates the forwarding rule IP address with that VM, and    both new and in-
-   * flight packets are quickly delivered to that VM.
+   * flight packets are quickly delivered to that VM.    - HA_CONTROLLER: The Backend Service is
+   * managed by a High Availability    Controller. Failover and leader election are exclusively
+   * managed by the    HA Controller service.
    *
    * Note the important properties of the Fast IP Move functionality:        - The GARP/RA-initiated
    * re-routing stays active for approximately 20    minutes. After triggering fast failover, you

@@ -38,7 +38,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean acceleratedSecurityPatchEnabled;
 
   /**
-   * Looker Instance Admin settings.
+   * Optional. Looker Instance Admin settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -66,9 +66,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String classType;
 
   /**
-   * Network name in the consumer project. Format: `projects/{project}/global/networks/{network}`.
-   * Note that the consumer network may be in a different GCP project than the consumer project that
-   * is hosting the Looker Instance.
+   * Optional. Network name in the consumer project. Format:
+   * `projects/{project}/global/networks/{network}`. Note that the consumer network may be in a
+   * different GCP project than the consumer project that is hosting the Looker Instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,14 +96,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Custom domain configuration for the instance.
+   * Optional. Custom domain configuration for the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomDomain customDomain;
 
   /**
-   * Maintenance denial period for this instance.
+   * Optional. Maintenance denial period for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String egressPublicIp;
 
   /**
-   * Encryption configuration (CMEK). Only set if CMEK has been enabled on the instance.
+   * Optional. Encryption configuration (CMEK). Only set if CMEK has been enabled on the instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -187,14 +187,14 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String lookerVersion;
 
   /**
-   * Maintenance schedule for this instance.
+   * Output only. Maintenance schedule for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private MaintenanceSchedule maintenanceSchedule;
 
   /**
-   * Maintenance window for this instance.
+   * Optional. Maintenance window for this instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,7 +208,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Looker instance OAuth login settings.
+   * Optional. Looker instance OAuth login settings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -222,14 +222,15 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private PeriodicExportConfig periodicExportConfig;
 
   /**
-   * Platform edition.
+   * Optional. Platform edition. Marked as OPTIONAL for backward compatibility, though it is
+   * required during instance creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String platformEdition;
 
   /**
-   * Whether private IP is enabled on the Looker instance.
+   * Optional. Whether private IP is enabled on the Looker instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -251,7 +252,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean pscEnabled;
 
   /**
-   * Whether public IP is enabled on the Looker instance.
+   * Optional. Whether public IP is enabled on the Looker instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,8 +266,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private java.lang.String releaseChannel;
 
   /**
-   * Name of a reserved IP address range within the Instance.consumer_network, to be used for
-   * private services access connection. May or may not be specified in a create request.
+   * Optional. Name of a reserved IP address range within the Instance.consumer_network, to be used
+   * for private services access connection. May or may not be specified in a create request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -339,7 +340,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Looker Instance Admin settings.
+   * Optional. Looker Instance Admin settings.
    * @return value or {@code null} for none
    */
   public AdminSettings getAdminSettings() {
@@ -347,7 +348,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Looker Instance Admin settings.
+   * Optional. Looker Instance Admin settings.
    * @param adminSettings adminSettings or {@code null} for none
    */
   public Instance setAdminSettings(AdminSettings adminSettings) {
@@ -407,9 +408,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network name in the consumer project. Format: `projects/{project}/global/networks/{network}`.
-   * Note that the consumer network may be in a different GCP project than the consumer project that
-   * is hosting the Looker Instance.
+   * Optional. Network name in the consumer project. Format:
+   * `projects/{project}/global/networks/{network}`. Note that the consumer network may be in a
+   * different GCP project than the consumer project that is hosting the Looker Instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getConsumerNetwork() {
@@ -417,9 +418,9 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Network name in the consumer project. Format: `projects/{project}/global/networks/{network}`.
-   * Note that the consumer network may be in a different GCP project than the consumer project that
-   * is hosting the Looker Instance.
+   * Optional. Network name in the consumer project. Format:
+   * `projects/{project}/global/networks/{network}`. Note that the consumer network may be in a
+   * different GCP project than the consumer project that is hosting the Looker Instance.
    * @param consumerNetwork consumerNetwork or {@code null} for none
    */
   public Instance setConsumerNetwork(java.lang.String consumerNetwork) {
@@ -479,7 +480,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom domain configuration for the instance.
+   * Optional. Custom domain configuration for the instance.
    * @return value or {@code null} for none
    */
   public CustomDomain getCustomDomain() {
@@ -487,7 +488,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Custom domain configuration for the instance.
+   * Optional. Custom domain configuration for the instance.
    * @param customDomain customDomain or {@code null} for none
    */
   public Instance setCustomDomain(CustomDomain customDomain) {
@@ -496,7 +497,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maintenance denial period for this instance.
+   * Optional. Maintenance denial period for this instance.
    * @return value or {@code null} for none
    */
   public DenyMaintenancePeriod getDenyMaintenancePeriod() {
@@ -504,7 +505,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maintenance denial period for this instance.
+   * Optional. Maintenance denial period for this instance.
    * @param denyMaintenancePeriod denyMaintenancePeriod or {@code null} for none
    */
   public Instance setDenyMaintenancePeriod(DenyMaintenancePeriod denyMaintenancePeriod) {
@@ -530,7 +531,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encryption configuration (CMEK). Only set if CMEK has been enabled on the instance.
+   * Optional. Encryption configuration (CMEK). Only set if CMEK has been enabled on the instance.
    * @return value or {@code null} for none
    */
   public EncryptionConfig getEncryptionConfig() {
@@ -538,7 +539,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Encryption configuration (CMEK). Only set if CMEK has been enabled on the instance.
+   * Optional. Encryption configuration (CMEK). Only set if CMEK has been enabled on the instance.
    * @param encryptionConfig encryptionConfig or {@code null} for none
    */
   public Instance setEncryptionConfig(EncryptionConfig encryptionConfig) {
@@ -700,7 +701,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maintenance schedule for this instance.
+   * Output only. Maintenance schedule for this instance.
    * @return value or {@code null} for none
    */
   public MaintenanceSchedule getMaintenanceSchedule() {
@@ -708,7 +709,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maintenance schedule for this instance.
+   * Output only. Maintenance schedule for this instance.
    * @param maintenanceSchedule maintenanceSchedule or {@code null} for none
    */
   public Instance setMaintenanceSchedule(MaintenanceSchedule maintenanceSchedule) {
@@ -717,7 +718,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maintenance window for this instance.
+   * Optional. Maintenance window for this instance.
    * @return value or {@code null} for none
    */
   public MaintenanceWindow getMaintenanceWindow() {
@@ -725,7 +726,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Maintenance window for this instance.
+   * Optional. Maintenance window for this instance.
    * @param maintenanceWindow maintenanceWindow or {@code null} for none
    */
   public Instance setMaintenanceWindow(MaintenanceWindow maintenanceWindow) {
@@ -751,7 +752,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Looker instance OAuth login settings.
+   * Optional. Looker instance OAuth login settings.
    * @return value or {@code null} for none
    */
   public OAuthConfig getOauthConfig() {
@@ -759,7 +760,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Looker instance OAuth login settings.
+   * Optional. Looker instance OAuth login settings.
    * @param oauthConfig oauthConfig or {@code null} for none
    */
   public Instance setOauthConfig(OAuthConfig oauthConfig) {
@@ -785,7 +786,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Platform edition.
+   * Optional. Platform edition. Marked as OPTIONAL for backward compatibility, though it is
+   * required during instance creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlatformEdition() {
@@ -793,7 +795,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Platform edition.
+   * Optional. Platform edition. Marked as OPTIONAL for backward compatibility, though it is
+   * required during instance creation.
    * @param platformEdition platformEdition or {@code null} for none
    */
   public Instance setPlatformEdition(java.lang.String platformEdition) {
@@ -802,7 +805,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether private IP is enabled on the Looker instance.
+   * Optional. Whether private IP is enabled on the Looker instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPrivateIpEnabled() {
@@ -810,7 +813,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether private IP is enabled on the Looker instance.
+   * Optional. Whether private IP is enabled on the Looker instance.
    * @param privateIpEnabled privateIpEnabled or {@code null} for none
    */
   public Instance setPrivateIpEnabled(java.lang.Boolean privateIpEnabled) {
@@ -855,7 +858,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether public IP is enabled on the Looker instance.
+   * Optional. Whether public IP is enabled on the Looker instance.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getPublicIpEnabled() {
@@ -863,7 +866,7 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether public IP is enabled on the Looker instance.
+   * Optional. Whether public IP is enabled on the Looker instance.
    * @param publicIpEnabled publicIpEnabled or {@code null} for none
    */
   public Instance setPublicIpEnabled(java.lang.Boolean publicIpEnabled) {
@@ -889,8 +892,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a reserved IP address range within the Instance.consumer_network, to be used for
-   * private services access connection. May or may not be specified in a create request.
+   * Optional. Name of a reserved IP address range within the Instance.consumer_network, to be used
+   * for private services access connection. May or may not be specified in a create request.
    * @return value or {@code null} for none
    */
   public java.lang.String getReservedRange() {
@@ -898,8 +901,8 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Name of a reserved IP address range within the Instance.consumer_network, to be used for
-   * private services access connection. May or may not be specified in a create request.
+   * Optional. Name of a reserved IP address range within the Instance.consumer_network, to be used
+   * for private services access connection. May or may not be specified in a create request.
    * @param reservedRange reservedRange or {@code null} for none
    */
   public Instance setReservedRange(java.lang.String reservedRange) {

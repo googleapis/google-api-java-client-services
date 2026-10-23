@@ -31,7 +31,7 @@ package com.google.api.services.looker.v1.model;
 public final class EncryptionConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Name of the CMEK key in KMS (input parameter).
+   * Optional. Immutable. Name of the CMEK key in KMS (input parameter).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +54,7 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
   private java.lang.String kmsKeyState;
 
   /**
-   * Name of the CMEK key in KMS (input parameter).
+   * Optional. Immutable. Name of the CMEK key in KMS (input parameter).
    * @return value or {@code null} for none
    */
   public java.lang.String getKmsKeyName() {
@@ -62,7 +62,7 @@ public final class EncryptionConfig extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Name of the CMEK key in KMS (input parameter).
+   * Optional. Immutable. Name of the CMEK key in KMS (input parameter).
    * @param kmsKeyName kmsKeyName or {@code null} for none
    */
   public EncryptionConfig setKmsKeyName(java.lang.String kmsKeyName) {

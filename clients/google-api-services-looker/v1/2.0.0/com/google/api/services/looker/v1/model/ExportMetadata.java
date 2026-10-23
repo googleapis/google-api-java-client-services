@@ -54,6 +54,15 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
   private ExportMetrics exportMetrics;
 
   /**
+   * A string of digits representing the number of microseconds since the Unix epoch when the export
+   * was created. Used to identify the cloned source Elite System Activity (ESA) BigQuery dataset
+   * for O2C direct dataset migration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String exportTime;
+
+  /**
    * List of files created as part of export artifact (excluding the metadata). The paths are
    * relative to the folder containing the metadata.
    * The value may be {@code null}.
@@ -148,6 +157,27 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
    */
   public ExportMetadata setExportMetrics(ExportMetrics exportMetrics) {
     this.exportMetrics = exportMetrics;
+    return this;
+  }
+
+  /**
+   * A string of digits representing the number of microseconds since the Unix epoch when the export
+   * was created. Used to identify the cloned source Elite System Activity (ESA) BigQuery dataset
+   * for O2C direct dataset migration.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExportTime() {
+    return exportTime;
+  }
+
+  /**
+   * A string of digits representing the number of microseconds since the Unix epoch when the export
+   * was created. Used to identify the cloned source Elite System Activity (ESA) BigQuery dataset
+   * for O2C direct dataset migration.
+   * @param exportTime exportTime or {@code null} for none
+   */
+  public ExportMetadata setExportTime(java.lang.String exportTime) {
+    this.exportTime = exportTime;
     return this;
   }
 

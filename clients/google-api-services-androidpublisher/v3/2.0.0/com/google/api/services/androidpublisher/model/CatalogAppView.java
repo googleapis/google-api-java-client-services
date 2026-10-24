@@ -59,7 +59,9 @@ public final class CatalogAppView extends com.google.api.client.json.GenericJson
   private java.lang.String appSubcategory;
 
   /**
-   * The token used for delivery of the app with the Google Play Inline Install API.
+   * The token used for delivery of the app with the Google Play Inline Install API. The token is
+   * unique per Play app and per third-party app store combination and has a limited validity period
+   * of 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -260,7 +262,9 @@ public final class CatalogAppView extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The token used for delivery of the app with the Google Play Inline Install API.
+   * The token used for delivery of the app with the Google Play Inline Install API. The token is
+   * unique per Play app and per third-party app store combination and has a limited validity period
+   * of 7 days.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeliveryToken() {
@@ -268,7 +272,9 @@ public final class CatalogAppView extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * The token used for delivery of the app with the Google Play Inline Install API.
+   * The token used for delivery of the app with the Google Play Inline Install API. The token is
+   * unique per Play app and per third-party app store combination and has a limited validity period
+   * of 7 days.
    * @param deliveryToken deliveryToken or {@code null} for none
    */
   public CatalogAppView setDeliveryToken(java.lang.String deliveryToken) {

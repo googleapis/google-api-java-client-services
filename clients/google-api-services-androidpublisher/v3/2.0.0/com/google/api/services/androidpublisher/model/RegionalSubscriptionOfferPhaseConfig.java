@@ -32,10 +32,9 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
 
   /**
    * The absolute amount of money subtracted from the base plan price prorated over the phase
-   * duration that the user pays for this offer phase. For example, if the base plan price for this
-   * region is $12 for a period of 1 year, then a $1 absolute discount for a phase of a duration of
-   * 3 months would correspond to a price of $2. The resulting price may not be smaller than the
-   * minimum price allowed for this region.
+   * duration. For example, if the base plan price for this region is $12 for a period of 1 year,
+   * then a $1 absolute discount for a phase of a duration of 3 months would correspond to a price
+   * of $2. The resulting price may not be smaller than the minimum price allowed for this region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -64,13 +63,12 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
   private java.lang.String regionCode;
 
   /**
-   * The fraction of the base plan price prorated over the phase duration that the user pays for
-   * this offer phase. For example, if the base plan price for this region is $12 for a period of 1
-   * year, then a 50% discount for a phase of a duration of 3 months would correspond to a price of
-   * $1.50. The discount must be specified as a fraction strictly larger than 0 and strictly smaller
-   * than 1. The resulting price will be rounded to the nearest billable unit (e.g. cents for USD).
-   * The relative discount is considered invalid if the discounted price ends up being smaller than
-   * the minimum price allowed in this region.
+   * The percentage discount subtracted from the base plan price prorated over the phase duration,
+   * specified as a fraction strictly larger than `0` and strictly smaller than `1`. For example, a
+   * value of `0.8` represents an 80% discount, meaning that if the prorated base plan price is
+   * $100, the offer price will be $20. The resulting price will be rounded to the nearest billable
+   * unit (e.g. cents for USD). The relative discount is considered invalid if the discounted price
+   * ends up being smaller than the minimum price allowed in this region.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -78,10 +76,9 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
 
   /**
    * The absolute amount of money subtracted from the base plan price prorated over the phase
-   * duration that the user pays for this offer phase. For example, if the base plan price for this
-   * region is $12 for a period of 1 year, then a $1 absolute discount for a phase of a duration of
-   * 3 months would correspond to a price of $2. The resulting price may not be smaller than the
-   * minimum price allowed for this region.
+   * duration. For example, if the base plan price for this region is $12 for a period of 1 year,
+   * then a $1 absolute discount for a phase of a duration of 3 months would correspond to a price
+   * of $2. The resulting price may not be smaller than the minimum price allowed for this region.
    * @return value or {@code null} for none
    */
   public Money getAbsoluteDiscount() {
@@ -90,10 +87,9 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
 
   /**
    * The absolute amount of money subtracted from the base plan price prorated over the phase
-   * duration that the user pays for this offer phase. For example, if the base plan price for this
-   * region is $12 for a period of 1 year, then a $1 absolute discount for a phase of a duration of
-   * 3 months would correspond to a price of $2. The resulting price may not be smaller than the
-   * minimum price allowed for this region.
+   * duration. For example, if the base plan price for this region is $12 for a period of 1 year,
+   * then a $1 absolute discount for a phase of a duration of 3 months would correspond to a price
+   * of $2. The resulting price may not be smaller than the minimum price allowed for this region.
    * @param absoluteDiscount absoluteDiscount or {@code null} for none
    */
   public RegionalSubscriptionOfferPhaseConfig setAbsoluteDiscount(Money absoluteDiscount) {
@@ -155,13 +151,12 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
   }
 
   /**
-   * The fraction of the base plan price prorated over the phase duration that the user pays for
-   * this offer phase. For example, if the base plan price for this region is $12 for a period of 1
-   * year, then a 50% discount for a phase of a duration of 3 months would correspond to a price of
-   * $1.50. The discount must be specified as a fraction strictly larger than 0 and strictly smaller
-   * than 1. The resulting price will be rounded to the nearest billable unit (e.g. cents for USD).
-   * The relative discount is considered invalid if the discounted price ends up being smaller than
-   * the minimum price allowed in this region.
+   * The percentage discount subtracted from the base plan price prorated over the phase duration,
+   * specified as a fraction strictly larger than `0` and strictly smaller than `1`. For example, a
+   * value of `0.8` represents an 80% discount, meaning that if the prorated base plan price is
+   * $100, the offer price will be $20. The resulting price will be rounded to the nearest billable
+   * unit (e.g. cents for USD). The relative discount is considered invalid if the discounted price
+   * ends up being smaller than the minimum price allowed in this region.
    * @return value or {@code null} for none
    */
   public java.lang.Double getRelativeDiscount() {
@@ -169,13 +164,12 @@ public final class RegionalSubscriptionOfferPhaseConfig extends com.google.api.c
   }
 
   /**
-   * The fraction of the base plan price prorated over the phase duration that the user pays for
-   * this offer phase. For example, if the base plan price for this region is $12 for a period of 1
-   * year, then a 50% discount for a phase of a duration of 3 months would correspond to a price of
-   * $1.50. The discount must be specified as a fraction strictly larger than 0 and strictly smaller
-   * than 1. The resulting price will be rounded to the nearest billable unit (e.g. cents for USD).
-   * The relative discount is considered invalid if the discounted price ends up being smaller than
-   * the minimum price allowed in this region.
+   * The percentage discount subtracted from the base plan price prorated over the phase duration,
+   * specified as a fraction strictly larger than `0` and strictly smaller than `1`. For example, a
+   * value of `0.8` represents an 80% discount, meaning that if the prorated base plan price is
+   * $100, the offer price will be $20. The resulting price will be rounded to the nearest billable
+   * unit (e.g. cents for USD). The relative discount is considered invalid if the discounted price
+   * ends up being smaller than the minimum price allowed in this region.
    * @param relativeDiscount relativeDiscount or {@code null} for none
    */
   public RegionalSubscriptionOfferPhaseConfig setRelativeDiscount(java.lang.Double relativeDiscount) {

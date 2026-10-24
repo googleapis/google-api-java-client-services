@@ -45,6 +45,30 @@ public final class GoogleCloudDialogflowV2beta1ToolsetTool extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1ParameterOverride> parameterOverrides;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudDialogflowV2beta1ParameterOverride used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudDialogflowV2beta1ParameterOverride.class);
+  }
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean proactiveEnabled;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reactiveEnabled;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String toolset;
 
   /**
@@ -74,6 +98,51 @@ public final class GoogleCloudDialogflowV2beta1ToolsetTool extends com.google.ap
    */
   public GoogleCloudDialogflowV2beta1ToolsetTool setOperationId(java.lang.String operationId) {
     this.operationId = operationId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1ParameterOverride> getParameterOverrides() {
+    return parameterOverrides;
+  }
+
+  /**
+   * @param parameterOverrides parameterOverrides or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolsetTool setParameterOverrides(java.util.List<GoogleCloudDialogflowV2beta1ParameterOverride> parameterOverrides) {
+    this.parameterOverrides = parameterOverrides;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProactiveEnabled() {
+    return proactiveEnabled;
+  }
+
+  /**
+   * @param proactiveEnabled proactiveEnabled or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolsetTool setProactiveEnabled(java.lang.Boolean proactiveEnabled) {
+    this.proactiveEnabled = proactiveEnabled;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReactiveEnabled() {
+    return reactiveEnabled;
+  }
+
+  /**
+   * @param reactiveEnabled reactiveEnabled or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1ToolsetTool setReactiveEnabled(java.lang.Boolean reactiveEnabled) {
+    this.reactiveEnabled = reactiveEnabled;
     return this;
   }
 

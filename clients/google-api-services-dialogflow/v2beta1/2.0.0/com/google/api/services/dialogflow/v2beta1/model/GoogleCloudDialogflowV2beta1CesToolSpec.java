@@ -42,6 +42,24 @@ public final class GoogleCloudDialogflowV2beta1CesToolSpec extends com.google.ap
   private java.lang.String confirmationRequirement;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2beta1ParameterOverride> parameterOverrides;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean proactiveEnabled;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean reactiveEnabled;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getCesTool() {
@@ -68,6 +86,51 @@ public final class GoogleCloudDialogflowV2beta1CesToolSpec extends com.google.ap
    */
   public GoogleCloudDialogflowV2beta1CesToolSpec setConfirmationRequirement(java.lang.String confirmationRequirement) {
     this.confirmationRequirement = confirmationRequirement;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2beta1ParameterOverride> getParameterOverrides() {
+    return parameterOverrides;
+  }
+
+  /**
+   * @param parameterOverrides parameterOverrides or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1CesToolSpec setParameterOverrides(java.util.List<GoogleCloudDialogflowV2beta1ParameterOverride> parameterOverrides) {
+    this.parameterOverrides = parameterOverrides;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProactiveEnabled() {
+    return proactiveEnabled;
+  }
+
+  /**
+   * @param proactiveEnabled proactiveEnabled or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1CesToolSpec setProactiveEnabled(java.lang.Boolean proactiveEnabled) {
+    this.proactiveEnabled = proactiveEnabled;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReactiveEnabled() {
+    return reactiveEnabled;
+  }
+
+  /**
+   * @param reactiveEnabled reactiveEnabled or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1CesToolSpec setReactiveEnabled(java.lang.Boolean reactiveEnabled) {
+    this.reactiveEnabled = reactiveEnabled;
     return this;
   }
 

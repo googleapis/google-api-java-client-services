@@ -75,6 +75,12 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2ResponseMessage> responseMessages;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private String sendTime;
 
   /**
@@ -185,6 +191,21 @@ public final class GoogleCloudDialogflowV2Message extends com.google.api.client.
    */
   public GoogleCloudDialogflowV2Message setParticipantRole(java.lang.String participantRole) {
     this.participantRole = participantRole;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2ResponseMessage> getResponseMessages() {
+    return responseMessages;
+  }
+
+  /**
+   * @param responseMessages responseMessages or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2Message setResponseMessages(java.util.List<GoogleCloudDialogflowV2ResponseMessage> responseMessages) {
+    this.responseMessages = responseMessages;
     return this;
   }
 

@@ -36,6 +36,12 @@ public final class GoogleCloudDialogflowV2beta1SentimentAnalysisResult extends c
   private GoogleCloudDialogflowV2beta1Sentiment queryTextSentiment;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleRpcStatus status;
+
+  /**
    * @return value or {@code null} for none
    */
   public GoogleCloudDialogflowV2beta1Sentiment getQueryTextSentiment() {
@@ -47,6 +53,21 @@ public final class GoogleCloudDialogflowV2beta1SentimentAnalysisResult extends c
    */
   public GoogleCloudDialogflowV2beta1SentimentAnalysisResult setQueryTextSentiment(GoogleCloudDialogflowV2beta1Sentiment queryTextSentiment) {
     this.queryTextSentiment = queryTextSentiment;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleRpcStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * @param status status or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2beta1SentimentAnalysisResult setStatus(GoogleRpcStatus status) {
+    this.status = status;
     return this;
   }
 

@@ -63,7 +63,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
    * Output only. The streaming mode this gateway is actually served with, which the service
    * resolves at creation from `streaming_mode`, the referenced API Config, and the platform default
    * at the time. Read this rather than `streaming_mode` to determine whether a gateway supports
-   * response streaming.
+   * streaming.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,10 +93,10 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   private java.lang.String state;
 
   /**
-   * Optional. Immutable. Requests response streaming for a new gateway. An attempt to change it on
-   * update is rejected. If unset, the service selects the mode. This field records only what was
-   * requested and is never modified by the service; read `effective_streaming_mode` for the mode
-   * the gateway is served with.
+   * Optional. Immutable. Requests streaming for a new gateway. An attempt to change it on update is
+   * rejected. If unset, the service selects the mode. This field records only what was requested
+   * and is never modified by the service; read `effective_streaming_mode` for the mode the gateway
+   * is served with.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
    * Output only. The streaming mode this gateway is actually served with, which the service
    * resolves at creation from `streaming_mode`, the referenced API Config, and the platform default
    * at the time. Read this rather than `streaming_mode` to determine whether a gateway supports
-   * response streaming.
+   * streaming.
    * @return value or {@code null} for none
    */
   public java.lang.String getEffectiveStreamingMode() {
@@ -194,7 +194,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
    * Output only. The streaming mode this gateway is actually served with, which the service
    * resolves at creation from `streaming_mode`, the referenced API Config, and the platform default
    * at the time. Read this rather than `streaming_mode` to determine whether a gateway supports
-   * response streaming.
+   * streaming.
    * @param effectiveStreamingMode effectiveStreamingMode or {@code null} for none
    */
   public ApigatewayGateway setEffectiveStreamingMode(java.lang.String effectiveStreamingMode) {
@@ -258,10 +258,10 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Immutable. Requests response streaming for a new gateway. An attempt to change it on
-   * update is rejected. If unset, the service selects the mode. This field records only what was
-   * requested and is never modified by the service; read `effective_streaming_mode` for the mode
-   * the gateway is served with.
+   * Optional. Immutable. Requests streaming for a new gateway. An attempt to change it on update is
+   * rejected. If unset, the service selects the mode. This field records only what was requested
+   * and is never modified by the service; read `effective_streaming_mode` for the mode the gateway
+   * is served with.
    * @return value or {@code null} for none
    */
   public java.lang.String getStreamingMode() {
@@ -269,10 +269,10 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Immutable. Requests response streaming for a new gateway. An attempt to change it on
-   * update is rejected. If unset, the service selects the mode. This field records only what was
-   * requested and is never modified by the service; read `effective_streaming_mode` for the mode
-   * the gateway is served with.
+   * Optional. Immutable. Requests streaming for a new gateway. An attempt to change it on update is
+   * rejected. If unset, the service selects the mode. This field records only what was requested
+   * and is never modified by the service; read `effective_streaming_mode` for the mode the gateway
+   * is served with.
    * @param streamingMode streamingMode or {@code null} for none
    */
   public ApigatewayGateway setStreamingMode(java.lang.String streamingMode) {

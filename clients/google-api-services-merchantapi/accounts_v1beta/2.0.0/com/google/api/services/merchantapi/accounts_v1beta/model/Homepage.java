@@ -34,8 +34,10 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class Homepage extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Whether the homepage is claimed. See
-   * https://support.google.com/merchants/answer/176793.
+   * Output only. Whether the homepage is claimed. See [About online store URL
+   * verification](https://support.google.com/merchants/answer/176793). This field is also `true` if
+   * the account inherits the claim from its advanced account, or if the account is exempted from
+   * claiming, even when the homepage isn't claimed directly on the account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +58,10 @@ public final class Homepage extends com.google.api.client.json.GenericJson {
   private java.lang.String uri;
 
   /**
-   * Output only. Whether the homepage is claimed. See
-   * https://support.google.com/merchants/answer/176793.
+   * Output only. Whether the homepage is claimed. See [About online store URL
+   * verification](https://support.google.com/merchants/answer/176793). This field is also `true` if
+   * the account inherits the claim from its advanced account, or if the account is exempted from
+   * claiming, even when the homepage isn't claimed directly on the account.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getClaimed() {
@@ -65,8 +69,10 @@ public final class Homepage extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Whether the homepage is claimed. See
-   * https://support.google.com/merchants/answer/176793.
+   * Output only. Whether the homepage is claimed. See [About online store URL
+   * verification](https://support.google.com/merchants/answer/176793). This field is also `true` if
+   * the account inherits the claim from its advanced account, or if the account is exempted from
+   * claiming, even when the homepage isn't claimed directly on the account.
    * @param claimed claimed or {@code null} for none
    */
   public Homepage setClaimed(java.lang.Boolean claimed) {

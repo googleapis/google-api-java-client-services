@@ -773,6 +773,162 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Retrieves the BoundaryConfig identified by the specified `name` (for example,
+     * `folders/123456789/boundaryConfig`).
+     *
+     * Create a request for the method "folders.getBoundaryConfig".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetBoundaryConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the BoundaryConfig to retrieve. Format:
+     *        `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig`
+     *        Example: `folders/123456789/boundaryConfig`
+     * @return the request
+     */
+    public GetBoundaryConfig getBoundaryConfig(java.lang.String name) throws java.io.IOException {
+      GetBoundaryConfig result = new GetBoundaryConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetBoundaryConfig extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/boundaryConfig$");
+
+      /**
+       * Retrieves the BoundaryConfig identified by the specified `name` (for example,
+       * `folders/123456789/boundaryConfig`).
+       *
+       * Create a request for the method "folders.getBoundaryConfig".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetBoundaryConfig#execute()} method to invoke the
+       * remote operation. <p> {@link GetBoundaryConfig#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the BoundaryConfig to retrieve. Format:
+     *        `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig`
+     *        Example: `folders/123456789/boundaryConfig`
+       * @since 1.13
+       */
+      protected GetBoundaryConfig(java.lang.String name) {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/boundaryConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetBoundaryConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetBoundaryConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetBoundaryConfig setAccessToken(java.lang.String accessToken) {
+        return (GetBoundaryConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetBoundaryConfig setAlt(java.lang.String alt) {
+        return (GetBoundaryConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetBoundaryConfig setCallback(java.lang.String callback) {
+        return (GetBoundaryConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetBoundaryConfig setFields(java.lang.String fields) {
+        return (GetBoundaryConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetBoundaryConfig setKey(java.lang.String key) {
+        return (GetBoundaryConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetBoundaryConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetBoundaryConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetBoundaryConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetBoundaryConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetBoundaryConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetBoundaryConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetBoundaryConfig setUploadType(java.lang.String uploadType) {
+        return (GetBoundaryConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetBoundaryConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetBoundaryConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the BoundaryConfig to retrieve. Format:
+       * `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the BoundaryConfig to retrieve. Format:
+     `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig` Example:
+     `folders/123456789/boundaryConfig`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the BoundaryConfig to retrieve. Format:
+       * `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      public GetBoundaryConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/boundaryConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetBoundaryConfig set(String parameterName, Object value) {
+        return (GetBoundaryConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the access control policy for a folder. The returned policy may be empty if no such policy
      * or resource exists. The `resource` field should be the folder's resource name, for example:
      * "folders/1234". The caller must have `resourcemanager.folders.getIamPolicy` permission on the
@@ -2128,7 +2284,1034 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (Undelete) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates the BoundaryConfig identified by the specified `name` (for example,
+     * `folders/123456789/boundaryConfig`).
+     *
+     * Create a request for the method "folders.updateBoundaryConfig".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link UpdateBoundaryConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. The unique resource name of the BoundaryConfig. Format: -
+     *        `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+     *        `folders/123456789/boundaryConfig`
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig}
+     * @return the request
+     */
+    public UpdateBoundaryConfig updateBoundaryConfig(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig content) throws java.io.IOException {
+      UpdateBoundaryConfig result = new UpdateBoundaryConfig(name, content);
+      initialize(result);
+      return result;
+    }
 
+    public class UpdateBoundaryConfig extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^folders/[^/]+/boundaryConfig$");
+
+      /**
+       * Updates the BoundaryConfig identified by the specified `name` (for example,
+       * `folders/123456789/boundaryConfig`).
+       *
+       * Create a request for the method "folders.updateBoundaryConfig".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link UpdateBoundaryConfig#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateBoundaryConfig#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Identifier. The unique resource name of the BoundaryConfig. Format: -
+     *        `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+     *        `folders/123456789/boundaryConfig`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig}
+       * @since 1.13
+       */
+      protected UpdateBoundaryConfig(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig content) {
+        super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/boundaryConfig$");
+        }
+      }
+
+      @Override
+      public UpdateBoundaryConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateBoundaryConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateBoundaryConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setAlt(java.lang.String alt) {
+        return (UpdateBoundaryConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setCallback(java.lang.String callback) {
+        return (UpdateBoundaryConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setFields(java.lang.String fields) {
+        return (UpdateBoundaryConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setKey(java.lang.String key) {
+        return (UpdateBoundaryConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateBoundaryConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateBoundaryConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateBoundaryConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateBoundaryConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateBoundaryConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The unique resource name of the BoundaryConfig. Format: -
+       * `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The unique resource name of the BoundaryConfig. Format: -
+     `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+     `folders/123456789/boundaryConfig`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The unique resource name of the BoundaryConfig. Format: -
+       * `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      public UpdateBoundaryConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^folders/[^/]+/boundaryConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Optional. The list of fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The list of fields to update. */
+      public UpdateBoundaryConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateBoundaryConfig set(String parameterName, Object value) {
+        return (UpdateBoundaryConfig) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the Boundaries collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+     *   {@code CloudResourceManager.Boundaries.List request = cloudresourcemanager.boundaries().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Boundaries boundaries() {
+      return new Boundaries();
+    }
+
+    /**
+     * The "boundaries" collection of methods.
+     */
+    public class Boundaries {
+
+      /**
+       * Creates a Boundary under a parent Folder or Organization. Creating a Boundary triggers the
+       * creation of a Management Project if one is not supplied.
+       *
+       * Create a request for the method "boundaries.create".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource under which the Boundary will be created. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+parent}/boundaries";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Creates a Boundary under a parent Folder or Organization. Creating a Boundary triggers the
+         * creation of a Management Project if one is not supplied.
+         *
+         * Create a request for the method "boundaries.create".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource under which the Boundary will be created. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+         * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) {
+          super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource under which the Boundary will be created. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource under which the Boundary will be created. Format:
+       `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource under which the Boundary will be created. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The user-assigned ID for the Boundary, which will become the final component of
+         * the Boundary's resource name. Must be unique within the parent resource. It must be 6 to
+         * 30 lowercase ASCII letters, digits, or hyphens. It must start with a letter. Trailing
+         * hyphens are prohibited. Example: `my-boundary-123`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String boundaryId;
+
+        /** Required. The user-assigned ID for the Boundary, which will become the final component of the
+       Boundary's resource name. Must be unique within the parent resource. It must be 6 to 30 lowercase
+       ASCII letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited.
+       Example: `my-boundary-123`
+         */
+        public java.lang.String getBoundaryId() {
+          return boundaryId;
+        }
+
+        /**
+         * Required. The user-assigned ID for the Boundary, which will become the final component of
+         * the Boundary's resource name. Must be unique within the parent resource. It must be 6 to
+         * 30 lowercase ASCII letters, digits, or hyphens. It must start with a letter. Trailing
+         * hyphens are prohibited. Example: `my-boundary-123`
+         */
+        public Create setBoundaryId(java.lang.String boundaryId) {
+          this.boundaryId = boundaryId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the Boundary identified by the specified `name` (for example,
+       * `folders/123456789/boundaries/my-boundary`).
+       *
+       * Create a request for the method "boundaries.delete".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Boundary to delete. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/boundaries/[^/]+$");
+
+        /**
+         * Deletes the Boundary identified by the specified `name` (for example,
+         * `folders/123456789/boundaries/my-boundary`).
+         *
+         * Create a request for the method "boundaries.delete".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Boundary to delete. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudResourceManager.this, "DELETE", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/boundaries/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Boundary to delete. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Boundary to delete. Format:
+       `organizations/{organization_id}/boundaries/{boundary_id}` or
+       `folders/{folder_id}/boundaries/{boundary_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Boundary to delete. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/boundaries/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the Boundary identified by the specified `name` (for example,
+       * `folders/123456789/boundaries/my-boundary`).
+       *
+       * Create a request for the method "boundaries.get".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Boundary to retrieve. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Boundary> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/boundaries/[^/]+$");
+
+        /**
+         * Retrieves the Boundary identified by the specified `name` (for example,
+         * `folders/123456789/boundaries/my-boundary`).
+         *
+         * Create a request for the method "boundaries.get".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Boundary to retrieve. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Boundary.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/boundaries/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Boundary to retrieve. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Boundary to retrieve. Format:
+       `organizations/{organization_id}/boundaries/{boundary_id}` or
+       `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-boundary`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Boundary to retrieve. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/boundaries/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists Boundaries that are direct children of the specified organization or folder resource.
+       *
+       * Create a request for the method "boundaries.list".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the parent resource whose Boundaries are being listed. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.ListBoundariesResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}/boundaries";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+$");
+
+        /**
+         * Lists Boundaries that are direct children of the specified organization or folder resource.
+         *
+         * Create a request for the method "boundaries.list".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the parent resource whose Boundaries are being listed. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.ListBoundariesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the parent resource whose Boundaries are being listed. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the parent resource whose Boundaries are being listed. Format:
+       `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the parent resource whose Boundaries are being listed. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^folders/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of Boundaries to return in the response. The service may
+         * return fewer Boundaries than requested. If unspecified, at most 100 Boundaries will be
+         * returned. The maximum value is 100; values above 100 will be coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of Boundaries to return in the response. The service may return fewer
+       Boundaries than requested. If unspecified, at most 100 Boundaries will be returned. The maximum
+       value is 100; values above 100 will be coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of Boundaries to return in the response. The service may
+         * return fewer Boundaries than requested. If unspecified, at most 100 Boundaries will be
+         * returned. The maximum value is 100; values above 100 will be coerced to 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A pagination token received from a previous call to `ListBoundaries` that
+         * indicates from where listing should continue. Provide this to retrieve the subsequent
+         * page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A pagination token received from a previous call to `ListBoundaries` that indicates from
+       where listing should continue. Provide this to retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A pagination token received from a previous call to `ListBoundaries` that
+         * indicates from where listing should continue. Provide this to retrieve the subsequent
+         * page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the `display_name` and `resource_filter.tag_filter.tag_value` of the Boundary identified
+       * by the specified `name` (for example, `folders/123456789/boundaries/my-boundary`).
+       *
+       * Create a request for the method "boundaries.patch".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The unique resource name of the Boundary. Format: -
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` -
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^folders/[^/]+/boundaries/[^/]+$");
+
+        /**
+         * Updates the `display_name` and `resource_filter.tag_filter.tag_value` of the Boundary
+         * identified by the specified `name` (for example, `folders/123456789/boundaries/my-boundary`).
+         *
+         * Create a request for the method "boundaries.patch".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The unique resource name of the Boundary. Format: -
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` -
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+         * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) {
+          super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/boundaries/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The unique resource name of the Boundary. Format: -
+         * `organizations/{organization_id}/boundaries/{boundary_id}` -
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The unique resource name of the Boundary. Format: -
+       `organizations/{organization_id}/boundaries/{boundary_id}` -
+       `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-boundary`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The unique resource name of the Boundary. Format: -
+         * `organizations/{organization_id}/boundaries/{boundary_id}` -
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^folders/[^/]+/boundaries/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The list of fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
     /**
      * An accessor for creating requests from the Capabilities collection.
      *
@@ -4822,6 +6005,162 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
+     * Retrieves the BoundaryConfig identified by the specified `name` (for example,
+     * `folders/123456789/boundaryConfig`).
+     *
+     * Create a request for the method "organizations.getBoundaryConfig".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link GetBoundaryConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The name of the BoundaryConfig to retrieve. Format:
+     *        `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig`
+     *        Example: `folders/123456789/boundaryConfig`
+     * @return the request
+     */
+    public GetBoundaryConfig getBoundaryConfig(java.lang.String name) throws java.io.IOException {
+      GetBoundaryConfig result = new GetBoundaryConfig(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetBoundaryConfig extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/boundaryConfig$");
+
+      /**
+       * Retrieves the BoundaryConfig identified by the specified `name` (for example,
+       * `folders/123456789/boundaryConfig`).
+       *
+       * Create a request for the method "organizations.getBoundaryConfig".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link GetBoundaryConfig#execute()} method to invoke the
+       * remote operation. <p> {@link GetBoundaryConfig#initialize(com.google.api.client.googleapis.serv
+       * ices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param name Required. The name of the BoundaryConfig to retrieve. Format:
+     *        `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig`
+     *        Example: `folders/123456789/boundaryConfig`
+       * @since 1.13
+       */
+      protected GetBoundaryConfig(java.lang.String name) {
+        super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/boundaryConfig$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetBoundaryConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (GetBoundaryConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetBoundaryConfig setAccessToken(java.lang.String accessToken) {
+        return (GetBoundaryConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetBoundaryConfig setAlt(java.lang.String alt) {
+        return (GetBoundaryConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public GetBoundaryConfig setCallback(java.lang.String callback) {
+        return (GetBoundaryConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public GetBoundaryConfig setFields(java.lang.String fields) {
+        return (GetBoundaryConfig) super.setFields(fields);
+      }
+
+      @Override
+      public GetBoundaryConfig setKey(java.lang.String key) {
+        return (GetBoundaryConfig) super.setKey(key);
+      }
+
+      @Override
+      public GetBoundaryConfig setOauthToken(java.lang.String oauthToken) {
+        return (GetBoundaryConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetBoundaryConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetBoundaryConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetBoundaryConfig setQuotaUser(java.lang.String quotaUser) {
+        return (GetBoundaryConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetBoundaryConfig setUploadType(java.lang.String uploadType) {
+        return (GetBoundaryConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetBoundaryConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetBoundaryConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The name of the BoundaryConfig to retrieve. Format:
+       * `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The name of the BoundaryConfig to retrieve. Format:
+     `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig` Example:
+     `folders/123456789/boundaryConfig`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The name of the BoundaryConfig to retrieve. Format:
+       * `organizations/{organization}/boundaryConfig` or `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      public GetBoundaryConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/boundaryConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetBoundaryConfig set(String parameterName, Object value) {
+        return (GetBoundaryConfig) super.set(parameterName, value);
+      }
+    }
+    /**
      * Gets the access control policy for an organization resource. The policy may be empty if no such
      * policy or resource exists. The `resource` field should be the organization's resource name, for
      * example: "organizations/123". Authorization requires the IAM permission
@@ -5481,7 +6820,1034 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
         return (TestIamPermissions) super.set(parameterName, value);
       }
     }
+    /**
+     * Updates the BoundaryConfig identified by the specified `name` (for example,
+     * `folders/123456789/boundaryConfig`).
+     *
+     * Create a request for the method "organizations.updateBoundaryConfig".
+     *
+     * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+     * optional parameters, call the {@link UpdateBoundaryConfig#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Identifier. The unique resource name of the BoundaryConfig. Format: -
+     *        `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+     *        `folders/123456789/boundaryConfig`
+     * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig}
+     * @return the request
+     */
+    public UpdateBoundaryConfig updateBoundaryConfig(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig content) throws java.io.IOException {
+      UpdateBoundaryConfig result = new UpdateBoundaryConfig(name, content);
+      initialize(result);
+      return result;
+    }
 
+    public class UpdateBoundaryConfig extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+      private static final String REST_PATH = "v3/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^organizations/[^/]+/boundaryConfig$");
+
+      /**
+       * Updates the BoundaryConfig identified by the specified `name` (for example,
+       * `folders/123456789/boundaryConfig`).
+       *
+       * Create a request for the method "organizations.updateBoundaryConfig".
+       *
+       * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+       * any optional parameters, call the {@link UpdateBoundaryConfig#execute()} method to invoke the
+       * remote operation. <p> {@link UpdateBoundaryConfig#initialize(com.google.api.client.googleapis.s
+       * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Identifier. The unique resource name of the BoundaryConfig. Format: -
+     *        `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+     *        `folders/123456789/boundaryConfig`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig}
+       * @since 1.13
+       */
+      protected UpdateBoundaryConfig(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.BoundaryConfig content) {
+        super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/boundaryConfig$");
+        }
+      }
+
+      @Override
+      public UpdateBoundaryConfig set$Xgafv(java.lang.String $Xgafv) {
+        return (UpdateBoundaryConfig) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setAccessToken(java.lang.String accessToken) {
+        return (UpdateBoundaryConfig) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setAlt(java.lang.String alt) {
+        return (UpdateBoundaryConfig) super.setAlt(alt);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setCallback(java.lang.String callback) {
+        return (UpdateBoundaryConfig) super.setCallback(callback);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setFields(java.lang.String fields) {
+        return (UpdateBoundaryConfig) super.setFields(fields);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setKey(java.lang.String key) {
+        return (UpdateBoundaryConfig) super.setKey(key);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setOauthToken(java.lang.String oauthToken) {
+        return (UpdateBoundaryConfig) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (UpdateBoundaryConfig) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setQuotaUser(java.lang.String quotaUser) {
+        return (UpdateBoundaryConfig) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setUploadType(java.lang.String uploadType) {
+        return (UpdateBoundaryConfig) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public UpdateBoundaryConfig setUploadProtocol(java.lang.String uploadProtocol) {
+        return (UpdateBoundaryConfig) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Identifier. The unique resource name of the BoundaryConfig. Format: -
+       * `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Identifier. The unique resource name of the BoundaryConfig. Format: -
+     `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+     `folders/123456789/boundaryConfig`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Identifier. The unique resource name of the BoundaryConfig. Format: -
+       * `organizations/{organization}/boundaryConfig` - `folders/{folder}/boundaryConfig` Example:
+       * `folders/123456789/boundaryConfig`
+       */
+      public UpdateBoundaryConfig setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^organizations/[^/]+/boundaryConfig$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Optional. The list of fields to update. */
+      @com.google.api.client.util.Key
+      private String updateMask;
+
+      /** Optional. The list of fields to update.
+       */
+      public String getUpdateMask() {
+        return updateMask;
+      }
+
+      /** Optional. The list of fields to update. */
+      public UpdateBoundaryConfig setUpdateMask(String updateMask) {
+        this.updateMask = updateMask;
+        return this;
+      }
+
+      @Override
+      public UpdateBoundaryConfig set(String parameterName, Object value) {
+        return (UpdateBoundaryConfig) super.set(parameterName, value);
+      }
+    }
+
+    /**
+     * An accessor for creating requests from the Boundaries collection.
+     *
+     * <p>The typical use is:</p>
+     * <pre>
+     *   {@code CloudResourceManager cloudresourcemanager = new CloudResourceManager(...);}
+     *   {@code CloudResourceManager.Boundaries.List request = cloudresourcemanager.boundaries().list(parameters ...)}
+     * </pre>
+     *
+     * @return the resource collection
+     */
+    public Boundaries boundaries() {
+      return new Boundaries();
+    }
+
+    /**
+     * The "boundaries" collection of methods.
+     */
+    public class Boundaries {
+
+      /**
+       * Creates a Boundary under a parent Folder or Organization. Creating a Boundary triggers the
+       * creation of a Management Project if one is not supplied.
+       *
+       * Create a request for the method "boundaries.create".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The parent resource under which the Boundary will be created. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+       * @return the request
+       */
+      public Create create(java.lang.String parent, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) throws java.io.IOException {
+        Create result = new Create(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Create extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+parent}/boundaries";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Creates a Boundary under a parent Folder or Organization. Creating a Boundary triggers the
+         * creation of a Management Project if one is not supplied.
+         *
+         * Create a request for the method "boundaries.create".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Create#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The parent resource under which the Boundary will be created. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+         * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+         * @since 1.13
+         */
+        protected Create(java.lang.String parent, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) {
+          super(CloudResourceManager.this, "POST", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public Create set$Xgafv(java.lang.String $Xgafv) {
+          return (Create) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Create setAccessToken(java.lang.String accessToken) {
+          return (Create) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Create setAlt(java.lang.String alt) {
+          return (Create) super.setAlt(alt);
+        }
+
+        @Override
+        public Create setCallback(java.lang.String callback) {
+          return (Create) super.setCallback(callback);
+        }
+
+        @Override
+        public Create setFields(java.lang.String fields) {
+          return (Create) super.setFields(fields);
+        }
+
+        @Override
+        public Create setKey(java.lang.String key) {
+          return (Create) super.setKey(key);
+        }
+
+        @Override
+        public Create setOauthToken(java.lang.String oauthToken) {
+          return (Create) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Create) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Create setQuotaUser(java.lang.String quotaUser) {
+          return (Create) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Create setUploadType(java.lang.String uploadType) {
+          return (Create) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Create setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Create) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The parent resource under which the Boundary will be created. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The parent resource under which the Boundary will be created. Format:
+       `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The parent resource under which the Boundary will be created. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public Create setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Required. The user-assigned ID for the Boundary, which will become the final component of
+         * the Boundary's resource name. Must be unique within the parent resource. It must be 6 to
+         * 30 lowercase ASCII letters, digits, or hyphens. It must start with a letter. Trailing
+         * hyphens are prohibited. Example: `my-boundary-123`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String boundaryId;
+
+        /** Required. The user-assigned ID for the Boundary, which will become the final component of the
+       Boundary's resource name. Must be unique within the parent resource. It must be 6 to 30 lowercase
+       ASCII letters, digits, or hyphens. It must start with a letter. Trailing hyphens are prohibited.
+       Example: `my-boundary-123`
+         */
+        public java.lang.String getBoundaryId() {
+          return boundaryId;
+        }
+
+        /**
+         * Required. The user-assigned ID for the Boundary, which will become the final component of
+         * the Boundary's resource name. Must be unique within the parent resource. It must be 6 to
+         * 30 lowercase ASCII letters, digits, or hyphens. It must start with a letter. Trailing
+         * hyphens are prohibited. Example: `my-boundary-123`
+         */
+        public Create setBoundaryId(java.lang.String boundaryId) {
+          this.boundaryId = boundaryId;
+          return this;
+        }
+
+        @Override
+        public Create set(String parameterName, Object value) {
+          return (Create) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Deletes the Boundary identified by the specified `name` (for example,
+       * `folders/123456789/boundaries/my-boundary`).
+       *
+       * Create a request for the method "boundaries.delete".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Boundary to delete. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}`
+       * @return the request
+       */
+      public Delete delete(java.lang.String name) throws java.io.IOException {
+        Delete result = new Delete(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Delete extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/boundaries/[^/]+$");
+
+        /**
+         * Deletes the Boundary identified by the specified `name` (for example,
+         * `folders/123456789/boundaries/my-boundary`).
+         *
+         * Create a request for the method "boundaries.delete".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Delete#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Boundary to delete. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}`
+         * @since 1.13
+         */
+        protected Delete(java.lang.String name) {
+          super(CloudResourceManager.this, "DELETE", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/boundaries/[^/]+$");
+          }
+        }
+
+        @Override
+        public Delete set$Xgafv(java.lang.String $Xgafv) {
+          return (Delete) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Delete setAccessToken(java.lang.String accessToken) {
+          return (Delete) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Delete setAlt(java.lang.String alt) {
+          return (Delete) super.setAlt(alt);
+        }
+
+        @Override
+        public Delete setCallback(java.lang.String callback) {
+          return (Delete) super.setCallback(callback);
+        }
+
+        @Override
+        public Delete setFields(java.lang.String fields) {
+          return (Delete) super.setFields(fields);
+        }
+
+        @Override
+        public Delete setKey(java.lang.String key) {
+          return (Delete) super.setKey(key);
+        }
+
+        @Override
+        public Delete setOauthToken(java.lang.String oauthToken) {
+          return (Delete) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Delete) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Delete setQuotaUser(java.lang.String quotaUser) {
+          return (Delete) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Delete setUploadType(java.lang.String uploadType) {
+          return (Delete) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Delete) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Boundary to delete. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Boundary to delete. Format:
+       `organizations/{organization_id}/boundaries/{boundary_id}` or
+       `folders/{folder_id}/boundaries/{boundary_id}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Boundary to delete. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}`
+         */
+        public Delete setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/boundaries/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Delete set(String parameterName, Object value) {
+          return (Delete) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Retrieves the Boundary identified by the specified `name` (for example,
+       * `folders/123456789/boundaries/my-boundary`).
+       *
+       * Create a request for the method "boundaries.get".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. The name of the Boundary to retrieve. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+       * @return the request
+       */
+      public Get get(java.lang.String name) throws java.io.IOException {
+        Get result = new Get(name);
+        initialize(result);
+        return result;
+      }
+
+      public class Get extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Boundary> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/boundaries/[^/]+$");
+
+        /**
+         * Retrieves the Boundary identified by the specified `name` (for example,
+         * `folders/123456789/boundaries/my-boundary`).
+         *
+         * Create a request for the method "boundaries.get".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the Boundary to retrieve. Format:
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` or
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+         * @since 1.13
+         */
+        protected Get(java.lang.String name) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.Boundary.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/boundaries/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public Get set$Xgafv(java.lang.String $Xgafv) {
+          return (Get) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Get setAccessToken(java.lang.String accessToken) {
+          return (Get) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Get setAlt(java.lang.String alt) {
+          return (Get) super.setAlt(alt);
+        }
+
+        @Override
+        public Get setCallback(java.lang.String callback) {
+          return (Get) super.setCallback(callback);
+        }
+
+        @Override
+        public Get setFields(java.lang.String fields) {
+          return (Get) super.setFields(fields);
+        }
+
+        @Override
+        public Get setKey(java.lang.String key) {
+          return (Get) super.setKey(key);
+        }
+
+        @Override
+        public Get setOauthToken(java.lang.String oauthToken) {
+          return (Get) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Get) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Get setQuotaUser(java.lang.String quotaUser) {
+          return (Get) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Get setUploadType(java.lang.String uploadType) {
+          return (Get) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Get setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Get) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the Boundary to retrieve. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the Boundary to retrieve. Format:
+       `organizations/{organization_id}/boundaries/{boundary_id}` or
+       `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-boundary`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the Boundary to retrieve. Format:
+         * `organizations/{organization_id}/boundaries/{boundary_id}` or
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        public Get setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/boundaries/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Get set(String parameterName, Object value) {
+          return (Get) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Lists Boundaries that are direct children of the specified organization or folder resource.
+       *
+       * Create a request for the method "boundaries.list".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+       *
+       * @param parent Required. The name of the parent resource whose Boundaries are being listed. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+       * @return the request
+       */
+      public List list(java.lang.String parent) throws java.io.IOException {
+        List result = new List(parent);
+        initialize(result);
+        return result;
+      }
+
+      public class List extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.ListBoundariesResponse> {
+
+        private static final String REST_PATH = "v3/{+parent}/boundaries";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+$");
+
+        /**
+         * Lists Boundaries that are direct children of the specified organization or folder resource.
+         *
+         * Create a request for the method "boundaries.list".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+         * called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param parent Required. The name of the parent resource whose Boundaries are being listed. Format:
+       *        `organizations/{organization_id}` or `folders/{folder_id}`
+         * @since 1.13
+         */
+        protected List(java.lang.String parent) {
+          super(CloudResourceManager.this, "GET", REST_PATH, null, com.google.api.services.cloudresourcemanager.v3.model.ListBoundariesResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public List set$Xgafv(java.lang.String $Xgafv) {
+          return (List) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public List setAccessToken(java.lang.String accessToken) {
+          return (List) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public List setAlt(java.lang.String alt) {
+          return (List) super.setAlt(alt);
+        }
+
+        @Override
+        public List setCallback(java.lang.String callback) {
+          return (List) super.setCallback(callback);
+        }
+
+        @Override
+        public List setFields(java.lang.String fields) {
+          return (List) super.setFields(fields);
+        }
+
+        @Override
+        public List setKey(java.lang.String key) {
+          return (List) super.setKey(key);
+        }
+
+        @Override
+        public List setOauthToken(java.lang.String oauthToken) {
+          return (List) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (List) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public List setQuotaUser(java.lang.String quotaUser) {
+          return (List) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public List setUploadType(java.lang.String uploadType) {
+          return (List) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public List setUploadProtocol(java.lang.String uploadProtocol) {
+          return (List) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the parent resource whose Boundaries are being listed. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** Required. The name of the parent resource whose Boundaries are being listed. Format:
+       `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * Required. The name of the parent resource whose Boundaries are being listed. Format:
+         * `organizations/{organization_id}` or `folders/{folder_id}`
+         */
+        public List setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^organizations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of Boundaries to return in the response. The service may
+         * return fewer Boundaries than requested. If unspecified, at most 100 Boundaries will be
+         * returned. The maximum value is 100; values above 100 will be coerced to 100.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of Boundaries to return in the response. The service may return fewer
+       Boundaries than requested. If unspecified, at most 100 Boundaries will be returned. The maximum
+       value is 100; values above 100 will be coerced to 100.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of Boundaries to return in the response. The service may
+         * return fewer Boundaries than requested. If unspecified, at most 100 Boundaries will be
+         * returned. The maximum value is 100; values above 100 will be coerced to 100.
+         */
+        public List setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A pagination token received from a previous call to `ListBoundaries` that
+         * indicates from where listing should continue. Provide this to retrieve the subsequent
+         * page.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A pagination token received from a previous call to `ListBoundaries` that indicates from
+       where listing should continue. Provide this to retrieve the subsequent page.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A pagination token received from a previous call to `ListBoundaries` that
+         * indicates from where listing should continue. Provide this to retrieve the subsequent
+         * page.
+         */
+        public List setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public List set(String parameterName, Object value) {
+          return (List) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the `display_name` and `resource_filter.tag_filter.tag_value` of the Boundary identified
+       * by the specified `name` (for example, `folders/123456789/boundaries/my-boundary`).
+       *
+       * Create a request for the method "boundaries.patch".
+       *
+       * This request holds the parameters needed by the cloudresourcemanager server.  After setting any
+       * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+       *
+       * @param name Identifier. The unique resource name of the Boundary. Format: -
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` -
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+       * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+       * @return the request
+       */
+      public Patch patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) throws java.io.IOException {
+        Patch result = new Patch(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Patch extends CloudResourceManagerRequest<com.google.api.services.cloudresourcemanager.v3.model.Operation> {
+
+        private static final String REST_PATH = "v3/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^organizations/[^/]+/boundaries/[^/]+$");
+
+        /**
+         * Updates the `display_name` and `resource_filter.tag_filter.tag_value` of the Boundary
+         * identified by the specified `name` (for example, `folders/123456789/boundaries/my-boundary`).
+         *
+         * Create a request for the method "boundaries.patch".
+         *
+         * This request holds the parameters needed by the the cloudresourcemanager server.  After setting
+         * any optional parameters, call the {@link Patch#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+         * be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The unique resource name of the Boundary. Format: -
+       *        `organizations/{organization_id}/boundaries/{boundary_id}` -
+       *        `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+       *        boundary`
+         * @param content the {@link com.google.api.services.cloudresourcemanager.v3.model.Boundary}
+         * @since 1.13
+         */
+        protected Patch(java.lang.String name, com.google.api.services.cloudresourcemanager.v3.model.Boundary content) {
+          super(CloudResourceManager.this, "PATCH", REST_PATH, content, com.google.api.services.cloudresourcemanager.v3.model.Operation.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/boundaries/[^/]+$");
+          }
+        }
+
+        @Override
+        public Patch set$Xgafv(java.lang.String $Xgafv) {
+          return (Patch) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Patch setAccessToken(java.lang.String accessToken) {
+          return (Patch) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Patch setAlt(java.lang.String alt) {
+          return (Patch) super.setAlt(alt);
+        }
+
+        @Override
+        public Patch setCallback(java.lang.String callback) {
+          return (Patch) super.setCallback(callback);
+        }
+
+        @Override
+        public Patch setFields(java.lang.String fields) {
+          return (Patch) super.setFields(fields);
+        }
+
+        @Override
+        public Patch setKey(java.lang.String key) {
+          return (Patch) super.setKey(key);
+        }
+
+        @Override
+        public Patch setOauthToken(java.lang.String oauthToken) {
+          return (Patch) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Patch) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Patch setQuotaUser(java.lang.String quotaUser) {
+          return (Patch) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Patch setUploadType(java.lang.String uploadType) {
+          return (Patch) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Patch) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The unique resource name of the Boundary. Format: -
+         * `organizations/{organization_id}/boundaries/{boundary_id}` -
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The unique resource name of the Boundary. Format: -
+       `organizations/{organization_id}/boundaries/{boundary_id}` -
+       `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-boundary`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The unique resource name of the Boundary. Format: -
+         * `organizations/{organization_id}/boundaries/{boundary_id}` -
+         * `folders/{folder_id}/boundaries/{boundary_id}` Example: `folders/123456789/boundaries/my-
+         * boundary`
+         */
+        public Patch setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^organizations/[^/]+/boundaries/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /** Optional. The list of fields to update. */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of fields to update.
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /** Optional. The list of fields to update. */
+        public Patch setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public Patch set(String parameterName, Object value) {
+          return (Patch) super.set(parameterName, value);
+        }
+      }
+
+    }
     /**
      * An accessor for creating requests from the CapabilityConfigs collection.
      *

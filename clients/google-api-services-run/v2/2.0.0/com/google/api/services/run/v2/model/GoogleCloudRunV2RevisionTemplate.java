@@ -30,6 +30,13 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The ambient networking configuration for this revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2AmbientNetworking ambientNetworking;
+
+  /**
    * Optional. Unstructured key value map that may be set by external tools to store and arbitrary
    * metadata. They are not queryable and should be preserved when modifying objects. Cloud Run API
    * v2 does not support annotations with `run.googleapis.com`, `cloud.googleapis.com`,
@@ -209,6 +216,23 @@ public final class GoogleCloudRunV2RevisionTemplate extends com.google.api.clien
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
+   * Optional. The ambient networking configuration for this revision.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2AmbientNetworking getAmbientNetworking() {
+    return ambientNetworking;
+  }
+
+  /**
+   * Optional. The ambient networking configuration for this revision.
+   * @param ambientNetworking ambientNetworking or {@code null} for none
+   */
+  public GoogleCloudRunV2RevisionTemplate setAmbientNetworking(GoogleCloudRunV2AmbientNetworking ambientNetworking) {
+    this.ambientNetworking = ambientNetworking;
+    return this;
+  }
 
   /**
    * Optional. Unstructured key value map that may be set by external tools to store and arbitrary

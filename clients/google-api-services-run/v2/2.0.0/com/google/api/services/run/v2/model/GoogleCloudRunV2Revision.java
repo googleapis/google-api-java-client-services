@@ -31,6 +31,13 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2Revision extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The ambient networking configuration for this revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2AmbientNetworking ambientNetworking;
+
+  /**
    * Output only. Unstructured key value map that may be set by external tools to store and
    * arbitrary metadata. They are not queryable and should be preserved when modifying objects.
    * The value may be {@code null}.
@@ -322,6 +329,23 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private GoogleCloudRunV2WorkloadIdentityConfig workloadIdentityConfig;
+
+  /**
+   * Output only. The ambient networking configuration for this revision.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2AmbientNetworking getAmbientNetworking() {
+    return ambientNetworking;
+  }
+
+  /**
+   * Output only. The ambient networking configuration for this revision.
+   * @param ambientNetworking ambientNetworking or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setAmbientNetworking(GoogleCloudRunV2AmbientNetworking ambientNetworking) {
+    this.ambientNetworking = ambientNetworking;
+    return this;
+  }
 
   /**
    * Output only. Unstructured key value map that may be set by external tools to store and

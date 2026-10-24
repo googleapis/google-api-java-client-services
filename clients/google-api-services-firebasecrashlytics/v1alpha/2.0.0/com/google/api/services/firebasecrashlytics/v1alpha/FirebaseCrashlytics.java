@@ -174,6 +174,141 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
     public class Apps {
 
       /**
+       * Creates a Cloud Monitoring AlertPolicy for the requested Crashlytics Web alert type and returns
+       * the created resource reference.
+       *
+       * Create a request for the method "apps.generateAlertPolicy".
+       *
+       * This request holds the parameters needed by the firebasecrashlytics server.  After setting any
+       * optional parameters, call the {@link GenerateAlertPolicy#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The firebase application. Format: "projects/{project}/apps/{app_id}".
+       * @param content the {@link com.google.api.services.firebasecrashlytics.v1alpha.model.GenerateAlertPolicyRequest}
+       * @return the request
+       */
+      public GenerateAlertPolicy generateAlertPolicy(java.lang.String name, com.google.api.services.firebasecrashlytics.v1alpha.model.GenerateAlertPolicyRequest content) throws java.io.IOException {
+        GenerateAlertPolicy result = new GenerateAlertPolicy(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class GenerateAlertPolicy extends FirebaseCrashlyticsRequest<com.google.api.services.firebasecrashlytics.v1alpha.model.GenerateAlertPolicyResponse> {
+
+        private static final String REST_PATH = "v1alpha/{+name}:generateAlertPolicy";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+$");
+
+        /**
+         * Creates a Cloud Monitoring AlertPolicy for the requested Crashlytics Web alert type and returns
+         * the created resource reference.
+         *
+         * Create a request for the method "apps.generateAlertPolicy".
+         *
+         * This request holds the parameters needed by the the firebasecrashlytics server.  After setting
+         * any optional parameters, call the {@link GenerateAlertPolicy#execute()} method to invoke the
+         * remote operation. <p> {@link GenerateAlertPolicy#initialize(com.google.api.client.googleapis.se
+         * rvices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param name Required. The firebase application. Format: "projects/{project}/apps/{app_id}".
+         * @param content the {@link com.google.api.services.firebasecrashlytics.v1alpha.model.GenerateAlertPolicyRequest}
+         * @since 1.13
+         */
+        protected GenerateAlertPolicy(java.lang.String name, com.google.api.services.firebasecrashlytics.v1alpha.model.GenerateAlertPolicyRequest content) {
+          super(FirebaseCrashlytics.this, "POST", REST_PATH, content, com.google.api.services.firebasecrashlytics.v1alpha.model.GenerateAlertPolicyResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+        }
+
+        @Override
+        public GenerateAlertPolicy set$Xgafv(java.lang.String $Xgafv) {
+          return (GenerateAlertPolicy) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GenerateAlertPolicy setAccessToken(java.lang.String accessToken) {
+          return (GenerateAlertPolicy) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GenerateAlertPolicy setAlt(java.lang.String alt) {
+          return (GenerateAlertPolicy) super.setAlt(alt);
+        }
+
+        @Override
+        public GenerateAlertPolicy setCallback(java.lang.String callback) {
+          return (GenerateAlertPolicy) super.setCallback(callback);
+        }
+
+        @Override
+        public GenerateAlertPolicy setFields(java.lang.String fields) {
+          return (GenerateAlertPolicy) super.setFields(fields);
+        }
+
+        @Override
+        public GenerateAlertPolicy setKey(java.lang.String key) {
+          return (GenerateAlertPolicy) super.setKey(key);
+        }
+
+        @Override
+        public GenerateAlertPolicy setOauthToken(java.lang.String oauthToken) {
+          return (GenerateAlertPolicy) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GenerateAlertPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GenerateAlertPolicy) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GenerateAlertPolicy setQuotaUser(java.lang.String quotaUser) {
+          return (GenerateAlertPolicy) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GenerateAlertPolicy setUploadType(java.lang.String uploadType) {
+          return (GenerateAlertPolicy) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GenerateAlertPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GenerateAlertPolicy) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /** Required. The firebase application. Format: "projects/{project}/apps/{app_id}". */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The firebase application. Format: "projects/{project}/apps/{app_id}".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /** Required. The firebase application. Format: "projects/{project}/apps/{app_id}". */
+        public GenerateAlertPolicy setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GenerateAlertPolicy set(String parameterName, Object value) {
+          return (GenerateAlertPolicy) super.set(parameterName, value);
+        }
+      }
+
+      /**
        * An accessor for creating requests from the Events collection.
        *
        * <p>The typical use is:</p>

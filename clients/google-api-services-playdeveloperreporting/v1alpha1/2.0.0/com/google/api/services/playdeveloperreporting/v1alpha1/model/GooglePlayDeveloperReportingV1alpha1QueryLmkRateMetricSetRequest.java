@@ -91,7 +91,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryLmkRateMetricSetRequ
 
   /**
    * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
-   * returned. The maximum value is 100,000; values above 100,000 will be coerced to 100,000.
+   * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -258,7 +258,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryLmkRateMetricSetRequ
 
   /**
    * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
-   * returned. The maximum value is 100,000; values above 100,000 will be coerced to 100,000.
+   * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -267,7 +267,7 @@ public final class GooglePlayDeveloperReportingV1alpha1QueryLmkRateMetricSetRequ
 
   /**
    * Optional. Maximum size of the returned data. If unspecified, at most 1000 rows will be
-   * returned. The maximum value is 100,000; values above 100,000 will be coerced to 100,000.
+   * returned. The maximum value is 10,000; values above 10,000 will be coerced to 10,000.
    * @param pageSize pageSize or {@code null} for none
    */
   public GooglePlayDeveloperReportingV1alpha1QueryLmkRateMetricSetRequest setPageSize(java.lang.Integer pageSize) {

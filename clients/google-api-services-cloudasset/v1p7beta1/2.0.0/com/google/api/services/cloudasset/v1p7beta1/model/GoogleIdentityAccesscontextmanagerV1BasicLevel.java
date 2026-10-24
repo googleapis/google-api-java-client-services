@@ -31,9 +31,9 @@ public final class GoogleIdentityAccesscontextmanagerV1BasicLevel extends com.go
 
   /**
    * How the `conditions` list should be combined to determine if a request is granted this
-   * `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the
-   * `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be
-   * satisfied for the `AccessLevel` to be applied. Default behavior is AND.
+   * `AccessLevel`. If `AND` is used, each `Condition` in `conditions` must be satisfied for the
+   * `AccessLevel` to be applied. If `OR` is used, at least one `Condition` in `conditions` must be
+   * satisfied for the `AccessLevel` to be applied. Default behavior is `AND`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,9 +48,9 @@ public final class GoogleIdentityAccesscontextmanagerV1BasicLevel extends com.go
 
   /**
    * How the `conditions` list should be combined to determine if a request is granted this
-   * `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the
-   * `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be
-   * satisfied for the `AccessLevel` to be applied. Default behavior is AND.
+   * `AccessLevel`. If `AND` is used, each `Condition` in `conditions` must be satisfied for the
+   * `AccessLevel` to be applied. If `OR` is used, at least one `Condition` in `conditions` must be
+   * satisfied for the `AccessLevel` to be applied. Default behavior is `AND`.
    * @return value or {@code null} for none
    */
   public java.lang.String getCombiningFunction() {
@@ -59,9 +59,9 @@ public final class GoogleIdentityAccesscontextmanagerV1BasicLevel extends com.go
 
   /**
    * How the `conditions` list should be combined to determine if a request is granted this
-   * `AccessLevel`. If AND is used, each `Condition` in `conditions` must be satisfied for the
-   * `AccessLevel` to be applied. If OR is used, at least one `Condition` in `conditions` must be
-   * satisfied for the `AccessLevel` to be applied. Default behavior is AND.
+   * `AccessLevel`. If `AND` is used, each `Condition` in `conditions` must be satisfied for the
+   * `AccessLevel` to be applied. If `OR` is used, at least one `Condition` in `conditions` must be
+   * satisfied for the `AccessLevel` to be applied. Default behavior is `AND`.
    * @param combiningFunction combiningFunction or {@code null} for none
    */
   public GoogleIdentityAccesscontextmanagerV1BasicLevel setCombiningFunction(java.lang.String combiningFunction) {

@@ -31,6 +31,24 @@ package com.google.api.services.sts.v1.model;
 public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. A security token that represents the identity of the acting party. Typically, this is
+   * the party that is authorized to use the requested security token and act on behalf of the
+   * subject.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String actorToken;
+
+  /**
+   * Optional. An identifier that indicates the type of the security token in the `actor_token`
+   * parameter. Required when the `actor_token` parameter is set. Supported values are
+   * `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth:token-type:id_token`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String actorTokenType;
+
+  /**
    * The full resource name of the identity provider; for example:
    * `//iam.googleapis.com/projects//locations/global/workloadIdentityPools//providers/` for
    * workload identity pool providers, or
@@ -167,6 +185,48 @@ public final class GoogleIdentityStsV1ExchangeTokenRequest extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.String subjectTokenType;
+
+  /**
+   * Optional. A security token that represents the identity of the acting party. Typically, this is
+   * the party that is authorized to use the requested security token and act on behalf of the
+   * subject.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActorToken() {
+    return actorToken;
+  }
+
+  /**
+   * Optional. A security token that represents the identity of the acting party. Typically, this is
+   * the party that is authorized to use the requested security token and act on behalf of the
+   * subject.
+   * @param actorToken actorToken or {@code null} for none
+   */
+  public GoogleIdentityStsV1ExchangeTokenRequest setActorToken(java.lang.String actorToken) {
+    this.actorToken = actorToken;
+    return this;
+  }
+
+  /**
+   * Optional. An identifier that indicates the type of the security token in the `actor_token`
+   * parameter. Required when the `actor_token` parameter is set. Supported values are
+   * `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth:token-type:id_token`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getActorTokenType() {
+    return actorTokenType;
+  }
+
+  /**
+   * Optional. An identifier that indicates the type of the security token in the `actor_token`
+   * parameter. Required when the `actor_token` parameter is set. Supported values are
+   * `urn:ietf:params:oauth:token-type:jwt`, `urn:ietf:params:oauth:token-type:id_token`.
+   * @param actorTokenType actorTokenType or {@code null} for none
+   */
+  public GoogleIdentityStsV1ExchangeTokenRequest setActorTokenType(java.lang.String actorTokenType) {
+    this.actorTokenType = actorTokenType;
+    return this;
+  }
 
   /**
    * The full resource name of the identity provider; for example:

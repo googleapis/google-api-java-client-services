@@ -37,6 +37,14 @@ public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google
   private java.lang.Boolean catalogPublishingEnabled;
 
   /**
+   * Optional. Custom instructions for generating data documentation. The maximum length is 2,048
+   * characters.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String customInstructions;
+
+  /**
    * Optional. Specifies which components of the data documentation to generate. Any component that
    * is required to generate the specified components will also be generated. If no generation scope
    * is specified, all available documentation components will be generated.
@@ -67,6 +75,25 @@ public final class GoogleCloudDataplexV1DataDocumentationSpec extends com.google
    */
   public GoogleCloudDataplexV1DataDocumentationSpec setCatalogPublishingEnabled(java.lang.Boolean catalogPublishingEnabled) {
     this.catalogPublishingEnabled = catalogPublishingEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. Custom instructions for generating data documentation. The maximum length is 2,048
+   * characters.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCustomInstructions() {
+    return customInstructions;
+  }
+
+  /**
+   * Optional. Custom instructions for generating data documentation. The maximum length is 2,048
+   * characters.
+   * @param customInstructions customInstructions or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationSpec setCustomInstructions(java.lang.String customInstructions) {
+    this.customInstructions = customInstructions;
     return this;
   }
 

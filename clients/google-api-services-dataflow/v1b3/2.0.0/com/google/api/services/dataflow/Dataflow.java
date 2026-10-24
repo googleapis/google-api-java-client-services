@@ -2125,6 +2125,52 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        @com.google.api.client.util.Key("createTimeRange.endTime")
+        private String createTimeRangeEndTime;
+
+        /** Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval will have
+       to be before the end.
+         */
+        public String getCreateTimeRangeEndTime() {
+          return createTimeRangeEndTime;
+        }
+
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        public Aggregated setCreateTimeRangeEndTime(String createTimeRangeEndTime) {
+          this.createTimeRangeEndTime = createTimeRangeEndTime;
+          return this;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        @com.google.api.client.util.Key("createTimeRange.startTime")
+        private String createTimeRangeStartTime;
+
+        /** Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval will
+       have to be the same or after the start.
+         */
+        public String getCreateTimeRangeStartTime() {
+          return createTimeRangeStartTime;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        public Aggregated setCreateTimeRangeStartTime(String createTimeRangeStartTime) {
+          this.createTimeRangeStartTime = createTimeRangeStartTime;
+          return this;
+        }
+
         /** The kind of filter to use. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -2239,6 +2285,52 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** Optional. */
         public Aggregated setRegionalFanoutRequested(java.lang.Boolean regionalFanoutRequested) {
           this.regionalFanoutRequested = regionalFanoutRequested;
+          return this;
+        }
+
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        @com.google.api.client.util.Key("terminationTimeRange.endTime")
+        private String terminationTimeRangeEndTime;
+
+        /** Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval will have
+       to be before the end.
+         */
+        public String getTerminationTimeRangeEndTime() {
+          return terminationTimeRangeEndTime;
+        }
+
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        public Aggregated setTerminationTimeRangeEndTime(String terminationTimeRangeEndTime) {
+          this.terminationTimeRangeEndTime = terminationTimeRangeEndTime;
+          return this;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        @com.google.api.client.util.Key("terminationTimeRange.startTime")
+        private String terminationTimeRangeStartTime;
+
+        /** Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval will
+       have to be the same or after the start.
+         */
+        public String getTerminationTimeRangeStartTime() {
+          return terminationTimeRangeStartTime;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        public Aggregated setTerminationTimeRangeStartTime(String terminationTimeRangeStartTime) {
+          this.terminationTimeRangeStartTime = terminationTimeRangeStartTime;
           return this;
         }
 
@@ -2973,6 +3065,52 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           return this;
         }
 
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        @com.google.api.client.util.Key("createTimeRange.endTime")
+        private String createTimeRangeEndTime;
+
+        /** Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval will have
+       to be before the end.
+         */
+        public String getCreateTimeRangeEndTime() {
+          return createTimeRangeEndTime;
+        }
+
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        public List setCreateTimeRangeEndTime(String createTimeRangeEndTime) {
+          this.createTimeRangeEndTime = createTimeRangeEndTime;
+          return this;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        @com.google.api.client.util.Key("createTimeRange.startTime")
+        private String createTimeRangeStartTime;
+
+        /** Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval will
+       have to be the same or after the start.
+         */
+        public String getCreateTimeRangeStartTime() {
+          return createTimeRangeStartTime;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        public List setCreateTimeRangeStartTime(String createTimeRangeStartTime) {
+          this.createTimeRangeStartTime = createTimeRangeStartTime;
+          return this;
+        }
+
         /** The kind of filter to use. */
         @com.google.api.client.util.Key
         private java.lang.String filter;
@@ -3087,6 +3225,52 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
         /** Optional. */
         public List setRegionalFanoutRequested(java.lang.Boolean regionalFanoutRequested) {
           this.regionalFanoutRequested = regionalFanoutRequested;
+          return this;
+        }
+
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        @com.google.api.client.util.Key("terminationTimeRange.endTime")
+        private String terminationTimeRangeEndTime;
+
+        /** Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval will have
+       to be before the end.
+         */
+        public String getTerminationTimeRangeEndTime() {
+          return terminationTimeRangeEndTime;
+        }
+
+        /**
+         * Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval
+         * will have to be before the end.
+         */
+        public List setTerminationTimeRangeEndTime(String terminationTimeRangeEndTime) {
+          this.terminationTimeRangeEndTime = terminationTimeRangeEndTime;
+          return this;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        @com.google.api.client.util.Key("terminationTimeRange.startTime")
+        private String terminationTimeRangeStartTime;
+
+        /** Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval will
+       have to be the same or after the start.
+         */
+        public String getTerminationTimeRangeStartTime() {
+          return terminationTimeRangeStartTime;
+        }
+
+        /**
+         * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+         * interval will have to be the same or after the start.
+         */
+        public List setTerminationTimeRangeStartTime(String terminationTimeRangeStartTime) {
+          this.terminationTimeRangeStartTime = terminationTimeRangeStartTime;
           return this;
         }
 
@@ -6434,6 +6618,52 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
             return this;
           }
 
+          /**
+           * Optional. Exclusive end of the interval. If specified, a Timestamp matching this
+           * interval will have to be before the end.
+           */
+          @com.google.api.client.util.Key("createTimeRange.endTime")
+          private String createTimeRangeEndTime;
+
+          /** Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval will have
+         to be before the end.
+           */
+          public String getCreateTimeRangeEndTime() {
+            return createTimeRangeEndTime;
+          }
+
+          /**
+           * Optional. Exclusive end of the interval. If specified, a Timestamp matching this
+           * interval will have to be before the end.
+           */
+          public List setCreateTimeRangeEndTime(String createTimeRangeEndTime) {
+            this.createTimeRangeEndTime = createTimeRangeEndTime;
+            return this;
+          }
+
+          /**
+           * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+           * interval will have to be the same or after the start.
+           */
+          @com.google.api.client.util.Key("createTimeRange.startTime")
+          private String createTimeRangeStartTime;
+
+          /** Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval will
+         have to be the same or after the start.
+           */
+          public String getCreateTimeRangeStartTime() {
+            return createTimeRangeStartTime;
+          }
+
+          /**
+           * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+           * interval will have to be the same or after the start.
+           */
+          public List setCreateTimeRangeStartTime(String createTimeRangeStartTime) {
+            this.createTimeRangeStartTime = createTimeRangeStartTime;
+            return this;
+          }
+
           /** The kind of filter to use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
@@ -6525,6 +6755,52 @@ public class Dataflow extends com.google.api.client.googleapis.services.json.Abs
           /** Optional. */
           public List setRegionalFanoutRequested(java.lang.Boolean regionalFanoutRequested) {
             this.regionalFanoutRequested = regionalFanoutRequested;
+            return this;
+          }
+
+          /**
+           * Optional. Exclusive end of the interval. If specified, a Timestamp matching this
+           * interval will have to be before the end.
+           */
+          @com.google.api.client.util.Key("terminationTimeRange.endTime")
+          private String terminationTimeRangeEndTime;
+
+          /** Optional. Exclusive end of the interval. If specified, a Timestamp matching this interval will have
+         to be before the end.
+           */
+          public String getTerminationTimeRangeEndTime() {
+            return terminationTimeRangeEndTime;
+          }
+
+          /**
+           * Optional. Exclusive end of the interval. If specified, a Timestamp matching this
+           * interval will have to be before the end.
+           */
+          public List setTerminationTimeRangeEndTime(String terminationTimeRangeEndTime) {
+            this.terminationTimeRangeEndTime = terminationTimeRangeEndTime;
+            return this;
+          }
+
+          /**
+           * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+           * interval will have to be the same or after the start.
+           */
+          @com.google.api.client.util.Key("terminationTimeRange.startTime")
+          private String terminationTimeRangeStartTime;
+
+          /** Optional. Inclusive start of the interval. If specified, a Timestamp matching this interval will
+         have to be the same or after the start.
+           */
+          public String getTerminationTimeRangeStartTime() {
+            return terminationTimeRangeStartTime;
+          }
+
+          /**
+           * Optional. Inclusive start of the interval. If specified, a Timestamp matching this
+           * interval will have to be the same or after the start.
+           */
+          public List setTerminationTimeRangeStartTime(String terminationTimeRangeStartTime) {
+            this.terminationTimeRangeStartTime = terminationTimeRangeStartTime;
             return this;
           }
 

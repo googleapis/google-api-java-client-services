@@ -39,6 +39,15 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
   private AlloyDBClusterBackupPlanAssociationProperties alloydbClusterBackupPlanAssociationProperties;
 
   /**
+   * Output only. The resource name of the `AutoProtectionPolicyBinding` that manages this
+   * association, if any. Format:
+   * `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoProtectionPolicyBinding;
+
+  /**
    * Required. Resource name of backup plan which needs to be applied on workload. Format:
    * projects/{project}/locations/{location}/backupPlans/{backupPlanId}
    * The value may be {@code null}.
@@ -159,6 +168,27 @@ public final class BackupPlanAssociation extends com.google.api.client.json.Gene
    */
   public BackupPlanAssociation setAlloydbClusterBackupPlanAssociationProperties(AlloyDBClusterBackupPlanAssociationProperties alloydbClusterBackupPlanAssociationProperties) {
     this.alloydbClusterBackupPlanAssociationProperties = alloydbClusterBackupPlanAssociationProperties;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the `AutoProtectionPolicyBinding` that manages this
+   * association, if any. Format:
+   * `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoProtectionPolicyBinding() {
+    return autoProtectionPolicyBinding;
+  }
+
+  /**
+   * Output only. The resource name of the `AutoProtectionPolicyBinding` that manages this
+   * association, if any. Format:
+   * `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+   * @param autoProtectionPolicyBinding autoProtectionPolicyBinding or {@code null} for none
+   */
+  public BackupPlanAssociation setAutoProtectionPolicyBinding(java.lang.String autoProtectionPolicyBinding) {
+    this.autoProtectionPolicyBinding = autoProtectionPolicyBinding;
     return this;
   }
 

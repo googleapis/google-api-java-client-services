@@ -1293,6 +1293,2290 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
       }
 
       /**
+       * An accessor for creating requests from the AppliedAutoProtectionPolicies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.AppliedAutoProtectionPolicies.List request = backupdr.appliedAutoProtectionPolicies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AppliedAutoProtectionPolicies appliedAutoProtectionPolicies() {
+        return new AppliedAutoProtectionPolicies();
+      }
+
+      /**
+       * The "appliedAutoProtectionPolicies" collection of methods.
+       */
+      public class AppliedAutoProtectionPolicies {
+
+        /**
+         * Lists AppliedAutoProtectionPolicies in a given project and location.
+         *
+         * Create a request for the method "appliedAutoProtectionPolicies.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve the list of applied policies. Format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListAppliedAutoProtectionPoliciesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/appliedAutoProtectionPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists AppliedAutoProtectionPolicies in a given project and location.
+           *
+           * Create a request for the method "appliedAutoProtectionPolicies.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve the list of applied policies. Format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListAppliedAutoProtectionPoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve the list of applied policies.
+           * Format: projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve the list of applied policies. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve the list of applied policies.
+           * Format: projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. A filter expression that filters resources listed in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that filters resources listed in the response.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. A filter expression that filters resources listed in the response. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. An expression that sorts the results in the response. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. An expression that sorts the results in the response.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. An expression that sorts the results in the response. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of applied policies to return in a single page. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000. If unspecified or set
+           * to 0, a default page size of 500 will be used.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of applied policies to return in a single page. The maximum value is
+         1000; values above 1000 will be coerced to 1000. If unspecified or set to 0, a default page size of
+         500 will be used.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of applied policies to return in a single page. The
+           * maximum value is 1000; values above 1000 will be coerced to 1000. If unspecified or set
+           * to 0, a default page size of 500 will be used.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAppliedAutoProtectionPolicies`
+           * call.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListAppliedAutoProtectionPolicies` call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAppliedAutoProtectionPolicies`
+           * call.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the AutoProtectionPolicies collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.AutoProtectionPolicies.List request = backupdr.autoProtectionPolicies().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public AutoProtectionPolicies autoProtectionPolicies() {
+        return new AutoProtectionPolicies();
+      }
+
+      /**
+       * The "autoProtectionPolicies" collection of methods.
+       */
+      public class AutoProtectionPolicies {
+
+        /**
+         * Creates a new AutoProtectionPolicy in a given project and location.
+         *
+         * Create a request for the method "autoProtectionPolicies.create".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource where this policy will be created. Format:
+         *        projects/{project}/locations/{location}
+         * @param content the {@link com.google.api.services.backupdr.v1.model.AutoProtectionPolicy}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.backupdr.v1.model.AutoProtectionPolicy content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+parent}/autoProtectionPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new AutoProtectionPolicy in a given project and location.
+           *
+           * Create a request for the method "autoProtectionPolicies.create".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource where this policy will be created. Format:
+         *        projects/{project}/locations/{location}
+           * @param content the {@link com.google.api.services.backupdr.v1.model.AutoProtectionPolicy}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.backupdr.v1.model.AutoProtectionPolicy content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource where this policy will be created. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource where this policy will be created. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource where this policy will be created. Format:
+           * projects/{project}/locations/{location}
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Required. The ID to use for the policy. This will become the final component of the
+           * policy's resource name.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String autoProtectionPolicyId;
+
+          /** Required. The ID to use for the policy. This will become the final component of the policy's
+         resource name.
+           */
+          public java.lang.String getAutoProtectionPolicyId() {
+            return autoProtectionPolicyId;
+          }
+
+          /**
+           * Required. The ID to use for the policy. This will become the final component of the
+           * policy's resource name.
+           */
+          public Create setAutoProtectionPolicyId(java.lang.String autoProtectionPolicyId) {
+            this.autoProtectionPolicyId = autoProtectionPolicyId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single AutoProtectionPolicy.
+         *
+         * Create a request for the method "autoProtectionPolicies.delete".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the policy to delete. Format:
+         *        projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+
+          /**
+           * Deletes a single AutoProtectionPolicy.
+           *
+           * Create a request for the method "autoProtectionPolicies.delete".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the policy to delete. Format:
+         *        projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Backupdr.this, "DELETE", REST_PATH, null, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the policy to delete. Format:
+           * projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the policy to delete. Format:
+         projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the policy to delete. Format:
+           * projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * The current etag of the autoprotectionpolicy. If an etag is provided and does not match
+           * the current etag of the connection, deletion will be blocked.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String etag;
+
+          /** The current etag of the autoprotectionpolicy. If an etag is provided and does not match the current
+         etag of the connection, deletion will be blocked.
+           */
+          public java.lang.String getEtag() {
+            return etag;
+          }
+
+          /**
+           * The current etag of the autoprotectionpolicy. If an etag is provided and does not match
+           * the current etag of the connection, deletion will be blocked.
+           */
+          public Delete setEtag(java.lang.String etag) {
+            this.etag = etag;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single AutoProtectionPolicy.
+         *
+         * Create a request for the method "autoProtectionPolicies.get".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the policy to retrieve. Format:
+         *        projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1.model.AutoProtectionPolicy> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+
+          /**
+           * Gets details of a single AutoProtectionPolicy.
+           *
+           * Create a request for the method "autoProtectionPolicies.get".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the policy to retrieve. Format:
+         *        projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.AutoProtectionPolicy.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the policy to retrieve. Format:
+           * projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the policy to retrieve. Format:
+         projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the policy to retrieve. Format:
+           * projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists AutoProtectionPolicies for a given project and location.
+         *
+         * Create a request for the method "autoProtectionPolicies.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve the list of policies. Format:
+         *        projects/{project}/locations/{location}
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListAutoProtectionPoliciesResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/autoProtectionPolicies";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists AutoProtectionPolicies for a given project and location.
+           *
+           * Create a request for the method "autoProtectionPolicies.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve the list of policies. Format:
+         *        projects/{project}/locations/{location}
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListAutoProtectionPoliciesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve the list of policies. Format:
+           * projects/{project}/locations/{location}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve the list of policies. Format:
+         projects/{project}/locations/{location}
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve the list of policies. Format:
+           * projects/{project}/locations/{location}
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter expression that filters resources listed in the response. The
+           * following fields are filterable:
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that filters resources listed in the response. The following fields
+         are filterable:
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression that filters resources listed in the response. The
+           * following fields are filterable:
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. An expression that sorts the results in the response. The following fields
+           * are sortable:
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. An expression that sorts the results in the response. The following fields are sortable:
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. An expression that sorts the results in the response. The following fields
+           * are sortable:
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of policies to return in a single page. If unspecified, a
+           * server-default value will be used.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of policies to return in a single page. If unspecified, a server-
+         default value will be used.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of policies to return in a single page. If unspecified, a
+           * server-default value will be used.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAutoProtectionPolicies` call.
+           * Provide this to retrieve the subsequent page.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListAutoProtectionPolicies` call. Provide this to
+         retrieve the subsequent page.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListAutoProtectionPolicies` call.
+           * Provide this to retrieve the subsequent page.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the parameters of a single AutoProtectionPolicy.
+         *
+         * Create a request for the method "autoProtectionPolicies.patch".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the AutoProtectionPolicy. Format:
+         *        `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+         * @param content the {@link com.google.api.services.backupdr.v1.model.AutoProtectionPolicy}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.backupdr.v1.model.AutoProtectionPolicy content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+
+          /**
+           * Updates the parameters of a single AutoProtectionPolicy.
+           *
+           * Create a request for the method "autoProtectionPolicies.patch".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the AutoProtectionPolicy. Format:
+         *        `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+           * @param content the {@link com.google.api.services.backupdr.v1.model.AutoProtectionPolicy}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.backupdr.v1.model.AutoProtectionPolicy content) {
+            super(Backupdr.this, "PATCH", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Identifier. The resource name of the AutoProtectionPolicy. Format: `projects/{project}/
+           * locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the AutoProtectionPolicy. Format:
+         `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Identifier. The resource name of the AutoProtectionPolicy. Format: `projects/{project}/
+           * locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+           */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * AutoProtectionPolicy resource by the update. The fields specified in the update_mask
+           * are relative to the resource, not the full request. A field will be overwritten if it
+           * is in the mask. If the user does not provide a mask then all fields will be
+           * overwritten.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. Field mask is used to specify the fields to be overwritten in the AutoProtectionPolicy
+         resource by the update. The fields specified in the update_mask are relative to the resource, not
+         the full request. A field will be overwritten if it is in the mask. If the user does not provide a
+         mask then all fields will be overwritten.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. Field mask is used to specify the fields to be overwritten in the
+           * AutoProtectionPolicy resource by the update. The fields specified in the update_mask
+           * are relative to the resource, not the full request. A field will be overwritten if it
+           * is in the mask. If the user does not provide a mask then all fields will be
+           * overwritten.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Bindings collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Backupdr backupdr = new Backupdr(...);}
+         *   {@code Backupdr.Bindings.List request = backupdr.bindings().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Bindings bindings() {
+          return new Bindings();
+        }
+
+        /**
+         * The "bindings" collection of methods.
+         */
+        public class Bindings {
+
+          /**
+           * Creates a new AutoProtectionPolicyBinding in a given project and location.
+           *
+           * Create a request for the method "bindings.create".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where this binding will be created. Format:
+           *        projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+           * @param content the {@link com.google.api.services.backupdr.v1.model.AutoProtectionPolicyBinding}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.backupdr.v1.model.AutoProtectionPolicyBinding content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+parent}/bindings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+
+            /**
+             * Creates a new AutoProtectionPolicyBinding in a given project and location.
+             *
+             * Create a request for the method "bindings.create".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where this binding will be created. Format:
+           *        projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+             * @param content the {@link com.google.api.services.backupdr.v1.model.AutoProtectionPolicyBinding}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.backupdr.v1.model.AutoProtectionPolicyBinding content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where this binding will be created. Format: projects/{p
+             * roject}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where this binding will be created. Format:
+           projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where this binding will be created. Format: projects/{p
+             * roject}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the binding. This will become the final component of the
+             * binding's resource name.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String autoProtectionPolicyBindingId;
+
+            /** Required. The ID to use for the binding. This will become the final component of the binding's
+           resource name.
+             */
+            public java.lang.String getAutoProtectionPolicyBindingId() {
+              return autoProtectionPolicyBindingId;
+            }
+
+            /**
+             * Required. The ID to use for the binding. This will become the final component of the
+             * binding's resource name.
+             */
+            public Create setAutoProtectionPolicyBindingId(java.lang.String autoProtectionPolicyBindingId) {
+              this.autoProtectionPolicyBindingId = autoProtectionPolicyBindingId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns the auto protection policy binding read from the CCFE tables.
+           *
+           * Create a request for the method "bindings.get".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the binding to retrieve. Format: projects/{project}/locations/{location}/autoP
+           *        rotectionPolicies/{auto_protection_policy}/bindings/{binding}
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1.model.AutoProtectionPolicyBinding> {
+
+            private static final String REST_PATH = "v1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+
+            /**
+             * Returns the auto protection policy binding read from the CCFE tables.
+             *
+             * Create a request for the method "bindings.get".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the binding to retrieve. Format: projects/{project}/locations/{location}/autoP
+           *        rotectionPolicies/{auto_protection_policy}/bindings/{binding}
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.AutoProtectionPolicyBinding.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the binding to retrieve. Format: projects/{project}/locations/{
+             * location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the binding to retrieve. Format: projects/{project}/locations/{location}/auto
+           ProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the binding to retrieve. Format: projects/{project}/locations/{
+             * location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Initiates delete for AutoProtectionPolicy Binding
+           *
+           * Create a request for the method "bindings.initiateDelete".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link InitiateDelete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the binding to delete. Format: projects/{project}/locations/{location}/autoPro
+           *        tectionPolicies/{auto_protection_policy}/bindings/{binding}
+           * @param content the {@link com.google.api.services.backupdr.v1.model.InitiateDeleteAutoProtectionPolicyBindingRequest}
+           * @return the request
+           */
+          public InitiateDelete initiateDelete(java.lang.String name, com.google.api.services.backupdr.v1.model.InitiateDeleteAutoProtectionPolicyBindingRequest content) throws java.io.IOException {
+            InitiateDelete result = new InitiateDelete(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class InitiateDelete extends BackupdrRequest<com.google.api.services.backupdr.v1.model.Operation> {
+
+            private static final String REST_PATH = "v1/{+name}:initiateDelete";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+
+            /**
+             * Initiates delete for AutoProtectionPolicy Binding
+             *
+             * Create a request for the method "bindings.initiateDelete".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link InitiateDelete#execute()} method to invoke the remote
+             * operation. <p> {@link InitiateDelete#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The name of the binding to delete. Format: projects/{project}/locations/{location}/autoPro
+           *        tectionPolicies/{auto_protection_policy}/bindings/{binding}
+             * @param content the {@link com.google.api.services.backupdr.v1.model.InitiateDeleteAutoProtectionPolicyBindingRequest}
+             * @since 1.13
+             */
+            protected InitiateDelete(java.lang.String name, com.google.api.services.backupdr.v1.model.InitiateDeleteAutoProtectionPolicyBindingRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+              }
+            }
+
+            @Override
+            public InitiateDelete set$Xgafv(java.lang.String $Xgafv) {
+              return (InitiateDelete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public InitiateDelete setAccessToken(java.lang.String accessToken) {
+              return (InitiateDelete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public InitiateDelete setAlt(java.lang.String alt) {
+              return (InitiateDelete) super.setAlt(alt);
+            }
+
+            @Override
+            public InitiateDelete setCallback(java.lang.String callback) {
+              return (InitiateDelete) super.setCallback(callback);
+            }
+
+            @Override
+            public InitiateDelete setFields(java.lang.String fields) {
+              return (InitiateDelete) super.setFields(fields);
+            }
+
+            @Override
+            public InitiateDelete setKey(java.lang.String key) {
+              return (InitiateDelete) super.setKey(key);
+            }
+
+            @Override
+            public InitiateDelete setOauthToken(java.lang.String oauthToken) {
+              return (InitiateDelete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public InitiateDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (InitiateDelete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public InitiateDelete setQuotaUser(java.lang.String quotaUser) {
+              return (InitiateDelete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public InitiateDelete setUploadType(java.lang.String uploadType) {
+              return (InitiateDelete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public InitiateDelete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (InitiateDelete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the binding to delete. Format: projects/{project}/locations/{lo
+             * cation}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the binding to delete. Format: projects/{project}/locations/{location}/autoPr
+           otectionPolicies/{auto_protection_policy}/bindings/{binding}
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the binding to delete. Format: projects/{project}/locations/{lo
+             * cation}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}
+             */
+            public InitiateDelete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public InitiateDelete set(String parameterName, Object value) {
+              return (InitiateDelete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Returns the auto protection policy bindings read from the CCFE tables.
+           *
+           * Create a request for the method "bindings.list".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The project and location for which to retrieve the list of policies. Format:
+           *        projects/{project}/locations/{location}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListAutoProtectionPolicyBindingsResponse> {
+
+            private static final String REST_PATH = "v1/{+parent}/bindings";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+
+            /**
+             * Returns the auto protection policy bindings read from the CCFE tables.
+             *
+             * Create a request for the method "bindings.list".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The project and location for which to retrieve the list of policies. Format:
+           *        projects/{project}/locations/{location}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListAutoProtectionPolicyBindingsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The project and location for which to retrieve the list of policies.
+             * Format: projects/{project}/locations/{location}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The project and location for which to retrieve the list of policies. Format:
+           projects/{project}/locations/{location}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The project and location for which to retrieve the list of policies.
+             * Format: projects/{project}/locations/{location}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. A filter expression that filters resources listed in the response. The
+             * following fields are filterable:
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. A filter expression that filters resources listed in the response. The following fields
+           are filterable:
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. A filter expression that filters resources listed in the response. The
+             * following fields are filterable:
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. An expression that sorts the results in the response. The following fields
+             * are sortable:
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. An expression that sorts the results in the response. The following fields are sortable:
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /**
+             * Optional. An expression that sorts the results in the response. The following fields
+             * are sortable:
+             */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of policies to return in a single page is 500. If
+             * unspecified, a server-default value will be used.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of policies to return in a single page is 500. If unspecified, a
+           server-default value will be used.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of policies to return in a single page is 500. If
+             * unspecified, a server-default value will be used.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListAutoProtectionPolicies` call.
+             * Provide this to retrieve the subsequent page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListAutoProtectionPolicies` call. Provide this to
+           retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListAutoProtectionPolicies` call.
+             * Provide this to retrieve the subsequent page.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+          /**
+           * An accessor for creating requests from the MatchingResources collection.
+           *
+           * <p>The typical use is:</p>
+           * <pre>
+           *   {@code Backupdr backupdr = new Backupdr(...);}
+           *   {@code Backupdr.MatchingResources.List request = backupdr.matchingResources().list(parameters ...)}
+           * </pre>
+           *
+           * @return the resource collection
+           */
+          public MatchingResources matchingResources() {
+            return new MatchingResources();
+          }
+
+          /**
+           * The "matchingResources" collection of methods.
+           */
+          public class MatchingResources {
+
+            /**
+             * Gets details of a single Binding Matching Resource.
+             *
+             * Create a request for the method "matchingResources.get".
+             *
+             * This request holds the parameters needed by the backupdr server.  After setting any optional
+             * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+             *
+             * @param name Required. The name of the matching resource to retrieve. Format: projects/{project}/locations/{locat
+             *        ion}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingResources/
+             *        {matching_resource}
+             * @return the request
+             */
+            public Get get(java.lang.String name) throws java.io.IOException {
+              Get result = new Get(name);
+              initialize(result);
+              return result;
+            }
+
+            public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1.model.BindingMatchingResource> {
+
+              private static final String REST_PATH = "v1/{+name}";
+
+              private final java.util.regex.Pattern NAME_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+/matchingResources/[^/]+$");
+
+              /**
+               * Gets details of a single Binding Matching Resource.
+               *
+               * Create a request for the method "matchingResources.get".
+               *
+               * This request holds the parameters needed by the the backupdr server.  After setting any
+               * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+               * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param name Required. The name of the matching resource to retrieve. Format: projects/{project}/locations/{locat
+             *        ion}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingResources/
+             *        {matching_resource}
+               * @since 1.13
+               */
+              protected Get(java.lang.String name) {
+                super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.BindingMatchingResource.class);
+                this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+/matchingResources/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public Get set$Xgafv(java.lang.String $Xgafv) {
+                return (Get) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public Get setAccessToken(java.lang.String accessToken) {
+                return (Get) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public Get setAlt(java.lang.String alt) {
+                return (Get) super.setAlt(alt);
+              }
+
+              @Override
+              public Get setCallback(java.lang.String callback) {
+                return (Get) super.setCallback(callback);
+              }
+
+              @Override
+              public Get setFields(java.lang.String fields) {
+                return (Get) super.setFields(fields);
+              }
+
+              @Override
+              public Get setKey(java.lang.String key) {
+                return (Get) super.setKey(key);
+              }
+
+              @Override
+              public Get setOauthToken(java.lang.String oauthToken) {
+                return (Get) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (Get) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public Get setQuotaUser(java.lang.String quotaUser) {
+                return (Get) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public Get setUploadType(java.lang.String uploadType) {
+                return (Get) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public Get setUploadProtocol(java.lang.String uploadProtocol) {
+                return (Get) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The name of the matching resource to retrieve. Format: projects/{project}
+               * /locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bin
+               * ding}/matchingResources/{matching_resource}
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String name;
+
+              /** Required. The name of the matching resource to retrieve. Format: projects/{project}/locations/{loca
+             tion}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingResources/{matchin
+             g_resource}
+               */
+              public java.lang.String getName() {
+                return name;
+              }
+
+              /**
+               * Required. The name of the matching resource to retrieve. Format: projects/{project}
+               * /locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bin
+               * ding}/matchingResources/{matching_resource}
+               */
+              public Get setName(java.lang.String name) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                      "Parameter name must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+/matchingResources/[^/]+$");
+                }
+                this.name = name;
+                return this;
+              }
+
+              @Override
+              public Get set(String parameterName, Object value) {
+                return (Get) super.set(parameterName, value);
+              }
+            }
+            /**
+             * Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+             *
+             * Create a request for the method "matchingResources.list".
+             *
+             * This request holds the parameters needed by the backupdr server.  After setting any optional
+             * parameters, call the {@link List#execute()} method to invoke the remote operation.
+             *
+             * @param parent Required. The project, location, auto protection policy and binding for which to retrieve
+             *        `BindingMatchingResources` information. Format: `projects/{project}/locations/{location}/a
+             *        utoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`. In Google Cloud Backup
+             *        and DR, locations map to Google Cloud regions, for example **us-central1**.
+             * @return the request
+             */
+            public List list(java.lang.String parent) throws java.io.IOException {
+              List result = new List(parent);
+              initialize(result);
+              return result;
+            }
+
+            public class List extends BackupdrRequest<com.google.api.services.backupdr.v1.model.ListBindingMatchingResourcesResponse> {
+
+              private static final String REST_PATH = "v1/{+parent}/matchingResources";
+
+              private final java.util.regex.Pattern PARENT_PATTERN =
+                  java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+
+              /**
+               * Lists Binding Matching Resources for a given AutoProtectionPolicyBinding.
+               *
+               * Create a request for the method "matchingResources.list".
+               *
+               * This request holds the parameters needed by the the backupdr server.  After setting any
+               * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+               * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+               * must be called to initialize this instance immediately after invoking the constructor. </p>
+               *
+               * @param parent Required. The project, location, auto protection policy and binding for which to retrieve
+             *        `BindingMatchingResources` information. Format: `projects/{project}/locations/{location}/a
+             *        utoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`. In Google Cloud Backup
+             *        and DR, locations map to Google Cloud regions, for example **us-central1**.
+               * @since 1.13
+               */
+              protected List(java.lang.String parent) {
+                super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1.model.ListBindingMatchingResourcesResponse.class);
+                this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+                }
+              }
+
+              @Override
+              public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+                return super.executeUsingHead();
+              }
+
+              @Override
+              public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+                return super.buildHttpRequestUsingHead();
+              }
+
+              @Override
+              public List set$Xgafv(java.lang.String $Xgafv) {
+                return (List) super.set$Xgafv($Xgafv);
+              }
+
+              @Override
+              public List setAccessToken(java.lang.String accessToken) {
+                return (List) super.setAccessToken(accessToken);
+              }
+
+              @Override
+              public List setAlt(java.lang.String alt) {
+                return (List) super.setAlt(alt);
+              }
+
+              @Override
+              public List setCallback(java.lang.String callback) {
+                return (List) super.setCallback(callback);
+              }
+
+              @Override
+              public List setFields(java.lang.String fields) {
+                return (List) super.setFields(fields);
+              }
+
+              @Override
+              public List setKey(java.lang.String key) {
+                return (List) super.setKey(key);
+              }
+
+              @Override
+              public List setOauthToken(java.lang.String oauthToken) {
+                return (List) super.setOauthToken(oauthToken);
+              }
+
+              @Override
+              public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+                return (List) super.setPrettyPrint(prettyPrint);
+              }
+
+              @Override
+              public List setQuotaUser(java.lang.String quotaUser) {
+                return (List) super.setQuotaUser(quotaUser);
+              }
+
+              @Override
+              public List setUploadType(java.lang.String uploadType) {
+                return (List) super.setUploadType(uploadType);
+              }
+
+              @Override
+              public List setUploadProtocol(java.lang.String uploadProtocol) {
+                return (List) super.setUploadProtocol(uploadProtocol);
+              }
+
+              /**
+               * Required. The project, location, auto protection policy and binding for which to
+               * retrieve `BindingMatchingResources` information. Format: `projects/{project}/locati
+               * ons/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`.
+               * In Google Cloud Backup and DR, locations map to Google Cloud regions, for example
+               * **us-central1**.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String parent;
+
+              /** Required. The project, location, auto protection policy and binding for which to retrieve
+             `BindingMatchingResources` information. Format: `projects/{project}/locations/{location}/autoProtec
+             tionPolicies/{auto_protection_policy}/bindings/{binding}`. In Google Cloud Backup and DR, locations
+             map to Google Cloud regions, for example **us-central1**.
+               */
+              public java.lang.String getParent() {
+                return parent;
+              }
+
+              /**
+               * Required. The project, location, auto protection policy and binding for which to
+               * retrieve `BindingMatchingResources` information. Format: `projects/{project}/locati
+               * ons/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`.
+               * In Google Cloud Backup and DR, locations map to Google Cloud regions, for example
+               * **us-central1**.
+               */
+              public List setParent(java.lang.String parent) {
+                if (!getSuppressPatternChecks()) {
+                  com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                      "Parameter parent must conform to the pattern " +
+                      "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+/bindings/[^/]+$");
+                }
+                this.parent = parent;
+                return this;
+              }
+
+              /** Optional. Field match expression used to filter the results. */
+              @com.google.api.client.util.Key
+              private java.lang.String filter;
+
+              /** Optional. Field match expression used to filter the results.
+               */
+              public java.lang.String getFilter() {
+                return filter;
+              }
+
+              /** Optional. Field match expression used to filter the results. */
+              public List setFilter(java.lang.String filter) {
+                this.filter = filter;
+                return this;
+              }
+
+              /** Optional. Field by which to sort the results. */
+              @com.google.api.client.util.Key
+              private java.lang.String orderBy;
+
+              /** Optional. Field by which to sort the results.
+               */
+              public java.lang.String getOrderBy() {
+                return orderBy;
+              }
+
+              /** Optional. Field by which to sort the results. */
+              public List setOrderBy(java.lang.String orderBy) {
+                this.orderBy = orderBy;
+                return this;
+              }
+
+              /**
+               * Optional. The maximum number of `BindingMatchingResources` to return in a single
+               * response. The default page size is 100 and maximum page size is 200. Note that the
+               * response may include a partial list and a caller should only rely on the response's
+               * next_page_token to determine if there are more instances left to be queried.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.Integer pageSize;
+
+              /** Optional. The maximum number of `BindingMatchingResources` to return in a single response. The
+             default page size is 100 and maximum page size is 200. Note that the response may include a partial
+             list and a caller should only rely on the response's next_page_token to determine if there are more
+             instances left to be queried.
+               */
+              public java.lang.Integer getPageSize() {
+                return pageSize;
+              }
+
+              /**
+               * Optional. The maximum number of `BindingMatchingResources` to return in a single
+               * response. The default page size is 100 and maximum page size is 200. Note that the
+               * response may include a partial list and a caller should only rely on the response's
+               * next_page_token to determine if there are more instances left to be queried.
+               */
+              public List setPageSize(java.lang.Integer pageSize) {
+                this.pageSize = pageSize;
+                return this;
+              }
+
+              /**
+               * Optional. The value of next_page_token received from a previous
+               * `ListBindingMatchingResources` call. Provide this to retrieve the subsequent page
+               * in a multi-page list of results. When paginating, all other parameters provided to
+               * `ListBindingMatchingResources` must match the call that provided the page token.
+               */
+              @com.google.api.client.util.Key
+              private java.lang.String pageToken;
+
+              /** Optional. The value of next_page_token received from a previous `ListBindingMatchingResources`
+             call. Provide this to retrieve the subsequent page in a multi-page list of results. When
+             paginating, all other parameters provided to `ListBindingMatchingResources` must match the call
+             that provided the page token.
+               */
+              public java.lang.String getPageToken() {
+                return pageToken;
+              }
+
+              /**
+               * Optional. The value of next_page_token received from a previous
+               * `ListBindingMatchingResources` call. Provide this to retrieve the subsequent page
+               * in a multi-page list of results. When paginating, all other parameters provided to
+               * `ListBindingMatchingResources` must match the call that provided the page token.
+               */
+              public List setPageToken(java.lang.String pageToken) {
+                this.pageToken = pageToken;
+                return this;
+              }
+
+              @Override
+              public List set(String parameterName, Object value) {
+                return (List) super.set(parameterName, value);
+              }
+            }
+
+          }
+        }
+      }
+      /**
        * An accessor for creating requests from the BackupPlanAssociations collection.
        *
        * <p>The typical use is:</p>
@@ -1653,6 +3937,34 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/backupPlanAssociations/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. This field is exclusively used by Backup and DR's auto-protection feature.
+           * The resource name of the `AutoProtectionPolicyBinding` that triggered the deletion of
+           * this association. Format: `projects/{project}/locations/{location}/autoProtectionPolici
+           * es/{policy}/bindings/{binding}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String autoProtectionPolicyBinding;
+
+          /** Optional. This field is exclusively used by Backup and DR's auto-protection feature. The resource
+         name of the `AutoProtectionPolicyBinding` that triggered the deletion of this association. Format:
+         `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+           */
+          public java.lang.String getAutoProtectionPolicyBinding() {
+            return autoProtectionPolicyBinding;
+          }
+
+          /**
+           * Optional. This field is exclusively used by Backup and DR's auto-protection feature.
+           * The resource name of the `AutoProtectionPolicyBinding` that triggered the deletion of
+           * this association. Format: `projects/{project}/locations/{location}/autoProtectionPolici
+           * es/{policy}/bindings/{binding}`.
+           */
+          public Delete setAutoProtectionPolicyBinding(java.lang.String autoProtectionPolicyBinding) {
+            this.autoProtectionPolicyBinding = autoProtectionPolicyBinding;
             return this;
           }
 

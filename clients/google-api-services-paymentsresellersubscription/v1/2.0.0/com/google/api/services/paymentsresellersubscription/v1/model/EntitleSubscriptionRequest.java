@@ -32,14 +32,18 @@ package com.google.api.services.paymentsresellersubscription.v1.model;
 public final class EntitleSubscriptionRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * Optional. Deprecated: This field is no longer supported. All line items are entitled
+   * automatically. Optional. The line items to be entitled. If unspecified, all line items will be
+   * entitled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<EntitleSubscriptionRequestLineItemEntitlementDetails> lineItemEntitlementDetails;
 
   /**
-   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * Optional. Deprecated: This field is no longer supported. All line items are entitled
+   * automatically. Optional. The line items to be entitled. If unspecified, all line items will be
+   * entitled.
    * @return value or {@code null} for none
    */
   public java.util.List<EntitleSubscriptionRequestLineItemEntitlementDetails> getLineItemEntitlementDetails() {
@@ -47,7 +51,9 @@ public final class EntitleSubscriptionRequest extends com.google.api.client.json
   }
 
   /**
-   * Optional. The line items to be entitled. If unspecified, all line items will be entitled.
+   * Optional. Deprecated: This field is no longer supported. All line items are entitled
+   * automatically. Optional. The line items to be entitled. If unspecified, all line items will be
+   * entitled.
    * @param lineItemEntitlementDetails lineItemEntitlementDetails or {@code null} for none
    */
   public EntitleSubscriptionRequest setLineItemEntitlementDetails(java.util.List<EntitleSubscriptionRequestLineItemEntitlementDetails> lineItemEntitlementDetails) {

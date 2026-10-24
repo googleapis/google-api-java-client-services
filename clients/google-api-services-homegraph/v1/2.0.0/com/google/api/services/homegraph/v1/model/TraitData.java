@@ -37,6 +37,13 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
   private String commitTime;
 
   /**
+   * Contains the dynamic JSON trait payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonTrait jsonTrait;
+
+  /**
    * The custom timestamp supplied by the provider during a ReportStateAndNotification update (if
    * provided). This field is returned as part of the `QueryResponse`.
    * The value may be {@code null}.
@@ -65,6 +72,23 @@ public final class TraitData extends com.google.api.client.json.GenericJson {
    */
   public TraitData setCommitTime(String commitTime) {
     this.commitTime = commitTime;
+    return this;
+  }
+
+  /**
+   * Contains the dynamic JSON trait payload.
+   * @return value or {@code null} for none
+   */
+  public JsonTrait getJsonTrait() {
+    return jsonTrait;
+  }
+
+  /**
+   * Contains the dynamic JSON trait payload.
+   * @param jsonTrait jsonTrait or {@code null} for none
+   */
+  public TraitData setJsonTrait(JsonTrait jsonTrait) {
+    this.jsonTrait = jsonTrait;
     return this;
   }
 

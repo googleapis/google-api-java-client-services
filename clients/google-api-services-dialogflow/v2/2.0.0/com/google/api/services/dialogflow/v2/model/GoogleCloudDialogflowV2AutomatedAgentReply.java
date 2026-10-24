@@ -45,6 +45,12 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String callCompanionAuthCode;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String cxCurrentPage;
 
   /**
@@ -52,6 +58,36 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
    */
   @com.google.api.client.util.Key
   private GoogleCloudDialogflowV2DetectIntentResponse detectIntentResponse;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String event;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String intent;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Float matchConfidence;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.Object> parameters;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudDialogflowV2ResponseMessage> responseMessages;
 
   /**
    * @return value or {@code null} for none
@@ -84,6 +120,49 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
   }
 
   /**
+   * @see #decodeCallCompanionAuthCode()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getCallCompanionAuthCode() {
+    return callCompanionAuthCode;
+  }
+
+  /**
+
+   * @see #getCallCompanionAuthCode()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeCallCompanionAuthCode() {
+    return com.google.api.client.util.Base64.decodeBase64(callCompanionAuthCode);
+  }
+
+  /**
+   * @see #encodeCallCompanionAuthCode()
+   * @param callCompanionAuthCode callCompanionAuthCode or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply setCallCompanionAuthCode(java.lang.String callCompanionAuthCode) {
+    this.callCompanionAuthCode = callCompanionAuthCode;
+    return this;
+  }
+
+  /**
+
+   * @see #setCallCompanionAuthCode()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply encodeCallCompanionAuthCode(byte[] callCompanionAuthCode) {
+    this.callCompanionAuthCode = com.google.api.client.util.Base64.encodeBase64URLSafeString(callCompanionAuthCode);
+    return this;
+  }
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getCxCurrentPage() {
@@ -110,6 +189,81 @@ public final class GoogleCloudDialogflowV2AutomatedAgentReply extends com.google
    */
   public GoogleCloudDialogflowV2AutomatedAgentReply setDetectIntentResponse(GoogleCloudDialogflowV2DetectIntentResponse detectIntentResponse) {
     this.detectIntentResponse = detectIntentResponse;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvent() {
+    return event;
+  }
+
+  /**
+   * @param event event or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply setEvent(java.lang.String event) {
+    this.event = event;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIntent() {
+    return intent;
+  }
+
+  /**
+   * @param intent intent or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply setIntent(java.lang.String intent) {
+    this.intent = intent;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Float getMatchConfidence() {
+    return matchConfidence;
+  }
+
+  /**
+   * @param matchConfidence matchConfidence or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply setMatchConfidence(java.lang.Float matchConfidence) {
+    this.matchConfidence = matchConfidence;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getParameters() {
+    return parameters;
+  }
+
+  /**
+   * @param parameters parameters or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply setParameters(java.util.Map<String, java.lang.Object> parameters) {
+    this.parameters = parameters;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudDialogflowV2ResponseMessage> getResponseMessages() {
+    return responseMessages;
+  }
+
+  /**
+   * @param responseMessages responseMessages or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2AutomatedAgentReply setResponseMessages(java.util.List<GoogleCloudDialogflowV2ResponseMessage> responseMessages) {
+    this.responseMessages = responseMessages;
     return this;
   }
 

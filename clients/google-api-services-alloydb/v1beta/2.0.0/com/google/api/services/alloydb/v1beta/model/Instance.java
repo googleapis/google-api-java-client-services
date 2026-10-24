@@ -210,6 +210,13 @@ public final class Instance extends com.google.api.client.json.GenericJson {
   private InstanceNetworkConfig networkConfig;
 
   /**
+   * Output only. Instance-level network information.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceNetworkInfo networkInfo;
+
+  /**
    * Output only. List of available read-only VMs in this instance, including the standby for a
    * PRIMARY instance.
    * The value may be {@code null}.
@@ -760,6 +767,23 @@ public final class Instance extends com.google.api.client.json.GenericJson {
    */
   public Instance setNetworkConfig(InstanceNetworkConfig networkConfig) {
     this.networkConfig = networkConfig;
+    return this;
+  }
+
+  /**
+   * Output only. Instance-level network information.
+   * @return value or {@code null} for none
+   */
+  public InstanceNetworkInfo getNetworkInfo() {
+    return networkInfo;
+  }
+
+  /**
+   * Output only. Instance-level network information.
+   * @param networkInfo networkInfo or {@code null} for none
+   */
+  public Instance setNetworkInfo(InstanceNetworkInfo networkInfo) {
+    this.networkInfo = networkInfo;
     return this;
   }
 

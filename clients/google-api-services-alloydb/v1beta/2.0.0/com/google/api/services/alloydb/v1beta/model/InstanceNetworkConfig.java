@@ -79,6 +79,13 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
   private java.lang.String network;
 
   /**
+   * Optional. Whether Public DNS is enabled for the instance.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean publicDnsEnabled;
+
+  /**
    * Optional. Name of the allocated IP range for the private IP AlloyDB instance, for example:
    * "google-managed-services-default". If set, the instance IPs will be created from this allocated
    * range and will override the IP range used by the parent cluster. The range name must comply
@@ -176,6 +183,23 @@ public final class InstanceNetworkConfig extends com.google.api.client.json.Gene
    */
   public InstanceNetworkConfig setNetwork(java.lang.String network) {
     this.network = network;
+    return this;
+  }
+
+  /**
+   * Optional. Whether Public DNS is enabled for the instance.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getPublicDnsEnabled() {
+    return publicDnsEnabled;
+  }
+
+  /**
+   * Optional. Whether Public DNS is enabled for the instance.
+   * @param publicDnsEnabled publicDnsEnabled or {@code null} for none
+   */
+  public InstanceNetworkConfig setPublicDnsEnabled(java.lang.Boolean publicDnsEnabled) {
+    this.publicDnsEnabled = publicDnsEnabled;
     return this;
   }
 

@@ -32,6 +32,15 @@ package com.google.api.services.backupdr.v1.model;
 public final class GcpBackupConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The resource name of the `AutoProtectionPolicyBinding` that manages this
+   * datasource, if any. Format:
+   * `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String autoProtectionPolicyBinding;
+
+  /**
    * The name of the backup plan.
    * The value may be {@code null}.
    */
@@ -72,6 +81,27 @@ public final class GcpBackupConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> backupPlanRules;
+
+  /**
+   * Output only. The resource name of the `AutoProtectionPolicyBinding` that manages this
+   * datasource, if any. Format:
+   * `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAutoProtectionPolicyBinding() {
+    return autoProtectionPolicyBinding;
+  }
+
+  /**
+   * Output only. The resource name of the `AutoProtectionPolicyBinding` that manages this
+   * datasource, if any. Format:
+   * `projects/{project}/locations/{location}/autoProtectionPolicies/{policy}/bindings/{binding}`.
+   * @param autoProtectionPolicyBinding autoProtectionPolicyBinding or {@code null} for none
+   */
+  public GcpBackupConfig setAutoProtectionPolicyBinding(java.lang.String autoProtectionPolicyBinding) {
+    this.autoProtectionPolicyBinding = autoProtectionPolicyBinding;
+    return this;
+  }
 
   /**
    * The name of the backup plan.

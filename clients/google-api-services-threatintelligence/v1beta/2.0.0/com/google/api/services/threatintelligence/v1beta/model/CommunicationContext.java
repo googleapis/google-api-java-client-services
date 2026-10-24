@@ -60,6 +60,13 @@ public final class CommunicationContext extends com.google.api.client.json.Gener
   private java.lang.String channelUrl;
 
   /**
+   * Optional. Message or post identifier on the originating platform.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String messageId;
+
+  /**
    * Optional. Service from the collection event origin (e.g. forum or chat service name).
    * The value may be {@code null}.
    */
@@ -138,6 +145,23 @@ public final class CommunicationContext extends com.google.api.client.json.Gener
    */
   public CommunicationContext setChannelUrl(java.lang.String channelUrl) {
     this.channelUrl = channelUrl;
+    return this;
+  }
+
+  /**
+   * Optional. Message or post identifier on the originating platform.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMessageId() {
+    return messageId;
+  }
+
+  /**
+   * Optional. Message or post identifier on the originating platform.
+   * @param messageId messageId or {@code null} for none
+   */
+  public CommunicationContext setMessageId(java.lang.String messageId) {
+    this.messageId = messageId;
     return this;
   }
 

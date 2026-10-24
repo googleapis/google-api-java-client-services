@@ -52,6 +52,13 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
   private String collectionTime;
 
   /**
+   * Output only. Platform identifiers of the message, thread and channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CommunicationContext communicationContext;
+
+  /**
    * Output only. The content of the document.
    * The value may be {@code null}.
    */
@@ -170,6 +177,23 @@ public final class AlertDocument extends com.google.api.client.json.GenericJson 
    */
   public AlertDocument setCollectionTime(String collectionTime) {
     this.collectionTime = collectionTime;
+    return this;
+  }
+
+  /**
+   * Output only. Platform identifiers of the message, thread and channel.
+   * @return value or {@code null} for none
+   */
+  public CommunicationContext getCommunicationContext() {
+    return communicationContext;
+  }
+
+  /**
+   * Output only. Platform identifiers of the message, thread and channel.
+   * @param communicationContext communicationContext or {@code null} for none
+   */
+  public AlertDocument setCommunicationContext(CommunicationContext communicationContext) {
+    this.communicationContext = communicationContext;
     return this;
   }
 

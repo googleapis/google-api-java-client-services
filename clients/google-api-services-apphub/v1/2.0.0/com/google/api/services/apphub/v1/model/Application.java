@@ -32,6 +32,20 @@ package com.google.api.services.apphub.v1.model;
 public final class Application extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Properties of an underlying cloud resource that can comprise an Application.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApplicationProperties applicationProperties;
+
+  /**
+   * Output only. Application type.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ApplicationType applicationType;
+
+  /**
    * Optional. Consumer provided attributes.
    * The value may be {@code null}.
    */
@@ -96,6 +110,40 @@ public final class Application extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
+
+  /**
+   * Output only. Properties of an underlying cloud resource that can comprise an Application.
+   * @return value or {@code null} for none
+   */
+  public ApplicationProperties getApplicationProperties() {
+    return applicationProperties;
+  }
+
+  /**
+   * Output only. Properties of an underlying cloud resource that can comprise an Application.
+   * @param applicationProperties applicationProperties or {@code null} for none
+   */
+  public Application setApplicationProperties(ApplicationProperties applicationProperties) {
+    this.applicationProperties = applicationProperties;
+    return this;
+  }
+
+  /**
+   * Output only. Application type.
+   * @return value or {@code null} for none
+   */
+  public ApplicationType getApplicationType() {
+    return applicationType;
+  }
+
+  /**
+   * Output only. Application type.
+   * @param applicationType applicationType or {@code null} for none
+   */
+  public Application setApplicationType(ApplicationType applicationType) {
+    this.applicationType = applicationType;
+    return this;
+  }
 
   /**
    * Optional. Consumer provided attributes.

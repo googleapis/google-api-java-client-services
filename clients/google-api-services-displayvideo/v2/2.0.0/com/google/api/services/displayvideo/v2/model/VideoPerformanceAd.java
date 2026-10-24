@@ -39,6 +39,14 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> actionButtonLabels;
 
   /**
+   * Optional. The business name shown on the ad. This setting is required unless a default value is
+   * set at the advertiser level. If left unset, the default value will be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String businessName;
+
+  /**
    * Optional. The list of companion banners used by this ad.
    * The value may be {@code null}.
    */
@@ -104,6 +112,14 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
   private java.util.List<java.lang.String> headlines;
 
   /**
+   * Optional. The logo image used by this ad. This setting is required unless a default value is
+   * set at the advertiser level. If left unset, the default value will be applied.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ImageAsset logo;
+
+  /**
    * Optional. The list of long headlines shown on the call-to-action banner. Must be set unless the
    * parent line item's lineItemType is `LINE_ITEM_TYPE_YOUTUBE_AND_PARTNERS_NON_SKIPPABLE`, in
    * which case this field cannot be set.
@@ -144,6 +160,25 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
    */
   public VideoPerformanceAd setActionButtonLabels(java.util.List<java.lang.String> actionButtonLabels) {
     this.actionButtonLabels = actionButtonLabels;
+    return this;
+  }
+
+  /**
+   * Optional. The business name shown on the ad. This setting is required unless a default value is
+   * set at the advertiser level. If left unset, the default value will be applied.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBusinessName() {
+    return businessName;
+  }
+
+  /**
+   * Optional. The business name shown on the ad. This setting is required unless a default value is
+   * set at the advertiser level. If left unset, the default value will be applied.
+   * @param businessName businessName or {@code null} for none
+   */
+  public VideoPerformanceAd setBusinessName(java.lang.String businessName) {
+    this.businessName = businessName;
     return this;
   }
 
@@ -286,6 +321,25 @@ public final class VideoPerformanceAd extends com.google.api.client.json.Generic
    */
   public VideoPerformanceAd setHeadlines(java.util.List<java.lang.String> headlines) {
     this.headlines = headlines;
+    return this;
+  }
+
+  /**
+   * Optional. The logo image used by this ad. This setting is required unless a default value is
+   * set at the advertiser level. If left unset, the default value will be applied.
+   * @return value or {@code null} for none
+   */
+  public ImageAsset getLogo() {
+    return logo;
+  }
+
+  /**
+   * Optional. The logo image used by this ad. This setting is required unless a default value is
+   * set at the advertiser level. If left unset, the default value will be applied.
+   * @param logo logo or {@code null} for none
+   */
+  public VideoPerformanceAd setLogo(ImageAsset logo) {
+    this.logo = logo;
     return this;
   }
 

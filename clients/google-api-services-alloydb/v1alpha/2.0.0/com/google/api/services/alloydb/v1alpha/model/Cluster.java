@@ -71,6 +71,13 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private BackupDrInfo backupdrInfo;
 
   /**
+   * Output only. Certificate Authority (CA) information for the cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CertificateAuthorityInfo certificateAuthorityInfo;
+
+  /**
    * Output only. Cluster created from CloudSQL snapshot.
    * The value may be {@code null}.
    */
@@ -450,6 +457,23 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setBackupdrInfo(BackupDrInfo backupdrInfo) {
     this.backupdrInfo = backupdrInfo;
+    return this;
+  }
+
+  /**
+   * Output only. Certificate Authority (CA) information for the cluster.
+   * @return value or {@code null} for none
+   */
+  public CertificateAuthorityInfo getCertificateAuthorityInfo() {
+    return certificateAuthorityInfo;
+  }
+
+  /**
+   * Output only. Certificate Authority (CA) information for the cluster.
+   * @param certificateAuthorityInfo certificateAuthorityInfo or {@code null} for none
+   */
+  public Cluster setCertificateAuthorityInfo(CertificateAuthorityInfo certificateAuthorityInfo) {
+    this.certificateAuthorityInfo = certificateAuthorityInfo;
     return this;
   }
 

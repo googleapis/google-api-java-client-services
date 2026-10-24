@@ -2301,6 +2301,172 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
+   * An accessor for creating requests from the V1 collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code DeepReview deepreview = new DeepReview(...);}
+   *   {@code DeepReview.V1.List request = deepreview.v1().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public V1 v1() {
+    return new V1();
+  }
+
+  /**
+   * The "v1" collection of methods.
+   */
+  public class V1 {
+
+    /**
+     * Retrieves the review quota limits and sliding-window usage for the authenticated caller.
+     *
+     * Create a request for the method "v1.getUserQuota".
+     *
+     * This request holds the parameters needed by the deepreview server.  After setting any optional
+     * parameters, call the {@link GetUserQuota#execute()} method to invoke the remote operation.
+     *
+     * @param name Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+     * @return the request
+     */
+    public GetUserQuota getUserQuota(java.lang.String name) throws java.io.IOException {
+      GetUserQuota result = new GetUserQuota(name);
+      initialize(result);
+      return result;
+    }
+
+    public class GetUserQuota extends DeepReviewRequest<com.google.api.services.deepreview.v1.model.UserQuota> {
+
+      private static final String REST_PATH = "v1/{+name}";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^userQuota$");
+
+      /**
+       * Retrieves the review quota limits and sliding-window usage for the authenticated caller.
+       *
+       * Create a request for the method "v1.getUserQuota".
+       *
+       * This request holds the parameters needed by the the deepreview server.  After setting any
+       * optional parameters, call the {@link GetUserQuota#execute()} method to invoke the remote
+       * operation. <p> {@link
+       * GetUserQuota#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+       * @since 1.13
+       */
+      protected GetUserQuota(java.lang.String name) {
+        super(DeepReview.this, "GET", REST_PATH, null, com.google.api.services.deepreview.v1.model.UserQuota.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^userQuota$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetUserQuota set$Xgafv(java.lang.String $Xgafv) {
+        return (GetUserQuota) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetUserQuota setAccessToken(java.lang.String accessToken) {
+        return (GetUserQuota) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetUserQuota setAlt(java.lang.String alt) {
+        return (GetUserQuota) super.setAlt(alt);
+      }
+
+      @Override
+      public GetUserQuota setCallback(java.lang.String callback) {
+        return (GetUserQuota) super.setCallback(callback);
+      }
+
+      @Override
+      public GetUserQuota setFields(java.lang.String fields) {
+        return (GetUserQuota) super.setFields(fields);
+      }
+
+      @Override
+      public GetUserQuota setKey(java.lang.String key) {
+        return (GetUserQuota) super.setKey(key);
+      }
+
+      @Override
+      public GetUserQuota setOauthToken(java.lang.String oauthToken) {
+        return (GetUserQuota) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetUserQuota setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetUserQuota) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetUserQuota setQuotaUser(java.lang.String quotaUser) {
+        return (GetUserQuota) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetUserQuota setUploadType(java.lang.String uploadType) {
+        return (GetUserQuota) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetUserQuota setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetUserQuota) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /**
+       * Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+       */
+      public GetUserQuota setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^userQuota$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      @Override
+      public GetUserQuota set(String parameterName, Object value) {
+        return (GetUserQuota) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * Builder for {@link DeepReview}.
    *
    * <p>

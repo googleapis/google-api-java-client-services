@@ -30,7 +30,7 @@ package com.google.api.services.vision.v1.model;
 public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Anger likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   private java.lang.String headwearLikelihood;
 
   /**
-   * Joy likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,14 +125,14 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   private java.lang.Float rollAngle;
 
   /**
-   * Sorrow likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sorrowLikelihood;
 
   /**
-   * Surprise likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -154,7 +154,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   private java.lang.String underExposedLikelihood;
 
   /**
-   * Anger likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAngerLikelihood() {
@@ -162,7 +162,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Anger likelihood.
+   * Deprecated: No longer populated.
    * @param angerLikelihood angerLikelihood or {@code null} for none
    */
   public GoogleCloudVisionV1p4beta1FaceAnnotation setAngerLikelihood(java.lang.String angerLikelihood) {
@@ -270,7 +270,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Joy likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getJoyLikelihood() {
@@ -278,7 +278,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Joy likelihood.
+   * Deprecated: No longer populated.
    * @param joyLikelihood joyLikelihood or {@code null} for none
    */
   public GoogleCloudVisionV1p4beta1FaceAnnotation setJoyLikelihood(java.lang.String joyLikelihood) {
@@ -380,7 +380,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Sorrow likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSorrowLikelihood() {
@@ -388,7 +388,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Sorrow likelihood.
+   * Deprecated: No longer populated.
    * @param sorrowLikelihood sorrowLikelihood or {@code null} for none
    */
   public GoogleCloudVisionV1p4beta1FaceAnnotation setSorrowLikelihood(java.lang.String sorrowLikelihood) {
@@ -397,7 +397,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Surprise likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSurpriseLikelihood() {
@@ -405,7 +405,7 @@ public final class GoogleCloudVisionV1p4beta1FaceAnnotation extends com.google.a
   }
 
   /**
-   * Surprise likelihood.
+   * Deprecated: No longer populated.
    * @param surpriseLikelihood surpriseLikelihood or {@code null} for none
    */
   public GoogleCloudVisionV1p4beta1FaceAnnotation setSurpriseLikelihood(java.lang.String surpriseLikelihood) {

@@ -760,22 +760,22 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Inventory view indicating what information should be included in the inventory
-             * resource. If unspecified, the default view is BASIC.
+             * Optional. Inventory view indicating what information should be included in the
+             * inventory resource. If unspecified, the default view is BASIC.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Inventory view indicating what information should be included in the inventory resource. If
-           unspecified, the default view is BASIC.
+            /** Optional. Inventory view indicating what information should be included in the inventory resource.
+           If unspecified, the default view is BASIC.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * Inventory view indicating what information should be included in the inventory
-             * resource. If unspecified, the default view is BASIC.
+             * Optional. Inventory view indicating what information should be included in the
+             * inventory resource. If unspecified, the default view is BASIC.
              */
             public Get setView(java.lang.String view) {
               this.view = view;
@@ -932,61 +932,61 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * If provided, this field specifies the criteria that must be met by a `Inventory` API
-             * resource to be included in the response.
+             * Optional. If provided, this field specifies the criteria that must be met by a
+             * `Inventory` API resource to be included in the response.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** If provided, this field specifies the criteria that must be met by a `Inventory` API resource to be
-           included in the response.
+            /** Optional. If provided, this field specifies the criteria that must be met by a `Inventory` API
+           resource to be included in the response.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * If provided, this field specifies the criteria that must be met by a `Inventory` API
-             * resource to be included in the response.
+             * Optional. If provided, this field specifies the criteria that must be met by a
+             * `Inventory` API resource to be included in the response.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** The maximum number of results to return. */
+            /** Optional. The maximum number of results to return. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** The maximum number of results to return.
+            /** Optional. The maximum number of results to return.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** The maximum number of results to return. */
+            /** Optional. The maximum number of results to return. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
             /**
-             * A pagination token returned from a previous call to `ListInventories` that indicates
-             * where this listing should continue from.
+             * Optional. A pagination token returned from a previous call to `ListInventories` that
+             * indicates where this listing should continue from.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** A pagination token returned from a previous call to `ListInventories` that indicates where this
-           listing should continue from.
+            /** Optional. A pagination token returned from a previous call to `ListInventories` that indicates
+           where this listing should continue from.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * A pagination token returned from a previous call to `ListInventories` that indicates
-             * where this listing should continue from.
+             * Optional. A pagination token returned from a previous call to `ListInventories` that
+             * indicates where this listing should continue from.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -994,22 +994,22 @@ public class OSConfig extends com.google.api.client.googleapis.services.json.Abs
             }
 
             /**
-             * Inventory view indicating what information should be included in the inventory
-             * resource. If unspecified, the default view is BASIC.
+             * Optional. Inventory view indicating what information should be included in the
+             * inventory resource. If unspecified, the default view is BASIC.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Inventory view indicating what information should be included in the inventory resource. If
-           unspecified, the default view is BASIC.
+            /** Optional. Inventory view indicating what information should be included in the inventory resource.
+           If unspecified, the default view is BASIC.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * Inventory view indicating what information should be included in the inventory
-             * resource. If unspecified, the default view is BASIC.
+             * Optional. Inventory view indicating what information should be included in the
+             * inventory resource. If unspecified, the default view is BASIC.
              */
             public List setView(java.lang.String view) {
               this.view = view;

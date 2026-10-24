@@ -72,7 +72,7 @@ public final class Scope3FlightSegment extends com.google.api.client.json.Generi
   private java.lang.String destination;
 
   /**
-   * Optional. Distance in kilometers, e.g. `2423`, from [1, 2.5e16) km. This is used to match a
+   * Optional. Distance in kilometers, e.g. `2423`, from [`1`, `1e12`) km. This is used to match a
    * flight to distance-based emissions when origin and destination are not provided or there are no
    * matching typical flights.
    * The value may be {@code null}.
@@ -199,7 +199,7 @@ public final class Scope3FlightSegment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Distance in kilometers, e.g. `2423`, from [1, 2.5e16) km. This is used to match a
+   * Optional. Distance in kilometers, e.g. `2423`, from [`1`, `1e12`) km. This is used to match a
    * flight to distance-based emissions when origin and destination are not provided or there are no
    * matching typical flights.
    * @return value or {@code null} for none
@@ -209,7 +209,7 @@ public final class Scope3FlightSegment extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. Distance in kilometers, e.g. `2423`, from [1, 2.5e16) km. This is used to match a
+   * Optional. Distance in kilometers, e.g. `2423`, from [`1`, `1e12`) km. This is used to match a
    * flight to distance-based emissions when origin and destination are not provided or there are no
    * matching typical flights.
    * @param distanceKm distanceKm or {@code null} for none

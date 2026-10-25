@@ -124,7 +124,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   private java.lang.String stackedType;
 
   /**
-   * True to make the chart 3D. Applies to Bar and Column charts.
+   * True to make the chart 3D. Applies to Bar and Column charts. Setting it on a Combo chart is
+   * allowed but has no effect; setting it on any other chart type returns an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -328,7 +329,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * True to make the chart 3D. Applies to Bar and Column charts.
+   * True to make the chart 3D. Applies to Bar and Column charts. Setting it on a Combo chart is
+   * allowed but has no effect; setting it on any other chart type returns an error.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getThreeDimensional() {
@@ -336,7 +338,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * True to make the chart 3D. Applies to Bar and Column charts.
+   * True to make the chart 3D. Applies to Bar and Column charts. Setting it on a Combo chart is
+   * allowed but has no effect; setting it on any other chart type returns an error.
    * @param threeDimensional threeDimensional or {@code null} for none
    */
   public BasicChartSpec setThreeDimensional(java.lang.Boolean threeDimensional) {

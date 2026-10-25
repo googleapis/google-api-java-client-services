@@ -30,7 +30,7 @@ package com.google.api.services.vision.v1p2beta1.model;
 public final class FaceAnnotation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Anger likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -79,7 +79,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   private java.lang.String headwearLikelihood;
 
   /**
-   * Joy likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,14 +116,14 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   private java.lang.Float rollAngle;
 
   /**
-   * Sorrow likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sorrowLikelihood;
 
   /**
-   * Surprise likelihood.
+   * Deprecated: No longer populated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -145,7 +145,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   private java.lang.String underExposedLikelihood;
 
   /**
-   * Anger likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getAngerLikelihood() {
@@ -153,7 +153,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Anger likelihood.
+   * Deprecated: No longer populated.
    * @param angerLikelihood angerLikelihood or {@code null} for none
    */
   public FaceAnnotation setAngerLikelihood(java.lang.String angerLikelihood) {
@@ -261,7 +261,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Joy likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getJoyLikelihood() {
@@ -269,7 +269,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Joy likelihood.
+   * Deprecated: No longer populated.
    * @param joyLikelihood joyLikelihood or {@code null} for none
    */
   public FaceAnnotation setJoyLikelihood(java.lang.String joyLikelihood) {
@@ -350,7 +350,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sorrow likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSorrowLikelihood() {
@@ -358,7 +358,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Sorrow likelihood.
+   * Deprecated: No longer populated.
    * @param sorrowLikelihood sorrowLikelihood or {@code null} for none
    */
   public FaceAnnotation setSorrowLikelihood(java.lang.String sorrowLikelihood) {
@@ -367,7 +367,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Surprise likelihood.
+   * Deprecated: No longer populated.
    * @return value or {@code null} for none
    */
   public java.lang.String getSurpriseLikelihood() {
@@ -375,7 +375,7 @@ public final class FaceAnnotation extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Surprise likelihood.
+   * Deprecated: No longer populated.
    * @param surpriseLikelihood surpriseLikelihood or {@code null} for none
    */
   public FaceAnnotation setSurpriseLikelihood(java.lang.String surpriseLikelihood) {

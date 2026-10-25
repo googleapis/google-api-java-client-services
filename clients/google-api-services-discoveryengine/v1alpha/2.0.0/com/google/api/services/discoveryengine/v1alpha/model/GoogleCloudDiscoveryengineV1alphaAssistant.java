@@ -81,13 +81,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
   private java.lang.String displayName;
 
   /**
-   * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
-   * assistant. The keys are connector name, for example
-   * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
-   * values consist of admin enabled tools towards the connector instance. Admin can selectively
-   * enable multiple tools on any of the connector instances that they created in the project. For
-   * example {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2, "transferTicket")],
-   * "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   * Optional. The enabled tools on this assistant. The keys are data connector resource names, in
+   * the format `projects/{project}/locations/{location}/collections/{collection}/dataConnector`.
+   * The values are the tools that the admin enabled on that connector. Admins can selectively
+   * enable tools on any of the connectors that they created in the project. For example: ``` {
+   * "projects/my-project/locations/global/collections/jira1/dataConnector": { "toolInfo": [ {
+   * "toolName": "create_jira_issue", "toolDisplayName": "Create Jira issue" }, { "toolName":
+   * "update_jira_issue", "toolDisplayName": "Update Jira issue" } ] } } ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -253,13 +253,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
   }
 
   /**
-   * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
-   * assistant. The keys are connector name, for example
-   * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
-   * values consist of admin enabled tools towards the connector instance. Admin can selectively
-   * enable multiple tools on any of the connector instances that they created in the project. For
-   * example {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2, "transferTicket")],
-   * "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   * Optional. The enabled tools on this assistant. The keys are data connector resource names, in
+   * the format `projects/{project}/locations/{location}/collections/{collection}/dataConnector`.
+   * The values are the tools that the admin enabled on that connector. Admins can selectively
+   * enable tools on any of the connectors that they created in the project. For example: ``` {
+   * "projects/my-project/locations/global/collections/jira1/dataConnector": { "toolInfo": [ {
+   * "toolName": "create_jira_issue", "toolDisplayName": "Create Jira issue" }, { "toolName":
+   * "update_jira_issue", "toolDisplayName": "Update Jira issue" } ] } } ```
    * @return value or {@code null} for none
    */
   public java.util.Map<String, GoogleCloudDiscoveryengineV1alphaAssistantToolList> getEnabledTools() {
@@ -267,13 +267,13 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistant extends com.google
   }
 
   /**
-   * Optional. Note: not implemented yet. Use enabled_actions instead. The enabled tools on this
-   * assistant. The keys are connector name, for example
-   * "projects/{projectId}/locations/{locationId}/collections/{collectionId}/dataconnector The
-   * values consist of admin enabled tools towards the connector instance. Admin can selectively
-   * enable multiple tools on any of the connector instances that they created in the project. For
-   * example {"jira1ConnectorName": [(toolId1, "createTicket"), (toolId2, "transferTicket")],
-   * "gmail1ConnectorName": [(toolId3, "sendEmail"),..] }
+   * Optional. The enabled tools on this assistant. The keys are data connector resource names, in
+   * the format `projects/{project}/locations/{location}/collections/{collection}/dataConnector`.
+   * The values are the tools that the admin enabled on that connector. Admins can selectively
+   * enable tools on any of the connectors that they created in the project. For example: ``` {
+   * "projects/my-project/locations/global/collections/jira1/dataConnector": { "toolInfo": [ {
+   * "toolName": "create_jira_issue", "toolDisplayName": "Create Jira issue" }, { "toolName":
+   * "update_jira_issue", "toolDisplayName": "Update Jira issue" } ] } } ```
    * @param enabledTools enabledTools or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaAssistant setEnabledTools(java.util.Map<String, GoogleCloudDiscoveryengineV1alphaAssistantToolList> enabledTools) {

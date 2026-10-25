@@ -31,6 +31,13 @@ package com.google.api.services.redis.v1beta1.model;
 public final class ZoneDistributionConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The exact list of zones where the cluster currently has active VMs.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> activeZones;
+
+  /**
    * Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not specified.
    * The value may be {@code null}.
    */
@@ -53,6 +60,23 @@ public final class ZoneDistributionConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> zones;
+
+  /**
+   * Output only. The exact list of zones where the cluster currently has active VMs.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getActiveZones() {
+    return activeZones;
+  }
+
+  /**
+   * Output only. The exact list of zones where the cluster currently has active VMs.
+   * @param activeZones activeZones or {@code null} for none
+   */
+  public ZoneDistributionConfig setActiveZones(java.util.List<java.lang.String> activeZones) {
+    this.activeZones = activeZones;
+    return this;
+  }
 
   /**
    * Optional. The mode of zone distribution. Defaults to MULTI_ZONE, when not specified.

@@ -31,21 +31,24 @@ package com.google.api.services.redis.v1.model;
 public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Allows to define schedule that runs specified day of the week.
+   * Optional. The day of the week for the maintenance window. This field is required. You can't use
+   * `DAY_OF_WEEK_UNSPECIFIED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String day;
 
   /**
-   * Optional. Start time of the window in UTC.
+   * Optional. The start time of the maintenance window in UTC. When you specify a maintenance
+   * window, `start_time` is required.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private TimeOfDay startTime;
 
   /**
-   * Optional. Allows to define schedule that runs specified day of the week.
+   * Optional. The day of the week for the maintenance window. This field is required. You can't use
+   * `DAY_OF_WEEK_UNSPECIFIED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDay() {
@@ -53,7 +56,8 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   }
 
   /**
-   * Optional. Allows to define schedule that runs specified day of the week.
+   * Optional. The day of the week for the maintenance window. This field is required. You can't use
+   * `DAY_OF_WEEK_UNSPECIFIED`.
    * @param day day or {@code null} for none
    */
   public ClusterWeeklyMaintenanceWindow setDay(java.lang.String day) {
@@ -62,7 +66,8 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   }
 
   /**
-   * Optional. Start time of the window in UTC.
+   * Optional. The start time of the maintenance window in UTC. When you specify a maintenance
+   * window, `start_time` is required.
    * @return value or {@code null} for none
    */
   public TimeOfDay getStartTime() {
@@ -70,7 +75,8 @@ public final class ClusterWeeklyMaintenanceWindow extends com.google.api.client.
   }
 
   /**
-   * Optional. Start time of the window in UTC.
+   * Optional. The start time of the maintenance window in UTC. When you specify a maintenance
+   * window, `start_time` is required.
    * @param startTime startTime or {@code null} for none
    */
   public ClusterWeeklyMaintenanceWindow setStartTime(TimeOfDay startTime) {

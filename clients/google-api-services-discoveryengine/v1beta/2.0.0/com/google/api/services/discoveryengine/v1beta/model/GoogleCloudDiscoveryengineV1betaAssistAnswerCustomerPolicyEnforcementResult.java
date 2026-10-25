@@ -40,8 +40,9 @@ public final class GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnf
   private java.util.List<GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnforcementResultPolicyEnforcementResult> policyResults;
 
   /**
-   * Final verdict of the customer policy enforcement. If only one policy blocked the processing,
-   * the verdict is BLOCK.
+   * Final verdict of the customer policy enforcement. If at least one policy blocked the
+   * processing, the verdict is BLOCK. If no policy blocked the processing but at least one flagged
+   * it, the verdict is FLAG.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +77,9 @@ public final class GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnf
   }
 
   /**
-   * Final verdict of the customer policy enforcement. If only one policy blocked the processing,
-   * the verdict is BLOCK.
+   * Final verdict of the customer policy enforcement. If at least one policy blocked the
+   * processing, the verdict is BLOCK. If no policy blocked the processing but at least one flagged
+   * it, the verdict is FLAG.
    * @return value or {@code null} for none
    */
   public java.lang.String getVerdict() {
@@ -85,8 +87,9 @@ public final class GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnf
   }
 
   /**
-   * Final verdict of the customer policy enforcement. If only one policy blocked the processing,
-   * the verdict is BLOCK.
+   * Final verdict of the customer policy enforcement. If at least one policy blocked the
+   * processing, the verdict is BLOCK. If no policy blocked the processing but at least one flagged
+   * it, the verdict is FLAG.
    * @param verdict verdict or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1betaAssistAnswerCustomerPolicyEnforcementResult setVerdict(java.lang.String verdict) {

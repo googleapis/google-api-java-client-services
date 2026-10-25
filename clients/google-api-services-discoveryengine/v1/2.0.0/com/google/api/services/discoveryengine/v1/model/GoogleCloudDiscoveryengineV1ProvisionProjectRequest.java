@@ -47,6 +47,14 @@ public final class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends c
   private java.lang.String dataUseTermsVersion;
 
   /**
+   * Optional. The identity provider for this location. When provided, the location's AclConfig is
+   * set from it as part of provisioning.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1IdpConfig idpConfig;
+
+  /**
    * Optional. Parameters for Agentspace.
    * The value may be {@code null}.
    */
@@ -90,6 +98,25 @@ public final class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends c
    */
   public GoogleCloudDiscoveryengineV1ProvisionProjectRequest setDataUseTermsVersion(java.lang.String dataUseTermsVersion) {
     this.dataUseTermsVersion = dataUseTermsVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The identity provider for this location. When provided, the location's AclConfig is
+   * set from it as part of provisioning.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1IdpConfig getIdpConfig() {
+    return idpConfig;
+  }
+
+  /**
+   * Optional. The identity provider for this location. When provided, the location's AclConfig is
+   * set from it as part of provisioning.
+   * @param idpConfig idpConfig or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProvisionProjectRequest setIdpConfig(GoogleCloudDiscoveryengineV1IdpConfig idpConfig) {
+    this.idpConfig = idpConfig;
     return this;
   }
 

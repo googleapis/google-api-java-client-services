@@ -31,7 +31,7 @@ package com.google.api.services.discoveryengine.v1.model;
 public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The additional user comment of the feedback if user gives a thumb down.
+   * Optional. The additional user comment of the feedback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,7 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   private java.lang.String feedbackSource;
 
   /**
-   * Required. Indicate whether the user gives a positive or negative feedback. If the user gives a
-   * negative feedback, there might be more feedback details.
+   * Required. Indicates whether the user gives a positive or negative feedback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,14 +81,21 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   private java.lang.String llmModelVersion;
 
   /**
-   * Optional. The reason if user gives a thumb down.
+   * Optional. Optional Model Armor false-positive dispute metadata attached to feedback.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDiscoveryengineV1FeedbackModelArmorDisputeInfo modelArmorDisputeInfo;
+
+  /**
+   * Optional. The reasons why the user gives feedback.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> reasons;
 
   /**
-   * Optional. The additional user comment of the feedback if user gives a thumb down.
+   * Optional. The additional user comment of the feedback.
    * @return value or {@code null} for none
    */
   public java.lang.String getComment() {
@@ -97,7 +103,7 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   }
 
   /**
-   * Optional. The additional user comment of the feedback if user gives a thumb down.
+   * Optional. The additional user comment of the feedback.
    * @param comment comment or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Feedback setComment(java.lang.String comment) {
@@ -176,8 +182,7 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   }
 
   /**
-   * Required. Indicate whether the user gives a positive or negative feedback. If the user gives a
-   * negative feedback, there might be more feedback details.
+   * Required. Indicates whether the user gives a positive or negative feedback.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedbackType() {
@@ -185,8 +190,7 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   }
 
   /**
-   * Required. Indicate whether the user gives a positive or negative feedback. If the user gives a
-   * negative feedback, there might be more feedback details.
+   * Required. Indicates whether the user gives a positive or negative feedback.
    * @param feedbackType feedbackType or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Feedback setFeedbackType(java.lang.String feedbackType) {
@@ -212,7 +216,24 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   }
 
   /**
-   * Optional. The reason if user gives a thumb down.
+   * Optional. Optional Model Armor false-positive dispute metadata attached to feedback.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1FeedbackModelArmorDisputeInfo getModelArmorDisputeInfo() {
+    return modelArmorDisputeInfo;
+  }
+
+  /**
+   * Optional. Optional Model Armor false-positive dispute metadata attached to feedback.
+   * @param modelArmorDisputeInfo modelArmorDisputeInfo or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Feedback setModelArmorDisputeInfo(GoogleCloudDiscoveryengineV1FeedbackModelArmorDisputeInfo modelArmorDisputeInfo) {
+    this.modelArmorDisputeInfo = modelArmorDisputeInfo;
+    return this;
+  }
+
+  /**
+   * Optional. The reasons why the user gives feedback.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getReasons() {
@@ -220,7 +241,7 @@ public final class GoogleCloudDiscoveryengineV1Feedback extends com.google.api.c
   }
 
   /**
-   * Optional. The reason if user gives a thumb down.
+   * Optional. The reasons why the user gives feedback.
    * @param reasons reasons or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Feedback setReasons(java.util.List<java.lang.String> reasons) {

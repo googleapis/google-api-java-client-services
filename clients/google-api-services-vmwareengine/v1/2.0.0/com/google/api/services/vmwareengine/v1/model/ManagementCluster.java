@@ -48,6 +48,16 @@ public final class ManagementCluster extends com.google.api.client.json.GenericJ
   private java.util.Map<String, NodeTypeConfig> nodeTypeConfigs;
 
   /**
+   * Optional. The identifier of the placement group for management cluster nodes. A placement group
+   * is an internal Google identifier for a group of resources that are physically located within
+   * the same fault domain. If provided, nodes for this cluster are placed within the specified
+   * placement group. If this field is omitted, the system selects an appropriate placement group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String placementGroup;
+
+  /**
    * Optional. Configuration of a stretched cluster. Required for STRETCHED private clouds.
    * The value may be {@code null}.
    */
@@ -93,6 +103,29 @@ public final class ManagementCluster extends com.google.api.client.json.GenericJ
    */
   public ManagementCluster setNodeTypeConfigs(java.util.Map<String, NodeTypeConfig> nodeTypeConfigs) {
     this.nodeTypeConfigs = nodeTypeConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. The identifier of the placement group for management cluster nodes. A placement group
+   * is an internal Google identifier for a group of resources that are physically located within
+   * the same fault domain. If provided, nodes for this cluster are placed within the specified
+   * placement group. If this field is omitted, the system selects an appropriate placement group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPlacementGroup() {
+    return placementGroup;
+  }
+
+  /**
+   * Optional. The identifier of the placement group for management cluster nodes. A placement group
+   * is an internal Google identifier for a group of resources that are physically located within
+   * the same fault domain. If provided, nodes for this cluster are placed within the specified
+   * placement group. If this field is omitted, the system selects an appropriate placement group.
+   * @param placementGroup placementGroup or {@code null} for none
+   */
+  public ManagementCluster setPlacementGroup(java.lang.String placementGroup) {
+    this.placementGroup = placementGroup;
     return this;
   }
 

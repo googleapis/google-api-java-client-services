@@ -66,6 +66,13 @@ public final class SkillRevision extends com.google.api.client.json.GenericJson 
   private java.lang.String name;
 
   /**
+   * Output only. Scan result of the skill revision.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScanResult scanResult;
+
+  /**
    * Output only. Cryptographic SHA-256 integrity and deduplication digest of the payload zip.
    * The value may be {@code null}.
    */
@@ -177,6 +184,23 @@ public final class SkillRevision extends com.google.api.client.json.GenericJson 
    */
   public SkillRevision setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Output only. Scan result of the skill revision.
+   * @return value or {@code null} for none
+   */
+  public ScanResult getScanResult() {
+    return scanResult;
+  }
+
+  /**
+   * Output only. Scan result of the skill revision.
+   * @param scanResult scanResult or {@code null} for none
+   */
+  public SkillRevision setScanResult(ScanResult scanResult) {
+    this.scanResult = scanResult;
     return this;
   }
 

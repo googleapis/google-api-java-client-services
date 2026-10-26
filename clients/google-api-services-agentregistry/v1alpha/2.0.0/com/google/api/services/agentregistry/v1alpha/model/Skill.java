@@ -98,6 +98,13 @@ public final class Skill extends com.google.api.client.json.GenericJson {
   private java.lang.String publisher;
 
   /**
+   * Optional. Optional. Scanning configuration for the skill.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScanningConfig scanningConfig;
+
+  /**
    * Output only. A stable, globally unique logical identifier for the skill. It is securely
    * constructed by the backend by combining the associated `publisher`'s verified namespace and the
    * skill's resource ID to enforce strict ownership. For example, the prefix `google-` is reserved
@@ -298,6 +305,23 @@ public final class Skill extends com.google.api.client.json.GenericJson {
    */
   public Skill setPublisher(java.lang.String publisher) {
     this.publisher = publisher;
+    return this;
+  }
+
+  /**
+   * Optional. Optional. Scanning configuration for the skill.
+   * @return value or {@code null} for none
+   */
+  public ScanningConfig getScanningConfig() {
+    return scanningConfig;
+  }
+
+  /**
+   * Optional. Optional. Scanning configuration for the skill.
+   * @param scanningConfig scanningConfig or {@code null} for none
+   */
+  public Skill setScanningConfig(ScanningConfig scanningConfig) {
+    this.scanningConfig = scanningConfig;
     return this;
   }
 

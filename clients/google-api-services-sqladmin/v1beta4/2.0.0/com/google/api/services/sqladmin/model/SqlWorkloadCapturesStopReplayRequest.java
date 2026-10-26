@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Request to stop executing a captured workload on a replay instance.
+ * Request to stop an active workload replay on a target Cloud SQL replay instance.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.sqladmin.model;
 public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Contains details about the stop workload replay operation.
+   * Optional. Contains details about the stop workload replay operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private StopWorkloadReplayContext stopWorkloadReplayContext;
 
   /**
-   * Required. Contains details about the stop workload replay operation.
+   * Optional. Contains details about the stop workload replay operation.
    * @return value or {@code null} for none
    */
   public StopWorkloadReplayContext getStopWorkloadReplayContext() {
@@ -45,7 +45,7 @@ public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.c
   }
 
   /**
-   * Required. Contains details about the stop workload replay operation.
+   * Optional. Contains details about the stop workload replay operation.
    * @param stopWorkloadReplayContext stopWorkloadReplayContext or {@code null} for none
    */
   public SqlWorkloadCapturesStopReplayRequest setStopWorkloadReplayContext(StopWorkloadReplayContext stopWorkloadReplayContext) {

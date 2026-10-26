@@ -49,7 +49,7 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
         com.google.api.client.googleapis.GoogleUtils.MAJOR_VERSION >= 2,
         "You are currently running with version %s of google-api-client. " +
         "You need at least version 1.31.1 of google-api-client to run version " +
-        "2.0.0 of the VMware Engine API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
+        "2.9.2 of the VMware Engine API library.", com.google.api.client.googleapis.GoogleUtils.VERSION);
   }
 
   /**
@@ -1167,6 +1167,327 @@ public class VMwareEngine extends com.google.api.client.googleapis.services.json
            * A page token, received from a previous `ListAnnouncements` call. Provide this to
            * retrieve the subsequent page. When paginating, all other parameters provided to
            * `ListAnnouncements` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
+       * An accessor for creating requests from the CapacityAllocations collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code VMwareEngine vmwareengine = new VMwareEngine(...);}
+       *   {@code VMwareEngine.CapacityAllocations.List request = vmwareengine.capacityAllocations().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public CapacityAllocations capacityAllocations() {
+        return new CapacityAllocations();
+      }
+
+      /**
+       * The "capacityAllocations" collection of methods.
+       */
+      public class CapacityAllocations {
+
+        /**
+         * Lists `CapacityAllocation` resources in a given project and location.
+         *
+         * Create a request for the method "capacityAllocations.list".
+         *
+         * This request holds the parameters needed by the vmwareengine server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the location to query for capacity allocations. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-central1-a`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends VMwareEngineRequest<com.google.api.services.vmwareengine.v1.model.ListCapacityAllocationsResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/capacityAllocations";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists `CapacityAllocation` resources in a given project and location.
+           *
+           * Create a request for the method "capacityAllocations.list".
+           *
+           * This request holds the parameters needed by the the vmwareengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the location to query for capacity allocations. Resource names are
+         *        schemeless URIs that follow the conventions in
+         *        https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+         *        project/locations/us-central1-a`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(VMwareEngine.this, "GET", REST_PATH, null, com.google.api.services.vmwareengine.v1.model.ListCapacityAllocationsResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the location to query for capacity allocations. Resource
+           * names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the location to query for capacity allocations. Resource names are
+         schemeless URIs that follow the conventions in https://cloud.google.com/apis/design/resource_names.
+         For example: `projects/my-project/locations/us-central1-a`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the location to query for capacity allocations. Resource
+           * names are schemeless URIs that follow the conventions in
+           * https://cloud.google.com/apis/design/resource_names. For example: `projects/my-
+           * project/locations/us-central1-a`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. A filter expression that matches resources returned in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string or a number. The comparison
+           * operator must be `=`, `!=`, `>`, `>=`, `<`, or `<=`. The has operator `:` is also
+           * supported. Supported fields include `name`, `display_name` (or `placement_group`),
+           * `machine_family`, `allocated_capacity_count`, `consumed_capacity_count`, and
+           * `connected_placement_group` (using `=`). For example, if you are filtering a list of
+           * capacity allocations, you can exclude the ones named `example-capacity-allocation` by
+           * specifying `name != "example-capacity-allocation"`. You can also filter on other
+           * fields, such as machine family (`"ve1"`, `"ve2"`, or `"ve3"`) or connected placement
+           * group: ``` machine_family = "ve1" connected_placement_group = "example-placement-group"
+           * ``` To filter on multiple expressions, provide each separate expression within
+           * parentheses. For example: ``` (machine_family = "ve1") (allocated_capacity_count > 10)
+           * ``` By default, each expression is an `AND` expression. However, you can include `AND`,
+           * `OR`, and `NOT` expressions explicitly. For example: ``` ((machine_family = "ve1") AND
+           * (allocated_capacity_count > 10)) OR (consumed_capacity_count > 0) ```
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. A filter expression that matches resources returned in the response. The expression must
+         specify the field name, a comparison operator, and the value that you want to use for filtering.
+         The value must be a string or a number. The comparison operator must be `=`, `!=`, `>`, `>=`, `<`,
+         or `<=`. The has operator `:` is also supported. Supported fields include `name`, `display_name`
+         (or `placement_group`), `machine_family`, `allocated_capacity_count`, `consumed_capacity_count`,
+         and `connected_placement_group` (using `=`). For example, if you are filtering a list of capacity
+         allocations, you can exclude the ones named `example-capacity-allocation` by specifying `name !=
+         "example-capacity-allocation"`. You can also filter on other fields, such as machine family
+         (`"ve1"`, `"ve2"`, or `"ve3"`) or connected placement group: ``` machine_family = "ve1"
+         connected_placement_group = "example-placement-group" ``` To filter on multiple expressions,
+         provide each separate expression within parentheses. For example: ``` (machine_family = "ve1")
+         (allocated_capacity_count > 10) ``` By default, each expression is an `AND` expression. However,
+         you can include `AND`, `OR`, and `NOT` expressions explicitly. For example: ``` ((machine_family =
+         "ve1") AND (allocated_capacity_count > 10)) OR (consumed_capacity_count > 0) ```
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. A filter expression that matches resources returned in the response. The
+           * expression must specify the field name, a comparison operator, and the value that you
+           * want to use for filtering. The value must be a string or a number. The comparison
+           * operator must be `=`, `!=`, `>`, `>=`, `<`, or `<=`. The has operator `:` is also
+           * supported. Supported fields include `name`, `display_name` (or `placement_group`),
+           * `machine_family`, `allocated_capacity_count`, `consumed_capacity_count`, and
+           * `connected_placement_group` (using `=`). For example, if you are filtering a list of
+           * capacity allocations, you can exclude the ones named `example-capacity-allocation` by
+           * specifying `name != "example-capacity-allocation"`. You can also filter on other
+           * fields, such as machine family (`"ve1"`, `"ve2"`, or `"ve3"`) or connected placement
+           * group: ``` machine_family = "ve1" connected_placement_group = "example-placement-group"
+           * ``` To filter on multiple expressions, provide each separate expression within
+           * parentheses. For example: ``` (machine_family = "ve1") (allocated_capacity_count > 10)
+           * ``` By default, each expression is an `AND` expression. However, you can include `AND`,
+           * `OR`, and `NOT` expressions explicitly. For example: ``` ((machine_family = "ve1") AND
+           * (allocated_capacity_count > 10)) OR (consumed_capacity_count > 0) ```
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. Sorts list results by a certain order. By default, returned results are
+           * ordered by `name` in ascending order. You can also sort results in descending order
+           * based on the `name` value using `orderBy="name desc"`. Currently, only ordering by
+           * `name` is supported.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Sorts list results by a certain order. By default, returned results are ordered by `name`
+         in ascending order. You can also sort results in descending order based on the `name` value using
+         `orderBy="name desc"`. Currently, only ordering by `name` is supported.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /**
+           * Optional. Sorts list results by a certain order. By default, returned results are
+           * ordered by `name` in ascending order. You can also sort results in descending order
+           * based on the `name` value using `orderBy="name desc"`. Currently, only ordering by
+           * `name` is supported.
+           */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of capacity allocations to return in one page. The service
+           * may return fewer than this value. The maximum value is coerced to 1000. The default
+           * value of this field is 500.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of capacity allocations to return in one page. The service may return
+         fewer than this value. The maximum value is coerced to 1000. The default value of this field is
+         500.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of capacity allocations to return in one page. The service
+           * may return fewer than this value. The maximum value is coerced to 1000. The default
+           * value of this field is 500.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListCapacityAllocations` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListCapacityAllocations` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListCapacityAllocations` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListCapacityAllocations` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListCapacityAllocations` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListCapacityAllocations` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;

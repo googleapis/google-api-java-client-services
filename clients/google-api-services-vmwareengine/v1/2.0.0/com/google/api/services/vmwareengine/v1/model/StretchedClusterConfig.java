@@ -40,6 +40,17 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
   private java.lang.String preferredLocation;
 
   /**
+   * Optional. The identifier of the placement group for preferred location cluster nodes. A
+   * placement group is an internal Google identifier for a group of resources that are physically
+   * located within the same fault domain. If provided, nodes for this cluster are placed within the
+   * specified placement group. If this field is omitted, the system selects an appropriate
+   * placement group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String preferredLocationPlacementGroup;
+
+  /**
    * Required. Additional zone for a higher level of availability and load balancing. Specify the
    * resource name or ID of a zone that belongs to the region of the private cloud. For example:
    * `projects/{project}/locations/europe-west3-b` or `europe-west3-b`, where `{project}` can either
@@ -48,6 +59,17 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
    */
   @com.google.api.client.util.Key
   private java.lang.String secondaryLocation;
+
+  /**
+   * Optional. The identifier of the placement group for secondary location cluster nodes. A
+   * placement group is an internal Google identifier for a group of resources that are physically
+   * located within the same fault domain. If provided, nodes for this cluster are placed within the
+   * specified placement group. If this field is omitted, the system selects an appropriate
+   * placement group.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String secondaryLocationPlacementGroup;
 
   /**
    * Required. Zone that will remain operational when connection between the two zones is lost.
@@ -73,6 +95,31 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
   }
 
   /**
+   * Optional. The identifier of the placement group for preferred location cluster nodes. A
+   * placement group is an internal Google identifier for a group of resources that are physically
+   * located within the same fault domain. If provided, nodes for this cluster are placed within the
+   * specified placement group. If this field is omitted, the system selects an appropriate
+   * placement group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPreferredLocationPlacementGroup() {
+    return preferredLocationPlacementGroup;
+  }
+
+  /**
+   * Optional. The identifier of the placement group for preferred location cluster nodes. A
+   * placement group is an internal Google identifier for a group of resources that are physically
+   * located within the same fault domain. If provided, nodes for this cluster are placed within the
+   * specified placement group. If this field is omitted, the system selects an appropriate
+   * placement group.
+   * @param preferredLocationPlacementGroup preferredLocationPlacementGroup or {@code null} for none
+   */
+  public StretchedClusterConfig setPreferredLocationPlacementGroup(java.lang.String preferredLocationPlacementGroup) {
+    this.preferredLocationPlacementGroup = preferredLocationPlacementGroup;
+    return this;
+  }
+
+  /**
    * Required. Additional zone for a higher level of availability and load balancing. Specify the
    * resource name or ID of a zone that belongs to the region of the private cloud. For example:
    * `projects/{project}/locations/europe-west3-b` or `europe-west3-b`, where `{project}` can either
@@ -92,6 +139,31 @@ public final class StretchedClusterConfig extends com.google.api.client.json.Gen
    */
   public StretchedClusterConfig setSecondaryLocation(java.lang.String secondaryLocation) {
     this.secondaryLocation = secondaryLocation;
+    return this;
+  }
+
+  /**
+   * Optional. The identifier of the placement group for secondary location cluster nodes. A
+   * placement group is an internal Google identifier for a group of resources that are physically
+   * located within the same fault domain. If provided, nodes for this cluster are placed within the
+   * specified placement group. If this field is omitted, the system selects an appropriate
+   * placement group.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSecondaryLocationPlacementGroup() {
+    return secondaryLocationPlacementGroup;
+  }
+
+  /**
+   * Optional. The identifier of the placement group for secondary location cluster nodes. A
+   * placement group is an internal Google identifier for a group of resources that are physically
+   * located within the same fault domain. If provided, nodes for this cluster are placed within the
+   * specified placement group. If this field is omitted, the system selects an appropriate
+   * placement group.
+   * @param secondaryLocationPlacementGroup secondaryLocationPlacementGroup or {@code null} for none
+   */
+  public StretchedClusterConfig setSecondaryLocationPlacementGroup(java.lang.String secondaryLocationPlacementGroup) {
+    this.secondaryLocationPlacementGroup = secondaryLocationPlacementGroup;
     return this;
   }
 

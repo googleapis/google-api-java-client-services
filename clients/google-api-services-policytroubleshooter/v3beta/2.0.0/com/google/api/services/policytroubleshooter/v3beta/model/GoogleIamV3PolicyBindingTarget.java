@@ -49,7 +49,7 @@ public final class GoogleIamV3PolicyBindingTarget extends com.google.api.client.
   private java.lang.String principalSet;
 
   /**
-   * Immutable. The full resource name that's used for access policy bindings. Examples: *
+   * Immutable. The full resource name that's used for Unified Access Policy bindings. Examples: *
    * Organization: `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID` * Folder:
    * `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID` * Project: *
    * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER` *
@@ -99,7 +99,7 @@ public final class GoogleIamV3PolicyBindingTarget extends com.google.api.client.
   }
 
   /**
-   * Immutable. The full resource name that's used for access policy bindings. Examples: *
+   * Immutable. The full resource name that's used for Unified Access Policy bindings. Examples: *
    * Organization: `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID` * Folder:
    * `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID` * Project: *
    * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER` *
@@ -111,7 +111,7 @@ public final class GoogleIamV3PolicyBindingTarget extends com.google.api.client.
   }
 
   /**
-   * Immutable. The full resource name that's used for access policy bindings. Examples: *
+   * Immutable. The full resource name that's used for Unified Access Policy bindings. Examples: *
    * Organization: `//cloudresourcemanager.googleapis.com/organizations/ORGANIZATION_ID` * Folder:
    * `//cloudresourcemanager.googleapis.com/folders/FOLDER_ID` * Project: *
    * `//cloudresourcemanager.googleapis.com/projects/PROJECT_NUMBER` *

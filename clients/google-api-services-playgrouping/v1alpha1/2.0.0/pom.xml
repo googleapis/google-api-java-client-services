@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-playgrouping</artifactId>
-  <version>v1alpha1-rev20230824-2.0.0</version>
-  <name>Google Play Grouping API v1alpha1-rev20230824-2.0.0</name>
+  <version>v1alpha1-rev20230824-2.9.2</version>
+  <name>Google Play Grouping API v1alpha1-rev20230824-2.9.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

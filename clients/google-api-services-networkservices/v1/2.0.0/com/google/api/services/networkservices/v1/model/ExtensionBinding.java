@@ -88,8 +88,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. The
-   * priority determines the order in which extension bindings are applied to a request.
+   * Optional. This field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -267,8 +266,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. The
-   * priority determines the order in which extension bindings are applied to a request.
+   * Optional. This field is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPriority() {
@@ -276,8 +274,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Priority of the extension binding. Lower numbers indicate higher priority. The
-   * priority determines the order in which extension bindings are applied to a request.
+   * Optional. This field is not supported.
    * @param priority priority or {@code null} for none
    */
   public ExtensionBinding setPriority(java.lang.Integer priority) {

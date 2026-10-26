@@ -37,7 +37,7 @@ public final class ProducerExtensionExtensionSettings extends com.google.api.cli
   private java.lang.String authority;
 
   /**
-   * Optional. Whether the extension should function in observability mode.
+   * Optional. This field is not supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class ProducerExtensionExtensionSettings extends com.google.api.cli
   }
 
   /**
-   * Optional. Whether the extension should function in observability mode.
+   * Optional. This field is not supported.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getObservabilityMode() {
@@ -83,7 +83,7 @@ public final class ProducerExtensionExtensionSettings extends com.google.api.cli
   }
 
   /**
-   * Optional. Whether the extension should function in observability mode.
+   * Optional. This field is not supported.
    * @param observabilityMode observabilityMode or {@code null} for none
    */
   public ProducerExtensionExtensionSettings setObservabilityMode(java.lang.Boolean observabilityMode) {

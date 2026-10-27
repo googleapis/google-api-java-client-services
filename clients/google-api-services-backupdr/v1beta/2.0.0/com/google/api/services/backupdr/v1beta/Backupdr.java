@@ -14063,7 +14063,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          */
         public Initialize initialize(java.lang.String name, com.google.api.services.backupdr.v1beta.model.InitializeServiceRequest content) throws java.io.IOException {
           Initialize result = new Initialize(name, content);
-          initialize(result);
+          Backupdr.this.initialize(result);
           return result;
         }
 

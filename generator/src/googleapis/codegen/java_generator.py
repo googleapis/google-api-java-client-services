@@ -102,6 +102,31 @@ class BaseJavaGenerator(api_library_generator.ApiLibraryGenerator):
     """Annotate a Property with Java specific elements."""
     self._HandleImports(prop)
 
+  def AnnotateResource(self, the_api, resource):
+    """Annotate a Resource with Java specific elements.
+
+    Generated request builders call the client's initialize(request). If the
+    resource has a method named "initialize", that method shadows the client's
+    one inside the generated resource class, so the call has to be qualified
+    with the enclosing client instance.
+
+    Args:
+      the_api: (Api) The Api which owns this resource.
+      resource: (Resource) The Resource to annotate.
+    """
+    if any(method.codeName == 'initialize'
+           for method in resource.values['methods']):
+      self._QualifyInitializeCalls(the_api, resource)
+    super(BaseJavaGenerator, self).AnnotateResource(the_api, resource)
+
+  def _QualifyInitializeCalls(self, the_api, resource):
+    """Qualifies initialize(request) in a resource and its sub-resources."""
+    qualifier = '%s.this.' % the_api.values['className']
+    for method in resource.values['methods']:
+      method.SetTemplateValue('initializeQualifier', qualifier)
+    for sub_resource in resource.values['resources']:
+      self._QualifyInitializeCalls(the_api, sub_resource)
+
   def _HandleImports(self, element):
     """Handles imports for the specified element.
 

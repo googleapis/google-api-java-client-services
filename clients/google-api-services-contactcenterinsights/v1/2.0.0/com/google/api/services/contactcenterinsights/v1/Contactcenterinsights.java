@@ -22055,7 +22055,7 @@ public class Contactcenterinsights extends com.google.api.client.googleapis.serv
          */
         public Initialize initialize(java.lang.String name, com.google.api.services.contactcenterinsights.v1.model.GoogleCloudContactcenterinsightsV1InitializeEncryptionSpecRequest content) throws java.io.IOException {
           Initialize result = new Initialize(name, content);
-          initialize(result);
+          Contactcenterinsights.this.initialize(result);
           return result;
         }
 

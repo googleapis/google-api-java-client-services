@@ -34788,7 +34788,7 @@ public class Dialogflow extends com.google.api.client.googleapis.services.json.A
          */
         public Initialize initialize(java.lang.String name, com.google.api.services.dialogflow.v2.model.GoogleCloudDialogflowV2InitializeEncryptionSpecRequest content) throws java.io.IOException {
           Initialize result = new Initialize(name, content);
-          initialize(result);
+          Dialogflow.this.initialize(result);
           return result;
         }
 

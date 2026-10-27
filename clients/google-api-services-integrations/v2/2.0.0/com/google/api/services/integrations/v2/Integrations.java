@@ -348,10 +348,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Execute#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The integration resource name.
-         * @param content the {@link com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Execute.ExecuteRequestContent}
+         * @param content the {@link com.google.api.services.integrations.v2.model.GoogleProtobufStruct}
          * @return the request
          */
-        public Execute execute(java.lang.String parent, com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Execute.ExecuteRequestContent content) throws java.io.IOException {
+        public Execute execute(java.lang.String parent, com.google.api.services.integrations.v2.model.GoogleProtobufStruct content) throws java.io.IOException {
           Execute result = new Execute(parent, content);
           initialize(result);
           return result;
@@ -381,10 +381,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The integration resource name.
-           * @param content the {@link com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Execute.ExecuteRequestContent}
+           * @param content the {@link com.google.api.services.integrations.v2.model.GoogleProtobufStruct}
            * @since 1.13
            */
-          protected Execute(java.lang.String parent, com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Execute.ExecuteRequestContent content) {
+          protected Execute(java.lang.String parent, com.google.api.services.integrations.v2.model.GoogleProtobufStruct content) {
             super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v2.model.GoogleApiHttpBody.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -1074,10 +1074,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
          * parameters, call the {@link Schedule#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The integration resource name.
-         * @param content the {@link com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Schedule.ScheduleRequestContent}
+         * @param content the {@link com.google.api.services.integrations.v2.model.GoogleProtobufStruct}
          * @return the request
          */
-        public Schedule schedule(java.lang.String parent, com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Schedule.ScheduleRequestContent content) throws java.io.IOException {
+        public Schedule schedule(java.lang.String parent, com.google.api.services.integrations.v2.model.GoogleProtobufStruct content) throws java.io.IOException {
           Schedule result = new Schedule(parent, content);
           initialize(result);
           return result;
@@ -1102,10 +1102,10 @@ public class Integrations extends com.google.api.client.googleapis.services.json
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The integration resource name.
-           * @param content the {@link com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Schedule.ScheduleRequestContent}
+           * @param content the {@link com.google.api.services.integrations.v2.model.GoogleProtobufStruct}
            * @since 1.13
            */
-          protected Schedule(java.lang.String parent, com.google.api.services.integrations.v2.model.Integrations.Projects.Locations.IntegrationsOperations.Schedule.ScheduleRequestContent content) {
+          protected Schedule(java.lang.String parent, com.google.api.services.integrations.v2.model.GoogleProtobufStruct content) {
             super(Integrations.this, "POST", REST_PATH, content, com.google.api.services.integrations.v2.model.GoogleApiHttpBody.class);
             this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
             if (!getSuppressPatternChecks()) {

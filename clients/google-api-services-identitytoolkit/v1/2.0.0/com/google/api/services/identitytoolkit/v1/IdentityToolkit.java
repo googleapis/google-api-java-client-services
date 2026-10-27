@@ -5882,7 +5882,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
       return result;
     }
 
-    public class GetPublicKeys extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v1.model.IdentityToolkit.V1.GetPublicKeys.GetPublicKeysResponse> {
+    public class GetPublicKeys extends IdentityToolkitRequest<com.google.api.services.identitytoolkit.v1.model.GoogleProtobufStruct> {
 
       private static final String REST_PATH = "v1/publicKeys";
 
@@ -5901,7 +5901,7 @@ public class IdentityToolkit extends com.google.api.client.googleapis.services.j
        * @since 1.13
        */
       protected GetPublicKeys() {
-        super(IdentityToolkit.this, "GET", REST_PATH, null, com.google.api.services.identitytoolkit.v1.model.IdentityToolkit.V1.GetPublicKeys.GetPublicKeysResponse.class);
+        super(IdentityToolkit.this, "GET", REST_PATH, null, com.google.api.services.identitytoolkit.v1.model.GoogleProtobufStruct.class);
       }
 
       @Override

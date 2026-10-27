@@ -177,6 +177,53 @@ class JavaGeneratorTest(absltest.TestCase):
     self.assertTrue(found_big_integer)
     self.assertTrue(found_date_time)
 
+  def testInitializeQualifier(self):
+    """A resource method named initialize must not shadow the client's one."""
+    gen = java_generator.BaseJavaGenerator({
+        'name': 'dummy',
+        'version': 'v1',
+        'resources': {
+            'serviceConfig': {
+                'methods': {
+                    'initialize': {'id': 'dummy.serviceConfig.initialize'},
+                    'get': {'id': 'dummy.serviceConfig.get'},
+                },
+                'resources': {
+                    'child': {
+                        'methods': {
+                            'get': {'id': 'dummy.serviceConfig.child.get'},
+                        },
+                    },
+                },
+            },
+            'other': {
+                'methods': {
+                    'get': {'id': 'dummy.other.get'},
+                },
+            },
+        },
+    })
+    gen.AnnotateApiForLanguage(gen.api)
+
+    def Qualifiers(resource):
+      result = {}
+      for method in resource.values['methods']:
+        result[method.values['rpcMethod']] = method.GetTemplateValue(
+            'initializeQualifier')
+      for sub_resource in resource.values['resources']:
+        result.update(Qualifiers(sub_resource))
+      return result
+
+    qualifiers = {}
+    for resource in gen.api.values['resources']:
+      qualifiers.update(Qualifiers(resource))
+    self.assertEqual({
+        'dummy.serviceConfig.initialize': 'Dummy.this.',
+        'dummy.serviceConfig.get': 'Dummy.this.',
+        'dummy.serviceConfig.child.get': 'Dummy.this.',
+        'dummy.other.get': None,
+    }, qualifiers)
+
 
 class JavaLanguageModelTest(absltest.TestCase):
   """Tests for features implemented in the language model."""

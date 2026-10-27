@@ -1090,10 +1090,10 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
        *
        * @param parent Required. The name of the project and its location that should own the process, run, and lineage
        *        event.
-       * @param content the {@link com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent}
+       * @param content the {@link com.google.api.services.datalineage.v1.model.GoogleProtobufStruct}
        * @return the request
        */
-      public ProcessOpenLineageRunEvent processOpenLineageRunEvent(java.lang.String parent, com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent content) throws java.io.IOException {
+      public ProcessOpenLineageRunEvent processOpenLineageRunEvent(java.lang.String parent, com.google.api.services.datalineage.v1.model.GoogleProtobufStruct content) throws java.io.IOException {
         ProcessOpenLineageRunEvent result = new ProcessOpenLineageRunEvent(parent, content);
         initialize(result);
         return result;
@@ -1121,10 +1121,10 @@ public class Datalineage extends com.google.api.client.googleapis.services.json.
          *
          * @param parent Required. The name of the project and its location that should own the process, run, and lineage
        *        event.
-         * @param content the {@link com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent}
+         * @param content the {@link com.google.api.services.datalineage.v1.model.GoogleProtobufStruct}
          * @since 1.13
          */
-        protected ProcessOpenLineageRunEvent(java.lang.String parent, com.google.api.services.datalineage.v1.model.Datalineage.Projects.Locations.ProcessOpenLineageRunEvent.ProcessOpenLineageRunEventRequestContent content) {
+        protected ProcessOpenLineageRunEvent(java.lang.String parent, com.google.api.services.datalineage.v1.model.GoogleProtobufStruct content) {
           super(Datalineage.this, "POST", REST_PATH, content, com.google.api.services.datalineage.v1.model.GoogleCloudDatacatalogLineageV1ProcessOpenLineageRunEventResponse.class);
           this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
           if (!getSuppressPatternChecks()) {

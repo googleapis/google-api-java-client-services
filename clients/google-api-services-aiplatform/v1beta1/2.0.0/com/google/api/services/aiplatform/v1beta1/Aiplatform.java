@@ -167011,7 +167011,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Card.CardResponse> {
+          public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -167037,7 +167037,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Card.CardResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -167216,7 +167216,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.ExtendedAgentCard.ExtendedAgentCardResponse> {
+          public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -167243,7 +167243,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -167422,7 +167422,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.TasksRequest.TasksResponse> {
+          public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -167449,7 +167449,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.TasksRequest.TasksResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -167640,16 +167640,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Send.SendRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @return the request
              */
-            public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Send.SendRequestContent content) throws java.io.IOException {
+            public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
               Send result = new Send(name, a2aEndpoint, content);
               initialize(result);
               return result;
             }
 
-            public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Send.SendResponse> {
+            public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -167671,11 +167671,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Send.SendRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @since 1.13
                */
-              protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Send.SendRequestContent content) {
-                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Send.SendResponse.class);
+              protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -167806,10 +167806,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Stream.StreamRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @return the request
              */
-            public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+            public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
               Stream result = new Stream(name, a2aEndpoint, content);
               initialize(result);
               return result;
@@ -167838,10 +167838,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Stream.StreamRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @since 1.13
                */
-              protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Message.Stream.StreamRequestContent content) {
+              protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
                 super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -168009,7 +168009,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -168036,7 +168036,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -168208,16 +168208,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @return the request
              */
-            public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+            public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
               Cancel result = new Cancel(name, a2aEndpoint, content);
               initialize(result);
               return result;
             }
 
-            public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.Cancel.CancelResponse> {
+            public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -168240,11 +168240,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @since 1.13
                */
-              protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent content) {
-                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.Cancel.CancelResponse.class);
+              protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -168385,7 +168385,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+            public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -168412,7 +168412,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -168796,7 +168796,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -168823,7 +168823,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -169027,7 +169027,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Card.CardResponse> {
+            public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -169053,7 +169053,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Card.CardResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -169234,7 +169234,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse> {
+            public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -169261,7 +169261,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -169442,7 +169442,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.TasksRequest.TasksResponse> {
+            public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -169469,7 +169469,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.TasksRequest.TasksResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -169662,16 +169662,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @return the request
                */
-              public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent content) throws java.io.IOException {
+              public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                 Send result = new Send(name, a2aEndpoint, content);
                 initialize(result);
                 return result;
               }
 
-              public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Send.SendResponse> {
+              public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -169693,11 +169693,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @since 1.13
                  */
-                protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent content) {
-                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Send.SendResponse.class);
+                protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -169832,10 +169832,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @return the request
                */
-              public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+              public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                 Stream result = new Stream(name, a2aEndpoint, content);
                 initialize(result);
                 return result;
@@ -169864,10 +169864,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @since 1.13
                  */
-                protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent content) {
+                protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
                   super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
@@ -170035,7 +170035,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -170062,7 +170062,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -170234,16 +170234,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @return the request
                */
-              public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+              public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                 Cancel result = new Cancel(name, a2aEndpoint, content);
                 initialize(result);
                 return result;
               }
 
-              public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelResponse> {
+              public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -170266,11 +170266,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @since 1.13
                  */
-                protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent content) {
-                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelResponse.class);
+                protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -170415,7 +170415,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+              public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -170442,7 +170442,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -170826,7 +170826,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                   return result;
                 }
 
-                public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+                public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                   private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -170853,7 +170853,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    * @since 1.13
                    */
                   protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -179460,7 +179460,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Card.CardResponse> {
+            public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -179486,7 +179486,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Card.CardResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -179667,7 +179667,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.ExtendedAgentCard.ExtendedAgentCardResponse> {
+            public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -179694,7 +179694,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -179875,7 +179875,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.TasksRequest.TasksResponse> {
+            public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -179902,7 +179902,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.TasksRequest.TasksResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -180095,16 +180095,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @return the request
                */
-              public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent content) throws java.io.IOException {
+              public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                 Send result = new Send(name, a2aEndpoint, content);
                 initialize(result);
                 return result;
               }
 
-              public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendResponse> {
+              public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -180126,11 +180126,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @since 1.13
                  */
-                protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent content) {
-                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendResponse.class);
+                protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -180265,10 +180265,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @return the request
                */
-              public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+              public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                 Stream result = new Stream(name, a2aEndpoint, content);
                 initialize(result);
                 return result;
@@ -180297,10 +180297,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @since 1.13
                  */
-                protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent content) {
+                protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
                   super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
@@ -180468,7 +180468,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -180495,7 +180495,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -180667,16 +180667,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @return the request
                */
-              public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+              public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                 Cancel result = new Cancel(name, a2aEndpoint, content);
                 initialize(result);
                 return result;
               }
 
-              public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelResponse> {
+              public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -180699,11 +180699,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @since 1.13
                  */
-                protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent content) {
-                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelResponse.class);
+                protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                  super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -180848,7 +180848,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+              public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -180875,7 +180875,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -181259,7 +181259,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                   return result;
                 }
 
-                public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+                public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                   private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -181286,7 +181286,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    * @since 1.13
                    */
                   protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -181494,7 +181494,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Card.CardResponse> {
+              public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -181520,7 +181520,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Card.CardResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -181701,7 +181701,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse> {
+              public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -181728,7 +181728,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -181909,7 +181909,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.TasksRequest.TasksResponse> {
+              public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -181936,7 +181936,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.TasksRequest.TasksResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -182129,16 +182129,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @return the request
                  */
-                public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent content) throws java.io.IOException {
+                public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                   Send result = new Send(name, a2aEndpoint, content);
                   initialize(result);
                   return result;
                 }
 
-                public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendResponse> {
+                public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                   private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -182160,11 +182160,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    *
                    * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                    * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                   * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent}
+                   * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                    * @since 1.13
                    */
-                  protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent content) {
-                    super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendResponse.class);
+                  protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                    super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -182301,10 +182301,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @return the request
                  */
-                public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+                public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                   Stream result = new Stream(name, a2aEndpoint, content);
                   initialize(result);
                   return result;
@@ -182333,10 +182333,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    *
                    * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                    * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-                   * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent}
+                   * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                    * @since 1.13
                    */
-                  protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent content) {
+                  protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
                     super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
@@ -182508,7 +182508,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                   return result;
                 }
 
-                public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+                public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                   private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -182535,7 +182535,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    * @since 1.13
                    */
                   protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -182711,16 +182711,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  *
                  * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                  * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent}
+                 * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                  * @return the request
                  */
-                public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+                public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
                   Cancel result = new Cancel(name, a2aEndpoint, content);
                   initialize(result);
                   return result;
                 }
 
-                public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelResponse> {
+                public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                   private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -182743,11 +182743,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    *
                    * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                    * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-                   * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent}
+                   * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                    * @since 1.13
                    */
-                  protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent content) {
-                    super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelResponse.class);
+                  protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                    super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -182894,7 +182894,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                   return result;
                 }
 
-                public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+                public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                   private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -182921,7 +182921,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                    * @since 1.13
                    */
                   protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+                    super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                     this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                     if (!getSuppressPatternChecks()) {
                       com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -183311,7 +183311,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                     return result;
                   }
 
-                  public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+                  public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                     private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -183338,7 +183338,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                      * @since 1.13
                      */
                     protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                      super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.Projects.Locations.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                      super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                       this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                       if (!getSuppressPatternChecks()) {
                         com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -226679,7 +226679,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         return result;
       }
 
-      public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Card.CardResponse> {
+      public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
         private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -226705,7 +226705,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * @since 1.13
          */
         protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Card.CardResponse.class);
+          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -226884,7 +226884,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         return result;
       }
 
-      public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.ExtendedAgentCard.ExtendedAgentCardResponse> {
+      public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
         private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -226911,7 +226911,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * @since 1.13
          */
         protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -227090,7 +227090,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
         return result;
       }
 
-      public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.TasksRequest.TasksResponse> {
+      public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
         private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -227117,7 +227117,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          * @since 1.13
          */
         protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.TasksRequest.TasksResponse.class);
+          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
           this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -227308,16 +227308,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. The full resource path of the reasoning engine, captured from the URL.
          * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Send.SendRequestContent}
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
          * @return the request
          */
-        public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Send.SendRequestContent content) throws java.io.IOException {
+        public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
           Send result = new Send(name, a2aEndpoint, content);
           initialize(result);
           return result;
         }
 
-        public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Send.SendResponse> {
+        public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -227339,11 +227339,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Send.SendRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @since 1.13
            */
-          protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Send.SendRequestContent content) {
-            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Send.SendResponse.class);
+          protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -227470,10 +227470,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. The full resource path of the reasoning engine, captured from the URL.
          * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Stream.StreamRequestContent}
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
          * @return the request
          */
-        public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+        public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
           Stream result = new Stream(name, a2aEndpoint, content);
           initialize(result);
           return result;
@@ -227502,10 +227502,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Stream.StreamRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @since 1.13
            */
-          protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Message.Stream.StreamRequestContent content) {
+          protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
             super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
@@ -227665,7 +227665,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+        public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -227692,7 +227692,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -227862,16 +227862,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          *
          * @param name Required. The full resource path of the reasoning engine, captured from the URL.
          * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent}
+         * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
          * @return the request
          */
-        public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+        public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
           Cancel result = new Cancel(name, a2aEndpoint, content);
           initialize(result);
           return result;
         }
 
-        public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.Cancel.CancelResponse> {
+        public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -227894,11 +227894,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @since 1.13
            */
-          protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.Cancel.CancelRequestContent content) {
-            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.Cancel.CancelResponse.class);
+          protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -228035,7 +228035,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+        public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -228062,7 +228062,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -228438,7 +228438,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+          public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -228465,7 +228465,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -228667,7 +228667,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Card.CardResponse> {
+        public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -228693,7 +228693,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Card.CardResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -228872,7 +228872,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse> {
+        public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -228899,7 +228899,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -229078,7 +229078,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.TasksRequest.TasksResponse> {
+        public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -229105,7 +229105,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.TasksRequest.TasksResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -229296,16 +229296,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @return the request
            */
-          public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent content) throws java.io.IOException {
+          public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
             Send result = new Send(name, a2aEndpoint, content);
             initialize(result);
             return result;
           }
 
-          public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Send.SendResponse> {
+          public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -229327,11 +229327,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @since 1.13
              */
-            protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Send.SendRequestContent content) {
-              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Send.SendResponse.class);
+            protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -229458,10 +229458,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @return the request
            */
-          public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+          public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
             Stream result = new Stream(name, a2aEndpoint, content);
             initialize(result);
             return result;
@@ -229490,10 +229490,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @since 1.13
              */
-            protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Message.Stream.StreamRequestContent content) {
+            protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
               super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
@@ -229657,7 +229657,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+          public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -229684,7 +229684,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -229854,16 +229854,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @return the request
            */
-          public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+          public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
             Cancel result = new Cancel(name, a2aEndpoint, content);
             initialize(result);
             return result;
           }
 
-          public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelResponse> {
+          public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -229886,11 +229886,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @since 1.13
              */
-            protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelRequestContent content) {
-              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.Cancel.CancelResponse.class);
+            protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -230027,7 +230027,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+          public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -230054,7 +230054,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -230432,7 +230432,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -230459,7 +230459,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -236185,7 +236185,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Card.CardResponse> {
+        public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -236211,7 +236211,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Card.CardResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -236390,7 +236390,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.ExtendedAgentCard.ExtendedAgentCardResponse> {
+        public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -236417,7 +236417,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -236596,7 +236596,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           return result;
         }
 
-        public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.TasksRequest.TasksResponse> {
+        public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
           private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -236623,7 +236623,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            * @since 1.13
            */
           protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.TasksRequest.TasksResponse.class);
+            super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
             this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -236814,16 +236814,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @return the request
            */
-          public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent content) throws java.io.IOException {
+          public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
             Send result = new Send(name, a2aEndpoint, content);
             initialize(result);
             return result;
           }
 
-          public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendResponse> {
+          public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -236845,11 +236845,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @since 1.13
              */
-            protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendRequestContent content) {
-              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Send.SendResponse.class);
+            protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -236976,10 +236976,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @return the request
            */
-          public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+          public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
             Stream result = new Stream(name, a2aEndpoint, content);
             initialize(result);
             return result;
@@ -237008,10 +237008,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @since 1.13
              */
-            protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Message.Stream.StreamRequestContent content) {
+            protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
               super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
@@ -237175,7 +237175,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+          public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -237202,7 +237202,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -237372,16 +237372,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
            *
            * @param name Required. The full resource path of the reasoning engine, captured from the URL.
            * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent}
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
            * @return the request
            */
-          public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+          public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
             Cancel result = new Cancel(name, a2aEndpoint, content);
             initialize(result);
             return result;
           }
 
-          public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelResponse> {
+          public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -237404,11 +237404,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @since 1.13
              */
-            protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelRequestContent content) {
-              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.Cancel.CancelResponse.class);
+            protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -237545,7 +237545,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+          public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -237572,7 +237572,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -237950,7 +237950,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -237977,7 +237977,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -238181,7 +238181,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Card.CardResponse> {
+          public class Card extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -238207,7 +238207,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected Card(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Card.CardResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -238386,7 +238386,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse> {
+          public class ExtendedAgentCard extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -238413,7 +238413,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected ExtendedAgentCard(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.ExtendedAgentCard.ExtendedAgentCardResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -238592,7 +238592,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return result;
           }
 
-          public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.TasksRequest.TasksResponse> {
+          public class TasksRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
             private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -238619,7 +238619,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              * @since 1.13
              */
             protected TasksRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.TasksRequest.TasksResponse.class);
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
               this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -238810,16 +238810,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @return the request
              */
-            public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent content) throws java.io.IOException {
+            public Send send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
               Send result = new Send(name, a2aEndpoint, content);
               initialize(result);
               return result;
             }
 
-            public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendResponse> {
+            public class Send extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:send";
 
@@ -238841,11 +238841,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @since 1.13
                */
-              protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendRequestContent content) {
-                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Send.SendResponse.class);
+              protected Send(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -238976,10 +238976,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @return the request
              */
-            public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent content) throws java.io.IOException {
+            public Stream stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
               Stream result = new Stream(name, a2aEndpoint, content);
               initialize(result);
               return result;
@@ -239008,10 +239008,10 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The http endpoint extracted from the URL path. e.g., v1/message:stream.
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @since 1.13
                */
-              protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Message.Stream.StreamRequestContent content) {
+              protected Stream(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
                 super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleApiHttpBody.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
@@ -239179,7 +239179,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+            public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -239206,7 +239206,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -239378,16 +239378,16 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
              *
              * @param name Required. The full resource path of the reasoning engine, captured from the URL.
              * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent}
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
              * @return the request
              */
-            public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent content) throws java.io.IOException {
+            public Cancel cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) throws java.io.IOException {
               Cancel result = new Cancel(name, a2aEndpoint, content);
               initialize(result);
               return result;
             }
 
-            public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelResponse> {
+            public class Cancel extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}:cancel";
 
@@ -239410,11 +239410,11 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                *
                * @param name Required. The full resource path of the reasoning engine, captured from the URL.
                * @param a2aEndpoint Required. The a2a endpoint path, captured from the URL. e.g., v1/message:send
-               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent}
+               * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct}
                * @since 1.13
                */
-              protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelRequestContent content) {
-                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.Cancel.CancelResponse.class);
+              protected Cancel(java.lang.String name, java.lang.String a2aEndpoint, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct content) {
+                super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -239555,7 +239555,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
               return result;
             }
 
-            public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse> {
+            public class PushNotificationConfigsRequest extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
               private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -239582,7 +239582,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                * @since 1.13
                */
               protected PushNotificationConfigsRequest(java.lang.String name, java.lang.String a2aEndpoint) {
-                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigsRequest.PushNotificationConfigsResponse.class);
+                super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                 this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                 if (!getSuppressPatternChecks()) {
                   com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -239966,7 +239966,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 return result;
               }
 
-              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse> {
+              public class A2aGetReasoningEngine extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct> {
 
                 private static final String REST_PATH = "v1beta1/{+name}/a2a/{+a2aEndpoint}";
 
@@ -239993,7 +239993,7 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                  * @since 1.13
                  */
                 protected A2aGetReasoningEngine(java.lang.String name, java.lang.String a2aEndpoint) {
-                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.Aiplatform.ReasoningEngines.RuntimeRevisions.A2a.V1.Tasks.PushNotificationConfigs.A2aGetReasoningEngine.A2aGetReasoningEngineResponse.class);
+                  super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufStruct.class);
                   this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
                   if (!getSuppressPatternChecks()) {
                     com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

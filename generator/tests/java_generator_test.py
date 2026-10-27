@@ -224,6 +224,73 @@ class JavaGeneratorTest(absltest.TestCase):
         'dummy.other.get': None,
     }, qualifiers)
 
+  _STRUCT_BODY = {'type': 'object', 'additionalProperties': {'type': 'any'}}
+
+  def _StructApi(self, schemas=None):
+    return java_generator.BaseJavaGenerator({
+        'name': 'dummy',
+        'version': 'v1',
+        'schemas': schemas or {},
+        'resources': {
+            'foo': {
+                'methods': {
+                    'send': {
+                        'id': 'dummy.foo.send',
+                        'request': self._STRUCT_BODY,
+                        'response': self._STRUCT_BODY,
+                    },
+                    'card': {
+                        'id': 'dummy.foo.card',
+                        'httpMethod': 'GET',
+                        'response': self._STRUCT_BODY,
+                    },
+                    'label': {
+                        'id': 'dummy.foo.label',
+                        'request': {
+                            'type': 'object',
+                            'additionalProperties': {'type': 'string'},
+                        },
+                    },
+                },
+            },
+        },
+    })
+
+  def testInlineStructBodiesUseSharedModel(self):
+    gen = self._StructApi()
+    gen.AnnotateApiForLanguage(gen.api)
+    methods = {m.values['rpcMethod']: m for m in gen.api.all_methods}
+    struct = gen.api.SchemaByName('GoogleProtobufStruct')
+    self.assertIsNotNone(struct)
+    self.assertEqual('GoogleProtobufStruct', struct.values['className'])
+    self.assertIn(struct, gen.api.TopLevelModelClasses())
+    self.assertIs(struct, methods['dummy.foo.send'].values['requestType'])
+    self.assertIs(struct, methods['dummy.foo.send'].values['responseType'])
+    self.assertIs(struct, methods['dummy.foo.card'].values['responseType'])
+    # Inline bodies that are not free-form objects are left as they were.
+    self.assertIsNot(struct, methods['dummy.foo.label'].values['requestType'])
+
+  def testInlineStructBodiesReuseNamedSchema(self):
+    gen = self._StructApi(
+        schemas={'GoogleProtobufStruct': dict(self._STRUCT_BODY,
+                                              id='GoogleProtobufStruct')})
+    named = gen.api.SchemaByName('GoogleProtobufStruct')
+    gen.AnnotateApiForLanguage(gen.api)
+    methods = {m.values['rpcMethod']: m for m in gen.api.all_methods}
+    self.assertIs(named, methods['dummy.foo.send'].values['requestType'])
+    self.assertIs(named, methods['dummy.foo.card'].values['responseType'])
+
+  def testNoStructModelWithoutInlineStructBodies(self):
+    gen = java_generator.BaseJavaGenerator({
+        'name': 'dummy',
+        'version': 'v1',
+        'resources': {
+            'foo': {'methods': {'get': {'id': 'dummy.foo.get'}}},
+        },
+    })
+    gen.AnnotateApiForLanguage(gen.api)
+    self.assertIsNone(gen.api.SchemaByName('GoogleProtobufStruct'))
+
 
 class JavaLanguageModelTest(absltest.TestCase):
   """Tests for features implemented in the language model."""

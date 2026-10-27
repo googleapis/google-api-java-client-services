@@ -30,6 +30,22 @@ from googleapis.codegen.import_definition import ImportDefinition
 from googleapis.codegen.java_import_manager import JavaImportManager
 from googleapis.codegen.utilities import maven_utils
 
+# Discovery inlines google.protobuf.Struct request and response bodies as
+# {"type": "object", "additionalProperties": {"type": "any"}}. No class is
+# generated for an inline body, so these bodies share one generated model class
+# with this name, which is how Struct bodies were generated when Discovery
+# declared them as a named schema.
+_STRUCT_SCHEMA_NAME = 'GoogleProtobufStruct'
+
+
+def _IsInlineStruct(data_type, method):
+  """Returns whether data_type is an inline free-form object body of method."""
+  if not isinstance(data_type, data_types.MapDataType):
+    return False
+  value_type = data_type.values.get('mapOf')
+  return (data_type.parent is method and value_type is not None and
+          value_type.json_type == 'any')
+
 
 class BaseJavaGenerator(api_library_generator.ApiLibraryGenerator):
   """Base for Java code generators."""
@@ -56,6 +72,27 @@ class BaseJavaGenerator(api_library_generator.ApiLibraryGenerator):
         'maven',
         maven_utils.GetMavenMetadata(the_api, self.language_version),
         'maven metadata')
+    self._TypeInlineStructBodies(the_api)
+
+  def _TypeInlineStructBodies(self, the_api):
+    """Types inline google.protobuf.Struct bodies as GoogleProtobufStruct.
+
+    Args:
+      the_api: (Api) The Api to annotate.
+    """
+    struct_schema = None
+    for method in the_api.all_methods:
+      for key in ('requestType', 'responseType'):
+        if not _IsInlineStruct(method.values.get(key), method):
+          continue
+        if struct_schema is None:
+          struct_schema = the_api.SchemaByName(_STRUCT_SCHEMA_NAME)
+          if struct_schema is None:
+            struct_schema = the_api.DataTypeFromJson(
+                {'type': 'object', 'additionalProperties': {'type': 'any'}},
+                _STRUCT_SCHEMA_NAME, wire_name=_STRUCT_SCHEMA_NAME)
+            the_api.VisitAll(lambda o: o.SetLanguageModel(self.language_model))
+        method.SetTemplateValue(key, struct_schema)
 
   def AnnotateParameter(self, unused_method, parameter):
     """Annotate a Parameter with Java specific elements."""

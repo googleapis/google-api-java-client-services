@@ -194,6 +194,13 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   private java.lang.String marketingMethod;
 
   /**
+   * Network to which metrics apply. Segment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String network;
+
+  /**
    * Merchant-provided id of the product. Segment.
    * The value may be {@code null}.
    */
@@ -643,6 +650,23 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
    */
   public ProductPerformanceView setMarketingMethod(java.lang.String marketingMethod) {
     this.marketingMethod = marketingMethod;
+    return this;
+  }
+
+  /**
+   * Network to which metrics apply. Segment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetwork() {
+    return network;
+  }
+
+  /**
+   * Network to which metrics apply. Segment.
+   * @param network network or {@code null} for none
+   */
+  public ProductPerformanceView setNetwork(java.lang.String network) {
+    this.network = network;
     return this;
   }
 

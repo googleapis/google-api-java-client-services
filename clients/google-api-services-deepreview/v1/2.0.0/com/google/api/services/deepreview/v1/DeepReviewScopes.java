@@ -23,6 +23,9 @@ package com.google.api.services.deepreview.v1;
  */
 public class DeepReviewScopes {
 
+  /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
+  public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
+
   /** See, edit, create, and delete only the specific Google Drive files you use with this app. */
   public static final String DRIVE_FILE = "https://www.googleapis.com/auth/drive.file";
 
@@ -33,6 +36,7 @@ public class DeepReviewScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(CLOUD_PLATFORM);
     set.add(DRIVE_FILE);
     return java.util.Collections.unmodifiableSet(set);
   }

@@ -31,11 +31,38 @@ package com.google.api.services.androidmanagement.v1.model;
 public final class Role extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Extra capabilities configured specifically for this role. Not all role types support
+   * or utilize extra capabilities.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExtraCapabilities extraCapabilities;
+
+  /**
    * Required. The type of the role an app can have.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String roleType;
+
+  /**
+   * Optional. Extra capabilities configured specifically for this role. Not all role types support
+   * or utilize extra capabilities.
+   * @return value or {@code null} for none
+   */
+  public ExtraCapabilities getExtraCapabilities() {
+    return extraCapabilities;
+  }
+
+  /**
+   * Optional. Extra capabilities configured specifically for this role. Not all role types support
+   * or utilize extra capabilities.
+   * @param extraCapabilities extraCapabilities or {@code null} for none
+   */
+  public Role setExtraCapabilities(ExtraCapabilities extraCapabilities) {
+    this.extraCapabilities = extraCapabilities;
+    return this;
+  }
 
   /**
    * Required. The type of the role an app can have.

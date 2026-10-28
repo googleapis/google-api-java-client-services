@@ -37,7 +37,8 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Task list identifier.
+   * Task list identifier. In requests, the authenticated user's default task list can also be
+   * referred to as "@default".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -90,7 +91,8 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task list identifier.
+   * Task list identifier. In requests, the authenticated user's default task list can also be
+   * referred to as "@default".
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -98,7 +100,8 @@ public final class TaskList extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Task list identifier.
+   * Task list identifier. In requests, the authenticated user's default task list can also be
+   * referred to as "@default".
    * @param id id or {@code null} for none
    */
   public TaskList setId(java.lang.String id) {

@@ -51,8 +51,9 @@ public final class QueryResponsePayload extends com.google.api.client.json.Gener
   private java.util.Map<String, java.util.Map<String, java.lang.Object>> devices;
 
   /**
-   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads. This field is
-   * populated when `device_view` is set to HOME_TRAIT_ONLY or HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   * Map of device IDs to their Unified Device Data Model (UDDM) or JSON trait payloads. This field
+   * is populated when `device_view` is set to `HOME_TRAIT_ONLY`, `HOME_TRAIT_AND_SMART_HOME_TRAIT`,
+   * or `JSON_TRAIT_ONLY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -101,8 +102,9 @@ public final class QueryResponsePayload extends com.google.api.client.json.Gener
   }
 
   /**
-   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads. This field is
-   * populated when `device_view` is set to HOME_TRAIT_ONLY or HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   * Map of device IDs to their Unified Device Data Model (UDDM) or JSON trait payloads. This field
+   * is populated when `device_view` is set to `HOME_TRAIT_ONLY`, `HOME_TRAIT_AND_SMART_HOME_TRAIT`,
+   * or `JSON_TRAIT_ONLY`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, HomeTraitPayload> getHomeTraitPayload() {
@@ -110,8 +112,9 @@ public final class QueryResponsePayload extends com.google.api.client.json.Gener
   }
 
   /**
-   * Map of device IDs to their Unified Device Data Model (UDDM) trait payloads. This field is
-   * populated when `device_view` is set to HOME_TRAIT_ONLY or HOME_TRAIT_AND_SMART_HOME_TRAIT.
+   * Map of device IDs to their Unified Device Data Model (UDDM) or JSON trait payloads. This field
+   * is populated when `device_view` is set to `HOME_TRAIT_ONLY`, `HOME_TRAIT_AND_SMART_HOME_TRAIT`,
+   * or `JSON_TRAIT_ONLY`.
    * @param homeTraitPayload homeTraitPayload or {@code null} for none
    */
   public QueryResponsePayload setHomeTraitPayload(java.util.Map<String, HomeTraitPayload> homeTraitPayload) {

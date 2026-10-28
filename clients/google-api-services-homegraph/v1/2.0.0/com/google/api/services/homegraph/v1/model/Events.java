@@ -31,7 +31,7 @@ public final class Events extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The ID of the provider component if the events are associated with a specific
-   * component. Optional for WHDM events, required for UDDM events.
+   * component. Optional for WHDM events, required for UDDM and JSON events.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -52,7 +52,7 @@ public final class Events extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The ID of the provider component if the events are associated with a specific
-   * component. Optional for WHDM events, required for UDDM events.
+   * component. Optional for WHDM events, required for UDDM and JSON events.
    * @return value or {@code null} for none
    */
   public java.lang.String getComponentId() {
@@ -61,7 +61,7 @@ public final class Events extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The ID of the provider component if the events are associated with a specific
-   * component. Optional for WHDM events, required for UDDM events.
+   * component. Optional for WHDM events, required for UDDM and JSON events.
    * @param componentId componentId or {@code null} for none
    */
   public Events setComponentId(java.lang.String componentId) {

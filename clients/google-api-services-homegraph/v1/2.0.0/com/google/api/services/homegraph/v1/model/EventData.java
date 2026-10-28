@@ -30,7 +30,7 @@ package com.google.api.services.homegraph.v1.model;
 public final class EventData extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The actual event payload.
+   * Optional. The actual event payload.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +51,14 @@ public final class EventData extends com.google.api.client.json.GenericJson {
   private String eventTime;
 
   /**
-   * Required. The actual event payload.
+   * Optional. Contains the dynamic JSON trait event payload.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private JsonTraitEvent jsonTraitEvent;
+
+  /**
+   * Optional. The actual event payload.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getEvent() {
@@ -59,7 +66,7 @@ public final class EventData extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The actual event payload.
+   * Optional. The actual event payload.
    * @param event event or {@code null} for none
    */
   public EventData setEvent(java.util.Map<String, java.lang.Object> event) {
@@ -98,6 +105,23 @@ public final class EventData extends com.google.api.client.json.GenericJson {
    */
   public EventData setEventTime(String eventTime) {
     this.eventTime = eventTime;
+    return this;
+  }
+
+  /**
+   * Optional. Contains the dynamic JSON trait event payload.
+   * @return value or {@code null} for none
+   */
+  public JsonTraitEvent getJsonTraitEvent() {
+    return jsonTraitEvent;
+  }
+
+  /**
+   * Optional. Contains the dynamic JSON trait event payload.
+   * @param jsonTraitEvent jsonTraitEvent or {@code null} for none
+   */
+  public EventData setJsonTraitEvent(JsonTraitEvent jsonTraitEvent) {
+    this.jsonTraitEvent = jsonTraitEvent;
     return this;
   }
 

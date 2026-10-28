@@ -48,7 +48,7 @@ public final class UpdateOneTimeProductOfferStateRequest extends com.google.api.
 
   /**
    * Deactivates an offer. Once deactivated, the offer is no longer available to users. This state
-   * transition is specific to discounted offers.
+   * transition is specific to discounted and game reward offers.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,7 +94,7 @@ public final class UpdateOneTimeProductOfferStateRequest extends com.google.api.
 
   /**
    * Deactivates an offer. Once deactivated, the offer is no longer available to users. This state
-   * transition is specific to discounted offers.
+   * transition is specific to discounted and game reward offers.
    * @return value or {@code null} for none
    */
   public DeactivateOneTimeProductOfferRequest getDeactivateOneTimeProductOfferRequest() {
@@ -103,7 +103,7 @@ public final class UpdateOneTimeProductOfferStateRequest extends com.google.api.
 
   /**
    * Deactivates an offer. Once deactivated, the offer is no longer available to users. This state
-   * transition is specific to discounted offers.
+   * transition is specific to discounted and game reward offers.
    * @param deactivateOneTimeProductOfferRequest deactivateOneTimeProductOfferRequest or {@code null} for none
    */
   public UpdateOneTimeProductOfferStateRequest setDeactivateOneTimeProductOfferRequest(DeactivateOneTimeProductOfferRequest deactivateOneTimeProductOfferRequest) {

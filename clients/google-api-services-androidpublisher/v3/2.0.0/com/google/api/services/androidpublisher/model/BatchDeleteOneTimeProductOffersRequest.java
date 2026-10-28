@@ -31,7 +31,7 @@ package com.google.api.services.androidpublisher.model;
 public final class BatchDeleteOneTimeProductOffersRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. A list of update requests of up to 100 elements. All requests must correspond to
+   * Required. A list of delete requests of up to 100 elements. All requests must correspond to
    * different offers.
    * The value may be {@code null}.
    */
@@ -39,7 +39,7 @@ public final class BatchDeleteOneTimeProductOffersRequest extends com.google.api
   private java.util.List<DeleteOneTimeProductOfferRequest> requests;
 
   /**
-   * Required. A list of update requests of up to 100 elements. All requests must correspond to
+   * Required. A list of delete requests of up to 100 elements. All requests must correspond to
    * different offers.
    * @return value or {@code null} for none
    */
@@ -48,7 +48,7 @@ public final class BatchDeleteOneTimeProductOffersRequest extends com.google.api
   }
 
   /**
-   * Required. A list of update requests of up to 100 elements. All requests must correspond to
+   * Required. A list of delete requests of up to 100 elements. All requests must correspond to
    * different offers.
    * @param requests requests or {@code null} for none
    */

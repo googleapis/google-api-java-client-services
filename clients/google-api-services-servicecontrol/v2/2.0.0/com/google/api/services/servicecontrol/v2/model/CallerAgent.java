@@ -37,6 +37,16 @@ public final class CallerAgent extends com.google.api.client.json.GenericJson {
   private java.lang.String authority;
 
   /**
+   * The agent identifier of the caller agent. This is a globally unique, immutable name in Uniform
+   * Resource Name (URN) format. Example:
+   * 'urn:agent:projects-123456789:projects:123456789:locations:us-
+   * central1:aiplatform:reasoningEngines:987654321'
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String id;
+
+  /**
    * The type of authority for the caller agent.
    * @return value or {@code null} for none
    */
@@ -50,6 +60,29 @@ public final class CallerAgent extends com.google.api.client.json.GenericJson {
    */
   public CallerAgent setAuthority(java.lang.String authority) {
     this.authority = authority;
+    return this;
+  }
+
+  /**
+   * The agent identifier of the caller agent. This is a globally unique, immutable name in Uniform
+   * Resource Name (URN) format. Example:
+   * 'urn:agent:projects-123456789:projects:123456789:locations:us-
+   * central1:aiplatform:reasoningEngines:987654321'
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getId() {
+    return id;
+  }
+
+  /**
+   * The agent identifier of the caller agent. This is a globally unique, immutable name in Uniform
+   * Resource Name (URN) format. Example:
+   * 'urn:agent:projects-123456789:projects:123456789:locations:us-
+   * central1:aiplatform:reasoningEngines:987654321'
+   * @param id id or {@code null} for none
+   */
+  public CallerAgent setId(java.lang.String id) {
+    this.id = id;
     return this;
   }
 

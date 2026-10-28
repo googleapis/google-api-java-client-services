@@ -31,14 +31,14 @@ package com.google.api.services.androidpublisher.model;
 public final class BatchGetOneTimeProductOffersResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of updated one-time product offers, in the same order as the request.
+   * The list of requested one-time product offers, in the same order as the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<OneTimeProductOffer> oneTimeProductOffers;
 
   /**
-   * The list of updated one-time product offers, in the same order as the request.
+   * The list of requested one-time product offers, in the same order as the request.
    * @return value or {@code null} for none
    */
   public java.util.List<OneTimeProductOffer> getOneTimeProductOffers() {
@@ -46,7 +46,7 @@ public final class BatchGetOneTimeProductOffersResponse extends com.google.api.c
   }
 
   /**
-   * The list of updated one-time product offers, in the same order as the request.
+   * The list of requested one-time product offers, in the same order as the request.
    * @param oneTimeProductOffers oneTimeProductOffers or {@code null} for none
    */
   public BatchGetOneTimeProductOffersResponse setOneTimeProductOffers(java.util.List<OneTimeProductOffer> oneTimeProductOffers) {

@@ -13086,7 +13086,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * operation.
        *
        * @param packageName Required. The parent app (package name) for which the one-time products should be deleted. Must be
-       *        equal to the package_name field on all the OneTimeProduct resources.
+       *        equal to the package_name field on all the requests.
        * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductsRequest}
        * @return the request
        */
@@ -13112,7 +13112,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param packageName Required. The parent app (package name) for which the one-time products should be deleted. Must be
-       *        equal to the package_name field on all the OneTimeProduct resources.
+       *        equal to the package_name field on all the requests.
          * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductsRequest}
          * @since 1.13
          */
@@ -13178,13 +13178,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. The parent app (package name) for which the one-time products should be
-         * deleted. Must be equal to the package_name field on all the OneTimeProduct resources.
+         * deleted. Must be equal to the package_name field on all the requests.
          */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
         /** Required. The parent app (package name) for which the one-time products should be deleted. Must be
-       equal to the package_name field on all the OneTimeProduct resources.
+       equal to the package_name field on all the requests.
          */
         public java.lang.String getPackageName() {
           return packageName;
@@ -13192,7 +13192,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
         /**
          * Required. The parent app (package name) for which the one-time products should be
-         * deleted. Must be equal to the package_name field on all the OneTimeProduct resources.
+         * deleted. Must be equal to the package_name field on all the requests.
          */
         public BatchDelete setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
@@ -13212,8 +13212,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
        * This request holds the parameters needed by the androidpublisher server.  After setting any
        * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
        *
-       * @param packageName Required. The parent app (package name) for which the products should be retrieved. Must be equal to
-       *        the package_name field on all requests.
+       * @param packageName Required. The parent app (package name) for which the products should be retrieved.
        * @return the request
        */
       public BatchGet batchGet(java.lang.String packageName) throws java.io.IOException {
@@ -13237,8 +13236,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
          * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param packageName Required. The parent app (package name) for which the products should be retrieved. Must be equal to
-       *        the package_name field on all requests.
+         * @param packageName Required. The parent app (package name) for which the products should be retrieved.
          * @since 1.13
          */
         protected BatchGet(java.lang.String packageName) {
@@ -13311,24 +13309,17 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
           return (BatchGet) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent app (package name) for which the products should be retrieved. Must
-         * be equal to the package_name field on all requests.
-         */
+        /** Required. The parent app (package name) for which the products should be retrieved. */
         @com.google.api.client.util.Key
         private java.lang.String packageName;
 
-        /** Required. The parent app (package name) for which the products should be retrieved. Must be equal
-       to the package_name field on all requests.
+        /** Required. The parent app (package name) for which the products should be retrieved.
          */
         public java.lang.String getPackageName() {
           return packageName;
         }
 
-        /**
-         * Required. The parent app (package name) for which the products should be retrieved. Must
-         * be equal to the package_name field on all requests.
-         */
+        /** Required. The parent app (package name) for which the products should be retrieved. */
         public BatchGet setPackageName(java.lang.String packageName) {
           this.packageName = packageName;
           return this;
@@ -14757,11 +14748,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
            * operation.
            *
            * @param packageName Required. The parent app (package name) of the offers to delete. Must be equal to the package_name
-           *        field on all the OneTimeProductOffer resources.
+           *        field on all the requests.
            * @param productId Required. The product ID of the parent one-time product, if all offers to delete belong to the same
            *        product. If this request spans multiple one-time products, set this field to "-".
            * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be deleted. May be specified
-           *        as '-' to update offers from multiple purchase options.
+           *        as '-' to delete offers from multiple purchase options.
            * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductOffersRequest}
            * @return the request
            */
@@ -14787,11 +14778,11 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
              * @param packageName Required. The parent app (package name) of the offers to delete. Must be equal to the package_name
-           *        field on all the OneTimeProductOffer resources.
+           *        field on all the requests.
              * @param productId Required. The product ID of the parent one-time product, if all offers to delete belong to the same
            *        product. If this request spans multiple one-time products, set this field to "-".
              * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be deleted. May be specified
-           *        as '-' to update offers from multiple purchase options.
+           *        as '-' to delete offers from multiple purchase options.
              * @param content the {@link com.google.api.services.androidpublisher.model.BatchDeleteOneTimeProductOffersRequest}
              * @since 1.13
              */
@@ -14859,13 +14850,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The parent app (package name) of the offers to delete. Must be equal to the
-             * package_name field on all the OneTimeProductOffer resources.
+             * package_name field on all the requests.
              */
             @com.google.api.client.util.Key
             private java.lang.String packageName;
 
             /** Required. The parent app (package name) of the offers to delete. Must be equal to the package_name
-           field on all the OneTimeProductOffer resources.
+           field on all the requests.
              */
             public java.lang.String getPackageName() {
               return packageName;
@@ -14873,7 +14864,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The parent app (package name) of the offers to delete. Must be equal to the
-             * package_name field on all the OneTimeProductOffer resources.
+             * package_name field on all the requests.
              */
             public BatchDelete setPackageName(java.lang.String packageName) {
               this.packageName = packageName;
@@ -14907,13 +14898,13 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The parent purchase option (ID) for which the offers should be deleted. May
-             * be specified as '-' to update offers from multiple purchase options.
+             * be specified as '-' to delete offers from multiple purchase options.
              */
             @com.google.api.client.util.Key
             private java.lang.String purchaseOptionId;
 
             /** Required. The parent purchase option (ID) for which the offers should be deleted. May be specified
-           as '-' to update offers from multiple purchase options.
+           as '-' to delete offers from multiple purchase options.
              */
             public java.lang.String getPurchaseOptionId() {
               return purchaseOptionId;
@@ -14921,7 +14912,7 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
 
             /**
              * Required. The parent purchase option (ID) for which the offers should be deleted. May
-             * be specified as '-' to update offers from multiple purchase options.
+             * be specified as '-' to delete offers from multiple purchase options.
              */
             public BatchDelete setPurchaseOptionId(java.lang.String purchaseOptionId) {
               this.purchaseOptionId = purchaseOptionId;
@@ -14941,12 +14932,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the androidpublisher server.  After setting any
            * optional parameters, call the {@link BatchGet#execute()} method to invoke the remote operation.
            *
-           * @param packageName Required. The parent app (package name) of the updated offers. Must be equal to the package_name
-           *        field on all the updated OneTimeProductOffer resources.
-           * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
-           *        product. If this request spans multiple one-time products, set this field to "-".
-           * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be updated. May be specified
-           *        as '-' to update offers from multiple purchase options.
+           * @param packageName Required. The parent app (package name) of the offers to retrieve. Must be equal to the package_name
+           *        field on all the requests.
+           * @param productId Required. The product ID of the parent one-time product, if all offers belong to the same product.
+           *        If this request spans multiple one-time products, set this field to "-".
+           * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be retrieved. May be specified
+           *        as '-' to retrieve offers from multiple purchase options.
            * @param content the {@link com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersRequest}
            * @return the request
            */
@@ -14971,12 +14962,12 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
              * BatchGet#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param packageName Required. The parent app (package name) of the updated offers. Must be equal to the package_name
-           *        field on all the updated OneTimeProductOffer resources.
-             * @param productId Required. The product ID of the parent one-time product, if all updated offers belong to the same
-           *        product. If this request spans multiple one-time products, set this field to "-".
-             * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be updated. May be specified
-           *        as '-' to update offers from multiple purchase options.
+             * @param packageName Required. The parent app (package name) of the offers to retrieve. Must be equal to the package_name
+           *        field on all the requests.
+             * @param productId Required. The product ID of the parent one-time product, if all offers belong to the same product.
+           *        If this request spans multiple one-time products, set this field to "-".
+             * @param purchaseOptionId Required. The parent purchase option (ID) for which the offers should be retrieved. May be specified
+           *        as '-' to retrieve offers from multiple purchase options.
              * @param content the {@link com.google.api.services.androidpublisher.model.BatchGetOneTimeProductOffersRequest}
              * @since 1.13
              */
@@ -15043,22 +15034,22 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The parent app (package name) of the updated offers. Must be equal to the
-             * package_name field on all the updated OneTimeProductOffer resources.
+             * Required. The parent app (package name) of the offers to retrieve. Must be equal to
+             * the package_name field on all the requests.
              */
             @com.google.api.client.util.Key
             private java.lang.String packageName;
 
-            /** Required. The parent app (package name) of the updated offers. Must be equal to the package_name
-           field on all the updated OneTimeProductOffer resources.
+            /** Required. The parent app (package name) of the offers to retrieve. Must be equal to the
+           package_name field on all the requests.
              */
             public java.lang.String getPackageName() {
               return packageName;
             }
 
             /**
-             * Required. The parent app (package name) of the updated offers. Must be equal to the
-             * package_name field on all the updated OneTimeProductOffer resources.
+             * Required. The parent app (package name) of the offers to retrieve. Must be equal to
+             * the package_name field on all the requests.
              */
             public BatchGet setPackageName(java.lang.String packageName) {
               this.packageName = packageName;
@@ -15066,24 +15057,24 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The product ID of the parent one-time product, if all updated offers belong
-             * to the same product. If this request spans multiple one-time products, set this field
-             * to "-".
+             * Required. The product ID of the parent one-time product, if all offers belong to the
+             * same product. If this request spans multiple one-time products, set this field to
+             * "-".
              */
             @com.google.api.client.util.Key
             private java.lang.String productId;
 
-            /** Required. The product ID of the parent one-time product, if all updated offers belong to the same
-           product. If this request spans multiple one-time products, set this field to "-".
+            /** Required. The product ID of the parent one-time product, if all offers belong to the same product.
+           If this request spans multiple one-time products, set this field to "-".
              */
             public java.lang.String getProductId() {
               return productId;
             }
 
             /**
-             * Required. The product ID of the parent one-time product, if all updated offers belong
-             * to the same product. If this request spans multiple one-time products, set this field
-             * to "-".
+             * Required. The product ID of the parent one-time product, if all offers belong to the
+             * same product. If this request spans multiple one-time products, set this field to
+             * "-".
              */
             public BatchGet setProductId(java.lang.String productId) {
               this.productId = productId;
@@ -15091,22 +15082,22 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The parent purchase option (ID) for which the offers should be updated. May
-             * be specified as '-' to update offers from multiple purchase options.
+             * Required. The parent purchase option (ID) for which the offers should be retrieved.
+             * May be specified as '-' to retrieve offers from multiple purchase options.
              */
             @com.google.api.client.util.Key
             private java.lang.String purchaseOptionId;
 
-            /** Required. The parent purchase option (ID) for which the offers should be updated. May be specified
-           as '-' to update offers from multiple purchase options.
+            /** Required. The parent purchase option (ID) for which the offers should be retrieved. May be
+           specified as '-' to retrieve offers from multiple purchase options.
              */
             public java.lang.String getPurchaseOptionId() {
               return purchaseOptionId;
             }
 
             /**
-             * Required. The parent purchase option (ID) for which the offers should be updated. May
-             * be specified as '-' to update offers from multiple purchase options.
+             * Required. The parent purchase option (ID) for which the offers should be retrieved.
+             * May be specified as '-' to retrieve offers from multiple purchase options.
              */
             public BatchGet setPurchaseOptionId(java.lang.String purchaseOptionId) {
               this.purchaseOptionId = purchaseOptionId;
@@ -16045,26 +16036,26 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Optional. A page token, received from a previous `ListOneTimeProductsOffers` call.
+             * Optional. A page token, received from a previous `ListOneTimeProductOffers` call.
              * Provide this to retrieve the subsequent page. When paginating, product_id,
-             * package_name and purchase_option_id provided to `ListOneTimeProductsOffersRequest`
+             * package_name and purchase_option_id provided to `ListOneTimeProductOffersRequest`
              * must match the call that provided the page token.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A page token, received from a previous `ListOneTimeProductsOffers` call. Provide this to
+            /** Optional. A page token, received from a previous `ListOneTimeProductOffers` call. Provide this to
            retrieve the subsequent page. When paginating, product_id, package_name and purchase_option_id
-           provided to `ListOneTimeProductsOffersRequest` must match the call that provided the page token.
+           provided to `ListOneTimeProductOffersRequest` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
             /**
-             * Optional. A page token, received from a previous `ListOneTimeProductsOffers` call.
+             * Optional. A page token, received from a previous `ListOneTimeProductOffers` call.
              * Provide this to retrieve the subsequent page. When paginating, product_id,
-             * package_name and purchase_option_id provided to `ListOneTimeProductsOffersRequest`
+             * package_name and purchase_option_id provided to `ListOneTimeProductOffersRequest`
              * must match the call that provided the page token.
              */
             public List setPageToken(java.lang.String pageToken) {

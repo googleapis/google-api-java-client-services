@@ -62,6 +62,13 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
   private java.lang.String effectiveSeverity;
 
   /**
+   * Output only. Exploitability signals and summary for this package issue.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Exploitability exploitability;
+
+  /**
    * The location at which this package was found.
    * The value may be {@code null}.
    */
@@ -181,6 +188,23 @@ public final class PackageIssue extends com.google.api.client.json.GenericJson {
    */
   public PackageIssue setEffectiveSeverity(java.lang.String effectiveSeverity) {
     this.effectiveSeverity = effectiveSeverity;
+    return this;
+  }
+
+  /**
+   * Output only. Exploitability signals and summary for this package issue.
+   * @return value or {@code null} for none
+   */
+  public Exploitability getExploitability() {
+    return exploitability;
+  }
+
+  /**
+   * Output only. Exploitability signals and summary for this package issue.
+   * @param exploitability exploitability or {@code null} for none
+   */
+  public PackageIssue setExploitability(Exploitability exploitability) {
+    this.exploitability = exploitability;
     return this;
   }
 

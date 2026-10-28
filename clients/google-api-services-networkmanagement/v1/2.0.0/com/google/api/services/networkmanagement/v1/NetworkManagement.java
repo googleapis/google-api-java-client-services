@@ -6059,6 +6059,22 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
               return this;
             }
 
+            /** Optional. The deployment type for Cloud Monitoring Points. */
+            @com.google.api.client.util.Key
+            private java.lang.String cloudDeploymentType;
+
+            /** Optional. The deployment type for Cloud Monitoring Points.
+             */
+            public java.lang.String getCloudDeploymentType() {
+              return cloudDeploymentType;
+            }
+
+            /** Optional. The deployment type for Cloud Monitoring Points. */
+            public DownloadInstallScript setCloudDeploymentType(java.lang.String cloudDeploymentType) {
+              this.cloudDeploymentType = cloudDeploymentType;
+              return this;
+            }
+
             /** Required. The hostname of the MonitoringPoint, e.g. "test-vm" */
             @com.google.api.client.util.Key
             private java.lang.String hostname;

@@ -39,7 +39,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Specifies the type of device data to be returned in the response. This allows callers
    * to request traditional Smart Home traits, Unified Device Data Model (UDDM) traits, or both. If
-   * unspecified, defaults to SMART_HOME_TRAIT_ONLY.
+   * unspecified, defaults to `SMART_HOME_TRAIT_ONLY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Specifies the type of device data to be returned in the response. This allows callers
    * to request traditional Smart Home traits, Unified Device Data Model (UDDM) traits, or both. If
-   * unspecified, defaults to SMART_HOME_TRAIT_ONLY.
+   * unspecified, defaults to `SMART_HOME_TRAIT_ONLY`.
    * @return value or {@code null} for none
    */
   public java.lang.String getDeviceView() {
@@ -96,7 +96,7 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
   /**
    * Optional. Specifies the type of device data to be returned in the response. This allows callers
    * to request traditional Smart Home traits, Unified Device Data Model (UDDM) traits, or both. If
-   * unspecified, defaults to SMART_HOME_TRAIT_ONLY.
+   * unspecified, defaults to `SMART_HOME_TRAIT_ONLY`.
    * @param deviceView deviceView or {@code null} for none
    */
   public QueryRequest setDeviceView(java.lang.String deviceView) {

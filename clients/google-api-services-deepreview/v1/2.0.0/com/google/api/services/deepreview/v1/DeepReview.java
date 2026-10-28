@@ -319,6 +319,143 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
+     * Estimates what a review of a document would cost on the caller's Gemini API key. The estimate
+     * comes from what past reviews with the same model and depth cost, adjusted to this document's size
+     * and repriced at the Gemini API's current list prices. It covers one review attempt that runs to
+     * completion, and doesn't include retries after errors.
+     *
+     * Create a request for the method "documents.estimateReviewCost".
+     *
+     * This request holds the parameters needed by the deepreview server.  After setting any optional
+     * parameters, call the {@link EstimateReviewCost#execute()} method to invoke the remote operation.
+     *
+     * @param document Required. The document to review. Format: `documents/{document}`
+     * @param content the {@link com.google.api.services.deepreview.v1.model.EstimateReviewCostRequest}
+     * @return the request
+     */
+    public EstimateReviewCost estimateReviewCost(java.lang.String document, com.google.api.services.deepreview.v1.model.EstimateReviewCostRequest content) throws java.io.IOException {
+      EstimateReviewCost result = new EstimateReviewCost(document, content);
+      initialize(result);
+      return result;
+    }
+
+    public class EstimateReviewCost extends DeepReviewRequest<com.google.api.services.deepreview.v1.model.EstimateReviewCostResponse> {
+
+      private static final String REST_PATH = "v1/{+document}:estimateReviewCost";
+
+      private final java.util.regex.Pattern DOCUMENT_PATTERN =
+          java.util.regex.Pattern.compile("^documents/[^/]+$");
+
+      /**
+       * Estimates what a review of a document would cost on the caller's Gemini API key. The estimate
+       * comes from what past reviews with the same model and depth cost, adjusted to this document's
+       * size and repriced at the Gemini API's current list prices. It covers one review attempt that
+       * runs to completion, and doesn't include retries after errors.
+       *
+       * Create a request for the method "documents.estimateReviewCost".
+       *
+       * This request holds the parameters needed by the the deepreview server.  After setting any
+       * optional parameters, call the {@link EstimateReviewCost#execute()} method to invoke the remote
+       * operation. <p> {@link EstimateReviewCost#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param document Required. The document to review. Format: `documents/{document}`
+       * @param content the {@link com.google.api.services.deepreview.v1.model.EstimateReviewCostRequest}
+       * @since 1.13
+       */
+      protected EstimateReviewCost(java.lang.String document, com.google.api.services.deepreview.v1.model.EstimateReviewCostRequest content) {
+        super(DeepReview.this, "POST", REST_PATH, content, com.google.api.services.deepreview.v1.model.EstimateReviewCostResponse.class);
+        this.document = com.google.api.client.util.Preconditions.checkNotNull(document, "Required parameter document must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DOCUMENT_PATTERN.matcher(document).matches(),
+              "Parameter document must conform to the pattern " +
+              "^documents/[^/]+$");
+        }
+      }
+
+      @Override
+      public EstimateReviewCost set$Xgafv(java.lang.String $Xgafv) {
+        return (EstimateReviewCost) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public EstimateReviewCost setAccessToken(java.lang.String accessToken) {
+        return (EstimateReviewCost) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public EstimateReviewCost setAlt(java.lang.String alt) {
+        return (EstimateReviewCost) super.setAlt(alt);
+      }
+
+      @Override
+      public EstimateReviewCost setCallback(java.lang.String callback) {
+        return (EstimateReviewCost) super.setCallback(callback);
+      }
+
+      @Override
+      public EstimateReviewCost setFields(java.lang.String fields) {
+        return (EstimateReviewCost) super.setFields(fields);
+      }
+
+      @Override
+      public EstimateReviewCost setKey(java.lang.String key) {
+        return (EstimateReviewCost) super.setKey(key);
+      }
+
+      @Override
+      public EstimateReviewCost setOauthToken(java.lang.String oauthToken) {
+        return (EstimateReviewCost) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public EstimateReviewCost setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (EstimateReviewCost) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public EstimateReviewCost setQuotaUser(java.lang.String quotaUser) {
+        return (EstimateReviewCost) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public EstimateReviewCost setUploadType(java.lang.String uploadType) {
+        return (EstimateReviewCost) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public EstimateReviewCost setUploadProtocol(java.lang.String uploadProtocol) {
+        return (EstimateReviewCost) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The document to review. Format: `documents/{document}` */
+      @com.google.api.client.util.Key
+      private java.lang.String document;
+
+      /** Required. The document to review. Format: `documents/{document}`
+       */
+      public java.lang.String getDocument() {
+        return document;
+      }
+
+      /** Required. The document to review. Format: `documents/{document}` */
+      public EstimateReviewCost setDocument(java.lang.String document) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(DOCUMENT_PATTERN.matcher(document).matches(),
+              "Parameter document must conform to the pattern " +
+              "^documents/[^/]+$");
+        }
+        this.document = document;
+        return this;
+      }
+
+      @Override
+      public EstimateReviewCost set(String parameterName, Object value) {
+        return (EstimateReviewCost) super.set(parameterName, value);
+      }
+    }
+    /**
      * Retrieves document metadata and review history.
      *
      * Create a request for the method "documents.get".

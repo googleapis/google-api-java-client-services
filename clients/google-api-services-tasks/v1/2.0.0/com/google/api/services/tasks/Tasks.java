@@ -156,14 +156,14 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
     /**
      * Deletes the authenticated user's specified task list. If the list contains assigned tasks, both
      * the assigned tasks and the original tasks in the assignment surface (Docs, Chat Spaces) are
-     * deleted.
+     * deleted. The user's default task list cannot be deleted.
      *
      * Create a request for the method "tasklists.delete".
      *
      * This request holds the parameters needed by the tasks server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param tasklist Task list identifier.
+     * @param tasklist Task list identifier. The default task list cannot be deleted.
      * @return the request
      */
     public Delete delete(java.lang.String tasklist) throws java.io.IOException {
@@ -179,7 +179,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       /**
        * Deletes the authenticated user's specified task list. If the list contains assigned tasks, both
        * the assigned tasks and the original tasks in the assignment surface (Docs, Chat Spaces) are
-       * deleted.
+       * deleted. The user's default task list cannot be deleted.
        *
        * Create a request for the method "tasklists.delete".
        *
@@ -188,7 +188,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param tasklist Task list identifier.
+       * @param tasklist Task list identifier. The default task list cannot be deleted.
        * @since 1.13
        */
       protected Delete(java.lang.String tasklist) {
@@ -251,17 +251,17 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Task list identifier. */
+      /** Task list identifier. The default task list cannot be deleted. */
       @com.google.api.client.util.Key
       private java.lang.String tasklist;
 
-      /** Task list identifier.
+      /** Task list identifier. The default task list cannot be deleted.
        */
       public java.lang.String getTasklist() {
         return tasklist;
       }
 
-      /** Task list identifier. */
+      /** Task list identifier. The default task list cannot be deleted. */
       public Delete setTasklist(java.lang.String tasklist) {
         this.tasklist = tasklist;
         return this;
@@ -280,7 +280,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
      * This request holds the parameters needed by the tasks server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param tasklist Task list identifier.
+     * @param tasklist Task list identifier. Use "@default" to get the authenticated user's default task list.
      * @return the request
      */
     public Get get(java.lang.String tasklist) throws java.io.IOException {
@@ -303,7 +303,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param tasklist Task list identifier.
+       * @param tasklist Task list identifier. Use "@default" to get the authenticated user's default task list.
        * @since 1.13
        */
       protected Get(java.lang.String tasklist) {
@@ -376,17 +376,21 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Task list identifier. */
+      /**
+       * Task list identifier. Use "@default" to get the authenticated user's default task list.
+       */
       @com.google.api.client.util.Key
       private java.lang.String tasklist;
 
-      /** Task list identifier.
+      /** Task list identifier. Use "@default" to get the authenticated user's default task list.
        */
       public java.lang.String getTasklist() {
         return tasklist;
       }
 
-      /** Task list identifier. */
+      /**
+       * Task list identifier. Use "@default" to get the authenticated user's default task list.
+       */
       public Get setTasklist(java.lang.String tasklist) {
         this.tasklist = tasklist;
         return this;
@@ -599,13 +603,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Maximum number of task lists returned on one page. Optional. The default is 1000 (max
+       * Optional. Maximum number of task lists returned on one page. The default is 1000 (max
        * allowed: 1000).
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of task lists returned on one page. Optional. The default is 1000 (max allowed:
+      /** Optional. Maximum number of task lists returned on one page. The default is 1000 (max allowed:
      1000).
        */
       public java.lang.Integer getMaxResults() {
@@ -613,7 +617,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Maximum number of task lists returned on one page. Optional. The default is 1000 (max
+       * Optional. Maximum number of task lists returned on one page. The default is 1000 (max
        * allowed: 1000).
        */
       public List setMaxResults(java.lang.Integer maxResults) {
@@ -621,17 +625,17 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Token specifying the result page to return. Optional. */
+      /** Optional. Token specifying the result page to return. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token specifying the result page to return. Optional.
+      /** Optional. Token specifying the result page to return.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token specifying the result page to return. Optional. */
+      /** Optional. Token specifying the result page to return. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1417,25 +1421,56 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Parent task identifier. If the task is created at the top level, this parameter is omitted.
-       * An assigned task cannot be a parent task, nor can it have a parent. Setting the parent to
-       * an assigned task results in failure of the request. Optional.
+       * Optional. Flag indicating whether the task is created as 'hidden', as if it had been
+       * completed and then cleared from the task list (see the "clear" method). Hidden tasks are
+       * not returned by default when retrieving all tasks for a task list (see showHidden). Only
+       * completed tasks can be created as hidden, and they can not be nested or positioned, so
+       * parent and previous must be empty.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean hidden;
+
+      /** Optional. Flag indicating whether the task is created as 'hidden', as if it had been completed and
+     then cleared from the task list (see the "clear" method). Hidden tasks are not returned by default
+     when retrieving all tasks for a task list (see showHidden). Only completed tasks can be created as
+     hidden, and they can not be nested or positioned, so parent and previous must be empty.
+       */
+      public java.lang.Boolean getHidden() {
+        return hidden;
+      }
+
+      /**
+       * Optional. Flag indicating whether the task is created as 'hidden', as if it had been
+       * completed and then cleared from the task list (see the "clear" method). Hidden tasks are
+       * not returned by default when retrieving all tasks for a task list (see showHidden). Only
+       * completed tasks can be created as hidden, and they can not be nested or positioned, so
+       * parent and previous must be empty.
+       */
+      public Insert setHidden(java.lang.Boolean hidden) {
+        this.hidden = hidden;
+        return this;
+      }
+
+      /**
+       * Optional. Parent task identifier. If the task is created at the top level, this parameter
+       * is omitted. An assigned task cannot be a parent task, nor can it have a parent. Setting the
+       * parent to an assigned task results in failure of the request.
        */
       @com.google.api.client.util.Key
       private java.lang.String parent;
 
-      /** Parent task identifier. If the task is created at the top level, this parameter is omitted. An
-     assigned task cannot be a parent task, nor can it have a parent. Setting the parent to an assigned
-     task results in failure of the request. Optional.
+      /** Optional. Parent task identifier. If the task is created at the top level, this parameter is
+     omitted. An assigned task cannot be a parent task, nor can it have a parent. Setting the parent to
+     an assigned task results in failure of the request.
        */
       public java.lang.String getParent() {
         return parent;
       }
 
       /**
-       * Parent task identifier. If the task is created at the top level, this parameter is omitted.
-       * An assigned task cannot be a parent task, nor can it have a parent. Setting the parent to
-       * an assigned task results in failure of the request. Optional.
+       * Optional. Parent task identifier. If the task is created at the top level, this parameter
+       * is omitted. An assigned task cannot be a parent task, nor can it have a parent. Setting the
+       * parent to an assigned task results in failure of the request.
        */
       public Insert setParent(java.lang.String parent) {
         this.parent = parent;
@@ -1443,22 +1478,22 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Previous sibling task identifier. If the task is created at the first position among its
-       * siblings, this parameter is omitted. Optional.
+       * Optional. Previous sibling task identifier. If the task is created at the first position
+       * among its siblings, this parameter is omitted.
        */
       @com.google.api.client.util.Key
       private java.lang.String previous;
 
-      /** Previous sibling task identifier. If the task is created at the first position among its siblings,
-     this parameter is omitted. Optional.
+      /** Optional. Previous sibling task identifier. If the task is created at the first position among its
+     siblings, this parameter is omitted.
        */
       public java.lang.String getPrevious() {
         return previous;
       }
 
       /**
-       * Previous sibling task identifier. If the task is created at the first position among its
-       * siblings, this parameter is omitted. Optional.
+       * Optional. Previous sibling task identifier. If the task is created at the first position
+       * among its siblings, this parameter is omitted.
        */
       public Insert setPrevious(java.lang.String previous) {
         this.previous = previous;
@@ -1595,13 +1630,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional.
+       * Optional. Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by.
        * The default is not to filter by completion date.
        */
       @com.google.api.client.util.Key
       private java.lang.String completedMax;
 
-      /** Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional. The
+      /** Optional. Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by. The
      default is not to filter by completion date.
        */
       public java.lang.String getCompletedMax() {
@@ -1609,7 +1644,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional.
+       * Optional. Upper bound for a task's completion date (as a RFC 3339 timestamp) to filter by.
        * The default is not to filter by completion date.
        */
       public List setCompletedMax(java.lang.String completedMax) {
@@ -1618,13 +1653,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional.
+       * Optional. Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by.
        * The default is not to filter by completion date.
        */
       @com.google.api.client.util.Key
       private java.lang.String completedMin;
 
-      /** Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional. The
+      /** Optional. Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by. The
      default is not to filter by completion date.
        */
       public java.lang.String getCompletedMin() {
@@ -1632,7 +1667,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by. Optional.
+       * Optional. Lower bound for a task's completion date (as a RFC 3339 timestamp) to filter by.
        * The default is not to filter by completion date.
        */
       public List setCompletedMin(java.lang.String completedMin) {
@@ -1641,13 +1676,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The
+       * Optional. Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. The
        * default is not to filter by due date.
        */
       @com.google.api.client.util.Key
       private java.lang.String dueMax;
 
-      /** Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The default is
+      /** Optional. Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. The default is
      not to filter by due date.
        */
       public java.lang.String getDueMax() {
@@ -1655,7 +1690,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The
+       * Optional. Upper bound for a task's due date (as a RFC 3339 timestamp) to filter by. The
        * default is not to filter by due date.
        */
       public List setDueMax(java.lang.String dueMax) {
@@ -1664,13 +1699,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The
+       * Optional. Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. The
        * default is not to filter by due date.
        */
       @com.google.api.client.util.Key
       private java.lang.String dueMin;
 
-      /** Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The default is
+      /** Optional. Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. The default is
      not to filter by due date.
        */
       public java.lang.String getDueMin() {
@@ -1678,7 +1713,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. Optional. The
+       * Optional. Lower bound for a task's due date (as a RFC 3339 timestamp) to filter by. The
        * default is not to filter by due date.
        */
       public List setDueMin(java.lang.String dueMin) {
@@ -1687,20 +1722,20 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Maximum number of tasks returned on one page. Optional. The default is 20 (max allowed:
+       * Optional. Maximum number of tasks returned on one page. The default is 20 (max allowed:
        * 100).
        */
       @com.google.api.client.util.Key
       private java.lang.Integer maxResults;
 
-      /** Maximum number of tasks returned on one page. Optional. The default is 20 (max allowed: 100).
+      /** Optional. Maximum number of tasks returned on one page. The default is 20 (max allowed: 100).
        */
       public java.lang.Integer getMaxResults() {
         return maxResults;
       }
 
       /**
-       * Maximum number of tasks returned on one page. Optional. The default is 20 (max allowed:
+       * Optional. Maximum number of tasks returned on one page. The default is 20 (max allowed:
        * 100).
        */
       public List setMaxResults(java.lang.Integer maxResults) {
@@ -1708,17 +1743,17 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
         return this;
       }
 
-      /** Token specifying the result page to return. Optional. */
+      /** Optional. Token specifying the result page to return. */
       @com.google.api.client.util.Key
       private java.lang.String pageToken;
 
-      /** Token specifying the result page to return. Optional.
+      /** Optional. Token specifying the result page to return.
        */
       public java.lang.String getPageToken() {
         return pageToken;
       }
 
-      /** Token specifying the result page to return. Optional. */
+      /** Optional. Token specifying the result page to return. */
       public List setPageToken(java.lang.String pageToken) {
         this.pageToken = pageToken;
         return this;
@@ -1726,13 +1761,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Optional. Flag indicating whether tasks assigned to the current user are returned in the
-       * result. Optional. The default is False.
+       * result. The default is False.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showAssigned;
 
       /** Optional. Flag indicating whether tasks assigned to the current user are returned in the result.
-     Optional. The default is False.
+     The default is False.
        */
       public java.lang.Boolean getShowAssigned() {
         return showAssigned;
@@ -1740,7 +1775,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Optional. Flag indicating whether tasks assigned to the current user are returned in the
-       * result. Optional. The default is False.
+       * result. The default is False.
        */
       public List setShowAssigned(java.lang.Boolean showAssigned) {
         this.showAssigned = showAssigned;
@@ -1748,25 +1783,25 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Flag indicating whether completed tasks are returned in the result. Note that showHidden
-       * must also be True to show tasks completed in first party clients, such as the web UI and
-       * Google's mobile apps. Optional. The default is True.
+       * Optional. Flag indicating whether completed tasks are returned in the result. Note that
+       * showHidden must also be True to show tasks completed in first party clients, such as the
+       * web UI and Google's mobile apps. The default is True.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showCompleted;
 
-      /** Flag indicating whether completed tasks are returned in the result. Note that showHidden must also
-     be True to show tasks completed in first party clients, such as the web UI and Google's mobile
-     apps. Optional. The default is True.
+      /** Optional. Flag indicating whether completed tasks are returned in the result. Note that showHidden
+     must also be True to show tasks completed in first party clients, such as the web UI and Google's
+     mobile apps. The default is True.
        */
       public java.lang.Boolean getShowCompleted() {
         return showCompleted;
       }
 
       /**
-       * Flag indicating whether completed tasks are returned in the result. Note that showHidden
-       * must also be True to show tasks completed in first party clients, such as the web UI and
-       * Google's mobile apps. Optional. The default is True.
+       * Optional. Flag indicating whether completed tasks are returned in the result. Note that
+       * showHidden must also be True to show tasks completed in first party clients, such as the
+       * web UI and Google's mobile apps. The default is True.
        */
       public List setShowCompleted(java.lang.Boolean showCompleted) {
         this.showCompleted = showCompleted;
@@ -1774,20 +1809,20 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Flag indicating whether deleted tasks are returned in the result. Optional. The default is
+       * Optional. Flag indicating whether deleted tasks are returned in the result. The default is
        * False.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showDeleted;
 
-      /** Flag indicating whether deleted tasks are returned in the result. Optional. The default is False.
+      /** Optional. Flag indicating whether deleted tasks are returned in the result. The default is False.
        */
       public java.lang.Boolean getShowDeleted() {
         return showDeleted;
       }
 
       /**
-       * Flag indicating whether deleted tasks are returned in the result. Optional. The default is
+       * Optional. Flag indicating whether deleted tasks are returned in the result. The default is
        * False.
        */
       public List setShowDeleted(java.lang.Boolean showDeleted) {
@@ -1796,20 +1831,20 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Flag indicating whether hidden tasks are returned in the result. Optional. The default is
+       * Optional. Flag indicating whether hidden tasks are returned in the result. The default is
        * False.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean showHidden;
 
-      /** Flag indicating whether hidden tasks are returned in the result. Optional. The default is False.
+      /** Optional. Flag indicating whether hidden tasks are returned in the result. The default is False.
        */
       public java.lang.Boolean getShowHidden() {
         return showHidden;
       }
 
       /**
-       * Flag indicating whether hidden tasks are returned in the result. Optional. The default is
+       * Optional. Flag indicating whether hidden tasks are returned in the result. The default is
        * False.
        */
       public List setShowHidden(java.lang.Boolean showHidden) {
@@ -1818,13 +1853,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by.
-       * Optional. The default is not to filter by last modification time.
+       * Optional. Lower bound for a task's last modification time (as a RFC 3339 timestamp) to
+       * filter by. The default is not to filter by last modification time.
        */
       @com.google.api.client.util.Key
       private java.lang.String updatedMin;
 
-      /** Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by. Optional.
+      /** Optional. Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by.
      The default is not to filter by last modification time.
        */
       public java.lang.String getUpdatedMin() {
@@ -1832,8 +1867,8 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Lower bound for a task's last modification time (as a RFC 3339 timestamp) to filter by.
-       * Optional. The default is not to filter by last modification time.
+       * Optional. Lower bound for a task's last modification time (as a RFC 3339 timestamp) to
+       * filter by. The default is not to filter by last modification time.
        */
       public List setUpdatedMin(java.lang.String updatedMin) {
         this.updatedMin = updatedMin;

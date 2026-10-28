@@ -64,6 +64,15 @@ public final class Creative extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> adTagKeys;
 
   /**
+   * Optional. Additional asset for the creative. This field captures additional assets that are
+   * associated with the creative and used in the context of the social/native and YouTube
+   * platforms.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AdditionalAsset additionalAsset;
+
+  /**
    * Additional sizes associated with a responsive creative. When inserting or updating a creative
    * either the size ID field or size width and height fields can be used. Applicable to DISPLAY
    * creatives when the primary asset type is HTML_IMAGE.
@@ -669,6 +678,27 @@ public final class Creative extends com.google.api.client.json.GenericJson {
    */
   public Creative setAdTagKeys(java.util.List<java.lang.String> adTagKeys) {
     this.adTagKeys = adTagKeys;
+    return this;
+  }
+
+  /**
+   * Optional. Additional asset for the creative. This field captures additional assets that are
+   * associated with the creative and used in the context of the social/native and YouTube
+   * platforms.
+   * @return value or {@code null} for none
+   */
+  public AdditionalAsset getAdditionalAsset() {
+    return additionalAsset;
+  }
+
+  /**
+   * Optional. Additional asset for the creative. This field captures additional assets that are
+   * associated with the creative and used in the context of the social/native and YouTube
+   * platforms.
+   * @param additionalAsset additionalAsset or {@code null} for none
+   */
+  public Creative setAdditionalAsset(AdditionalAsset additionalAsset) {
+    this.additionalAsset = additionalAsset;
     return this;
   }
 

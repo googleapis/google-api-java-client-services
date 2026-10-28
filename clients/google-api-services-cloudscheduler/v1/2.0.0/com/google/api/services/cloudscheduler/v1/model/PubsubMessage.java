@@ -21,7 +21,7 @@ package com.google.api.services.cloudscheduler.v1.model;
  * either a non-empty data field or at least one attribute. Note that client libraries represent
  * this object differently depending on the language. See the corresponding [client library
  * documentation](https://cloud.google.com/pubsub/docs/reference/libraries) for more information.
- * See [quotas and limits] (https://cloud.google.com/pubsub/quotas) for more information about
+ * See [quotas and limits]( https://cloud.google.com/pubsub/quotas) for more information about
  * message limits.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is

@@ -1402,14 +1402,16 @@ public class CloudFTP extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. A unique ID for the server. Must start with a lowercase letter, and end with
            * a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens.
-           * Maximum length is 30 characters.
+           * Can't begin with the prefix `goog` or contain the string `google`, including close
+           * misspellings such as `g00gle`. Maximum length is 30 characters.
            */
           @com.google.api.client.util.Key
           private java.lang.String serverId;
 
           /** Required. A unique ID for the server. Must start with a lowercase letter, and end with a lowercase
-         letter or number. Can contain lowercase letters, numbers, and hyphens. Maximum length is 30
-         characters.
+         letter or number. Can contain lowercase letters, numbers, and hyphens. Can't begin with the prefix
+         `goog` or contain the string `google`, including close misspellings such as `g00gle`. Maximum
+         length is 30 characters.
            */
           public java.lang.String getServerId() {
             return serverId;
@@ -1418,7 +1420,8 @@ public class CloudFTP extends com.google.api.client.googleapis.services.json.Abs
           /**
            * Required. A unique ID for the server. Must start with a lowercase letter, and end with
            * a lowercase letter or number. Can contain lowercase letters, numbers, and hyphens.
-           * Maximum length is 30 characters.
+           * Can't begin with the prefix `goog` or contain the string `google`, including close
+           * misspellings such as `g00gle`. Maximum length is 30 characters.
            */
           public Create setServerId(java.lang.String serverId) {
             this.serverId = serverId;

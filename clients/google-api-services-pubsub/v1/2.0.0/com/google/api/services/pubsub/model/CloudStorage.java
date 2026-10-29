@@ -38,7 +38,7 @@ public final class CloudStorage extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Cloud Storage bucket. The bucket name must be without any prefix like "gs://". See
-   * the [bucket naming requirements] (https://cloud.google.com/storage/docs/buckets#naming).
+   * the [bucket naming requirements]( https://cloud.google.com/storage/docs/buckets#naming).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,7 +103,7 @@ public final class CloudStorage extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Cloud Storage bucket. The bucket name must be without any prefix like "gs://". See
-   * the [bucket naming requirements] (https://cloud.google.com/storage/docs/buckets#naming).
+   * the [bucket naming requirements]( https://cloud.google.com/storage/docs/buckets#naming).
    * @return value or {@code null} for none
    */
   public java.lang.String getBucket() {
@@ -112,7 +112,7 @@ public final class CloudStorage extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Cloud Storage bucket. The bucket name must be without any prefix like "gs://". See
-   * the [bucket naming requirements] (https://cloud.google.com/storage/docs/buckets#naming).
+   * the [bucket naming requirements]( https://cloud.google.com/storage/docs/buckets#naming).
    * @param bucket bucket or {@code null} for none
    */
   public CloudStorage setBucket(java.lang.String bucket) {

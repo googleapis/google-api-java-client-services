@@ -44,7 +44,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   private HeldDriveQuery driveQuery;
 
   /**
-   * Service-specific options for Gemini holds. If set, **CorpusType** must be **GEMINI**.
+   * Service-specific options for Gemini app holds. If set, **CorpusType** must be **GEMINI**.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -113,7 +113,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Service-specific options for Gemini holds. If set, **CorpusType** must be **GEMINI**.
+   * Service-specific options for Gemini app holds. If set, **CorpusType** must be **GEMINI**.
    * @return value or {@code null} for none
    */
   public HeldGeminiQuery getGeminiQuery() {
@@ -121,7 +121,7 @@ public final class CorpusQuery extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Service-specific options for Gemini holds. If set, **CorpusType** must be **GEMINI**.
+   * Service-specific options for Gemini app holds. If set, **CorpusType** must be **GEMINI**.
    * @param geminiQuery geminiQuery or {@code null} for none
    */
   public CorpusQuery setGeminiQuery(HeldGeminiQuery geminiQuery) {

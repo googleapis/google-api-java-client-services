@@ -31,14 +31,6 @@ package com.google.api.services.oracledatabase.v1.model;
 public final class SqlResult extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The number of rows affected by DML statements (e.g., INSERT, UPDATE, DELETE, MERGE).
-   * Unset or 0 for SELECT / DDL statements.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
-  private java.lang.Long affectedRowCount;
-
-  /**
    * List of columns included in the result, including data type.
    * The value may be {@code null}.
    */
@@ -62,25 +54,6 @@ public final class SqlResult extends com.google.api.client.json.GenericJson {
     // hack to force ProGuard to consider Row used, since otherwise it would be stripped out
     // see https://github.com/google/google-api-java-client/issues/543
     com.google.api.client.util.Data.nullOf(Row.class);
-  }
-
-  /**
-   * Optional. The number of rows affected by DML statements (e.g., INSERT, UPDATE, DELETE, MERGE).
-   * Unset or 0 for SELECT / DDL statements.
-   * @return value or {@code null} for none
-   */
-  public java.lang.Long getAffectedRowCount() {
-    return affectedRowCount;
-  }
-
-  /**
-   * Optional. The number of rows affected by DML statements (e.g., INSERT, UPDATE, DELETE, MERGE).
-   * Unset or 0 for SELECT / DDL statements.
-   * @param affectedRowCount affectedRowCount or {@code null} for none
-   */
-  public SqlResult setAffectedRowCount(java.lang.Long affectedRowCount) {
-    this.affectedRowCount = affectedRowCount;
-    return this;
   }
 
   /**

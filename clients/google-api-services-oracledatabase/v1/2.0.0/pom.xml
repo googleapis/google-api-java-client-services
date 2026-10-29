@@ -8,8 +8,8 @@
 
   <groupId>com.google.apis</groupId>
   <artifactId>google-api-services-oracledatabase</artifactId>
-  <version>v1-rev20261019-2.9.2</version>
-  <name>Oracle Database@Google Cloud API v1-rev20261019-2.9.2</name>
+  <version>v1-rev20261024-2.9.2</version>
+  <name>Oracle Database@Google Cloud API v1-rev20261024-2.9.2</name>
   <packaging>jar</packaging>
 
   <inceptionYear>2011</inceptionYear>

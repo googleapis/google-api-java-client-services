@@ -38,7 +38,7 @@ public final class OdbDnsZone extends com.google.api.client.json.GenericJson {
   private String createTime;
 
   /**
-   * Required. The DNS suffix for the zone. Ex: abc.example.com.
+   * Required. Immutable. The DNS suffix for the zone. Ex: abc.example.com.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -84,7 +84,7 @@ public final class OdbDnsZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The DNS suffix for the zone. Ex: abc.example.com.
+   * Required. Immutable. The DNS suffix for the zone. Ex: abc.example.com.
    * @return value or {@code null} for none
    */
   public java.lang.String getDomain() {
@@ -92,7 +92,7 @@ public final class OdbDnsZone extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The DNS suffix for the zone. Ex: abc.example.com.
+   * Required. Immutable. The DNS suffix for the zone. Ex: abc.example.com.
    * @param domain domain or {@code null} for none
    */
   public OdbDnsZone setDomain(java.lang.String domain) {

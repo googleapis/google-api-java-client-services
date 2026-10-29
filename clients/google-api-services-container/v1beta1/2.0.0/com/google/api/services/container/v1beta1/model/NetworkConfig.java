@@ -31,6 +31,13 @@ package com.google.api.services.container.v1beta1.model;
 public final class NetworkConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Contains the desired config of Ambient Networking mode on this cluster.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AmbientNetworkingConfig ambientNetworkingConfig;
+
+  /**
    * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy
    * implementation.
    * The value may be {@code null}.
@@ -166,6 +173,23 @@ public final class NetworkConfig extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String subnetwork;
+
+  /**
+   * Optional. Contains the desired config of Ambient Networking mode on this cluster.
+   * @return value or {@code null} for none
+   */
+  public AmbientNetworkingConfig getAmbientNetworkingConfig() {
+    return ambientNetworkingConfig;
+  }
+
+  /**
+   * Optional. Contains the desired config of Ambient Networking mode on this cluster.
+   * @param ambientNetworkingConfig ambientNetworkingConfig or {@code null} for none
+   */
+  public NetworkConfig setAmbientNetworkingConfig(AmbientNetworkingConfig ambientNetworkingConfig) {
+    this.ambientNetworkingConfig = ambientNetworkingConfig;
+    return this;
+  }
 
   /**
    * The desired datapath provider for this cluster. By default, uses the IPTables-based kube-proxy

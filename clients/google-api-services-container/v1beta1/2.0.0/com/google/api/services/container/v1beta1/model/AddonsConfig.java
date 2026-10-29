@@ -203,6 +203,13 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
   private StatefulHAConfig statefulHaConfig;
 
   /**
+   * Optional. Configuration for the Wiz Sensor add-on.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WizSensorConfig wizSensorConfig;
+
+  /**
    * Optional. Configuration for the AgentSandbox addon.
    * @return value or {@code null} for none
    */
@@ -610,6 +617,23 @@ public final class AddonsConfig extends com.google.api.client.json.GenericJson {
    */
   public AddonsConfig setStatefulHaConfig(StatefulHAConfig statefulHaConfig) {
     this.statefulHaConfig = statefulHaConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for the Wiz Sensor add-on.
+   * @return value or {@code null} for none
+   */
+  public WizSensorConfig getWizSensorConfig() {
+    return wizSensorConfig;
+  }
+
+  /**
+   * Optional. Configuration for the Wiz Sensor add-on.
+   * @param wizSensorConfig wizSensorConfig or {@code null} for none
+   */
+  public AddonsConfig setWizSensorConfig(WizSensorConfig wizSensorConfig) {
+    this.wizSensorConfig = wizSensorConfig;
     return this;
   }
 

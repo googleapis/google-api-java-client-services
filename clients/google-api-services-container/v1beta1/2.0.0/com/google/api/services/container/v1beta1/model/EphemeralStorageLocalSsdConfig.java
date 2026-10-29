@@ -39,6 +39,14 @@ public final class EphemeralStorageLocalSsdConfig extends com.google.api.client.
   private java.lang.Integer dataCacheCount;
 
   /**
+   * Capacity set aside for Ephemeral Storage if using mixed Local SSD modes. The remaining capacity
+   * is Raw Block.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long ephemeralCapacityGb;
+
+  /**
    * Number of local SSDs to use to back ephemeral storage. Uses NVMe interfaces. A zero (or unset)
    * value has different meanings depending on machine type being used: 1. For pre-Gen3 machines,
    * which support flexible numbers of local ssds, zero (or unset) means to disable using local SSDs
@@ -68,6 +76,25 @@ public final class EphemeralStorageLocalSsdConfig extends com.google.api.client.
    */
   public EphemeralStorageLocalSsdConfig setDataCacheCount(java.lang.Integer dataCacheCount) {
     this.dataCacheCount = dataCacheCount;
+    return this;
+  }
+
+  /**
+   * Capacity set aside for Ephemeral Storage if using mixed Local SSD modes. The remaining capacity
+   * is Raw Block.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getEphemeralCapacityGb() {
+    return ephemeralCapacityGb;
+  }
+
+  /**
+   * Capacity set aside for Ephemeral Storage if using mixed Local SSD modes. The remaining capacity
+   * is Raw Block.
+   * @param ephemeralCapacityGb ephemeralCapacityGb or {@code null} for none
+   */
+  public EphemeralStorageLocalSsdConfig setEphemeralCapacityGb(java.lang.Long ephemeralCapacityGb) {
+    this.ephemeralCapacityGb = ephemeralCapacityGb;
     return this;
   }
 

@@ -56,6 +56,13 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
   private AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults;
 
   /**
+   * Optional. Configures restrictions related to autoprovisioning settings.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private AutoprovisioningRestrictionConfig autoprovisioningRestrictionConfig;
+
+  /**
    * Defines autoscaling behaviour.
    * The value may be {@code null}.
    */
@@ -135,6 +142,23 @@ public final class ClusterAutoscaling extends com.google.api.client.json.Generic
    */
   public ClusterAutoscaling setAutoprovisioningNodePoolDefaults(AutoprovisioningNodePoolDefaults autoprovisioningNodePoolDefaults) {
     this.autoprovisioningNodePoolDefaults = autoprovisioningNodePoolDefaults;
+    return this;
+  }
+
+  /**
+   * Optional. Configures restrictions related to autoprovisioning settings.
+   * @return value or {@code null} for none
+   */
+  public AutoprovisioningRestrictionConfig getAutoprovisioningRestrictionConfig() {
+    return autoprovisioningRestrictionConfig;
+  }
+
+  /**
+   * Optional. Configures restrictions related to autoprovisioning settings.
+   * @param autoprovisioningRestrictionConfig autoprovisioningRestrictionConfig or {@code null} for none
+   */
+  public ClusterAutoscaling setAutoprovisioningRestrictionConfig(AutoprovisioningRestrictionConfig autoprovisioningRestrictionConfig) {
+    this.autoprovisioningRestrictionConfig = autoprovisioningRestrictionConfig;
     return this;
   }
 

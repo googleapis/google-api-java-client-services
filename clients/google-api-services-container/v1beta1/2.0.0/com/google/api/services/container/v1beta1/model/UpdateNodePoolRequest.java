@@ -238,6 +238,15 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * Optional. Option to specify the rollout strategy to apply node pool configuration updates. If
+   * unspecified, standard rolling update strategy with VM recreation is used as the default
+   * behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nodeConfigUpdateMode;
+
+  /**
    * The desired node drain configuration for nodes in the node pool.
    * The value may be {@code null}.
    */
@@ -270,6 +279,14 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.lang.String nodeVersion;
+
+  /**
+   * Optional. The nodes to upgrade. The field can only be used together with the node_version
+   * field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> nodes;
 
   /**
    * Deprecated. The Google Developers Console [project ID or project
@@ -845,6 +862,27 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   }
 
   /**
+   * Optional. Option to specify the rollout strategy to apply node pool configuration updates. If
+   * unspecified, standard rolling update strategy with VM recreation is used as the default
+   * behavior.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNodeConfigUpdateMode() {
+    return nodeConfigUpdateMode;
+  }
+
+  /**
+   * Optional. Option to specify the rollout strategy to apply node pool configuration updates. If
+   * unspecified, standard rolling update strategy with VM recreation is used as the default
+   * behavior.
+   * @param nodeConfigUpdateMode nodeConfigUpdateMode or {@code null} for none
+   */
+  public UpdateNodePoolRequest setNodeConfigUpdateMode(java.lang.String nodeConfigUpdateMode) {
+    this.nodeConfigUpdateMode = nodeConfigUpdateMode;
+    return this;
+  }
+
+  /**
    * The desired node drain configuration for nodes in the node pool.
    * @return value or {@code null} for none
    */
@@ -921,6 +959,25 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setNodeVersion(java.lang.String nodeVersion) {
     this.nodeVersion = nodeVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The nodes to upgrade. The field can only be used together with the node_version
+   * field.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNodes() {
+    return nodes;
+  }
+
+  /**
+   * Optional. The nodes to upgrade. The field can only be used together with the node_version
+   * field.
+   * @param nodes nodes or {@code null} for none
+   */
+  public UpdateNodePoolRequest setNodes(java.util.List<java.lang.String> nodes) {
+    this.nodes = nodes;
     return this;
   }
 

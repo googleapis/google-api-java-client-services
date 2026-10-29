@@ -38,6 +38,8 @@ public final class ProtectConfig extends com.google.api.client.json.GenericJson 
   private WorkloadConfig workloadConfig;
 
   /**
+   * Deprecated: Vulnerability scanning is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Sets which mode to use for Protect workload vulnerability scanning feature.
    * The value may be {@code null}.
    */
@@ -62,6 +64,8 @@ public final class ProtectConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Deprecated: Vulnerability scanning is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Sets which mode to use for Protect workload vulnerability scanning feature.
    * @return value or {@code null} for none
    */
@@ -70,6 +74,8 @@ public final class ProtectConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
+   * Deprecated: Vulnerability scanning is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Sets which mode to use for Protect workload vulnerability scanning feature.
    * @param workloadVulnerabilityMode workloadVulnerabilityMode or {@code null} for none
    */

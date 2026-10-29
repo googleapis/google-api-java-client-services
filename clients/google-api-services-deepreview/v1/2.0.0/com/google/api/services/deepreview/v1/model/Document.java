@@ -17,8 +17,8 @@
 package com.google.api.services.deepreview.v1.model;
 
 /**
- * Document Resource Model representing an uploaded document for review. Documents are immutable
- * post-creation; to review a new version, create a new Document.
+ * A document uploaded for automated review. Documents are immutable post-creation; to review a new
+ * version, create a new Document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Deep Review API. For a detailed explanation see:
@@ -52,7 +52,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   private DriveSource driveSource;
 
   /**
-   * Output only. Summary of the most recent review run for this document, if any.
+   * Output only. Summary of the most recent review run for this document, if any. Populated by
+   * `GetDocument` and `ListDocuments`; unset on the document returned by `CreateDocument`, which
+   * has no reviews yet.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +119,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Summary of the most recent review run for this document, if any.
+   * Output only. Summary of the most recent review run for this document, if any. Populated by
+   * `GetDocument` and `ListDocuments`; unset on the document returned by `CreateDocument`, which
+   * has no reviews yet.
    * @return value or {@code null} for none
    */
   public ReviewSummary getLatestReviewSummary() {
@@ -125,7 +129,9 @@ public final class Document extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Summary of the most recent review run for this document, if any.
+   * Output only. Summary of the most recent review run for this document, if any. Populated by
+   * `GetDocument` and `ListDocuments`; unset on the document returned by `CreateDocument`, which
+   * has no reviews yet.
    * @param latestReviewSummary latestReviewSummary or {@code null} for none
    */
   public Document setLatestReviewSummary(ReviewSummary latestReviewSummary) {

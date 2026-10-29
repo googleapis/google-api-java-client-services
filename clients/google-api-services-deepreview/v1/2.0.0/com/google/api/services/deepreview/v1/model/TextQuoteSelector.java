@@ -17,8 +17,8 @@
 package com.google.api.services.deepreview.v1.model;
 
 /**
- * W3C Web Annotation TextQuoteSelector for resilient text anchoring
- * (https://www.w3.org/TR/annotation-model/#text-quote-selector).
+ * W3C Web Annotation TextQuoteSelector for resilient text anchoring (see
+ * https://www.w3.org/TR/annotation-model/#text-quote-selector for details).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Deep Review API. For a detailed explanation see:

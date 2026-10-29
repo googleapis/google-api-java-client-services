@@ -37,7 +37,7 @@ public final class ReviewSummary extends com.google.api.client.json.GenericJson 
   private String createTime;
 
   /**
-   * Output only. Resource name of the Review. Format: `documents/{document}/reviews/{review}`
+   * Output only. Resource name of the Review.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class ReviewSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Resource name of the Review. Format: `documents/{document}/reviews/{review}`
+   * Output only. Resource name of the Review.
    * @return value or {@code null} for none
    */
   public java.lang.String getReview() {
@@ -76,7 +76,7 @@ public final class ReviewSummary extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Resource name of the Review. Format: `documents/{document}/reviews/{review}`
+   * Output only. Resource name of the Review.
    * @param review review or {@code null} for none
    */
   public ReviewSummary setReview(java.lang.String review) {

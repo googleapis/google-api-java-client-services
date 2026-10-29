@@ -56,8 +56,8 @@ public final class DriveSource extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean resourceKeySet;
 
   /**
-   * Optional. Input only. Immutable. Specific revision ID to import (defaults to latest head
-   * revision).
+   * Optional. Input only. Immutable. Importing a specific revision is not currently supported; non-
+   * empty values return INVALID_ARGUMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +125,8 @@ public final class DriveSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Specific revision ID to import (defaults to latest head
-   * revision).
+   * Optional. Input only. Immutable. Importing a specific revision is not currently supported; non-
+   * empty values return INVALID_ARGUMENT.
    * @return value or {@code null} for none
    */
   public java.lang.String getRevisionId() {
@@ -134,8 +134,8 @@ public final class DriveSource extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Input only. Immutable. Specific revision ID to import (defaults to latest head
-   * revision).
+   * Optional. Input only. Immutable. Importing a specific revision is not currently supported; non-
+   * empty values return INVALID_ARGUMENT.
    * @param revisionId revisionId or {@code null} for none
    */
   public DriveSource setRevisionId(java.lang.String revisionId) {

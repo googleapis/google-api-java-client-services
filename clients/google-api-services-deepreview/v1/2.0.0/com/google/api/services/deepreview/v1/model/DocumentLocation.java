@@ -17,7 +17,7 @@
 package com.google.api.services.deepreview.v1.model;
 
 /**
- * Polymorphic location targeting either a PDF page region/quote or text lines.
+ * A location targeting either a PDF page region/quote or text lines in the document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Deep Review API. For a detailed explanation see:

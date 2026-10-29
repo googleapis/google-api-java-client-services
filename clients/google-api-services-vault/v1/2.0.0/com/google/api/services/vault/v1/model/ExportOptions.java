@@ -44,7 +44,14 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   private DriveExportOptions driveOptions;
 
   /**
-   * Option available for Gemini export.
+   * Option available for Gemini in Workspace export.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeminiInWorkspaceExportOptions geminiInWorkspaceOptions;
+
+  /**
+   * Option available for Gemini app export.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -120,7 +127,24 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for Gemini export.
+   * Option available for Gemini in Workspace export.
+   * @return value or {@code null} for none
+   */
+  public GeminiInWorkspaceExportOptions getGeminiInWorkspaceOptions() {
+    return geminiInWorkspaceOptions;
+  }
+
+  /**
+   * Option available for Gemini in Workspace export.
+   * @param geminiInWorkspaceOptions geminiInWorkspaceOptions or {@code null} for none
+   */
+  public ExportOptions setGeminiInWorkspaceOptions(GeminiInWorkspaceExportOptions geminiInWorkspaceOptions) {
+    this.geminiInWorkspaceOptions = geminiInWorkspaceOptions;
+    return this;
+  }
+
+  /**
+   * Option available for Gemini app export.
    * @return value or {@code null} for none
    */
   public GeminiExportOptions getGeminiOptions() {
@@ -128,7 +152,7 @@ public final class ExportOptions extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Option available for Gemini export.
+   * Option available for Gemini app export.
    * @param geminiOptions geminiOptions or {@code null} for none
    */
   public ExportOptions setGeminiOptions(GeminiExportOptions geminiOptions) {

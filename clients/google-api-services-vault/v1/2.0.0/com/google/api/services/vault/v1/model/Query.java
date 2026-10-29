@@ -80,7 +80,14 @@ public final class Query extends com.google.api.client.json.GenericJson {
   private String endTime;
 
   /**
-   * Set Gemini search-specific options.
+   * Set Gemini in Workspace search-specific options.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GeminiInWorkspaceOptions geminiInWorkspaceOptions;
+
+  /**
+   * Set Gemini app search-specific options.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,7 +312,24 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set Gemini search-specific options.
+   * Set Gemini in Workspace search-specific options.
+   * @return value or {@code null} for none
+   */
+  public GeminiInWorkspaceOptions getGeminiInWorkspaceOptions() {
+    return geminiInWorkspaceOptions;
+  }
+
+  /**
+   * Set Gemini in Workspace search-specific options.
+   * @param geminiInWorkspaceOptions geminiInWorkspaceOptions or {@code null} for none
+   */
+  public Query setGeminiInWorkspaceOptions(GeminiInWorkspaceOptions geminiInWorkspaceOptions) {
+    this.geminiInWorkspaceOptions = geminiInWorkspaceOptions;
+    return this;
+  }
+
+  /**
+   * Set Gemini app search-specific options.
    * @return value or {@code null} for none
    */
   public GeminiOptions getGeminiOptions() {
@@ -313,7 +337,7 @@ public final class Query extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Set Gemini search-specific options.
+   * Set Gemini app search-specific options.
    * @param geminiOptions geminiOptions or {@code null} for none
    */
   public Query setGeminiOptions(GeminiOptions geminiOptions) {

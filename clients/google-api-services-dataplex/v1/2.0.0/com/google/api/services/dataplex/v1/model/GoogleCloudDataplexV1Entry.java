@@ -54,6 +54,15 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
   private String createTime;
 
   /**
+   * Output only. The type of the EntryGroup that this entry belongs to. The default value is an
+   * empty string. Recognised values include: * context-set: EntryGroup containing context set data
+   * assets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String entryGroupType;
+
+  /**
    * Optional. Information related to the source system of the data resource that is represented by
    * the entry.
    * The value may be {@code null}.
@@ -141,6 +150,27 @@ public final class GoogleCloudDataplexV1Entry extends com.google.api.client.json
    */
   public GoogleCloudDataplexV1Entry setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The type of the EntryGroup that this entry belongs to. The default value is an
+   * empty string. Recognised values include: * context-set: EntryGroup containing context set data
+   * assets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEntryGroupType() {
+    return entryGroupType;
+  }
+
+  /**
+   * Output only. The type of the EntryGroup that this entry belongs to. The default value is an
+   * empty string. Recognised values include: * context-set: EntryGroup containing context set data
+   * assets.
+   * @param entryGroupType entryGroupType or {@code null} for none
+   */
+  public GoogleCloudDataplexV1Entry setEntryGroupType(java.lang.String entryGroupType) {
+    this.entryGroupType = entryGroupType;
     return this;
   }
 

@@ -17,13 +17,13 @@
 package com.google.api.services.chat.v1.model;
 
 /**
- * A carousel, also known as a slider, rotates and displays a list of widgets in a slideshow format,
- * with buttons navigating to the previous or next widget. For example, this is a JSON
- * representation of a carousel that contains three text paragraph widgets. ``` { "carouselCards": [
- * { "widgets": [ { "textParagraph": { "text": "First text paragraph in carousel", } } ] }, {
- * "widgets": [ { "textParagraph": { "text": "Second text paragraph in carousel", } } ] }, {
- * "widgets": [ { "textParagraph": { "text": "Third text paragraph in carousel", } } ] } ] } ```
- * [Google Chat apps](https://developers.google.com/workspace/chat):
+ * Rotates and displays a list of carousel cards in a slideshow format, with buttons navigating to
+ * the previous or next card. For example, this is a JSON representation of a carousel that contains
+ * three text paragraph widgets. ``` { "carouselCards": [ { "widgets": [ { "textParagraph": {
+ * "text": "First text paragraph in carousel" } } ] }, { "widgets": [ { "textParagraph": { "text":
+ * "Second text paragraph in carousel" } } ] }, { "widgets": [ { "textParagraph": { "text": "Third
+ * text paragraph in carousel" } } ] } ] } ``` [Google Chat
+ * apps](https://developers.google.com/workspace/chat):
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

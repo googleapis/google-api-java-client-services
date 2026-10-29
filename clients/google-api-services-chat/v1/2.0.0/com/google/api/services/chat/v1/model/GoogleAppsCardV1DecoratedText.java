@@ -81,7 +81,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   private GoogleAppsCardV1Icon icon;
 
   /**
-   * This action is triggered when users click `topLabel` or `bottomLabel`.
+   * This action is triggered when users click anywhere on the `DecoratedText` widget (including
+   * `text`, `top_label`, `bottom_label`, and icons), except when clicking a separate interactive
+   * control (`button` or `switch_control`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -254,7 +256,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * This action is triggered when users click `topLabel` or `bottomLabel`.
+   * This action is triggered when users click anywhere on the `DecoratedText` widget (including
+   * `text`, `top_label`, `bottom_label`, and icons), except when clicking a separate interactive
+   * control (`button` or `switch_control`).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -262,7 +266,9 @@ public final class GoogleAppsCardV1DecoratedText extends com.google.api.client.j
   }
 
   /**
-   * This action is triggered when users click `topLabel` or `bottomLabel`.
+   * This action is triggered when users click anywhere on the `DecoratedText` widget (including
+   * `text`, `top_label`, `bottom_label`, and icons), except when clicking a separate interactive
+   * control (`button` or `switch_control`).
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1DecoratedText setOnClick(GoogleAppsCardV1OnClick onClick) {

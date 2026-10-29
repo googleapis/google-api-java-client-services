@@ -30,6 +30,13 @@ package com.google.api.services.dataplex.v1.model;
 public final class GoogleCloudDataplexV1DataDocumentationResult extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Insights for a data product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudDataplexV1DataDocumentationResultDataProductResult dataProductResult;
+
+  /**
    * Output only. Insights for a Dataset resource.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class GoogleCloudDataplexV1DataDocumentationResult extends com.goog
    */
   @com.google.api.client.util.Key
   private GoogleCloudDataplexV1DataDocumentationResultTableResult tableResult;
+
+  /**
+   * Output only. Insights for a data product.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResultDataProductResult getDataProductResult() {
+    return dataProductResult;
+  }
+
+  /**
+   * Output only. Insights for a data product.
+   * @param dataProductResult dataProductResult or {@code null} for none
+   */
+  public GoogleCloudDataplexV1DataDocumentationResult setDataProductResult(GoogleCloudDataplexV1DataDocumentationResultDataProductResult dataProductResult) {
+    this.dataProductResult = dataProductResult;
+    return this;
+  }
 
   /**
    * Output only. Insights for a Dataset resource.

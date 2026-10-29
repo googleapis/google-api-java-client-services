@@ -90,6 +90,14 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
   private java.lang.String transferStatus;
 
   /**
+   * Optional. Immutable. The type of this EntryGroup. The default value is an empty string.
+   * Recognised values include: * context-set: EntryGroup containing context set data assets.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Output only. System generated globally unique ID for the EntryGroup. If you delete and recreate
    * the EntryGroup with the same name, this ID will be different.
    * The value may be {@code null}.
@@ -245,6 +253,25 @@ public final class GoogleCloudDataplexV1EntryGroup extends com.google.api.client
    */
   public GoogleCloudDataplexV1EntryGroup setTransferStatus(java.lang.String transferStatus) {
     this.transferStatus = transferStatus;
+    return this;
+  }
+
+  /**
+   * Optional. Immutable. The type of this EntryGroup. The default value is an empty string.
+   * Recognised values include: * context-set: EntryGroup containing context set data assets.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Optional. Immutable. The type of this EntryGroup. The default value is an empty string.
+   * Recognised values include: * context-set: EntryGroup containing context set data assets.
+   * @param type type or {@code null} for none
+   */
+  public GoogleCloudDataplexV1EntryGroup setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

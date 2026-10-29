@@ -48,15 +48,15 @@ public final class GoogleAppsCardV1Chip extends com.google.api.client.json.Gener
   private java.lang.Boolean disabled;
 
   /**
-   * Whether the chip is in an active state and responds to user actions. Defaults to `true`.
-   * Deprecated. Use `disabled` instead.
+   * Deprecated: Use `disabled` instead. Whether the chip is in an active state and responds to user
+   * actions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears before the text.
+   * The icon image. If both `icon` and `label` are set, then the icon appears before the label.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -118,8 +118,8 @@ public final class GoogleAppsCardV1Chip extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the chip is in an active state and responds to user actions. Defaults to `true`.
-   * Deprecated. Use `disabled` instead.
+   * Deprecated: Use `disabled` instead. Whether the chip is in an active state and responds to user
+   * actions.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -127,8 +127,8 @@ public final class GoogleAppsCardV1Chip extends com.google.api.client.json.Gener
   }
 
   /**
-   * Whether the chip is in an active state and responds to user actions. Defaults to `true`.
-   * Deprecated. Use `disabled` instead.
+   * Deprecated: Use `disabled` instead. Whether the chip is in an active state and responds to user
+   * actions.
    * @param enabled enabled or {@code null} for none
    */
   public GoogleAppsCardV1Chip setEnabled(java.lang.Boolean enabled) {
@@ -137,7 +137,7 @@ public final class GoogleAppsCardV1Chip extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears before the text.
+   * The icon image. If both `icon` and `label` are set, then the icon appears before the label.
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1Icon getIcon() {
@@ -145,7 +145,7 @@ public final class GoogleAppsCardV1Chip extends com.google.api.client.json.Gener
   }
 
   /**
-   * The icon image. If both `icon` and `text` are set, then the icon appears before the text.
+   * The icon image. If both `icon` and `label` are set, then the icon appears before the label.
    * @param icon icon or {@code null} for none
    */
   public GoogleAppsCardV1Chip setIcon(GoogleAppsCardV1Icon icon) {

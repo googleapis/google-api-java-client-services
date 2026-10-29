@@ -65,8 +65,8 @@ public final class GoogleAppsCardV1Grid extends com.google.api.client.json.Gener
   private java.util.List<GoogleAppsCardV1GridItem> items;
 
   /**
-   * This callback is reused by each individual grid item, but with the item's identifier and index
-   * in the items list added to the callback's parameters.
+   * This callback is reused by each individual grid item, but with the item's identifier added to
+   * the callback's parameters (under the key `"grid_item_identifier"`).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -135,8 +135,8 @@ public final class GoogleAppsCardV1Grid extends com.google.api.client.json.Gener
   }
 
   /**
-   * This callback is reused by each individual grid item, but with the item's identifier and index
-   * in the items list added to the callback's parameters.
+   * This callback is reused by each individual grid item, but with the item's identifier added to
+   * the callback's parameters (under the key `"grid_item_identifier"`).
    * @return value or {@code null} for none
    */
   public GoogleAppsCardV1OnClick getOnClick() {
@@ -144,8 +144,8 @@ public final class GoogleAppsCardV1Grid extends com.google.api.client.json.Gener
   }
 
   /**
-   * This callback is reused by each individual grid item, but with the item's identifier and index
-   * in the items list added to the callback's parameters.
+   * This callback is reused by each individual grid item, but with the item's identifier added to
+   * the callback's parameters (under the key `"grid_item_identifier"`).
    * @param onClick onClick or {@code null} for none
    */
   public GoogleAppsCardV1Grid setOnClick(GoogleAppsCardV1OnClick onClick) {

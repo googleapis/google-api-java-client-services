@@ -74,7 +74,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   /**
    * The number representing the time zone offset from UTC, in minutes. If set, the `value_ms_epoch`
    * is displayed in the specified time zone. If unset, the value defaults to the user's time zone
-   * setting.
+   * setting. Note: This field is in minutes, whereas user interaction event payloads typically
+   * provide time zone offsets in milliseconds (divide by `60000` to convert).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -182,7 +183,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   /**
    * The number representing the time zone offset from UTC, in minutes. If set, the `value_ms_epoch`
    * is displayed in the specified time zone. If unset, the value defaults to the user's time zone
-   * setting.
+   * setting. Note: This field is in minutes, whereas user interaction event payloads typically
+   * provide time zone offsets in milliseconds (divide by `60000` to convert).
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTimezoneOffsetDate() {
@@ -192,7 +194,8 @@ public final class GoogleAppsCardV1DateTimePicker extends com.google.api.client.
   /**
    * The number representing the time zone offset from UTC, in minutes. If set, the `value_ms_epoch`
    * is displayed in the specified time zone. If unset, the value defaults to the user's time zone
-   * setting.
+   * setting. Note: This field is in minutes, whereas user interaction event payloads typically
+   * provide time zone offsets in milliseconds (divide by `60000` to convert).
    * @param timezoneOffsetDate timezoneOffsetDate or {@code null} for none
    */
   public GoogleAppsCardV1DateTimePicker setTimezoneOffsetDate(java.lang.Integer timezoneOffsetDate) {

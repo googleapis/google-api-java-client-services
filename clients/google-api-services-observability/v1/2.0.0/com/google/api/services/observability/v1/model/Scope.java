@@ -30,7 +30,7 @@ package com.google.api.services.observability.v1.model;
 public final class Scope extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The full resource name of the `LogScope`. For example:
+   * Required. The full resource name of the `logging.googleapis.com/LogScope`. For example:
    * //logging.googleapis.com/projects/myproject/locations/global/logScopes/my-log-scope
    * The value may be {@code null}.
    */
@@ -47,8 +47,8 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The resource name of the `TraceScope`. For example:
-   * projects/myproject/locations/global/traceScopes/my-trace-scope
+   * Required. The unqualified resource name of the `cloudtrace.googleapis.com/TraceScope`. For
+   * example: projects/myproject/locations/global/traceScopes/my-trace-scope
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
-   * Required. The full resource name of the `LogScope`. For example:
+   * Required. The full resource name of the `logging.googleapis.com/LogScope`. For example:
    * //logging.googleapis.com/projects/myproject/locations/global/logScopes/my-log-scope
    * @return value or {@code null} for none
    */
@@ -72,7 +72,7 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The full resource name of the `LogScope`. For example:
+   * Required. The full resource name of the `logging.googleapis.com/LogScope`. For example:
    * //logging.googleapis.com/projects/myproject/locations/global/logScopes/my-log-scope
    * @param logScope logScope or {@code null} for none
    */
@@ -103,8 +103,8 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the `TraceScope`. For example:
-   * projects/myproject/locations/global/traceScopes/my-trace-scope
+   * Required. The unqualified resource name of the `cloudtrace.googleapis.com/TraceScope`. For
+   * example: projects/myproject/locations/global/traceScopes/my-trace-scope
    * @return value or {@code null} for none
    */
   public java.lang.String getTraceScope() {
@@ -112,8 +112,8 @@ public final class Scope extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The resource name of the `TraceScope`. For example:
-   * projects/myproject/locations/global/traceScopes/my-trace-scope
+   * Required. The unqualified resource name of the `cloudtrace.googleapis.com/TraceScope`. For
+   * example: projects/myproject/locations/global/traceScopes/my-trace-scope
    * @param traceScope traceScope or {@code null} for none
    */
   public Scope setTraceScope(java.lang.String traceScope) {

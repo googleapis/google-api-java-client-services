@@ -1,6 +1,6 @@
 # My Business Place Actions API Client Library for Java
 
-The My Business Place Actions API provides an interface for managing place action links of a location on Google. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
+The My Business Place Actions API provides an interface for managing place action links of a location on Google. Note: If you have a quota of 0 after enabling the API, please request GBP API access at https://developers.google.com/my-business/content/prereqs#request-access. 
 
 This page contains information about getting started with the My Business Place Actions API
 using the Google API Client Library for Java. In addition, you may be interested
@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-mybusinessplaceactions</artifactId>
-      <version>v1-rev20251022-2.9.2</version>
+      <version>v1-rev20261026-2.9.2</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-mybusinessplaceactions:v1-rev20251022-2.9.2'
+  implementation 'com.google.apis:google-api-services-mybusinessplaceactions:v1-rev20261026-2.9.2'
 }
 ```
 

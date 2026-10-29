@@ -20,7 +20,7 @@ package com.google.api.services.mybusinessplaceactions.v1;
  * Service definition for MyBusinessPlaceActions (v1).
  *
  * <p>
- * The My Business Place Actions API provides an interface for managing place action links of a location on Google. Note - If you have a quota of 0 after enabling the API, please request for GBP API access.
+ * The My Business Place Actions API provides an interface for managing place action links of a location on Google. Note: If you have a quota of 0 after enabling the API, please request GBP API access at https://developers.google.com/my-business/content/prereqs#request-access. 
  * </p>
  *
  * <p>

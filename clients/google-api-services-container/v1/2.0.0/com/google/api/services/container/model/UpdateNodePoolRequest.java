@@ -242,6 +242,15 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
   private java.lang.String name;
 
   /**
+   * Optional. Option to specify the rollout strategy to apply node pool configuration updates. If
+   * unspecified, standard rolling update strategy with VM recreation is used as the default
+   * behavior.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nodeConfigUpdateMode;
+
+  /**
    * The desired node drain configuration for nodes in the node pool.
    * The value may be {@code null}.
    */
@@ -853,6 +862,27 @@ public final class UpdateNodePoolRequest extends com.google.api.client.json.Gene
    */
   public UpdateNodePoolRequest setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Option to specify the rollout strategy to apply node pool configuration updates. If
+   * unspecified, standard rolling update strategy with VM recreation is used as the default
+   * behavior.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNodeConfigUpdateMode() {
+    return nodeConfigUpdateMode;
+  }
+
+  /**
+   * Optional. Option to specify the rollout strategy to apply node pool configuration updates. If
+   * unspecified, standard rolling update strategy with VM recreation is used as the default
+   * behavior.
+   * @param nodeConfigUpdateMode nodeConfigUpdateMode or {@code null} for none
+   */
+  public UpdateNodePoolRequest setNodeConfigUpdateMode(java.lang.String nodeConfigUpdateMode) {
+    this.nodeConfigUpdateMode = nodeConfigUpdateMode;
     return this;
   }
 

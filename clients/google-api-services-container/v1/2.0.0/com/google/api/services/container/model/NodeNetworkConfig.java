@@ -80,6 +80,13 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
   private java.lang.Boolean createPodRange;
 
   /**
+   * The datapath provider for this node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String datapathProvider;
+
+  /**
    * Whether nodes have internal IP addresses only. If enable_private_nodes is not specified, then
    * the value is derived from Cluster.NetworkConfig.default_enable_private_nodes
    * The value may be {@code null}.
@@ -250,6 +257,23 @@ public final class NodeNetworkConfig extends com.google.api.client.json.GenericJ
    */
   public NodeNetworkConfig setCreatePodRange(java.lang.Boolean createPodRange) {
     this.createPodRange = createPodRange;
+    return this;
+  }
+
+  /**
+   * The datapath provider for this node pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDatapathProvider() {
+    return datapathProvider;
+  }
+
+  /**
+   * The datapath provider for this node pool.
+   * @param datapathProvider datapathProvider or {@code null} for none
+   */
+  public NodeNetworkConfig setDatapathProvider(java.lang.String datapathProvider) {
+    this.datapathProvider = datapathProvider;
     return this;
   }
 

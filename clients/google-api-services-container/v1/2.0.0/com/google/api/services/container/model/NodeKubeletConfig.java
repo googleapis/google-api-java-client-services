@@ -65,6 +65,24 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private java.lang.String containerLogMaxSize;
 
   /**
+   * Optional. Defines the maximum number of concurrent workers to rotate container log files. See
+   * https://kubernetes.io/docs/concepts/cluster-administration/logging/#log-rotation The value must
+   * be an integer between 1 and 10, inclusive. The default value is 1 if unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer containerLogMaxWorkers;
+
+  /**
+   * Optional. Specifies the interval at which the container logs are monitored for performing the
+   * log rotate operation. The value must be a positive interval between 3s and 300s, inclusive. The
+   * default value is "10s" if unspecified.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String containerLogMonitorInterval;
+
+  /**
    * Enable CPU CFS quota enforcement for containers that specify CPU limits. This option is enabled
    * by default which makes kubelet use CFS quota
    * (https://www.kernel.org/doc/Documentation/scheduler/sched-bwc.txt) to enforce container CPU
@@ -228,6 +246,14 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
   private ReservedResourcesConfig reservedResourcesConfig;
 
   /**
+   * Optional. The reserved_system_cpus option specifies the CPU list reserved for the host system
+   * services. Format: a list of CPU IDs (e.g. "0-3", "0,1") that can be parsed as a cpuset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reservedSystemCpus;
+
+  /**
    * Optional. shutdown_grace_period_critical_pods_seconds is the maximum allowed grace period (in
    * seconds) used to terminate critical pods during a node shutdown. This value should be <=
    * shutdown_grace_period_seconds, and is only valid if shutdown_grace_period_seconds is set.
@@ -340,6 +366,48 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setContainerLogMaxSize(java.lang.String containerLogMaxSize) {
     this.containerLogMaxSize = containerLogMaxSize;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the maximum number of concurrent workers to rotate container log files. See
+   * https://kubernetes.io/docs/concepts/cluster-administration/logging/#log-rotation The value must
+   * be an integer between 1 and 10, inclusive. The default value is 1 if unspecified.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getContainerLogMaxWorkers() {
+    return containerLogMaxWorkers;
+  }
+
+  /**
+   * Optional. Defines the maximum number of concurrent workers to rotate container log files. See
+   * https://kubernetes.io/docs/concepts/cluster-administration/logging/#log-rotation The value must
+   * be an integer between 1 and 10, inclusive. The default value is 1 if unspecified.
+   * @param containerLogMaxWorkers containerLogMaxWorkers or {@code null} for none
+   */
+  public NodeKubeletConfig setContainerLogMaxWorkers(java.lang.Integer containerLogMaxWorkers) {
+    this.containerLogMaxWorkers = containerLogMaxWorkers;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the interval at which the container logs are monitored for performing the
+   * log rotate operation. The value must be a positive interval between 3s and 300s, inclusive. The
+   * default value is "10s" if unspecified.
+   * @return value or {@code null} for none
+   */
+  public String getContainerLogMonitorInterval() {
+    return containerLogMonitorInterval;
+  }
+
+  /**
+   * Optional. Specifies the interval at which the container logs are monitored for performing the
+   * log rotate operation. The value must be a positive interval between 3s and 300s, inclusive. The
+   * default value is "10s" if unspecified.
+   * @param containerLogMonitorInterval containerLogMonitorInterval or {@code null} for none
+   */
+  public NodeKubeletConfig setContainerLogMonitorInterval(String containerLogMonitorInterval) {
+    this.containerLogMonitorInterval = containerLogMonitorInterval;
     return this;
   }
 
@@ -717,6 +785,25 @@ public final class NodeKubeletConfig extends com.google.api.client.json.GenericJ
    */
   public NodeKubeletConfig setReservedResourcesConfig(ReservedResourcesConfig reservedResourcesConfig) {
     this.reservedResourcesConfig = reservedResourcesConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The reserved_system_cpus option specifies the CPU list reserved for the host system
+   * services. Format: a list of CPU IDs (e.g. "0-3", "0,1") that can be parsed as a cpuset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReservedSystemCpus() {
+    return reservedSystemCpus;
+  }
+
+  /**
+   * Optional. The reserved_system_cpus option specifies the CPU list reserved for the host system
+   * services. Format: a list of CPU IDs (e.g. "0-3", "0,1") that can be parsed as a cpuset.
+   * @param reservedSystemCpus reservedSystemCpus or {@code null} for none
+   */
+  public NodeKubeletConfig setReservedSystemCpus(java.lang.String reservedSystemCpus) {
+    this.reservedSystemCpus = reservedSystemCpus;
     return this;
   }
 

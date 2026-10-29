@@ -39,6 +39,8 @@ public final class SecurityPostureConfig extends com.google.api.client.json.Gene
   private java.lang.String mode;
 
   /**
+   * Deprecated: Vulnerability scanning is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Sets which mode to use for vulnerability scanning.
    * The value may be {@code null}.
    */
@@ -63,6 +65,8 @@ public final class SecurityPostureConfig extends com.google.api.client.json.Gene
   }
 
   /**
+   * Deprecated: Vulnerability scanning is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Sets which mode to use for vulnerability scanning.
    * @return value or {@code null} for none
    */
@@ -71,6 +75,8 @@ public final class SecurityPostureConfig extends com.google.api.client.json.Gene
   }
 
   /**
+   * Deprecated: Vulnerability scanning is no longer supported. For more details, see
+   * https://cloud.google.com/kubernetes-engine/docs/deprecations/posture-management-deprecation.
    * Sets which mode to use for vulnerability scanning.
    * @param vulnerabilityMode vulnerabilityMode or {@code null} for none
    */

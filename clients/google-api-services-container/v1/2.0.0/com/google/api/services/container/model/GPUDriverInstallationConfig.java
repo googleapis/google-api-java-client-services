@@ -38,6 +38,14 @@ public final class GPUDriverInstallationConfig extends com.google.api.client.jso
   private java.lang.String gpuDriverVersion;
 
   /**
+   * Optional. The specific version of the GPU driver to install. Use this field only with
+   * gpu_driver_version set to SPECIFIC. Otherwise, an error will be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String specificVersion;
+
+  /**
    * Mode for how the GPU driver is installed.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class GPUDriverInstallationConfig extends com.google.api.client.jso
    */
   public GPUDriverInstallationConfig setGpuDriverVersion(java.lang.String gpuDriverVersion) {
     this.gpuDriverVersion = gpuDriverVersion;
+    return this;
+  }
+
+  /**
+   * Optional. The specific version of the GPU driver to install. Use this field only with
+   * gpu_driver_version set to SPECIFIC. Otherwise, an error will be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSpecificVersion() {
+    return specificVersion;
+  }
+
+  /**
+   * Optional. The specific version of the GPU driver to install. Use this field only with
+   * gpu_driver_version set to SPECIFIC. Otherwise, an error will be returned.
+   * @param specificVersion specificVersion or {@code null} for none
+   */
+  public GPUDriverInstallationConfig setSpecificVersion(java.lang.String specificVersion) {
+    this.specificVersion = specificVersion;
     return this;
   }
 

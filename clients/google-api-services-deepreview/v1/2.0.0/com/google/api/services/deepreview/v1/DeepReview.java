@@ -154,14 +154,15 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
   public class Documents {
 
     /**
-     * Deletes a document and all associated reviews and stored blobs.
+     * Deletes a document and its stored content. If `force` is set to `true`, any associated reviews
+     * are also deleted.
      *
      * Create a request for the method "documents.delete".
      *
      * This request holds the parameters needed by the deepreview server.  After setting any optional
      * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the document to delete. Format: `documents/{document}`
+     * @param name Required. The resource name of the document to delete.
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -178,7 +179,8 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^documents/[^/]+$");
 
       /**
-       * Deletes a document and all associated reviews and stored blobs.
+       * Deletes a document and its stored content. If `force` is set to `true`, any associated reviews
+       * are also deleted.
        *
        * Create a request for the method "documents.delete".
        *
@@ -188,7 +190,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the document to delete. Format: `documents/{document}`
+       * @param name Required. The resource name of the document to delete.
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -256,17 +258,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return (Delete) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the document to delete. Format: `documents/{document}` */
+      /** Required. The resource name of the document to delete. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the document to delete. Format: `documents/{document}`
+      /** Required. The resource name of the document to delete.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The resource name of the document to delete. Format: `documents/{document}` */
+      /** Required. The resource name of the document to delete. */
       public Delete setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -277,36 +279,41 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return this;
       }
 
-      /** Optional. If set to true, and the document is not found, the request succeeds. */
+      /** Optional. If set to `true`, and the document is not found, the request succeeds. */
       @com.google.api.client.util.Key
       private java.lang.Boolean allowMissing;
 
-      /** Optional. If set to true, and the document is not found, the request succeeds.
+      /** Optional. If set to `true`, and the document is not found, the request succeeds.
        */
       public java.lang.Boolean getAllowMissing() {
         return allowMissing;
       }
 
-      /** Optional. If set to true, and the document is not found, the request succeeds. */
+      /** Optional. If set to `true`, and the document is not found, the request succeeds. */
       public Delete setAllowMissing(java.lang.Boolean allowMissing) {
         this.allowMissing = allowMissing;
         return this;
       }
 
       /**
-       * Optional. If set to true, any child resources (e.g. review resources) are also deleted.
+       * Optional. If set to `true`, any child resources (e.g. review resources) are also deleted.
+       * If `false` and the document has existing reviews, the request fails with
+       * `FAILED_PRECONDITION`.
        */
       @com.google.api.client.util.Key
       private java.lang.Boolean force;
 
-      /** Optional. If set to true, any child resources (e.g. review resources) are also deleted.
+      /** Optional. If set to `true`, any child resources (e.g. review resources) are also deleted. If
+     `false` and the document has existing reviews, the request fails with `FAILED_PRECONDITION`.
        */
       public java.lang.Boolean getForce() {
         return force;
       }
 
       /**
-       * Optional. If set to true, any child resources (e.g. review resources) are also deleted.
+       * Optional. If set to `true`, any child resources (e.g. review resources) are also deleted.
+       * If `false` and the document has existing reviews, the request fails with
+       * `FAILED_PRECONDITION`.
        */
       public Delete setForce(java.lang.Boolean force) {
         this.force = force;
@@ -329,7 +336,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the deepreview server.  After setting any optional
      * parameters, call the {@link EstimateReviewCost#execute()} method to invoke the remote operation.
      *
-     * @param document Required. The document to review. Format: `documents/{document}`
+     * @param document Required. The document to review.
      * @param content the {@link com.google.api.services.deepreview.v1.model.EstimateReviewCostRequest}
      * @return the request
      */
@@ -360,7 +367,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
        * invoking the constructor. </p>
        *
-       * @param document Required. The document to review. Format: `documents/{document}`
+       * @param document Required. The document to review.
        * @param content the {@link com.google.api.services.deepreview.v1.model.EstimateReviewCostRequest}
        * @since 1.13
        */
@@ -429,17 +436,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return (EstimateReviewCost) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The document to review. Format: `documents/{document}` */
+      /** Required. The document to review. */
       @com.google.api.client.util.Key
       private java.lang.String document;
 
-      /** Required. The document to review. Format: `documents/{document}`
+      /** Required. The document to review.
        */
       public java.lang.String getDocument() {
         return document;
       }
 
-      /** Required. The document to review. Format: `documents/{document}` */
+      /** Required. The document to review. */
       public EstimateReviewCost setDocument(java.lang.String document) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(DOCUMENT_PATTERN.matcher(document).matches(),
@@ -456,14 +463,15 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Retrieves document metadata and review history.
+     * Retrieves document metadata. The returned document includes its `latest_review_summary` when a
+     * review exists.
      *
      * Create a request for the method "documents.get".
      *
      * This request holds the parameters needed by the deepreview server.  After setting any optional
      * parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the document to retrieve. Format: `documents/{document}`
+     * @param name Required. The resource name of the document to retrieve.
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -480,7 +488,8 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^documents/[^/]+$");
 
       /**
-       * Retrieves document metadata and review history.
+       * Retrieves document metadata. The returned document includes its `latest_review_summary` when a
+       * review exists.
        *
        * Create a request for the method "documents.get".
        *
@@ -489,7 +498,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the document to retrieve. Format: `documents/{document}`
+       * @param name Required. The resource name of the document to retrieve.
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -567,21 +576,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return (Get) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The resource name of the document to retrieve. Format: `documents/{document}`
-       */
+      /** Required. The resource name of the document to retrieve. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the document to retrieve. Format: `documents/{document}`
+      /** Required. The resource name of the document to retrieve.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The resource name of the document to retrieve. Format: `documents/{document}`
-       */
+      /** Required. The resource name of the document to retrieve. */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -598,7 +603,8 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Lists documents for the authenticated caller with cursor pagination.
+     * Lists documents for the authenticated caller with cursor pagination. Each returned document
+     * includes its `latest_review_summary` when a review exists.
      *
      * Create a request for the method "documents.list".
      *
@@ -618,7 +624,8 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v1/documents";
 
       /**
-       * Lists documents for the authenticated caller with cursor pagination.
+       * Lists documents for the authenticated caller with cursor pagination. Each returned document
+       * includes its `latest_review_summary` when a review exists.
        *
        * Create a request for the method "documents.list".
        *
@@ -698,33 +705,47 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return (List) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Optional. Supported AIP-160 filter expressions (e.g., `display_name = "..."`). */
+      /**
+       * Optional. Custom filter expressions are not currently supported; non-empty values return
+       * INVALID_ARGUMENT.
+       */
       @com.google.api.client.util.Key
       private java.lang.String filter;
 
-      /** Optional. Supported AIP-160 filter expressions (e.g., `display_name = "..."`).
+      /** Optional. Custom filter expressions are not currently supported; non-empty values return
+     INVALID_ARGUMENT.
        */
       public java.lang.String getFilter() {
         return filter;
       }
 
-      /** Optional. Supported AIP-160 filter expressions (e.g., `display_name = "..."`). */
+      /**
+       * Optional. Custom filter expressions are not currently supported; non-empty values return
+       * INVALID_ARGUMENT.
+       */
       public List setFilter(java.lang.String filter) {
         this.filter = filter;
         return this;
       }
 
-      /** Optional. Supported AIP-132 order_by field. */
+      /**
+       * Optional. Custom order_by expressions are not currently supported; non-empty values return
+       * INVALID_ARGUMENT.
+       */
       @com.google.api.client.util.Key
       private java.lang.String orderBy;
 
-      /** Optional. Supported AIP-132 order_by field.
+      /** Optional. Custom order_by expressions are not currently supported; non-empty values return
+     INVALID_ARGUMENT.
        */
       public java.lang.String getOrderBy() {
         return orderBy;
       }
 
-      /** Optional. Supported AIP-132 order_by field. */
+      /**
+       * Optional. Custom order_by expressions are not currently supported; non-empty values return
+       * INVALID_ARGUMENT.
+       */
       public List setOrderBy(java.lang.String orderBy) {
         this.orderBy = orderBy;
         return this;
@@ -733,14 +754,14 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. The maximum number of documents to return in a single page. The server may return
        * fewer than this value. If unspecified, at most 50 documents will be returned. The maximum
-       * value is 1000; values above 1000 will be coerced to 1000.
+       * value is 100; values above 100 will be coerced to 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
       /** Optional. The maximum number of documents to return in a single page. The server may return fewer
-     than this value. If unspecified, at most 50 documents will be returned. The maximum value is 1000;
-     values above 1000 will be coerced to 1000.
+     than this value. If unspecified, at most 50 documents will be returned. The maximum value is 100;
+     values above 100 will be coerced to 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
@@ -749,7 +770,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       /**
        * Optional. The maximum number of documents to return in a single page. The server may return
        * fewer than this value. If unspecified, at most 50 documents will be returned. The maximum
-       * value is 1000; values above 1000 will be coerced to 1000.
+       * value is 100; values above 100 will be coerced to 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
         this.pageSize = pageSize;
@@ -799,15 +820,16 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
     public class Reviews {
 
       /**
-       * Creates and initiates an asynchronous multi-agent review for a document.
+       * Creates and initiates an asynchronous multi-agent review for a document. Returns a
+       * google.longrunning.Operation. When the operation completes, the `response` field contains a
+       * `Review` and the `metadata` field contains `CreateReviewMetadata`.
        *
        * Create a request for the method "reviews.create".
        *
        * This request holds the parameters needed by the deepreview server.  After setting any optional
        * parameters, call the {@link Create#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Document resource name where this review will be created. Format:
-       *        `documents/{document}`
+       * @param parent Required. The parent Document resource name where this review will be created.
        * @param content the {@link com.google.api.services.deepreview.v1.model.Review}
        * @return the request
        */
@@ -825,7 +847,9 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
             java.util.regex.Pattern.compile("^documents/[^/]+$");
 
         /**
-         * Creates and initiates an asynchronous multi-agent review for a document.
+         * Creates and initiates an asynchronous multi-agent review for a document. Returns a
+         * google.longrunning.Operation. When the operation completes, the `response` field contains a
+         * `Review` and the `metadata` field contains `CreateReviewMetadata`.
          *
          * Create a request for the method "reviews.create".
          *
@@ -835,8 +859,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
          * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent Document resource name where this review will be created. Format:
-       *        `documents/{document}`
+         * @param parent Required. The parent Document resource name where this review will be created.
          * @param content the {@link com.google.api.services.deepreview.v1.model.Review}
          * @since 1.13
          */
@@ -905,24 +928,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           return (Create) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The parent Document resource name where this review will be created. Format:
-         * `documents/{document}`
-         */
+        /** Required. The parent Document resource name where this review will be created. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Document resource name where this review will be created. Format:
-       `documents/{document}`
+        /** Required. The parent Document resource name where this review will be created.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /**
-         * Required. The parent Document resource name where this review will be created. Format:
-         * `documents/{document}`
-         */
+        /** Required. The parent Document resource name where this review will be created. */
         public Create setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -991,8 +1007,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the deepreview server.  After setting any optional
        * parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
-       * @param name Required. The resource name of the review to retrieve. Format:
-       *        `documents/{document}/reviews/{review}`
+       * @param name Required. The resource name of the review to retrieve.
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -1018,8 +1033,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
          * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Required. The resource name of the review to retrieve. Format:
-       *        `documents/{document}/reviews/{review}`
+         * @param name Required. The resource name of the review to retrieve.
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -1097,24 +1111,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           return (Get) super.setUploadProtocol(uploadProtocol);
         }
 
-        /**
-         * Required. The resource name of the review to retrieve. Format:
-         * `documents/{document}/reviews/{review}`
-         */
+        /** Required. The resource name of the review to retrieve. */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Required. The resource name of the review to retrieve. Format:
-       `documents/{document}/reviews/{review}`
+        /** Required. The resource name of the review to retrieve.
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /**
-         * Required. The resource name of the review to retrieve. Format:
-         * `documents/{document}/reviews/{review}`
-         */
+        /** Required. The resource name of the review to retrieve. */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1138,7 +1145,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * This request holds the parameters needed by the deepreview server.  After setting any optional
        * parameters, call the {@link List#execute()} method to invoke the remote operation.
        *
-       * @param parent Required. The parent Document resource name. Format: `documents/{document}`
+       * @param parent Required. The parent Document resource name.
        * @return the request
        */
       public List list(java.lang.String parent) throws java.io.IOException {
@@ -1164,7 +1171,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
          * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
          * must be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param parent Required. The parent Document resource name. Format: `documents/{document}`
+         * @param parent Required. The parent Document resource name.
          * @since 1.13
          */
         protected List(java.lang.String parent) {
@@ -1242,17 +1249,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           return (List) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Required. The parent Document resource name. Format: `documents/{document}` */
+        /** Required. The parent Document resource name. */
         @com.google.api.client.util.Key
         private java.lang.String parent;
 
-        /** Required. The parent Document resource name. Format: `documents/{document}`
+        /** Required. The parent Document resource name.
          */
         public java.lang.String getParent() {
           return parent;
         }
 
-        /** Required. The parent Document resource name. Format: `documents/{document}` */
+        /** Required. The parent Document resource name. */
         public List setParent(java.lang.String parent) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -1263,33 +1270,47 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           return this;
         }
 
-        /** Optional. Supported AIP-160 filter expressions. */
+        /**
+         * Optional. Custom filter expressions are not currently supported; non-empty values return
+         * INVALID_ARGUMENT.
+         */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. Supported AIP-160 filter expressions.
+        /** Optional. Custom filter expressions are not currently supported; non-empty values return
+       INVALID_ARGUMENT.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
-        /** Optional. Supported AIP-160 filter expressions. */
+        /**
+         * Optional. Custom filter expressions are not currently supported; non-empty values return
+         * INVALID_ARGUMENT.
+         */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
           return this;
         }
 
-        /** Optional. Supported AIP-132 order_by field. */
+        /**
+         * Optional. Custom order_by expressions are not currently supported; non-empty values
+         * return INVALID_ARGUMENT.
+         */
         @com.google.api.client.util.Key
         private java.lang.String orderBy;
 
-        /** Optional. Supported AIP-132 order_by field.
+        /** Optional. Custom order_by expressions are not currently supported; non-empty values return
+       INVALID_ARGUMENT.
          */
         public java.lang.String getOrderBy() {
           return orderBy;
         }
 
-        /** Optional. Supported AIP-132 order_by field. */
+        /**
+         * Optional. Custom order_by expressions are not currently supported; non-empty values
+         * return INVALID_ARGUMENT.
+         */
         public List setOrderBy(java.lang.String orderBy) {
           this.orderBy = orderBy;
           return this;
@@ -1298,14 +1319,14 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional. The maximum number of reviews to return in a single page. The server may return
          * fewer than this value. If unspecified, at most 50 reviews will be returned. The maximum
-         * value is 1000; values above 1000 will be coerced to 1000.
+         * value is 100; values above 100 will be coerced to 100.
          */
         @com.google.api.client.util.Key
         private java.lang.Integer pageSize;
 
         /** Optional. The maximum number of reviews to return in a single page. The server may return fewer
-       than this value. If unspecified, at most 50 reviews will be returned. The maximum value is 1000;
-       values above 1000 will be coerced to 1000.
+       than this value. If unspecified, at most 50 reviews will be returned. The maximum value is 100;
+       values above 100 will be coerced to 100.
          */
         public java.lang.Integer getPageSize() {
           return pageSize;
@@ -1314,7 +1335,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         /**
          * Optional. The maximum number of reviews to return in a single page. The server may return
          * fewer than this value. If unspecified, at most 50 reviews will be returned. The maximum
-         * value is 1000; values above 1000 will be coerced to 1000.
+         * value is 100; values above 100 will be coerced to 100.
          */
         public List setPageSize(java.lang.Integer pageSize) {
           this.pageSize = pageSize;
@@ -1367,15 +1388,15 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
   public class Media {
 
     /**
-     * Downloads the original document content (PDF binary) via Scotty media streaming (AIP-136 custom
-     * method).
+     * Downloads the original document content (PDF binary) using media streaming. Pass `alt=media` as a
+     * query parameter to stream the binary PDF bytes. Without `alt=media`, a JSON response is returned.
      *
      * Create a request for the method "media.download".
      *
      * This request holds the parameters needed by the deepreview server.  After setting any optional
      * parameters, call the {@link Download#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the document to download. Format: `documents/{document}`
+     * @param name Required. The resource name of the document to download.
      * @return the request
      */
     public Download download(java.lang.String name) throws java.io.IOException {
@@ -1392,8 +1413,9 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
           java.util.regex.Pattern.compile("^documents/[^/]+$");
 
       /**
-       * Downloads the original document content (PDF binary) via Scotty media streaming (AIP-136 custom
-       * method).
+       * Downloads the original document content (PDF binary) using media streaming. Pass `alt=media` as
+       * a query parameter to stream the binary PDF bytes. Without `alt=media`, a JSON response is
+       * returned.
        *
        * Create a request for the method "media.download".
        *
@@ -1403,7 +1425,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the document to download. Format: `documents/{document}`
+       * @param name Required. The resource name of the document to download.
        * @since 1.13
        */
       protected Download(java.lang.String name) {
@@ -1505,21 +1527,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return (Download) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The resource name of the document to download. Format: `documents/{document}`
-       */
+      /** Required. The resource name of the document to download. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the document to download. Format: `documents/{document}`
+      /** Required. The resource name of the document to download.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The resource name of the document to download. Format: `documents/{document}`
-       */
+      /** Required. The resource name of the document to download. */
       public Download setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1536,7 +1554,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       }
     }
     /**
-     * Creates a new Document resource and ingests the manuscript via Scotty or Google Drive.
+     * Creates a new Document resource and ingests the manuscript using media upload or Google Drive.
      *
      * Create a request for the method "media.upload".
      *
@@ -1553,7 +1571,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
     }
 
     /**
-     * Creates a new Document resource and ingests the manuscript via Scotty or Google Drive.
+     * Creates a new Document resource and ingests the manuscript using media upload or Google Drive.
      *
      * Create a request for the method "media.upload".
      *
@@ -1581,7 +1599,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       private static final String REST_PATH = "v1/documents";
 
       /**
-       * Creates a new Document resource and ingests the manuscript via Scotty or Google Drive.
+       * Creates a new Document resource and ingests the manuscript using media upload or Google Drive.
        *
        * Create a request for the method "media.upload".
        *
@@ -1599,7 +1617,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
       }
 
       /**
-       * Creates a new Document resource and ingests the manuscript via Scotty or Google Drive.
+       * Creates a new Document resource and ingests the manuscript using media upload or Google Drive.
        *
        * Create a request for the method "media.upload".
        *
@@ -1751,506 +1769,6 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
    * The "operations" collection of methods.
    */
   public class Operations {
-
-    /**
-     * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-     * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-     * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-     * methods to check whether the cancellation succeeded or whether the operation completed despite
-     * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-     * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-     * `Code.CANCELLED`.
-     *
-     * Create a request for the method "operations.cancel".
-     *
-     * This request holds the parameters needed by the deepreview server.  After setting any optional
-     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation resource to be cancelled.
-     * @param content the {@link com.google.api.services.deepreview.v1.model.CancelOperationRequest}
-     * @return the request
-     */
-    public Cancel cancel(java.lang.String name, com.google.api.services.deepreview.v1.model.CancelOperationRequest content) throws java.io.IOException {
-      Cancel result = new Cancel(name, content);
-      initialize(result);
-      return result;
-    }
-
-    public class Cancel extends DeepReviewRequest<com.google.api.services.deepreview.v1.model.Empty> {
-
-      private static final String REST_PATH = "v1/{+name}:cancel";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.*$");
-
-      /**
-       * Starts asynchronous cancellation on a long-running operation. The server makes a best effort to
-       * cancel the operation, but success is not guaranteed. If the server doesn't support this method,
-       * it returns `google.rpc.Code.UNIMPLEMENTED`. Clients can use Operations.GetOperation or other
-       * methods to check whether the cancellation succeeded or whether the operation completed despite
-       * cancellation. On successful cancellation, the operation is not deleted; instead, it becomes an
-       * operation with an Operation.error value with a google.rpc.Status.code of `1`, corresponding to
-       * `Code.CANCELLED`.
-       *
-       * Create a request for the method "operations.cancel".
-       *
-       * This request holds the parameters needed by the the deepreview server.  After setting any
-       * optional parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation resource to be cancelled.
-       * @param content the {@link com.google.api.services.deepreview.v1.model.CancelOperationRequest}
-       * @since 1.13
-       */
-      protected Cancel(java.lang.String name, com.google.api.services.deepreview.v1.model.CancelOperationRequest content) {
-        super(DeepReview.this, "POST", REST_PATH, content, com.google.api.services.deepreview.v1.model.Empty.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/.*$");
-        }
-      }
-
-      @Override
-      public Cancel set$Xgafv(java.lang.String $Xgafv) {
-        return (Cancel) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Cancel setAccessToken(java.lang.String accessToken) {
-        return (Cancel) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Cancel setAlt(java.lang.String alt) {
-        return (Cancel) super.setAlt(alt);
-      }
-
-      @Override
-      public Cancel setCallback(java.lang.String callback) {
-        return (Cancel) super.setCallback(callback);
-      }
-
-      @Override
-      public Cancel setFields(java.lang.String fields) {
-        return (Cancel) super.setFields(fields);
-      }
-
-      @Override
-      public Cancel setKey(java.lang.String key) {
-        return (Cancel) super.setKey(key);
-      }
-
-      @Override
-      public Cancel setOauthToken(java.lang.String oauthToken) {
-        return (Cancel) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Cancel) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Cancel setQuotaUser(java.lang.String quotaUser) {
-        return (Cancel) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Cancel setUploadType(java.lang.String uploadType) {
-        return (Cancel) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Cancel) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation resource to be cancelled. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation resource to be cancelled.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation resource to be cancelled. */
-      public Cancel setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/.*$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Cancel set(String parameterName, Object value) {
-        return (Cancel) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Deletes a long-running operation. This method indicates that the client is no longer interested
-     * in the operation result. It does not cancel the operation. If the server doesn't support this
-     * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-     *
-     * Create a request for the method "operations.delete".
-     *
-     * This request holds the parameters needed by the deepreview server.  After setting any optional
-     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation resource to be deleted.
-     * @return the request
-     */
-    public Delete delete(java.lang.String name) throws java.io.IOException {
-      Delete result = new Delete(name);
-      initialize(result);
-      return result;
-    }
-
-    public class Delete extends DeepReviewRequest<com.google.api.services.deepreview.v1.model.Empty> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations/.*$");
-
-      /**
-       * Deletes a long-running operation. This method indicates that the client is no longer interested
-       * in the operation result. It does not cancel the operation. If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-       *
-       * Create a request for the method "operations.delete".
-       *
-       * This request holds the parameters needed by the the deepreview server.  After setting any
-       * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-       * <p> {@link
-       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation resource to be deleted.
-       * @since 1.13
-       */
-      protected Delete(java.lang.String name) {
-        super(DeepReview.this, "DELETE", REST_PATH, null, com.google.api.services.deepreview.v1.model.Empty.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/.*$");
-        }
-      }
-
-      @Override
-      public Delete set$Xgafv(java.lang.String $Xgafv) {
-        return (Delete) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public Delete setAccessToken(java.lang.String accessToken) {
-        return (Delete) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public Delete setAlt(java.lang.String alt) {
-        return (Delete) super.setAlt(alt);
-      }
-
-      @Override
-      public Delete setCallback(java.lang.String callback) {
-        return (Delete) super.setCallback(callback);
-      }
-
-      @Override
-      public Delete setFields(java.lang.String fields) {
-        return (Delete) super.setFields(fields);
-      }
-
-      @Override
-      public Delete setKey(java.lang.String key) {
-        return (Delete) super.setKey(key);
-      }
-
-      @Override
-      public Delete setOauthToken(java.lang.String oauthToken) {
-        return (Delete) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Delete) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Delete setQuotaUser(java.lang.String quotaUser) {
-        return (Delete) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Delete setUploadType(java.lang.String uploadType) {
-        return (Delete) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-        return (Delete) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation resource to be deleted. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation resource to be deleted.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation resource to be deleted. */
-      public Delete setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations/.*$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      @Override
-      public Delete set(String parameterName, Object value) {
-        return (Delete) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Lists operations that match the specified filter in the request. If the server doesn't support
-     * this method, it returns `UNIMPLEMENTED`.
-     *
-     * Create a request for the method "operations.list".
-     *
-     * This request holds the parameters needed by the deepreview server.  After setting any optional
-     * parameters, call the {@link List#execute()} method to invoke the remote operation.
-     *
-     * @param name The name of the operation's parent resource.
-     * @return the request
-     */
-    public List list(java.lang.String name) throws java.io.IOException {
-      List result = new List(name);
-      initialize(result);
-      return result;
-    }
-
-    public class List extends DeepReviewRequest<com.google.api.services.deepreview.v1.model.ListOperationsResponse> {
-
-      private static final String REST_PATH = "v1/{+name}";
-
-      private final java.util.regex.Pattern NAME_PATTERN =
-          java.util.regex.Pattern.compile("^operations$");
-
-      /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * Create a request for the method "operations.list".
-       *
-       * This request holds the parameters needed by the the deepreview server.  After setting any
-       * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-       * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-       * must be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param name The name of the operation's parent resource.
-       * @since 1.13
-       */
-      protected List(java.lang.String name) {
-        super(DeepReview.this, "GET", REST_PATH, null, com.google.api.services.deepreview.v1.model.ListOperationsResponse.class);
-        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations$");
-        }
-      }
-
-      @Override
-      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-        return super.executeUsingHead();
-      }
-
-      @Override
-      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-        return super.buildHttpRequestUsingHead();
-      }
-
-      @Override
-      public List set$Xgafv(java.lang.String $Xgafv) {
-        return (List) super.set$Xgafv($Xgafv);
-      }
-
-      @Override
-      public List setAccessToken(java.lang.String accessToken) {
-        return (List) super.setAccessToken(accessToken);
-      }
-
-      @Override
-      public List setAlt(java.lang.String alt) {
-        return (List) super.setAlt(alt);
-      }
-
-      @Override
-      public List setCallback(java.lang.String callback) {
-        return (List) super.setCallback(callback);
-      }
-
-      @Override
-      public List setFields(java.lang.String fields) {
-        return (List) super.setFields(fields);
-      }
-
-      @Override
-      public List setKey(java.lang.String key) {
-        return (List) super.setKey(key);
-      }
-
-      @Override
-      public List setOauthToken(java.lang.String oauthToken) {
-        return (List) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (List) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public List setQuotaUser(java.lang.String quotaUser) {
-        return (List) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public List setUploadType(java.lang.String uploadType) {
-        return (List) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public List setUploadProtocol(java.lang.String uploadProtocol) {
-        return (List) super.setUploadProtocol(uploadProtocol);
-      }
-
-      /** The name of the operation's parent resource. */
-      @com.google.api.client.util.Key
-      private java.lang.String name;
-
-      /** The name of the operation's parent resource.
-       */
-      public java.lang.String getName() {
-        return name;
-      }
-
-      /** The name of the operation's parent resource. */
-      public List setName(java.lang.String name) {
-        if (!getSuppressPatternChecks()) {
-          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-              "Parameter name must conform to the pattern " +
-              "^operations$");
-        }
-        this.name = name;
-        return this;
-      }
-
-      /** The standard list filter. */
-      @com.google.api.client.util.Key
-      private java.lang.String filter;
-
-      /** The standard list filter.
-       */
-      public java.lang.String getFilter() {
-        return filter;
-      }
-
-      /** The standard list filter. */
-      public List setFilter(java.lang.String filter) {
-        this.filter = filter;
-        return this;
-      }
-
-      /** The standard list page size. */
-      @com.google.api.client.util.Key
-      private java.lang.Integer pageSize;
-
-      /** The standard list page size.
-       */
-      public java.lang.Integer getPageSize() {
-        return pageSize;
-      }
-
-      /** The standard list page size. */
-      public List setPageSize(java.lang.Integer pageSize) {
-        this.pageSize = pageSize;
-        return this;
-      }
-
-      /** The standard list page token. */
-      @com.google.api.client.util.Key
-      private java.lang.String pageToken;
-
-      /** The standard list page token.
-       */
-      public java.lang.String getPageToken() {
-        return pageToken;
-      }
-
-      /** The standard list page token. */
-      public List setPageToken(java.lang.String pageToken) {
-        this.pageToken = pageToken;
-        return this;
-      }
-
-      /**
-       * When set to `true`, operations that are reachable are returned as normal, and those that
-       * are unreachable are returned in the ListOperationsResponse.unreachable field. This can only
-       * be `true` when reading across collections. For example, when `parent` is set to
-       * `"projects/example/locations/-"`. This field is not supported by default and will result in
-       * an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-       * product specific documentation.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean returnPartialSuccess;
-
-      /** When set to `true`, operations that are reachable are returned as normal, and those that are
-     unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-     when reading across collections. For example, when `parent` is set to
-     `"projects/example/locations/-"`. This field is not supported by default and will result in an
-     `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-     documentation.
-       */
-      public java.lang.Boolean getReturnPartialSuccess() {
-        return returnPartialSuccess;
-      }
-
-      /**
-       * When set to `true`, operations that are reachable are returned as normal, and those that
-       * are unreachable are returned in the ListOperationsResponse.unreachable field. This can only
-       * be `true` when reading across collections. For example, when `parent` is set to
-       * `"projects/example/locations/-"`. This field is not supported by default and will result in
-       * an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-       * product specific documentation.
-       */
-      public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-        this.returnPartialSuccess = returnPartialSuccess;
-        return this;
-      }
-
-      @Override
-      public List set(String parameterName, Object value) {
-        return (List) super.set(parameterName, value);
-      }
-    }
 
     /**
      * An accessor for creating requests from the Documents collection.
@@ -2465,7 +1983,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
      * This request holds the parameters needed by the deepreview server.  After setting any optional
      * parameters, call the {@link GetUserQuota#execute()} method to invoke the remote operation.
      *
-     * @param name Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+     * @param name Required. The resource name of the singleton user quota to retrieve.
      * @return the request
      */
     public GetUserQuota getUserQuota(java.lang.String name) throws java.io.IOException {
@@ -2492,7 +2010,7 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
        * GetUserQuota#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
        * must be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+       * @param name Required. The resource name of the singleton user quota to retrieve.
        * @since 1.13
        */
       protected GetUserQuota(java.lang.String name) {
@@ -2570,21 +2088,17 @@ public class DeepReview extends com.google.api.client.googleapis.services.json.A
         return (GetUserQuota) super.setUploadProtocol(uploadProtocol);
       }
 
-      /**
-       * Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
-       */
+      /** Required. The resource name of the singleton user quota to retrieve. */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
+      /** Required. The resource name of the singleton user quota to retrieve.
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /**
-       * Required. The resource name of the singleton user quota to retrieve. Format: `userQuota`
-       */
+      /** Required. The resource name of the singleton user quota to retrieve. */
       public GetUserQuota setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

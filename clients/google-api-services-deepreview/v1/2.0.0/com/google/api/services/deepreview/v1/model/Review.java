@@ -17,7 +17,7 @@
 package com.google.api.services.deepreview.v1.model;
 
 /**
- * Review Sub-Resource Model representing an evaluation run of a document.
+ * An evaluation run of a document.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Deep Review API. For a detailed explanation see:

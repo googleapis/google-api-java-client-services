@@ -31,7 +31,7 @@ public final class EstimateReviewCostRequest extends com.google.api.client.json.
 
   /**
    * Required. The review to estimate, as it would be passed to `CreateReview`. Only its
-   * `run_config` is read, and `run_config.gemini_api_key` is ignored.
+   * `run_config` is read, and `gemini_api_key` is ignored.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -39,7 +39,7 @@ public final class EstimateReviewCostRequest extends com.google.api.client.json.
 
   /**
    * Required. The review to estimate, as it would be passed to `CreateReview`. Only its
-   * `run_config` is read, and `run_config.gemini_api_key` is ignored.
+   * `run_config` is read, and `gemini_api_key` is ignored.
    * @return value or {@code null} for none
    */
   public Review getReview() {
@@ -48,7 +48,7 @@ public final class EstimateReviewCostRequest extends com.google.api.client.json.
 
   /**
    * Required. The review to estimate, as it would be passed to `CreateReview`. Only its
-   * `run_config` is read, and `run_config.gemini_api_key` is ignored.
+   * `run_config` is read, and `gemini_api_key` is ignored.
    * @param review review or {@code null} for none
    */
   public EstimateReviewCostRequest setReview(Review review) {

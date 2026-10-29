@@ -48,7 +48,8 @@ public final class DeepReviewRunConfig extends com.google.api.client.json.Generi
   private java.lang.Boolean geminiApiKeySet;
 
   /**
-   * Optional. The Gemini model name/version to use (e.g., "gemini-1.5-pro", "gemini-2.0-flash").
+   * Optional. The Gemini model identifier to use for the review. If omitted, the server uses its
+   * default model. Unsupported values return INVALID_ARGUMENT.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +113,8 @@ public final class DeepReviewRunConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The Gemini model name/version to use (e.g., "gemini-1.5-pro", "gemini-2.0-flash").
+   * Optional. The Gemini model identifier to use for the review. If omitted, the server uses its
+   * default model. Unsupported values return INVALID_ARGUMENT.
    * @return value or {@code null} for none
    */
   public java.lang.String getModel() {
@@ -120,7 +122,8 @@ public final class DeepReviewRunConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The Gemini model name/version to use (e.g., "gemini-1.5-pro", "gemini-2.0-flash").
+   * Optional. The Gemini model identifier to use for the review. If omitted, the server uses its
+   * default model. Unsupported values return INVALID_ARGUMENT.
    * @param model model or {@code null} for none
    */
   public DeepReviewRunConfig setModel(java.lang.String model) {

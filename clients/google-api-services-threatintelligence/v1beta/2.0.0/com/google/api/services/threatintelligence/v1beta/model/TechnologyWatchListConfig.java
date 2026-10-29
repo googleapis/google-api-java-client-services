@@ -38,8 +38,12 @@ public final class TechnologyWatchListConfig extends com.google.api.client.json.
   private TechnologyWatchListAlertThreshold alertThreshold;
 
   /**
-   * Optional. List of vendor, technology or cpe fingerprint. example: Microsoft office 360 Apache
-   * Server 3.5 cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*
+   * Optional. List of technologies to watch, one per entry, in the form ` [version]`, using the
+   * vendor and product names from the Google Threat Intelligence products and fixes section.
+   * example: `microsoft outlook` `apache http_server 2.4.54` CPE strings such as
+   * `cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*` are only parsed through the Google Threat
+   * Intelligence interface and are not available through the API. Send the vendor and product pair
+   * instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +67,12 @@ public final class TechnologyWatchListConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. List of vendor, technology or cpe fingerprint. example: Microsoft office 360 Apache
-   * Server 3.5 cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*
+   * Optional. List of technologies to watch, one per entry, in the form ` [version]`, using the
+   * vendor and product names from the Google Threat Intelligence products and fixes section.
+   * example: `microsoft outlook` `apache http_server 2.4.54` CPE strings such as
+   * `cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*` are only parsed through the Google Threat
+   * Intelligence interface and are not available through the API. Send the vendor and product pair
+   * instead.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getTechnologies() {
@@ -72,8 +80,12 @@ public final class TechnologyWatchListConfig extends com.google.api.client.json.
   }
 
   /**
-   * Optional. List of vendor, technology or cpe fingerprint. example: Microsoft office 360 Apache
-   * Server 3.5 cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*
+   * Optional. List of technologies to watch, one per entry, in the form ` [version]`, using the
+   * vendor and product names from the Google Threat Intelligence products and fixes section.
+   * example: `microsoft outlook` `apache http_server 2.4.54` CPE strings such as
+   * `cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*` are only parsed through the Google Threat
+   * Intelligence interface and are not available through the API. Send the vendor and product pair
+   * instead.
    * @param technologies technologies or {@code null} for none
    */
   public TechnologyWatchListConfig setTechnologies(java.util.List<java.lang.String> technologies) {

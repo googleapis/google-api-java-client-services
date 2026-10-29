@@ -37,6 +37,14 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean creationDisabled;
 
   /**
+   * Whether it is possible to create an environment in the `DEVELOPMENT` mode with the image
+   * version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean devModeSupported;
+
+  /**
    * The string identifier of the ImageVersion, in the form: "composer-x.y.z-airflow-a.b.c"
    * The value may be {@code null}.
    */
@@ -86,6 +94,25 @@ public final class ImageVersion extends com.google.api.client.json.GenericJson {
    */
   public ImageVersion setCreationDisabled(java.lang.Boolean creationDisabled) {
     this.creationDisabled = creationDisabled;
+    return this;
+  }
+
+  /**
+   * Whether it is possible to create an environment in the `DEVELOPMENT` mode with the image
+   * version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDevModeSupported() {
+    return devModeSupported;
+  }
+
+  /**
+   * Whether it is possible to create an environment in the `DEVELOPMENT` mode with the image
+   * version.
+   * @param devModeSupported devModeSupported or {@code null} for none
+   */
+  public ImageVersion setDevModeSupported(java.lang.Boolean devModeSupported) {
+    this.devModeSupported = devModeSupported;
     return this;
   }
 

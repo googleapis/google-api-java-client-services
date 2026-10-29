@@ -17,8 +17,8 @@
 package com.google.api.services.pubsub.model;
 
 /**
- * The payload to the push endpoint is in the form of the JSON representation of a PubsubMessage
- * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+ * The payload to the push endpoint is in the form of the JSON representation of a [PubsubMessage](h
+ * ttps://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Pub/Sub API. For a detailed explanation see:

@@ -199,7 +199,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Optional. Indicates whether to retain acknowledged messages. If true, then messages are not
    * expunged from the subscription's backlog, even if they are acknowledged, until they fall out of
    * the `message_retention_duration` window. This must be true if you would like to [`Seek` to a
-   * timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to
+   * timestamp]( https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to
    * replay previously-acknowledged messages.
    * The value may be {@code null}.
    */
@@ -622,7 +622,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Optional. Indicates whether to retain acknowledged messages. If true, then messages are not
    * expunged from the subscription's backlog, even if they are acknowledged, until they fall out of
    * the `message_retention_duration` window. This must be true if you would like to [`Seek` to a
-   * timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to
+   * timestamp]( https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to
    * replay previously-acknowledged messages.
    * @return value or {@code null} for none
    */
@@ -634,7 +634,7 @@ public final class Subscription extends com.google.api.client.json.GenericJson {
    * Optional. Indicates whether to retain acknowledged messages. If true, then messages are not
    * expunged from the subscription's backlog, even if they are acknowledged, until they fall out of
    * the `message_retention_duration` window. This must be true if you would like to [`Seek` to a
-   * timestamp] (https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to
+   * timestamp]( https://cloud.google.com/pubsub/docs/replay-overview#seek_to_a_time) in the past to
    * replay previously-acknowledged messages.
    * @param retainAckedMessages retainAckedMessages or {@code null} for none
    */

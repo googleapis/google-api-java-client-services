@@ -63,8 +63,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. When set, the payload to the push endpoint is in the form of the JSON representation
-   * of a PubsubMessage
-   * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+   * of a [PubsubMessage](
+   * https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,8 +153,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. When set, the payload to the push endpoint is in the form of the JSON representation
-   * of a PubsubMessage
-   * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+   * of a [PubsubMessage](
+   * https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
    * @return value or {@code null} for none
    */
   public PubsubWrapper getPubsubWrapper() {
@@ -163,8 +163,8 @@ public final class PushConfig extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. When set, the payload to the push endpoint is in the form of the JSON representation
-   * of a PubsubMessage
-   * (https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
+   * of a [PubsubMessage](
+   * https://cloud.google.com/pubsub/docs/reference/rpc/google.pubsub.v1#pubsubmessage).
    * @param pubsubWrapper pubsubWrapper or {@code null} for none
    */
   public PushConfig setPubsubWrapper(PubsubWrapper pubsubWrapper) {

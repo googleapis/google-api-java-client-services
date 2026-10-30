@@ -1688,13 +1688,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The ID to use for the policy. This will become the final component of the
-           * policy's resource name.
+           * policy's resource name. This value must start with a lowercase letter followed by up to
+           * 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
            */
           @com.google.api.client.util.Key
           private java.lang.String autoProtectionPolicyId;
 
           /** Required. The ID to use for the policy. This will become the final component of the policy's
-         resource name.
+         resource name. This value must start with a lowercase letter followed by up to 62 lowercase
+         letters, numbers, or hyphens, and cannot end with a hyphen.
            */
           public java.lang.String getAutoProtectionPolicyId() {
             return autoProtectionPolicyId;
@@ -1702,10 +1704,43 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
           /**
            * Required. The ID to use for the policy. This will become the final component of the
-           * policy's resource name.
+           * policy's resource name. This value must start with a lowercase letter followed by up to
+           * 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
            */
           public Create setAutoProtectionPolicyId(java.lang.String autoProtectionPolicyId) {
             this.autoProtectionPolicyId = autoProtectionPolicyId;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. The
+         request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -1867,6 +1902,38 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. The
+         request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -2268,7 +2335,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
          * This request holds the parameters needed by the backupdr server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Identifier. The resource name of the AutoprotectionPolicy. Format:
+         * @param name Output only. Identifier. The resource name of the AutoprotectionPolicy. Format:
          *        `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
          * @param content the {@link com.google.api.services.backupdr.v1beta.model.AutoProtectionPolicy}
          * @return the request
@@ -2297,7 +2364,7 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Identifier. The resource name of the AutoprotectionPolicy. Format:
+           * @param name Output only. Identifier. The resource name of the AutoprotectionPolicy. Format:
          *        `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
            * @param content the {@link com.google.api.services.backupdr.v1beta.model.AutoProtectionPolicy}
            * @since 1.13
@@ -2368,13 +2435,13 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Identifier. The resource name of the AutoprotectionPolicy. Format: `projects/{project}/
-           * locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+           * Output only. Identifier. The resource name of the AutoprotectionPolicy. Format: `projec
+           * ts/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Identifier. The resource name of the AutoprotectionPolicy. Format:
+          /** Output only. Identifier. The resource name of the AutoprotectionPolicy. Format:
          `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
            */
           public java.lang.String getName() {
@@ -2382,8 +2449,8 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * Identifier. The resource name of the AutoprotectionPolicy. Format: `projects/{project}/
-           * locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
+           * Output only. Identifier. The resource name of the AutoprotectionPolicy. Format: `projec
+           * ts/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -2392,6 +2459,38 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
                   "^projects/[^/]+/locations/[^/]+/autoProtectionPolicies/[^/]+$");
             }
             this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. The
+         request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
             return this;
           }
 
@@ -2589,13 +2688,15 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The ID to use for the binding. This will become the final component of the
-             * binding's resource name.
+             * binding's resource name. This value must start with a lowercase letter followed by up
+             * to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
              */
             @com.google.api.client.util.Key
             private java.lang.String autoProtectionPolicyBindingId;
 
             /** Required. The ID to use for the binding. This will become the final component of the binding's
-           resource name.
+           resource name. This value must start with a lowercase letter followed by up to 62 lowercase
+           letters, numbers, or hyphens, and cannot end with a hyphen.
              */
             public java.lang.String getAutoProtectionPolicyBindingId() {
               return autoProtectionPolicyBindingId;
@@ -2603,10 +2704,43 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
             /**
              * Required. The ID to use for the binding. This will become the final component of the
-             * binding's resource name.
+             * binding's resource name. This value must start with a lowercase letter followed by up
+             * to 62 lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
              */
             public Create setAutoProtectionPolicyBindingId(java.lang.String autoProtectionPolicyBindingId) {
               this.autoProtectionPolicyBindingId = autoProtectionPolicyBindingId;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know to ignore the request if it has already been
+           completed. The server will guarantee that for at least 60 minutes since the first request. The
+           request ID must be a valid UUID with the exception that zero UUID is not supported
+           (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know to ignore the request if it
+             * has already been completed. The server will guarantee that for at least 60 minutes
+             * since the first request. The request ID must be a valid UUID with the exception that
+             * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
               return this;
             }
 

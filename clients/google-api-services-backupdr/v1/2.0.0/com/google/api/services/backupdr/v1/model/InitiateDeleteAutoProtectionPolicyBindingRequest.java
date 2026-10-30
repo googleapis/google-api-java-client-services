@@ -30,6 +30,72 @@ package com.google.api.services.backupdr.v1.model;
 @SuppressWarnings("javadoc")
 public final class InitiateDeleteAutoProtectionPolicyBindingRequest extends com.google.api.client.json.GenericJson {
 
+  /**
+   * Optional. The current etag of the AutoProtectionPolicyBinding. If an etag is provided and does
+   * not match the current etag of the binding, deletion will be blocked and an ABORTED error will
+   * be returned.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String etag;
+
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
+   * you must retry your request, the server will know to ignore the request if it has already been
+   * completed. The server will guarantee that for at least 60 minutes since the first request. The
+   * request ID must be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String requestId;
+
+  /**
+   * Optional. The current etag of the AutoProtectionPolicyBinding. If an etag is provided and does
+   * not match the current etag of the binding, deletion will be blocked and an ABORTED error will
+   * be returned.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEtag() {
+    return etag;
+  }
+
+  /**
+   * Optional. The current etag of the AutoProtectionPolicyBinding. If an etag is provided and does
+   * not match the current etag of the binding, deletion will be blocked and an ABORTED error will
+   * be returned.
+   * @param etag etag or {@code null} for none
+   */
+  public InitiateDeleteAutoProtectionPolicyBindingRequest setEtag(java.lang.String etag) {
+    this.etag = etag;
+    return this;
+  }
+
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
+   * you must retry your request, the server will know to ignore the request if it has already been
+   * completed. The server will guarantee that for at least 60 minutes since the first request. The
+   * request ID must be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getRequestId() {
+    return requestId;
+  }
+
+  /**
+   * Optional. An optional request ID to identify requests. Specify a unique request ID so that if
+   * you must retry your request, the server will know to ignore the request if it has already been
+   * completed. The server will guarantee that for at least 60 minutes since the first request. The
+   * request ID must be a valid UUID with the exception that zero UUID is not supported
+   * (00000000-0000-0000-0000-000000000000).
+   * @param requestId requestId or {@code null} for none
+   */
+  public InitiateDeleteAutoProtectionPolicyBindingRequest setRequestId(java.lang.String requestId) {
+    this.requestId = requestId;
+    return this;
+  }
+
   @Override
   public InitiateDeleteAutoProtectionPolicyBindingRequest set(String fieldName, Object value) {
     return (InitiateDeleteAutoProtectionPolicyBindingRequest) super.set(fieldName, value);

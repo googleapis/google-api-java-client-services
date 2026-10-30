@@ -94,6 +94,20 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMe
   private java.lang.String location;
 
   /**
+   * The study arm ID associated with the conversation. Only applicable to automated agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String studyArmId;
+
+  /**
+   * The study ID associated with the conversation. Only applicable to automated agents.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String studyId;
+
+  /**
    * A user-specified string representing the agent's team. Deprecated in favor of the `teams`
    * field.
    * The value may be {@code null}.
@@ -272,6 +286,40 @@ public final class GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMe
    */
   public GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * The study arm ID associated with the conversation. Only applicable to automated agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStudyArmId() {
+    return studyArmId;
+  }
+
+  /**
+   * The study arm ID associated with the conversation. Only applicable to automated agents.
+   * @param studyArmId studyArmId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo setStudyArmId(java.lang.String studyArmId) {
+    this.studyArmId = studyArmId;
+    return this;
+  }
+
+  /**
+   * The study ID associated with the conversation. Only applicable to automated agents.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getStudyId() {
+    return studyId;
+  }
+
+  /**
+   * The study ID associated with the conversation. Only applicable to automated agents.
+   * @param studyId studyId or {@code null} for none
+   */
+  public GoogleCloudContactcenterinsightsV1alpha1ConversationQualityMetadataAgentInfo setStudyId(java.lang.String studyId) {
+    this.studyId = studyId;
     return this;
   }
 

@@ -39,19 +39,19 @@ public final class AndroidRemoteNotification extends com.google.api.client.json.
   private java.lang.Boolean mutableContent;
 
   /**
-   * Optional. Notification to send to android devices.
+   * Optional. Notification to send to Android devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AndroidNotificationV2 notification;
 
   /**
-   * Optional. If set to true, this RemoteNotification message will be delivered to legacy V1
-   * clients as data messages by omitting the
-   * google.firebase.fcm.v1.Message.android_v2.remote_notification.notification. This should only be
-   * enabled when migration from legacy V1 data messages. Note that by default (when set to false),
-   * RemoteNotification messages are automatically translated to V1 notification message for legacy
-   * clients;
+   * Optional. If set to `true`, this RemoteNotification message will be delivered to legacy V1
+   * clients as a data message by omitting the
+   * google.firebase.fcm.v1.AndroidRemoteNotification.notification. This should only be enabled when
+   * migrating from legacy V1 data messages. Note that by default (when set to false),
+   * RemoteNotification messages are automatically translated to V1 notification messages for legacy
+   * clients.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class AndroidRemoteNotification extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Notification to send to android devices.
+   * Optional. Notification to send to Android devices.
    * @return value or {@code null} for none
    */
   public AndroidNotificationV2 getNotification() {
@@ -85,7 +85,7 @@ public final class AndroidRemoteNotification extends com.google.api.client.json.
   }
 
   /**
-   * Optional. Notification to send to android devices.
+   * Optional. Notification to send to Android devices.
    * @param notification notification or {@code null} for none
    */
   public AndroidRemoteNotification setNotification(AndroidNotificationV2 notification) {
@@ -94,12 +94,12 @@ public final class AndroidRemoteNotification extends com.google.api.client.json.
   }
 
   /**
-   * Optional. If set to true, this RemoteNotification message will be delivered to legacy V1
-   * clients as data messages by omitting the
-   * google.firebase.fcm.v1.Message.android_v2.remote_notification.notification. This should only be
-   * enabled when migration from legacy V1 data messages. Note that by default (when set to false),
-   * RemoteNotification messages are automatically translated to V1 notification message for legacy
-   * clients;
+   * Optional. If set to `true`, this RemoteNotification message will be delivered to legacy V1
+   * clients as a data message by omitting the
+   * google.firebase.fcm.v1.AndroidRemoteNotification.notification. This should only be enabled when
+   * migrating from legacy V1 data messages. Note that by default (when set to false),
+   * RemoteNotification messages are automatically translated to V1 notification messages for legacy
+   * clients.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseAsV1DataMessage() {
@@ -107,12 +107,12 @@ public final class AndroidRemoteNotification extends com.google.api.client.json.
   }
 
   /**
-   * Optional. If set to true, this RemoteNotification message will be delivered to legacy V1
-   * clients as data messages by omitting the
-   * google.firebase.fcm.v1.Message.android_v2.remote_notification.notification. This should only be
-   * enabled when migration from legacy V1 data messages. Note that by default (when set to false),
-   * RemoteNotification messages are automatically translated to V1 notification message for legacy
-   * clients;
+   * Optional. If set to `true`, this RemoteNotification message will be delivered to legacy V1
+   * clients as a data message by omitting the
+   * google.firebase.fcm.v1.AndroidRemoteNotification.notification. This should only be enabled when
+   * migrating from legacy V1 data messages. Note that by default (when set to false),
+   * RemoteNotification messages are automatically translated to V1 notification messages for legacy
+   * clients.
    * @param useAsV1DataMessage useAsV1DataMessage or {@code null} for none
    */
   public AndroidRemoteNotification setUseAsV1DataMessage(java.lang.Boolean useAsV1DataMessage) {

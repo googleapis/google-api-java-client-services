@@ -17,7 +17,7 @@
 package com.google.api.services.fcm.v1.model;
 
 /**
- * Notification v2 to send to android devices. This is a v2 version of the AndroidNotification
+ * Notification v2 to send to Android devices. This is a v2 version of the AndroidNotification
  * message and will replace it in the v2 API.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -136,7 +136,7 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Optional. Identifier used to replace existing notifications in the notification drawer. It is
-   * used in conjunction with `tag` to form a unique identifier `(tag, id`)` within the app. If not
+   * used in conjunction with `tag` to form a unique identifier `(tag, id)` within the app. If not
    * specified, each request creates a new notification. If specified and a notification with the
    * same `(tag, id)` is already being shown, the new notification replaces the existing one in the
    * notification drawer.
@@ -174,7 +174,7 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Sets the number of items this notification represents. May be displayed as a badge count for
-   * launchers that support badging.See [Notification
+   * launchers that support badging. See [Notification
    * Badge](https://developer.android.com/training/notify-user/badges). For example, this might be
    * useful if you're using just one notification to represent multiple new messages but you want
    * the count here to represent the number of total new messages. If non-positive or unspecified,
@@ -220,10 +220,10 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Identifier used to replace existing notifications in the notification drawer. It is used in
-   * conjunction with `id` to form a unique identifier `(tag, id`)` within the app. If not
-   * specified, each request creates a new notification. If specified and a notification with the
-   * same `(tag, id)` is already being shown, the new notification replaces the existing one in the
-   * notification drawer.
+   * conjunction with `id` to form a unique identifier `(tag, id)` within the app. If not specified,
+   * each request creates a new notification. If specified and a notification with the same `(tag,
+   * id)` is already being shown, the new notification replaces the existing one in the notification
+   * drawer.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -527,7 +527,7 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Optional. Identifier used to replace existing notifications in the notification drawer. It is
-   * used in conjunction with `tag` to form a unique identifier `(tag, id`)` within the app. If not
+   * used in conjunction with `tag` to form a unique identifier `(tag, id)` within the app. If not
    * specified, each request creates a new notification. If specified and a notification with the
    * same `(tag, id)` is already being shown, the new notification replaces the existing one in the
    * notification drawer.
@@ -539,7 +539,7 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Optional. Identifier used to replace existing notifications in the notification drawer. It is
-   * used in conjunction with `tag` to form a unique identifier `(tag, id`)` within the app. If not
+   * used in conjunction with `tag` to form a unique identifier `(tag, id)` within the app. If not
    * specified, each request creates a new notification. If specified and a notification with the
    * same `(tag, id)` is already being shown, the new notification replaces the existing one in the
    * notification drawer.
@@ -615,7 +615,7 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Sets the number of items this notification represents. May be displayed as a badge count for
-   * launchers that support badging.See [Notification
+   * launchers that support badging. See [Notification
    * Badge](https://developer.android.com/training/notify-user/badges). For example, this might be
    * useful if you're using just one notification to represent multiple new messages but you want
    * the count here to represent the number of total new messages. If non-positive or unspecified,
@@ -629,7 +629,7 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Sets the number of items this notification represents. May be displayed as a badge count for
-   * launchers that support badging.See [Notification
+   * launchers that support badging. See [Notification
    * Badge](https://developer.android.com/training/notify-user/badges). For example, this might be
    * useful if you're using just one notification to represent multiple new messages but you want
    * the count here to represent the number of total new messages. If non-positive or unspecified,
@@ -719,10 +719,10 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Identifier used to replace existing notifications in the notification drawer. It is used in
-   * conjunction with `id` to form a unique identifier `(tag, id`)` within the app. If not
-   * specified, each request creates a new notification. If specified and a notification with the
-   * same `(tag, id)` is already being shown, the new notification replaces the existing one in the
-   * notification drawer.
+   * conjunction with `id` to form a unique identifier `(tag, id)` within the app. If not specified,
+   * each request creates a new notification. If specified and a notification with the same `(tag,
+   * id)` is already being shown, the new notification replaces the existing one in the notification
+   * drawer.
    * @return value or {@code null} for none
    */
   public java.lang.String getTag() {
@@ -731,10 +731,10 @@ public final class AndroidNotificationV2 extends com.google.api.client.json.Gene
 
   /**
    * Identifier used to replace existing notifications in the notification drawer. It is used in
-   * conjunction with `id` to form a unique identifier `(tag, id`)` within the app. If not
-   * specified, each request creates a new notification. If specified and a notification with the
-   * same `(tag, id)` is already being shown, the new notification replaces the existing one in the
-   * notification drawer.
+   * conjunction with `id` to form a unique identifier `(tag, id)` within the app. If not specified,
+   * each request creates a new notification. If specified and a notification with the same `(tag,
+   * id)` is already being shown, the new notification replaces the existing one in the notification
+   * drawer.
    * @param tag tag or {@code null} for none
    */
   public AndroidNotificationV2 setTag(java.lang.String tag) {

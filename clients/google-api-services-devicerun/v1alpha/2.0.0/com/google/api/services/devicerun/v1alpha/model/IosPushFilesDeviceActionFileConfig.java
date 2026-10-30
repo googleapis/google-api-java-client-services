@@ -37,7 +37,12 @@ public final class IosPushFilesDeviceActionFileConfig extends com.google.api.cli
   private java.lang.String bundleId;
 
   /**
-   * Required. The destination path relative to the app sandbox, e.g. "/Documents/file.txt".
+   * Required. The destination path relative to the app sandbox, e.g. "/Documents/file.txt". It must
+   * be in the app's "/Documents" directory or under "/private/var/mobile/Media/". This is the path
+   * of the pushed file, and missing parent directories are created. If the path is an existing
+   * directory, such as "/Documents", the file is placed in it under the file name of `source_file`.
+   * A trailing "/" does not create a directory: "/Documents/foo/" pushes the file to
+   * "/Documents/foo" unless that directory already exists.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +73,12 @@ public final class IosPushFilesDeviceActionFileConfig extends com.google.api.cli
   }
 
   /**
-   * Required. The destination path relative to the app sandbox, e.g. "/Documents/file.txt".
+   * Required. The destination path relative to the app sandbox, e.g. "/Documents/file.txt". It must
+   * be in the app's "/Documents" directory or under "/private/var/mobile/Media/". This is the path
+   * of the pushed file, and missing parent directories are created. If the path is an existing
+   * directory, such as "/Documents", the file is placed in it under the file name of `source_file`.
+   * A trailing "/" does not create a directory: "/Documents/foo/" pushes the file to
+   * "/Documents/foo" unless that directory already exists.
    * @return value or {@code null} for none
    */
   public java.lang.String getDestinationPath() {
@@ -76,7 +86,12 @@ public final class IosPushFilesDeviceActionFileConfig extends com.google.api.cli
   }
 
   /**
-   * Required. The destination path relative to the app sandbox, e.g. "/Documents/file.txt".
+   * Required. The destination path relative to the app sandbox, e.g. "/Documents/file.txt". It must
+   * be in the app's "/Documents" directory or under "/private/var/mobile/Media/". This is the path
+   * of the pushed file, and missing parent directories are created. If the path is an existing
+   * directory, such as "/Documents", the file is placed in it under the file name of `source_file`.
+   * A trailing "/" does not create a directory: "/Documents/foo/" pushes the file to
+   * "/Documents/foo" unless that directory already exists.
    * @param destinationPath destinationPath or {@code null} for none
    */
   public IosPushFilesDeviceActionFileConfig setDestinationPath(java.lang.String destinationPath) {

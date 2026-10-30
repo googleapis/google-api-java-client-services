@@ -25,7 +25,7 @@ package com.google.api.services.saasservicemgmt.v1;
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://cloud.google.com/saas-runtime/docs" target="_blank">API Documentation</a>
+ * <a href="https://docs.cloud.google.com/app-lifecycle-manager" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

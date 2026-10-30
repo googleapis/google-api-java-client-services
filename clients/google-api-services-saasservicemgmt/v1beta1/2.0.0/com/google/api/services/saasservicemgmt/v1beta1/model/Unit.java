@@ -81,6 +81,14 @@ public final class Unit extends com.google.api.client.json.GenericJson {
   private java.util.List<UnitDependency> dependents;
 
   /**
+   * Optional. Output only. Metadata about the underlying actuation engine instance managing this
+   * Unit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Engine engine;
+
+  /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
    * can be used to confirm that the client and server agree on the ordering of a resource being
    * written.
@@ -372,6 +380,25 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   public Unit setDependents(java.util.List<UnitDependency> dependents) {
     this.dependents = dependents;
+    return this;
+  }
+
+  /**
+   * Optional. Output only. Metadata about the underlying actuation engine instance managing this
+   * Unit.
+   * @return value or {@code null} for none
+   */
+  public Engine getEngine() {
+    return engine;
+  }
+
+  /**
+   * Optional. Output only. Metadata about the underlying actuation engine instance managing this
+   * Unit.
+   * @param engine engine or {@code null} for none
+   */
+  public Unit setEngine(Engine engine) {
+    this.engine = engine;
     return this;
   }
 

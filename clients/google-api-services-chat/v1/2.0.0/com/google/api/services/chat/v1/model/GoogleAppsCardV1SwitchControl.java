@@ -40,8 +40,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   private java.lang.String controlType;
 
   /**
-   * The name by which the switch widget is identified in a form input event. For details about
-   * working with form inputs, see [Receive form
+   * The name by which the switch widget is identified in a form input event (as the key in
+   * `CommonEventObject.form_inputs`). For details about working with form inputs, see [Receive form
    * data](https://developers.google.com/workspace/chat/read-form-data).
    * The value may be {@code null}.
    */
@@ -56,16 +56,19 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   private GoogleAppsCardV1Action onChangeAction;
 
   /**
-   * When `true`, the switch is selected.
+   * When `true`, the switch is selected, and its `value` is included in
+   * `CommonEventObject.form_inputs[name].string_inputs.value`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean selected;
 
   /**
-   * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
-   * form-data).
+   * The value returned in `CommonEventObject.form_inputs[name].string_inputs` when the switch is
+   * selected (`selected` is `true`). If `selected` is `true` and `value` is unset, an empty string
+   * (`""`) is returned in `string_inputs.value`. When `selected` is `false`, this value is omitted
+   * from `string_inputs.value`. For details about working with form inputs, see [Receive form
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +94,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The name by which the switch widget is identified in a form input event. For details about
-   * working with form inputs, see [Receive form
+   * The name by which the switch widget is identified in a form input event (as the key in
+   * `CommonEventObject.form_inputs`). For details about working with form inputs, see [Receive form
    * data](https://developers.google.com/workspace/chat/read-form-data).
    * @return value or {@code null} for none
    */
@@ -101,8 +104,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The name by which the switch widget is identified in a form input event. For details about
-   * working with form inputs, see [Receive form
+   * The name by which the switch widget is identified in a form input event (as the key in
+   * `CommonEventObject.form_inputs`). For details about working with form inputs, see [Receive form
    * data](https://developers.google.com/workspace/chat/read-form-data).
    * @param name name or {@code null} for none
    */
@@ -129,7 +132,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * When `true`, the switch is selected.
+   * When `true`, the switch is selected, and its `value` is included in
+   * `CommonEventObject.form_inputs[name].string_inputs.value`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSelected() {
@@ -137,7 +141,8 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * When `true`, the switch is selected.
+   * When `true`, the switch is selected, and its `value` is included in
+   * `CommonEventObject.form_inputs[name].string_inputs.value`.
    * @param selected selected or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setSelected(java.lang.Boolean selected) {
@@ -146,9 +151,11 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
-   * form-data).
+   * The value returned in `CommonEventObject.form_inputs[name].string_inputs` when the switch is
+   * selected (`selected` is `true`). If `selected` is `true` and `value` is unset, an empty string
+   * (`""`) is returned in `string_inputs.value`. When `selected` is `false`, this value is omitted
+   * from `string_inputs.value`. For details about working with form inputs, see [Receive form
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * @return value or {@code null} for none
    */
   public java.lang.String getValue() {
@@ -156,9 +163,11 @@ public final class GoogleAppsCardV1SwitchControl extends com.google.api.client.j
   }
 
   /**
-   * The value entered by a user, returned as part of a form input event. For details about working
-   * with form inputs, see [Receive form data](https://developers.google.com/workspace/chat/read-
-   * form-data).
+   * The value returned in `CommonEventObject.form_inputs[name].string_inputs` when the switch is
+   * selected (`selected` is `true`). If `selected` is `true` and `value` is unset, an empty string
+   * (`""`) is returned in `string_inputs.value`. When `selected` is `false`, this value is omitted
+   * from `string_inputs.value`. For details about working with form inputs, see [Receive form
+   * data](https://developers.google.com/workspace/chat/read-form-data).
    * @param value value or {@code null} for none
    */
   public GoogleAppsCardV1SwitchControl setValue(java.lang.String value) {

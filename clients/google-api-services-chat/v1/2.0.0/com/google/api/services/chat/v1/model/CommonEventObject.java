@@ -41,30 +41,42 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * A map containing the current values of the widgets in the displayed card. The map keys are the
-   * string IDs assigned with each widget. The structure of the map value object is dependent on the
-   * widget type: **Note**: The following examples are formatted for Apps Script's V8 runtime. If
-   * you're using Rhino runtime, you must add `[""]` after the value. For example, instead of
+   * string `name` values assigned to each input widget (such as `TextInput.name`,
+   * `SelectionInput.name`, `DateTimePicker.name`, or `DecoratedText.SwitchControl.name`). The
+   * structure of the map value object is dependent on the widget type: **Note**: The following
+   * examples are formatted for Apps Script's V8 runtime. If you're using Rhino runtime, you must
+   * add `[""]` after the value. For example, instead of
    * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`, format the event object as
    * `e.commonEventObject.formInputs.employeeName[""].stringInputs.value[0]`. To learn more about
    * runtimes in Apps Script, see the [V8 Runtime Overview](https://developers.google.com/apps-
-   * script/guides/v8-runtime). * Single-valued widgets (for example, a text box): a list of strings
-   * (only one element). **Example**: for a text input widget with `employeeName` as its ID, access
-   * the text input value with: `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`.
-   * * Multi-valued widgets (for example, checkbox groups): a list of strings. **Example**: for a
-   * multi-value widget with `participants` as its ID, access the value array with:
-   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A date-time picker**: a
-   * [`DateTimeInput object`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#date-time-input). **Example**: For a picker with an ID of `myDTPicker`, access the
+   * script/guides/v8-runtime). * Single-valued widgets (for example, a `TextInput` widget, or a
+   * `SelectionInput` widget of type `DROPDOWN` or `RADIO_BUTTON`): a `StringInputs` object
+   * containing a single-element list (or an empty list if no selection is made). **Example**: for a
+   * text input widget with `employeeName` as its `name`, access the text input value with:
+   * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`. * Multi-valued widgets
+   * (for example, a `SelectionInput` widget of type `CHECK_BOX`, `SWITCH`, or `MULTI_SELECT`): a
+   * `StringInputs` object containing the list of selected item `value` strings. **Example**: for a
+   * multi-value widget with `participants` as its `name`, access the value array with:
+   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A
+   * `DecoratedText.SwitchControl` widget**: a `StringInputs` object. When `selected` is `true`,
+   * `stringInputs.value` contains the switch's `value` field (or `""` if `value` was not specified;
+   * if multiple switches share the same `name`, each selected switch's `value` is included in the
+   * list). When `selected` is `false`, the switch's `value` is omitted from `stringInputs.value`. *
+   * **A date-time picker (`DateTimePickerType.DATE_AND_TIME`)**: a [`DateTimeInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-time-
+   * input). **Example**: For a picker with a `name` of `myDTPicker`, access the
    * [`DateTimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
    * time-input) object using `e.commonEventObject.formInputs.myDTPicker.dateTimeInput`. * **A date-
-   * only picker**: a [`DateInput object`](https://developers.google.com/workspace/add-
-   * ons/concepts/event-objects#date-input). **Example**: For a picker with an ID of `myDatePicker`,
-   * access the [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#date-input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A
-   * time-only picker**: a [`TimeInput object`](https://developers.google.com/workspace/add-
-   * ons/concepts/event-objects#time-input). **Example**: For a picker with an ID of `myTimePicker`,
-   * access the [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#time-input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
+   * only picker (`DateTimePickerType.DATE_ONLY`)**: a [`DateInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-input).
+   * **Example**: For a picker with a `name` of `myDatePicker`, access the
+   * [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
+   * input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A time-only
+   * picker (`DateTimePickerType.TIME_ONLY`)**: a [`TimeInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#time-input).
+   * **Example**: For a picker with a `name` of `myTimePicker`, access the
+   * [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#time-
+   * input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,30 +156,42 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * A map containing the current values of the widgets in the displayed card. The map keys are the
-   * string IDs assigned with each widget. The structure of the map value object is dependent on the
-   * widget type: **Note**: The following examples are formatted for Apps Script's V8 runtime. If
-   * you're using Rhino runtime, you must add `[""]` after the value. For example, instead of
+   * string `name` values assigned to each input widget (such as `TextInput.name`,
+   * `SelectionInput.name`, `DateTimePicker.name`, or `DecoratedText.SwitchControl.name`). The
+   * structure of the map value object is dependent on the widget type: **Note**: The following
+   * examples are formatted for Apps Script's V8 runtime. If you're using Rhino runtime, you must
+   * add `[""]` after the value. For example, instead of
    * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`, format the event object as
    * `e.commonEventObject.formInputs.employeeName[""].stringInputs.value[0]`. To learn more about
    * runtimes in Apps Script, see the [V8 Runtime Overview](https://developers.google.com/apps-
-   * script/guides/v8-runtime). * Single-valued widgets (for example, a text box): a list of strings
-   * (only one element). **Example**: for a text input widget with `employeeName` as its ID, access
-   * the text input value with: `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`.
-   * * Multi-valued widgets (for example, checkbox groups): a list of strings. **Example**: for a
-   * multi-value widget with `participants` as its ID, access the value array with:
-   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A date-time picker**: a
-   * [`DateTimeInput object`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#date-time-input). **Example**: For a picker with an ID of `myDTPicker`, access the
+   * script/guides/v8-runtime). * Single-valued widgets (for example, a `TextInput` widget, or a
+   * `SelectionInput` widget of type `DROPDOWN` or `RADIO_BUTTON`): a `StringInputs` object
+   * containing a single-element list (or an empty list if no selection is made). **Example**: for a
+   * text input widget with `employeeName` as its `name`, access the text input value with:
+   * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`. * Multi-valued widgets
+   * (for example, a `SelectionInput` widget of type `CHECK_BOX`, `SWITCH`, or `MULTI_SELECT`): a
+   * `StringInputs` object containing the list of selected item `value` strings. **Example**: for a
+   * multi-value widget with `participants` as its `name`, access the value array with:
+   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A
+   * `DecoratedText.SwitchControl` widget**: a `StringInputs` object. When `selected` is `true`,
+   * `stringInputs.value` contains the switch's `value` field (or `""` if `value` was not specified;
+   * if multiple switches share the same `name`, each selected switch's `value` is included in the
+   * list). When `selected` is `false`, the switch's `value` is omitted from `stringInputs.value`. *
+   * **A date-time picker (`DateTimePickerType.DATE_AND_TIME`)**: a [`DateTimeInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-time-
+   * input). **Example**: For a picker with a `name` of `myDTPicker`, access the
    * [`DateTimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
    * time-input) object using `e.commonEventObject.formInputs.myDTPicker.dateTimeInput`. * **A date-
-   * only picker**: a [`DateInput object`](https://developers.google.com/workspace/add-
-   * ons/concepts/event-objects#date-input). **Example**: For a picker with an ID of `myDatePicker`,
-   * access the [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#date-input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A
-   * time-only picker**: a [`TimeInput object`](https://developers.google.com/workspace/add-
-   * ons/concepts/event-objects#time-input). **Example**: For a picker with an ID of `myTimePicker`,
-   * access the [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#time-input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
+   * only picker (`DateTimePickerType.DATE_ONLY`)**: a [`DateInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-input).
+   * **Example**: For a picker with a `name` of `myDatePicker`, access the
+   * [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
+   * input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A time-only
+   * picker (`DateTimePickerType.TIME_ONLY`)**: a [`TimeInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#time-input).
+   * **Example**: For a picker with a `name` of `myTimePicker`, access the
+   * [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#time-
+   * input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Inputs> getFormInputs() {
@@ -176,30 +200,42 @@ public final class CommonEventObject extends com.google.api.client.json.GenericJ
 
   /**
    * A map containing the current values of the widgets in the displayed card. The map keys are the
-   * string IDs assigned with each widget. The structure of the map value object is dependent on the
-   * widget type: **Note**: The following examples are formatted for Apps Script's V8 runtime. If
-   * you're using Rhino runtime, you must add `[""]` after the value. For example, instead of
+   * string `name` values assigned to each input widget (such as `TextInput.name`,
+   * `SelectionInput.name`, `DateTimePicker.name`, or `DecoratedText.SwitchControl.name`). The
+   * structure of the map value object is dependent on the widget type: **Note**: The following
+   * examples are formatted for Apps Script's V8 runtime. If you're using Rhino runtime, you must
+   * add `[""]` after the value. For example, instead of
    * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`, format the event object as
    * `e.commonEventObject.formInputs.employeeName[""].stringInputs.value[0]`. To learn more about
    * runtimes in Apps Script, see the [V8 Runtime Overview](https://developers.google.com/apps-
-   * script/guides/v8-runtime). * Single-valued widgets (for example, a text box): a list of strings
-   * (only one element). **Example**: for a text input widget with `employeeName` as its ID, access
-   * the text input value with: `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`.
-   * * Multi-valued widgets (for example, checkbox groups): a list of strings. **Example**: for a
-   * multi-value widget with `participants` as its ID, access the value array with:
-   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A date-time picker**: a
-   * [`DateTimeInput object`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#date-time-input). **Example**: For a picker with an ID of `myDTPicker`, access the
+   * script/guides/v8-runtime). * Single-valued widgets (for example, a `TextInput` widget, or a
+   * `SelectionInput` widget of type `DROPDOWN` or `RADIO_BUTTON`): a `StringInputs` object
+   * containing a single-element list (or an empty list if no selection is made). **Example**: for a
+   * text input widget with `employeeName` as its `name`, access the text input value with:
+   * `e.commonEventObject.formInputs.employeeName.stringInputs.value[0]`. * Multi-valued widgets
+   * (for example, a `SelectionInput` widget of type `CHECK_BOX`, `SWITCH`, or `MULTI_SELECT`): a
+   * `StringInputs` object containing the list of selected item `value` strings. **Example**: for a
+   * multi-value widget with `participants` as its `name`, access the value array with:
+   * `e.commonEventObject.formInputs.participants.stringInputs.value`. * **A
+   * `DecoratedText.SwitchControl` widget**: a `StringInputs` object. When `selected` is `true`,
+   * `stringInputs.value` contains the switch's `value` field (or `""` if `value` was not specified;
+   * if multiple switches share the same `name`, each selected switch's `value` is included in the
+   * list). When `selected` is `false`, the switch's `value` is omitted from `stringInputs.value`. *
+   * **A date-time picker (`DateTimePickerType.DATE_AND_TIME`)**: a [`DateTimeInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-time-
+   * input). **Example**: For a picker with a `name` of `myDTPicker`, access the
    * [`DateTimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
    * time-input) object using `e.commonEventObject.formInputs.myDTPicker.dateTimeInput`. * **A date-
-   * only picker**: a [`DateInput object`](https://developers.google.com/workspace/add-
-   * ons/concepts/event-objects#date-input). **Example**: For a picker with an ID of `myDatePicker`,
-   * access the [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#date-input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A
-   * time-only picker**: a [`TimeInput object`](https://developers.google.com/workspace/add-
-   * ons/concepts/event-objects#time-input). **Example**: For a picker with an ID of `myTimePicker`,
-   * access the [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-
-   * objects#time-input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
+   * only picker (`DateTimePickerType.DATE_ONLY`)**: a [`DateInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-input).
+   * **Example**: For a picker with a `name` of `myDatePicker`, access the
+   * [`DateInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#date-
+   * input) object using `e.commonEventObject.formInputs.myDatePicker.dateInput`. * **A time-only
+   * picker (`DateTimePickerType.TIME_ONLY`)**: a [`TimeInput
+   * object`](https://developers.google.com/workspace/add-ons/concepts/event-objects#time-input).
+   * **Example**: For a picker with a `name` of `myTimePicker`, access the
+   * [`TimeInput`](https://developers.google.com/workspace/add-ons/concepts/event-objects#time-
+   * input) object using `e.commonEventObject.formInputs.myTimePicker.timeInput`.
    * @param formInputs formInputs or {@code null} for none
    */
   public CommonEventObject setFormInputs(java.util.Map<String, Inputs> formInputs) {

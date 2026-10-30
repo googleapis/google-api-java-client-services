@@ -84,6 +84,16 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
   private Deprovision deprovision;
 
   /**
+   * Optional. Defines the duration limits for this specific UnitOperation instance. These settings
+   * override any default duration limits set on the UnitKind. See the DurationLimits message
+   * definition for details on the constraints like minimum, maximum, and system default values for
+   * unit_operation_timeout.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DurationLimits durationLimits;
+
+  /**
    * Optional. Output only. The engine state for on-going deployment engine operation(s). This field
    * is opaque for external usage.
    * The value may be {@code null}.
@@ -313,6 +323,29 @@ public final class UnitOperation extends com.google.api.client.json.GenericJson 
    */
   public UnitOperation setDeprovision(Deprovision deprovision) {
     this.deprovision = deprovision;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the duration limits for this specific UnitOperation instance. These settings
+   * override any default duration limits set on the UnitKind. See the DurationLimits message
+   * definition for details on the constraints like minimum, maximum, and system default values for
+   * unit_operation_timeout.
+   * @return value or {@code null} for none
+   */
+  public DurationLimits getDurationLimits() {
+    return durationLimits;
+  }
+
+  /**
+   * Optional. Defines the duration limits for this specific UnitOperation instance. These settings
+   * override any default duration limits set on the UnitKind. See the DurationLimits message
+   * definition for details on the constraints like minimum, maximum, and system default values for
+   * unit_operation_timeout.
+   * @param durationLimits durationLimits or {@code null} for none
+   */
+  public UnitOperation setDurationLimits(DurationLimits durationLimits) {
+    this.durationLimits = durationLimits;
     return this;
   }
 

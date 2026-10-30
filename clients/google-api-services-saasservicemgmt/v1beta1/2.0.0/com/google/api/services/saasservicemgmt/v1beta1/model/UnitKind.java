@@ -109,6 +109,18 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. Defines the default duration limits for UnitOperations created from this UnitKind.
+   * These settings provide a baseline for execution time constraints. The limits specified here can
+   * be overridden by more specific settings on an individual UnitOperation resource. See the
+   * DurationLimits message definition for details on the constraints like minimum, maximum, and
+   * system default values for unit_operation_timeout. If not set, UnitOperations will use the
+   * system default duration limits unless overridden on the UnitOperation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DurationLimits durationLimits;
+
+  /**
    * Output only. An opaque value that uniquely identifies a version or generation of a resource. It
    * can be used to confirm that the client and server agree on the ordering of a resource being
    * written.
@@ -344,6 +356,33 @@ public final class UnitKind extends com.google.api.client.json.GenericJson {
    */
   public UnitKind setDependencies(java.util.List<Dependency> dependencies) {
     this.dependencies = dependencies;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the default duration limits for UnitOperations created from this UnitKind.
+   * These settings provide a baseline for execution time constraints. The limits specified here can
+   * be overridden by more specific settings on an individual UnitOperation resource. See the
+   * DurationLimits message definition for details on the constraints like minimum, maximum, and
+   * system default values for unit_operation_timeout. If not set, UnitOperations will use the
+   * system default duration limits unless overridden on the UnitOperation.
+   * @return value or {@code null} for none
+   */
+  public DurationLimits getDurationLimits() {
+    return durationLimits;
+  }
+
+  /**
+   * Optional. Defines the default duration limits for UnitOperations created from this UnitKind.
+   * These settings provide a baseline for execution time constraints. The limits specified here can
+   * be overridden by more specific settings on an individual UnitOperation resource. See the
+   * DurationLimits message definition for details on the constraints like minimum, maximum, and
+   * system default values for unit_operation_timeout. If not set, UnitOperations will use the
+   * system default duration limits unless overridden on the UnitOperation.
+   * @param durationLimits durationLimits or {@code null} for none
+   */
+  public UnitKind setDurationLimits(DurationLimits durationLimits) {
+    this.durationLimits = durationLimits;
     return this;
   }
 

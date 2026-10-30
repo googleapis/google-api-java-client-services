@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * Remediation instructions to resolve violation via gcloud cli
+ * Instructions to remediate a violation by using the Google Cloud CLI.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,28 +31,28 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud extends com.google.api.client.json.GenericJson {
 
   /**
-   * Additional urls for more information about steps
+   * Additional URLs with more information about the steps.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> additionalLinks;
 
   /**
-   * Gcloud command to resolve violation
+   * The gcloud CLI commands that resolve the violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> gcloudCommands;
 
   /**
-   * Steps to resolve violation via gcloud cli
+   * The steps to resolve the violation by using the gcloud CLI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> steps;
 
   /**
-   * Additional urls for more information about steps
+   * Additional URLs with more information about the steps.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAdditionalLinks() {
@@ -60,7 +60,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Additional urls for more information about steps
+   * Additional URLs with more information about the steps.
    * @param additionalLinks additionalLinks or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud setAdditionalLinks(java.util.List<java.lang.String> additionalLinks) {
@@ -69,7 +69,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Gcloud command to resolve violation
+   * The gcloud CLI commands that resolve the violation.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getGcloudCommands() {
@@ -77,7 +77,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Gcloud command to resolve violation
+   * The gcloud CLI commands that resolve the violation.
    * @param gcloudCommands gcloudCommands or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud setGcloudCommands(java.util.List<java.lang.String> gcloudCommands) {
@@ -86,7 +86,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Steps to resolve violation via gcloud cli
+   * The steps to resolve the violation by using the gcloud CLI.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSteps() {
@@ -94,7 +94,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Steps to resolve violation via gcloud cli
+   * The steps to resolve the violation by using the gcloud CLI.
    * @param steps steps or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud setSteps(java.util.List<java.lang.String> steps) {

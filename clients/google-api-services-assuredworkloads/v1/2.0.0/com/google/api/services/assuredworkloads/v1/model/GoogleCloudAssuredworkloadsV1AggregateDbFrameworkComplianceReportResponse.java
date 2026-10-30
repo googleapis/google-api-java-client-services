@@ -31,14 +31,14 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1AggregateDbFrameworkComplianceReportResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of aggregated compliance reports.
+   * The daily compliance reports for the requested time range.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAssuredworkloadsV1AggregatedComplianceReport> aggregatedComplianceReports;
 
   /**
-   * The list of aggregated compliance reports.
+   * The daily compliance reports for the requested time range.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAssuredworkloadsV1AggregatedComplianceReport> getAggregatedComplianceReports() {
@@ -46,7 +46,7 @@ public final class GoogleCloudAssuredworkloadsV1AggregateDbFrameworkComplianceRe
   }
 
   /**
-   * The list of aggregated compliance reports.
+   * The daily compliance reports for the requested time range.
    * @param aggregatedComplianceReports aggregatedComplianceReports or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1AggregateDbFrameworkComplianceReportResponse setAggregatedComplianceReports(java.util.List<GoogleCloudAssuredworkloadsV1AggregatedComplianceReport> aggregatedComplianceReports) {

@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * The details for a finding.
+ * A summary of the active findings for a finding category in a Data Boundary scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,70 +31,70 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The category of the finding.
+   * Output only. The category of the findings that are summarized.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingCategory;
 
   /**
-   * Output only. The class of the finding.
+   * Output only. The class of the findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String findingClass;
 
   /**
-   * Output only. The count of the finding.
+   * Output only. The total number of active findings in the category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long findingCount;
 
   /**
-   * Identifier. The name of the finding summary.
+   * Identifier. The resource name of the finding summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. Number of active organization policy findings for this category.
+   * Output only. The number of active organization policy findings in the category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long organizationPolicyFindingCount;
 
   /**
-   * Optional. The list of compliance frameworks that the finding belongs to.
+   * Optional. The display names of the compliance frameworks that the findings are related to.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> relatedFrameworks;
 
   /**
-   * Output only. Number of active resource findings for this category.
+   * Output only. The number of active resource findings in the category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long resourceFindingCount;
 
   /**
-   * Output only. The severity of the finding.
+   * Output only. The severity of the findings.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * Output only. The last updated time of the finding.
+   * Output only. The time when the findings in the category were last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. The category of the finding.
+   * Output only. The category of the findings that are summarized.
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingCategory() {
@@ -102,7 +102,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The category of the finding.
+   * Output only. The category of the findings that are summarized.
    * @param findingCategory findingCategory or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setFindingCategory(java.lang.String findingCategory) {
@@ -111,7 +111,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The class of the finding.
+   * Output only. The class of the findings.
    * @return value or {@code null} for none
    */
   public java.lang.String getFindingClass() {
@@ -119,7 +119,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The class of the finding.
+   * Output only. The class of the findings.
    * @param findingClass findingClass or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setFindingClass(java.lang.String findingClass) {
@@ -128,7 +128,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The count of the finding.
+   * Output only. The total number of active findings in the category.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFindingCount() {
@@ -136,7 +136,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The count of the finding.
+   * Output only. The total number of active findings in the category.
    * @param findingCount findingCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setFindingCount(java.lang.Long findingCount) {
@@ -145,7 +145,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Identifier. The name of the finding summary.
+   * Identifier. The resource name of the finding summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -153,7 +153,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Identifier. The name of the finding summary.
+   * Identifier. The resource name of the finding summary.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setName(java.lang.String name) {
@@ -162,7 +162,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. Number of active organization policy findings for this category.
+   * Output only. The number of active organization policy findings in the category.
    * @return value or {@code null} for none
    */
   public java.lang.Long getOrganizationPolicyFindingCount() {
@@ -170,7 +170,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. Number of active organization policy findings for this category.
+   * Output only. The number of active organization policy findings in the category.
    * @param organizationPolicyFindingCount organizationPolicyFindingCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setOrganizationPolicyFindingCount(java.lang.Long organizationPolicyFindingCount) {
@@ -179,7 +179,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Optional. The list of compliance frameworks that the finding belongs to.
+   * Optional. The display names of the compliance frameworks that the findings are related to.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRelatedFrameworks() {
@@ -187,7 +187,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Optional. The list of compliance frameworks that the finding belongs to.
+   * Optional. The display names of the compliance frameworks that the findings are related to.
    * @param relatedFrameworks relatedFrameworks or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setRelatedFrameworks(java.util.List<java.lang.String> relatedFrameworks) {
@@ -196,7 +196,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. Number of active resource findings for this category.
+   * Output only. The number of active resource findings in the category.
    * @return value or {@code null} for none
    */
   public java.lang.Long getResourceFindingCount() {
@@ -204,7 +204,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. Number of active resource findings for this category.
+   * Output only. The number of active resource findings in the category.
    * @param resourceFindingCount resourceFindingCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setResourceFindingCount(java.lang.Long resourceFindingCount) {
@@ -213,7 +213,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The severity of the finding.
+   * Output only. The severity of the findings.
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -221,7 +221,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The severity of the finding.
+   * Output only. The severity of the findings.
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setSeverity(java.lang.String severity) {
@@ -230,7 +230,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The last updated time of the finding.
+   * Output only. The time when the findings in the category were last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -238,7 +238,7 @@ public final class GoogleCloudAssuredworkloadsV1DbFindingSummary extends com.goo
   }
 
   /**
-   * Output only. The last updated time of the finding.
+   * Output only. The time when the findings in the category were last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1DbFindingSummary setUpdateTime(String updateTime) {

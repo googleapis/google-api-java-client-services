@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * Violation exception detail.
+ * Details about an acknowledgement (exception) of a violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,28 +31,28 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext extends com.google.api.client.json.GenericJson {
 
   /**
-   * Timestamp when the violation was acknowledged.
+   * The time when the violation was acknowledged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String acknowledgementTime;
 
   /**
-   * Business justification provided towards the acknowledgement of the violation.
+   * The business justification that was provided when the violation was acknowledged.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String comment;
 
   /**
-   * Name of the user (or service account) who acknowledged the violation.
+   * The name of the user (or service account) who acknowledged the violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String userName;
 
   /**
-   * Timestamp when the violation was acknowledged.
+   * The time when the violation was acknowledged.
    * @return value or {@code null} for none
    */
   public String getAcknowledgementTime() {
@@ -60,7 +60,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   }
 
   /**
-   * Timestamp when the violation was acknowledged.
+   * The time when the violation was acknowledged.
    * @param acknowledgementTime acknowledgementTime or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext setAcknowledgementTime(String acknowledgementTime) {
@@ -69,7 +69,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   }
 
   /**
-   * Business justification provided towards the acknowledgement of the violation.
+   * The business justification that was provided when the violation was acknowledged.
    * @return value or {@code null} for none
    */
   public java.lang.String getComment() {
@@ -77,7 +77,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   }
 
   /**
-   * Business justification provided towards the acknowledgement of the violation.
+   * The business justification that was provided when the violation was acknowledged.
    * @param comment comment or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext setComment(java.lang.String comment) {
@@ -86,7 +86,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   }
 
   /**
-   * Name of the user (or service account) who acknowledged the violation.
+   * The name of the user (or service account) who acknowledged the violation.
    * @return value or {@code null} for none
    */
   public java.lang.String getUserName() {
@@ -94,7 +94,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext e
   }
 
   /**
-   * Name of the user (or service account) who acknowledged the violation.
+   * The name of the user (or service account) who acknowledged the violation.
    * @param userName userName or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ViolationExceptionContext setUserName(java.lang.String userName) {

@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * The details for control compliance.
+ * A summary of the compliance status of a control in a framework compliance report.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -87,7 +87,9 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary 
   private java.lang.Boolean isFakeControl;
 
   /**
-   * Identifier. The name of the control compliance summary.
+   * Identifier. The resource name of the control compliance summary. Format: `organizations/{organi
+   * zation}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}/dbCo
+   * ntrolComplianceSummaries/{db_control_compliance_summary}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -250,7 +252,9 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary 
   }
 
   /**
-   * Identifier. The name of the control compliance summary.
+   * Identifier. The resource name of the control compliance summary. Format: `organizations/{organi
+   * zation}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}/dbCo
+   * ntrolComplianceSummaries/{db_control_compliance_summary}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -258,7 +262,9 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary 
   }
 
   /**
-   * Identifier. The name of the control compliance summary.
+   * Identifier. The resource name of the control compliance summary. Format: `organizations/{organi
+   * zation}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}/dbCo
+   * ntrolComplianceSummaries/{db_control_compliance_summary}`
    * @param name name or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary setName(java.lang.String name) {

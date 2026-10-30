@@ -31,7 +31,7 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * List of finding summary by category.
+   * The list of finding summaries, one for each finding category.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,15 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesRespo
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of finding summary by category.
+   * The list of finding summaries, one for each finding category.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAssuredworkloadsV1beta1DbFindingSummary> getDbFindingSummaries() {
@@ -59,7 +60,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesRespo
   }
 
   /**
-   * List of finding summary by category.
+   * The list of finding summaries, one for each finding category.
    * @param dbFindingSummaries dbFindingSummaries or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesResponse setDbFindingSummaries(java.util.List<GoogleCloudAssuredworkloadsV1beta1DbFindingSummary> dbFindingSummaries) {
@@ -68,7 +69,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesRespo
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +78,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesRespo
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListDbFindingSummariesResponse setNextPageToken(java.lang.String nextPageToken) {

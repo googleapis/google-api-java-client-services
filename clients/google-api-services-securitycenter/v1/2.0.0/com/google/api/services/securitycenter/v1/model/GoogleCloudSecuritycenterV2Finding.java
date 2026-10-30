@@ -148,6 +148,12 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private GoogleCloudSecuritycenterV2CloudRun cloudRun;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private GoogleCloudSecuritycenterV2ComplianceDetails complianceDetails;
 
   /**
@@ -786,6 +792,21 @@ public final class GoogleCloudSecuritycenterV2Finding extends com.google.api.cli
    */
   public GoogleCloudSecuritycenterV2Finding setCloudDlpInspection(GoogleCloudSecuritycenterV2CloudDlpInspection cloudDlpInspection) {
     this.cloudDlpInspection = cloudDlpInspection;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2CloudRun getCloudRun() {
+    return cloudRun;
+  }
+
+  /**
+   * @param cloudRun cloudRun or {@code null} for none
+   */
+  public GoogleCloudSecuritycenterV2Finding setCloudRun(GoogleCloudSecuritycenterV2CloudRun cloudRun) {
+    this.cloudRun = cloudRun;
     return this;
   }
 

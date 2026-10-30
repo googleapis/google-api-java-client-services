@@ -148,6 +148,12 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private CloudRun cloudRun;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private ComplianceDetails complianceDetails;
 
   /**
@@ -774,6 +780,21 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   public Finding setCloudDlpInspection(CloudDlpInspection cloudDlpInspection) {
     this.cloudDlpInspection = cloudDlpInspection;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public CloudRun getCloudRun() {
+    return cloudRun;
+  }
+
+  /**
+   * @param cloudRun cloudRun or {@code null} for none
+   */
+  public Finding setCloudRun(CloudRun cloudRun) {
+    this.cloudRun = cloudRun;
     return this;
   }
 

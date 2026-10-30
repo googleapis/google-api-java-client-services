@@ -39,14 +39,16 @@ public final class GoogleCloudRecaptchaenterpriseV1ProtectedEndpoint extends com
   private java.lang.String action;
 
   /**
-   * Required. URI path of the API endpoint to protect. Must start with '/'. Supports glob
-   * characters '*' to match a single path segment and '**' to match multiple path segments.
-   * Standalone root catch-alls ('' and '*') are invalid because it can negatively impact
-   * performance to trigger reCAPTCHA on every single request to your backend. Matching is evaluated
-   * against the URL path only (domain, scheme, and query parameters are ignored). Examples: -
-   * `/login` matches `/login`, `https://example.com/login`, and `/login?query=1`, but not
-   * `/login/step1`. - `/products` matches `/products/123`, but not `/products/123/456`. -
-   * `/content*` matches `/content/articles/2024/01/01`.
+   * Required. The URI path of the API endpoint to protect. The path is case-sensitive and must meet
+   * the following criteria: * Be unique, start with `/`, and contain 1 to 200 characters without
+   * consecutive slashes (`//`). * Include at least one non-wildcard segment. For example, cannot be
+   * `/`, ``, `*`, or `/`. * Wildcards must occupy complete segments: `*` matches a single segment.
+   * For example, `/api/login` or `/api` are valid; `/api/login*` is invalid, and `**` matches
+   * multiple segments as the final segment only. For example, `/api*` is valid; `/apilogin` is
+   * invalid. Matching is evaluated against the URL path only. Domain, scheme, and query parameters
+   * are ignored. Examples: * `/login` matches `/login`, `https://example.com/login`, and
+   * `/login?query=1`, but not `/login/step1`. * `/products` matches `/products/123`, but not
+   * `/products/123/456`. * `/content*` matches `/content/articles/2024/01/01`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,14 +74,16 @@ public final class GoogleCloudRecaptchaenterpriseV1ProtectedEndpoint extends com
   }
 
   /**
-   * Required. URI path of the API endpoint to protect. Must start with '/'. Supports glob
-   * characters '*' to match a single path segment and '**' to match multiple path segments.
-   * Standalone root catch-alls ('' and '*') are invalid because it can negatively impact
-   * performance to trigger reCAPTCHA on every single request to your backend. Matching is evaluated
-   * against the URL path only (domain, scheme, and query parameters are ignored). Examples: -
-   * `/login` matches `/login`, `https://example.com/login`, and `/login?query=1`, but not
-   * `/login/step1`. - `/products` matches `/products/123`, but not `/products/123/456`. -
-   * `/content*` matches `/content/articles/2024/01/01`.
+   * Required. The URI path of the API endpoint to protect. The path is case-sensitive and must meet
+   * the following criteria: * Be unique, start with `/`, and contain 1 to 200 characters without
+   * consecutive slashes (`//`). * Include at least one non-wildcard segment. For example, cannot be
+   * `/`, ``, `*`, or `/`. * Wildcards must occupy complete segments: `*` matches a single segment.
+   * For example, `/api/login` or `/api` are valid; `/api/login*` is invalid, and `**` matches
+   * multiple segments as the final segment only. For example, `/api*` is valid; `/apilogin` is
+   * invalid. Matching is evaluated against the URL path only. Domain, scheme, and query parameters
+   * are ignored. Examples: * `/login` matches `/login`, `https://example.com/login`, and
+   * `/login?query=1`, but not `/login/step1`. * `/products` matches `/products/123`, but not
+   * `/products/123/456`. * `/content*` matches `/content/articles/2024/01/01`.
    * @return value or {@code null} for none
    */
   public java.lang.String getPath() {
@@ -87,14 +91,16 @@ public final class GoogleCloudRecaptchaenterpriseV1ProtectedEndpoint extends com
   }
 
   /**
-   * Required. URI path of the API endpoint to protect. Must start with '/'. Supports glob
-   * characters '*' to match a single path segment and '**' to match multiple path segments.
-   * Standalone root catch-alls ('' and '*') are invalid because it can negatively impact
-   * performance to trigger reCAPTCHA on every single request to your backend. Matching is evaluated
-   * against the URL path only (domain, scheme, and query parameters are ignored). Examples: -
-   * `/login` matches `/login`, `https://example.com/login`, and `/login?query=1`, but not
-   * `/login/step1`. - `/products` matches `/products/123`, but not `/products/123/456`. -
-   * `/content*` matches `/content/articles/2024/01/01`.
+   * Required. The URI path of the API endpoint to protect. The path is case-sensitive and must meet
+   * the following criteria: * Be unique, start with `/`, and contain 1 to 200 characters without
+   * consecutive slashes (`//`). * Include at least one non-wildcard segment. For example, cannot be
+   * `/`, ``, `*`, or `/`. * Wildcards must occupy complete segments: `*` matches a single segment.
+   * For example, `/api/login` or `/api` are valid; `/api/login*` is invalid, and `**` matches
+   * multiple segments as the final segment only. For example, `/api*` is valid; `/apilogin` is
+   * invalid. Matching is evaluated against the URL path only. Domain, scheme, and query parameters
+   * are ignored. Examples: * `/login` matches `/login`, `https://example.com/login`, and
+   * `/login?query=1`, but not `/login/step1`. * `/products` matches `/products/123`, but not
+   * `/products/123/456`. * `/content*` matches `/content/articles/2024/01/01`.
    * @param path path or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1ProtectedEndpoint setPath(java.lang.String path) {

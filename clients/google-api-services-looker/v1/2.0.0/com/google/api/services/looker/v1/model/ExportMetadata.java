@@ -32,6 +32,15 @@ package com.google.api.services.looker.v1.model;
 public final class ExportMetadata extends com.google.api.client.json.GenericJson {
 
   /**
+   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration. It is
+   * minted by the exporter together with the cloned source dataset and presented back to Looker
+   * Original when the import requests access to that dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String esaMigrationToken;
+
+  /**
    * Source BigQuery dataset (formatted as `project_id:dataset_id`) for O2C Elite System Activity
    * (ESA) direct dataset migration.
    * The value may be {@code null}.
@@ -106,6 +115,27 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String source;
+
+  /**
+   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration. It is
+   * minted by the exporter together with the cloned source dataset and presented back to Looker
+   * Original when the import requests access to that dataset.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEsaMigrationToken() {
+    return esaMigrationToken;
+  }
+
+  /**
+   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration. It is
+   * minted by the exporter together with the cloned source dataset and presented back to Looker
+   * Original when the import requests access to that dataset.
+   * @param esaMigrationToken esaMigrationToken or {@code null} for none
+   */
+  public ExportMetadata setEsaMigrationToken(java.lang.String esaMigrationToken) {
+    this.esaMigrationToken = esaMigrationToken;
+    return this;
+  }
 
   /**
    * Source BigQuery dataset (formatted as `project_id:dataset_id`) for O2C Elite System Activity

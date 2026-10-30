@@ -16454,712 +16454,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
   }
 
   /**
-   * An accessor for creating requests from the EvaluationTasks collection.
-   *
-   * <p>The typical use is:</p>
-   * <pre>
-   *   {@code Aiplatform aiplatform = new Aiplatform(...);}
-   *   {@code Aiplatform.EvaluationTasks.List request = aiplatform.evaluationTasks().list(parameters ...)}
-   * </pre>
-   *
-   * @return the resource collection
-   */
-  public EvaluationTasks evaluationTasks() {
-    return new EvaluationTasks();
-  }
-
-  /**
-   * The "evaluationTasks" collection of methods.
-   */
-  public class EvaluationTasks {
-
-    /**
-     * An accessor for creating requests from the Operations collection.
-     *
-     * <p>The typical use is:</p>
-     * <pre>
-     *   {@code Aiplatform aiplatform = new Aiplatform(...);}
-     *   {@code Aiplatform.Operations.List request = aiplatform.operations().list(parameters ...)}
-     * </pre>
-     *
-     * @return the resource collection
-     */
-    public Operations operations() {
-      return new Operations();
-    }
-
-    /**
-     * The "operations" collection of methods.
-     */
-    public class Operations {
-
-      /**
-       * Deletes a long-running operation. This method indicates that the client is no longer interested
-       * in the operation result. It does not cancel the operation. If the server doesn't support this
-       * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-       *
-       * Create a request for the method "operations.delete".
-       *
-       * This request holds the parameters needed by the aiplatform server.  After setting any optional
-       * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the operation resource to be deleted.
-       * @return the request
-       */
-      public Delete delete(java.lang.String name) throws java.io.IOException {
-        Delete result = new Delete(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufEmpty> {
-
-        private static final String REST_PATH = "v1beta1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^evaluationTasks/[^/]+/operations/[^/]+$");
-
-        /**
-         * Deletes a long-running operation. This method indicates that the client is no longer interested
-         * in the operation result. It does not cancel the operation. If the server doesn't support this
-         * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-         *
-         * Create a request for the method "operations.delete".
-         *
-         * This request holds the parameters needed by the the aiplatform server.  After setting any
-         * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-         * <p> {@link
-         * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-         * be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the operation resource to be deleted.
-         * @since 1.13
-         */
-        protected Delete(java.lang.String name) {
-          super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufEmpty.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+/operations/[^/]+$");
-          }
-        }
-
-        @Override
-        public Delete set$Xgafv(java.lang.String $Xgafv) {
-          return (Delete) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Delete setAccessToken(java.lang.String accessToken) {
-          return (Delete) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Delete setAlt(java.lang.String alt) {
-          return (Delete) super.setAlt(alt);
-        }
-
-        @Override
-        public Delete setCallback(java.lang.String callback) {
-          return (Delete) super.setCallback(callback);
-        }
-
-        @Override
-        public Delete setFields(java.lang.String fields) {
-          return (Delete) super.setFields(fields);
-        }
-
-        @Override
-        public Delete setKey(java.lang.String key) {
-          return (Delete) super.setKey(key);
-        }
-
-        @Override
-        public Delete setOauthToken(java.lang.String oauthToken) {
-          return (Delete) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Delete) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Delete setQuotaUser(java.lang.String quotaUser) {
-          return (Delete) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Delete setUploadType(java.lang.String uploadType) {
-          return (Delete) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Delete) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The name of the operation resource to be deleted. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the operation resource to be deleted.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The name of the operation resource to be deleted. */
-        public Delete setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+/operations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Delete set(String parameterName, Object value) {
-          return (Delete) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Gets the latest state of a long-running operation. Clients can use this method to poll the
-       * operation result at intervals as recommended by the API service.
-       *
-       * Create a request for the method "operations.get".
-       *
-       * This request holds the parameters needed by the aiplatform server.  After setting any optional
-       * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the operation resource.
-       * @return the request
-       */
-      public Get get(java.lang.String name) throws java.io.IOException {
-        Get result = new Get(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
-
-        private static final String REST_PATH = "v1beta1/{+name}";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^evaluationTasks/[^/]+/operations/[^/]+$");
-
-        /**
-         * Gets the latest state of a long-running operation. Clients can use this method to poll the
-         * operation result at intervals as recommended by the API service.
-         *
-         * Create a request for the method "operations.get".
-         *
-         * This request holds the parameters needed by the the aiplatform server.  After setting any
-         * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-         * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the operation resource.
-         * @since 1.13
-         */
-        protected Get(java.lang.String name) {
-          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+/operations/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public Get set$Xgafv(java.lang.String $Xgafv) {
-          return (Get) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Get setAccessToken(java.lang.String accessToken) {
-          return (Get) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Get setAlt(java.lang.String alt) {
-          return (Get) super.setAlt(alt);
-        }
-
-        @Override
-        public Get setCallback(java.lang.String callback) {
-          return (Get) super.setCallback(callback);
-        }
-
-        @Override
-        public Get setFields(java.lang.String fields) {
-          return (Get) super.setFields(fields);
-        }
-
-        @Override
-        public Get setKey(java.lang.String key) {
-          return (Get) super.setKey(key);
-        }
-
-        @Override
-        public Get setOauthToken(java.lang.String oauthToken) {
-          return (Get) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Get) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Get setQuotaUser(java.lang.String quotaUser) {
-          return (Get) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Get setUploadType(java.lang.String uploadType) {
-          return (Get) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Get setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Get) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The name of the operation resource. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the operation resource.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The name of the operation resource. */
-        public Get setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+/operations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        @Override
-        public Get set(String parameterName, Object value) {
-          return (Get) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Lists operations that match the specified filter in the request. If the server doesn't support
-       * this method, it returns `UNIMPLEMENTED`.
-       *
-       * Create a request for the method "operations.list".
-       *
-       * This request holds the parameters needed by the aiplatform server.  After setting any optional
-       * parameters, call the {@link List#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the operation's parent resource.
-       * @return the request
-       */
-      public List list(java.lang.String name) throws java.io.IOException {
-        List result = new List(name);
-        initialize(result);
-        return result;
-      }
-
-      public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningListOperationsResponse> {
-
-        private static final String REST_PATH = "v1beta1/{+name}/operations";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^evaluationTasks/[^/]+$");
-
-        /**
-         * Lists operations that match the specified filter in the request. If the server doesn't support
-         * this method, it returns `UNIMPLEMENTED`.
-         *
-         * Create a request for the method "operations.list".
-         *
-         * This request holds the parameters needed by the the aiplatform server.  After setting any
-         * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-         * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the operation's parent resource.
-         * @since 1.13
-         */
-        protected List(java.lang.String name) {
-          super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningListOperationsResponse.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+$");
-          }
-        }
-
-        @Override
-        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-          return super.executeUsingHead();
-        }
-
-        @Override
-        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-          return super.buildHttpRequestUsingHead();
-        }
-
-        @Override
-        public List set$Xgafv(java.lang.String $Xgafv) {
-          return (List) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public List setAccessToken(java.lang.String accessToken) {
-          return (List) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public List setAlt(java.lang.String alt) {
-          return (List) super.setAlt(alt);
-        }
-
-        @Override
-        public List setCallback(java.lang.String callback) {
-          return (List) super.setCallback(callback);
-        }
-
-        @Override
-        public List setFields(java.lang.String fields) {
-          return (List) super.setFields(fields);
-        }
-
-        @Override
-        public List setKey(java.lang.String key) {
-          return (List) super.setKey(key);
-        }
-
-        @Override
-        public List setOauthToken(java.lang.String oauthToken) {
-          return (List) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (List) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public List setQuotaUser(java.lang.String quotaUser) {
-          return (List) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public List setUploadType(java.lang.String uploadType) {
-          return (List) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public List setUploadProtocol(java.lang.String uploadProtocol) {
-          return (List) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The name of the operation's parent resource. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the operation's parent resource.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The name of the operation's parent resource. */
-        public List setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /** The standard list filter. */
-        @com.google.api.client.util.Key
-        private java.lang.String filter;
-
-        /** The standard list filter.
-         */
-        public java.lang.String getFilter() {
-          return filter;
-        }
-
-        /** The standard list filter. */
-        public List setFilter(java.lang.String filter) {
-          this.filter = filter;
-          return this;
-        }
-
-        /** The standard list page size. */
-        @com.google.api.client.util.Key
-        private java.lang.Integer pageSize;
-
-        /** The standard list page size.
-         */
-        public java.lang.Integer getPageSize() {
-          return pageSize;
-        }
-
-        /** The standard list page size. */
-        public List setPageSize(java.lang.Integer pageSize) {
-          this.pageSize = pageSize;
-          return this;
-        }
-
-        /** The standard list page token. */
-        @com.google.api.client.util.Key
-        private java.lang.String pageToken;
-
-        /** The standard list page token.
-         */
-        public java.lang.String getPageToken() {
-          return pageToken;
-        }
-
-        /** The standard list page token. */
-        public List setPageToken(java.lang.String pageToken) {
-          this.pageToken = pageToken;
-          return this;
-        }
-
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
-        @com.google.api.client.util.Key
-        private java.lang.Boolean returnPartialSuccess;
-
-        /** When set to `true`, operations that are reachable are returned as normal, and those that are
-       unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-       when reading across collections. For example, when `parent` is set to
-       `"projects/example/locations/-"`. This field is not supported by default and will result in an
-       `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-       documentation.
-         */
-        public java.lang.Boolean getReturnPartialSuccess() {
-          return returnPartialSuccess;
-        }
-
-        /**
-         * When set to `true`, operations that are reachable are returned as normal, and those that
-         * are unreachable are returned in the ListOperationsResponse.unreachable field. This can
-         * only be `true` when reading across collections. For example, when `parent` is set to
-         * `"projects/example/locations/-"`. This field is not supported by default and will result
-         * in an `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or
-         * product specific documentation.
-         */
-        public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-          this.returnPartialSuccess = returnPartialSuccess;
-          return this;
-        }
-
-        @Override
-        public List set(String parameterName, Object value) {
-          return (List) super.set(parameterName, value);
-        }
-      }
-      /**
-       * Waits until the specified long-running operation is done or reaches at most a specified timeout,
-       * returning the latest state. If the operation is already done, the latest state is immediately
-       * returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
-       * timeout is used. If the server does not support this method, it returns
-       * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
-       * the latest state before the specified timeout (including immediately), meaning even an immediate
-       * response is no guarantee that the operation is done.
-       *
-       * Create a request for the method "operations.wait".
-       *
-       * This request holds the parameters needed by the aiplatform server.  After setting any optional
-       * parameters, call the {@link Wait#execute()} method to invoke the remote operation.
-       *
-       * @param name The name of the operation resource to wait on.
-       * @return the request
-       */
-      public Wait wait(java.lang.String name) throws java.io.IOException {
-        Wait result = new Wait(name);
-        initialize(result);
-        return result;
-      }
-
-      public class Wait extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
-
-        private static final String REST_PATH = "v1beta1/{+name}:wait";
-
-        private final java.util.regex.Pattern NAME_PATTERN =
-            java.util.regex.Pattern.compile("^evaluationTasks/[^/]+/operations/[^/]+$");
-
-        /**
-         * Waits until the specified long-running operation is done or reaches at most a specified
-         * timeout, returning the latest state. If the operation is already done, the latest state is
-         * immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout,
-         * the HTTP/RPC timeout is used. If the server does not support this method, it returns
-         * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
-         * the latest state before the specified timeout (including immediately), meaning even an
-         * immediate response is no guarantee that the operation is done.
-         *
-         * Create a request for the method "operations.wait".
-         *
-         * This request holds the parameters needed by the the aiplatform server.  After setting any
-         * optional parameters, call the {@link Wait#execute()} method to invoke the remote operation. <p>
-         * {@link Wait#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-         * must be called to initialize this instance immediately after invoking the constructor. </p>
-         *
-         * @param name The name of the operation resource to wait on.
-         * @since 1.13
-         */
-        protected Wait(java.lang.String name) {
-          super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
-          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+/operations/[^/]+$");
-          }
-        }
-
-        @Override
-        public Wait set$Xgafv(java.lang.String $Xgafv) {
-          return (Wait) super.set$Xgafv($Xgafv);
-        }
-
-        @Override
-        public Wait setAccessToken(java.lang.String accessToken) {
-          return (Wait) super.setAccessToken(accessToken);
-        }
-
-        @Override
-        public Wait setAlt(java.lang.String alt) {
-          return (Wait) super.setAlt(alt);
-        }
-
-        @Override
-        public Wait setCallback(java.lang.String callback) {
-          return (Wait) super.setCallback(callback);
-        }
-
-        @Override
-        public Wait setFields(java.lang.String fields) {
-          return (Wait) super.setFields(fields);
-        }
-
-        @Override
-        public Wait setKey(java.lang.String key) {
-          return (Wait) super.setKey(key);
-        }
-
-        @Override
-        public Wait setOauthToken(java.lang.String oauthToken) {
-          return (Wait) super.setOauthToken(oauthToken);
-        }
-
-        @Override
-        public Wait setPrettyPrint(java.lang.Boolean prettyPrint) {
-          return (Wait) super.setPrettyPrint(prettyPrint);
-        }
-
-        @Override
-        public Wait setQuotaUser(java.lang.String quotaUser) {
-          return (Wait) super.setQuotaUser(quotaUser);
-        }
-
-        @Override
-        public Wait setUploadType(java.lang.String uploadType) {
-          return (Wait) super.setUploadType(uploadType);
-        }
-
-        @Override
-        public Wait setUploadProtocol(java.lang.String uploadProtocol) {
-          return (Wait) super.setUploadProtocol(uploadProtocol);
-        }
-
-        /** The name of the operation resource to wait on. */
-        @com.google.api.client.util.Key
-        private java.lang.String name;
-
-        /** The name of the operation resource to wait on.
-         */
-        public java.lang.String getName() {
-          return name;
-        }
-
-        /** The name of the operation resource to wait on. */
-        public Wait setName(java.lang.String name) {
-          if (!getSuppressPatternChecks()) {
-            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                "Parameter name must conform to the pattern " +
-                "^evaluationTasks/[^/]+/operations/[^/]+$");
-          }
-          this.name = name;
-          return this;
-        }
-
-        /**
-         * The maximum duration to wait before timing out. If left blank, the wait will be at most
-         * the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also
-         * specified, the shorter one will be used.
-         */
-        @com.google.api.client.util.Key
-        private String timeout;
-
-        /** The maximum duration to wait before timing out. If left blank, the wait will be at most the time
-       permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also specified, the
-       shorter one will be used.
-         */
-        public String getTimeout() {
-          return timeout;
-        }
-
-        /**
-         * The maximum duration to wait before timing out. If left blank, the wait will be at most
-         * the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also
-         * specified, the shorter one will be used.
-         */
-        public Wait setTimeout(String timeout) {
-          this.timeout = timeout;
-          return this;
-        }
-
-        @Override
-        public Wait set(String parameterName, Object value) {
-          return (Wait) super.set(parameterName, value);
-        }
-      }
-
-    }
-  }
-
-  /**
    * An accessor for creating requests from the ExampleStores collection.
    *
    * <p>The typical use is:</p>
@@ -50815,6 +50109,29 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
+          /**
+           * Optional. Optional. One-time cryptographic nonce issued by the trusted IdP provisioning
+           * iframe for session and device non-repudiation.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String idpNonce;
+
+          /** Optional. Optional. One-time cryptographic nonce issued by the trusted IdP provisioning iframe for
+         session and device non-repudiation.
+           */
+          public java.lang.String getIdpNonce() {
+            return idpNonce;
+          }
+
+          /**
+           * Optional. Optional. One-time cryptographic nonce issued by the trusted IdP provisioning
+           * iframe for session and device non-repudiation.
+           */
+          public Create setIdpNonce(java.lang.String idpNonce) {
+            this.idpNonce = idpNonce;
+            return this;
+          }
+
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -82857,711 +82174,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
                 com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
                     "Parameter name must conform to the pattern " +
                     "^projects/[^/]+/locations/[^/]+/evaluationSets/[^/]+/operations/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            /**
-             * The maximum duration to wait before timing out. If left blank, the wait will be at
-             * most the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline
-             * is also specified, the shorter one will be used.
-             */
-            @com.google.api.client.util.Key
-            private String timeout;
-
-            /** The maximum duration to wait before timing out. If left blank, the wait will be at most the time
-           permitted by the underlying HTTP/RPC protocol. If RPC context deadline is also specified, the
-           shorter one will be used.
-             */
-            public String getTimeout() {
-              return timeout;
-            }
-
-            /**
-             * The maximum duration to wait before timing out. If left blank, the wait will be at
-             * most the time permitted by the underlying HTTP/RPC protocol. If RPC context deadline
-             * is also specified, the shorter one will be used.
-             */
-            public Wait setTimeout(String timeout) {
-              this.timeout = timeout;
-              return this;
-            }
-
-            @Override
-            public Wait set(String parameterName, Object value) {
-              return (Wait) super.set(parameterName, value);
-            }
-          }
-
-        }
-      }
-      /**
-       * An accessor for creating requests from the EvaluationTasks collection.
-       *
-       * <p>The typical use is:</p>
-       * <pre>
-       *   {@code Aiplatform aiplatform = new Aiplatform(...);}
-       *   {@code Aiplatform.EvaluationTasks.List request = aiplatform.evaluationTasks().list(parameters ...)}
-       * </pre>
-       *
-       * @return the resource collection
-       */
-      public EvaluationTasks evaluationTasks() {
-        return new EvaluationTasks();
-      }
-
-      /**
-       * The "evaluationTasks" collection of methods.
-       */
-      public class EvaluationTasks {
-
-        /**
-         * An accessor for creating requests from the Operations collection.
-         *
-         * <p>The typical use is:</p>
-         * <pre>
-         *   {@code Aiplatform aiplatform = new Aiplatform(...);}
-         *   {@code Aiplatform.Operations.List request = aiplatform.operations().list(parameters ...)}
-         * </pre>
-         *
-         * @return the resource collection
-         */
-        public Operations operations() {
-          return new Operations();
-        }
-
-        /**
-         * The "operations" collection of methods.
-         */
-        public class Operations {
-
-          /**
-           * Deletes a long-running operation. This method indicates that the client is no longer interested
-           * in the operation result. It does not cancel the operation. If the server doesn't support this
-           * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-           *
-           * Create a request for the method "operations.delete".
-           *
-           * This request holds the parameters needed by the aiplatform server.  After setting any optional
-           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-           *
-           * @param name The name of the operation resource to be deleted.
-           * @return the request
-           */
-          public Delete delete(java.lang.String name) throws java.io.IOException {
-            Delete result = new Delete(name);
-            initialize(result);
-            return result;
-          }
-
-          public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufEmpty> {
-
-            private static final String REST_PATH = "v1beta1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-
-            /**
-             * Deletes a long-running operation. This method indicates that the client is no longer interested
-             * in the operation result. It does not cancel the operation. If the server doesn't support this
-             * method, it returns `google.rpc.Code.UNIMPLEMENTED`.
-             *
-             * Create a request for the method "operations.delete".
-             *
-             * This request holds the parameters needed by the the aiplatform server.  After setting any
-             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
-             * <p> {@link
-             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-             * be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name The name of the operation resource to be deleted.
-             * @since 1.13
-             */
-            protected Delete(java.lang.String name) {
-              super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleProtobufEmpty.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-              }
-            }
-
-            @Override
-            public Delete set$Xgafv(java.lang.String $Xgafv) {
-              return (Delete) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Delete setAccessToken(java.lang.String accessToken) {
-              return (Delete) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Delete setAlt(java.lang.String alt) {
-              return (Delete) super.setAlt(alt);
-            }
-
-            @Override
-            public Delete setCallback(java.lang.String callback) {
-              return (Delete) super.setCallback(callback);
-            }
-
-            @Override
-            public Delete setFields(java.lang.String fields) {
-              return (Delete) super.setFields(fields);
-            }
-
-            @Override
-            public Delete setKey(java.lang.String key) {
-              return (Delete) super.setKey(key);
-            }
-
-            @Override
-            public Delete setOauthToken(java.lang.String oauthToken) {
-              return (Delete) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Delete) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Delete setQuotaUser(java.lang.String quotaUser) {
-              return (Delete) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Delete setUploadType(java.lang.String uploadType) {
-              return (Delete) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Delete) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** The name of the operation resource to be deleted. */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** The name of the operation resource to be deleted.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** The name of the operation resource to be deleted. */
-            public Delete setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Delete set(String parameterName, Object value) {
-              return (Delete) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Gets the latest state of a long-running operation. Clients can use this method to poll the
-           * operation result at intervals as recommended by the API service.
-           *
-           * Create a request for the method "operations.get".
-           *
-           * This request holds the parameters needed by the aiplatform server.  After setting any optional
-           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
-           *
-           * @param name The name of the operation resource.
-           * @return the request
-           */
-          public Get get(java.lang.String name) throws java.io.IOException {
-            Get result = new Get(name);
-            initialize(result);
-            return result;
-          }
-
-          public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
-
-            private static final String REST_PATH = "v1beta1/{+name}";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-
-            /**
-             * Gets the latest state of a long-running operation. Clients can use this method to poll the
-             * operation result at intervals as recommended by the API service.
-             *
-             * Create a request for the method "operations.get".
-             *
-             * This request holds the parameters needed by the the aiplatform server.  After setting any
-             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
-             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name The name of the operation resource.
-             * @since 1.13
-             */
-            protected Get(java.lang.String name) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public Get set$Xgafv(java.lang.String $Xgafv) {
-              return (Get) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Get setAccessToken(java.lang.String accessToken) {
-              return (Get) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Get setAlt(java.lang.String alt) {
-              return (Get) super.setAlt(alt);
-            }
-
-            @Override
-            public Get setCallback(java.lang.String callback) {
-              return (Get) super.setCallback(callback);
-            }
-
-            @Override
-            public Get setFields(java.lang.String fields) {
-              return (Get) super.setFields(fields);
-            }
-
-            @Override
-            public Get setKey(java.lang.String key) {
-              return (Get) super.setKey(key);
-            }
-
-            @Override
-            public Get setOauthToken(java.lang.String oauthToken) {
-              return (Get) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Get) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Get setQuotaUser(java.lang.String quotaUser) {
-              return (Get) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Get setUploadType(java.lang.String uploadType) {
-              return (Get) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Get setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Get) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** The name of the operation resource. */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** The name of the operation resource.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** The name of the operation resource. */
-            public Get setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public Get set(String parameterName, Object value) {
-              return (Get) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Lists operations that match the specified filter in the request. If the server doesn't support
-           * this method, it returns `UNIMPLEMENTED`.
-           *
-           * Create a request for the method "operations.list".
-           *
-           * This request holds the parameters needed by the aiplatform server.  After setting any optional
-           * parameters, call the {@link List#execute()} method to invoke the remote operation.
-           *
-           * @param name The name of the operation's parent resource.
-           * @return the request
-           */
-          public List list(java.lang.String name) throws java.io.IOException {
-            List result = new List(name);
-            initialize(result);
-            return result;
-          }
-
-          public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningListOperationsResponse> {
-
-            private static final String REST_PATH = "v1beta1/{+name}/operations";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+$");
-
-            /**
-             * Lists operations that match the specified filter in the request. If the server doesn't support
-             * this method, it returns `UNIMPLEMENTED`.
-             *
-             * Create a request for the method "operations.list".
-             *
-             * This request holds the parameters needed by the the aiplatform server.  After setting any
-             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
-             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name The name of the operation's parent resource.
-             * @since 1.13
-             */
-            protected List(java.lang.String name) {
-              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningListOperationsResponse.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+$");
-              }
-            }
-
-            @Override
-            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
-              return super.executeUsingHead();
-            }
-
-            @Override
-            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
-              return super.buildHttpRequestUsingHead();
-            }
-
-            @Override
-            public List set$Xgafv(java.lang.String $Xgafv) {
-              return (List) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public List setAccessToken(java.lang.String accessToken) {
-              return (List) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public List setAlt(java.lang.String alt) {
-              return (List) super.setAlt(alt);
-            }
-
-            @Override
-            public List setCallback(java.lang.String callback) {
-              return (List) super.setCallback(callback);
-            }
-
-            @Override
-            public List setFields(java.lang.String fields) {
-              return (List) super.setFields(fields);
-            }
-
-            @Override
-            public List setKey(java.lang.String key) {
-              return (List) super.setKey(key);
-            }
-
-            @Override
-            public List setOauthToken(java.lang.String oauthToken) {
-              return (List) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (List) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public List setQuotaUser(java.lang.String quotaUser) {
-              return (List) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public List setUploadType(java.lang.String uploadType) {
-              return (List) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public List setUploadProtocol(java.lang.String uploadProtocol) {
-              return (List) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** The name of the operation's parent resource. */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** The name of the operation's parent resource.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** The name of the operation's parent resource. */
-            public List setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            /** The standard list filter. */
-            @com.google.api.client.util.Key
-            private java.lang.String filter;
-
-            /** The standard list filter.
-             */
-            public java.lang.String getFilter() {
-              return filter;
-            }
-
-            /** The standard list filter. */
-            public List setFilter(java.lang.String filter) {
-              this.filter = filter;
-              return this;
-            }
-
-            /** The standard list page size. */
-            @com.google.api.client.util.Key
-            private java.lang.Integer pageSize;
-
-            /** The standard list page size.
-             */
-            public java.lang.Integer getPageSize() {
-              return pageSize;
-            }
-
-            /** The standard list page size. */
-            public List setPageSize(java.lang.Integer pageSize) {
-              this.pageSize = pageSize;
-              return this;
-            }
-
-            /** The standard list page token. */
-            @com.google.api.client.util.Key
-            private java.lang.String pageToken;
-
-            /** The standard list page token.
-             */
-            public java.lang.String getPageToken() {
-              return pageToken;
-            }
-
-            /** The standard list page token. */
-            public List setPageToken(java.lang.String pageToken) {
-              this.pageToken = pageToken;
-              return this;
-            }
-
-            /**
-             * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
-             * This can only be `true` when reading across collections. For example, when `parent`
-             * is set to `"projects/example/locations/-"`. This field is not supported by default
-             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
-             * otherwise in service or product specific documentation.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.Boolean returnPartialSuccess;
-
-            /** When set to `true`, operations that are reachable are returned as normal, and those that are
-           unreachable are returned in the ListOperationsResponse.unreachable field. This can only be `true`
-           when reading across collections. For example, when `parent` is set to
-           `"projects/example/locations/-"`. This field is not supported by default and will result in an
-           `UNIMPLEMENTED` error if set unless explicitly documented otherwise in service or product specific
-           documentation.
-             */
-            public java.lang.Boolean getReturnPartialSuccess() {
-              return returnPartialSuccess;
-            }
-
-            /**
-             * When set to `true`, operations that are reachable are returned as normal, and those
-             * that are unreachable are returned in the ListOperationsResponse.unreachable field.
-             * This can only be `true` when reading across collections. For example, when `parent`
-             * is set to `"projects/example/locations/-"`. This field is not supported by default
-             * and will result in an `UNIMPLEMENTED` error if set unless explicitly documented
-             * otherwise in service or product specific documentation.
-             */
-            public List setReturnPartialSuccess(java.lang.Boolean returnPartialSuccess) {
-              this.returnPartialSuccess = returnPartialSuccess;
-              return this;
-            }
-
-            @Override
-            public List set(String parameterName, Object value) {
-              return (List) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Waits until the specified long-running operation is done or reaches at most a specified timeout,
-           * returning the latest state. If the operation is already done, the latest state is immediately
-           * returned. If the timeout specified is greater than the default HTTP/RPC timeout, the HTTP/RPC
-           * timeout is used. If the server does not support this method, it returns
-           * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
-           * the latest state before the specified timeout (including immediately), meaning even an immediate
-           * response is no guarantee that the operation is done.
-           *
-           * Create a request for the method "operations.wait".
-           *
-           * This request holds the parameters needed by the aiplatform server.  After setting any optional
-           * parameters, call the {@link Wait#execute()} method to invoke the remote operation.
-           *
-           * @param name The name of the operation resource to wait on.
-           * @return the request
-           */
-          public Wait wait(java.lang.String name) throws java.io.IOException {
-            Wait result = new Wait(name);
-            initialize(result);
-            return result;
-          }
-
-          public class Wait extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation> {
-
-            private static final String REST_PATH = "v1beta1/{+name}:wait";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-
-            /**
-             * Waits until the specified long-running operation is done or reaches at most a specified
-             * timeout, returning the latest state. If the operation is already done, the latest state is
-             * immediately returned. If the timeout specified is greater than the default HTTP/RPC timeout,
-             * the HTTP/RPC timeout is used. If the server does not support this method, it returns
-             * `google.rpc.Code.UNIMPLEMENTED`. Note that this method is on a best-effort basis. It may return
-             * the latest state before the specified timeout (including immediately), meaning even an
-             * immediate response is no guarantee that the operation is done.
-             *
-             * Create a request for the method "operations.wait".
-             *
-             * This request holds the parameters needed by the the aiplatform server.  After setting any
-             * optional parameters, call the {@link Wait#execute()} method to invoke the remote operation. <p>
-             * {@link Wait#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name The name of the operation resource to wait on.
-             * @since 1.13
-             */
-            protected Wait(java.lang.String name) {
-              super(Aiplatform.this, "POST", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleLongrunningOperation.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
-              }
-            }
-
-            @Override
-            public Wait set$Xgafv(java.lang.String $Xgafv) {
-              return (Wait) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public Wait setAccessToken(java.lang.String accessToken) {
-              return (Wait) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public Wait setAlt(java.lang.String alt) {
-              return (Wait) super.setAlt(alt);
-            }
-
-            @Override
-            public Wait setCallback(java.lang.String callback) {
-              return (Wait) super.setCallback(callback);
-            }
-
-            @Override
-            public Wait setFields(java.lang.String fields) {
-              return (Wait) super.setFields(fields);
-            }
-
-            @Override
-            public Wait setKey(java.lang.String key) {
-              return (Wait) super.setKey(key);
-            }
-
-            @Override
-            public Wait setOauthToken(java.lang.String oauthToken) {
-              return (Wait) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public Wait setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (Wait) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public Wait setQuotaUser(java.lang.String quotaUser) {
-              return (Wait) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public Wait setUploadType(java.lang.String uploadType) {
-              return (Wait) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public Wait setUploadProtocol(java.lang.String uploadProtocol) {
-              return (Wait) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /** The name of the operation resource to wait on. */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** The name of the operation resource to wait on.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /** The name of the operation resource to wait on. */
-            public Wait setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/evaluationTasks/[^/]+/operations/[^/]+$");
               }
               this.name = name;
               return this;
@@ -155804,6 +154416,934 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
       public class Publishers {
 
         /**
+         * An accessor for creating requests from the Files collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Aiplatform aiplatform = new Aiplatform(...);}
+         *   {@code Aiplatform.Files.List request = aiplatform.files().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Files files() {
+          return new Files();
+        }
+
+        /**
+         * The "files" collection of methods.
+         */
+        public class Files {
+
+          /**
+           * Deletes the given file. Returns the deleted file's ID rather than an empty body. See
+           * `DeleteFileResponse`.
+           *
+           * Create a request for the method "files.delete".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the file to delete. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DeleteFileResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+
+            /**
+             * Deletes the given file. Returns the deleted file's ID rather than an empty body. See
+             * `DeleteFileResponse`.
+             *
+             * Create a request for the method "files.delete".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the file to delete. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Aiplatform.this, "DELETE", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DeleteFileResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the file to delete. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the file to delete. Format:
+           `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the file to delete. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Downloads the contents of the given file. Only files marked `downloadable` can be retrieved this
+           * way; user-uploaded files are not downloadable.
+           *
+           * Create a request for the method "files.download".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Download#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the file to download. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+           * @return the request
+           */
+          public Download download(java.lang.String name) throws java.io.IOException {
+            Download result = new Download(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Download extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DownloadFileResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+name}/content";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+
+            /**
+             * Downloads the contents of the given file. Only files marked `downloadable` can be retrieved
+             * this way; user-uploaded files are not downloadable.
+             *
+             * Create a request for the method "files.download".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Download#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Download#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the file to download. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             * @since 1.13
+             */
+            protected Download(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1DownloadFileResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+              }
+              initializeMediaDownload();
+            }
+
+            @Override
+            public void executeMediaAndDownloadTo(java.io.OutputStream outputStream) throws java.io.IOException {
+              super.executeMediaAndDownloadTo(outputStream);
+            }
+
+            @Override
+            public java.io.InputStream executeMediaAsInputStream() throws java.io.IOException {
+              return super.executeMediaAsInputStream();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeMedia() throws java.io.IOException {
+              return super.executeMedia();
+            }
+
+            @Override
+            public com.google.api.client.http.GenericUrl buildHttpRequestUrl() {
+              java.lang.String baseUrl = ("media".equals(get("alt")) && getMediaHttpUploader() == null)
+                  ? getRootUrl() + "download/" + getServicePath() : getBaseUrl();
+              return new com.google.api.client.http.GenericUrl(
+                  com.google.api.client.http.UriTemplate.expand(baseUrl, getUriTemplate(), this, true));
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Download set$Xgafv(java.lang.String $Xgafv) {
+              return (Download) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Download setAccessToken(java.lang.String accessToken) {
+              return (Download) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Download setAlt(java.lang.String alt) {
+              return (Download) super.setAlt(alt);
+            }
+
+            @Override
+            public Download setCallback(java.lang.String callback) {
+              return (Download) super.setCallback(callback);
+            }
+
+            @Override
+            public Download setFields(java.lang.String fields) {
+              return (Download) super.setFields(fields);
+            }
+
+            @Override
+            public Download setKey(java.lang.String key) {
+              return (Download) super.setKey(key);
+            }
+
+            @Override
+            public Download setOauthToken(java.lang.String oauthToken) {
+              return (Download) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Download setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Download) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Download setQuotaUser(java.lang.String quotaUser) {
+              return (Download) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Download setUploadType(java.lang.String uploadType) {
+              return (Download) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Download setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Download) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the file to download. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the file to download. Format:
+           `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the file to download. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            public Download setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Download set(String parameterName, Object value) {
+              return (Download) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets the metadata for the given file.
+           *
+           * Create a request for the method "files.get".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the file to get. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClaudeFile> {
+
+            private static final String REST_PATH = "v1beta1/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+
+            /**
+             * Gets the metadata for the given file.
+             *
+             * Create a request for the method "files.get".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the file to get. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClaudeFile.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the file to get. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the file to get. Format:
+           `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the file to get. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/files/{file}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/files/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the files owned by the requesting project and location. Supports two mutually exclusive
+           * modes: paginated listing via an opaque `page` cursor, or batch fetch by `ids`. See
+           * `ListFilesRequest`.
+           *
+           * Create a request for the method "files.list".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The location to list files under. Format: `projects/{project}/locations/{location}`
+           * @param publishersId
+           * @return the request
+           */
+          public List list(java.lang.String parent, java.lang.String publishersId) throws java.io.IOException {
+            List result = new List(parent, publishersId);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFilesResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/publishers/{publishersId}/files";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+            /**
+             * Lists the files owned by the requesting project and location. Supports two mutually exclusive
+             * modes: paginated listing via an opaque `page` cursor, or batch fetch by `ids`. See
+             * `ListFilesRequest`.
+             *
+             * Create a request for the method "files.list".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The location to list files under. Format: `projects/{project}/locations/{location}`
+             * @param publishersId
+             * @since 1.13
+             */
+            protected List(java.lang.String parent, java.lang.String publishersId) {
+              super(Aiplatform.this, "GET", REST_PATH, null, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ListFilesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+$");
+              }
+              this.publishersId = com.google.api.client.util.Preconditions.checkNotNull(publishersId, "Required parameter publishersId must be specified.");
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The location to list files under. Format:
+             * `projects/{project}/locations/{location}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The location to list files under. Format: `projects/{project}/locations/{location}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The location to list files under. Format:
+             * `projects/{project}/locations/{location}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.String publishersId;
+
+            /**
+
+             */
+            public java.lang.String getPublishersId() {
+              return publishersId;
+            }
+
+            public List setPublishersId(java.lang.String publishersId) {
+              this.publishersId = publishersId;
+              return this;
+            }
+
+            /**
+             * Optional. Batch fetch: return only these files, up to 100 IDs after de-duplication.
+             * Mutually exclusive with both `page` and `limit`. Serialised as a repeated `ids` query
+             * parameter, one occurrence per ID.
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> ids;
+
+            /** Optional. Batch fetch: return only these files, up to 100 IDs after de-duplication. Mutually
+           exclusive with both `page` and `limit`. Serialised as a repeated `ids` query parameter, one
+           occurrence per ID.
+             */
+            public java.util.List<java.lang.String> getIds() {
+              return ids;
+            }
+
+            /**
+             * Optional. Batch fetch: return only these files, up to 100 IDs after de-duplication.
+             * Mutually exclusive with both `page` and `limit`. Serialised as a repeated `ids` query
+             * parameter, one occurrence per ID.
+             */
+            public List setIds(java.util.List<java.lang.String> ids) {
+              this.ids = ids;
+              return this;
+            }
+
+            /**
+             * Optional. The number of files to return per page. Defaults to 20 if unset, maximum
+             * 1000. Mutually exclusive with `ids`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer limit;
+
+            /** Optional. The number of files to return per page. Defaults to 20 if unset, maximum 1000. Mutually
+           exclusive with `ids`.
+             */
+            public java.lang.Integer getLimit() {
+              return limit;
+            }
+
+            /**
+             * Optional. The number of files to return per page. Defaults to 20 if unset, maximum
+             * 1000. Mutually exclusive with `ids`.
+             */
+            public List setLimit(java.lang.Integer limit) {
+              this.limit = limit;
+              return this;
+            }
+
+            /**
+             * Optional. Opaque pagination cursor. Pass the previous response's `next_page` to fetch
+             * the next page. Mutually exclusive with `ids`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String page;
+
+            /** Optional. Opaque pagination cursor. Pass the previous response's `next_page` to fetch the next
+           page. Mutually exclusive with `ids`.
+             */
+            public java.lang.String getPage() {
+              return page;
+            }
+
+            /**
+             * Optional. Opaque pagination cursor. Pass the previous response's `next_page` to fetch
+             * the next page. Mutually exclusive with `ids`.
+             */
+            public List setPage(java.lang.String page) {
+              this.page = page;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Uploads a file that can be referenced by ID from subsequent Claude model requests.
+           *
+           * Create a request for the method "files.upload".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The location to create the file under. Format: `projects/{project}/locations/{location}`
+           * @param publishersId
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest}
+           * @return the request
+           */
+          public Upload upload(java.lang.String parent, java.lang.String publishersId, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest content) throws java.io.IOException {
+            Upload result = new Upload(parent, publishersId, content);
+            initialize(result);
+            return result;
+          }
+
+          /**
+           * Uploads a file that can be referenced by ID from subsequent Claude model requests.
+           *
+           * Create a request for the method "files.upload".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+           *
+           * <p>
+           * This method should be used for uploading media content.
+           * </p>
+           *
+           * @param parent Required. The location to create the file under. Format: `projects/{project}/locations/{location}`@param publishersId
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest} media metadata or {@code null} if none
+           * @param mediaContent The media HTTP content.
+           * @return the request
+           * @throws java.io.IOException if the initialization of the request fails
+           */
+          public Upload upload(java.lang.String parent, java.lang.String publishersId, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) throws java.io.IOException {
+            Upload result = new Upload(parent, publishersId, content, mediaContent);
+            initialize(result);
+            return result;
+          }
+
+          public class Upload extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClaudeFile> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/publishers/{publishersId}/files";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+            /**
+             * Uploads a file that can be referenced by ID from subsequent Claude model requests.
+             *
+             * Create a request for the method "files.upload".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The location to create the file under. Format: `projects/{project}/locations/{location}`
+             * @param publishersId
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest}
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, java.lang.String publishersId, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClaudeFile.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+$");
+              }
+              this.publishersId = com.google.api.client.util.Preconditions.checkNotNull(publishersId, "Required parameter publishersId must be specified.");
+            }
+
+            /**
+             * Uploads a file that can be referenced by ID from subsequent Claude model requests.
+             *
+             * Create a request for the method "files.upload".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link Upload#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Upload#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * <p>
+             * This constructor should be used for uploading media content.
+             * </p>
+             *
+             * @param parent Required. The location to create the file under. Format: `projects/{project}/locations/{location}`@param publishersId
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest} media metadata or {@code null} if none
+             * @param mediaContent The media HTTP content.
+             * @since 1.13
+             */
+            protected Upload(java.lang.String parent, java.lang.String publishersId, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1CreateFileRequest content, com.google.api.client.http.AbstractInputStreamContent mediaContent) {
+              super(Aiplatform.this, "POST", "/upload/" + getServicePath() + REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1ClaudeFile.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              this.publishersId = com.google.api.client.util.Preconditions.checkNotNull(publishersId, "Required parameter publishersId must be specified.");
+              com.google.api.client.util.Preconditions.checkNotNull(mediaContent, "Required parameter mediaContent must be specified.");
+              initializeMediaUpload(mediaContent);
+            }
+
+            @Override
+            public Upload set$Xgafv(java.lang.String $Xgafv) {
+              return (Upload) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Upload setAccessToken(java.lang.String accessToken) {
+              return (Upload) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Upload setAlt(java.lang.String alt) {
+              return (Upload) super.setAlt(alt);
+            }
+
+            @Override
+            public Upload setCallback(java.lang.String callback) {
+              return (Upload) super.setCallback(callback);
+            }
+
+            @Override
+            public Upload setFields(java.lang.String fields) {
+              return (Upload) super.setFields(fields);
+            }
+
+            @Override
+            public Upload setKey(java.lang.String key) {
+              return (Upload) super.setKey(key);
+            }
+
+            @Override
+            public Upload setOauthToken(java.lang.String oauthToken) {
+              return (Upload) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Upload setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Upload) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Upload setQuotaUser(java.lang.String quotaUser) {
+              return (Upload) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Upload setUploadType(java.lang.String uploadType) {
+              return (Upload) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Upload setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Upload) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The location to create the file under. Format:
+             * `projects/{project}/locations/{location}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The location to create the file under. Format: `projects/{project}/locations/{location}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The location to create the file under. Format:
+             * `projects/{project}/locations/{location}`
+             */
+            public Upload setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @com.google.api.client.util.Key
+            private java.lang.String publishersId;
+
+            /**
+
+             */
+            public java.lang.String getPublishersId() {
+              return publishersId;
+            }
+
+            public Upload setPublishersId(java.lang.String publishersId) {
+              this.publishersId = publishersId;
+              return this;
+            }
+
+            @Override
+            public Upload set(String parameterName, Object value) {
+              return (Upload) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
          * An accessor for creating requests from the Models collection.
          *
          * <p>The typical use is:</p>
@@ -155823,6 +155363,146 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
          */
         public class Models {
 
+          /**
+           * Generates embeddings directly from multiple contents.
+           *
+           * Create a request for the method "models.batchEmbedContents".
+           *
+           * This request holds the parameters needed by the aiplatform server.  After setting any optional
+           * parameters, call the {@link BatchEmbedContents#execute()} method to invoke the remote operation.
+           *
+           * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+           * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1BatchEmbedContentsRequest}
+           * @return the request
+           */
+          public BatchEmbedContents batchEmbedContents(java.lang.String model, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1BatchEmbedContentsRequest content) throws java.io.IOException {
+            BatchEmbedContents result = new BatchEmbedContents(model, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchEmbedContents extends AiplatformRequest<com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1BatchEmbedContentsResponse> {
+
+            private static final String REST_PATH = "v1beta1/{+model}:batchEmbedContents";
+
+            private final java.util.regex.Pattern MODEL_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+
+            /**
+             * Generates embeddings directly from multiple contents.
+             *
+             * Create a request for the method "models.batchEmbedContents".
+             *
+             * This request holds the parameters needed by the the aiplatform server.  After setting any
+             * optional parameters, call the {@link BatchEmbedContents#execute()} method to invoke the remote
+             * operation. <p> {@link BatchEmbedContents#initialize(com.google.api.client.googleapis.services.A
+             * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param model Required. The name of the publisher model requested to serve the prediction. Format:
+           *        `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             * @param content the {@link com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1BatchEmbedContentsRequest}
+             * @since 1.13
+             */
+            protected BatchEmbedContents(java.lang.String model, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1BatchEmbedContentsRequest content) {
+              super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1beta1.model.GoogleCloudAiplatformV1beta1BatchEmbedContentsResponse.class);
+              this.model = com.google.api.client.util.Preconditions.checkNotNull(model, "Required parameter model must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                    "Parameter model must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchEmbedContents set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchEmbedContents) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchEmbedContents setAccessToken(java.lang.String accessToken) {
+              return (BatchEmbedContents) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchEmbedContents setAlt(java.lang.String alt) {
+              return (BatchEmbedContents) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchEmbedContents setCallback(java.lang.String callback) {
+              return (BatchEmbedContents) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchEmbedContents setFields(java.lang.String fields) {
+              return (BatchEmbedContents) super.setFields(fields);
+            }
+
+            @Override
+            public BatchEmbedContents setKey(java.lang.String key) {
+              return (BatchEmbedContents) super.setKey(key);
+            }
+
+            @Override
+            public BatchEmbedContents setOauthToken(java.lang.String oauthToken) {
+              return (BatchEmbedContents) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchEmbedContents setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchEmbedContents) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchEmbedContents setQuotaUser(java.lang.String quotaUser) {
+              return (BatchEmbedContents) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchEmbedContents setUploadType(java.lang.String uploadType) {
+              return (BatchEmbedContents) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchEmbedContents setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchEmbedContents) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the publisher model requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String model;
+
+            /** Required. The name of the publisher model requested to serve the prediction. Format:
+           `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            public java.lang.String getModel() {
+              return model;
+            }
+
+            /**
+             * Required. The name of the publisher model requested to serve the prediction. Format:
+             * `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`
+             */
+            public BatchEmbedContents setModel(java.lang.String model) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(MODEL_PATTERN.matcher(model).matches(),
+                    "Parameter model must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/publishers/[^/]+/models/[^/]+$");
+              }
+              this.model = model;
+              return this;
+            }
+
+            @Override
+            public BatchEmbedContents set(String parameterName, Object value) {
+              return (BatchEmbedContents) super.set(parameterName, value);
+            }
+          }
           /**
            * Return a list of tokens based on the input text.
            *

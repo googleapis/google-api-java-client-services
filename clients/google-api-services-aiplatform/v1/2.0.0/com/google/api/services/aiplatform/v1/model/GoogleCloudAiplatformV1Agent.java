@@ -30,6 +30,14 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1Agent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The resource name of the AI Application provisioned for this agent. Format:
+   * `projects/{project}/locations/{location}/aiApplications/{ai_application}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String aiApplication;
+
+  /**
    * Required. Immutable. The base agent for the agent. Supported values: * `antigravity-
    * preview-05-2026` Immutable: `UpdateAgent` rejects a change, including clearing it. The kind of
    * agent this is gets derived from this field when the agent is created and is recorded then;
@@ -136,6 +144,25 @@ public final class GoogleCloudAiplatformV1Agent extends com.google.api.client.js
    */
   @com.google.api.client.util.Key
   private String updated;
+
+  /**
+   * Output only. The resource name of the AI Application provisioned for this agent. Format:
+   * `projects/{project}/locations/{location}/aiApplications/{ai_application}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAiApplication() {
+    return aiApplication;
+  }
+
+  /**
+   * Output only. The resource name of the AI Application provisioned for this agent. Format:
+   * `projects/{project}/locations/{location}/aiApplications/{ai_application}`.
+   * @param aiApplication aiApplication or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1Agent setAiApplication(java.lang.String aiApplication) {
+    this.aiApplication = aiApplication;
+    return this;
+  }
 
   /**
    * Required. Immutable. The base agent for the agent. Supported values: * `antigravity-

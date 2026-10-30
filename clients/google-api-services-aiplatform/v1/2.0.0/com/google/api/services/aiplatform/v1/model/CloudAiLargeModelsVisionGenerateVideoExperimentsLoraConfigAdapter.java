@@ -44,7 +44,7 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfigAda
   private java.lang.String resolvedPath;
 
   /**
-   * The blending scale/weight of the LoRA adapter. Must be in the range (0.0, 1.0]. Default is 1.0.
+   * The blending scale/weight of the LoRA adapter. Must be in the range (0.0, 2.0]. Default is 1.0.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfigAda
   }
 
   /**
-   * The blending scale/weight of the LoRA adapter. Must be in the range (0.0, 1.0]. Default is 1.0.
+   * The blending scale/weight of the LoRA adapter. Must be in the range (0.0, 2.0]. Default is 1.0.
    * @return value or {@code null} for none
    */
   public java.lang.Float getWeight() {
@@ -93,7 +93,7 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfigAda
   }
 
   /**
-   * The blending scale/weight of the LoRA adapter. Must be in the range (0.0, 1.0]. Default is 1.0.
+   * The blending scale/weight of the LoRA adapter. Must be in the range (0.0, 2.0]. Default is 1.0.
    * @param weight weight or {@code null} for none
    */
   public CloudAiLargeModelsVisionGenerateVideoExperimentsLoraConfigAdapter setWeight(java.lang.Float weight) {

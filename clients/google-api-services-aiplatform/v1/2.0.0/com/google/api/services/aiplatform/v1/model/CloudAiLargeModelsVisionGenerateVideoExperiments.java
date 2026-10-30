@@ -156,6 +156,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
   private CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig outpaintConfig;
 
   /**
+   * Optional. Omni Perf 3D estimation configuration.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private CloudAiLargeModelsVisionGenerateVideoExperimentsPerfEstimationConfig perfEstimationConfig;
+
+  /**
    * Configuration for Pro Edit.
    * The value may be {@code null}.
    */
@@ -540,6 +547,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperiments extends com.
    */
   public CloudAiLargeModelsVisionGenerateVideoExperiments setOutpaintConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsOutpaintConfig outpaintConfig) {
     this.outpaintConfig = outpaintConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Omni Perf 3D estimation configuration.
+   * @return value or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsPerfEstimationConfig getPerfEstimationConfig() {
+    return perfEstimationConfig;
+  }
+
+  /**
+   * Optional. Omni Perf 3D estimation configuration.
+   * @param perfEstimationConfig perfEstimationConfig or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperiments setPerfEstimationConfig(CloudAiLargeModelsVisionGenerateVideoExperimentsPerfEstimationConfig perfEstimationConfig) {
+    this.perfEstimationConfig = perfEstimationConfig;
     return this;
   }
 

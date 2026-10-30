@@ -55,6 +55,15 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   }
 
   /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String continuationToken;
+
+  /**
    * Optional. Generation config.
    * The value may be {@code null}.
    */
@@ -79,6 +88,13 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1ModelArmorConfig modelArmorConfig;
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1GenerateContentRequestOutputConfig outputConfig;
 
   /**
    * Optional. Per request settings for blocking unsafe content. Enforced on
@@ -157,6 +173,59 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
   }
 
   /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #decodeContinuationToken()
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getContinuationToken() {
+    return continuationToken;
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #getContinuationToken()
+   * @return Base64 decoded value or {@code null} for none
+   *
+   * @since 1.14
+   */
+  public byte[] decodeContinuationToken() {
+    return com.google.api.client.util.Base64.decodeBase64(continuationToken);
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #encodeContinuationToken()
+   * @param continuationToken continuationToken or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setContinuationToken(java.lang.String continuationToken) {
+    this.continuationToken = continuationToken;
+    return this;
+  }
+
+  /**
+   * Optional. An opaque continuation token used to resume generation from a previous
+   * `GenerateContent` or `StreamGenerateContent` response that stopped with `finish_reason` set to
+   * `CONTINUATION`.
+   * @see #setContinuationToken()
+   *
+   * <p>
+   * The value is encoded Base64 or {@code null} for none.
+   * </p>
+   *
+   * @since 1.14
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest encodeContinuationToken(byte[] continuationToken) {
+    this.continuationToken = com.google.api.client.util.Base64.encodeBase64URLSafeString(continuationToken);
+    return this;
+  }
+
+  /**
    * Optional. Generation config.
    * @return value or {@code null} for none
    */
@@ -214,6 +283,23 @@ public final class GoogleCloudAiplatformV1GenerateContentRequest extends com.goo
    */
   public GoogleCloudAiplatformV1GenerateContentRequest setModelArmorConfig(GoogleCloudAiplatformV1ModelArmorConfig modelArmorConfig) {
     this.modelArmorConfig = modelArmorConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequestOutputConfig getOutputConfig() {
+    return outputConfig;
+  }
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * @param outputConfig outputConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1GenerateContentRequest setOutputConfig(GoogleCloudAiplatformV1GenerateContentRequestOutputConfig outputConfig) {
+    this.outputConfig = outputConfig;
     return this;
   }
 

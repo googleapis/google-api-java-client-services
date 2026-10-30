@@ -37,6 +37,13 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfi
   private java.lang.String mode;
 
   /**
+   * Number of diffusion denoising steps (1 or 2).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer steps;
+
+  /**
    * Smooths the seams between the tiles the model upscales separately.
    * The value may be {@code null}.
    */
@@ -57,6 +64,23 @@ public final class CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfi
    */
   public CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * Number of diffusion denoising steps (1 or 2).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getSteps() {
+    return steps;
+  }
+
+  /**
+   * Number of diffusion denoising steps (1 or 2).
+   * @param steps steps or {@code null} for none
+   */
+  public CloudAiLargeModelsVisionGenerateVideoExperimentsSuperResConfig setSteps(java.lang.Integer steps) {
+    this.steps = steps;
     return this;
   }
 

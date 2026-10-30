@@ -52,6 +52,14 @@ public final class GoogleCloudAiplatformV1beta1EmbedContentRequest extends com.g
   private GoogleCloudAiplatformV1beta1EmbedContentRequestEmbedContentConfig embedContentConfig;
 
   /**
+   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String model;
+
+  /**
    * Optional. Deprecated: Please use EmbedContentConfig.output_dimensionality instead. Reduced
    * dimension for the output embedding. If set, excessive values in the output embedding are
    * truncated from the end.
@@ -125,6 +133,25 @@ public final class GoogleCloudAiplatformV1beta1EmbedContentRequest extends com.g
    */
   public GoogleCloudAiplatformV1beta1EmbedContentRequest setEmbedContentConfig(GoogleCloudAiplatformV1beta1EmbedContentRequestEmbedContentConfig embedContentConfig) {
     this.embedContentConfig = embedContentConfig;
+    return this;
+  }
+
+  /**
+   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getModel() {
+    return model;
+  }
+
+  /**
+   * Required. The name of the publisher model requested to serve the prediction. Format:
+   * `projects/{project}/locations/{location}/publishers/models`
+   * @param model model or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EmbedContentRequest setModel(java.lang.String model) {
+    this.model = model;
     return this;
   }
 

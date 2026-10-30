@@ -816,6 +816,18 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean tetheringConfigDisabled;
 
   /**
+   * Optional. The Unified Update Control policy, for controlling updates of software components on
+   * the device. Supported only on company-owned devices.The targets OS_UPDATE_WITH_API_LEVEL_CHANGE
+   * and OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are supported only on devices where the OEM has
+   * integrated with Unified Update Controls, and are ignored otherwise. If systemUpdate is set,
+   * then that policy takes precedence and the targets OS_UPDATE_WITH_API_LEVEL_CHANGE and
+   * OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are ignored here.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UnifiedUpdatePolicy unifiedUpdatePolicy;
+
+  /**
    * Whether user uninstallation of applications is disabled. This prevents apps from being
    * uninstalled, even those removed using applications
    * The value may be {@code null}.
@@ -2650,6 +2662,33 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setTetheringConfigDisabled(java.lang.Boolean tetheringConfigDisabled) {
     this.tetheringConfigDisabled = tetheringConfigDisabled;
+    return this;
+  }
+
+  /**
+   * Optional. The Unified Update Control policy, for controlling updates of software components on
+   * the device. Supported only on company-owned devices.The targets OS_UPDATE_WITH_API_LEVEL_CHANGE
+   * and OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are supported only on devices where the OEM has
+   * integrated with Unified Update Controls, and are ignored otherwise. If systemUpdate is set,
+   * then that policy takes precedence and the targets OS_UPDATE_WITH_API_LEVEL_CHANGE and
+   * OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are ignored here.
+   * @return value or {@code null} for none
+   */
+  public UnifiedUpdatePolicy getUnifiedUpdatePolicy() {
+    return unifiedUpdatePolicy;
+  }
+
+  /**
+   * Optional. The Unified Update Control policy, for controlling updates of software components on
+   * the device. Supported only on company-owned devices.The targets OS_UPDATE_WITH_API_LEVEL_CHANGE
+   * and OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are supported only on devices where the OEM has
+   * integrated with Unified Update Controls, and are ignored otherwise. If systemUpdate is set,
+   * then that policy takes precedence and the targets OS_UPDATE_WITH_API_LEVEL_CHANGE and
+   * OS_UPDATE_WITHOUT_API_LEVEL_CHANGE are ignored here.
+   * @param unifiedUpdatePolicy unifiedUpdatePolicy or {@code null} for none
+   */
+  public Policy setUnifiedUpdatePolicy(UnifiedUpdatePolicy unifiedUpdatePolicy) {
+    this.unifiedUpdatePolicy = unifiedUpdatePolicy;
     return this;
   }
 

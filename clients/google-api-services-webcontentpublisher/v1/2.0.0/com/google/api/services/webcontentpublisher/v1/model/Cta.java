@@ -54,7 +54,7 @@ public final class Cta extends com.google.api.client.json.GenericJson {
   private NewsletterConfig newsletterConfig;
 
   /**
-   * Output only. The current state of this CTA.
+   * Optional. The current state of this CTA.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -130,7 +130,7 @@ public final class Cta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The current state of this CTA.
+   * Optional. The current state of this CTA.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -138,7 +138,7 @@ public final class Cta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The current state of this CTA.
+   * Optional. The current state of this CTA.
    * @param state state or {@code null} for none
    */
   public Cta setState(java.lang.String state) {

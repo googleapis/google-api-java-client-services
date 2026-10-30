@@ -51,7 +51,7 @@ public final class CustomQuestion extends com.google.api.client.json.GenericJson
   private java.lang.String categoryLabel;
 
   /**
-   * Required. The question prompt displayed to readers.
+   * Optional. The question prompt displayed to readers (up to 140 characters).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -99,7 +99,7 @@ public final class CustomQuestion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The question prompt displayed to readers.
+   * Optional. The question prompt displayed to readers (up to 140 characters).
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayText() {
@@ -107,7 +107,7 @@ public final class CustomQuestion extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. The question prompt displayed to readers.
+   * Optional. The question prompt displayed to readers (up to 140 characters).
    * @param displayText displayText or {@code null} for none
    */
   public CustomQuestion setDisplayText(java.lang.String displayText) {

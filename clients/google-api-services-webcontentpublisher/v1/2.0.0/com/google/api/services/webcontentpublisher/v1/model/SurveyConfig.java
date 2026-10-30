@@ -47,6 +47,13 @@ public final class SurveyConfig extends com.google.api.client.json.GenericJson {
   private java.util.List<SurveyQuestion> questions;
 
   /**
+   * Output only. Link to the Looker Studio dashboard.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String reportUrl;
+
+  /**
    * Optional. Header prompt shown to readers. If omitted, the server populates the default prompt
    * localized to the parent publication's configured primary language.
    * @return value or {@code null} for none
@@ -81,6 +88,23 @@ public final class SurveyConfig extends com.google.api.client.json.GenericJson {
    */
   public SurveyConfig setQuestions(java.util.List<SurveyQuestion> questions) {
     this.questions = questions;
+    return this;
+  }
+
+  /**
+   * Output only. Link to the Looker Studio dashboard.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getReportUrl() {
+    return reportUrl;
+  }
+
+  /**
+   * Output only. Link to the Looker Studio dashboard.
+   * @param reportUrl reportUrl or {@code null} for none
+   */
+  public SurveyConfig setReportUrl(java.lang.String reportUrl) {
+    this.reportUrl = reportUrl;
     return this;
   }
 

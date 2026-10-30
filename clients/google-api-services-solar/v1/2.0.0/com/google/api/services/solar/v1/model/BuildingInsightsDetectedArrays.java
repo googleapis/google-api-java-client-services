@@ -30,6 +30,13 @@ package com.google.api.services.solar.v1.model;
 public final class BuildingInsightsDetectedArrays extends com.google.api.client.json.GenericJson {
 
   /**
+   * A list of solar arrays detected on the building.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<BuildingInsightsDetectedArraysSolarArray> arrays;
+
+  /**
    * Indicates the detection status of solar arrays for this building.
    * The value may be {@code null}.
    */
@@ -42,6 +49,23 @@ public final class BuildingInsightsDetectedArrays extends com.google.api.client.
    */
   @com.google.api.client.util.Key
   private Date latestCaptureDate;
+
+  /**
+   * A list of solar arrays detected on the building.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<BuildingInsightsDetectedArraysSolarArray> getArrays() {
+    return arrays;
+  }
+
+  /**
+   * A list of solar arrays detected on the building.
+   * @param arrays arrays or {@code null} for none
+   */
+  public BuildingInsightsDetectedArrays setArrays(java.util.List<BuildingInsightsDetectedArraysSolarArray> arrays) {
+    this.arrays = arrays;
+    return this;
+  }
 
   /**
    * Indicates the detection status of solar arrays for this building.

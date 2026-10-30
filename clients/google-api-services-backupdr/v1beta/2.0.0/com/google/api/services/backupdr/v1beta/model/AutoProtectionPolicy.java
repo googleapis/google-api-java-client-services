@@ -61,7 +61,7 @@ public final class AutoProtectionPolicy extends com.google.api.client.json.Gener
   private Criteria criteria;
 
   /**
-   * Optional. A description of the policy.
+   * Optional. A description of the policy. The description must be at most 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +76,7 @@ public final class AutoProtectionPolicy extends com.google.api.client.json.Gener
   private java.lang.String etag;
 
   /**
-   * Identifier. The resource name of the AutoprotectionPolicy. Format:
+   * Output only. Identifier. The resource name of the AutoprotectionPolicy. Format:
    * `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
    * The value may be {@code null}.
    */
@@ -173,7 +173,7 @@ public final class AutoProtectionPolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. A description of the policy.
+   * Optional. A description of the policy. The description must be at most 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -181,7 +181,7 @@ public final class AutoProtectionPolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. A description of the policy.
+   * Optional. A description of the policy. The description must be at most 2048 characters.
    * @param description description or {@code null} for none
    */
   public AutoProtectionPolicy setDescription(java.lang.String description) {
@@ -209,7 +209,7 @@ public final class AutoProtectionPolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Identifier. The resource name of the AutoprotectionPolicy. Format:
+   * Output only. Identifier. The resource name of the AutoprotectionPolicy. Format:
    * `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
    * @return value or {@code null} for none
    */
@@ -218,7 +218,7 @@ public final class AutoProtectionPolicy extends com.google.api.client.json.Gener
   }
 
   /**
-   * Identifier. The resource name of the AutoprotectionPolicy. Format:
+   * Output only. Identifier. The resource name of the AutoprotectionPolicy. Format:
    * `projects/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}`
    * @param name name or {@code null} for none
    */

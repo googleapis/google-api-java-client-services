@@ -47,7 +47,7 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   private String createTime;
 
   /**
-   * Optional. A description of the binding.
+   * Optional. A description of the binding. The description must be at most 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,8 +62,9 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   private java.lang.String etag;
 
   /**
-   * Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `projects/{project}/l
-   * ocations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`
+   * Output only. Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `project
+   * s/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bind
+   * ing}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -128,7 +129,7 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   }
 
   /**
-   * Optional. A description of the binding.
+   * Optional. A description of the binding. The description must be at most 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -136,7 +137,7 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   }
 
   /**
-   * Optional. A description of the binding.
+   * Optional. A description of the binding. The description must be at most 2048 characters.
    * @param description description or {@code null} for none
    */
   public AutoProtectionPolicyBinding setDescription(java.lang.String description) {
@@ -164,8 +165,9 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   }
 
   /**
-   * Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `projects/{project}/l
-   * ocations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`
+   * Output only. Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `project
+   * s/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bind
+   * ing}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -173,8 +175,9 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   }
 
   /**
-   * Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `projects/{project}/l
-   * ocations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}`
+   * Output only. Identifier. The resource name of the AutoProtectionPolicyBinding. Format: `project
+   * s/{project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bind
+   * ing}`
    * @param name name or {@code null} for none
    */
   public AutoProtectionPolicyBinding setName(java.lang.String name) {

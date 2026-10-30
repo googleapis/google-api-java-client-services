@@ -73,7 +73,7 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   private AndroidFcmOptions fcmOptions;
 
   /**
-   * Notification to send to android devices.
+   * Notification to send to Android devices.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -219,7 +219,7 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Notification to send to android devices.
+   * Notification to send to Android devices.
    * @return value or {@code null} for none
    */
   public AndroidNotification getNotification() {
@@ -227,7 +227,7 @@ public final class AndroidConfig extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Notification to send to android devices.
+   * Notification to send to Android devices.
    * @param notification notification or {@code null} for none
    */
   public AndroidConfig setNotification(AndroidNotification notification) {

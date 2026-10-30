@@ -63,7 +63,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Human readable title. Must be unique within the Policy.
+   * Human-readable title. Must be unique within the policy.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable title. Must be unique within the Policy.
+   * Human-readable title. Must be unique within the policy.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -152,7 +152,7 @@ public final class AccessLevel extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Human readable title. Must be unique within the Policy.
+   * Human-readable title. Must be unique within the policy.
    * @param title title or {@code null} for none
    */
   public AccessLevel setTitle(java.lang.String title) {

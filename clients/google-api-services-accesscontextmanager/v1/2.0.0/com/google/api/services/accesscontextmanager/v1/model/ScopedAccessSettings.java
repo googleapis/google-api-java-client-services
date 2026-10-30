@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * A relationship between access settings and its scope.
+ * A relationship between access settings and their scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -31,32 +31,32 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class ScopedAccessSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Access settings for this scoped access settings. This field may be empty if
-   * dry_run_settings is set.
+   * Optional. Access settings for this `ScopedAccessSettings`. This field may be empty if
+   * `dry_run_settings` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccessSettings activeSettings;
 
   /**
-   * Optional. Dry-run access settings for this scoped access settings. This field may be empty if
-   * active_settings is set.
+   * Optional. Dry-run access settings for this `ScopedAccessSettings`. This field may be empty if
+   * `active_settings` is set.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccessSettings dryRunSettings;
 
   /**
-   * Optional. Application, etc. to which the access settings will be applied to. Implicitly, this
-   * is the scoped access settings key; as such, it must be unique and non-empty.
+   * Optional. Application or other resource to which the access settings are applied. Implicitly,
+   * this is the scoped access settings key; as such, it must be unique and non-empty.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private AccessScope scope;
 
   /**
-   * Optional. Access settings for this scoped access settings. This field may be empty if
-   * dry_run_settings is set.
+   * Optional. Access settings for this `ScopedAccessSettings`. This field may be empty if
+   * `dry_run_settings` is set.
    * @return value or {@code null} for none
    */
   public AccessSettings getActiveSettings() {
@@ -64,8 +64,8 @@ public final class ScopedAccessSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Access settings for this scoped access settings. This field may be empty if
-   * dry_run_settings is set.
+   * Optional. Access settings for this `ScopedAccessSettings`. This field may be empty if
+   * `dry_run_settings` is set.
    * @param activeSettings activeSettings or {@code null} for none
    */
   public ScopedAccessSettings setActiveSettings(AccessSettings activeSettings) {
@@ -74,8 +74,8 @@ public final class ScopedAccessSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Dry-run access settings for this scoped access settings. This field may be empty if
-   * active_settings is set.
+   * Optional. Dry-run access settings for this `ScopedAccessSettings`. This field may be empty if
+   * `active_settings` is set.
    * @return value or {@code null} for none
    */
   public AccessSettings getDryRunSettings() {
@@ -83,8 +83,8 @@ public final class ScopedAccessSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Dry-run access settings for this scoped access settings. This field may be empty if
-   * active_settings is set.
+   * Optional. Dry-run access settings for this `ScopedAccessSettings`. This field may be empty if
+   * `active_settings` is set.
    * @param dryRunSettings dryRunSettings or {@code null} for none
    */
   public ScopedAccessSettings setDryRunSettings(AccessSettings dryRunSettings) {
@@ -93,8 +93,8 @@ public final class ScopedAccessSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Application, etc. to which the access settings will be applied to. Implicitly, this
-   * is the scoped access settings key; as such, it must be unique and non-empty.
+   * Optional. Application or other resource to which the access settings are applied. Implicitly,
+   * this is the scoped access settings key; as such, it must be unique and non-empty.
    * @return value or {@code null} for none
    */
   public AccessScope getScope() {
@@ -102,8 +102,8 @@ public final class ScopedAccessSettings extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Application, etc. to which the access settings will be applied to. Implicitly, this
-   * is the scoped access settings key; as such, it must be unique and non-empty.
+   * Optional. Application or other resource to which the access settings are applied. Implicitly,
+   * this is the scoped access settings key; as such, it must be unique and non-empty.
    * @param scope scope or {@code null} for none
    */
   public ScopedAccessSettings setScope(AccessScope scope) {

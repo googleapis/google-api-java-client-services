@@ -266,7 +266,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the accesscontextmanager server.  After setting any
      * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name for the access policy to delete. Format `accessPolicies/{policy_id}`
+     * @param name Required. Resource name for the access policy to delete. Format: `accessPolicies/{policy_id}`
      * @return the request
      */
     public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -294,7 +294,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
        * be called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name for the access policy to delete. Format `accessPolicies/{policy_id}`
+       * @param name Required. Resource name for the access policy to delete. Format: `accessPolicies/{policy_id}`
        * @since 1.13
        */
       protected Delete(java.lang.String name) {
@@ -363,20 +363,20 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. Resource name for the access policy to delete. Format
+       * Required. Resource name for the access policy to delete. Format:
        * `accessPolicies/{policy_id}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name for the access policy to delete. Format `accessPolicies/{policy_id}`
+      /** Required. Resource name for the access policy to delete. Format: `accessPolicies/{policy_id}`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name for the access policy to delete. Format
+       * Required. Resource name for the access policy to delete. Format:
        * `accessPolicies/{policy_id}`
        */
       public Delete setName(java.lang.String name) {
@@ -402,7 +402,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * This request holds the parameters needed by the accesscontextmanager server.  After setting any
      * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
      *
-     * @param name Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
+     * @param name Required. Resource name for the access policy to get. Format: `accessPolicies/{policy_id}`
      * @return the request
      */
     public Get get(java.lang.String name) throws java.io.IOException {
@@ -429,7 +429,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
        * called to initialize this instance immediately after invoking the constructor. </p>
        *
-       * @param name Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
+       * @param name Required. Resource name for the access policy to get. Format: `accessPolicies/{policy_id}`
        * @since 1.13
        */
       protected Get(java.lang.String name) {
@@ -508,19 +508,19 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
+       * Required. Resource name for the access policy to get. Format: `accessPolicies/{policy_id}`
        */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
+      /** Required. Resource name for the access policy to get. Format: `accessPolicies/{policy_id}`
        */
       public java.lang.String getName() {
         return name;
       }
 
       /**
-       * Required. Resource name for the access policy to get. Format `accessPolicies/{policy_id}`
+       * Required. Resource name for the access policy to get. Format: `accessPolicies/{policy_id}`
        */
       public Get setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
@@ -1763,18 +1763,18 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Whether to return `BasicLevels` in the Cloud Common Expression Language rather than as
-         * `BasicLevels`. Defaults to AS_DEFINED, where Access Levels are returned as `BasicLevels`
-         * or `CustomLevels` based on how they were created. If set to CEL, all Access Levels are
-         * returned as `CustomLevels`. In the CEL case, `BasicLevels` are translated to equivalent
-         * `CustomLevels`.
+         * `BasicLevels`. Defaults to `AS_DEFINED`, where Access Levels are returned as
+         * `BasicLevels` or `CustomLevels` based on how they were created. If set to `CEL`, all
+         * Access Levels are returned as `CustomLevels`. In the `CEL` case, `BasicLevels` are
+         * translated to equivalent `CustomLevels`.
          */
         @com.google.api.client.util.Key
         private java.lang.String accessLevelFormat;
 
         /** Whether to return `BasicLevels` in the Cloud Common Expression Language rather than as
-       `BasicLevels`. Defaults to AS_DEFINED, where Access Levels are returned as `BasicLevels` or
-       `CustomLevels` based on how they were created. If set to CEL, all Access Levels are returned as
-       `CustomLevels`. In the CEL case, `BasicLevels` are translated to equivalent `CustomLevels`.
+       `BasicLevels`. Defaults to `AS_DEFINED`, where Access Levels are returned as `BasicLevels` or
+       `CustomLevels` based on how they were created. If set to `CEL`, all Access Levels are returned as
+       `CustomLevels`. In the `CEL` case, `BasicLevels` are translated to equivalent `CustomLevels`.
          */
         public java.lang.String getAccessLevelFormat() {
           return accessLevelFormat;
@@ -1782,10 +1782,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Whether to return `BasicLevels` in the Cloud Common Expression Language rather than as
-         * `BasicLevels`. Defaults to AS_DEFINED, where Access Levels are returned as `BasicLevels`
-         * or `CustomLevels` based on how they were created. If set to CEL, all Access Levels are
-         * returned as `CustomLevels`. In the CEL case, `BasicLevels` are translated to equivalent
-         * `CustomLevels`.
+         * `BasicLevels`. Defaults to `AS_DEFINED`, where Access Levels are returned as
+         * `BasicLevels` or `CustomLevels` based on how they were created. If set to `CEL`, all
+         * Access Levels are returned as `CustomLevels`. In the `CEL` case, `BasicLevels` are
+         * translated to equivalent `CustomLevels`.
          */
         public Get setAccessLevelFormat(java.lang.String accessLevelFormat) {
           this.accessLevelFormat = accessLevelFormat;
@@ -1941,14 +1941,14 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Whether to return `BasicLevels` in the Cloud Common Expression language, as
+         * Whether to return `BasicLevels` in the Cloud Common Expression Language, as
          * `CustomLevels`, rather than as `BasicLevels`. Defaults to returning `AccessLevels` in the
          * format they were defined.
          */
         @com.google.api.client.util.Key
         private java.lang.String accessLevelFormat;
 
-        /** Whether to return `BasicLevels` in the Cloud Common Expression language, as `CustomLevels`, rather
+        /** Whether to return `BasicLevels` in the Cloud Common Expression Language, as `CustomLevels`, rather
        than as `BasicLevels`. Defaults to returning `AccessLevels` in the format they were defined.
          */
         public java.lang.String getAccessLevelFormat() {
@@ -1956,7 +1956,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Whether to return `BasicLevels` in the Cloud Common Expression language, as
+         * Whether to return `BasicLevels` in the Cloud Common Expression Language, as
          * `CustomLevels`, rather than as `BasicLevels`. Defaults to returning `AccessLevels` in the
          * format they were defined.
          */
@@ -2186,9 +2186,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * done atomically. The long-running operation from this RPC has a successful status after all
        * replacements propagate to long-lasting storage. If the replacement contains errors, an error
        * response is returned for the first error encountered. Upon error, the replacement is cancelled,
-       * and existing access levels are not affected. The Operation.response field contains
-       * ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters
-       * result in an error.
+       * and existing access levels are not affected. The `Operation.response` field contains
+       * `ReplaceAccessLevelsResponse`. Removing access levels contained in existing service perimeters
+       * results in an error.
        *
        * Create a request for the method "accessLevels.replaceAll".
        *
@@ -2218,9 +2218,9 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * is done atomically. The long-running operation from this RPC has a successful status after all
          * replacements propagate to long-lasting storage. If the replacement contains errors, an error
          * response is returned for the first error encountered. Upon error, the replacement is cancelled,
-         * and existing access levels are not affected. The Operation.response field contains
-         * ReplaceAccessLevelsResponse. Removing access levels contained in existing service perimeters
-         * result in an error.
+         * and existing access levels are not affected. The `Operation.response` field contains
+         * `ReplaceAccessLevelsResponse`. Removing access levels contained in existing service perimeters
+         * results in an error.
          *
          * Create a request for the method "accessLevels.replaceAll".
          *
@@ -2510,7 +2510,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
       /**
        * Creates an authorized orgs desc. The long-running operation from this RPC has a successful status
-       * after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc
+       * after the authorized orgs desc propagates to long-lasting storage. If an authorized orgs desc
        * contains errors, an error response is returned for the first error encountered. The name of this
        * `AuthorizedOrgsDesc` will be assigned during creation.
        *
@@ -2539,7 +2539,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Creates an authorized orgs desc. The long-running operation from this RPC has a successful
-         * status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs
+         * status after the authorized orgs desc propagates to long-lasting storage. If an authorized orgs
          * desc contains errors, an error response is returned for the first error encountered. The name
          * of this `AuthorizedOrgsDesc` will be assigned during creation.
          *
@@ -2664,7 +2664,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
        *
        * @param name Required. Resource name for the Authorized Orgs Desc. Format:
-       *        `accessPolicies/{policy_id}/authorizedOrgsDesc/{authorized_orgs_desc_id}`
+       *        `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
        * @return the request
        */
       public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2694,7 +2694,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Resource name for the Authorized Orgs Desc. Format:
-       *        `accessPolicies/{policy_id}/authorizedOrgsDesc/{authorized_orgs_desc_id}`
+       *        `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          * @since 1.13
          */
         protected Delete(java.lang.String name) {
@@ -2764,13 +2764,13 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Resource name for the Authorized Orgs Desc. Format:
-         * `accessPolicies/{policy_id}/authorizedOrgsDesc/{authorized_orgs_desc_id}`
+         * `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name for the Authorized Orgs Desc. Format:
-       `accessPolicies/{policy_id}/authorizedOrgsDesc/{authorized_orgs_desc_id}`
+       `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -2778,7 +2778,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Resource name for the Authorized Orgs Desc. Format:
-         * `accessPolicies/{policy_id}/authorizedOrgsDesc/{authorized_orgs_desc_id}`
+         * `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          */
         public Delete setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -2804,7 +2804,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Resource name for the Authorized Orgs Desc. Format:
-       *        `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_descs_id}`
+       *        `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -2832,7 +2832,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Resource name for the Authorized Orgs Desc. Format:
-       *        `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_descs_id}`
+       *        `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -2912,13 +2912,13 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Resource name for the Authorized Orgs Desc. Format:
-         * `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_descs_id}`
+         * `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name for the Authorized Orgs Desc. Format:
-       `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_descs_id}`
+       `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -2926,7 +2926,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Resource name for the Authorized Orgs Desc. Format:
-         * `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_descs_id}`
+         * `accessPolicies/{policy_id}/authorizedOrgsDescs/{authorized_orgs_desc_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -3132,10 +3132,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
       /**
        * Updates an authorized orgs desc. The long-running operation from this RPC has a successful status
-       * after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs desc
+       * after the authorized orgs desc propagates to long-lasting storage. If an authorized orgs desc
        * contains errors, an error response is returned for the first error encountered. Only the
-       * organization list in `AuthorizedOrgsDesc` can be updated. The name, authorization_type,
-       * asset_type and authorization_direction cannot be updated.
+       * organization list in `AuthorizedOrgsDesc` can be updated. The `name`, `authorization_type`,
+       * `asset_type`, and `authorization_direction` cannot be updated.
        *
        * Create a request for the method "authorizedOrgsDescs.patch".
        *
@@ -3164,10 +3164,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Updates an authorized orgs desc. The long-running operation from this RPC has a successful
-         * status after the authorized orgs desc propagates to long-lasting storage. If a authorized orgs
+         * status after the authorized orgs desc propagates to long-lasting storage. If an authorized orgs
          * desc contains errors, an error response is returned for the first error encountered. Only the
-         * organization list in `AuthorizedOrgsDesc` can be updated. The name, authorization_type,
-         * asset_type and authorization_direction cannot be updated.
+         * organization list in `AuthorizedOrgsDesc` can be updated. The `name`, `authorization_type`,
+         * `asset_type`, and `authorization_direction` cannot be updated.
          *
          * Create a request for the method "authorizedOrgsDescs.patch".
          *
@@ -3335,8 +3335,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * affected by a commit operation. The long-running operation from this RPC has a successful status
        * after the dry-run specifications for all the service perimeters have been committed. If a commit
        * fails, it causes the long-running operation to return an error response and the entire commit
-       * operation is cancelled. When successful, the Operation.response field contains
-       * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are cleared after a
+       * operation is cancelled. When successful, the `Operation.response` field contains
+       * `CommitServicePerimetersResponse`. The `dry_run` and the `spec` fields are cleared after a
        * successful commit operation.
        *
        * Create a request for the method "servicePerimeters.commit".
@@ -3369,8 +3369,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * are affected by a commit operation. The long-running operation from this RPC has a successful
          * status after the dry-run specifications for all the service perimeters have been committed. If
          * a commit fails, it causes the long-running operation to return an error response and the entire
-         * commit operation is cancelled. When successful, the Operation.response field contains
-         * CommitServicePerimetersResponse. The `dry_run` and the `spec` fields are cleared after a
+         * commit operation is cancelled. When successful, the `Operation.response` field contains
+         * `CommitServicePerimetersResponse`. The `dry_run` and the `spec` fields are cleared after a
          * successful commit operation.
          *
          * Create a request for the method "servicePerimeters.commit".
@@ -3777,7 +3777,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
        *
        * @param name Required. Resource name for the Service Perimeter. Format:
-       *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+       *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
        * @return the request
        */
       public Get get(java.lang.String name) throws java.io.IOException {
@@ -3805,7 +3805,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * called to initialize this instance immediately after invoking the constructor. </p>
          *
          * @param name Required. Resource name for the Service Perimeter. Format:
-       *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+       *        `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          * @since 1.13
          */
         protected Get(java.lang.String name) {
@@ -3885,13 +3885,13 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Resource name for the Service Perimeter. Format:
-         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
         /** Required. Resource name for the Service Perimeter. Format:
-       `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+       `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          */
         public java.lang.String getName() {
           return name;
@@ -3899,7 +3899,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
 
         /**
          * Required. Resource name for the Service Perimeter. Format:
-         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeters_id}`
+         * `accessPolicies/{policy_id}/servicePerimeters/{service_perimeter_id}`
          */
         public Get setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -4343,12 +4343,12 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
       }
       /**
-       * Replace all existing service perimeters in an access policy with the service perimeters provided.
-       * This is done atomically. The long-running operation from this RPC has a successful status after
-       * all replacements propagate to long-lasting storage. Replacements containing errors result in an
-       * error response for the first error encountered. Upon an error, replacements are cancelled and
-       * existing service perimeters are not affected. The Operation.response field contains
-       * ReplaceServicePerimetersResponse.
+       * Replaces all existing service perimeters in an access policy with the service perimeters
+       * provided. This is done atomically. The long-running operation from this RPC has a successful
+       * status after all replacements propagate to long-lasting storage. Replacements containing errors
+       * result in an error response for the first error encountered. Upon an error, replacements are
+       * cancelled and existing service perimeters are not affected. The `Operation.response` field
+       * contains `ReplaceServicePerimetersResponse`.
        *
        * Create a request for the method "servicePerimeters.replaceAll".
        *
@@ -4374,12 +4374,12 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
             java.util.regex.Pattern.compile("^accessPolicies/[^/]+$");
 
         /**
-         * Replace all existing service perimeters in an access policy with the service perimeters
+         * Replaces all existing service perimeters in an access policy with the service perimeters
          * provided. This is done atomically. The long-running operation from this RPC has a successful
          * status after all replacements propagate to long-lasting storage. Replacements containing errors
          * result in an error response for the first error encountered. Upon an error, replacements are
-         * cancelled and existing service perimeters are not affected. The Operation.response field
-         * contains ReplaceServicePerimetersResponse.
+         * cancelled and existing service perimeters are not affected. The `Operation.response` field
+         * contains `ReplaceServicePerimetersResponse`.
          *
          * Create a request for the method "servicePerimeters.replaceAll".
          *
@@ -4670,8 +4670,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Folders {
 
     /**
-     * Looks up the configured service perimeter for a given resource Format:
-     * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+     * Looks up the configured service perimeter for a given resource. Format:
+     * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
      *
      * Create a request for the method "folders.lookupConfiguredServicePerimeter".
      *
@@ -4679,7 +4679,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to invoke
      * the remote operation.
      *
-     * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+     * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
      * @return the request
      */
     public LookupConfiguredServicePerimeter lookupConfiguredServicePerimeter(java.lang.String resource) throws java.io.IOException {
@@ -4696,8 +4696,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^folders/[^/]+$");
 
       /**
-       * Looks up the configured service perimeter for a given resource Format:
-       * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+       * Looks up the configured service perimeter for a given resource. Format:
+       * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
        *
        * Create a request for the method "folders.lookupConfiguredServicePerimeter".
        *
@@ -4707,7 +4707,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+       * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
        * @since 1.13
        */
       protected LookupConfiguredServicePerimeter(java.lang.String resource) {
@@ -4785,17 +4785,17 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (LookupConfiguredServicePerimeter) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`).
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
       public LookupConfiguredServicePerimeter setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -6061,28 +6061,39 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Optional. The literal filter to apply to the results returned. See
-         * https://google.aip.dev/160 for more details. Accepts values: * `principal:group_key` *
-         * `principal:service_account` OR `principal:service_account_project_number`. If this field
-         * is empty or not one of the above, the default value is `"principal:group_key"`.
+         * Optional. Filters the results by principal type. Uses the
+         * [AIP-160](https://google.aip.dev/160) filter syntax. Only the following filters are
+         * supported: * `principal:group_key`: bindings for groups. This is the default when the
+         * filter is empty. * `principal:service_account OR
+         * principal:service_account_project_number`: bindings for service accounts. *
+         * `principal:federated_principal`: bindings for federated principals. Values can be in
+         * snake_case or camelCase. Whitespace and the order of `OR` terms don't matter. Any other
+         * filter returns an `INVALID_ARGUMENT` error.
          */
         @com.google.api.client.util.Key
         private java.lang.String filter;
 
-        /** Optional. The literal filter to apply to the results returned. See https://google.aip.dev/160 for
-       more details. Accepts values: * `principal:group_key` * `principal:service_account` OR
-       `principal:service_account_project_number`. If this field is empty or not one of the above, the
-       default value is `"principal:group_key"`.
+        /** Optional. Filters the results by principal type. Uses the [AIP-160](https://google.aip.dev/160)
+       filter syntax. Only the following filters are supported: * `principal:group_key`: bindings for
+       groups. This is the default when the filter is empty. * `principal:service_account OR
+       principal:service_account_project_number`: bindings for service accounts. *
+       `principal:federated_principal`: bindings for federated principals. Values can be in snake_case or
+       camelCase. Whitespace and the order of `OR` terms don't matter. Any other filter returns an
+       `INVALID_ARGUMENT` error.
          */
         public java.lang.String getFilter() {
           return filter;
         }
 
         /**
-         * Optional. The literal filter to apply to the results returned. See
-         * https://google.aip.dev/160 for more details. Accepts values: * `principal:group_key` *
-         * `principal:service_account` OR `principal:service_account_project_number`. If this field
-         * is empty or not one of the above, the default value is `"principal:group_key"`.
+         * Optional. Filters the results by principal type. Uses the
+         * [AIP-160](https://google.aip.dev/160) filter syntax. Only the following filters are
+         * supported: * `principal:group_key`: bindings for groups. This is the default when the
+         * filter is empty. * `principal:service_account OR
+         * principal:service_account_project_number`: bindings for service accounts. *
+         * `principal:federated_principal`: bindings for federated principals. Values can be in
+         * snake_case or camelCase. Whitespace and the order of `OR` terms don't matter. Any other
+         * filter returns an `INVALID_ARGUMENT` error.
          */
         public List setFilter(java.lang.String filter) {
           this.filter = filter;
@@ -6152,7 +6163,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * @param name Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has
        *        only URI unreserved characters (as defined by [RFC 3986 Section
        *        2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-       *        client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+       *        client during creation. Example: `"organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"`
        * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.GcpUserAccessBinding}
        * @return the request
        */
@@ -6184,7 +6195,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * @param name Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has
        *        only URI unreserved characters (as defined by [RFC 3986 Section
        *        2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-       *        client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+       *        client during creation. Example: `"organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"`
          * @param content the {@link com.google.api.services.accesscontextmanager.v1.model.GcpUserAccessBinding}
          * @since 1.13
          */
@@ -6257,7 +6268,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Immutable. Assigned by the server during creation. The last segment has an arbitrary
          * length and has only URI unreserved characters (as defined by [RFC 3986 Section
          * 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-         * client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+         * client during creation. Example: `"organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"`
          */
         @com.google.api.client.util.Key
         private java.lang.String name;
@@ -6265,7 +6276,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /** Immutable. Assigned by the server during creation. The last segment has an arbitrary length and has
        only URI unreserved characters (as defined by [RFC 3986 Section
        2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the client
-       during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+       during creation. Example: `"organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"`
          */
         public java.lang.String getName() {
           return name;
@@ -6275,7 +6286,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
          * Immutable. Assigned by the server during creation. The last segment has an arbitrary
          * length and has only URI unreserved characters (as defined by [RFC 3986 Section
          * 2.3](https://tools.ietf.org/html/rfc3986#section-2.3)). Should not be specified by the
-         * client during creation. Example: "organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"
+         * client during creation. Example: `"organizations/256/gcpUserAccessBindings/b3-BhcX_Ud5N"`
          */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
@@ -6290,23 +6301,23 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Optional. This field controls whether or not certain repeated settings in the update
          * request overwrite or append to existing settings on the binding. If true, then append.
-         * Otherwise overwrite. So far, only scoped_access_settings with session_settings supports
-         * appending. Global access_levels, access_levels in scoped_access_settings,
-         * dry_run_access_levels, and session_settings are not compatible with append functionality,
-         * and the request will return an error if append=true when these settings are in the
-         * update_mask. The request will also return an error if append=true when
-         * "scoped_access_settings" is not set in the update_mask.
+         * Otherwise overwrite. So far, only `scoped_access_settings` with `session_settings`
+         * supports appending. Global `access_levels`, `access_levels` in `scoped_access_settings`,
+         * `dry_run_access_levels`, and `session_settings` are not compatible with append
+         * functionality, and the request will return an error if `append=true` when these settings
+         * are in the `update_mask`. The request will also return an error if `append=true` when
+         * `"scoped_access_settings"` is not set in the `update_mask`.
          */
         @com.google.api.client.util.Key
         private java.lang.Boolean append;
 
         /** Optional. This field controls whether or not certain repeated settings in the update request
        overwrite or append to existing settings on the binding. If true, then append. Otherwise overwrite.
-       So far, only scoped_access_settings with session_settings supports appending. Global access_levels,
-       access_levels in scoped_access_settings, dry_run_access_levels, and session_settings are not
-       compatible with append functionality, and the request will return an error if append=true when
-       these settings are in the update_mask. The request will also return an error if append=true when
-       "scoped_access_settings" is not set in the update_mask.
+       So far, only `scoped_access_settings` with `session_settings` supports appending. Global
+       `access_levels`, `access_levels` in `scoped_access_settings`, `dry_run_access_levels`, and
+       `session_settings` are not compatible with append functionality, and the request will return an
+       error if `append=true` when these settings are in the `update_mask`. The request will also return
+       an error if `append=true` when `"scoped_access_settings"` is not set in the `update_mask`.
          */
         public java.lang.Boolean getAppend() {
           return append;
@@ -6315,12 +6326,12 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         /**
          * Optional. This field controls whether or not certain repeated settings in the update
          * request overwrite or append to existing settings on the binding. If true, then append.
-         * Otherwise overwrite. So far, only scoped_access_settings with session_settings supports
-         * appending. Global access_levels, access_levels in scoped_access_settings,
-         * dry_run_access_levels, and session_settings are not compatible with append functionality,
-         * and the request will return an error if append=true when these settings are in the
-         * update_mask. The request will also return an error if append=true when
-         * "scoped_access_settings" is not set in the update_mask.
+         * Otherwise overwrite. So far, only `scoped_access_settings` with `session_settings`
+         * supports appending. Global `access_levels`, `access_levels` in `scoped_access_settings`,
+         * `dry_run_access_levels`, and `session_settings` are not compatible with append
+         * functionality, and the request will return an error if `append=true` when these settings
+         * are in the `update_mask`. The request will also return an error if `append=true` when
+         * `"scoped_access_settings"` is not set in the `update_mask`.
          */
         public Patch setAppend(java.lang.Boolean append) {
           this.append = append;
@@ -6328,16 +6339,16 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Only the fields specified in this mask are updated. Because name and group_key
-         * cannot be changed, update_mask is required and may only contain the following fields:
-         * `access_levels`, `dry_run_access_levels`, `session_settings`, `scoped_access_settings`.
-         * update_mask { paths: "access_levels" }
+         * Required. Only the fields specified in this mask are updated. Because `name` and
+         * `group_key` cannot be changed, `update_mask` is required and may only contain the
+         * following fields: `access_levels`, `dry_run_access_levels`, `session_settings`,
+         * `scoped_access_settings`. update_mask { paths: "access_levels" }
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. Only the fields specified in this mask are updated. Because name and group_key cannot be
-       changed, update_mask is required and may only contain the following fields: `access_levels`,
+        /** Required. Only the fields specified in this mask are updated. Because `name` and `group_key` cannot
+       be changed, `update_mask` is required and may only contain the following fields: `access_levels`,
        `dry_run_access_levels`, `session_settings`, `scoped_access_settings`. update_mask { paths:
        "access_levels" }
          */
@@ -6346,10 +6357,10 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         }
 
         /**
-         * Required. Only the fields specified in this mask are updated. Because name and group_key
-         * cannot be changed, update_mask is required and may only contain the following fields:
-         * `access_levels`, `dry_run_access_levels`, `session_settings`, `scoped_access_settings`.
-         * update_mask { paths: "access_levels" }
+         * Required. Only the fields specified in this mask are updated. Because `name` and
+         * `group_key` cannot be changed, `update_mask` is required and may only contain the
+         * following fields: `access_levels`, `dry_run_access_levels`, `session_settings`,
+         * `scoped_access_settings`. update_mask { paths: "access_levels" }
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;
@@ -6490,21 +6501,21 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
       }
 
       /**
-       * Optional. This flag specifies the maximum number of services to return per page. Default
+       * Optional. This flag specifies the maximum number of permissions to return per page. Default
        * value is 100.
        */
       @com.google.api.client.util.Key
       private java.lang.Integer pageSize;
 
-      /** Optional. This flag specifies the maximum number of services to return per page. Default value is
-     100.
+      /** Optional. This flag specifies the maximum number of permissions to return per page. Default value
+     is 100.
        */
       public java.lang.Integer getPageSize() {
         return pageSize;
       }
 
       /**
-       * Optional. This flag specifies the maximum number of services to return per page. Default
+       * Optional. This flag specifies the maximum number of permissions to return per page. Default
        * value is 100.
        */
       public List setPageSize(java.lang.Integer pageSize) {
@@ -6561,8 +6572,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Projects {
 
     /**
-     * Looks up the configured service perimeter for a given resource Format:
-     * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+     * Looks up the configured service perimeter for a given resource. Format:
+     * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
      *
      * Create a request for the method "projects.lookupConfiguredServicePerimeter".
      *
@@ -6570,7 +6581,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to invoke
      * the remote operation.
      *
-     * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+     * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
      * @return the request
      */
     public LookupConfiguredServicePerimeter lookupConfiguredServicePerimeter(java.lang.String resource) throws java.io.IOException {
@@ -6587,8 +6598,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Looks up the configured service perimeter for a given resource Format:
-       * ['projects/{projectNumber}', 'folders/{folderNumber}'].
+       * Looks up the configured service perimeter for a given resource. Format:
+       * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
        *
        * Create a request for the method "projects.lookupConfiguredServicePerimeter".
        *
@@ -6598,7 +6609,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param resource Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+       * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
        * @since 1.13
        */
       protected LookupConfiguredServicePerimeter(java.lang.String resource) {
@@ -6676,17 +6687,17 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (LookupConfiguredServicePerimeter) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456").
+      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`).
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Required. The Resource to resolve (e.g. "projects/123", "folders/456"). */
+      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
       public LookupConfiguredServicePerimeter setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),

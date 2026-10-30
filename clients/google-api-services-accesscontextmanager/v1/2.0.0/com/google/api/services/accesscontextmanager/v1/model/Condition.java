@@ -17,10 +17,10 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * A condition necessary for an `AccessLevel` to be granted. The Condition is an AND over its
- * fields. So a Condition is true if: 1) the request IP is from one of the listed subnetworks AND 2)
- * the originating device complies with the listed device policy AND 3) all listed access levels are
- * granted AND 4) the request was sent at a time allowed by the DateTimeRestriction.
+ * A condition necessary for an `AccessLevel` to be granted. The `Condition` is an AND over its
+ * fields. A `Condition` is true if: 1) the request IP is from one of the listed subnetworks, AND 2)
+ * the originating device complies with the listed device policy, AND 3) all listed access levels
+ * are granted, AND 4) the request was sent at a time allowed by the `DateTimeRestriction`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -34,7 +34,7 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
-   * Device specific restrictions, all restrictions must hold for the Condition to be true. If not
+   * Device-specific restrictions. All restrictions must hold for the `Condition` to be true. If not
    * specified, all devices are allowed.
    * The value may be {@code null}.
    */
@@ -43,11 +43,11 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address
-   * block, the specified IP address portion must be properly truncated (i.e. all the host bits must
-   * be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but
-   * "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas
-   * "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets
-   * in order for this Condition to be true. If empty, all IP addresses are allowed.
+   * block, the specified IP address portion must be properly truncated (that is, all the host bits
+   * must be zero) or the input is considered malformed. For example, `"192.0.2.0/24"` is accepted,
+   * but `"192.0.2.1/24"` is not. Similarly, for IPv6, `"2001:db8::/32"` is accepted, whereas
+   * `"2001:db8::1/32"` is not. The originating IP of a request must be in one of the listed subnets
+   * in order for this `Condition` to be true. If empty, all IP addresses are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +63,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> members;
 
   /**
-   * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty
-   * fields. Any non-empty field criteria evaluating to false will result in the Condition to be
-   * satisfied. Defaults to false.
+   * Whether to negate the `Condition`. If `true`, the `Condition` becomes a NAND over its non-empty
+   * fields. Any non-empty field criteria evaluating to `false` will result in the `Condition` being
+   * satisfied. Defaults to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -81,9 +81,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of other access levels defined in the same `Policy`, referenced by resource name.
-   * Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be
-   * granted for the Condition to be true. Example:
-   * "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
+   * Referencing an `AccessLevel` that does not exist is an error. All access levels listed must be
+   * granted for the `Condition` to be true. Example:
+   * `"accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +98,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   private java.util.List<VpcNetworkSource> vpcNetworkSources;
 
   /**
-   * Device specific restrictions, all restrictions must hold for the Condition to be true. If not
+   * Device-specific restrictions. All restrictions must hold for the `Condition` to be true. If not
    * specified, all devices are allowed.
    * @return value or {@code null} for none
    */
@@ -107,7 +107,7 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Device specific restrictions, all restrictions must hold for the Condition to be true. If not
+   * Device-specific restrictions. All restrictions must hold for the `Condition` to be true. If not
    * specified, all devices are allowed.
    * @param devicePolicy devicePolicy or {@code null} for none
    */
@@ -118,11 +118,11 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address
-   * block, the specified IP address portion must be properly truncated (i.e. all the host bits must
-   * be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but
-   * "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas
-   * "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets
-   * in order for this Condition to be true. If empty, all IP addresses are allowed.
+   * block, the specified IP address portion must be properly truncated (that is, all the host bits
+   * must be zero) or the input is considered malformed. For example, `"192.0.2.0/24"` is accepted,
+   * but `"192.0.2.1/24"` is not. Similarly, for IPv6, `"2001:db8::/32"` is accepted, whereas
+   * `"2001:db8::1/32"` is not. The originating IP of a request must be in one of the listed subnets
+   * in order for this `Condition` to be true. If empty, all IP addresses are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIpSubnetworks() {
@@ -131,11 +131,11 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * CIDR block IP subnetwork specification. May be IPv4 or IPv6. Note that for a CIDR IP address
-   * block, the specified IP address portion must be properly truncated (i.e. all the host bits must
-   * be zero) or the input is considered malformed. For example, "192.0.2.0/24" is accepted but
-   * "192.0.2.1/24" is not. Similarly, for IPv6, "2001:db8::/32" is accepted whereas
-   * "2001:db8::1/32" is not. The originating IP of a request must be in one of the listed subnets
-   * in order for this Condition to be true. If empty, all IP addresses are allowed.
+   * block, the specified IP address portion must be properly truncated (that is, all the host bits
+   * must be zero) or the input is considered malformed. For example, `"192.0.2.0/24"` is accepted,
+   * but `"192.0.2.1/24"` is not. Similarly, for IPv6, `"2001:db8::/32"` is accepted, whereas
+   * `"2001:db8::1/32"` is not. The originating IP of a request must be in one of the listed subnets
+   * in order for this `Condition` to be true. If empty, all IP addresses are allowed.
    * @param ipSubnetworks ipSubnetworks or {@code null} for none
    */
   public Condition setIpSubnetworks(java.util.List<java.lang.String> ipSubnetworks) {
@@ -165,9 +165,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty
-   * fields. Any non-empty field criteria evaluating to false will result in the Condition to be
-   * satisfied. Defaults to false.
+   * Whether to negate the `Condition`. If `true`, the `Condition` becomes a NAND over its non-empty
+   * fields. Any non-empty field criteria evaluating to `false` will result in the `Condition` being
+   * satisfied. Defaults to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getNegate() {
@@ -175,9 +175,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to negate the Condition. If true, the Condition becomes a NAND over its non-empty
-   * fields. Any non-empty field criteria evaluating to false will result in the Condition to be
-   * satisfied. Defaults to false.
+   * Whether to negate the `Condition`. If `true`, the `Condition` becomes a NAND over its non-empty
+   * fields. Any non-empty field criteria evaluating to `false` will result in the `Condition` being
+   * satisfied. Defaults to `false`.
    * @param negate negate or {@code null} for none
    */
   public Condition setNegate(java.lang.Boolean negate) {
@@ -206,9 +206,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of other access levels defined in the same `Policy`, referenced by resource name.
-   * Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be
-   * granted for the Condition to be true. Example:
-   * "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
+   * Referencing an `AccessLevel` that does not exist is an error. All access levels listed must be
+   * granted for the `Condition` to be true. Example:
+   * `"accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRequiredAccessLevels() {
@@ -217,9 +217,9 @@ public final class Condition extends com.google.api.client.json.GenericJson {
 
   /**
    * A list of other access levels defined in the same `Policy`, referenced by resource name.
-   * Referencing an `AccessLevel` which does not exist is an error. All access levels listed must be
-   * granted for the Condition to be true. Example:
-   * "`accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
+   * Referencing an `AccessLevel` that does not exist is an error. All access levels listed must be
+   * granted for the `Condition` to be true. Example:
+   * `"accessPolicies/MY_POLICY/accessLevels/LEVEL_NAME"`
    * @param requiredAccessLevels requiredAccessLevels or {@code null} for none
    */
   public Condition setRequiredAccessLevels(java.util.List<java.lang.String> requiredAccessLevels) {

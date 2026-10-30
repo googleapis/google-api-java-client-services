@@ -31,16 +31,16 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class LookupConfiguredServicePerimeterResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The resource (e.g. "projects/123", "folders/456") that directly owns/is restricted by the
-   * enforced perimeter.
+   * The resource (for example, `projects/123` or `folders/456`) that directly owns or is restricted
+   * by the enforced perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String restrictedResource;
 
   /**
-   * The resource (e.g. "projects/123", "folders/456") that directly owns/is restricted by the dry-
-   * run perimeter.
+   * The resource (for example, `projects/123` or `folders/456`) that directly owns or is restricted
+   * by the dry-run perimeter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,8 +65,8 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   private java.lang.String servicePerimeterDryRun;
 
   /**
-   * The resource (e.g. "projects/123", "folders/456") that directly owns/is restricted by the
-   * enforced perimeter.
+   * The resource (for example, `projects/123` or `folders/456`) that directly owns or is restricted
+   * by the enforced perimeter.
    * @return value or {@code null} for none
    */
   public java.lang.String getRestrictedResource() {
@@ -74,8 +74,8 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * The resource (e.g. "projects/123", "folders/456") that directly owns/is restricted by the
-   * enforced perimeter.
+   * The resource (for example, `projects/123` or `folders/456`) that directly owns or is restricted
+   * by the enforced perimeter.
    * @param restrictedResource restrictedResource or {@code null} for none
    */
   public LookupConfiguredServicePerimeterResponse setRestrictedResource(java.lang.String restrictedResource) {
@@ -84,8 +84,8 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * The resource (e.g. "projects/123", "folders/456") that directly owns/is restricted by the dry-
-   * run perimeter.
+   * The resource (for example, `projects/123` or `folders/456`) that directly owns or is restricted
+   * by the dry-run perimeter.
    * @return value or {@code null} for none
    */
   public java.lang.String getRestrictedResourceDryRun() {
@@ -93,8 +93,8 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * The resource (e.g. "projects/123", "folders/456") that directly owns/is restricted by the dry-
-   * run perimeter.
+   * The resource (for example, `projects/123` or `folders/456`) that directly owns or is restricted
+   * by the dry-run perimeter.
    * @param restrictedResourceDryRun restrictedResourceDryRun or {@code null} for none
    */
   public LookupConfiguredServicePerimeterResponse setRestrictedResourceDryRun(java.lang.String restrictedResourceDryRun) {

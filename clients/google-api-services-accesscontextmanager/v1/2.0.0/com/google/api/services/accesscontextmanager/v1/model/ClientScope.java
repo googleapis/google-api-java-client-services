@@ -17,7 +17,8 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * Client scope represents the application, etc. subject to this binding's restrictions.
+ * Client scope represents the application, project, or other resource subject to this binding's
+ * restrictions.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed

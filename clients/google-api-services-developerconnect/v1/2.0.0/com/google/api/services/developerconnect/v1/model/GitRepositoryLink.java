@@ -45,14 +45,14 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   private java.lang.String cloneUri;
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,8 +68,8 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   private java.lang.String etag;
 
   /**
-   * Output only. URI to access the linked repository through the Git Proxy. This field is only
-   * populated if the git proxy is enabled for the connection.
+   * Output only. URI to access the linked repository through the Git proxy. This field is only
+   * populated if the Git proxy is enabled for the connection.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +105,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   private java.lang.String uid;
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -153,7 +153,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -161,7 +161,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public GitRepositoryLink setCreateTime(String createTime) {
@@ -170,7 +170,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -178,7 +178,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public GitRepositoryLink setDeleteTime(String deleteTime) {
@@ -208,8 +208,8 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. URI to access the linked repository through the Git Proxy. This field is only
-   * populated if the git proxy is enabled for the connection.
+   * Output only. URI to access the linked repository through the Git proxy. This field is only
+   * populated if the Git proxy is enabled for the connection.
    * @return value or {@code null} for none
    */
   public java.lang.String getGitProxyUri() {
@@ -217,8 +217,8 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. URI to access the linked repository through the Git Proxy. This field is only
-   * populated if the git proxy is enabled for the connection.
+   * Output only. URI to access the linked repository through the Git proxy. This field is only
+   * populated if the Git proxy is enabled for the connection.
    * @param gitProxyUri gitProxyUri or {@code null} for none
    */
   public GitRepositoryLink setGitProxyUri(java.lang.String gitProxyUri) {
@@ -297,7 +297,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -305,7 +305,7 @@ public final class GitRepositoryLink extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public GitRepositoryLink setUpdateTime(String updateTime) {

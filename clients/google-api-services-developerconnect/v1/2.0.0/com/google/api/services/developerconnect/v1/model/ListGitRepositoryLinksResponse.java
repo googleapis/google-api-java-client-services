@@ -31,7 +31,7 @@ package com.google.api.services.developerconnect.v1.model;
 public final class ListGitRepositoryLinksResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of GitRepositoryLinks
+   * The list of GitRepositoryLinks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ListGitRepositoryLinksResponse extends com.google.api.client.
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of GitRepositoryLinks
+   * The list of GitRepositoryLinks.
    * @return value or {@code null} for none
    */
   public java.util.List<GitRepositoryLink> getGitRepositoryLinks() {
@@ -66,7 +66,7 @@ public final class ListGitRepositoryLinksResponse extends com.google.api.client.
   }
 
   /**
-   * The list of GitRepositoryLinks
+   * The list of GitRepositoryLinks.
    * @param gitRepositoryLinks gitRepositoryLinks or {@code null} for none
    */
   public ListGitRepositoryLinksResponse setGitRepositoryLinks(java.util.List<GitRepositoryLink> gitRepositoryLinks) {

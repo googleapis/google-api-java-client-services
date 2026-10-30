@@ -2103,31 +2103,39 @@ public class DeviceRun extends com.google.api.client.googleapis.services.json.Ab
           }
 
           /**
-           * Optional. A unique identifier for this request. This request is only idempotent if a
-           * `request_id` is provided, i.e. if a request with the same `request_id` is received,
-           * then the previous result will be returned. The server will guarantee that for at least
-           * 60 minutes after the first request. The value must be a UUID (e.g.,
-           * 123e4567-e89b-12d3-a456-426655440000). See github.com/google/uuid for more details.
+           * Optional. A unique identifier for this request. This request is only idempotent if both
+           * `request_id` and `session_id` are provided. If a retry with the same `request_id` and
+           * `session_id` is received, then the previous result will be returned. The server will
+           * guarantee that for at least 60 minutes after the first request. If `request_id` is
+           * provided without `session_id`, the server generates a new `session_id` on each attempt,
+           * and retries with the same `request_id` will fail with `INVALID_ARGUMENT`. The value
+           * must be a UUID (e.g., 123e4567-e89b-12d3-a456-426655440000). See github.com/google/uuid
+           * for more details.
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
-          /** Optional. A unique identifier for this request. This request is only idempotent if a `request_id`
-         is provided, i.e. if a request with the same `request_id` is received, then the previous result
-         will be returned. The server will guarantee that for at least 60 minutes after the first request.
-         The value must be a UUID (e.g., 123e4567-e89b-12d3-a456-426655440000). See github.com/google/uuid
-         for more details.
+          /** Optional. A unique identifier for this request. This request is only idempotent if both
+         `request_id` and `session_id` are provided. If a retry with the same `request_id` and `session_id`
+         is received, then the previous result will be returned. The server will guarantee that for at least
+         60 minutes after the first request. If `request_id` is provided without `session_id`, the server
+         generates a new `session_id` on each attempt, and retries with the same `request_id` will fail with
+         `INVALID_ARGUMENT`. The value must be a UUID (e.g., 123e4567-e89b-12d3-a456-426655440000). See
+         github.com/google/uuid for more details.
            */
           public java.lang.String getRequestId() {
             return requestId;
           }
 
           /**
-           * Optional. A unique identifier for this request. This request is only idempotent if a
-           * `request_id` is provided, i.e. if a request with the same `request_id` is received,
-           * then the previous result will be returned. The server will guarantee that for at least
-           * 60 minutes after the first request. The value must be a UUID (e.g.,
-           * 123e4567-e89b-12d3-a456-426655440000). See github.com/google/uuid for more details.
+           * Optional. A unique identifier for this request. This request is only idempotent if both
+           * `request_id` and `session_id` are provided. If a retry with the same `request_id` and
+           * `session_id` is received, then the previous result will be returned. The server will
+           * guarantee that for at least 60 minutes after the first request. If `request_id` is
+           * provided without `session_id`, the server generates a new `session_id` on each attempt,
+           * and retries with the same `request_id` will fail with `INVALID_ARGUMENT`. The value
+           * must be a UUID (e.g., 123e4567-e89b-12d3-a456-426655440000). See github.com/google/uuid
+           * for more details.
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2136,16 +2144,20 @@ public class DeviceRun extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. The ID to use for the session, which will become the final component of the
-           * resource name. If not provided, the server will generate a value for this field. When
-           * provided, this value must be between 4 and 63 characters, and match the following
-           * regex: ^a-z{2,61}[a-z0-9]$.
+           * resource name. If not provided, the server will generate a value for this field. To
+           * make the request idempotent when `request_id` is specified, callers must also provide
+           * `session_id` so that retries target the same resource name. When provided, this value
+           * must be between 4 and 63 characters, and match the following regex:
+           * ^a-z{2,61}[a-z0-9]$.
            */
           @com.google.api.client.util.Key
           private java.lang.String sessionId;
 
           /** Optional. The ID to use for the session, which will become the final component of the resource
-         name. If not provided, the server will generate a value for this field. When provided, this value
-         must be between 4 and 63 characters, and match the following regex: ^a-z{2,61}[a-z0-9]$.
+         name. If not provided, the server will generate a value for this field. To make the request
+         idempotent when `request_id` is specified, callers must also provide `session_id` so that retries
+         target the same resource name. When provided, this value must be between 4 and 63 characters, and
+         match the following regex: ^a-z{2,61}[a-z0-9]$.
            */
           public java.lang.String getSessionId() {
             return sessionId;
@@ -2153,9 +2165,11 @@ public class DeviceRun extends com.google.api.client.googleapis.services.json.Ab
 
           /**
            * Optional. The ID to use for the session, which will become the final component of the
-           * resource name. If not provided, the server will generate a value for this field. When
-           * provided, this value must be between 4 and 63 characters, and match the following
-           * regex: ^a-z{2,61}[a-z0-9]$.
+           * resource name. If not provided, the server will generate a value for this field. To
+           * make the request idempotent when `request_id` is specified, callers must also provide
+           * `session_id` so that retries target the same resource name. When provided, this value
+           * must be between 4 and 63 characters, and match the following regex:
+           * ^a-z{2,61}[a-z0-9]$.
            */
           public Create setSessionId(java.lang.String sessionId) {
             this.sessionId = sessionId;

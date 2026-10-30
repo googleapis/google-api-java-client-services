@@ -81,7 +81,8 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   private java.lang.Integer uncollapsibleWidgetsCount;
 
   /**
-   * All the widgets in the section. Must contain at least one widget.
+   * All the widgets in the section. Must contain at least one widget. A card supports up to 100
+   * widgets across all sections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -201,7 +202,8 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * All the widgets in the section. Must contain at least one widget.
+   * All the widgets in the section. Must contain at least one widget. A card supports up to 100
+   * widgets across all sections.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1Widget> getWidgets() {
@@ -209,7 +211,8 @@ public final class GoogleAppsCardV1Section extends com.google.api.client.json.Ge
   }
 
   /**
-   * All the widgets in the section. Must contain at least one widget.
+   * All the widgets in the section. Must contain at least one widget. A card supports up to 100
+   * widgets across all sections.
    * @param widgets widgets or {@code null} for none
    */
   public GoogleAppsCardV1Section setWidgets(java.util.List<GoogleAppsCardV1Widget> widgets) {

@@ -38,6 +38,15 @@ public final class GoogleCloudDataplexV1RequestBatchMetadataChangeRequest extend
   private GoogleCloudDataplexV1BatchChangeMetadataRequest changePayload;
 
   /**
+   * Optional. If set to true, defers reference validation between entries to when the change
+   * request is approved and applied. Structural validation of entries and aspects is still
+   * performed at the time of submission. The default is false.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deferredValidation;
+
+  /**
    * Optional. Justification for the metadata change request.
    * The value may be {@code null}.
    */
@@ -67,6 +76,27 @@ public final class GoogleCloudDataplexV1RequestBatchMetadataChangeRequest extend
    */
   public GoogleCloudDataplexV1RequestBatchMetadataChangeRequest setChangePayload(GoogleCloudDataplexV1BatchChangeMetadataRequest changePayload) {
     this.changePayload = changePayload;
+    return this;
+  }
+
+  /**
+   * Optional. If set to true, defers reference validation between entries to when the change
+   * request is approved and applied. Structural validation of entries and aspects is still
+   * performed at the time of submission. The default is false.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeferredValidation() {
+    return deferredValidation;
+  }
+
+  /**
+   * Optional. If set to true, defers reference validation between entries to when the change
+   * request is approved and applied. Structural validation of entries and aspects is still
+   * performed at the time of submission. The default is false.
+   * @param deferredValidation deferredValidation or {@code null} for none
+   */
+  public GoogleCloudDataplexV1RequestBatchMetadataChangeRequest setDeferredValidation(java.lang.Boolean deferredValidation) {
+    this.deferredValidation = deferredValidation;
     return this;
   }
 

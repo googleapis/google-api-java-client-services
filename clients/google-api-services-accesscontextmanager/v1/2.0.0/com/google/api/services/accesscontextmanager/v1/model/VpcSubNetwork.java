@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * Sub-segment ranges inside of a VPC Network.
+ * Sub-segment ranges inside of a VPC network.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -43,9 +43,9 @@ public final class VpcSubNetwork extends com.google.api.client.json.GenericJson 
   /**
    * CIDR block IP subnetwork specification. The IP address must be an IPv4 address and can be a
    * public or private IP address. Note that for a CIDR IP address block, the specified IP address
-   * portion must be properly truncated (i.e. all the host bits must be zero) or the input is
-   * considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. If
-   * empty, all IP addresses are allowed.
+   * portion must be properly truncated (that is, all the host bits must be zero) or the input is
+   * considered malformed. For example, `"192.0.2.0/24"` is accepted, but `"192.0.2.1/24"` is not.
+   * If empty, all IP addresses are allowed.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,9 +77,9 @@ public final class VpcSubNetwork extends com.google.api.client.json.GenericJson 
   /**
    * CIDR block IP subnetwork specification. The IP address must be an IPv4 address and can be a
    * public or private IP address. Note that for a CIDR IP address block, the specified IP address
-   * portion must be properly truncated (i.e. all the host bits must be zero) or the input is
-   * considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. If
-   * empty, all IP addresses are allowed.
+   * portion must be properly truncated (that is, all the host bits must be zero) or the input is
+   * considered malformed. For example, `"192.0.2.0/24"` is accepted, but `"192.0.2.1/24"` is not.
+   * If empty, all IP addresses are allowed.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getVpcIpSubnetworks() {
@@ -89,9 +89,9 @@ public final class VpcSubNetwork extends com.google.api.client.json.GenericJson 
   /**
    * CIDR block IP subnetwork specification. The IP address must be an IPv4 address and can be a
    * public or private IP address. Note that for a CIDR IP address block, the specified IP address
-   * portion must be properly truncated (i.e. all the host bits must be zero) or the input is
-   * considered malformed. For example, "192.0.2.0/24" is accepted but "192.0.2.1/24" is not. If
-   * empty, all IP addresses are allowed.
+   * portion must be properly truncated (that is, all the host bits must be zero) or the input is
+   * considered malformed. For example, `"192.0.2.0/24"` is accepted, but `"192.0.2.1/24"` is not.
+   * If empty, all IP addresses are allowed.
    * @param vpcIpSubnetworks vpcIpSubnetworks or {@code null} for none
    */
   public VpcSubNetwork setVpcIpSubnetworks(java.util.List<java.lang.String> vpcIpSubnetworks) {

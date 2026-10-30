@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * Defines the conditions under which an EgressPolicy matches a request. Conditions based on
+ * Defines the conditions under which an EgressPolicy matches a request. Conditions are based on
  * information about the source of the request. Note that if the destination of the request is also
  * protected by a ServicePerimeter, then that ServicePerimeter must have an IngressPolicy which
  * allows access in order for this request to succeed.
@@ -52,8 +52,8 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
   private java.lang.String identityType;
 
   /**
-   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` fields is
-   * non-empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` field is not
+   * empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +110,8 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` fields is
-   * non-empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` field is not
+   * empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
    * @return value or {@code null} for none
    */
   public java.lang.String getSourceRestriction() {
@@ -119,8 +119,8 @@ public final class EgressFrom extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` fields is
-   * non-empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
+   * Whether to enforce traffic restrictions based on `sources` field. If the `sources` field is not
+   * empty, then this field must be set to `SOURCE_RESTRICTION_ENABLED`.
    * @param sourceRestriction sourceRestriction or {@code null} for none
    */
   public EgressFrom setSourceRestriction(java.lang.String sourceRestriction) {

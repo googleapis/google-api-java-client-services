@@ -54,7 +54,7 @@ public final class IngressPolicy extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Human-readable title for the ingress rule. The title must be unique within the
-   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * perimeter and cannot exceed 100 characters. Within the access policy, the combined length of
    * all rule titles must not exceed 240,000 characters.
    * The value may be {@code null}.
    */
@@ -99,7 +99,7 @@ public final class IngressPolicy extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Human-readable title for the ingress rule. The title must be unique within the
-   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * perimeter and cannot exceed 100 characters. Within the access policy, the combined length of
    * all rule titles must not exceed 240,000 characters.
    * @return value or {@code null} for none
    */
@@ -109,7 +109,7 @@ public final class IngressPolicy extends com.google.api.client.json.GenericJson 
 
   /**
    * Optional. Human-readable title for the ingress rule. The title must be unique within the
-   * perimeter and can not exceed 100 characters. Within the access policy, the combined length of
+   * perimeter and cannot exceed 100 characters. Within the access policy, the combined length of
    * all rule titles must not exceed 240,000 characters.
    * @param title title or {@code null} for none
    */

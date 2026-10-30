@@ -31,7 +31,7 @@ package com.google.api.services.accesscontextmanager.v1.model;
 public final class AuthorizedOrgsDesc extends com.google.api.client.json.GenericJson {
 
   /**
-   * The asset type of this authorized orgs desc. Valid values are `ASSET_TYPE_DEVICE`, and
+   * The asset type of this authorized orgs desc. Valid values are `ASSET_TYPE_DEVICE` and
    * `ASSET_TYPE_CREDENTIAL_STRENGTH`.
    * The value may be {@code null}.
    */
@@ -45,10 +45,10 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
    * organizations listed in the `orgs` field. `AUTHORIZATION_DIRECTION_TO`: Allows the
    * organizations listed in the `orgs` field to evaluate the traffic in this organization. For the
    * authorization relationship to take effect, all of the organizations must authorize and specify
-   * the appropriate relationship direction. For example, if organization A authorized organization
-   * B and C to evaluate its traffic, by specifying `AUTHORIZATION_DIRECTION_TO` as the
-   * authorization direction, organizations B and C must specify `AUTHORIZATION_DIRECTION_FROM` as
-   * the authorization direction in their `AuthorizedOrgsDesc` resource.
+   * the appropriate relationship direction. For example, if organization A authorizes organizations
+   * B and C to evaluate its traffic by specifying `AUTHORIZATION_DIRECTION_TO` as the authorization
+   * direction, organizations B and C must specify `AUTHORIZATION_DIRECTION_FROM` as the
+   * authorization direction in their `AuthorizedOrgsDesc` resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,15 +72,15 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   private java.lang.String name;
 
   /**
-   * The list of organization ids in this AuthorizedOrgsDesc. Format: `organizations/` Example:
-   * `organizations/123456`
+   * The list of organization IDs in this `AuthorizedOrgsDesc`. Format: `organizations/{org_number}`
+   * Example: `organizations/123456`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> orgs;
 
   /**
-   * The asset type of this authorized orgs desc. Valid values are `ASSET_TYPE_DEVICE`, and
+   * The asset type of this authorized orgs desc. Valid values are `ASSET_TYPE_DEVICE` and
    * `ASSET_TYPE_CREDENTIAL_STRENGTH`.
    * @return value or {@code null} for none
    */
@@ -89,7 +89,7 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   }
 
   /**
-   * The asset type of this authorized orgs desc. Valid values are `ASSET_TYPE_DEVICE`, and
+   * The asset type of this authorized orgs desc. Valid values are `ASSET_TYPE_DEVICE` and
    * `ASSET_TYPE_CREDENTIAL_STRENGTH`.
    * @param assetType assetType or {@code null} for none
    */
@@ -105,10 +105,10 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
    * organizations listed in the `orgs` field. `AUTHORIZATION_DIRECTION_TO`: Allows the
    * organizations listed in the `orgs` field to evaluate the traffic in this organization. For the
    * authorization relationship to take effect, all of the organizations must authorize and specify
-   * the appropriate relationship direction. For example, if organization A authorized organization
-   * B and C to evaluate its traffic, by specifying `AUTHORIZATION_DIRECTION_TO` as the
-   * authorization direction, organizations B and C must specify `AUTHORIZATION_DIRECTION_FROM` as
-   * the authorization direction in their `AuthorizedOrgsDesc` resource.
+   * the appropriate relationship direction. For example, if organization A authorizes organizations
+   * B and C to evaluate its traffic by specifying `AUTHORIZATION_DIRECTION_TO` as the authorization
+   * direction, organizations B and C must specify `AUTHORIZATION_DIRECTION_FROM` as the
+   * authorization direction in their `AuthorizedOrgsDesc` resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthorizationDirection() {
@@ -122,10 +122,10 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
    * organizations listed in the `orgs` field. `AUTHORIZATION_DIRECTION_TO`: Allows the
    * organizations listed in the `orgs` field to evaluate the traffic in this organization. For the
    * authorization relationship to take effect, all of the organizations must authorize and specify
-   * the appropriate relationship direction. For example, if organization A authorized organization
-   * B and C to evaluate its traffic, by specifying `AUTHORIZATION_DIRECTION_TO` as the
-   * authorization direction, organizations B and C must specify `AUTHORIZATION_DIRECTION_FROM` as
-   * the authorization direction in their `AuthorizedOrgsDesc` resource.
+   * the appropriate relationship direction. For example, if organization A authorizes organizations
+   * B and C to evaluate its traffic by specifying `AUTHORIZATION_DIRECTION_TO` as the authorization
+   * direction, organizations B and C must specify `AUTHORIZATION_DIRECTION_FROM` as the
+   * authorization direction in their `AuthorizedOrgsDesc` resource.
    * @param authorizationDirection authorizationDirection or {@code null} for none
    */
   public AuthorizedOrgsDesc setAuthorizationDirection(java.lang.String authorizationDirection) {
@@ -174,8 +174,8 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of organization ids in this AuthorizedOrgsDesc. Format: `organizations/` Example:
-   * `organizations/123456`
+   * The list of organization IDs in this `AuthorizedOrgsDesc`. Format: `organizations/{org_number}`
+   * Example: `organizations/123456`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getOrgs() {
@@ -183,8 +183,8 @@ public final class AuthorizedOrgsDesc extends com.google.api.client.json.Generic
   }
 
   /**
-   * The list of organization ids in this AuthorizedOrgsDesc. Format: `organizations/` Example:
-   * `organizations/123456`
+   * The list of organization IDs in this `AuthorizedOrgsDesc`. Format: `organizations/{org_number}`
+   * Example: `organizations/123456`
    * @param orgs orgs or {@code null} for none
    */
   public AuthorizedOrgsDesc setOrgs(java.util.List<java.lang.String> orgs) {

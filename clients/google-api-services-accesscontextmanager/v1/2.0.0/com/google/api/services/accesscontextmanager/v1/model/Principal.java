@@ -48,10 +48,10 @@ public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Service account email used to assign policies to a specific service account. If a
-   * service account is subject to multiple policies (e.g., if there is a policy for all service
-   * accounts in a project and a policy for the service account), the closest (i.e. the most
-   * specific) dry-run policy will be used for the dry-run functionality and the closest enforcement
-   * policy will be used for the enforcement.
+   * service account is subject to multiple policies (for example, if there is a policy for all
+   * service accounts in a project and a policy for the service account), the closest (that is, the
+   * most specific) dry-run policy is used for the dry-run functionality and the closest enforcement
+   * policy is used for enforcement.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -100,10 +100,10 @@ public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Service account email used to assign policies to a specific service account. If a
-   * service account is subject to multiple policies (e.g., if there is a policy for all service
-   * accounts in a project and a policy for the service account), the closest (i.e. the most
-   * specific) dry-run policy will be used for the dry-run functionality and the closest enforcement
-   * policy will be used for the enforcement.
+   * service account is subject to multiple policies (for example, if there is a policy for all
+   * service accounts in a project and a policy for the service account), the closest (that is, the
+   * most specific) dry-run policy is used for the dry-run functionality and the closest enforcement
+   * policy is used for enforcement.
    * @return value or {@code null} for none
    */
   public java.lang.String getServiceAccount() {
@@ -112,10 +112,10 @@ public final class Principal extends com.google.api.client.json.GenericJson {
 
   /**
    * Immutable. Service account email used to assign policies to a specific service account. If a
-   * service account is subject to multiple policies (e.g., if there is a policy for all service
-   * accounts in a project and a policy for the service account), the closest (i.e. the most
-   * specific) dry-run policy will be used for the dry-run functionality and the closest enforcement
-   * policy will be used for the enforcement.
+   * service account is subject to multiple policies (for example, if there is a policy for all
+   * service accounts in a project and a policy for the service account), the closest (that is, the
+   * most specific) dry-run policy is used for the dry-run functionality and the closest enforcement
+   * policy is used for enforcement.
    * @param serviceAccount serviceAccount or {@code null} for none
    */
   public Principal setServiceAccount(java.lang.String serviceAccount) {

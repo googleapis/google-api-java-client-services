@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * `SupportedService` specifies the VPC Service Controls and its properties.
+ * `SupportedService` specifies a service supported by VPC Service Controls and its properties.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -70,7 +70,7 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
   private java.lang.String supportStage;
 
   /**
-   * The list of the supported methods. This field exists only in response to GetSupportedService
+   * The list of supported methods. This field exists only in response to GetSupportedService.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the supported product, such as 'Cloud Product API'.
+   * The name of the supported product, such as `'Cloud Product API'`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -183,7 +183,7 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of the supported methods. This field exists only in response to GetSupportedService
+   * The list of supported methods. This field exists only in response to GetSupportedService.
    * @return value or {@code null} for none
    */
   public java.util.List<MethodSelector> getSupportedMethods() {
@@ -191,7 +191,7 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The list of the supported methods. This field exists only in response to GetSupportedService
+   * The list of supported methods. This field exists only in response to GetSupportedService.
    * @param supportedMethods supportedMethods or {@code null} for none
    */
   public SupportedService setSupportedMethods(java.util.List<MethodSelector> supportedMethods) {
@@ -200,7 +200,7 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the supported product, such as 'Cloud Product API'.
+   * The name of the supported product, such as `'Cloud Product API'`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTitle() {
@@ -208,7 +208,7 @@ public final class SupportedService extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * The name of the supported product, such as 'Cloud Product API'.
+   * The name of the supported product, such as `'Cloud Product API'`.
    * @param title title or {@code null} for none
    */
   public SupportedService setTitle(java.lang.String title) {

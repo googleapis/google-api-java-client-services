@@ -17,8 +17,8 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * Stores settings related to Google Cloud Session Length including session duration, the type of
- * challenge (i.e. method) they should face when their session expires, and other related settings.
+ * Stores settings related to Google Cloud Session Length, including session duration, the type of
+ * challenge (that is, method) a user faces when their session expires, and other related settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -43,33 +43,33 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
    * Optional. The session length. Setting this field to zero allows for sessions that are active
    * indefinitely. Also, setting `session_length_enabled` to `false` disregards session limits,
    * which means that sessions never expire. If `use_oidc_max_age` is `true`, for OIDC apps, the
-   * session length will be the minimum of this field and the OIDC `max_age` param. If this field is
-   * set to zero, `session_length_enabled` must be set to `false` or left unset.
+   * session length will be the minimum of this field and the OIDC `max_age` parameter. If this
+   * field is set to zero, `session_length_enabled` must be set to `false` or left unset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String sessionLength;
 
   /**
-   * Optional. This field enables or disables Google Cloud session length. When false, all fields
-   * set above will be disregarded and the session length is basically infinite. If `session_length`
-   * is set to zero, this field must be set to false.
+   * Optional. This field enables or disables Google Cloud session length. When `false`, all fields
+   * set above are disregarded and the session length is effectively infinite. If `session_length`
+   * is set to zero, this field must be set to `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean sessionLengthEnabled;
 
   /**
-   * Optional. Session method when user's Google Cloud session is up.
+   * Optional. Session challenge method when a user's Google Cloud session expires.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sessionReauthMethod;
 
   /**
-   * Optional. Only useful for OIDC apps. When false, the OIDC max_age param, if passed in the
-   * authentication request will be ignored. When true, the re-auth period will be the minimum of
-   * the session_length field and the max_age OIDC param.
+   * Optional. Only useful for OIDC apps. When `false`, the OIDC `max_age` parameter, if passed in
+   * the authentication request, is ignored. When `true`, the re-authentication period is the
+   * minimum of the `session_length` field and the `max_age` OIDC parameter.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,8 +98,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
    * Optional. The session length. Setting this field to zero allows for sessions that are active
    * indefinitely. Also, setting `session_length_enabled` to `false` disregards session limits,
    * which means that sessions never expire. If `use_oidc_max_age` is `true`, for OIDC apps, the
-   * session length will be the minimum of this field and the OIDC `max_age` param. If this field is
-   * set to zero, `session_length_enabled` must be set to `false` or left unset.
+   * session length will be the minimum of this field and the OIDC `max_age` parameter. If this
+   * field is set to zero, `session_length_enabled` must be set to `false` or left unset.
    * @return value or {@code null} for none
    */
   public String getSessionLength() {
@@ -110,8 +110,8 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
    * Optional. The session length. Setting this field to zero allows for sessions that are active
    * indefinitely. Also, setting `session_length_enabled` to `false` disregards session limits,
    * which means that sessions never expire. If `use_oidc_max_age` is `true`, for OIDC apps, the
-   * session length will be the minimum of this field and the OIDC `max_age` param. If this field is
-   * set to zero, `session_length_enabled` must be set to `false` or left unset.
+   * session length will be the minimum of this field and the OIDC `max_age` parameter. If this
+   * field is set to zero, `session_length_enabled` must be set to `false` or left unset.
    * @param sessionLength sessionLength or {@code null} for none
    */
   public SessionSettings setSessionLength(String sessionLength) {
@@ -120,9 +120,9 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. This field enables or disables Google Cloud session length. When false, all fields
-   * set above will be disregarded and the session length is basically infinite. If `session_length`
-   * is set to zero, this field must be set to false.
+   * Optional. This field enables or disables Google Cloud session length. When `false`, all fields
+   * set above are disregarded and the session length is effectively infinite. If `session_length`
+   * is set to zero, this field must be set to `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSessionLengthEnabled() {
@@ -130,9 +130,9 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. This field enables or disables Google Cloud session length. When false, all fields
-   * set above will be disregarded and the session length is basically infinite. If `session_length`
-   * is set to zero, this field must be set to false.
+   * Optional. This field enables or disables Google Cloud session length. When `false`, all fields
+   * set above are disregarded and the session length is effectively infinite. If `session_length`
+   * is set to zero, this field must be set to `false`.
    * @param sessionLengthEnabled sessionLengthEnabled or {@code null} for none
    */
   public SessionSettings setSessionLengthEnabled(java.lang.Boolean sessionLengthEnabled) {
@@ -141,7 +141,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Session method when user's Google Cloud session is up.
+   * Optional. Session challenge method when a user's Google Cloud session expires.
    * @return value or {@code null} for none
    */
   public java.lang.String getSessionReauthMethod() {
@@ -149,7 +149,7 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Session method when user's Google Cloud session is up.
+   * Optional. Session challenge method when a user's Google Cloud session expires.
    * @param sessionReauthMethod sessionReauthMethod or {@code null} for none
    */
   public SessionSettings setSessionReauthMethod(java.lang.String sessionReauthMethod) {
@@ -158,9 +158,9 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Only useful for OIDC apps. When false, the OIDC max_age param, if passed in the
-   * authentication request will be ignored. When true, the re-auth period will be the minimum of
-   * the session_length field and the max_age OIDC param.
+   * Optional. Only useful for OIDC apps. When `false`, the OIDC `max_age` parameter, if passed in
+   * the authentication request, is ignored. When `true`, the re-authentication period is the
+   * minimum of the `session_length` field and the `max_age` OIDC parameter.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getUseOidcMaxAge() {
@@ -168,9 +168,9 @@ public final class SessionSettings extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Only useful for OIDC apps. When false, the OIDC max_age param, if passed in the
-   * authentication request will be ignored. When true, the re-auth period will be the minimum of
-   * the session_length field and the max_age OIDC param.
+   * Optional. Only useful for OIDC apps. When `false`, the OIDC `max_age` parameter, if passed in
+   * the authentication request, is ignored. When `true`, the re-authentication period is the
+   * minimum of the `session_length` field and the `max_age` OIDC parameter.
    * @param useOidcMaxAge useOidcMaxAge or {@code null} for none
    */
   public SessionSettings setUseOidcMaxAge(java.lang.Boolean useOidcMaxAge) {

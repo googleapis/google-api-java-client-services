@@ -34,14 +34,14 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
-   * "accessPolicies/9522/accessLevels/device_trusted"
+   * `"accessPolicies/9522/accessLevels/device_trusted"`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> accessLevels;
 
   /**
-   * Optional. Session settings applied to user access on a given AccessScope.
+   * Optional. Session settings applied to user access on a given `AccessScope`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -50,7 +50,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
-   * "accessPolicies/9522/accessLevels/device_trusted"
+   * `"accessPolicies/9522/accessLevels/device_trusted"`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccessLevels() {
@@ -60,7 +60,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   /**
    * Optional. Access level that a user must have to be granted access. Only one access level is
    * supported, not multiple. This repeated field must have exactly one element. Example:
-   * "accessPolicies/9522/accessLevels/device_trusted"
+   * `"accessPolicies/9522/accessLevels/device_trusted"`
    * @param accessLevels accessLevels or {@code null} for none
    */
   public AccessSettings setAccessLevels(java.util.List<java.lang.String> accessLevels) {
@@ -69,7 +69,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Session settings applied to user access on a given AccessScope.
+   * Optional. Session settings applied to user access on a given `AccessScope`.
    * @return value or {@code null} for none
    */
   public SessionSettings getSessionSettings() {
@@ -77,7 +77,7 @@ public final class AccessSettings extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Session settings applied to user access on a given AccessScope.
+   * Optional. Session settings applied to user access on a given `AccessScope`.
    * @param sessionSettings sessionSettings or {@code null} for none
    */
   public AccessSettings setSessionSettings(SessionSettings sessionSettings) {

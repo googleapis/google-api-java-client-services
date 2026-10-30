@@ -44,8 +44,8 @@ public final class ServicePattern extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL pattern to allow. Only patterns of ".googleapis.com", "www.googleapis.com/" and
-   * "*.appspot.com forms are supported, where should be an alphanumeric name.
+   * URL pattern to allow. Only patterns of `".googleapis.com"`, `"www.googleapis.com/"`, and
+   * `"*.appspot.com"` forms are supported, where `` should be an alphanumeric name.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,8 +76,8 @@ public final class ServicePattern extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL pattern to allow. Only patterns of ".googleapis.com", "www.googleapis.com/" and
-   * "*.appspot.com forms are supported, where should be an alphanumeric name.
+   * URL pattern to allow. Only patterns of `".googleapis.com"`, `"www.googleapis.com/"`, and
+   * `"*.appspot.com"` forms are supported, where `` should be an alphanumeric name.
    * @return value or {@code null} for none
    */
   public java.lang.String getPattern() {
@@ -85,8 +85,8 @@ public final class ServicePattern extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * URL pattern to allow. Only patterns of ".googleapis.com", "www.googleapis.com/" and
-   * "*.appspot.com forms are supported, where should be an alphanumeric name.
+   * URL pattern to allow. Only patterns of `".googleapis.com"`, `"www.googleapis.com/"`, and
+   * `"*.appspot.com"` forms are supported, where `` should be an alphanumeric name.
    * @param pattern pattern or {@code null} for none
    */
   public ServicePattern setPattern(java.lang.String pattern) {

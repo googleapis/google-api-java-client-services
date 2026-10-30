@@ -46,9 +46,9 @@ public final class OsConstraint extends com.google.api.client.json.GenericJson {
   private java.lang.String osType;
 
   /**
-   * Only allows requests from devices with a verified Chrome OS. Verifications includes
-   * requirements that the device is enterprise-managed, conformant to domain policies, and the
-   * caller has permission to call the API targeted by the request.
+   * Only allows requests from devices with a verified Chrome OS. Verification includes requirements
+   * that the device is enterprise-managed, conforms to domain policies, and the caller has
+   * permission to call the API targeted by the request.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,9 +91,9 @@ public final class OsConstraint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only allows requests from devices with a verified Chrome OS. Verifications includes
-   * requirements that the device is enterprise-managed, conformant to domain policies, and the
-   * caller has permission to call the API targeted by the request.
+   * Only allows requests from devices with a verified Chrome OS. Verification includes requirements
+   * that the device is enterprise-managed, conforms to domain policies, and the caller has
+   * permission to call the API targeted by the request.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getRequireVerifiedChromeOs() {
@@ -101,9 +101,9 @@ public final class OsConstraint extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Only allows requests from devices with a verified Chrome OS. Verifications includes
-   * requirements that the device is enterprise-managed, conformant to domain policies, and the
-   * caller has permission to call the API targeted by the request.
+   * Only allows requests from devices with a verified Chrome OS. Verification includes requirements
+   * that the device is enterprise-managed, conforms to domain policies, and the caller has
+   * permission to call the API targeted by the request.
    * @param requireVerifiedChromeOs requireVerifiedChromeOs or {@code null} for none
    */
   public OsConstraint setRequireVerifiedChromeOs(java.lang.Boolean requireVerifiedChromeOs) {

@@ -52,7 +52,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private BitbucketDataCenterConfig bitbucketDataCenterConfig;
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,7 +67,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private CryptoKeyConfig cryptoKeyConfig;
 
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -91,8 +91,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
-   * perform git operations on the repositories linked in the connection. [Learn
+   * Optional. Configuration for the Git proxy feature. Enabling the Git proxy allows clients to
+   * perform Git operations on the repositories linked in the connection. [Learn
    * more](https://docs.cloud.google.com/developer-connect/docs/configure-git-proxy).
    * The value may be {@code null}.
    */
@@ -178,7 +178,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   private java.lang.String uid;
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -236,7 +236,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -244,7 +244,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Create timestamp
+   * Output only. Create timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public Connection setCreateTime(String createTime) {
@@ -272,7 +272,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    * @return value or {@code null} for none
    */
   public String getDeleteTime() {
@@ -280,7 +280,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Delete timestamp
+   * Output only. Delete timestamp.
    * @param deleteTime deleteTime or {@code null} for none
    */
   public Connection setDeleteTime(String deleteTime) {
@@ -329,8 +329,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
-   * perform git operations on the repositories linked in the connection. [Learn
+   * Optional. Configuration for the Git proxy feature. Enabling the Git proxy allows clients to
+   * perform Git operations on the repositories linked in the connection. [Learn
    * more](https://docs.cloud.google.com/developer-connect/docs/configure-git-proxy).
    * @return value or {@code null} for none
    */
@@ -339,8 +339,8 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Configuration for the git proxy feature. Enabling the git proxy allows clients to
-   * perform git operations on the repositories linked in the connection. [Learn
+   * Optional. Configuration for the Git proxy feature. Enabling the Git proxy allows clients to
+   * perform Git operations on the repositories linked in the connection. [Learn
    * more](https://docs.cloud.google.com/developer-connect/docs/configure-git-proxy).
    * @param gitProxyConfig gitProxyConfig or {@code null} for none
    */
@@ -539,7 +539,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -547,7 +547,7 @@ public final class Connection extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. [Output only] Update timestamp
+   * Output only. Update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public Connection setUpdateTime(String updateTime) {

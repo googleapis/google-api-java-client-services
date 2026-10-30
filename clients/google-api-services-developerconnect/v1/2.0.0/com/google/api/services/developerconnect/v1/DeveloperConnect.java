@@ -1506,33 +1506,33 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -2838,33 +2838,33 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filtering results
+            /** Optional. Filtering results.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Optional. Hint for how to order the results */
+            /** Optional. Hint for how to order the results. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Hint for how to order the results
+            /** Optional. Hint for how to order the results.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Optional. Hint for how to order the results */
+            /** Optional. Hint for how to order the results. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
@@ -3213,22 +3213,22 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and connection_id from the method_signature of Create RPC
+           * Required. The ID to use for the connection, which becomes the final component of the
+           * connection's resource name.
            */
           @com.google.api.client.util.Key
           private java.lang.String connectionId;
 
-          /** Required. Id of the requesting object If auto-generating Id server-side, remove this field and
-         connection_id from the method_signature of Create RPC
+          /** Required. The ID to use for the connection, which becomes the final component of the connection's
+         resource name.
            */
           public java.lang.String getConnectionId() {
             return connectionId;
           }
 
           /**
-           * Required. Id of the requesting object If auto-generating Id server-side, remove this
-           * field and connection_id from the method_signature of Create RPC
+           * Required. The ID to use for the connection, which becomes the final component of the
+           * connection's resource name.
            */
           public Create setConnectionId(java.lang.String connectionId) {
             this.connectionId = connectionId;
@@ -4107,33 +4107,33 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Optional. Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Optional. Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
@@ -4602,6 +4602,288 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
         public class GitRepositoryLinks {
 
           /**
+           * Add a comment to a Pull Request.
+           *
+           * Create a request for the method "gitRepositoryLinks.addPullRequestComment".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link AddPullRequestComment#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestCommentRequest}
+           * @return the request
+           */
+          public AddPullRequestComment addPullRequestComment(java.lang.String name, com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestCommentRequest content) throws java.io.IOException {
+            AddPullRequestComment result = new AddPullRequestComment(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddPullRequestComment extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.PullRequestComment> {
+
+            private static final String REST_PATH = "v1/{+name}:addPullRequestComment";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Add a comment to a Pull Request.
+             *
+             * Create a request for the method "gitRepositoryLinks.addPullRequestComment".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link AddPullRequestComment#execute()} method to invoke the
+             * remote operation. <p> {@link AddPullRequestComment#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestCommentRequest}
+             * @since 1.13
+             */
+            protected AddPullRequestComment(java.lang.String name, com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestCommentRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.PullRequestComment.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public AddPullRequestComment set$Xgafv(java.lang.String $Xgafv) {
+              return (AddPullRequestComment) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddPullRequestComment setAccessToken(java.lang.String accessToken) {
+              return (AddPullRequestComment) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddPullRequestComment setAlt(java.lang.String alt) {
+              return (AddPullRequestComment) super.setAlt(alt);
+            }
+
+            @Override
+            public AddPullRequestComment setCallback(java.lang.String callback) {
+              return (AddPullRequestComment) super.setCallback(callback);
+            }
+
+            @Override
+            public AddPullRequestComment setFields(java.lang.String fields) {
+              return (AddPullRequestComment) super.setFields(fields);
+            }
+
+            @Override
+            public AddPullRequestComment setKey(java.lang.String key) {
+              return (AddPullRequestComment) super.setKey(key);
+            }
+
+            @Override
+            public AddPullRequestComment setOauthToken(java.lang.String oauthToken) {
+              return (AddPullRequestComment) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddPullRequestComment setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddPullRequestComment) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddPullRequestComment setQuotaUser(java.lang.String quotaUser) {
+              return (AddPullRequestComment) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddPullRequestComment setUploadType(java.lang.String uploadType) {
+              return (AddPullRequestComment) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddPullRequestComment setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddPullRequestComment) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public AddPullRequestComment setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AddPullRequestComment set(String parameterName, Object value) {
+              return (AddPullRequestComment) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Add a review comment (inline on diff) to a Pull Request.
+           *
+           * Create a request for the method "gitRepositoryLinks.addPullRequestReviewComment".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link AddPullRequestReviewComment#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestReviewCommentRequest}
+           * @return the request
+           */
+          public AddPullRequestReviewComment addPullRequestReviewComment(java.lang.String name, com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestReviewCommentRequest content) throws java.io.IOException {
+            AddPullRequestReviewComment result = new AddPullRequestReviewComment(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class AddPullRequestReviewComment extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.PullRequestReviewComment> {
+
+            private static final String REST_PATH = "v1/{+name}:addPullRequestReviewComment";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Add a review comment (inline on diff) to a Pull Request.
+             *
+             * Create a request for the method "gitRepositoryLinks.addPullRequestReviewComment".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link AddPullRequestReviewComment#execute()} method to invoke
+             * the remote operation. <p> {@link AddPullRequestReviewComment#initialize(com.google.api.client.g
+             * oogleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestReviewCommentRequest}
+             * @since 1.13
+             */
+            protected AddPullRequestReviewComment(java.lang.String name, com.google.api.services.developerconnect.v1.model.AddGitRepositoryLinkPullRequestReviewCommentRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.PullRequestReviewComment.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public AddPullRequestReviewComment set$Xgafv(java.lang.String $Xgafv) {
+              return (AddPullRequestReviewComment) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setAccessToken(java.lang.String accessToken) {
+              return (AddPullRequestReviewComment) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setAlt(java.lang.String alt) {
+              return (AddPullRequestReviewComment) super.setAlt(alt);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setCallback(java.lang.String callback) {
+              return (AddPullRequestReviewComment) super.setCallback(callback);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setFields(java.lang.String fields) {
+              return (AddPullRequestReviewComment) super.setFields(fields);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setKey(java.lang.String key) {
+              return (AddPullRequestReviewComment) super.setKey(key);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setOauthToken(java.lang.String oauthToken) {
+              return (AddPullRequestReviewComment) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (AddPullRequestReviewComment) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setQuotaUser(java.lang.String quotaUser) {
+              return (AddPullRequestReviewComment) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setUploadType(java.lang.String uploadType) {
+              return (AddPullRequestReviewComment) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public AddPullRequestReviewComment setUploadProtocol(java.lang.String uploadProtocol) {
+              return (AddPullRequestReviewComment) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public AddPullRequestReviewComment setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public AddPullRequestReviewComment set(String parameterName, Object value) {
+              return (AddPullRequestReviewComment) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates a GitRepositoryLink. Upon linking a Git Repository, Developer Connect will configure the
            * Git Repository to send webhook events to Developer Connect. Connections that use Firebase GitHub
            * Application will have events forwarded to the Firebase service. Connections that use Gemini Code
@@ -5039,6 +5321,910 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             }
           }
           /**
+           * Diff commits for a GitRepositoryLink.
+           *
+           * Create a request for the method "gitRepositoryLinks.diffCommit".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link DiffCommit#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink.
+           * @return the request
+           */
+          public DiffCommit diffCommit(java.lang.String name) throws java.io.IOException {
+            DiffCommit result = new DiffCommit(name);
+            initialize(result);
+            return result;
+          }
+
+          public class DiffCommit extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.DiffGitRepositoryLinkCommitResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:diffCommit";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Diff commits for a GitRepositoryLink.
+             *
+             * Create a request for the method "gitRepositoryLinks.diffCommit".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link DiffCommit#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * DiffCommit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink.
+             * @since 1.13
+             */
+            protected DiffCommit(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.DiffGitRepositoryLinkCommitResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public DiffCommit set$Xgafv(java.lang.String $Xgafv) {
+              return (DiffCommit) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public DiffCommit setAccessToken(java.lang.String accessToken) {
+              return (DiffCommit) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public DiffCommit setAlt(java.lang.String alt) {
+              return (DiffCommit) super.setAlt(alt);
+            }
+
+            @Override
+            public DiffCommit setCallback(java.lang.String callback) {
+              return (DiffCommit) super.setCallback(callback);
+            }
+
+            @Override
+            public DiffCommit setFields(java.lang.String fields) {
+              return (DiffCommit) super.setFields(fields);
+            }
+
+            @Override
+            public DiffCommit setKey(java.lang.String key) {
+              return (DiffCommit) super.setKey(key);
+            }
+
+            @Override
+            public DiffCommit setOauthToken(java.lang.String oauthToken) {
+              return (DiffCommit) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public DiffCommit setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (DiffCommit) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public DiffCommit setQuotaUser(java.lang.String quotaUser) {
+              return (DiffCommit) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public DiffCommit setUploadType(java.lang.String uploadType) {
+              return (DiffCommit) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public DiffCommit setUploadProtocol(java.lang.String uploadProtocol) {
+              return (DiffCommit) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /** Required. The resource name of the GitRepositoryLink. */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /** Required. The resource name of the GitRepositoryLink. */
+            public DiffCommit setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The base commit SHA or ref. */
+            @com.google.api.client.util.Key
+            private java.lang.String baseSha;
+
+            /** Required. The base commit SHA or ref.
+             */
+            public java.lang.String getBaseSha() {
+              return baseSha;
+            }
+
+            /** Required. The base commit SHA or ref. */
+            public DiffCommit setBaseSha(java.lang.String baseSha) {
+              this.baseSha = baseSha;
+              return this;
+            }
+
+            /** Required. The head commit SHA or ref. */
+            @com.google.api.client.util.Key
+            private java.lang.String headSha;
+
+            /** Required. The head commit SHA or ref.
+             */
+            public java.lang.String getHeadSha() {
+              return headSha;
+            }
+
+            /** Required. The head commit SHA or ref. */
+            public DiffCommit setHeadSha(java.lang.String headSha) {
+              this.headSha = headSha;
+              return this;
+            }
+
+            /**
+             * Optional. Path patterns or exact paths to filter returned files. When `path_filters`
+             * is specified, `FileDiff.patch` is populated for all matching files (use `["**"]` to
+             * include patches for all changed files). When `path_filters` is omitted or empty, the
+             * full list of `FileDiff` is returned without patch diffs (`FileDiff.patch` is empty).
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> pathFilters;
+
+            /** Optional. Path patterns or exact paths to filter returned files. When `path_filters` is specified,
+           `FileDiff.patch` is populated for all matching files (use `["**"]` to include patches for all
+           changed files). When `path_filters` is omitted or empty, the full list of `FileDiff` is returned
+           without patch diffs (`FileDiff.patch` is empty).
+             */
+            public java.util.List<java.lang.String> getPathFilters() {
+              return pathFilters;
+            }
+
+            /**
+             * Optional. Path patterns or exact paths to filter returned files. When `path_filters`
+             * is specified, `FileDiff.patch` is populated for all matching files (use `["**"]` to
+             * include patches for all changed files). When `path_filters` is omitted or empty, the
+             * full list of `FileDiff` is returned without patch diffs (`FileDiff.patch` is empty).
+             */
+            public DiffCommit setPathFilters(java.util.List<java.lang.String> pathFilters) {
+              this.pathFilters = pathFilters;
+              return this;
+            }
+
+            @Override
+            public DiffCommit set(String parameterName, Object value) {
+              return (DiffCommit) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch Commit details from a Git repository link.
+           *
+           * Create a request for the method "gitRepositoryLinks.fetchCommit".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchCommit#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @return the request
+           */
+          public FetchCommit fetchCommit(java.lang.String name) throws java.io.IOException {
+            FetchCommit result = new FetchCommit(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchCommit extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkCommitResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchCommit";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Fetch Commit details from a Git repository link.
+             *
+             * Create a request for the method "gitRepositoryLinks.fetchCommit".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchCommit#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * FetchCommit#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @since 1.13
+             */
+            protected FetchCommit(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkCommitResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchCommit set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchCommit) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchCommit setAccessToken(java.lang.String accessToken) {
+              return (FetchCommit) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchCommit setAlt(java.lang.String alt) {
+              return (FetchCommit) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchCommit setCallback(java.lang.String callback) {
+              return (FetchCommit) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchCommit setFields(java.lang.String fields) {
+              return (FetchCommit) super.setFields(fields);
+            }
+
+            @Override
+            public FetchCommit setKey(java.lang.String key) {
+              return (FetchCommit) super.setKey(key);
+            }
+
+            @Override
+            public FetchCommit setOauthToken(java.lang.String oauthToken) {
+              return (FetchCommit) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchCommit setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchCommit) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchCommit setQuotaUser(java.lang.String quotaUser) {
+              return (FetchCommit) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchCommit setUploadType(java.lang.String uploadType) {
+              return (FetchCommit) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchCommit setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchCommit) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public FetchCommit setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Required. The commit SHA, or symbolic revision (for example, branch name, tag, or Git
+             * reference).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String commitSha;
+
+            /** Required. The commit SHA, or symbolic revision (for example, branch name, tag, or Git reference).
+             */
+            public java.lang.String getCommitSha() {
+              return commitSha;
+            }
+
+            /**
+             * Required. The commit SHA, or symbolic revision (for example, branch name, tag, or Git
+             * reference).
+             */
+            public FetchCommit setCommitSha(java.lang.String commitSha) {
+              this.commitSha = commitSha;
+              return this;
+            }
+
+            /**
+             * Optional. Path patterns or exact paths to filter returned files (only applicable in
+             * `FULL` view). When `path_filters` is specified, `FileDiff.patch` is populated for all
+             * matching files (use `["**"]` to include patches for all changed files). When
+             * `path_filters` is omitted or empty, the full list of `FileDiff` is returned without
+             * patch diffs (`FileDiff.patch` is empty).
+             */
+            @com.google.api.client.util.Key
+            private java.util.List<java.lang.String> pathFilters;
+
+            /** Optional. Path patterns or exact paths to filter returned files (only applicable in `FULL` view).
+           When `path_filters` is specified, `FileDiff.patch` is populated for all matching files (use
+           `["**"]` to include patches for all changed files). When `path_filters` is omitted or empty, the
+           full list of `FileDiff` is returned without patch diffs (`FileDiff.patch` is empty).
+             */
+            public java.util.List<java.lang.String> getPathFilters() {
+              return pathFilters;
+            }
+
+            /**
+             * Optional. Path patterns or exact paths to filter returned files (only applicable in
+             * `FULL` view). When `path_filters` is specified, `FileDiff.patch` is populated for all
+             * matching files (use `["**"]` to include patches for all changed files). When
+             * `path_filters` is omitted or empty, the full list of `FileDiff` is returned without
+             * patch diffs (`FileDiff.patch` is empty).
+             */
+            public FetchCommit setPathFilters(java.util.List<java.lang.String> pathFilters) {
+              this.pathFilters = pathFilters;
+              return this;
+            }
+
+            /**
+             * Optional. The level of commit details to return in the response. Defaults to `FULL`
+             * if unspecified. In `FULL` view, `files` metadata (paths and statuses) are returned;
+             * `path_filters` must also be specified to populate line patch hunks.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The level of commit details to return in the response. Defaults to `FULL` if unspecified.
+           In `FULL` view, `files` metadata (paths and statuses) are returned; `path_filters` must also be
+           specified to populate line patch hunks.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The level of commit details to return in the response. Defaults to `FULL`
+             * if unspecified. In `FULL` view, `files` metadata (paths and statuses) are returned;
+             * `path_filters` must also be specified to populate line patch hunks.
+             */
+            public FetchCommit setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public FetchCommit set(String parameterName, Object value) {
+              return (FetchCommit) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch a list of Commits from a Git repository link.
+           *
+           * Create a request for the method "gitRepositoryLinks.fetchCommitList".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchCommitList#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @return the request
+           */
+          public FetchCommitList fetchCommitList(java.lang.String name) throws java.io.IOException {
+            FetchCommitList result = new FetchCommitList(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchCommitList extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkCommitListResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchCommitList";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Fetch a list of Commits from a Git repository link.
+             *
+             * Create a request for the method "gitRepositoryLinks.fetchCommitList".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchCommitList#execute()} method to invoke the remote
+             * operation. <p> {@link FetchCommitList#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @since 1.13
+             */
+            protected FetchCommitList(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkCommitListResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchCommitList set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchCommitList) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchCommitList setAccessToken(java.lang.String accessToken) {
+              return (FetchCommitList) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchCommitList setAlt(java.lang.String alt) {
+              return (FetchCommitList) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchCommitList setCallback(java.lang.String callback) {
+              return (FetchCommitList) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchCommitList setFields(java.lang.String fields) {
+              return (FetchCommitList) super.setFields(fields);
+            }
+
+            @Override
+            public FetchCommitList setKey(java.lang.String key) {
+              return (FetchCommitList) super.setKey(key);
+            }
+
+            @Override
+            public FetchCommitList setOauthToken(java.lang.String oauthToken) {
+              return (FetchCommitList) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchCommitList setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchCommitList) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchCommitList setQuotaUser(java.lang.String quotaUser) {
+              return (FetchCommitList) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchCommitList setUploadType(java.lang.String uploadType) {
+              return (FetchCommitList) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchCommitList setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchCommitList) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public FetchCommitList setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Optional. Number of results to return in the list. Default is 50. Max is 100. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Number of results to return in the list. Default is 50. Max is 100.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. Number of results to return in the list. Default is 50. Max is 100. */
+            public FetchCommitList setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `FetchGitRepositoryLinkCommitList`
+             * call. Provide this to retrieve the subsequent page. When paginating, all other
+             * parameters provided to `FetchGitRepositoryLinkCommitList` must match the call that
+             * provided the page token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `FetchGitRepositoryLinkCommitList` call. Provide
+           this to retrieve the subsequent page. When paginating, all other parameters provided to
+           `FetchGitRepositoryLinkCommitList` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `FetchGitRepositoryLinkCommitList`
+             * call. Provide this to retrieve the subsequent page. When paginating, all other
+             * parameters provided to `FetchGitRepositoryLinkCommitList` must match the call that
+             * provided the page token.
+             */
+            public FetchCommitList setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            /**
+             * Optional. The commit SHA, or symbolic revision (for example, branch name, tag, or Git
+             * reference) from which to start listing commits.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ref;
+
+            /** Optional. The commit SHA, or symbolic revision (for example, branch name, tag, or Git reference)
+           from which to start listing commits.
+             */
+            public java.lang.String getRef() {
+              return ref;
+            }
+
+            /**
+             * Optional. The commit SHA, or symbolic revision (for example, branch name, tag, or Git
+             * reference) from which to start listing commits.
+             */
+            public FetchCommitList setRef(java.lang.String ref) {
+              this.ref = ref;
+              return this;
+            }
+
+            /**
+             * Optional. The level of commit details to return in the response. Only `BASIC` is
+             * supported; `FULL` returns `INVALID_ARGUMENT`. Defaults to `BASIC` if unspecified. Use
+             * `FetchGitRepositoryLinkCommit` to get file diffs for a single commit.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String view;
+
+            /** Optional. The level of commit details to return in the response. Only `BASIC` is supported; `FULL`
+           returns `INVALID_ARGUMENT`. Defaults to `BASIC` if unspecified. Use `FetchGitRepositoryLinkCommit`
+           to get file diffs for a single commit.
+             */
+            public java.lang.String getView() {
+              return view;
+            }
+
+            /**
+             * Optional. The level of commit details to return in the response. Only `BASIC` is
+             * supported; `FULL` returns `INVALID_ARGUMENT`. Defaults to `BASIC` if unspecified. Use
+             * `FetchGitRepositoryLinkCommit` to get file diffs for a single commit.
+             */
+            public FetchCommitList setView(java.lang.String view) {
+              this.view = view;
+              return this;
+            }
+
+            @Override
+            public FetchCommitList set(String parameterName, Object value) {
+              return (FetchCommitList) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetches blame information for a file or line range in a file.
+           *
+           * Create a request for the method "gitRepositoryLinks.fetchFileBlame".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchFileBlame#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @return the request
+           */
+          public FetchFileBlame fetchFileBlame(java.lang.String name) throws java.io.IOException {
+            FetchFileBlame result = new FetchFileBlame(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchFileBlame extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkFileBlameResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchFileBlame";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Fetches blame information for a file or line range in a file.
+             *
+             * Create a request for the method "gitRepositoryLinks.fetchFileBlame".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchFileBlame#execute()} method to invoke the remote
+             * operation. <p> {@link FetchFileBlame#initialize(com.google.api.client.googleapis.services.Abstr
+             * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @since 1.13
+             */
+            protected FetchFileBlame(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkFileBlameResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchFileBlame set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchFileBlame) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchFileBlame setAccessToken(java.lang.String accessToken) {
+              return (FetchFileBlame) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchFileBlame setAlt(java.lang.String alt) {
+              return (FetchFileBlame) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchFileBlame setCallback(java.lang.String callback) {
+              return (FetchFileBlame) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchFileBlame setFields(java.lang.String fields) {
+              return (FetchFileBlame) super.setFields(fields);
+            }
+
+            @Override
+            public FetchFileBlame setKey(java.lang.String key) {
+              return (FetchFileBlame) super.setKey(key);
+            }
+
+            @Override
+            public FetchFileBlame setOauthToken(java.lang.String oauthToken) {
+              return (FetchFileBlame) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchFileBlame setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchFileBlame) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchFileBlame setQuotaUser(java.lang.String quotaUser) {
+              return (FetchFileBlame) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchFileBlame setUploadType(java.lang.String uploadType) {
+              return (FetchFileBlame) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchFileBlame setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchFileBlame) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public FetchFileBlame setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. The 1-indexed starting line number of the range to blame (inclusive). If
+             * not specified, blame begins at line 1.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer firstLine;
+
+            /** Optional. The 1-indexed starting line number of the range to blame (inclusive). If not specified,
+           blame begins at line 1.
+             */
+            public java.lang.Integer getFirstLine() {
+              return firstLine;
+            }
+
+            /**
+             * Optional. The 1-indexed starting line number of the range to blame (inclusive). If
+             * not specified, blame begins at line 1.
+             */
+            public FetchFileBlame setFirstLine(java.lang.Integer firstLine) {
+              this.firstLine = firstLine;
+              return this;
+            }
+
+            /**
+             * Optional. The 1-indexed ending line number of the range to blame (inclusive). If not
+             * specified, blame extends to the end of the file.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer lastLine;
+
+            /** Optional. The 1-indexed ending line number of the range to blame (inclusive). If not specified,
+           blame extends to the end of the file.
+             */
+            public java.lang.Integer getLastLine() {
+              return lastLine;
+            }
+
+            /**
+             * Optional. The 1-indexed ending line number of the range to blame (inclusive). If not
+             * specified, blame extends to the end of the file.
+             */
+            public FetchFileBlame setLastLine(java.lang.Integer lastLine) {
+              this.lastLine = lastLine;
+              return this;
+            }
+
+            /** Required. The file path within the repository. */
+            @com.google.api.client.util.Key
+            private java.lang.String path;
+
+            /** Required. The file path within the repository.
+             */
+            public java.lang.String getPath() {
+              return path;
+            }
+
+            /** Required. The file path within the repository. */
+            public FetchFileBlame setPath(java.lang.String path) {
+              this.path = path;
+              return this;
+            }
+
+            /**
+             * Required. The SCM commit SHA, or symbolic revision (for example, branch name, tag)
+             * from which to fetch the blame.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String ref;
+
+            /** Required. The SCM commit SHA, or symbolic revision (for example, branch name, tag) from which to
+           fetch the blame.
+             */
+            public java.lang.String getRef() {
+              return ref;
+            }
+
+            /**
+             * Required. The SCM commit SHA, or symbolic revision (for example, branch name, tag)
+             * from which to fetch the blame.
+             */
+            public FetchFileBlame setRef(java.lang.String ref) {
+              this.ref = ref;
+              return this;
+            }
+
+            @Override
+            public FetchFileBlame set(String parameterName, Object value) {
+              return (FetchFileBlame) super.set(parameterName, value);
+            }
+          }
+          /**
            * Fetch the list of branches or tags for a given repository.
            *
            * Create a request for the method "gitRepositoryLinks.fetchGitRefs".
@@ -5233,6 +6419,408 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             @Override
             public FetchGitRefs set(String parameterName, Object value) {
               return (FetchGitRefs) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetch Pull Request details from a Git repository link.
+           *
+           * Create a request for the method "gitRepositoryLinks.fetchPullRequest".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchPullRequest#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @return the request
+           */
+          public FetchPullRequest fetchPullRequest(java.lang.String name) throws java.io.IOException {
+            FetchPullRequest result = new FetchPullRequest(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchPullRequest extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.PullRequest> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchPullRequest";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Fetch Pull Request details from a Git repository link.
+             *
+             * Create a request for the method "gitRepositoryLinks.fetchPullRequest".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchPullRequest#execute()} method to invoke the remote
+             * operation. <p> {@link FetchPullRequest#initialize(com.google.api.client.googleapis.services.Abs
+             * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the GitRepositoryLink in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @since 1.13
+             */
+            protected FetchPullRequest(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.PullRequest.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchPullRequest set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchPullRequest) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchPullRequest setAccessToken(java.lang.String accessToken) {
+              return (FetchPullRequest) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchPullRequest setAlt(java.lang.String alt) {
+              return (FetchPullRequest) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchPullRequest setCallback(java.lang.String callback) {
+              return (FetchPullRequest) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchPullRequest setFields(java.lang.String fields) {
+              return (FetchPullRequest) super.setFields(fields);
+            }
+
+            @Override
+            public FetchPullRequest setKey(java.lang.String key) {
+              return (FetchPullRequest) super.setKey(key);
+            }
+
+            @Override
+            public FetchPullRequest setOauthToken(java.lang.String oauthToken) {
+              return (FetchPullRequest) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchPullRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchPullRequest) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchPullRequest setQuotaUser(java.lang.String quotaUser) {
+              return (FetchPullRequest) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchPullRequest setUploadType(java.lang.String uploadType) {
+              return (FetchPullRequest) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchPullRequest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchPullRequest) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the GitRepositoryLink in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the GitRepositoryLink in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public FetchPullRequest setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /** Required. The ID of the Pull Request. */
+            @com.google.api.client.util.Key
+            private java.lang.String pullRequestId;
+
+            /** Required. The ID of the Pull Request.
+             */
+            public java.lang.String getPullRequestId() {
+              return pullRequestId;
+            }
+
+            /** Required. The ID of the Pull Request. */
+            public FetchPullRequest setPullRequestId(java.lang.String pullRequestId) {
+              this.pullRequestId = pullRequestId;
+              return this;
+            }
+
+            @Override
+            public FetchPullRequest set(String parameterName, Object value) {
+              return (FetchPullRequest) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Fetches a list of Pull Requests from the remote repository.
+           *
+           * Create a request for the method "gitRepositoryLinks.fetchPullRequestList".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link FetchPullRequestList#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The GitRepositoryLink resource name in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @return the request
+           */
+          public FetchPullRequestList fetchPullRequestList(java.lang.String name) throws java.io.IOException {
+            FetchPullRequestList result = new FetchPullRequestList(name);
+            initialize(result);
+            return result;
+          }
+
+          public class FetchPullRequestList extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkPullRequestListResponse> {
+
+            private static final String REST_PATH = "v1/{+name}:fetchPullRequestList";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Fetches a list of Pull Requests from the remote repository.
+             *
+             * Create a request for the method "gitRepositoryLinks.fetchPullRequestList".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link FetchPullRequestList#execute()} method to invoke the
+             * remote operation. <p> {@link FetchPullRequestList#initialize(com.google.api.client.googleapis.s
+             * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink resource name in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @since 1.13
+             */
+            protected FetchPullRequestList(java.lang.String name) {
+              super(DeveloperConnect.this, "GET", REST_PATH, null, com.google.api.services.developerconnect.v1.model.FetchGitRepositoryLinkPullRequestListResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public FetchPullRequestList set$Xgafv(java.lang.String $Xgafv) {
+              return (FetchPullRequestList) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public FetchPullRequestList setAccessToken(java.lang.String accessToken) {
+              return (FetchPullRequestList) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public FetchPullRequestList setAlt(java.lang.String alt) {
+              return (FetchPullRequestList) super.setAlt(alt);
+            }
+
+            @Override
+            public FetchPullRequestList setCallback(java.lang.String callback) {
+              return (FetchPullRequestList) super.setCallback(callback);
+            }
+
+            @Override
+            public FetchPullRequestList setFields(java.lang.String fields) {
+              return (FetchPullRequestList) super.setFields(fields);
+            }
+
+            @Override
+            public FetchPullRequestList setKey(java.lang.String key) {
+              return (FetchPullRequestList) super.setKey(key);
+            }
+
+            @Override
+            public FetchPullRequestList setOauthToken(java.lang.String oauthToken) {
+              return (FetchPullRequestList) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public FetchPullRequestList setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (FetchPullRequestList) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public FetchPullRequestList setQuotaUser(java.lang.String quotaUser) {
+              return (FetchPullRequestList) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public FetchPullRequestList setUploadType(java.lang.String uploadType) {
+              return (FetchPullRequestList) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public FetchPullRequestList setUploadProtocol(java.lang.String uploadProtocol) {
+              return (FetchPullRequestList) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource name in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink resource name in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource name in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public FetchPullRequestList setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. A filter expression that filters the pull requests returned in the
+             * response. Only a single equality comparison on `state` is supported, for example
+             * `state = "OPEN"`. Supported values are `OPEN`, `CLOSED`, and `MERGED`. `DECLINED` is
+             * only supported for SCM providers that support declining pull requests, and returns
+             * `INVALID_ARGUMENT` for GitHub, GitHub Enterprise, GitLab, and GitLab Enterprise.
+             * Other values or expressions return `INVALID_ARGUMENT`. Defaults to `state = "OPEN"`
+             * if unspecified.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. A filter expression that filters the pull requests returned in the response. Only a
+           single equality comparison on `state` is supported, for example `state = "OPEN"`. Supported values
+           are `OPEN`, `CLOSED`, and `MERGED`. `DECLINED` is only supported for SCM providers that support
+           declining pull requests, and returns `INVALID_ARGUMENT` for GitHub, GitHub Enterprise, GitLab, and
+           GitLab Enterprise. Other values or expressions return `INVALID_ARGUMENT`. Defaults to `state =
+           "OPEN"` if unspecified.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. A filter expression that filters the pull requests returned in the
+             * response. Only a single equality comparison on `state` is supported, for example
+             * `state = "OPEN"`. Supported values are `OPEN`, `CLOSED`, and `MERGED`. `DECLINED` is
+             * only supported for SCM providers that support declining pull requests, and returns
+             * `INVALID_ARGUMENT` for GitHub, GitHub Enterprise, GitLab, and GitLab Enterprise.
+             * Other values or expressions return `INVALID_ARGUMENT`. Defaults to `state = "OPEN"`
+             * if unspecified.
+             */
+            public FetchPullRequestList setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Number of results to return in the list. Default is 20. Max is 100. A page
+             * may contain fewer than `page_size` results even when more results are available; use
+             * `next_page_token` to check for more pages.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Number of results to return in the list. Default is 20. Max is 100. A page may contain
+           fewer than `page_size` results even when more results are available; use `next_page_token` to check
+           for more pages.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Number of results to return in the list. Default is 20. Max is 100. A page
+             * may contain fewer than `page_size` results even when more results are available; use
+             * `next_page_token` to check for more pages.
+             */
+            public FetchPullRequestList setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * `FetchGitRepositoryLinkPullRequestList` call. Provide this to retrieve the subsequent
+             * page.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `FetchGitRepositoryLinkPullRequestList` call.
+           Provide this to retrieve the subsequent page.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * `FetchGitRepositoryLinkPullRequestList` call. Provide this to retrieve the subsequent
+             * page.
+             */
+            public FetchPullRequestList setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public FetchPullRequestList set(String parameterName, Object value) {
+              return (FetchPullRequestList) super.set(parameterName, value);
             }
           }
           /**
@@ -5663,7 +7251,7 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the developerconnect server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Parent value for ListGitRepositoryLinksRequest
+           * @param parent Required. Parent value for ListGitRepositoryLinksRequest.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5689,7 +7277,7 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Parent value for ListGitRepositoryLinksRequest
+             * @param parent Required. Parent value for ListGitRepositoryLinksRequest.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5767,17 +7355,17 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
               return (List) super.setUploadProtocol(uploadProtocol);
             }
 
-            /** Required. Parent value for ListGitRepositoryLinksRequest */
+            /** Required. Parent value for ListGitRepositoryLinksRequest. */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Parent value for ListGitRepositoryLinksRequest
+            /** Required. Parent value for ListGitRepositoryLinksRequest.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
-            /** Required. Parent value for ListGitRepositoryLinksRequest */
+            /** Required. Parent value for ListGitRepositoryLinksRequest. */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
                 com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -5788,33 +7376,33 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filtering results
+            /** Optional. Filtering results.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. Filtering results */
+            /** Optional. Filtering results. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Optional. Hint for how to order the results */
+            /** Optional. Hint for how to order the results. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Hint for how to order the results
+            /** Optional. Hint for how to order the results.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Optional. Hint for how to order the results */
+            /** Optional. Hint for how to order the results. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
@@ -5862,6 +7450,288 @@ public class DeveloperConnect extends com.google.api.client.googleapis.services.
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Modifies a Pull Request in the remote SCM repository associated with a GitRepositoryLink.
+           *
+           * Create a request for the method "gitRepositoryLinks.modifyPullRequest".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link ModifyPullRequest#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The GitRepositoryLink resource name in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.ModifyGitRepositoryLinkPullRequestRequest}
+           * @return the request
+           */
+          public ModifyPullRequest modifyPullRequest(java.lang.String name, com.google.api.services.developerconnect.v1.model.ModifyGitRepositoryLinkPullRequestRequest content) throws java.io.IOException {
+            ModifyPullRequest result = new ModifyPullRequest(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class ModifyPullRequest extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.PullRequest> {
+
+            private static final String REST_PATH = "v1/{+name}:modifyPullRequest";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Modifies a Pull Request in the remote SCM repository associated with a GitRepositoryLink.
+             *
+             * Create a request for the method "gitRepositoryLinks.modifyPullRequest".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link ModifyPullRequest#execute()} method to invoke the remote
+             * operation. <p> {@link ModifyPullRequest#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink resource name in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.ModifyGitRepositoryLinkPullRequestRequest}
+             * @since 1.13
+             */
+            protected ModifyPullRequest(java.lang.String name, com.google.api.services.developerconnect.v1.model.ModifyGitRepositoryLinkPullRequestRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.PullRequest.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public ModifyPullRequest set$Xgafv(java.lang.String $Xgafv) {
+              return (ModifyPullRequest) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public ModifyPullRequest setAccessToken(java.lang.String accessToken) {
+              return (ModifyPullRequest) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public ModifyPullRequest setAlt(java.lang.String alt) {
+              return (ModifyPullRequest) super.setAlt(alt);
+            }
+
+            @Override
+            public ModifyPullRequest setCallback(java.lang.String callback) {
+              return (ModifyPullRequest) super.setCallback(callback);
+            }
+
+            @Override
+            public ModifyPullRequest setFields(java.lang.String fields) {
+              return (ModifyPullRequest) super.setFields(fields);
+            }
+
+            @Override
+            public ModifyPullRequest setKey(java.lang.String key) {
+              return (ModifyPullRequest) super.setKey(key);
+            }
+
+            @Override
+            public ModifyPullRequest setOauthToken(java.lang.String oauthToken) {
+              return (ModifyPullRequest) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public ModifyPullRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (ModifyPullRequest) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public ModifyPullRequest setQuotaUser(java.lang.String quotaUser) {
+              return (ModifyPullRequest) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public ModifyPullRequest setUploadType(java.lang.String uploadType) {
+              return (ModifyPullRequest) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public ModifyPullRequest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (ModifyPullRequest) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource name in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink resource name in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource name in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public ModifyPullRequest setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public ModifyPullRequest set(String parameterName, Object value) {
+              return (ModifyPullRequest) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Opens a Pull Request in the remote SCM repository associated with a GitRepositoryLink.
+           *
+           * Create a request for the method "gitRepositoryLinks.openPullRequest".
+           *
+           * This request holds the parameters needed by the developerconnect server.  After setting any
+           * optional parameters, call the {@link OpenPullRequest#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The GitRepositoryLink resource name in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+           * @param content the {@link com.google.api.services.developerconnect.v1.model.OpenGitRepositoryLinkPullRequestRequest}
+           * @return the request
+           */
+          public OpenPullRequest openPullRequest(java.lang.String name, com.google.api.services.developerconnect.v1.model.OpenGitRepositoryLinkPullRequestRequest content) throws java.io.IOException {
+            OpenPullRequest result = new OpenPullRequest(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class OpenPullRequest extends DeveloperConnectRequest<com.google.api.services.developerconnect.v1.model.PullRequest> {
+
+            private static final String REST_PATH = "v1/{+name}:openPullRequest";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+
+            /**
+             * Opens a Pull Request in the remote SCM repository associated with a GitRepositoryLink.
+             *
+             * Create a request for the method "gitRepositoryLinks.openPullRequest".
+             *
+             * This request holds the parameters needed by the the developerconnect server.  After setting any
+             * optional parameters, call the {@link OpenPullRequest#execute()} method to invoke the remote
+             * operation. <p> {@link OpenPullRequest#initialize(com.google.api.client.googleapis.services.Abst
+             * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+             * the constructor. </p>
+             *
+             * @param name Required. The GitRepositoryLink resource name in the format
+           *        `projects/locations/connections/gitRepositoryLinks`.
+             * @param content the {@link com.google.api.services.developerconnect.v1.model.OpenGitRepositoryLinkPullRequestRequest}
+             * @since 1.13
+             */
+            protected OpenPullRequest(java.lang.String name, com.google.api.services.developerconnect.v1.model.OpenGitRepositoryLinkPullRequestRequest content) {
+              super(DeveloperConnect.this, "POST", REST_PATH, content, com.google.api.services.developerconnect.v1.model.PullRequest.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+            }
+
+            @Override
+            public OpenPullRequest set$Xgafv(java.lang.String $Xgafv) {
+              return (OpenPullRequest) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public OpenPullRequest setAccessToken(java.lang.String accessToken) {
+              return (OpenPullRequest) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public OpenPullRequest setAlt(java.lang.String alt) {
+              return (OpenPullRequest) super.setAlt(alt);
+            }
+
+            @Override
+            public OpenPullRequest setCallback(java.lang.String callback) {
+              return (OpenPullRequest) super.setCallback(callback);
+            }
+
+            @Override
+            public OpenPullRequest setFields(java.lang.String fields) {
+              return (OpenPullRequest) super.setFields(fields);
+            }
+
+            @Override
+            public OpenPullRequest setKey(java.lang.String key) {
+              return (OpenPullRequest) super.setKey(key);
+            }
+
+            @Override
+            public OpenPullRequest setOauthToken(java.lang.String oauthToken) {
+              return (OpenPullRequest) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public OpenPullRequest setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (OpenPullRequest) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public OpenPullRequest setQuotaUser(java.lang.String quotaUser) {
+              return (OpenPullRequest) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public OpenPullRequest setUploadType(java.lang.String uploadType) {
+              return (OpenPullRequest) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public OpenPullRequest setUploadProtocol(java.lang.String uploadProtocol) {
+              return (OpenPullRequest) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource name in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The GitRepositoryLink resource name in the format
+           `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The GitRepositoryLink resource name in the format
+             * `projects/locations/connections/gitRepositoryLinks`.
+             */
+            public OpenPullRequest setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/connections/[^/]+/gitRepositoryLinks/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public OpenPullRequest set(String parameterName, Object value) {
+              return (OpenPullRequest) super.set(parameterName, value);
             }
           }
           /**

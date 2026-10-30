@@ -32,7 +32,7 @@ package com.google.api.services.developerconnect.v1.model;
 public final class GitProxyConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Setting this to true allows the git proxy to be used for performing git operations on
+   * Optional. Setting this to true allows the Git proxy to be used for performing Git operations on
    * the repositories linked in the connection.
    * The value may be {@code null}.
    */
@@ -50,7 +50,7 @@ public final class GitProxyConfig extends com.google.api.client.json.GenericJson
   private java.lang.String httpProxyBaseUri;
 
   /**
-   * Optional. Setting this to true allows the git proxy to be used for performing git operations on
+   * Optional. Setting this to true allows the Git proxy to be used for performing Git operations on
    * the repositories linked in the connection.
    * @return value or {@code null} for none
    */
@@ -59,7 +59,7 @@ public final class GitProxyConfig extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Setting this to true allows the git proxy to be used for performing git operations on
+   * Optional. Setting this to true allows the Git proxy to be used for performing Git operations on
    * the repositories linked in the connection.
    * @param enabled enabled or {@code null} for none
    */

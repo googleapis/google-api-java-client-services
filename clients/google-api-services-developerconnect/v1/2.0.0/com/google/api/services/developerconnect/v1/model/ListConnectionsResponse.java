@@ -31,7 +31,7 @@ package com.google.api.services.developerconnect.v1.model;
 public final class ListConnectionsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Connection
+   * The list of Connections.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -58,7 +58,7 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Connection
+   * The list of Connections.
    * @return value or {@code null} for none
    */
   public java.util.List<Connection> getConnections() {
@@ -66,7 +66,7 @@ public final class ListConnectionsResponse extends com.google.api.client.json.Ge
   }
 
   /**
-   * The list of Connection
+   * The list of Connections.
    * @param connections connections or {@code null} for none
    */
   public ListConnectionsResponse setConnections(java.util.List<Connection> connections) {

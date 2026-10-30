@@ -98,6 +98,16 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
   private java.lang.Boolean printHeader;
 
   /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of an extract job on tables with row access
+   * policies.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SecureContext secureContext;
+
+  /**
    * A reference to the model being exported.
    * The value may be {@code null}.
    */
@@ -303,6 +313,29 @@ public final class JobConfigurationExtract extends com.google.api.client.json.Ge
       return true;
     }
     return printHeader;
+  }
+
+  /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of an extract job on tables with row access
+   * policies.
+   * @return value or {@code null} for none
+   */
+  public SecureContext getSecureContext() {
+    return secureContext;
+  }
+
+  /**
+   * Optional. A set of key-value pairs representing the secure context. This can be used to pass
+   * sensitive or context-specific information. They can be retrieved via the SECURE_CONTEXT()
+   * function and used to modify the run-time behavior of an extract job on tables with row access
+   * policies.
+   * @param secureContext secureContext or {@code null} for none
+   */
+  public JobConfigurationExtract setSecureContext(SecureContext secureContext) {
+    this.secureContext = secureContext;
+    return this;
   }
 
   /**

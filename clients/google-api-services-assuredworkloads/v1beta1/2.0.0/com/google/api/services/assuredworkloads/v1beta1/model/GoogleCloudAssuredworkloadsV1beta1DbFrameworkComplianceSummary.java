@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * The details for a framework compliance summary.
+ * A summary of the compliance status of a framework that's deployed in a Data Boundary scope.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,49 +31,51 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary extends com.google.api.client.json.GenericJson {
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails controlAssessmentDetails;
 
   /**
-   * Output only. The trend of controls that are passing for the given duration.
+   * Output only. The trend of passing controls over the trend duration. This field is only
+   * populated when using `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1Trend controlsPassingTrend;
 
   /**
-   * Output only. The count of the findings generated against the framework.
+   * Output only. The number of findings that were generated against the framework. This field is
+   * only populated when using `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_FULL`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long findingCount;
 
   /**
-   * The name of the framework.
+   * The resource name of the compliance framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String framework;
 
   /**
-   * The list of framework categories supported by the framework.
+   * The categories of the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> frameworkCategories;
 
   /**
-   * Optional. The display name for the framework.
+   * Optional. The display name of the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String frameworkDisplayName;
 
   /**
-   * The type of framework.
+   * The type of the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -94,28 +96,29 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   private java.lang.Long minorRevisionId;
 
   /**
-   * Identifier. The name of the framework compliance summary.
+   * Identifier. The resource name of the framework compliance summary.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The list of cloud providers supported by the framework.
+   * The cloud providers that are supported by the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedCloudProviders;
 
   /**
-   * The target resource details for the framework.
+   * The details of the target resources (organizations, folders, or projects) that the framework is
+   * deployed on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAssuredworkloadsV1beta1TargetResourceDetails> targetResourceDetails;
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails getControlAssessmentDetails() {
@@ -123,7 +126,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework.
    * @param controlAssessmentDetails controlAssessmentDetails or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setControlAssessmentDetails(GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails controlAssessmentDetails) {
@@ -132,7 +135,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Output only. The trend of controls that are passing for the given duration.
+   * Output only. The trend of passing controls over the trend duration. This field is only
+   * populated when using `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_FULL`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1Trend getControlsPassingTrend() {
@@ -140,7 +144,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Output only. The trend of controls that are passing for the given duration.
+   * Output only. The trend of passing controls over the trend duration. This field is only
+   * populated when using `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_FULL`.
    * @param controlsPassingTrend controlsPassingTrend or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setControlsPassingTrend(GoogleCloudAssuredworkloadsV1beta1Trend controlsPassingTrend) {
@@ -149,7 +154,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Output only. The count of the findings generated against the framework.
+   * Output only. The number of findings that were generated against the framework. This field is
+   * only populated when using `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_FULL`.
    * @return value or {@code null} for none
    */
   public java.lang.Long getFindingCount() {
@@ -157,7 +163,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Output only. The count of the findings generated against the framework.
+   * Output only. The number of findings that were generated against the framework. This field is
+   * only populated when using `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_FULL`.
    * @param findingCount findingCount or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setFindingCount(java.lang.Long findingCount) {
@@ -166,7 +173,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The name of the framework.
+   * The resource name of the compliance framework.
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -174,7 +181,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The name of the framework.
+   * The resource name of the compliance framework.
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setFramework(java.lang.String framework) {
@@ -183,7 +190,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The list of framework categories supported by the framework.
+   * The categories of the framework.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFrameworkCategories() {
@@ -191,7 +198,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The list of framework categories supported by the framework.
+   * The categories of the framework.
    * @param frameworkCategories frameworkCategories or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setFrameworkCategories(java.util.List<java.lang.String> frameworkCategories) {
@@ -200,7 +207,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Optional. The display name for the framework.
+   * Optional. The display name of the framework.
    * @return value or {@code null} for none
    */
   public java.lang.String getFrameworkDisplayName() {
@@ -208,7 +215,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Optional. The display name for the framework.
+   * Optional. The display name of the framework.
    * @param frameworkDisplayName frameworkDisplayName or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setFrameworkDisplayName(java.lang.String frameworkDisplayName) {
@@ -217,7 +224,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The type of framework.
+   * The type of the framework.
    * @return value or {@code null} for none
    */
   public java.lang.String getFrameworkType() {
@@ -225,7 +232,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The type of framework.
+   * The type of the framework.
    * @param frameworkType frameworkType or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setFrameworkType(java.lang.String frameworkType) {
@@ -268,7 +275,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Identifier. The name of the framework compliance summary.
+   * Identifier. The resource name of the framework compliance summary.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -276,7 +283,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * Identifier. The name of the framework compliance summary.
+   * Identifier. The resource name of the framework compliance summary.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setName(java.lang.String name) {
@@ -285,7 +292,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The list of cloud providers supported by the framework.
+   * The cloud providers that are supported by the framework.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedCloudProviders() {
@@ -293,7 +300,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The list of cloud providers supported by the framework.
+   * The cloud providers that are supported by the framework.
    * @param supportedCloudProviders supportedCloudProviders or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setSupportedCloudProviders(java.util.List<java.lang.String> supportedCloudProviders) {
@@ -302,7 +309,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The target resource details for the framework.
+   * The details of the target resources (organizations, folders, or projects) that the framework is
+   * deployed on.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAssuredworkloadsV1beta1TargetResourceDetails> getTargetResourceDetails() {
@@ -310,7 +318,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummar
   }
 
   /**
-   * The target resource details for the framework.
+   * The details of the target resources (organizations, folders, or projects) that the framework is
+   * deployed on.
    * @param targetResourceDetails targetResourceDetails or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1DbFrameworkComplianceSummary setTargetResourceDetails(java.util.List<GoogleCloudAssuredworkloadsV1beta1TargetResourceDetails> targetResourceDetails) {

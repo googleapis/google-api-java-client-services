@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * The aggregated compliance report.
+ * A point-in-time compliance report for a framework.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1AggregatedComplianceReport extends com.google.api.client.json.GenericJson {
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework at `report_time`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails controlAssessmentDetails;
 
   /**
-   * The report time of the aggregated compliance report.
+   * The time that the compliance report represents.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String reportTime;
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework at `report_time`.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails getControlAssessmentDetails() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1AggregatedComplianceReport 
   }
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework at `report_time`.
    * @param controlAssessmentDetails controlAssessmentDetails or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1AggregatedComplianceReport setControlAssessmentDetails(GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails controlAssessmentDetails) {
@@ -62,7 +62,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1AggregatedComplianceReport 
   }
 
   /**
-   * The report time of the aggregated compliance report.
+   * The time that the compliance report represents.
    * @return value or {@code null} for none
    */
   public String getReportTime() {
@@ -70,7 +70,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1AggregatedComplianceReport 
   }
 
   /**
-   * The report time of the aggregated compliance report.
+   * The time that the compliance report represents.
    * @param reportTime reportTime or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1AggregatedComplianceReport setReportTime(String reportTime) {

@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * Response of ListViolations endpoint.
+ * Response message for the `ListViolations` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,28 +31,31 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The next page token. Returns empty if reached the last page.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is empty,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The total number of violations.
+   * The total number of violations that match the request, across all pages. This field might not
+   * be populated for all requests; when it's not populated, its value is `0`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer totalSize;
 
   /**
-   * List of Violations under a Workload.
+   * The list of violations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAssuredworkloadsV1beta1Violation> violations;
 
   /**
-   * The next page token. Returns empty if reached the last page.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is empty,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -60,7 +63,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
   }
 
   /**
-   * The next page token. Returns empty if reached the last page.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is empty,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -69,7 +73,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
   }
 
   /**
-   * The total number of violations.
+   * The total number of violations that match the request, across all pages. This field might not
+   * be populated for all requests; when it's not populated, its value is `0`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTotalSize() {
@@ -77,7 +82,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
   }
 
   /**
-   * The total number of violations.
+   * The total number of violations that match the request, across all pages. This field might not
+   * be populated for all requests; when it's not populated, its value is `0`.
    * @param totalSize totalSize or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse setTotalSize(java.lang.Integer totalSize) {
@@ -86,7 +92,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
   }
 
   /**
-   * List of Violations under a Workload.
+   * The list of violations.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAssuredworkloadsV1beta1Violation> getViolations() {
@@ -94,7 +100,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse exte
   }
 
   /**
-   * List of Violations under a Workload.
+   * The list of violations.
    * @param violations violations or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListViolationsResponse setViolations(java.util.List<GoogleCloudAssuredworkloadsV1beta1Violation> violations) {

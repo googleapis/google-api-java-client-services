@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * Request for acknowledging the violation
+ * Request message for acknowledging a violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,40 +31,46 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Acknowledge type of specified violation.
+   * Optional. The scope of the acknowledgement for the specified violation. If not specified,
+   * `SINGLE_VIOLATION` is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String acknowledgeType;
 
   /**
-   * Required. Business justification explaining the need for violation acknowledgement
+   * Required. The business justification for acknowledging the violation. The comment can't be
+   * empty or contain only whitespace characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String comment;
 
   /**
-   * Optional. This field is deprecated and will be removed in future version of the API. Name of
-   * the OrgPolicy which was modified with non-compliant change and resulted in this violation.
-   * Format: projects/{project_number}/policies/{constraint_name}
-   * folders/{folder_id}/policies/{constraint_name}
-   * organizations/{organization_id}/policies/{constraint_name}
+   * Optional. Deprecated: This field is deprecated and will be removed in a future version of the
+   * API. The service identifies the violation to acknowledge by `name`, and ignores this field.
+   * Don't set this field. The name of the organization policy that was modified with a non-
+   * compliant change and resulted in this violation. Formats: *
+   * `projects/{project_number}/policies/{constraint_name}` *
+   * `folders/{folder_id}/policies/{constraint_name}` *
+   * `organizations/{organization_id}/policies/{constraint_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nonCompliantOrgPolicy;
 
   /**
-   * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for acknowledging
-   * violations.
+   * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+   * `VIOLATION_VIEW_DATA_BOUNDARY`) that the violation belongs to. If not specified,
+   * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String view;
 
   /**
-   * Optional. Acknowledge type of specified violation.
+   * Optional. The scope of the acknowledgement for the specified violation. If not specified,
+   * `SINGLE_VIOLATION` is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getAcknowledgeType() {
@@ -72,7 +78,8 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Optional. Acknowledge type of specified violation.
+   * Optional. The scope of the acknowledgement for the specified violation. If not specified,
+   * `SINGLE_VIOLATION` is used.
    * @param acknowledgeType acknowledgeType or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest setAcknowledgeType(java.lang.String acknowledgeType) {
@@ -81,7 +88,8 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Required. Business justification explaining the need for violation acknowledgement
+   * Required. The business justification for acknowledging the violation. The comment can't be
+   * empty or contain only whitespace characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getComment() {
@@ -89,7 +97,8 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Required. Business justification explaining the need for violation acknowledgement
+   * Required. The business justification for acknowledging the violation. The comment can't be
+   * empty or contain only whitespace characters.
    * @param comment comment or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest setComment(java.lang.String comment) {
@@ -98,11 +107,13 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Optional. This field is deprecated and will be removed in future version of the API. Name of
-   * the OrgPolicy which was modified with non-compliant change and resulted in this violation.
-   * Format: projects/{project_number}/policies/{constraint_name}
-   * folders/{folder_id}/policies/{constraint_name}
-   * organizations/{organization_id}/policies/{constraint_name}
+   * Optional. Deprecated: This field is deprecated and will be removed in a future version of the
+   * API. The service identifies the violation to acknowledge by `name`, and ignores this field.
+   * Don't set this field. The name of the organization policy that was modified with a non-
+   * compliant change and resulted in this violation. Formats: *
+   * `projects/{project_number}/policies/{constraint_name}` *
+   * `folders/{folder_id}/policies/{constraint_name}` *
+   * `organizations/{organization_id}/policies/{constraint_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNonCompliantOrgPolicy() {
@@ -110,11 +121,13 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Optional. This field is deprecated and will be removed in future version of the API. Name of
-   * the OrgPolicy which was modified with non-compliant change and resulted in this violation.
-   * Format: projects/{project_number}/policies/{constraint_name}
-   * folders/{folder_id}/policies/{constraint_name}
-   * organizations/{organization_id}/policies/{constraint_name}
+   * Optional. Deprecated: This field is deprecated and will be removed in a future version of the
+   * API. The service identifies the violation to acknowledge by `name`, and ignores this field.
+   * Don't set this field. The name of the organization policy that was modified with a non-
+   * compliant change and resulted in this violation. Formats: *
+   * `projects/{project_number}/policies/{constraint_name}` *
+   * `folders/{folder_id}/policies/{constraint_name}` *
+   * `organizations/{organization_id}/policies/{constraint_name}`
    * @param nonCompliantOrgPolicy nonCompliantOrgPolicy or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest setNonCompliantOrgPolicy(java.lang.String nonCompliantOrgPolicy) {
@@ -123,8 +136,9 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for acknowledging
-   * violations.
+   * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+   * `VIOLATION_VIEW_DATA_BOUNDARY`) that the violation belongs to. If not specified,
+   * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
    * @return value or {@code null} for none
    */
   public java.lang.String getView() {
@@ -132,8 +146,9 @@ public final class GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest exte
   }
 
   /**
-   * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for acknowledging
-   * violations.
+   * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+   * `VIOLATION_VIEW_DATA_BOUNDARY`) that the violation belongs to. If not specified,
+   * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
    * @param view view or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest setView(java.lang.String view) {

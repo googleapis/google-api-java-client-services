@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * The response message for ListDbFrameworkComplianceSummariesResponse.
+ * The response message for ListDbFrameworkComplianceSummaries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -44,7 +44,8 @@ public final class GoogleCloudAssuredworkloadsV1ListDbFrameworkComplianceSummari
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +69,8 @@ public final class GoogleCloudAssuredworkloadsV1ListDbFrameworkComplianceSummari
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +78,8 @@ public final class GoogleCloudAssuredworkloadsV1ListDbFrameworkComplianceSummari
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ListDbFrameworkComplianceSummariesResponse setNextPageToken(java.lang.String nextPageToken) {

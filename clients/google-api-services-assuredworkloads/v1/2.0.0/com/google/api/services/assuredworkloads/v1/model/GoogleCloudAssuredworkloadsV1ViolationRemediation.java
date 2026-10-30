@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * Represents remediation guidance to resolve compliance violation for AssuredWorkload
+ * Remediation guidance to resolve a compliance violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,30 +31,31 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1ViolationRemediation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Values that can resolve the violation For example: for list org policy violations, this will
-   * either be the list of allowed or denied values
+   * The values that can resolve the violation. For example, for list organization policy
+   * violations, this field contains the list of allowed or denied values.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> compliantValues;
 
   /**
-   * Required. Remediation instructions to resolve violations
+   * Required. The instructions to resolve the violation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions instructions;
 
   /**
-   * Output only. Reemediation type based on the type of org policy values violated
+   * Output only. The remediation type, which is based on the type of organization policy values
+   * that were violated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String remediationType;
 
   /**
-   * Values that can resolve the violation For example: for list org policy violations, this will
-   * either be the list of allowed or denied values
+   * The values that can resolve the violation. For example, for list organization policy
+   * violations, this field contains the list of allowed or denied values.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getCompliantValues() {
@@ -62,8 +63,8 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediation extends com
   }
 
   /**
-   * Values that can resolve the violation For example: for list org policy violations, this will
-   * either be the list of allowed or denied values
+   * The values that can resolve the violation. For example, for list organization policy
+   * violations, this field contains the list of allowed or denied values.
    * @param compliantValues compliantValues or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediation setCompliantValues(java.util.List<java.lang.String> compliantValues) {
@@ -72,7 +73,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediation extends com
   }
 
   /**
-   * Required. Remediation instructions to resolve violations
+   * Required. The instructions to resolve the violation.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions getInstructions() {
@@ -80,7 +81,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediation extends com
   }
 
   /**
-   * Required. Remediation instructions to resolve violations
+   * Required. The instructions to resolve the violation.
    * @param instructions instructions or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediation setInstructions(GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions instructions) {
@@ -89,7 +90,8 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediation extends com
   }
 
   /**
-   * Output only. Reemediation type based on the type of org policy values violated
+   * Output only. The remediation type, which is based on the type of organization policy values
+   * that were violated.
    * @return value or {@code null} for none
    */
   public java.lang.String getRemediationType() {
@@ -97,7 +99,8 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediation extends com
   }
 
   /**
-   * Output only. Reemediation type based on the type of org policy values violated
+   * Output only. The remediation type, which is based on the type of organization policy values
+   * that were violated.
    * @param remediationType remediationType or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediation setRemediationType(java.lang.String remediationType) {

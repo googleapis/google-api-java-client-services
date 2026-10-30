@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1.model;
 
 /**
- * Instructions to remediate violation
+ * Instructions to remediate a violation.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,21 +31,21 @@ package com.google.api.services.assuredworkloads.v1.model;
 public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Remediation instructions to resolve violation via cloud console
+   * Instructions to resolve the violation by using the Google Cloud console.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole consoleInstructions;
 
   /**
-   * Remediation instructions to resolve violation via gcloud cli
+   * Instructions to resolve the violation by using the gcloud CLI.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud gcloudInstructions;
 
   /**
-   * Remediation instructions to resolve violation via cloud console
+   * Instructions to resolve the violation by using the Google Cloud console.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole getConsoleInstructions() {
@@ -53,7 +53,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Remediation instructions to resolve violation via cloud console
+   * Instructions to resolve the violation by using the Google Cloud console.
    * @param consoleInstructions consoleInstructions or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions setConsoleInstructions(GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsConsole consoleInstructions) {
@@ -62,7 +62,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Remediation instructions to resolve violation via gcloud cli
+   * Instructions to resolve the violation by using the gcloud CLI.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud getGcloudInstructions() {
@@ -70,7 +70,7 @@ public final class GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions
   }
 
   /**
-   * Remediation instructions to resolve violation via gcloud cli
+   * Instructions to resolve the violation by using the gcloud CLI.
    * @param gcloudInstructions gcloudInstructions or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1ViolationRemediationInstructions setGcloudInstructions(GoogleCloudAssuredworkloadsV1ViolationRemediationInstructionsGcloud gcloudInstructions) {

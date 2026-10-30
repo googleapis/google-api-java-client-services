@@ -194,16 +194,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFindingSummaries {
 
         /**
-         * Lists the finding summary by category for a given scope.
+         * Lists summaries of the active findings in a Data Boundary scope (an organization, folder, or
+         * project), with one summary for each finding category.
          *
          * Create a request for the method "dbFindingSummaries.list".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent scope for the framework overview page. Formats: -
-         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         *        organizations/{organization}/locations/{location}
+         * @param parent Required. The parent scope to list finding summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -220,7 +221,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the finding summary by category for a given scope.
+           * Lists summaries of the active findings in a Data Boundary scope (an organization, folder, or
+           * project), with one summary for each finding category.
            *
            * Create a request for the method "dbFindingSummaries.list".
            *
@@ -229,9 +231,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent scope for the framework overview page. Formats: -
-         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         *        organizations/{organization}/locations/{location}
+           * @param parent Required. The parent scope to list finding summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -310,25 +312,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent scope for the framework overview page. Formats: -
-           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-           * organizations/{organization}/locations/{location}
+           * Required. The parent scope to list finding summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent scope for the framework overview page. Formats: -
-         projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         organizations/{organization}/locations/{location}
+          /** Required. The parent scope to list finding summaries for. Formats: *
+         `organizations/{organization}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent scope for the framework overview page. Formats: -
-           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-           * organizations/{organization}/locations/{location}
+           * Required. The parent scope to list finding summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -340,17 +342,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments whose findings
+           * are summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported
+           * fields are `framework_deployment`, `framework_name`, and `framework_revision` (the
+           * major revision ID of the framework).
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the framework deployments whose findings are
+         summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported fields are
+         `framework_deployment`, `framework_name`, and `framework_revision` (the major revision ID of the
+         framework).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments whose findings
+           * are summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported
+           * fields are `framework_deployment`, `framework_name`, and `framework_revision` (the
+           * major revision ID of the framework).
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -381,11 +396,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
+           * Pass the `next_page_token` value from a previous result.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A token that identifies the page of results that the server should return.
+          /** Optional. A token that identifies the page of results that the server should return. Pass the
+         `next_page_token` value from a previous result.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -393,6 +410,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
+           * Pass the `next_page_token` value from a previous result.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -427,14 +445,16 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFrameworkComplianceReports {
 
         /**
-         * Gets the aggregated compliance report over time for a given scope.
+         * Gets daily compliance reports over a time range for a framework that's deployed in a Data
+         * Boundary scope.
          *
          * Create a request for the method "dbFrameworkComplianceReports.aggregate".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Aggregate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the aggregated compliance report over time to retrieve. Format: `organizations
+         * @param name Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         *        ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations
          *        /{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
          *        nce_report}`
          * @return the request
@@ -453,7 +473,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
           /**
-           * Gets the aggregated compliance report over time for a given scope.
+           * Gets daily compliance reports over a time range for a framework that's deployed in a Data
+           * Boundary scope.
            *
            * Create a request for the method "dbFrameworkComplianceReports.aggregate".
            *
@@ -463,7 +484,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * Aggregate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the aggregated compliance report over time to retrieve. Format: `organizations
+           * @param name Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         *        ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations
          *        /{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
          *        nce_report}`
            * @since 1.13
@@ -544,25 +566,27 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The name of the aggregated compliance report over time to retrieve. Format: `
-           * organizations/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_f
-           * ramework_compliance_report}`
+           * Required. The name of the framework compliance report to aggregate over time. The
+           * report ID is the ID of the compliance framework, for example `builtin-fedramp-high`.
+           * Format: `organizations/{organization_id}/locations/{location}/dbFrameworkComplianceRepo
+           * rts/{db_framework_compliance_report}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the aggregated compliance report over time to retrieve. Format: `organization
-         s/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_repo
-         rt}`
+          /** Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations/{organiz
+         ation_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the aggregated compliance report over time to retrieve. Format: `
-           * organizations/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_f
-           * ramework_compliance_report}`
+           * Required. The name of the framework compliance report to aggregate over time. The
+           * report ID is the ID of the compliance framework, for example `builtin-fedramp-high`.
+           * Format: `organizations/{organization_id}/locations/{location}/dbFrameworkComplianceRepo
+           * rts/{db_framework_compliance_report}`
            */
           public Aggregate setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -574,17 +598,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments that are
+           * included in the report. The syntax follows [AIP-160](https://google.aip.dev/160).
+           * Supported fields are `framework_deployment`, `framework_name`, and `framework_revision`
+           * (the major revision ID of the framework).
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the framework deployments that are included in the
+         report. The syntax follows [AIP-160](https://google.aip.dev/160). Supported fields are
+         `framework_deployment`, `framework_name`, and `framework_revision` (the major revision ID of the
+         framework).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments that are
+           * included in the report. The syntax follows [AIP-160](https://google.aip.dev/160).
+           * Supported fields are `framework_deployment`, `framework_name`, and `framework_revision`
+           * (the major revision ID of the framework).
+           */
           public Aggregate setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -642,14 +679,21 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Fetches the framework compliance report for a given scope.
+         * Fetches the current compliance report for a framework that's deployed in a Data Boundary scope
+         * (an organization, folder, or project). The report includes the number of passing, failing, and
+         * not assessed controls in the framework.
          *
          * Create a request for the method "dbFrameworkComplianceReports.fetch".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the framework compliance report to retrieve.
+         * @param name Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         *        compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organ
+         *        ization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report
+         *        }` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_com
+         *        pliance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{
+         *        db_framework_compliance_report}`
          * @return the request
          */
         public Fetch fetch(java.lang.String name) throws java.io.IOException {
@@ -666,7 +710,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
           /**
-           * Fetches the framework compliance report for a given scope.
+           * Fetches the current compliance report for a framework that's deployed in a Data Boundary scope
+           * (an organization, folder, or project). The report includes the number of passing, failing, and
+           * not assessed controls in the framework.
            *
            * Create a request for the method "dbFrameworkComplianceReports.fetch".
            *
@@ -676,7 +722,12 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the framework compliance report to retrieve.
+           * @param name Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         *        compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organ
+         *        ization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report
+         *        }` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_com
+         *        pliance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{
+         *        db_framework_compliance_report}`
            * @since 1.13
            */
           protected Fetch(java.lang.String name) {
@@ -754,17 +805,35 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return (Fetch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the framework compliance report to retrieve. */
+          /**
+           * Required. The name of the framework compliance report to retrieve. The report ID is the
+           * ID of the compliance framework, for example `builtin-fedramp-high`. Formats: * `organiz
+           * ations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           * ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReport
+           * s/{db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFramew
+           * orkComplianceReports/{db_framework_compliance_report}`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the framework compliance report to retrieve.
+          /** Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organization}/
+         locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}` * `folders/{fol
+         der}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}` * `project
+         s/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the framework compliance report to retrieve. */
+          /**
+           * Required. The name of the framework compliance report to retrieve. The report ID is the
+           * ID of the compliance framework, for example `builtin-fedramp-high`. Formats: * `organiz
+           * ations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           * ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReport
+           * s/{db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFramew
+           * orkComplianceReports/{db_framework_compliance_report}`
+           */
           public Fetch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -775,33 +844,40 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The end time of the report. */
+          /**
+           * Optional. The end time of the report. Reserved for future use. Currently, the report
+           * always reflects the current compliance state.
+           */
           @com.google.api.client.util.Key
           private String endTime;
 
-          /** Optional. The end time of the report.
+          /** Optional. The end time of the report. Reserved for future use. Currently, the report always
+         reflects the current compliance state.
            */
           public String getEndTime() {
             return endTime;
           }
 
-          /** Optional. The end time of the report. */
+          /**
+           * Optional. The end time of the report. Reserved for future use. Currently, the report
+           * always reflects the current compliance state.
+           */
           public Fetch setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the results. Reserved for future use.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           public Fetch setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -834,18 +910,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         public class DbControlComplianceSummaries {
 
           /**
-           * Lists the control compliance summary for a given scope.
+           * Lists the compliance summaries of the controls in a framework compliance report.
            *
            * Create a request for the method "dbControlComplianceSummaries.list".
            *
            * This request holds the parameters needed by the assuredworkloads server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent scope for the framework overview page. Format: organizations/{organization}/loc
-           *        ations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report} folders/{f
-           *        older}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           *        projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
-           *        nce_report}
+           * @param parent Required. The framework compliance report to list control compliance summaries for. Formats: * `orga
+           *        nizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           *        ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{
+           *        db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFrameworkCom
+           *        plianceReports/{db_framework_compliance_report}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -862,7 +938,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
             /**
-             * Lists the control compliance summary for a given scope.
+             * Lists the compliance summaries of the controls in a framework compliance report.
              *
              * Create a request for the method "dbControlComplianceSummaries.list".
              *
@@ -871,11 +947,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent scope for the framework overview page. Format: organizations/{organization}/loc
-           *        ations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report} folders/{f
-           *        older}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           *        projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
-           *        nce_report}
+             * @param parent Required. The framework compliance report to list control compliance summaries for. Formats: * `orga
+           *        nizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           *        ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{
+           *        db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFrameworkCom
+           *        plianceReports/{db_framework_compliance_report}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -954,31 +1030,31 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The parent scope for the framework overview page. Format: organizations/{or
-             * ganization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
-             * e_report} folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_fram
-             * ework_compliance_report} projects/{project}/locations/{location}/dbFrameworkComplianc
-             * eReports/{db_framework_compliance_report}
+             * Required. The framework compliance report to list control compliance summaries for.
+             * Formats: * `organizations/{organization}/locations/{location}/dbFrameworkComplianceRe
+             * ports/{db_framework_compliance_report}` * `folders/{folder}/locations/{location}/dbFr
+             * ameworkComplianceReports/{db_framework_compliance_report}` * `projects/{project}/loca
+             * tions/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent scope for the framework overview page. Format: organizations/{organization}/lo
-           cations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_repor
-           t}
+            /** Required. The framework compliance report to list control compliance summaries for. Formats: * `org
+           anizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
+           e_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_comp
+           liance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framewo
+           rk_compliance_report}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent scope for the framework overview page. Format: organizations/{or
-             * ganization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
-             * e_report} folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_fram
-             * ework_compliance_report} projects/{project}/locations/{location}/dbFrameworkComplianc
-             * eReports/{db_framework_compliance_report}
+             * Required. The framework compliance report to list control compliance summaries for.
+             * Formats: * `organizations/{organization}/locations/{location}/dbFrameworkComplianceRe
+             * ports/{db_framework_compliance_report}` * `folders/{folder}/locations/{location}/dbFr
+             * ameworkComplianceReports/{db_framework_compliance_report}` * `projects/{project}/loca
+             * tions/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -990,17 +1066,38 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. The filtering results. */
+            /**
+             * Optional. A filter expression that restricts the results. The syntax follows
+             * [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+             * `framework_name`, `framework_revision` (the major revision ID of the framework), and
+             * `end_time`. The `end_time` field accepts a single equality comparison with an [RFC
+             * 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+             * "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are
+             * counted.
+             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filtering results.
+            /** Optional. A filter expression that restricts the results. The syntax follows
+           [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+           `framework_name`, `framework_revision` (the major revision ID of the framework), and `end_time`.
+           The `end_time` field accepts a single equality comparison with an [RFC
+           3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+           "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are counted.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. The filtering results. */
+            /**
+             * Optional. A filter expression that restricts the results. The syntax follows
+             * [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+             * `framework_name`, `framework_revision` (the major revision ID of the framework), and
+             * `end_time`. The `end_time` field accepts a single equality comparison with an [RFC
+             * 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+             * "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are
+             * counted.
+             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -1031,11 +1128,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Optional. A token that identifies the page of results that the server should return.
+             * Pass the `next_page_token` value from a previous result.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A token that identifies the page of results that the server should return.
+            /** Optional. A token that identifies the page of results that the server should return. Pass the
+           `next_page_token` value from a previous result.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -1043,6 +1142,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Optional. A token that identifies the page of results that the server should return.
+             * Pass the `next_page_token` value from a previous result.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -1078,16 +1178,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFrameworkComplianceSummaries {
 
         /**
-         * Lists the framework compliance summary for a given scope.
+         * Lists the compliance summaries of the frameworks that are deployed in a Data Boundary scope (an
+         * organization, folder, or project).
          *
          * Create a request for the method "dbFrameworkComplianceSummaries.list".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent scope for the framework compliance summary. Format:
-         *        organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         *        projects/{project}/locations/{location}
+         * @param parent Required. The parent scope to list framework compliance summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1104,7 +1205,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^folders/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the framework compliance summary for a given scope.
+           * Lists the compliance summaries of the frameworks that are deployed in a Data Boundary scope (an
+           * organization, folder, or project).
            *
            * Create a request for the method "dbFrameworkComplianceSummaries.list".
            *
@@ -1113,9 +1215,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent scope for the framework compliance summary. Format:
-         *        organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         *        projects/{project}/locations/{location}
+           * @param parent Required. The parent scope to list framework compliance summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1194,25 +1296,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent scope for the framework compliance summary. Format:
-           * organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-           * projects/{project}/locations/{location}
+           * Required. The parent scope to list framework compliance summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent scope for the framework compliance summary. Format:
-         organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         projects/{project}/locations/{location}
+          /** Required. The parent scope to list framework compliance summaries for. Formats: *
+         `organizations/{organization}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent scope for the framework compliance summary. Format:
-           * organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-           * projects/{project}/locations/{location}
+           * Required. The parent scope to list framework compliance summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1224,17 +1326,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the results. Reserved for future use.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1265,13 +1367,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
-           * Pass the next_page_token value from a previous result.
+           * Pass the `next_page_token` value from a previous result.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. A token that identifies the page of results that the server should return. Pass the
-         next_page_token value from a previous result.
+         `next_page_token` value from a previous result.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -1279,24 +1381,31 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
-           * Pass the next_page_token value from a previous result.
+           * Pass the `next_page_token` value from a previous result.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /** Optional. Specifies the level of detail to return in the response. */
+          /**
+           * Optional. The level of detail to return for each summary. If not specified,
+           * `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
+           */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. Specifies the level of detail to return in the response.
+          /** Optional. The level of detail to return for each summary. If not specified,
+         `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. Specifies the level of detail to return in the response. */
+          /**
+           * Optional. The level of detail to return for each summary. If not specified,
+           * `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
+           */
           public List setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -1373,16 +1482,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFindingSummaries {
 
         /**
-         * Lists the finding summary by category for a given scope.
+         * Lists summaries of the active findings in a Data Boundary scope (an organization, folder, or
+         * project), with one summary for each finding category.
          *
          * Create a request for the method "dbFindingSummaries.list".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent scope for the framework overview page. Formats: -
-         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         *        organizations/{organization}/locations/{location}
+         * @param parent Required. The parent scope to list finding summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -1399,7 +1509,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the finding summary by category for a given scope.
+           * Lists summaries of the active findings in a Data Boundary scope (an organization, folder, or
+           * project), with one summary for each finding category.
            *
            * Create a request for the method "dbFindingSummaries.list".
            *
@@ -1408,9 +1519,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent scope for the framework overview page. Formats: -
-         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         *        organizations/{organization}/locations/{location}
+           * @param parent Required. The parent scope to list finding summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -1489,25 +1600,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent scope for the framework overview page. Formats: -
-           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-           * organizations/{organization}/locations/{location}
+           * Required. The parent scope to list finding summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent scope for the framework overview page. Formats: -
-         projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         organizations/{organization}/locations/{location}
+          /** Required. The parent scope to list finding summaries for. Formats: *
+         `organizations/{organization}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent scope for the framework overview page. Formats: -
-           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-           * organizations/{organization}/locations/{location}
+           * Required. The parent scope to list finding summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -1519,17 +1630,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments whose findings
+           * are summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported
+           * fields are `framework_deployment`, `framework_name`, and `framework_revision` (the
+           * major revision ID of the framework).
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the framework deployments whose findings are
+         summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported fields are
+         `framework_deployment`, `framework_name`, and `framework_revision` (the major revision ID of the
+         framework).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments whose findings
+           * are summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported
+           * fields are `framework_deployment`, `framework_name`, and `framework_revision` (the
+           * major revision ID of the framework).
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1560,11 +1684,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
+           * Pass the `next_page_token` value from a previous result.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A token that identifies the page of results that the server should return.
+          /** Optional. A token that identifies the page of results that the server should return. Pass the
+         `next_page_token` value from a previous result.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -1572,6 +1698,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
+           * Pass the `next_page_token` value from a previous result.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -1606,14 +1733,16 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFrameworkComplianceReports {
 
         /**
-         * Gets the aggregated compliance report over time for a given scope.
+         * Gets daily compliance reports over a time range for a framework that's deployed in a Data
+         * Boundary scope.
          *
          * Create a request for the method "dbFrameworkComplianceReports.aggregate".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Aggregate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the aggregated compliance report over time to retrieve. Format: `organizations
+         * @param name Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         *        ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations
          *        /{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
          *        nce_report}`
          * @return the request
@@ -1632,7 +1761,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
           /**
-           * Gets the aggregated compliance report over time for a given scope.
+           * Gets daily compliance reports over a time range for a framework that's deployed in a Data
+           * Boundary scope.
            *
            * Create a request for the method "dbFrameworkComplianceReports.aggregate".
            *
@@ -1642,7 +1772,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * Aggregate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the aggregated compliance report over time to retrieve. Format: `organizations
+           * @param name Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         *        ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations
          *        /{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
          *        nce_report}`
            * @since 1.13
@@ -1723,25 +1854,27 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The name of the aggregated compliance report over time to retrieve. Format: `
-           * organizations/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_f
-           * ramework_compliance_report}`
+           * Required. The name of the framework compliance report to aggregate over time. The
+           * report ID is the ID of the compliance framework, for example `builtin-fedramp-high`.
+           * Format: `organizations/{organization_id}/locations/{location}/dbFrameworkComplianceRepo
+           * rts/{db_framework_compliance_report}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the aggregated compliance report over time to retrieve. Format: `organization
-         s/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_repo
-         rt}`
+          /** Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations/{organiz
+         ation_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the aggregated compliance report over time to retrieve. Format: `
-           * organizations/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_f
-           * ramework_compliance_report}`
+           * Required. The name of the framework compliance report to aggregate over time. The
+           * report ID is the ID of the compliance framework, for example `builtin-fedramp-high`.
+           * Format: `organizations/{organization_id}/locations/{location}/dbFrameworkComplianceRepo
+           * rts/{db_framework_compliance_report}`
            */
           public Aggregate setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -1753,17 +1886,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments that are
+           * included in the report. The syntax follows [AIP-160](https://google.aip.dev/160).
+           * Supported fields are `framework_deployment`, `framework_name`, and `framework_revision`
+           * (the major revision ID of the framework).
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the framework deployments that are included in the
+         report. The syntax follows [AIP-160](https://google.aip.dev/160). Supported fields are
+         `framework_deployment`, `framework_name`, and `framework_revision` (the major revision ID of the
+         framework).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments that are
+           * included in the report. The syntax follows [AIP-160](https://google.aip.dev/160).
+           * Supported fields are `framework_deployment`, `framework_name`, and `framework_revision`
+           * (the major revision ID of the framework).
+           */
           public Aggregate setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -1821,14 +1967,21 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Fetches the framework compliance report for a given scope.
+         * Fetches the current compliance report for a framework that's deployed in a Data Boundary scope
+         * (an organization, folder, or project). The report includes the number of passing, failing, and
+         * not assessed controls in the framework.
          *
          * Create a request for the method "dbFrameworkComplianceReports.fetch".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the framework compliance report to retrieve.
+         * @param name Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         *        compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organ
+         *        ization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report
+         *        }` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_com
+         *        pliance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{
+         *        db_framework_compliance_report}`
          * @return the request
          */
         public Fetch fetch(java.lang.String name) throws java.io.IOException {
@@ -1845,7 +1998,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
           /**
-           * Fetches the framework compliance report for a given scope.
+           * Fetches the current compliance report for a framework that's deployed in a Data Boundary scope
+           * (an organization, folder, or project). The report includes the number of passing, failing, and
+           * not assessed controls in the framework.
            *
            * Create a request for the method "dbFrameworkComplianceReports.fetch".
            *
@@ -1855,7 +2010,12 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the framework compliance report to retrieve.
+           * @param name Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         *        compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organ
+         *        ization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report
+         *        }` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_com
+         *        pliance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{
+         *        db_framework_compliance_report}`
            * @since 1.13
            */
           protected Fetch(java.lang.String name) {
@@ -1933,17 +2093,35 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return (Fetch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the framework compliance report to retrieve. */
+          /**
+           * Required. The name of the framework compliance report to retrieve. The report ID is the
+           * ID of the compliance framework, for example `builtin-fedramp-high`. Formats: * `organiz
+           * ations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           * ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReport
+           * s/{db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFramew
+           * orkComplianceReports/{db_framework_compliance_report}`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the framework compliance report to retrieve.
+          /** Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organization}/
+         locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}` * `folders/{fol
+         der}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}` * `project
+         s/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the framework compliance report to retrieve. */
+          /**
+           * Required. The name of the framework compliance report to retrieve. The report ID is the
+           * ID of the compliance framework, for example `builtin-fedramp-high`. Formats: * `organiz
+           * ations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           * ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReport
+           * s/{db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFramew
+           * orkComplianceReports/{db_framework_compliance_report}`
+           */
           public Fetch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1954,33 +2132,40 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The end time of the report. */
+          /**
+           * Optional. The end time of the report. Reserved for future use. Currently, the report
+           * always reflects the current compliance state.
+           */
           @com.google.api.client.util.Key
           private String endTime;
 
-          /** Optional. The end time of the report.
+          /** Optional. The end time of the report. Reserved for future use. Currently, the report always
+         reflects the current compliance state.
            */
           public String getEndTime() {
             return endTime;
           }
 
-          /** Optional. The end time of the report. */
+          /**
+           * Optional. The end time of the report. Reserved for future use. Currently, the report
+           * always reflects the current compliance state.
+           */
           public Fetch setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the results. Reserved for future use.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           public Fetch setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -2013,18 +2198,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         public class DbControlComplianceSummaries {
 
           /**
-           * Lists the control compliance summary for a given scope.
+           * Lists the compliance summaries of the controls in a framework compliance report.
            *
            * Create a request for the method "dbControlComplianceSummaries.list".
            *
            * This request holds the parameters needed by the assuredworkloads server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent scope for the framework overview page. Format: organizations/{organization}/loc
-           *        ations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report} folders/{f
-           *        older}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           *        projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
-           *        nce_report}
+           * @param parent Required. The framework compliance report to list control compliance summaries for. Formats: * `orga
+           *        nizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           *        ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{
+           *        db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFrameworkCom
+           *        plianceReports/{db_framework_compliance_report}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -2041,7 +2226,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
             /**
-             * Lists the control compliance summary for a given scope.
+             * Lists the compliance summaries of the controls in a framework compliance report.
              *
              * Create a request for the method "dbControlComplianceSummaries.list".
              *
@@ -2050,11 +2235,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent scope for the framework overview page. Format: organizations/{organization}/loc
-           *        ations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report} folders/{f
-           *        older}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           *        projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
-           *        nce_report}
+             * @param parent Required. The framework compliance report to list control compliance summaries for. Formats: * `orga
+           *        nizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           *        ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{
+           *        db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFrameworkCom
+           *        plianceReports/{db_framework_compliance_report}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -2133,31 +2318,31 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The parent scope for the framework overview page. Format: organizations/{or
-             * ganization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
-             * e_report} folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_fram
-             * ework_compliance_report} projects/{project}/locations/{location}/dbFrameworkComplianc
-             * eReports/{db_framework_compliance_report}
+             * Required. The framework compliance report to list control compliance summaries for.
+             * Formats: * `organizations/{organization}/locations/{location}/dbFrameworkComplianceRe
+             * ports/{db_framework_compliance_report}` * `folders/{folder}/locations/{location}/dbFr
+             * ameworkComplianceReports/{db_framework_compliance_report}` * `projects/{project}/loca
+             * tions/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent scope for the framework overview page. Format: organizations/{organization}/lo
-           cations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_repor
-           t}
+            /** Required. The framework compliance report to list control compliance summaries for. Formats: * `org
+           anizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
+           e_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_comp
+           liance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framewo
+           rk_compliance_report}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent scope for the framework overview page. Format: organizations/{or
-             * ganization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
-             * e_report} folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_fram
-             * ework_compliance_report} projects/{project}/locations/{location}/dbFrameworkComplianc
-             * eReports/{db_framework_compliance_report}
+             * Required. The framework compliance report to list control compliance summaries for.
+             * Formats: * `organizations/{organization}/locations/{location}/dbFrameworkComplianceRe
+             * ports/{db_framework_compliance_report}` * `folders/{folder}/locations/{location}/dbFr
+             * ameworkComplianceReports/{db_framework_compliance_report}` * `projects/{project}/loca
+             * tions/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -2169,17 +2354,38 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. The filtering results. */
+            /**
+             * Optional. A filter expression that restricts the results. The syntax follows
+             * [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+             * `framework_name`, `framework_revision` (the major revision ID of the framework), and
+             * `end_time`. The `end_time` field accepts a single equality comparison with an [RFC
+             * 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+             * "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are
+             * counted.
+             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filtering results.
+            /** Optional. A filter expression that restricts the results. The syntax follows
+           [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+           `framework_name`, `framework_revision` (the major revision ID of the framework), and `end_time`.
+           The `end_time` field accepts a single equality comparison with an [RFC
+           3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+           "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are counted.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. The filtering results. */
+            /**
+             * Optional. A filter expression that restricts the results. The syntax follows
+             * [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+             * `framework_name`, `framework_revision` (the major revision ID of the framework), and
+             * `end_time`. The `end_time` field accepts a single equality comparison with an [RFC
+             * 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+             * "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are
+             * counted.
+             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -2210,11 +2416,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Optional. A token that identifies the page of results that the server should return.
+             * Pass the `next_page_token` value from a previous result.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A token that identifies the page of results that the server should return.
+            /** Optional. A token that identifies the page of results that the server should return. Pass the
+           `next_page_token` value from a previous result.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -2222,6 +2430,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Optional. A token that identifies the page of results that the server should return.
+             * Pass the `next_page_token` value from a previous result.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -2257,16 +2466,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFrameworkComplianceSummaries {
 
         /**
-         * Lists the framework compliance summary for a given scope.
+         * Lists the compliance summaries of the frameworks that are deployed in a Data Boundary scope (an
+         * organization, folder, or project).
          *
          * Create a request for the method "dbFrameworkComplianceSummaries.list".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent scope for the framework compliance summary. Format:
-         *        organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         *        projects/{project}/locations/{location}
+         * @param parent Required. The parent scope to list framework compliance summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2283,7 +2493,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the framework compliance summary for a given scope.
+           * Lists the compliance summaries of the frameworks that are deployed in a Data Boundary scope (an
+           * organization, folder, or project).
            *
            * Create a request for the method "dbFrameworkComplianceSummaries.list".
            *
@@ -2292,9 +2503,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent scope for the framework compliance summary. Format:
-         *        organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         *        projects/{project}/locations/{location}
+           * @param parent Required. The parent scope to list framework compliance summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2373,25 +2584,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent scope for the framework compliance summary. Format:
-           * organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-           * projects/{project}/locations/{location}
+           * Required. The parent scope to list framework compliance summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent scope for the framework compliance summary. Format:
-         organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         projects/{project}/locations/{location}
+          /** Required. The parent scope to list framework compliance summaries for. Formats: *
+         `organizations/{organization}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent scope for the framework compliance summary. Format:
-           * organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-           * projects/{project}/locations/{location}
+           * Required. The parent scope to list framework compliance summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -2403,17 +2614,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the results. Reserved for future use.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -2444,13 +2655,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
-           * Pass the next_page_token value from a previous result.
+           * Pass the `next_page_token` value from a previous result.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. A token that identifies the page of results that the server should return. Pass the
-         next_page_token value from a previous result.
+         `next_page_token` value from a previous result.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -2458,24 +2669,31 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
-           * Pass the next_page_token value from a previous result.
+           * Pass the `next_page_token` value from a previous result.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /** Optional. Specifies the level of detail to return in the response. */
+          /**
+           * Optional. The level of detail to return for each summary. If not specified,
+           * `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
+           */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. Specifies the level of detail to return in the response.
+          /** Optional. The level of detail to return for each summary. If not specified,
+         `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. Specifies the level of detail to return in the response. */
+          /**
+           * Optional. The level of detail to return for each summary. If not specified,
+           * `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
+           */
           public List setView(java.lang.String view) {
             this.view = view;
             return this;
@@ -4968,9 +5186,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * optional parameters, call the {@link Acknowledge#execute()} method to invoke the remote
            * operation.
            *
-           * @param name Required. The resource name of the Violation to acknowledge. Format:
-           *        organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violati
-           *        on}
+           * @param name Required. The resource name of the violation to acknowledge. Format:
+           *        `organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violat
+           *        ion}`
            * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest}
            * @return the request
            */
@@ -5000,9 +5218,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * Acknowledge#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Violation to acknowledge. Format:
-           *        organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violati
-           *        on}
+             * @param name Required. The resource name of the violation to acknowledge. Format:
+           *        `organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violat
+           *        ion}`
              * @param content the {@link com.google.api.services.assuredworkloads.v1.model.GoogleCloudAssuredworkloadsV1AcknowledgeViolationRequest}
              * @since 1.13
              */
@@ -5072,22 +5290,22 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The resource name of the Violation to acknowledge. Format: organizations/{o
-             * rganization}/locations/{location}/workloads/{workload}/violations/{violation}
+             * Required. The resource name of the violation to acknowledge. Format: `organizations/{
+             * organization}/locations/{location}/workloads/{workload}/violations/{violation}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Violation to acknowledge. Format:
-           organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}
+            /** Required. The resource name of the violation to acknowledge. Format:
+           `organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Violation to acknowledge. Format: organizations/{o
-             * rganization}/locations/{location}/workloads/{workload}/violations/{violation}
+             * Required. The resource name of the violation to acknowledge. Format: `organizations/{
+             * organization}/locations/{location}/workloads/{workload}/violations/{violation}`
              */
             public Acknowledge setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5105,16 +5323,16 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
           }
           /**
-           * Retrieves Assured Workload Violation based on ID.
+           * Retrieves an Assured Workloads violation by its resource name.
            *
            * Create a request for the method "violations.get".
            *
            * This request holds the parameters needed by the assuredworkloads server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. The resource name of the Violation to fetch (ie. Violation.name). Format:
-           *        organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violati
-           *        on}
+           * @param name Required. The resource name of the violation to retrieve (that is, the value of `Violation.name`).
+           *        Format: `organizations/{organization}/locations/{location}/workloads/{workload}/violations
+           *        /{violation}`
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -5131,7 +5349,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/workloads/[^/]+/violations/[^/]+$");
 
             /**
-             * Retrieves Assured Workload Violation based on ID.
+             * Retrieves an Assured Workloads violation by its resource name.
              *
              * Create a request for the method "violations.get".
              *
@@ -5140,9 +5358,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. The resource name of the Violation to fetch (ie. Violation.name). Format:
-           *        organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violati
-           *        on}
+             * @param name Required. The resource name of the violation to retrieve (that is, the value of `Violation.name`).
+           *        Format: `organizations/{organization}/locations/{location}/workloads/{workload}/violations
+           *        /{violation}`
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -5221,24 +5439,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The resource name of the Violation to fetch (ie. Violation.name). Format: o
-             * rganizations/{organization}/locations/{location}/workloads/{workload}/violations/{vio
-             * lation}
+             * Required. The resource name of the violation to retrieve (that is, the value of
+             * `Violation.name`). Format: `organizations/{organization}/locations/{location}/workloa
+             * ds/{workload}/violations/{violation}`
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. The resource name of the Violation to fetch (ie. Violation.name). Format:
-           organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}
+            /** Required. The resource name of the violation to retrieve (that is, the value of `Violation.name`).
+           Format:
+           `organizations/{organization}/locations/{location}/workloads/{workload}/violations/{violation}`
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. The resource name of the Violation to fetch (ie. Violation.name). Format: o
-             * rganizations/{organization}/locations/{location}/workloads/{workload}/violations/{vio
-             * lation}
+             * Required. The resource name of the violation to retrieve (that is, the value of
+             * `Violation.name`). Format: `organizations/{organization}/locations/{location}/workloa
+             * ds/{workload}/violations/{violation}`
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -5251,22 +5470,24 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for
-             * fetching violations.
+             * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+             * `VIOLATION_VIEW_DATA_BOUNDARY`) that the violation belongs to. If not specified,
+             * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for fetching
-           violations.
+            /** Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or `VIOLATION_VIEW_DATA_BOUNDARY`)
+           that the violation belongs to. If not specified, `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * Optional. Specifies the violation view (`AssuredWorkloads` or `DataBoundary`) for
-             * fetching violations.
+             * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+             * `VIOLATION_VIEW_DATA_BOUNDARY`) that the violation belongs to. If not specified,
+             * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
              */
             public Get setView(java.lang.String view) {
               this.view = view;
@@ -5289,8 +5510,10 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * This request holds the parameters needed by the assuredworkloads server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The Workload name. Format
-           *        `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+           * @param parent Required. The workload to list violations for. To list violations across all workloads in an
+           *        organization, use `-` as the workload ID. When `view` is `VIOLATION_VIEW_DATA_BOUNDARY`,
+           *        violations are listed for the entire organization and location, and the workload ID is
+           *        ignored. Format: `organizations/{organization}/locations/{location}/workloads/{workload}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -5319,8 +5542,10 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The Workload name. Format
-           *        `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+             * @param parent Required. The workload to list violations for. To list violations across all workloads in an
+           *        organization, use `-` as the workload ID. When `view` is `VIOLATION_VIEW_DATA_BOUNDARY`,
+           *        violations are listed for the entire organization and location, and the workload ID is
+           *        ignored. Format: `organizations/{organization}/locations/{location}/workloads/{workload}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -5399,22 +5624,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The Workload name. Format
-             * `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+             * Required. The workload to list violations for. To list violations across all
+             * workloads in an organization, use `-` as the workload ID. When `view` is
+             * `VIOLATION_VIEW_DATA_BOUNDARY`, violations are listed for the entire organization and
+             * location, and the workload ID is ignored. Format:
+             * `organizations/{organization}/locations/{location}/workloads/{workload}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The Workload name. Format
-           `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+            /** Required. The workload to list violations for. To list violations across all workloads in an
+           organization, use `-` as the workload ID. When `view` is `VIOLATION_VIEW_DATA_BOUNDARY`, violations
+           are listed for the entire organization and location, and the workload ID is ignored. Format:
+           `organizations/{organization}/locations/{location}/workloads/{workload}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The Workload name. Format
-             * `organizations/{org_id}/locations/{location}/workloads/{workload}`.
+             * Required. The workload to list violations for. To list violations across all
+             * workloads in an organization, use `-` as the workload ID. When `view` is
+             * `VIOLATION_VIEW_DATA_BOUNDARY`, violations are listed for the entire organization and
+             * location, and the workload ID is ignored. Format:
+             * `organizations/{organization}/locations/{location}/workloads/{workload}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -5426,17 +5659,44 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. A custom filter for filtering by the Violations properties. */
+            /**
+             * Optional. A filter expression that restricts the violations that are returned. The
+             * syntax follows [AIP-160](https://google.aip.dev/160). Only the equality operator
+             * (`=`) is supported, and expressions can be combined with `AND`, `OR`, and `NOT`. When
+             * `view` is `VIOLATION_VIEW_DATA_BOUNDARY`, the following fields are supported:
+             * `violationId`, `category`, `state` (`UNRESOLVED`, `RESOLVED`, or `EXCEPTION`),
+             * `violationType` (`ORG_POLICY` or `RESOURCE`), `resourceType`, `resourceName`,
+             * `project`, `associatedOrgPolicyViolationId`, `cloudControlName`,
+             * `workloadDisplayName`, and `complianceType` (a framework ID). Example: `state =
+             * "UNRESOLVED" AND complianceType = "builtin-fedramp-high"`
+             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. A custom filter for filtering by the Violations properties.
+            /** Optional. A filter expression that restricts the violations that are returned. The syntax follows
+           [AIP-160](https://google.aip.dev/160). Only the equality operator (`=`) is supported, and
+           expressions can be combined with `AND`, `OR`, and `NOT`. When `view` is
+           `VIOLATION_VIEW_DATA_BOUNDARY`, the following fields are supported: `violationId`, `category`,
+           `state` (`UNRESOLVED`, `RESOLVED`, or `EXCEPTION`), `violationType` (`ORG_POLICY` or `RESOURCE`),
+           `resourceType`, `resourceName`, `project`, `associatedOrgPolicyViolationId`, `cloudControlName`,
+           `workloadDisplayName`, and `complianceType` (a framework ID). Example: `state = "UNRESOLVED" AND
+           complianceType = "builtin-fedramp-high"`
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. A custom filter for filtering by the Violations properties. */
+            /**
+             * Optional. A filter expression that restricts the violations that are returned. The
+             * syntax follows [AIP-160](https://google.aip.dev/160). Only the equality operator
+             * (`=`) is supported, and expressions can be combined with `AND`, `OR`, and `NOT`. When
+             * `view` is `VIOLATION_VIEW_DATA_BOUNDARY`, the following fields are supported:
+             * `violationId`, `category`, `state` (`UNRESOLVED`, `RESOLVED`, or `EXCEPTION`),
+             * `violationType` (`ORG_POLICY` or `RESOURCE`), `resourceType`, `resourceName`,
+             * `project`, `associatedOrgPolicyViolationId`, `cloudControlName`,
+             * `workloadDisplayName`, and `complianceType` (a framework ID). Example: `state =
+             * "UNRESOLVED" AND complianceType = "builtin-fedramp-high"`
+             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -5474,70 +5734,111 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. Actionable sorting delegation. */
+            /**
+             * Optional. A comma-separated list of fields to sort the results by. The default sort
+             * order is ascending; to sort in descending order, append ` desc` to the field name.
+             * For example, `update_time desc,category`. When `view` is
+             * `VIOLATION_VIEW_DATA_BOUNDARY`, the following fields are supported: `begin_time`,
+             * `update_time`, `resource_type`, `state`, and `category`. If not specified, results
+             * are sorted by `begin_time` in descending order.
+             */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Optional. Actionable sorting delegation.
+            /** Optional. A comma-separated list of fields to sort the results by. The default sort order is
+           ascending; to sort in descending order, append ` desc` to the field name. For example, `update_time
+           desc,category`. When `view` is `VIOLATION_VIEW_DATA_BOUNDARY`, the following fields are supported:
+           `begin_time`, `update_time`, `resource_type`, `state`, and `category`. If not specified, results
+           are sorted by `begin_time` in descending order.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Optional. Actionable sorting delegation. */
+            /**
+             * Optional. A comma-separated list of fields to sort the results by. The default sort
+             * order is ascending; to sort in descending order, append ` desc` to the field name.
+             * For example, `update_time desc,category`. When `view` is
+             * `VIOLATION_VIEW_DATA_BOUNDARY`, the following fields are supported: `begin_time`,
+             * `update_time`, `resource_type`, `state`, and `category`. If not specified, results
+             * are sorted by `begin_time` in descending order.
+             */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
             }
 
-            /** Optional. Page size. */
+            /**
+             * Optional. The maximum number of violations to return. The service might return fewer
+             * violations than this value. If unspecified, at most 100 violations are returned. The
+             * maximum value is 1000; values above 1000 are coerced to 1000.
+             */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. Page size.
+            /** Optional. The maximum number of violations to return. The service might return fewer violations
+           than this value. If unspecified, at most 100 violations are returned. The maximum value is 1000;
+           values above 1000 are coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** Optional. Page size. */
+            /**
+             * Optional. The maximum number of violations to return. The service might return fewer
+             * violations than this value. If unspecified, at most 100 violations are returned. The
+             * maximum value is 1000; values above 1000 are coerced to 1000.
+             */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Optional. Page token returned from previous request. */
+            /**
+             * Optional. A page token, received from a previous `ListViolations` call. Provide this
+             * token to retrieve the subsequent page. When paginating, all other parameters that are
+             * provided to `ListViolations` must match the call that provided the page token.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. Page token returned from previous request.
+            /** Optional. A page token, received from a previous `ListViolations` call. Provide this token to
+           retrieve the subsequent page. When paginating, all other parameters that are provided to
+           `ListViolations` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Optional. Page token returned from previous request. */
+            /**
+             * Optional. A page token, received from a previous `ListViolations` call. Provide this
+             * token to retrieve the subsequent page. When paginating, all other parameters that are
+             * provided to `ListViolations` must match the call that provided the page token.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
             }
 
             /**
-             * Optional. Specifies the violation view(AssuredWorkloads or DataBoundary) for fetching
-             * violations.
+             * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+             * `VIOLATION_VIEW_DATA_BOUNDARY`) to list violations for. If not specified,
+             * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Optional. Specifies the violation view(AssuredWorkloads or DataBoundary) for fetching violations.
+            /** Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or `VIOLATION_VIEW_DATA_BOUNDARY`)
+           to list violations for. If not specified, `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * Optional. Specifies the violation view(AssuredWorkloads or DataBoundary) for fetching
-             * violations.
+             * Optional. The violation view (`VIOLATION_VIEW_ASSURED_WORKLOADS` or
+             * `VIOLATION_VIEW_DATA_BOUNDARY`) to list violations for. If not specified,
+             * `VIOLATION_VIEW_ASSURED_WORKLOADS` is used.
              */
             public List setView(java.lang.String view) {
               this.view = view;
@@ -5616,16 +5917,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFindingSummaries {
 
         /**
-         * Lists the finding summary by category for a given scope.
+         * Lists summaries of the active findings in a Data Boundary scope (an organization, folder, or
+         * project), with one summary for each finding category.
          *
          * Create a request for the method "dbFindingSummaries.list".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent scope for the framework overview page. Formats: -
-         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         *        organizations/{organization}/locations/{location}
+         * @param parent Required. The parent scope to list finding summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5642,7 +5944,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the finding summary by category for a given scope.
+           * Lists summaries of the active findings in a Data Boundary scope (an organization, folder, or
+           * project), with one summary for each finding category.
            *
            * Create a request for the method "dbFindingSummaries.list".
            *
@@ -5651,9 +5954,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent scope for the framework overview page. Formats: -
-         *        projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         *        organizations/{organization}/locations/{location}
+           * @param parent Required. The parent scope to list finding summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5732,25 +6035,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent scope for the framework overview page. Formats: -
-           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-           * organizations/{organization}/locations/{location}
+           * Required. The parent scope to list finding summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent scope for the framework overview page. Formats: -
-         projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-         organizations/{organization}/locations/{location}
+          /** Required. The parent scope to list finding summaries for. Formats: *
+         `organizations/{organization}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent scope for the framework overview page. Formats: -
-           * projects/{project}/locations/{location} - folders/{folder}/locations/{location} -
-           * organizations/{organization}/locations/{location}
+           * Required. The parent scope to list finding summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5762,17 +6065,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments whose findings
+           * are summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported
+           * fields are `framework_deployment`, `framework_name`, and `framework_revision` (the
+           * major revision ID of the framework).
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the framework deployments whose findings are
+         summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported fields are
+         `framework_deployment`, `framework_name`, and `framework_revision` (the major revision ID of the
+         framework).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments whose findings
+           * are summarized. The syntax follows [AIP-160](https://google.aip.dev/160). Supported
+           * fields are `framework_deployment`, `framework_name`, and `framework_revision` (the
+           * major revision ID of the framework).
+           */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -5803,11 +6119,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
+           * Pass the `next_page_token` value from a previous result.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. A token that identifies the page of results that the server should return.
+          /** Optional. A token that identifies the page of results that the server should return. Pass the
+         `next_page_token` value from a previous result.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -5815,6 +6133,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
+           * Pass the `next_page_token` value from a previous result.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5849,14 +6168,16 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFrameworkComplianceReports {
 
         /**
-         * Gets the aggregated compliance report over time for a given scope.
+         * Gets daily compliance reports over a time range for a framework that's deployed in a Data
+         * Boundary scope.
          *
          * Create a request for the method "dbFrameworkComplianceReports.aggregate".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Aggregate#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the aggregated compliance report over time to retrieve. Format: `organizations
+         * @param name Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         *        ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations
          *        /{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
          *        nce_report}`
          * @return the request
@@ -5875,7 +6196,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
           /**
-           * Gets the aggregated compliance report over time for a given scope.
+           * Gets daily compliance reports over a time range for a framework that's deployed in a Data
+           * Boundary scope.
            *
            * Create a request for the method "dbFrameworkComplianceReports.aggregate".
            *
@@ -5885,7 +6207,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * Aggregate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the aggregated compliance report over time to retrieve. Format: `organizations
+           * @param name Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         *        ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations
          *        /{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
          *        nce_report}`
            * @since 1.13
@@ -5966,25 +6289,27 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The name of the aggregated compliance report over time to retrieve. Format: `
-           * organizations/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_f
-           * ramework_compliance_report}`
+           * Required. The name of the framework compliance report to aggregate over time. The
+           * report ID is the ID of the compliance framework, for example `builtin-fedramp-high`.
+           * Format: `organizations/{organization_id}/locations/{location}/dbFrameworkComplianceRepo
+           * rts/{db_framework_compliance_report}`
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the aggregated compliance report over time to retrieve. Format: `organization
-         s/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_repo
-         rt}`
+          /** Required. The name of the framework compliance report to aggregate over time. The report ID is the
+         ID of the compliance framework, for example `builtin-fedramp-high`. Format: `organizations/{organiz
+         ation_id}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. The name of the aggregated compliance report over time to retrieve. Format: `
-           * organizations/{organization_id}/locations/{location}/dbFrameworkComplianceReports/{db_f
-           * ramework_compliance_report}`
+           * Required. The name of the framework compliance report to aggregate over time. The
+           * report ID is the ID of the compliance framework, for example `builtin-fedramp-high`.
+           * Format: `organizations/{organization_id}/locations/{location}/dbFrameworkComplianceRepo
+           * rts/{db_framework_compliance_report}`
            */
           public Aggregate setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5996,17 +6321,30 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments that are
+           * included in the report. The syntax follows [AIP-160](https://google.aip.dev/160).
+           * Supported fields are `framework_deployment`, `framework_name`, and `framework_revision`
+           * (the major revision ID of the framework).
+           */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the framework deployments that are included in the
+         report. The syntax follows [AIP-160](https://google.aip.dev/160). Supported fields are
+         `framework_deployment`, `framework_name`, and `framework_revision` (the major revision ID of the
+         framework).
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /**
+           * Optional. A filter expression that restricts the framework deployments that are
+           * included in the report. The syntax follows [AIP-160](https://google.aip.dev/160).
+           * Supported fields are `framework_deployment`, `framework_name`, and `framework_revision`
+           * (the major revision ID of the framework).
+           */
           public Aggregate setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -6064,14 +6402,21 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
         }
         /**
-         * Fetches the framework compliance report for a given scope.
+         * Fetches the current compliance report for a framework that's deployed in a Data Boundary scope
+         * (an organization, folder, or project). The report includes the number of passing, failing, and
+         * not assessed controls in the framework.
          *
          * Create a request for the method "dbFrameworkComplianceReports.fetch".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link Fetch#execute()} method to invoke the remote operation.
          *
-         * @param name Required. The name of the framework compliance report to retrieve.
+         * @param name Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         *        compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organ
+         *        ization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report
+         *        }` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_com
+         *        pliance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{
+         *        db_framework_compliance_report}`
          * @return the request
          */
         public Fetch fetch(java.lang.String name) throws java.io.IOException {
@@ -6088,7 +6433,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
           /**
-           * Fetches the framework compliance report for a given scope.
+           * Fetches the current compliance report for a framework that's deployed in a Data Boundary scope
+           * (an organization, folder, or project). The report includes the number of passing, failing, and
+           * not assessed controls in the framework.
            *
            * Create a request for the method "dbFrameworkComplianceReports.fetch".
            *
@@ -6098,7 +6445,12 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * Fetch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. The name of the framework compliance report to retrieve.
+           * @param name Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         *        compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organ
+         *        ization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report
+         *        }` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_com
+         *        pliance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{
+         *        db_framework_compliance_report}`
            * @since 1.13
            */
           protected Fetch(java.lang.String name) {
@@ -6176,17 +6528,35 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return (Fetch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. The name of the framework compliance report to retrieve. */
+          /**
+           * Required. The name of the framework compliance report to retrieve. The report ID is the
+           * ID of the compliance framework, for example `builtin-fedramp-high`. Formats: * `organiz
+           * ations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           * ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReport
+           * s/{db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFramew
+           * orkComplianceReports/{db_framework_compliance_report}`
+           */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. The name of the framework compliance report to retrieve.
+          /** Required. The name of the framework compliance report to retrieve. The report ID is the ID of the
+         compliance framework, for example `builtin-fedramp-high`. Formats: * `organizations/{organization}/
+         locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}` * `folders/{fol
+         der}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}` * `project
+         s/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. The name of the framework compliance report to retrieve. */
+          /**
+           * Required. The name of the framework compliance report to retrieve. The report ID is the
+           * ID of the compliance framework, for example `builtin-fedramp-high`. Formats: * `organiz
+           * ations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           * ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReport
+           * s/{db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFramew
+           * orkComplianceReports/{db_framework_compliance_report}`
+           */
           public Fetch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -6197,33 +6567,40 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The end time of the report. */
+          /**
+           * Optional. The end time of the report. Reserved for future use. Currently, the report
+           * always reflects the current compliance state.
+           */
           @com.google.api.client.util.Key
           private String endTime;
 
-          /** Optional. The end time of the report.
+          /** Optional. The end time of the report. Reserved for future use. Currently, the report always
+         reflects the current compliance state.
            */
           public String getEndTime() {
             return endTime;
           }
 
-          /** Optional. The end time of the report. */
+          /**
+           * Optional. The end time of the report. Reserved for future use. Currently, the report
+           * always reflects the current compliance state.
+           */
           public Fetch setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the results. Reserved for future use.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           public Fetch setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -6256,18 +6633,18 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
         public class DbControlComplianceSummaries {
 
           /**
-           * Lists the control compliance summary for a given scope.
+           * Lists the compliance summaries of the controls in a framework compliance report.
            *
            * Create a request for the method "dbControlComplianceSummaries.list".
            *
            * This request holds the parameters needed by the assuredworkloads server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. The parent scope for the framework overview page. Format: organizations/{organization}/loc
-           *        ations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report} folders/{f
-           *        older}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           *        projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
-           *        nce_report}
+           * @param parent Required. The framework compliance report to list control compliance summaries for. Formats: * `orga
+           *        nizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           *        ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{
+           *        db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFrameworkCom
+           *        plianceReports/{db_framework_compliance_report}`
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -6284,7 +6661,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/dbFrameworkComplianceReports/[^/]+$");
 
             /**
-             * Lists the control compliance summary for a given scope.
+             * Lists the compliance summaries of the controls in a framework compliance report.
              *
              * Create a request for the method "dbControlComplianceSummaries.list".
              *
@@ -6293,11 +6670,11 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. The parent scope for the framework overview page. Format: organizations/{organization}/loc
-           *        ations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report} folders/{f
-           *        older}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           *        projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complia
-           *        nce_report}
+             * @param parent Required. The framework compliance report to list control compliance summaries for. Formats: * `orga
+           *        nizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_c
+           *        ompliance_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{
+           *        db_framework_compliance_report}` * `projects/{project}/locations/{location}/dbFrameworkCom
+           *        plianceReports/{db_framework_compliance_report}`
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -6376,31 +6753,31 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             }
 
             /**
-             * Required. The parent scope for the framework overview page. Format: organizations/{or
-             * ganization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
-             * e_report} folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_fram
-             * ework_compliance_report} projects/{project}/locations/{location}/dbFrameworkComplianc
-             * eReports/{db_framework_compliance_report}
+             * Required. The framework compliance report to list control compliance summaries for.
+             * Formats: * `organizations/{organization}/locations/{location}/dbFrameworkComplianceRe
+             * ports/{db_framework_compliance_report}` * `folders/{folder}/locations/{location}/dbFr
+             * ameworkComplianceReports/{db_framework_compliance_report}` * `projects/{project}/loca
+             * tions/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. The parent scope for the framework overview page. Format: organizations/{organization}/lo
-           cations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}
-           projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framework_compliance_repor
-           t}
+            /** Required. The framework compliance report to list control compliance summaries for. Formats: * `org
+           anizations/{organization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
+           e_report}` * `folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_framework_comp
+           liance_report}` * `projects/{project}/locations/{location}/dbFrameworkComplianceReports/{db_framewo
+           rk_compliance_report}`
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. The parent scope for the framework overview page. Format: organizations/{or
-             * ganization}/locations/{location}/dbFrameworkComplianceReports/{db_framework_complianc
-             * e_report} folders/{folder}/locations/{location}/dbFrameworkComplianceReports/{db_fram
-             * ework_compliance_report} projects/{project}/locations/{location}/dbFrameworkComplianc
-             * eReports/{db_framework_compliance_report}
+             * Required. The framework compliance report to list control compliance summaries for.
+             * Formats: * `organizations/{organization}/locations/{location}/dbFrameworkComplianceRe
+             * ports/{db_framework_compliance_report}` * `folders/{folder}/locations/{location}/dbFr
+             * ameworkComplianceReports/{db_framework_compliance_report}` * `projects/{project}/loca
+             * tions/{location}/dbFrameworkComplianceReports/{db_framework_compliance_report}`
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -6412,17 +6789,38 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               return this;
             }
 
-            /** Optional. The filtering results. */
+            /**
+             * Optional. A filter expression that restricts the results. The syntax follows
+             * [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+             * `framework_name`, `framework_revision` (the major revision ID of the framework), and
+             * `end_time`. The `end_time` field accepts a single equality comparison with an [RFC
+             * 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+             * "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are
+             * counted.
+             */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. The filtering results.
+            /** Optional. A filter expression that restricts the results. The syntax follows
+           [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+           `framework_name`, `framework_revision` (the major revision ID of the framework), and `end_time`.
+           The `end_time` field accepts a single equality comparison with an [RFC
+           3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+           "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are counted.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Optional. The filtering results. */
+            /**
+             * Optional. A filter expression that restricts the results. The syntax follows
+             * [AIP-160](https://google.aip.dev/160). Supported fields are `framework_deployment`,
+             * `framework_name`, `framework_revision` (the major revision ID of the framework), and
+             * `end_time`. The `end_time` field accepts a single equality comparison with an [RFC
+             * 3339](https://www.ietf.org/rfc/rfc3339.txt) timestamp, for example `end_time =
+             * "2026-01-01T00:00:00Z"`. Only findings that were updated at or after this time are
+             * counted.
+             */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
@@ -6453,11 +6851,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Optional. A token that identifies the page of results that the server should return.
+             * Pass the `next_page_token` value from a previous result.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A token that identifies the page of results that the server should return.
+            /** Optional. A token that identifies the page of results that the server should return. Pass the
+           `next_page_token` value from a previous result.
              */
             public java.lang.String getPageToken() {
               return pageToken;
@@ -6465,6 +6865,7 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
             /**
              * Optional. A token that identifies the page of results that the server should return.
+             * Pass the `next_page_token` value from a previous result.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
@@ -6500,16 +6901,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
       public class DbFrameworkComplianceSummaries {
 
         /**
-         * Lists the framework compliance summary for a given scope.
+         * Lists the compliance summaries of the frameworks that are deployed in a Data Boundary scope (an
+         * organization, folder, or project).
          *
          * Create a request for the method "dbFrameworkComplianceSummaries.list".
          *
          * This request holds the parameters needed by the assuredworkloads server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent scope for the framework compliance summary. Format:
-         *        organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         *        projects/{project}/locations/{location}
+         * @param parent Required. The parent scope to list framework compliance summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -6526,7 +6928,8 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists the framework compliance summary for a given scope.
+           * Lists the compliance summaries of the frameworks that are deployed in a Data Boundary scope (an
+           * organization, folder, or project).
            *
            * Create a request for the method "dbFrameworkComplianceSummaries.list".
            *
@@ -6535,9 +6938,9 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent scope for the framework compliance summary. Format:
-         *        organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         *        projects/{project}/locations/{location}
+           * @param parent Required. The parent scope to list framework compliance summaries for. Formats: *
+         *        `organizations/{organization}/locations/{location}` *
+         *        `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -6616,25 +7019,25 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
           }
 
           /**
-           * Required. The parent scope for the framework compliance summary. Format:
-           * organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-           * projects/{project}/locations/{location}
+           * Required. The parent scope to list framework compliance summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent scope for the framework compliance summary. Format:
-         organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-         projects/{project}/locations/{location}
+          /** Required. The parent scope to list framework compliance summaries for. Formats: *
+         `organizations/{organization}/locations/{location}` * `folders/{folder}/locations/{location}` *
+         `projects/{project}/locations/{location}`
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent scope for the framework compliance summary. Format:
-           * organizations/{organization}/locations/{location} folders/{folder}/locations/{location}
-           * projects/{project}/locations/{location}
+           * Required. The parent scope to list framework compliance summaries for. Formats: *
+           * `organizations/{organization}/locations/{location}` *
+           * `folders/{folder}/locations/{location}` * `projects/{project}/locations/{location}`
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -6646,17 +7049,17 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
             return this;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. The filtering results.
+          /** Optional. A filter expression that restricts the results. Reserved for future use.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. The filtering results. */
+          /** Optional. A filter expression that restricts the results. Reserved for future use. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
@@ -6687,13 +7090,13 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
-           * Pass the next_page_token value from a previous result.
+           * Pass the `next_page_token` value from a previous result.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
           /** Optional. A token that identifies the page of results that the server should return. Pass the
-         next_page_token value from a previous result.
+         `next_page_token` value from a previous result.
            */
           public java.lang.String getPageToken() {
             return pageToken;
@@ -6701,24 +7104,31 @@ public class Assuredworkloads extends com.google.api.client.googleapis.services.
 
           /**
            * Optional. A token that identifies the page of results that the server should return.
-           * Pass the next_page_token value from a previous result.
+           * Pass the `next_page_token` value from a previous result.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
           }
 
-          /** Optional. Specifies the level of detail to return in the response. */
+          /**
+           * Optional. The level of detail to return for each summary. If not specified,
+           * `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
+           */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Optional. Specifies the level of detail to return in the response.
+          /** Optional. The level of detail to return for each summary. If not specified,
+         `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
            */
           public java.lang.String getView() {
             return view;
           }
 
-          /** Optional. Specifies the level of detail to return in the response. */
+          /**
+           * Optional. The level of detail to return for each summary. If not specified,
+           * `FRAMEWORK_COMPLIANCE_SUMMARY_VIEW_BASIC` is used.
+           */
           public List setView(java.lang.String view) {
             this.view = view;
             return this;

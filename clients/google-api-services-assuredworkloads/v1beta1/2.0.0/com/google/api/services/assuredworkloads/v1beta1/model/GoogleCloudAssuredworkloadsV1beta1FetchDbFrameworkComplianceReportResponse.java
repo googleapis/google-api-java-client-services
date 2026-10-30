@@ -31,21 +31,22 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails controlAssessmentDetails;
 
   /**
-   * The name of the framework.
+   * The resource name of the compliance framework. For example,
+   * `organizations/{organization}/locations/{location}/frameworks/{framework_id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String framework;
 
   /**
-   * The list of framework categories supported.
+   * The categories of the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -59,7 +60,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   private java.lang.String frameworkDescription;
 
   /**
-   * Optional. The display name for the framework.
+   * Optional. The display name of the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -87,35 +88,36 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   private java.lang.Long minorRevisionId;
 
   /**
-   * The name of the framework compliance report.
+   * The resource name of the framework compliance report.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The list of cloud providers that are supported by the framework.
+   * The cloud providers that are supported by the framework.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> supportedCloudProviders;
 
   /**
-   * The target resource details of the framework.
+   * The details of the target resources (organizations, folders, or projects) that the framework is
+   * deployed on.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<GoogleCloudAssuredworkloadsV1beta1TargetResourceDetails> targetResourceDetails;
 
   /**
-   * Output only. The last updated time of the report.
+   * Output only. The time when the report was last updated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework.
    * @return value or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails getControlAssessmentDetails() {
@@ -123,7 +125,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The control assessment details of the framework.
+   * The number of passing, failing, and not assessed controls in the framework.
    * @param controlAssessmentDetails controlAssessmentDetails or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setControlAssessmentDetails(GoogleCloudAssuredworkloadsV1beta1ControlAssessmentDetails controlAssessmentDetails) {
@@ -132,7 +134,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The name of the framework.
+   * The resource name of the compliance framework. For example,
+   * `organizations/{organization}/locations/{location}/frameworks/{framework_id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFramework() {
@@ -140,7 +143,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The name of the framework.
+   * The resource name of the compliance framework. For example,
+   * `organizations/{organization}/locations/{location}/frameworks/{framework_id}`.
    * @param framework framework or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setFramework(java.lang.String framework) {
@@ -149,7 +153,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The list of framework categories supported.
+   * The categories of the framework.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFrameworkCategories() {
@@ -157,7 +161,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The list of framework categories supported.
+   * The categories of the framework.
    * @param frameworkCategories frameworkCategories or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setFrameworkCategories(java.util.List<java.lang.String> frameworkCategories) {
@@ -183,7 +187,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * Optional. The display name for the framework.
+   * Optional. The display name of the framework.
    * @return value or {@code null} for none
    */
   public java.lang.String getFrameworkDisplayName() {
@@ -191,7 +195,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * Optional. The display name for the framework.
+   * Optional. The display name of the framework.
    * @param frameworkDisplayName frameworkDisplayName or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setFrameworkDisplayName(java.lang.String frameworkDisplayName) {
@@ -251,7 +255,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The name of the framework compliance report.
+   * The resource name of the framework compliance report.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -259,7 +263,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The name of the framework compliance report.
+   * The resource name of the framework compliance report.
    * @param name name or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setName(java.lang.String name) {
@@ -268,7 +272,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The list of cloud providers that are supported by the framework.
+   * The cloud providers that are supported by the framework.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSupportedCloudProviders() {
@@ -276,7 +280,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The list of cloud providers that are supported by the framework.
+   * The cloud providers that are supported by the framework.
    * @param supportedCloudProviders supportedCloudProviders or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setSupportedCloudProviders(java.util.List<java.lang.String> supportedCloudProviders) {
@@ -285,7 +289,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The target resource details of the framework.
+   * The details of the target resources (organizations, folders, or projects) that the framework is
+   * deployed on.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAssuredworkloadsV1beta1TargetResourceDetails> getTargetResourceDetails() {
@@ -293,7 +298,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * The target resource details of the framework.
+   * The details of the target resources (organizations, folders, or projects) that the framework is
+   * deployed on.
    * @param targetResourceDetails targetResourceDetails or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setTargetResourceDetails(java.util.List<GoogleCloudAssuredworkloadsV1beta1TargetResourceDetails> targetResourceDetails) {
@@ -302,7 +308,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * Output only. The last updated time of the report.
+   * Output only. The time when the report was last updated.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -310,7 +316,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceR
   }
 
   /**
-   * Output only. The last updated time of the report.
+   * Output only. The time when the report was last updated.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1FetchDbFrameworkComplianceReportResponse setUpdateTime(String updateTime) {

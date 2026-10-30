@@ -17,7 +17,7 @@
 package com.google.api.services.assuredworkloads.v1beta1.model;
 
 /**
- * The response message for ListDBControlComplianceSummaries.
+ * The response message for ListDbControlComplianceSummaries.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Assured Workloads API. For a detailed explanation
@@ -31,7 +31,7 @@ package com.google.api.services.assuredworkloads.v1beta1.model;
 public final class GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSummariesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of control compliance details.
+   * The list of control compliance summaries.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +44,15 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSumm
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * The list of control compliance details.
+   * The list of control compliance summaries.
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary> getDbControlComplianceSummaries() {
@@ -59,7 +60,7 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSumm
   }
 
   /**
-   * The list of control compliance details.
+   * The list of control compliance summaries.
    * @param dbControlComplianceSummaries dbControlComplianceSummaries or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSummariesResponse setDbControlComplianceSummaries(java.util.List<GoogleCloudAssuredworkloadsV1beta1DbControlComplianceSummary> dbControlComplianceSummaries) {
@@ -68,7 +69,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSumm
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -76,7 +78,8 @@ public final class GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSumm
   }
 
   /**
-   * Output only. The token to retrieve the next page of results.
+   * Output only. A token that can be sent as `page_token` to retrieve the next page. If this field
+   * is empty, there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public GoogleCloudAssuredworkloadsV1beta1ListDbControlComplianceSummariesResponse setNextPageToken(java.lang.String nextPageToken) {

@@ -30,7 +30,9 @@ package com.google.api.services.places.v1.model;
 public final class GoogleMapsPlacesV1FuelOptionsFuelPrice extends com.google.api.client.json.GenericJson {
 
   /**
-   * The price of the fuel.
+   * The price of the fuel. The price is per US liquid gallon in the United States, and per liter
+   * elsewhere. Prices do not distinguish between payment methods (cash or credit). When a station
+   * offers multiple prices for the same `FuelType`, the API returns the standard (highest) price.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +46,17 @@ public final class GoogleMapsPlacesV1FuelOptionsFuelPrice extends com.google.api
   private java.lang.String type;
 
   /**
-   * The time the fuel price was last updated.
+   * The time the fuel price was last updated. This represents the time when the specific fuel price
+   * offer was last observed or updated by the data provider.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * The price of the fuel.
+   * The price of the fuel. The price is per US liquid gallon in the United States, and per liter
+   * elsewhere. Prices do not distinguish between payment methods (cash or credit). When a station
+   * offers multiple prices for the same `FuelType`, the API returns the standard (highest) price.
    * @return value or {@code null} for none
    */
   public GoogleTypeMoney getPrice() {
@@ -59,7 +64,9 @@ public final class GoogleMapsPlacesV1FuelOptionsFuelPrice extends com.google.api
   }
 
   /**
-   * The price of the fuel.
+   * The price of the fuel. The price is per US liquid gallon in the United States, and per liter
+   * elsewhere. Prices do not distinguish between payment methods (cash or credit). When a station
+   * offers multiple prices for the same `FuelType`, the API returns the standard (highest) price.
    * @param price price or {@code null} for none
    */
   public GoogleMapsPlacesV1FuelOptionsFuelPrice setPrice(GoogleTypeMoney price) {
@@ -85,7 +92,8 @@ public final class GoogleMapsPlacesV1FuelOptionsFuelPrice extends com.google.api
   }
 
   /**
-   * The time the fuel price was last updated.
+   * The time the fuel price was last updated. This represents the time when the specific fuel price
+   * offer was last observed or updated by the data provider.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -93,7 +101,8 @@ public final class GoogleMapsPlacesV1FuelOptionsFuelPrice extends com.google.api
   }
 
   /**
-   * The time the fuel price was last updated.
+   * The time the fuel price was last updated. This represents the time when the specific fuel price
+   * offer was last observed or updated by the data provider.
    * @param updateTime updateTime or {@code null} for none
    */
   public GoogleMapsPlacesV1FuelOptionsFuelPrice setUpdateTime(String updateTime) {

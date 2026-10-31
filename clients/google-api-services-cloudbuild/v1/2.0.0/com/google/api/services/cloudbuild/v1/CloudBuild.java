@@ -804,7 +804,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       /**
        * Approves or rejects a pending build. If approved, the returned long-running operation (LRO) will
        * be analogous to the LRO returned from a CreateBuild call. If rejected, the returned LRO will be
-       * immediately done.
+       * immediately done. Note: This method only approves or rejects builds in the "global" region when
+       * using the legacy resource path projects/{project_id}/builds/{id}:approve. For all regions, use
+       * the regional resource path: `projects/{project_id}/locations/{location}/builds/{id}:approve`.
        *
        * Create a request for the method "builds.approve".
        *
@@ -831,7 +833,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         /**
          * Approves or rejects a pending build. If approved, the returned long-running operation (LRO)
          * will be analogous to the LRO returned from a CreateBuild call. If rejected, the returned LRO
-         * will be immediately done.
+         * will be immediately done. Note: This method only approves or rejects builds in the "global"
+         * region when using the legacy resource path projects/{project_id}/builds/{id}:approve. For all
+         * regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/builds/{id}:approve`.
          *
          * Create a request for the method "builds.approve".
          *
@@ -4180,7 +4185,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         /**
          * Approves or rejects a pending build. If approved, the returned long-running operation (LRO) will
          * be analogous to the LRO returned from a CreateBuild call. If rejected, the returned LRO will be
-         * immediately done.
+         * immediately done. Note: This method only approves or rejects builds in the "global" region when
+         * using the legacy resource path projects/{project_id}/builds/{id}:approve. For all regions, use
+         * the regional resource path: `projects/{project_id}/locations/{location}/builds/{id}:approve`.
          *
          * Create a request for the method "builds.approve".
          *
@@ -4207,7 +4214,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           /**
            * Approves or rejects a pending build. If approved, the returned long-running operation (LRO)
            * will be analogous to the LRO returned from a CreateBuild call. If rejected, the returned LRO
-           * will be immediately done.
+           * will be immediately done. Note: This method only approves or rejects builds in the "global"
+           * region when using the legacy resource path projects/{project_id}/builds/{id}:approve. For all
+           * regions, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/builds/{id}:approve`.
            *
            * Create a request for the method "builds.approve".
            *
@@ -6412,7 +6422,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
       public class Triggers {
 
         /**
-         * Creates a new `BuildTrigger`.
+         * Creates a new `BuildTrigger`. Note: This method only creates triggers in the "global" region when
+         * using the legacy resource path projects/{project_id}/triggers. For all regions, use the regional
+         * resource path: `projects/{project_id}/locations/{location}/triggers`.
          *
          * Create a request for the method "triggers.create".
          *
@@ -6438,7 +6450,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new `BuildTrigger`.
+           * Creates a new `BuildTrigger`. Note: This method only creates triggers in the "global" region
+           * when using the legacy resource path projects/{project_id}/triggers. For all regions, use the
+           * regional resource path: `projects/{project_id}/locations/{location}/triggers`.
            *
            * Create a request for the method "triggers.create".
            *
@@ -6568,7 +6582,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Deletes a `BuildTrigger` by its project ID and trigger ID.
+         * Deletes a `BuildTrigger` by its project ID and trigger ID. Note: This method only deletes
+         * triggers in the "global" region when using the legacy resource path
+         * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
          *
          * Create a request for the method "triggers.delete".
          *
@@ -6593,7 +6610,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Deletes a `BuildTrigger` by its project ID and trigger ID.
+           * Deletes a `BuildTrigger` by its project ID and trigger ID. Note: This method only deletes
+           * triggers in the "global" region when using the legacy resource path
+           * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
            *
            * Create a request for the method "triggers.delete".
            *
@@ -6738,7 +6758,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Returns information about a `BuildTrigger`.
+         * Returns information about a `BuildTrigger`. Note: This method only gets triggers in the "global"
+         * region when using the legacy resource path projects/{project_id}/triggers/{trigger_id}. For all
+         * regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
          *
          * Create a request for the method "triggers.get".
          *
@@ -6763,7 +6786,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Returns information about a `BuildTrigger`.
+           * Returns information about a `BuildTrigger`. Note: This method only gets triggers in the
+           * "global" region when using the legacy resource path
+           * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
            *
            * Create a request for the method "triggers.get".
            *
@@ -6917,7 +6943,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Lists existing `BuildTrigger`s.
+         * Lists existing `BuildTrigger`s. Note: This method only lists triggers in the "global" region when
+         * using the legacy resource path projects/{project_id}/triggers. For all regions, use the regional
+         * resource path: `projects/{project_id}/locations/{location}/triggers`.
          *
          * Create a request for the method "triggers.list".
          *
@@ -6941,7 +6969,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists existing `BuildTrigger`s.
+           * Lists existing `BuildTrigger`s. Note: This method only lists triggers in the "global" region
+           * when using the legacy resource path projects/{project_id}/triggers. For all regions, use the
+           * regional resource path: `projects/{project_id}/locations/{location}/triggers`.
            *
            * Create a request for the method "triggers.list".
            *
@@ -7109,7 +7139,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
-         * Updates a `BuildTrigger` by its project ID and trigger ID.
+         * Updates a `BuildTrigger` by its project ID and trigger ID. Note: This method only updates
+         * triggers in the "global" region when using the legacy resource path
+         * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
          *
          * Create a request for the method "triggers.patch".
          *
@@ -7135,7 +7168,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/triggers/[^/]+$");
 
           /**
-           * Updates a `BuildTrigger` by its project ID and trigger ID.
+           * Updates a `BuildTrigger` by its project ID and trigger ID. Note: This method only updates
+           * triggers in the "global" region when using the legacy resource path
+           * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+           * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
            *
            * Create a request for the method "triggers.patch".
            *
@@ -8604,7 +8640,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
     public class Triggers {
 
       /**
-       * Creates a new `BuildTrigger`.
+       * Creates a new `BuildTrigger`. Note: This method only creates triggers in the "global" region when
+       * using the legacy resource path projects/{project_id}/triggers. For all regions, use the regional
+       * resource path: `projects/{project_id}/locations/{location}/triggers`.
        *
        * Create a request for the method "triggers.create".
        *
@@ -8626,7 +8664,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers";
 
         /**
-         * Creates a new `BuildTrigger`.
+         * Creates a new `BuildTrigger`. Note: This method only creates triggers in the "global" region
+         * when using the legacy resource path projects/{project_id}/triggers. For all regions, use the
+         * regional resource path: `projects/{project_id}/locations/{location}/triggers`.
          *
          * Create a request for the method "triggers.create".
          *
@@ -8745,7 +8785,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Deletes a `BuildTrigger` by its project ID and trigger ID.
+       * Deletes a `BuildTrigger` by its project ID and trigger ID. Note: This method only deletes
+       * triggers in the "global" region when using the legacy resource path
+       * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+       * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
        *
        * Create a request for the method "triggers.delete".
        *
@@ -8767,7 +8810,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Deletes a `BuildTrigger` by its project ID and trigger ID.
+         * Deletes a `BuildTrigger` by its project ID and trigger ID. Note: This method only deletes
+         * triggers in the "global" region when using the legacy resource path
+         * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
          *
          * Create a request for the method "triggers.delete".
          *
@@ -8903,7 +8949,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Returns information about a `BuildTrigger`.
+       * Returns information about a `BuildTrigger`. Note: This method only gets triggers in the "global"
+       * region when using the legacy resource path projects/{project_id}/triggers/{trigger_id}. For all
+       * regions, use the regional resource path:
+       * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
        *
        * Create a request for the method "triggers.get".
        *
@@ -8925,7 +8974,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Returns information about a `BuildTrigger`.
+         * Returns information about a `BuildTrigger`. Note: This method only gets triggers in the
+         * "global" region when using the legacy resource path
+         * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
          *
          * Create a request for the method "triggers.get".
          *
@@ -9070,7 +9122,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Lists existing `BuildTrigger`s.
+       * Lists existing `BuildTrigger`s. Note: This method only lists triggers in the "global" region when
+       * using the legacy resource path projects/{project_id}/triggers. For all regions, use the regional
+       * resource path: `projects/{project_id}/locations/{location}/triggers`.
        *
        * Create a request for the method "triggers.list".
        *
@@ -9091,7 +9145,9 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers";
 
         /**
-         * Lists existing `BuildTrigger`s.
+         * Lists existing `BuildTrigger`s. Note: This method only lists triggers in the "global" region
+         * when using the legacy resource path projects/{project_id}/triggers. For all regions, use the
+         * regional resource path: `projects/{project_id}/locations/{location}/triggers`.
          *
          * Create a request for the method "triggers.list".
          *
@@ -9249,7 +9305,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         }
       }
       /**
-       * Updates a `BuildTrigger` by its project ID and trigger ID.
+       * Updates a `BuildTrigger` by its project ID and trigger ID. Note: This method only updates
+       * triggers in the "global" region when using the legacy resource path
+       * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+       * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
        *
        * Create a request for the method "triggers.patch".
        *
@@ -9272,7 +9331,10 @@ public class CloudBuild extends com.google.api.client.googleapis.services.json.A
         private static final String REST_PATH = "v1/projects/{projectId}/triggers/{triggerId}";
 
         /**
-         * Updates a `BuildTrigger` by its project ID and trigger ID.
+         * Updates a `BuildTrigger` by its project ID and trigger ID. Note: This method only updates
+         * triggers in the "global" region when using the legacy resource path
+         * projects/{project_id}/triggers/{trigger_id}. For all regions, use the regional resource path:
+         * `projects/{project_id}/locations/{location}/triggers/{trigger_id}`.
          *
          * Create a request for the method "triggers.patch".
          *

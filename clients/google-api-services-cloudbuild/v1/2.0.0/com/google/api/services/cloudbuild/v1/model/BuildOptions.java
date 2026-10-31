@@ -119,6 +119,16 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
   private java.lang.String pubsubTopic;
 
   /**
+   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
+   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
+   * in the given region. This field must be empty for the Build to be eligible to be paired with a
+   * pre-provisioned worker VM.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> rankedMachineSeries;
+
+  /**
    * Requested verifiability options.
    * The value may be {@code null}.
    */
@@ -391,6 +401,29 @@ public final class BuildOptions extends com.google.api.client.json.GenericJson {
    */
   public BuildOptions setPubsubTopic(java.lang.String pubsubTopic) {
     this.pubsubTopic = pubsubTopic;
+    return this;
+  }
+
+  /**
+   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
+   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
+   * in the given region. This field must be empty for the Build to be eligible to be paired with a
+   * pre-provisioned worker VM.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRankedMachineSeries() {
+    return rankedMachineSeries;
+  }
+
+  /**
+   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
+   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
+   * in the given region. This field must be empty for the Build to be eligible to be paired with a
+   * pre-provisioned worker VM.
+   * @param rankedMachineSeries rankedMachineSeries or {@code null} for none
+   */
+  public BuildOptions setRankedMachineSeries(java.util.List<java.lang.String> rankedMachineSeries) {
+    this.rankedMachineSeries = rankedMachineSeries;
     return this;
   }
 

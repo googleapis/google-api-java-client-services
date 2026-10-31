@@ -18,8 +18,8 @@ package com.google.api.services.deepreview.v1.model;
 
 /**
  * Response message for estimating what a review would cost. When the cost can't be estimated, for
- * example because too few past reviews used the same model and depth, the costs are unset and
- * `past_review_count` is 0.
+ * example because too few past reviews used the same model, depth, and thinking level, the costs
+ * are unset and `past_review_count` is 0.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Deep Review API. For a detailed explanation see:

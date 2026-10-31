@@ -116,6 +116,20 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
   private java.lang.String parent;
 
   /**
+   * Indicates the source of this Firewall Policy. This field is optional on creation and defaults
+   * to USER_DEFINED.
+   *
+   * The USER_DEFINED value indicates a regular firewall policy.
+   *
+   * The SYSTEM value indicates a system-level policy managed by an internal service like GKE. This
+   * SYSTEM value is reserved for internal services and cannot be set by users during policy
+   * creation. Policies with a SYSTEM source cannot be modified or deleted by users.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String policySource;
+
+  /**
    * The type of the firewall policy. This field can be one of VPC_POLICY, RDMA_ROCE_POLICY or
    * ULL_POLICY.
    *
@@ -417,6 +431,37 @@ public final class FirewallPolicy extends com.google.api.client.json.GenericJson
    */
   public FirewallPolicy setParent(java.lang.String parent) {
     this.parent = parent;
+    return this;
+  }
+
+  /**
+   * Indicates the source of this Firewall Policy. This field is optional on creation and defaults
+   * to USER_DEFINED.
+   *
+   * The USER_DEFINED value indicates a regular firewall policy.
+   *
+   * The SYSTEM value indicates a system-level policy managed by an internal service like GKE. This
+   * SYSTEM value is reserved for internal services and cannot be set by users during policy
+   * creation. Policies with a SYSTEM source cannot be modified or deleted by users.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getPolicySource() {
+    return policySource;
+  }
+
+  /**
+   * Indicates the source of this Firewall Policy. This field is optional on creation and defaults
+   * to USER_DEFINED.
+   *
+   * The USER_DEFINED value indicates a regular firewall policy.
+   *
+   * The SYSTEM value indicates a system-level policy managed by an internal service like GKE. This
+   * SYSTEM value is reserved for internal services and cannot be set by users during policy
+   * creation. Policies with a SYSTEM source cannot be modified or deleted by users.
+   * @param policySource policySource or {@code null} for none
+   */
+  public FirewallPolicy setPolicySource(java.lang.String policySource) {
+    this.policySource = policySource;
     return this;
   }
 

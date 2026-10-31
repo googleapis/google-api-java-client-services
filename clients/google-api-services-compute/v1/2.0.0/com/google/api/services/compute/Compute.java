@@ -177,7 +177,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/acceleratorTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -622,7 +622,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/acceleratorTypes/{acceleratorType}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -835,7 +835,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/acceleratorTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1274,7 +1274,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/addresses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1719,7 +1719,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses/{address}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -1972,7 +1972,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses/{address}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2186,7 +2186,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2408,7 +2408,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -2824,7 +2824,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses/{address}/move";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3080,7 +3080,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3337,7 +3337,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/addresses/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3568,7 +3568,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/advice/calendarMode";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3746,7 +3746,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/advice/capacity";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -3922,7 +3922,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/advice/capacityHistory";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -4121,7 +4121,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -4566,7 +4566,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers/{autoscaler}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -4819,7 +4819,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers/{autoscaler}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -5033,7 +5033,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -5255,7 +5255,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -5671,7 +5671,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -5920,7 +5920,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -6126,7 +6126,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -6398,7 +6398,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}/addSignedUrlKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -6620,7 +6620,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/backendBuckets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -7065,7 +7065,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -7289,7 +7289,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}/deleteSignedUrlKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -7525,7 +7525,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -7707,7 +7707,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -7907,7 +7907,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -8098,7 +8098,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -8480,7 +8480,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/listUsable";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -8866,7 +8866,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -9093,7 +9093,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}/setEdgeSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -9313,7 +9313,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -9488,7 +9488,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -9663,7 +9663,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -9911,7 +9911,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}/addSignedUrlKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -10133,7 +10133,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/backendServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -10578,7 +10578,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -10802,7 +10802,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}/deleteSignedUrlKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -11038,7 +11038,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -11221,7 +11221,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}/getEffectiveSecurityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -11409,7 +11409,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}/getHealth";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -11586,7 +11586,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -11787,7 +11787,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -11978,7 +11978,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -12362,7 +12362,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/listUsable";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -12751,7 +12751,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -12979,7 +12979,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}/setEdgeSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -13199,7 +13199,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -13377,7 +13377,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}/setSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -13598,7 +13598,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -13774,7 +13774,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -14020,7 +14020,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -14241,7 +14241,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -14424,7 +14424,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -14633,7 +14633,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -15018,7 +15018,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -15300,7 +15300,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/diskTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -15745,7 +15745,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/diskTypes/{diskType}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -15958,7 +15958,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/diskTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -16398,7 +16398,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/addResourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -16655,7 +16655,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/disks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -17100,7 +17100,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/bulkInsert";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -17325,7 +17325,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/bulkSetLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -17577,7 +17577,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/createSnapshot";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -17861,7 +17861,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -18116,7 +18116,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -18330,7 +18330,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -18565,7 +18565,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -18806,7 +18806,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -19223,7 +19223,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/removeResourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -19479,7 +19479,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/resize";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -19734,7 +19734,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -19941,7 +19941,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -20199,7 +20199,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/startAsyncReplication";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -20455,7 +20455,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/stopAsyncReplication";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -20713,7 +20713,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/stopGroupAsyncReplication";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -20948,7 +20948,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -21156,7 +21156,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -21444,7 +21444,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/disks/{disk}/updateKmsKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -21709,7 +21709,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/externalVpnGateways/{externalVpnGateway}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -21931,7 +21931,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/externalVpnGateways/{externalVpnGateway}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -22114,7 +22114,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/externalVpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -22304,7 +22304,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/externalVpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -22689,7 +22689,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/externalVpnGateways/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -22865,7 +22865,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/externalVpnGateways/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -23062,7 +23062,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/addAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -23279,7 +23279,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/addRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -23470,7 +23470,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/cloneRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -23676,7 +23676,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -23865,7 +23865,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -24015,7 +24015,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/getAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -24182,7 +24182,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -24350,7 +24350,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/getRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -24517,7 +24517,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Creates a new policy in the specified project using the data included in the request.
@@ -24698,7 +24698,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Lists all the policies that have been configured for the specified folder or organization.
@@ -25071,7 +25071,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/listAssociations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Lists associations of a specified target, i.e., organization or folder.
@@ -25237,7 +25237,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/move";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -25450,7 +25450,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -25641,7 +25641,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/patchRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -25848,7 +25848,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/removeAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -26054,7 +26054,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{firewallPolicy}/removeRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern FIREWALL_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -26261,7 +26261,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -26404,7 +26404,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/firewallPolicies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern RESOURCE_PATTERN =
           java.util.regex.Pattern.compile("(firewallPolicies/)?[0-9]{0,20}");
@@ -26570,7 +26570,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls/{firewall}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -26791,7 +26791,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls/{firewall}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -26973,7 +26973,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -27163,7 +27163,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -27548,7 +27548,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls/{firewall}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -27772,7 +27772,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -27949,7 +27949,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewalls/{firewall}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -28198,7 +28198,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/forwardingRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -28643,7 +28643,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules/{forwardingRule}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -28896,7 +28896,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules/{forwardingRule}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -29126,7 +29126,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -29349,7 +29349,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -29767,7 +29767,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules/{forwardingRule}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -30025,7 +30025,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -30283,7 +30283,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/forwardingRules/{forwardingRule}/setTarget";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -30563,7 +30563,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/futureReservations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -31008,7 +31008,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/futureReservations/{futureReservation}/cancel";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -31235,7 +31235,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/futureReservations/{futureReservation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -31462,7 +31462,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/futureReservations/{futureReservation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -31650,7 +31650,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/futureReservations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -31860,7 +31860,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/futureReservations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -32264,7 +32264,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/futureReservations/{futureReservation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -32530,7 +32530,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses/{address}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -32751,7 +32751,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses/{address}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -32933,7 +32933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -33123,7 +33123,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -33507,7 +33507,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses/{address}/move";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -33731,7 +33731,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -33907,7 +33907,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/addresses/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -34104,7 +34104,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules/{forwardingRule}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -34326,7 +34326,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules/{forwardingRule}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -34525,7 +34525,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -34716,7 +34716,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -35102,7 +35102,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules/{forwardingRule}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -35328,7 +35328,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -35505,7 +35505,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/forwardingRules/{forwardingRule}/setTarget";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -35751,7 +35751,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/globalFrontendSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Gets the Global Frontend Billing Bundle Settings for a project.
@@ -35889,7 +35889,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/globalFrontendSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Updates the Global Frontend Billing Bundle Settings for a project.
@@ -36077,7 +36077,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/attachNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -36298,7 +36298,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -36516,7 +36516,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/detachNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -36735,7 +36735,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -36911,7 +36911,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -37108,7 +37108,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -37494,7 +37494,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -37920,7 +37920,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/operations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -38365,7 +38365,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -38543,7 +38543,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -38729,7 +38729,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/operations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -39122,7 +39122,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/operations/{operation}/wait";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -39331,7 +39331,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern OPERATION_PATTERN =
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
@@ -39494,7 +39494,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern OPERATION_PATTERN =
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
@@ -39665,7 +39665,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/operations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Retrieves a list of Operation resources contained within the specified organization.
@@ -40056,7 +40056,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicDelegatedPrefixes/{publicDelegatedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -40277,7 +40277,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicDelegatedPrefixes/{publicDelegatedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -40460,7 +40460,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicDelegatedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -40651,7 +40651,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicDelegatedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -41037,7 +41037,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicDelegatedPrefixes/{publicDelegatedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -41285,7 +41285,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/vmExtensionPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -41734,7 +41734,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/vmExtensionPolicies/{globalVmExtensionPolicy}/delete";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -41947,7 +41947,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/vmExtensionPolicies/{globalVmExtensionPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -42129,7 +42129,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/vmExtensionPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -42319,7 +42319,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/vmExtensionPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -42703,7 +42703,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/vmExtensionPolicies/{globalVmExtensionPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -42938,7 +42938,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/healthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -43383,7 +43383,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -43604,7 +43604,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -43786,7 +43786,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -43976,7 +43976,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -44361,7 +44361,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -44585,7 +44585,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -44760,7 +44760,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -45016,7 +45016,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{association}/hosts/{host}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Retrieves information about the specified host.
@@ -45245,7 +45245,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{association}/hosts/{host}/getVersion";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Allows customers to get SBOM versions of a host.
@@ -45478,7 +45478,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{association}/hosts";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Retrieves a list of hosts.
@@ -45932,7 +45932,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks/{httpHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -46153,7 +46153,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks/{httpHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -46336,7 +46336,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -46527,7 +46527,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -46913,7 +46913,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks/{httpHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -47138,7 +47138,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -47314,7 +47314,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpHealthChecks/{httpHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -47560,7 +47560,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks/{httpsHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -47781,7 +47781,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks/{httpsHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -47964,7 +47964,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -48155,7 +48155,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -48541,7 +48541,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks/{httpsHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -48766,7 +48766,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -48942,7 +48942,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/httpsHealthChecks/{httpsHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -49190,7 +49190,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/imageFamilyViews/{family}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -49428,7 +49428,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/imageViews/{resourceId}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -49641,7 +49641,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/imageViews";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -50078,7 +50078,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{image}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -50302,7 +50302,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{image}/deprecate";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -50527,7 +50527,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{image}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -50712,7 +50712,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/family/{family}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -50905,7 +50905,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -51105,7 +51105,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -51315,7 +51315,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -51704,7 +51704,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{image}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -51928,7 +51928,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -52104,7 +52104,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -52280,7 +52280,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/images/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -52484,7 +52484,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}/cancel";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -52758,7 +52758,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -53031,7 +53031,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -53263,7 +53263,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -53512,7 +53512,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resizeRequests";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -53976,7 +53976,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/abandonInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -54223,7 +54223,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/instanceGroupManagers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -54672,7 +54672,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -54865,7 +54865,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/createInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -55113,7 +55113,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -55411,7 +55411,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/deleteInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -55713,7 +55713,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/deletePerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -55908,7 +55908,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -56109,7 +56109,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -56332,7 +56332,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -56747,7 +56747,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/listErrors";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -57198,7 +57198,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/listManagedInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -57623,7 +57623,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/listPerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -58054,7 +58054,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -58302,7 +58302,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/patchPerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -58557,7 +58557,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/recreateInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -58874,7 +58874,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resize";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -59170,7 +59170,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/resumeInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -59421,7 +59421,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -59663,7 +59663,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/setTargetPools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -59916,7 +59916,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/startInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -60183,7 +60183,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/stopInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -60508,7 +60508,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/suspendInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -60767,7 +60767,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroupManagers/{instanceGroupManager}/updatePerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -61036,7 +61036,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/addInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -61272,7 +61272,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/instanceGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -61720,7 +61720,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -61959,7 +61959,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -62158,7 +62158,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -62377,7 +62377,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -62792,7 +62792,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/listInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -63225,7 +63225,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/removeInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -63471,7 +63471,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{instanceGroup}/setNamedPorts";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -63706,7 +63706,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -63934,7 +63934,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -64117,7 +64117,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instanceSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -64368,7 +64368,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/instanceTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -64815,7 +64815,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates/{instanceTemplate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -65038,7 +65038,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates/{instanceTemplate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -65220,7 +65220,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -65423,7 +65423,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -65616,7 +65616,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -66000,7 +66000,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -66175,7 +66175,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/instanceTemplates/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -66375,7 +66375,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/addAccessConfig";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -66651,7 +66651,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/addNetworkInterface";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -66904,7 +66904,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/addResourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -67165,7 +67165,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/instances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -67617,7 +67617,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/attachDisk";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -67900,7 +67900,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/bulkInsert";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -68125,7 +68125,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -68396,7 +68396,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/deleteAccessConfig";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -68693,7 +68693,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/deleteNetworkInterface";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -68967,7 +68967,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/detachDisk";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -69248,7 +69248,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -69464,7 +69464,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/getEffectiveFirewalls";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -69697,7 +69697,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/getGuestAttributes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -69944,7 +69944,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -70176,7 +70176,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/screenshot";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -70391,7 +70391,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/serialPort";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -70683,7 +70683,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/getShieldedInstanceIdentity";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -70898,7 +70898,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -71201,7 +71201,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -71620,7 +71620,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/referrers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -72078,7 +72078,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/performMaintenance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -72334,7 +72334,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/removeResourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -72590,7 +72590,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/reportHostAsFaulty";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -72846,7 +72846,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/reset";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -73100,7 +73100,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/resume";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -73354,7 +73354,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/sendDiagnosticInterrupt";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -73560,7 +73560,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{resource}/setDeletionProtection";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -73861,7 +73861,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setDiskAutoDelete";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -74174,7 +74174,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -74382,7 +74382,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -74640,7 +74640,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setMachineResources";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -74897,7 +74897,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setMachineType";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -75153,7 +75153,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setMetadata";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -75410,7 +75410,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setMinCpuPlatform";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -75667,7 +75667,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setName";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -75926,7 +75926,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setScheduling";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -76188,7 +76188,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -76442,7 +76442,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setServiceAccount";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -76702,7 +76702,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setShieldedInstanceIntegrityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -76960,7 +76960,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/setTags";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -77217,7 +77217,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/simulateMaintenanceEvent";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -77495,7 +77495,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/start";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -77752,7 +77752,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/startWithEncryptionKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -78011,7 +78011,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/stop";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -78314,7 +78314,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/suspend";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -78600,7 +78600,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -78809,7 +78809,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -79143,7 +79143,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/updateAccessConfig";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -79421,7 +79421,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/updateDisplayDevice";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -79684,7 +79684,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/updateNetworkInterface";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -79964,7 +79964,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instances/{instance}/updateShieldedInstanceConfig";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -80244,7 +80244,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups/{instantSnapshotGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -80497,7 +80497,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups/{instantSnapshotGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -80711,7 +80711,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -80943,7 +80943,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -81181,7 +81181,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -81597,7 +81597,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -81804,7 +81804,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshotGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -82034,7 +82034,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/instantSnapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -82484,7 +82484,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -82742,7 +82742,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots/{instantSnapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -82956,7 +82956,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -83188,7 +83188,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -83410,7 +83410,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -83826,7 +83826,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -84034,7 +84034,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -84291,7 +84291,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/instantSnapshots/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -84519,7 +84519,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{interconnectAttachmentGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -84740,7 +84740,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{interconnectAttachmentGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -84922,7 +84922,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -85124,7 +85124,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{interconnectAttachmentGroup}/getOperationalStatus";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -85309,7 +85309,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -85500,7 +85500,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -85885,7 +85885,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{interconnectAttachmentGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -86126,7 +86126,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -86301,7 +86301,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectAttachmentGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -86500,7 +86500,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/interconnectAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -86945,7 +86945,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -87198,7 +87198,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -87413,7 +87413,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/interconnectAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -87652,7 +87652,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/interconnectAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -88069,7 +88069,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/interconnectAttachments/{interconnectAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -88326,7 +88326,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/interconnectAttachments/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -88605,7 +88605,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{interconnectGroup}/createMembers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -88779,7 +88779,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{interconnectGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -89000,7 +89000,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{interconnectGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -89182,7 +89182,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -89383,7 +89383,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{interconnectGroup}/getOperationalStatus";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -89567,7 +89567,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -89758,7 +89758,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -90143,7 +90143,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{interconnectGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -90383,7 +90383,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -90558,7 +90558,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -90756,7 +90756,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectLocations/{interconnectLocation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -90938,7 +90938,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectLocations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -91345,7 +91345,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectRemoteLocations/{interconnectRemoteLocation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -91527,7 +91527,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnectRemoteLocations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -91933,7 +91933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -92155,7 +92155,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -92344,7 +92344,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}/getDiagnostics";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -92533,7 +92533,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}/getMacsecConfig";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -92716,7 +92716,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -92906,7 +92906,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -93291,7 +93291,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -93516,7 +93516,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -93692,7 +93692,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/interconnects/{interconnect}/setName";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -93940,7 +93940,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenseCodes/{licenseCode}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -94126,7 +94126,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenseCodes/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -94330,7 +94330,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenseCodes/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -94508,7 +94508,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenseCodes/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -94707,7 +94707,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses/{license}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -94930,7 +94930,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses/{license}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -95115,7 +95115,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -95317,7 +95317,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -95513,7 +95513,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -95904,7 +95904,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -96082,7 +96082,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -96259,7 +96259,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/licenses/{license}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -96521,7 +96521,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages/{machineImage}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -96743,7 +96743,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages/{machineImage}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -96925,7 +96925,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -97127,7 +97127,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -97336,7 +97336,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -97720,7 +97720,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -97896,7 +97896,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -98072,7 +98072,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/machineImages/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -98271,7 +98271,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/machineTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -98716,7 +98716,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/machineTypes/{machineType}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -98929,7 +98929,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/machineTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -99366,7 +99366,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/managedRulesets/{managedRuleset}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -99547,7 +99547,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/managedRulesets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -99956,7 +99956,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/networkAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -100402,7 +100402,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments/{networkAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -100655,7 +100655,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments/{networkAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -100869,7 +100869,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -101102,7 +101102,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -101325,7 +101325,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -101742,7 +101742,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments/{networkAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -101998,7 +101998,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -102205,7 +102205,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkAttachments/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -102436,7 +102436,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/networkEdgeSecurityServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -102882,7 +102882,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEdgeSecurityServices/{networkEdgeSecurityService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -103135,7 +103135,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEdgeSecurityServices/{networkEdgeSecurityService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -103349,7 +103349,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEdgeSecurityServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -103589,7 +103589,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEdgeSecurityServices/{networkEdgeSecurityService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -103898,7 +103898,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -104348,7 +104348,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/attachNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -104597,7 +104597,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -104843,7 +104843,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/detachNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -105089,7 +105089,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -105293,7 +105293,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -105519,7 +105519,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -105934,7 +105934,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -106363,7 +106363,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/networkEndpointGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -106592,7 +106592,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/addAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -106842,7 +106842,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/addPacketMirroringRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -107112,7 +107112,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/addRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -107384,7 +107384,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -107829,7 +107829,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/cloneRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -108067,7 +108067,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -108288,7 +108288,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -108470,7 +108470,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/getAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -108669,7 +108669,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -108870,7 +108870,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/getPacketMirroringRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -109069,7 +109069,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/getRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -109268,7 +109268,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -109458,7 +109458,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -109842,7 +109842,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -110066,7 +110066,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/patchPacketMirroringRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -110306,7 +110306,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/patchRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -110545,7 +110545,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/removeAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -110784,7 +110784,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/removePacketMirroringRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -111022,7 +111022,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{firewallPolicy}/removeRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -111261,7 +111261,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -111436,7 +111436,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/firewallPolicies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -111633,7 +111633,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkProfiles/{networkProfile}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -111814,7 +111814,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networkProfiles";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -112221,7 +112221,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/addPeering";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -112448,7 +112448,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/cancelRequestRemovePeering";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -112673,7 +112673,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -112894,7 +112894,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -113077,7 +113077,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/getEffectiveFirewalls";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -113260,7 +113260,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -113450,7 +113450,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -113833,7 +113833,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/listPeeringRoutes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -114305,7 +114305,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -114529,7 +114529,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/removePeering";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -114755,7 +114755,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/requestRemovePeering";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -114979,7 +114979,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/switchToCustomMode";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -115203,7 +115203,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/networks/{network}/updatePeering";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -115453,7 +115453,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/addNodes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -115710,7 +115710,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/nodeGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -116156,7 +116156,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -116410,7 +116410,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/deleteNodes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -116666,7 +116666,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -116881,7 +116881,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -117114,7 +117114,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -117355,7 +117355,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -117771,7 +117771,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/listNodes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -118209,7 +118209,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -118464,7 +118464,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/performMaintenance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -118720,7 +118720,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -118927,7 +118927,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/setNodeTemplate";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -119185,7 +119185,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{nodeGroup}/simulateMaintenanceEvent";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -119446,7 +119446,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -119676,7 +119676,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/nodeTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -120121,7 +120121,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates/{nodeTemplate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -120374,7 +120374,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates/{nodeTemplate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -120588,7 +120588,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -120820,7 +120820,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -121043,7 +121043,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -121459,7 +121459,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -121666,7 +121666,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/nodeTemplates/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -121896,7 +121896,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/nodeTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -122341,7 +122341,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeTypes/{nodeType}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -122554,7 +122554,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/nodeTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -122998,7 +122998,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/addAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -123226,7 +123226,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/addRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -123425,7 +123425,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/copyRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -123639,7 +123639,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -123836,7 +123836,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -123994,7 +123994,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/getAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -124169,7 +124169,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/getRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -124344,7 +124344,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Creates a new policy in the specified organization using the data included in the request.
@@ -124533,7 +124533,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * List all the policies that have been configured for the specified organization.
@@ -124907,7 +124907,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/listAssociations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Lists associations of a specified target, i.e., organization or folder.
@@ -125051,7 +125051,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/listPreconfiguredExpressionSets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Gets the current list of preconfigured Web Application Firewall (WAF) expressions.
@@ -125423,7 +125423,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/move";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -125637,7 +125637,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -125836,7 +125836,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/patchRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -126051,7 +126051,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/removeAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -126265,7 +126265,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "locations/global/securityPolicies/{securityPolicy}/removeRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern SECURITY_POLICY_PATTERN =
           java.util.regex.Pattern.compile("(securityPolicies/)?[0-9]{0,20}");
@@ -126501,7 +126501,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/packetMirrorings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -126946,7 +126946,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -127199,7 +127199,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -127414,7 +127414,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/packetMirrorings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -127637,7 +127637,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/packetMirrorings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -128054,7 +128054,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/packetMirrorings/{packetMirroring}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -128310,7 +128310,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/packetMirrorings/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -128538,7 +128538,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/previewFeatures/{previewFeature}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -128719,7 +128719,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/previewFeatures";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -129103,7 +129103,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/previewFeatures/{previewFeature}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -129352,7 +129352,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/projectViews";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -129560,7 +129560,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/disableXpnHost";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -129751,7 +129751,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/disableXpnResource";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -129942,7 +129942,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/enableXpnHost";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -130134,7 +130134,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/enableXpnResource";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -130332,7 +130332,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -130488,7 +130488,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/getXpnHost";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -130639,7 +130639,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/getXpnResources";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -131023,7 +131023,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/listXpnHosts";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -131409,7 +131409,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/moveDisk";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -131617,7 +131617,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/moveInstance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -131816,7 +131816,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/setCloudArmorTier";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -132012,7 +132012,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/setCommonInstanceMetadata";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -132207,7 +132207,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/setDefaultNetworkTier";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -132402,7 +132402,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/setUsageExportBucket";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -132618,7 +132618,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes/{publicAdvertisedPrefix}/announce";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -132827,7 +132827,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes/{publicAdvertisedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -133048,7 +133048,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes/{publicAdvertisedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -133231,7 +133231,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -133422,7 +133422,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -133807,7 +133807,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes/{publicAdvertisedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -134030,7 +134030,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/publicAdvertisedPrefixes/{publicAdvertisedPrefix}/withdraw";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -134264,7 +134264,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/publicDelegatedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -134710,7 +134710,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}/announce";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -134945,7 +134945,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -135198,7 +135198,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -135413,7 +135413,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -135636,7 +135636,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -136053,7 +136053,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -136309,7 +136309,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/publicDelegatedPrefixes/{publicDelegatedPrefix}/withdraw";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -136567,7 +136567,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers/{autoscaler}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -136820,7 +136820,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers/{autoscaler}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -137034,7 +137034,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -137256,7 +137256,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -137672,7 +137672,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -137921,7 +137921,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -138127,7 +138127,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/autoscalers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -138397,7 +138397,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -138650,7 +138650,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -138864,7 +138864,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -139097,7 +139097,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -139321,7 +139321,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -139737,7 +139737,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/listUsable";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -140163,7 +140163,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/{backendBucket}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -140419,7 +140419,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -140626,7 +140626,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendBuckets/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -140855,7 +140855,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -141108,7 +141108,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -141323,7 +141323,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{backendService}/getHealth";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -141528,7 +141528,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -141761,7 +141761,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -141985,7 +141985,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -142403,7 +142403,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/listUsable";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -142819,7 +142819,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -143076,7 +143076,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -143286,7 +143286,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{backendService}/setSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -143539,7 +143539,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -143747,7 +143747,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/backendServices/{backendService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -144026,7 +144026,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/commitments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -144471,7 +144471,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/commitments/{commitment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -144685,7 +144685,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/commitments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -144907,7 +144907,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/commitments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -145325,7 +145325,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/commitments/{commitment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -145637,7 +145637,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/compositeHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -146083,7 +146083,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks/{compositeHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -146336,7 +146336,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks/{compositeHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -146550,7 +146550,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks/{compositeHealthCheck}/getHealth";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -146766,7 +146766,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -146989,7 +146989,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -147409,7 +147409,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks/{compositeHealthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -147662,7 +147662,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/compositeHealthChecks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -147891,7 +147891,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/diskTypes/{diskType}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -148104,7 +148104,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/diskTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -148544,7 +148544,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/addResourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -148800,7 +148800,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/bulkInsert";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -149027,7 +149027,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/createSnapshot";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -149286,7 +149286,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -149541,7 +149541,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -149755,7 +149755,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -149988,7 +149988,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -150227,7 +150227,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -150644,7 +150644,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/removeResourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -150900,7 +150900,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/resize";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -151155,7 +151155,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -151362,7 +151362,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -151619,7 +151619,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/startAsyncReplication";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -151875,7 +151875,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/stopAsyncReplication";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -152133,7 +152133,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/stopGroupAsyncReplication";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -152368,7 +152368,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -152576,7 +152576,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -152864,7 +152864,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/disks/{disk}/updateKmsKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -153132,7 +153132,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/healthAggregationPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -153578,7 +153578,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthAggregationPolicies/{healthAggregationPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -153831,7 +153831,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthAggregationPolicies/{healthAggregationPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -154046,7 +154046,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthAggregationPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -154269,7 +154269,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthAggregationPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -154689,7 +154689,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthAggregationPolicies/{healthAggregationPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -154942,7 +154942,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthAggregationPolicies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -155173,7 +155173,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/healthCheckServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -155621,7 +155621,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthCheckServices/{healthCheckService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -155872,7 +155872,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthCheckServices/{healthCheckService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -156083,7 +156083,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthCheckServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -156307,7 +156307,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthCheckServices";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -156727,7 +156727,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthCheckServices/{healthCheckService}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -156980,7 +156980,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthCheckServices/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -157209,7 +157209,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -157462,7 +157462,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -157676,7 +157676,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -157898,7 +157898,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -158315,7 +158315,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -158571,7 +158571,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -158778,7 +158778,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthChecks/{healthCheck}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -159057,7 +159057,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/healthSources";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -159503,7 +159503,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources/{healthSource}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -159756,7 +159756,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources/{healthSource}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -159970,7 +159970,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources/{healthSource}/getHealth";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -160186,7 +160186,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -160409,7 +160409,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -160827,7 +160827,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources/{healthSource}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -161077,7 +161077,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/healthSources/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -161311,7 +161311,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}/cancel";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -161579,7 +161579,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -161846,7 +161846,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests/{resizeRequest}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -162071,7 +162071,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -162314,7 +162314,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resizeRequests";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -162775,7 +162775,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/abandonInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -163018,7 +163018,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/applyUpdatesToInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -163206,7 +163206,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/createInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -163451,7 +163451,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -163741,7 +163741,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/deleteInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -164034,7 +164034,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/deletePerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -164214,7 +164214,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -164408,7 +164408,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -164623,7 +164623,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -165031,7 +165031,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/listErrors";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -165476,7 +165476,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/listManagedInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -165892,7 +165892,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/listPerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -166314,7 +166314,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -166555,7 +166555,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/patchPerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -166801,7 +166801,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/recreateInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -167104,7 +167104,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resize";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -167381,7 +167381,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/resumeInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -167625,7 +167625,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/setInstanceTemplate";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -167857,7 +167857,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/setTargetPools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -168101,7 +168101,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/startInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -168362,7 +168362,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/stopInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -168681,7 +168681,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/suspendInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -168933,7 +168933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroupManagers/{instanceGroupManager}/updatePerInstanceConfigs";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -169191,7 +169191,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroups/{instanceGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -169378,7 +169378,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -169784,7 +169784,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroups/{instanceGroup}/listInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -170204,7 +170204,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroups/{instanceGroup}/setNamedPorts";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -170434,7 +170434,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -170664,7 +170664,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -170918,7 +170918,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceTemplates/{instanceTemplate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -171133,7 +171133,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -171357,7 +171357,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instanceTemplates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -171796,7 +171796,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instances/bulkInsert";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -172044,7 +172044,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups/{instantSnapshotGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -172297,7 +172297,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups/{instantSnapshotGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -172511,7 +172511,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -172743,7 +172743,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -172981,7 +172981,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -173397,7 +173397,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -173604,7 +173604,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshotGroups/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -173838,7 +173838,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots/{instantSnapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -174096,7 +174096,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots/{instantSnapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -174310,7 +174310,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -174542,7 +174542,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -174764,7 +174764,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -175180,7 +175180,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -175388,7 +175388,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -175645,7 +175645,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/instantSnapshots/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -175880,7 +175880,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}/attachNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -176130,7 +176130,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -176376,7 +176376,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}/detachNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -176623,7 +176623,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -176827,7 +176827,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -177054,7 +177054,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -177468,7 +177468,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/networkEndpointGroups/{networkEndpointGroup}/listNetworkEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -177919,7 +177919,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -178229,7 +178229,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/addRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -178530,7 +178530,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/cloneRules";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -178800,7 +178800,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -179053,7 +179053,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -179267,7 +179267,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -179499,7 +179499,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/getEffectiveFirewalls";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -179701,7 +179701,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -179933,7 +179933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/getRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -180164,7 +180164,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -180387,7 +180387,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -180804,7 +180804,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -181059,7 +181059,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/patchAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -181315,7 +181315,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/patchRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -181586,7 +181586,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeAssociation";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -181856,7 +181856,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{firewallPolicy}/removeRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -182127,7 +182127,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -182334,7 +182334,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/firewallPolicies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -182562,7 +182562,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/notificationEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -183005,7 +183005,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/notificationEndpoints/{notificationEndpoint}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -183258,7 +183258,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/notificationEndpoints/{notificationEndpoint}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -183473,7 +183473,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/notificationEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -183696,7 +183696,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/notificationEndpoints";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -184112,7 +184112,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/notificationEndpoints/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -184342,7 +184342,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -184552,7 +184552,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -184770,7 +184770,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/operations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -185195,7 +185195,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/operations/{operation}/wait";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -185437,7 +185437,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/addRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -185659,7 +185659,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -185912,7 +185912,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -186126,7 +186126,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/getRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -186357,7 +186357,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -186595,7 +186595,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -187014,7 +187014,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -187289,7 +187289,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/patchRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -187544,7 +187544,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{securityPolicy}/removeRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -187767,7 +187767,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/securityPolicies/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -188045,7 +188045,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshotSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -188228,7 +188228,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshotSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -188495,7 +188495,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{snapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -188753,7 +188753,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{snapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -188967,7 +188967,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -189199,7 +189199,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -189421,7 +189421,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -189837,7 +189837,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -190045,7 +190045,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -190302,7 +190302,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -190509,7 +190509,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/snapshots/{snapshot}/updateKmsKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -190787,7 +190787,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslCertificates/{sslCertificate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -191041,7 +191041,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslCertificates/{sslCertificate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -191257,7 +191257,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -191481,7 +191481,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -191922,7 +191922,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{sslPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -192171,7 +192171,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{sslPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -192357,6 +192357,238 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     *
+     * Create a request for the method "regionSslPolicies.getIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param resource Name or id of the resource for this request.
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(project, region, resource);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{resource}/getIamPolicy";
+
+      private static final String API_VERSION = "2026-11-01";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Gets the access control policy for a resource. May be empty if no such policy or resource
+       * exists.
+       *
+       * Create a request for the method "regionSslPolicies.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param resource Name or id of the resource for this request.
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetIamPolicy setUserIp(java.lang.String userIp) {
+        return (GetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public GetIamPolicy setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      /** Requested IAM Policy version. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** Requested IAM Policy version.
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /** Requested IAM Policy version. */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Creates a new policy in the specified project and region using the data included in the request.
      *
      * Create a request for the method "regionSslPolicies.insert".
@@ -192379,7 +192611,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -192602,7 +192834,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -193017,7 +193249,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/listAvailableFeatures";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -193435,7 +193667,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{sslPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -193660,6 +193892,420 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return (Patch) super.set(parameterName, value);
       }
     }
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy.
+     *
+     * Create a request for the method "regionSslPolicies.setIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.RegionSetPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.RegionSetPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(project, region, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{resource}/setIamPolicy";
+
+      private static final String API_VERSION = "2026-11-01";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Sets the access control policy on the specified resource. Replaces any existing policy.
+       *
+       * Create a request for the method "regionSslPolicies.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.RegionSetPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.RegionSetPolicyRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetIamPolicy setUserIp(java.lang.String userIp) {
+        return (SetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public SetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public SetIamPolicy setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified resource.
+     *
+     * Create a request for the method "regionSslPolicies.testIamPermissions".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region The name of the region for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(project, region, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends ComputeRequest<com.google.api.services.compute.model.TestPermissionsResponse> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/sslPolicies/{resource}/testIamPermissions";
+
+      private static final String API_VERSION = "2026-11-01";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns permissions that a caller has on the specified resource.
+       *
+       * Create a request for the method "regionSslPolicies.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region The name of the region for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String project, java.lang.String region, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.TestPermissionsResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public TestIamPermissions setUserIp(java.lang.String userIp) {
+        return (TestIamPermissions) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public TestIamPermissions setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** The name of the region for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** The name of the region for this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** The name of the region for this request. */
+      public TestIamPermissions setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -193706,7 +194352,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpProxies/{targetHttpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -193959,7 +194605,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpProxies/{targetHttpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -194174,7 +194820,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -194398,7 +195044,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -194815,7 +195461,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpProxies/{targetHttpProxy}/setUrlMap";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -195093,7 +195739,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies/{targetHttpsProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -195346,7 +195992,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies/{targetHttpsProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -195561,7 +196207,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -195785,7 +196431,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -196203,7 +196849,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies/{targetHttpsProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -196460,7 +197106,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies/{targetHttpsProxy}/setSslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -196721,7 +197367,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetHttpsProxies/{targetHttpsProxy}/setUrlMap";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -196999,7 +197645,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetTcpProxies/{targetTcpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -197252,7 +197898,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetTcpProxies/{targetTcpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -197467,7 +198113,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetTcpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -197691,7 +198337,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetTcpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -198130,7 +198776,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -198354,7 +199000,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -198568,7 +199214,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -198762,7 +199408,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -199180,7 +199826,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -199407,7 +200053,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -199634,7 +200280,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/urlMaps/{urlMap}/validate";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -199864,7 +200510,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/zones";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -200314,7 +200960,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -200520,7 +201166,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -200939,7 +201585,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/reliabilityRisks/{reliabilityRisk}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -201120,7 +201766,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/reliabilityRisks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -201530,7 +202176,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}/reservationBlocks/{reservationBlock}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Retrieves information about the specified reservation block.
@@ -201750,7 +202396,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{parentResource}/reservationBlocks/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -202014,7 +202660,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}/reservationBlocks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Retrieves a list of reservation blocks under a single reservation.
@@ -202430,7 +203076,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}/reservationBlocks/{reservationBlock}/performMaintenance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       /**
        * Allows customers to perform maintenance on a reservation block
@@ -202676,7 +203322,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{parentResource}/reservationBlocks/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -202915,7 +203561,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{parentResource}/reservationBlocks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -203179,7 +203825,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSlots/{reservationSlot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
@@ -203407,7 +204053,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSlots/{reservationSlot}/getHealth";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
@@ -203645,7 +204291,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSlots/{reservationSlot}/getVersion";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
@@ -203911,7 +204557,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSlots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
@@ -204344,7 +204990,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSlots/{reservationSlot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("reservations/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})/reservationSubBlocks/([a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19})");
@@ -204583,7 +205229,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSubBlocks/{reservationSubBlock}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("^reservations/[^/]+/reservationBlocks/[^/]+$");
@@ -204819,7 +205465,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentResource}/reservationSubBlocks/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -205086,7 +205732,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSubBlocks/{reservationSubBlock}/getVersion";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("^reservations/[^/]+/reservationBlocks/[^/]+$");
@@ -205347,7 +205993,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSubBlocks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("^reservations/[^/]+/reservationBlocks/[^/]+$");
@@ -205778,7 +206424,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSubBlocks/{reservationSubBlock}/performMaintenance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("^reservations/[^/]+/reservationBlocks/[^/]+$");
@@ -206041,7 +206687,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentName}/reservationSubBlocks/{reservationSubBlock}/reportFaulty";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PARENT_NAME_PATTERN =
           java.util.regex.Pattern.compile("^reservations/[^/]+/reservationBlocks/[^/]+$");
@@ -206303,7 +206949,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentResource}/reservationSubBlocks/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -206542,7 +207188,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/{+parentResource}/reservationSubBlocks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -206803,7 +207449,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/reservations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -207248,7 +207894,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -207501,7 +208147,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -207715,7 +208361,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -207947,7 +208593,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -208170,7 +208816,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -208588,7 +209234,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}/performMaintenance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern RESERVATION_PATTERN =
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
@@ -208824,7 +209470,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}/resize";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -209080,7 +209726,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -209287,7 +209933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -209494,7 +210140,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/reservations/{reservation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -209803,7 +210449,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/resourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -210248,7 +210894,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies/{resourcePolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -210501,7 +211147,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies/{resourcePolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -210715,7 +211361,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -210947,7 +211593,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -211170,7 +211816,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -211587,7 +212233,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies/{resourcePolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -211858,7 +212504,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -212065,7 +212711,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/resourcePolicies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -212293,7 +212939,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rolloutPlans/{rolloutPlan}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -212514,7 +213160,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rolloutPlans/{rolloutPlan}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -212696,7 +213342,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rolloutPlans";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -212886,7 +213532,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rolloutPlans";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -213292,7 +213938,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts/{rollout}/advance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -213530,7 +214176,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts/{rollout}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -213777,7 +214423,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts/{rollout}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -213998,7 +214644,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts/{rollout}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -214179,7 +214825,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -214562,7 +215208,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts/{rollout}/pause";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -214806,7 +215452,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/rollouts/{rollout}/resume";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -215075,7 +215721,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/routers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -215520,7 +216166,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -215773,7 +216419,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/deleteNamedSet";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -216043,7 +216689,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/deleteRoutePolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -216313,7 +216959,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -216528,7 +217174,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/getNamedSet";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -216752,7 +217398,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/getNatIpInfo";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -216985,7 +217631,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/getNatMappingInfo";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -217461,7 +218107,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/getRoutePolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -217686,7 +218332,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/getRouterStatus";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -217902,7 +218548,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -218125,7 +218771,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -218541,7 +219187,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/listBgpRoutes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -219124,7 +219770,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/listNamedSets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -219577,7 +220223,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/listRoutePolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -220031,7 +220677,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -220287,7 +220933,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/patchNamedSet";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -220543,7 +221189,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/patchRoutePolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -220800,7 +221446,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/preview";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -221010,7 +221656,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -221267,7 +221913,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/updateNamedSet";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -221523,7 +222169,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/routers/{router}/updateRoutePolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -221800,7 +222446,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/routes/{route}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -222021,7 +222667,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/routes/{route}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -222203,7 +222849,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/routes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -222393,7 +223039,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/routes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -222777,7 +223423,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/routes/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -222975,7 +223621,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}/addRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -223168,7 +223814,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -223613,7 +224259,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -223834,7 +224480,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -224016,7 +224662,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}/getRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -224215,7 +224861,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -224421,7 +225067,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -224804,7 +225450,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/listPreconfiguredExpressionSets";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -225192,7 +225838,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -225435,7 +226081,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}/patchRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -225658,7 +226304,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{securityPolicy}/removeRule";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -225849,7 +226495,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/securityPolicies/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -226050,7 +226696,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/serviceAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -226496,7 +227142,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -226749,7 +227395,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -226979,7 +227625,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -227212,7 +227858,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -227435,7 +228081,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -227854,7 +228500,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments/{serviceAttachment}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -228093,7 +228739,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -228300,7 +228946,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/serviceAttachments/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -228527,7 +229173,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshotSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -228678,7 +229324,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshotSettings";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -228913,7 +229559,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{snapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -229139,7 +229785,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{snapshot}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -229321,7 +229967,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -229524,7 +230170,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -229717,7 +230363,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -230101,7 +230747,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -230277,7 +230923,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -230453,7 +231099,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -230628,7 +231274,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/snapshots/{snapshot}/updateKmsKey";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -230877,7 +231523,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/sslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -231322,7 +231968,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslCertificates/{sslCertificate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -231543,7 +232189,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslCertificates/{sslCertificate}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -231726,7 +232372,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -231917,7 +232563,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -232326,7 +232972,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/sslPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -232773,7 +233419,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslPolicies/{sslPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -232990,7 +233636,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslPolicies/{sslPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -233145,6 +233791,206 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
+     * Gets the access control policy for a resource. May be empty if no such policy or resource exists.
+     *
+     * Create a request for the method "sslPolicies.getIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param resource Name or id of the resource for this request.
+     * @return the request
+     */
+    public GetIamPolicy getIamPolicy(java.lang.String project, java.lang.String resource) throws java.io.IOException {
+      GetIamPolicy result = new GetIamPolicy(project, resource);
+      initialize(result);
+      return result;
+    }
+
+    public class GetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/global/sslPolicies/{resource}/getIamPolicy";
+
+      private static final String API_VERSION = "2026-11-01";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Gets the access control policy for a resource. May be empty if no such policy or resource
+       * exists.
+       *
+       * Create a request for the method "sslPolicies.getIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link GetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * GetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param resource Name or id of the resource for this request.
+       * @since 1.13
+       */
+      protected GetIamPolicy(java.lang.String project, java.lang.String resource) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public GetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (GetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public GetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (GetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public GetIamPolicy setAlt(java.lang.String alt) {
+        return (GetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public GetIamPolicy setCallback(java.lang.String callback) {
+        return (GetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public GetIamPolicy setFields(java.lang.String fields) {
+        return (GetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public GetIamPolicy setKey(java.lang.String key) {
+        return (GetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public GetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (GetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public GetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (GetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public GetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (GetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public GetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (GetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public GetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (GetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public GetIamPolicy setUserIp(java.lang.String userIp) {
+        return (GetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public GetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public GetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      /** Requested IAM Policy version. */
+      @com.google.api.client.util.Key
+      private java.lang.Integer optionsRequestedPolicyVersion;
+
+      /** Requested IAM Policy version.
+       */
+      public java.lang.Integer getOptionsRequestedPolicyVersion() {
+        return optionsRequestedPolicyVersion;
+      }
+
+      /** Requested IAM Policy version. */
+      public GetIamPolicy setOptionsRequestedPolicyVersion(java.lang.Integer optionsRequestedPolicyVersion) {
+        this.optionsRequestedPolicyVersion = optionsRequestedPolicyVersion;
+        return this;
+      }
+
+      @Override
+      public GetIamPolicy set(String parameterName, Object value) {
+        return (GetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
      * Returns the specified SSL policy resource.
      *
      * Create a request for the method "sslPolicies.insert".
@@ -233166,7 +234012,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -233356,7 +234202,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -233739,7 +234585,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslPolicies/listAvailableFeatures";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -234125,7 +234971,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/sslPolicies/{sslPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -234319,6 +235165,356 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
         return (Patch) super.set(parameterName, value);
       }
     }
+    /**
+     * Sets the access control policy on the specified resource. Replaces any existing policy.
+     *
+     * Create a request for the method "sslPolicies.setIamPolicy".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.GlobalSetPolicyRequest}
+     * @return the request
+     */
+    public SetIamPolicy setIamPolicy(java.lang.String project, java.lang.String resource, com.google.api.services.compute.model.GlobalSetPolicyRequest content) throws java.io.IOException {
+      SetIamPolicy result = new SetIamPolicy(project, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class SetIamPolicy extends ComputeRequest<com.google.api.services.compute.model.Policy> {
+
+      private static final String REST_PATH = "projects/{project}/global/sslPolicies/{resource}/setIamPolicy";
+
+      private static final String API_VERSION = "2026-11-01";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Sets the access control policy on the specified resource. Replaces any existing policy.
+       *
+       * Create a request for the method "sslPolicies.setIamPolicy".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link SetIamPolicy#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * SetIamPolicy#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+       * must be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.GlobalSetPolicyRequest}
+       * @since 1.13
+       */
+      protected SetIamPolicy(java.lang.String project, java.lang.String resource, com.google.api.services.compute.model.GlobalSetPolicyRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Policy.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public SetIamPolicy set$Xgafv(java.lang.String $Xgafv) {
+        return (SetIamPolicy) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public SetIamPolicy setAccessToken(java.lang.String accessToken) {
+        return (SetIamPolicy) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public SetIamPolicy setAlt(java.lang.String alt) {
+        return (SetIamPolicy) super.setAlt(alt);
+      }
+
+      @Override
+      public SetIamPolicy setCallback(java.lang.String callback) {
+        return (SetIamPolicy) super.setCallback(callback);
+      }
+
+      @Override
+      public SetIamPolicy setFields(java.lang.String fields) {
+        return (SetIamPolicy) super.setFields(fields);
+      }
+
+      @Override
+      public SetIamPolicy setKey(java.lang.String key) {
+        return (SetIamPolicy) super.setKey(key);
+      }
+
+      @Override
+      public SetIamPolicy setOauthToken(java.lang.String oauthToken) {
+        return (SetIamPolicy) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public SetIamPolicy setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (SetIamPolicy) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public SetIamPolicy setQuotaUser(java.lang.String quotaUser) {
+        return (SetIamPolicy) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public SetIamPolicy setUploadType(java.lang.String uploadType) {
+        return (SetIamPolicy) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public SetIamPolicy setUploadProtocol(java.lang.String uploadProtocol) {
+        return (SetIamPolicy) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public SetIamPolicy setUserIp(java.lang.String userIp) {
+        return (SetIamPolicy) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public SetIamPolicy setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public SetIamPolicy setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public SetIamPolicy set(String parameterName, Object value) {
+        return (SetIamPolicy) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Returns permissions that a caller has on the specified resource.
+     *
+     * Create a request for the method "sslPolicies.testIamPermissions".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param resource Name or id of the resource for this request.
+     * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+     * @return the request
+     */
+    public TestIamPermissions testIamPermissions(java.lang.String project, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) throws java.io.IOException {
+      TestIamPermissions result = new TestIamPermissions(project, resource, content);
+      initialize(result);
+      return result;
+    }
+
+    public class TestIamPermissions extends ComputeRequest<com.google.api.services.compute.model.TestPermissionsResponse> {
+
+      private static final String REST_PATH = "projects/{project}/global/sslPolicies/{resource}/testIamPermissions";
+
+      private static final String API_VERSION = "2026-11-01";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern RESOURCE_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns permissions that a caller has on the specified resource.
+       *
+       * Create a request for the method "sslPolicies.testIamPermissions".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link TestIamPermissions#execute()} method to invoke the remote
+       * operation. <p> {@link TestIamPermissions#initialize(com.google.api.client.googleapis.services.A
+       * bstractGoogleClientRequest)} must be called to initialize this instance immediately after
+       * invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param resource Name or id of the resource for this request.
+       * @param content the {@link com.google.api.services.compute.model.TestPermissionsRequest}
+       * @since 1.13
+       */
+      protected TestIamPermissions(java.lang.String project, java.lang.String resource, com.google.api.services.compute.model.TestPermissionsRequest content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.TestPermissionsResponse.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.resource = com.google.api.client.util.Preconditions.checkNotNull(resource, "Required parameter resource must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public TestIamPermissions set$Xgafv(java.lang.String $Xgafv) {
+        return (TestIamPermissions) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public TestIamPermissions setAccessToken(java.lang.String accessToken) {
+        return (TestIamPermissions) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public TestIamPermissions setAlt(java.lang.String alt) {
+        return (TestIamPermissions) super.setAlt(alt);
+      }
+
+      @Override
+      public TestIamPermissions setCallback(java.lang.String callback) {
+        return (TestIamPermissions) super.setCallback(callback);
+      }
+
+      @Override
+      public TestIamPermissions setFields(java.lang.String fields) {
+        return (TestIamPermissions) super.setFields(fields);
+      }
+
+      @Override
+      public TestIamPermissions setKey(java.lang.String key) {
+        return (TestIamPermissions) super.setKey(key);
+      }
+
+      @Override
+      public TestIamPermissions setOauthToken(java.lang.String oauthToken) {
+        return (TestIamPermissions) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public TestIamPermissions setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (TestIamPermissions) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public TestIamPermissions setQuotaUser(java.lang.String quotaUser) {
+        return (TestIamPermissions) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public TestIamPermissions setUploadType(java.lang.String uploadType) {
+        return (TestIamPermissions) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public TestIamPermissions setUploadProtocol(java.lang.String uploadProtocol) {
+        return (TestIamPermissions) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public TestIamPermissions setUserIp(java.lang.String userIp) {
+        return (TestIamPermissions) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public TestIamPermissions setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name or id of the resource for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String resource;
+
+      /** Name or id of the resource for this request.
+       */
+      public java.lang.String getResource() {
+        return resource;
+      }
+
+      /** Name or id of the resource for this request. */
+      public TestIamPermissions setResource(java.lang.String resource) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
+              "Parameter resource must conform to the pattern " +
+              "[a-z](?:[-a-z0-9_]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.resource = resource;
+        return this;
+      }
+
+      @Override
+      public TestIamPermissions set(String parameterName, Object value) {
+        return (TestIamPermissions) super.set(parameterName, value);
+      }
+    }
 
   }
 
@@ -234366,7 +235562,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/storagePoolTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -234811,7 +236007,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePoolTypes/{storagePoolType}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -235024,7 +236220,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePoolTypes";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -235463,7 +236659,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/storagePools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -235910,7 +237106,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{storagePool}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -236166,7 +237362,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{storagePool}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -236381,7 +237577,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -236613,7 +237809,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -236835,7 +238031,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -237250,7 +238446,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{storagePool}/listDisks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -237698,7 +238894,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -237905,7 +239101,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -238114,7 +239310,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/storagePools/{storagePool}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -238411,7 +239607,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/subnetworks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -238882,7 +240078,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{subnetwork}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -239136,7 +240332,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{subnetwork}/expandIpCidrRange";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -239391,7 +240587,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{subnetwork}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -239631,7 +240827,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{resource}/getIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -239863,7 +241059,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -240085,7 +241281,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -240524,7 +241720,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/subnetworks/listUsable";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -240937,7 +242133,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{subnetwork}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -241229,7 +242425,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{resource}/setIamPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -241438,7 +242634,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{subnetwork}/setPrivateIpGoogleAccess";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -241695,7 +242891,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/subnetworks/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -241923,7 +243119,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetGrpcProxies/{targetGrpcProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -242144,7 +243340,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetGrpcProxies/{targetGrpcProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -242327,7 +243523,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetGrpcProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -242518,7 +243714,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetGrpcProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -242903,7 +244099,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetGrpcProxies/{targetGrpcProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -243152,7 +244348,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/targetHttpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -243597,7 +244793,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpProxies/{targetHttpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -243818,7 +245014,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpProxies/{targetHttpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -244001,7 +245197,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -244192,7 +245388,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -244577,7 +245773,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpProxies/{targetHttpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -244801,7 +245997,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/targetHttpProxies/{targetHttpProxy}/setUrlMap";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -245050,7 +246246,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/targetHttpsProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -245495,7 +246691,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -245716,7 +246912,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -245899,7 +247095,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -246090,7 +247286,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -246475,7 +247671,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -246701,7 +247897,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}/setCertificateMap";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -246923,7 +248119,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}/setQuicOverride";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -247144,7 +248340,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/targetHttpsProxies/{targetHttpsProxy}/setSslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -247377,7 +248573,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetHttpsProxies/{targetHttpsProxy}/setSslPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -247600,7 +248796,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/targetHttpsProxies/{targetHttpsProxy}/setUrlMap";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -247853,7 +249049,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/targetInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -248298,7 +249494,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/targetInstances/{targetInstance}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -248551,7 +249747,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/targetInstances/{targetInstance}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -248766,7 +249962,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/targetInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -248989,7 +250185,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/targetInstances";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -249408,7 +250604,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/targetInstances/{targetInstance}/setSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -249661,7 +250857,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/targetInstances/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -249891,7 +251087,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/addHealthCheck";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -250147,7 +251343,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/addInstance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -250403,7 +251599,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/targetPools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -250848,7 +252044,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -251101,7 +252297,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -251317,7 +252513,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/getHealth";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -251524,7 +252720,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -251747,7 +252943,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -252163,7 +253359,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/removeHealthCheck";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -252419,7 +253615,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/removeInstance";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -252675,7 +253871,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/setBackup";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -252950,7 +254146,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{targetPool}/setSecurityPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -253203,7 +254399,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetPools/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -253431,7 +254627,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -253652,7 +254848,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -253835,7 +255031,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -254026,7 +255222,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -254411,7 +255607,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}/setBackendService";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -254642,7 +255838,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}/setCertificateMap";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -254862,7 +256058,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}/setProxyHeader";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -255087,7 +256283,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}/setSslCertificates";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -255320,7 +256516,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{targetSslProxy}/setSslPolicy";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -255542,7 +256738,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetSslProxies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -255742,7 +256938,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/targetTcpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -256187,7 +257383,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies/{targetTcpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -256408,7 +257604,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies/{targetTcpProxy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -256591,7 +257787,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -256782,7 +257978,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -257167,7 +258363,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies/{targetTcpProxy}/setBackendService";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -257396,7 +258592,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies/{targetTcpProxy}/setProxyHeader";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -257620,7 +258816,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/targetTcpProxies/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -257819,7 +259015,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/targetVpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -258264,7 +259460,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetVpnGateways/{targetVpnGateway}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -258517,7 +259713,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetVpnGateways/{targetVpnGateway}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -258732,7 +259928,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetVpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -258955,7 +260151,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetVpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -259372,7 +260568,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/targetVpnGateways/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -259653,7 +260849,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/urlMaps";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -260098,7 +261294,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -260319,7 +261515,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -260501,7 +261697,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -260696,7 +261892,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{urlMap}/invalidateCache";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -260921,7 +262117,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -261306,7 +262502,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -261530,7 +262726,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -261705,7 +262901,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{urlMap}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -261929,7 +263125,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/urlMaps/{urlMap}/validate";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -262129,7 +263325,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/vpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -262574,7 +263770,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways/{vpnGateway}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -262827,7 +264023,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways/{vpnGateway}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -263041,7 +264237,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways/{vpnGateway}/getStatus";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -263256,7 +264452,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -263479,7 +264675,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -263896,7 +265092,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -264153,7 +265349,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnGateways/{resource}/testIamPermissions";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -264383,7 +265579,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/aggregated/vpnTunnels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -264828,7 +266024,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnTunnels/{vpnTunnel}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -265081,7 +266277,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnTunnels/{vpnTunnel}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -265296,7 +266492,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnTunnels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -265519,7 +266715,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnTunnels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -265936,7 +267132,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/regions/{region}/vpnTunnels/{resource}/setLabels";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -266215,7 +267411,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}/wireGroups/{wireGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -266441,7 +267637,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}/wireGroups/{wireGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -266629,7 +267825,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}/wireGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -266856,7 +268052,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}/wireGroups";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -267259,7 +268455,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/global/crossSiteNetworks/{crossSiteNetwork}/wireGroups/{wireGroup}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -267545,7 +268741,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -267755,7 +268951,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/operations/{operation}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -267973,7 +269169,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/operations";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -268398,7 +269594,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/operations/{operation}/wait";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -268639,7 +269835,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -268879,7 +270075,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -269093,7 +270289,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/vmExtensionPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -269315,7 +270511,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/vmExtensionPolicies";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -269731,7 +270927,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}/vmExtensionPolicies/{vmExtensionPolicy}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -269994,7 +271190,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones/{zone}";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
@@ -270175,7 +271371,7 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
 
       private static final String REST_PATH = "projects/{project}/zones";
 
-      private static final String API_VERSION = "2026-09-01";
+      private static final String API_VERSION = "2026-11-01";
 
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");

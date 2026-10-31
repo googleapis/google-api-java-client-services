@@ -161,6 +161,14 @@ public final class Address extends com.google.api.client.json.GenericJson {
   private java.lang.String network;
 
   /**
+   * Optional. The URL of the network attachment that this address comes from in the following
+   * format: projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String networkAttachment;
+
+  /**
    * This signifies the networking tier used for configuring this address and can only take the
    * following values: PREMIUM orSTANDARD. Internal IP addresses are always Premium Tier; global
    * external IP addresses are always Premium Tier; regional external IP addresses can be either
@@ -218,6 +226,15 @@ public final class Address extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String selfLink;
+
+  /**
+   * Optional. Producer Service's Service class ID for the region of this address. Can only be used
+   * with network_attachment. It is not possible to use on its own; however, network_attachment can
+   * be used without service_class_id.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceClassId;
 
   /**
    * Output only. [Output Only] The status of the address, which can be one ofRESERVING, RESERVED,
@@ -571,6 +588,25 @@ public final class Address extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The URL of the network attachment that this address comes from in the following
+   * format: projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNetworkAttachment() {
+    return networkAttachment;
+  }
+
+  /**
+   * Optional. The URL of the network attachment that this address comes from in the following
+   * format: projects/{project}/regions/{region_name}/networkAttachments/{network_attachment_name}.
+   * @param networkAttachment networkAttachment or {@code null} for none
+   */
+  public Address setNetworkAttachment(java.lang.String networkAttachment) {
+    this.networkAttachment = networkAttachment;
+    return this;
+  }
+
+  /**
    * This signifies the networking tier used for configuring this address and can only take the
    * following values: PREMIUM orSTANDARD. Internal IP addresses are always Premium Tier; global
    * external IP addresses are always Premium Tier; regional external IP addresses can be either
@@ -700,6 +736,27 @@ public final class Address extends com.google.api.client.json.GenericJson {
    */
   public Address setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Optional. Producer Service's Service class ID for the region of this address. Can only be used
+   * with network_attachment. It is not possible to use on its own; however, network_attachment can
+   * be used without service_class_id.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceClassId() {
+    return serviceClassId;
+  }
+
+  /**
+   * Optional. Producer Service's Service class ID for the region of this address. Can only be used
+   * with network_attachment. It is not possible to use on its own; however, network_attachment can
+   * be used without service_class_id.
+   * @param serviceClassId serviceClassId or {@code null} for none
+   */
+  public Address setServiceClassId(java.lang.String serviceClassId) {
+    this.serviceClassId = serviceClassId;
     return this;
   }
 

@@ -42,6 +42,12 @@ public final class WorkloadIdentityConfig extends com.google.api.client.json.Gen
   private java.lang.Boolean identityCertificateEnabled;
 
   /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identityType;
+
+  /**
    * @return value or {@code null} for none
    */
   public java.lang.String getIdentity() {
@@ -68,6 +74,21 @@ public final class WorkloadIdentityConfig extends com.google.api.client.json.Gen
    */
   public WorkloadIdentityConfig setIdentityCertificateEnabled(java.lang.Boolean identityCertificateEnabled) {
     this.identityCertificateEnabled = identityCertificateEnabled;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentityType() {
+    return identityType;
+  }
+
+  /**
+   * @param identityType identityType or {@code null} for none
+   */
+  public WorkloadIdentityConfig setIdentityType(java.lang.String identityType) {
+    this.identityType = identityType;
     return this;
   }
 

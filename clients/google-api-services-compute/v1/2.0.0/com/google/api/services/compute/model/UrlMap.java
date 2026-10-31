@@ -243,6 +243,13 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
   private java.lang.String selfLink;
 
   /**
+   * Output only. [Output Only] The status of the URL map.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private UrlMapStatus status;
+
+  /**
    * The list of expected URL mapping tests. Request to update theUrlMap succeeds only if all test
    * cases pass. You can specify a maximum of 100 tests per UrlMap.
    *
@@ -683,6 +690,23 @@ public final class UrlMap extends com.google.api.client.json.GenericJson {
    */
   public UrlMap setSelfLink(java.lang.String selfLink) {
     this.selfLink = selfLink;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The status of the URL map.
+   * @return value or {@code null} for none
+   */
+  public UrlMapStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Output only. [Output Only] The status of the URL map.
+   * @param status status or {@code null} for none
+   */
+  public UrlMap setStatus(UrlMapStatus status) {
+    this.status = status;
     return this;
   }
 

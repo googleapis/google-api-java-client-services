@@ -267,7 +267,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   private java.lang.String snapshotGroupName;
 
   /**
-   * Indicates the type of the snapshot.
+   * Indicates the type of the snapshot. Valid values are ARCHIVE or STANDARD. The default is
+   * STANDARD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -959,7 +960,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the type of the snapshot.
+   * Indicates the type of the snapshot. Valid values are ARCHIVE or STANDARD. The default is
+   * STANDARD.
    * @return value or {@code null} for none
    */
   public java.lang.String getSnapshotType() {
@@ -967,7 +969,8 @@ public final class Snapshot extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Indicates the type of the snapshot.
+   * Indicates the type of the snapshot. Valid values are ARCHIVE or STANDARD. The default is
+   * STANDARD.
    * @param snapshotType snapshotType or {@code null} for none
    */
   public Snapshot setSnapshotType(java.lang.String snapshotType) {

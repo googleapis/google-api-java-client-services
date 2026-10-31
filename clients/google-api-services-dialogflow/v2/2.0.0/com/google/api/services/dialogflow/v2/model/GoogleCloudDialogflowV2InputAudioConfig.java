@@ -33,6 +33,12 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> alternativeLanguageCodes;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String audioEncoding;
 
   /**
@@ -130,6 +136,21 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean useGeminiAsr;
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAlternativeLanguageCodes() {
+    return alternativeLanguageCodes;
+  }
+
+  /**
+   * @param alternativeLanguageCodes alternativeLanguageCodes or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2InputAudioConfig setAlternativeLanguageCodes(java.util.List<java.lang.String> alternativeLanguageCodes) {
+    this.alternativeLanguageCodes = alternativeLanguageCodes;
+    return this;
+  }
 
   /**
    * @return value or {@code null} for none

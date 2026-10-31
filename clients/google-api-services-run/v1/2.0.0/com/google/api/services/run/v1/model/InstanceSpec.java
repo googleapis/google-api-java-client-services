@@ -59,6 +59,13 @@ public final class InstanceSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String restartPolicy;
 
   /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SandboxConfiguration sandboxes;
+
+  /**
    * Optional. Email address of the IAM service account associated with the Instance. The service
    * account represents the identity of the running container, and determines what permissions the
    * Instance has. If not provided, the Instance will use the project's default service account.
@@ -126,6 +133,23 @@ public final class InstanceSpec extends com.google.api.client.json.GenericJson {
    */
   public InstanceSpec setRestartPolicy(java.lang.String restartPolicy) {
     this.restartPolicy = restartPolicy;
+    return this;
+  }
+
+  /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * @return value or {@code null} for none
+   */
+  public SandboxConfiguration getSandboxes() {
+    return sandboxes;
+  }
+
+  /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * @param sandboxes sandboxes or {@code null} for none
+   */
+  public InstanceSpec setSandboxes(SandboxConfiguration sandboxes) {
+    this.sandboxes = sandboxes;
     return this;
   }
 

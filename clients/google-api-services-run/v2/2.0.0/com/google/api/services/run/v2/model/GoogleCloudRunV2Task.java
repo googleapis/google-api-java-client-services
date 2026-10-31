@@ -227,6 +227,13 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
   private java.lang.Integer retried;
 
   /**
+   * Configuration for sandboxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2SandboxConfiguration sandboxes;
+
+  /**
    * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
@@ -743,6 +750,23 @@ public final class GoogleCloudRunV2Task extends com.google.api.client.json.Gener
    */
   public GoogleCloudRunV2Task setRetried(java.lang.Integer retried) {
     this.retried = retried;
+    return this;
+  }
+
+  /**
+   * Configuration for sandboxes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2SandboxConfiguration getSandboxes() {
+    return sandboxes;
+  }
+
+  /**
+   * Configuration for sandboxes.
+   * @param sandboxes sandboxes or {@code null} for none
+   */
+  public GoogleCloudRunV2Task setSandboxes(GoogleCloudRunV2SandboxConfiguration sandboxes) {
+    this.sandboxes = sandboxes;
     return this;
   }
 

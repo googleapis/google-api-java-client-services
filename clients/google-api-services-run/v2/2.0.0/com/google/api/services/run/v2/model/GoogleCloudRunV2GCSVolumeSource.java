@@ -17,7 +17,8 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Represents a volume backed by a Cloud Storage bucket using Cloud Storage FUSE.
+ * Represents a volume backed by a Cloud Storage bucket (mounted via Cloud Storage FUSE or as a
+ * block device disk).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:

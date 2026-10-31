@@ -56,6 +56,15 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
   private java.lang.String machineType;
 
   /**
+   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
+   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
+   * in the given region.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> rankedMachineSeries;
+
+  /**
    * Optional. Option to specify which release or release channel (rapid|regular|stable) to use to
    * run this build.
    * The value may be {@code null}.
@@ -121,6 +130,27 @@ public final class WorkerConfig extends com.google.api.client.json.GenericJson {
    */
   public WorkerConfig setMachineType(java.lang.String machineType) {
     this.machineType = machineType;
+    return this;
+  }
+
+  /**
+   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
+   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
+   * in the given region.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getRankedMachineSeries() {
+    return rankedMachineSeries;
+  }
+
+  /**
+   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
+   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
+   * in the given region.
+   * @param rankedMachineSeries rankedMachineSeries or {@code null} for none
+   */
+  public WorkerConfig setRankedMachineSeries(java.util.List<java.lang.String> rankedMachineSeries) {
+    this.rankedMachineSeries = rankedMachineSeries;
     return this;
   }
 

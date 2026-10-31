@@ -31,7 +31,9 @@ package com.google.api.services.servicenetworking.v1beta.model;
 public final class CommonLanguageSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * The destination where API teams want this client library to be published.
+   * Deprecated: Client libraries are published for all supported languages by default when a
+   * `library_settings` entry is present with a `version` and `launch_stage`. The destination where
+   * API teams want this client library to be published.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -54,7 +56,9 @@ public final class CommonLanguageSettings extends com.google.api.client.json.Gen
   private SelectiveGapicGeneration selectiveGapicGeneration;
 
   /**
-   * The destination where API teams want this client library to be published.
+   * Deprecated: Client libraries are published for all supported languages by default when a
+   * `library_settings` entry is present with a `version` and `launch_stage`. The destination where
+   * API teams want this client library to be published.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDestinations() {
@@ -62,7 +66,9 @@ public final class CommonLanguageSettings extends com.google.api.client.json.Gen
   }
 
   /**
-   * The destination where API teams want this client library to be published.
+   * Deprecated: Client libraries are published for all supported languages by default when a
+   * `library_settings` entry is present with a `version` and `launch_stage`. The destination where
+   * API teams want this client library to be published.
    * @param destinations destinations or {@code null} for none
    */
   public CommonLanguageSettings setDestinations(java.util.List<java.lang.String> destinations) {

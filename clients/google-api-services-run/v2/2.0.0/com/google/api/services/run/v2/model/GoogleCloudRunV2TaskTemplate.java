@@ -79,6 +79,13 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
   private GoogleCloudRunV2NodeSelector nodeSelector;
 
   /**
+   * Optional. Configuration for sandboxes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2SandboxConfiguration sandboxes;
+
+  /**
    * Optional. Email address of the IAM service account associated with the Task of a Job. The
    * service account represents the identity of the running task, and determines what permissions
    * the task has. If not provided, the task will use the project's default service account.
@@ -219,6 +226,23 @@ public final class GoogleCloudRunV2TaskTemplate extends com.google.api.client.js
    */
   public GoogleCloudRunV2TaskTemplate setNodeSelector(GoogleCloudRunV2NodeSelector nodeSelector) {
     this.nodeSelector = nodeSelector;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for sandboxes.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2SandboxConfiguration getSandboxes() {
+    return sandboxes;
+  }
+
+  /**
+   * Optional. Configuration for sandboxes.
+   * @param sandboxes sandboxes or {@code null} for none
+   */
+  public GoogleCloudRunV2TaskTemplate setSandboxes(GoogleCloudRunV2SandboxConfiguration sandboxes) {
+    this.sandboxes = sandboxes;
     return this;
   }
 

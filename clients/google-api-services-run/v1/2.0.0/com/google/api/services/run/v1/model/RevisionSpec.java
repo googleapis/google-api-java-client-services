@@ -86,6 +86,13 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
   private java.lang.String runtimeClassName;
 
   /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SandboxConfiguration sandboxes;
+
+  /**
    * Email address of the IAM service account associated with the revision of the service. The
    * service account represents the identity of the running revision, and determines what
    * permissions the revision has. If not provided, the revision will use the project's default
@@ -213,6 +220,23 @@ public final class RevisionSpec extends com.google.api.client.json.GenericJson {
    */
   public RevisionSpec setRuntimeClassName(java.lang.String runtimeClassName) {
     this.runtimeClassName = runtimeClassName;
+    return this;
+  }
+
+  /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * @return value or {@code null} for none
+   */
+  public SandboxConfiguration getSandboxes() {
+    return sandboxes;
+  }
+
+  /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * @param sandboxes sandboxes or {@code null} for none
+   */
+  public RevisionSpec setSandboxes(SandboxConfiguration sandboxes) {
+    this.sandboxes = sandboxes;
     return this;
   }
 

@@ -58,6 +58,13 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> nodeSelector;
 
   /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SandboxConfiguration sandboxes;
+
+  /**
    * Optional. Email address of the IAM service account associated with the task of a job execution.
    * The service account represents the identity of the running task, and determines what
    * permissions the task has. If not provided, the task will use the project's default service
@@ -133,6 +140,23 @@ public final class TaskSpec extends com.google.api.client.json.GenericJson {
    */
   public TaskSpec setNodeSelector(java.util.Map<String, java.lang.String> nodeSelector) {
     this.nodeSelector = nodeSelector;
+    return this;
+  }
+
+  /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * @return value or {@code null} for none
+   */
+  public SandboxConfiguration getSandboxes() {
+    return sandboxes;
+  }
+
+  /**
+   * Optional. Sandbox configuration that can be launched through the `sandbox` CLI.
+   * @param sandboxes sandboxes or {@code null} for none
+   */
+  public TaskSpec setSandboxes(SandboxConfiguration sandboxes) {
+    this.sandboxes = sandboxes;
     return this;
   }
 

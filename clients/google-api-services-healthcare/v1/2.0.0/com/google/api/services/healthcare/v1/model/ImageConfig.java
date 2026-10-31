@@ -30,11 +30,41 @@ package com.google.api.services.healthcare.v1.model;
 public final class ImageConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Custom regex patterns to redact from the image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomRegex> customRegexes;
+
+  static {
+    // hack to force ProGuard to consider CustomRegex used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomRegex.class);
+  }
+
+  /**
    * Optional. Determines how to redact text from image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String textRedactionMode;
+
+  /**
+   * Optional. Custom regex patterns to redact from the image.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomRegex> getCustomRegexes() {
+    return customRegexes;
+  }
+
+  /**
+   * Optional. Custom regex patterns to redact from the image.
+   * @param customRegexes customRegexes or {@code null} for none
+   */
+  public ImageConfig setCustomRegexes(java.util.List<CustomRegex> customRegexes) {
+    this.customRegexes = customRegexes;
+    return this;
+  }
 
   /**
    * Optional. Determines how to redact text from image.

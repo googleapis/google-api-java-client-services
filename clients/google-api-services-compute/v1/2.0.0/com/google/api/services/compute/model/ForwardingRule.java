@@ -81,6 +81,55 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.lang.String iPAddress;
 
   /**
+   * IP addresses for which this forwarding rule accepts traffic. All IP addresses must have the
+   * same IP version, IPv4 or IPv6. When a client sends traffic that matches one of the specified IP
+   * addresses, protocol and ports, the forwarding rule directs the traffic to the
+   * referencedbackendService. All IP addresses are served by the same set of backends, and they
+   * share the target capacities specified in the backend service fairly.
+   *
+   * Global external Passthrough Network Load Balancer requires two IP addresses for each forwarding
+   * rule to provide high availability when both IP addresses are used to serve client requests. The
+   * two IP addresses must come from global IP pools that belong to two distinct Availability
+   * Groups, represented by the purposePASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0
+   * andPASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1. TheIPAddresses field specifies zero, one, or
+   * two IP addresses:        - If omitted, Google Cloud assigns two ephemeral IP addresses, one
+   * from    each Availability Group.    - If you specify one IP address that references an existing
+   * static IP    address resource from one Availability Group, Google Cloud assigns an    ephemeral
+   * IP address from the other Availability Group.    - If you specify two IP addresses that
+   * reference existing static IP    address resources, they are required to be from different
+   * Availability    Groups.
+   *
+   * For global external Passthrough Network Load Balancer, each IP address can be one of the
+   * following:        - A static or ephemeral IPv4 address from a Google-owned IP pool.    - A
+   * static IPv4 address from a global public delegated prefix.    - A static or ephemeral IPv6 /96
+   * prefix from a Google-owned IP pool.
+   *
+   * For global external Passthrough Network Load Balancer, the two IP addresses can be of different
+   * types. One IP address can be from a BYOIP prefix while the other is from a Google-owned IP
+   * pool. One IP address can be static while the other is ephemeral. However, both IP addresses
+   * must have the same IP version, IPv4 or IPv6.
+   *
+   * The IP addresses can only be set at creation and cannot be updated.
+   *
+   * When creating a global external Passthrough Network Load Balancer forwarding rule (a parent
+   * forwarding rule), you must use theIPAddresses field, but the Google Cloud-generated child
+   * forwarding rules set the IPAddress field instead. Refer to theavailabilityGroup field for
+   * further details.
+   *
+   * Refer to the IPAddress field for the formats that can be used to specify IP addresses while
+   * creating a forwarding rule.
+   *
+   * Because Passthrough Network Load Balancers do not terminate or translate traffic, the backend
+   * stack types must be compatible with the forwarding rule IP version:        - If the forwarding
+   * rule IP version is IPv4, backends should be    configured as dual-stack or IPv4-only.    - If
+   * the forwarding rule IP version is IPv6, backends should be    configured as dual-stack or
+   * IPv6-only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("IPAddresses")
+  private java.util.List<java.lang.String> iPAddresses;
+
+  /**
    * The IP protocol to which this rule applies.
    *
    * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
@@ -138,6 +187,31 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   private java.util.List<ForwardingRuleAttachedExtension> attachedExtensions;
 
   /**
+   * Output only. [Output Only] Specifies the load balancing availability group, one of the two that
+   * collectively provide high availability.
+   *
+   * Specifies the availability group of the forwarding rule. This field is for use by global
+   * external passthrough load balancers (load balancing scheme EXTERNAL_PASSTHROUGH) and is set for
+   * the child forwarding rules only. The possible values are:        - AVAILABILITY_GROUP0: Set for
+   * the child forwarding rule    that is programmed on the AVAILABILITY_GROUP0 load balancing
+   * stack. The child forwarding rule has the same IP protocol, port, and    backend service
+   * settings as the parent forwarding rule, but has only one of    the two IP addresses of the
+   * parent forwarding rule, the one with the    purpose
+   * PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0.    - AVAILABILITY_GROUP1: Set for the child
+   * forwarding rule    that is programmed on the AVAILABILITY_GROUP1 load balancing    stack. The
+   * child forwarding rule has the same IP protocol, port and backend    service settings as the
+   * parent forwarding rule, but has only one of the two    IP addresses of the parent forwarding
+   * rule, the one with the purposePASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1.
+   *
+   * For each global external Passthrough Network Load Balancer forwarding rule (a parent forwarding
+   * rule) that you create, Google Cloud generates two output-only child forwarding rules, one
+   * forAVAILABILITY_GROUP0 and one forAVAILABILITY_GROUP1.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String availabilityGroup;
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic.
    *
    * It is a required field for the following load balancers:        - Internal passthrough Network
@@ -159,6 +233,19 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.String baseForwardingRule;
+
+  /**
+   * Output only. [Output Only] The resource URLs for the child forwarding rules.
+   *
+   * Applicable only to the parent forwarding rule of global external passthrough load balancers.
+   * This field contains the list of child forwarding rule URLs associated with the parent
+   * forwarding rule: one for each availability group. AVAILABILITY_GROUP0 will be the first
+   * element, and AVAILABILITY_GROUP1 will be the second element. Refer to theavailabilityGroup
+   * field for further details. It cannot be set by any other forwarding rules.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> childForwardingRules;
 
   /**
    * Output only. [Output Only] Creation timestamp inRFC3339 text format.
@@ -377,6 +464,16 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean noAutomateDnsZone;
+
+  /**
+   * Output only. [Output Only] The resource URL for the parent forwarding rule.
+   *
+   * Applicable only to the child forwarding rules of global external passthrough load balancers.
+   * This field contains the URL of the parent forwarding rule.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String parentForwardingRule;
 
   /**
    * The ports, portRange, and allPorts fields are mutually exclusive. Only packets addressed to
@@ -626,6 +723,107 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * IP addresses for which this forwarding rule accepts traffic. All IP addresses must have the
+   * same IP version, IPv4 or IPv6. When a client sends traffic that matches one of the specified IP
+   * addresses, protocol and ports, the forwarding rule directs the traffic to the
+   * referencedbackendService. All IP addresses are served by the same set of backends, and they
+   * share the target capacities specified in the backend service fairly.
+   *
+   * Global external Passthrough Network Load Balancer requires two IP addresses for each forwarding
+   * rule to provide high availability when both IP addresses are used to serve client requests. The
+   * two IP addresses must come from global IP pools that belong to two distinct Availability
+   * Groups, represented by the purposePASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0
+   * andPASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1. TheIPAddresses field specifies zero, one, or
+   * two IP addresses:        - If omitted, Google Cloud assigns two ephemeral IP addresses, one
+   * from    each Availability Group.    - If you specify one IP address that references an existing
+   * static IP    address resource from one Availability Group, Google Cloud assigns an    ephemeral
+   * IP address from the other Availability Group.    - If you specify two IP addresses that
+   * reference existing static IP    address resources, they are required to be from different
+   * Availability    Groups.
+   *
+   * For global external Passthrough Network Load Balancer, each IP address can be one of the
+   * following:        - A static or ephemeral IPv4 address from a Google-owned IP pool.    - A
+   * static IPv4 address from a global public delegated prefix.    - A static or ephemeral IPv6 /96
+   * prefix from a Google-owned IP pool.
+   *
+   * For global external Passthrough Network Load Balancer, the two IP addresses can be of different
+   * types. One IP address can be from a BYOIP prefix while the other is from a Google-owned IP
+   * pool. One IP address can be static while the other is ephemeral. However, both IP addresses
+   * must have the same IP version, IPv4 or IPv6.
+   *
+   * The IP addresses can only be set at creation and cannot be updated.
+   *
+   * When creating a global external Passthrough Network Load Balancer forwarding rule (a parent
+   * forwarding rule), you must use theIPAddresses field, but the Google Cloud-generated child
+   * forwarding rules set the IPAddress field instead. Refer to theavailabilityGroup field for
+   * further details.
+   *
+   * Refer to the IPAddress field for the formats that can be used to specify IP addresses while
+   * creating a forwarding rule.
+   *
+   * Because Passthrough Network Load Balancers do not terminate or translate traffic, the backend
+   * stack types must be compatible with the forwarding rule IP version:        - If the forwarding
+   * rule IP version is IPv4, backends should be    configured as dual-stack or IPv4-only.    - If
+   * the forwarding rule IP version is IPv6, backends should be    configured as dual-stack or
+   * IPv6-only.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getIPAddresses() {
+    return iPAddresses;
+  }
+
+  /**
+   * IP addresses for which this forwarding rule accepts traffic. All IP addresses must have the
+   * same IP version, IPv4 or IPv6. When a client sends traffic that matches one of the specified IP
+   * addresses, protocol and ports, the forwarding rule directs the traffic to the
+   * referencedbackendService. All IP addresses are served by the same set of backends, and they
+   * share the target capacities specified in the backend service fairly.
+   *
+   * Global external Passthrough Network Load Balancer requires two IP addresses for each forwarding
+   * rule to provide high availability when both IP addresses are used to serve client requests. The
+   * two IP addresses must come from global IP pools that belong to two distinct Availability
+   * Groups, represented by the purposePASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0
+   * andPASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1. TheIPAddresses field specifies zero, one, or
+   * two IP addresses:        - If omitted, Google Cloud assigns two ephemeral IP addresses, one
+   * from    each Availability Group.    - If you specify one IP address that references an existing
+   * static IP    address resource from one Availability Group, Google Cloud assigns an    ephemeral
+   * IP address from the other Availability Group.    - If you specify two IP addresses that
+   * reference existing static IP    address resources, they are required to be from different
+   * Availability    Groups.
+   *
+   * For global external Passthrough Network Load Balancer, each IP address can be one of the
+   * following:        - A static or ephemeral IPv4 address from a Google-owned IP pool.    - A
+   * static IPv4 address from a global public delegated prefix.    - A static or ephemeral IPv6 /96
+   * prefix from a Google-owned IP pool.
+   *
+   * For global external Passthrough Network Load Balancer, the two IP addresses can be of different
+   * types. One IP address can be from a BYOIP prefix while the other is from a Google-owned IP
+   * pool. One IP address can be static while the other is ephemeral. However, both IP addresses
+   * must have the same IP version, IPv4 or IPv6.
+   *
+   * The IP addresses can only be set at creation and cannot be updated.
+   *
+   * When creating a global external Passthrough Network Load Balancer forwarding rule (a parent
+   * forwarding rule), you must use theIPAddresses field, but the Google Cloud-generated child
+   * forwarding rules set the IPAddress field instead. Refer to theavailabilityGroup field for
+   * further details.
+   *
+   * Refer to the IPAddress field for the formats that can be used to specify IP addresses while
+   * creating a forwarding rule.
+   *
+   * Because Passthrough Network Load Balancers do not terminate or translate traffic, the backend
+   * stack types must be compatible with the forwarding rule IP version:        - If the forwarding
+   * rule IP version is IPv4, backends should be    configured as dual-stack or IPv4-only.    - If
+   * the forwarding rule IP version is IPv6, backends should be    configured as dual-stack or
+   * IPv6-only.
+   * @param iPAddresses iPAddresses or {@code null} for none
+   */
+  public ForwardingRule setIPAddresses(java.util.List<java.lang.String> iPAddresses) {
+    this.iPAddresses = iPAddresses;
+    return this;
+  }
+
+  /**
    * The IP protocol to which this rule applies.
    *
    * For protocol forwarding, valid options are TCP, UDP, ESP,AH, SCTP, ICMP andL3_DEFAULT.
@@ -755,6 +953,59 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. [Output Only] Specifies the load balancing availability group, one of the two that
+   * collectively provide high availability.
+   *
+   * Specifies the availability group of the forwarding rule. This field is for use by global
+   * external passthrough load balancers (load balancing scheme EXTERNAL_PASSTHROUGH) and is set for
+   * the child forwarding rules only. The possible values are:        - AVAILABILITY_GROUP0: Set for
+   * the child forwarding rule    that is programmed on the AVAILABILITY_GROUP0 load balancing
+   * stack. The child forwarding rule has the same IP protocol, port, and    backend service
+   * settings as the parent forwarding rule, but has only one of    the two IP addresses of the
+   * parent forwarding rule, the one with the    purpose
+   * PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0.    - AVAILABILITY_GROUP1: Set for the child
+   * forwarding rule    that is programmed on the AVAILABILITY_GROUP1 load balancing    stack. The
+   * child forwarding rule has the same IP protocol, port and backend    service settings as the
+   * parent forwarding rule, but has only one of the two    IP addresses of the parent forwarding
+   * rule, the one with the purposePASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1.
+   *
+   * For each global external Passthrough Network Load Balancer forwarding rule (a parent forwarding
+   * rule) that you create, Google Cloud generates two output-only child forwarding rules, one
+   * forAVAILABILITY_GROUP0 and one forAVAILABILITY_GROUP1.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getAvailabilityGroup() {
+    return availabilityGroup;
+  }
+
+  /**
+   * Output only. [Output Only] Specifies the load balancing availability group, one of the two that
+   * collectively provide high availability.
+   *
+   * Specifies the availability group of the forwarding rule. This field is for use by global
+   * external passthrough load balancers (load balancing scheme EXTERNAL_PASSTHROUGH) and is set for
+   * the child forwarding rules only. The possible values are:        - AVAILABILITY_GROUP0: Set for
+   * the child forwarding rule    that is programmed on the AVAILABILITY_GROUP0 load balancing
+   * stack. The child forwarding rule has the same IP protocol, port, and    backend service
+   * settings as the parent forwarding rule, but has only one of    the two IP addresses of the
+   * parent forwarding rule, the one with the    purpose
+   * PASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP0.    - AVAILABILITY_GROUP1: Set for the child
+   * forwarding rule    that is programmed on the AVAILABILITY_GROUP1 load balancing    stack. The
+   * child forwarding rule has the same IP protocol, port and backend    service settings as the
+   * parent forwarding rule, but has only one of the two    IP addresses of the parent forwarding
+   * rule, the one with the purposePASSTHROUGH_LOAD_BALANCER_AVAILABILITY_GROUP1.
+   *
+   * For each global external Passthrough Network Load Balancer forwarding rule (a parent forwarding
+   * rule) that you create, Google Cloud generates two output-only child forwarding rules, one
+   * forAVAILABILITY_GROUP0 and one forAVAILABILITY_GROUP1.
+   * @param availabilityGroup availabilityGroup or {@code null} for none
+   */
+  public ForwardingRule setAvailabilityGroup(java.lang.String availabilityGroup) {
+    this.availabilityGroup = availabilityGroup;
+    return this;
+  }
+
+  /**
    * Identifies the backend service to which the forwarding rule sends traffic.
    *
    * It is a required field for the following load balancers:        - Internal passthrough Network
@@ -803,6 +1054,35 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setBaseForwardingRule(java.lang.String baseForwardingRule) {
     this.baseForwardingRule = baseForwardingRule;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The resource URLs for the child forwarding rules.
+   *
+   * Applicable only to the parent forwarding rule of global external passthrough load balancers.
+   * This field contains the list of child forwarding rule URLs associated with the parent
+   * forwarding rule: one for each availability group. AVAILABILITY_GROUP0 will be the first
+   * element, and AVAILABILITY_GROUP1 will be the second element. Refer to theavailabilityGroup
+   * field for further details. It cannot be set by any other forwarding rules.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getChildForwardingRules() {
+    return childForwardingRules;
+  }
+
+  /**
+   * Output only. [Output Only] The resource URLs for the child forwarding rules.
+   *
+   * Applicable only to the parent forwarding rule of global external passthrough load balancers.
+   * This field contains the list of child forwarding rule URLs associated with the parent
+   * forwarding rule: one for each availability group. AVAILABILITY_GROUP0 will be the first
+   * element, and AVAILABILITY_GROUP1 will be the second element. Refer to theavailabilityGroup
+   * field for further details. It cannot be set by any other forwarding rules.
+   * @param childForwardingRules childForwardingRules or {@code null} for none
+   */
+  public ForwardingRule setChildForwardingRules(java.util.List<java.lang.String> childForwardingRules) {
+    this.childForwardingRules = childForwardingRules;
     return this;
   }
 
@@ -1371,6 +1651,29 @@ public final class ForwardingRule extends com.google.api.client.json.GenericJson
    */
   public ForwardingRule setNoAutomateDnsZone(java.lang.Boolean noAutomateDnsZone) {
     this.noAutomateDnsZone = noAutomateDnsZone;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] The resource URL for the parent forwarding rule.
+   *
+   * Applicable only to the child forwarding rules of global external passthrough load balancers.
+   * This field contains the URL of the parent forwarding rule.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getParentForwardingRule() {
+    return parentForwardingRule;
+  }
+
+  /**
+   * Output only. [Output Only] The resource URL for the parent forwarding rule.
+   *
+   * Applicable only to the child forwarding rules of global external passthrough load balancers.
+   * This field contains the URL of the parent forwarding rule.
+   * @param parentForwardingRule parentForwardingRule or {@code null} for none
+   */
+  public ForwardingRule setParentForwardingRule(java.lang.String parentForwardingRule) {
+    this.parentForwardingRule = parentForwardingRule;
     return this;
   }
 

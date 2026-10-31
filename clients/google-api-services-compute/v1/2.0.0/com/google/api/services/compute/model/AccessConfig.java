@@ -49,6 +49,20 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
   private java.lang.Integer externalIpv6PrefixLength;
 
   /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   *
+   * Use one of the following formats to specify a PDP when allocating an external IPv4 address
+   * using BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/project
+   * s/projectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String ipCollection;
+
+  /**
    * Output only. [Output Only] Type of the resource. Alwayscompute#accessConfig for access configs.
    * The value may be {@code null}.
    */
@@ -164,6 +178,37 @@ public final class AccessConfig extends com.google.api.client.json.GenericJson {
    */
   public AccessConfig setExternalIpv6PrefixLength(java.lang.Integer externalIpv6PrefixLength) {
     this.externalIpv6PrefixLength = externalIpv6PrefixLength;
+    return this;
+  }
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   *
+   * Use one of the following formats to specify a PDP when allocating an external IPv4 address
+   * using BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/project
+   * s/projectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIpCollection() {
+    return ipCollection;
+  }
+
+  /**
+   * Reference to the source of external IPv4 addresses, like a PublicDelegatedPrefix (PDP) for
+   * BYOIP. The PDP must support enhanced IPv4 allocations.
+   *
+   * Use one of the following formats to specify a PDP when allocating an external IPv4 address
+   * using BYOIP.        -     Full resource URL, as inhttps://www.googleapis.com/compute/v1/project
+   * s/projectId/regions/region/publicDelegatedPrefixes/pdp-name    -     Partial URL, as in
+   * - projects/projectId/regions/region/publicDelegatedPrefixes/pdp-name           -
+   * regions/region/publicDelegatedPrefixes/pdp-name
+   * @param ipCollection ipCollection or {@code null} for none
+   */
+  public AccessConfig setIpCollection(java.lang.String ipCollection) {
+    this.ipCollection = ipCollection;
     return this;
   }
 

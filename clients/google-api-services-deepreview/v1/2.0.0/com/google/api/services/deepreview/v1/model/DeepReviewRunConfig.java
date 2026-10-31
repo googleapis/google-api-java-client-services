@@ -56,6 +56,16 @@ public final class DeepReviewRunConfig extends com.google.api.client.json.Generi
   private java.lang.String model;
 
   /**
+   * Optional. Reasoning effort level for model calls in the review pipeline. Defaults to
+   * `THINKING_LEVEL_MEDIUM` when omitted or `THINKING_LEVEL_UNSPECIFIED`.
+   * Non-`THINKING_LEVEL_MEDIUM` thinking levels require `gemini_api_key` when calling
+   * `CreateReview`; otherwise `CreateReview` returns `INVALID_ARGUMENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String thinkingLevel;
+
+  /**
    * Optional. Review execution topology profile to use.
    * The value may be {@code null}.
    */
@@ -128,6 +138,29 @@ public final class DeepReviewRunConfig extends com.google.api.client.json.Generi
    */
   public DeepReviewRunConfig setModel(java.lang.String model) {
     this.model = model;
+    return this;
+  }
+
+  /**
+   * Optional. Reasoning effort level for model calls in the review pipeline. Defaults to
+   * `THINKING_LEVEL_MEDIUM` when omitted or `THINKING_LEVEL_UNSPECIFIED`.
+   * Non-`THINKING_LEVEL_MEDIUM` thinking levels require `gemini_api_key` when calling
+   * `CreateReview`; otherwise `CreateReview` returns `INVALID_ARGUMENT`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getThinkingLevel() {
+    return thinkingLevel;
+  }
+
+  /**
+   * Optional. Reasoning effort level for model calls in the review pipeline. Defaults to
+   * `THINKING_LEVEL_MEDIUM` when omitted or `THINKING_LEVEL_UNSPECIFIED`.
+   * Non-`THINKING_LEVEL_MEDIUM` thinking levels require `gemini_api_key` when calling
+   * `CreateReview`; otherwise `CreateReview` returns `INVALID_ARGUMENT`.
+   * @param thinkingLevel thinkingLevel or {@code null} for none
+   */
+  public DeepReviewRunConfig setThinkingLevel(java.lang.String thinkingLevel) {
+    this.thinkingLevel = thinkingLevel;
     return this;
   }
 

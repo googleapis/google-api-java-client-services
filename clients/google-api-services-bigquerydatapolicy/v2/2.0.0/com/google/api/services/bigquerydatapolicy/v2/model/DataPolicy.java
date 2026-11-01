@@ -82,6 +82,16 @@ public final class DataPolicy extends com.google.api.client.json.GenericJson {
   private java.util.List<java.lang.String> grantees;
 
   /**
+   * Optional. Matching condition specified as a SQL expression string. Data Governance Tag matcher
+   * functions are: `COLUMN_HAS_TAG_KEY(keyName STRING) -> BOOL` `COLUMN_MATCH_TAG(keyName STRING,
+   * valueShortName STRING) -> BOOL` For example: `COLUMN_HAS_TAG_KEY('project-id/pii') AND
+   * COLUMN_MATCH_TAG('project-id/pii', 'ssn')`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String matchingCondition;
+
+  /**
    * Identifier. Resource name of this data policy, in the format of
    * `projects/{project_number}/locations/{location_id}/dataPolicies/{data_policy_id}`.
    * The value may be {@code null}.
@@ -222,6 +232,29 @@ public final class DataPolicy extends com.google.api.client.json.GenericJson {
    */
   public DataPolicy setGrantees(java.util.List<java.lang.String> grantees) {
     this.grantees = grantees;
+    return this;
+  }
+
+  /**
+   * Optional. Matching condition specified as a SQL expression string. Data Governance Tag matcher
+   * functions are: `COLUMN_HAS_TAG_KEY(keyName STRING) -> BOOL` `COLUMN_MATCH_TAG(keyName STRING,
+   * valueShortName STRING) -> BOOL` For example: `COLUMN_HAS_TAG_KEY('project-id/pii') AND
+   * COLUMN_MATCH_TAG('project-id/pii', 'ssn')`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMatchingCondition() {
+    return matchingCondition;
+  }
+
+  /**
+   * Optional. Matching condition specified as a SQL expression string. Data Governance Tag matcher
+   * functions are: `COLUMN_HAS_TAG_KEY(keyName STRING) -> BOOL` `COLUMN_MATCH_TAG(keyName STRING,
+   * valueShortName STRING) -> BOOL` For example: `COLUMN_HAS_TAG_KEY('project-id/pii') AND
+   * COLUMN_MATCH_TAG('project-id/pii', 'ssn')`
+   * @param matchingCondition matchingCondition or {@code null} for none
+   */
+  public DataPolicy setMatchingCondition(java.lang.String matchingCondition) {
+    this.matchingCondition = matchingCondition;
     return this;
   }
 

@@ -58,6 +58,13 @@ public final class Hub extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean exportPsc;
 
   /**
+   * Optional. Config for more granular control of Private Service Connect transitivity.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ExportPscConfig exportPscConfig;
+
+  /**
    * Optional labels in key-value pair format. For more information about labels, see [Requirements
    * for labels](https://cloud.google.com/resource-manager/docs/creating-managing-
    * labels#requirements).
@@ -195,6 +202,23 @@ public final class Hub extends com.google.api.client.json.GenericJson {
    */
   public Hub setExportPsc(java.lang.Boolean exportPsc) {
     this.exportPsc = exportPsc;
+    return this;
+  }
+
+  /**
+   * Optional. Config for more granular control of Private Service Connect transitivity.
+   * @return value or {@code null} for none
+   */
+  public ExportPscConfig getExportPscConfig() {
+    return exportPscConfig;
+  }
+
+  /**
+   * Optional. Config for more granular control of Private Service Connect transitivity.
+   * @param exportPscConfig exportPscConfig or {@code null} for none
+   */
+  public Hub setExportPscConfig(ExportPscConfig exportPscConfig) {
+    this.exportPscConfig = exportPscConfig;
     return this;
   }
 

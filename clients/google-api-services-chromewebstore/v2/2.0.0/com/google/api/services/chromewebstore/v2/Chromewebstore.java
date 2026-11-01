@@ -533,6 +533,262 @@ public class Chromewebstore extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * Fetch user reviews for an item.
+       *
+       * Create a request for the method "items.fetchReviews".
+       *
+       * This request holds the parameters needed by the chromewebstore server.  After setting any
+       * optional parameters, call the {@link FetchReviews#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The item resource name whose reviews are being fetched. Format:
+       *        publishers/{publisher_id}/items/{item_id}
+       * @return the request
+       */
+      public FetchReviews fetchReviews(java.lang.String name) throws java.io.IOException {
+        FetchReviews result = new FetchReviews(name);
+        initialize(result);
+        return result;
+      }
+
+      public class FetchReviews extends ChromewebstoreRequest<com.google.api.services.chromewebstore.v2.model.FetchItemReviewsResponse> {
+
+        private static final String REST_PATH = "v2/{+name}:fetchReviews";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^publishers/[^/]+/items/[^/]+$");
+
+        /**
+         * Fetch user reviews for an item.
+         *
+         * Create a request for the method "items.fetchReviews".
+         *
+         * This request holds the parameters needed by the the chromewebstore server.  After setting any
+         * optional parameters, call the {@link FetchReviews#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * FetchReviews#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The item resource name whose reviews are being fetched. Format:
+       *        publishers/{publisher_id}/items/{item_id}
+         * @since 1.13
+         */
+        protected FetchReviews(java.lang.String name) {
+          super(Chromewebstore.this, "GET", REST_PATH, null, com.google.api.services.chromewebstore.v2.model.FetchItemReviewsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public FetchReviews set$Xgafv(java.lang.String $Xgafv) {
+          return (FetchReviews) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public FetchReviews setAccessToken(java.lang.String accessToken) {
+          return (FetchReviews) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public FetchReviews setAlt(java.lang.String alt) {
+          return (FetchReviews) super.setAlt(alt);
+        }
+
+        @Override
+        public FetchReviews setCallback(java.lang.String callback) {
+          return (FetchReviews) super.setCallback(callback);
+        }
+
+        @Override
+        public FetchReviews setFields(java.lang.String fields) {
+          return (FetchReviews) super.setFields(fields);
+        }
+
+        @Override
+        public FetchReviews setKey(java.lang.String key) {
+          return (FetchReviews) super.setKey(key);
+        }
+
+        @Override
+        public FetchReviews setOauthToken(java.lang.String oauthToken) {
+          return (FetchReviews) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public FetchReviews setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (FetchReviews) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public FetchReviews setQuotaUser(java.lang.String quotaUser) {
+          return (FetchReviews) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public FetchReviews setUploadType(java.lang.String uploadType) {
+          return (FetchReviews) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public FetchReviews setUploadProtocol(java.lang.String uploadProtocol) {
+          return (FetchReviews) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The item resource name whose reviews are being fetched. Format:
+         * publishers/{publisher_id}/items/{item_id}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The item resource name whose reviews are being fetched. Format:
+       publishers/{publisher_id}/items/{item_id}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The item resource name whose reviews are being fetched. Format:
+         * publishers/{publisher_id}/items/{item_id}
+         */
+        public FetchReviews setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. A filter to apply to the reviews. Only equality comparison on rating is
+         * supported, e.g. `rating = 5`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String filter;
+
+        /** Optional. A filter to apply to the reviews. Only equality comparison on rating is supported, e.g.
+       `rating = 5`.
+         */
+        public java.lang.String getFilter() {
+          return filter;
+        }
+
+        /**
+         * Optional. A filter to apply to the reviews. Only equality comparison on rating is
+         * supported, e.g. `rating = 5`.
+         */
+        public FetchReviews setFilter(java.lang.String filter) {
+          this.filter = filter;
+          return this;
+        }
+
+        /**
+         * Optional. An optional comma-separated list of fields by which to sort the results. The
+         * default sort order is ascending (`asc`). Supported fields are: - `rating`: Supported
+         * orders are `asc` (default) and `desc`. - `create_time`: Only `desc` (most recent first)
+         * is supported; `desc` must be explicitly specified since the default is `asc`. Example:
+         * `rating desc`, `create_time desc`, or `rating desc, create_time desc`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String orderBy;
+
+        /** Optional. An optional comma-separated list of fields by which to sort the results. The default sort
+       order is ascending (`asc`). Supported fields are: - `rating`: Supported orders are `asc` (default)
+       and `desc`. - `create_time`: Only `desc` (most recent first) is supported; `desc` must be
+       explicitly specified since the default is `asc`. Example: `rating desc`, `create_time desc`, or
+       `rating desc, create_time desc`.
+         */
+        public java.lang.String getOrderBy() {
+          return orderBy;
+        }
+
+        /**
+         * Optional. An optional comma-separated list of fields by which to sort the results. The
+         * default sort order is ascending (`asc`). Supported fields are: - `rating`: Supported
+         * orders are `asc` (default) and `desc`. - `create_time`: Only `desc` (most recent first)
+         * is supported; `desc` must be explicitly specified since the default is `asc`. Example:
+         * `rating desc`, `create_time desc`, or `rating desc, create_time desc`.
+         */
+        public FetchReviews setOrderBy(java.lang.String orderBy) {
+          this.orderBy = orderBy;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of reviews to return. The service may return fewer than this
+         * value. If unspecified, at most 50 reviews will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of reviews to return. The service may return fewer than this value. If
+       unspecified, at most 50 reviews will be returned. The maximum value is 200; values above 200 will
+       be coerced to 200.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of reviews to return. The service may return fewer than this
+         * value. If unspecified, at most 50 reviews will be returned. The maximum value is 200;
+         * values above 200 will be coerced to 200.
+         */
+        public FetchReviews setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FetchItemReviews` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `FetchItemReviews` must match the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous `FetchItemReviews` call. Provide this to retrieve
+       the subsequent page. When paginating, all other parameters provided to `FetchItemReviews` must
+       match the call that provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous `FetchItemReviews` call. Provide this to
+         * retrieve the subsequent page. When paginating, all other parameters provided to
+         * `FetchItemReviews` must match the call that provided the page token.
+         */
+        public FetchReviews setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        @Override
+        public FetchReviews set(String parameterName, Object value) {
+          return (FetchReviews) super.set(parameterName, value);
+        }
+      }
+      /**
        * Fetch the status of an item.
        *
        * Create a request for the method "items.fetchStatus".
@@ -682,6 +938,155 @@ public class Chromewebstore extends com.google.api.client.googleapis.services.js
         }
       }
       /**
+       * Gets the RatingSummary for the publishers item.
+       *
+       * Create a request for the method "items.getRatingSummary".
+       *
+       * This request holds the parameters needed by the chromewebstore server.  After setting any
+       * optional parameters, call the {@link GetRatingSummary#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the rating summary to retrieve. Format:
+       *        publishers/{publisher}/items/{item}/ratingSummary
+       * @return the request
+       */
+      public GetRatingSummary getRatingSummary(java.lang.String name) throws java.io.IOException {
+        GetRatingSummary result = new GetRatingSummary(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetRatingSummary extends ChromewebstoreRequest<com.google.api.services.chromewebstore.v2.model.RatingSummary> {
+
+        private static final String REST_PATH = "v2/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^publishers/[^/]+/items/[^/]+/ratingSummary$");
+
+        /**
+         * Gets the RatingSummary for the publishers item.
+         *
+         * Create a request for the method "items.getRatingSummary".
+         *
+         * This request holds the parameters needed by the the chromewebstore server.  After setting any
+         * optional parameters, call the {@link GetRatingSummary#execute()} method to invoke the remote
+         * operation. <p> {@link GetRatingSummary#initialize(com.google.api.client.googleapis.services.Abs
+         * tractGoogleClientRequest)} must be called to initialize this instance immediately after
+         * invoking the constructor. </p>
+         *
+         * @param name Required. The name of the rating summary to retrieve. Format:
+       *        publishers/{publisher}/items/{item}/ratingSummary
+         * @since 1.13
+         */
+        protected GetRatingSummary(java.lang.String name) {
+          super(Chromewebstore.this, "GET", REST_PATH, null, com.google.api.services.chromewebstore.v2.model.RatingSummary.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+/ratingSummary$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetRatingSummary set$Xgafv(java.lang.String $Xgafv) {
+          return (GetRatingSummary) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetRatingSummary setAccessToken(java.lang.String accessToken) {
+          return (GetRatingSummary) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetRatingSummary setAlt(java.lang.String alt) {
+          return (GetRatingSummary) super.setAlt(alt);
+        }
+
+        @Override
+        public GetRatingSummary setCallback(java.lang.String callback) {
+          return (GetRatingSummary) super.setCallback(callback);
+        }
+
+        @Override
+        public GetRatingSummary setFields(java.lang.String fields) {
+          return (GetRatingSummary) super.setFields(fields);
+        }
+
+        @Override
+        public GetRatingSummary setKey(java.lang.String key) {
+          return (GetRatingSummary) super.setKey(key);
+        }
+
+        @Override
+        public GetRatingSummary setOauthToken(java.lang.String oauthToken) {
+          return (GetRatingSummary) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetRatingSummary setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetRatingSummary) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetRatingSummary setQuotaUser(java.lang.String quotaUser) {
+          return (GetRatingSummary) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetRatingSummary setUploadType(java.lang.String uploadType) {
+          return (GetRatingSummary) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetRatingSummary setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetRatingSummary) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the rating summary to retrieve. Format:
+         * publishers/{publisher}/items/{item}/ratingSummary
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the rating summary to retrieve. Format:
+       publishers/{publisher}/items/{item}/ratingSummary
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the rating summary to retrieve. Format:
+         * publishers/{publisher}/items/{item}/ratingSummary
+         */
+        public GetRatingSummary setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+/ratingSummary$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetRatingSummary set(String parameterName, Object value) {
+          return (GetRatingSummary) super.set(parameterName, value);
+        }
+      }
+      /**
        * Submit the item to be published in the store. The item will be submitted for review unless
        * `skip_review` is set to true, or the item is staged from a previous submission with
        * `publish_type` set to `STAGED_PUBLISH`.
@@ -814,6 +1219,533 @@ public class Chromewebstore extends com.google.api.client.googleapis.services.js
         @Override
         public Publish set(String parameterName, Object value) {
           return (Publish) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Query the metrics for an item.
+       *
+       * Create a request for the method "items.queryMetrics".
+       *
+       * This request holds the parameters needed by the chromewebstore server.  After setting any
+       * optional parameters, call the {@link QueryMetrics#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param name Required. The name of the item to query the metrics for. Format: publishers/{publisher}/items/{item}
+       * @return the request
+       */
+      public QueryMetrics queryMetrics(java.lang.String name) throws java.io.IOException {
+        QueryMetrics result = new QueryMetrics(name);
+        initialize(result);
+        return result;
+      }
+
+      public class QueryMetrics extends ChromewebstoreRequest<com.google.api.services.chromewebstore.v2.model.QueryItemMetricsResponse> {
+
+        private static final String REST_PATH = "v2/{+name}:queryMetrics";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^publishers/[^/]+/items/[^/]+$");
+
+        /**
+         * Query the metrics for an item.
+         *
+         * Create a request for the method "items.queryMetrics".
+         *
+         * This request holds the parameters needed by the the chromewebstore server.  After setting any
+         * optional parameters, call the {@link QueryMetrics#execute()} method to invoke the remote
+         * operation. <p> {@link
+         * QueryMetrics#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The name of the item to query the metrics for. Format: publishers/{publisher}/items/{item}
+         * @since 1.13
+         */
+        protected QueryMetrics(java.lang.String name) {
+          super(Chromewebstore.this, "GET", REST_PATH, null, com.google.api.services.chromewebstore.v2.model.QueryItemMetricsResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public QueryMetrics set$Xgafv(java.lang.String $Xgafv) {
+          return (QueryMetrics) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public QueryMetrics setAccessToken(java.lang.String accessToken) {
+          return (QueryMetrics) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public QueryMetrics setAlt(java.lang.String alt) {
+          return (QueryMetrics) super.setAlt(alt);
+        }
+
+        @Override
+        public QueryMetrics setCallback(java.lang.String callback) {
+          return (QueryMetrics) super.setCallback(callback);
+        }
+
+        @Override
+        public QueryMetrics setFields(java.lang.String fields) {
+          return (QueryMetrics) super.setFields(fields);
+        }
+
+        @Override
+        public QueryMetrics setKey(java.lang.String key) {
+          return (QueryMetrics) super.setKey(key);
+        }
+
+        @Override
+        public QueryMetrics setOauthToken(java.lang.String oauthToken) {
+          return (QueryMetrics) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public QueryMetrics setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (QueryMetrics) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public QueryMetrics setQuotaUser(java.lang.String quotaUser) {
+          return (QueryMetrics) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public QueryMetrics setUploadType(java.lang.String uploadType) {
+          return (QueryMetrics) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public QueryMetrics setUploadProtocol(java.lang.String uploadProtocol) {
+          return (QueryMetrics) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The name of the item to query the metrics for. Format:
+         * publishers/{publisher}/items/{item}
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The name of the item to query the metrics for. Format:
+       publishers/{publisher}/items/{item}
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The name of the item to query the metrics for. Format:
+         * publishers/{publisher}/items/{item}
+         */
+        public QueryMetrics setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. Dimensions to slice the metrics by. At most one dimension can be specified.
+         * **Supported dimensions:** - os: The operating system of the user. - app-version: The
+         * version of the item. - country: The country of the user. - install-source: The source of
+         * the install. - install-type: The type of install (from webstore, inline, or other). -
+         * language: The language of the user. - enabled: If the item is enabled or disabled. - utm-
+         * campaign: The UTM campaign of the user. - utm-content: The UTM content of the user. -
+         * utm-medium: The UTM medium of the user. - utm-source: The UTM source of the user. - utm-
+         * term: The UTM term of the user.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> dimensions;
+
+        /** Optional. Dimensions to slice the metrics by. At most one dimension can be specified. **Supported
+       dimensions:** - os: The operating system of the user. - app-version: The version of the item. -
+       country: The country of the user. - install-source: The source of the install. - install-type: The
+       type of install (from webstore, inline, or other). - language: The language of the user. - enabled:
+       If the item is enabled or disabled. - utm-campaign: The UTM campaign of the user. - utm-content:
+       The UTM content of the user. - utm-medium: The UTM medium of the user. - utm-source: The UTM source
+       of the user. - utm-term: The UTM term of the user.
+         */
+        public java.util.List<java.lang.String> getDimensions() {
+          return dimensions;
+        }
+
+        /**
+         * Optional. Dimensions to slice the metrics by. At most one dimension can be specified.
+         * **Supported dimensions:** - os: The operating system of the user. - app-version: The
+         * version of the item. - country: The country of the user. - install-source: The source of
+         * the install. - install-type: The type of install (from webstore, inline, or other). -
+         * language: The language of the user. - enabled: If the item is enabled or disabled. - utm-
+         * campaign: The UTM campaign of the user. - utm-content: The UTM content of the user. -
+         * utm-medium: The UTM medium of the user. - utm-source: The UTM source of the user. - utm-
+         * term: The UTM term of the user.
+         */
+        public QueryMetrics setDimensions(java.util.List<java.lang.String> dimensions) {
+          this.dimensions = dimensions;
+          return this;
+        }
+
+        /**
+         * Required. The metrics to query the metric set for. **Supported metrics:** - installs:
+         * Count of item installs. - installs-7d: Count of item installs in the last 7 days. -
+         * uninstalls: Count of item uninstalls. - users: Count of daily active users of the item. -
+         * users-7d: Count of 7-day active users of the item. - impressions: Count of item
+         * impressions across the entire store front. - page-views: Count of individual views of the
+         * item's detail page.
+         */
+        @com.google.api.client.util.Key
+        private java.util.List<java.lang.String> metrics;
+
+        /** Required. The metrics to query the metric set for. **Supported metrics:** - installs: Count of item
+       installs. - installs-7d: Count of item installs in the last 7 days. - uninstalls: Count of item
+       uninstalls. - users: Count of daily active users of the item. - users-7d: Count of 7-day active
+       users of the item. - impressions: Count of item impressions across the entire store front. - page-
+       views: Count of individual views of the item's detail page.
+         */
+        public java.util.List<java.lang.String> getMetrics() {
+          return metrics;
+        }
+
+        /**
+         * Required. The metrics to query the metric set for. **Supported metrics:** - installs:
+         * Count of item installs. - installs-7d: Count of item installs in the last 7 days. -
+         * uninstalls: Count of item uninstalls. - users: Count of daily active users of the item. -
+         * users-7d: Count of 7-day active users of the item. - impressions: Count of item
+         * impressions across the entire store front. - page-views: Count of individual views of the
+         * item's detail page.
+         */
+        public QueryMetrics setMetrics(java.util.List<java.lang.String> metrics) {
+          this.metrics = metrics;
+          return this;
+        }
+
+        /**
+         * Optional. The maximum number of rows to return. If unspecified, at most 100 rows will be
+         * returned. The maximum value is 1000; Values above 1000 will be coerced to 1000.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.Integer pageSize;
+
+        /** Optional. The maximum number of rows to return. If unspecified, at most 100 rows will be returned.
+       The maximum value is 1000; Values above 1000 will be coerced to 1000.
+         */
+        public java.lang.Integer getPageSize() {
+          return pageSize;
+        }
+
+        /**
+         * Optional. The maximum number of rows to return. If unspecified, at most 100 rows will be
+         * returned. The maximum value is 1000; Values above 1000 will be coerced to 1000.
+         */
+        public QueryMetrics setPageSize(java.lang.Integer pageSize) {
+          this.pageSize = pageSize;
+          return this;
+        }
+
+        /**
+         * Optional. A page token, received from a previous call. Provide this to retrieve the
+         * subsequent page. When paginating, all other parameters provided to the request must match
+         * the call that provided the page token.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String pageToken;
+
+        /** Optional. A page token, received from a previous call. Provide this to retrieve the subsequent
+       page. When paginating, all other parameters provided to the request must match the call that
+       provided the page token.
+         */
+        public java.lang.String getPageToken() {
+          return pageToken;
+        }
+
+        /**
+         * Optional. A page token, received from a previous call. Provide this to retrieve the
+         * subsequent page. When paginating, all other parameters provided to the request must match
+         * the call that provided the page token.
+         */
+        public QueryMetrics setPageToken(java.lang.String pageToken) {
+          this.pageToken = pageToken;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("timeSpec.firstDate.day")
+        private java.lang.Integer timeSpecFirstDateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getTimeSpecFirstDateDay() {
+          return timeSpecFirstDateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public QueryMetrics setTimeSpecFirstDateDay(java.lang.Integer timeSpecFirstDateDay) {
+          this.timeSpecFirstDateDay = timeSpecFirstDateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("timeSpec.firstDate.month")
+        private java.lang.Integer timeSpecFirstDateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getTimeSpecFirstDateMonth() {
+          return timeSpecFirstDateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public QueryMetrics setTimeSpecFirstDateMonth(java.lang.Integer timeSpecFirstDateMonth) {
+          this.timeSpecFirstDateMonth = timeSpecFirstDateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("timeSpec.firstDate.year")
+        private java.lang.Integer timeSpecFirstDateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getTimeSpecFirstDateYear() {
+          return timeSpecFirstDateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public QueryMetrics setTimeSpecFirstDateYear(java.lang.Integer timeSpecFirstDateYear) {
+          this.timeSpecFirstDateYear = timeSpecFirstDateYear;
+          return this;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        @com.google.api.client.util.Key("timeSpec.lastDate.day")
+        private java.lang.Integer timeSpecLastDateDay;
+
+        /** Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a year by
+       itself or a year and month where the day isn't significant.
+         */
+        public java.lang.Integer getTimeSpecLastDateDay() {
+          return timeSpecLastDateDay;
+        }
+
+        /**
+         * Day of a month. Must be from 1 to 31 and valid for the year and month, or 0 to specify a
+         * year by itself or a year and month where the day isn't significant.
+         */
+        public QueryMetrics setTimeSpecLastDateDay(java.lang.Integer timeSpecLastDateDay) {
+          this.timeSpecLastDateDay = timeSpecLastDateDay;
+          return this;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        @com.google.api.client.util.Key("timeSpec.lastDate.month")
+        private java.lang.Integer timeSpecLastDateMonth;
+
+        /** Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public java.lang.Integer getTimeSpecLastDateMonth() {
+          return timeSpecLastDateMonth;
+        }
+
+        /**
+         * Month of a year. Must be from 1 to 12, or 0 to specify a year without a month and day.
+         */
+        public QueryMetrics setTimeSpecLastDateMonth(java.lang.Integer timeSpecLastDateMonth) {
+          this.timeSpecLastDateMonth = timeSpecLastDateMonth;
+          return this;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        @com.google.api.client.util.Key("timeSpec.lastDate.year")
+        private java.lang.Integer timeSpecLastDateYear;
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year.
+         */
+        public java.lang.Integer getTimeSpecLastDateYear() {
+          return timeSpecLastDateYear;
+        }
+
+        /** Year of the date. Must be from 1 to 9999, or 0 to specify a date without a year. */
+        public QueryMetrics setTimeSpecLastDateYear(java.lang.Integer timeSpecLastDateYear) {
+          this.timeSpecLastDateYear = timeSpecLastDateYear;
+          return this;
+        }
+
+        @Override
+        public QueryMetrics set(String parameterName, Object value) {
+          return (QueryMetrics) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Rolls back an item's published CRX package to a specified previously published CRX package and
+       * publishes it to all users.
+       *
+       * Create a request for the method "items.rollback".
+       *
+       * This request holds the parameters needed by the chromewebstore server.  After setting any
+       * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+       *
+       * @param name Required. Name of the item to rollback in the form `publishers/{publisherId}/items/{itemId}`
+       * @param content the {@link com.google.api.services.chromewebstore.v2.model.RollbackItemRequest}
+       * @return the request
+       */
+      public Rollback rollback(java.lang.String name, com.google.api.services.chromewebstore.v2.model.RollbackItemRequest content) throws java.io.IOException {
+        Rollback result = new Rollback(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Rollback extends ChromewebstoreRequest<com.google.api.services.chromewebstore.v2.model.RollbackItemResponse> {
+
+        private static final String REST_PATH = "v2/{+name}:rollback";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^publishers/[^/]+/items/[^/]+$");
+
+        /**
+         * Rolls back an item's published CRX package to a specified previously published CRX package and
+         * publishes it to all users.
+         *
+         * Create a request for the method "items.rollback".
+         *
+         * This request holds the parameters needed by the the chromewebstore server.  After setting any
+         * optional parameters, call the {@link Rollback#execute()} method to invoke the remote operation.
+         * <p> {@link
+         * Rollback#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+         * must be called to initialize this instance immediately after invoking the constructor. </p>
+         *
+         * @param name Required. Name of the item to rollback in the form `publishers/{publisherId}/items/{itemId}`
+         * @param content the {@link com.google.api.services.chromewebstore.v2.model.RollbackItemRequest}
+         * @since 1.13
+         */
+        protected Rollback(java.lang.String name, com.google.api.services.chromewebstore.v2.model.RollbackItemRequest content) {
+          super(Chromewebstore.this, "POST", REST_PATH, content, com.google.api.services.chromewebstore.v2.model.RollbackItemResponse.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+        }
+
+        @Override
+        public Rollback set$Xgafv(java.lang.String $Xgafv) {
+          return (Rollback) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Rollback setAccessToken(java.lang.String accessToken) {
+          return (Rollback) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Rollback setAlt(java.lang.String alt) {
+          return (Rollback) super.setAlt(alt);
+        }
+
+        @Override
+        public Rollback setCallback(java.lang.String callback) {
+          return (Rollback) super.setCallback(callback);
+        }
+
+        @Override
+        public Rollback setFields(java.lang.String fields) {
+          return (Rollback) super.setFields(fields);
+        }
+
+        @Override
+        public Rollback setKey(java.lang.String key) {
+          return (Rollback) super.setKey(key);
+        }
+
+        @Override
+        public Rollback setOauthToken(java.lang.String oauthToken) {
+          return (Rollback) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Rollback setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Rollback) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Rollback setQuotaUser(java.lang.String quotaUser) {
+          return (Rollback) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Rollback setUploadType(java.lang.String uploadType) {
+          return (Rollback) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Rollback setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Rollback) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. Name of the item to rollback in the form
+         * `publishers/{publisherId}/items/{itemId}`
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. Name of the item to rollback in the form `publishers/{publisherId}/items/{itemId}`
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. Name of the item to rollback in the form
+         * `publishers/{publisherId}/items/{itemId}`
+         */
+        public Rollback setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^publishers/[^/]+/items/[^/]+$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public Rollback set(String parameterName, Object value) {
+          return (Rollback) super.set(parameterName, value);
         }
       }
       /**

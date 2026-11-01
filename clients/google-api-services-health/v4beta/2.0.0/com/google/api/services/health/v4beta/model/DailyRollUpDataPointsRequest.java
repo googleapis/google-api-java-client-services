@@ -53,9 +53,9 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   private java.lang.String dataSourceFamily;
 
   /**
-   * Optional. The maximum number of data points to return. If unspecified, at most 90 data points
-   * will be returned. The maximum page size is 10000; values above that will be truncated
-   * accordingly.
+   * Optional. The maximum number of data points to return. If unspecified, at most `90` data points
+   * will be returned. The maximum page size is `90`. For `calories-in-heart-rate-zone`, `heart-
+   * rate`, `active-minutes`, and `total-calories`, the default and maximum page size is `14`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,9 +139,9 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The maximum number of data points to return. If unspecified, at most 90 data points
-   * will be returned. The maximum page size is 10000; values above that will be truncated
-   * accordingly.
+   * Optional. The maximum number of data points to return. If unspecified, at most `90` data points
+   * will be returned. The maximum page size is `90`. For `calories-in-heart-rate-zone`, `heart-
+   * rate`, `active-minutes`, and `total-calories`, the default and maximum page size is `14`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getPageSize() {
@@ -149,9 +149,9 @@ public final class DailyRollUpDataPointsRequest extends com.google.api.client.js
   }
 
   /**
-   * Optional. The maximum number of data points to return. If unspecified, at most 90 data points
-   * will be returned. The maximum page size is 10000; values above that will be truncated
-   * accordingly.
+   * Optional. The maximum number of data points to return. If unspecified, at most `90` data points
+   * will be returned. The maximum page size is `90`. For `calories-in-heart-rate-zone`, `heart-
+   * rate`, `active-minutes`, and `total-calories`, the default and maximum page size is `14`.
    * @param pageSize pageSize or {@code null} for none
    */
   public DailyRollUpDataPointsRequest setPageSize(java.lang.Integer pageSize) {

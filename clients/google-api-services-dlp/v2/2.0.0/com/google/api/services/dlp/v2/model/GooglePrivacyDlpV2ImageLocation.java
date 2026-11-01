@@ -44,6 +44,13 @@ public final class GooglePrivacyDlpV2ImageLocation extends com.google.api.client
   }
 
   /**
+   * The 0-indexed page number or frame index for multi-page image formats.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer pageNumber;
+
+  /**
    * Bounding boxes locating the pixels within the image containing the finding.
    * @return value or {@code null} for none
    */
@@ -57,6 +64,23 @@ public final class GooglePrivacyDlpV2ImageLocation extends com.google.api.client
    */
   public GooglePrivacyDlpV2ImageLocation setBoundingBoxes(java.util.List<GooglePrivacyDlpV2BoundingBox> boundingBoxes) {
     this.boundingBoxes = boundingBoxes;
+    return this;
+  }
+
+  /**
+   * The 0-indexed page number or frame index for multi-page image formats.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getPageNumber() {
+    return pageNumber;
+  }
+
+  /**
+   * The 0-indexed page number or frame index for multi-page image formats.
+   * @param pageNumber pageNumber or {@code null} for none
+   */
+  public GooglePrivacyDlpV2ImageLocation setPageNumber(java.lang.Integer pageNumber) {
+    this.pageNumber = pageNumber;
     return this;
   }
 

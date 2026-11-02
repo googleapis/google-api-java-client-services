@@ -7086,17 +7086,17 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /** Param key. DEPRECATED. User parameter_pair_key instead. */
+            /** Param key. DEPRECATED. Use parameter_pair_key instead. */
             @com.google.api.client.util.Key("filterParams.parameterKey")
             private java.lang.String filterParamsParameterKey;
 
-            /** Param key. DEPRECATED. User parameter_pair_key instead.
+            /** Param key. DEPRECATED. Use parameter_pair_key instead.
              */
             public java.lang.String getFilterParamsParameterKey() {
               return filterParamsParameterKey;
             }
 
-            /** Param key. DEPRECATED. User parameter_pair_key instead. */
+            /** Param key. DEPRECATED. Use parameter_pair_key instead. */
             public List setFilterParamsParameterKey(java.lang.String filterParamsParameterKey) {
               this.filterParamsParameterKey = filterParamsParameterKey;
               return this;
@@ -7150,17 +7150,17 @@ public class Integrations extends com.google.api.client.googleapis.services.json
               return this;
             }
 
-            /** Param value. DEPRECATED. User parameter_pair_value instead. */
+            /** Param value. DEPRECATED. Use parameter_pair_value instead. */
             @com.google.api.client.util.Key("filterParams.parameterValue")
             private java.lang.String filterParamsParameterValue;
 
-            /** Param value. DEPRECATED. User parameter_pair_value instead.
+            /** Param value. DEPRECATED. Use parameter_pair_value instead.
              */
             public java.lang.String getFilterParamsParameterValue() {
               return filterParamsParameterValue;
             }
 
-            /** Param value. DEPRECATED. User parameter_pair_value instead. */
+            /** Param value. DEPRECATED. Use parameter_pair_value instead. */
             public List setFilterParamsParameterValue(java.lang.String filterParamsParameterValue) {
               this.filterParamsParameterValue = filterParamsParameterValue;
               return this;
@@ -14833,17 +14833,17 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                 return this;
               }
 
-              /** Param key. DEPRECATED. User parameter_pair_key instead. */
+              /** Param key. DEPRECATED. Use parameter_pair_key instead. */
               @com.google.api.client.util.Key("filterParams.parameterKey")
               private java.lang.String filterParamsParameterKey;
 
-              /** Param key. DEPRECATED. User parameter_pair_key instead.
+              /** Param key. DEPRECATED. Use parameter_pair_key instead.
                */
               public java.lang.String getFilterParamsParameterKey() {
                 return filterParamsParameterKey;
               }
 
-              /** Param key. DEPRECATED. User parameter_pair_key instead. */
+              /** Param key. DEPRECATED. Use parameter_pair_key instead. */
               public List setFilterParamsParameterKey(java.lang.String filterParamsParameterKey) {
                 this.filterParamsParameterKey = filterParamsParameterKey;
                 return this;
@@ -14897,17 +14897,17 @@ public class Integrations extends com.google.api.client.googleapis.services.json
                 return this;
               }
 
-              /** Param value. DEPRECATED. User parameter_pair_value instead. */
+              /** Param value. DEPRECATED. Use parameter_pair_value instead. */
               @com.google.api.client.util.Key("filterParams.parameterValue")
               private java.lang.String filterParamsParameterValue;
 
-              /** Param value. DEPRECATED. User parameter_pair_value instead.
+              /** Param value. DEPRECATED. Use parameter_pair_value instead.
                */
               public java.lang.String getFilterParamsParameterValue() {
                 return filterParamsParameterValue;
               }
 
-              /** Param value. DEPRECATED. User parameter_pair_value instead. */
+              /** Param value. DEPRECATED. Use parameter_pair_value instead. */
               public List setFilterParamsParameterValue(java.lang.String filterParamsParameterValue) {
                 this.filterParamsParameterValue = filterParamsParameterValue;
                 return this;

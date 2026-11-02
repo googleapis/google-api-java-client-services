@@ -149,8 +149,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
    * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, and the
-   * `LbEdgeExtension` resources.
+   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, the
+   * `LbEdgeExtension`, and the `CdnEdgeExtension` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -436,8 +436,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
    * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, and the
-   * `LbEdgeExtension` resources.
+   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, the
+   * `LbEdgeExtension`, and the `CdnEdgeExtension` resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -455,8 +455,8 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
    * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, and the
-   * `LbEdgeExtension` resources.
+   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, the
+   * `LbEdgeExtension`, and the `CdnEdgeExtension` resources.
    * @param service service or {@code null} for none
    */
   public ExtensionChainExtension setService(java.lang.String service) {

@@ -17,8 +17,8 @@
 package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * ServiceLbPolicy holds global load balancing and traffic distribution configuration that can be
- * applied to a BackendService.
+ * ServiceLbPolicy holds load balancing and traffic distribution configuration that can be applied
+ * to a global or regional BackendService.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

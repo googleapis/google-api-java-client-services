@@ -216,8 +216,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    *
    * Certificate Manager Certificates accepted formats are:        - //certificatemanager.googleapis
    * .com/projects/{project}/locations/{location}/certificates/{resourceName}.    - https://certific
-   * atemanager.googleapis.com/v1alpha1/projects/{project}/locations/{location}/certificates/{resour
-   * ceName}.
+   * atemanager.{universeDomain}/v1alpha1/projects/{project}/locations/{location}/certificates/{reso
+   * urceName}.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -671,8 +671,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    *
    * Certificate Manager Certificates accepted formats are:        - //certificatemanager.googleapis
    * .com/projects/{project}/locations/{location}/certificates/{resourceName}.    - https://certific
-   * atemanager.googleapis.com/v1alpha1/projects/{project}/locations/{location}/certificates/{resour
-   * ceName}.
+   * atemanager.{universeDomain}/v1alpha1/projects/{project}/locations/{location}/certificates/{reso
+   * urceName}.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getSslCertificates() {
@@ -695,8 +695,8 @@ public final class TargetHttpsProxy extends com.google.api.client.json.GenericJs
    *
    * Certificate Manager Certificates accepted formats are:        - //certificatemanager.googleapis
    * .com/projects/{project}/locations/{location}/certificates/{resourceName}.    - https://certific
-   * atemanager.googleapis.com/v1alpha1/projects/{project}/locations/{location}/certificates/{resour
-   * ceName}.
+   * atemanager.{universeDomain}/v1alpha1/projects/{project}/locations/{location}/certificates/{reso
+   * urceName}.
    * @param sslCertificates sslCertificates or {@code null} for none
    */
   public TargetHttpsProxy setSslCertificates(java.util.List<java.lang.String> sslCertificates) {

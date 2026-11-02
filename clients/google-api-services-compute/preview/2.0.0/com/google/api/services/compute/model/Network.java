@@ -148,6 +148,14 @@ public final class Network extends com.google.api.client.json.GenericJson {
   private java.lang.String networkFirewallPolicyEnforcementOrder;
 
   /**
+   * Output only. [Output Only] List of server-defined fully-qualified URLs of regional network
+   * location bindings in this VPC network.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> networkLocationBindings;
+
+  /**
    * A full or partial URL of the network profile to apply to this network. This field can be set
    * only at resource creation time. For example, the following are valid URLs:         - https://ww
    * w.googleapis.com/compute/{api_version}/projects/{project_id}/global/networkProfiles/{network_pr
@@ -467,6 +475,25 @@ public final class Network extends com.google.api.client.json.GenericJson {
    */
   public Network setNetworkFirewallPolicyEnforcementOrder(java.lang.String networkFirewallPolicyEnforcementOrder) {
     this.networkFirewallPolicyEnforcementOrder = networkFirewallPolicyEnforcementOrder;
+    return this;
+  }
+
+  /**
+   * Output only. [Output Only] List of server-defined fully-qualified URLs of regional network
+   * location bindings in this VPC network.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getNetworkLocationBindings() {
+    return networkLocationBindings;
+  }
+
+  /**
+   * Output only. [Output Only] List of server-defined fully-qualified URLs of regional network
+   * location bindings in this VPC network.
+   * @param networkLocationBindings networkLocationBindings or {@code null} for none
+   */
+  public Network setNetworkLocationBindings(java.util.List<java.lang.String> networkLocationBindings) {
+    this.networkLocationBindings = networkLocationBindings;
     return this;
   }
 

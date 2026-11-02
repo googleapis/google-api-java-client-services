@@ -44,7 +44,8 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
   private ConfidentialParavisorConfig confidentialParavisorConfig;
 
   /**
-   * Defines whether the instance should have confidential compute enabled.
+   * Defines whether the instance should have confidential compute enabled. When enabled, the
+   * technology used defaults to  AMD SEV unless confidentialInstanceType is specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +86,8 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
   }
 
   /**
-   * Defines whether the instance should have confidential compute enabled.
+   * Defines whether the instance should have confidential compute enabled. When enabled, the
+   * technology used defaults to  AMD SEV unless confidentialInstanceType is specified.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnableConfidentialCompute() {
@@ -93,7 +95,8 @@ public final class ConfidentialInstanceConfig extends com.google.api.client.json
   }
 
   /**
-   * Defines whether the instance should have confidential compute enabled.
+   * Defines whether the instance should have confidential compute enabled. When enabled, the
+   * technology used defaults to  AMD SEV unless confidentialInstanceType is specified.
    * @param enableConfidentialCompute enableConfidentialCompute or {@code null} for none
    */
   public ConfidentialInstanceConfig setEnableConfidentialCompute(java.lang.Boolean enableConfidentialCompute) {

@@ -54,7 +54,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
   private java.lang.String description;
 
   /**
-   * Required. Human-readable display name of the skill. Maximum length is 128 characters.
+   * Optional. Human-readable display name of the skill. Maximum length is 128 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -206,7 +206,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Human-readable display name of the skill. Maximum length is 128 characters.
+   * Optional. Human-readable display name of the skill. Maximum length is 128 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -214,7 +214,7 @@ public final class Skill extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Human-readable display name of the skill. Maximum length is 128 characters.
+   * Optional. Human-readable display name of the skill. Maximum length is 128 characters.
    * @param displayName displayName or {@code null} for none
    */
   public Skill setDisplayName(java.lang.String displayName) {

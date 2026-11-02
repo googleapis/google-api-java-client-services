@@ -30,18 +30,21 @@ package com.google.api.services.compute.model;
 public final class ConfidentialParavisorConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Defines the type of TPM to use for the confidential instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String confidentialTpmType;
 
   /**
+   * Defines the IRQ mode to use for the confidential instance.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sevSnpIrqMode;
 
   /**
+   * Defines the type of TPM to use for the confidential instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getConfidentialTpmType() {
@@ -49,6 +52,7 @@ public final class ConfidentialParavisorConfig extends com.google.api.client.jso
   }
 
   /**
+   * Defines the type of TPM to use for the confidential instance.
    * @param confidentialTpmType confidentialTpmType or {@code null} for none
    */
   public ConfidentialParavisorConfig setConfidentialTpmType(java.lang.String confidentialTpmType) {
@@ -57,6 +61,7 @@ public final class ConfidentialParavisorConfig extends com.google.api.client.jso
   }
 
   /**
+   * Defines the IRQ mode to use for the confidential instance.
    * @return value or {@code null} for none
    */
   public java.lang.String getSevSnpIrqMode() {
@@ -64,6 +69,7 @@ public final class ConfidentialParavisorConfig extends com.google.api.client.jso
   }
 
   /**
+   * Defines the IRQ mode to use for the confidential instance.
    * @param sevSnpIrqMode sevSnpIrqMode or {@code null} for none
    */
   public ConfidentialParavisorConfig setSevSnpIrqMode(java.lang.String sevSnpIrqMode) {

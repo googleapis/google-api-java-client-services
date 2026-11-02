@@ -55,6 +55,20 @@ public final class InstanceFlexibilityPolicyInstanceSelection extends com.google
   private java.util.List<java.lang.String> machineTypes;
 
   /**
+   * Metadata key/value pairs assigned to instances created from this selection. Key/value pairs
+   * specified here override keys specified in the instance properties on a key-by-key basis.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<MetadataOverrides> metadataOverrides;
+
+  static {
+    // hack to force ProGuard to consider MetadataOverrides used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(MetadataOverrides.class);
+  }
+
+  /**
    * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
    * The value may be {@code null}.
    */
@@ -110,6 +124,25 @@ public final class InstanceFlexibilityPolicyInstanceSelection extends com.google
   }
 
   /**
+   * Metadata key/value pairs assigned to instances created from this selection. Key/value pairs
+   * specified here override keys specified in the instance properties on a key-by-key basis.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<MetadataOverrides> getMetadataOverrides() {
+    return metadataOverrides;
+  }
+
+  /**
+   * Metadata key/value pairs assigned to instances created from this selection. Key/value pairs
+   * specified here override keys specified in the instance properties on a key-by-key basis.
+   * @param metadataOverrides metadataOverrides or {@code null} for none
+   */
+  public InstanceFlexibilityPolicyInstanceSelection setMetadataOverrides(java.util.List<MetadataOverrides> metadataOverrides) {
+    this.metadataOverrides = metadataOverrides;
+    return this;
+  }
+
+  /**
    * Name of the minimum CPU platform to be used by this instance selection. e.g. 'Intel Ice Lake'.
    * @return value or {@code null} for none
    */
@@ -153,6 +186,86 @@ public final class InstanceFlexibilityPolicyInstanceSelection extends com.google
   @Override
   public InstanceFlexibilityPolicyInstanceSelection clone() {
     return (InstanceFlexibilityPolicyInstanceSelection) super.clone();
+  }
+
+  /**
+   * Metadata
+   */
+  public static final class MetadataOverrides extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be
+     * less than 128 bytes in length. This is reflected as part of a URL in the metadata server.
+     * Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the
+     * project.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String key;
+
+    /**
+     * Value for the metadata entry. These are free-form strings, and only have meaning as interpreted
+     * by the image running in the instance. The only restriction placed on values is that their size
+     * must be less than or equal to 262144 bytes (256 KiB).
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String value;
+
+    /**
+     * Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be
+     * less than 128 bytes in length. This is reflected as part of a URL in the metadata server.
+     * Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the
+     * project.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getKey() {
+      return key;
+    }
+
+    /**
+     * Key for the metadata entry. Keys must conform to the following regexp: [a-zA-Z0-9-_]+, and be
+     * less than 128 bytes in length. This is reflected as part of a URL in the metadata server.
+     * Additionally, to avoid ambiguity, keys must not conflict with any other metadata keys for the
+     * project.
+     * @param key key or {@code null} for none
+     */
+    public MetadataOverrides setKey(java.lang.String key) {
+      this.key = key;
+      return this;
+    }
+
+    /**
+     * Value for the metadata entry. These are free-form strings, and only have meaning as interpreted
+     * by the image running in the instance. The only restriction placed on values is that their size
+     * must be less than or equal to 262144 bytes (256 KiB).
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getValue() {
+      return value;
+    }
+
+    /**
+     * Value for the metadata entry. These are free-form strings, and only have meaning as interpreted
+     * by the image running in the instance. The only restriction placed on values is that their size
+     * must be less than or equal to 262144 bytes (256 KiB).
+     * @param value value or {@code null} for none
+     */
+    public MetadataOverrides setValue(java.lang.String value) {
+      this.value = value;
+      return this;
+    }
+
+    @Override
+    public MetadataOverrides set(String fieldName, Object value) {
+      return (MetadataOverrides) super.set(fieldName, value);
+    }
+
+    @Override
+    public MetadataOverrides clone() {
+      return (MetadataOverrides) super.clone();
+    }
+
   }
 
 }

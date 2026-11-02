@@ -33402,6 +33402,2786 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the FolderRolloutPlans collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.FolderRolloutPlans.List request = compute.folderRolloutPlans().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public FolderRolloutPlans folderRolloutPlans() {
+    return new FolderRolloutPlans();
+  }
+
+  /**
+   * The "folderRolloutPlans" collection of methods.
+   */
+  public class FolderRolloutPlans {
+
+    /**
+     * Deletes a FolderRolloutPlan.
+     *
+     * Create a request for the method "folderRolloutPlans.delete".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param folder Folder ID for this request.
+     * @param rolloutPlan Name of the FolderRolloutPlan resource to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String folder, java.lang.String rolloutPlan) throws java.io.IOException {
+      Delete result = new Delete(folder, rolloutPlan);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rolloutPlans/{rolloutPlan}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{0,20}");
+
+      private final java.util.regex.Pattern ROLLOUT_PLAN_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Deletes a FolderRolloutPlan.
+       *
+       * Create a request for the method "folderRolloutPlans.delete".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Folder ID for this request.
+       * @param rolloutPlan Name of the FolderRolloutPlan resource to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String folder, java.lang.String rolloutPlan) {
+        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.rolloutPlan = com.google.api.client.util.Preconditions.checkNotNull(rolloutPlan, "Required parameter rolloutPlan must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PLAN_PATTERN.matcher(rolloutPlan).matches(),
+              "Parameter rolloutPlan must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Folder ID for this request. */
+      public Delete setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Name of the FolderRolloutPlan resource to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String rolloutPlan;
+
+      /** Name of the FolderRolloutPlan resource to delete.
+       */
+      public java.lang.String getRolloutPlan() {
+        return rolloutPlan;
+      }
+
+      /** Name of the FolderRolloutPlan resource to delete. */
+      public Delete setRolloutPlan(java.lang.String rolloutPlan) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PLAN_PATTERN.matcher(rolloutPlan).matches(),
+              "Parameter rolloutPlan must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rolloutPlan = rolloutPlan;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets details of a single folder-scoped RolloutPlan.
+     *
+     * Create a request for the method "folderRolloutPlans.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param folder Folder ID for this request.
+     * @param rolloutPlan Name of the persistent rollout plan to return.
+     * @return the request
+     */
+    public Get get(java.lang.String folder, java.lang.String rolloutPlan) throws java.io.IOException {
+      Get result = new Get(folder, rolloutPlan);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.RolloutPlan> {
+
+      private static final String REST_PATH = "{+folder}/global/rolloutPlans/{rolloutPlan}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{0,20}");
+
+      private final java.util.regex.Pattern ROLLOUT_PLAN_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Gets details of a single folder-scoped RolloutPlan.
+       *
+       * Create a request for the method "folderRolloutPlans.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Folder ID for this request.
+       * @param rolloutPlan Name of the persistent rollout plan to return.
+       * @since 1.13
+       */
+      protected Get(java.lang.String folder, java.lang.String rolloutPlan) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.RolloutPlan.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.rolloutPlan = com.google.api.client.util.Preconditions.checkNotNull(rolloutPlan, "Required parameter rolloutPlan must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PLAN_PATTERN.matcher(rolloutPlan).matches(),
+              "Parameter rolloutPlan must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Folder ID for this request. */
+      public Get setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Name of the persistent rollout plan to return. */
+      @com.google.api.client.util.Key
+      private java.lang.String rolloutPlan;
+
+      /** Name of the persistent rollout plan to return.
+       */
+      public java.lang.String getRolloutPlan() {
+        return rolloutPlan;
+      }
+
+      /** Name of the persistent rollout plan to return. */
+      public Get setRolloutPlan(java.lang.String rolloutPlan) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PLAN_PATTERN.matcher(rolloutPlan).matches(),
+              "Parameter rolloutPlan must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rolloutPlan = rolloutPlan;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Creates a new RolloutPlan in a given folder and location.
+     *
+     * Create a request for the method "folderRolloutPlans.insert".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Insert#execute()} method to invoke the remote operation.
+     *
+     * @param folder Folder ID for this request.
+     * @param content the {@link com.google.api.services.compute.model.RolloutPlan}
+     * @return the request
+     */
+    public Insert insert(java.lang.String folder, com.google.api.services.compute.model.RolloutPlan content) throws java.io.IOException {
+      Insert result = new Insert(folder, content);
+      initialize(result);
+      return result;
+    }
+
+    public class Insert extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rolloutPlans";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{0,20}");
+
+      /**
+       * Creates a new RolloutPlan in a given folder and location.
+       *
+       * Create a request for the method "folderRolloutPlans.insert".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Insert#execute()} method to invoke the remote operation. <p> {@link
+       * Insert#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Folder ID for this request.
+       * @param content the {@link com.google.api.services.compute.model.RolloutPlan}
+       * @since 1.13
+       */
+      protected Insert(java.lang.String folder, com.google.api.services.compute.model.RolloutPlan content) {
+        super(Compute.this, "POST", REST_PATH, content, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Insert set$Xgafv(java.lang.String $Xgafv) {
+        return (Insert) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Insert setAccessToken(java.lang.String accessToken) {
+        return (Insert) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Insert setAlt(java.lang.String alt) {
+        return (Insert) super.setAlt(alt);
+      }
+
+      @Override
+      public Insert setCallback(java.lang.String callback) {
+        return (Insert) super.setCallback(callback);
+      }
+
+      @Override
+      public Insert setFields(java.lang.String fields) {
+        return (Insert) super.setFields(fields);
+      }
+
+      @Override
+      public Insert setKey(java.lang.String key) {
+        return (Insert) super.setKey(key);
+      }
+
+      @Override
+      public Insert setOauthToken(java.lang.String oauthToken) {
+        return (Insert) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Insert setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Insert) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Insert setQuotaUser(java.lang.String quotaUser) {
+        return (Insert) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Insert setUploadType(java.lang.String uploadType) {
+        return (Insert) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Insert setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Insert) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Insert setUserIp(java.lang.String userIp) {
+        return (Insert) super.setUserIp(userIp);
+      }
+
+      /** Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Folder ID for this request. */
+      public Insert setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Insert setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Insert set(String parameterName, Object value) {
+        return (Insert) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists FolderRolloutPlans in a given folder and location.
+     *
+     * Create a request for the method "folderRolloutPlans.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param folder Folder ID for this request.
+     * @return the request
+     */
+    public List list(java.lang.String folder) throws java.io.IOException {
+      List result = new List(folder);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.RolloutPlansListResponse> {
+
+      private static final String REST_PATH = "{+folder}/global/rolloutPlans";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{0,20}");
+
+      /**
+       * Lists FolderRolloutPlans in a given folder and location.
+       *
+       * Create a request for the method "folderRolloutPlans.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Folder ID for this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String folder) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.RolloutPlansListResponse.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Folder ID for this request. */
+      public List setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. Most Compute resources support
+     two types of filter expressions: expressions that support regular expressions and expressions that
+     follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in
+     one request.
+
+     If you want to use AIP-160, your expression must specify the field name, an operator, and the value
+     that you want to use for filtering. The value must be a string, a number, or a boolean. The
+     operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     `example-instance` by specifying `name != example-instance`.
+
+     The `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ```
+
+     You can also filter nested fields. For example, you could specify `scheduling.automaticRestart =
+     false` to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based onresource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default,
+     each expression is an `AND` expression. However, you can include `AND` and `OR` expressions
+     explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
+     AND (scheduling.automaticRestart = true) ```
+
+     If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against
+     a single un-parenthesized expression with or without quotes or against multiple parenthesized
+     expressions. Examples:
+
+     `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted
+     literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+
+     The literal value is interpreted as a regular expression using GoogleRE2 library syntax. The
+     literal value must match the entire field.
+
+     For example, to filter for instances that do not end with name "instance", you would use `name ne
+     .*instance`.
+
+     You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
+   * An accessor for creating requests from the FolderRollouts collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.FolderRollouts.List request = compute.folderRollouts().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public FolderRollouts folderRollouts() {
+    return new FolderRollouts();
+  }
+
+  /**
+   * The "folderRollouts" collection of methods.
+   */
+  public class FolderRollouts {
+
+    /**
+     * Advances a Rollout to the next wave, or completes it if no waves remain.
+     *
+     * Create a request for the method "folderRollouts.advance".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Advance#execute()} method to invoke the remote operation.
+     *
+     * @param folder Required. Folder ID for this request.
+     * @param rollout Required. Name of the Rollout resource to advance.
+     * @return the request
+     */
+    public Advance advance(java.lang.String folder, java.lang.String rollout) throws java.io.IOException {
+      Advance result = new Advance(folder, rollout);
+      initialize(result);
+      return result;
+    }
+
+    public class Advance extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts/{rollout}/advance";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{1,19}");
+
+      private final java.util.regex.Pattern ROLLOUT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Advances a Rollout to the next wave, or completes it if no waves remain.
+       *
+       * Create a request for the method "folderRollouts.advance".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Advance#execute()} method to invoke the remote operation. <p>
+       * {@link
+       * Advance#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Required. Folder ID for this request.
+       * @param rollout Required. Name of the Rollout resource to advance.
+       * @since 1.13
+       */
+      protected Advance(java.lang.String folder, java.lang.String rollout) {
+        super(Compute.this, "POST", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Advance set$Xgafv(java.lang.String $Xgafv) {
+        return (Advance) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Advance setAccessToken(java.lang.String accessToken) {
+        return (Advance) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Advance setAlt(java.lang.String alt) {
+        return (Advance) super.setAlt(alt);
+      }
+
+      @Override
+      public Advance setCallback(java.lang.String callback) {
+        return (Advance) super.setCallback(callback);
+      }
+
+      @Override
+      public Advance setFields(java.lang.String fields) {
+        return (Advance) super.setFields(fields);
+      }
+
+      @Override
+      public Advance setKey(java.lang.String key) {
+        return (Advance) super.setKey(key);
+      }
+
+      @Override
+      public Advance setOauthToken(java.lang.String oauthToken) {
+        return (Advance) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Advance setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Advance) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Advance setQuotaUser(java.lang.String quotaUser) {
+        return (Advance) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Advance setUploadType(java.lang.String uploadType) {
+        return (Advance) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Advance setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Advance) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Advance setUserIp(java.lang.String userIp) {
+        return (Advance) super.setUserIp(userIp);
+      }
+
+      /** Required. Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Required. Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Required. Folder ID for this request. */
+      public Advance setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Required. Name of the Rollout resource to advance. */
+      @com.google.api.client.util.Key
+      private java.lang.String rollout;
+
+      /** Required. Name of the Rollout resource to advance.
+       */
+      public java.lang.String getRollout() {
+        return rollout;
+      }
+
+      /** Required. Name of the Rollout resource to advance. */
+      public Advance setRollout(java.lang.String rollout) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rollout = rollout;
+        return this;
+      }
+
+      /** Required. Wave number of the current wave. */
+      @com.google.api.client.util.Key
+      private java.lang.Long currentWaveNumber;
+
+      /** Required. Wave number of the current wave.
+       */
+      public java.lang.Long getCurrentWaveNumber() {
+        return currentWaveNumber;
+      }
+
+      /** Required. Wave number of the current wave. */
+      public Advance setCurrentWaveNumber(java.lang.Long currentWaveNumber) {
+        this.currentWaveNumber = currentWaveNumber;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Advance setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Advance set(String parameterName, Object value) {
+        return (Advance) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Cancels a Rollout.
+     *
+     * Create a request for the method "folderRollouts.cancel".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Cancel#execute()} method to invoke the remote operation.
+     *
+     * @param folder Required. Folder ID for this request.
+     * @param rollout Name of the Rollout resource to cancel.
+     * @return the request
+     */
+    public Cancel cancel(java.lang.String folder, java.lang.String rollout) throws java.io.IOException {
+      Cancel result = new Cancel(folder, rollout);
+      initialize(result);
+      return result;
+    }
+
+    public class Cancel extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts/{rollout}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{1,19}");
+
+      private final java.util.regex.Pattern ROLLOUT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Cancels a Rollout.
+       *
+       * Create a request for the method "folderRollouts.cancel".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Cancel#execute()} method to invoke the remote operation. <p> {@link
+       * Cancel#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Required. Folder ID for this request.
+       * @param rollout Name of the Rollout resource to cancel.
+       * @since 1.13
+       */
+      protected Cancel(java.lang.String folder, java.lang.String rollout) {
+        super(Compute.this, "PATCH", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Cancel set$Xgafv(java.lang.String $Xgafv) {
+        return (Cancel) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Cancel setAccessToken(java.lang.String accessToken) {
+        return (Cancel) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Cancel setAlt(java.lang.String alt) {
+        return (Cancel) super.setAlt(alt);
+      }
+
+      @Override
+      public Cancel setCallback(java.lang.String callback) {
+        return (Cancel) super.setCallback(callback);
+      }
+
+      @Override
+      public Cancel setFields(java.lang.String fields) {
+        return (Cancel) super.setFields(fields);
+      }
+
+      @Override
+      public Cancel setKey(java.lang.String key) {
+        return (Cancel) super.setKey(key);
+      }
+
+      @Override
+      public Cancel setOauthToken(java.lang.String oauthToken) {
+        return (Cancel) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Cancel setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Cancel) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Cancel setQuotaUser(java.lang.String quotaUser) {
+        return (Cancel) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Cancel setUploadType(java.lang.String uploadType) {
+        return (Cancel) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Cancel setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Cancel) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Cancel setUserIp(java.lang.String userIp) {
+        return (Cancel) super.setUserIp(userIp);
+      }
+
+      /** Required. Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Required. Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Required. Folder ID for this request. */
+      public Cancel setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Name of the Rollout resource to cancel. */
+      @com.google.api.client.util.Key
+      private java.lang.String rollout;
+
+      /** Name of the Rollout resource to cancel.
+       */
+      public java.lang.String getRollout() {
+        return rollout;
+      }
+
+      /** Name of the Rollout resource to cancel. */
+      public Cancel setRollout(java.lang.String rollout) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rollout = rollout;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Cancel setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      /**
+       * Optional. If true, then the ongoing rollout must be rolled back. Else, just cancel the
+       * rollout without taking any further actions. Note that products must support at least one of
+       * these options, however, it does not need to support both.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Boolean rollback;
+
+      /** Optional. If true, then the ongoing rollout must be rolled back. Else, just cancel the rollout
+     without taking any further actions. Note that products must support at least one of these options,
+     however, it does not need to support both.
+       */
+      public java.lang.Boolean getRollback() {
+        return rollback;
+      }
+
+      /**
+       * Optional. If true, then the ongoing rollout must be rolled back. Else, just cancel the
+       * rollout without taking any further actions. Note that products must support at least one of
+       * these options, however, it does not need to support both.
+       */
+      public Cancel setRollback(java.lang.Boolean rollback) {
+        this.rollback = rollback;
+        return this;
+      }
+
+      @Override
+      public Cancel set(String parameterName, Object value) {
+        return (Cancel) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Deletes a Rollout.
+     *
+     * Create a request for the method "folderRollouts.delete".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+     *
+     * @param folder Required. Folder ID for this request.
+     * @param rollout Name of the Rollout resource to delete.
+     * @return the request
+     */
+    public Delete delete(java.lang.String folder, java.lang.String rollout) throws java.io.IOException {
+      Delete result = new Delete(folder, rollout);
+      initialize(result);
+      return result;
+    }
+
+    public class Delete extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts/{rollout}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{1,19}");
+
+      private final java.util.regex.Pattern ROLLOUT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Deletes a Rollout.
+       *
+       * Create a request for the method "folderRollouts.delete".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Delete#execute()} method to invoke the remote operation. <p> {@link
+       * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Required. Folder ID for this request.
+       * @param rollout Name of the Rollout resource to delete.
+       * @since 1.13
+       */
+      protected Delete(java.lang.String folder, java.lang.String rollout) {
+        super(Compute.this, "DELETE", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Delete set$Xgafv(java.lang.String $Xgafv) {
+        return (Delete) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Delete setAccessToken(java.lang.String accessToken) {
+        return (Delete) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Delete setAlt(java.lang.String alt) {
+        return (Delete) super.setAlt(alt);
+      }
+
+      @Override
+      public Delete setCallback(java.lang.String callback) {
+        return (Delete) super.setCallback(callback);
+      }
+
+      @Override
+      public Delete setFields(java.lang.String fields) {
+        return (Delete) super.setFields(fields);
+      }
+
+      @Override
+      public Delete setKey(java.lang.String key) {
+        return (Delete) super.setKey(key);
+      }
+
+      @Override
+      public Delete setOauthToken(java.lang.String oauthToken) {
+        return (Delete) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Delete) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Delete setQuotaUser(java.lang.String quotaUser) {
+        return (Delete) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Delete setUploadType(java.lang.String uploadType) {
+        return (Delete) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Delete) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Delete setUserIp(java.lang.String userIp) {
+        return (Delete) super.setUserIp(userIp);
+      }
+
+      /** Required. Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Required. Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Required. Folder ID for this request. */
+      public Delete setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Name of the Rollout resource to delete. */
+      @com.google.api.client.util.Key
+      private java.lang.String rollout;
+
+      /** Name of the Rollout resource to delete.
+       */
+      public java.lang.String getRollout() {
+        return rollout;
+      }
+
+      /** Name of the Rollout resource to delete. */
+      public Delete setRollout(java.lang.String rollout) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rollout = rollout;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Delete setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Delete set(String parameterName, Object value) {
+        return (Delete) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Gets details of a single folder-scoped Rollout.
+     *
+     * Create a request for the method "folderRollouts.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param folder Folder ID for this request.
+     * @param rollout Name of the persistent rollout to return.
+     * @return the request
+     */
+    public Get get(java.lang.String folder, java.lang.String rollout) throws java.io.IOException {
+      Get result = new Get(folder, rollout);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.Rollout> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts/{rollout}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{0,20}");
+
+      private final java.util.regex.Pattern ROLLOUT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Gets details of a single folder-scoped Rollout.
+       *
+       * Create a request for the method "folderRollouts.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Folder ID for this request.
+       * @param rollout Name of the persistent rollout to return.
+       * @since 1.13
+       */
+      protected Get(java.lang.String folder, java.lang.String rollout) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.Rollout.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Folder ID for this request. */
+      public Get setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{0,20}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Name of the persistent rollout to return. */
+      @com.google.api.client.util.Key
+      private java.lang.String rollout;
+
+      /** Name of the persistent rollout to return.
+       */
+      public java.lang.String getRollout() {
+        return rollout;
+      }
+
+      /** Name of the persistent rollout to return. */
+      public Get setRollout(java.lang.String rollout) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rollout = rollout;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists Rollouts in a given folder and location.
+     *
+     * Create a request for the method "folderRollouts.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param folder Required. Folder ID for this request.
+     * @return the request
+     */
+    public List list(java.lang.String folder) throws java.io.IOException {
+      List result = new List(folder);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.FolderRolloutsListResponse> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{1,19}");
+
+      /**
+       * Lists Rollouts in a given folder and location.
+       *
+       * Create a request for the method "folderRollouts.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Required. Folder ID for this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String folder) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.FolderRolloutsListResponse.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Required. Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Required. Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Required. Folder ID for this request. */
+      public List setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. Most Compute resources support
+     two types of filter expressions: expressions that support regular expressions and expressions that
+     follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in
+     one request.
+
+     If you want to use AIP-160, your expression must specify the field name, an operator, and the value
+     that you want to use for filtering. The value must be a string, a number, or a boolean. The
+     operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     `example-instance` by specifying `name != example-instance`.
+
+     The `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ```
+
+     You can also filter nested fields. For example, you could specify `scheduling.automaticRestart =
+     false` to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based onresource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default,
+     each expression is an `AND` expression. However, you can include `AND` and `OR` expressions
+     explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
+     AND (scheduling.automaticRestart = true) ```
+
+     If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against
+     a single un-parenthesized expression with or without quotes or against multiple parenthesized
+     expressions. Examples:
+
+     `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted
+     literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+
+     The literal value is interpreted as a regular expression using GoogleRE2 library syntax. The
+     literal value must match the entire field.
+
+     For example, to filter for instances that do not end with name "instance", you would use `name ne
+     .*instance`.
+
+     You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Pauses a Rollout.
+     *
+     * Create a request for the method "folderRollouts.pause".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
+     *
+     * @param folder Required. Folder ID for this request.
+     * @param rollout Required. Name of the Rollout resource to pause.
+     * @return the request
+     */
+    public Pause pause(java.lang.String folder, java.lang.String rollout) throws java.io.IOException {
+      Pause result = new Pause(folder, rollout);
+      initialize(result);
+      return result;
+    }
+
+    public class Pause extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts/{rollout}/pause";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{1,19}");
+
+      private final java.util.regex.Pattern ROLLOUT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Pauses a Rollout.
+       *
+       * Create a request for the method "folderRollouts.pause".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
+       * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Required. Folder ID for this request.
+       * @param rollout Required. Name of the Rollout resource to pause.
+       * @since 1.13
+       */
+      protected Pause(java.lang.String folder, java.lang.String rollout) {
+        super(Compute.this, "POST", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Pause set$Xgafv(java.lang.String $Xgafv) {
+        return (Pause) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Pause setAccessToken(java.lang.String accessToken) {
+        return (Pause) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Pause setAlt(java.lang.String alt) {
+        return (Pause) super.setAlt(alt);
+      }
+
+      @Override
+      public Pause setCallback(java.lang.String callback) {
+        return (Pause) super.setCallback(callback);
+      }
+
+      @Override
+      public Pause setFields(java.lang.String fields) {
+        return (Pause) super.setFields(fields);
+      }
+
+      @Override
+      public Pause setKey(java.lang.String key) {
+        return (Pause) super.setKey(key);
+      }
+
+      @Override
+      public Pause setOauthToken(java.lang.String oauthToken) {
+        return (Pause) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Pause) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Pause setQuotaUser(java.lang.String quotaUser) {
+        return (Pause) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Pause setUploadType(java.lang.String uploadType) {
+        return (Pause) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Pause setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Pause) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Pause setUserIp(java.lang.String userIp) {
+        return (Pause) super.setUserIp(userIp);
+      }
+
+      /** Required. Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Required. Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Required. Folder ID for this request. */
+      public Pause setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Required. Name of the Rollout resource to pause. */
+      @com.google.api.client.util.Key
+      private java.lang.String rollout;
+
+      /** Required. Name of the Rollout resource to pause.
+       */
+      public java.lang.String getRollout() {
+        return rollout;
+      }
+
+      /** Required. Name of the Rollout resource to pause. */
+      public Pause setRollout(java.lang.String rollout) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rollout = rollout;
+        return this;
+      }
+
+      /**
+       * The etag of the Rollout. If this is provided, the request will only succeed if the etag
+       * matches the current etag of the Rollout.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String etag;
+
+      /** The etag of the Rollout. If this is provided, the request will only succeed if the etag matches the
+     current etag of the Rollout.
+       */
+      public java.lang.String getEtag() {
+        return etag;
+      }
+
+      /**
+       * The etag of the Rollout. If this is provided, the request will only succeed if the etag
+       * matches the current etag of the Rollout.
+       */
+      public Pause setEtag(java.lang.String etag) {
+        this.etag = etag;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Pause setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Pause set(String parameterName, Object value) {
+        return (Pause) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Resumes a Rollout.
+     *
+     * Create a request for the method "folderRollouts.resume".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Resume#execute()} method to invoke the remote operation.
+     *
+     * @param folder Required. Folder ID for this request.
+     * @param rollout Required. Name of the Rollout resource to resume.
+     * @return the request
+     */
+    public Resume resume(java.lang.String folder, java.lang.String rollout) throws java.io.IOException {
+      Resume result = new Resume(folder, rollout);
+      initialize(result);
+      return result;
+    }
+
+    public class Resume extends ComputeRequest<com.google.api.services.compute.model.Operation> {
+
+      private static final String REST_PATH = "{+folder}/global/rollouts/{rollout}/resume";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern FOLDER_PATTERN =
+          java.util.regex.Pattern.compile("folders/[0-9]{1,19}");
+
+      private final java.util.regex.Pattern ROLLOUT_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Resumes a Rollout.
+       *
+       * Create a request for the method "folderRollouts.resume".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Resume#execute()} method to invoke the remote operation. <p> {@link
+       * Resume#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+       * be called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param folder Required. Folder ID for this request.
+       * @param rollout Required. Name of the Rollout resource to resume.
+       * @since 1.13
+       */
+      protected Resume(java.lang.String folder, java.lang.String rollout) {
+        super(Compute.this, "POST", REST_PATH, null, com.google.api.services.compute.model.Operation.class);
+        this.folder = com.google.api.client.util.Preconditions.checkNotNull(folder, "Required parameter folder must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.rollout = com.google.api.client.util.Preconditions.checkNotNull(rollout, "Required parameter rollout must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public Resume set$Xgafv(java.lang.String $Xgafv) {
+        return (Resume) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Resume setAccessToken(java.lang.String accessToken) {
+        return (Resume) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Resume setAlt(java.lang.String alt) {
+        return (Resume) super.setAlt(alt);
+      }
+
+      @Override
+      public Resume setCallback(java.lang.String callback) {
+        return (Resume) super.setCallback(callback);
+      }
+
+      @Override
+      public Resume setFields(java.lang.String fields) {
+        return (Resume) super.setFields(fields);
+      }
+
+      @Override
+      public Resume setKey(java.lang.String key) {
+        return (Resume) super.setKey(key);
+      }
+
+      @Override
+      public Resume setOauthToken(java.lang.String oauthToken) {
+        return (Resume) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Resume setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Resume) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Resume setQuotaUser(java.lang.String quotaUser) {
+        return (Resume) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Resume setUploadType(java.lang.String uploadType) {
+        return (Resume) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Resume setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Resume) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Resume setUserIp(java.lang.String userIp) {
+        return (Resume) super.setUserIp(userIp);
+      }
+
+      /** Required. Folder ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String folder;
+
+      /** Required. Folder ID for this request.
+       */
+      public java.lang.String getFolder() {
+        return folder;
+      }
+
+      /** Required. Folder ID for this request. */
+      public Resume setFolder(java.lang.String folder) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(FOLDER_PATTERN.matcher(folder).matches(),
+              "Parameter folder must conform to the pattern " +
+              "folders/[0-9]{1,19}");
+        }
+        this.folder = folder;
+        return this;
+      }
+
+      /** Required. Name of the Rollout resource to resume. */
+      @com.google.api.client.util.Key
+      private java.lang.String rollout;
+
+      /** Required. Name of the Rollout resource to resume.
+       */
+      public java.lang.String getRollout() {
+        return rollout;
+      }
+
+      /** Required. Name of the Rollout resource to resume. */
+      public Resume setRollout(java.lang.String rollout) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(ROLLOUT_PATTERN.matcher(rollout).matches(),
+              "Parameter rollout must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.rollout = rollout;
+        return this;
+      }
+
+      /**
+       * The etag of the Rollout. If this is provided, the request will only succeed if the etag
+       * matches the current etag of the Rollout.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String etag;
+
+      /** The etag of the Rollout. If this is provided, the request will only succeed if the etag matches the
+     current etag of the Rollout.
+       */
+      public java.lang.String getEtag() {
+        return etag;
+      }
+
+      /**
+       * The etag of the Rollout. If this is provided, the request will only succeed if the etag
+       * matches the current etag of the Rollout.
+       */
+      public Resume setEtag(java.lang.String etag) {
+        this.etag = etag;
+        return this;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String requestId;
+
+      /** An optional request ID to identify requests. Specify a unique request ID so that if you must retry
+     your request, the server will know to ignore the request if it has already been completed.
+
+     For example, consider a situation where you make an initial request and the request times out. If
+     you make the request again with the same request ID, the server can check if original operation
+     with the same request ID was received, and if so, will ignore the second request. This prevents
+     clients from accidentally creating duplicate commitments.
+
+     The request ID must be a valid UUID with the exception that zero UUID is not supported
+     (00000000-0000-0000-0000-000000000000).
+       */
+      public java.lang.String getRequestId() {
+        return requestId;
+      }
+
+      /**
+       * An optional request ID to identify requests. Specify a unique request ID so that if you
+       * must retry your request, the server will know to ignore the request if it has already been
+       * completed.
+       *
+       * For example, consider a situation where you make an initial request and the request times
+       * out. If you make the request again with the same request ID, the server can check if
+       * original operation with the same request ID was received, and if so, will ignore the second
+       * request. This prevents clients from accidentally creating duplicate commitments.
+       *
+       * The request ID must be a valid UUID with the exception that zero UUID is not supported
+       * (00000000-0000-0000-0000-000000000000).
+       */
+      public Resume setRequestId(java.lang.String requestId) {
+        this.requestId = requestId;
+        return this;
+      }
+
+      @Override
+      public Resume set(String parameterName, Object value) {
+        return (Resume) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the FolderZoneVmExtensionPolicies collection.
    *
    * <p>The typical use is:</p>
@@ -121994,6 +124774,657 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
   }
 
   /**
+   * An accessor for creating requests from the NetworkLocationBindings collection.
+   *
+   * <p>The typical use is:</p>
+   * <pre>
+   *   {@code Compute compute = new Compute(...);}
+   *   {@code Compute.NetworkLocationBindings.List request = compute.networkLocationBindings().list(parameters ...)}
+   * </pre>
+   *
+   * @return the resource collection
+   */
+  public NetworkLocationBindings networkLocationBindings() {
+    return new NetworkLocationBindings();
+  }
+
+  /**
+   * The "networkLocationBindings" collection of methods.
+   */
+  public class NetworkLocationBindings {
+
+    /**
+     * Returns the specified NetworkLocationBinding resource in the given scope.
+     *
+     * Create a request for the method "networkLocationBindings.get".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region of this request.
+     * @param networkLocationBinding Name of the NetworkLocationBinding resource to return.
+     * @return the request
+     */
+    public Get get(java.lang.String project, java.lang.String region, java.lang.String networkLocationBinding) throws java.io.IOException {
+      Get result = new Get(project, region, networkLocationBinding);
+      initialize(result);
+      return result;
+    }
+
+    public class Get extends ComputeRequest<com.google.api.services.compute.model.NetworkLocationBinding> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/networkLocationBindings/{networkLocationBinding}";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      private final java.util.regex.Pattern NETWORK_LOCATION_BINDING_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+
+      /**
+       * Returns the specified NetworkLocationBinding resource in the given scope.
+       *
+       * Create a request for the method "networkLocationBindings.get".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+       * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region of this request.
+       * @param networkLocationBinding Name of the NetworkLocationBinding resource to return.
+       * @since 1.13
+       */
+      protected Get(java.lang.String project, java.lang.String region, java.lang.String networkLocationBinding) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.NetworkLocationBinding.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.networkLocationBinding = com.google.api.client.util.Preconditions.checkNotNull(networkLocationBinding, "Required parameter networkLocationBinding must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NETWORK_LOCATION_BINDING_PATTERN.matcher(networkLocationBinding).matches(),
+              "Parameter networkLocationBinding must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public Get set$Xgafv(java.lang.String $Xgafv) {
+        return (Get) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public Get setAccessToken(java.lang.String accessToken) {
+        return (Get) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public Get setAlt(java.lang.String alt) {
+        return (Get) super.setAlt(alt);
+      }
+
+      @Override
+      public Get setCallback(java.lang.String callback) {
+        return (Get) super.setCallback(callback);
+      }
+
+      @Override
+      public Get setFields(java.lang.String fields) {
+        return (Get) super.setFields(fields);
+      }
+
+      @Override
+      public Get setKey(java.lang.String key) {
+        return (Get) super.setKey(key);
+      }
+
+      @Override
+      public Get setOauthToken(java.lang.String oauthToken) {
+        return (Get) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (Get) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public Get setQuotaUser(java.lang.String quotaUser) {
+        return (Get) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public Get setUploadType(java.lang.String uploadType) {
+        return (Get) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public Get setUploadProtocol(java.lang.String uploadProtocol) {
+        return (Get) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public Get setUserIp(java.lang.String userIp) {
+        return (Get) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public Get setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region of this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region of this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region of this request. */
+      public Get setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /** Name of the NetworkLocationBinding resource to return. */
+      @com.google.api.client.util.Key
+      private java.lang.String networkLocationBinding;
+
+      /** Name of the NetworkLocationBinding resource to return.
+       */
+      public java.lang.String getNetworkLocationBinding() {
+        return networkLocationBinding;
+      }
+
+      /** Name of the NetworkLocationBinding resource to return. */
+      public Get setNetworkLocationBinding(java.lang.String networkLocationBinding) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NETWORK_LOCATION_BINDING_PATTERN.matcher(networkLocationBinding).matches(),
+              "Parameter networkLocationBinding must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?|[1-9][0-9]{0,19}");
+        }
+        this.networkLocationBinding = networkLocationBinding;
+        return this;
+      }
+
+      @Override
+      public Get set(String parameterName, Object value) {
+        return (Get) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Lists the NetworkLocationBindings for a project in the given scope.
+     *
+     * Create a request for the method "networkLocationBindings.list".
+     *
+     * This request holds the parameters needed by the compute server.  After setting any optional
+     * parameters, call the {@link List#execute()} method to invoke the remote operation.
+     *
+     * @param project Project ID for this request.
+     * @param region Name of the region of this request.
+     * @return the request
+     */
+    public List list(java.lang.String project, java.lang.String region) throws java.io.IOException {
+      List result = new List(project, region);
+      initialize(result);
+      return result;
+    }
+
+    public class List extends ComputeRequest<com.google.api.services.compute.model.NetworkLocationBindingList> {
+
+      private static final String REST_PATH = "projects/{project}/regions/{region}/networkLocationBindings";
+
+      private static final String API_VERSION = "2026-10-01-preview";
+
+      private final java.util.regex.Pattern PROJECT_PATTERN =
+          java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+
+      private final java.util.regex.Pattern REGION_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
+      /**
+       * Lists the NetworkLocationBindings for a project in the given scope.
+       *
+       * Create a request for the method "networkLocationBindings.list".
+       *
+       * This request holds the parameters needed by the the compute server.  After setting any optional
+       * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+       * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+       * called to initialize this instance immediately after invoking the constructor. </p>
+       *
+       * @param project Project ID for this request.
+       * @param region Name of the region of this request.
+       * @since 1.13
+       */
+      protected List(java.lang.String project, java.lang.String region) {
+        super(Compute.this, "GET", REST_PATH, null, com.google.api.services.compute.model.NetworkLocationBindingList.class);
+        this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.region = com.google.api.client.util.Preconditions.checkNotNull(region, "Required parameter region must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        // Does not override the API_VERSION if already configured
+        com.google.api.client.http.HttpHeaders headers = getRequestHeaders();
+        if (headers.get(API_VERSION_HEADER) == null) {
+          headers.set(API_VERSION_HEADER, API_VERSION);
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public List set$Xgafv(java.lang.String $Xgafv) {
+        return (List) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public List setAccessToken(java.lang.String accessToken) {
+        return (List) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public List setAlt(java.lang.String alt) {
+        return (List) super.setAlt(alt);
+      }
+
+      @Override
+      public List setCallback(java.lang.String callback) {
+        return (List) super.setCallback(callback);
+      }
+
+      @Override
+      public List setFields(java.lang.String fields) {
+        return (List) super.setFields(fields);
+      }
+
+      @Override
+      public List setKey(java.lang.String key) {
+        return (List) super.setKey(key);
+      }
+
+      @Override
+      public List setOauthToken(java.lang.String oauthToken) {
+        return (List) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (List) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public List setQuotaUser(java.lang.String quotaUser) {
+        return (List) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public List setUploadType(java.lang.String uploadType) {
+        return (List) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public List setUploadProtocol(java.lang.String uploadProtocol) {
+        return (List) super.setUploadProtocol(uploadProtocol);
+      }
+
+      @Override
+      public List setUserIp(java.lang.String userIp) {
+        return (List) super.setUserIp(userIp);
+      }
+
+      /** Project ID for this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String project;
+
+      /** Project ID for this request.
+       */
+      public java.lang.String getProject() {
+        return project;
+      }
+
+      /** Project ID for this request. */
+      public List setProject(java.lang.String project) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(PROJECT_PATTERN.matcher(project).matches(),
+              "Parameter project must conform to the pattern " +
+              "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
+        }
+        this.project = project;
+        return this;
+      }
+
+      /** Name of the region of this request. */
+      @com.google.api.client.util.Key
+      private java.lang.String region;
+
+      /** Name of the region of this request.
+       */
+      public java.lang.String getRegion() {
+        return region;
+      }
+
+      /** Name of the region of this request. */
+      public List setRegion(java.lang.String region) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(REGION_PATTERN.matcher(region).matches(),
+              "Parameter region must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.region = region;
+        return this;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String filter;
+
+      /** A filter expression that filters resources listed in the response. Most Compute resources support
+     two types of filter expressions: expressions that support regular expressions and expressions that
+     follow API improvement proposal AIP-160. These two types of filter expressions cannot be mixed in
+     one request.
+
+     If you want to use AIP-160, your expression must specify the field name, an operator, and the value
+     that you want to use for filtering. The value must be a string, a number, or a boolean. The
+     operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+
+     For example, if you are filtering Compute Engine instances, you can exclude instances named
+     `example-instance` by specifying `name != example-instance`.
+
+     The `:*` comparison can be used to test whether a key has been defined. For example, to find all
+     objects with `owner` label use: ``` labels.owner:* ```
+
+     You can also filter nested fields. For example, you could specify `scheduling.automaticRestart =
+     false` to include instances only if they are not scheduled for automatic restarts. You can use
+     filtering on nested fields to filter based onresource labels.
+
+     To filter on multiple expressions, provide each separate expression within parentheses. For
+     example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By default,
+     each expression is an `AND` expression. However, you can include `AND` and `OR` expressions
+     explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform = "Intel Broadwell")
+     AND (scheduling.automaticRestart = true) ```
+
+     If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator against
+     a single un-parenthesized expression with or without quotes or against multiple parenthesized
+     expressions. Examples:
+
+     `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq "double quoted
+     literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+
+     The literal value is interpreted as a regular expression using GoogleRE2 library syntax. The
+     literal value must match the entire field.
+
+     For example, to filter for instances that do not end with name "instance", you would use `name ne
+     .*instance`.
+
+     You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public java.lang.String getFilter() {
+        return filter;
+      }
+
+      /**
+       * A filter expression that filters resources listed in the response. Most Compute resources
+       * support two types of filter expressions: expressions that support regular expressions and
+       * expressions that follow API improvement proposal AIP-160. These two types of filter
+       * expressions cannot be mixed in one request.
+       *
+       * If you want to use AIP-160, your expression must specify the field name, an operator, and
+       * the value that you want to use for filtering. The value must be a string, a number, or a
+       * boolean. The operator must be either `=`, `!=`, `>`, `<`, `<=`, `>=` or `:`.
+       *
+       * For example, if you are filtering Compute Engine instances, you can exclude instances named
+       * `example-instance` by specifying `name != example-instance`.
+       *
+       * The `:*` comparison can be used to test whether a key has been defined. For example, to
+       * find all objects with `owner` label use: ``` labels.owner:* ```
+       *
+       * You can also filter nested fields. For example, you could specify
+       * `scheduling.automaticRestart = false` to include instances only if they are not scheduled
+       * for automatic restarts. You can use filtering on nested fields to filter based onresource
+       * labels.
+       *
+       * To filter on multiple expressions, provide each separate expression within parentheses. For
+       * example: ``` (scheduling.automaticRestart = true) (cpuPlatform = "Intel Skylake") ``` By
+       * default, each expression is an `AND` expression. However, you can include `AND` and `OR`
+       * expressions explicitly. For example: ``` (cpuPlatform = "Intel Skylake") OR (cpuPlatform =
+       * "Intel Broadwell") AND (scheduling.automaticRestart = true) ```
+       *
+       * If you want to use a regular expression, use the `eq` (equal) or `ne` (not equal) operator
+       * against a single un-parenthesized expression with or without quotes or against multiple
+       * parenthesized expressions. Examples:
+       *
+       * `fieldname eq unquoted literal` `fieldname eq 'single quoted literal'` `fieldname eq
+       * "double quoted literal"` `(fieldname1 eq literal) (fieldname2 ne "literal")`
+       *
+       * The literal value is interpreted as a regular expression using GoogleRE2 library syntax.
+       * The literal value must match the entire field.
+       *
+       * For example, to filter for instances that do not end with name "instance", you would use
+       * `name ne .*instance`.
+       *
+       * You cannot combine constraints on multiple fields using regular expressions.
+       */
+      public List setFilter(java.lang.String filter) {
+        this.filter = filter;
+        return this;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Long maxResults;
+
+      /** The maximum number of results per page that should be returned. If the number of available results
+     is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be used to get the
+     next page of results in subsequent list requests. Acceptable values are `0` to `500`, inclusive.
+     (Default: `500`) [default: 500] [minimum: 0]
+       */
+      public java.lang.Long getMaxResults() {
+        return maxResults;
+      }
+
+      /**
+       * The maximum number of results per page that should be returned. If the number of available
+       * results is larger than `maxResults`, Compute Engine returns a `nextPageToken` that can be
+       * used to get the next page of results in subsequent list requests. Acceptable values are `0`
+       * to `500`, inclusive. (Default: `500`)
+       */
+      public List setMaxResults(java.lang.Long maxResults) {
+        this.maxResults = maxResults;
+        return this;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String orderBy;
+
+      /** Sorts list results by a certain order. By default, results are returned in alphanumerical order
+     based on the resource name.
+
+     You can also sort results in descending order based on the creation timestamp using
+     `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp` field in
+     reverse chronological order (newest result first). Use this to sort resources like operations so
+     that the newest operation is returned first.
+
+     Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public java.lang.String getOrderBy() {
+        return orderBy;
+      }
+
+      /**
+       * Sorts list results by a certain order. By default, results are returned in alphanumerical
+       * order based on the resource name.
+       *
+       * You can also sort results in descending order based on the creation timestamp using
+       * `orderBy="creationTimestamp desc"`. This sorts results based on the `creationTimestamp`
+       * field in reverse chronological order (newest result first). Use this to sort resources like
+       * operations so that the newest operation is returned first.
+       *
+       * Currently, only sorting by `name` or `creationTimestamp desc` is supported.
+       */
+      public List setOrderBy(java.lang.String orderBy) {
+        this.orderBy = orderBy;
+        return this;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String pageToken;
+
+      /** Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a previous list
+     request to get the next page of results.
+       */
+      public java.lang.String getPageToken() {
+        return pageToken;
+      }
+
+      /**
+       * Specifies a page token to use. Set `pageToken` to the `nextPageToken` returned by a
+       * previous list request to get the next page of results.
+       */
+      public List setPageToken(java.lang.String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+      }
+
+      @Override
+      public List set(String parameterName, Object value) {
+        return (List) super.set(parameterName, value);
+      }
+    }
+
+  }
+
+  /**
    * An accessor for creating requests from the NetworkProfiles collection.
    *
    * <p>The typical use is:</p>
@@ -205868,6 +209299,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       private final java.util.regex.Pattern REGION_PATTERN =
           java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
 
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
       /**
        * Returns the public encryption key used to encrypt the TLS private key before upload.
        *
@@ -206013,6 +209447,34 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
               "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
         }
         this.region = region;
+        return this;
+      }
+
+      /**
+       * Required. Name of the SslCertificate resource to be created. The name must be 1-63
+       * characters long, and comply withRFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the SslCertificate resource to be created. The name must be 1-63 characters long,
+     and comply withRFC1035.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Name of the SslCertificate resource to be created. The name must be 1-63
+       * characters long, and comply withRFC1035.
+       */
+      public FetchEncryptionKey setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.name = name;
         return this;
       }
 
@@ -246551,6 +250013,9 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
       private final java.util.regex.Pattern PROJECT_PATTERN =
           java.util.regex.Pattern.compile("(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
 
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+
       /**
        * Returns the public encryption key used to encrypt the TLS private key before upload.
        *
@@ -246668,6 +250133,34 @@ public class Compute extends com.google.api.client.googleapis.services.json.Abst
               "(?:(?:[-a-z0-9]{1,63}\\.)*(?:[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?):)?(?:[0-9]{1,19}|(?:[a-z0-9](?:[-a-z0-9]{0,61}[a-z0-9])?))");
         }
         this.project = project;
+        return this;
+      }
+
+      /**
+       * Required. Name of the SslCertificate resource to be created. The name must be 1-63
+       * characters long, and comply withRFC1035.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. Name of the SslCertificate resource to be created. The name must be 1-63 characters long,
+     and comply withRFC1035.
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /**
+       * Required. Name of the SslCertificate resource to be created. The name must be 1-63
+       * characters long, and comply withRFC1035.
+       */
+      public FetchEncryptionKey setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "[a-z](?:[-a-z0-9]{0,61}[a-z0-9])?");
+        }
+        this.name = name;
         return this;
       }
 

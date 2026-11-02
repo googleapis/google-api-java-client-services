@@ -252,7 +252,7 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   private java.lang.String snapshotGroupName;
 
   /**
-   * Indicates the type of the snapshot.
+   * Indicates the type of the snapshot. Valid values are ARCHIVE or STANDARD.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -902,7 +902,7 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   }
 
   /**
-   * Indicates the type of the snapshot.
+   * Indicates the type of the snapshot. Valid values are ARCHIVE or STANDARD.
    * @return value or {@code null} for none
    */
   public java.lang.String getSnapshotType() {
@@ -910,7 +910,7 @@ public final class RecoverableSnapshotOriginalSnapshot extends com.google.api.cl
   }
 
   /**
-   * Indicates the type of the snapshot.
+   * Indicates the type of the snapshot. Valid values are ARCHIVE or STANDARD.
    * @param snapshotType snapshotType or {@code null} for none
    */
   public RecoverableSnapshotOriginalSnapshot setSnapshotType(java.lang.String snapshotType) {

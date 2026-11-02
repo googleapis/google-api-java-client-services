@@ -30,16 +30,16 @@ package com.google.api.services.compute.model;
 public final class MachineImageParams extends com.google.api.client.json.GenericJson {
 
   /**
-   * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
-   * new machine image.
+   * Input only. Specifies the list of disk device names that must be excluded from the new machine
+   * image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> excludedDisks;
 
   /**
-   * Input only. [Input Only] Specifies the list of disk device names that must be included with the
-   * new machine image.
+   * Input only. Specifies the list of disk device names that must be included with the new machine
+   * image.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -57,8 +57,8 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
   private java.util.Map<String, java.lang.String> resourceManagerTags;
 
   /**
-   * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
-   * new machine image.
+   * Input only. Specifies the list of disk device names that must be excluded from the new machine
+   * image.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedDisks() {
@@ -66,8 +66,8 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
   }
 
   /**
-   * Input only. [Input Only] Specifies the list of disk device names that must be excluded from the
-   * new machine image.
+   * Input only. Specifies the list of disk device names that must be excluded from the new machine
+   * image.
    * @param excludedDisks excludedDisks or {@code null} for none
    */
   public MachineImageParams setExcludedDisks(java.util.List<java.lang.String> excludedDisks) {
@@ -76,8 +76,8 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
   }
 
   /**
-   * Input only. [Input Only] Specifies the list of disk device names that must be included with the
-   * new machine image.
+   * Input only. Specifies the list of disk device names that must be included with the new machine
+   * image.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedDisks() {
@@ -85,8 +85,8 @@ public final class MachineImageParams extends com.google.api.client.json.Generic
   }
 
   /**
-   * Input only. [Input Only] Specifies the list of disk device names that must be included with the
-   * new machine image.
+   * Input only. Specifies the list of disk device names that must be included with the new machine
+   * image.
    * @param includedDisks includedDisks or {@code null} for none
    */
   public MachineImageParams setIncludedDisks(java.util.List<java.lang.String> includedDisks) {

@@ -30,6 +30,14 @@ package com.google.api.services.alloydb.v1.model;
 public final class Policy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Connections count policy for the autoscaler. If not set, the autoscaler will not use
+   * connection count for scaling.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ConnectionsCount connectionsCount;
+
+  /**
    * The period of time in seconds after a new node is created before the autoscaler will
    * incorporate its resource usage (e.g. CPU utilization) into the autoscaling recommendation
    * algorithm.
@@ -58,6 +66,25 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxNodeCount;
+
+  /**
+   * Optional. Connections count policy for the autoscaler. If not set, the autoscaler will not use
+   * connection count for scaling.
+   * @return value or {@code null} for none
+   */
+  public ConnectionsCount getConnectionsCount() {
+    return connectionsCount;
+  }
+
+  /**
+   * Optional. Connections count policy for the autoscaler. If not set, the autoscaler will not use
+   * connection count for scaling.
+   * @param connectionsCount connectionsCount or {@code null} for none
+   */
+  public Policy setConnectionsCount(ConnectionsCount connectionsCount) {
+    this.connectionsCount = connectionsCount;
+    return this;
+  }
 
   /**
    * The period of time in seconds after a new node is created before the autoscaler will

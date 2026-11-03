@@ -30,6 +30,13 @@ package com.google.api.services.agentregistry.v1alpha.model;
 public final class Tool extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Protocol-level tool metadata conforming to MCP _meta specification. Output only.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key("_meta")
+  private java.util.Map<String, java.lang.Object> meta;
+
+  /**
    * Output only. Annotations associated with the tool.
    * The value may be {@code null}.
    */
@@ -49,6 +56,23 @@ public final class Tool extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. Protocol-level tool metadata conforming to MCP _meta specification. Output only.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.Object> getMeta() {
+    return meta;
+  }
+
+  /**
+   * Output only. Protocol-level tool metadata conforming to MCP _meta specification. Output only.
+   * @param meta meta or {@code null} for none
+   */
+  public Tool setMeta(java.util.Map<String, java.lang.Object> meta) {
+    this.meta = meta;
+    return this;
+  }
 
   /**
    * Output only. Annotations associated with the tool.

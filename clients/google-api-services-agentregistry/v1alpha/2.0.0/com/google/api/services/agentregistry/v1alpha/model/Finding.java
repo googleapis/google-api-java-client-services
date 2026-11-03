@@ -30,13 +30,6 @@ package com.google.api.services.agentregistry.v1alpha.model;
 public final class Finding extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Category of the finding.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String category;
-
-  /**
    * Output only. Create time.
    * The value may be {@code null}.
    */
@@ -105,23 +98,6 @@ public final class Finding extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private String updateTime;
-
-  /**
-   * Optional. Category of the finding.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getCategory() {
-    return category;
-  }
-
-  /**
-   * Optional. Category of the finding.
-   * @param category category or {@code null} for none
-   */
-  public Finding setCategory(java.lang.String category) {
-    this.category = category;
-    return this;
-  }
 
   /**
    * Output only. Create time.

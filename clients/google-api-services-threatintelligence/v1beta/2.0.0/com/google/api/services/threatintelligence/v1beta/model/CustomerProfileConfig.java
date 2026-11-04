@@ -31,6 +31,19 @@ package com.google.api.services.threatintelligence.v1beta.model;
 public final class CustomerProfileConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Brands associated with the organization.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<CustomerProfileBrand> brands;
+
+  static {
+    // hack to force ProGuard to consider CustomerProfileBrand used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(CustomerProfileBrand.class);
+  }
+
+  /**
    * Optional. Citations for the organization profile.
    * The value may be {@code null}.
    */
@@ -139,6 +152,23 @@ public final class CustomerProfileConfig extends com.google.api.client.json.Gene
    */
   @com.google.api.client.util.Key
   private java.util.List<CustomerProfileWebPresence> webPresences;
+
+  /**
+   * Optional. Brands associated with the organization.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<CustomerProfileBrand> getBrands() {
+    return brands;
+  }
+
+  /**
+   * Optional. Brands associated with the organization.
+   * @param brands brands or {@code null} for none
+   */
+  public CustomerProfileConfig setBrands(java.util.List<CustomerProfileBrand> brands) {
+    this.brands = brands;
+    return this;
+  }
 
   /**
    * Optional. Citations for the organization profile.

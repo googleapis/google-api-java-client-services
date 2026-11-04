@@ -13655,10 +13655,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Required. Project ID of the project that contains the instance.
      * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
-     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest}
+     * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStartRequest}
      * @return the request
      */
-    public Start start(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest content) throws java.io.IOException {
+    public Start start(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.WorkloadCapturesStartRequest content) throws java.io.IOException {
       Start result = new Start(project, instance, content);
       initialize(result);
       return result;
@@ -13684,10 +13684,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Required. Project ID of the project that contains the instance.
        * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
-       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest}
+       * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStartRequest}
        * @since 1.13
        */
-      protected Start(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartRequest content) {
+      protected Start(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.WorkloadCapturesStartRequest content) {
         super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
@@ -13798,10 +13798,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      * @param project Required. Project ID of the project that contains the instance.
      * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
      * @param workloadId Required. The ID of the workload to replay.
-     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest}
+     * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStartReplayRequest}
      * @return the request
      */
-    public StartReplay startReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest content) throws java.io.IOException {
+    public StartReplay startReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.WorkloadCapturesStartReplayRequest content) throws java.io.IOException {
       StartReplay result = new StartReplay(project, instance, workloadId, content);
       initialize(result);
       return result;
@@ -13827,10 +13827,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        * @param project Required. Project ID of the project that contains the instance.
        * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
        * @param workloadId Required. The ID of the workload to replay.
-       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest}
+       * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStartReplayRequest}
        * @since 1.13
        */
-      protected StartReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStartReplayRequest content) {
+      protected StartReplay(java.lang.String project, java.lang.String instance, java.lang.String workloadId, com.google.api.services.sqladmin.model.WorkloadCapturesStartReplayRequest content) {
         super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
@@ -13955,10 +13955,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Required. Project ID of the project that contains the instance.
      * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
-     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest}
+     * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStopRequest}
      * @return the request
      */
-    public Stop stop(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest content) throws java.io.IOException {
+    public Stop stop(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.WorkloadCapturesStopRequest content) throws java.io.IOException {
       Stop result = new Stop(project, instance, content);
       initialize(result);
       return result;
@@ -13980,10 +13980,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Required. Project ID of the project that contains the instance.
        * @param instance Required. Cloud SQL instance ID. This does not include the project ID.
-       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest}
+       * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStopRequest}
        * @since 1.13
        */
-      protected Stop(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopRequest content) {
+      protected Stop(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.WorkloadCapturesStopRequest content) {
         super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");
@@ -14091,10 +14091,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
      *
      * @param project Required. Project ID of the project that contains the target replay instance.
      * @param instance Required. Cloud SQL instance ID of the target replay instance. This does not include the project ID.
-     * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest}
+     * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStopReplayRequest}
      * @return the request
      */
-    public StopReplay stopReplay(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest content) throws java.io.IOException {
+    public StopReplay stopReplay(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.WorkloadCapturesStopReplayRequest content) throws java.io.IOException {
       StopReplay result = new StopReplay(project, instance, content);
       initialize(result);
       return result;
@@ -14117,10 +14117,10 @@ public class SQLAdmin extends com.google.api.client.googleapis.services.json.Abs
        *
        * @param project Required. Project ID of the project that contains the target replay instance.
        * @param instance Required. Cloud SQL instance ID of the target replay instance. This does not include the project ID.
-       * @param content the {@link com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest}
+       * @param content the {@link com.google.api.services.sqladmin.model.WorkloadCapturesStopReplayRequest}
        * @since 1.13
        */
-      protected StopReplay(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.SqlWorkloadCapturesStopReplayRequest content) {
+      protected StopReplay(java.lang.String project, java.lang.String instance, com.google.api.services.sqladmin.model.WorkloadCapturesStopReplayRequest content) {
         super(SQLAdmin.this, "POST", REST_PATH, content, com.google.api.services.sqladmin.model.Operation.class);
         this.project = com.google.api.client.util.Preconditions.checkNotNull(project, "Required parameter project must be specified.");
         this.instance = com.google.api.client.util.Preconditions.checkNotNull(instance, "Required parameter instance must be specified.");

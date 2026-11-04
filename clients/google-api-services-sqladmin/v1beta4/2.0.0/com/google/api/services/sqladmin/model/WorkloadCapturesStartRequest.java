@@ -17,7 +17,7 @@
 package com.google.api.services.sqladmin.model;
 
 /**
- * Request to stop an active workload replay on a target Cloud SQL replay instance.
+ * Request to start recording traffic from the primary instance (captured workload).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud SQL Admin API. For a detailed explanation see:
@@ -27,40 +27,40 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.client.json.GenericJson {
+public final class WorkloadCapturesStartRequest extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Contains details about the stop workload replay operation.
+   * Optional. Contains details about the start workload capture operation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private StopWorkloadReplayContext stopWorkloadReplayContext;
+  private StartWorkloadCaptureContext startWorkloadCaptureContext;
 
   /**
-   * Optional. Contains details about the stop workload replay operation.
+   * Optional. Contains details about the start workload capture operation.
    * @return value or {@code null} for none
    */
-  public StopWorkloadReplayContext getStopWorkloadReplayContext() {
-    return stopWorkloadReplayContext;
+  public StartWorkloadCaptureContext getStartWorkloadCaptureContext() {
+    return startWorkloadCaptureContext;
   }
 
   /**
-   * Optional. Contains details about the stop workload replay operation.
-   * @param stopWorkloadReplayContext stopWorkloadReplayContext or {@code null} for none
+   * Optional. Contains details about the start workload capture operation.
+   * @param startWorkloadCaptureContext startWorkloadCaptureContext or {@code null} for none
    */
-  public SqlWorkloadCapturesStopReplayRequest setStopWorkloadReplayContext(StopWorkloadReplayContext stopWorkloadReplayContext) {
-    this.stopWorkloadReplayContext = stopWorkloadReplayContext;
+  public WorkloadCapturesStartRequest setStartWorkloadCaptureContext(StartWorkloadCaptureContext startWorkloadCaptureContext) {
+    this.startWorkloadCaptureContext = startWorkloadCaptureContext;
     return this;
   }
 
   @Override
-  public SqlWorkloadCapturesStopReplayRequest set(String fieldName, Object value) {
-    return (SqlWorkloadCapturesStopReplayRequest) super.set(fieldName, value);
+  public WorkloadCapturesStartRequest set(String fieldName, Object value) {
+    return (WorkloadCapturesStartRequest) super.set(fieldName, value);
   }
 
   @Override
-  public SqlWorkloadCapturesStopReplayRequest clone() {
-    return (SqlWorkloadCapturesStopReplayRequest) super.clone();
+  public WorkloadCapturesStartRequest clone() {
+    return (WorkloadCapturesStartRequest) super.clone();
   }
 
 }

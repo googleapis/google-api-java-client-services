@@ -20,12 +20,12 @@ package com.google.api.services.places.v1;
  * Service definition for MapsPlaces (v1).
  *
  * <p>
- * 
+ * The Places API allows developers to access a variety of search and retrieval endpoints for a Place.
  * </p>
  *
  * <p>
  * For more information about this service, see the
- * <a href="https://mapsplatform.google.com/maps-products/#places-section" target="_blank">API Documentation</a>
+ * <a href="https://developers.google.com/maps/documentation/places/web-service" target="_blank">API Documentation</a>
  * </p>
  *
  * <p>

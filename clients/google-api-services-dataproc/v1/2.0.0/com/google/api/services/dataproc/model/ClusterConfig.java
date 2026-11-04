@@ -179,6 +179,13 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
   private MetastoreConfig metastoreConfig;
 
   /**
+   * Optional. Config for scheduling the resources to be allocated when available.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SchedulingConfig schedulingConfig;
+
+  /**
    * Optional. The Compute Engine config settings for a cluster's secondary worker instances
    * The value may be {@code null}.
    */
@@ -581,6 +588,23 @@ public final class ClusterConfig extends com.google.api.client.json.GenericJson 
    */
   public ClusterConfig setMetastoreConfig(MetastoreConfig metastoreConfig) {
     this.metastoreConfig = metastoreConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Config for scheduling the resources to be allocated when available.
+   * @return value or {@code null} for none
+   */
+  public SchedulingConfig getSchedulingConfig() {
+    return schedulingConfig;
+  }
+
+  /**
+   * Optional. Config for scheduling the resources to be allocated when available.
+   * @param schedulingConfig schedulingConfig or {@code null} for none
+   */
+  public ClusterConfig setSchedulingConfig(SchedulingConfig schedulingConfig) {
+    this.schedulingConfig = schedulingConfig;
     return this;
   }
 

@@ -135,6 +135,13 @@ public final class VmwareNodePool extends com.google.api.client.json.GenericJson
   private String updateTime;
 
   /**
+   * The validation check for the node pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ValidationCheck validationCheck;
+
+  /**
    * Annotations on the node pool. This field has the same restrictions as Kubernetes annotations.
    * The total size of all keys and values combined is limited to 256k. Key can have 2 segments:
    * prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS
@@ -383,6 +390,23 @@ public final class VmwareNodePool extends com.google.api.client.json.GenericJson
    */
   public VmwareNodePool setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * The validation check for the node pool.
+   * @return value or {@code null} for none
+   */
+  public ValidationCheck getValidationCheck() {
+    return validationCheck;
+  }
+
+  /**
+   * The validation check for the node pool.
+   * @param validationCheck validationCheck or {@code null} for none
+   */
+  public VmwareNodePool setValidationCheck(ValidationCheck validationCheck) {
+    this.validationCheck = validationCheck;
     return this;
   }
 

@@ -66,6 +66,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   private java.lang.Long delegatedProjectNumber;
 
   /**
+   * The account's attributes to be deleted.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -330,6 +331,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   }
 
   /**
+   * The account's attributes to be deleted.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getDeleteAttribute() {
@@ -337,6 +339,7 @@ public final class GoogleCloudIdentitytoolkitV1SetAccountInfoRequest extends com
   }
 
   /**
+   * The account's attributes to be deleted.
    * @param deleteAttribute deleteAttribute or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1SetAccountInfoRequest setDeleteAttribute(java.util.List<java.lang.String> deleteAttribute) {

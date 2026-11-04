@@ -63,6 +63,15 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
   private TimeOfDay dueTime;
 
   /**
+   * Output only. Whether changes to `pointsEarned` values on this attachment's student submissions
+   * will be copied to the `pointsEarned` field on the students' CourseWork submissions. This field
+   * can be `true` for at most one add-on attachment per stream item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean gradeSyncEnabled;
+
+  /**
    * Immutable. Classroom-assigned identifier for this attachment, unique per post.
    * The value may be {@code null}.
    */
@@ -203,6 +212,27 @@ public final class AddOnAttachment extends com.google.api.client.json.GenericJso
    */
   public AddOnAttachment setDueTime(TimeOfDay dueTime) {
     this.dueTime = dueTime;
+    return this;
+  }
+
+  /**
+   * Output only. Whether changes to `pointsEarned` values on this attachment's student submissions
+   * will be copied to the `pointsEarned` field on the students' CourseWork submissions. This field
+   * can be `true` for at most one add-on attachment per stream item.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getGradeSyncEnabled() {
+    return gradeSyncEnabled;
+  }
+
+  /**
+   * Output only. Whether changes to `pointsEarned` values on this attachment's student submissions
+   * will be copied to the `pointsEarned` field on the students' CourseWork submissions. This field
+   * can be `true` for at most one add-on attachment per stream item.
+   * @param gradeSyncEnabled gradeSyncEnabled or {@code null} for none
+   */
+  public AddOnAttachment setGradeSyncEnabled(java.lang.Boolean gradeSyncEnabled) {
+    this.gradeSyncEnabled = gradeSyncEnabled;
     return this;
   }
 

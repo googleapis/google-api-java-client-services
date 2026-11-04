@@ -96,6 +96,13 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
   private java.util.List<GoogleChromeManagementV1ChromeAppPermission> permissions;
 
   /**
+   * Output only. Contains risk assessment data for the Chrome extension.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleChromeManagementV1RiskAssessmentData riskAssessment;
+
+  /**
    * Output only. Every permission giving access to domains or broad host patterns. ( e.g.
    * www.google.com). This includes the matches from content scripts as well as hosts in the
    * permissions node of the manifest. Version-specific field that will only be set when the
@@ -274,6 +281,23 @@ public final class GoogleChromeManagementV1ChromeAppInfo extends com.google.api.
    */
   public GoogleChromeManagementV1ChromeAppInfo setPermissions(java.util.List<GoogleChromeManagementV1ChromeAppPermission> permissions) {
     this.permissions = permissions;
+    return this;
+  }
+
+  /**
+   * Output only. Contains risk assessment data for the Chrome extension.
+   * @return value or {@code null} for none
+   */
+  public GoogleChromeManagementV1RiskAssessmentData getRiskAssessment() {
+    return riskAssessment;
+  }
+
+  /**
+   * Output only. Contains risk assessment data for the Chrome extension.
+   * @param riskAssessment riskAssessment or {@code null} for none
+   */
+  public GoogleChromeManagementV1ChromeAppInfo setRiskAssessment(GoogleChromeManagementV1RiskAssessmentData riskAssessment) {
+    this.riskAssessment = riskAssessment;
     return this;
   }
 

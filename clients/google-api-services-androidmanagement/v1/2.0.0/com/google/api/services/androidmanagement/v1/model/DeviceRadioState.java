@@ -52,6 +52,15 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
   private java.lang.String minimumWifiSecurityLevel;
 
   /**
+   * Optional. Controls whether NFC is disabled on the device and if the user can toggle NFC between
+   * enabled and disabled. This is for fully managed devices. To control NFC on work profiles on
+   * company-owned devices, use deviceWidePolicies.deviceRadioState.nfc instead.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String nfc;
+
+  /**
    * Optional. Controls the state of the ultra wideband setting and whether the user can toggle it
    * on or off.
    * The value may be {@code null}.
@@ -121,6 +130,27 @@ public final class DeviceRadioState extends com.google.api.client.json.GenericJs
    */
   public DeviceRadioState setMinimumWifiSecurityLevel(java.lang.String minimumWifiSecurityLevel) {
     this.minimumWifiSecurityLevel = minimumWifiSecurityLevel;
+    return this;
+  }
+
+  /**
+   * Optional. Controls whether NFC is disabled on the device and if the user can toggle NFC between
+   * enabled and disabled. This is for fully managed devices. To control NFC on work profiles on
+   * company-owned devices, use deviceWidePolicies.deviceRadioState.nfc instead.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getNfc() {
+    return nfc;
+  }
+
+  /**
+   * Optional. Controls whether NFC is disabled on the device and if the user can toggle NFC between
+   * enabled and disabled. This is for fully managed devices. To control NFC on work profiles on
+   * company-owned devices, use deviceWidePolicies.deviceRadioState.nfc instead.
+   * @param nfc nfc or {@code null} for none
+   */
+  public DeviceRadioState setNfc(java.lang.String nfc) {
+    this.nfc = nfc;
     return this;
   }
 

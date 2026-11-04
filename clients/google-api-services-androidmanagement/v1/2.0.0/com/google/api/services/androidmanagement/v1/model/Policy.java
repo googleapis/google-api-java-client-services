@@ -335,6 +335,13 @@ public final class Policy extends com.google.api.client.json.GenericJson {
   private DeviceRadioState deviceRadioState;
 
   /**
+   * Optional. Policies controlling the device on company-owned devices.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private DeviceWidePolicies deviceWidePolicies;
+
+  /**
    * Optional. Controls for the display settings.
    * The value may be {@code null}.
    */
@@ -1580,6 +1587,23 @@ public final class Policy extends com.google.api.client.json.GenericJson {
    */
   public Policy setDeviceRadioState(DeviceRadioState deviceRadioState) {
     this.deviceRadioState = deviceRadioState;
+    return this;
+  }
+
+  /**
+   * Optional. Policies controlling the device on company-owned devices.
+   * @return value or {@code null} for none
+   */
+  public DeviceWidePolicies getDeviceWidePolicies() {
+    return deviceWidePolicies;
+  }
+
+  /**
+   * Optional. Policies controlling the device on company-owned devices.
+   * @param deviceWidePolicies deviceWidePolicies or {@code null} for none
+   */
+  public Policy setDeviceWidePolicies(DeviceWidePolicies deviceWidePolicies) {
+    this.deviceWidePolicies = deviceWidePolicies;
     return this;
   }
 

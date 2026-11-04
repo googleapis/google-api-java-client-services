@@ -4087,7 +4087,7 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
        * This request holds the parameters needed by the meet server.  After setting any optional
        * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
        *
-       * @param name Identifier. Resource name of the member. Format: spaces/{space}/members/{member}
+       * @param name Identifier. Resource name of the member. Format: `spaces/{space}/members/{member}`
        * @param content the {@link com.google.api.services.meet.v2.model.Member}
        * @return the request
        */
@@ -4115,7 +4115,7 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
          * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
          * be called to initialize this instance immediately after invoking the constructor. </p>
          *
-         * @param name Identifier. Resource name of the member. Format: spaces/{space}/members/{member}
+         * @param name Identifier. Resource name of the member. Format: `spaces/{space}/members/{member}`
          * @param content the {@link com.google.api.services.meet.v2.model.Member}
          * @since 1.13
          */
@@ -4184,17 +4184,17 @@ public class Meet extends com.google.api.client.googleapis.services.json.Abstrac
           return (Patch) super.setUploadProtocol(uploadProtocol);
         }
 
-        /** Identifier. Resource name of the member. Format: spaces/{space}/members/{member} */
+        /** Identifier. Resource name of the member. Format: `spaces/{space}/members/{member}` */
         @com.google.api.client.util.Key
         private java.lang.String name;
 
-        /** Identifier. Resource name of the member. Format: spaces/{space}/members/{member}
+        /** Identifier. Resource name of the member. Format: `spaces/{space}/members/{member}`
          */
         public java.lang.String getName() {
           return name;
         }
 
-        /** Identifier. Resource name of the member. Format: spaces/{space}/members/{member} */
+        /** Identifier. Resource name of the member. Format: `spaces/{space}/members/{member}` */
         public Patch setName(java.lang.String name) {
           if (!getSuppressPatternChecks()) {
             com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),

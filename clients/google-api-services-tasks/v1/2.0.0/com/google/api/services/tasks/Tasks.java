@@ -1421,37 +1421,6 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
       }
 
       /**
-       * Optional. Flag indicating whether the task is created as 'hidden', as if it had been
-       * completed and then cleared from the task list (see the "clear" method). Hidden tasks are
-       * not returned by default when retrieving all tasks for a task list (see showHidden). Only
-       * completed tasks can be created as hidden, and they can not be nested or positioned, so
-       * parent and previous must be empty.
-       */
-      @com.google.api.client.util.Key
-      private java.lang.Boolean hidden;
-
-      /** Optional. Flag indicating whether the task is created as 'hidden', as if it had been completed and
-     then cleared from the task list (see the "clear" method). Hidden tasks are not returned by default
-     when retrieving all tasks for a task list (see showHidden). Only completed tasks can be created as
-     hidden, and they can not be nested or positioned, so parent and previous must be empty.
-       */
-      public java.lang.Boolean getHidden() {
-        return hidden;
-      }
-
-      /**
-       * Optional. Flag indicating whether the task is created as 'hidden', as if it had been
-       * completed and then cleared from the task list (see the "clear" method). Hidden tasks are
-       * not returned by default when retrieving all tasks for a task list (see showHidden). Only
-       * completed tasks can be created as hidden, and they can not be nested or positioned, so
-       * parent and previous must be empty.
-       */
-      public Insert setHidden(java.lang.Boolean hidden) {
-        this.hidden = hidden;
-        return this;
-      }
-
-      /**
        * Optional. Parent task identifier. If the task is created at the top level, this parameter
        * is omitted. An assigned task cannot be a parent task, nor can it have a parent. Setting the
        * parent to an assigned task results in failure of the request.

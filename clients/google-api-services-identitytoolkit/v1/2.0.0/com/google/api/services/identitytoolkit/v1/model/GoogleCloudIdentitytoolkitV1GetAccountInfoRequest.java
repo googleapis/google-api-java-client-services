@@ -46,6 +46,9 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
   private java.util.List<java.lang.String> email;
 
   /**
+   * The federated user identifier of one or more accounts to fetch. Should only be specified by
+   * authenticated requests bearing a Google OAuth 2.0 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,6 +152,9 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
   }
 
   /**
+   * The federated user identifier of one or more accounts to fetch. Should only be specified by
+   * authenticated requests bearing a Google OAuth 2.0 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleCloudIdentitytoolkitV1FederatedUserIdentifier> getFederatedUserId() {
@@ -156,6 +162,9 @@ public final class GoogleCloudIdentitytoolkitV1GetAccountInfoRequest extends com
   }
 
   /**
+   * The federated user identifier of one or more accounts to fetch. Should only be specified by
+   * authenticated requests bearing a Google OAuth 2.0 credential with proper
+   * [permissions](https://cloud.google.com/identity-platform/docs/access-control).
    * @param federatedUserId federatedUserId or {@code null} for none
    */
   public GoogleCloudIdentitytoolkitV1GetAccountInfoRequest setFederatedUserId(java.util.List<GoogleCloudIdentitytoolkitV1FederatedUserIdentifier> federatedUserId) {

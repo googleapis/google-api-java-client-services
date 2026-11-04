@@ -80,6 +80,17 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswer extends com.goo
   private java.lang.String state;
 
   /**
+   * Output only. Maps a tool name (for example, `Internal-KB-Search` or
+   * `custom_mcp__agent__Internal-KB-Search`) to its human-readable display title (for example,
+   * `@Internal-KB Search`), populated from MCP tool `title` or `annotations.title` metadata so
+   * user-facing surfaces can display the tool title instead of the raw function declaration
+   * identifier. Empty when no tool display titles are present.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> toolDisplayNames;
+
+  /**
    * Reasons for not answering the assist call.
    * @return value or {@code null} for none
    */
@@ -194,6 +205,31 @@ public final class GoogleCloudDiscoveryengineV1alphaAssistAnswer extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaAssistAnswer setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Maps a tool name (for example, `Internal-KB-Search` or
+   * `custom_mcp__agent__Internal-KB-Search`) to its human-readable display title (for example,
+   * `@Internal-KB Search`), populated from MCP tool `title` or `annotations.title` metadata so
+   * user-facing surfaces can display the tool title instead of the raw function declaration
+   * identifier. Empty when no tool display titles are present.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getToolDisplayNames() {
+    return toolDisplayNames;
+  }
+
+  /**
+   * Output only. Maps a tool name (for example, `Internal-KB-Search` or
+   * `custom_mcp__agent__Internal-KB-Search`) to its human-readable display title (for example,
+   * `@Internal-KB Search`), populated from MCP tool `title` or `annotations.title` metadata so
+   * user-facing surfaces can display the tool title instead of the raw function declaration
+   * identifier. Empty when no tool display titles are present.
+   * @param toolDisplayNames toolDisplayNames or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAssistAnswer setToolDisplayNames(java.util.Map<String, java.lang.String> toolDisplayNames) {
+    this.toolDisplayNames = toolDisplayNames;
     return this;
   }
 

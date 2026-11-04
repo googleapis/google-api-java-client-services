@@ -44,6 +44,17 @@ public final class GoogleCloudDiscoveryengineV1alphaActionConfig extends com.goo
   private java.lang.Boolean createBapConnection;
 
   /**
+   * Optional. Customer-supplied OAuth scopes for connectors that opt into customer- managed scopes
+   * via ConnectorSource.enable_customer_managed_scopes. When non-empty on an opted-in connector,
+   * this list **replaces** the connector's built-in per-tool scopes: the OAuth authorization URL
+   * requests exactly these scopes for every operation, and the built-in scopes are never merged in.
+   * Ignored for connectors that do not opt in.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> customerManagedScopes;
+
+  /**
    * Output only. The connector contains the necessary parameters and is configured to support
    * actions.
    * The value may be {@code null}.
@@ -114,6 +125,31 @@ public final class GoogleCloudDiscoveryengineV1alphaActionConfig extends com.goo
    */
   public GoogleCloudDiscoveryengineV1alphaActionConfig setCreateBapConnection(java.lang.Boolean createBapConnection) {
     this.createBapConnection = createBapConnection;
+    return this;
+  }
+
+  /**
+   * Optional. Customer-supplied OAuth scopes for connectors that opt into customer- managed scopes
+   * via ConnectorSource.enable_customer_managed_scopes. When non-empty on an opted-in connector,
+   * this list **replaces** the connector's built-in per-tool scopes: the OAuth authorization URL
+   * requests exactly these scopes for every operation, and the built-in scopes are never merged in.
+   * Ignored for connectors that do not opt in.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getCustomerManagedScopes() {
+    return customerManagedScopes;
+  }
+
+  /**
+   * Optional. Customer-supplied OAuth scopes for connectors that opt into customer- managed scopes
+   * via ConnectorSource.enable_customer_managed_scopes. When non-empty on an opted-in connector,
+   * this list **replaces** the connector's built-in per-tool scopes: the OAuth authorization URL
+   * requests exactly these scopes for every operation, and the built-in scopes are never merged in.
+   * Ignored for connectors that do not opt in.
+   * @param customerManagedScopes customerManagedScopes or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaActionConfig setCustomerManagedScopes(java.util.List<java.lang.String> customerManagedScopes) {
+    this.customerManagedScopes = customerManagedScopes;
     return this;
   }
 

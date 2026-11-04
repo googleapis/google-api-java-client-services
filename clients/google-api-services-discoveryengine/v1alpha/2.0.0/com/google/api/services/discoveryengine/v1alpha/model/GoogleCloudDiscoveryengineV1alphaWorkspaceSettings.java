@@ -31,6 +31,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWorkspaceSettings extends co
 
   /**
    * Whether the calling user's customer domain matches the workspace data stores under this engine.
+   * Unset when the check did not run or could not complete, which clients treat as unknown.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,6 +46,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWorkspaceSettings extends co
 
   /**
    * Whether the calling user's customer domain matches the workspace data stores under this engine.
+   * Unset when the check did not run or could not complete, which clients treat as unknown.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCustomerDomainValid() {
@@ -53,6 +55,7 @@ public final class GoogleCloudDiscoveryengineV1alphaWorkspaceSettings extends co
 
   /**
    * Whether the calling user's customer domain matches the workspace data stores under this engine.
+   * Unset when the check did not run or could not complete, which clients treat as unknown.
    * @param customerDomainValid customerDomainValid or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaWorkspaceSettings setCustomerDomainValid(java.lang.Boolean customerDomainValid) {

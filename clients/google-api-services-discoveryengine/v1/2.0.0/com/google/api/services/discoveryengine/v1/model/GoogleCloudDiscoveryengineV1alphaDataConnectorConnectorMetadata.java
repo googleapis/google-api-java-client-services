@@ -32,7 +32,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetada
 
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-party provider name.
-   * Lets end users see who authored a connector (future: third-party-authored connectors).
+   * Lets end users see who authored a connector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,7 +71,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetada
 
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-party provider name.
-   * Lets end users see who authored a connector (future: third-party-authored connectors).
+   * Lets end users see who authored a connector.
    * @return value or {@code null} for none
    */
   public java.lang.String getAuthor() {
@@ -80,7 +80,7 @@ public final class GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetada
 
   /**
    * Optional. The party that authored the connector, e.g. "Google" or a third-party provider name.
-   * Lets end users see who authored a connector (future: third-party-authored connectors).
+   * Lets end users see who authored a connector.
    * @param author author or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataConnectorConnectorMetadata setAuthor(java.lang.String author) {

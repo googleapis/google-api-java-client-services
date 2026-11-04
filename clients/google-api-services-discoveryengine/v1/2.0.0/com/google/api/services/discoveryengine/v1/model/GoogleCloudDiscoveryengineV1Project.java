@@ -51,6 +51,13 @@ public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.cl
   private GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfig customerProvidedConfig;
 
   /**
+   * Output only. The current experience state of the project.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String experienceState;
+
+  /**
    * Output only. Full resource name of the project, for example `projects/{project}`. Note that
    * when making requests, project number and project id are both acceptable, but the server will
    * always respond in project number.
@@ -122,6 +129,23 @@ public final class GoogleCloudDiscoveryengineV1Project extends com.google.api.cl
    */
   public GoogleCloudDiscoveryengineV1Project setCustomerProvidedConfig(GoogleCloudDiscoveryengineV1ProjectCustomerProvidedConfig customerProvidedConfig) {
     this.customerProvidedConfig = customerProvidedConfig;
+    return this;
+  }
+
+  /**
+   * Output only. The current experience state of the project.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getExperienceState() {
+    return experienceState;
+  }
+
+  /**
+   * Output only. The current experience state of the project.
+   * @param experienceState experienceState or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Project setExperienceState(java.lang.String experienceState) {
+    this.experienceState = experienceState;
     return this;
   }
 

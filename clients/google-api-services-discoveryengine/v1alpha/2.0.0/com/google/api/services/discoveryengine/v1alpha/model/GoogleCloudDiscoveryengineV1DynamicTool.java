@@ -58,6 +58,13 @@ public final class GoogleCloudDiscoveryengineV1DynamicTool extends com.google.ap
   private java.lang.String name;
 
   /**
+   * Optional. Indicates whether the tool is read-only and does not perform write operations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean readonly;
+
+  /**
    * Optional. The description of the tool.
    * @return value or {@code null} for none
    */
@@ -122,6 +129,23 @@ public final class GoogleCloudDiscoveryengineV1DynamicTool extends com.google.ap
    */
   public GoogleCloudDiscoveryengineV1DynamicTool setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. Indicates whether the tool is read-only and does not perform write operations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getReadonly() {
+    return readonly;
+  }
+
+  /**
+   * Optional. Indicates whether the tool is read-only and does not perform write operations.
+   * @param readonly readonly or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1DynamicTool setReadonly(java.lang.Boolean readonly) {
+    this.readonly = readonly;
     return this;
   }
 

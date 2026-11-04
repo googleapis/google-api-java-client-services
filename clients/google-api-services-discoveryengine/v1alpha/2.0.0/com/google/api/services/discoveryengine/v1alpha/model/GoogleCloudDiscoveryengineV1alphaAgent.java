@@ -74,6 +74,14 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
   private java.lang.String customPlaceholderText;
 
   /**
+   * Optional. Whether the agent is pinned by default for users who have access to it and have not
+   * explicitly unpinned it. Setting this field requires an admin.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean defaultPinned;
+
+  /**
    * Output only. The reason why the agent deployment failed. Only set if the state is
    * DEPLOYMENT_FAILED.
    * The value may be {@code null}.
@@ -287,6 +295,25 @@ public final class GoogleCloudDiscoveryengineV1alphaAgent extends com.google.api
    */
   public GoogleCloudDiscoveryengineV1alphaAgent setCustomPlaceholderText(java.lang.String customPlaceholderText) {
     this.customPlaceholderText = customPlaceholderText;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the agent is pinned by default for users who have access to it and have not
+   * explicitly unpinned it. Setting this field requires an admin.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDefaultPinned() {
+    return defaultPinned;
+  }
+
+  /**
+   * Optional. Whether the agent is pinned by default for users who have access to it and have not
+   * explicitly unpinned it. Setting this field requires an admin.
+   * @param defaultPinned defaultPinned or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1alphaAgent setDefaultPinned(java.lang.Boolean defaultPinned) {
+    this.defaultPinned = defaultPinned;
     return this;
   }
 

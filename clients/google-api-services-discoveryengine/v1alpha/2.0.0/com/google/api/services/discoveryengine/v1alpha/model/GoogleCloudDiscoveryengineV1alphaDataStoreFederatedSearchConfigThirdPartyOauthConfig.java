@@ -37,9 +37,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStoreFederatedSearchConf
   private java.lang.String appName;
 
   /**
-   * Optional. The instance name identifying the 3P app, e.g., "vaissptbots-my". This is different
-   * from the instance_uri which is the full URL of the 3P app e.g., "https://vaissptbots-
-   * my.sharepoint.com".
+   * Optional. The instance name identifying the 3P app, e.g., "-my". This is different from the
+   * instance_uri which is the full URL of the 3P app e.g., "https://-my.sharepoint.com".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,9 +62,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStoreFederatedSearchConf
   }
 
   /**
-   * Optional. The instance name identifying the 3P app, e.g., "vaissptbots-my". This is different
-   * from the instance_uri which is the full URL of the 3P app e.g., "https://vaissptbots-
-   * my.sharepoint.com".
+   * Optional. The instance name identifying the 3P app, e.g., "-my". This is different from the
+   * instance_uri which is the full URL of the 3P app e.g., "https://-my.sharepoint.com".
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceName() {
@@ -73,9 +71,8 @@ public final class GoogleCloudDiscoveryengineV1alphaDataStoreFederatedSearchConf
   }
 
   /**
-   * Optional. The instance name identifying the 3P app, e.g., "vaissptbots-my". This is different
-   * from the instance_uri which is the full URL of the 3P app e.g., "https://vaissptbots-
-   * my.sharepoint.com".
+   * Optional. The instance name identifying the 3P app, e.g., "-my". This is different from the
+   * instance_uri which is the full URL of the 3P app e.g., "https://-my.sharepoint.com".
    * @param instanceName instanceName or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaDataStoreFederatedSearchConfigThirdPartyOauthConfig setInstanceName(java.lang.String instanceName) {

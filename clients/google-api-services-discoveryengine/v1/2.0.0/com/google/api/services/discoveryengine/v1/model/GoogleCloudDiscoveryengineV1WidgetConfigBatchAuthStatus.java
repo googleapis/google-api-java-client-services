@@ -45,9 +45,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus exten
 
   /**
    * Output only. It is the batch authorization group placeholder full resource name. This is not a
-   * real data connector (not existed in DataConnector table in spanner). It's a resource name
-   * existing only in the connector_authorization in the user table. E.g. projects/{project}/locatio
-   * ns/{location}/collections/oauth_placeholder_google_workspace/dataStores/dataConnector.
+   * real data connector resource. E.g. projects/{project}/locations/{location}/collections/oauth_pl
+   * aceholder_google_workspace/dataStores/dataConnector.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,9 +88,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus exten
 
   /**
    * Output only. It is the batch authorization group placeholder full resource name. This is not a
-   * real data connector (not existed in DataConnector table in spanner). It's a resource name
-   * existing only in the connector_authorization in the user table. E.g. projects/{project}/locatio
-   * ns/{location}/collections/oauth_placeholder_google_workspace/dataStores/dataConnector.
+   * real data connector resource. E.g. projects/{project}/locations/{location}/collections/oauth_pl
+   * aceholder_google_workspace/dataStores/dataConnector.
    * @return value or {@code null} for none
    */
   public java.lang.String getPlaceholder() {
@@ -100,9 +98,8 @@ public final class GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus exten
 
   /**
    * Output only. It is the batch authorization group placeholder full resource name. This is not a
-   * real data connector (not existed in DataConnector table in spanner). It's a resource name
-   * existing only in the connector_authorization in the user table. E.g. projects/{project}/locatio
-   * ns/{location}/collections/oauth_placeholder_google_workspace/dataStores/dataConnector.
+   * real data connector resource. E.g. projects/{project}/locations/{location}/collections/oauth_pl
+   * aceholder_google_workspace/dataStores/dataConnector.
    * @param placeholder placeholder or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1WidgetConfigBatchAuthStatus setPlaceholder(java.lang.String placeholder) {

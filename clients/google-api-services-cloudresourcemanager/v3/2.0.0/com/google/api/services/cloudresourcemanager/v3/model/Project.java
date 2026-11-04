@@ -94,6 +94,14 @@ public final class Project extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Output only. The type of Management Project. This field is only populated if
+   * `is_management_project` is `true`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String managementType;
+
+  /**
    * Output only. The unique resource name of the project. It is an int64 generated number prefixed
    * by "projects/". Example: `projects/415104041262`
    * The value may be {@code null}.
@@ -282,6 +290,25 @@ public final class Project extends com.google.api.client.json.GenericJson {
    */
   public Project setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Output only. The type of Management Project. This field is only populated if
+   * `is_management_project` is `true`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getManagementType() {
+    return managementType;
+  }
+
+  /**
+   * Output only. The type of Management Project. This field is only populated if
+   * `is_management_project` is `true`.
+   * @param managementType managementType or {@code null} for none
+   */
+  public Project setManagementType(java.lang.String managementType) {
+    this.managementType = managementType;
     return this;
   }
 

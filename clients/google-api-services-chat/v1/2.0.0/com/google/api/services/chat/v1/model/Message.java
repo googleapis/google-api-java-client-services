@@ -241,7 +241,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   private String lastUpdateTime;
 
   /**
-   * Optional. Specifies how the server interprets the message `text` field content.
+   * Optional. Specifies how the server interprets the message `text` field content when creating a
+   * message or updating the `text` field of a message. When calling `UpdateMessage`, set
+   * `markup_syntax` and `text` on the `Message` resource and include `text` (not `markup_syntax`)
+   * in `update_mask`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -751,7 +754,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies how the server interprets the message `text` field content.
+   * Optional. Specifies how the server interprets the message `text` field content when creating a
+   * message or updating the `text` field of a message. When calling `UpdateMessage`, set
+   * `markup_syntax` and `text` on the `Message` resource and include `text` (not `markup_syntax`)
+   * in `update_mask`.
    * @return value or {@code null} for none
    */
   public java.lang.String getMarkupSyntax() {
@@ -759,7 +765,10 @@ public final class Message extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Specifies how the server interprets the message `text` field content.
+   * Optional. Specifies how the server interprets the message `text` field content when creating a
+   * message or updating the `text` field of a message. When calling `UpdateMessage`, set
+   * `markup_syntax` and `text` on the `Message` resource and include `text` (not `markup_syntax`)
+   * in `update_mask`.
    * @param markupSyntax markupSyntax or {@code null} for none
    */
   public Message setMarkupSyntax(java.lang.String markupSyntax) {

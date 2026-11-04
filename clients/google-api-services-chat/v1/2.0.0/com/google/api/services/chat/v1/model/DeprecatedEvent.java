@@ -23,12 +23,15 @@ package com.google.api.services.chat.v1.model;
  * interactions). In addition to receiving events from user interactions, Chat apps can receive
  * events about changes to spaces, such as when a new member is added to a space. To learn about
  * space events, see [Work with events from Google
- * Chat](https://developers.google.com/workspace/chat/events-overview). Note: This event is only
- * used for [Chat interaction events](https://developers.google.com/workspace/chat/receive-respond-
- * interactions). If your Chat app is built as a [Google Workspace add-
- * on](https://developers.google.com/workspace/add-ons/chat/build), see [Chat event
+ * Chat](https://developers.google.com/workspace/chat/events-overview). Warning: This event object
+ * is only used for [Chat apps that aren't add-
+ * ons](https://developers.google.com/workspace/chat/receive-respond-interactions#not-add-on-
+ * interaction-events). If your Chat app is built as a [Google Workspace add-
+ * on](https://developers.google.com/workspace/add-ons/chat/build), instead see [Add-on event
  * objects](https://developers.google.com/workspace/add-ons/concepts/event-objects#chat-event-
- * object) in the add-ons documentation.
+ * object) in the add-ons documentation. To confirm which type of event your app receives, see
+ * [Determine your event type](https://developers.google.com/workspace/chat/receive-respond-
+ * interactions#determine-event-type).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

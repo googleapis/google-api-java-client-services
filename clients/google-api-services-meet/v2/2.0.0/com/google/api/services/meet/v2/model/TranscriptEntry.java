@@ -46,7 +46,7 @@ public final class TranscriptEntry extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. Resource name of the entry. Format:
-   * "conferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}"
+   * `conferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -112,7 +112,7 @@ public final class TranscriptEntry extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. Resource name of the entry. Format:
-   * "conferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}"
+   * `conferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -121,7 +121,7 @@ public final class TranscriptEntry extends com.google.api.client.json.GenericJso
 
   /**
    * Output only. Resource name of the entry. Format:
-   * "conferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}"
+   * `conferenceRecords/{conference_record}/transcripts/{transcript}/entries/{entry}`
    * @param name name or {@code null} for none
    */
   public TranscriptEntry setName(java.lang.String name) {

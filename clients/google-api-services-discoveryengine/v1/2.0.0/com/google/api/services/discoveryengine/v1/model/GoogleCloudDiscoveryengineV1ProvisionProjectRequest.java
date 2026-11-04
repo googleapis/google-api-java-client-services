@@ -55,6 +55,14 @@ public final class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends c
   private GoogleCloudDiscoveryengineV1IdpConfig idpConfig;
 
   /**
+   * Optional. The caller states whether the provisioning is for the new or the classic Gemini
+   * Enterprise experience.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String provisionIntent;
+
+  /**
    * Optional. Parameters for Agentspace.
    * The value may be {@code null}.
    */
@@ -117,6 +125,25 @@ public final class GoogleCloudDiscoveryengineV1ProvisionProjectRequest extends c
    */
   public GoogleCloudDiscoveryengineV1ProvisionProjectRequest setIdpConfig(GoogleCloudDiscoveryengineV1IdpConfig idpConfig) {
     this.idpConfig = idpConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The caller states whether the provisioning is for the new or the classic Gemini
+   * Enterprise experience.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getProvisionIntent() {
+    return provisionIntent;
+  }
+
+  /**
+   * Optional. The caller states whether the provisioning is for the new or the classic Gemini
+   * Enterprise experience.
+   * @param provisionIntent provisionIntent or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1ProvisionProjectRequest setProvisionIntent(java.lang.String provisionIntent) {
+    this.provisionIntent = provisionIntent;
     return this;
   }
 

@@ -38,7 +38,7 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
 
   /**
    * Output only. Indication of whether the subscription is terminated earlier than the expiration
-   * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
+   * date.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -144,7 +144,7 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
 
   /**
    * Output only. Indication of whether the subscription is terminated earlier than the expiration
-   * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
+   * date.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEarlyTerminated() {
@@ -153,7 +153,7 @@ public final class GoogleCloudDiscoveryengineV1LicenseConfig extends com.google.
 
   /**
    * Output only. Indication of whether the subscription is terminated earlier than the expiration
-   * date. This is usually terminated by pipeline once the subscription gets terminated from subsv3.
+   * date.
    * @param earlyTerminated earlyTerminated or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1LicenseConfig setEarlyTerminated(java.lang.Boolean earlyTerminated) {

@@ -44,8 +44,8 @@ public final class GoogleCloudDiscoveryengineV1alphaExternalIdentityUserMetadata
   private java.lang.String givenName;
 
   /**
-   * The user's primary email address. Do not use this for IAM bindings. Use
-   * ExternalIdentity.subject.
+   * The user's primary email address (populated from SCIM `emails[type=work]`). Do not use this for
+   * IAM bindings. Use ExternalIdentity.subject.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,8 +86,8 @@ public final class GoogleCloudDiscoveryengineV1alphaExternalIdentityUserMetadata
   }
 
   /**
-   * The user's primary email address. Do not use this for IAM bindings. Use
-   * ExternalIdentity.subject.
+   * The user's primary email address (populated from SCIM `emails[type=work]`). Do not use this for
+   * IAM bindings. Use ExternalIdentity.subject.
    * @return value or {@code null} for none
    */
   public java.lang.String getPrimaryEmail() {
@@ -95,8 +95,8 @@ public final class GoogleCloudDiscoveryengineV1alphaExternalIdentityUserMetadata
   }
 
   /**
-   * The user's primary email address. Do not use this for IAM bindings. Use
-   * ExternalIdentity.subject.
+   * The user's primary email address (populated from SCIM `emails[type=work]`). Do not use this for
+   * IAM bindings. Use ExternalIdentity.subject.
    * @param primaryEmail primaryEmail or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1alphaExternalIdentityUserMetadata setPrimaryEmail(java.lang.String primaryEmail) {

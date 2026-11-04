@@ -1398,7 +1398,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
       /**
        * This method provides suggestions for users and groups managed in an external identity provider,
-       * based on the provided prefix.
+       * based on the provided prefix. See CompleteExternalIdentitiesRequest.prefix_query for the fields
+       * matched during completion.
        *
        * Create a request for the method "locations.completeExternalIdentities".
        *
@@ -1424,7 +1425,8 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
         /**
          * This method provides suggestions for users and groups managed in an external identity provider,
-         * based on the provided prefix.
+         * based on the provided prefix. See CompleteExternalIdentitiesRequest.prefix_query for the fields
+         * matched during completion.
          *
          * Create a request for the method "locations.completeExternalIdentities".
          *
@@ -1588,24 +1590,31 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         }
 
         /**
-         * Required. The prefix to search for. For users, this prefix is matched against the
-         * `primary_email`. For groups, this prefix is matched against the `display_name`. The
-         * matching is case-insensitive.
+         * Required. The prefix to search for. The matching is case-insensitive. * Users: *
+         * Supported: `primary_email` (SCIM `emails[type=work]` only), `given_name`, and
+         * `family_name` by leading prefix, and `display_name` per word. * Not supported: `subject`,
+         * `external_id`, and SCIM `userName` (not stored; only used to derive `subject` when
+         * `google.subject` maps `user.userName`). * Groups: * Supported: `display_name` per word.
          */
         @com.google.api.client.util.Key
         private java.lang.String prefixQuery;
 
-        /** Required. The prefix to search for. For users, this prefix is matched against the `primary_email`.
-       For groups, this prefix is matched against the `display_name`. The matching is case-insensitive.
+        /** Required. The prefix to search for. The matching is case-insensitive. * Users: * Supported:
+       `primary_email` (SCIM `emails[type=work]` only), `given_name`, and `family_name` by leading prefix,
+       and `display_name` per word. * Not supported: `subject`, `external_id`, and SCIM `userName` (not
+       stored; only used to derive `subject` when `google.subject` maps `user.userName`). * Groups: *
+       Supported: `display_name` per word.
          */
         public java.lang.String getPrefixQuery() {
           return prefixQuery;
         }
 
         /**
-         * Required. The prefix to search for. For users, this prefix is matched against the
-         * `primary_email`. For groups, this prefix is matched against the `display_name`. The
-         * matching is case-insensitive.
+         * Required. The prefix to search for. The matching is case-insensitive. * Users: *
+         * Supported: `primary_email` (SCIM `emails[type=work]` only), `given_name`, and
+         * `family_name` by leading prefix, and `display_name` per word. * Not supported: `subject`,
+         * `external_id`, and SCIM `userName` (not stored; only used to derive `subject` when
+         * `google.subject` maps `user.userName`). * Groups: * Supported: `display_name` per word.
          */
         public CompleteExternalIdentities setPrefixQuery(java.lang.String prefixQuery) {
           this.prefixQuery = prefixQuery;
@@ -26299,19 +26308,18 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
                * backend computes. `ADMIN` is set by the Cloud Console admin "Feature Management"
-               * page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-               * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-               * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-               * returns the end-user web selector.
+               * page to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+               * populated; `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive
+               * the mobile model set; unset / `END_USER_WEB` returns the end-user web selector.
                */
               @com.google.api.client.util.Key
               private java.lang.String modelInfoView;
 
               /** Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes.
-             `ADMIN` is set by the Cloud Console admin "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to
-             receive the admin-surfaced model set with `ResolvedModel.admin_view` populated; `END_USER_MOBILE`
-             is set by the Gemini Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-             returns the end-user web selector.
+             `ADMIN` is set by the Cloud Console admin "Feature Management" page to receive the admin-surfaced
+             model set with `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
+             Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB` returns the end-user
+             web selector.
                */
               public java.lang.String getModelInfoView() {
                 return modelInfoView;
@@ -26320,10 +26328,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
                * backend computes. `ADMIN` is set by the Cloud Console admin "Feature Management"
-               * page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-               * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-               * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-               * returns the end-user web selector.
+               * page to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+               * populated; `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive
+               * the mobile model set; unset / `END_USER_WEB` returns the end-user web selector.
                */
               public Get setModelInfoView(java.lang.String modelInfoView) {
                 this.modelInfoView = modelInfoView;
@@ -40320,19 +40327,18 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
                * backend computes. `ADMIN` is set by the Cloud Console admin "Feature Management"
-               * page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-               * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-               * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-               * returns the end-user web selector.
+               * page to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+               * populated; `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive
+               * the mobile model set; unset / `END_USER_WEB` returns the end-user web selector.
                */
               @com.google.api.client.util.Key
               private java.lang.String modelInfoView;
 
               /** Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes.
-             `ADMIN` is set by the Cloud Console admin "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to
-             receive the admin-surfaced model set with `ResolvedModel.admin_view` populated; `END_USER_MOBILE`
-             is set by the Gemini Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-             returns the end-user web selector.
+             `ADMIN` is set by the Cloud Console admin "Feature Management" page to receive the admin-surfaced
+             model set with `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
+             Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB` returns the end-user
+             web selector.
                */
               public java.lang.String getModelInfoView() {
                 return modelInfoView;
@@ -40341,10 +40347,9 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
               /**
                * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the
                * backend computes. `ADMIN` is set by the Cloud Console admin "Feature Management"
-               * page (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-               * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-               * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-               * returns the end-user web selector.
+               * page to receive the admin-surfaced model set with `ResolvedModel.admin_view`
+               * populated; `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive
+               * the mobile model set; unset / `END_USER_WEB` returns the end-user web selector.
                */
               public Get setModelInfoView(java.lang.String modelInfoView) {
                 this.modelInfoView = modelInfoView;
@@ -57028,20 +57033,19 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend
-             * computes. `ADMIN` is set by the Cloud Console admin "Feature Management" page
-             * (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-             * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-             * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB` returns
-             * the end-user web selector.
+             * computes. `ADMIN` is set by the Cloud Console admin "Feature Management" page to
+             * receive the admin-surfaced model set with `ResolvedModel.admin_view` populated;
+             * `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive the mobile
+             * model set; unset / `END_USER_WEB` returns the end-user web selector.
              */
             @com.google.api.client.util.Key
             private java.lang.String modelInfoView;
 
             /** Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend computes.
-           `ADMIN` is set by the Cloud Console admin "Feature Management" page (screen/4Vn9gQKbN8tb7gm) to
-           receive the admin-surfaced model set with `ResolvedModel.admin_view` populated; `END_USER_MOBILE`
-           is set by the Gemini Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB`
-           returns the end-user web selector.
+           `ADMIN` is set by the Cloud Console admin "Feature Management" page to receive the admin-surfaced
+           model set with `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
+           Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB` returns the end-user
+           web selector.
              */
             public java.lang.String getModelInfoView() {
               return modelInfoView;
@@ -57049,11 +57053,10 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
 
             /**
              * Optional. Selects which view of `WidgetConfig.UiSettings.ModelConfigInfo` the backend
-             * computes. `ADMIN` is set by the Cloud Console admin "Feature Management" page
-             * (screen/4Vn9gQKbN8tb7gm) to receive the admin-surfaced model set with
-             * `ResolvedModel.admin_view` populated; `END_USER_MOBILE` is set by the Gemini
-             * Enterprise mobile app to receive the mobile model set; unset / `END_USER_WEB` returns
-             * the end-user web selector.
+             * computes. `ADMIN` is set by the Cloud Console admin "Feature Management" page to
+             * receive the admin-surfaced model set with `ResolvedModel.admin_view` populated;
+             * `END_USER_MOBILE` is set by the Gemini Enterprise mobile app to receive the mobile
+             * model set; unset / `END_USER_WEB` returns the end-user web selector.
              */
             public Get setModelInfoView(java.lang.String modelInfoView) {
               this.modelInfoView = modelInfoView;

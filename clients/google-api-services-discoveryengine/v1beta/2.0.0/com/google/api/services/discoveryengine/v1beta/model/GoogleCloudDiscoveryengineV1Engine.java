@@ -116,6 +116,13 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private java.util.List<java.lang.String> dataStoreIds;
 
   /**
+   * Output only. Whether the project is allowed to set `global_feature_toggle_state` to `DELAYED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean delayedGlobalFeatureToggleStateAllowed;
+
+  /**
    * Optional. Whether to disable analytics for searches performed on this engine.
    * The value may be {@code null}.
    */
@@ -131,22 +138,40 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private java.lang.String displayName;
 
   /**
+   * Output only. The complete, server-resolved state of every known feature toggle. Unlike
+   * `features`, which stores only explicit admin overrides, this map always contains an entry for
+   * every toggle. Clients should read toggle state from this field.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> effectiveFeatures;
+
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `speech-to-text` *
    * `feedback` * `session-sharing` * `personalization-memory` * `personalization-suggested-
    * highlights` * `mobile-app-access` * `disable-agent-sharing` * `disable-image-generation` *
-   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
-   * google-drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` *
-   * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-approval` *
-   * `disable-projects` * `sobi` * `enable-end-user-sharing-with-groups` * `single-agent-
-   * orchestration` * `multi-agent-orchestration` * `cross-product-intelligence` * `workflow-agents`
-   * * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-badge`
+   * `disable-video-generation` * `music-generation` * `speech-generation` * `disable-onedrive-
+   * upload` * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
+   * * `disable-canvas` * `canvas-workspace` * `canvas-app-builder` * `skills` * `skill-sharing` *
+   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
+   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence` * `workflow-agents` * `in-app-notifications` * `code-extraction` *
+   * `remote-vm` * `license-tier-badge` * `agent-marketplace` * `agent-scheduling` * `preview-
+   * agents`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> features;
+
+  /**
+   * Optional. Controls the global feature toggle state for the engine.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String globalFeatureToggleState;
 
   /**
    * Optional. The industry vertical that the engine registers. The restriction of the Engine
@@ -451,6 +476,23 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   }
 
   /**
+   * Output only. Whether the project is allowed to set `global_feature_toggle_state` to `DELAYED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDelayedGlobalFeatureToggleStateAllowed() {
+    return delayedGlobalFeatureToggleStateAllowed;
+  }
+
+  /**
+   * Output only. Whether the project is allowed to set `global_feature_toggle_state` to `DELAYED`.
+   * @param delayedGlobalFeatureToggleStateAllowed delayedGlobalFeatureToggleStateAllowed or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setDelayedGlobalFeatureToggleStateAllowed(java.lang.Boolean delayedGlobalFeatureToggleStateAllowed) {
+    this.delayedGlobalFeatureToggleStateAllowed = delayedGlobalFeatureToggleStateAllowed;
+    return this;
+  }
+
+  /**
    * Optional. Whether to disable analytics for searches performed on this engine.
    * @return value or {@code null} for none
    */
@@ -487,18 +529,41 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   }
 
   /**
+   * Output only. The complete, server-resolved state of every known feature toggle. Unlike
+   * `features`, which stores only explicit admin overrides, this map always contains an entry for
+   * every toggle. Clients should read toggle state from this field.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getEffectiveFeatures() {
+    return effectiveFeatures;
+  }
+
+  /**
+   * Output only. The complete, server-resolved state of every known feature toggle. Unlike
+   * `features`, which stores only explicit admin overrides, this map always contains an entry for
+   * every toggle. Clients should read toggle state from this field.
+   * @param effectiveFeatures effectiveFeatures or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setEffectiveFeatures(java.util.Map<String, java.lang.String> effectiveFeatures) {
+    this.effectiveFeatures = effectiveFeatures;
+    return this;
+  }
+
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `speech-to-text` *
    * `feedback` * `session-sharing` * `personalization-memory` * `personalization-suggested-
    * highlights` * `mobile-app-access` * `disable-agent-sharing` * `disable-image-generation` *
-   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
-   * google-drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` *
-   * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-approval` *
-   * `disable-projects` * `sobi` * `enable-end-user-sharing-with-groups` * `single-agent-
-   * orchestration` * `multi-agent-orchestration` * `cross-product-intelligence` * `workflow-agents`
-   * * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-badge`
+   * `disable-video-generation` * `music-generation` * `speech-generation` * `disable-onedrive-
+   * upload` * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
+   * * `disable-canvas` * `canvas-workspace` * `canvas-app-builder` * `skills` * `skill-sharing` *
+   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
+   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence` * `workflow-agents` * `in-app-notifications` * `code-extraction` *
+   * `remote-vm` * `license-tier-badge` * `agent-marketplace` * `agent-scheduling` * `preview-
+   * agents`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -512,16 +577,35 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `people-search` * `people-search-org-chart` * `bi-directional-audio` * `speech-to-text` *
    * `feedback` * `session-sharing` * `personalization-memory` * `personalization-suggested-
    * highlights` * `mobile-app-access` * `disable-agent-sharing` * `disable-image-generation` *
-   * `disable-video-generation` * `disable-onedrive-upload` * `disable-talk-to-content` * `disable-
-   * google-drive-upload` * `disable-welcome-emails` * `disable-canvas` * `canvas-workspace` *
-   * `canvas-app-builder` * `skills` * `skill-sharing` * `skill-sharing-without-admin-approval` *
-   * `disable-projects` * `sobi` * `enable-end-user-sharing-with-groups` * `single-agent-
-   * orchestration` * `multi-agent-orchestration` * `cross-product-intelligence` * `workflow-agents`
-   * * `in-app-notifications` * `code-extraction` * `remote-vm` * `license-tier-badge`
+   * `disable-video-generation` * `music-generation` * `speech-generation` * `disable-onedrive-
+   * upload` * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
+   * * `disable-canvas` * `canvas-workspace` * `canvas-app-builder` * `skills` * `skill-sharing` *
+   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
+   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
+   * product-intelligence` * `workflow-agents` * `in-app-notifications` * `code-extraction` *
+   * `remote-vm` * `license-tier-badge` * `agent-marketplace` * `agent-scheduling` * `preview-
+   * agents`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setFeatures(java.util.Map<String, java.lang.String> features) {
     this.features = features;
+    return this;
+  }
+
+  /**
+   * Optional. Controls the global feature toggle state for the engine.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getGlobalFeatureToggleState() {
+    return globalFeatureToggleState;
+  }
+
+  /**
+   * Optional. Controls the global feature toggle state for the engine.
+   * @param globalFeatureToggleState globalFeatureToggleState or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setGlobalFeatureToggleState(java.lang.String globalFeatureToggleState) {
+    this.globalFeatureToggleState = globalFeatureToggleState;
     return this;
   }
 

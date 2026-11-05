@@ -89,7 +89,7 @@ public final class GoogleCloudRunV2BuildConfig extends com.google.api.client.jso
   private java.lang.String sourceLocation;
 
   /**
-   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to build the Cloud Run
+   * Optional. Name of the Cloud Build private pool that should be used to build the Cloud Run
    * function. The format of this field is
    * `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and
    * `{region}` are the project id and region respectively where the worker pool is defined and
@@ -242,7 +242,7 @@ public final class GoogleCloudRunV2BuildConfig extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to build the Cloud Run
+   * Optional. Name of the Cloud Build private pool that should be used to build the Cloud Run
    * function. The format of this field is
    * `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and
    * `{region}` are the project id and region respectively where the worker pool is defined and
@@ -254,7 +254,7 @@ public final class GoogleCloudRunV2BuildConfig extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to build the Cloud Run
+   * Optional. Name of the Cloud Build private pool that should be used to build the Cloud Run
    * function. The format of this field is
    * `projects/{project}/locations/{region}/workerPools/{workerPool}` where `{project}` and
    * `{region}` are the project id and region respectively where the worker pool is defined and

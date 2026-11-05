@@ -47,6 +47,13 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
   private java.lang.String baseImageUri;
 
   /**
+   * Optional. The build configuration for the container image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2BuildConfiguration buildConfig;
+
+  /**
    * Output only. The build info of the container image.
    * The value may be {@code null}.
    */
@@ -192,6 +199,23 @@ public final class GoogleCloudRunV2Container extends com.google.api.client.json.
    */
   public GoogleCloudRunV2Container setBaseImageUri(java.lang.String baseImageUri) {
     this.baseImageUri = baseImageUri;
+    return this;
+  }
+
+  /**
+   * Optional. The build configuration for the container image.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2BuildConfiguration getBuildConfig() {
+    return buildConfig;
+  }
+
+  /**
+   * Optional. The build configuration for the container image.
+   * @param buildConfig buildConfig or {@code null} for none
+   */
+  public GoogleCloudRunV2Container setBuildConfig(GoogleCloudRunV2BuildConfiguration buildConfig) {
+    this.buildConfig = buildConfig;
     return this;
   }
 

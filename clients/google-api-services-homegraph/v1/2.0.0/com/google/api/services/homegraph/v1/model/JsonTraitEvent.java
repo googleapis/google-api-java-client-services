@@ -17,7 +17,7 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Dynamic JSON event payload conforming to `json_trait_schema.md`.
+ * Represents a dynamic JSON event payload that conforms to `json_trait_schema.md`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -30,22 +30,23 @@ package com.google.api.services.homegraph.v1.model;
 public final class JsonTraitEvent extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Event payload fields conforming to the event's registered JSON Schema.
+   * Optional. Holds the event payload fields, which conform to the event's registered JSON Schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> data;
 
   /**
-   * Required. Fully qualified event ID: `.` (e.g., `matter.doorLock.lockOperation`,
-   * `ghp.acme.warranty.claimUpdated`).
+   * Required. Identifies the event as `.`, where `` is the PascalCase key in the schema's
+   * `x-capability-info.events`, for example `capability.matter.standard.DoorLock.LockOperation` or
+   * `capability.generic.acme.Warranty.ClaimUpdated`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Optional. Event payload fields conforming to the event's registered JSON Schema.
+   * Optional. Holds the event payload fields, which conform to the event's registered JSON Schema.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getData() {
@@ -53,7 +54,7 @@ public final class JsonTraitEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Optional. Event payload fields conforming to the event's registered JSON Schema.
+   * Optional. Holds the event payload fields, which conform to the event's registered JSON Schema.
    * @param data data or {@code null} for none
    */
   public JsonTraitEvent setData(java.util.Map<String, java.lang.Object> data) {
@@ -62,8 +63,9 @@ public final class JsonTraitEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Fully qualified event ID: `.` (e.g., `matter.doorLock.lockOperation`,
-   * `ghp.acme.warranty.claimUpdated`).
+   * Required. Identifies the event as `.`, where `` is the PascalCase key in the schema's
+   * `x-capability-info.events`, for example `capability.matter.standard.DoorLock.LockOperation` or
+   * `capability.generic.acme.Warranty.ClaimUpdated`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -71,8 +73,9 @@ public final class JsonTraitEvent extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Required. Fully qualified event ID: `.` (e.g., `matter.doorLock.lockOperation`,
-   * `ghp.acme.warranty.claimUpdated`).
+   * Required. Identifies the event as `.`, where `` is the PascalCase key in the schema's
+   * `x-capability-info.events`, for example `capability.matter.standard.DoorLock.LockOperation` or
+   * `capability.generic.acme.Warranty.ClaimUpdated`.
    * @param id id or {@code null} for none
    */
   public JsonTraitEvent setId(java.lang.String id) {

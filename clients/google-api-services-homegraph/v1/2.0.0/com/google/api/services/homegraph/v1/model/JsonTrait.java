@@ -17,10 +17,10 @@
 package com.google.api.services.homegraph.v1.model;
 
 /**
- * Dynamic JSON trait state payload conforming to `json_trait_schema.md`. Used for Category 2
- * (vendor Matter clusters) and Category 3 (non-Matter capabilities) traits across all wire and
- * internal paths, and for Category 1 traits on external JSON-only wire paths (e.g., `Query` with
- * `JSON_TRAIT_ONLY`).
+ * Represents a dynamic JSON trait state payload that conforms to `json_trait_schema.md`. This
+ * message is used for Category 2 (vendor Matter clusters) and Category 3 (non-Matter capabilities)
+ * traits across all wire and internal paths, and for Category 1 traits on external JSON-only wire
+ * paths (for example, `Query` with `JSON_TRAIT_ONLY`).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the HomeGraph API. For a detailed explanation see:
@@ -33,24 +33,25 @@ package com.google.api.services.homegraph.v1.model;
 public final class JsonTrait extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Trait attribute map conforming to the trait's registered JSON Schema.
+   * Optional. Holds the trait attributes, which conform to the trait's registered JSON Schema.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.Object> data;
 
   /**
-   * Required. Canonical symbolic trait ID per `json_trait_schema.md`: - Standard Matter (Cat 1):
-   * `matter.` (e.g., `matter.thermostat`) - Google / vendor Matter (Cat 1/2): `matter..` (e.g.,
-   * `matter.google.`, `matter.eve.utility`) - Non-Matter (Cat 3, any provider incl. Google):
-   * `ghp..` (e.g., `ghp.acme.warranty`, `ghp.google.`)
+   * Required. Identifies the trait by its canonical four-segment capability ID, `capability...`: *
+   * Standard or Google Matter (Category 1): `capability.matter.standard.` or
+   * `capability.matter.google.`, for example `capability.matter.standard.Thermostat`. * Vendor
+   * Matter (Category 2): `capability.matter..`. * Non-Matter (Category 3, from any provider
+   * including Google): `capability.generic..`, for example `capability.generic.acme.Warranty`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
 
   /**
-   * Optional. Trait attribute map conforming to the trait's registered JSON Schema.
+   * Optional. Holds the trait attributes, which conform to the trait's registered JSON Schema.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.Object> getData() {
@@ -58,7 +59,7 @@ public final class JsonTrait extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Trait attribute map conforming to the trait's registered JSON Schema.
+   * Optional. Holds the trait attributes, which conform to the trait's registered JSON Schema.
    * @param data data or {@code null} for none
    */
   public JsonTrait setData(java.util.Map<String, java.lang.Object> data) {
@@ -67,10 +68,11 @@ public final class JsonTrait extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Canonical symbolic trait ID per `json_trait_schema.md`: - Standard Matter (Cat 1):
-   * `matter.` (e.g., `matter.thermostat`) - Google / vendor Matter (Cat 1/2): `matter..` (e.g.,
-   * `matter.google.`, `matter.eve.utility`) - Non-Matter (Cat 3, any provider incl. Google):
-   * `ghp..` (e.g., `ghp.acme.warranty`, `ghp.google.`)
+   * Required. Identifies the trait by its canonical four-segment capability ID, `capability...`: *
+   * Standard or Google Matter (Category 1): `capability.matter.standard.` or
+   * `capability.matter.google.`, for example `capability.matter.standard.Thermostat`. * Vendor
+   * Matter (Category 2): `capability.matter..`. * Non-Matter (Category 3, from any provider
+   * including Google): `capability.generic..`, for example `capability.generic.acme.Warranty`.
    * @return value or {@code null} for none
    */
   public java.lang.String getId() {
@@ -78,10 +80,11 @@ public final class JsonTrait extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. Canonical symbolic trait ID per `json_trait_schema.md`: - Standard Matter (Cat 1):
-   * `matter.` (e.g., `matter.thermostat`) - Google / vendor Matter (Cat 1/2): `matter..` (e.g.,
-   * `matter.google.`, `matter.eve.utility`) - Non-Matter (Cat 3, any provider incl. Google):
-   * `ghp..` (e.g., `ghp.acme.warranty`, `ghp.google.`)
+   * Required. Identifies the trait by its canonical four-segment capability ID, `capability...`: *
+   * Standard or Google Matter (Category 1): `capability.matter.standard.` or
+   * `capability.matter.google.`, for example `capability.matter.standard.Thermostat`. * Vendor
+   * Matter (Category 2): `capability.matter..`. * Non-Matter (Category 3, from any provider
+   * including Google): `capability.generic..`, for example `capability.generic.acme.Warranty`.
    * @param id id or {@code null} for none
    */
   public JsonTrait setId(java.lang.String id) {

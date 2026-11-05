@@ -40,11 +40,12 @@ package com.google.api.services.merchantapi.accounts_v1beta.model;
 public final class AccountService extends com.google.api.client.json.GenericJson {
 
   /**
-   * Service type for account aggregation. This enables the provider, which is an advanced account,
-   * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
-   * provider can perform administrative and operational tasks across all linked sub-accounts. This
-   * is useful for agencies, aggregators, or large retailers that need centralized control over many
-   * Merchant Center accounts.
+   * Service type for account aggregation. This enables the provider, which is a multi-client
+   * advanced account, to manage multiple sub-accounts (client accounts). Through this service, the
+   * service provider can perform administrative and operational tasks across all linked sub-
+   * accounts. This is used by store builders (ecommerce platforms), channel partners, marketplaces,
+   * multi-brand retailers, and international retailers that need centralized control over sub-
+   * accounts in Merchant Center.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -147,11 +148,12 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   private java.lang.String providerDisplayName;
 
   /**
-   * Service type for account aggregation. This enables the provider, which is an advanced account,
-   * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
-   * provider can perform administrative and operational tasks across all linked sub-accounts. This
-   * is useful for agencies, aggregators, or large retailers that need centralized control over many
-   * Merchant Center accounts.
+   * Service type for account aggregation. This enables the provider, which is a multi-client
+   * advanced account, to manage multiple sub-accounts (client accounts). Through this service, the
+   * service provider can perform administrative and operational tasks across all linked sub-
+   * accounts. This is used by store builders (ecommerce platforms), channel partners, marketplaces,
+   * multi-brand retailers, and international retailers that need centralized control over sub-
+   * accounts in Merchant Center.
    * @return value or {@code null} for none
    */
   public AccountAggregation getAccountAggregation() {
@@ -159,11 +161,12 @@ public final class AccountService extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Service type for account aggregation. This enables the provider, which is an advanced account,
-   * to manage multiple sub-accounts (client accounts). Through this service, the advanced account
-   * provider can perform administrative and operational tasks across all linked sub-accounts. This
-   * is useful for agencies, aggregators, or large retailers that need centralized control over many
-   * Merchant Center accounts.
+   * Service type for account aggregation. This enables the provider, which is a multi-client
+   * advanced account, to manage multiple sub-accounts (client accounts). Through this service, the
+   * service provider can perform administrative and operational tasks across all linked sub-
+   * accounts. This is used by store builders (ecommerce platforms), channel partners, marketplaces,
+   * multi-brand retailers, and international retailers that need centralized control over sub-
+   * accounts in Merchant Center.
    * @param accountAggregation accountAggregation or {@code null} for none
    */
   public AccountService setAccountAggregation(AccountAggregation accountAggregation) {

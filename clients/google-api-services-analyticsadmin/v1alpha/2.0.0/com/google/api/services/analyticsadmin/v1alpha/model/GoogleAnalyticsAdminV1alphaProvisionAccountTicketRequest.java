@@ -38,8 +38,7 @@ public final class GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequest exte
   private GoogleAnalyticsAdminV1alphaAccount account;
 
   /**
-   * Redirect URI where the user will be sent after accepting Terms of Service. Must be configured
-   * in Cloud Console as a Redirect URI.
+   * Redirect URI where the user will be sent after accepting Terms of Service.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,8 +62,7 @@ public final class GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequest exte
   }
 
   /**
-   * Redirect URI where the user will be sent after accepting Terms of Service. Must be configured
-   * in Cloud Console as a Redirect URI.
+   * Redirect URI where the user will be sent after accepting Terms of Service.
    * @return value or {@code null} for none
    */
   public java.lang.String getRedirectUri() {
@@ -72,8 +70,7 @@ public final class GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequest exte
   }
 
   /**
-   * Redirect URI where the user will be sent after accepting Terms of Service. Must be configured
-   * in Cloud Console as a Redirect URI.
+   * Redirect URI where the user will be sent after accepting Terms of Service.
    * @param redirectUri redirectUri or {@code null} for none
    */
   public GoogleAnalyticsAdminV1alphaProvisionAccountTicketRequest setRedirectUri(java.lang.String redirectUri) {

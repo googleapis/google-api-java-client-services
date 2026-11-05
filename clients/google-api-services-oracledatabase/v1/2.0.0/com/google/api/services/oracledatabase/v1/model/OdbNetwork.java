@@ -45,8 +45,8 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String entitlementId;
 
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If not
-   * specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If
+   * not specified, the system will pick a zone based on availability.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -68,7 +68,7 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The name of the VPC network in the following format:
+   * Required. Immutable. The name of the VPC network in the following format:
    * projects/{project}/global/networks/{network}
    * The value may be {@code null}.
    */
@@ -135,8 +135,8 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If not
-   * specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If
+   * not specified, the system will pick a zone based on availability.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcpOracleZone() {
@@ -144,8 +144,8 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If not
-   * specified, the system will pick a zone based on availability.
+   * Optional. Immutable. The GCP Oracle zone where OdbNetwork is hosted. Example: us-east4-b-r2. If
+   * not specified, the system will pick a zone based on availability.
    * @param gcpOracleZone gcpOracleZone or {@code null} for none
    */
   public OdbNetwork setGcpOracleZone(java.lang.String gcpOracleZone) {
@@ -190,7 +190,7 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the VPC network in the following format:
+   * Required. Immutable. The name of the VPC network in the following format:
    * projects/{project}/global/networks/{network}
    * @return value or {@code null} for none
    */
@@ -199,7 +199,7 @@ public final class OdbNetwork extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The name of the VPC network in the following format:
+   * Required. Immutable. The name of the VPC network in the following format:
    * projects/{project}/global/networks/{network}
    * @param network network or {@code null} for none
    */

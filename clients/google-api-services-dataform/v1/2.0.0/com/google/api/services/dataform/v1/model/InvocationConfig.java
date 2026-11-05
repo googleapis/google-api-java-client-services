@@ -31,6 +31,13 @@ package com.google.api.services.dataform.v1.model;
 public final class InvocationConfig extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Maximum number of actions that can be executed concurrently.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer concurrentActionsLimit;
+
+  /**
    * Optional. Configuration for end user authentication. Do not set if `service_account` is used.
    * The value may be {@code null}.
    */
@@ -93,6 +100,23 @@ public final class InvocationConfig extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean transitiveDependentsIncluded;
+
+  /**
+   * Optional. Maximum number of actions that can be executed concurrently.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getConcurrentActionsLimit() {
+    return concurrentActionsLimit;
+  }
+
+  /**
+   * Optional. Maximum number of actions that can be executed concurrently.
+   * @param concurrentActionsLimit concurrentActionsLimit or {@code null} for none
+   */
+  public InvocationConfig setConcurrentActionsLimit(java.lang.Integer concurrentActionsLimit) {
+    this.concurrentActionsLimit = concurrentActionsLimit;
+    return this;
+  }
 
   /**
    * Optional. Configuration for end user authentication. Do not set if `service_account` is used.

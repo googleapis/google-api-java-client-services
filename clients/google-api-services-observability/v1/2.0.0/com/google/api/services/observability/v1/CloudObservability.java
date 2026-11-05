@@ -4321,6 +4321,150 @@ public class CloudObservability extends com.google.api.client.googleapis.service
             return (Patch) super.set(parameterName, value);
           }
         }
+        /**
+         * Initiates reprovisioning of a bucket. This is allowed only a single time for a bucket and results
+         * in data loss. Subsequent calls to this method for the same bucket will result in a
+         * FAILED_PRECONDITION (400 Bad Request) error.
+         *
+         * Create a request for the method "buckets.reprovision".
+         *
+         * This request holds the parameters needed by the observability server.  After setting any optional
+         * parameters, call the {@link Reprovision#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. Name of the bucket to reprovision. The format is:
+         *        projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+         * @param content the {@link com.google.api.services.observability.v1.model.ReprovisionBucketRequest}
+         * @return the request
+         */
+        public Reprovision reprovision(java.lang.String name, com.google.api.services.observability.v1.model.ReprovisionBucketRequest content) throws java.io.IOException {
+          Reprovision result = new Reprovision(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Reprovision extends CloudObservabilityRequest<com.google.api.services.observability.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:reprovision";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+
+          /**
+           * Initiates reprovisioning of a bucket. This is allowed only a single time for a bucket and
+           * results in data loss. Subsequent calls to this method for the same bucket will result in a
+           * FAILED_PRECONDITION (400 Bad Request) error.
+           *
+           * Create a request for the method "buckets.reprovision".
+           *
+           * This request holds the parameters needed by the the observability server.  After setting any
+           * optional parameters, call the {@link Reprovision#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * Reprovision#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. Name of the bucket to reprovision. The format is:
+         *        projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           * @param content the {@link com.google.api.services.observability.v1.model.ReprovisionBucketRequest}
+           * @since 1.13
+           */
+          protected Reprovision(java.lang.String name, com.google.api.services.observability.v1.model.ReprovisionBucketRequest content) {
+            super(CloudObservability.this, "POST", REST_PATH, content, com.google.api.services.observability.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+          }
+
+          @Override
+          public Reprovision set$Xgafv(java.lang.String $Xgafv) {
+            return (Reprovision) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Reprovision setAccessToken(java.lang.String accessToken) {
+            return (Reprovision) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Reprovision setAlt(java.lang.String alt) {
+            return (Reprovision) super.setAlt(alt);
+          }
+
+          @Override
+          public Reprovision setCallback(java.lang.String callback) {
+            return (Reprovision) super.setCallback(callback);
+          }
+
+          @Override
+          public Reprovision setFields(java.lang.String fields) {
+            return (Reprovision) super.setFields(fields);
+          }
+
+          @Override
+          public Reprovision setKey(java.lang.String key) {
+            return (Reprovision) super.setKey(key);
+          }
+
+          @Override
+          public Reprovision setOauthToken(java.lang.String oauthToken) {
+            return (Reprovision) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Reprovision setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Reprovision) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Reprovision setQuotaUser(java.lang.String quotaUser) {
+            return (Reprovision) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Reprovision setUploadType(java.lang.String uploadType) {
+            return (Reprovision) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Reprovision setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Reprovision) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. Name of the bucket to reprovision. The format is:
+           * projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. Name of the bucket to reprovision. The format is:
+         projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. Name of the bucket to reprovision. The format is:
+           * projects/[PROJECT_ID]/locations/[LOCATION]/buckets/[BUCKET_ID]
+           */
+          public Reprovision setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/buckets/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Reprovision set(String parameterName, Object value) {
+            return (Reprovision) super.set(parameterName, value);
+          }
+        }
 
         /**
          * An accessor for creating requests from the Datasets collection.

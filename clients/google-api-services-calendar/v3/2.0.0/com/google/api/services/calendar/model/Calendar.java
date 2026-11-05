@@ -109,6 +109,17 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
   private java.lang.String timeZone;
 
   /**
+   * Represents the information about the user's working hours. Only available for primary calendars
+   * of Google Workspace users. To update the working hours, the entire working hours object must be
+   * passed. If not specified (or passed as null or an empty object), the existing working hours
+   * remain unchanged. To disable working hours or clear the schedule, set workingHoursEnabled to
+   * false (and omit availableTimes or pass an empty list).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private WorkingHours workingHours;
+
+  /**
    * Whether this calendar automatically accepts invitations. Only valid for resource calendars.
    * @return value or {@code null} for none
    */
@@ -299,6 +310,31 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
     return this;
   }
 
+  /**
+   * Represents the information about the user's working hours. Only available for primary calendars
+   * of Google Workspace users. To update the working hours, the entire working hours object must be
+   * passed. If not specified (or passed as null or an empty object), the existing working hours
+   * remain unchanged. To disable working hours or clear the schedule, set workingHoursEnabled to
+   * false (and omit availableTimes or pass an empty list).
+   * @return value or {@code null} for none
+   */
+  public WorkingHours getWorkingHours() {
+    return workingHours;
+  }
+
+  /**
+   * Represents the information about the user's working hours. Only available for primary calendars
+   * of Google Workspace users. To update the working hours, the entire working hours object must be
+   * passed. If not specified (or passed as null or an empty object), the existing working hours
+   * remain unchanged. To disable working hours or clear the schedule, set workingHoursEnabled to
+   * false (and omit availableTimes or pass an empty list).
+   * @param workingHours workingHours or {@code null} for none
+   */
+  public Calendar setWorkingHours(WorkingHours workingHours) {
+    this.workingHours = workingHours;
+    return this;
+  }
+
   @Override
   public Calendar set(String fieldName, Object value) {
     return (Calendar) super.set(fieldName, value);
@@ -309,4 +345,175 @@ public final class Calendar extends com.google.api.client.json.GenericJson {
     return (Calendar) super.clone();
   }
 
+  /**
+   * Represents the information about the user's working hours. Only available for primary calendars
+   * of Google Workspace users. To update the working hours, the entire working hours object must be
+   * passed. If not specified (or passed as null or an empty object), the existing working hours
+   * remain unchanged. To disable working hours or clear the schedule, set workingHoursEnabled to
+   * false (and omit availableTimes or pass an empty list).
+   */
+  public static final class WorkingHours extends com.google.api.client.json.GenericJson {
+
+    /**
+     * Working hours. Each availability period represents the user's working hours block during one
+     * day.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.util.List<AvailableTimes> availableTimes;
+
+    static {
+      // hack to force ProGuard to consider AvailableTimes used, since otherwise it would be stripped out
+      // see https://github.com/google/google-api-java-client/issues/543
+      com.google.api.client.util.Data.nullOf(AvailableTimes.class);
+    }
+
+    /**
+     * Whether the working hours are enabled for this calendar. Cannot be set to true when
+     * availableTimes is empty.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.Boolean workingHoursEnabled;
+
+    /**
+     * Working hours. Each availability period represents the user's working hours block during one
+     * day.
+     * @return value or {@code null} for none
+     */
+    public java.util.List<AvailableTimes> getAvailableTimes() {
+      return availableTimes;
+    }
+
+    /**
+     * Working hours. Each availability period represents the user's working hours block during one
+     * day.
+     * @param availableTimes availableTimes or {@code null} for none
+     */
+    public WorkingHours setAvailableTimes(java.util.List<AvailableTimes> availableTimes) {
+      this.availableTimes = availableTimes;
+      return this;
+    }
+
+    /**
+     * Whether the working hours are enabled for this calendar. Cannot be set to true when
+     * availableTimes is empty.
+     * @return value or {@code null} for none
+     */
+    public java.lang.Boolean getWorkingHoursEnabled() {
+      return workingHoursEnabled;
+    }
+
+    /**
+     * Whether the working hours are enabled for this calendar. Cannot be set to true when
+     * availableTimes is empty.
+     * @param workingHoursEnabled workingHoursEnabled or {@code null} for none
+     */
+    public WorkingHours setWorkingHoursEnabled(java.lang.Boolean workingHoursEnabled) {
+      this.workingHoursEnabled = workingHoursEnabled;
+      return this;
+    }
+
+    @Override
+    public WorkingHours set(String fieldName, Object value) {
+      return (WorkingHours) super.set(fieldName, value);
+    }
+
+    @Override
+    public WorkingHours clone() {
+      return (WorkingHours) super.clone();
+    }
+
+    /**
+     * Model definition for CalendarWorkingHoursAvailableTimes.
+     */
+    public static final class AvailableTimes extends com.google.api.client.json.GenericJson {
+
+      /**
+       * Day of the week. Required. Possible values are: - "monday" - "tuesday" - "wednesday" -
+       * "thursday" - "friday" - "saturday" - "sunday"
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.String dayOfWeek;
+
+      /**
+       * Period end, in minutes from the start of the day, exclusive. Required.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer periodEnd;
+
+      /**
+       * Period start, in minutes from the start of the day, inclusive. Required.
+       * The value may be {@code null}.
+       */
+      @com.google.api.client.util.Key
+      private java.lang.Integer periodStart;
+
+      /**
+       * Day of the week. Required. Possible values are: - "monday" - "tuesday" - "wednesday" -
+       * "thursday" - "friday" - "saturday" - "sunday"
+       * @return value or {@code null} for none
+       */
+      public java.lang.String getDayOfWeek() {
+        return dayOfWeek;
+      }
+
+      /**
+       * Day of the week. Required. Possible values are: - "monday" - "tuesday" - "wednesday" -
+       * "thursday" - "friday" - "saturday" - "sunday"
+       * @param dayOfWeek dayOfWeek or {@code null} for none
+       */
+      public AvailableTimes setDayOfWeek(java.lang.String dayOfWeek) {
+        this.dayOfWeek = dayOfWeek;
+        return this;
+      }
+
+      /**
+       * Period end, in minutes from the start of the day, exclusive. Required.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Integer getPeriodEnd() {
+        return periodEnd;
+      }
+
+      /**
+       * Period end, in minutes from the start of the day, exclusive. Required.
+       * @param periodEnd periodEnd or {@code null} for none
+       */
+      public AvailableTimes setPeriodEnd(java.lang.Integer periodEnd) {
+        this.periodEnd = periodEnd;
+        return this;
+      }
+
+      /**
+       * Period start, in minutes from the start of the day, inclusive. Required.
+       * @return value or {@code null} for none
+       */
+      public java.lang.Integer getPeriodStart() {
+        return periodStart;
+      }
+
+      /**
+       * Period start, in minutes from the start of the day, inclusive. Required.
+       * @param periodStart periodStart or {@code null} for none
+       */
+      public AvailableTimes setPeriodStart(java.lang.Integer periodStart) {
+        this.periodStart = periodStart;
+        return this;
+      }
+
+      @Override
+      public AvailableTimes set(String fieldName, Object value) {
+        return (AvailableTimes) super.set(fieldName, value);
+      }
+
+      @Override
+      public AvailableTimes clone() {
+        return (AvailableTimes) super.clone();
+      }
+
+    }
+  }
 }

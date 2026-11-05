@@ -74,6 +74,20 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
   }
 
   /**
+   * Output only. Status information for each of the specified containers. The status includes the
+   * resolved digest for specified images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRunV2ContainerStatus> containerStatuses;
+
+  static {
+    // hack to force ProGuard to consider GoogleCloudRunV2ContainerStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(GoogleCloudRunV2ContainerStatus.class);
+  }
+
+  /**
    * Holds the list which define the units of execution for this Revision.
    * The value may be {@code null}.
    */
@@ -423,6 +437,25 @@ public final class GoogleCloudRunV2Revision extends com.google.api.client.json.G
    */
   public GoogleCloudRunV2Revision setConditions(java.util.List<GoogleCloudRunV2Condition> conditions) {
     this.conditions = conditions;
+    return this;
+  }
+
+  /**
+   * Output only. Status information for each of the specified containers. The status includes the
+   * resolved digest for specified images.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRunV2ContainerStatus> getContainerStatuses() {
+    return containerStatuses;
+  }
+
+  /**
+   * Output only. Status information for each of the specified containers. The status includes the
+   * resolved digest for specified images.
+   * @param containerStatuses containerStatuses or {@code null} for none
+   */
+  public GoogleCloudRunV2Revision setContainerStatuses(java.util.List<GoogleCloudRunV2ContainerStatus> containerStatuses) {
+    this.containerStatuses = containerStatuses;
     return this;
   }
 

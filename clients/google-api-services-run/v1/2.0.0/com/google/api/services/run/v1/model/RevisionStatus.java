@@ -48,6 +48,20 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Status information for each of the specified containers. The status includes the
+   * resolved digest for specified images.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ContainerStatus> containerStatuses;
+
+  static {
+    // hack to force ProGuard to consider ContainerStatus used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(ContainerStatus.class);
+  }
+
+  /**
    * Output only. The configured number of instances running this revision. For Cloud Run, this only
    * includes instances provisioned using the minScale annotation. It does not include instances
    * created by autoscaling.
@@ -113,6 +127,25 @@ public final class RevisionStatus extends com.google.api.client.json.GenericJson
    */
   public RevisionStatus setConditions(java.util.List<GoogleCloudRunV1Condition> conditions) {
     this.conditions = conditions;
+    return this;
+  }
+
+  /**
+   * Output only. Status information for each of the specified containers. The status includes the
+   * resolved digest for specified images.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ContainerStatus> getContainerStatuses() {
+    return containerStatuses;
+  }
+
+  /**
+   * Output only. Status information for each of the specified containers. The status includes the
+   * resolved digest for specified images.
+   * @param containerStatuses containerStatuses or {@code null} for none
+   */
+  public RevisionStatus setContainerStatuses(java.util.List<ContainerStatus> containerStatuses) {
+    this.containerStatuses = containerStatuses;
     return this;
   }
 

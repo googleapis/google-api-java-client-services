@@ -96,10 +96,10 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
   private java.util.List<java.lang.String> tags;
 
   /**
-   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to build the function.
-   * The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}`
-   * where `{project}` and `{region}` are the project id and region respectively where the worker
-   * pool is defined and `{workerPool}` is the short name of the worker pool.
+   * Optional. Name of the Cloud Build private pool that should be used to build the function. The
+   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * `{project}` and `{region}` are the project id and region respectively where the worker pool is
+   * defined and `{workerPool}` is the short name of the worker pool.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -265,10 +265,10 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
   }
 
   /**
-   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to build the function.
-   * The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}`
-   * where `{project}` and `{region}` are the project id and region respectively where the worker
-   * pool is defined and `{workerPool}` is the short name of the worker pool.
+   * Optional. Name of the Cloud Build private pool that should be used to build the function. The
+   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * `{project}` and `{region}` are the project id and region respectively where the worker pool is
+   * defined and `{workerPool}` is the short name of the worker pool.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPool() {
@@ -276,10 +276,10 @@ public final class GoogleCloudRunV2SubmitBuildRequest extends com.google.api.cli
   }
 
   /**
-   * Optional. Name of the Cloud Build Custom Worker Pool that should be used to build the function.
-   * The format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}`
-   * where `{project}` and `{region}` are the project id and region respectively where the worker
-   * pool is defined and `{workerPool}` is the short name of the worker pool.
+   * Optional. Name of the Cloud Build private pool that should be used to build the function. The
+   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * `{project}` and `{region}` are the project id and region respectively where the worker pool is
+   * defined and `{workerPool}` is the short name of the worker pool.
    * @param workerPool workerPool or {@code null} for none
    */
   public GoogleCloudRunV2SubmitBuildRequest setWorkerPool(java.lang.String workerPool) {

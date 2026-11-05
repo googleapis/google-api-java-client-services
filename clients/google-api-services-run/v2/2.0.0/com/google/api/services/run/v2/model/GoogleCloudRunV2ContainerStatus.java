@@ -30,6 +30,13 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2ContainerStatus extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The build status of the container image.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2BuildStatus buildStatus;
+
+  /**
    * ImageDigest holds the resolved digest for the image specified and resolved during the creation
    * of Revision. This field holds the digest value regardless of whether a tag or digest was
    * originally specified in the Container object.
@@ -44,6 +51,23 @@ public final class GoogleCloudRunV2ContainerStatus extends com.google.api.client
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
+
+  /**
+   * Output only. The build status of the container image.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2BuildStatus getBuildStatus() {
+    return buildStatus;
+  }
+
+  /**
+   * Output only. The build status of the container image.
+   * @param buildStatus buildStatus or {@code null} for none
+   */
+  public GoogleCloudRunV2ContainerStatus setBuildStatus(GoogleCloudRunV2BuildStatus buildStatus) {
+    this.buildStatus = buildStatus;
+    return this;
+  }
 
   /**
    * ImageDigest holds the resolved digest for the image specified and resolved during the creation

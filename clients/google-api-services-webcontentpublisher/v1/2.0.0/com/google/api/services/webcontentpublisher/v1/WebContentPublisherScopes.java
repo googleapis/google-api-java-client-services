@@ -23,6 +23,9 @@ package com.google.api.services.webcontentpublisher.v1;
  */
 public class WebContentPublisherScopes {
 
+  /** Private Service: https://www.googleapis.com/auth/webcontentpublisher.publications.entitlements.readonly.system. */
+  public static final String WEBCONTENTPUBLISHER_PUBLICATIONS_ENTITLEMENTS_READONLY_SYSTEM = "https://www.googleapis.com/auth/webcontentpublisher.publications.entitlements.readonly.system";
+
   /** Private Service: https://www.googleapis.com/auth/webcontentpublisher.publications.manage.system. */
   public static final String WEBCONTENTPUBLISHER_PUBLICATIONS_MANAGE_SYSTEM = "https://www.googleapis.com/auth/webcontentpublisher.publications.manage.system";
 
@@ -33,6 +36,7 @@ public class WebContentPublisherScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(WEBCONTENTPUBLISHER_PUBLICATIONS_ENTITLEMENTS_READONLY_SYSTEM);
     set.add(WEBCONTENTPUBLISHER_PUBLICATIONS_MANAGE_SYSTEM);
     return java.util.Collections.unmodifiableSet(set);
   }

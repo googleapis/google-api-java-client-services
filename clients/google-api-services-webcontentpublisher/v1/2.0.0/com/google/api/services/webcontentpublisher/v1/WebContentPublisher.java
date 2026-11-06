@@ -1739,7 +1739,7 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
      * optional parameters, call the {@link CheckFreeAccess#execute()} method to invoke the remote
      * operation.
      *
-     * @param name Required. The resource name of the publication. Format: publications/{publication_id}
+     * @param name Required. The resource name of the publication. Format: publications/{publication}
      * @return the request
      */
     public CheckFreeAccess checkFreeAccess(java.lang.String name) throws java.io.IOException {
@@ -1766,7 +1766,7 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
        * ractGoogleClientRequest)} must be called to initialize this instance immediately after invoking
        * the constructor. </p>
        *
-       * @param name Required. The resource name of the publication. Format: publications/{publication_id}
+       * @param name Required. The resource name of the publication. Format: publications/{publication}
        * @since 1.13
        */
       protected CheckFreeAccess(java.lang.String name) {
@@ -1844,17 +1844,17 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
         return (CheckFreeAccess) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource name of the publication. Format: publications/{publication_id} */
+      /** Required. The resource name of the publication. Format: publications/{publication} */
       @com.google.api.client.util.Key
       private java.lang.String name;
 
-      /** Required. The resource name of the publication. Format: publications/{publication_id}
+      /** Required. The resource name of the publication. Format: publications/{publication}
        */
       public java.lang.String getName() {
         return name;
       }
 
-      /** Required. The resource name of the publication. Format: publications/{publication_id} */
+      /** Required. The resource name of the publication. Format: publications/{publication} */
       public CheckFreeAccess setName(java.lang.String name) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -1900,6 +1900,178 @@ public class WebContentPublisher extends com.google.api.client.googleapis.servic
       @Override
       public CheckFreeAccess set(String parameterName, Object value) {
         return (CheckFreeAccess) super.set(parameterName, value);
+      }
+    }
+    /**
+     * Checks if a reader has active program access.
+     *
+     * Create a request for the method "publications.checkProgramAccess".
+     *
+     * This request holds the parameters needed by the webcontentpublisher server.  After setting any
+     * optional parameters, call the {@link CheckProgramAccess#execute()} method to invoke the remote
+     * operation.
+     *
+     * @param name Required. The resource name of the publication. Format: publications/{publication}
+     * @return the request
+     */
+    public CheckProgramAccess checkProgramAccess(java.lang.String name) throws java.io.IOException {
+      CheckProgramAccess result = new CheckProgramAccess(name);
+      initialize(result);
+      return result;
+    }
+
+    public class CheckProgramAccess extends WebContentPublisherRequest<com.google.api.services.webcontentpublisher.v1.model.CheckProgramAccessResponse> {
+
+      private static final String REST_PATH = "v1/{+name}:checkProgramAccess";
+
+      private final java.util.regex.Pattern NAME_PATTERN =
+          java.util.regex.Pattern.compile("^publications/[^/]+$");
+
+      /**
+       * Checks if a reader has active program access.
+       *
+       * Create a request for the method "publications.checkProgramAccess".
+       *
+       * This request holds the parameters needed by the the webcontentpublisher server.  After setting
+       * any optional parameters, call the {@link CheckProgramAccess#execute()} method to invoke the
+       * remote operation. <p> {@link CheckProgramAccess#initialize(com.google.api.client.googleapis.ser
+       * vices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+       * after invoking the constructor. </p>
+       *
+       * @param name Required. The resource name of the publication. Format: publications/{publication}
+       * @since 1.13
+       */
+      protected CheckProgramAccess(java.lang.String name) {
+        super(WebContentPublisher.this, "GET", REST_PATH, null, com.google.api.services.webcontentpublisher.v1.model.CheckProgramAccessResponse.class);
+        this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^publications/[^/]+$");
+        }
+      }
+
+      @Override
+      public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+        return super.executeUsingHead();
+      }
+
+      @Override
+      public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+        return super.buildHttpRequestUsingHead();
+      }
+
+      @Override
+      public CheckProgramAccess set$Xgafv(java.lang.String $Xgafv) {
+        return (CheckProgramAccess) super.set$Xgafv($Xgafv);
+      }
+
+      @Override
+      public CheckProgramAccess setAccessToken(java.lang.String accessToken) {
+        return (CheckProgramAccess) super.setAccessToken(accessToken);
+      }
+
+      @Override
+      public CheckProgramAccess setAlt(java.lang.String alt) {
+        return (CheckProgramAccess) super.setAlt(alt);
+      }
+
+      @Override
+      public CheckProgramAccess setCallback(java.lang.String callback) {
+        return (CheckProgramAccess) super.setCallback(callback);
+      }
+
+      @Override
+      public CheckProgramAccess setFields(java.lang.String fields) {
+        return (CheckProgramAccess) super.setFields(fields);
+      }
+
+      @Override
+      public CheckProgramAccess setKey(java.lang.String key) {
+        return (CheckProgramAccess) super.setKey(key);
+      }
+
+      @Override
+      public CheckProgramAccess setOauthToken(java.lang.String oauthToken) {
+        return (CheckProgramAccess) super.setOauthToken(oauthToken);
+      }
+
+      @Override
+      public CheckProgramAccess setPrettyPrint(java.lang.Boolean prettyPrint) {
+        return (CheckProgramAccess) super.setPrettyPrint(prettyPrint);
+      }
+
+      @Override
+      public CheckProgramAccess setQuotaUser(java.lang.String quotaUser) {
+        return (CheckProgramAccess) super.setQuotaUser(quotaUser);
+      }
+
+      @Override
+      public CheckProgramAccess setUploadType(java.lang.String uploadType) {
+        return (CheckProgramAccess) super.setUploadType(uploadType);
+      }
+
+      @Override
+      public CheckProgramAccess setUploadProtocol(java.lang.String uploadProtocol) {
+        return (CheckProgramAccess) super.setUploadProtocol(uploadProtocol);
+      }
+
+      /** Required. The resource name of the publication. Format: publications/{publication} */
+      @com.google.api.client.util.Key
+      private java.lang.String name;
+
+      /** Required. The resource name of the publication. Format: publications/{publication}
+       */
+      public java.lang.String getName() {
+        return name;
+      }
+
+      /** Required. The resource name of the publication. Format: publications/{publication} */
+      public CheckProgramAccess setName(java.lang.String name) {
+        if (!getSuppressPatternChecks()) {
+          com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+              "Parameter name must conform to the pattern " +
+              "^publications/[^/]+$");
+        }
+        this.name = name;
+        return this;
+      }
+
+      /** Required. The specific product ID being accessed. */
+      @com.google.api.client.util.Key
+      private java.lang.String productId;
+
+      /** Required. The specific product ID being accessed.
+       */
+      public java.lang.String getProductId() {
+        return productId;
+      }
+
+      /** Required. The specific product ID being accessed. */
+      public CheckProgramAccess setProductId(java.lang.String productId) {
+        this.productId = productId;
+        return this;
+      }
+
+      /** Required. The encrypted site token string received from the Chrome HTTP header. */
+      @com.google.api.client.util.Key
+      private java.lang.String swgUserToken;
+
+      /** Required. The encrypted site token string received from the Chrome HTTP header.
+       */
+      public java.lang.String getSwgUserToken() {
+        return swgUserToken;
+      }
+
+      /** Required. The encrypted site token string received from the Chrome HTTP header. */
+      public CheckProgramAccess setSwgUserToken(java.lang.String swgUserToken) {
+        this.swgUserToken = swgUserToken;
+        return this;
+      }
+
+      @Override
+      public CheckProgramAccess set(String parameterName, Object value) {
+        return (CheckProgramAccess) super.set(parameterName, value);
       }
     }
 

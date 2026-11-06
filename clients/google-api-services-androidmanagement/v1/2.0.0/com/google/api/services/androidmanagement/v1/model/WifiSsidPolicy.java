@@ -18,8 +18,8 @@ package com.google.api.services.androidmanagement.v1.model;
 
 /**
  * Restrictions on which Wi-Fi SSIDs the device can connect to. Note that this does not affect which
- * networks can be configured on the device. Supported on company-owned devices running Android 13
- * and above.
+ * networks can be configured on the device. Supported on Android 13 (API level 33) and higher on
+ * fully managed devices and work profiles on company-owned devices.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Android Management API. For a detailed explanation
@@ -41,10 +41,7 @@ public final class WifiSsidPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. List of Wi-Fi SSIDs that should be applied in the policy. This field must be non-
-   * empty when WifiSsidPolicyType is set to WIFI_SSID_ALLOWLIST. If this is set to a non-empty
-   * list, then a NonComplianceDetail detail with API_LEVEL is reported if the Android version is
-   * less than 13 and a NonComplianceDetail with MANAGEMENT_MODE is reported for non-company-owned
-   * devices.
+   * empty when wifiSsidPolicyType is set to WIFI_SSID_ALLOWLIST.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,10 +72,7 @@ public final class WifiSsidPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. List of Wi-Fi SSIDs that should be applied in the policy. This field must be non-
-   * empty when WifiSsidPolicyType is set to WIFI_SSID_ALLOWLIST. If this is set to a non-empty
-   * list, then a NonComplianceDetail detail with API_LEVEL is reported if the Android version is
-   * less than 13 and a NonComplianceDetail with MANAGEMENT_MODE is reported for non-company-owned
-   * devices.
+   * empty when wifiSsidPolicyType is set to WIFI_SSID_ALLOWLIST.
    * @return value or {@code null} for none
    */
   public java.util.List<WifiSsid> getWifiSsids() {
@@ -87,10 +81,7 @@ public final class WifiSsidPolicy extends com.google.api.client.json.GenericJson
 
   /**
    * Optional. List of Wi-Fi SSIDs that should be applied in the policy. This field must be non-
-   * empty when WifiSsidPolicyType is set to WIFI_SSID_ALLOWLIST. If this is set to a non-empty
-   * list, then a NonComplianceDetail detail with API_LEVEL is reported if the Android version is
-   * less than 13 and a NonComplianceDetail with MANAGEMENT_MODE is reported for non-company-owned
-   * devices.
+   * empty when wifiSsidPolicyType is set to WIFI_SSID_ALLOWLIST.
    * @param wifiSsids wifiSsids or {@code null} for none
    */
   public WifiSsidPolicy setWifiSsids(java.util.List<WifiSsid> wifiSsids) {

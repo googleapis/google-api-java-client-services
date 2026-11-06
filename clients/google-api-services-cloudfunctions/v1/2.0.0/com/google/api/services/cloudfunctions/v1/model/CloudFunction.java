@@ -73,8 +73,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   private java.lang.String buildServiceAccount;
 
   /**
-   * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
-   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * Name of the Cloud Build private pool that should be used to build the function. The format of
+   * this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * `{project}` and `{region}` are the project id and region respectively where the worker pool is
    * defined and `{workerPool}` is the short name of the worker pool. If the project id is not the
    * same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-
@@ -451,8 +451,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
-   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * Name of the Cloud Build private pool that should be used to build the function. The format of
+   * this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * `{project}` and `{region}` are the project id and region respectively where the worker pool is
    * defined and `{workerPool}` is the short name of the worker pool. If the project id is not the
    * same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-
@@ -465,8 +465,8 @@ public final class CloudFunction extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Name of the Cloud Build Custom Worker Pool that should be used to build the function. The
-   * format of this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+   * Name of the Cloud Build private pool that should be used to build the function. The format of
+   * this field is `projects/{project}/locations/{region}/workerPools/{workerPool}` where
    * `{project}` and `{region}` are the project id and region respectively where the worker pool is
    * defined and `{workerPool}` is the short name of the worker pool. If the project id is not the
    * same as the function, then the Cloud Functions Service Agent (`service-@gcf-admin-

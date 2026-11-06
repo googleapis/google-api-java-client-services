@@ -50,7 +50,8 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The specification of the runtime.
+   * Required. The specification of the runtime. When calling `CreateRuntime`, this field should be
+   * set to an eligible runtime spec obtained from the ListRuntimeSpecsResponse.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +105,8 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The specification of the runtime.
+   * Required. The specification of the runtime. When calling `CreateRuntime`, this field should be
+   * set to an eligible runtime spec obtained from the ListRuntimeSpecsResponse.
    * @return value or {@code null} for none
    */
   public Key getRuntimeSpec() {
@@ -112,7 +114,8 @@ public final class Runtime extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The specification of the runtime.
+   * Required. The specification of the runtime. When calling `CreateRuntime`, this field should be
+   * set to an eligible runtime spec obtained from the ListRuntimeSpecsResponse.
    * @param runtimeSpec runtimeSpec or {@code null} for none
    */
   public Runtime setRuntimeSpec(Key runtimeSpec) {

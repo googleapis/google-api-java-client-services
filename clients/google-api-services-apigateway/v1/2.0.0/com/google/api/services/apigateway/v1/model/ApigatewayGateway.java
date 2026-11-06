@@ -78,7 +78,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Resource name of the Gateway. Format:
+   * Identifier. Resource name of the Gateway. Format:
    * projects/{project}/locations/{location}/gateways/{gateway}
    * The value may be {@code null}.
    */
@@ -222,7 +222,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Resource name of the Gateway. Format:
+   * Identifier. Resource name of the Gateway. Format:
    * projects/{project}/locations/{location}/gateways/{gateway}
    * @return value or {@code null} for none
    */
@@ -231,7 +231,7 @@ public final class ApigatewayGateway extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Output only. Resource name of the Gateway. Format:
+   * Identifier. Resource name of the Gateway. Format:
    * projects/{project}/locations/{location}/gateways/{gateway}
    * @param name name or {@code null} for none
    */

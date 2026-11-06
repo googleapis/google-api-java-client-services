@@ -61,7 +61,7 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   private java.lang.String managedService;
 
   /**
-   * Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+   * Identifier. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -156,7 +156,7 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+   * Identifier. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -164,7 +164,7 @@ public final class ApigatewayApi extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+   * Identifier. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
    * @param name name or {@code null} for none
    */
   public ApigatewayApi setName(java.lang.String name) {

@@ -34,13 +34,13 @@ public final class EnableManagedRotationRequest extends com.google.api.client.js
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials;
+  private CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials;
 
   /**
    * Credentials required for Cloud SQL DB for Single user Managed Rotation.
    * @return value or {@code null} for none
    */
-  public CloudSQLSingleUserCredentials getCloudSqlSingleUserCredentials() {
+  public CloudSqlSingleUserCredentials getCloudSqlSingleUserCredentials() {
     return cloudSqlSingleUserCredentials;
   }
 
@@ -48,7 +48,7 @@ public final class EnableManagedRotationRequest extends com.google.api.client.js
    * Credentials required for Cloud SQL DB for Single user Managed Rotation.
    * @param cloudSqlSingleUserCredentials cloudSqlSingleUserCredentials or {@code null} for none
    */
-  public EnableManagedRotationRequest setCloudSqlSingleUserCredentials(CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials) {
+  public EnableManagedRotationRequest setCloudSqlSingleUserCredentials(CloudSqlSingleUserCredentials cloudSqlSingleUserCredentials) {
     this.cloudSqlSingleUserCredentials = cloudSqlSingleUserCredentials;
     return this;
   }

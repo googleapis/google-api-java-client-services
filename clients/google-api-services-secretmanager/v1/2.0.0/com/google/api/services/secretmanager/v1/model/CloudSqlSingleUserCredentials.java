@@ -27,7 +27,7 @@ package com.google.api.services.secretmanager.v1.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class CloudSQLSingleUserCredentials extends com.google.api.client.json.GenericJson {
+public final class CloudSqlSingleUserCredentials extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. Instance ID of the Cloud SQL instance.
@@ -63,7 +63,7 @@ public final class CloudSQLSingleUserCredentials extends com.google.api.client.j
    * Required. Instance ID of the Cloud SQL instance.
    * @param instanceId instanceId or {@code null} for none
    */
-  public CloudSQLSingleUserCredentials setInstanceId(java.lang.String instanceId) {
+  public CloudSqlSingleUserCredentials setInstanceId(java.lang.String instanceId) {
     this.instanceId = instanceId;
     return this;
   }
@@ -82,7 +82,7 @@ public final class CloudSQLSingleUserCredentials extends com.google.api.client.j
    * be generated.
    * @param password password or {@code null} for none
    */
-  public CloudSQLSingleUserCredentials setPassword(java.lang.String password) {
+  public CloudSqlSingleUserCredentials setPassword(java.lang.String password) {
     this.password = password;
     return this;
   }
@@ -99,19 +99,19 @@ public final class CloudSQLSingleUserCredentials extends com.google.api.client.j
    * Required. Username of the Cloud SQL instance.
    * @param username username or {@code null} for none
    */
-  public CloudSQLSingleUserCredentials setUsername(java.lang.String username) {
+  public CloudSqlSingleUserCredentials setUsername(java.lang.String username) {
     this.username = username;
     return this;
   }
 
   @Override
-  public CloudSQLSingleUserCredentials set(String fieldName, Object value) {
-    return (CloudSQLSingleUserCredentials) super.set(fieldName, value);
+  public CloudSqlSingleUserCredentials set(String fieldName, Object value) {
+    return (CloudSqlSingleUserCredentials) super.set(fieldName, value);
   }
 
   @Override
-  public CloudSQLSingleUserCredentials clone() {
-    return (CloudSQLSingleUserCredentials) super.clone();
+  public CloudSqlSingleUserCredentials clone() {
+    return (CloudSqlSingleUserCredentials) super.clone();
   }
 
 }

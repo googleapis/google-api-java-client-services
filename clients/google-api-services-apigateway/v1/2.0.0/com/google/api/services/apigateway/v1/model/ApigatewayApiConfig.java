@@ -83,7 +83,7 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
   private java.util.List<ApigatewayApiConfigFile> managedServiceConfigs;
 
   /**
-   * Output only. Resource name of the API Config. Format:
+   * Identifier. Resource name of the API Config. Format:
    * projects/{project}/locations/global/apis/{api}/configs/{api_config}
    * The value may be {@code null}.
    */
@@ -243,7 +243,7 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Resource name of the API Config. Format:
+   * Identifier. Resource name of the API Config. Format:
    * projects/{project}/locations/global/apis/{api}/configs/{api_config}
    * @return value or {@code null} for none
    */
@@ -252,7 +252,7 @@ public final class ApigatewayApiConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Output only. Resource name of the API Config. Format:
+   * Identifier. Resource name of the API Config. Format:
    * projects/{project}/locations/global/apis/{api}/configs/{api_config}
    * @param name name or {@code null} for none
    */

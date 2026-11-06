@@ -22,7 +22,7 @@ Add the following lines to your `pom.xml` file:
     <dependency>
       <groupId>com.google.apis</groupId>
       <artifactId>google-api-services-apigateway</artifactId>
-      <version>v1beta-rev20261014-2.9.2</version>
+      <version>v1beta-rev20261028-2.9.2</version>
     </dependency>
   </dependencies>
 </project>
@@ -35,7 +35,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  implementation 'com.google.apis:google-api-services-apigateway:v1beta-rev20261014-2.9.2'
+  implementation 'com.google.apis:google-api-services-apigateway:v1beta-rev20261028-2.9.2'
 }
 ```
 

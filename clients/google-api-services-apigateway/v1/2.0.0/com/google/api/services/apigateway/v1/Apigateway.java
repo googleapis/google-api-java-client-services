@@ -1323,65 +1323,65 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Filter. */
+          /** Optional. Filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter.
+          /** Optional. Filter.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter. */
+          /** Optional. Filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Order by parameters. */
+          /** Optional. Order by parameters. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Order by parameters.
+          /** Optional. Order by parameters.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Order by parameters. */
+          /** Optional. Order by parameters. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Page size. */
+          /** Optional. Page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Page size.
+          /** Optional. Page size.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Page size. */
+          /** Optional. Page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** Page token. */
+          /** Optional. Page token. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token.
+          /** Optional. Page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Page token. */
+          /** Optional. Page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -1400,7 +1400,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the apigateway server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+         * @param name Identifier. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
          * @param content the {@link com.google.api.services.apigateway.v1.model.ApigatewayApi}
          * @return the request
          */
@@ -1428,7 +1428,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+           * @param name Identifier. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
            * @param content the {@link com.google.api.services.apigateway.v1.model.ApigatewayApi}
            * @since 1.13
            */
@@ -1498,20 +1498,20 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Resource name of the API. Format:
+           * Identifier. Resource name of the API. Format:
            * projects/{project}/locations/global/apis/{api}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
+          /** Identifier. Resource name of the API. Format: projects/{project}/locations/global/apis/{api}
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Output only. Resource name of the API. Format:
+           * Identifier. Resource name of the API. Format:
            * projects/{project}/locations/global/apis/{api}
            */
           public Patch setName(java.lang.String name) {
@@ -1525,28 +1525,28 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Field mask is used to specify the fields to be overwritten in the Api resource by the
-           * update. The fields specified in the update_mask are relative to the resource, not the
-           * full request. A field will be overwritten if it is in the mask. If the user does not
-           * provide a mask then all fields will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the Api
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. The
+           * request fails if `update_mask` is missing or empty.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Field mask is used to specify the fields to be overwritten in the Api resource by the update. The
-         fields specified in the update_mask are relative to the resource, not the full request. A field
-         will be overwritten if it is in the mask. If the user does not provide a mask then all fields will
-         be overwritten.
+          /** Optional. Field mask is used to specify the fields to be overwritten in the Api resource by the
+         update. The fields specified in the update_mask are relative to the resource, not the full request.
+         A field will be overwritten if it is in the mask. The request fails if `update_mask` is missing or
+         empty.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Field mask is used to specify the fields to be overwritten in the Api resource by the
-           * update. The fields specified in the update_mask are relative to the resource, not the
-           * full request. A field will be overwritten if it is in the mask. If the user does not
-           * provide a mask then all fields will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the Api
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. The
+           * request fails if `update_mask` is missing or empty.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -2300,21 +2300,22 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Specifies which fields of the API Config are returned in the response. Defaults to
-             * `BASIC` view.
+             * Optional. Specifies which fields of the API Config are returned in the response.
+             * Defaults to `BASIC` view.
              */
             @com.google.api.client.util.Key
             private java.lang.String view;
 
-            /** Specifies which fields of the API Config are returned in the response. Defaults to `BASIC` view.
+            /** Optional. Specifies which fields of the API Config are returned in the response. Defaults to
+           `BASIC` view.
              */
             public java.lang.String getView() {
               return view;
             }
 
             /**
-             * Specifies which fields of the API Config are returned in the response. Defaults to
-             * `BASIC` view.
+             * Optional. Specifies which fields of the API Config are returned in the response.
+             * Defaults to `BASIC` view.
              */
             public Get setView(java.lang.String view) {
               this.view = view;
@@ -2663,65 +2664,65 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
               return this;
             }
 
-            /** Filter. */
+            /** Optional. Filter. */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Filter.
+            /** Optional. Filter.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
-            /** Filter. */
+            /** Optional. Filter. */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
               return this;
             }
 
-            /** Order by parameters. */
+            /** Optional. Order by parameters. */
             @com.google.api.client.util.Key
             private java.lang.String orderBy;
 
-            /** Order by parameters.
+            /** Optional. Order by parameters.
              */
             public java.lang.String getOrderBy() {
               return orderBy;
             }
 
-            /** Order by parameters. */
+            /** Optional. Order by parameters. */
             public List setOrderBy(java.lang.String orderBy) {
               this.orderBy = orderBy;
               return this;
             }
 
-            /** Page size. */
+            /** Optional. Page size. */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Page size.
+            /** Optional. Page size.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
-            /** Page size. */
+            /** Optional. Page size. */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Page token. */
+            /** Optional. Page token. */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Page token.
+            /** Optional. Page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Page token. */
+            /** Optional. Page token. */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -2740,7 +2741,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
            * This request holds the parameters needed by the apigateway server.  After setting any optional
            * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
            *
-           * @param name Output only. Resource name of the API Config. Format:
+           * @param name Identifier. Resource name of the API Config. Format:
            *        projects/{project}/locations/global/apis/{api}/configs/{api_config}
            * @param content the {@link com.google.api.services.apigateway.v1.model.ApigatewayApiConfig}
            * @return the request
@@ -2769,7 +2770,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
              * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Output only. Resource name of the API Config. Format:
+             * @param name Identifier. Resource name of the API Config. Format:
            *        projects/{project}/locations/global/apis/{api}/configs/{api_config}
              * @param content the {@link com.google.api.services.apigateway.v1.model.ApigatewayApiConfig}
              * @since 1.13
@@ -2840,13 +2841,13 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Output only. Resource name of the API Config. Format:
+             * Identifier. Resource name of the API Config. Format:
              * projects/{project}/locations/global/apis/{api}/configs/{api_config}
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Output only. Resource name of the API Config. Format:
+            /** Identifier. Resource name of the API Config. Format:
            projects/{project}/locations/global/apis/{api}/configs/{api_config}
              */
             public java.lang.String getName() {
@@ -2854,7 +2855,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Output only. Resource name of the API Config. Format:
+             * Identifier. Resource name of the API Config. Format:
              * projects/{project}/locations/global/apis/{api}/configs/{api_config}
              */
             public Patch setName(java.lang.String name) {
@@ -2868,28 +2869,28 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
             }
 
             /**
-             * Field mask is used to specify the fields to be overwritten in the ApiConfig resource
-             * by the update. The fields specified in the update_mask are relative to the resource,
-             * not the full request. A field will be overwritten if it is in the mask. If the user
-             * does not provide a mask then all fields will be overwritten.
+             * Optional. Field mask is used to specify the fields to be overwritten in the ApiConfig
+             * resource by the update. The fields specified in the update_mask are relative to the
+             * resource, not the full request. A field will be overwritten if it is in the mask. The
+             * request fails if `update_mask` is missing or empty.
              */
             @com.google.api.client.util.Key
             private String updateMask;
 
-            /** Field mask is used to specify the fields to be overwritten in the ApiConfig resource by the update.
-           The fields specified in the update_mask are relative to the resource, not the full request. A field
-           will be overwritten if it is in the mask. If the user does not provide a mask then all fields will
-           be overwritten.
+            /** Optional. Field mask is used to specify the fields to be overwritten in the ApiConfig resource by
+           the update. The fields specified in the update_mask are relative to the resource, not the full
+           request. A field will be overwritten if it is in the mask. The request fails if `update_mask` is
+           missing or empty.
              */
             public String getUpdateMask() {
               return updateMask;
             }
 
             /**
-             * Field mask is used to specify the fields to be overwritten in the ApiConfig resource
-             * by the update. The fields specified in the update_mask are relative to the resource,
-             * not the full request. A field will be overwritten if it is in the mask. If the user
-             * does not provide a mask then all fields will be overwritten.
+             * Optional. Field mask is used to specify the fields to be overwritten in the ApiConfig
+             * resource by the update. The fields specified in the update_mask are relative to the
+             * resource, not the full request. A field will be overwritten if it is in the mask. The
+             * request fails if `update_mask` is missing or empty.
              */
             public Patch setUpdateMask(String updateMask) {
               this.updateMask = updateMask;
@@ -3973,65 +3974,65 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /** Filter. */
+          /** Optional. Filter. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Filter.
+          /** Optional. Filter.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Filter. */
+          /** Optional. Filter. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Order by parameters. */
+          /** Optional. Order by parameters. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Order by parameters.
+          /** Optional. Order by parameters.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Order by parameters. */
+          /** Optional. Order by parameters. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
-          /** Page size. */
+          /** Optional. Page size. */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Page size.
+          /** Optional. Page size.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Page size. */
+          /** Optional. Page size. */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** Page token. */
+          /** Optional. Page token. */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Page token.
+          /** Optional. Page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** Page token. */
+          /** Optional. Page token. */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -4050,7 +4051,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
          * This request holds the parameters needed by the apigateway server.  After setting any optional
          * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Output only. Resource name of the Gateway. Format:
+         * @param name Identifier. Resource name of the Gateway. Format:
          *        projects/{project}/locations/{location}/gateways/{gateway}
          * @param content the {@link com.google.api.services.apigateway.v1.model.ApigatewayGateway}
          * @return the request
@@ -4079,7 +4080,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Output only. Resource name of the Gateway. Format:
+           * @param name Identifier. Resource name of the Gateway. Format:
          *        projects/{project}/locations/{location}/gateways/{gateway}
            * @param content the {@link com.google.api.services.apigateway.v1.model.ApigatewayGateway}
            * @since 1.13
@@ -4150,13 +4151,13 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Resource name of the Gateway. Format:
+           * Identifier. Resource name of the Gateway. Format:
            * projects/{project}/locations/{location}/gateways/{gateway}
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Output only. Resource name of the Gateway. Format:
+          /** Identifier. Resource name of the Gateway. Format:
          projects/{project}/locations/{location}/gateways/{gateway}
            */
           public java.lang.String getName() {
@@ -4164,7 +4165,7 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Output only. Resource name of the Gateway. Format:
+           * Identifier. Resource name of the Gateway. Format:
            * projects/{project}/locations/{location}/gateways/{gateway}
            */
           public Patch setName(java.lang.String name) {
@@ -4178,28 +4179,28 @@ public class Apigateway extends com.google.api.client.googleapis.services.json.A
           }
 
           /**
-           * Field mask is used to specify the fields to be overwritten in the Gateway resource by
-           * the update. The fields specified in the update_mask are relative to the resource, not
-           * the full request. A field will be overwritten if it is in the mask. If the user does
-           * not provide a mask then all fields will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the Gateway
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. The
+           * request fails if `update_mask` is missing or empty.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Field mask is used to specify the fields to be overwritten in the Gateway resource by the update.
-         The fields specified in the update_mask are relative to the resource, not the full request. A field
-         will be overwritten if it is in the mask. If the user does not provide a mask then all fields will
-         be overwritten.
+          /** Optional. Field mask is used to specify the fields to be overwritten in the Gateway resource by the
+         update. The fields specified in the update_mask are relative to the resource, not the full request.
+         A field will be overwritten if it is in the mask. The request fails if `update_mask` is missing or
+         empty.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Field mask is used to specify the fields to be overwritten in the Gateway resource by
-           * the update. The fields specified in the update_mask are relative to the resource, not
-           * the full request. A field will be overwritten if it is in the mask. If the user does
-           * not provide a mask then all fields will be overwritten.
+           * Optional. Field mask is used to specify the fields to be overwritten in the Gateway
+           * resource by the update. The fields specified in the update_mask are relative to the
+           * resource, not the full request. A field will be overwritten if it is in the mask. The
+           * request fails if `update_mask` is missing or empty.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

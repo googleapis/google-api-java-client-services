@@ -38,7 +38,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> annotations;
 
   /**
-   * Output only. The list of connectors in this service.
+   * Output only. The list of connectors in this service. Connectors returned in this collection are
+   * a summary view. Authoritative lifecycle metadata and entity tags are omitted from embedded
+   * representations. Call `GetConnector` to retrieve the complete resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -105,7 +107,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean reconciling;
 
   /**
-   * Optional. The list of schemas in this service.
+   * Optional. The list of schemas in this service. Schemas returned in this collection are a
+   * summary view. Authoritative lifecycle metadata and entity tags are omitted from embedded
+   * representations. Call `GetSchema` to retrieve the complete resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -164,7 +168,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of connectors in this service.
+   * Output only. The list of connectors in this service. Connectors returned in this collection are
+   * a summary view. Authoritative lifecycle metadata and entity tags are omitted from embedded
+   * representations. Call `GetConnector` to retrieve the complete resource.
    * @return value or {@code null} for none
    */
   public java.util.List<Connector> getConnectors() {
@@ -172,7 +178,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. The list of connectors in this service.
+   * Output only. The list of connectors in this service. Connectors returned in this collection are
+   * a summary view. Authoritative lifecycle metadata and entity tags are omitted from embedded
+   * representations. Call `GetConnector` to retrieve the complete resource.
    * @param connectors connectors or {@code null} for none
    */
   public Service setConnectors(java.util.List<Connector> connectors) {
@@ -310,7 +318,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of schemas in this service.
+   * Optional. The list of schemas in this service. Schemas returned in this collection are a
+   * summary view. Authoritative lifecycle metadata and entity tags are omitted from embedded
+   * representations. Call `GetSchema` to retrieve the complete resource.
    * @return value or {@code null} for none
    */
   public java.util.List<Schema> getSchemas() {
@@ -318,7 +328,9 @@ public final class Service extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The list of schemas in this service.
+   * Optional. The list of schemas in this service. Schemas returned in this collection are a
+   * summary view. Authoritative lifecycle metadata and entity tags are omitted from embedded
+   * representations. Call `GetSchema` to retrieve the complete resource.
    * @param schemas schemas or {@code null} for none
    */
   public Service setSchemas(java.util.List<Schema> schemas) {

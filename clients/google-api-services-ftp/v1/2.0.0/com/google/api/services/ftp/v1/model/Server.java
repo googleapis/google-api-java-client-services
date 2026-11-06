@@ -79,6 +79,13 @@ public final class Server extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. Configuration for Cloud Logging on the Server.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfig loggingConfig;
+
+  /**
    * Identifier. name of resource
    * The value may be {@code null}.
    */
@@ -236,6 +243,23 @@ public final class Server extends com.google.api.client.json.GenericJson {
    */
   public Server setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for Cloud Logging on the Server.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfig getLoggingConfig() {
+    return loggingConfig;
+  }
+
+  /**
+   * Optional. Configuration for Cloud Logging on the Server.
+   * @param loggingConfig loggingConfig or {@code null} for none
+   */
+  public Server setLoggingConfig(LoggingConfig loggingConfig) {
+    this.loggingConfig = loggingConfig;
     return this;
   }
 

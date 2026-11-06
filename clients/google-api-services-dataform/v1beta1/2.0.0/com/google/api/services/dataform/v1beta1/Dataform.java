@@ -10004,6 +10004,169 @@ public class Dataform extends com.google.api.client.googleapis.services.json.Abs
             }
           }
           /**
+           * Creates a new Workspace in a given Repository asynchronously.
+           *
+           * Create a request for the method "workspaces.createLongRunning".
+           *
+           * This request holds the parameters needed by the dataform server.  After setting any optional
+           * parameters, call the {@link CreateLongRunning#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The repository in which to create the workspace. Must be in the format
+           *        `projects/locations/repositories`.
+           * @param content the {@link com.google.api.services.dataform.v1beta1.model.Workspace}
+           * @return the request
+           */
+          public CreateLongRunning createLongRunning(java.lang.String parent, com.google.api.services.dataform.v1beta1.model.Workspace content) throws java.io.IOException {
+            CreateLongRunning result = new CreateLongRunning(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CreateLongRunning extends DataformRequest<com.google.api.services.dataform.v1beta1.model.Operation> {
+
+            private static final String REST_PATH = "v1beta1/{+parent}/workspaces:createLongRunning";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+
+            /**
+             * Creates a new Workspace in a given Repository asynchronously.
+             *
+             * Create a request for the method "workspaces.createLongRunning".
+             *
+             * This request holds the parameters needed by the the dataform server.  After setting any
+             * optional parameters, call the {@link CreateLongRunning#execute()} method to invoke the remote
+             * operation. <p> {@link CreateLongRunning#initialize(com.google.api.client.googleapis.services.Ab
+             * stractGoogleClientRequest)} must be called to initialize this instance immediately after
+             * invoking the constructor. </p>
+             *
+             * @param parent Required. The repository in which to create the workspace. Must be in the format
+           *        `projects/locations/repositories`.
+             * @param content the {@link com.google.api.services.dataform.v1beta1.model.Workspace}
+             * @since 1.13
+             */
+            protected CreateLongRunning(java.lang.String parent, com.google.api.services.dataform.v1beta1.model.Workspace content) {
+              super(Dataform.this, "POST", REST_PATH, content, com.google.api.services.dataform.v1beta1.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+            }
+
+            @Override
+            public CreateLongRunning set$Xgafv(java.lang.String $Xgafv) {
+              return (CreateLongRunning) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CreateLongRunning setAccessToken(java.lang.String accessToken) {
+              return (CreateLongRunning) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CreateLongRunning setAlt(java.lang.String alt) {
+              return (CreateLongRunning) super.setAlt(alt);
+            }
+
+            @Override
+            public CreateLongRunning setCallback(java.lang.String callback) {
+              return (CreateLongRunning) super.setCallback(callback);
+            }
+
+            @Override
+            public CreateLongRunning setFields(java.lang.String fields) {
+              return (CreateLongRunning) super.setFields(fields);
+            }
+
+            @Override
+            public CreateLongRunning setKey(java.lang.String key) {
+              return (CreateLongRunning) super.setKey(key);
+            }
+
+            @Override
+            public CreateLongRunning setOauthToken(java.lang.String oauthToken) {
+              return (CreateLongRunning) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CreateLongRunning setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CreateLongRunning) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CreateLongRunning setQuotaUser(java.lang.String quotaUser) {
+              return (CreateLongRunning) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CreateLongRunning setUploadType(java.lang.String uploadType) {
+              return (CreateLongRunning) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CreateLongRunning setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CreateLongRunning) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The repository in which to create the workspace. Must be in the format
+             * `projects/locations/repositories`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The repository in which to create the workspace. Must be in the format
+           `projects/locations/repositories`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The repository in which to create the workspace. Must be in the format
+             * `projects/locations/repositories`.
+             */
+            public CreateLongRunning setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/repositories/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the workspace, which will become the final component of
+             * the workspace's resource name.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String workspaceId;
+
+            /** Required. The ID to use for the workspace, which will become the final component of the workspace's
+           resource name.
+             */
+            public java.lang.String getWorkspaceId() {
+              return workspaceId;
+            }
+
+            /**
+             * Required. The ID to use for the workspace, which will become the final component of
+             * the workspace's resource name.
+             */
+            public CreateLongRunning setWorkspaceId(java.lang.String workspaceId) {
+              this.workspaceId = workspaceId;
+              return this;
+            }
+
+            @Override
+            public CreateLongRunning set(String parameterName, Object value) {
+              return (CreateLongRunning) super.set(parameterName, value);
+            }
+          }
+          /**
            * Deletes a single Workspace.
            *
            * Create a request for the method "workspaces.delete".

@@ -93,6 +93,15 @@ public final class AuditSchedule extends com.google.api.client.json.GenericJson 
   private String nextRunTime;
 
   /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name at execution time.
+   * For example, `{"organizations/123/locations/global/cloudControls/control-1": {parameters:
+   * [...]}}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ParameterOverrides> parameterOverrides;
+
+  /**
    * Required. Format for the audit report.
    * The value may be {@code null}.
    */
@@ -265,6 +274,27 @@ public final class AuditSchedule extends com.google.api.client.json.GenericJson 
    */
   public AuditSchedule setNextRunTime(String nextRunTime) {
     this.nextRunTime = nextRunTime;
+    return this;
+  }
+
+  /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name at execution time.
+   * For example, `{"organizations/123/locations/global/cloudControls/control-1": {parameters:
+   * [...]}}`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ParameterOverrides> getParameterOverrides() {
+    return parameterOverrides;
+  }
+
+  /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name at execution time.
+   * For example, `{"organizations/123/locations/global/cloudControls/control-1": {parameters:
+   * [...]}}`
+   * @param parameterOverrides parameterOverrides or {@code null} for none
+   */
+  public AuditSchedule setParameterOverrides(java.util.Map<String, ParameterOverrides> parameterOverrides) {
+    this.parameterOverrides = parameterOverrides;
     return this;
   }
 

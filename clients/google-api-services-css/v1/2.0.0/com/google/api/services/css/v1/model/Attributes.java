@@ -137,7 +137,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
-   * Merchant Center).
+   * Merchant Center). Supported values are: - `css_ads_experiences` - `css_organic_experiences`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -247,7 +247,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
    * Merchant Center). Default destinations are always included unless provided in
-   * `excludedDestinations`.
+   * `excluded_destinations`. Supported values are: - `css_ads_experiences` -
+   * `css_organic_experiences`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -694,7 +695,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
-   * Merchant Center).
+   * Merchant Center). Supported values are: - `css_ads_experiences` - `css_organic_experiences`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getExcludedDestinations() {
@@ -703,7 +704,7 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
 
   /**
    * The list of destinations to exclude for this target (corresponds to unchecked check boxes in
-   * Merchant Center).
+   * Merchant Center). Supported values are: - `css_ads_experiences` - `css_organic_experiences`
    * @param excludedDestinations excludedDestinations or {@code null} for none
    */
   public Attributes setExcludedDestinations(java.util.List<java.lang.String> excludedDestinations) {
@@ -955,7 +956,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
    * Merchant Center). Default destinations are always included unless provided in
-   * `excludedDestinations`.
+   * `excluded_destinations`. Supported values are: - `css_ads_experiences` -
+   * `css_organic_experiences`
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getIncludedDestinations() {
@@ -965,7 +967,8 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   /**
    * The list of destinations to include for this target (corresponds to checked check boxes in
    * Merchant Center). Default destinations are always included unless provided in
-   * `excludedDestinations`.
+   * `excluded_destinations`. Supported values are: - `css_ads_experiences` -
+   * `css_organic_experiences`
    * @param includedDestinations includedDestinations or {@code null} for none
    */
   public Attributes setIncludedDestinations(java.util.List<java.lang.String> includedDestinations) {

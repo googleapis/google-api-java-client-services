@@ -30,6 +30,14 @@ package com.google.api.services.auditmanager.v1.model;
 public final class AuditReport extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. Parameter values provided by the user and values for tunable parameters, stored in
+   * the DB, keyed by control name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, CloudControlParameterStates> cloudControlParameterStates;
+
+  /**
    * Output only. Compliance framework to use for the audit report. For example,
    * `CIS_GCP_FOUNDATIONS_V1_2_0`.
    * The value may be {@code null}.
@@ -113,6 +121,25 @@ public final class AuditReport extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String scopeId;
+
+  /**
+   * Output only. Parameter values provided by the user and values for tunable parameters, stored in
+   * the DB, keyed by control name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, CloudControlParameterStates> getCloudControlParameterStates() {
+    return cloudControlParameterStates;
+  }
+
+  /**
+   * Output only. Parameter values provided by the user and values for tunable parameters, stored in
+   * the DB, keyed by control name.
+   * @param cloudControlParameterStates cloudControlParameterStates or {@code null} for none
+   */
+  public AuditReport setCloudControlParameterStates(java.util.Map<String, CloudControlParameterStates> cloudControlParameterStates) {
+    this.cloudControlParameterStates = cloudControlParameterStates;
+    return this;
+  }
 
   /**
    * Output only. Compliance framework to use for the audit report. For example,

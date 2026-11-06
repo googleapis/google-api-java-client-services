@@ -46,6 +46,15 @@ public final class GenerateAuditScopeReportRequest extends com.google.api.client
   private java.lang.String complianceStandard;
 
   /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name at execution time.
+   * For example, `{"organizations/123/locations/global/cloudControls/control-1": {parameters:
+   * [...]}}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, ParameterOverrides> parameterOverrides;
+
+  /**
    * Required. Format for the audit scope report.
    * The value may be {@code null}.
    */
@@ -101,6 +110,27 @@ public final class GenerateAuditScopeReportRequest extends com.google.api.client
    */
   public GenerateAuditScopeReportRequest setComplianceStandard(java.lang.String complianceStandard) {
     this.complianceStandard = complianceStandard;
+    return this;
+  }
+
+  /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name at execution time.
+   * For example, `{"organizations/123/locations/global/cloudControls/control-1": {parameters:
+   * [...]}}`
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, ParameterOverrides> getParameterOverrides() {
+    return parameterOverrides;
+  }
+
+  /**
+   * Optional. Maps dynamic parameter overrides by Cloud Control resource name at execution time.
+   * For example, `{"organizations/123/locations/global/cloudControls/control-1": {parameters:
+   * [...]}}`
+   * @param parameterOverrides parameterOverrides or {@code null} for none
+   */
+  public GenerateAuditScopeReportRequest setParameterOverrides(java.util.Map<String, ParameterOverrides> parameterOverrides) {
+    this.parameterOverrides = parameterOverrides;
     return this;
   }
 

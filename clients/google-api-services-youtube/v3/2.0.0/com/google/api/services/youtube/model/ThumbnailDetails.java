@@ -72,6 +72,13 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
   private Thumbnail qhd;
 
   /**
+   * The Shorts aspect ratio (9:16) image for this resource.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Thumbnail shortsAspectRatio;
+
+  /**
    * The standard quality image for this resource.
    * The value may be {@code null}.
    */
@@ -184,6 +191,23 @@ public final class ThumbnailDetails extends com.google.api.client.json.GenericJs
    */
   public ThumbnailDetails setQhd(Thumbnail qhd) {
     this.qhd = qhd;
+    return this;
+  }
+
+  /**
+   * The Shorts aspect ratio (9:16) image for this resource.
+   * @return value or {@code null} for none
+   */
+  public Thumbnail getShortsAspectRatio() {
+    return shortsAspectRatio;
+  }
+
+  /**
+   * The Shorts aspect ratio (9:16) image for this resource.
+   * @param shortsAspectRatio shortsAspectRatio or {@code null} for none
+   */
+  public ThumbnailDetails setShortsAspectRatio(Thumbnail shortsAspectRatio) {
+    this.shortsAspectRatio = shortsAspectRatio;
     return this;
   }
 

@@ -30,6 +30,13 @@ package com.google.api.services.merchantapi.datasources_v1.model;
 public final class PrimaryProductDataSource extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. Specifies the type of data source channel.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String channel;
+
+  /**
    * Optional. Immutable. The two-letter ISO 639-1 language of the items in the data source.
    * `feedLabel` and `contentLanguage` must be either both set or unset. The fields can only be
    * unset for data sources without file input. If set, the data source will only accept products
@@ -100,6 +107,23 @@ public final class PrimaryProductDataSource extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean legacyLocal;
+
+  /**
+   * Optional. Immutable. Specifies the type of data source channel.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getChannel() {
+    return channel;
+  }
+
+  /**
+   * Optional. Immutable. Specifies the type of data source channel.
+   * @param channel channel or {@code null} for none
+   */
+  public PrimaryProductDataSource setChannel(java.lang.String channel) {
+    this.channel = channel;
+    return this;
+  }
 
   /**
    * Optional. Immutable. The two-letter ISO 639-1 language of the items in the data source.

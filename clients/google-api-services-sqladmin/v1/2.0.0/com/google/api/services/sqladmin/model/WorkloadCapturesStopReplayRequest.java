@@ -27,7 +27,7 @@ package com.google.api.services.sqladmin.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.client.json.GenericJson {
+public final class WorkloadCapturesStopReplayRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. Contains details about the stop workload replay operation. If omitted, default values
@@ -51,19 +51,19 @@ public final class SqlWorkloadCapturesStopReplayRequest extends com.google.api.c
    * are used.
    * @param stopWorkloadReplayContext stopWorkloadReplayContext or {@code null} for none
    */
-  public SqlWorkloadCapturesStopReplayRequest setStopWorkloadReplayContext(StopWorkloadReplayContext stopWorkloadReplayContext) {
+  public WorkloadCapturesStopReplayRequest setStopWorkloadReplayContext(StopWorkloadReplayContext stopWorkloadReplayContext) {
     this.stopWorkloadReplayContext = stopWorkloadReplayContext;
     return this;
   }
 
   @Override
-  public SqlWorkloadCapturesStopReplayRequest set(String fieldName, Object value) {
-    return (SqlWorkloadCapturesStopReplayRequest) super.set(fieldName, value);
+  public WorkloadCapturesStopReplayRequest set(String fieldName, Object value) {
+    return (WorkloadCapturesStopReplayRequest) super.set(fieldName, value);
   }
 
   @Override
-  public SqlWorkloadCapturesStopReplayRequest clone() {
-    return (SqlWorkloadCapturesStopReplayRequest) super.clone();
+  public WorkloadCapturesStopReplayRequest clone() {
+    return (WorkloadCapturesStopReplayRequest) super.clone();
   }
 
 }

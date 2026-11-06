@@ -93,8 +93,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private GcpConfig gcpConfig;
 
   /**
-   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`, `4.3.x`). If not
-   * specified during cluster creation, defaults to `3.7.x`.
+   * Optional. The Apache Kafka version of the cluster. Specifically, this value is the finalized
+   * metadata version. If not specified during cluster creation, defaults to `3.7.x`. Supported
+   * values: `3.7.x`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -305,8 +306,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`, `4.3.x`). If not
-   * specified during cluster creation, defaults to `3.7.x`.
+   * Optional. The Apache Kafka version of the cluster. Specifically, this value is the finalized
+   * metadata version. If not specified during cluster creation, defaults to `3.7.x`. Supported
+   * values: `3.7.x`.
    * @return value or {@code null} for none
    */
   public java.lang.String getKafkaVersion() {
@@ -314,8 +316,9 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The Apache Kafka version of the cluster (for example, `3.7.x`, `4.3.x`). If not
-   * specified during cluster creation, defaults to `3.7.x`.
+   * Optional. The Apache Kafka version of the cluster. Specifically, this value is the finalized
+   * metadata version. If not specified during cluster creation, defaults to `3.7.x`. Supported
+   * values: `3.7.x`.
    * @param kafkaVersion kafkaVersion or {@code null} for none
    */
   public Cluster setKafkaVersion(java.lang.String kafkaVersion) {

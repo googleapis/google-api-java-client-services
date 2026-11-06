@@ -51,6 +51,12 @@ public final class Event extends com.google.api.client.json.GenericJson {
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private CallInfo callInfo;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private CartData cartData;
 
   /**
@@ -215,6 +221,21 @@ public final class Event extends com.google.api.client.json.GenericJson {
    */
   public Event setAppInstanceId(java.lang.String appInstanceId) {
     this.appInstanceId = appInstanceId;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public CallInfo getCallInfo() {
+    return callInfo;
+  }
+
+  /**
+   * @param callInfo callInfo or {@code null} for none
+   */
+  public Event setCallInfo(CallInfo callInfo) {
+    this.callInfo = callInfo;
     return this;
   }
 

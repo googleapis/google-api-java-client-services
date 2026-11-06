@@ -38,6 +38,33 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private AccurateTimeConfig accurateTimeConfig;
 
   /**
+   * Optional. Additional entries to be added to /etc/hosts.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EtcHostsEntry> additionalEtcHosts;
+
+  static {
+    // hack to force ProGuard to consider EtcHostsEntry used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(EtcHostsEntry.class);
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/resolv.conf.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResolvedConfEntry> additionalEtcResolvConf;
+
+  /**
+   * Optional. Additional entries to be added to /etc/systemd/resolved.conf.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<ResolvedConfEntry> additionalEtcSystemdResolvedConf;
+
+  /**
    * cgroup_mode specifies the cgroup mode to be used on the node.
    * The value may be {@code null}.
    */
@@ -64,6 +91,14 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   @com.google.api.client.util.Key
   private HugepagesConfig hugepages;
+
+  /**
+   * Optional. Defines the kernel overrides to be applied to the nodes. Note: sysctl changes are
+   * defined separately in the sysctls fields.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private KernelOverrides kernelOverrides;
 
   /**
    * Optional. Configuration for kernel module loading on nodes. When enabled, the node pool will be
@@ -114,6 +149,13 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
   private java.util.Map<String, java.lang.String> sysctls;
 
   /**
+   * Optional. Configures the timezone of the node.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String timeZone;
+
+  /**
    * Optional. Defines the transparent hugepage defrag configuration on the node. VM hugepage
    * allocation can be managed by either limiting defragmentation for delayed allocation or skipping
    * it entirely for immediate allocation only. See https://docs.kernel.org/admin-
@@ -147,6 +189,57 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setAccurateTimeConfig(AccurateTimeConfig accurateTimeConfig) {
     this.accurateTimeConfig = accurateTimeConfig;
+    return this;
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/hosts.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EtcHostsEntry> getAdditionalEtcHosts() {
+    return additionalEtcHosts;
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/hosts.
+   * @param additionalEtcHosts additionalEtcHosts or {@code null} for none
+   */
+  public LinuxNodeConfig setAdditionalEtcHosts(java.util.List<EtcHostsEntry> additionalEtcHosts) {
+    this.additionalEtcHosts = additionalEtcHosts;
+    return this;
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/resolv.conf.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResolvedConfEntry> getAdditionalEtcResolvConf() {
+    return additionalEtcResolvConf;
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/resolv.conf.
+   * @param additionalEtcResolvConf additionalEtcResolvConf or {@code null} for none
+   */
+  public LinuxNodeConfig setAdditionalEtcResolvConf(java.util.List<ResolvedConfEntry> additionalEtcResolvConf) {
+    this.additionalEtcResolvConf = additionalEtcResolvConf;
+    return this;
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/systemd/resolved.conf.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<ResolvedConfEntry> getAdditionalEtcSystemdResolvedConf() {
+    return additionalEtcSystemdResolvedConf;
+  }
+
+  /**
+   * Optional. Additional entries to be added to /etc/systemd/resolved.conf.
+   * @param additionalEtcSystemdResolvedConf additionalEtcSystemdResolvedConf or {@code null} for none
+   */
+  public LinuxNodeConfig setAdditionalEtcSystemdResolvedConf(java.util.List<ResolvedConfEntry> additionalEtcSystemdResolvedConf) {
+    this.additionalEtcSystemdResolvedConf = additionalEtcSystemdResolvedConf;
     return this;
   }
 
@@ -215,6 +308,25 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setHugepages(HugepagesConfig hugepages) {
     this.hugepages = hugepages;
+    return this;
+  }
+
+  /**
+   * Optional. Defines the kernel overrides to be applied to the nodes. Note: sysctl changes are
+   * defined separately in the sysctls fields.
+   * @return value or {@code null} for none
+   */
+  public KernelOverrides getKernelOverrides() {
+    return kernelOverrides;
+  }
+
+  /**
+   * Optional. Defines the kernel overrides to be applied to the nodes. Note: sysctl changes are
+   * defined separately in the sysctls fields.
+   * @param kernelOverrides kernelOverrides or {@code null} for none
+   */
+  public LinuxNodeConfig setKernelOverrides(KernelOverrides kernelOverrides) {
+    this.kernelOverrides = kernelOverrides;
     return this;
   }
 
@@ -323,6 +435,23 @@ public final class LinuxNodeConfig extends com.google.api.client.json.GenericJso
    */
   public LinuxNodeConfig setSysctls(java.util.Map<String, java.lang.String> sysctls) {
     this.sysctls = sysctls;
+    return this;
+  }
+
+  /**
+   * Optional. Configures the timezone of the node.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTimeZone() {
+    return timeZone;
+  }
+
+  /**
+   * Optional. Configures the timezone of the node.
+   * @param timeZone timeZone or {@code null} for none
+   */
+  public LinuxNodeConfig setTimeZone(java.lang.String timeZone) {
+    this.timeZone = timeZone;
     return this;
   }
 

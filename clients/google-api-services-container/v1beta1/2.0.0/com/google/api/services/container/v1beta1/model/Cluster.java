@@ -750,6 +750,15 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
   private java.lang.String subnetwork;
 
   /**
+   * Optional. The cluster-level default node version to be used for newly created node pools where
+   * the node version is not explicitly specified. The node version is also used to reconcile
+   * existing node pools to this version.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetNodeVersion;
+
+  /**
    * Configuration for Cloud TPU support; This field is deprecated due to the deprecation of 2VM
    * TPU. The end of life date for 2VM TPU is 2025-04-25.
    * The value may be {@code null}.
@@ -2514,6 +2523,27 @@ public final class Cluster extends com.google.api.client.json.GenericJson {
    */
   public Cluster setSubnetwork(java.lang.String subnetwork) {
     this.subnetwork = subnetwork;
+    return this;
+  }
+
+  /**
+   * Optional. The cluster-level default node version to be used for newly created node pools where
+   * the node version is not explicitly specified. The node version is also used to reconcile
+   * existing node pools to this version.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetNodeVersion() {
+    return targetNodeVersion;
+  }
+
+  /**
+   * Optional. The cluster-level default node version to be used for newly created node pools where
+   * the node version is not explicitly specified. The node version is also used to reconcile
+   * existing node pools to this version.
+   * @param targetNodeVersion targetNodeVersion or {@code null} for none
+   */
+  public Cluster setTargetNodeVersion(java.lang.String targetNodeVersion) {
+    this.targetNodeVersion = targetNodeVersion;
     return this;
   }
 

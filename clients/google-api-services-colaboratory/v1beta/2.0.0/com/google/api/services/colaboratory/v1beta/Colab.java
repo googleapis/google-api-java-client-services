@@ -340,8 +340,8 @@ public class Colab extends com.google.api.client.googleapis.services.json.Abstra
     }
     /**
      * Deletes a Colab runtime assignment. **Best Practices:** - Avoid deleting runtimes unless
-     * necessary. Reuse runtimes for efficiency. - Create a new Jupyter session within an existing
-     * runtime for state isolation.
+     * necessary. Reuse runtimes for efficiency. - Open a new Jupyter session on an existing runtime for
+     * state isolation.
      *
      * Create a request for the method "runtimes.delete".
      *
@@ -366,8 +366,8 @@ public class Colab extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Deletes a Colab runtime assignment. **Best Practices:** - Avoid deleting runtimes unless
-       * necessary. Reuse runtimes for efficiency. - Create a new Jupyter session within an existing
-       * runtime for state isolation.
+       * necessary. Reuse runtimes for efficiency. - Open a new Jupyter session on an existing runtime
+       * for state isolation.
        *
        * Create a request for the method "runtimes.delete".
        *

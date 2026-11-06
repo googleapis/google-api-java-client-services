@@ -69,6 +69,12 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.String leadId;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.String matchId;
 
   /**
@@ -188,6 +194,21 @@ public final class AdIdentifiers extends com.google.api.client.json.GenericJson 
    */
   public AdIdentifiers setLandingPageDeviceInfo(DeviceInfo landingPageDeviceInfo) {
     this.landingPageDeviceInfo = landingPageDeviceInfo;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLeadId() {
+    return leadId;
+  }
+
+  /**
+   * @param leadId leadId or {@code null} for none
+   */
+  public AdIdentifiers setLeadId(java.lang.String leadId) {
+    this.leadId = leadId;
     return this;
   }
 

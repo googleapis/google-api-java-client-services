@@ -773,6 +773,253 @@ public class DataManager extends com.google.api.client.googleapis.services.json.
 
       }
       /**
+       * An accessor for creating requests from the Reports collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code DataManager datamanager = new DataManager(...);}
+       *   {@code DataManager.Reports.List request = datamanager.reports().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public Reports reports() {
+        return new Reports();
+      }
+
+      /**
+       * The "reports" collection of methods.
+       */
+      public class Reports {
+
+        /**
+         * Create a request for the method "reports.retrievePartnerMatchReport".
+         *
+         * This request holds the parameters needed by the datamanager server.  After setting any optional
+         * parameters, call the {@link RetrievePartnerMatchReport#execute()} method to invoke the remote
+         * operation.
+         *
+         * @param parent
+         * @return the request
+         */
+        public RetrievePartnerMatchReport retrievePartnerMatchReport(java.lang.String parent) throws java.io.IOException {
+          RetrievePartnerMatchReport result = new RetrievePartnerMatchReport(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class RetrievePartnerMatchReport extends DataManagerRequest<com.google.api.services.datamanager.v1.model.RetrievePartnerMatchReportResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/reports:retrievePartnerMatchReport";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^accountTypes/[^/]+/accounts/[^/]+$");
+
+          /**
+           * Create a request for the method "reports.retrievePartnerMatchReport".
+           *
+           * This request holds the parameters needed by the the datamanager server.  After setting any
+           * optional parameters, call the {@link RetrievePartnerMatchReport#execute()} method to invoke the
+           * remote operation. <p> {@link RetrievePartnerMatchReport#initialize(com.google.api.client.google
+           * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param parent
+           * @since 1.13
+           */
+          protected RetrievePartnerMatchReport(java.lang.String parent) {
+            super(DataManager.this, "GET", REST_PATH, null, com.google.api.services.datamanager.v1.model.RetrievePartnerMatchReportResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public RetrievePartnerMatchReport set$Xgafv(java.lang.String $Xgafv) {
+            return (RetrievePartnerMatchReport) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setAccessToken(java.lang.String accessToken) {
+            return (RetrievePartnerMatchReport) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setAlt(java.lang.String alt) {
+            return (RetrievePartnerMatchReport) super.setAlt(alt);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setCallback(java.lang.String callback) {
+            return (RetrievePartnerMatchReport) super.setCallback(callback);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setFields(java.lang.String fields) {
+            return (RetrievePartnerMatchReport) super.setFields(fields);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setKey(java.lang.String key) {
+            return (RetrievePartnerMatchReport) super.setKey(key);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setOauthToken(java.lang.String oauthToken) {
+            return (RetrievePartnerMatchReport) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (RetrievePartnerMatchReport) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setQuotaUser(java.lang.String quotaUser) {
+            return (RetrievePartnerMatchReport) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setUploadType(java.lang.String uploadType) {
+            return (RetrievePartnerMatchReport) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public RetrievePartnerMatchReport setUploadProtocol(java.lang.String uploadProtocol) {
+            return (RetrievePartnerMatchReport) super.setUploadProtocol(uploadProtocol);
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /**
+
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          public RetrievePartnerMatchReport setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^accountTypes/[^/]+/accounts/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String currencyCode;
+
+          /**
+
+           */
+          public java.lang.String getCurrencyCode() {
+            return currencyCode;
+          }
+
+          public RetrievePartnerMatchReport setCurrencyCode(java.lang.String currencyCode) {
+            this.currencyCode = currencyCode;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.Long endDate;
+
+          /**
+
+           */
+          public java.lang.Long getEndDate() {
+            return endDate;
+          }
+
+          public RetrievePartnerMatchReport setEndDate(java.lang.Long endDate) {
+            this.endDate = endDate;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /**
+
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          public RetrievePartnerMatchReport setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /**
+
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          public RetrievePartnerMatchReport setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /**
+
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          public RetrievePartnerMatchReport setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @com.google.api.client.util.Key
+          private java.lang.Long startDate;
+
+          /**
+
+           */
+          public java.lang.Long getStartDate() {
+            return startDate;
+          }
+
+          public RetrievePartnerMatchReport setStartDate(java.lang.Long startDate) {
+            this.startDate = startDate;
+            return this;
+          }
+
+          @Override
+          public RetrievePartnerMatchReport set(String parameterName, Object value) {
+            return (RetrievePartnerMatchReport) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the UserListDirectLicenses collection.
        *
        * <p>The typical use is:</p>

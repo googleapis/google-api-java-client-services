@@ -796,7 +796,9 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
         }
       }
       /**
-       * Updates a ScanConfig. This method support partial update of a ScanConfig.
+       * Updates a ScanConfig. This method supports partial update of a ScanConfig. Authorization requires
+       * the following [IAM](https://cloud.google.com/iam/docs/) permission on the specified resource
+       * `scan_config.name`: - `cloudsecurityscanner.scans.update`
        *
        * Create a request for the method "scanConfigs.patch".
        *
@@ -823,7 +825,9 @@ public class WebSecurityScanner extends com.google.api.client.googleapis.service
             java.util.regex.Pattern.compile("^projects/[^/]+/scanConfigs/[^/]+$");
 
         /**
-         * Updates a ScanConfig. This method support partial update of a ScanConfig.
+         * Updates a ScanConfig. This method supports partial update of a ScanConfig. Authorization
+         * requires the following [IAM](https://cloud.google.com/iam/docs/) permission on the specified
+         * resource `scan_config.name`: - `cloudsecurityscanner.scans.update`
          *
          * Create a request for the method "scanConfigs.patch".
          *

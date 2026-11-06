@@ -65,6 +65,34 @@ public final class LinkedInterconnectAttachments extends com.google.api.client.j
   private java.util.List<java.lang.String> includeImportRanges;
 
   /**
+   * Output only. The proposed exclude export IP ranges waiting for hub administrator's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> proposedExcludeExportRanges;
+
+  /**
+   * Output only. The proposed exclude import IP ranges waiting for hub administrator's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> proposedExcludeImportRanges;
+
+  /**
+   * Output only. The proposed include export IP ranges waiting for hub administrator's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> proposedIncludeExportRanges;
+
+  /**
+   * Output only. The proposed include import IP ranges waiting for hub administrator's approval.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> proposedIncludeImportRanges;
+
+  /**
    * A value that controls whether site-to-site data transfer is enabled for these resources. Data
    * transfer is available only in [supported locations](https://cloud.google.com/network-
    * connectivity/docs/network-connectivity-center/concepts/locations).
@@ -160,6 +188,74 @@ public final class LinkedInterconnectAttachments extends com.google.api.client.j
    */
   public LinkedInterconnectAttachments setIncludeImportRanges(java.util.List<java.lang.String> includeImportRanges) {
     this.includeImportRanges = includeImportRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The proposed exclude export IP ranges waiting for hub administrator's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProposedExcludeExportRanges() {
+    return proposedExcludeExportRanges;
+  }
+
+  /**
+   * Output only. The proposed exclude export IP ranges waiting for hub administrator's approval.
+   * @param proposedExcludeExportRanges proposedExcludeExportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setProposedExcludeExportRanges(java.util.List<java.lang.String> proposedExcludeExportRanges) {
+    this.proposedExcludeExportRanges = proposedExcludeExportRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The proposed exclude import IP ranges waiting for hub administrator's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProposedExcludeImportRanges() {
+    return proposedExcludeImportRanges;
+  }
+
+  /**
+   * Output only. The proposed exclude import IP ranges waiting for hub administrator's approval.
+   * @param proposedExcludeImportRanges proposedExcludeImportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setProposedExcludeImportRanges(java.util.List<java.lang.String> proposedExcludeImportRanges) {
+    this.proposedExcludeImportRanges = proposedExcludeImportRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The proposed include export IP ranges waiting for hub administrator's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProposedIncludeExportRanges() {
+    return proposedIncludeExportRanges;
+  }
+
+  /**
+   * Output only. The proposed include export IP ranges waiting for hub administrator's approval.
+   * @param proposedIncludeExportRanges proposedIncludeExportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setProposedIncludeExportRanges(java.util.List<java.lang.String> proposedIncludeExportRanges) {
+    this.proposedIncludeExportRanges = proposedIncludeExportRanges;
+    return this;
+  }
+
+  /**
+   * Output only. The proposed include import IP ranges waiting for hub administrator's approval.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getProposedIncludeImportRanges() {
+    return proposedIncludeImportRanges;
+  }
+
+  /**
+   * Output only. The proposed include import IP ranges waiting for hub administrator's approval.
+   * @param proposedIncludeImportRanges proposedIncludeImportRanges or {@code null} for none
+   */
+  public LinkedInterconnectAttachments setProposedIncludeImportRanges(java.util.List<java.lang.String> proposedIncludeImportRanges) {
+    this.proposedIncludeImportRanges = proposedIncludeImportRanges;
     return this;
   }
 

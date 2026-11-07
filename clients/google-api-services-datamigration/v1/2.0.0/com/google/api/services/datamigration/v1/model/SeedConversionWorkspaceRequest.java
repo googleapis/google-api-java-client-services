@@ -45,6 +45,13 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
   private java.lang.String destinationConnectionProfile;
 
   /**
+   * Optional. Cloud Storage source details for seeding.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GcsSource gcsSource;
+
+  /**
    * Optional. Fully qualified (Uri) name of the source connection profile.
    * The value may be {@code null}.
    */
@@ -82,6 +89,23 @@ public final class SeedConversionWorkspaceRequest extends com.google.api.client.
    */
   public SeedConversionWorkspaceRequest setDestinationConnectionProfile(java.lang.String destinationConnectionProfile) {
     this.destinationConnectionProfile = destinationConnectionProfile;
+    return this;
+  }
+
+  /**
+   * Optional. Cloud Storage source details for seeding.
+   * @return value or {@code null} for none
+   */
+  public GcsSource getGcsSource() {
+    return gcsSource;
+  }
+
+  /**
+   * Optional. Cloud Storage source details for seeding.
+   * @param gcsSource gcsSource or {@code null} for none
+   */
+  public SeedConversionWorkspaceRequest setGcsSource(GcsSource gcsSource) {
+    this.gcsSource = gcsSource;
     return this;
   }
 

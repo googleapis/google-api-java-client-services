@@ -14162,6 +14162,3418 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
 
       }
       /**
+       * An accessor for creating requests from the RestoreTemplates collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.RestoreTemplates.List request = backupdr.restoreTemplates().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RestoreTemplates restoreTemplates() {
+        return new RestoreTemplates();
+      }
+
+      /**
+       * The "restoreTemplates" collection of methods.
+       */
+      public class RestoreTemplates {
+
+        /**
+         * Creates a new RestoreTemplate in a given project and location.
+         *
+         * Create a request for the method "restoreTemplates.create".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The restore template project and location in the format
+         *        'projects/{project_id}/locations/{location}'.
+         * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreTemplate}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.backupdr.v1beta.model.RestoreTemplate content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/restoreTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new RestoreTemplate in a given project and location.
+           *
+           * Create a request for the method "restoreTemplates.create".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The restore template project and location in the format
+         *        'projects/{project_id}/locations/{location}'.
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreTemplate}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.backupdr.v1beta.model.RestoreTemplate content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The restore template project and location in the format
+           * 'projects/{project_id}/locations/{location}'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The restore template project and location in the format
+         'projects/{project_id}/locations/{location}'.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The restore template project and location in the format
+           * 'projects/{project_id}/locations/{location}'.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. The ID of the restore template to create. The ID must be unique for the
+           * specified project and location.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String restoreTemplateId;
+
+          /** Required. The ID of the restore template to create. The ID must be unique for the specified project
+         and location.
+           */
+          public java.lang.String getRestoreTemplateId() {
+            return restoreTemplateId;
+          }
+
+          /**
+           * Required. The ID of the restore template to create. The ID must be unique for the
+           * specified project and location.
+           */
+          public Create setRestoreTemplateId(java.lang.String restoreTemplateId) {
+            this.restoreTemplateId = restoreTemplateId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a RestoreTemplate.
+         *
+         * Create a request for the method "restoreTemplates.delete".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the restore template to delete. Format:
+         *        'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+
+          /**
+           * Deletes a RestoreTemplate.
+           *
+           * Create a request for the method "restoreTemplates.delete".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the restore template to delete. Format:
+         *        'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Backupdr.this, "DELETE", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the restore template to delete. Format:
+           * 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the restore template to delete. Format:
+         'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the restore template to delete. Format:
+           * 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any child RestoreTemplateExecutions will also be deleted. If
+           * false and the RestoreTemplate has any child executions, the request will fail.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any child RestoreTemplateExecutions will also be deleted. If false and
+         the RestoreTemplate has any child executions, the request will fail.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any child RestoreTemplateExecutions will also be deleted. If
+           * false and the RestoreTemplate has any child executions, the request will fail.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a RestoreTemplate.
+         *
+         * Create a request for the method "restoreTemplates.get".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the restore template to retrieve. Format:
+         *        'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.RestoreTemplate> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+
+          /**
+           * Gets details of a RestoreTemplate.
+           *
+           * Create a request for the method "restoreTemplates.get".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the restore template to retrieve. Format:
+         *        'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.RestoreTemplate.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the restore template to retrieve. Format:
+           * 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the restore template to retrieve. Format:
+         'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the restore template to retrieve. Format:
+           * 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists RestoreTemplates in a given project and location.
+         *
+         * Create a request for the method "restoreTemplates.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location from which to list the restore templates. Format:
+         *        `projects/{project}/locations/{location}`.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.ListRestoreTemplatesResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/restoreTemplates";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists RestoreTemplates in a given project and location.
+           *
+           * Create a request for the method "restoreTemplates.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location from which to list the restore templates. Format:
+         *        `projects/{project}/locations/{location}`.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.ListRestoreTemplatesResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location from which to list the restore templates. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location from which to list the restore templates. Format:
+         `projects/{project}/locations/{location}`.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location from which to list the restore templates. Format:
+           * `projects/{project}/locations/{location}`.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Field match expression used to filter the results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field by which to sort the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /** Optional. The maximum number of items to return. */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of items to return.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /** Optional. The maximum number of items to return. */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /** Optional. A page token, received from a previous `ListRestoreTemplates` call. */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListRestoreTemplates` call.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /** Optional. A page token, received from a previous `ListRestoreTemplates` call. */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Updates the settings of a RestoreTemplate.
+         *
+         * Create a request for the method "restoreTemplates.patch".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+         *
+         * @param name Identifier. The resource name of the RestoreTemplate.
+         * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreTemplate}
+         * @return the request
+         */
+        public Patch patch(java.lang.String name, com.google.api.services.backupdr.v1beta.model.RestoreTemplate content) throws java.io.IOException {
+          Patch result = new Patch(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Patch extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+
+          /**
+           * Updates the settings of a RestoreTemplate.
+           *
+           * Create a request for the method "restoreTemplates.patch".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Identifier. The resource name of the RestoreTemplate.
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreTemplate}
+           * @since 1.13
+           */
+          protected Patch(java.lang.String name, com.google.api.services.backupdr.v1beta.model.RestoreTemplate content) {
+            super(Backupdr.this, "PATCH", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Patch set$Xgafv(java.lang.String $Xgafv) {
+            return (Patch) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Patch setAccessToken(java.lang.String accessToken) {
+            return (Patch) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Patch setAlt(java.lang.String alt) {
+            return (Patch) super.setAlt(alt);
+          }
+
+          @Override
+          public Patch setCallback(java.lang.String callback) {
+            return (Patch) super.setCallback(callback);
+          }
+
+          @Override
+          public Patch setFields(java.lang.String fields) {
+            return (Patch) super.setFields(fields);
+          }
+
+          @Override
+          public Patch setKey(java.lang.String key) {
+            return (Patch) super.setKey(key);
+          }
+
+          @Override
+          public Patch setOauthToken(java.lang.String oauthToken) {
+            return (Patch) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Patch setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Patch) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Patch setQuotaUser(java.lang.String quotaUser) {
+            return (Patch) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Patch setUploadType(java.lang.String uploadType) {
+            return (Patch) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Patch setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Patch) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /** Identifier. The resource name of the RestoreTemplate. */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Identifier. The resource name of the RestoreTemplate.
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /** Identifier. The resource name of the RestoreTemplate. */
+          public Patch setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The request ID must be a valid UUID with the exception that zero UUID is not supported
+         (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The request ID must be a valid UUID with the exception that
+           * zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Patch setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Optional. The list of fields to update. Field mask is used to specify the fields to be
+           * overwritten in the RestoreTemplate resource by the update. The fields specified in the
+           * update_mask are relative to the resource, not the full request. A field will be
+           * overwritten if it is in the mask.
+           */
+          @com.google.api.client.util.Key
+          private String updateMask;
+
+          /** Optional. The list of fields to update. Field mask is used to specify the fields to be overwritten
+         in the RestoreTemplate resource by the update. The fields specified in the update_mask are relative
+         to the resource, not the full request. A field will be overwritten if it is in the mask.
+           */
+          public String getUpdateMask() {
+            return updateMask;
+          }
+
+          /**
+           * Optional. The list of fields to update. Field mask is used to specify the fields to be
+           * overwritten in the RestoreTemplate resource by the update. The fields specified in the
+           * update_mask are relative to the resource, not the full request. A field will be
+           * overwritten if it is in the mask.
+           */
+          public Patch setUpdateMask(String updateMask) {
+            this.updateMask = updateMask;
+            return this;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * 'false'.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean validateOnly;
+
+          /** Optional. Only validate the request, but do not perform mutations. The default is 'false'.
+           */
+          public java.lang.Boolean getValidateOnly() {
+            return validateOnly;
+          }
+
+          /**
+           * Optional. Only validate the request, but do not perform mutations. The default is
+           * 'false'.
+           */
+          public Patch setValidateOnly(java.lang.Boolean validateOnly) {
+            this.validateOnly = validateOnly;
+            return this;
+          }
+
+          @Override
+          public Patch set(String parameterName, Object value) {
+            return (Patch) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Runs a RestoreTemplate.
+         *
+         * Create a request for the method "restoreTemplates.run".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Run#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The name of the restore template to run. Format:
+         *        'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+         * @param content the {@link com.google.api.services.backupdr.v1beta.model.RunRestoreTemplateRequest}
+         * @return the request
+         */
+        public Run run(java.lang.String name, com.google.api.services.backupdr.v1beta.model.RunRestoreTemplateRequest content) throws java.io.IOException {
+          Run result = new Run(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Run extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}:run";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+
+          /**
+           * Runs a RestoreTemplate.
+           *
+           * Create a request for the method "restoreTemplates.run".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Run#execute()} method to invoke the remote operation. <p>
+           * {@link Run#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the restore template to run. Format:
+         *        'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.RunRestoreTemplateRequest}
+           * @since 1.13
+           */
+          protected Run(java.lang.String name, com.google.api.services.backupdr.v1beta.model.RunRestoreTemplateRequest content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+          }
+
+          @Override
+          public Run set$Xgafv(java.lang.String $Xgafv) {
+            return (Run) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Run setAccessToken(java.lang.String accessToken) {
+            return (Run) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Run setAlt(java.lang.String alt) {
+            return (Run) super.setAlt(alt);
+          }
+
+          @Override
+          public Run setCallback(java.lang.String callback) {
+            return (Run) super.setCallback(callback);
+          }
+
+          @Override
+          public Run setFields(java.lang.String fields) {
+            return (Run) super.setFields(fields);
+          }
+
+          @Override
+          public Run setKey(java.lang.String key) {
+            return (Run) super.setKey(key);
+          }
+
+          @Override
+          public Run setOauthToken(java.lang.String oauthToken) {
+            return (Run) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Run setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Run) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Run setQuotaUser(java.lang.String quotaUser) {
+            return (Run) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Run setUploadType(java.lang.String uploadType) {
+            return (Run) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Run setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Run) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the restore template to run. Format:
+           * 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the restore template to run. Format:
+         'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the restore template to run. Format:
+           * 'projects/{project_id}/locations/{location}/restoreTemplates/{restore_template_id}'
+           */
+          public Run setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Run set(String parameterName, Object value) {
+            return (Run) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Executions collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Backupdr backupdr = new Backupdr(...);}
+         *   {@code Backupdr.Executions.List request = backupdr.executions().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Executions executions() {
+          return new Executions();
+        }
+
+        /**
+         * The "executions" collection of methods.
+         */
+        public class Executions {
+
+          /**
+           * Gets details of a RestoreTemplateExecution.
+           *
+           * Create a request for the method "executions.get".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The name of the restore template execution to retrieve. Format: 'projects/{project_id}/loc
+           *        ations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.RestoreTemplateExecution> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+/executions/[^/]+$");
+
+            /**
+             * Gets details of a RestoreTemplateExecution.
+             *
+             * Create a request for the method "executions.get".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The name of the restore template execution to retrieve. Format: 'projects/{project_id}/loc
+           *        ations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.RestoreTemplateExecution.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The name of the restore template execution to retrieve. Format: 'projects/{
+             * project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{e
+             * xecution_id}'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The name of the restore template execution to retrieve. Format: 'projects/{project_id}/lo
+           cations/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The name of the restore template execution to retrieve. Format: 'projects/{
+             * project_id}/locations/{location}/restoreTemplates/{restore_template_id}/executions/{e
+             * xecution_id}'
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists RestoreTemplateExecutions in a given project, location and restore template.
+           *
+           * Create a request for the method "executions.list".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The project, location, and restore template for which to retrieve executions information.
+           *        Format: `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.ListRestoreTemplateExecutionsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/executions";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+
+            /**
+             * Lists RestoreTemplateExecutions in a given project, location and restore template.
+             *
+             * Create a request for the method "executions.list".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The project, location, and restore template for which to retrieve executions information.
+           *        Format: `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.ListRestoreTemplateExecutionsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The project, location, and restore template for which to retrieve
+             * executions information. Format:
+             * `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The project, location, and restore template for which to retrieve executions information.
+           Format: `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The project, location, and restore template for which to retrieve
+             * executions information. Format:
+             * `projects/{project}/locations/{location}/restoreTemplates/{restore_template}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filtering results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filtering results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filtering results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Hint for how to order the results. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Hint for how to order the results.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Hint for how to order the results. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /** Optional. Requested page size. */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /** Optional. Requested page size. */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. A token identifying a page of results. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A token identifying a page of results.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. A token identifying a page of results. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Triggers cleanup of restored resources created during execution.
+           *
+           * Create a request for the method "executions.triggerRestoreCleanup".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link TriggerRestoreCleanup#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. Name of the restore template execution. Format: 'projects/{project_id}/locations/{location
+           *        }/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.TriggerRestoreCleanupRequest}
+           * @return the request
+           */
+          public TriggerRestoreCleanup triggerRestoreCleanup(java.lang.String name, com.google.api.services.backupdr.v1beta.model.TriggerRestoreCleanupRequest content) throws java.io.IOException {
+            TriggerRestoreCleanup result = new TriggerRestoreCleanup(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TriggerRestoreCleanup extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+name}:triggerRestoreCleanup";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+/executions/[^/]+$");
+
+            /**
+             * Triggers cleanup of restored resources created during execution.
+             *
+             * Create a request for the method "executions.triggerRestoreCleanup".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link TriggerRestoreCleanup#execute()} method to invoke the
+             * remote operation. <p> {@link TriggerRestoreCleanup#initialize(com.google.api.client.googleapis.
+             * services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+             * after invoking the constructor. </p>
+             *
+             * @param name Required. Name of the restore template execution. Format: 'projects/{project_id}/locations/{location
+           *        }/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+             * @param content the {@link com.google.api.services.backupdr.v1beta.model.TriggerRestoreCleanupRequest}
+             * @since 1.13
+             */
+            protected TriggerRestoreCleanup(java.lang.String name, com.google.api.services.backupdr.v1beta.model.TriggerRestoreCleanupRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+/executions/[^/]+$");
+              }
+            }
+
+            @Override
+            public TriggerRestoreCleanup set$Xgafv(java.lang.String $Xgafv) {
+              return (TriggerRestoreCleanup) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setAccessToken(java.lang.String accessToken) {
+              return (TriggerRestoreCleanup) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setAlt(java.lang.String alt) {
+              return (TriggerRestoreCleanup) super.setAlt(alt);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setCallback(java.lang.String callback) {
+              return (TriggerRestoreCleanup) super.setCallback(callback);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setFields(java.lang.String fields) {
+              return (TriggerRestoreCleanup) super.setFields(fields);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setKey(java.lang.String key) {
+              return (TriggerRestoreCleanup) super.setKey(key);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setOauthToken(java.lang.String oauthToken) {
+              return (TriggerRestoreCleanup) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TriggerRestoreCleanup) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setQuotaUser(java.lang.String quotaUser) {
+              return (TriggerRestoreCleanup) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setUploadType(java.lang.String uploadType) {
+              return (TriggerRestoreCleanup) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TriggerRestoreCleanup setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TriggerRestoreCleanup) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. Name of the restore template execution. Format: 'projects/{project_id}/loca
+             * tions/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. Name of the restore template execution. Format: 'projects/{project_id}/locations/{locatio
+           n}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. Name of the restore template execution. Format: 'projects/{project_id}/loca
+             * tions/{location}/restoreTemplates/{restore_template_id}/executions/{execution_id}'
+             */
+            public TriggerRestoreCleanup setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreTemplates/[^/]+/executions/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public TriggerRestoreCleanup set(String parameterName, Object value) {
+              return (TriggerRestoreCleanup) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
+       * An accessor for creating requests from the RestoreVerificationPlans collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code Backupdr backupdr = new Backupdr(...);}
+       *   {@code Backupdr.RestoreVerificationPlans.List request = backupdr.restoreVerificationPlans().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public RestoreVerificationPlans restoreVerificationPlans() {
+        return new RestoreVerificationPlans();
+      }
+
+      /**
+       * The "restoreVerificationPlans" collection of methods.
+       */
+      public class RestoreVerificationPlans {
+
+        /**
+         * Creates a new RestoreVerificationPlan in a given project and location.
+         *
+         * Create a request for the method "restoreVerificationPlans.create".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The `RestoreVerificationPlan` project and location in the format
+         *        `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map to
+         *        Google Cloud regions, for example **us-central1**.
+         * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlan}
+         * @return the request
+         */
+        public Create create(java.lang.String parent, com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlan content) throws java.io.IOException {
+          Create result = new Create(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/restoreVerificationPlans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Creates a new RestoreVerificationPlan in a given project and location.
+           *
+           * Create a request for the method "restoreVerificationPlans.create".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The `RestoreVerificationPlan` project and location in the format
+         *        `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map to
+         *        Google Cloud regions, for example **us-central1**.
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlan}
+           * @since 1.13
+           */
+          protected Create(java.lang.String parent, com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlan content) {
+            super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public Create set$Xgafv(java.lang.String $Xgafv) {
+            return (Create) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Create setAccessToken(java.lang.String accessToken) {
+            return (Create) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Create setAlt(java.lang.String alt) {
+            return (Create) super.setAlt(alt);
+          }
+
+          @Override
+          public Create setCallback(java.lang.String callback) {
+            return (Create) super.setCallback(callback);
+          }
+
+          @Override
+          public Create setFields(java.lang.String fields) {
+            return (Create) super.setFields(fields);
+          }
+
+          @Override
+          public Create setKey(java.lang.String key) {
+            return (Create) super.setKey(key);
+          }
+
+          @Override
+          public Create setOauthToken(java.lang.String oauthToken) {
+            return (Create) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Create) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Create setQuotaUser(java.lang.String quotaUser) {
+            return (Create) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Create setUploadType(java.lang.String uploadType) {
+            return (Create) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Create setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Create) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The `RestoreVerificationPlan` project and location in the format
+           * `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map
+           * to Google Cloud regions, for example **us-central1**.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The `RestoreVerificationPlan` project and location in the format
+         `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map to Google
+         Cloud regions, for example **us-central1**.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The `RestoreVerificationPlan` project and location in the format
+           * `projects/{project}/locations/{location}`. In Google Cloud Backup and DR locations map
+           * to Google Cloud regions, for example **us-central1**.
+           */
+          public Create setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes since the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * since the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Create setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          /**
+           * Required. The name of the `RestoreVerificationPlan` to create. The name must be unique
+           * for the specified project and location. The name must start with a lowercase letter
+           * followed by up to 62 lowercase letters, numbers, or hyphens. Pattern,
+           * `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String restoreVerificationPlanId;
+
+          /** Required. The name of the `RestoreVerificationPlan` to create. The name must be unique for the
+         specified project and location. The name must start with a lowercase letter followed by up to 62
+         lowercase letters, numbers, or hyphens. Pattern, `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+           */
+          public java.lang.String getRestoreVerificationPlanId() {
+            return restoreVerificationPlanId;
+          }
+
+          /**
+           * Required. The name of the `RestoreVerificationPlan` to create. The name must be unique
+           * for the specified project and location. The name must start with a lowercase letter
+           * followed by up to 62 lowercase letters, numbers, or hyphens. Pattern,
+           * `^[a-z]([-a-z0-9]*[a-z0-9])?$`.
+           */
+          public Create setRestoreVerificationPlanId(java.lang.String restoreVerificationPlanId) {
+            this.restoreVerificationPlanId = restoreVerificationPlanId;
+            return this;
+          }
+
+          @Override
+          public Create set(String parameterName, Object value) {
+            return (Create) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Deletes a single RestoreVerificationPlan. If the `force` flag is set to `true`, any
+         * RestoreVerificationPlanAssociations linked to this RestoreVerificationPlan will also be deleted.
+         *
+         * Create a request for the method "restoreVerificationPlans.delete".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the `RestoreVerificationPlan` to delete. Format:
+         *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan
+         *        }`
+         * @return the request
+         */
+        public Delete delete(java.lang.String name) throws java.io.IOException {
+          Delete result = new Delete(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Delete extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+
+          /**
+           * Deletes a single RestoreVerificationPlan. If the `force` flag is set to `true`, any
+           * RestoreVerificationPlanAssociations linked to this RestoreVerificationPlan will also be
+           * deleted.
+           *
+           * Create a request for the method "restoreVerificationPlans.delete".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           * <p> {@link
+           * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+           * be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the `RestoreVerificationPlan` to delete. Format:
+         *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan
+         *        }`
+           * @since 1.13
+           */
+          protected Delete(java.lang.String name) {
+            super(Backupdr.this, "DELETE", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public Delete set$Xgafv(java.lang.String $Xgafv) {
+            return (Delete) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Delete setAccessToken(java.lang.String accessToken) {
+            return (Delete) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Delete setAlt(java.lang.String alt) {
+            return (Delete) super.setAlt(alt);
+          }
+
+          @Override
+          public Delete setCallback(java.lang.String callback) {
+            return (Delete) super.setCallback(callback);
+          }
+
+          @Override
+          public Delete setFields(java.lang.String fields) {
+            return (Delete) super.setFields(fields);
+          }
+
+          @Override
+          public Delete setKey(java.lang.String key) {
+            return (Delete) super.setKey(key);
+          }
+
+          @Override
+          public Delete setOauthToken(java.lang.String oauthToken) {
+            return (Delete) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Delete) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Delete setQuotaUser(java.lang.String quotaUser) {
+            return (Delete) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Delete setUploadType(java.lang.String uploadType) {
+            return (Delete) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Delete) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the `RestoreVerificationPlan` to delete. Format: `projec
+           * ts/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the `RestoreVerificationPlan` to delete. Format:
+         `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the `RestoreVerificationPlan` to delete. Format: `projec
+           * ts/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+           */
+          public Delete setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          /**
+           * Optional. If set to true, any RestoreVerificationPlanAssociations linked to this
+           * RestoreVerificationPlan will also be deleted.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to true, any RestoreVerificationPlanAssociations linked to this
+         RestoreVerificationPlan will also be deleted.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to true, any RestoreVerificationPlanAssociations linked to this
+           * RestoreVerificationPlan will also be deleted.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String requestId;
+
+          /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+         must retry your request, the server will know to ignore the request if it has already been
+         completed. The server will guarantee that for at least 60 minutes after the first request. For
+         example, consider a situation where you make an initial request and the request times out. If you
+         make the request again with the same request ID, the server can check if original operation with
+         the same request ID was received, and if so, will ignore the second request. This prevents clients
+         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
+         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public java.lang.String getRequestId() {
+            return requestId;
+          }
+
+          /**
+           * Optional. An optional request ID to identify requests. Specify a unique request ID so
+           * that if you must retry your request, the server will know to ignore the request if it
+           * has already been completed. The server will guarantee that for at least 60 minutes
+           * after the first request. For example, consider a situation where you make an initial
+           * request and the request times out. If you make the request again with the same request
+           * ID, the server can check if original operation with the same request ID was received,
+           * and if so, will ignore the second request. This prevents clients from accidentally
+           * creating duplicate commitments. The request ID must be a valid UUID with the exception
+           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           */
+          public Delete setRequestId(java.lang.String requestId) {
+            this.requestId = requestId;
+            return this;
+          }
+
+          @Override
+          public Delete set(String parameterName, Object value) {
+            return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets details of a single RestoreVerificationPlan. Returns the requested RestoreVerificationPlan.
+         *
+         * Create a request for the method "restoreVerificationPlans.get".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the `RestoreVerificationPlan` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan
+         *        }`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlan> {
+
+          private static final String REST_PATH = "v1beta/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+
+          /**
+           * Gets details of a single RestoreVerificationPlan. Returns the requested
+           * RestoreVerificationPlan.
+           *
+           * Create a request for the method "restoreVerificationPlans.get".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+           * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the `RestoreVerificationPlan` to retrieve. Format:
+         *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan
+         *        }`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlan.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the `RestoreVerificationPlan` to retrieve. Format: `proj
+           * ects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the `RestoreVerificationPlan` to retrieve. Format:
+         `projects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the `RestoreVerificationPlan` to retrieve. Format: `proj
+           * ects/{project}/locations/{location}/restoreVerificationPlans/{restoreVerificationPlan}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists RestoreVerificationPlans in a given project and location.
+         *
+         * Create a request for the method "restoreVerificationPlans.list".
+         *
+         * This request holds the parameters needed by the backupdr server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The project and location for which to retrieve `RestoreVerificationPlans` information.
+         *        Format: `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+         *        locations map to Google Cloud regions, for example **us-central1**. To retrieve restore
+         *        verification plans for all locations, use "-" for the `{location}` value.
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.ListRestoreVerificationPlansResponse> {
+
+          private static final String REST_PATH = "v1beta/{+parent}/restoreVerificationPlans";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists RestoreVerificationPlans in a given project and location.
+           *
+           * Create a request for the method "restoreVerificationPlans.list".
+           *
+           * This request holds the parameters needed by the the backupdr server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+           * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The project and location for which to retrieve `RestoreVerificationPlans` information.
+         *        Format: `projects/{project}/locations/{location}`. In Google Cloud Backup and DR,
+         *        locations map to Google Cloud regions, for example **us-central1**. To retrieve restore
+         *        verification plans for all locations, use "-" for the `{location}` value.
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.ListRestoreVerificationPlansResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The project and location for which to retrieve `RestoreVerificationPlans`
+           * information. Format: `projects/{project}/locations/{location}`. In Google Cloud Backup
+           * and DR, locations map to Google Cloud regions, for example **us-central1**. To retrieve
+           * restore verification plans for all locations, use "-" for the `{location}` value.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The project and location for which to retrieve `RestoreVerificationPlans` information.
+         Format: `projects/{project}/locations/{location}`. In Google Cloud Backup and DR, locations map to
+         Google Cloud regions, for example **us-central1**. To retrieve restore verification plans for all
+         locations, use "-" for the `{location}` value.
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The project and location for which to retrieve `RestoreVerificationPlans`
+           * information. Format: `projects/{project}/locations/{location}`. In Google Cloud Backup
+           * and DR, locations map to Google Cloud regions, for example **us-central1**. To retrieve
+           * restore verification plans for all locations, use "-" for the `{location}` value.
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. Field match expression used to filter the results.
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /** Optional. Field match expression used to filter the results. */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          @com.google.api.client.util.Key
+          private java.lang.String orderBy;
+
+          /** Optional. Field by which to sort the results.
+           */
+          public java.lang.String getOrderBy() {
+            return orderBy;
+          }
+
+          /** Optional. Field by which to sort the results. */
+          public List setOrderBy(java.lang.String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of `RestoreVerificationPlans` to return in a single
+           * response. If not specified, a default value will be chosen by the service. Note that
+           * the response may include a partial list and a caller should only rely on the response's
+           * next_page_token to determine if there are more instances left to be queried.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of `RestoreVerificationPlans` to return in a single response. If not
+         specified, a default value will be chosen by the service. Note that the response may include a
+         partial list and a caller should only rely on the response's next_page_token to determine if there
+         are more instances left to be queried.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of `RestoreVerificationPlans` to return in a single
+           * response. If not specified, a default value will be chosen by the service. Note that
+           * the response may include a partial list and a caller should only rely on the response's
+           * next_page_token to determine if there are more instances left to be queried.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous
+           * `ListRestoreVerificationPlans` call. Provide this to retrieve the subsequent page in a
+           * multi-page list of results. When paginating, all other parameters provided to
+           * `ListRestoreVerificationPlans` must match the call that provided the page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. The value of next_page_token received from a previous `ListRestoreVerificationPlans`
+         call. Provide this to retrieve the subsequent page in a multi-page list of results. When
+         paginating, all other parameters provided to `ListRestoreVerificationPlans` must match the call
+         that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. The value of next_page_token received from a previous
+           * `ListRestoreVerificationPlans` call. Provide this to retrieve the subsequent page in a
+           * multi-page list of results. When paginating, all other parameters provided to
+           * `ListRestoreVerificationPlans` must match the call that provided the page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+        /**
+         * An accessor for creating requests from the Associations collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code Backupdr backupdr = new Backupdr(...);}
+         *   {@code Backupdr.Associations.List request = backupdr.associations().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public Associations associations() {
+          return new Associations();
+        }
+
+        /**
+         * The "associations" collection of methods.
+         */
+        public class Associations {
+
+          /**
+           * Creates a new RestoreVerificationPlanAssociation in a given RestoreVerificationPlan.
+           *
+           * Create a request for the method "associations.create".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Create#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent resource where this association will be created. Format:
+           *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_pl
+           *        an}`
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlanAssociation}
+           * @return the request
+           */
+          public Create create(java.lang.String parent, com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlanAssociation content) throws java.io.IOException {
+            Create result = new Create(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Create extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/associations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+
+            /**
+             * Creates a new RestoreVerificationPlanAssociation in a given RestoreVerificationPlan.
+             *
+             * Create a request for the method "associations.create".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent resource where this association will be created. Format:
+           *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_pl
+           *        an}`
+             * @param content the {@link com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlanAssociation}
+             * @since 1.13
+             */
+            protected Create(java.lang.String parent, com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlanAssociation content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+              }
+            }
+
+            @Override
+            public Create set$Xgafv(java.lang.String $Xgafv) {
+              return (Create) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Create setAccessToken(java.lang.String accessToken) {
+              return (Create) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Create setAlt(java.lang.String alt) {
+              return (Create) super.setAlt(alt);
+            }
+
+            @Override
+            public Create setCallback(java.lang.String callback) {
+              return (Create) super.setCallback(callback);
+            }
+
+            @Override
+            public Create setFields(java.lang.String fields) {
+              return (Create) super.setFields(fields);
+            }
+
+            @Override
+            public Create setKey(java.lang.String key) {
+              return (Create) super.setKey(key);
+            }
+
+            @Override
+            public Create setOauthToken(java.lang.String oauthToken) {
+              return (Create) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Create setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Create) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Create setQuotaUser(java.lang.String quotaUser) {
+              return (Create) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Create setUploadType(java.lang.String uploadType) {
+              return (Create) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Create setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Create) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent resource where this association will be created. Format: `projec
+             * ts/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan
+             * }`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent resource where this association will be created. Format:
+           `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent resource where this association will be created. Format: `projec
+             * ts/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan
+             * }`
+             */
+            public Create setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know that the server has already
+             * received the duplicate request and can avoid responding with an error. The request ID
+             * must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know that the server has already received the duplicate
+           request and can avoid responding with an error. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know that the server has already
+             * received the duplicate request and can avoid responding with an error. The request ID
+             * must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Create setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            /**
+             * Required. The ID to use for the association, which will become the final component of
+             * the association's resource name. This value should be 1-63 characters, and valid
+             * characters are /[a-z0-9_-]/.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String restoreVerificationPlanAssociationId;
+
+            /** Required. The ID to use for the association, which will become the final component of the
+           association's resource name. This value should be 1-63 characters, and valid characters are
+           /[a-z0-9_-]/.
+             */
+            public java.lang.String getRestoreVerificationPlanAssociationId() {
+              return restoreVerificationPlanAssociationId;
+            }
+
+            /**
+             * Required. The ID to use for the association, which will become the final component of
+             * the association's resource name. This value should be 1-63 characters, and valid
+             * characters are /[a-z0-9_-]/.
+             */
+            public Create setRestoreVerificationPlanAssociationId(java.lang.String restoreVerificationPlanAssociationId) {
+              this.restoreVerificationPlanAssociationId = restoreVerificationPlanAssociationId;
+              return this;
+            }
+
+            @Override
+            public Create set(String parameterName, Object value) {
+              return (Create) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Deletes a single RestoreVerificationPlanAssociation in a given RestoreVerificationPlan.
+           *
+           * Create a request for the method "associations.delete".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the RestoreVerificationPlanAssociation to delete. Format: `projects/{
+           *        project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associa
+           *        tions/{association}`
+           * @return the request
+           */
+          public Delete delete(java.lang.String name) throws java.io.IOException {
+            Delete result = new Delete(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Delete extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+
+            /**
+             * Deletes a single RestoreVerificationPlanAssociation in a given RestoreVerificationPlan.
+             *
+             * Create a request for the method "associations.delete".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the RestoreVerificationPlanAssociation to delete. Format: `projects/{
+           *        project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associa
+           *        tions/{association}`
+             * @since 1.13
+             */
+            protected Delete(java.lang.String name) {
+              super(Backupdr.this, "DELETE", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+              }
+            }
+
+            @Override
+            public Delete set$Xgafv(java.lang.String $Xgafv) {
+              return (Delete) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Delete setAccessToken(java.lang.String accessToken) {
+              return (Delete) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Delete setAlt(java.lang.String alt) {
+              return (Delete) super.setAlt(alt);
+            }
+
+            @Override
+            public Delete setCallback(java.lang.String callback) {
+              return (Delete) super.setCallback(callback);
+            }
+
+            @Override
+            public Delete setFields(java.lang.String fields) {
+              return (Delete) super.setFields(fields);
+            }
+
+            @Override
+            public Delete setKey(java.lang.String key) {
+              return (Delete) super.setKey(key);
+            }
+
+            @Override
+            public Delete setOauthToken(java.lang.String oauthToken) {
+              return (Delete) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Delete setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Delete) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Delete setQuotaUser(java.lang.String quotaUser) {
+              return (Delete) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Delete setUploadType(java.lang.String uploadType) {
+              return (Delete) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Delete setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Delete) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the RestoreVerificationPlanAssociation to delete.
+             * Format: `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_ve
+             * rification_plan}/associations/{association}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the RestoreVerificationPlanAssociation to delete. Format: `projects/
+           {project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{a
+           ssociation}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the RestoreVerificationPlanAssociation to delete.
+             * Format: `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_ve
+             * rification_plan}/associations/{association}`
+             */
+            public Delete setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know that the server has already
+             * received the duplicate request and can avoid responding with an error. The request ID
+             * must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String requestId;
+
+            /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
+           must retry your request, the server will know that the server has already received the duplicate
+           request and can avoid responding with an error. The request ID must be a valid UUID with the
+           exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+             */
+            public java.lang.String getRequestId() {
+              return requestId;
+            }
+
+            /**
+             * Optional. An optional request ID to identify requests. Specify a unique request ID so
+             * that if you must retry your request, the server will know that the server has already
+             * received the duplicate request and can avoid responding with an error. The request ID
+             * must be a valid UUID with the exception that zero UUID is not supported
+             * (00000000-0000-0000-0000-000000000000).
+             */
+            public Delete setRequestId(java.lang.String requestId) {
+              this.requestId = requestId;
+              return this;
+            }
+
+            @Override
+            public Delete set(String parameterName, Object value) {
+              return (Delete) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Gets details of a single RestoreVerificationPlanAssociation in a given RestoreVerificationPlan.
+           *
+           * Create a request for the method "associations.get".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+           *
+           * @param name Required. The resource name of the RestoreVerificationPlanAssociation to retrieve. Format: `projects
+           *        /{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/assoc
+           *        iations/{association}`
+           * @return the request
+           */
+          public Get get(java.lang.String name) throws java.io.IOException {
+            Get result = new Get(name);
+            initialize(result);
+            return result;
+          }
+
+          public class Get extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlanAssociation> {
+
+            private static final String REST_PATH = "v1beta/{+name}";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+
+            /**
+             * Gets details of a single RestoreVerificationPlanAssociation in a given RestoreVerificationPlan.
+             *
+             * Create a request for the method "associations.get".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link Get#execute()} method to invoke the remote operation. <p>
+             * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the RestoreVerificationPlanAssociation to retrieve. Format: `projects
+           *        /{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/assoc
+           *        iations/{association}`
+             * @since 1.13
+             */
+            protected Get(java.lang.String name) {
+              super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.RestoreVerificationPlanAssociation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public Get set$Xgafv(java.lang.String $Xgafv) {
+              return (Get) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Get setAccessToken(java.lang.String accessToken) {
+              return (Get) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Get setAlt(java.lang.String alt) {
+              return (Get) super.setAlt(alt);
+            }
+
+            @Override
+            public Get setCallback(java.lang.String callback) {
+              return (Get) super.setCallback(callback);
+            }
+
+            @Override
+            public Get setFields(java.lang.String fields) {
+              return (Get) super.setFields(fields);
+            }
+
+            @Override
+            public Get setKey(java.lang.String key) {
+              return (Get) super.setKey(key);
+            }
+
+            @Override
+            public Get setOauthToken(java.lang.String oauthToken) {
+              return (Get) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Get) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Get setQuotaUser(java.lang.String quotaUser) {
+              return (Get) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Get setUploadType(java.lang.String uploadType) {
+              return (Get) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Get setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Get) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the RestoreVerificationPlanAssociation to retrieve.
+             * Format: `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_ve
+             * rification_plan}/associations/{association}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the RestoreVerificationPlanAssociation to retrieve. Format: `project
+           s/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/
+           {association}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the RestoreVerificationPlanAssociation to retrieve.
+             * Format: `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_ve
+             * rification_plan}/associations/{association}`
+             */
+            public Get setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public Get set(String parameterName, Object value) {
+              return (Get) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists RestoreVerificationPlanAssociations in a given RestoreVerificationPlan.
+           *
+           * Create a request for the method "associations.list".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent RestoreVerificationPlan name. Format:
+           *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_pl
+           *        an}`
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.ListRestoreVerificationPlanAssociationsResponse> {
+
+            private static final String REST_PATH = "v1beta/{+parent}/associations";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+
+            /**
+             * Lists RestoreVerificationPlanAssociations in a given RestoreVerificationPlan.
+             *
+             * Create a request for the method "associations.list".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent RestoreVerificationPlan name. Format:
+           *        `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_pl
+           *        an}`
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(Backupdr.this, "GET", REST_PATH, null, com.google.api.services.backupdr.v1beta.model.ListRestoreVerificationPlanAssociationsResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent RestoreVerificationPlan name. Format: `projects/{project}/locati
+             * ons/{location}/restoreVerificationPlans/{restore_verification_plan}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent RestoreVerificationPlan name. Format:
+           `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}`
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent RestoreVerificationPlan name. Format: `projects/{project}/locati
+             * ons/{location}/restoreVerificationPlans/{restore_verification_plan}`
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /** Optional. Filtering results. */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filtering results.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /** Optional. Filtering results. */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /** Optional. Hint for how to order the results. */
+            @com.google.api.client.util.Key
+            private java.lang.String orderBy;
+
+            /** Optional. Hint for how to order the results.
+             */
+            public java.lang.String getOrderBy() {
+              return orderBy;
+            }
+
+            /** Optional. Hint for how to order the results. */
+            public List setOrderBy(java.lang.String orderBy) {
+              this.orderBy = orderBy;
+              return this;
+            }
+
+            /**
+             * Optional. The maximum number of associations to return. The service may return fewer
+             * than this value. If unspecified, at most 500 associations will be returned. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. The maximum number of associations to return. The service may return fewer than this
+           value. If unspecified, at most 500 associations will be returned. The maximum value is 1000; values
+           above 1000 will be coerced to 1000.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. The maximum number of associations to return. The service may return fewer
+             * than this value. If unspecified, at most 500 associations will be returned. The
+             * maximum value is 1000; values above 1000 will be coerced to 1000.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * `ListRestoreVerificationPlanAssociations` call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters provided to
+             * `ListRestoreVerificationPlanAssociations` must match the call that provided the page
+             * token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListRestoreVerificationPlanAssociations` call.
+           Provide this to retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListRestoreVerificationPlanAssociations` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous
+             * `ListRestoreVerificationPlanAssociations` call. Provide this to retrieve the
+             * subsequent page. When paginating, all other parameters provided to
+             * `ListRestoreVerificationPlanAssociations` must match the call that provided the page
+             * token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Triggers a new Restore Verification for the association in a given RestoreVerificationPlan.
+           *
+           * Create a request for the method "associations.triggerRestoreVerification".
+           *
+           * This request holds the parameters needed by the backupdr server.  After setting any optional
+           * parameters, call the {@link TriggerRestoreVerification#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param name Required. The resource name of the RestoreVerificationPlanAssociation to trigger. Format: `projects/
+           *        {project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associ
+           *        ations/{association}`
+           * @param content the {@link com.google.api.services.backupdr.v1beta.model.TriggerRestoreVerificationRequest}
+           * @return the request
+           */
+          public TriggerRestoreVerification triggerRestoreVerification(java.lang.String name, com.google.api.services.backupdr.v1beta.model.TriggerRestoreVerificationRequest content) throws java.io.IOException {
+            TriggerRestoreVerification result = new TriggerRestoreVerification(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class TriggerRestoreVerification extends BackupdrRequest<com.google.api.services.backupdr.v1beta.model.Operation> {
+
+            private static final String REST_PATH = "v1beta/{+name}:triggerRestoreVerification";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+
+            /**
+             * Triggers a new Restore Verification for the association in a given RestoreVerificationPlan.
+             *
+             * Create a request for the method "associations.triggerRestoreVerification".
+             *
+             * This request holds the parameters needed by the the backupdr server.  After setting any
+             * optional parameters, call the {@link TriggerRestoreVerification#execute()} method to invoke the
+             * remote operation. <p> {@link TriggerRestoreVerification#initialize(com.google.api.client.google
+             * apis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The resource name of the RestoreVerificationPlanAssociation to trigger. Format: `projects/
+           *        {project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associ
+           *        ations/{association}`
+             * @param content the {@link com.google.api.services.backupdr.v1beta.model.TriggerRestoreVerificationRequest}
+             * @since 1.13
+             */
+            protected TriggerRestoreVerification(java.lang.String name, com.google.api.services.backupdr.v1beta.model.TriggerRestoreVerificationRequest content) {
+              super(Backupdr.this, "POST", REST_PATH, content, com.google.api.services.backupdr.v1beta.model.Operation.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+              }
+            }
+
+            @Override
+            public TriggerRestoreVerification set$Xgafv(java.lang.String $Xgafv) {
+              return (TriggerRestoreVerification) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public TriggerRestoreVerification setAccessToken(java.lang.String accessToken) {
+              return (TriggerRestoreVerification) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public TriggerRestoreVerification setAlt(java.lang.String alt) {
+              return (TriggerRestoreVerification) super.setAlt(alt);
+            }
+
+            @Override
+            public TriggerRestoreVerification setCallback(java.lang.String callback) {
+              return (TriggerRestoreVerification) super.setCallback(callback);
+            }
+
+            @Override
+            public TriggerRestoreVerification setFields(java.lang.String fields) {
+              return (TriggerRestoreVerification) super.setFields(fields);
+            }
+
+            @Override
+            public TriggerRestoreVerification setKey(java.lang.String key) {
+              return (TriggerRestoreVerification) super.setKey(key);
+            }
+
+            @Override
+            public TriggerRestoreVerification setOauthToken(java.lang.String oauthToken) {
+              return (TriggerRestoreVerification) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public TriggerRestoreVerification setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (TriggerRestoreVerification) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public TriggerRestoreVerification setQuotaUser(java.lang.String quotaUser) {
+              return (TriggerRestoreVerification) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public TriggerRestoreVerification setUploadType(java.lang.String uploadType) {
+              return (TriggerRestoreVerification) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public TriggerRestoreVerification setUploadProtocol(java.lang.String uploadProtocol) {
+              return (TriggerRestoreVerification) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The resource name of the RestoreVerificationPlanAssociation to trigger.
+             * Format: `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_ve
+             * rification_plan}/associations/{association}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The resource name of the RestoreVerificationPlanAssociation to trigger. Format: `projects
+           /{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/associations/{
+           association}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The resource name of the RestoreVerificationPlanAssociation to trigger.
+             * Format: `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_ve
+             * rification_plan}/associations/{association}`
+             */
+            public TriggerRestoreVerification setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/restoreVerificationPlans/[^/]+/associations/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public TriggerRestoreVerification set(String parameterName, Object value) {
+              return (TriggerRestoreVerification) super.set(parameterName, value);
+            }
+          }
+
+        }
+      }
+      /**
        * An accessor for creating requests from the ServiceConfig collection.
        *
        * <p>The typical use is:</p>

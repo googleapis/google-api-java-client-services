@@ -5257,6 +5257,288 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           }
         }
         /**
+         * Disables the Workload Identity Connector for a Cloud VM Cluster.
+         *
+         * Create a request for the method "cloudVmClusters.disableIdentityConnector".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link DisableIdentityConnector#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the Cloud VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.DisableCloudVmClusterIdentityConnectorRequest}
+         * @return the request
+         */
+        public DisableIdentityConnector disableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DisableCloudVmClusterIdentityConnectorRequest content) throws java.io.IOException {
+          DisableIdentityConnector result = new DisableIdentityConnector(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DisableIdentityConnector extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:disableIdentityConnector";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+
+          /**
+           * Disables the Workload Identity Connector for a Cloud VM Cluster.
+           *
+           * Create a request for the method "cloudVmClusters.disableIdentityConnector".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link DisableIdentityConnector#execute()} method to invoke the
+           * remote operation. <p> {@link DisableIdentityConnector#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Cloud VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.DisableCloudVmClusterIdentityConnectorRequest}
+           * @since 1.13
+           */
+          protected DisableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DisableCloudVmClusterIdentityConnectorRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public DisableIdentityConnector set$Xgafv(java.lang.String $Xgafv) {
+            return (DisableIdentityConnector) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DisableIdentityConnector setAccessToken(java.lang.String accessToken) {
+            return (DisableIdentityConnector) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DisableIdentityConnector setAlt(java.lang.String alt) {
+            return (DisableIdentityConnector) super.setAlt(alt);
+          }
+
+          @Override
+          public DisableIdentityConnector setCallback(java.lang.String callback) {
+            return (DisableIdentityConnector) super.setCallback(callback);
+          }
+
+          @Override
+          public DisableIdentityConnector setFields(java.lang.String fields) {
+            return (DisableIdentityConnector) super.setFields(fields);
+          }
+
+          @Override
+          public DisableIdentityConnector setKey(java.lang.String key) {
+            return (DisableIdentityConnector) super.setKey(key);
+          }
+
+          @Override
+          public DisableIdentityConnector setOauthToken(java.lang.String oauthToken) {
+            return (DisableIdentityConnector) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DisableIdentityConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DisableIdentityConnector) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DisableIdentityConnector setQuotaUser(java.lang.String quotaUser) {
+            return (DisableIdentityConnector) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DisableIdentityConnector setUploadType(java.lang.String uploadType) {
+            return (DisableIdentityConnector) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DisableIdentityConnector setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DisableIdentityConnector) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Cloud VM Cluster in the following format:
+           * projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Cloud VM Cluster in the following format:
+         projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Cloud VM Cluster in the following format:
+           * projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          public DisableIdentityConnector setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DisableIdentityConnector set(String parameterName, Object value) {
+            return (DisableIdentityConnector) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enables the Workload Identity Connector for a Cloud VM Cluster.
+         *
+         * Create a request for the method "cloudVmClusters.enableIdentityConnector".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link EnableIdentityConnector#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the Cloud VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.EnableCloudVmClusterIdentityConnectorRequest}
+         * @return the request
+         */
+        public EnableIdentityConnector enableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.EnableCloudVmClusterIdentityConnectorRequest content) throws java.io.IOException {
+          EnableIdentityConnector result = new EnableIdentityConnector(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableIdentityConnector extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:enableIdentityConnector";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+
+          /**
+           * Enables the Workload Identity Connector for a Cloud VM Cluster.
+           *
+           * Create a request for the method "cloudVmClusters.enableIdentityConnector".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link EnableIdentityConnector#execute()} method to invoke the
+           * remote operation. <p> {@link EnableIdentityConnector#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Cloud VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.EnableCloudVmClusterIdentityConnectorRequest}
+           * @since 1.13
+           */
+          protected EnableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.EnableCloudVmClusterIdentityConnectorRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableIdentityConnector set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableIdentityConnector) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableIdentityConnector setAccessToken(java.lang.String accessToken) {
+            return (EnableIdentityConnector) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableIdentityConnector setAlt(java.lang.String alt) {
+            return (EnableIdentityConnector) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableIdentityConnector setCallback(java.lang.String callback) {
+            return (EnableIdentityConnector) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableIdentityConnector setFields(java.lang.String fields) {
+            return (EnableIdentityConnector) super.setFields(fields);
+          }
+
+          @Override
+          public EnableIdentityConnector setKey(java.lang.String key) {
+            return (EnableIdentityConnector) super.setKey(key);
+          }
+
+          @Override
+          public EnableIdentityConnector setOauthToken(java.lang.String oauthToken) {
+            return (EnableIdentityConnector) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableIdentityConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableIdentityConnector) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableIdentityConnector setQuotaUser(java.lang.String quotaUser) {
+            return (EnableIdentityConnector) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableIdentityConnector setUploadType(java.lang.String uploadType) {
+            return (EnableIdentityConnector) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableIdentityConnector setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableIdentityConnector) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Cloud VM Cluster in the following format:
+           * projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Cloud VM Cluster in the following format:
+         projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Cloud VM Cluster in the following format:
+           * projects/{project}/locations/{location}/cloudVmClusters/{cloud_vm_cluster}
+           */
+          public EnableIdentityConnector setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/cloudVmClusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableIdentityConnector set(String parameterName, Object value) {
+            return (EnableIdentityConnector) super.set(parameterName, value);
+          }
+        }
+        /**
          * Gets details of a single VM Cluster.
          *
          * Create a request for the method "cloudVmClusters.get".
@@ -10415,6 +10697,288 @@ public class OracleDatabase extends com.google.api.client.googleapis.services.js
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Disables the Workload Identity Connector for an Exadb VM Cluster.
+         *
+         * Create a request for the method "exadbVmClusters.disableIdentityConnector".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link DisableIdentityConnector#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the Exadb VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.DisableExadbVmClusterIdentityConnectorRequest}
+         * @return the request
+         */
+        public DisableIdentityConnector disableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DisableExadbVmClusterIdentityConnectorRequest content) throws java.io.IOException {
+          DisableIdentityConnector result = new DisableIdentityConnector(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class DisableIdentityConnector extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:disableIdentityConnector";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+
+          /**
+           * Disables the Workload Identity Connector for an Exadb VM Cluster.
+           *
+           * Create a request for the method "exadbVmClusters.disableIdentityConnector".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link DisableIdentityConnector#execute()} method to invoke the
+           * remote operation. <p> {@link DisableIdentityConnector#initialize(com.google.api.client.googleap
+           * is.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+           * immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Exadb VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.DisableExadbVmClusterIdentityConnectorRequest}
+           * @since 1.13
+           */
+          protected DisableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.DisableExadbVmClusterIdentityConnectorRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public DisableIdentityConnector set$Xgafv(java.lang.String $Xgafv) {
+            return (DisableIdentityConnector) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public DisableIdentityConnector setAccessToken(java.lang.String accessToken) {
+            return (DisableIdentityConnector) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public DisableIdentityConnector setAlt(java.lang.String alt) {
+            return (DisableIdentityConnector) super.setAlt(alt);
+          }
+
+          @Override
+          public DisableIdentityConnector setCallback(java.lang.String callback) {
+            return (DisableIdentityConnector) super.setCallback(callback);
+          }
+
+          @Override
+          public DisableIdentityConnector setFields(java.lang.String fields) {
+            return (DisableIdentityConnector) super.setFields(fields);
+          }
+
+          @Override
+          public DisableIdentityConnector setKey(java.lang.String key) {
+            return (DisableIdentityConnector) super.setKey(key);
+          }
+
+          @Override
+          public DisableIdentityConnector setOauthToken(java.lang.String oauthToken) {
+            return (DisableIdentityConnector) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public DisableIdentityConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (DisableIdentityConnector) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public DisableIdentityConnector setQuotaUser(java.lang.String quotaUser) {
+            return (DisableIdentityConnector) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public DisableIdentityConnector setUploadType(java.lang.String uploadType) {
+            return (DisableIdentityConnector) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public DisableIdentityConnector setUploadProtocol(java.lang.String uploadProtocol) {
+            return (DisableIdentityConnector) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Exadb VM Cluster in the following format:
+           * projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Exadb VM Cluster in the following format:
+         projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Exadb VM Cluster in the following format:
+           * projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           */
+          public DisableIdentityConnector setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public DisableIdentityConnector set(String parameterName, Object value) {
+            return (DisableIdentityConnector) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Enables the Workload Identity Connector for an Exadb VM Cluster.
+         *
+         * Create a request for the method "exadbVmClusters.enableIdentityConnector".
+         *
+         * This request holds the parameters needed by the oracledatabase server.  After setting any
+         * optional parameters, call the {@link EnableIdentityConnector#execute()} method to invoke the
+         * remote operation.
+         *
+         * @param name Required. The name of the Exadb VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+         * @param content the {@link com.google.api.services.oracledatabase.v1.model.EnableExadbVmClusterIdentityConnectorRequest}
+         * @return the request
+         */
+        public EnableIdentityConnector enableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.EnableExadbVmClusterIdentityConnectorRequest content) throws java.io.IOException {
+          EnableIdentityConnector result = new EnableIdentityConnector(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class EnableIdentityConnector extends OracleDatabaseRequest<com.google.api.services.oracledatabase.v1.model.Operation> {
+
+          private static final String REST_PATH = "v1/{+name}:enableIdentityConnector";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+
+          /**
+           * Enables the Workload Identity Connector for an Exadb VM Cluster.
+           *
+           * Create a request for the method "exadbVmClusters.enableIdentityConnector".
+           *
+           * This request holds the parameters needed by the the oracledatabase server.  After setting any
+           * optional parameters, call the {@link EnableIdentityConnector#execute()} method to invoke the
+           * remote operation. <p> {@link EnableIdentityConnector#initialize(com.google.api.client.googleapi
+           * s.services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+           * after invoking the constructor. </p>
+           *
+           * @param name Required. The name of the Exadb VM Cluster in the following format:
+         *        projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           * @param content the {@link com.google.api.services.oracledatabase.v1.model.EnableExadbVmClusterIdentityConnectorRequest}
+           * @since 1.13
+           */
+          protected EnableIdentityConnector(java.lang.String name, com.google.api.services.oracledatabase.v1.model.EnableExadbVmClusterIdentityConnectorRequest content) {
+            super(OracleDatabase.this, "POST", REST_PATH, content, com.google.api.services.oracledatabase.v1.model.Operation.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+            }
+          }
+
+          @Override
+          public EnableIdentityConnector set$Xgafv(java.lang.String $Xgafv) {
+            return (EnableIdentityConnector) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public EnableIdentityConnector setAccessToken(java.lang.String accessToken) {
+            return (EnableIdentityConnector) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public EnableIdentityConnector setAlt(java.lang.String alt) {
+            return (EnableIdentityConnector) super.setAlt(alt);
+          }
+
+          @Override
+          public EnableIdentityConnector setCallback(java.lang.String callback) {
+            return (EnableIdentityConnector) super.setCallback(callback);
+          }
+
+          @Override
+          public EnableIdentityConnector setFields(java.lang.String fields) {
+            return (EnableIdentityConnector) super.setFields(fields);
+          }
+
+          @Override
+          public EnableIdentityConnector setKey(java.lang.String key) {
+            return (EnableIdentityConnector) super.setKey(key);
+          }
+
+          @Override
+          public EnableIdentityConnector setOauthToken(java.lang.String oauthToken) {
+            return (EnableIdentityConnector) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public EnableIdentityConnector setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (EnableIdentityConnector) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public EnableIdentityConnector setQuotaUser(java.lang.String quotaUser) {
+            return (EnableIdentityConnector) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public EnableIdentityConnector setUploadType(java.lang.String uploadType) {
+            return (EnableIdentityConnector) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public EnableIdentityConnector setUploadProtocol(java.lang.String uploadProtocol) {
+            return (EnableIdentityConnector) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The name of the Exadb VM Cluster in the following format:
+           * projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The name of the Exadb VM Cluster in the following format:
+         projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The name of the Exadb VM Cluster in the following format:
+           * projects/{project}/locations/{location}/exadbVmClusters/{exadb_vm_cluster}
+           */
+          public EnableIdentityConnector setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/exadbVmClusters/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public EnableIdentityConnector set(String parameterName, Object value) {
+            return (EnableIdentityConnector) super.set(parameterName, value);
           }
         }
         /**

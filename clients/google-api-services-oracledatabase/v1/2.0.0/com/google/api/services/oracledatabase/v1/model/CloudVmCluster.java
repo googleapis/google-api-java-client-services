@@ -101,6 +101,16 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
   private IdentityConnector identityConnector;
 
   /**
+   * Optional. Input only. Immutable. If set to true, disables the automatic provisioning of the
+   * Workload Identity Connector during creation. If set to false or omitted, the Workload Identity
+   * Connector will be automatically provisioned by default. Note: Provisioning the Workload
+   * Identity Connector is a prerequisite for enabling Google Cloud CMEK.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean identityConnectorDisabled;
+
+  /**
    * Optional. Labels or tags associated with the VM Cluster.
    * The value may be {@code null}.
    */
@@ -319,6 +329,29 @@ public final class CloudVmCluster extends com.google.api.client.json.GenericJson
    */
   public CloudVmCluster setIdentityConnector(IdentityConnector identityConnector) {
     this.identityConnector = identityConnector;
+    return this;
+  }
+
+  /**
+   * Optional. Input only. Immutable. If set to true, disables the automatic provisioning of the
+   * Workload Identity Connector during creation. If set to false or omitted, the Workload Identity
+   * Connector will be automatically provisioned by default. Note: Provisioning the Workload
+   * Identity Connector is a prerequisite for enabling Google Cloud CMEK.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIdentityConnectorDisabled() {
+    return identityConnectorDisabled;
+  }
+
+  /**
+   * Optional. Input only. Immutable. If set to true, disables the automatic provisioning of the
+   * Workload Identity Connector during creation. If set to false or omitted, the Workload Identity
+   * Connector will be automatically provisioned by default. Note: Provisioning the Workload
+   * Identity Connector is a prerequisite for enabling Google Cloud CMEK.
+   * @param identityConnectorDisabled identityConnectorDisabled or {@code null} for none
+   */
+  public CloudVmCluster setIdentityConnectorDisabled(java.lang.Boolean identityConnectorDisabled) {
+    this.identityConnectorDisabled = identityConnectorDisabled;
     return this;
   }
 

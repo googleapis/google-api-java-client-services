@@ -225,6 +225,13 @@ public final class Backup extends com.google.api.client.json.GenericJson {
   private String updateTime;
 
   /**
+   * Output only. The restore verification status of the backup.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VerificationSummary verificationSummary;
+
+  /**
    * Output only. AlloyDB specific backup properties.
    * @return value or {@code null} for none
    */
@@ -690,6 +697,23 @@ public final class Backup extends com.google.api.client.json.GenericJson {
    */
   public Backup setUpdateTime(String updateTime) {
     this.updateTime = updateTime;
+    return this;
+  }
+
+  /**
+   * Output only. The restore verification status of the backup.
+   * @return value or {@code null} for none
+   */
+  public VerificationSummary getVerificationSummary() {
+    return verificationSummary;
+  }
+
+  /**
+   * Output only. The restore verification status of the backup.
+   * @param verificationSummary verificationSummary or {@code null} for none
+   */
+  public Backup setVerificationSummary(VerificationSummary verificationSummary) {
+    this.verificationSummary = verificationSummary;
     return this;
   }
 

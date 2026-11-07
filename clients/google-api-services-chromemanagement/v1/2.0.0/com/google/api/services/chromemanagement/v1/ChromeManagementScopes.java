@@ -26,6 +26,18 @@ public class ChromeManagementScopes {
   /** See detailed information about apps installed on Chrome browsers and devices managed by your organization. */
   public static final String CHROME_MANAGEMENT_APPDETAILS_READONLY = "https://www.googleapis.com/auth/chrome.management.appdetails.readonly";
 
+  /** See, edit, delete, and take other necessary actions on Chrome browsers managed by your organization. */
+  public static final String CHROME_MANAGEMENT_BROWSERS = "https://www.googleapis.com/auth/chrome.management.browsers";
+
+  /** See Chrome browsers managed by your organization. */
+  public static final String CHROME_MANAGEMENT_BROWSERS_READONLY = "https://www.googleapis.com/auth/chrome.management.browsers.readonly";
+
+  /** See, edit, revoke, and take other necessary actions on Chrome enrollment tokens managed by your organization. */
+  public static final String CHROME_MANAGEMENT_ENROLLMENTTOKENS = "https://www.googleapis.com/auth/chrome.management.enrollmenttokens";
+
+  /** See Chrome enrollment tokens managed by your organization. */
+  public static final String CHROME_MANAGEMENT_ENROLLMENTTOKENS_READONLY = "https://www.googleapis.com/auth/chrome.management.enrollmenttokens.readonly";
+
   /** See, edit, delete, and take other necessary actions on Chrome browser profiles managed by your organization. */
   public static final String CHROME_MANAGEMENT_PROFILES = "https://www.googleapis.com/auth/chrome.management.profiles";
 
@@ -52,6 +64,10 @@ public class ChromeManagementScopes {
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
     set.add(CHROME_MANAGEMENT_APPDETAILS_READONLY);
+    set.add(CHROME_MANAGEMENT_BROWSERS);
+    set.add(CHROME_MANAGEMENT_BROWSERS_READONLY);
+    set.add(CHROME_MANAGEMENT_ENROLLMENTTOKENS);
+    set.add(CHROME_MANAGEMENT_ENROLLMENTTOKENS_READONLY);
     set.add(CHROME_MANAGEMENT_PROFILES);
     set.add(CHROME_MANAGEMENT_PROFILES_READONLY);
     set.add(CHROME_MANAGEMENT_REPORTS_READONLY);

@@ -31,7 +31,21 @@ package com.google.api.services.datamigration.v1.model;
 public final class SourceObjectsConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. The list of the objects to be migrated.
+   * Optional. The list of the objects to be excluded from the migration. Exclusion takes precedence
+   * over inclusion in `object_configs`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<SourceObjectConfig> excludedObjectConfigs;
+
+  static {
+    // hack to force ProGuard to consider SourceObjectConfig used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(SourceObjectConfig.class);
+  }
+
+  /**
+   * Optional. The list of the objects to be included in the migration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -51,7 +65,26 @@ public final class SourceObjectsConfig extends com.google.api.client.json.Generi
   private java.lang.String objectsSelectionType;
 
   /**
-   * Optional. The list of the objects to be migrated.
+   * Optional. The list of the objects to be excluded from the migration. Exclusion takes precedence
+   * over inclusion in `object_configs`.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<SourceObjectConfig> getExcludedObjectConfigs() {
+    return excludedObjectConfigs;
+  }
+
+  /**
+   * Optional. The list of the objects to be excluded from the migration. Exclusion takes precedence
+   * over inclusion in `object_configs`.
+   * @param excludedObjectConfigs excludedObjectConfigs or {@code null} for none
+   */
+  public SourceObjectsConfig setExcludedObjectConfigs(java.util.List<SourceObjectConfig> excludedObjectConfigs) {
+    this.excludedObjectConfigs = excludedObjectConfigs;
+    return this;
+  }
+
+  /**
+   * Optional. The list of the objects to be included in the migration.
    * @return value or {@code null} for none
    */
   public java.util.List<SourceObjectConfig> getObjectConfigs() {
@@ -59,7 +92,7 @@ public final class SourceObjectsConfig extends com.google.api.client.json.Generi
   }
 
   /**
-   * Optional. The list of the objects to be migrated.
+   * Optional. The list of the objects to be included in the migration.
    * @param objectConfigs objectConfigs or {@code null} for none
    */
   public SourceObjectsConfig setObjectConfigs(java.util.List<SourceObjectConfig> objectConfigs) {

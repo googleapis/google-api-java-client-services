@@ -17395,8 +17395,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
     /**
      * Create a guest user with access to a [subset of Workspace
-     * capabilities](https://support.google.com/a/answer/16558545). This feature is currently in Open
-     * Beta.
+     * capabilities](https://support.google.com/a/answer/16558545).
      *
      * Create a request for the method "users.createGuest".
      *
@@ -17418,8 +17417,7 @@ public class Directory extends com.google.api.client.googleapis.services.json.Ab
 
       /**
        * Create a guest user with access to a [subset of Workspace
-       * capabilities](https://support.google.com/a/answer/16558545). This feature is currently in Open
-       * Beta.
+       * capabilities](https://support.google.com/a/answer/16558545).
        *
        * Create a request for the method "users.createGuest".
        *

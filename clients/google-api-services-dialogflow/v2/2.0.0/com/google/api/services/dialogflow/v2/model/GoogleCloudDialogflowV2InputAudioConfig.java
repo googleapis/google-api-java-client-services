@@ -117,6 +117,12 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
+  private java.lang.Boolean profanityFilter;
+
+  /**
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
   private java.lang.Integer sampleRateHertz;
 
   /**
@@ -344,6 +350,21 @@ public final class GoogleCloudDialogflowV2InputAudioConfig extends com.google.ap
    */
   public GoogleCloudDialogflowV2InputAudioConfig setPhraseSets(java.util.List<java.lang.String> phraseSets) {
     this.phraseSets = phraseSets;
+    return this;
+  }
+
+  /**
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getProfanityFilter() {
+    return profanityFilter;
+  }
+
+  /**
+   * @param profanityFilter profanityFilter or {@code null} for none
+   */
+  public GoogleCloudDialogflowV2InputAudioConfig setProfanityFilter(java.lang.Boolean profanityFilter) {
+    this.profanityFilter = profanityFilter;
     return this;
   }
 

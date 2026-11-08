@@ -17,8 +17,8 @@
 package com.google.api.services.firebaseappcheck.v1beta.model;
 
 /**
- * A JWK as specified by [section 4 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4) and
- * [section 6.3.1 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1).
+ * A JWK as specified by [section 4 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4)
+ * and [section 6.3.1 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -32,49 +32,49 @@ package com.google.api.services.firebaseappcheck.v1beta.model;
 public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.client.json.GenericJson {
 
   /**
-   * See [section 4.4 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.4).
+   * See [section 4.4 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.4).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String alg;
 
   /**
-   * See [section 6.3.1.2 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1.2).
+   * See [section 6.3.1.2 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1.2).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String e;
 
   /**
-   * See [section 4.5 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.5).
+   * See [section 4.5 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.5).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kid;
 
   /**
-   * See [section 4.1 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.1).
+   * See [section 4.1 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String kty;
 
   /**
-   * See [section 6.3.1.1 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1.1).
+   * See [section 6.3.1.1 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1.1).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String n;
 
   /**
-   * See [section 4.2 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.2).
+   * See [section 4.2 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.2).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String use;
 
   /**
-   * See [section 4.4 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.4).
+   * See [section 4.4 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.4).
    * @return value or {@code null} for none
    */
   public java.lang.String getAlg() {
@@ -82,7 +82,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.4 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.4).
+   * See [section 4.4 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.4).
    * @param alg alg or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaPublicJwk setAlg(java.lang.String alg) {
@@ -91,7 +91,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 6.3.1.2 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1.2).
+   * See [section 6.3.1.2 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1.2).
    * @return value or {@code null} for none
    */
   public java.lang.String getE() {
@@ -99,7 +99,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 6.3.1.2 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1.2).
+   * See [section 6.3.1.2 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1.2).
    * @param e e or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaPublicJwk setE(java.lang.String e) {
@@ -108,7 +108,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.5 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.5).
+   * See [section 4.5 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.5).
    * @return value or {@code null} for none
    */
   public java.lang.String getKid() {
@@ -116,7 +116,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.5 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.5).
+   * See [section 4.5 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.5).
    * @param kid kid or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaPublicJwk setKid(java.lang.String kid) {
@@ -125,7 +125,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.1 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.1).
+   * See [section 4.1 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.1).
    * @return value or {@code null} for none
    */
   public java.lang.String getKty() {
@@ -133,7 +133,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.1 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.1).
+   * See [section 4.1 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.1).
    * @param kty kty or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaPublicJwk setKty(java.lang.String kty) {
@@ -142,7 +142,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 6.3.1.1 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1.1).
+   * See [section 6.3.1.1 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1.1).
    * @return value or {@code null} for none
    */
   public java.lang.String getN() {
@@ -150,7 +150,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 6.3.1.1 of RFC 7518](https://tools.ietf.org/html/rfc7518#section-6.3.1.1).
+   * See [section 6.3.1.1 of RFC 7518](https://www.rfc-editor.org/info/rfc7518/#section-6.3.1.1).
    * @param n n or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaPublicJwk setN(java.lang.String n) {
@@ -159,7 +159,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.2 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.2).
+   * See [section 4.2 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.2).
    * @return value or {@code null} for none
    */
   public java.lang.String getUse() {
@@ -167,7 +167,7 @@ public final class GoogleFirebaseAppcheckV1betaPublicJwk extends com.google.api.
   }
 
   /**
-   * See [section 4.2 of RFC 7517](https://tools.ietf.org/html/rfc7517#section-4.2).
+   * See [section 4.2 of RFC 7517](https://www.rfc-editor.org/info/rfc7517/#section-4.2).
    * @param use use or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1betaPublicJwk setUse(java.lang.String use) {

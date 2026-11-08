@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Defines the settings for WildFire Inline ML analysis.
+ * Defines the settings for Advanced malware sandbox inline ML analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class WildfireInlineMlSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. List of files to exclude from WildFire Inline ML analysis.
+   * Optional. List of files to exclude from Advanced malware sandbox inline ML analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,14 +43,15 @@ public final class WildfireInlineMlSettings extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. List of Inline ML configs to enable in WildFire Inline ML analysis.
+   * Optional. List of inline ML configurations to enable in Advanced malware sandbox inline ML
+   * analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireInlineMlSettingsInlineMlConfig> inlineMlConfigs;
 
   /**
-   * Optional. List of files to exclude from WildFire Inline ML analysis.
+   * Optional. List of files to exclude from Advanced malware sandbox inline ML analysis.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireInlineMlFileException> getFileExceptions() {
@@ -58,7 +59,7 @@ public final class WildfireInlineMlSettings extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. List of files to exclude from WildFire Inline ML analysis.
+   * Optional. List of files to exclude from Advanced malware sandbox inline ML analysis.
    * @param fileExceptions fileExceptions or {@code null} for none
    */
   public WildfireInlineMlSettings setFileExceptions(java.util.List<WildfireInlineMlFileException> fileExceptions) {
@@ -67,7 +68,8 @@ public final class WildfireInlineMlSettings extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. List of Inline ML configs to enable in WildFire Inline ML analysis.
+   * Optional. List of inline ML configurations to enable in Advanced malware sandbox inline ML
+   * analysis.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireInlineMlSettingsInlineMlConfig> getInlineMlConfigs() {
@@ -75,7 +77,8 @@ public final class WildfireInlineMlSettings extends com.google.api.client.json.G
   }
 
   /**
-   * Optional. List of Inline ML configs to enable in WildFire Inline ML analysis.
+   * Optional. List of inline ML configurations to enable in Advanced malware sandbox inline ML
+   * analysis.
    * @param inlineMlConfigs inlineMlConfigs or {@code null} for none
    */
   public WildfireInlineMlSettings setInlineMlConfigs(java.util.List<WildfireInlineMlSettingsInlineMlConfig> inlineMlConfigs) {

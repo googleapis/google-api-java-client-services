@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Response returned by the ListSecurityProfiles method.
+ * Response returned by the `ListSecurityProfiles` method.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,25 +30,23 @@ package com.google.api.services.networksecurity.v1.model;
 public final class ListSecurityProfilesResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * If there might be more results than those appearing in this response, then `next_page_token` is
-   * included. To get the next set of results, call this method again using the value of
-   * `next_page_token` as `page_token`.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * List of SecurityProfile resources.
+   * List of `SecurityProfile` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<SecurityProfile> securityProfiles;
 
   /**
-   * If there might be more results than those appearing in this response, then `next_page_token` is
-   * included. To get the next set of results, call this method again using the value of
-   * `next_page_token` as `page_token`.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -56,9 +54,8 @@ public final class ListSecurityProfilesResponse extends com.google.api.client.js
   }
 
   /**
-   * If there might be more results than those appearing in this response, then `next_page_token` is
-   * included. To get the next set of results, call this method again using the value of
-   * `next_page_token` as `page_token`.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListSecurityProfilesResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -67,7 +64,7 @@ public final class ListSecurityProfilesResponse extends com.google.api.client.js
   }
 
   /**
-   * List of SecurityProfile resources.
+   * List of `SecurityProfile` resources.
    * @return value or {@code null} for none
    */
   public java.util.List<SecurityProfile> getSecurityProfiles() {
@@ -75,7 +72,7 @@ public final class ListSecurityProfilesResponse extends com.google.api.client.js
   }
 
   /**
-   * List of SecurityProfile resources.
+   * List of `SecurityProfile` resources.
    * @param securityProfiles securityProfiles or {@code null} for none
    */
   public ListSecurityProfilesResponse setSecurityProfiles(java.util.List<SecurityProfile> securityProfiles) {

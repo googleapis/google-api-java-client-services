@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing WildfireVerdictChangeRequests.
+ * Message for response to listing `WildfireVerdictChangeRequest` resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,7 +30,8 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ListWildfireVerdictChangeRequestsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,14 +45,15 @@ public final class ListWildfireVerdictChangeRequestsResponse extends com.google.
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of WildfireVerdictChangeRequests
+   * The list of `WildfireVerdictChangeRequest` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireVerdictChangeRequest> wildfireVerdictChangeRequests;
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -59,7 +61,8 @@ public final class ListWildfireVerdictChangeRequestsResponse extends com.google.
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListWildfireVerdictChangeRequestsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -85,7 +88,7 @@ public final class ListWildfireVerdictChangeRequestsResponse extends com.google.
   }
 
   /**
-   * The list of WildfireVerdictChangeRequests
+   * The list of `WildfireVerdictChangeRequest` resources.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireVerdictChangeRequest> getWildfireVerdictChangeRequests() {
@@ -93,7 +96,7 @@ public final class ListWildfireVerdictChangeRequestsResponse extends com.google.
   }
 
   /**
-   * The list of WildfireVerdictChangeRequests
+   * The list of `WildfireVerdictChangeRequest` resources.
    * @param wildfireVerdictChangeRequests wildfireVerdictChangeRequests or {@code null} for none
    */
   public ListWildfireVerdictChangeRequestsResponse setWildfireVerdictChangeRequests(java.util.List<WildfireVerdictChangeRequest> wildfireVerdictChangeRequests) {

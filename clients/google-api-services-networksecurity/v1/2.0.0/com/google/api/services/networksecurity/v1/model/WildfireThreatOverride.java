@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Defines what action to take for a specific WildFire threat_id match.
+ * Defines what action to take for a specific Advanced malware sandbox `threat_id` match.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:

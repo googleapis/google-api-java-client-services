@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * The options to submit a custom list of file types for scan.
+ * The options to submit a custom list of file types for scanning.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,14 +30,14 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class WildfireInlineCloudAnalysisRuleCustomFileTypes extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. File types to be submitted for WildFire inline cloud analysis.
+   * Required. File types to be submitted for Advanced malware sandbox inline cloud analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> fileTypes;
 
   /**
-   * Required. File types to be submitted for WildFire inline cloud analysis.
+   * Required. File types to be submitted for Advanced malware sandbox inline cloud analysis.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getFileTypes() {
@@ -45,7 +45,7 @@ public final class WildfireInlineCloudAnalysisRuleCustomFileTypes extends com.go
   }
 
   /**
-   * Required. File types to be submitted for WildFire inline cloud analysis.
+   * Required. File types to be submitted for Advanced malware sandbox inline cloud analysis.
    * @param fileTypes fileTypes or {@code null} for none
    */
   public WildfireInlineCloudAnalysisRuleCustomFileTypes setFileTypes(java.util.List<java.lang.String> fileTypes) {

@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Message describing Association object
+ * Message describing a firewall endpoint association.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,35 +30,36 @@ package com.google.api.services.networksecurity.v1.model;
 public final class FirewallEndpointAssociation extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Whether the association is disabled. True indicates that traffic won't be intercepted
+   * Optional. Whether the association is disabled. Setting this to `true` indicates that traffic
+   * isn't intercepted. The default value is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean disabled;
 
   /**
-   * Required. The URL of the FirewallEndpoint that is being associated.
+   * Required. The URL of the `FirewallEndpoint` that is being associated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String firewallEndpoint;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. The name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,7 +73,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   private java.lang.String network;
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. Whether reconciliation is in progress.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,21 +87,21 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   private java.lang.String state;
 
   /**
-   * Optional. The URL of the TlsInspectionPolicy that is being associated.
+   * Optional. The URL of the `TlsInspectionPolicy` that is being associated.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String tlsInspectionPolicy;
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -108,7 +109,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. Create time stamp
+   * Output only. Create timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public FirewallEndpointAssociation setCreateTime(String createTime) {
@@ -117,7 +118,8 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Whether the association is disabled. True indicates that traffic won't be intercepted
+   * Optional. Whether the association is disabled. Setting this to `true` indicates that traffic
+   * isn't intercepted. The default value is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getDisabled() {
@@ -125,7 +127,8 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Whether the association is disabled. True indicates that traffic won't be intercepted
+   * Optional. Whether the association is disabled. Setting this to `true` indicates that traffic
+   * isn't intercepted. The default value is `false`.
    * @param disabled disabled or {@code null} for none
    */
   public FirewallEndpointAssociation setDisabled(java.lang.Boolean disabled) {
@@ -134,7 +137,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Required. The URL of the FirewallEndpoint that is being associated.
+   * Required. The URL of the `FirewallEndpoint` that is being associated.
    * @return value or {@code null} for none
    */
   public java.lang.String getFirewallEndpoint() {
@@ -142,7 +145,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Required. The URL of the FirewallEndpoint that is being associated.
+   * Required. The URL of the `FirewallEndpoint` that is being associated.
    * @param firewallEndpoint firewallEndpoint or {@code null} for none
    */
   public FirewallEndpointAssociation setFirewallEndpoint(java.lang.String firewallEndpoint) {
@@ -151,7 +154,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -159,7 +162,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public FirewallEndpointAssociation setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -168,7 +171,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. The name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -176,7 +179,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Immutable. Identifier. name of resource
+   * Immutable. Identifier. The name of the resource.
    * @param name name or {@code null} for none
    */
   public FirewallEndpointAssociation setName(java.lang.String name) {
@@ -202,7 +205,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. Whether reconciliation is in progress.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getReconciling() {
@@ -210,7 +213,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. Whether reconciling is in progress, recommended per https://google.aip.dev/128.
+   * Output only. Whether reconciliation is in progress.
    * @param reconciling reconciling or {@code null} for none
    */
   public FirewallEndpointAssociation setReconciling(java.lang.Boolean reconciling) {
@@ -236,7 +239,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The URL of the TlsInspectionPolicy that is being associated.
+   * Optional. The URL of the `TlsInspectionPolicy` that is being associated.
    * @return value or {@code null} for none
    */
   public java.lang.String getTlsInspectionPolicy() {
@@ -244,7 +247,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Optional. The URL of the TlsInspectionPolicy that is being associated.
+   * Optional. The URL of the `TlsInspectionPolicy` that is being associated.
    * @param tlsInspectionPolicy tlsInspectionPolicy or {@code null} for none
    */
   public FirewallEndpointAssociation setTlsInspectionPolicy(java.lang.String tlsInspectionPolicy) {
@@ -253,7 +256,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -261,7 +264,7 @@ public final class FirewallEndpointAssociation extends com.google.api.client.jso
   }
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public FirewallEndpointAssociation setUpdateTime(String updateTime) {

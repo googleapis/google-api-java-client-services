@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * This is a subset of the FirewallEndpointAssociation message, containing fields to be used by the
+ * A subset of the `FirewallEndpointAssociation` message, containing fields to be used by the
  * consumer.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -31,23 +31,23 @@ package com.google.api.services.networksecurity.v1.model;
 public final class FirewallEndpointAssociationReference extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. The resource name of the FirewallEndpointAssociation. Format:
-   * projects/{project}/locations/{location}/firewallEndpointAssociations/{id}
+   * Output only. The resource name of the `FirewallEndpointAssociation`. Format:
+   * `projects/{project}/locations/{location}/firewallEndpointAssociations/{id}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Output only. The VPC network associated. Format: projects/{project}/global/networks/{name}.
+   * Output only. The associated VPC network. Format: `projects/{project}/global/networks/{name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String network;
 
   /**
-   * Output only. The resource name of the FirewallEndpointAssociation. Format:
-   * projects/{project}/locations/{location}/firewallEndpointAssociations/{id}
+   * Output only. The resource name of the `FirewallEndpointAssociation`. Format:
+   * `projects/{project}/locations/{location}/firewallEndpointAssociations/{id}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -55,8 +55,8 @@ public final class FirewallEndpointAssociationReference extends com.google.api.c
   }
 
   /**
-   * Output only. The resource name of the FirewallEndpointAssociation. Format:
-   * projects/{project}/locations/{location}/firewallEndpointAssociations/{id}
+   * Output only. The resource name of the `FirewallEndpointAssociation`. Format:
+   * `projects/{project}/locations/{location}/firewallEndpointAssociations/{id}`.
    * @param name name or {@code null} for none
    */
   public FirewallEndpointAssociationReference setName(java.lang.String name) {
@@ -65,7 +65,7 @@ public final class FirewallEndpointAssociationReference extends com.google.api.c
   }
 
   /**
-   * Output only. The VPC network associated. Format: projects/{project}/global/networks/{name}.
+   * Output only. The associated VPC network. Format: `projects/{project}/global/networks/{name}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getNetwork() {
@@ -73,7 +73,7 @@ public final class FirewallEndpointAssociationReference extends com.google.api.c
   }
 
   /**
-   * Output only. The VPC network associated. Format: projects/{project}/global/networks/{name}.
+   * Output only. The associated VPC network. Format: `projects/{project}/global/networks/{name}`.
    * @param network network or {@code null} for none
    */
   public FirewallEndpointAssociationReference setNetwork(java.lang.String network) {

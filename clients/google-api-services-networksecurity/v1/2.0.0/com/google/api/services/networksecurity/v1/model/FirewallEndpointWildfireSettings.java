@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Settings for WildFire analysis.
+ * Settings for Advanced malware sandbox analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,46 +30,51 @@ package com.google.api.services.networksecurity.v1.model;
 public final class FirewallEndpointWildfireSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Indicates whether WildFire analysis is enabled. Default value is false.
+   * Optional. Indicates whether Advanced malware sandbox analysis is enabled. The default value is
+   * `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean enabled;
 
   /**
-   * Optional. Settings for WildFire inline cloud analysis.
+   * Optional. Settings for Advanced malware sandbox inline cloud analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings wildfireInlineCloudAnalysisSettings;
 
   /**
-   * Optional. Duration in milliseconds on a file being held while the WildFire real time signature
-   * cloud performs a signature lookup. Value between 1 to 5000 is valid. Default value is 1000.
+   * Optional. The duration that a file is held while the Advanced malware sandbox real-time
+   * signature cloud performs a signature lookup. Valid values are from 1 to 5000 milliseconds. In
+   * canonical JSON encoding, this is represented as a string ending in `s` (for example, `"0.001s"`
+   * to `"5s"`). The default value is `1000` milliseconds (`"1s"` in JSON).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String wildfireRealtimeLookupDuration;
 
   /**
-   * Optional. Action to take on WildFire real time signature lookup timeout. Default value is
-   * ALLOW.
+   * Optional. The action to take on an Advanced malware sandbox real-time signature lookup timeout.
+   * The default value is `ALLOW`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wildfireRealtimeLookupTimeoutAction;
 
   /**
-   * Optional. The region where WildFire analysis will be performed. Palo Alto Networks supports
-   * regions: https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
-   * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud
+   * Optional. The region where Advanced malware sandbox analysis is performed. For a list of Palo
+   * Alto Networks supported regions, see [Advanced WildFire global
+   * cloud](https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
+   * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String wildfireRegion;
 
   /**
-   * Optional. Indicates whether WildFire analysis is enabled. Default value is false.
+   * Optional. Indicates whether Advanced malware sandbox analysis is enabled. The default value is
+   * `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getEnabled() {
@@ -77,7 +82,8 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Indicates whether WildFire analysis is enabled. Default value is false.
+   * Optional. Indicates whether Advanced malware sandbox analysis is enabled. The default value is
+   * `false`.
    * @param enabled enabled or {@code null} for none
    */
   public FirewallEndpointWildfireSettings setEnabled(java.lang.Boolean enabled) {
@@ -86,7 +92,7 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Settings for WildFire inline cloud analysis.
+   * Optional. Settings for Advanced malware sandbox inline cloud analysis.
    * @return value or {@code null} for none
    */
   public FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings getWildfireInlineCloudAnalysisSettings() {
@@ -94,7 +100,7 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Settings for WildFire inline cloud analysis.
+   * Optional. Settings for Advanced malware sandbox inline cloud analysis.
    * @param wildfireInlineCloudAnalysisSettings wildfireInlineCloudAnalysisSettings or {@code null} for none
    */
   public FirewallEndpointWildfireSettings setWildfireInlineCloudAnalysisSettings(FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings wildfireInlineCloudAnalysisSettings) {
@@ -103,8 +109,10 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Duration in milliseconds on a file being held while the WildFire real time signature
-   * cloud performs a signature lookup. Value between 1 to 5000 is valid. Default value is 1000.
+   * Optional. The duration that a file is held while the Advanced malware sandbox real-time
+   * signature cloud performs a signature lookup. Valid values are from 1 to 5000 milliseconds. In
+   * canonical JSON encoding, this is represented as a string ending in `s` (for example, `"0.001s"`
+   * to `"5s"`). The default value is `1000` milliseconds (`"1s"` in JSON).
    * @return value or {@code null} for none
    */
   public String getWildfireRealtimeLookupDuration() {
@@ -112,8 +120,10 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Duration in milliseconds on a file being held while the WildFire real time signature
-   * cloud performs a signature lookup. Value between 1 to 5000 is valid. Default value is 1000.
+   * Optional. The duration that a file is held while the Advanced malware sandbox real-time
+   * signature cloud performs a signature lookup. Valid values are from 1 to 5000 milliseconds. In
+   * canonical JSON encoding, this is represented as a string ending in `s` (for example, `"0.001s"`
+   * to `"5s"`). The default value is `1000` milliseconds (`"1s"` in JSON).
    * @param wildfireRealtimeLookupDuration wildfireRealtimeLookupDuration or {@code null} for none
    */
   public FirewallEndpointWildfireSettings setWildfireRealtimeLookupDuration(String wildfireRealtimeLookupDuration) {
@@ -122,8 +132,8 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Action to take on WildFire real time signature lookup timeout. Default value is
-   * ALLOW.
+   * Optional. The action to take on an Advanced malware sandbox real-time signature lookup timeout.
+   * The default value is `ALLOW`.
    * @return value or {@code null} for none
    */
   public java.lang.String getWildfireRealtimeLookupTimeoutAction() {
@@ -131,8 +141,8 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Action to take on WildFire real time signature lookup timeout. Default value is
-   * ALLOW.
+   * Optional. The action to take on an Advanced malware sandbox real-time signature lookup timeout.
+   * The default value is `ALLOW`.
    * @param wildfireRealtimeLookupTimeoutAction wildfireRealtimeLookupTimeoutAction or {@code null} for none
    */
   public FirewallEndpointWildfireSettings setWildfireRealtimeLookupTimeoutAction(java.lang.String wildfireRealtimeLookupTimeoutAction) {
@@ -141,9 +151,10 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. The region where WildFire analysis will be performed. Palo Alto Networks supports
-   * regions: https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
-   * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud
+   * Optional. The region where Advanced malware sandbox analysis is performed. For a list of Palo
+   * Alto Networks supported regions, see [Advanced WildFire global
+   * cloud](https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
+   * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud).
    * @return value or {@code null} for none
    */
   public java.lang.String getWildfireRegion() {
@@ -151,9 +162,10 @@ public final class FirewallEndpointWildfireSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. The region where WildFire analysis will be performed. Palo Alto Networks supports
-   * regions: https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
-   * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud
+   * Optional. The region where Advanced malware sandbox analysis is performed. For a list of Palo
+   * Alto Networks supported regions, see [Advanced WildFire global
+   * cloud](https://docs.paloaltonetworks.com/advanced-wildfire/administration/advanced-wildfire-
+   * overview/advanced-wildfire-deployments/advanced-wildfire-global-cloud).
    * @param wildfireRegion wildfireRegion or {@code null} for none
    */
   public FirewallEndpointWildfireSettings setWildfireRegion(java.lang.String wildfireRegion) {

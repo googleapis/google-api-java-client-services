@@ -17,7 +17,8 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Defines the file types to be submitted for WildFire analysis and the direction of the traffic.
+ * Defines the file types to be submitted for Advanced malware sandbox analysis and the direction of
+ * the traffic.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,28 +31,28 @@ package com.google.api.services.networksecurity.v1.model;
 public final class WildfireSubmissionRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WildfireSubmissionRuleCustomFileTypes customFileTypes;
 
   /**
-   * Required. Direction for the files to be analyzed by WildFire.
+   * Required. Direction for the files to be analyzed by Advanced malware sandbox.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String direction;
 
   /**
-   * Required. File selection mode for WildFire analysis.
+   * Required. File selection mode for Advanced malware sandbox analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileSelectionMode;
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox analysis.
    * @return value or {@code null} for none
    */
   public WildfireSubmissionRuleCustomFileTypes getCustomFileTypes() {
@@ -59,7 +60,7 @@ public final class WildfireSubmissionRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox analysis.
    * @param customFileTypes customFileTypes or {@code null} for none
    */
   public WildfireSubmissionRule setCustomFileTypes(WildfireSubmissionRuleCustomFileTypes customFileTypes) {
@@ -68,7 +69,7 @@ public final class WildfireSubmissionRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Direction for the files to be analyzed by WildFire.
+   * Required. Direction for the files to be analyzed by Advanced malware sandbox.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -76,7 +77,7 @@ public final class WildfireSubmissionRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Direction for the files to be analyzed by WildFire.
+   * Required. Direction for the files to be analyzed by Advanced malware sandbox.
    * @param direction direction or {@code null} for none
    */
   public WildfireSubmissionRule setDirection(java.lang.String direction) {
@@ -85,7 +86,7 @@ public final class WildfireSubmissionRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. File selection mode for WildFire analysis.
+   * Required. File selection mode for Advanced malware sandbox analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileSelectionMode() {
@@ -93,7 +94,7 @@ public final class WildfireSubmissionRule extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. File selection mode for WildFire analysis.
+   * Required. File selection mode for Advanced malware sandbox analysis.
    * @param fileSelectionMode fileSelectionMode or {@code null} for none
    */
   public WildfireSubmissionRule setFileSelectionMode(java.lang.String fileSelectionMode) {

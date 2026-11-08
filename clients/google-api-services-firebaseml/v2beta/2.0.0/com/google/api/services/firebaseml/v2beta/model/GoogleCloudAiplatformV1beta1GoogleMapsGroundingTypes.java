@@ -39,6 +39,7 @@ public final class GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes extends 
 
   /**
    * Optional. Enables grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute).
+   * Also enabled by default for Gemini 4 and later models when no `GroundingTypes` are specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,6 +66,7 @@ public final class GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes extends 
 
   /**
    * Optional. Enables grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute).
+   * Also enabled by default for Gemini 4 and later models when no `GroundingTypes` are specified.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GoogleMapsRouting getRouting() {
@@ -73,6 +75,7 @@ public final class GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes extends 
 
   /**
    * Optional. Enables grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute).
+   * Also enabled by default for Gemini 4 and later models when no `GroundingTypes` are specified.
    * @param routing routing or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes setRouting(GoogleCloudAiplatformV1beta1GoogleMapsRouting routing) {

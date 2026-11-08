@@ -17,7 +17,8 @@
 package com.google.api.services.firebaseml.v2beta.model;
 
 /**
- * Grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute).
+ * Grounding with Google Maps Routing APIs (ComputeRoutes and SearchAlongRoute). Also enabled by
+ * default for Gemini 4 and later models when no grounding type is specified.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase ML API. For a detailed explanation see:

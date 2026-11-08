@@ -17,7 +17,8 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * The list of file type configurations to be scanned by WildFire Inline Cloud Analysis.
+ * The list of file type configurations to be scanned by Advanced malware sandbox inline cloud
+ * analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,37 +31,38 @@ package com.google.api.services.networksecurity.v1.model;
 public final class WildfireInlineCloudAnalysisRule extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Action to take when a threat is detected using WildFire Inline Cloud Analysis. The
-   * default Value is DENY.
+   * Required. Action to take when a threat is detected using Advanced malware sandbox inline cloud
+   * analysis. The default value is `DENY`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox inline cloud analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WildfireInlineCloudAnalysisRuleCustomFileTypes customFileTypes;
 
   /**
-   * Required. Direction for the file to be analyzed by WildFire Inline Cloud Analysis.
+   * Required. Direction for the files to be analyzed by Advanced malware sandbox inline cloud
+   * analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String direction;
 
   /**
-   * Required. File selection mode for WildFire inline cloud analysis.
+   * Required. File selection mode for Advanced malware sandbox inline cloud analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileSelectionMode;
 
   /**
-   * Required. Action to take when a threat is detected using WildFire Inline Cloud Analysis. The
-   * default Value is DENY.
+   * Required. Action to take when a threat is detected using Advanced malware sandbox inline cloud
+   * analysis. The default value is `DENY`.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -68,8 +70,8 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Required. Action to take when a threat is detected using WildFire Inline Cloud Analysis. The
-   * default Value is DENY.
+   * Required. Action to take when a threat is detected using Advanced malware sandbox inline cloud
+   * analysis. The default value is `DENY`.
    * @param action action or {@code null} for none
    */
   public WildfireInlineCloudAnalysisRule setAction(java.lang.String action) {
@@ -78,7 +80,7 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox inline cloud analysis.
    * @return value or {@code null} for none
    */
   public WildfireInlineCloudAnalysisRuleCustomFileTypes getCustomFileTypes() {
@@ -86,7 +88,7 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Submit a custom list of file types for WildFire analysis.
+   * Submit a custom list of file types for Advanced malware sandbox inline cloud analysis.
    * @param customFileTypes customFileTypes or {@code null} for none
    */
   public WildfireInlineCloudAnalysisRule setCustomFileTypes(WildfireInlineCloudAnalysisRuleCustomFileTypes customFileTypes) {
@@ -95,7 +97,8 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Required. Direction for the file to be analyzed by WildFire Inline Cloud Analysis.
+   * Required. Direction for the files to be analyzed by Advanced malware sandbox inline cloud
+   * analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getDirection() {
@@ -103,7 +106,8 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Required. Direction for the file to be analyzed by WildFire Inline Cloud Analysis.
+   * Required. Direction for the files to be analyzed by Advanced malware sandbox inline cloud
+   * analysis.
    * @param direction direction or {@code null} for none
    */
   public WildfireInlineCloudAnalysisRule setDirection(java.lang.String direction) {
@@ -112,7 +116,7 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Required. File selection mode for WildFire inline cloud analysis.
+   * Required. File selection mode for Advanced malware sandbox inline cloud analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileSelectionMode() {
@@ -120,7 +124,7 @@ public final class WildfireInlineCloudAnalysisRule extends com.google.api.client
   }
 
   /**
-   * Required. File selection mode for WildFire inline cloud analysis.
+   * Required. File selection mode for Advanced malware sandbox inline cloud analysis.
    * @param fileSelectionMode fileSelectionMode or {@code null} for none
    */
   public WildfireInlineCloudAnalysisRule setFileSelectionMode(java.lang.String fileSelectionMode) {

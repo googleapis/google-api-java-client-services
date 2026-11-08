@@ -37,16 +37,16 @@ public final class FirewallEndpointEndpointSettings extends com.google.api.clien
   private java.lang.String contentCloudRegion;
 
   /**
-   * Optional. Whether to block HTTP partial responses for the endpoint. When this is true,
-   * resumption of blocked malicious HTTP file downloads will be blocked by the firewall. False
-   * provides maximum availability, true provides maximum security.
+   * Optional. Whether to block HTTP partial responses for the endpoint. When set to `true`, the
+   * firewall blocks the resumption of HTTP file downloads. Setting this to `false` provides maximum
+   * availability, while `true` provides maximum security.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean httpPartialResponseBlocked;
 
   /**
-   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default value is false.
+   * Optional. Immutable. Indicates whether jumbo frames are enabled. The default value is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -70,9 +70,9 @@ public final class FirewallEndpointEndpointSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Whether to block HTTP partial responses for the endpoint. When this is true,
-   * resumption of blocked malicious HTTP file downloads will be blocked by the firewall. False
-   * provides maximum availability, true provides maximum security.
+   * Optional. Whether to block HTTP partial responses for the endpoint. When set to `true`, the
+   * firewall blocks the resumption of HTTP file downloads. Setting this to `false` provides maximum
+   * availability, while `true` provides maximum security.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getHttpPartialResponseBlocked() {
@@ -80,9 +80,9 @@ public final class FirewallEndpointEndpointSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Whether to block HTTP partial responses for the endpoint. When this is true,
-   * resumption of blocked malicious HTTP file downloads will be blocked by the firewall. False
-   * provides maximum availability, true provides maximum security.
+   * Optional. Whether to block HTTP partial responses for the endpoint. When set to `true`, the
+   * firewall blocks the resumption of HTTP file downloads. Setting this to `false` provides maximum
+   * availability, while `true` provides maximum security.
    * @param httpPartialResponseBlocked httpPartialResponseBlocked or {@code null} for none
    */
   public FirewallEndpointEndpointSettings setHttpPartialResponseBlocked(java.lang.Boolean httpPartialResponseBlocked) {
@@ -91,7 +91,7 @@ public final class FirewallEndpointEndpointSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default value is false.
+   * Optional. Immutable. Indicates whether jumbo frames are enabled. The default value is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getJumboFramesEnabled() {
@@ -99,7 +99,7 @@ public final class FirewallEndpointEndpointSettings extends com.google.api.clien
   }
 
   /**
-   * Optional. Immutable. Indicates whether Jumbo Frames are enabled. Default value is false.
+   * Optional. Immutable. Indicates whether jumbo frames are enabled. The default value is `false`.
    * @param jumboFramesEnabled jumboFramesEnabled or {@code null} for none
    */
   public FirewallEndpointEndpointSettings setJumboFramesEnabled(java.lang.Boolean jumboFramesEnabled) {

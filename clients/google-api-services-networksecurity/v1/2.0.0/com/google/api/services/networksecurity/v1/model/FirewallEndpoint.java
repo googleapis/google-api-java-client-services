@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Message describing Endpoint object.
+ * Message describing a firewall endpoint.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,18 +30,19 @@ package com.google.api.services.networksecurity.v1.model;
 public final class FirewallEndpoint extends com.google.api.client.json.GenericJson {
 
   /**
-   * Output only. Deprecated: List of networks that are associated with this endpoint in the local
-   * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
-   * network will only appear in this list after traffic routing is fully configured. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. Deprecated: Use the `network` field in the `associations` message instead. List of
+   * networks that are associated with this endpoint in the local zone. This is a projection of the
+   * firewall endpoint association resources pointing at this endpoint. A network only appears in
+   * this list after traffic routing is fully configured. Format:
+   * `projects/{project}/global/networks/{name}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> associatedNetworks;
 
   /**
-   * Output only. List of FirewallEndpointAssociations that are associated to this endpoint. An
-   * association will only appear in this list after traffic routing is fully configured.
+   * Output only. List of firewall endpoint association resources that are associated with this
+   * endpoint. An association only appears in this list after traffic routing is fully configured.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,14 +57,14 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String billingProjectId;
 
   /**
-   * Output only. Create time stamp.
+   * Output only. Create timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String createTime;
 
   /**
-   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * Optional. Description of the firewall endpoint. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,14 +78,14 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private FirewallEndpointEndpointSettings endpointSettings;
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Identifier. Name of resource.
+   * Immutable. Identifier. The name of the resource.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,14 +99,14 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.Boolean reconciling;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean satisfiesPzi;
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -119,24 +120,25 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   private java.lang.String state;
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String updateTime;
 
   /**
-   * Optional. Settings for WildFire analysis.
+   * Optional. Settings for Advanced malware sandbox (WildFire) analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private FirewallEndpointWildfireSettings wildfireSettings;
 
   /**
-   * Output only. Deprecated: List of networks that are associated with this endpoint in the local
-   * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
-   * network will only appear in this list after traffic routing is fully configured. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. Deprecated: Use the `network` field in the `associations` message instead. List of
+   * networks that are associated with this endpoint in the local zone. This is a projection of the
+   * firewall endpoint association resources pointing at this endpoint. A network only appears in
+   * this list after traffic routing is fully configured. Format:
+   * `projects/{project}/global/networks/{name}`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAssociatedNetworks() {
@@ -144,10 +146,11 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Deprecated: List of networks that are associated with this endpoint in the local
-   * zone. This is a projection of the FirewallEndpointAssociations pointing at this endpoint. A
-   * network will only appear in this list after traffic routing is fully configured. Format:
-   * projects/{project}/global/networks/{name}.
+   * Output only. Deprecated: Use the `network` field in the `associations` message instead. List of
+   * networks that are associated with this endpoint in the local zone. This is a projection of the
+   * firewall endpoint association resources pointing at this endpoint. A network only appears in
+   * this list after traffic routing is fully configured. Format:
+   * `projects/{project}/global/networks/{name}`.
    * @param associatedNetworks associatedNetworks or {@code null} for none
    */
   public FirewallEndpoint setAssociatedNetworks(java.util.List<java.lang.String> associatedNetworks) {
@@ -156,8 +159,8 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. List of FirewallEndpointAssociations that are associated to this endpoint. An
-   * association will only appear in this list after traffic routing is fully configured.
+   * Output only. List of firewall endpoint association resources that are associated with this
+   * endpoint. An association only appears in this list after traffic routing is fully configured.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallEndpointAssociationReference> getAssociations() {
@@ -165,8 +168,8 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. List of FirewallEndpointAssociations that are associated to this endpoint. An
-   * association will only appear in this list after traffic routing is fully configured.
+   * Output only. List of firewall endpoint association resources that are associated with this
+   * endpoint. An association only appears in this list after traffic routing is fully configured.
    * @param associations associations or {@code null} for none
    */
   public FirewallEndpoint setAssociations(java.util.List<FirewallEndpointAssociationReference> associations) {
@@ -194,7 +197,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Create time stamp.
+   * Output only. Create timestamp.
    * @return value or {@code null} for none
    */
   public String getCreateTime() {
@@ -202,7 +205,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Create time stamp.
+   * Output only. Create timestamp.
    * @param createTime createTime or {@code null} for none
    */
   public FirewallEndpoint setCreateTime(String createTime) {
@@ -211,7 +214,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * Optional. Description of the firewall endpoint. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -219,7 +222,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Description of the firewall endpoint. Max length 2048 characters.
+   * Optional. Description of the firewall endpoint. The maximum length is 2048 characters.
    * @param description description or {@code null} for none
    */
   public FirewallEndpoint setDescription(java.lang.String description) {
@@ -245,7 +248,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -253,7 +256,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Labels as key value pairs
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public FirewallEndpoint setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -262,7 +265,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Identifier. Name of resource.
+   * Immutable. Identifier. The name of the resource.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -270,7 +273,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Immutable. Identifier. Name of resource.
+   * Immutable. Identifier. The name of the resource.
    * @param name name or {@code null} for none
    */
   public FirewallEndpoint setName(java.lang.String name) {
@@ -296,7 +299,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzi() {
@@ -304,7 +307,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    * @param satisfiesPzi satisfiesPzi or {@code null} for none
    */
   public FirewallEndpoint setSatisfiesPzi(java.lang.Boolean satisfiesPzi) {
@@ -313,7 +316,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSatisfiesPzs() {
@@ -321,7 +324,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. [Output Only] Reserved for future use.
+   * Output only. Reserved for future use.
    * @param satisfiesPzs satisfiesPzs or {@code null} for none
    */
   public FirewallEndpoint setSatisfiesPzs(java.lang.Boolean satisfiesPzs) {
@@ -347,7 +350,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    * @return value or {@code null} for none
    */
   public String getUpdateTime() {
@@ -355,7 +358,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Output only. Update time stamp
+   * Output only. Update timestamp.
    * @param updateTime updateTime or {@code null} for none
    */
   public FirewallEndpoint setUpdateTime(String updateTime) {
@@ -364,7 +367,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Settings for WildFire analysis.
+   * Optional. Settings for Advanced malware sandbox (WildFire) analysis.
    * @return value or {@code null} for none
    */
   public FirewallEndpointWildfireSettings getWildfireSettings() {
@@ -372,7 +375,7 @@ public final class FirewallEndpoint extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Optional. Settings for WildFire analysis.
+   * Optional. Settings for Advanced malware sandbox (WildFire) analysis.
    * @param wildfireSettings wildfireSettings or {@code null} for none
    */
   public FirewallEndpoint setWildfireSettings(FirewallEndpointWildfireSettings wildfireSettings) {

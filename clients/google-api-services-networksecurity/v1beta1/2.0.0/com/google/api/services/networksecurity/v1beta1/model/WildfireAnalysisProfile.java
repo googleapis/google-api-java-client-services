@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * WildfireAnalysisProfile defines Palo Alto Networks WildFire behavior.
+ * `WildfireAnalysisProfile` defines Palo Alto Networks WildFire behavior.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,64 +30,66 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class WildfireAnalysisProfile extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Configuration for WildFire inline cloud analysis.
+   * Optional. Configuration for Advanced malware sandbox inline cloud analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireInlineCloudAnalysisRule> wildfireInlineCloudAnalysisRules;
 
   /**
-   * Optional. Configuration for overriding inline ML WildFire actions per protocol.
+   * Optional. Configuration for overriding inline ML Advanced malware sandbox actions per protocol.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireInlineMlOverride> wildfireInlineMlOverrides;
 
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Settings for Advanced malware sandbox inline ML analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private WildfireInlineMlSettings wildfireInlineMlSetting;
 
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Deprecated: Use `wildfire_inline_ml_setting` instead. Settings for Advanced malware
+   * sandbox inline ML analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireInlineMlSettings> wildfireInlineMlSettings;
 
   /**
-   * Optional. Configuration for overriding WildFire actions per protocol.
+   * Optional. Configuration for overriding Advanced malware sandbox actions per protocol.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireOverride> wildfireOverrides;
 
   /**
-   * Optional. Whether to hold the transfer of a file while the WildFire real-time signature cloud
-   * performs a signature lookup. Default value is false.
+   * Optional. Whether to hold the transfer of a file while the Advanced malware sandbox real-time
+   * signature cloud performs a signature lookup. The default value is `false`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean wildfireRealtimeLookup;
 
   /**
-   * Optional. Configurations for WildFire file submissions.
+   * Optional. Configurations for Advanced malware sandbox (WildFire) file submissions.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireSubmissionRule> wildfireSubmissionRules;
 
   /**
-   * Optional. Configuration for overriding WildFire threats action by threat_id match.
+   * Optional. Configuration for overriding the Advanced malware sandbox threat action by
+   * `threat_id` match.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<WildfireThreatOverride> wildfireThreatOverrides;
 
   /**
-   * Optional. Configuration for WildFire inline cloud analysis.
+   * Optional. Configuration for Advanced malware sandbox inline cloud analysis.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireInlineCloudAnalysisRule> getWildfireInlineCloudAnalysisRules() {
@@ -95,7 +97,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for WildFire inline cloud analysis.
+   * Optional. Configuration for Advanced malware sandbox inline cloud analysis.
    * @param wildfireInlineCloudAnalysisRules wildfireInlineCloudAnalysisRules or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireInlineCloudAnalysisRules(java.util.List<WildfireInlineCloudAnalysisRule> wildfireInlineCloudAnalysisRules) {
@@ -104,7 +106,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for overriding inline ML WildFire actions per protocol.
+   * Optional. Configuration for overriding inline ML Advanced malware sandbox actions per protocol.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireInlineMlOverride> getWildfireInlineMlOverrides() {
@@ -112,7 +114,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for overriding inline ML WildFire actions per protocol.
+   * Optional. Configuration for overriding inline ML Advanced malware sandbox actions per protocol.
    * @param wildfireInlineMlOverrides wildfireInlineMlOverrides or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireInlineMlOverrides(java.util.List<WildfireInlineMlOverride> wildfireInlineMlOverrides) {
@@ -121,7 +123,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Settings for Advanced malware sandbox inline ML analysis.
    * @return value or {@code null} for none
    */
   public WildfireInlineMlSettings getWildfireInlineMlSetting() {
@@ -129,7 +131,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Settings for Advanced malware sandbox inline ML analysis.
    * @param wildfireInlineMlSetting wildfireInlineMlSetting or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireInlineMlSetting(WildfireInlineMlSettings wildfireInlineMlSetting) {
@@ -138,7 +140,8 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Deprecated: Use `wildfire_inline_ml_setting` instead. Settings for Advanced malware
+   * sandbox inline ML analysis.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireInlineMlSettings> getWildfireInlineMlSettings() {
@@ -146,7 +149,8 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Settings for WildFire Inline ML analysis.
+   * Optional. Deprecated: Use `wildfire_inline_ml_setting` instead. Settings for Advanced malware
+   * sandbox inline ML analysis.
    * @param wildfireInlineMlSettings wildfireInlineMlSettings or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireInlineMlSettings(java.util.List<WildfireInlineMlSettings> wildfireInlineMlSettings) {
@@ -155,7 +159,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for overriding WildFire actions per protocol.
+   * Optional. Configuration for overriding Advanced malware sandbox actions per protocol.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireOverride> getWildfireOverrides() {
@@ -163,7 +167,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for overriding WildFire actions per protocol.
+   * Optional. Configuration for overriding Advanced malware sandbox actions per protocol.
    * @param wildfireOverrides wildfireOverrides or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireOverrides(java.util.List<WildfireOverride> wildfireOverrides) {
@@ -172,8 +176,8 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Whether to hold the transfer of a file while the WildFire real-time signature cloud
-   * performs a signature lookup. Default value is false.
+   * Optional. Whether to hold the transfer of a file while the Advanced malware sandbox real-time
+   * signature cloud performs a signature lookup. The default value is `false`.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getWildfireRealtimeLookup() {
@@ -181,8 +185,8 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Whether to hold the transfer of a file while the WildFire real-time signature cloud
-   * performs a signature lookup. Default value is false.
+   * Optional. Whether to hold the transfer of a file while the Advanced malware sandbox real-time
+   * signature cloud performs a signature lookup. The default value is `false`.
    * @param wildfireRealtimeLookup wildfireRealtimeLookup or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireRealtimeLookup(java.lang.Boolean wildfireRealtimeLookup) {
@@ -191,7 +195,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configurations for WildFire file submissions.
+   * Optional. Configurations for Advanced malware sandbox (WildFire) file submissions.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireSubmissionRule> getWildfireSubmissionRules() {
@@ -199,7 +203,7 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configurations for WildFire file submissions.
+   * Optional. Configurations for Advanced malware sandbox (WildFire) file submissions.
    * @param wildfireSubmissionRules wildfireSubmissionRules or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireSubmissionRules(java.util.List<WildfireSubmissionRule> wildfireSubmissionRules) {
@@ -208,7 +212,8 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for overriding WildFire threats action by threat_id match.
+   * Optional. Configuration for overriding the Advanced malware sandbox threat action by
+   * `threat_id` match.
    * @return value or {@code null} for none
    */
   public java.util.List<WildfireThreatOverride> getWildfireThreatOverrides() {
@@ -216,7 +221,8 @@ public final class WildfireAnalysisProfile extends com.google.api.client.json.Ge
   }
 
   /**
-   * Optional. Configuration for overriding WildFire threats action by threat_id match.
+   * Optional. Configuration for overriding the Advanced malware sandbox threat action by
+   * `threat_id` match.
    * @param wildfireThreatOverrides wildfireThreatOverrides or {@code null} for none
    */
   public WildfireAnalysisProfile setWildfireThreatOverrides(java.util.List<WildfireThreatOverride> wildfireThreatOverrides) {

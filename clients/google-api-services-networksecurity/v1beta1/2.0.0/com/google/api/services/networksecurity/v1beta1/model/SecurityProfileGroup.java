@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * SecurityProfileGroup is a resource that defines the behavior for various ProfileTypes.
+ * A resource that defines the behavior for various `ProfileType` values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -37,28 +37,28 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private String createTime;
 
   /**
-   * Optional. Reference to a SecurityProfile with the CustomIntercept configuration.
+   * Optional. Reference to a `SecurityProfile` with the custom intercept configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customInterceptProfile;
 
   /**
-   * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
+   * Optional. Reference to a `SecurityProfile` with the custom mirroring configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String customMirroringProfile;
 
   /**
-   * Output only. Identifier used by the data-path. Unique within `{container, location}`.
+   * Output only. Identifier used by the data path. Unique within `{container, location}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.math.BigInteger dataPathId;
 
   /**
-   * Optional. An optional description of the profile group. Max length 2048 characters.
+   * Optional. An optional description of the profile group. The maximum length is 2048 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,22 +74,23 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private java.lang.String etag;
 
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-   * `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+   * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizations/{org
+   * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or
+   * `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Optional. Reference to a SecurityProfile with the ThreatPrevention configuration.
+   * Optional. Reference to a `SecurityProfile` with the threat prevention configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,14 +104,15 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   private String updateTime;
 
   /**
-   * Optional. Reference to a SecurityProfile with the UrlFiltering configuration.
+   * Optional. Reference to a `SecurityProfile` with the URL filtering configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String urlFilteringProfile;
 
   /**
-   * Optional. Reference to a SecurityProfile with the WildFire configuration.
+   * Optional. Reference to a `SecurityProfile` with the Advanced malware sandbox (WildFire)
+   * configuration.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +136,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the CustomIntercept configuration.
+   * Optional. Reference to a `SecurityProfile` with the custom intercept configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomInterceptProfile() {
@@ -142,7 +144,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the CustomIntercept configuration.
+   * Optional. Reference to a `SecurityProfile` with the custom intercept configuration.
    * @param customInterceptProfile customInterceptProfile or {@code null} for none
    */
   public SecurityProfileGroup setCustomInterceptProfile(java.lang.String customInterceptProfile) {
@@ -151,7 +153,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
+   * Optional. Reference to a `SecurityProfile` with the custom mirroring configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getCustomMirroringProfile() {
@@ -159,7 +161,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the CustomMirroring configuration.
+   * Optional. Reference to a `SecurityProfile` with the custom mirroring configuration.
    * @param customMirroringProfile customMirroringProfile or {@code null} for none
    */
   public SecurityProfileGroup setCustomMirroringProfile(java.lang.String customMirroringProfile) {
@@ -168,7 +170,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Identifier used by the data-path. Unique within `{container, location}`.
+   * Output only. Identifier used by the data path. Unique within `{container, location}`.
    * @return value or {@code null} for none
    */
   public java.math.BigInteger getDataPathId() {
@@ -176,7 +178,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Output only. Identifier used by the data-path. Unique within `{container, location}`.
+   * Output only. Identifier used by the data path. Unique within `{container, location}`.
    * @param dataPathId dataPathId or {@code null} for none
    */
   public SecurityProfileGroup setDataPathId(java.math.BigInteger dataPathId) {
@@ -185,7 +187,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. An optional description of the profile group. Max length 2048 characters.
+   * Optional. An optional description of the profile group. The maximum length is 2048 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -193,7 +195,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. An optional description of the profile group. Max length 2048 characters.
+   * Optional. An optional description of the profile group. The maximum length is 2048 characters.
    * @param description description or {@code null} for none
    */
   public SecurityProfileGroup setDescription(java.lang.String description) {
@@ -223,7 +225,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -231,7 +233,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public SecurityProfileGroup setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -240,8 +242,9 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-   * `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+   * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizations/{org
+   * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or
+   * `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -249,8 +252,9 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-   * `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+   * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizations/{org
+   * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or
+   * `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
    * @param name name or {@code null} for none
    */
   public SecurityProfileGroup setName(java.lang.String name) {
@@ -259,7 +263,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the ThreatPrevention configuration.
+   * Optional. Reference to a `SecurityProfile` with the threat prevention configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getThreatPreventionProfile() {
@@ -267,7 +271,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the ThreatPrevention configuration.
+   * Optional. Reference to a `SecurityProfile` with the threat prevention configuration.
    * @param threatPreventionProfile threatPreventionProfile or {@code null} for none
    */
   public SecurityProfileGroup setThreatPreventionProfile(java.lang.String threatPreventionProfile) {
@@ -293,7 +297,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the UrlFiltering configuration.
+   * Optional. Reference to a `SecurityProfile` with the URL filtering configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getUrlFilteringProfile() {
@@ -301,7 +305,7 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the UrlFiltering configuration.
+   * Optional. Reference to a `SecurityProfile` with the URL filtering configuration.
    * @param urlFilteringProfile urlFilteringProfile or {@code null} for none
    */
   public SecurityProfileGroup setUrlFilteringProfile(java.lang.String urlFilteringProfile) {
@@ -310,7 +314,8 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the WildFire configuration.
+   * Optional. Reference to a `SecurityProfile` with the Advanced malware sandbox (WildFire)
+   * configuration.
    * @return value or {@code null} for none
    */
   public java.lang.String getWildfireAnalysisProfile() {
@@ -318,7 +323,8 @@ public final class SecurityProfileGroup extends com.google.api.client.json.Gener
   }
 
   /**
-   * Optional. Reference to a SecurityProfile with the WildFire configuration.
+   * Optional. Reference to a `SecurityProfile` with the Advanced malware sandbox (WildFire)
+   * configuration.
    * @param wildfireAnalysisProfile wildfireAnalysisProfile or {@code null} for none
    */
   public SecurityProfileGroup setWildfireAnalysisProfile(java.lang.String wildfireAnalysisProfile) {

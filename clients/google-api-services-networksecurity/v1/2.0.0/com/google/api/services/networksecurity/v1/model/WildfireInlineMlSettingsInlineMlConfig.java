@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Configuration for WildFire Inline ML analysis per file type.
+ * Configuration for Advanced malware sandbox inline ML analysis per file type.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.networksecurity.v1.model;
 public final class WildfireInlineMlSettingsInlineMlConfig extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Action to take when a threat is detected using Inline ML.
+   * Required. Action to take when a threat is detected using inline ML.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Required. File type to configure Inline ML for.
+   * Required. File type to configure inline ML for.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String fileType;
 
   /**
-   * Required. Action to take when a threat is detected using Inline ML.
+   * Required. Action to take when a threat is detected using inline ML.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -52,7 +52,7 @@ public final class WildfireInlineMlSettingsInlineMlConfig extends com.google.api
   }
 
   /**
-   * Required. Action to take when a threat is detected using Inline ML.
+   * Required. Action to take when a threat is detected using inline ML.
    * @param action action or {@code null} for none
    */
   public WildfireInlineMlSettingsInlineMlConfig setAction(java.lang.String action) {
@@ -61,7 +61,7 @@ public final class WildfireInlineMlSettingsInlineMlConfig extends com.google.api
   }
 
   /**
-   * Required. File type to configure Inline ML for.
+   * Required. File type to configure inline ML for.
    * @return value or {@code null} for none
    */
   public java.lang.String getFileType() {
@@ -69,7 +69,7 @@ public final class WildfireInlineMlSettingsInlineMlConfig extends com.google.api
   }
 
   /**
-   * Required. File type to configure Inline ML for.
+   * Required. File type to configure inline ML for.
    * @param fileType fileType or {@code null} for none
    */
   public WildfireInlineMlSettingsInlineMlConfig setFileType(java.lang.String fileType) {

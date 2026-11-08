@@ -50,8 +50,9 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   private java.lang.String name;
 
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` * `endpoint` * `filesystem`
-   * * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `audio_generation` * `code_execution` *
+   * `endpoint` * `filesystem` * `google_search` * `image_generation` * `mcp_server` *
+   * `speech_generation` * `url_context` * `video_generation`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -110,8 +111,9 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` * `endpoint` * `filesystem`
-   * * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `audio_generation` * `code_execution` *
+   * `endpoint` * `filesystem` * `google_search` * `image_generation` * `mcp_server` *
+   * `speech_generation` * `url_context` * `video_generation`
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -119,8 +121,9 @@ public final class GoogleCloudAiplatformV1AgentTool extends com.google.api.clien
   }
 
   /**
-   * Required. The type of the tool. Supported types: * `code_execution` * `endpoint` * `filesystem`
-   * * `google_search` * `mcp_server` * `url_context`
+   * Required. The type of the tool. Supported types: * `audio_generation` * `code_execution` *
+   * `endpoint` * `filesystem` * `google_search` * `image_generation` * `mcp_server` *
+   * `speech_generation` * `url_context` * `video_generation`
    * @param type type or {@code null} for none
    */
   public GoogleCloudAiplatformV1AgentTool setType(java.lang.String type) {

@@ -37,6 +37,15 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
   private java.lang.String apiEndpoint;
 
   /**
+   * Optional. Controls authentication for the instance. If set, every caller must sign in as an
+   * individual user, and only the principals allowed here may use the instance. If unset, the
+   * instance runs without authentication.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1XmanagerAuthConfig authConfig;
+
+  /**
    * Output only. Creation timestamp.
    * The value may be {@code null}.
    */
@@ -61,6 +70,7 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
 
   /**
    * Output only. The resource names of the ModelDevelopmentClusters registered with this instance.
+   * A maximum of 100 clusters can be registered.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,6 +126,27 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
    */
   public GoogleCloudAiplatformV1beta1XmanagerInstance setApiEndpoint(java.lang.String apiEndpoint) {
     this.apiEndpoint = apiEndpoint;
+    return this;
+  }
+
+  /**
+   * Optional. Controls authentication for the instance. If set, every caller must sign in as an
+   * individual user, and only the principals allowed here may use the instance. If unset, the
+   * instance runs without authentication.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1XmanagerAuthConfig getAuthConfig() {
+    return authConfig;
+  }
+
+  /**
+   * Optional. Controls authentication for the instance. If set, every caller must sign in as an
+   * individual user, and only the principals allowed here may use the instance. If unset, the
+   * instance runs without authentication.
+   * @param authConfig authConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1XmanagerInstance setAuthConfig(GoogleCloudAiplatformV1beta1XmanagerAuthConfig authConfig) {
+    this.authConfig = authConfig;
     return this;
   }
 
@@ -176,6 +207,7 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
 
   /**
    * Output only. The resource names of the ModelDevelopmentClusters registered with this instance.
+   * A maximum of 100 clusters can be registered.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegisteredClusters() {
@@ -184,6 +216,7 @@ public final class GoogleCloudAiplatformV1beta1XmanagerInstance extends com.goog
 
   /**
    * Output only. The resource names of the ModelDevelopmentClusters registered with this instance.
+   * A maximum of 100 clusters can be registered.
    * @param registeredClusters registeredClusters or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1XmanagerInstance setRegisteredClusters(java.util.List<java.lang.String> registeredClusters) {

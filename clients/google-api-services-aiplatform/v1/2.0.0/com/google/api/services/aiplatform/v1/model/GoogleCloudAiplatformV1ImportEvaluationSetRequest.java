@@ -59,8 +59,8 @@ public final class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends com
   private GoogleCloudAiplatformV1EvaluationSet evaluationSet;
 
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem payloads will be
-   * stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem payloads will be
+   * stored. Required for every source except `harbor_dataset`, which must not set it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -158,8 +158,8 @@ public final class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends com
   }
 
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem payloads will be
-   * stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem payloads will be
+   * stored. Required for every source except `harbor_dataset`, which must not set it.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1GcsDestination getGcsDestination() {
@@ -167,8 +167,8 @@ public final class GoogleCloudAiplatformV1ImportEvaluationSetRequest extends com
   }
 
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem payloads will be
-   * stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem payloads will be
+   * stored. Required for every source except `harbor_dataset`, which must not set it.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public GoogleCloudAiplatformV1ImportEvaluationSetRequest setGcsDestination(GoogleCloudAiplatformV1GcsDestination gcsDestination) {

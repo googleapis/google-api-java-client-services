@@ -45,6 +45,16 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunDataSource extends c
   private java.lang.String evaluationSet;
 
   /**
+   * The EvaluationSetRevision resource name. The run evaluates the item revisions frozen in the
+   * revision, so later changes to the EvaluationSet and its EvaluationItems do not affect it.
+   * Format:
+   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}/revisions/{revision}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationSetRevision;
+
+  /**
    * Evaluation data in bigquery.
    * @return value or {@code null} for none
    */
@@ -77,6 +87,29 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunDataSource extends c
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunDataSource setEvaluationSet(java.lang.String evaluationSet) {
     this.evaluationSet = evaluationSet;
+    return this;
+  }
+
+  /**
+   * The EvaluationSetRevision resource name. The run evaluates the item revisions frozen in the
+   * revision, so later changes to the EvaluationSet and its EvaluationItems do not affect it.
+   * Format:
+   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}/revisions/{revision}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationSetRevision() {
+    return evaluationSetRevision;
+  }
+
+  /**
+   * The EvaluationSetRevision resource name. The run evaluates the item revisions frozen in the
+   * revision, so later changes to the EvaluationSet and its EvaluationItems do not affect it.
+   * Format:
+   * `projects/{project}/locations/{location}/evaluationSets/{evaluation_set}/revisions/{revision}`
+   * @param evaluationSetRevision evaluationSetRevision or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunDataSource setEvaluationSetRevision(java.lang.String evaluationSetRevision) {
+    this.evaluationSetRevision = evaluationSetRevision;
     return this;
   }
 

@@ -44,6 +44,13 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
   private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource developerConnectSource;
 
   /**
+   * Source code is in a public Git repository.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecGitSource gitSource;
+
+  /**
    * Optional. Configuration for building an image with custom config file.
    * The value may be {@code null}.
    */
@@ -95,6 +102,23 @@ public final class GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec
    */
   public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec setDeveloperConnectSource(GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecDeveloperConnectSource developerConnectSource) {
     this.developerConnectSource = developerConnectSource;
+    return this;
+  }
+
+  /**
+   * Source code is in a public Git repository.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecGitSource getGitSource() {
+    return gitSource;
+  }
+
+  /**
+   * Source code is in a public Git repository.
+   * @param gitSource gitSource or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpec setGitSource(GoogleCloudAiplatformV1beta1ReasoningEngineSpecSourceCodeSpecGitSource gitSource) {
+    this.gitSource = gitSource;
     return this;
   }
 

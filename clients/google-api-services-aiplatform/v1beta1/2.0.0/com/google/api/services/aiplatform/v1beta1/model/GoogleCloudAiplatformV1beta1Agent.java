@@ -30,12 +30,30 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Immutable. The identity configuration of the agent. Immutable: the agent's own
+   * identity determines the A2 (CoWorker) archetype and the minted SPIFFE, so it cannot change
+   * after creation (no A1<->A2 transition).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentIdentity agentIdentity;
+
+  /**
    * Output only. The resource name of the AI Application provisioned for this agent. Format:
    * `projects/{project}/locations/{location}/aiApplications/{ai_application}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String aiApplication;
+
+  /**
+   * Optional. The identities this agent is allowed to contact outbound (for example over Gmail or
+   * Chat). Stored on the agent and always returned by `GetAgent`; see the field comments on
+   * `AllowedTeammates`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AllowedTeammates allowedTeammates;
 
   /**
    * Required. Immutable. The base agent for the agent. Supported values: * `antigravity-
@@ -78,6 +96,15 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private java.lang.String effectiveIdentity;
 
   /**
+   * Optional. Immutable. Customer-managed encryption key spec for an Agent. If set, this agent's
+   * user data will be secured by this key; if not set, it is secured by a Google-managed key.
+   * Cannot be changed after the agent is created.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec;
+
+  /**
    * Immutable. The user-specified ID for the agent. This ID becomes the final component of the
    * agent resource name. If not provided, Vertex AI will generate a value for this ID. The ID can
    * be up to 63 characters and must match the regular expression `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
@@ -85,6 +112,13 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   @com.google.api.client.util.Key
   private java.lang.String id;
+
+  /**
+   * Optional. Memory settings for the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentMemoryConfig memoryConfig;
 
   /**
    * Optional. The metadata for the agent.
@@ -124,6 +158,38 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private GoogleCloudAiplatformV1beta1ObservabilityConfig observabilityConfig;
 
   /**
+   * Optional. The human owner (principal) the agent acts on behalf of (A1 Personal). Mutable by
+   * design: ownership is meant to be reassignable (e.g. by an admin). On create an A1 (Personal)
+   * agent may omit it and the control plane defaults it to the caller; an A2 (CoWorker) agent must
+   * set it explicitly. `owner.id` must be an *obfuscated* Gaia id. A raw Gaia id is rejected with
+   * INVALID_ARGUMENT naming the rule -- both forms are strings of decimal digits, so the surface
+   * would otherwise have two indistinguishable spellings of one identity. Not yet: `UpdateAgent`
+   * currently rejects a change to this field. The control plane authorizes every agent method
+   * against the owner Gaia id it persists internally at create time, and the update path does not
+   * maintain that copy — so a field write here would move the reported owner without moving the one
+   * access control uses. The guard comes out once reassignment moves both, along with the Workspace
+   * identity provisioned under the owner.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Principal owner;
+
+  /**
+   * Optional. The persona (presentation) of the agent. Mutable: presentation only, not an
+   * archetype-derivation signal.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1Persona persona;
+
+  /**
+   * Output only. The current operational state of the agent.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1AgentStatus status;
+
+  /**
    * Optional. The instructions for the agent to follow. These instructions are passed to the LLM as
    * a system instruction.
    * The value may be {@code null}.
@@ -146,6 +212,27 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   private String updated;
 
   /**
+   * Optional. Immutable. The identity configuration of the agent. Immutable: the agent's own
+   * identity determines the A2 (CoWorker) archetype and the minted SPIFFE, so it cannot change
+   * after creation (no A1<->A2 transition).
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentIdentity getAgentIdentity() {
+    return agentIdentity;
+  }
+
+  /**
+   * Optional. Immutable. The identity configuration of the agent. Immutable: the agent's own
+   * identity determines the A2 (CoWorker) archetype and the minted SPIFFE, so it cannot change
+   * after creation (no A1<->A2 transition).
+   * @param agentIdentity agentIdentity or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setAgentIdentity(GoogleCloudAiplatformV1beta1AgentIdentity agentIdentity) {
+    this.agentIdentity = agentIdentity;
+    return this;
+  }
+
+  /**
    * Output only. The resource name of the AI Application provisioned for this agent. Format:
    * `projects/{project}/locations/{location}/aiApplications/{ai_application}`.
    * @return value or {@code null} for none
@@ -161,6 +248,27 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Agent setAiApplication(java.lang.String aiApplication) {
     this.aiApplication = aiApplication;
+    return this;
+  }
+
+  /**
+   * Optional. The identities this agent is allowed to contact outbound (for example over Gmail or
+   * Chat). Stored on the agent and always returned by `GetAgent`; see the field comments on
+   * `AllowedTeammates`.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AllowedTeammates getAllowedTeammates() {
+    return allowedTeammates;
+  }
+
+  /**
+   * Optional. The identities this agent is allowed to contact outbound (for example over Gmail or
+   * Chat). Stored on the agent and always returned by `GetAgent`; see the field comments on
+   * `AllowedTeammates`.
+   * @param allowedTeammates allowedTeammates or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setAllowedTeammates(GoogleCloudAiplatformV1beta1AllowedTeammates allowedTeammates) {
+    this.allowedTeammates = allowedTeammates;
     return this;
   }
 
@@ -260,6 +368,27 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
   }
 
   /**
+   * Optional. Immutable. Customer-managed encryption key spec for an Agent. If set, this agent's
+   * user data will be secured by this key; if not set, it is secured by a Google-managed key.
+   * Cannot be changed after the agent is created.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EncryptionSpec getEncryptionSpec() {
+    return encryptionSpec;
+  }
+
+  /**
+   * Optional. Immutable. Customer-managed encryption key spec for an Agent. If set, this agent's
+   * user data will be secured by this key; if not set, it is secured by a Google-managed key.
+   * Cannot be changed after the agent is created.
+   * @param encryptionSpec encryptionSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setEncryptionSpec(GoogleCloudAiplatformV1beta1EncryptionSpec encryptionSpec) {
+    this.encryptionSpec = encryptionSpec;
+    return this;
+  }
+
+  /**
    * Immutable. The user-specified ID for the agent. This ID becomes the final component of the
    * agent resource name. If not provided, Vertex AI will generate a value for this ID. The ID can
    * be up to 63 characters and must match the regular expression `[a-z]([a-z0-9-]{0,61}[a-z0-9])?`.
@@ -277,6 +406,23 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Agent setId(java.lang.String id) {
     this.id = id;
+    return this;
+  }
+
+  /**
+   * Optional. Memory settings for the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentMemoryConfig getMemoryConfig() {
+    return memoryConfig;
+  }
+
+  /**
+   * Optional. Memory settings for the agent.
+   * @param memoryConfig memoryConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setMemoryConfig(GoogleCloudAiplatformV1beta1AgentMemoryConfig memoryConfig) {
+    this.memoryConfig = memoryConfig;
     return this;
   }
 
@@ -366,6 +512,79 @@ public final class GoogleCloudAiplatformV1beta1Agent extends com.google.api.clie
    */
   public GoogleCloudAiplatformV1beta1Agent setObservabilityConfig(GoogleCloudAiplatformV1beta1ObservabilityConfig observabilityConfig) {
     this.observabilityConfig = observabilityConfig;
+    return this;
+  }
+
+  /**
+   * Optional. The human owner (principal) the agent acts on behalf of (A1 Personal). Mutable by
+   * design: ownership is meant to be reassignable (e.g. by an admin). On create an A1 (Personal)
+   * agent may omit it and the control plane defaults it to the caller; an A2 (CoWorker) agent must
+   * set it explicitly. `owner.id` must be an *obfuscated* Gaia id. A raw Gaia id is rejected with
+   * INVALID_ARGUMENT naming the rule -- both forms are strings of decimal digits, so the surface
+   * would otherwise have two indistinguishable spellings of one identity. Not yet: `UpdateAgent`
+   * currently rejects a change to this field. The control plane authorizes every agent method
+   * against the owner Gaia id it persists internally at create time, and the update path does not
+   * maintain that copy — so a field write here would move the reported owner without moving the one
+   * access control uses. The guard comes out once reassignment moves both, along with the Workspace
+   * identity provisioned under the owner.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Principal getOwner() {
+    return owner;
+  }
+
+  /**
+   * Optional. The human owner (principal) the agent acts on behalf of (A1 Personal). Mutable by
+   * design: ownership is meant to be reassignable (e.g. by an admin). On create an A1 (Personal)
+   * agent may omit it and the control plane defaults it to the caller; an A2 (CoWorker) agent must
+   * set it explicitly. `owner.id` must be an *obfuscated* Gaia id. A raw Gaia id is rejected with
+   * INVALID_ARGUMENT naming the rule -- both forms are strings of decimal digits, so the surface
+   * would otherwise have two indistinguishable spellings of one identity. Not yet: `UpdateAgent`
+   * currently rejects a change to this field. The control plane authorizes every agent method
+   * against the owner Gaia id it persists internally at create time, and the update path does not
+   * maintain that copy — so a field write here would move the reported owner without moving the one
+   * access control uses. The guard comes out once reassignment moves both, along with the Workspace
+   * identity provisioned under the owner.
+   * @param owner owner or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setOwner(GoogleCloudAiplatformV1beta1Principal owner) {
+    this.owner = owner;
+    return this;
+  }
+
+  /**
+   * Optional. The persona (presentation) of the agent. Mutable: presentation only, not an
+   * archetype-derivation signal.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Persona getPersona() {
+    return persona;
+  }
+
+  /**
+   * Optional. The persona (presentation) of the agent. Mutable: presentation only, not an
+   * archetype-derivation signal.
+   * @param persona persona or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setPersona(GoogleCloudAiplatformV1beta1Persona persona) {
+    this.persona = persona;
+    return this;
+  }
+
+  /**
+   * Output only. The current operational state of the agent.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AgentStatus getStatus() {
+    return status;
+  }
+
+  /**
+   * Output only. The current operational state of the agent.
+   * @param status status or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Agent setStatus(GoogleCloudAiplatformV1beta1AgentStatus status) {
+    this.status = status;
     return this;
   }
 

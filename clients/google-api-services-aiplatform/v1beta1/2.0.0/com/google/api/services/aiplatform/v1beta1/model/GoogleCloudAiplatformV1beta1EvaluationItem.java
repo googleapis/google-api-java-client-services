@@ -81,6 +81,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluationItem extends com.google
   private java.lang.String gcsUri;
 
   /**
+   * Output only. A Harbor task. Populated when evaluation_item_type == HARBOR_TASK. HARBOR_TASK
+   * items are created by ImportEvaluationSet and can't be created or updated directly.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1HarborTask harborTask;
+
+  /**
    * Optional. Labels for the EvaluationItem.
    * The value may be {@code null}.
    */
@@ -218,6 +226,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationItem extends com.google
    */
   public GoogleCloudAiplatformV1beta1EvaluationItem setGcsUri(java.lang.String gcsUri) {
     this.gcsUri = gcsUri;
+    return this;
+  }
+
+  /**
+   * Output only. A Harbor task. Populated when evaluation_item_type == HARBOR_TASK. HARBOR_TASK
+   * items are created by ImportEvaluationSet and can't be created or updated directly.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1HarborTask getHarborTask() {
+    return harborTask;
+  }
+
+  /**
+   * Output only. A Harbor task. Populated when evaluation_item_type == HARBOR_TASK. HARBOR_TASK
+   * items are created by ImportEvaluationSet and can't be created or updated directly.
+   * @param harborTask harborTask or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationItem setHarborTask(GoogleCloudAiplatformV1beta1HarborTask harborTask) {
+    this.harborTask = harborTask;
     return this;
   }
 

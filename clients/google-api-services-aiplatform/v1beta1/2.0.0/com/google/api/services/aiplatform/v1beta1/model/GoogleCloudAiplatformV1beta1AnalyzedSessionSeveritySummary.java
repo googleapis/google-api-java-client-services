@@ -30,6 +30,15 @@ package com.google.api.services.aiplatform.v1beta1.model;
 public final class GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary extends com.google.api.client.json.GenericJson {
 
   /**
+   * Output only. The display names of the customer-defined detectors in `detector_ids`, keyed by
+   * detector ID. A detector ID with no entry -- a Google-managed detector, or a customer-defined
+   * detector that has since been deleted -- has no display name.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, java.lang.String> detectorDisplayNames;
+
+  /**
    * The list of detectors summaries for this severity level.
    * The value may be {@code null}.
    */
@@ -52,6 +61,27 @@ public final class GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary ex
    */
   @com.google.api.client.util.Key
   private java.lang.String severityLevel;
+
+  /**
+   * Output only. The display names of the customer-defined detectors in `detector_ids`, keyed by
+   * detector ID. A detector ID with no entry -- a Google-managed detector, or a customer-defined
+   * detector that has since been deleted -- has no display name.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, java.lang.String> getDetectorDisplayNames() {
+    return detectorDisplayNames;
+  }
+
+  /**
+   * Output only. The display names of the customer-defined detectors in `detector_ids`, keyed by
+   * detector ID. A detector ID with no entry -- a Google-managed detector, or a customer-defined
+   * detector that has since been deleted -- has no display name.
+   * @param detectorDisplayNames detectorDisplayNames or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1AnalyzedSessionSeveritySummary setDetectorDisplayNames(java.util.Map<String, java.lang.String> detectorDisplayNames) {
+    this.detectorDisplayNames = detectorDisplayNames;
+    return this;
+  }
 
   /**
    * The list of detectors summaries for this severity level.

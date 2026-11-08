@@ -45,6 +45,16 @@ public final class GoogleCloudAiplatformV1beta1DeployRequestDeployConfig extends
   private java.lang.Boolean fastTryoutEnabled;
 
   /**
+   * Optional. The service account that the container of the deployed model runs as. Specify the
+   * email address of the service account. If not specified, the container runs as a service account
+   * that has no access to the resource project. Users deploying the model must have the
+   * `iam.serviceAccounts.actAs` permission on this service account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Optional. System labels for Model Garden deployments. These labels are managed by Google and
    * for tracking purposes only.
    * The value may be {@code null}.
@@ -85,6 +95,29 @@ public final class GoogleCloudAiplatformV1beta1DeployRequestDeployConfig extends
    */
   public GoogleCloudAiplatformV1beta1DeployRequestDeployConfig setFastTryoutEnabled(java.lang.Boolean fastTryoutEnabled) {
     this.fastTryoutEnabled = fastTryoutEnabled;
+    return this;
+  }
+
+  /**
+   * Optional. The service account that the container of the deployed model runs as. Specify the
+   * email address of the service account. If not specified, the container runs as a service account
+   * that has no access to the resource project. Users deploying the model must have the
+   * `iam.serviceAccounts.actAs` permission on this service account.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account that the container of the deployed model runs as. Specify the
+   * email address of the service account. If not specified, the container runs as a service account
+   * that has no access to the resource project. Users deploying the model must have the
+   * `iam.serviceAccounts.actAs` permission on this service account.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DeployRequestDeployConfig setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

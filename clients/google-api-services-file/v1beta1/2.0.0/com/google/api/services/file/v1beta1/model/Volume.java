@@ -89,7 +89,9 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The state of the volume. This field is caller-settable via `UpdateVolume` to
    * transition a volume from `HOT` to `COLD` (freezing the volume). In `CreateVolume`, this field
-   * is output-only and initialized to `HOT`.
+   * is output-only: the volume is created as `HOT` when `ip_acls` is non-empty. When `ip_acls` is
+   * empty, the volume may be created `WARM` with no `mount_point` until `ip_acls` are set with
+   * `UpdateVolume`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -221,7 +223,9 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The state of the volume. This field is caller-settable via `UpdateVolume` to
    * transition a volume from `HOT` to `COLD` (freezing the volume). In `CreateVolume`, this field
-   * is output-only and initialized to `HOT`.
+   * is output-only: the volume is created as `HOT` when `ip_acls` is non-empty. When `ip_acls` is
+   * empty, the volume may be created `WARM` with no `mount_point` until `ip_acls` are set with
+   * `UpdateVolume`.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -231,7 +235,9 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   /**
    * Optional. The state of the volume. This field is caller-settable via `UpdateVolume` to
    * transition a volume from `HOT` to `COLD` (freezing the volume). In `CreateVolume`, this field
-   * is output-only and initialized to `HOT`.
+   * is output-only: the volume is created as `HOT` when `ip_acls` is non-empty. When `ip_acls` is
+   * empty, the volume may be created `WARM` with no `mount_point` until `ip_acls` are set with
+   * `UpdateVolume`.
    * @param state state or {@code null} for none
    */
   public Volume setState(java.lang.String state) {

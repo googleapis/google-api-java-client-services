@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.products_v1.model;
 
 /**
- * The minimum order value in the cart before the checkout is permitted.
+ * [Minimum order value](https://support.google.com/merchants/answer/16989009) in the cart before
+ * the checkout is permitted.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

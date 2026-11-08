@@ -30,6 +30,17 @@ package com.google.api.services.aiplatform.v1.model;
 public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Allows the evaluation run to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean allowCrossRegionModel;
+
+  /**
    * Optional. Autorater config used for evaluation. Not applicable for predefined metrics
    * (PredefinedMetricSpec); the server uses its own model configuration for predefined metrics and
    * this field is ignored.
@@ -294,6 +305,31 @@ public final class GoogleCloudAiplatformV1EvaluateInstancesRequest extends com.g
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1TrajectorySingleToolUseInput trajectorySingleToolUseInput;
+
+  /**
+   * Optional. Allows the evaluation run to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getAllowCrossRegionModel() {
+    return allowCrossRegionModel;
+  }
+
+  /**
+   * Optional. Allows the evaluation run to use cross region models. When this flag is set, the
+   * service may route traffic to other regions if a model is unavailable in the current region
+   * (e.g., to a `global` endpoint). If a fully-qualified model endpoint resource name with a
+   * different region than the request location is provided elsewhere in the request, this flag must
+   * be set to true or the request will fail.
+   * @param allowCrossRegionModel allowCrossRegionModel or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluateInstancesRequest setAllowCrossRegionModel(java.lang.Boolean allowCrossRegionModel) {
+    this.allowCrossRegionModel = allowCrossRegionModel;
+    return this;
+  }
 
   /**
    * Optional. Autorater config used for evaluation. Not applicable for predefined metrics

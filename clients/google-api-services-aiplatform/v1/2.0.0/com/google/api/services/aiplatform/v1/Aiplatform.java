@@ -37469,29 +37469,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
             return this;
           }
 
-          /**
-           * Optional. Optional. One-time cryptographic nonce issued by the trusted IdP provisioning
-           * iframe for session and device non-repudiation.
-           */
-          @com.google.api.client.util.Key
-          private java.lang.String idpNonce;
-
-          /** Optional. Optional. One-time cryptographic nonce issued by the trusted IdP provisioning iframe for
-         session and device non-repudiation.
-           */
-          public java.lang.String getIdpNonce() {
-            return idpNonce;
-          }
-
-          /**
-           * Optional. Optional. One-time cryptographic nonce issued by the trusted IdP provisioning
-           * iframe for session and device non-repudiation.
-           */
-          public Create setIdpNonce(java.lang.String idpNonce) {
-            this.idpNonce = idpNonce;
-            return this;
-          }
-
           @Override
           public Create set(String parameterName, Object value) {
             return (Create) super.set(parameterName, value);
@@ -112343,6 +112320,146 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
           }
         }
         /**
+         * Sets the default NotebookRuntimeTemplate for a Location.
+         *
+         * Create a request for the method "notebookRuntimeTemplates.setDefault".
+         *
+         * This request holds the parameters needed by the aiplatform server.  After setting any optional
+         * parameters, call the {@link SetDefault#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The resource name of the Location to set the default NotebookRuntimeTemplate. Format:
+         *        `projects/{project}/locations/{location}`
+         * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest}
+         * @return the request
+         */
+        public SetDefault setDefault(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest content) throws java.io.IOException {
+          SetDefault result = new SetDefault(parent, content);
+          initialize(result);
+          return result;
+        }
+
+        public class SetDefault extends AiplatformRequest<com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/notebookRuntimeTemplates:setDefault";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Sets the default NotebookRuntimeTemplate for a Location.
+           *
+           * Create a request for the method "notebookRuntimeTemplates.setDefault".
+           *
+           * This request holds the parameters needed by the the aiplatform server.  After setting any
+           * optional parameters, call the {@link SetDefault#execute()} method to invoke the remote
+           * operation. <p> {@link
+           * SetDefault#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The resource name of the Location to set the default NotebookRuntimeTemplate. Format:
+         *        `projects/{project}/locations/{location}`
+           * @param content the {@link com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest}
+           * @since 1.13
+           */
+          protected SetDefault(java.lang.String parent, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateRequest content) {
+            super(Aiplatform.this, "POST", REST_PATH, content, com.google.api.services.aiplatform.v1.model.GoogleCloudAiplatformV1SetDefaultNotebookRuntimeTemplateResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public SetDefault set$Xgafv(java.lang.String $Xgafv) {
+            return (SetDefault) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public SetDefault setAccessToken(java.lang.String accessToken) {
+            return (SetDefault) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public SetDefault setAlt(java.lang.String alt) {
+            return (SetDefault) super.setAlt(alt);
+          }
+
+          @Override
+          public SetDefault setCallback(java.lang.String callback) {
+            return (SetDefault) super.setCallback(callback);
+          }
+
+          @Override
+          public SetDefault setFields(java.lang.String fields) {
+            return (SetDefault) super.setFields(fields);
+          }
+
+          @Override
+          public SetDefault setKey(java.lang.String key) {
+            return (SetDefault) super.setKey(key);
+          }
+
+          @Override
+          public SetDefault setOauthToken(java.lang.String oauthToken) {
+            return (SetDefault) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public SetDefault setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (SetDefault) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public SetDefault setQuotaUser(java.lang.String quotaUser) {
+            return (SetDefault) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public SetDefault setUploadType(java.lang.String uploadType) {
+            return (SetDefault) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public SetDefault setUploadProtocol(java.lang.String uploadProtocol) {
+            return (SetDefault) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the Location to set the default NotebookRuntimeTemplate.
+           * Format: `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The resource name of the Location to set the default NotebookRuntimeTemplate. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The resource name of the Location to set the default NotebookRuntimeTemplate.
+           * Format: `projects/{project}/locations/{location}`
+           */
+          public SetDefault setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          @Override
+          public SetDefault set(String parameterName, Object value) {
+            return (SetDefault) super.set(parameterName, value);
+          }
+        }
+        /**
          * Sets the access control policy on the specified resource. Replaces any existing policy. Can
          * return `NOT_FOUND`, `INVALID_ARGUMENT`, and `PERMISSION_DENIED` errors.
          *
@@ -122796,32 +122913,6 @@ public class Aiplatform extends com.google.api.client.googleapis.services.json.A
 
             public List setPublishersId(java.lang.String publishersId) {
               this.publishersId = publishersId;
-              return this;
-            }
-
-            /**
-             * Optional. Batch fetch: return only these files, up to 100 IDs after de-duplication.
-             * Mutually exclusive with both `page` and `limit`. Serialised as a repeated `ids` query
-             * parameter, one occurrence per ID.
-             */
-            @com.google.api.client.util.Key
-            private java.util.List<java.lang.String> ids;
-
-            /** Optional. Batch fetch: return only these files, up to 100 IDs after de-duplication. Mutually
-           exclusive with both `page` and `limit`. Serialised as a repeated `ids` query parameter, one
-           occurrence per ID.
-             */
-            public java.util.List<java.lang.String> getIds() {
-              return ids;
-            }
-
-            /**
-             * Optional. Batch fetch: return only these files, up to 100 IDs after de-duplication.
-             * Mutually exclusive with both `page` and `limit`. Serialised as a repeated `ids` query
-             * parameter, one occurrence per ID.
-             */
-            public List setIds(java.util.List<java.lang.String> ids) {
-              this.ids = ids;
               return this;
             }
 

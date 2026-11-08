@@ -60,6 +60,13 @@ public final class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends 
   private java.lang.String model;
 
   /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig outputConfig;
+
+  /**
    * Per request settings for blocking unsafe content. Enforced on
    * GenerateContentResponse.candidates.
    * The value may be {@code null}.
@@ -149,6 +156,23 @@ public final class GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage extends 
    */
   public GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage setModel(java.lang.String model) {
     this.model = model;
+    return this;
+  }
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig getOutputConfig() {
+    return outputConfig;
+  }
+
+  /**
+   * Optional. Configuration for persisting output assets to external storage.
+   * @param outputConfig outputConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1SchemaPromptSpecPromptMessage setOutputConfig(GoogleCloudAiplatformV1SchemaPromptSpecPromptMessageOutputConfig outputConfig) {
+    this.outputConfig = outputConfig;
     return this;
   }
 

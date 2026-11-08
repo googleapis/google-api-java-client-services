@@ -44,6 +44,13 @@ public final class GenaiVertexV1InteractionUsage extends com.google.api.client.j
   private java.util.List<GenaiVertexV1InteractionUsageGroundingToolCount> groundingToolCount;
 
   /**
+   * Number of input tokens used in the first turn of this interaction.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer initialInputTokens;
+
+  /**
    * A breakdown of input token usage by modality.
    * The value may be {@code null}.
    */
@@ -137,6 +144,23 @@ public final class GenaiVertexV1InteractionUsage extends com.google.api.client.j
    */
   public GenaiVertexV1InteractionUsage setGroundingToolCount(java.util.List<GenaiVertexV1InteractionUsageGroundingToolCount> groundingToolCount) {
     this.groundingToolCount = groundingToolCount;
+    return this;
+  }
+
+  /**
+   * Number of input tokens used in the first turn of this interaction.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getInitialInputTokens() {
+    return initialInputTokens;
+  }
+
+  /**
+   * Number of input tokens used in the first turn of this interaction.
+   * @param initialInputTokens initialInputTokens or {@code null} for none
+   */
+  public GenaiVertexV1InteractionUsage setInitialInputTokens(java.lang.Integer initialInputTokens) {
+    this.initialInputTokens = initialInputTokens;
     return this;
   }
 

@@ -26538,6 +26538,149 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
         public class Engines {
 
           /**
+           * Checks members for Engine.feature_policies against the project's directory, as
+           * EngineService.UpdateEngine does when it saves them, and saves nothing.
+           *
+           * Create a request for the method "engines.checkFeaturePolicyMembers".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link CheckFeaturePolicyMembers#execute()} method to invoke the
+           * remote operation.
+           *
+           * @param name Required. The engine resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckFeaturePolicyMembersRequest}
+           * @return the request
+           */
+          public CheckFeaturePolicyMembers checkFeaturePolicyMembers(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckFeaturePolicyMembersRequest content) throws java.io.IOException {
+            CheckFeaturePolicyMembers result = new CheckFeaturePolicyMembers(name, content);
+            initialize(result);
+            return result;
+          }
+
+          public class CheckFeaturePolicyMembers extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckFeaturePolicyMembersResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+name}:checkFeaturePolicyMembers";
+
+            private final java.util.regex.Pattern NAME_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+
+            /**
+             * Checks members for Engine.feature_policies against the project's directory, as
+             * EngineService.UpdateEngine does when it saves them, and saves nothing.
+             *
+             * Create a request for the method "engines.checkFeaturePolicyMembers".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link CheckFeaturePolicyMembers#execute()} method to invoke the
+             * remote operation. <p> {@link CheckFeaturePolicyMembers#initialize(com.google.api.client.googlea
+             * pis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+             * immediately after invoking the constructor. </p>
+             *
+             * @param name Required. The engine resource name. Format:
+           *        `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckFeaturePolicyMembersRequest}
+             * @since 1.13
+             */
+            protected CheckFeaturePolicyMembers(java.lang.String name, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckFeaturePolicyMembersRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaCheckFeaturePolicyMembersResponse.class);
+              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers set$Xgafv(java.lang.String $Xgafv) {
+              return (CheckFeaturePolicyMembers) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setAccessToken(java.lang.String accessToken) {
+              return (CheckFeaturePolicyMembers) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setAlt(java.lang.String alt) {
+              return (CheckFeaturePolicyMembers) super.setAlt(alt);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setCallback(java.lang.String callback) {
+              return (CheckFeaturePolicyMembers) super.setCallback(callback);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setFields(java.lang.String fields) {
+              return (CheckFeaturePolicyMembers) super.setFields(fields);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setKey(java.lang.String key) {
+              return (CheckFeaturePolicyMembers) super.setKey(key);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setOauthToken(java.lang.String oauthToken) {
+              return (CheckFeaturePolicyMembers) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (CheckFeaturePolicyMembers) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setQuotaUser(java.lang.String quotaUser) {
+              return (CheckFeaturePolicyMembers) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setUploadType(java.lang.String uploadType) {
+              return (CheckFeaturePolicyMembers) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers setUploadProtocol(java.lang.String uploadProtocol) {
+              return (CheckFeaturePolicyMembers) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The engine resource name. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String name;
+
+            /** Required. The engine resource name. Format:
+           `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             */
+            public java.lang.String getName() {
+              return name;
+            }
+
+            /**
+             * Required. The engine resource name. Format:
+             * `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+             */
+            public CheckFeaturePolicyMembers setName(java.lang.String name) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                    "Parameter name must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/collections/[^/]+/engines/[^/]+$");
+              }
+              this.name = name;
+              return this;
+            }
+
+            @Override
+            public CheckFeaturePolicyMembers set(String parameterName, Object value) {
+              return (CheckFeaturePolicyMembers) super.set(parameterName, value);
+            }
+          }
+          /**
            * Creates an Engine.
            *
            * Create a request for the method "engines.create".
@@ -66910,6 +67053,560 @@ public class DiscoveryEngine extends com.google.api.client.googleapis.services.j
             @Override
             public List set(String parameterName, Object value) {
               return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the UserAvailabilities collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.UserAvailabilities.List request = discoveryengine.userAvailabilities().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public UserAvailabilities userAvailabilities() {
+          return new UserAvailabilities();
+        }
+
+        /**
+         * The "userAvailabilities" collection of methods.
+         */
+        public class UserAvailabilities {
+
+          /**
+           * Updates multiple UserAvailabilitys.
+           *
+           * Create a request for the method "userAvailabilities.batchUpdate".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+           * operation.
+           *
+           * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserAvailabilitiesRequest}
+           * @return the request
+           */
+          public BatchUpdate batchUpdate(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserAvailabilitiesRequest content) throws java.io.IOException {
+            BatchUpdate result = new BatchUpdate(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class BatchUpdate extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserAvailabilitiesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/userAvailabilities:batchUpdate";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Updates multiple UserAvailabilitys.
+             *
+             * Create a request for the method "userAvailabilities.batchUpdate".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link BatchUpdate#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * BatchUpdate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserAvailabilitiesRequest}
+             * @since 1.13
+             */
+            protected BatchUpdate(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserAvailabilitiesRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaBatchUpdateUserAvailabilitiesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public BatchUpdate set$Xgafv(java.lang.String $Xgafv) {
+              return (BatchUpdate) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public BatchUpdate setAccessToken(java.lang.String accessToken) {
+              return (BatchUpdate) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public BatchUpdate setAlt(java.lang.String alt) {
+              return (BatchUpdate) super.setAlt(alt);
+            }
+
+            @Override
+            public BatchUpdate setCallback(java.lang.String callback) {
+              return (BatchUpdate) super.setCallback(callback);
+            }
+
+            @Override
+            public BatchUpdate setFields(java.lang.String fields) {
+              return (BatchUpdate) super.setFields(fields);
+            }
+
+            @Override
+            public BatchUpdate setKey(java.lang.String key) {
+              return (BatchUpdate) super.setKey(key);
+            }
+
+            @Override
+            public BatchUpdate setOauthToken(java.lang.String oauthToken) {
+              return (BatchUpdate) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public BatchUpdate setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (BatchUpdate) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public BatchUpdate setQuotaUser(java.lang.String quotaUser) {
+              return (BatchUpdate) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public BatchUpdate setUploadType(java.lang.String uploadType) {
+              return (BatchUpdate) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public BatchUpdate setUploadProtocol(java.lang.String uploadProtocol) {
+              return (BatchUpdate) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent UserStore resource name, format:
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public BatchUpdate setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public BatchUpdate set(String parameterName, Object value) {
+              return (BatchUpdate) super.set(parameterName, value);
+            }
+          }
+          /**
+           * Lists the UserAvailabilitys.
+           *
+           * Create a request for the method "userAvailabilities.list".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListUserAvailabilitiesResponse> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/userAvailabilities";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Lists the UserAvailabilitys.
+             *
+             * Create a request for the method "userAvailabilities.list".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link List#execute()} method to invoke the remote operation. <p>
+             * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+             * must be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(DiscoveryEngine.this, "GET", REST_PATH, null, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaListUserAvailabilitiesResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent UserStore resource name, format:
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Filter for the list request. Supported fields (only `user_principal` is
+             * supported for now): * `user_principal` (will be normalized for matching) Examples: *
+             * `user_principal = "user1@example.com"` to list user availability for
+             * `user1@example.com`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String filter;
+
+            /** Optional. Filter for the list request. Supported fields (only `user_principal` is supported for
+           now): * `user_principal` (will be normalized for matching) Examples: * `user_principal =
+           "user1@example.com"` to list user availability for `user1@example.com`.
+             */
+            public java.lang.String getFilter() {
+              return filter;
+            }
+
+            /**
+             * Optional. Filter for the list request. Supported fields (only `user_principal` is
+             * supported for now): * `user_principal` (will be normalized for matching) Examples: *
+             * `user_principal = "user1@example.com"` to list user availability for
+             * `user1@example.com`.
+             */
+            public List setFilter(java.lang.String filter) {
+              this.filter = filter;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, defaults to 100. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified,
+           defaults to 100. The maximum value is 1000; values above 1000 will be coerced to 1000. If this
+           field is negative, an INVALID_ARGUMENT error is returned.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. Server may return fewer items than requested. If
+             * unspecified, defaults to 100. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000. If this field is negative, an INVALID_ARGUMENT error is returned.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListUserAvailabilities` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListUserAvailabilities` must match the call that provided the page
+             * token.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. A page token, received from a previous `ListUserAvailabilities` call. Provide this to
+           retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListUserAvailabilities` must match the call that provided the page token.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /**
+             * Optional. A page token, received from a previous `ListUserAvailabilities` call.
+             * Provide this to retrieve the subsequent page. When paginating, all other parameters
+             * provided to `ListUserAvailabilities` must match the call that provided the page
+             * token.
+             */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
+        /**
+         * An accessor for creating requests from the UserAvailability collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code DiscoveryEngine discoveryengine = new DiscoveryEngine(...);}
+         *   {@code DiscoveryEngine.UserAvailability.List request = discoveryengine.userAvailability().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public UserAvailability userAvailability() {
+          return new UserAvailability();
+        }
+
+        /**
+         * The "userAvailability" collection of methods.
+         */
+        public class UserAvailability {
+
+          /**
+           * Updates a UserAvailability.
+           *
+           * Create a request for the method "userAvailability.update".
+           *
+           * This request holds the parameters needed by the discoveryengine server.  After setting any
+           * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+           *
+           * @param parent Optional. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+           * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUpdateUserAvailabilityRequest}
+           * @return the request
+           */
+          public Update update(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUpdateUserAvailabilityRequest content) throws java.io.IOException {
+            Update result = new Update(parent, content);
+            initialize(result);
+            return result;
+          }
+
+          public class Update extends DiscoveryEngineRequest<com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserAvailability> {
+
+            private static final String REST_PATH = "v1alpha/{+parent}/userAvailability:update";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+
+            /**
+             * Updates a UserAvailability.
+             *
+             * Create a request for the method "userAvailability.update".
+             *
+             * This request holds the parameters needed by the the discoveryengine server.  After setting any
+             * optional parameters, call the {@link Update#execute()} method to invoke the remote operation.
+             * <p> {@link
+             * Update#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
+             * be called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Optional. The parent UserStore resource name, format:
+           *        `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             * @param content the {@link com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUpdateUserAvailabilityRequest}
+             * @since 1.13
+             */
+            protected Update(java.lang.String parent, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUpdateUserAvailabilityRequest content) {
+              super(DiscoveryEngine.this, "POST", REST_PATH, content, com.google.api.services.discoveryengine.v1alpha.model.GoogleCloudDiscoveryengineV1alphaUserAvailability.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+            }
+
+            @Override
+            public Update set$Xgafv(java.lang.String $Xgafv) {
+              return (Update) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public Update setAccessToken(java.lang.String accessToken) {
+              return (Update) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public Update setAlt(java.lang.String alt) {
+              return (Update) super.setAlt(alt);
+            }
+
+            @Override
+            public Update setCallback(java.lang.String callback) {
+              return (Update) super.setCallback(callback);
+            }
+
+            @Override
+            public Update setFields(java.lang.String fields) {
+              return (Update) super.setFields(fields);
+            }
+
+            @Override
+            public Update setKey(java.lang.String key) {
+              return (Update) super.setKey(key);
+            }
+
+            @Override
+            public Update setOauthToken(java.lang.String oauthToken) {
+              return (Update) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public Update setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (Update) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public Update setQuotaUser(java.lang.String quotaUser) {
+              return (Update) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public Update setUploadType(java.lang.String uploadType) {
+              return (Update) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public Update setUploadProtocol(java.lang.String uploadProtocol) {
+              return (Update) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Optional. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Optional. The parent UserStore resource name, format:
+           `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Optional. The parent UserStore resource name, format:
+             * `projects/{project}/locations/{location}/userStores/{user_store_id}`.
+             */
+            public Update setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/userStores/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            @Override
+            public Update set(String parameterName, Object value) {
+              return (Update) super.set(parameterName, value);
             }
           }
 

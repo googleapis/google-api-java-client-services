@@ -6024,6 +6024,31 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             return this;
           }
 
+          /**
+           * Optional. If set to `true`, the volume pool is deleted even if it has volumes, and its
+           * volumes are deleted with it. Otherwise, the request fails if the volume pool has any
+           * volumes.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Boolean force;
+
+          /** Optional. If set to `true`, the volume pool is deleted even if it has volumes, and its volumes are
+         deleted with it. Otherwise, the request fails if the volume pool has any volumes.
+           */
+          public java.lang.Boolean getForce() {
+            return force;
+          }
+
+          /**
+           * Optional. If set to `true`, the volume pool is deleted even if it has volumes, and its
+           * volumes are deleted with it. Otherwise, the request fails if the volume pool has any
+           * volumes.
+           */
+          public Delete setForce(java.lang.Boolean force) {
+            this.force = force;
+            return this;
+          }
+
           @Override
           public Delete set(String parameterName, Object value) {
             return (Delete) super.set(parameterName, value);
@@ -7015,312 +7040,6 @@ public class CloudFilestore extends com.google.api.client.googleapis.services.js
             @Override
             public Delete set(String parameterName, Object value) {
               return (Delete) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Creates a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
-           * for testing and removed.
-           *
-           * Create a request for the method "volumes.directCreate".
-           *
-           * This request holds the parameters needed by the file server.  After setting any optional
-           * parameters, call the {@link DirectCreate#execute()} method to invoke the remote operation.
-           *
-           * @param parent Required. The parent volume pool path, in the format
-           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
-           * @param content the {@link com.google.api.services.file.v1beta1.model.Volume}
-           * @return the request
-           */
-          public DirectCreate directCreate(java.lang.String parent, com.google.api.services.file.v1beta1.model.Volume content) throws java.io.IOException {
-            DirectCreate result = new DirectCreate(parent, content);
-            initialize(result);
-            return result;
-          }
-
-          public class DirectCreate extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Volume> {
-
-            private static final String REST_PATH = "v1beta1/{+parent}/volumes:directCreate";
-
-            private final java.util.regex.Pattern PARENT_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
-
-            /**
-             * Creates a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
-             * for testing and removed.
-             *
-             * Create a request for the method "volumes.directCreate".
-             *
-             * This request holds the parameters needed by the the file server.  After setting any optional
-             * parameters, call the {@link DirectCreate#execute()} method to invoke the remote operation. <p>
-             * {@link
-             * DirectCreate#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param parent Required. The parent volume pool path, in the format
-           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
-             * @param content the {@link com.google.api.services.file.v1beta1.model.Volume}
-             * @since 1.13
-             */
-            protected DirectCreate(java.lang.String parent, com.google.api.services.file.v1beta1.model.Volume content) {
-              super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Volume.class);
-              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
-              }
-            }
-
-            @Override
-            public DirectCreate set$Xgafv(java.lang.String $Xgafv) {
-              return (DirectCreate) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public DirectCreate setAccessToken(java.lang.String accessToken) {
-              return (DirectCreate) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public DirectCreate setAlt(java.lang.String alt) {
-              return (DirectCreate) super.setAlt(alt);
-            }
-
-            @Override
-            public DirectCreate setCallback(java.lang.String callback) {
-              return (DirectCreate) super.setCallback(callback);
-            }
-
-            @Override
-            public DirectCreate setFields(java.lang.String fields) {
-              return (DirectCreate) super.setFields(fields);
-            }
-
-            @Override
-            public DirectCreate setKey(java.lang.String key) {
-              return (DirectCreate) super.setKey(key);
-            }
-
-            @Override
-            public DirectCreate setOauthToken(java.lang.String oauthToken) {
-              return (DirectCreate) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public DirectCreate setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (DirectCreate) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public DirectCreate setQuotaUser(java.lang.String quotaUser) {
-              return (DirectCreate) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public DirectCreate setUploadType(java.lang.String uploadType) {
-              return (DirectCreate) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public DirectCreate setUploadProtocol(java.lang.String uploadProtocol) {
-              return (DirectCreate) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The parent volume pool path, in the format
-             * `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String parent;
-
-            /** Required. The parent volume pool path, in the format
-           `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
-             */
-            public java.lang.String getParent() {
-              return parent;
-            }
-
-            /**
-             * Required. The parent volume pool path, in the format
-             * `projects/{project}/locations/{location}/volumePools/{volume_pool}`.
-             */
-            public DirectCreate setParent(java.lang.String parent) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
-                    "Parameter parent must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+$");
-              }
-              this.parent = parent;
-              return this;
-            }
-
-            /**
-             * Required. The ID to use for the volume. The ID must be unique within the specified
-             * volume pool.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String volumeId;
-
-            /** Required. The ID to use for the volume. The ID must be unique within the specified volume pool.
-             */
-            public java.lang.String getVolumeId() {
-              return volumeId;
-            }
-
-            /**
-             * Required. The ID to use for the volume. The ID must be unique within the specified
-             * volume pool.
-             */
-            public DirectCreate setVolumeId(java.lang.String volumeId) {
-              this.volumeId = volumeId;
-              return this;
-            }
-
-            @Override
-            public DirectCreate set(String parameterName, Object value) {
-              return (DirectCreate) super.set(parameterName, value);
-            }
-          }
-          /**
-           * Deletes a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
-           * for testing and removed.
-           *
-           * Create a request for the method "volumes.directDelete".
-           *
-           * This request holds the parameters needed by the file server.  After setting any optional
-           * parameters, call the {@link DirectDelete#execute()} method to invoke the remote operation.
-           *
-           * @param name Required. The volume resource name, in the format
-           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
-           * @param content the {@link com.google.api.services.file.v1beta1.model.DeleteVolumeRequest}
-           * @return the request
-           */
-          public DirectDelete directDelete(java.lang.String name, com.google.api.services.file.v1beta1.model.DeleteVolumeRequest content) throws java.io.IOException {
-            DirectDelete result = new DirectDelete(name, content);
-            initialize(result);
-            return result;
-          }
-
-          public class DirectDelete extends CloudFilestoreRequest<com.google.api.services.file.v1beta1.model.Empty> {
-
-            private static final String REST_PATH = "v1beta1/{+name}:directDelete";
-
-            private final java.util.regex.Pattern NAME_PATTERN =
-                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
-
-            /**
-             * Deletes a volume directly on the CLH, bypassing CCFE. This is a temporary PoC that will be used
-             * for testing and removed.
-             *
-             * Create a request for the method "volumes.directDelete".
-             *
-             * This request holds the parameters needed by the the file server.  After setting any optional
-             * parameters, call the {@link DirectDelete#execute()} method to invoke the remote operation. <p>
-             * {@link
-             * DirectDelete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
-             * must be called to initialize this instance immediately after invoking the constructor. </p>
-             *
-             * @param name Required. The volume resource name, in the format
-           *        `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
-             * @param content the {@link com.google.api.services.file.v1beta1.model.DeleteVolumeRequest}
-             * @since 1.13
-             */
-            protected DirectDelete(java.lang.String name, com.google.api.services.file.v1beta1.model.DeleteVolumeRequest content) {
-              super(CloudFilestore.this, "POST", REST_PATH, content, com.google.api.services.file.v1beta1.model.Empty.class);
-              this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
-              }
-            }
-
-            @Override
-            public DirectDelete set$Xgafv(java.lang.String $Xgafv) {
-              return (DirectDelete) super.set$Xgafv($Xgafv);
-            }
-
-            @Override
-            public DirectDelete setAccessToken(java.lang.String accessToken) {
-              return (DirectDelete) super.setAccessToken(accessToken);
-            }
-
-            @Override
-            public DirectDelete setAlt(java.lang.String alt) {
-              return (DirectDelete) super.setAlt(alt);
-            }
-
-            @Override
-            public DirectDelete setCallback(java.lang.String callback) {
-              return (DirectDelete) super.setCallback(callback);
-            }
-
-            @Override
-            public DirectDelete setFields(java.lang.String fields) {
-              return (DirectDelete) super.setFields(fields);
-            }
-
-            @Override
-            public DirectDelete setKey(java.lang.String key) {
-              return (DirectDelete) super.setKey(key);
-            }
-
-            @Override
-            public DirectDelete setOauthToken(java.lang.String oauthToken) {
-              return (DirectDelete) super.setOauthToken(oauthToken);
-            }
-
-            @Override
-            public DirectDelete setPrettyPrint(java.lang.Boolean prettyPrint) {
-              return (DirectDelete) super.setPrettyPrint(prettyPrint);
-            }
-
-            @Override
-            public DirectDelete setQuotaUser(java.lang.String quotaUser) {
-              return (DirectDelete) super.setQuotaUser(quotaUser);
-            }
-
-            @Override
-            public DirectDelete setUploadType(java.lang.String uploadType) {
-              return (DirectDelete) super.setUploadType(uploadType);
-            }
-
-            @Override
-            public DirectDelete setUploadProtocol(java.lang.String uploadProtocol) {
-              return (DirectDelete) super.setUploadProtocol(uploadProtocol);
-            }
-
-            /**
-             * Required. The volume resource name, in the format
-             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
-             */
-            @com.google.api.client.util.Key
-            private java.lang.String name;
-
-            /** Required. The volume resource name, in the format
-           `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
-             */
-            public java.lang.String getName() {
-              return name;
-            }
-
-            /**
-             * Required. The volume resource name, in the format
-             * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`.
-             */
-            public DirectDelete setName(java.lang.String name) {
-              if (!getSuppressPatternChecks()) {
-                com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
-                    "Parameter name must conform to the pattern " +
-                    "^projects/[^/]+/locations/[^/]+/volumePools/[^/]+/volumes/[^/]+$");
-              }
-              this.name = name;
-              return this;
-            }
-
-            @Override
-            public DirectDelete set(String parameterName, Object value) {
-              return (DirectDelete) super.set(parameterName, value);
             }
           }
           /**

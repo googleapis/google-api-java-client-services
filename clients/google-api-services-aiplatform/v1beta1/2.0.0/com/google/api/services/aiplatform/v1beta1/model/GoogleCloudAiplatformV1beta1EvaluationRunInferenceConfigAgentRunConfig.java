@@ -39,6 +39,14 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgent
   private java.lang.String agentEngine;
 
   /**
+   * Optional. Config for scraping a Gemini Data Analytics data agent. The scraping service runs the
+   * agent via the DataChatService Chat API and returns the resulting trajectory for evaluation.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1DataAgentConfig dataAgentConfig;
+
+  /**
    * Optional. Config for scraping a Discovery Engine Assistant. The scraping service runs the
    * assistant via the Discovery Engine AssistantService and returns the resulting trajectory for
    * evaluation.
@@ -89,6 +97,25 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgent
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig setAgentEngine(java.lang.String agentEngine) {
     this.agentEngine = agentEngine;
+    return this;
+  }
+
+  /**
+   * Optional. Config for scraping a Gemini Data Analytics data agent. The scraping service runs the
+   * agent via the DataChatService Chat API and returns the resulting trajectory for evaluation.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1DataAgentConfig getDataAgentConfig() {
+    return dataAgentConfig;
+  }
+
+  /**
+   * Optional. Config for scraping a Gemini Data Analytics data agent. The scraping service runs the
+   * agent via the DataChatService Chat API and returns the resulting trajectory for evaluation.
+   * @param dataAgentConfig dataAgentConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigAgentRunConfig setDataAgentConfig(GoogleCloudAiplatformV1beta1DataAgentConfig dataAgentConfig) {
+    this.dataAgentConfig = dataAgentConfig;
     return this;
   }
 

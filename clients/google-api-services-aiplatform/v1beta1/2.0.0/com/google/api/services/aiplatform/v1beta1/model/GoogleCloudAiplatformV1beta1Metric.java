@@ -107,6 +107,13 @@ public final class GoogleCloudAiplatformV1beta1Metric extends com.google.api.cli
   private GoogleCloudAiplatformV1beta1RougeSpec rougeSpec;
 
   /**
+   * Spec for a step-based LLM metric.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1StepBasedLlmMetricSpec stepBasedLlmMetricSpec;
+
+  /**
    * Optional. The aggregation metrics to use.
    * @return value or {@code null} for none
    */
@@ -290,6 +297,23 @@ public final class GoogleCloudAiplatformV1beta1Metric extends com.google.api.cli
    */
   public GoogleCloudAiplatformV1beta1Metric setRougeSpec(GoogleCloudAiplatformV1beta1RougeSpec rougeSpec) {
     this.rougeSpec = rougeSpec;
+    return this;
+  }
+
+  /**
+   * Spec for a step-based LLM metric.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1StepBasedLlmMetricSpec getStepBasedLlmMetricSpec() {
+    return stepBasedLlmMetricSpec;
+  }
+
+  /**
+   * Spec for a step-based LLM metric.
+   * @param stepBasedLlmMetricSpec stepBasedLlmMetricSpec or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1Metric setStepBasedLlmMetricSpec(GoogleCloudAiplatformV1beta1StepBasedLlmMetricSpec stepBasedLlmMetricSpec) {
+    this.stepBasedLlmMetricSpec = stepBasedLlmMetricSpec;
     return this;
   }
 

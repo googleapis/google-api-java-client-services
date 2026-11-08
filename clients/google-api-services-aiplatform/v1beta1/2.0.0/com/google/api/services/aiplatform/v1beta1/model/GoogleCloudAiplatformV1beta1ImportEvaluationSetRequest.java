@@ -59,8 +59,8 @@ public final class GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest extend
   private GoogleCloudAiplatformV1beta1EvaluationSet evaluationSet;
 
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem payloads will be
-   * stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem payloads will be
+   * stored. Required for every source except `harbor_dataset`, which must not set it.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,6 +72,21 @@ public final class GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest extend
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1ImportEvaluationSetRequestGcsSource gcsSource;
+
+  /**
+   * A Harbor dataset source. `gcs_destination` must not be set.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1HarborDataset harborDataset;
+
+  /**
+   * Optional. If set, `evaluation_set.name` selects an existing EvaluationSet to import into, and
+   * its other fields are ignored.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String importMode;
 
   /**
    * Inline source for small payloads (< 4MB).
@@ -158,8 +173,8 @@ public final class GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest extend
   }
 
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem payloads will be
-   * stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem payloads will be
+   * stored. Required for every source except `harbor_dataset`, which must not set it.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GcsDestination getGcsDestination() {
@@ -167,8 +182,8 @@ public final class GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest extend
   }
 
   /**
-   * Required. The Cloud Storage location where the resulting EvaluationItem payloads will be
-   * stored.
+   * Optional. The Cloud Storage location where the resulting EvaluationItem payloads will be
+   * stored. Required for every source except `harbor_dataset`, which must not set it.
    * @param gcsDestination gcsDestination or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest setGcsDestination(GoogleCloudAiplatformV1beta1GcsDestination gcsDestination) {
@@ -190,6 +205,42 @@ public final class GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest extend
    */
   public GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest setGcsSource(GoogleCloudAiplatformV1beta1ImportEvaluationSetRequestGcsSource gcsSource) {
     this.gcsSource = gcsSource;
+    return this;
+  }
+
+  /**
+   * A Harbor dataset source. `gcs_destination` must not be set.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1HarborDataset getHarborDataset() {
+    return harborDataset;
+  }
+
+  /**
+   * A Harbor dataset source. `gcs_destination` must not be set.
+   * @param harborDataset harborDataset or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest setHarborDataset(GoogleCloudAiplatformV1beta1HarborDataset harborDataset) {
+    this.harborDataset = harborDataset;
+    return this;
+  }
+
+  /**
+   * Optional. If set, `evaluation_set.name` selects an existing EvaluationSet to import into, and
+   * its other fields are ignored.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getImportMode() {
+    return importMode;
+  }
+
+  /**
+   * Optional. If set, `evaluation_set.name` selects an existing EvaluationSet to import into, and
+   * its other fields are ignored.
+   * @param importMode importMode or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ImportEvaluationSetRequest setImportMode(java.lang.String importMode) {
+    this.importMode = importMode;
     return this;
   }
 

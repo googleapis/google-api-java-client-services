@@ -69,6 +69,17 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   private GoogleCloudAiplatformV1beta1GenerationConfig generationConfig;
 
   /**
+   * Optional. Config for running an agent on tasks in Harbor format in a sandboxed batch
+   * environment. Its presence routes the run to the Harbor batch inference path; which datasets and
+   * tasks run is carried by the `harbor_task` of each evaluation item. If this field is set, the
+   * evaluation run must set `service_account`. The Harbor task run in sandbox will use the service
+   * account.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1HarborRunConfig harborRunConfig;
+
+  /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
    * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
@@ -96,6 +107,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    */
   @com.google.api.client.util.Key
   private GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigPromptTemplate promptTemplate;
+
+  /**
+   * Optional. The destination for the raw, unconverted agent trajectory data the run produces.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigRawAgentTrajectoryDestination rawAgentTrajectoryDestination;
 
   /**
    * Optional. Deprecated: Use `agents` instead. Agent config used to generate responses.
@@ -168,6 +186,31 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
   }
 
   /**
+   * Optional. Config for running an agent on tasks in Harbor format in a sandboxed batch
+   * environment. Its presence routes the run to the Harbor batch inference path; which datasets and
+   * tasks run is carried by the `harbor_task` of each evaluation item. If this field is set, the
+   * evaluation run must set `service_account`. The Harbor task run in sandbox will use the service
+   * account.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1HarborRunConfig getHarborRunConfig() {
+    return harborRunConfig;
+  }
+
+  /**
+   * Optional. Config for running an agent on tasks in Harbor format in a sandboxed batch
+   * environment. Its presence routes the run to the Harbor batch inference path; which datasets and
+   * tasks run is carried by the `harbor_task` of each evaluation item. If this field is set, the
+   * evaluation run must set `service_account`. The Harbor task run in sandbox will use the service
+   * account.
+   * @param harborRunConfig harborRunConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setHarborRunConfig(GoogleCloudAiplatformV1beta1HarborRunConfig harborRunConfig) {
+    this.harborRunConfig = harborRunConfig;
+    return this;
+  }
+
+  /**
    * Optional. The fully qualified name of the publisher model or endpoint to use. Anthropic and
    * Llama third-party models are also supported through Model Garden. Publisher model format:
    * `projects/{project}/locations/{location}/publishers/models` Third-party model formats:
@@ -231,6 +274,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig exte
    */
   public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setPromptTemplate(GoogleCloudAiplatformV1beta1EvaluationRunEvaluationConfigPromptTemplate promptTemplate) {
     this.promptTemplate = promptTemplate;
+    return this;
+  }
+
+  /**
+   * Optional. The destination for the raw, unconverted agent trajectory data the run produces.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigRawAgentTrajectoryDestination getRawAgentTrajectoryDestination() {
+    return rawAgentTrajectoryDestination;
+  }
+
+  /**
+   * Optional. The destination for the raw, unconverted agent trajectory data the run produces.
+   * @param rawAgentTrajectoryDestination rawAgentTrajectoryDestination or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfig setRawAgentTrajectoryDestination(GoogleCloudAiplatformV1beta1EvaluationRunInferenceConfigRawAgentTrajectoryDestination rawAgentTrajectoryDestination) {
+    this.rawAgentTrajectoryDestination = rawAgentTrajectoryDestination;
     return this;
   }
 

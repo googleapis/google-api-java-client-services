@@ -120,6 +120,13 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
   private java.lang.Boolean useGkeTd;
 
   /**
+   * Optional. The configuration for the warm pool of this template.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateWarmPoolConfig warmPoolConfig;
+
+  /**
    * Output only. The timestamp when this SandboxEnvironmentTemplate was created.
    * @return value or {@code null} for none
    */
@@ -327,6 +334,23 @@ public final class GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate extend
    */
   public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setUseGkeTd(java.lang.Boolean useGkeTd) {
     this.useGkeTd = useGkeTd;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for the warm pool of this template.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateWarmPoolConfig getWarmPoolConfig() {
+    return warmPoolConfig;
+  }
+
+  /**
+   * Optional. The configuration for the warm pool of this template.
+   * @param warmPoolConfig warmPoolConfig or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplate setWarmPoolConfig(GoogleCloudAiplatformV1beta1SandboxEnvironmentTemplateWarmPoolConfig warmPoolConfig) {
+    this.warmPoolConfig = warmPoolConfig;
     return this;
   }
 

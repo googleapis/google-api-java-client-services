@@ -18,9 +18,9 @@ package com.google.api.services.firebaseappcheck.v1.model;
 
 /**
  * The currently active set of public keys that can be used to verify App Check tokens. This object
- * is a JWK set as specified by [section 5 of RFC
- * 7517](https://tools.ietf.org/html/rfc7517#section-5). For security, the response **must not** be
- * cached for longer than six hours.
+ * is a JWK set as specified by [section 5 of RFC 7517](https://www.rfc-
+ * editor.org/info/rfc7517#section-5). For security, the response **must not** be cached for longer
+ * than six hours.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Firebase App Check API. For a detailed explanation
@@ -34,8 +34,8 @@ package com.google.api.services.firebaseappcheck.v1.model;
 public final class GoogleFirebaseAppcheckV1PublicJwkSet extends com.google.api.client.json.GenericJson {
 
   /**
-   * The set of public keys. See [section 5.1 of RFC
-   * 7517](https://tools.ietf.org/html/rfc7517#section-5).
+   * The set of public keys. See [section 5.1 of RFC 7517](https://www.rfc-
+   * editor.org/info/rfc7517#section-5).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -48,8 +48,8 @@ public final class GoogleFirebaseAppcheckV1PublicJwkSet extends com.google.api.c
   }
 
   /**
-   * The set of public keys. See [section 5.1 of RFC
-   * 7517](https://tools.ietf.org/html/rfc7517#section-5).
+   * The set of public keys. See [section 5.1 of RFC 7517](https://www.rfc-
+   * editor.org/info/rfc7517#section-5).
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleFirebaseAppcheckV1PublicJwk> getKeys() {
@@ -57,8 +57,8 @@ public final class GoogleFirebaseAppcheckV1PublicJwkSet extends com.google.api.c
   }
 
   /**
-   * The set of public keys. See [section 5.1 of RFC
-   * 7517](https://tools.ietf.org/html/rfc7517#section-5).
+   * The set of public keys. See [section 5.1 of RFC 7517](https://www.rfc-
+   * editor.org/info/rfc7517#section-5).
    * @param keys keys or {@code null} for none
    */
   public GoogleFirebaseAppcheckV1PublicJwkSet setKeys(java.util.List<GoogleFirebaseAppcheckV1PublicJwk> keys) {

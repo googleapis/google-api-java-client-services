@@ -40,8 +40,8 @@ public final class GoogleCloudRecaptchaenterpriseV1ChallengeRule extends com.goo
   /**
    * Optional. A CEL condition that must be met for this rule to apply. If unspecified, the rule
    * applies unconditionally. The following fields can be referenced in the condition: * `score` *
-   * `user_ip_address` * `user_asn` * `user_agent` * `verified_bots.name` * `verified_bots.bot_type`
-   * Examples: * `score < 0.5` * `user_ip_address == "123.45.67.89"` *
+   * `user_ip_address` * `user_asn` * `user_agent` * `region_code` * `verified_bots.name` *
+   * `verified_bots.bot_type` Examples: * `score < 0.5` * `user_ip_address == "123.45.67.89"` *
    * `user_agent.contains("Chrome")` * `score < 0.5 && user_ip_address == "123.45.67.89"`
    * The value may be {@code null}.
    */
@@ -75,8 +75,8 @@ public final class GoogleCloudRecaptchaenterpriseV1ChallengeRule extends com.goo
   /**
    * Optional. A CEL condition that must be met for this rule to apply. If unspecified, the rule
    * applies unconditionally. The following fields can be referenced in the condition: * `score` *
-   * `user_ip_address` * `user_asn` * `user_agent` * `verified_bots.name` * `verified_bots.bot_type`
-   * Examples: * `score < 0.5` * `user_ip_address == "123.45.67.89"` *
+   * `user_ip_address` * `user_asn` * `user_agent` * `region_code` * `verified_bots.name` *
+   * `verified_bots.bot_type` Examples: * `score < 0.5` * `user_ip_address == "123.45.67.89"` *
    * `user_agent.contains("Chrome")` * `score < 0.5 && user_ip_address == "123.45.67.89"`
    * @return value or {@code null} for none
    */
@@ -87,8 +87,8 @@ public final class GoogleCloudRecaptchaenterpriseV1ChallengeRule extends com.goo
   /**
    * Optional. A CEL condition that must be met for this rule to apply. If unspecified, the rule
    * applies unconditionally. The following fields can be referenced in the condition: * `score` *
-   * `user_ip_address` * `user_asn` * `user_agent` * `verified_bots.name` * `verified_bots.bot_type`
-   * Examples: * `score < 0.5` * `user_ip_address == "123.45.67.89"` *
+   * `user_ip_address` * `user_asn` * `user_agent` * `region_code` * `verified_bots.name` *
+   * `verified_bots.bot_type` Examples: * `score < 0.5` * `user_ip_address == "123.45.67.89"` *
    * `user_agent.contains("Chrome")` * `score < 0.5 && user_ip_address == "123.45.67.89"`
    * @param condition condition or {@code null} for none
    */

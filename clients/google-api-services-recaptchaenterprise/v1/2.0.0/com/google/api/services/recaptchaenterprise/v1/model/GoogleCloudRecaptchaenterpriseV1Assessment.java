@@ -91,8 +91,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   private java.lang.String name;
 
   /**
-   * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
-   * provided. SMS defense needs to be enabled.
+   * Output only. Assessment returned when a site key, a token, `user_info.account_id`, and a phone
+   * number in `user_info.user_ids` are provided. SMS defense must be enabled.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -272,8 +272,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
-   * provided. SMS defense needs to be enabled.
+   * Output only. Assessment returned when a site key, a token, `user_info.account_id`, and a phone
+   * number in `user_info.user_ids` are provided. SMS defense must be enabled.
    * @return value or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment getPhoneFraudAssessment() {
@@ -281,8 +281,8 @@ public final class GoogleCloudRecaptchaenterpriseV1Assessment extends com.google
   }
 
   /**
-   * Output only. Assessment returned when a site key, a token, and a phone number as `user_id` are
-   * provided. SMS defense needs to be enabled.
+   * Output only. Assessment returned when a site key, a token, `user_info.account_id`, and a phone
+   * number in `user_info.user_ids` are provided. SMS defense must be enabled.
    * @param phoneFraudAssessment phoneFraudAssessment or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Assessment setPhoneFraudAssessment(GoogleCloudRecaptchaenterpriseV1PhoneFraudAssessment phoneFraudAssessment) {

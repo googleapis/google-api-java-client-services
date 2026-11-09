@@ -32,7 +32,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
 
   /**
    * Optional. Unique account identifier for this user. If using Account defense, this should match
-   * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
+   * the `user_info.account_id` field. Otherwise, a unique and persistent identifier for this
+   * account.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -76,7 +77,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
 
   /**
    * Optional. Unique account identifier for this user. If using Account defense, this should match
-   * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
+   * the `user_info.account_id` field. Otherwise, a unique and persistent identifier for this
+   * account.
    * @return value or {@code null} for none
    */
   public java.lang.String getAccountId() {
@@ -85,7 +87,8 @@ public final class GoogleCloudRecaptchaenterpriseV1TransactionDataUser extends c
 
   /**
    * Optional. Unique account identifier for this user. If using Account defense, this should match
-   * the hashed_account_id field. Otherwise, a unique and persistent identifier for this account.
+   * the `user_info.account_id` field. Otherwise, a unique and persistent identifier for this
+   * account.
    * @param accountId accountId or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TransactionDataUser setAccountId(java.lang.String accountId) {

@@ -41,12 +41,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Bot extends com.google.api.cl
    * Optional. Enumerated string value that indicates the identity of the bot, formatted in kebab-
    * case. Current example values include the following: * google-agent - AI_AGENT * browser-base -
    * AI_AGENT * chat-gpt - AI_AGENT * aws-bedrock - AI_AGENT * cybaa-bot - AI_AGENT * cloudflare -
-   * AI_AGENT * payhawk - AI_AGENT * duck-duck-go - SEARCH_INDEXER * mediaboard - CONTENT_SCRAPER *
+   * AI_AGENT * payhawk - AI_AGENT * duck-duck-go - AI_AGENT * mediaboard - CONTENT_SCRAPER *
    * marker-io - AI_AGENT * anchor-browser - AI_AGENT * shopify - AI_AGENT * stackscope -
    * CONTENT_SCRAPER * manus - AI_AGENT * kernel-sh - AI_AGENT * zvelo - SEARCH_INDEXER * meta-muse
-   * - AI_AGENT Ensure that your applications can handle identifier values not explicitly listed
-   * here. Deprecated values might take some time to stop showing up in responses. New values can be
-   * pushed so this list should be taken as non exhaustive.
+   * - AI_AGENT * duck-duck-bot - SEARCH_INDEXER * my-porta - SEARCH_INDEXER * ison-search -
+   * SEARCH_INDEXER * rokt - SEARCH_INDEXER Ensure that your applications can handle identifier
+   * values not explicitly listed here. Deprecated values might take some time to stop showing up in
+   * responses. New values can be pushed so this list should be taken as non exhaustive.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -73,12 +74,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Bot extends com.google.api.cl
    * Optional. Enumerated string value that indicates the identity of the bot, formatted in kebab-
    * case. Current example values include the following: * google-agent - AI_AGENT * browser-base -
    * AI_AGENT * chat-gpt - AI_AGENT * aws-bedrock - AI_AGENT * cybaa-bot - AI_AGENT * cloudflare -
-   * AI_AGENT * payhawk - AI_AGENT * duck-duck-go - SEARCH_INDEXER * mediaboard - CONTENT_SCRAPER *
+   * AI_AGENT * payhawk - AI_AGENT * duck-duck-go - AI_AGENT * mediaboard - CONTENT_SCRAPER *
    * marker-io - AI_AGENT * anchor-browser - AI_AGENT * shopify - AI_AGENT * stackscope -
    * CONTENT_SCRAPER * manus - AI_AGENT * kernel-sh - AI_AGENT * zvelo - SEARCH_INDEXER * meta-muse
-   * - AI_AGENT Ensure that your applications can handle identifier values not explicitly listed
-   * here. Deprecated values might take some time to stop showing up in responses. New values can be
-   * pushed so this list should be taken as non exhaustive.
+   * - AI_AGENT * duck-duck-bot - SEARCH_INDEXER * my-porta - SEARCH_INDEXER * ison-search -
+   * SEARCH_INDEXER * rokt - SEARCH_INDEXER Ensure that your applications can handle identifier
+   * values not explicitly listed here. Deprecated values might take some time to stop showing up in
+   * responses. New values can be pushed so this list should be taken as non exhaustive.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -89,12 +91,13 @@ public final class GoogleCloudRecaptchaenterpriseV1Bot extends com.google.api.cl
    * Optional. Enumerated string value that indicates the identity of the bot, formatted in kebab-
    * case. Current example values include the following: * google-agent - AI_AGENT * browser-base -
    * AI_AGENT * chat-gpt - AI_AGENT * aws-bedrock - AI_AGENT * cybaa-bot - AI_AGENT * cloudflare -
-   * AI_AGENT * payhawk - AI_AGENT * duck-duck-go - SEARCH_INDEXER * mediaboard - CONTENT_SCRAPER *
+   * AI_AGENT * payhawk - AI_AGENT * duck-duck-go - AI_AGENT * mediaboard - CONTENT_SCRAPER *
    * marker-io - AI_AGENT * anchor-browser - AI_AGENT * shopify - AI_AGENT * stackscope -
    * CONTENT_SCRAPER * manus - AI_AGENT * kernel-sh - AI_AGENT * zvelo - SEARCH_INDEXER * meta-muse
-   * - AI_AGENT Ensure that your applications can handle identifier values not explicitly listed
-   * here. Deprecated values might take some time to stop showing up in responses. New values can be
-   * pushed so this list should be taken as non exhaustive.
+   * - AI_AGENT * duck-duck-bot - SEARCH_INDEXER * my-porta - SEARCH_INDEXER * ison-search -
+   * SEARCH_INDEXER * rokt - SEARCH_INDEXER Ensure that your applications can handle identifier
+   * values not explicitly listed here. Deprecated values might take some time to stop showing up in
+   * responses. New values can be pushed so this list should be taken as non exhaustive.
    * @param name name or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1Bot setName(java.lang.String name) {

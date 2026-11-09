@@ -31,8 +31,9 @@ package com.google.api.services.recaptchaenterprise.v1.model;
 public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
-   * site return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (`CHECKBOX`, `INVISIBLE`), all challenge requests for
+   * this site do not show a challenge if `NOCAPTCHA`, or show an unsolvable challenge if
+   * `UNSOLVABLE_CHALLENGE`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -47,8 +48,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   private java.lang.Float testingScore;
 
   /**
-   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
-   * site return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (`CHECKBOX`, `INVISIBLE`), all challenge requests for
+   * this site do not show a challenge if `NOCAPTCHA`, or show an unsolvable challenge if
+   * `UNSOLVABLE_CHALLENGE`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTestingChallenge() {
@@ -56,8 +58,9 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptions extends com.go
   }
 
   /**
-   * Optional. For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this
-   * site return nocaptcha if NOCAPTCHA, or an unsolvable challenge if CHALLENGE.
+   * Optional. For challenge-based keys only (`CHECKBOX`, `INVISIBLE`), all challenge requests for
+   * this site do not show a challenge if `NOCAPTCHA`, or show an unsolvable challenge if
+   * `UNSOLVABLE_CHALLENGE`.
    * @param testingChallenge testingChallenge or {@code null} for none
    */
   public GoogleCloudRecaptchaenterpriseV1TestingOptions setTestingChallenge(java.lang.String testingChallenge) {

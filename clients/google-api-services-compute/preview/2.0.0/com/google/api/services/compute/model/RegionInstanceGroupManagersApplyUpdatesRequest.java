@@ -38,6 +38,13 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
   private java.lang.Boolean allInstances;
 
   /**
+   * Actions that are allowed to update instances within MIG.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> allowedActions;
+
+  /**
    * The list of URLs of one or more instances for which you want to apply updates. Each URL can be
    * a full URL or a partial URL, such aszones/[ZONE]/instances/[INSTANCE_NAME].
    * The value may be {@code null}.
@@ -87,6 +94,23 @@ public final class RegionInstanceGroupManagersApplyUpdatesRequest extends com.go
    */
   public RegionInstanceGroupManagersApplyUpdatesRequest setAllInstances(java.lang.Boolean allInstances) {
     this.allInstances = allInstances;
+    return this;
+  }
+
+  /**
+   * Actions that are allowed to update instances within MIG.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getAllowedActions() {
+    return allowedActions;
+  }
+
+  /**
+   * Actions that are allowed to update instances within MIG.
+   * @param allowedActions allowedActions or {@code null} for none
+   */
+  public RegionInstanceGroupManagersApplyUpdatesRequest setAllowedActions(java.util.List<java.lang.String> allowedActions) {
+    this.allowedActions = allowedActions;
     return this;
   }
 

@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Defines the file to exclude from WildFire Inline ML analysis.
+ * Defines the file to exclude from Advanced malware sandbox inline ML analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,22 +30,22 @@ package com.google.api.services.networksecurity.v1.model;
 public final class WildfireInlineMlFileException extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Name of the file to exclude from WildFire Inline ML analysis.
+   * Optional. Name of the file to exclude from Advanced malware sandbox inline ML analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String filename;
 
   /**
-   * Required. Machine learning partial hash of the file to exclude from WildFire Inline ML
-   * analysis.
+   * Required. Machine learning partial hash of the file to exclude from Advanced malware sandbox
+   * inline ML analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String partialHash;
 
   /**
-   * Optional. Name of the file to exclude from WildFire Inline ML analysis.
+   * Optional. Name of the file to exclude from Advanced malware sandbox inline ML analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getFilename() {
@@ -53,7 +53,7 @@ public final class WildfireInlineMlFileException extends com.google.api.client.j
   }
 
   /**
-   * Optional. Name of the file to exclude from WildFire Inline ML analysis.
+   * Optional. Name of the file to exclude from Advanced malware sandbox inline ML analysis.
    * @param filename filename or {@code null} for none
    */
   public WildfireInlineMlFileException setFilename(java.lang.String filename) {
@@ -62,8 +62,8 @@ public final class WildfireInlineMlFileException extends com.google.api.client.j
   }
 
   /**
-   * Required. Machine learning partial hash of the file to exclude from WildFire Inline ML
-   * analysis.
+   * Required. Machine learning partial hash of the file to exclude from Advanced malware sandbox
+   * inline ML analysis.
    * @return value or {@code null} for none
    */
   public java.lang.String getPartialHash() {
@@ -71,8 +71,8 @@ public final class WildfireInlineMlFileException extends com.google.api.client.j
   }
 
   /**
-   * Required. Machine learning partial hash of the file to exclude from WildFire Inline ML
-   * analysis.
+   * Required. Machine learning partial hash of the file to exclude from Advanced malware sandbox
+   * inline ML analysis.
    * @param partialHash partialHash or {@code null} for none
    */
   public WildfireInlineMlFileException setPartialHash(java.lang.String partialHash) {

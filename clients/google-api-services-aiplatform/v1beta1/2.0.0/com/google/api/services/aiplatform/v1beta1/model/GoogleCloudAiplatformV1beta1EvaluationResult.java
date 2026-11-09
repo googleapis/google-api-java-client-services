@@ -51,6 +51,15 @@ public final class GoogleCloudAiplatformV1beta1EvaluationResult extends com.goog
   private java.lang.String evaluationRequest;
 
   /**
+   * Output only. The EvaluationItemRevision that was evaluated, set when the evaluation run's data
+   * source is an EvaluationSetRevision. Format: `projects/{project}/locations/{location}/evaluation
+   * Items/{evaluation_item}/revisions/{revision}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String evaluationRequestRevision;
+
+  /**
    * Required. The evaluation run that was used to generate the result. Format:
    * projects/{project}/locations/{location}/evaluationRuns/{evaluation_run}
    * The value may be {@code null}.
@@ -112,6 +121,27 @@ public final class GoogleCloudAiplatformV1beta1EvaluationResult extends com.goog
    */
   public GoogleCloudAiplatformV1beta1EvaluationResult setEvaluationRequest(java.lang.String evaluationRequest) {
     this.evaluationRequest = evaluationRequest;
+    return this;
+  }
+
+  /**
+   * Output only. The EvaluationItemRevision that was evaluated, set when the evaluation run's data
+   * source is an EvaluationSetRevision. Format: `projects/{project}/locations/{location}/evaluation
+   * Items/{evaluation_item}/revisions/{revision}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getEvaluationRequestRevision() {
+    return evaluationRequestRevision;
+  }
+
+  /**
+   * Output only. The EvaluationItemRevision that was evaluated, set when the evaluation run's data
+   * source is an EvaluationSetRevision. Format: `projects/{project}/locations/{location}/evaluation
+   * Items/{evaluation_item}/revisions/{revision}`.
+   * @param evaluationRequestRevision evaluationRequestRevision or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationResult setEvaluationRequestRevision(java.lang.String evaluationRequestRevision) {
+    this.evaluationRequestRevision = evaluationRequestRevision;
     return this;
   }
 

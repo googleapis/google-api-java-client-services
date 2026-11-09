@@ -158,6 +158,14 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
   private java.lang.String resilienceMode;
 
   /**
+   * Optional. The configuration for hibernating and resuming the environment on a schedule.
+   * Supported for environments that have `mode` set to `DEVELOPMENT`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ScheduledHibernationConfig scheduledHibernationConfig;
+
+  /**
    * Optional. The configuration settings for software inside the environment.
    * The value may be {@code null}.
    */
@@ -488,6 +496,25 @@ public final class EnvironmentConfig extends com.google.api.client.json.GenericJ
    */
   public EnvironmentConfig setResilienceMode(java.lang.String resilienceMode) {
     this.resilienceMode = resilienceMode;
+    return this;
+  }
+
+  /**
+   * Optional. The configuration for hibernating and resuming the environment on a schedule.
+   * Supported for environments that have `mode` set to `DEVELOPMENT`.
+   * @return value or {@code null} for none
+   */
+  public ScheduledHibernationConfig getScheduledHibernationConfig() {
+    return scheduledHibernationConfig;
+  }
+
+  /**
+   * Optional. The configuration for hibernating and resuming the environment on a schedule.
+   * Supported for environments that have `mode` set to `DEVELOPMENT`.
+   * @param scheduledHibernationConfig scheduledHibernationConfig or {@code null} for none
+   */
+  public EnvironmentConfig setScheduledHibernationConfig(ScheduledHibernationConfig scheduledHibernationConfig) {
+    this.scheduledHibernationConfig = scheduledHibernationConfig;
     return this;
   }
 

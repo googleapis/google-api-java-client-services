@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Defines what action to take for WildFire Inline ML threats per protocol.
+ * Defines what action to take for Advanced malware sandbox inline ML threats per protocol.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,21 +30,21 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class WildfireInlineMlOverride extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The action to take for WildFire Inline ML override.
+   * Required. The action to take for Advanced malware sandbox inline ML override.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String action;
 
   /**
-   * Required. Protocol to match for WildFire Inline ML override.
+   * Required. Protocol to match for Advanced malware sandbox inline ML override.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String protocol;
 
   /**
-   * Required. The action to take for WildFire Inline ML override.
+   * Required. The action to take for Advanced malware sandbox inline ML override.
    * @return value or {@code null} for none
    */
   public java.lang.String getAction() {
@@ -52,7 +52,7 @@ public final class WildfireInlineMlOverride extends com.google.api.client.json.G
   }
 
   /**
-   * Required. The action to take for WildFire Inline ML override.
+   * Required. The action to take for Advanced malware sandbox inline ML override.
    * @param action action or {@code null} for none
    */
   public WildfireInlineMlOverride setAction(java.lang.String action) {
@@ -61,7 +61,7 @@ public final class WildfireInlineMlOverride extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Protocol to match for WildFire Inline ML override.
+   * Required. Protocol to match for Advanced malware sandbox inline ML override.
    * @return value or {@code null} for none
    */
   public java.lang.String getProtocol() {
@@ -69,7 +69,7 @@ public final class WildfireInlineMlOverride extends com.google.api.client.json.G
   }
 
   /**
-   * Required. Protocol to match for WildFire Inline ML override.
+   * Required. Protocol to match for Advanced malware sandbox inline ML override.
    * @param protocol protocol or {@code null} for none
    */
   public WildfireInlineMlOverride setProtocol(java.lang.String protocol) {

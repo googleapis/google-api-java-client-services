@@ -307,6 +307,325 @@ public class FirebaseCrashlytics extends com.google.api.client.googleapis.servic
           return (GenerateAlertPolicy) super.set(parameterName, value);
         }
       }
+      /**
+       * Retrieves the Android Profiling Manager configuration for an app.
+       *
+       * Create a request for the method "apps.getProfilingManagerConfig".
+       *
+       * This request holds the parameters needed by the firebasecrashlytics server.  After setting any
+       * optional parameters, call the {@link GetProfilingManagerConfig#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Required. The resource name of the Profiling Manager configuration to retrieve. Format:
+       *        "projects/{project}/apps/{app}/profilingManagerConfig".
+       * @return the request
+       */
+      public GetProfilingManagerConfig getProfilingManagerConfig(java.lang.String name) throws java.io.IOException {
+        GetProfilingManagerConfig result = new GetProfilingManagerConfig(name);
+        initialize(result);
+        return result;
+      }
+
+      public class GetProfilingManagerConfig extends FirebaseCrashlyticsRequest<com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/profilingManagerConfig$");
+
+        /**
+         * Retrieves the Android Profiling Manager configuration for an app.
+         *
+         * Create a request for the method "apps.getProfilingManagerConfig".
+         *
+         * This request holds the parameters needed by the the firebasecrashlytics server.  After setting
+         * any optional parameters, call the {@link GetProfilingManagerConfig#execute()} method to invoke
+         * the remote operation. <p> {@link GetProfilingManagerConfig#initialize(com.google.api.client.goo
+         * gleapis.services.AbstractGoogleClientRequest)} must be called to initialize this instance
+         * immediately after invoking the constructor. </p>
+         *
+         * @param name Required. The resource name of the Profiling Manager configuration to retrieve. Format:
+       *        "projects/{project}/apps/{app}/profilingManagerConfig".
+         * @since 1.13
+         */
+        protected GetProfilingManagerConfig(java.lang.String name) {
+          super(FirebaseCrashlytics.this, "GET", REST_PATH, null, com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+/profilingManagerConfig$");
+          }
+        }
+
+        @Override
+        public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+          return super.executeUsingHead();
+        }
+
+        @Override
+        public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+          return super.buildHttpRequestUsingHead();
+        }
+
+        @Override
+        public GetProfilingManagerConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (GetProfilingManagerConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setAccessToken(java.lang.String accessToken) {
+          return (GetProfilingManagerConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setAlt(java.lang.String alt) {
+          return (GetProfilingManagerConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setCallback(java.lang.String callback) {
+          return (GetProfilingManagerConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setFields(java.lang.String fields) {
+          return (GetProfilingManagerConfig) super.setFields(fields);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setKey(java.lang.String key) {
+          return (GetProfilingManagerConfig) super.setKey(key);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setOauthToken(java.lang.String oauthToken) {
+          return (GetProfilingManagerConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (GetProfilingManagerConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setQuotaUser(java.lang.String quotaUser) {
+          return (GetProfilingManagerConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setUploadType(java.lang.String uploadType) {
+          return (GetProfilingManagerConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public GetProfilingManagerConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (GetProfilingManagerConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The resource name of the Profiling Manager configuration to retrieve. Format:
+         * "projects/{project}/apps/{app}/profilingManagerConfig".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Required. The resource name of the Profiling Manager configuration to retrieve. Format:
+       "projects/{project}/apps/{app}/profilingManagerConfig".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Required. The resource name of the Profiling Manager configuration to retrieve. Format:
+         * "projects/{project}/apps/{app}/profilingManagerConfig".
+         */
+        public GetProfilingManagerConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+/profilingManagerConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        @Override
+        public GetProfilingManagerConfig set(String parameterName, Object value) {
+          return (GetProfilingManagerConfig) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Updates the Android Profiling Manager configuration for an app.
+       *
+       * Create a request for the method "apps.updateProfilingManagerConfig".
+       *
+       * This request holds the parameters needed by the firebasecrashlytics server.  After setting any
+       * optional parameters, call the {@link UpdateProfilingManagerConfig#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param name Identifier. The resource name of the Profiling Manager configuration. Format:
+       *        "projects/{project}/apps/{app}/profilingManagerConfig".
+       * @param content the {@link com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig}
+       * @return the request
+       */
+      public UpdateProfilingManagerConfig updateProfilingManagerConfig(java.lang.String name, com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig content) throws java.io.IOException {
+        UpdateProfilingManagerConfig result = new UpdateProfilingManagerConfig(name, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpdateProfilingManagerConfig extends FirebaseCrashlyticsRequest<com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig> {
+
+        private static final String REST_PATH = "v1alpha/{+name}";
+
+        private final java.util.regex.Pattern NAME_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/apps/[^/]+/profilingManagerConfig$");
+
+        /**
+         * Updates the Android Profiling Manager configuration for an app.
+         *
+         * Create a request for the method "apps.updateProfilingManagerConfig".
+         *
+         * This request holds the parameters needed by the the firebasecrashlytics server.  After setting
+         * any optional parameters, call the {@link UpdateProfilingManagerConfig#execute()} method to
+         * invoke the remote operation. <p> {@link UpdateProfilingManagerConfig#initialize(com.google.api.
+         * client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
+         * instance immediately after invoking the constructor. </p>
+         *
+         * @param name Identifier. The resource name of the Profiling Manager configuration. Format:
+       *        "projects/{project}/apps/{app}/profilingManagerConfig".
+         * @param content the {@link com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig}
+         * @since 1.13
+         */
+        protected UpdateProfilingManagerConfig(java.lang.String name, com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig content) {
+          super(FirebaseCrashlytics.this, "PATCH", REST_PATH, content, com.google.api.services.firebasecrashlytics.v1alpha.model.ProfilingManagerConfig.class);
+          this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+/profilingManagerConfig$");
+          }
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig set$Xgafv(java.lang.String $Xgafv) {
+          return (UpdateProfilingManagerConfig) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setAccessToken(java.lang.String accessToken) {
+          return (UpdateProfilingManagerConfig) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setAlt(java.lang.String alt) {
+          return (UpdateProfilingManagerConfig) super.setAlt(alt);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setCallback(java.lang.String callback) {
+          return (UpdateProfilingManagerConfig) super.setCallback(callback);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setFields(java.lang.String fields) {
+          return (UpdateProfilingManagerConfig) super.setFields(fields);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setKey(java.lang.String key) {
+          return (UpdateProfilingManagerConfig) super.setKey(key);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setOauthToken(java.lang.String oauthToken) {
+          return (UpdateProfilingManagerConfig) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpdateProfilingManagerConfig) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setQuotaUser(java.lang.String quotaUser) {
+          return (UpdateProfilingManagerConfig) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setUploadType(java.lang.String uploadType) {
+          return (UpdateProfilingManagerConfig) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpdateProfilingManagerConfig) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Identifier. The resource name of the Profiling Manager configuration. Format:
+         * "projects/{project}/apps/{app}/profilingManagerConfig".
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String name;
+
+        /** Identifier. The resource name of the Profiling Manager configuration. Format:
+       "projects/{project}/apps/{app}/profilingManagerConfig".
+         */
+        public java.lang.String getName() {
+          return name;
+        }
+
+        /**
+         * Identifier. The resource name of the Profiling Manager configuration. Format:
+         * "projects/{project}/apps/{app}/profilingManagerConfig".
+         */
+        public UpdateProfilingManagerConfig setName(java.lang.String name) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                "Parameter name must conform to the pattern " +
+                "^projects/[^/]+/apps/[^/]+/profilingManagerConfig$");
+          }
+          this.name = name;
+          return this;
+        }
+
+        /**
+         * Optional. The list of ProfilingManagerConfig fields to update (`gcs_bucket`,
+         * `heap_dump_collection_enabled`). If omitted, all populated (non-default) fields are
+         * updated; specify an explicit `update_mask` (or `*`) when clearing a field to its default
+         * value (such as `""` or `false`).
+         */
+        @com.google.api.client.util.Key
+        private String updateMask;
+
+        /** Optional. The list of ProfilingManagerConfig fields to update (`gcs_bucket`,
+       `heap_dump_collection_enabled`). If omitted, all populated (non-default) fields are updated;
+       specify an explicit `update_mask` (or `*`) when clearing a field to its default value (such as `""`
+       or `false`).
+         */
+        public String getUpdateMask() {
+          return updateMask;
+        }
+
+        /**
+         * Optional. The list of ProfilingManagerConfig fields to update (`gcs_bucket`,
+         * `heap_dump_collection_enabled`). If omitted, all populated (non-default) fields are
+         * updated; specify an explicit `update_mask` (or `*`) when clearing a field to its default
+         * value (such as `""` or `false`).
+         */
+        public UpdateProfilingManagerConfig setUpdateMask(String updateMask) {
+          this.updateMask = updateMask;
+          return this;
+        }
+
+        @Override
+        public UpdateProfilingManagerConfig set(String parameterName, Object value) {
+          return (UpdateProfilingManagerConfig) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the Events collection.

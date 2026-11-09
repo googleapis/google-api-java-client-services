@@ -130,6 +130,19 @@ public final class GoogleCloudAiplatformV1EvaluationRun extends com.google.api.c
   private java.lang.String name;
 
   /**
+   * Optional. The service account to run the evaluation run as. If set, the run uses this service
+   * account to access Google Cloud resources. Access is limited to the IAM permissions that you
+   * grant to the service account. Must be provided if an inference config sets `harbor_run_config`,
+   * `data_agent_config`. If no inference config requires this field, setting it returns an error.
+   * The caller must have the `iam.serviceAccounts.actAs` permission on this service account, and
+   * the project's [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) must have the `roles/iam.serviceAccountTokenCreator` role on it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccount;
+
+  /**
    * Output only. The state of the evaluation run.
    * The value may be {@code null}.
    */
@@ -370,6 +383,35 @@ public final class GoogleCloudAiplatformV1EvaluationRun extends com.google.api.c
    */
   public GoogleCloudAiplatformV1EvaluationRun setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Optional. The service account to run the evaluation run as. If set, the run uses this service
+   * account to access Google Cloud resources. Access is limited to the IAM permissions that you
+   * grant to the service account. Must be provided if an inference config sets `harbor_run_config`,
+   * `data_agent_config`. If no inference config requires this field, setting it returns an error.
+   * The caller must have the `iam.serviceAccounts.actAs` permission on this service account, and
+   * the project's [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) must have the `roles/iam.serviceAccountTokenCreator` role on it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccount() {
+    return serviceAccount;
+  }
+
+  /**
+   * Optional. The service account to run the evaluation run as. If set, the run uses this service
+   * account to access Google Cloud resources. Access is limited to the IAM permissions that you
+   * grant to the service account. Must be provided if an inference config sets `harbor_run_config`,
+   * `data_agent_config`. If no inference config requires this field, setting it returns an error.
+   * The caller must have the `iam.serviceAccounts.actAs` permission on this service account, and
+   * the project's [Vertex AI Service Agent](https://cloud.google.com/vertex-ai/docs/general/access-
+   * control#service-agents) must have the `roles/iam.serviceAccountTokenCreator` role on it.
+   * @param serviceAccount serviceAccount or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1EvaluationRun setServiceAccount(java.lang.String serviceAccount) {
+    this.serviceAccount = serviceAccount;
     return this;
   }
 

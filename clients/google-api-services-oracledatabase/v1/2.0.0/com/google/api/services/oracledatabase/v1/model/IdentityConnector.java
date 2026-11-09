@@ -39,6 +39,22 @@ public final class IdentityConnector extends com.google.api.client.json.GenericJ
   private java.lang.String connectionState;
 
   /**
+   * Output only. The unique partner identifier for the Identity Connector, used to establish secure
+   * cross-cloud access between Google Cloud and OCI. This corresponds directly to the ID of the
+   * OracleDbGcpIdentityConnector resource in Oracle Cloud Infrastructure (OCI).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String identityConnectorId;
+
+  /**
+   * Output only. Additional information about the current lifecycle state.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String lifecycleStateDetails;
+
+  /**
    * Output only. A google managed service account on which customers can grant roles to access
    * resources in the customer project. Example: `p176944527254-55-75119d87fd8f@gcp-sa-
    * oci.iam.gserviceaccount.com`
@@ -46,6 +62,16 @@ public final class IdentityConnector extends com.google.api.client.json.GenericJ
    */
   @com.google.api.client.util.Key
   private java.lang.String serviceAgentEmail;
+
+  /**
+   * Output only. The resource name of the Workload Identity Pool configured for identity federation
+   * with OCI. This exact pool name can be used to configure VPC Service Controls (VPC-SC) egress
+   * rules. Format:
+   * `projects/{project}/locations/global/workloadIdentityPools/{workload_identity_pool}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String workloadIdentityPool;
 
   /**
    * Output only. The connection state of the identity connector.
@@ -61,6 +87,44 @@ public final class IdentityConnector extends com.google.api.client.json.GenericJ
    */
   public IdentityConnector setConnectionState(java.lang.String connectionState) {
     this.connectionState = connectionState;
+    return this;
+  }
+
+  /**
+   * Output only. The unique partner identifier for the Identity Connector, used to establish secure
+   * cross-cloud access between Google Cloud and OCI. This corresponds directly to the ID of the
+   * OracleDbGcpIdentityConnector resource in Oracle Cloud Infrastructure (OCI).
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getIdentityConnectorId() {
+    return identityConnectorId;
+  }
+
+  /**
+   * Output only. The unique partner identifier for the Identity Connector, used to establish secure
+   * cross-cloud access between Google Cloud and OCI. This corresponds directly to the ID of the
+   * OracleDbGcpIdentityConnector resource in Oracle Cloud Infrastructure (OCI).
+   * @param identityConnectorId identityConnectorId or {@code null} for none
+   */
+  public IdentityConnector setIdentityConnectorId(java.lang.String identityConnectorId) {
+    this.identityConnectorId = identityConnectorId;
+    return this;
+  }
+
+  /**
+   * Output only. Additional information about the current lifecycle state.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLifecycleStateDetails() {
+    return lifecycleStateDetails;
+  }
+
+  /**
+   * Output only. Additional information about the current lifecycle state.
+   * @param lifecycleStateDetails lifecycleStateDetails or {@code null} for none
+   */
+  public IdentityConnector setLifecycleStateDetails(java.lang.String lifecycleStateDetails) {
+    this.lifecycleStateDetails = lifecycleStateDetails;
     return this;
   }
 
@@ -82,6 +146,29 @@ public final class IdentityConnector extends com.google.api.client.json.GenericJ
    */
   public IdentityConnector setServiceAgentEmail(java.lang.String serviceAgentEmail) {
     this.serviceAgentEmail = serviceAgentEmail;
+    return this;
+  }
+
+  /**
+   * Output only. The resource name of the Workload Identity Pool configured for identity federation
+   * with OCI. This exact pool name can be used to configure VPC Service Controls (VPC-SC) egress
+   * rules. Format:
+   * `projects/{project}/locations/global/workloadIdentityPools/{workload_identity_pool}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getWorkloadIdentityPool() {
+    return workloadIdentityPool;
+  }
+
+  /**
+   * Output only. The resource name of the Workload Identity Pool configured for identity federation
+   * with OCI. This exact pool name can be used to configure VPC Service Controls (VPC-SC) egress
+   * rules. Format:
+   * `projects/{project}/locations/global/workloadIdentityPools/{workload_identity_pool}`
+   * @param workloadIdentityPool workloadIdentityPool or {@code null} for none
+   */
+  public IdentityConnector setWorkloadIdentityPool(java.lang.String workloadIdentityPool) {
+    this.workloadIdentityPool = workloadIdentityPool;
     return this;
   }
 

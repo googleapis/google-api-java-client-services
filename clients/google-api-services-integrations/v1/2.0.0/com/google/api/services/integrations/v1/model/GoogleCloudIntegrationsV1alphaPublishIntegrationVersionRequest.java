@@ -38,6 +38,14 @@ public final class GoogleCloudIntegrationsV1alphaPublishIntegrationVersionReques
   private java.util.Map<String, java.lang.Object> configParameters;
 
   /**
+   * Optional. If set, validates the integration version's configuration and returns without
+   * publishing it. The version's state, edit lock, and active version do not change.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean validateOnly;
+
+  /**
    * Optional. Config parameters used during integration execution.
    * @return value or {@code null} for none
    */
@@ -51,6 +59,25 @@ public final class GoogleCloudIntegrationsV1alphaPublishIntegrationVersionReques
    */
   public GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest setConfigParameters(java.util.Map<String, java.lang.Object> configParameters) {
     this.configParameters = configParameters;
+    return this;
+  }
+
+  /**
+   * Optional. If set, validates the integration version's configuration and returns without
+   * publishing it. The version's state, edit lock, and active version do not change.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getValidateOnly() {
+    return validateOnly;
+  }
+
+  /**
+   * Optional. If set, validates the integration version's configuration and returns without
+   * publishing it. The version's state, edit lock, and active version do not change.
+   * @param validateOnly validateOnly or {@code null} for none
+   */
+  public GoogleCloudIntegrationsV1alphaPublishIntegrationVersionRequest setValidateOnly(java.lang.Boolean validateOnly) {
+    this.validateOnly = validateOnly;
     return this;
   }
 

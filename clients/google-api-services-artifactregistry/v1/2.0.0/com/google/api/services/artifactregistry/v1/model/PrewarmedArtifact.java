@@ -17,8 +17,7 @@
 package com.google.api.services.artifactregistry.v1.model;
 
 /**
- * PrewarmedArtifact represents a streamed artifact. This is not a request message, so
- * field_behavior annotations are not required.
+ * PrewarmedArtifact represents a streamed artifact.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Artifact Registry API. For a detailed explanation
@@ -30,6 +29,20 @@ package com.google.api.services.artifactregistry.v1.model;
  */
 @SuppressWarnings("javadoc")
 public final class PrewarmedArtifact extends com.google.api.client.json.GenericJson {
+
+  /**
+   * Output only. The time the artifact was first prewarmed.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String createTime;
+
+  /**
+   * Output only. The error message if the state is `FAILED`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String errorMessage;
 
   /**
    * The expiration time of the prewarmed artifact.
@@ -46,12 +59,61 @@ public final class PrewarmedArtifact extends com.google.api.client.json.GenericJ
   private java.lang.String location;
 
   /**
+   * Output only. The compressed size of the prewarmed artifact in bytes. This is the size counted
+   * against the prewarm storage quota.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key @com.google.api.client.json.JsonString
+  private java.lang.Long sizeBytes;
+
+  /**
+   * Output only. The caching state of the prewarmed artifact.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String state;
+
+  /**
    * URL to access the image. Example: us-west4-docker.pkg.dev/test-project/test-
    * repo/nginx@sha256:e9954c1fc875017be1c3e36eca16be2d9e9bccc4bf072163515467d6a823c7cf
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String uri;
+
+  /**
+   * Output only. The time the artifact was first prewarmed.
+   * @return value or {@code null} for none
+   */
+  public String getCreateTime() {
+    return createTime;
+  }
+
+  /**
+   * Output only. The time the artifact was first prewarmed.
+   * @param createTime createTime or {@code null} for none
+   */
+  public PrewarmedArtifact setCreateTime(String createTime) {
+    this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Output only. The error message if the state is `FAILED`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getErrorMessage() {
+    return errorMessage;
+  }
+
+  /**
+   * Output only. The error message if the state is `FAILED`.
+   * @param errorMessage errorMessage or {@code null} for none
+   */
+  public PrewarmedArtifact setErrorMessage(java.lang.String errorMessage) {
+    this.errorMessage = errorMessage;
+    return this;
+  }
 
   /**
    * The expiration time of the prewarmed artifact.
@@ -84,6 +146,42 @@ public final class PrewarmedArtifact extends com.google.api.client.json.GenericJ
    */
   public PrewarmedArtifact setLocation(java.lang.String location) {
     this.location = location;
+    return this;
+  }
+
+  /**
+   * Output only. The compressed size of the prewarmed artifact in bytes. This is the size counted
+   * against the prewarm storage quota.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Long getSizeBytes() {
+    return sizeBytes;
+  }
+
+  /**
+   * Output only. The compressed size of the prewarmed artifact in bytes. This is the size counted
+   * against the prewarm storage quota.
+   * @param sizeBytes sizeBytes or {@code null} for none
+   */
+  public PrewarmedArtifact setSizeBytes(java.lang.Long sizeBytes) {
+    this.sizeBytes = sizeBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The caching state of the prewarmed artifact.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getState() {
+    return state;
+  }
+
+  /**
+   * Output only. The caching state of the prewarmed artifact.
+   * @param state state or {@code null} for none
+   */
+  public PrewarmedArtifact setState(java.lang.String state) {
+    this.state = state;
     return this;
   }
 

@@ -88,6 +88,15 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
   private java.lang.String mode;
 
   /**
+   * Optional. The source text to be edited or rewritten via voice instructions. When provided in
+   * `SMART` mode, the model evaluates the audio input against this text and emits the complete
+   * replacement text in the candidate response rather than appending to it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String sourceText;
+
+  /**
    * Optional. Configures word-level timestamp generation.
    * The value may be {@code null}.
    */
@@ -228,6 +237,27 @@ public final class GoogleCloudAiplatformV1AudioTranscriptionConfig extends com.g
    */
   public GoogleCloudAiplatformV1AudioTranscriptionConfig setMode(java.lang.String mode) {
     this.mode = mode;
+    return this;
+  }
+
+  /**
+   * Optional. The source text to be edited or rewritten via voice instructions. When provided in
+   * `SMART` mode, the model evaluates the audio input against this text and emits the complete
+   * replacement text in the candidate response rather than appending to it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getSourceText() {
+    return sourceText;
+  }
+
+  /**
+   * Optional. The source text to be edited or rewritten via voice instructions. When provided in
+   * `SMART` mode, the model evaluates the audio input against this text and emits the complete
+   * replacement text in the candidate response rather than appending to it.
+   * @param sourceText sourceText or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1AudioTranscriptionConfig setSourceText(java.lang.String sourceText) {
+    this.sourceText = sourceText;
     return this;
   }
 

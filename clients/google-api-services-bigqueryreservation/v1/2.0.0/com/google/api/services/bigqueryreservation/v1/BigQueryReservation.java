@@ -927,6 +927,167 @@ public class BigQueryReservation extends com.google.api.client.googleapis.servic
           return (UpdateBiReservation) super.set(parameterName, value);
         }
       }
+      /**
+       * Upgrades the edition for a list of reservations and capacity commitments. You can only upgrade to
+       * a higher edition (from `STANDARD` to `ENTERPRISE` or `ENTERPRISE_PLUS`, from `ENTERPRISE` to
+       * `ENTERPRISE_PLUS`, or from `EDITION_UNSPECIFIED` to `ENTERPRISE` or `ENTERPRISE_PLUS`). You can't
+       * downgrade an edition. The upgrade must not cause an overall flexible slot increase across the
+       * original and target editions (for example, by upgrading a reservation without upgrading its
+       * corresponding capacity commitment). Otherwise, the method fails with a
+       * `google.rpc.Code.FAILED_PRECONDITION` error. Before the upgrade, the service validates that the
+       * resources meet the requirements of the target edition (for example, all reservations within a
+       * reservation group must be upgraded together).
+       *
+       * Create a request for the method "locations.upgradeEdition".
+       *
+       * This request holds the parameters needed by the bigqueryreservation server.  After setting any
+       * optional parameters, call the {@link UpgradeEdition#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param parent The parent resource name that identifies the admin project and location, in the format
+       *        `projects/{project}/locations/{location}`. For example, `projects/myproject/locations/us-
+       *        west1`.
+       * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.UpgradeEditionRequest}
+       * @return the request
+       */
+      public UpgradeEdition upgradeEdition(java.lang.String parent, com.google.api.services.bigqueryreservation.v1.model.UpgradeEditionRequest content) throws java.io.IOException {
+        UpgradeEdition result = new UpgradeEdition(parent, content);
+        initialize(result);
+        return result;
+      }
+
+      public class UpgradeEdition extends BigQueryReservationRequest<com.google.api.services.bigqueryreservation.v1.model.UpgradeEditionResponse> {
+
+        private static final String REST_PATH = "v1/{+parent}:upgradeEdition";
+
+        private final java.util.regex.Pattern PARENT_PATTERN =
+            java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+        /**
+         * Upgrades the edition for a list of reservations and capacity commitments. You can only upgrade
+         * to a higher edition (from `STANDARD` to `ENTERPRISE` or `ENTERPRISE_PLUS`, from `ENTERPRISE` to
+         * `ENTERPRISE_PLUS`, or from `EDITION_UNSPECIFIED` to `ENTERPRISE` or `ENTERPRISE_PLUS`). You
+         * can't downgrade an edition. The upgrade must not cause an overall flexible slot increase across
+         * the original and target editions (for example, by upgrading a reservation without upgrading its
+         * corresponding capacity commitment). Otherwise, the method fails with a
+         * `google.rpc.Code.FAILED_PRECONDITION` error. Before the upgrade, the service validates that the
+         * resources meet the requirements of the target edition (for example, all reservations within a
+         * reservation group must be upgraded together).
+         *
+         * Create a request for the method "locations.upgradeEdition".
+         *
+         * This request holds the parameters needed by the the bigqueryreservation server.  After setting
+         * any optional parameters, call the {@link UpgradeEdition#execute()} method to invoke the remote
+         * operation. <p> {@link UpgradeEdition#initialize(com.google.api.client.googleapis.services.Abstr
+         * actGoogleClientRequest)} must be called to initialize this instance immediately after invoking
+         * the constructor. </p>
+         *
+         * @param parent The parent resource name that identifies the admin project and location, in the format
+       *        `projects/{project}/locations/{location}`. For example, `projects/myproject/locations/us-
+       *        west1`.
+         * @param content the {@link com.google.api.services.bigqueryreservation.v1.model.UpgradeEditionRequest}
+         * @since 1.13
+         */
+        protected UpgradeEdition(java.lang.String parent, com.google.api.services.bigqueryreservation.v1.model.UpgradeEditionRequest content) {
+          super(BigQueryReservation.this, "POST", REST_PATH, content, com.google.api.services.bigqueryreservation.v1.model.UpgradeEditionResponse.class);
+          this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+        }
+
+        @Override
+        public UpgradeEdition set$Xgafv(java.lang.String $Xgafv) {
+          return (UpgradeEdition) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public UpgradeEdition setAccessToken(java.lang.String accessToken) {
+          return (UpgradeEdition) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public UpgradeEdition setAlt(java.lang.String alt) {
+          return (UpgradeEdition) super.setAlt(alt);
+        }
+
+        @Override
+        public UpgradeEdition setCallback(java.lang.String callback) {
+          return (UpgradeEdition) super.setCallback(callback);
+        }
+
+        @Override
+        public UpgradeEdition setFields(java.lang.String fields) {
+          return (UpgradeEdition) super.setFields(fields);
+        }
+
+        @Override
+        public UpgradeEdition setKey(java.lang.String key) {
+          return (UpgradeEdition) super.setKey(key);
+        }
+
+        @Override
+        public UpgradeEdition setOauthToken(java.lang.String oauthToken) {
+          return (UpgradeEdition) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public UpgradeEdition setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (UpgradeEdition) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public UpgradeEdition setQuotaUser(java.lang.String quotaUser) {
+          return (UpgradeEdition) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public UpgradeEdition setUploadType(java.lang.String uploadType) {
+          return (UpgradeEdition) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public UpgradeEdition setUploadProtocol(java.lang.String uploadProtocol) {
+          return (UpgradeEdition) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * The parent resource name that identifies the admin project and location, in the format
+         * `projects/{project}/locations/{location}`. For example, `projects/myproject/locations/us-
+         * west1`.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String parent;
+
+        /** The parent resource name that identifies the admin project and location, in the format
+       `projects/{project}/locations/{location}`. For example, `projects/myproject/locations/us-west1`.
+         */
+        public java.lang.String getParent() {
+          return parent;
+        }
+
+        /**
+         * The parent resource name that identifies the admin project and location, in the format
+         * `projects/{project}/locations/{location}`. For example, `projects/myproject/locations/us-
+         * west1`.
+         */
+        public UpgradeEdition setParent(java.lang.String parent) {
+          if (!getSuppressPatternChecks()) {
+            com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                "Parameter parent must conform to the pattern " +
+                "^projects/[^/]+/locations/[^/]+$");
+          }
+          this.parent = parent;
+          return this;
+        }
+
+        @Override
+        public UpgradeEdition set(String parameterName, Object value) {
+          return (UpgradeEdition) super.set(parameterName, value);
+        }
+      }
 
       /**
        * An accessor for creating requests from the CapacityCommitments collection.

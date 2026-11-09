@@ -138,6 +138,13 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
   private java.util.Map<String, java.lang.String> metadata;
 
   /**
+   * Optional. The connection mode of the service attachment.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String mode;
+
+  /**
    * Name of the resource. Provided by the client when the resource is created. The name must be
    * 1-63 characters long, and comply withRFC1035. Specifically, the name must be 1-63 characters
    * long and match the regular expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first
@@ -510,6 +517,23 @@ public final class ServiceAttachment extends com.google.api.client.json.GenericJ
    */
   public ServiceAttachment setMetadata(java.util.Map<String, java.lang.String> metadata) {
     this.metadata = metadata;
+    return this;
+  }
+
+  /**
+   * Optional. The connection mode of the service attachment.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMode() {
+    return mode;
+  }
+
+  /**
+   * Optional. The connection mode of the service attachment.
+   * @param mode mode or {@code null} for none
+   */
+  public ServiceAttachment setMode(java.lang.String mode) {
+    this.mode = mode;
     return this;
   }
 

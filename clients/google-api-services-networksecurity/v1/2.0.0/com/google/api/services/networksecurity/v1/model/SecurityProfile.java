@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * SecurityProfile is a resource that defines the behavior for one of many ProfileTypes.
+ * A resource that defines the behavior for one of many `ProfileType` values.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -37,21 +37,21 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   private String createTime;
 
   /**
-   * The custom TPPI configuration for the SecurityProfile.
+   * The custom network security in-band integration configuration for the `SecurityProfile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomInterceptProfile customInterceptProfile;
 
   /**
-   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * The custom network security out-of-band integration configuration for the `SecurityProfile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private CustomMirroringProfile customMirroringProfile;
 
   /**
-   * Optional. An optional description of the profile. Max length 512 characters.
+   * Optional. An optional description of the profile. The maximum length is 512 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,29 +67,30 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   private java.lang.String etag;
 
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-   * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+   * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+   * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+   * `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * The threat prevention configuration for the SecurityProfile.
+   * The threat prevention configuration for the `SecurityProfile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private ThreatPreventionProfile threatPreventionProfile;
 
   /**
-   * Immutable. The single ProfileType that the SecurityProfile resource configures.
+   * Immutable. The single `ProfileType` that the `SecurityProfile` resource configures.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,14 +104,14 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   private String updateTime;
 
   /**
-   * The URL filtering configuration for the SecurityProfile.
+   * The URL filtering configuration for the `SecurityProfile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private UrlFilteringProfile urlFilteringProfile;
 
   /**
-   * The WildFire Analysis configurations for SecurityProfile.
+   * The Advanced malware sandbox analysis configuration for the `SecurityProfile`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -134,7 +135,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The custom TPPI configuration for the SecurityProfile.
+   * The custom network security in-band integration configuration for the `SecurityProfile`.
    * @return value or {@code null} for none
    */
   public CustomInterceptProfile getCustomInterceptProfile() {
@@ -142,7 +143,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The custom TPPI configuration for the SecurityProfile.
+   * The custom network security in-band integration configuration for the `SecurityProfile`.
    * @param customInterceptProfile customInterceptProfile or {@code null} for none
    */
   public SecurityProfile setCustomInterceptProfile(CustomInterceptProfile customInterceptProfile) {
@@ -151,7 +152,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * The custom network security out-of-band integration configuration for the `SecurityProfile`.
    * @return value or {@code null} for none
    */
   public CustomMirroringProfile getCustomMirroringProfile() {
@@ -159,7 +160,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The custom Packet Mirroring v2 configuration for the SecurityProfile.
+   * The custom network security out-of-band integration configuration for the `SecurityProfile`.
    * @param customMirroringProfile customMirroringProfile or {@code null} for none
    */
   public SecurityProfile setCustomMirroringProfile(CustomMirroringProfile customMirroringProfile) {
@@ -168,7 +169,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. An optional description of the profile. Max length 512 characters.
+   * Optional. An optional description of the profile. The maximum length is 512 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -176,7 +177,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. An optional description of the profile. Max length 512 characters.
+   * Optional. An optional description of the profile. The maximum length is 512 characters.
    * @param description description or {@code null} for none
    */
   public SecurityProfile setDescription(java.lang.String description) {
@@ -206,7 +207,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getLabels() {
@@ -214,7 +215,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Optional. Labels as key value pairs.
+   * Optional. Labels as key-value pairs.
    * @param labels labels or {@code null} for none
    */
   public SecurityProfile setLabels(java.util.Map<String, java.lang.String> labels) {
@@ -223,8 +224,9 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-   * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+   * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+   * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+   * `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -232,8 +234,9 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-   * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+   * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+   * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+   * `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
    * @param name name or {@code null} for none
    */
   public SecurityProfile setName(java.lang.String name) {
@@ -242,7 +245,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The threat prevention configuration for the SecurityProfile.
+   * The threat prevention configuration for the `SecurityProfile`.
    * @return value or {@code null} for none
    */
   public ThreatPreventionProfile getThreatPreventionProfile() {
@@ -250,7 +253,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The threat prevention configuration for the SecurityProfile.
+   * The threat prevention configuration for the `SecurityProfile`.
    * @param threatPreventionProfile threatPreventionProfile or {@code null} for none
    */
   public SecurityProfile setThreatPreventionProfile(ThreatPreventionProfile threatPreventionProfile) {
@@ -259,7 +262,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The single ProfileType that the SecurityProfile resource configures.
+   * Immutable. The single `ProfileType` that the `SecurityProfile` resource configures.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -267,7 +270,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * Immutable. The single ProfileType that the SecurityProfile resource configures.
+   * Immutable. The single `ProfileType` that the `SecurityProfile` resource configures.
    * @param type type or {@code null} for none
    */
   public SecurityProfile setType(java.lang.String type) {
@@ -293,7 +296,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The URL filtering configuration for the SecurityProfile.
+   * The URL filtering configuration for the `SecurityProfile`.
    * @return value or {@code null} for none
    */
   public UrlFilteringProfile getUrlFilteringProfile() {
@@ -301,7 +304,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The URL filtering configuration for the SecurityProfile.
+   * The URL filtering configuration for the `SecurityProfile`.
    * @param urlFilteringProfile urlFilteringProfile or {@code null} for none
    */
   public SecurityProfile setUrlFilteringProfile(UrlFilteringProfile urlFilteringProfile) {
@@ -310,7 +313,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The WildFire Analysis configurations for SecurityProfile.
+   * The Advanced malware sandbox analysis configuration for the `SecurityProfile`.
    * @return value or {@code null} for none
    */
   public WildfireAnalysisProfile getWildfireAnalysisProfile() {
@@ -318,7 +321,7 @@ public final class SecurityProfile extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * The WildFire Analysis configurations for SecurityProfile.
+   * The Advanced malware sandbox analysis configuration for the `SecurityProfile`.
    * @param wildfireAnalysisProfile wildfireAnalysisProfile or {@code null} for none
    */
   public SecurityProfile setWildfireAnalysisProfile(WildfireAnalysisProfile wildfireAnalysisProfile) {

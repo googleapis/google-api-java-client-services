@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1beta1.model;
 
 /**
- * Message for response to listing Associations
+ * Message for response to listing associations.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,7 +30,7 @@ package com.google.api.services.networksecurity.v1beta1.model;
 public final class ListFirewallEndpointAssociationsResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * The list of Association
+   * The list of associations.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,21 +43,23 @@ public final class ListFirewallEndpointAssociationsResponse extends com.google.a
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * Locations that could not be reached. The list of unreachable locations might expand in the
+   * future.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> unreachable;
 
   /**
-   * The list of Association
+   * The list of associations.
    * @return value or {@code null} for none
    */
   public java.util.List<FirewallEndpointAssociation> getFirewallEndpointAssociations() {
@@ -65,7 +67,7 @@ public final class ListFirewallEndpointAssociationsResponse extends com.google.a
   }
 
   /**
-   * The list of Association
+   * The list of associations.
    * @param firewallEndpointAssociations firewallEndpointAssociations or {@code null} for none
    */
   public ListFirewallEndpointAssociationsResponse setFirewallEndpointAssociations(java.util.List<FirewallEndpointAssociation> firewallEndpointAssociations) {
@@ -74,7 +76,8 @@ public final class ListFirewallEndpointAssociationsResponse extends com.google.a
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @return value or {@code null} for none
    */
   public java.lang.String getNextPageToken() {
@@ -82,7 +85,8 @@ public final class ListFirewallEndpointAssociationsResponse extends com.google.a
   }
 
   /**
-   * A token identifying a page of results the server should return.
+   * A token that can be sent as `page_token` to retrieve the next page. If this field is omitted,
+   * there are no subsequent pages.
    * @param nextPageToken nextPageToken or {@code null} for none
    */
   public ListFirewallEndpointAssociationsResponse setNextPageToken(java.lang.String nextPageToken) {
@@ -91,7 +95,8 @@ public final class ListFirewallEndpointAssociationsResponse extends com.google.a
   }
 
   /**
-   * Locations that could not be reached.
+   * Locations that could not be reached. The list of unreachable locations might expand in the
+   * future.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -99,7 +104,8 @@ public final class ListFirewallEndpointAssociationsResponse extends com.google.a
   }
 
   /**
-   * Locations that could not be reached.
+   * Locations that could not be reached. The list of unreachable locations might expand in the
+   * future.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListFirewallEndpointAssociationsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

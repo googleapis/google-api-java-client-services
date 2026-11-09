@@ -38,7 +38,11 @@ public final class GenaiVertexV1TextResponseFormat extends com.google.api.client
 
   /**
    * The JSON schema that the output should conform to. Only applicable when mime_type is
-   * application/json.
+   * application/json. Supports a subset of JSON Schema. `minLength`, `maxLength`, `minProperties`,
+   * `maxProperties`, `uniqueItems`, `contains`, `minContains`, and `maxContains` are ignored and
+   * not enforced; validate these in your application. `minItems` and `maxItems` are enforced.
+   * Schemas that are too complex to enforce (for example, large `maxItems` on nested arrays) return
+   * a 400 INVALID_ARGUMENT error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +67,11 @@ public final class GenaiVertexV1TextResponseFormat extends com.google.api.client
 
   /**
    * The JSON schema that the output should conform to. Only applicable when mime_type is
-   * application/json.
+   * application/json. Supports a subset of JSON Schema. `minLength`, `maxLength`, `minProperties`,
+   * `maxProperties`, `uniqueItems`, `contains`, `minContains`, and `maxContains` are ignored and
+   * not enforced; validate these in your application. `minItems` and `maxItems` are enforced.
+   * Schemas that are too complex to enforce (for example, large `maxItems` on nested arrays) return
+   * a 400 INVALID_ARGUMENT error.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1Struct getSchema() {
@@ -72,7 +80,11 @@ public final class GenaiVertexV1TextResponseFormat extends com.google.api.client
 
   /**
    * The JSON schema that the output should conform to. Only applicable when mime_type is
-   * application/json.
+   * application/json. Supports a subset of JSON Schema. `minLength`, `maxLength`, `minProperties`,
+   * `maxProperties`, `uniqueItems`, `contains`, `minContains`, and `maxContains` are ignored and
+   * not enforced; validate these in your application. `minItems` and `maxItems` are enforced.
+   * Schemas that are too complex to enforce (for example, large `maxItems` on nested arrays) return
+   * a 400 INVALID_ARGUMENT error.
    * @param schema schema or {@code null} for none
    */
   public GenaiVertexV1TextResponseFormat setSchema(GenaiVertexV1Struct schema) {

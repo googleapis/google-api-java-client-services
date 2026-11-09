@@ -40,7 +40,8 @@ public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api
 
   /**
    * Optional. Specifies the types of Google Maps grounding to enable. Defaults to `places` when
-   * unset.
+   * unset, and to `places` and `routing` for Gemini 4 and later models. When set, only the listed
+   * types are enabled; for example, setting only `places` disables routing.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,7 +70,8 @@ public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api
 
   /**
    * Optional. Specifies the types of Google Maps grounding to enable. Defaults to `places` when
-   * unset.
+   * unset, and to `places` and `routing` for Gemini 4 and later models. When set, only the listed
+   * types are enabled; for example, setting only `places` disables routing.
    * @return value or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes getGroundingTypes() {
@@ -78,7 +80,8 @@ public final class GoogleCloudAiplatformV1beta1GoogleMaps extends com.google.api
 
   /**
    * Optional. Specifies the types of Google Maps grounding to enable. Defaults to `places` when
-   * unset.
+   * unset, and to `places` and `routing` for Gemini 4 and later models. When set, only the listed
+   * types are enabled; for example, setting only `places` disables routing.
    * @param groundingTypes groundingTypes or {@code null} for none
    */
   public GoogleCloudAiplatformV1beta1GoogleMaps setGroundingTypes(GoogleCloudAiplatformV1beta1GoogleMapsGroundingTypes groundingTypes) {

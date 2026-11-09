@@ -17,7 +17,7 @@
 package com.google.api.services.networksecurity.v1.model;
 
 /**
- * Settings for WildFire inline cloud analysis.
+ * Settings for Advanced malware sandbox inline cloud analysis.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Security API. For a detailed explanation see:
@@ -30,31 +30,36 @@ package com.google.api.services.networksecurity.v1.model;
 public final class FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Timeout in milliseconds on a file being held while WildFire inline cloud analysis is
-   * performed. Value between 1 to 240000 is valid. Default value is 30000.
+   * Optional. The timeout that a file is held while Advanced malware sandbox inline cloud analysis
+   * is performed. Valid values are from 1 to 240000 milliseconds. In canonical JSON encoding, this
+   * is represented as a string ending in `s` (for example, `"0.001s"` to `"240s"`). The default
+   * value is `30000` milliseconds (`"30s"` in JSON).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String maxAnalysisDuration;
 
   /**
-   * Optional. Whether to disable WildFire submission log generation for files that timeout during
-   * WildFire inline cloud analysis.
+   * Optional. Whether to disable Advanced malware sandbox submission log generation for files that
+   * time out during Advanced malware sandbox inline cloud analysis.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Boolean submissionTimeoutLoggingDisabled;
 
   /**
-   * Optional. Action to take when WildFire inline cloud analysis times out. Default value is ALLOW.
+   * Optional. The action to take when Advanced malware sandbox inline cloud analysis times out. The
+   * default value is `ALLOW`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String timeoutAction;
 
   /**
-   * Optional. Timeout in milliseconds on a file being held while WildFire inline cloud analysis is
-   * performed. Value between 1 to 240000 is valid. Default value is 30000.
+   * Optional. The timeout that a file is held while Advanced malware sandbox inline cloud analysis
+   * is performed. Valid values are from 1 to 240000 milliseconds. In canonical JSON encoding, this
+   * is represented as a string ending in `s` (for example, `"0.001s"` to `"240s"`). The default
+   * value is `30000` milliseconds (`"30s"` in JSON).
    * @return value or {@code null} for none
    */
   public String getMaxAnalysisDuration() {
@@ -62,8 +67,10 @@ public final class FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSe
   }
 
   /**
-   * Optional. Timeout in milliseconds on a file being held while WildFire inline cloud analysis is
-   * performed. Value between 1 to 240000 is valid. Default value is 30000.
+   * Optional. The timeout that a file is held while Advanced malware sandbox inline cloud analysis
+   * is performed. Valid values are from 1 to 240000 milliseconds. In canonical JSON encoding, this
+   * is represented as a string ending in `s` (for example, `"0.001s"` to `"240s"`). The default
+   * value is `30000` milliseconds (`"30s"` in JSON).
    * @param maxAnalysisDuration maxAnalysisDuration or {@code null} for none
    */
   public FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings setMaxAnalysisDuration(String maxAnalysisDuration) {
@@ -72,8 +79,8 @@ public final class FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSe
   }
 
   /**
-   * Optional. Whether to disable WildFire submission log generation for files that timeout during
-   * WildFire inline cloud analysis.
+   * Optional. Whether to disable Advanced malware sandbox submission log generation for files that
+   * time out during Advanced malware sandbox inline cloud analysis.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getSubmissionTimeoutLoggingDisabled() {
@@ -81,8 +88,8 @@ public final class FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSe
   }
 
   /**
-   * Optional. Whether to disable WildFire submission log generation for files that timeout during
-   * WildFire inline cloud analysis.
+   * Optional. Whether to disable Advanced malware sandbox submission log generation for files that
+   * time out during Advanced malware sandbox inline cloud analysis.
    * @param submissionTimeoutLoggingDisabled submissionTimeoutLoggingDisabled or {@code null} for none
    */
   public FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings setSubmissionTimeoutLoggingDisabled(java.lang.Boolean submissionTimeoutLoggingDisabled) {
@@ -91,7 +98,8 @@ public final class FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSe
   }
 
   /**
-   * Optional. Action to take when WildFire inline cloud analysis times out. Default value is ALLOW.
+   * Optional. The action to take when Advanced malware sandbox inline cloud analysis times out. The
+   * default value is `ALLOW`.
    * @return value or {@code null} for none
    */
   public java.lang.String getTimeoutAction() {
@@ -99,7 +107,8 @@ public final class FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSe
   }
 
   /**
-   * Optional. Action to take when WildFire inline cloud analysis times out. Default value is ALLOW.
+   * Optional. The action to take when Advanced malware sandbox inline cloud analysis times out. The
+   * default value is `ALLOW`.
    * @param timeoutAction timeoutAction or {@code null} for none
    */
   public FirewallEndpointWildfireSettingsWildfireInlineCloudAnalysisSettings setTimeoutAction(java.lang.String timeoutAction) {

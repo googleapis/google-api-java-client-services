@@ -74,6 +74,13 @@ public final class GoogleCloudAiplatformV1beta1EvaluationSet extends com.google.
   private java.util.List<java.lang.String> evaluationItems;
 
   /**
+   * Output only. Set when the items were imported from a Harbor dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudAiplatformV1beta1HarborDataset harborDataset;
+
+  /**
    * Optional. Metadata for the EvaluationSet.
    * The value may be {@code null}.
    */
@@ -183,6 +190,23 @@ public final class GoogleCloudAiplatformV1beta1EvaluationSet extends com.google.
    */
   public GoogleCloudAiplatformV1beta1EvaluationSet setEvaluationItems(java.util.List<java.lang.String> evaluationItems) {
     this.evaluationItems = evaluationItems;
+    return this;
+  }
+
+  /**
+   * Output only. Set when the items were imported from a Harbor dataset.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1HarborDataset getHarborDataset() {
+    return harborDataset;
+  }
+
+  /**
+   * Output only. Set when the items were imported from a Harbor dataset.
+   * @param harborDataset harborDataset or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1EvaluationSet setHarborDataset(GoogleCloudAiplatformV1beta1HarborDataset harborDataset) {
+    this.harborDataset = harborDataset;
     return this;
   }
 

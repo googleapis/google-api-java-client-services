@@ -147,6 +147,15 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   private java.util.Map<String, java.lang.String> effectiveFeatures;
 
   /**
+   * Optional. Per-feature access policies, keyed by feature toggle name (see `features`). A feature
+   * with no entry is available to every user when it is on. Only features that support access
+   * policies are accepted.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.Map<String, GoogleCloudDiscoveryengineV1EngineFeaturePolicy> featurePolicies;
+
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
@@ -156,11 +165,11 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `disable-video-generation` * `music-generation` * `speech-generation` * `disable-onedrive-
    * upload` * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
    * * `disable-canvas` * `canvas-workspace` * `canvas-app-builder` * `skills` * `skill-sharing` *
-   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
-   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
-   * product-intelligence` * `workflow-agents` * `in-app-notifications` * `code-extraction` *
-   * `remote-vm` * `license-tier-badge` * `agent-marketplace` * `agent-scheduling` * `preview-
-   * agents`
+   * `skill-sharing-without-admin-approval` * `skill-security-scan` * `disable-projects` * `sobi` *
+   * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-
+   * orchestration` * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `canvas-app-sharing` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents` * `plugins`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -550,6 +559,27 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
   }
 
   /**
+   * Optional. Per-feature access policies, keyed by feature toggle name (see `features`). A feature
+   * with no entry is available to every user when it is on. Only features that support access
+   * policies are accepted.
+   * @return value or {@code null} for none
+   */
+  public java.util.Map<String, GoogleCloudDiscoveryengineV1EngineFeaturePolicy> getFeaturePolicies() {
+    return featurePolicies;
+  }
+
+  /**
+   * Optional. Per-feature access policies, keyed by feature toggle name (see `features`). A feature
+   * with no entry is available to every user when it is on. Only features that support access
+   * policies are accepted.
+   * @param featurePolicies featurePolicies or {@code null} for none
+   */
+  public GoogleCloudDiscoveryengineV1Engine setFeaturePolicies(java.util.Map<String, GoogleCloudDiscoveryengineV1EngineFeaturePolicy> featurePolicies) {
+    this.featurePolicies = featurePolicies;
+    return this;
+  }
+
+  /**
    * Optional. Feature config for the engine to opt in or opt out of features. Supported keys: *
    * `*`: all features, if it's present, all other feature state settings are ignored. * `agent-
    * gallery` * `no-code-agent-builder` * `prompt-gallery` * `model-selector` * `notebook-lm` *
@@ -559,11 +589,11 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `disable-video-generation` * `music-generation` * `speech-generation` * `disable-onedrive-
    * upload` * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
    * * `disable-canvas` * `canvas-workspace` * `canvas-app-builder` * `skills` * `skill-sharing` *
-   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
-   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
-   * product-intelligence` * `workflow-agents` * `in-app-notifications` * `code-extraction` *
-   * `remote-vm` * `license-tier-badge` * `agent-marketplace` * `agent-scheduling` * `preview-
-   * agents`
+   * `skill-sharing-without-admin-approval` * `skill-security-scan` * `disable-projects` * `sobi` *
+   * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-
+   * orchestration` * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `canvas-app-sharing` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents` * `plugins`
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getFeatures() {
@@ -580,11 +610,11 @@ public final class GoogleCloudDiscoveryengineV1Engine extends com.google.api.cli
    * `disable-video-generation` * `music-generation` * `speech-generation` * `disable-onedrive-
    * upload` * `disable-talk-to-content` * `disable-google-drive-upload` * `disable-welcome-emails`
    * * `disable-canvas` * `canvas-workspace` * `canvas-app-builder` * `skills` * `skill-sharing` *
-   * `skill-sharing-without-admin-approval` * `disable-projects` * `sobi` * `enable-end-user-
-   * sharing-with-groups` * `single-agent-orchestration` * `multi-agent-orchestration` * `cross-
-   * product-intelligence` * `workflow-agents` * `in-app-notifications` * `code-extraction` *
-   * `remote-vm` * `license-tier-badge` * `agent-marketplace` * `agent-scheduling` * `preview-
-   * agents`
+   * `skill-sharing-without-admin-approval` * `skill-security-scan` * `disable-projects` * `sobi` *
+   * `enable-end-user-sharing-with-groups` * `single-agent-orchestration` * `multi-agent-
+   * orchestration` * `cross-product-intelligence` * `workflow-agents` * `in-app-notifications` *
+   * `code-extraction` * `remote-vm` * `license-tier-badge` * `canvas-app-sharing` * `agent-
+   * marketplace` * `agent-scheduling` * `preview-agents` * `plugins`
    * @param features features or {@code null} for none
    */
   public GoogleCloudDiscoveryengineV1Engine setFeatures(java.util.Map<String, java.lang.String> features) {

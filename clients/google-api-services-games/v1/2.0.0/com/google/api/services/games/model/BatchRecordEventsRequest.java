@@ -17,7 +17,7 @@
 package com.google.api.services.games.model;
 
 /**
- * Request message for PlayerGameEvents.BatchRecordEvents Next ID: 7
+ * Request message for PlayerGameEvents.BatchRecordEvents Next ID: 8
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Play Games Services API. For a detailed
@@ -44,6 +44,14 @@ public final class BatchRecordEventsRequest extends com.google.api.client.json.G
    */
   @com.google.api.client.util.Key
   private java.util.List<PlayerGameEvent> events;
+
+  /**
+   * Optional. Developer-provided fraud or integrity verdicts passed as a request parameter. Maximum
+   * of 10 integrity verdicts per batch request.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<DeveloperIntegrityVerdict> integrityVerdicts;
 
   /**
    * Required. Application package name (e.g., "com.example.game").
@@ -100,6 +108,25 @@ public final class BatchRecordEventsRequest extends com.google.api.client.json.G
    */
   public BatchRecordEventsRequest setEvents(java.util.List<PlayerGameEvent> events) {
     this.events = events;
+    return this;
+  }
+
+  /**
+   * Optional. Developer-provided fraud or integrity verdicts passed as a request parameter. Maximum
+   * of 10 integrity verdicts per batch request.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<DeveloperIntegrityVerdict> getIntegrityVerdicts() {
+    return integrityVerdicts;
+  }
+
+  /**
+   * Optional. Developer-provided fraud or integrity verdicts passed as a request parameter. Maximum
+   * of 10 integrity verdicts per batch request.
+   * @param integrityVerdicts integrityVerdicts or {@code null} for none
+   */
+  public BatchRecordEventsRequest setIntegrityVerdicts(java.util.List<DeveloperIntegrityVerdict> integrityVerdicts) {
+    this.integrityVerdicts = integrityVerdicts;
     return this;
   }
 

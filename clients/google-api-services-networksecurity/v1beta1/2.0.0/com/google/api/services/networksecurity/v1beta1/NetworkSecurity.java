@@ -2318,14 +2318,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class FirewallEndpoints {
 
         /**
-         * Creates a new FirewallEndpoint in a given organization and location.
+         * Creates a new firewall endpoint in a given organization and location.
          *
          * Create a request for the method "firewallEndpoints.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource where this firewall endpoint is created. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
          * @return the request
          */
@@ -2343,7 +2345,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new FirewallEndpoint in a given organization and location.
+           * Creates a new firewall endpoint in a given organization and location.
            *
            * Create a request for the method "firewallEndpoints.create".
            *
@@ -2353,7 +2355,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource where this firewall endpoint is created. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
            * @since 1.13
            */
@@ -2422,17 +2426,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. The parent resource where this firewall endpoint is created. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource where this firewall endpoint is created. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. The parent resource where this firewall endpoint is created. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2444,22 +2457,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Id of the requesting object. If auto-generating Id server-side, remove this
-           * field and firewall_endpoint_id from the method_signature of Create RPC.
+           * Required. The ID to use for the firewall endpoint, which becomes the final component of
+           * the endpoint's resource name. This value must be 1-63 characters long, start with a
+           * lowercase letter, contain only lowercase letters, numbers, and hyphens, and cannot end
+           * with a hyphen.
            */
           @com.google.api.client.util.Key
           private java.lang.String firewallEndpointId;
 
-          /** Required. Id of the requesting object. If auto-generating Id server-side, remove this field and
-         firewall_endpoint_id from the method_signature of Create RPC.
+          /** Required. The ID to use for the firewall endpoint, which becomes the final component of the
+         endpoint's resource name. This value must be 1-63 characters long, start with a lowercase letter,
+         contain only lowercase letters, numbers, and hyphens, and cannot end with a hyphen.
            */
           public java.lang.String getFirewallEndpointId() {
             return firewallEndpointId;
           }
 
           /**
-           * Required. Id of the requesting object. If auto-generating Id server-side, remove this
-           * field and firewall_endpoint_id from the method_signature of Create RPC.
+           * Required. The ID to use for the firewall endpoint, which becomes the final component of
+           * the endpoint's resource name. This value must be 1-63 characters long, start with a
+           * lowercase letter, contain only lowercase letters, numbers, and hyphens, and cannot end
+           * with a hyphen.
            */
           public Create setFirewallEndpointId(java.lang.String firewallEndpointId) {
             this.firewallEndpointId = firewallEndpointId;
@@ -2468,26 +2486,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -2495,14 +2513,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2510,21 +2528,21 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If set, validate the request and preview the endpoint, but do not actually
-           * create it.
+           * Optional. If set, validates the request and previews the endpoint, but does not
+           * actually create it.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. If set, validate the request and preview the endpoint, but do not actually create it.
+          /** Optional. If set, validates the request and previews the endpoint, but does not actually create it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. If set, validate the request and preview the endpoint, but do not actually
-           * create it.
+           * Optional. If set, validates the request and previews the endpoint, but does not
+           * actually create it.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -2537,14 +2555,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single org Endpoint.
+         * Deletes a single organization endpoint.
          *
          * Create a request for the method "firewallEndpoints.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The name of the resource.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -2561,7 +2579,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Deletes a single org Endpoint.
+           * Deletes a single organization endpoint.
            *
            * Create a request for the method "firewallEndpoints.delete".
            *
@@ -2571,7 +2589,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The name of the resource.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -2639,17 +2657,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2662,26 +2680,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes after the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -2689,14 +2707,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -2709,14 +2727,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single org Endpoint.
+         * Gets details of a single organization endpoint.
          *
          * Create a request for the method "firewallEndpoints.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The name of the resource.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -2733,7 +2751,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Gets details of a single org Endpoint.
+           * Gets details of a single organization endpoint.
            *
            * Create a request for the method "firewallEndpoints.get".
            *
@@ -2742,7 +2760,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The name of the resource.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -2820,17 +2838,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -2847,14 +2865,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists FirewallEndpoints in a given organization and location.
+         * Lists firewall endpoints in a given organization and location.
          *
          * Create a request for the method "firewallEndpoints.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListEndpointsRequest
+         * @param parent Required. The parent resource from which the firewall endpoints are listed. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -2871,7 +2891,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists FirewallEndpoints in a given organization and location.
+           * Lists firewall endpoints in a given organization and location.
            *
            * Create a request for the method "firewallEndpoints.list".
            *
@@ -2880,7 +2900,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListEndpointsRequest
+           * @param parent Required. The parent resource from which the firewall endpoints are listed. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -2958,17 +2980,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListEndpointsRequest */
+          /**
+           * Required. The parent resource from which the firewall endpoints are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListEndpointsRequest
+          /** Required. The parent resource from which the firewall endpoints are listed. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListEndpointsRequest */
+          /**
+           * Required. The parent resource from which the firewall endpoints are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -2979,72 +3010,85 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. Requested page size. The server might return fewer items than requested. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+          /** Optional. Requested page size. The server might return fewer items than requested. The maximum
+         value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks an
+         appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. Requested page size. The server might return fewer items than requested. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** A token identifying a page of results the server should return. */
+          /**
+           * A page token, received from a previous `ListFirewallEndpoints` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFirewallEndpoints` must match the call that provided the page token.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
+          /** A page token, received from a previous `ListFirewallEndpoints` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListFirewallEndpoints` must
+         match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** A token identifying a page of results the server should return. */
+          /**
+           * A page token, received from a previous `ListFirewallEndpoints` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFirewallEndpoints` must match the call that provided the page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -3056,14 +3100,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Update a single org Endpoint.
+         * Updates a single organization endpoint.
          *
          * Create a request for the method "firewallEndpoints.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Name of resource.
+         * @param name Immutable. Identifier. The name of the resource.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
          * @return the request
          */
@@ -3081,7 +3125,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Update a single org Endpoint.
+           * Updates a single organization endpoint.
            *
            * Create a request for the method "firewallEndpoints.patch".
            *
@@ -3091,7 +3135,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Name of resource.
+           * @param name Immutable. Identifier. The name of the resource.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
            * @since 1.13
            */
@@ -3160,17 +3204,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. Name of resource. */
+          /** Immutable. Identifier. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Name of resource.
+          /** Immutable. Identifier. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. Name of resource. */
+          /** Immutable. Identifier. The name of the resource. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -3183,26 +3227,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -3210,14 +3254,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -3225,28 +3269,30 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Endpoint
-           * resource by the update. The fields specified in the update_mask are relative to the
-           * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask used to specify the fields to be overwritten in the
+           * `FirewallEndpoint` resource by the update. The fields specified in the `update_mask`
+           * are relative to the resource, not the full request. A field is overwritten if it is in
+           * the mask. If the user does not provide a mask, then all fields present in the request
+           * are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the Endpoint resource by
-         the update. The fields specified in the update_mask are relative to the resource, not the full
-         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
-         all fields will be overwritten.
+          /** Required. Field mask used to specify the fields to be overwritten in the `FirewallEndpoint`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask. If the user does not provide a mask,
+         then all fields present in the request are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Endpoint
-           * resource by the update. The fields specified in the update_mask are relative to the
-           * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask used to specify the fields to be overwritten in the
+           * `FirewallEndpoint` resource by the update. The fields specified in the `update_mask`
+           * are relative to the resource, not the full request. A field is overwritten if it is in
+           * the mask. If the user does not provide a mask, then all fields present in the request
+           * are overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -3280,16 +3326,18 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
         public class WildfireVerdictChangeRequests {
 
           /**
-           * Create WildfireVerdictChangeRequest in a given Firewall Endpoint in an organization and location.
+           * Creates an Advanced malware sandbox verdict change request in a given firewall endpoint in an
+           * organization and location.
            *
            * Create a request for the method "wildfireVerdictChangeRequests.create".
            *
            * This request holds the parameters needed by the networksecurity server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+           * @param parent Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.WildfireVerdictChangeRequest}
            * @return the request
            */
@@ -3307,8 +3355,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
             /**
-             * Create WildfireVerdictChangeRequest in a given Firewall Endpoint in an organization and
-             * location.
+             * Creates an Advanced malware sandbox verdict change request in a given firewall endpoint in an
+             * organization and location.
              *
              * Create a request for the method "wildfireVerdictChangeRequests.create".
              *
@@ -3318,9 +3366,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+             * @param parent Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.WildfireVerdictChangeRequest}
              * @since 1.13
              */
@@ -3390,25 +3439,28 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a firewall
-           endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{location}/fi
-           rewallEndpoints/{firewall_endpoint}
+            /** Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+           endpoint resource. Format:
+           `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}` or
+           `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3426,18 +3478,20 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Get WildfireVerdictChangeRequest in a given Firewall Endpoint in an organization and location.
+           * Gets an Advanced malware sandbox verdict change request in a given firewall endpoint in an
+           * organization and location.
            *
            * Create a request for the method "wildfireVerdictChangeRequests.get".
            *
            * This request holds the parameters needed by the networksecurity server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations|projects/{proj
-           *        ect_or_organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVe
-           *        rdictChangeRequests/{wildfire_verdict_change_request_id} Where
-           *        {wildfire_verdict_change_request_id} is the ID in the format:
-           *        ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+           * @param name Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organizations/{organi
+           *        zation}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+           *        quests/{wildfire_verdict_change_request_id}` or `projects/{project}/locations/{location}/f
+           *        irewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_chang
+           *        e_request_id}`. Where `{wildfire_verdict_change_request_id}` is an ID in the format
+           *        `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -3454,7 +3508,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+/wildfireVerdictChangeRequests/[^/]+$");
 
             /**
-             * Get WildfireVerdictChangeRequest in a given Firewall Endpoint in an organization and location.
+             * Gets an Advanced malware sandbox verdict change request in a given firewall endpoint in an
+             * organization and location.
              *
              * Create a request for the method "wildfireVerdictChangeRequests.get".
              *
@@ -3463,11 +3518,12 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations|projects/{proj
-           *        ect_or_organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVe
-           *        rdictChangeRequests/{wildfire_verdict_change_request_id} Where
-           *        {wildfire_verdict_change_request_id} is the ID in the format:
-           *        ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+             * @param name Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organizations/{organi
+           *        zation}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+           *        quests/{wildfire_verdict_change_request_id}` or `projects/{project}/locations/{location}/f
+           *        irewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_chang
+           *        e_request_id}`. Where `{wildfire_verdict_change_request_id}` is an ID in the format
+           *        `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -3546,30 +3602,36 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations
-             * |projects/{project_or_organization}/locations/{location}/firewallEndpoints/{firewall_
-             * endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_change_request_id} Where
-             * {wildfire_verdict_change_request_id} is the ID in the format:
-             * ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+             * Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organi
+             * zations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wil
+             * dfireVerdictChangeRequests/{wildfire_verdict_change_request_id}` or `projects/{projec
+             * t}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+             * quests/{wildfire_verdict_change_request_id}`. Where
+             * `{wildfire_verdict_change_request_id}` is an ID in the format
+             * `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations|projects/{pro
-           ject_or_organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictCha
-           ngeRequests/{wildfire_verdict_change_request_id} Where {wildfire_verdict_change_request_id} is the
-           ID in the format: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+            /** Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organizations/{organ
+           ization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{
+           wildfire_verdict_change_request_id}` or `projects/{project}/locations/{location}/firewallEndpoints/
+           {firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_change_request_id}`. Where
+           `{wildfire_verdict_change_request_id}` is an ID in the format
+           `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations
-             * |projects/{project_or_organization}/locations/{location}/firewallEndpoints/{firewall_
-             * endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_change_request_id} Where
-             * {wildfire_verdict_change_request_id} is the ID in the format:
-             * ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+             * Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organi
+             * zations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wil
+             * dfireVerdictChangeRequests/{wildfire_verdict_change_request_id}` or `projects/{projec
+             * t}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+             * quests/{wildfire_verdict_change_request_id}`. Where
+             * `{wildfire_verdict_change_request_id}` is an ID in the format
+             * `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -3587,16 +3649,18 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Lists WildfireVerdictChangeRequests in a given Firewall Endpoint in an organization and location.
+           * Lists the Advanced malware sandbox (WildFire) verdict change requests in a given firewall
+           * endpoint in an organization and location.
            *
            * Create a request for the method "wildfireVerdictChangeRequests.list".
            *
            * This request holds the parameters needed by the networksecurity server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+           * @param parent Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -3613,8 +3677,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
             /**
-             * Lists WildfireVerdictChangeRequests in a given Firewall Endpoint in an organization and
-             * location.
+             * Lists the Advanced malware sandbox (WildFire) verdict change requests in a given firewall
+             * endpoint in an organization and location.
              *
              * Create a request for the method "wildfireVerdictChangeRequests.list".
              *
@@ -3623,9 +3687,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+             * @param parent Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -3704,25 +3769,28 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a firewall
-           endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{location}/fi
-           rewallEndpoints/{firewall_endpoint}
+            /** Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall
+           endpoint resource. Format:
+           `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}` or
+           `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -3735,28 +3803,36 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Filter expression to filter the results. See AIP-160 for filtering syntax.
-             * Supported fields are: - `sha256` (string, equality only, e.g. `sha256 = "..."`) -
-             * `state` (enum, equality only, e.g. `state = "ACTIVE"`) - `create_time` (timestamp,
-             * comparisons, e.g. `create_time > "2026-01-01T00:00:00Z"`)
+             * Optional. Filter expression to filter the results. Supported fields are: - `sha256`
+             * (string, equality only, for example, `sha256 = "..."`) - `state` (enum, equality
+             * only, valid values are `OPEN`, `CLOSED`, or `PENDING`, for example, `state =
+             * "PENDING"`) - `create_time` (timestamp, comparisons, for example, `create_time >=
+             * "2026-01-01T00:00:00Z" AND create_time <= "2026-01-31T23:59:59Z"`). If filtering by
+             * `create_time`, you must specify both a start time and an end time. If `create_time`
+             * is not specified, the query defaults to the past 30 days.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter expression to filter the results. See AIP-160 for filtering syntax. Supported
-           fields are: - `sha256` (string, equality only, e.g. `sha256 = "..."`) - `state` (enum, equality
-           only, e.g. `state = "ACTIVE"`) - `create_time` (timestamp, comparisons, e.g. `create_time >
-           "2026-01-01T00:00:00Z"`)
+            /** Optional. Filter expression to filter the results. Supported fields are: - `sha256` (string,
+           equality only, for example, `sha256 = "..."`) - `state` (enum, equality only, valid values are
+           `OPEN`, `CLOSED`, or `PENDING`, for example, `state = "PENDING"`) - `create_time` (timestamp,
+           comparisons, for example, `create_time >= "2026-01-01T00:00:00Z" AND create_time <=
+           "2026-01-31T23:59:59Z"`). If filtering by `create_time`, you must specify both a start time and an
+           end time. If `create_time` is not specified, the query defaults to the past 30 days.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter expression to filter the results. See AIP-160 for filtering syntax.
-             * Supported fields are: - `sha256` (string, equality only, e.g. `sha256 = "..."`) -
-             * `state` (enum, equality only, e.g. `state = "ACTIVE"`) - `create_time` (timestamp,
-             * comparisons, e.g. `create_time > "2026-01-01T00:00:00Z"`)
+             * Optional. Filter expression to filter the results. Supported fields are: - `sha256`
+             * (string, equality only, for example, `sha256 = "..."`) - `state` (enum, equality
+             * only, valid values are `OPEN`, `CLOSED`, or `PENDING`, for example, `state =
+             * "PENDING"`) - `create_time` (timestamp, comparisons, for example, `create_time >=
+             * "2026-01-01T00:00:00Z" AND create_time <= "2026-01-31T23:59:59Z"`). If filtering by
+             * `create_time`, you must specify both a start time and an end time. If `create_time`
+             * is not specified, the query defaults to the past 30 days.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -3764,39 +3840,51 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, server will pick an appropriate default.
+             * Optional. Requested page size. The server might return fewer items than requested. If
+             * unspecified, the server picks an appropriate default.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-           will pick an appropriate default.
+            /** Optional. Requested page size. The server might return fewer items than requested. If unspecified,
+           the server picks an appropriate default.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, server will pick an appropriate default.
+             * Optional. Requested page size. The server might return fewer items than requested. If
+             * unspecified, the server picks an appropriate default.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Optional. A token identifying a page of results the server should return. */
+            /**
+             * Optional. A page token, received from a previous `ListWildfireVerdictChangeRequests`
+             * call. Provide this to retrieve the subsequent page. When paginating, all other
+             * parameters provided to `ListWildfireVerdictChangeRequests` must match the call that
+             * provided the page token.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A token identifying a page of results the server should return.
+            /** Optional. A page token, received from a previous `ListWildfireVerdictChangeRequests` call. Provide
+           this to retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListWildfireVerdictChangeRequests` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Optional. A token identifying a page of results the server should return. */
+            /**
+             * Optional. A page token, received from a previous `ListWildfireVerdictChangeRequests`
+             * call. Provide this to retrieve the subsequent page. When paginating, all other
+             * parameters provided to `ListWildfireVerdictChangeRequests` must match the call that
+             * provided the page token.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -4492,15 +4580,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class SecurityProfileGroups {
 
         /**
-         * Creates a new SecurityProfileGroup in a given organization and location.
+         * Creates a new security profile group in a given organization and location.
          *
          * Create a request for the method "securityProfileGroups.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the SecurityProfileGroup. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+         * @param parent Required. The parent resource of the `SecurityProfileGroup`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
          * @return the request
          */
@@ -4518,7 +4607,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new SecurityProfileGroup in a given organization and location.
+           * Creates a new security profile group in a given organization and location.
            *
            * Create a request for the method "securityProfileGroups.create".
            *
@@ -4528,8 +4617,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the SecurityProfileGroup. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+           * @param parent Required. The parent resource of the `SecurityProfileGroup`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
            * @since 1.13
            */
@@ -4599,22 +4689,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource of the SecurityProfileGroup. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfileGroup`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the SecurityProfileGroup. Must be in the format
-         `projects|organizations/locations/{location}`.
+          /** Required. The parent resource of the `SecurityProfileGroup`. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the SecurityProfileGroup. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfileGroup`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -4627,25 +4719,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Short name of the SecurityProfileGroup resource to be created. This value
-           * should be 1-63 characters long, containing only letters, numbers, hyphens, and
-           * underscores, and should not start with a number. E.g. "security_profile_group1".
+           * Required. Short name of the `SecurityProfileGroup` resource to be created. This value
+           * must be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens,
+           * and must not start with a number. For example, `security-profile-group1`.
            */
           @com.google.api.client.util.Key
           private java.lang.String securityProfileGroupId;
 
-          /** Required. Short name of the SecurityProfileGroup resource to be created. This value should be 1-63
-         characters long, containing only letters, numbers, hyphens, and underscores, and should not start
-         with a number. E.g. "security_profile_group1".
+          /** Required. Short name of the `SecurityProfileGroup` resource to be created. This value must be 1 to
+         63 characters long, contain only lowercase letters, numbers, and hyphens, and must not start with a
+         number. For example, `security-profile-group1`.
            */
           public java.lang.String getSecurityProfileGroupId() {
             return securityProfileGroupId;
           }
 
           /**
-           * Required. Short name of the SecurityProfileGroup resource to be created. This value
-           * should be 1-63 characters long, containing only letters, numbers, hyphens, and
-           * underscores, and should not start with a number. E.g. "security_profile_group1".
+           * Required. Short name of the `SecurityProfileGroup` resource to be created. This value
+           * must be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens,
+           * and must not start with a number. For example, `security-profile-group1`.
            */
           public Create setSecurityProfileGroupId(java.lang.String securityProfileGroupId) {
             this.securityProfileGroupId = securityProfileGroupId;
@@ -4658,16 +4750,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single SecurityProfileGroup.
+         * Deletes a single security profile group.
          *
          * Create a request for the method "securityProfileGroups.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfileGroup to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+         * @param name Required. The name of the `SecurityProfileGroup` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -4684,7 +4777,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/securityProfileGroups/[^/]+$");
 
           /**
-           * Deletes a single SecurityProfileGroup.
+           * Deletes a single security profile group.
            *
            * Create a request for the method "securityProfileGroups.delete".
            *
@@ -4694,9 +4787,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfileGroup to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+           * @param name Required. The name of the `SecurityProfileGroup` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -4765,22 +4859,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to delete. Must be in the format `projects
-           * |organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to delete. Format: `organizations/{org
+           * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or `pro
+           * jects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfileGroup to delete. Must be in the format
-         `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+          /** Required. The name of the `SecurityProfileGroup` to delete. Format:
+         `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+         or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to delete. Must be in the format `projects
-           * |organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to delete. Format: `organizations/{org
+           * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or `pro
+           * jects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4793,21 +4890,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. If client provided etag is out of date, delete will return FAILED_PRECONDITION error.
+          /** Optional. If the client-provided `etag` is out of date, the delete request returns an `ABORTED`
+         error.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -4820,16 +4918,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single SecurityProfileGroup.
+         * Gets details of a single security profile group.
          *
          * Create a request for the method "securityProfileGroups.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfileGroup to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+         * @param name Required. The name of the `SecurityProfileGroup` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -4846,7 +4945,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/securityProfileGroups/[^/]+$");
 
           /**
-           * Gets details of a single SecurityProfileGroup.
+           * Gets details of a single security profile group.
            *
            * Create a request for the method "securityProfileGroups.get".
            *
@@ -4855,9 +4954,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfileGroup to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+           * @param name Required. The name of the `SecurityProfileGroup` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -4936,22 +5036,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to get. Must be in the format `projects|or
-           * ganizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to get. Format: `organizations/{organi
+           * zation}/locations/{location}/securityProfileGroups/{security_profile_group}` or `projec
+           * ts/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfileGroup to get. Must be in the format
-         `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+          /** Required. The name of the `SecurityProfileGroup` to get. Format:
+         `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+         or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to get. Must be in the format `projects|or
-           * ganizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to get. Format: `organizations/{organi
+           * zation}/locations/{location}/securityProfileGroups/{security_profile_group}` or `projec
+           * ts/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -4969,15 +5072,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists SecurityProfileGroups in a given organization and location.
+         * Lists security profile group resources in a given organization and location.
          *
          * Create a request for the method "securityProfileGroups.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project or organization and location from which the SecurityProfileGroups should be
-         *        listed, specified in the format `projects|organizations/locations/{location}`.
+         * @param parent Required. The project or organization and location from which the `SecurityProfileGroup` resources
+         *        are listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -4994,7 +5098,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists SecurityProfileGroups in a given organization and location.
+           * Lists security profile group resources in a given organization and location.
            *
            * Create a request for the method "securityProfileGroups.list".
            *
@@ -5003,8 +5107,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project or organization and location from which the SecurityProfileGroups should be
-         *        listed, specified in the format `projects|organizations/locations/{location}`.
+           * @param parent Required. The project or organization and location from which the `SecurityProfileGroup` resources
+         *        are listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5083,24 +5188,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfileGroups
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the
+           * `SecurityProfileGroup` resources are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project or organization and location from which the SecurityProfileGroups should be
-         listed, specified in the format `projects|organizations/locations/{location}`.
+          /** Required. The project or organization and location from which the `SecurityProfileGroup` resources
+         are listed. Format: `organizations/{organization}/locations/{location}` or
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfileGroups
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the
+           * `SecurityProfileGroup` resources are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5112,42 +5220,54 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Maximum number of SecurityProfileGroups to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfileGroup` resources to return per call. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Maximum number of SecurityProfileGroups to return per call.
+          /** Optional. Maximum number of `SecurityProfileGroup` resources to return per call. The maximum value
+         is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks an appropriate
+         default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. Maximum number of SecurityProfileGroups to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfileGroup` resources to return per call. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates
-           * that this is a continuation of a prior `ListSecurityProfileGroups` call, and that the
-           * system should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfileGroups` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListSecurityProfileGroups` must match the call that provided the page
+           * token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates that this is
-         a continuation of a prior `ListSecurityProfileGroups` call, and that the system should return the
-         next page of data.
+          /** Optional. A page token, received from a previous `ListSecurityProfileGroups` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListSecurityProfileGroups` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates
-           * that this is a continuation of a prior `ListSecurityProfileGroups` call, and that the
-           * system should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfileGroups` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListSecurityProfileGroups` must match the call that provided the page
+           * token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -5160,16 +5280,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the parameters of a single SecurityProfileGroup.
+         * Updates the parameters of a single security profile group.
          *
          * Create a request for the method "securityProfileGroups.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+         * @param name Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
          * @return the request
          */
@@ -5187,7 +5308,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/securityProfileGroups/[^/]+$");
 
           /**
-           * Updates the parameters of a single SecurityProfileGroup.
+           * Updates the parameters of a single security profile group.
            *
            * Create a request for the method "securityProfileGroups.patch".
            *
@@ -5197,9 +5318,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+           * @param name Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
            * @since 1.13
            */
@@ -5269,24 +5391,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern `p
-           * rojects|organizations/locations/{location}/securityProfileGroups/{security_profile_grou
-           * p}`.
+           * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizati
+           * ons/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+           * or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_gro
+           * up}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-         `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+          /** Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format:
+         `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+         or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern `p
-           * rojects|organizations/locations/{location}/securityProfileGroups/{security_profile_grou
-           * p}`.
+           * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizati
+           * ons/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+           * or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_gro
+           * up}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5300,16 +5425,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfileGroup resource by the update. The fields specified in the update_mask
-           * are relative to the resource, not the full request. A field will be overwritten if it
-           * is in the mask.
+           * `SecurityProfileGroup` resource by the update. The fields specified in the
+           * `update_mask` are relative to the resource, not the full request. A field is
+           * overwritten if it is in the mask.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the SecurityProfileGroup
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it is in the mask.
+          /** Required. Field mask is used to specify the fields to be overwritten in the `SecurityProfileGroup`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -5317,9 +5442,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfileGroup resource by the update. The fields specified in the update_mask
-           * are relative to the resource, not the full request. A field will be overwritten if it
-           * is in the mask.
+           * `SecurityProfileGroup` resource by the update. The fields specified in the
+           * `update_mask` are relative to the resource, not the full request. A field is
+           * overwritten if it is in the mask.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -5354,15 +5479,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class SecurityProfiles {
 
         /**
-         * Creates a new SecurityProfile in a given organization and location.
+         * Creates a new security profile in a given organization and location.
          *
          * Create a request for the method "securityProfiles.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the SecurityProfile. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+         * @param parent Required. The parent resource of the `SecurityProfile`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
          * @return the request
          */
@@ -5380,7 +5506,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new SecurityProfile in a given organization and location.
+           * Creates a new security profile in a given organization and location.
            *
            * Create a request for the method "securityProfiles.create".
            *
@@ -5390,8 +5516,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the SecurityProfile. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+           * @param parent Required. The parent resource of the `SecurityProfile`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
            * @since 1.13
            */
@@ -5461,22 +5588,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource of the SecurityProfile. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfile`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the SecurityProfile. Must be in the format
-         `projects|organizations/locations/{location}`.
+          /** Required. The parent resource of the `SecurityProfile`. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the SecurityProfile. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfile`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5489,25 +5618,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Short name of the SecurityProfile resource to be created. This value should
-           * be 1-63 characters long, containing only letters, numbers, hyphens, and underscores,
-           * and should not start with a number. E.g. "security_profile1".
+           * Required. Short name of the `SecurityProfile` resource to be created. This value must
+           * be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens, and
+           * must not start with a number. For example, `security-profile1`.
            */
           @com.google.api.client.util.Key
           private java.lang.String securityProfileId;
 
-          /** Required. Short name of the SecurityProfile resource to be created. This value should be 1-63
-         characters long, containing only letters, numbers, hyphens, and underscores, and should not start
-         with a number. E.g. "security_profile1".
+          /** Required. Short name of the `SecurityProfile` resource to be created. This value must be 1 to 63
+         characters long, contain only lowercase letters, numbers, and hyphens, and must not start with a
+         number. For example, `security-profile1`.
            */
           public java.lang.String getSecurityProfileId() {
             return securityProfileId;
           }
 
           /**
-           * Required. Short name of the SecurityProfile resource to be created. This value should
-           * be 1-63 characters long, containing only letters, numbers, hyphens, and underscores,
-           * and should not start with a number. E.g. "security_profile1".
+           * Required. Short name of the `SecurityProfile` resource to be created. This value must
+           * be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens, and
+           * must not start with a number. For example, `security-profile1`.
            */
           public Create setSecurityProfileId(java.lang.String securityProfileId) {
             this.securityProfileId = securityProfileId;
@@ -5520,15 +5649,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single SecurityProfile.
+         * Deletes a single security profile.
          *
          * Create a request for the method "securityProfiles.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfile to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+         * @param name Required. The name of the `SecurityProfile` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -5545,7 +5675,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/securityProfiles/[^/]+$");
 
           /**
-           * Deletes a single SecurityProfile.
+           * Deletes a single security profile.
            *
            * Create a request for the method "securityProfiles.delete".
            *
@@ -5555,8 +5685,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfile to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * @param name Required. The name of the `SecurityProfile` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -5625,22 +5756,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfile to delete. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to delete. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfile to delete. Must be in the format
-         `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+          /** Required. The name of the `SecurityProfile` to delete. Format:
+         `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfile to delete. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to delete. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5653,21 +5787,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. If client provided etag is out of date, delete will return FAILED_PRECONDITION error.
+          /** Optional. If the client-provided `etag` is out of date, the delete request returns an `ABORTED`
+         error.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -5680,15 +5815,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single SecurityProfile.
+         * Gets details of a single security profile.
          *
          * Create a request for the method "securityProfiles.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfile to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+         * @param name Required. The name of the `SecurityProfile` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -5705,7 +5841,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/securityProfiles/[^/]+$");
 
           /**
-           * Gets details of a single SecurityProfile.
+           * Gets details of a single security profile.
            *
            * Create a request for the method "securityProfiles.get".
            *
@@ -5714,8 +5850,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfile to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * @param name Required. The name of the `SecurityProfile` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -5794,22 +5931,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfile to get. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to get. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfile to get. Must be in the format
-         `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+          /** Required. The name of the `SecurityProfile` to get. Format:
+         `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfile to get. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to get. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -5827,15 +5967,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists SecurityProfiles in a given organization and location.
+         * Lists security profile resources in a given organization and location.
          *
          * Create a request for the method "securityProfiles.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project or organization and location from which the SecurityProfiles should be listed,
-         *        specified in the format `projects|organizations/locations/{location}`.
+         * @param parent Required. The project or organization and location from which the `SecurityProfile` resources are
+         *        listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -5852,7 +5993,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists SecurityProfiles in a given organization and location.
+           * Lists security profile resources in a given organization and location.
            *
            * Create a request for the method "securityProfiles.list".
            *
@@ -5861,8 +6002,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project or organization and location from which the SecurityProfiles should be listed,
-         *        specified in the format `projects|organizations/locations/{location}`.
+           * @param parent Required. The project or organization and location from which the `SecurityProfile` resources are
+         *        listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -5941,24 +6083,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfiles
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the `SecurityProfile`
+           * resources are listed. Format: `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project or organization and location from which the SecurityProfiles should be
-         listed, specified in the format `projects|organizations/locations/{location}`.
+          /** Required. The project or organization and location from which the `SecurityProfile` resources are
+         listed. Format: `organizations/{organization}/locations/{location}` or
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfiles
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the `SecurityProfile`
+           * resources are listed. Format: `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -5970,42 +6113,52 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Maximum number of SecurityProfiles to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfile` resources to return per call. The maximum
+           * value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks
+           * an appropriate default.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Maximum number of SecurityProfiles to return per call.
+          /** Optional. Maximum number of `SecurityProfile` resources to return per call. The maximum value is
+         1000; values above 1000 are coerced to 1000. If unspecified, the server picks an appropriate
+         default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. Maximum number of SecurityProfiles to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfile` resources to return per call. The maximum
+           * value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks
+           * an appropriate default.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that
-           * this is a continuation of a prior `ListSecurityProfiles` call, and that the system
-           * should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSecurityProfiles` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that this is a
-         continuation of a prior `ListSecurityProfiles` call, and that the system should return the next
-         page of data.
+          /** Optional. A page token, received from a previous `ListSecurityProfiles` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListSecurityProfiles` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that
-           * this is a continuation of a prior `ListSecurityProfiles` call, and that the system
-           * should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSecurityProfiles` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -6018,15 +6171,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the parameters of a single SecurityProfile.
+         * Updates the parameters of a single security profile.
          *
          * Create a request for the method "securityProfiles.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+         * @param name Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
          * @return the request
          */
@@ -6044,7 +6198,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^organizations/[^/]+/locations/[^/]+/securityProfiles/[^/]+$");
 
           /**
-           * Updates the parameters of a single SecurityProfile.
+           * Updates the parameters of a single security profile.
            *
            * Create a request for the method "securityProfiles.patch".
            *
@@ -6054,8 +6208,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+           * @param name Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
            * @since 1.13
            */
@@ -6125,22 +6280,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+           * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-         `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+          /** Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+         `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+           * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -6154,16 +6312,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfile resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask.
+           * `SecurityProfile` resource by the update. The fields specified in the `update_mask` are
+           * relative to the resource, not the full request. A field is overwritten if it is in the
+           * mask.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the SecurityProfile
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it is in the mask.
+          /** Required. Field mask is used to specify the fields to be overwritten in the `SecurityProfile`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -6171,9 +6329,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfile resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask.
+           * `SecurityProfile` resource by the update. The fields specified in the `update_mask` are
+           * relative to the resource, not the full request. A field is overwritten if it is in the
+           * mask.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -14506,14 +14664,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class FirewallEndpointAssociations {
 
         /**
-         * Creates a new FirewallEndpointAssociation in a given project and location.
+         * Creates a new firewall endpoint association in a given project and location.
          *
          * Create a request for the method "firewallEndpointAssociations.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource where this firewall endpoint association is created. Format:
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpointAssociation}
          * @return the request
          */
@@ -14531,7 +14690,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new FirewallEndpointAssociation in a given project and location.
+           * Creates a new firewall endpoint association in a given project and location.
            *
            * Create a request for the method "firewallEndpointAssociations.create".
            *
@@ -14541,7 +14700,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource where this firewall endpoint association is created. Format:
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpointAssociation}
            * @since 1.13
            */
@@ -14610,17 +14770,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. The parent resource where this firewall endpoint association is created.
+           * Format: `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource where this firewall endpoint association is created. Format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. The parent resource where this firewall endpoint association is created.
+           * Format: `projects/{project}/locations/{location}`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -14632,22 +14799,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. Id of the requesting object. If auto-generating Id server-side, remove this
-           * field and firewall_endpoint_association_id from the method_signature of Create RPC.
+           * Optional. The ID to use for the firewall endpoint association, which becomes the final
+           * component of the association's resource name. This value must be 1-63 characters long,
+           * start with a lowercase letter, contain only lowercase letters, numbers, and hyphens,
+           * and cannot end with a hyphen.
            */
           @com.google.api.client.util.Key
           private java.lang.String firewallEndpointAssociationId;
 
-          /** Optional. Id of the requesting object. If auto-generating Id server-side, remove this field and
-         firewall_endpoint_association_id from the method_signature of Create RPC.
+          /** Optional. The ID to use for the firewall endpoint association, which becomes the final component of
+         the association's resource name. This value must be 1-63 characters long, start with a lowercase
+         letter, contain only lowercase letters, numbers, and hyphens, and cannot end with a hyphen.
            */
           public java.lang.String getFirewallEndpointAssociationId() {
             return firewallEndpointAssociationId;
           }
 
           /**
-           * Optional. Id of the requesting object. If auto-generating Id server-side, remove this
-           * field and firewall_endpoint_association_id from the method_signature of Create RPC.
+           * Optional. The ID to use for the firewall endpoint association, which becomes the final
+           * component of the association's resource name. This value must be 1-63 characters long,
+           * start with a lowercase letter, contain only lowercase letters, numbers, and hyphens,
+           * and cannot end with a hyphen.
            */
           public Create setFirewallEndpointAssociationId(java.lang.String firewallEndpointAssociationId) {
             this.firewallEndpointAssociationId = firewallEndpointAssociationId;
@@ -14656,26 +14828,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -14683,14 +14855,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -14703,14 +14875,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single FirewallEndpointAssociation.
+         * Deletes a single firewall endpoint association.
          *
          * Create a request for the method "firewallEndpointAssociations.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The name of the resource.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -14727,7 +14899,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpointAssociations/[^/]+$");
 
           /**
-           * Deletes a single FirewallEndpointAssociation.
+           * Deletes a single firewall endpoint association.
            *
            * Create a request for the method "firewallEndpointAssociations.delete".
            *
@@ -14737,7 +14909,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The name of the resource.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -14805,17 +14977,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -14828,26 +15000,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes after the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -14855,14 +15027,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -14875,14 +15047,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single FirewallEndpointAssociation.
+         * Gets details of a single firewall endpoint association.
          *
          * Create a request for the method "firewallEndpointAssociations.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The name of the resource.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -14899,7 +15071,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpointAssociations/[^/]+$");
 
           /**
-           * Gets details of a single FirewallEndpointAssociation.
+           * Gets details of a single firewall endpoint association.
            *
            * Create a request for the method "firewallEndpointAssociations.get".
            *
@@ -14908,7 +15080,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The name of the resource.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -14986,17 +15158,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15013,14 +15185,15 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists Associations in a given project and location.
+         * Lists associations in a given project and location.
          *
          * Create a request for the method "firewallEndpointAssociations.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListAssociationsRequest
+         * @param parent Required. The parent resource from which the firewall endpoint associations are listed. Format:
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -15037,7 +15210,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists Associations in a given project and location.
+           * Lists associations in a given project and location.
            *
            * Create a request for the method "firewallEndpointAssociations.list".
            *
@@ -15046,7 +15219,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListAssociationsRequest
+           * @param parent Required. The parent resource from which the firewall endpoint associations are listed. Format:
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -15124,17 +15298,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListAssociationsRequest */
+          /**
+           * Required. The parent resource from which the firewall endpoint associations are listed.
+           * Format: `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListAssociationsRequest
+          /** Required. The parent resource from which the firewall endpoint associations are listed. Format:
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListAssociationsRequest */
+          /**
+           * Required. The parent resource from which the firewall endpoint associations are listed.
+           * Format: `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15145,72 +15326,85 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Hint for how to order the results */
+          /** Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Hint for how to order the results
+          /** Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Hint for how to order the results */
+          /** Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. Requested page size. The server might return fewer items than requested. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+          /** Optional. Requested page size. The server might return fewer items than requested. The maximum
+         value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks an
+         appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. Requested page size. The server might return fewer items than requested. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** A token identifying a page of results the server should return. */
+          /**
+           * A page token, received from a previous `ListFirewallEndpointAssociations` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFirewallEndpointAssociations` must match the call that provided the page token.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
+          /** A page token, received from a previous `ListFirewallEndpointAssociations` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListFirewallEndpointAssociations` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** A token identifying a page of results the server should return. */
+          /**
+           * A page token, received from a previous `ListFirewallEndpointAssociations` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFirewallEndpointAssociations` must match the call that provided the page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -15222,14 +15416,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Update a single FirewallEndpointAssociation.
+         * Updates a single firewall endpoint association.
          *
          * Create a request for the method "firewallEndpointAssociations.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. name of resource
+         * @param name Immutable. Identifier. The name of the resource.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpointAssociation}
          * @return the request
          */
@@ -15247,7 +15441,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpointAssociations/[^/]+$");
 
           /**
-           * Update a single FirewallEndpointAssociation.
+           * Updates a single firewall endpoint association.
            *
            * Create a request for the method "firewallEndpointAssociations.patch".
            *
@@ -15257,7 +15451,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. name of resource
+           * @param name Immutable. Identifier. The name of the resource.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpointAssociation}
            * @since 1.13
            */
@@ -15326,17 +15520,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. name of resource */
+          /** Immutable. Identifier. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. name of resource
+          /** Immutable. Identifier. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. name of resource */
+          /** Immutable. Identifier. The name of the resource. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15349,26 +15543,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -15376,14 +15570,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -15391,28 +15585,30 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Association
-           * resource by the update. The fields specified in the update_mask are relative to the
-           * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask used to specify the fields to be overwritten in the
+           * `FirewallEndpointAssociation` resource by the update. The fields specified in the
+           * `update_mask` are relative to the resource, not the full request. A field is
+           * overwritten if it is in the mask. If the user does not provide a mask, then all fields
+           * present in the request are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the Association resource by
-         the update. The fields specified in the update_mask are relative to the resource, not the full
-         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
-         all fields will be overwritten.
+          /** Required. Field mask used to specify the fields to be overwritten in the
+         `FirewallEndpointAssociation` resource by the update. The fields specified in the `update_mask` are
+         relative to the resource, not the full request. A field is overwritten if it is in the mask. If the
+         user does not provide a mask, then all fields present in the request are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Association
-           * resource by the update. The fields specified in the update_mask are relative to the
-           * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask used to specify the fields to be overwritten in the
+           * `FirewallEndpointAssociation` resource by the update. The fields specified in the
+           * `update_mask` are relative to the resource, not the full request. A field is
+           * overwritten if it is in the mask. If the user does not provide a mask, then all fields
+           * present in the request are overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -15447,14 +15643,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class FirewallEndpoints {
 
         /**
-         * Creates a new FirewallEndpoint in a given project and location.
+         * Creates a new firewall endpoint in a given project and location.
          *
          * Create a request for the method "firewallEndpoints.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Value for parent.
+         * @param parent Required. The parent resource where this firewall endpoint is created. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
          * @return the request
          */
@@ -15472,7 +15670,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new FirewallEndpoint in a given project and location.
+           * Creates a new firewall endpoint in a given project and location.
            *
            * Create a request for the method "firewallEndpoints.create".
            *
@@ -15482,7 +15680,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Value for parent.
+           * @param parent Required. The parent resource where this firewall endpoint is created. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
            * @since 1.13
            */
@@ -15551,17 +15751,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Create) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. The parent resource where this firewall endpoint is created. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Value for parent.
+          /** Required. The parent resource where this firewall endpoint is created. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Value for parent. */
+          /**
+           * Required. The parent resource where this firewall endpoint is created. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -15573,22 +15782,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Id of the requesting object. If auto-generating Id server-side, remove this
-           * field and firewall_endpoint_id from the method_signature of Create RPC.
+           * Required. The ID to use for the firewall endpoint, which becomes the final component of
+           * the endpoint's resource name. This value must be 1-63 characters long, start with a
+           * lowercase letter, contain only lowercase letters, numbers, and hyphens, and cannot end
+           * with a hyphen.
            */
           @com.google.api.client.util.Key
           private java.lang.String firewallEndpointId;
 
-          /** Required. Id of the requesting object. If auto-generating Id server-side, remove this field and
-         firewall_endpoint_id from the method_signature of Create RPC.
+          /** Required. The ID to use for the firewall endpoint, which becomes the final component of the
+         endpoint's resource name. This value must be 1-63 characters long, start with a lowercase letter,
+         contain only lowercase letters, numbers, and hyphens, and cannot end with a hyphen.
            */
           public java.lang.String getFirewallEndpointId() {
             return firewallEndpointId;
           }
 
           /**
-           * Required. Id of the requesting object. If auto-generating Id server-side, remove this
-           * field and firewall_endpoint_id from the method_signature of Create RPC.
+           * Required. The ID to use for the firewall endpoint, which becomes the final component of
+           * the endpoint's resource name. This value must be 1-63 characters long, start with a
+           * lowercase letter, contain only lowercase letters, numbers, and hyphens, and cannot end
+           * with a hyphen.
            */
           public Create setFirewallEndpointId(java.lang.String firewallEndpointId) {
             this.firewallEndpointId = firewallEndpointId;
@@ -15597,26 +15811,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -15624,14 +15838,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Create setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -15639,21 +15853,21 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If set, validate the request and preview the endpoint, but do not actually
-           * create it.
+           * Optional. If set, validates the request and previews the endpoint, but does not
+           * actually create it.
            */
           @com.google.api.client.util.Key
           private java.lang.Boolean validateOnly;
 
-          /** Optional. If set, validate the request and preview the endpoint, but do not actually create it.
+          /** Optional. If set, validates the request and previews the endpoint, but does not actually create it.
            */
           public java.lang.Boolean getValidateOnly() {
             return validateOnly;
           }
 
           /**
-           * Optional. If set, validate the request and preview the endpoint, but do not actually
-           * create it.
+           * Optional. If set, validates the request and previews the endpoint, but does not
+           * actually create it.
            */
           public Create setValidateOnly(java.lang.Boolean validateOnly) {
             this.validateOnly = validateOnly;
@@ -15666,14 +15880,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single project Endpoint.
+         * Deletes a single project endpoint.
          *
          * Create a request for the method "firewallEndpoints.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The name of the resource.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -15690,7 +15904,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Deletes a single project Endpoint.
+           * Deletes a single project endpoint.
            *
            * Create a request for the method "firewallEndpoints.delete".
            *
@@ -15700,7 +15914,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The name of the resource.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -15768,17 +15982,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Delete) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15791,26 +16005,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes after the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes after the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -15818,14 +16032,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * after the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes after the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Delete setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -15838,14 +16052,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single project Endpoint.
+         * Gets details of a single project endpoint.
          *
          * Create a request for the method "firewallEndpoints.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. Name of the resource
+         * @param name Required. The name of the resource.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -15862,7 +16076,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Gets details of a single project Endpoint.
+           * Gets details of a single project endpoint.
            *
            * Create a request for the method "firewallEndpoints.get".
            *
@@ -15871,7 +16085,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. Name of the resource
+           * @param name Required. The name of the resource.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -15949,17 +16163,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Get) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. Name of the resource
+          /** Required. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Required. Name of the resource */
+          /** Required. The name of the resource. */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -15976,14 +16190,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists FirewallEndpoints in a given project and location.
+         * Lists firewall endpoints in a given project and location.
          *
          * Create a request for the method "firewallEndpoints.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. Parent value for ListEndpointsRequest
+         * @param parent Required. The parent resource from which the firewall endpoints are listed. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16000,7 +16216,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists FirewallEndpoints in a given project and location.
+           * Lists firewall endpoints in a given project and location.
            *
            * Create a request for the method "firewallEndpoints.list".
            *
@@ -16009,7 +16225,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. Parent value for ListEndpointsRequest
+           * @param parent Required. The parent resource from which the firewall endpoints are listed. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16087,17 +16305,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (List) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Required. Parent value for ListEndpointsRequest */
+          /**
+           * Required. The parent resource from which the firewall endpoints are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. Parent value for ListEndpointsRequest
+          /** Required. The parent resource from which the firewall endpoints are listed. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
-          /** Required. Parent value for ListEndpointsRequest */
+          /**
+           * Required. The parent resource from which the firewall endpoints are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
+           */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
@@ -16108,72 +16335,85 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           @com.google.api.client.util.Key
           private java.lang.String filter;
 
-          /** Optional. Filtering results
+          /** Optional. Filtering results.
            */
           public java.lang.String getFilter() {
             return filter;
           }
 
-          /** Optional. Filtering results */
+          /** Optional. Filtering results. */
           public List setFilter(java.lang.String filter) {
             this.filter = filter;
             return this;
           }
 
-          /** Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           @com.google.api.client.util.Key
           private java.lang.String orderBy;
 
-          /** Hint for how to order the results
+          /** Optional. Hint for how to order the results.
            */
           public java.lang.String getOrderBy() {
             return orderBy;
           }
 
-          /** Hint for how to order the results */
+          /** Optional. Hint for how to order the results. */
           public List setOrderBy(java.lang.String orderBy) {
             this.orderBy = orderBy;
             return this;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. Requested page size. The server might return fewer items than requested. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-         will pick an appropriate default.
+          /** Optional. Requested page size. The server might return fewer items than requested. The maximum
+         value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks an
+         appropriate default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
           /**
-           * Optional. Requested page size. Server may return fewer items than requested. If
-           * unspecified, server will pick an appropriate default.
+           * Optional. Requested page size. The server might return fewer items than requested. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
-          /** A token identifying a page of results the server should return. */
+          /**
+           * A page token, received from a previous `ListFirewallEndpoints` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFirewallEndpoints` must match the call that provided the page token.
+           */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** A token identifying a page of results the server should return.
+          /** A page token, received from a previous `ListFirewallEndpoints` call. Provide this to retrieve the
+         subsequent page. When paginating, all other parameters provided to `ListFirewallEndpoints` must
+         match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
-          /** A token identifying a page of results the server should return. */
+          /**
+           * A page token, received from a previous `ListFirewallEndpoints` call. Provide this to
+           * retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListFirewallEndpoints` must match the call that provided the page token.
+           */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
             return this;
@@ -16185,14 +16425,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Update a single project Endpoint.
+         * Updates a single project endpoint.
          *
          * Create a request for the method "firewallEndpoints.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Name of resource.
+         * @param name Immutable. Identifier. The name of the resource.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
          * @return the request
          */
@@ -16210,7 +16450,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
           /**
-           * Update a single project Endpoint.
+           * Updates a single project endpoint.
            *
            * Create a request for the method "firewallEndpoints.patch".
            *
@@ -16220,7 +16460,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Name of resource.
+           * @param name Immutable. Identifier. The name of the resource.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.FirewallEndpoint}
            * @since 1.13
            */
@@ -16289,17 +16529,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return (Patch) super.setUploadProtocol(uploadProtocol);
           }
 
-          /** Immutable. Identifier. Name of resource. */
+          /** Immutable. Identifier. The name of the resource. */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Name of resource.
+          /** Immutable. Identifier. The name of the resource.
            */
           public java.lang.String getName() {
             return name;
           }
 
-          /** Immutable. Identifier. Name of resource. */
+          /** Immutable. Identifier. The name of the resource. */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
               com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
@@ -16312,26 +16552,26 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           @com.google.api.client.util.Key
           private java.lang.String requestId;
 
           /** Optional. An optional request ID to identify requests. Specify a unique request ID so that if you
-         must retry your request, the server will know to ignore the request if it has already been
-         completed. The server will guarantee that for at least 60 minutes since the first request. For
-         example, consider a situation where you make an initial request and the request times out. If you
-         make the request again with the same request ID, the server can check if original operation with
-         the same request ID was received, and if so, will ignore the second request. This prevents clients
-         from accidentally creating duplicate commitments. The request ID must be a valid UUID with the
-         exception that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+         must retry your request, the server knows to ignore the request if it has already been completed.
+         The server guarantees that for at least 60 minutes since the first request. For example, consider a
+         situation where you make an initial request and the request times out. If you make the request
+         again with the same request ID, the server can check if the original operation with the same
+         request ID was received, and if so, ignores the second request. This prevents clients from
+         accidentally creating duplicate commitments. The request ID must be a valid UUID with the exception
+         that zero UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public java.lang.String getRequestId() {
             return requestId;
@@ -16339,14 +16579,14 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. An optional request ID to identify requests. Specify a unique request ID so
-           * that if you must retry your request, the server will know to ignore the request if it
-           * has already been completed. The server will guarantee that for at least 60 minutes
-           * since the first request. For example, consider a situation where you make an initial
-           * request and the request times out. If you make the request again with the same request
-           * ID, the server can check if original operation with the same request ID was received,
-           * and if so, will ignore the second request. This prevents clients from accidentally
-           * creating duplicate commitments. The request ID must be a valid UUID with the exception
-           * that zero UUID is not supported (00000000-0000-0000-0000-000000000000).
+           * that if you must retry your request, the server knows to ignore the request if it has
+           * already been completed. The server guarantees that for at least 60 minutes since the
+           * first request. For example, consider a situation where you make an initial request and
+           * the request times out. If you make the request again with the same request ID, the
+           * server can check if the original operation with the same request ID was received, and
+           * if so, ignores the second request. This prevents clients from accidentally creating
+           * duplicate commitments. The request ID must be a valid UUID with the exception that zero
+           * UUID is not supported (`00000000-0000-0000-0000-000000000000`).
            */
           public Patch setRequestId(java.lang.String requestId) {
             this.requestId = requestId;
@@ -16354,28 +16594,30 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Endpoint
-           * resource by the update. The fields specified in the update_mask are relative to the
-           * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask used to specify the fields to be overwritten in the
+           * `FirewallEndpoint` resource by the update. The fields specified in the `update_mask`
+           * are relative to the resource, not the full request. A field is overwritten if it is in
+           * the mask. If the user does not provide a mask, then all fields present in the request
+           * are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the Endpoint resource by
-         the update. The fields specified in the update_mask are relative to the resource, not the full
-         request. A field will be overwritten if it is in the mask. If the user does not provide a mask then
-         all fields will be overwritten.
+          /** Required. Field mask used to specify the fields to be overwritten in the `FirewallEndpoint`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask. If the user does not provide a mask,
+         then all fields present in the request are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
           }
 
           /**
-           * Required. Field mask is used to specify the fields to be overwritten in the Endpoint
-           * resource by the update. The fields specified in the update_mask are relative to the
-           * resource, not the full request. A field will be overwritten if it is in the mask. If
-           * the user does not provide a mask then all fields will be overwritten.
+           * Required. Field mask used to specify the fields to be overwritten in the
+           * `FirewallEndpoint` resource by the update. The fields specified in the `update_mask`
+           * are relative to the resource, not the full request. A field is overwritten if it is in
+           * the mask. If the user does not provide a mask, then all fields present in the request
+           * are overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -16409,16 +16651,18 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
         public class WildfireVerdictChangeRequests {
 
           /**
-           * Create WildfireVerdictChangeRequest in a given Firewall Endpoint in a project and location.
+           * Creates an Advanced malware sandbox verdict change request in a given firewall endpoint in a
+           * project and location.
            *
            * Create a request for the method "wildfireVerdictChangeRequests.create".
            *
            * This request holds the parameters needed by the networksecurity server.  After setting any
            * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+           * @param parent Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.WildfireVerdictChangeRequest}
            * @return the request
            */
@@ -16436,7 +16680,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
             /**
-             * Create WildfireVerdictChangeRequest in a given Firewall Endpoint in a project and location.
+             * Creates an Advanced malware sandbox verdict change request in a given firewall endpoint in a
+             * project and location.
              *
              * Create a request for the method "wildfireVerdictChangeRequests.create".
              *
@@ -16446,9 +16691,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
              * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
              * be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+             * @param parent Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.WildfireVerdictChangeRequest}
              * @since 1.13
              */
@@ -16518,25 +16764,28 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a firewall
-           endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{location}/fi
-           rewallEndpoints/{firewall_endpoint}
+            /** Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is a firewall
+           endpoint resource. Format:
+           `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}` or
+           `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Parent value for CreateWildfireVerdictChangeRequestRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `CreateWildfireVerdictChangeRequestRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public Create setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -16554,18 +16803,20 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Get WildfireVerdictChangeRequest in a given Firewall Endpoint in a project and location.
+           * Gets an Advanced malware sandbox verdict change request in a given firewall endpoint in a project
+           * and location.
            *
            * Create a request for the method "wildfireVerdictChangeRequests.get".
            *
            * This request holds the parameters needed by the networksecurity server.  After setting any
            * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
            *
-           * @param name Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations|projects/{proj
-           *        ect_or_organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVe
-           *        rdictChangeRequests/{wildfire_verdict_change_request_id} Where
-           *        {wildfire_verdict_change_request_id} is the ID in the format:
-           *        ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+           * @param name Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organizations/{organi
+           *        zation}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+           *        quests/{wildfire_verdict_change_request_id}` or `projects/{project}/locations/{location}/f
+           *        irewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_chang
+           *        e_request_id}`. Where `{wildfire_verdict_change_request_id}` is an ID in the format
+           *        `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
            * @return the request
            */
           public Get get(java.lang.String name) throws java.io.IOException {
@@ -16582,7 +16833,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+/wildfireVerdictChangeRequests/[^/]+$");
 
             /**
-             * Get WildfireVerdictChangeRequest in a given Firewall Endpoint in a project and location.
+             * Gets an Advanced malware sandbox verdict change request in a given firewall endpoint in a
+             * project and location.
              *
              * Create a request for the method "wildfireVerdictChangeRequests.get".
              *
@@ -16591,11 +16843,12 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
              * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param name Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations|projects/{proj
-           *        ect_or_organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVe
-           *        rdictChangeRequests/{wildfire_verdict_change_request_id} Where
-           *        {wildfire_verdict_change_request_id} is the ID in the format:
-           *        ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+             * @param name Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organizations/{organi
+           *        zation}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+           *        quests/{wildfire_verdict_change_request_id}` or `projects/{project}/locations/{location}/f
+           *        irewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_chang
+           *        e_request_id}`. Where `{wildfire_verdict_change_request_id}` is an ID in the format
+           *        `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              * @since 1.13
              */
             protected Get(java.lang.String name) {
@@ -16674,30 +16927,36 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations
-             * |projects/{project_or_organization}/locations/{location}/firewallEndpoints/{firewall_
-             * endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_change_request_id} Where
-             * {wildfire_verdict_change_request_id} is the ID in the format:
-             * ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+             * Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organi
+             * zations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wil
+             * dfireVerdictChangeRequests/{wildfire_verdict_change_request_id}` or `projects/{projec
+             * t}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+             * quests/{wildfire_verdict_change_request_id}`. Where
+             * `{wildfire_verdict_change_request_id}` is an ID in the format
+             * `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              */
             @com.google.api.client.util.Key
             private java.lang.String name;
 
-            /** Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations|projects/{pro
-           ject_or_organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictCha
-           ngeRequests/{wildfire_verdict_change_request_id} Where {wildfire_verdict_change_request_id} is the
-           ID in the format: ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+            /** Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organizations/{organ
+           ization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRequests/{
+           wildfire_verdict_change_request_id}` or `projects/{project}/locations/{location}/firewallEndpoints/
+           {firewall_endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_change_request_id}`. Where
+           `{wildfire_verdict_change_request_id}` is an ID in the format
+           `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              */
             public java.lang.String getName() {
               return name;
             }
 
             /**
-             * Required. Name of the WildfireVerdictChangeRequest to retrieve. Format: organizations
-             * |projects/{project_or_organization}/locations/{location}/firewallEndpoints/{firewall_
-             * endpoint}/wildfireVerdictChangeRequests/{wildfire_verdict_change_request_id} Where
-             * {wildfire_verdict_change_request_id} is the ID in the format:
-             * ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$
+             * Required. The name of the `WildfireVerdictChangeRequest` to retrieve. Format: `organi
+             * zations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wil
+             * dfireVerdictChangeRequests/{wildfire_verdict_change_request_id}` or `projects/{projec
+             * t}/locations/{location}/firewallEndpoints/{firewall_endpoint}/wildfireVerdictChangeRe
+             * quests/{wildfire_verdict_change_request_id}`. Where
+             * `{wildfire_verdict_change_request_id}` is an ID in the format
+             * `^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$`.
              */
             public Get setName(java.lang.String name) {
               if (!getSuppressPatternChecks()) {
@@ -16715,16 +16974,18 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
           }
           /**
-           * Lists WildfireVerdictChangeRequests in a given Firewall Endpoint in a project and location.
+           * Lists the Advanced malware sandbox verdict change requests in a given firewall endpoint in a
+           * project and location.
            *
            * Create a request for the method "wildfireVerdictChangeRequests.list".
            *
            * This request holds the parameters needed by the networksecurity server.  After setting any
            * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
            *
-           * @param parent Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+           * @param parent Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
            * @return the request
            */
           public List list(java.lang.String parent) throws java.io.IOException {
@@ -16741,7 +17002,8 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
                 java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/firewallEndpoints/[^/]+$");
 
             /**
-             * Lists WildfireVerdictChangeRequests in a given Firewall Endpoint in a project and location.
+             * Lists the Advanced malware sandbox verdict change requests in a given firewall endpoint in a
+             * project and location.
              *
              * Create a request for the method "wildfireVerdictChangeRequests.list".
              *
@@ -16750,9 +17012,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
              * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
              * must be called to initialize this instance immediately after invoking the constructor. </p>
              *
-             * @param parent Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a firewall
-           *        endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{loc
-           *        ation}/firewallEndpoints/{firewall_endpoint}
+             * @param parent Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall
+           *        endpoint resource. Format:
+           *        `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}`
+           *        or `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              * @since 1.13
              */
             protected List(java.lang.String parent) {
@@ -16831,25 +17094,28 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             @com.google.api.client.util.Key
             private java.lang.String parent;
 
-            /** Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a firewall
-           endpoint resource. Format: organizations|projects/{project_or_organization}/locations/{location}/fi
-           rewallEndpoints/{firewall_endpoint}
+            /** Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is a firewall
+           endpoint resource. Format:
+           `organizations/{organization}/locations/{location}/firewallEndpoints/{firewall_endpoint}` or
+           `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public java.lang.String getParent() {
               return parent;
             }
 
             /**
-             * Required. Parent value for ListWildfireVerdictChangeRequestsRequest. The parent is a
-             * firewall endpoint resource. Format: organizations|projects/{project_or_organization}/
-             * locations/{location}/firewallEndpoints/{firewall_endpoint}
+             * Required. Parent value for `ListWildfireVerdictChangeRequestsRequest`. The parent is
+             * a firewall endpoint resource. Format: `organizations/{organization}/locations/{locati
+             * on}/firewallEndpoints/{firewall_endpoint}` or
+             * `projects/{project}/locations/{location}/firewallEndpoints/{firewall_endpoint}`.
              */
             public List setParent(java.lang.String parent) {
               if (!getSuppressPatternChecks()) {
@@ -16862,28 +17128,36 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Filter expression to filter the results. See AIP-160 for filtering syntax.
-             * Supported fields are: - `sha256` (string, equality only, e.g. `sha256 = "..."`) -
-             * `state` (enum, equality only, e.g. `state = "ACTIVE"`) - `create_time` (timestamp,
-             * comparisons, e.g. `create_time > "2026-01-01T00:00:00Z"`)
+             * Optional. Filter expression to filter the results. Supported fields are: - `sha256`
+             * (string, equality only, for example, `sha256 = "..."`) - `state` (enum, equality
+             * only, valid values are `OPEN`, `CLOSED`, or `PENDING`, for example, `state =
+             * "PENDING"`) - `create_time` (timestamp, comparisons, for example, `create_time >=
+             * "2026-01-01T00:00:00Z" AND create_time <= "2026-01-31T23:59:59Z"`). If filtering by
+             * `create_time`, you must specify both a start time and an end time. If `create_time`
+             * is not specified, the query defaults to the past 30 days.
              */
             @com.google.api.client.util.Key
             private java.lang.String filter;
 
-            /** Optional. Filter expression to filter the results. See AIP-160 for filtering syntax. Supported
-           fields are: - `sha256` (string, equality only, e.g. `sha256 = "..."`) - `state` (enum, equality
-           only, e.g. `state = "ACTIVE"`) - `create_time` (timestamp, comparisons, e.g. `create_time >
-           "2026-01-01T00:00:00Z"`)
+            /** Optional. Filter expression to filter the results. Supported fields are: - `sha256` (string,
+           equality only, for example, `sha256 = "..."`) - `state` (enum, equality only, valid values are
+           `OPEN`, `CLOSED`, or `PENDING`, for example, `state = "PENDING"`) - `create_time` (timestamp,
+           comparisons, for example, `create_time >= "2026-01-01T00:00:00Z" AND create_time <=
+           "2026-01-31T23:59:59Z"`). If filtering by `create_time`, you must specify both a start time and an
+           end time. If `create_time` is not specified, the query defaults to the past 30 days.
              */
             public java.lang.String getFilter() {
               return filter;
             }
 
             /**
-             * Optional. Filter expression to filter the results. See AIP-160 for filtering syntax.
-             * Supported fields are: - `sha256` (string, equality only, e.g. `sha256 = "..."`) -
-             * `state` (enum, equality only, e.g. `state = "ACTIVE"`) - `create_time` (timestamp,
-             * comparisons, e.g. `create_time > "2026-01-01T00:00:00Z"`)
+             * Optional. Filter expression to filter the results. Supported fields are: - `sha256`
+             * (string, equality only, for example, `sha256 = "..."`) - `state` (enum, equality
+             * only, valid values are `OPEN`, `CLOSED`, or `PENDING`, for example, `state =
+             * "PENDING"`) - `create_time` (timestamp, comparisons, for example, `create_time >=
+             * "2026-01-01T00:00:00Z" AND create_time <= "2026-01-31T23:59:59Z"`). If filtering by
+             * `create_time`, you must specify both a start time and an end time. If `create_time`
+             * is not specified, the query defaults to the past 30 days.
              */
             public List setFilter(java.lang.String filter) {
               this.filter = filter;
@@ -16891,39 +17165,51 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, server will pick an appropriate default.
+             * Optional. Requested page size. The server might return fewer items than requested. If
+             * unspecified, the server picks an appropriate default.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Optional. Requested page size. Server may return fewer items than requested. If unspecified, server
-           will pick an appropriate default.
+            /** Optional. Requested page size. The server might return fewer items than requested. If unspecified,
+           the server picks an appropriate default.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Optional. Requested page size. Server may return fewer items than requested. If
-             * unspecified, server will pick an appropriate default.
+             * Optional. Requested page size. The server might return fewer items than requested. If
+             * unspecified, the server picks an appropriate default.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
               return this;
             }
 
-            /** Optional. A token identifying a page of results the server should return. */
+            /**
+             * Optional. A page token, received from a previous `ListWildfireVerdictChangeRequests`
+             * call. Provide this to retrieve the subsequent page. When paginating, all other
+             * parameters provided to `ListWildfireVerdictChangeRequests` must match the call that
+             * provided the page token.
+             */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** Optional. A token identifying a page of results the server should return.
+            /** Optional. A page token, received from a previous `ListWildfireVerdictChangeRequests` call. Provide
+           this to retrieve the subsequent page. When paginating, all other parameters provided to
+           `ListWildfireVerdictChangeRequests` must match the call that provided the page token.
              */
             public java.lang.String getPageToken() {
               return pageToken;
             }
 
-            /** Optional. A token identifying a page of results the server should return. */
+            /**
+             * Optional. A page token, received from a previous `ListWildfireVerdictChangeRequests`
+             * call. Provide this to retrieve the subsequent page. When paginating, all other
+             * parameters provided to `ListWildfireVerdictChangeRequests` must match the call that
+             * provided the page token.
+             */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;
               return this;
@@ -29407,15 +29693,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class SecurityProfileGroups {
 
         /**
-         * Creates a new SecurityProfileGroup in a given project and location.
+         * Creates a new security profile group in a given project and location.
          *
          * Create a request for the method "securityProfileGroups.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the SecurityProfileGroup. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+         * @param parent Required. The parent resource of the `SecurityProfileGroup`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
          * @return the request
          */
@@ -29433,7 +29720,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new SecurityProfileGroup in a given project and location.
+           * Creates a new security profile group in a given project and location.
            *
            * Create a request for the method "securityProfileGroups.create".
            *
@@ -29443,8 +29730,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the SecurityProfileGroup. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+           * @param parent Required. The parent resource of the `SecurityProfileGroup`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
            * @since 1.13
            */
@@ -29514,22 +29802,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource of the SecurityProfileGroup. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfileGroup`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the SecurityProfileGroup. Must be in the format
-         `projects|organizations/locations/{location}`.
+          /** Required. The parent resource of the `SecurityProfileGroup`. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the SecurityProfileGroup. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfileGroup`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -29542,25 +29832,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Short name of the SecurityProfileGroup resource to be created. This value
-           * should be 1-63 characters long, containing only letters, numbers, hyphens, and
-           * underscores, and should not start with a number. E.g. "security_profile_group1".
+           * Required. Short name of the `SecurityProfileGroup` resource to be created. This value
+           * must be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens,
+           * and must not start with a number. For example, `security-profile-group1`.
            */
           @com.google.api.client.util.Key
           private java.lang.String securityProfileGroupId;
 
-          /** Required. Short name of the SecurityProfileGroup resource to be created. This value should be 1-63
-         characters long, containing only letters, numbers, hyphens, and underscores, and should not start
-         with a number. E.g. "security_profile_group1".
+          /** Required. Short name of the `SecurityProfileGroup` resource to be created. This value must be 1 to
+         63 characters long, contain only lowercase letters, numbers, and hyphens, and must not start with a
+         number. For example, `security-profile-group1`.
            */
           public java.lang.String getSecurityProfileGroupId() {
             return securityProfileGroupId;
           }
 
           /**
-           * Required. Short name of the SecurityProfileGroup resource to be created. This value
-           * should be 1-63 characters long, containing only letters, numbers, hyphens, and
-           * underscores, and should not start with a number. E.g. "security_profile_group1".
+           * Required. Short name of the `SecurityProfileGroup` resource to be created. This value
+           * must be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens,
+           * and must not start with a number. For example, `security-profile-group1`.
            */
           public Create setSecurityProfileGroupId(java.lang.String securityProfileGroupId) {
             this.securityProfileGroupId = securityProfileGroupId;
@@ -29573,16 +29863,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single SecurityProfileGroup.
+         * Deletes a single security profile group.
          *
          * Create a request for the method "securityProfileGroups.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfileGroup to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+         * @param name Required. The name of the `SecurityProfileGroup` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -29599,7 +29890,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityProfileGroups/[^/]+$");
 
           /**
-           * Deletes a single SecurityProfileGroup.
+           * Deletes a single security profile group.
            *
            * Create a request for the method "securityProfileGroups.delete".
            *
@@ -29609,9 +29900,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfileGroup to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+           * @param name Required. The name of the `SecurityProfileGroup` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -29680,22 +29972,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to delete. Must be in the format `projects
-           * |organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to delete. Format: `organizations/{org
+           * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or `pro
+           * jects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfileGroup to delete. Must be in the format
-         `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+          /** Required. The name of the `SecurityProfileGroup` to delete. Format:
+         `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+         or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to delete. Must be in the format `projects
-           * |organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to delete. Format: `organizations/{org
+           * anization}/locations/{location}/securityProfileGroups/{security_profile_group}` or `pro
+           * jects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -29708,21 +30003,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. If client provided etag is out of date, delete will return FAILED_PRECONDITION error.
+          /** Optional. If the client-provided `etag` is out of date, the delete request returns an `ABORTED`
+         error.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -29735,16 +30031,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single SecurityProfileGroup.
+         * Gets details of a single security profile group.
          *
          * Create a request for the method "securityProfileGroups.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfileGroup to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+         * @param name Required. The name of the `SecurityProfileGroup` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -29761,7 +30058,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityProfileGroups/[^/]+$");
 
           /**
-           * Gets details of a single SecurityProfileGroup.
+           * Gets details of a single security profile group.
            *
            * Create a request for the method "securityProfileGroups.get".
            *
@@ -29770,9 +30067,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfileGroup to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+           * @param name Required. The name of the `SecurityProfileGroup` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -29851,22 +30149,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to get. Must be in the format `projects|or
-           * ganizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to get. Format: `organizations/{organi
+           * zation}/locations/{location}/securityProfileGroups/{security_profile_group}` or `projec
+           * ts/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfileGroup to get. Must be in the format
-         `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+          /** Required. The name of the `SecurityProfileGroup` to get. Format:
+         `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+         or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfileGroup to get. Must be in the format `projects|or
-           * ganizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+           * Required. The name of the `SecurityProfileGroup` to get. Format: `organizations/{organi
+           * zation}/locations/{location}/securityProfileGroups/{security_profile_group}` or `projec
+           * ts/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -29884,15 +30185,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists SecurityProfileGroups in a given project and location.
+         * Lists security profile group resources in a given project and location.
          *
          * Create a request for the method "securityProfileGroups.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project or organization and location from which the SecurityProfileGroups should be
-         *        listed, specified in the format `projects|organizations/locations/{location}`.
+         * @param parent Required. The project or organization and location from which the `SecurityProfileGroup` resources
+         *        are listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -29909,7 +30211,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists SecurityProfileGroups in a given project and location.
+           * Lists security profile group resources in a given project and location.
            *
            * Create a request for the method "securityProfileGroups.list".
            *
@@ -29918,8 +30220,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project or organization and location from which the SecurityProfileGroups should be
-         *        listed, specified in the format `projects|organizations/locations/{location}`.
+           * @param parent Required. The project or organization and location from which the `SecurityProfileGroup` resources
+         *        are listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -29998,24 +30301,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfileGroups
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the
+           * `SecurityProfileGroup` resources are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project or organization and location from which the SecurityProfileGroups should be
-         listed, specified in the format `projects|organizations/locations/{location}`.
+          /** Required. The project or organization and location from which the `SecurityProfileGroup` resources
+         are listed. Format: `organizations/{organization}/locations/{location}` or
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfileGroups
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the
+           * `SecurityProfileGroup` resources are listed. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -30027,42 +30333,54 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Maximum number of SecurityProfileGroups to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfileGroup` resources to return per call. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Maximum number of SecurityProfileGroups to return per call.
+          /** Optional. Maximum number of `SecurityProfileGroup` resources to return per call. The maximum value
+         is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks an appropriate
+         default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. Maximum number of SecurityProfileGroups to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfileGroup` resources to return per call. The
+           * maximum value is 1000; values above 1000 are coerced to 1000. If unspecified, the
+           * server picks an appropriate default.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates
-           * that this is a continuation of a prior `ListSecurityProfileGroups` call, and that the
-           * system should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfileGroups` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListSecurityProfileGroups` must match the call that provided the page
+           * token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates that this is
-         a continuation of a prior `ListSecurityProfileGroups` call, and that the system should return the
-         next page of data.
+          /** Optional. A page token, received from a previous `ListSecurityProfileGroups` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListSecurityProfileGroups` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfileGroupsResponse` Indicates
-           * that this is a continuation of a prior `ListSecurityProfileGroups` call, and that the
-           * system should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfileGroups` call.
+           * Provide this to retrieve the subsequent page. When paginating, all other parameters
+           * provided to `ListSecurityProfileGroups` must match the call that provided the page
+           * token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -30075,16 +30393,17 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the parameters of a single SecurityProfileGroup.
+         * Updates the parameters of a single security profile group.
          *
          * Create a request for the method "securityProfileGroups.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+         * @param name Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
          * @return the request
          */
@@ -30102,7 +30421,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityProfileGroups/[^/]+$");
 
           /**
-           * Updates the parameters of a single SecurityProfileGroup.
+           * Updates the parameters of a single security profile group.
            *
            * Create a request for the method "securityProfileGroups.patch".
            *
@@ -30112,9 +30431,10 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group
-         *        }`.
+           * @param name Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile
+         *        _group}` or
+         *        `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfileGroup}
            * @since 1.13
            */
@@ -30184,24 +30504,27 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern `p
-           * rojects|organizations/locations/{location}/securityProfileGroups/{security_profile_grou
-           * p}`.
+           * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizati
+           * ons/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+           * or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_gro
+           * up}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern
-         `projects|organizations/locations/{location}/securityProfileGroups/{security_profile_group}`.
+          /** Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format:
+         `organizations/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+         or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_group}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfileGroup resource. It matches pattern `p
-           * rojects|organizations/locations/{location}/securityProfileGroups/{security_profile_grou
-           * p}`.
+           * Immutable. Identifier. Name of the `SecurityProfileGroup` resource. Format: `organizati
+           * ons/{organization}/locations/{location}/securityProfileGroups/{security_profile_group}`
+           * or `projects/{project}/locations/{location}/securityProfileGroups/{security_profile_gro
+           * up}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -30215,16 +30538,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfileGroup resource by the update. The fields specified in the update_mask
-           * are relative to the resource, not the full request. A field will be overwritten if it
-           * is in the mask.
+           * `SecurityProfileGroup` resource by the update. The fields specified in the
+           * `update_mask` are relative to the resource, not the full request. A field is
+           * overwritten if it is in the mask.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the SecurityProfileGroup
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it is in the mask.
+          /** Required. Field mask is used to specify the fields to be overwritten in the `SecurityProfileGroup`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -30232,9 +30555,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfileGroup resource by the update. The fields specified in the update_mask
-           * are relative to the resource, not the full request. A field will be overwritten if it
-           * is in the mask.
+           * `SecurityProfileGroup` resource by the update. The fields specified in the
+           * `update_mask` are relative to the resource, not the full request. A field is
+           * overwritten if it is in the mask.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -30269,15 +30592,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
       public class SecurityProfiles {
 
         /**
-         * Creates a new SecurityProfile in a given project and location.
+         * Creates a new security profile in a given project and location.
          *
          * Create a request for the method "securityProfiles.create".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Create#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The parent resource of the SecurityProfile. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+         * @param parent Required. The parent resource of the `SecurityProfile`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
          * @return the request
          */
@@ -30295,7 +30619,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new SecurityProfile in a given project and location.
+           * Creates a new security profile in a given project and location.
            *
            * Create a request for the method "securityProfiles.create".
            *
@@ -30305,8 +30629,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Create#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The parent resource of the SecurityProfile. Must be in the format
-         *        `projects|organizations/locations/{location}`.
+           * @param parent Required. The parent resource of the `SecurityProfile`. Format:
+         *        `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
            * @since 1.13
            */
@@ -30376,22 +30701,24 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The parent resource of the SecurityProfile. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfile`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The parent resource of the SecurityProfile. Must be in the format
-         `projects|organizations/locations/{location}`.
+          /** Required. The parent resource of the `SecurityProfile`. Format:
+         `organizations/{organization}/locations/{location}` or `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The parent resource of the SecurityProfile. Must be in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The parent resource of the `SecurityProfile`. Format:
+           * `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public Create setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -30404,25 +30731,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. Short name of the SecurityProfile resource to be created. This value should
-           * be 1-63 characters long, containing only letters, numbers, hyphens, and underscores,
-           * and should not start with a number. E.g. "security_profile1".
+           * Required. Short name of the `SecurityProfile` resource to be created. This value must
+           * be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens, and
+           * must not start with a number. For example, `security-profile1`.
            */
           @com.google.api.client.util.Key
           private java.lang.String securityProfileId;
 
-          /** Required. Short name of the SecurityProfile resource to be created. This value should be 1-63
-         characters long, containing only letters, numbers, hyphens, and underscores, and should not start
-         with a number. E.g. "security_profile1".
+          /** Required. Short name of the `SecurityProfile` resource to be created. This value must be 1 to 63
+         characters long, contain only lowercase letters, numbers, and hyphens, and must not start with a
+         number. For example, `security-profile1`.
            */
           public java.lang.String getSecurityProfileId() {
             return securityProfileId;
           }
 
           /**
-           * Required. Short name of the SecurityProfile resource to be created. This value should
-           * be 1-63 characters long, containing only letters, numbers, hyphens, and underscores,
-           * and should not start with a number. E.g. "security_profile1".
+           * Required. Short name of the `SecurityProfile` resource to be created. This value must
+           * be 1 to 63 characters long, contain only lowercase letters, numbers, and hyphens, and
+           * must not start with a number. For example, `security-profile1`.
            */
           public Create setSecurityProfileId(java.lang.String securityProfileId) {
             this.securityProfileId = securityProfileId;
@@ -30435,15 +30762,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Deletes a single SecurityProfile.
+         * Deletes a single security profile.
          *
          * Create a request for the method "securityProfiles.delete".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfile to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+         * @param name Required. The name of the `SecurityProfile` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
          * @return the request
          */
         public Delete delete(java.lang.String name) throws java.io.IOException {
@@ -30460,7 +30788,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityProfiles/[^/]+$");
 
           /**
-           * Deletes a single SecurityProfile.
+           * Deletes a single security profile.
            *
            * Create a request for the method "securityProfiles.delete".
            *
@@ -30470,8 +30798,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfile to delete. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * @param name Required. The name of the `SecurityProfile` to delete. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            * @since 1.13
            */
           protected Delete(java.lang.String name) {
@@ -30540,22 +30869,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfile to delete. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to delete. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfile to delete. Must be in the format
-         `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+          /** Required. The name of the `SecurityProfile` to delete. Format:
+         `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfile to delete. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to delete. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Delete setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -30568,21 +30900,22 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. If client provided etag is out of date, delete will return FAILED_PRECONDITION error.
+          /** Optional. If the client-provided `etag` is out of date, the delete request returns an `ABORTED`
+         error.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * Optional. If client provided etag is out of date, delete will return
-           * FAILED_PRECONDITION error.
+           * Optional. If the client-provided `etag` is out of date, the delete request returns an
+           * `ABORTED` error.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
@@ -30595,15 +30928,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Gets details of a single SecurityProfile.
+         * Gets details of a single security profile.
          *
          * Create a request for the method "securityProfiles.get".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the SecurityProfile to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+         * @param name Required. The name of the `SecurityProfile` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
          * @return the request
          */
         public Get get(java.lang.String name) throws java.io.IOException {
@@ -30620,7 +30954,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityProfiles/[^/]+$");
 
           /**
-           * Gets details of a single SecurityProfile.
+           * Gets details of a single security profile.
            *
            * Create a request for the method "securityProfiles.get".
            *
@@ -30629,8 +30963,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the SecurityProfile to get. Must be in the format
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * @param name Required. The name of the `SecurityProfile` to get. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            * @since 1.13
            */
           protected Get(java.lang.String name) {
@@ -30709,22 +31044,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the SecurityProfile to get. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to get. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the SecurityProfile to get. Must be in the format
-         `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+          /** Required. The name of the `SecurityProfile` to get. Format:
+         `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Required. A name of the SecurityProfile to get. Must be in the format
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile_id}`.
+           * Required. The name of the `SecurityProfile` to get. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Get setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -30742,15 +31080,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Lists SecurityProfiles in a given project and location.
+         * Lists security profiles in a given project and location.
          *
          * Create a request for the method "securityProfiles.list".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
-         * @param parent Required. The project or organization and location from which the SecurityProfiles should be listed,
-         *        specified in the format `projects|organizations/locations/{location}`.
+         * @param parent Required. The project or organization and location from which the `SecurityProfile` resources are
+         *        listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -30767,7 +31106,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Lists SecurityProfiles in a given project and location.
+           * Lists security profiles in a given project and location.
            *
            * Create a request for the method "securityProfiles.list".
            *
@@ -30776,8 +31115,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * {@link List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param parent Required. The project or organization and location from which the SecurityProfiles should be listed,
-         *        specified in the format `projects|organizations/locations/{location}`.
+           * @param parent Required. The project or organization and location from which the `SecurityProfile` resources are
+         *        listed. Format: `organizations/{organization}/locations/{location}` or
+         *        `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -30856,24 +31196,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfiles
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the `SecurityProfile`
+           * resources are listed. Format: `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
-          /** Required. The project or organization and location from which the SecurityProfiles should be
-         listed, specified in the format `projects|organizations/locations/{location}`.
+          /** Required. The project or organization and location from which the `SecurityProfile` resources are
+         listed. Format: `organizations/{organization}/locations/{location}` or
+         `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
           }
 
           /**
-           * Required. The project or organization and location from which the SecurityProfiles
-           * should be listed, specified in the format
-           * `projects|organizations/locations/{location}`.
+           * Required. The project or organization and location from which the `SecurityProfile`
+           * resources are listed. Format: `organizations/{organization}/locations/{location}` or
+           * `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -30885,42 +31226,52 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. Maximum number of SecurityProfiles to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfile` resources to return per call. The maximum
+           * value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks
+           * an appropriate default.
+           */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Optional. Maximum number of SecurityProfiles to return per call.
+          /** Optional. Maximum number of `SecurityProfile` resources to return per call. The maximum value is
+         1000; values above 1000 are coerced to 1000. If unspecified, the server picks an appropriate
+         default.
            */
           public java.lang.Integer getPageSize() {
             return pageSize;
           }
 
-          /** Optional. Maximum number of SecurityProfiles to return per call. */
+          /**
+           * Optional. Maximum number of `SecurityProfile` resources to return per call. The maximum
+           * value is 1000; values above 1000 are coerced to 1000. If unspecified, the server picks
+           * an appropriate default.
+           */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
             return this;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that
-           * this is a continuation of a prior `ListSecurityProfiles` call, and that the system
-           * should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSecurityProfiles` must match the call that provided the page token.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that this is a
-         continuation of a prior `ListSecurityProfiles` call, and that the system should return the next
-         page of data.
+          /** Optional. A page token, received from a previous `ListSecurityProfiles` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters provided to
+         `ListSecurityProfiles` must match the call that provided the page token.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. The value returned by the last `ListSecurityProfilesResponse` Indicates that
-           * this is a continuation of a prior `ListSecurityProfiles` call, and that the system
-           * should return the next page of data.
+           * Optional. A page token, received from a previous `ListSecurityProfiles` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters provided to
+           * `ListSecurityProfiles` must match the call that provided the page token.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -30933,15 +31284,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
         }
         /**
-         * Updates the parameters of a single SecurityProfile.
+         * Updates the parameters of a single security profile.
          *
          * Create a request for the method "securityProfiles.patch".
          *
          * This request holds the parameters needed by the networksecurity server.  After setting any
          * optional parameters, call the {@link Patch#execute()} method to invoke the remote operation.
          *
-         * @param name Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+         * @param name Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
          * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
          * @return the request
          */
@@ -30959,7 +31311,7 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/securityProfiles/[^/]+$");
 
           /**
-           * Updates the parameters of a single SecurityProfile.
+           * Updates the parameters of a single security profile.
            *
            * Create a request for the method "securityProfiles.patch".
            *
@@ -30969,8 +31321,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
            * Patch#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-         *        `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+           * @param name Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+         *        `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         *        `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            * @param content the {@link com.google.api.services.networksecurity.v1beta1.model.SecurityProfile}
            * @since 1.13
            */
@@ -31040,22 +31393,25 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+           * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-         `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+          /** Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+         `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}` or
+         `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public java.lang.String getName() {
             return name;
           }
 
           /**
-           * Immutable. Identifier. Name of the SecurityProfile resource. It matches pattern
-           * `projects|organizations/locations/{location}/securityProfiles/{security_profile}`.
+           * Immutable. Identifier. Name of the `SecurityProfile` resource. Format:
+           * `organizations/{organization}/locations/{location}/securityProfiles/{security_profile}`
+           * or `projects/{project}/locations/{location}/securityProfiles/{security_profile}`.
            */
           public Patch setName(java.lang.String name) {
             if (!getSuppressPatternChecks()) {
@@ -31069,16 +31425,16 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfile resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask.
+           * `SecurityProfile` resource by the update. The fields specified in the `update_mask` are
+           * relative to the resource, not the full request. A field is overwritten if it is in the
+           * mask.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
-          /** Required. Field mask is used to specify the fields to be overwritten in the SecurityProfile
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it is in the mask.
+          /** Required. Field mask is used to specify the fields to be overwritten in the `SecurityProfile`
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -31086,9 +31442,9 @@ public class NetworkSecurity extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. Field mask is used to specify the fields to be overwritten in the
-           * SecurityProfile resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask.
+           * `SecurityProfile` resource by the update. The fields specified in the `update_mask` are
+           * relative to the resource, not the full request. A field is overwritten if it is in the
+           * mask.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;

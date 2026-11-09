@@ -44,7 +44,9 @@ public final class GenaiVertexV1beta1Function extends com.google.api.client.json
   private java.lang.String name;
 
   /**
-   * The JSON Schema for the function's parameters.
+   * The JSON Schema for the function's parameters. Supports a subset of JSON Schema. `minLength`,
+   * `maxLength`, `minProperties`, `maxProperties`, `uniqueItems`, `contains`, `minContains`, and
+   * `maxContains` are ignored and not enforced.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +87,9 @@ public final class GenaiVertexV1beta1Function extends com.google.api.client.json
   }
 
   /**
-   * The JSON Schema for the function's parameters.
+   * The JSON Schema for the function's parameters. Supports a subset of JSON Schema. `minLength`,
+   * `maxLength`, `minProperties`, `maxProperties`, `uniqueItems`, `contains`, `minContains`, and
+   * `maxContains` are ignored and not enforced.
    * @return value or {@code null} for none
    */
   public GenaiVertexV1beta1Value getParameters() {
@@ -93,7 +97,9 @@ public final class GenaiVertexV1beta1Function extends com.google.api.client.json
   }
 
   /**
-   * The JSON Schema for the function's parameters.
+   * The JSON Schema for the function's parameters. Supports a subset of JSON Schema. `minLength`,
+   * `maxLength`, `minProperties`, `maxProperties`, `uniqueItems`, `contains`, `minContains`, and
+   * `maxContains` are ignored and not enforced.
    * @param parameters parameters or {@code null} for none
    */
   public GenaiVertexV1beta1Function setParameters(GenaiVertexV1beta1Value parameters) {

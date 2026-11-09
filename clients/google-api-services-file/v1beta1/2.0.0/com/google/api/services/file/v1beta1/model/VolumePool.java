@@ -44,6 +44,14 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
   private java.lang.Integer activeVolumeIops;
 
   /**
+   * Optional. How long a volume stays `WARM` after it is deactivated before it is automatically
+   * frozen (moved to `COLD`). Must be positive if set. Default: 7 days.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String autoFreezeDelay;
+
+  /**
    * Output only. The time when the volume pool was created.
    * The value may be {@code null}.
    */
@@ -133,6 +141,25 @@ public final class VolumePool extends com.google.api.client.json.GenericJson {
    */
   public VolumePool setActiveVolumeIops(java.lang.Integer activeVolumeIops) {
     this.activeVolumeIops = activeVolumeIops;
+    return this;
+  }
+
+  /**
+   * Optional. How long a volume stays `WARM` after it is deactivated before it is automatically
+   * frozen (moved to `COLD`). Must be positive if set. Default: 7 days.
+   * @return value or {@code null} for none
+   */
+  public String getAutoFreezeDelay() {
+    return autoFreezeDelay;
+  }
+
+  /**
+   * Optional. How long a volume stays `WARM` after it is deactivated before it is automatically
+   * frozen (moved to `COLD`). Must be positive if set. Default: 7 days.
+   * @param autoFreezeDelay autoFreezeDelay or {@code null} for none
+   */
+  public VolumePool setAutoFreezeDelay(String autoFreezeDelay) {
+    this.autoFreezeDelay = autoFreezeDelay;
     return this;
   }
 

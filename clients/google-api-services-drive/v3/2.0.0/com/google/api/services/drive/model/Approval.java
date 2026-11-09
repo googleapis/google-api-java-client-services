@@ -37,6 +37,14 @@ public final class Approval extends com.google.api.client.json.GenericJson {
   private java.lang.String approvalId;
 
   /**
+   * The revision ID of the file when the approval completed successfully. This is only set when the
+   * approval status is APPROVED.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String approvedRevisionId;
+
+  /**
    * The time the approval was completed.
    * The value may be {@code null}.
    */
@@ -120,6 +128,25 @@ public final class Approval extends com.google.api.client.json.GenericJson {
    */
   public Approval setApprovalId(java.lang.String approvalId) {
     this.approvalId = approvalId;
+    return this;
+  }
+
+  /**
+   * The revision ID of the file when the approval completed successfully. This is only set when the
+   * approval status is APPROVED.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getApprovedRevisionId() {
+    return approvedRevisionId;
+  }
+
+  /**
+   * The revision ID of the file when the approval completed successfully. This is only set when the
+   * approval status is APPROVED.
+   * @param approvedRevisionId approvedRevisionId or {@code null} for none
+   */
+  public Approval setApprovedRevisionId(java.lang.String approvedRevisionId) {
+    this.approvedRevisionId = approvedRevisionId;
     return this;
   }
 

@@ -984,8 +984,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
   public class Liens {
 
     /**
-     * Create a Lien which applies to the resource denoted by the `parent` field. Callers of this method
-     * will require permission on the `parent` resource. For example, applying to `projects/1234`
+     * Creates a Lien which applies to the resource denoted by the `parent` field. Callers of this
+     * method will require permission on the `parent` resource. For example, applying to `projects/1234`
      * requires permission `resourcemanager.projects.updateLiens`. NOTE: Some resources may limit the
      * number of Liens which may be applied.
      *
@@ -1008,7 +1008,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/liens";
 
       /**
-       * Create a Lien which applies to the resource denoted by the `parent` field. Callers of this
+       * Creates a Lien which applies to the resource denoted by the `parent` field. Callers of this
        * method will require permission on the `parent` resource. For example, applying to
        * `projects/1234` requires permission `resourcemanager.projects.updateLiens`. NOTE: Some
        * resources may limit the number of Liens which may be applied.
@@ -1089,8 +1089,8 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Delete a Lien by `name`. Callers of this method will require permission on the `parent` resource.
-     * For example, a Lien with a `parent` of `projects/1234` requires permission
+     * Deletes a Lien by `name`. Callers of this method will require permission on the `parent`
+     * resource. For example, a Lien with a `parent` of `projects/1234` requires permission
      * `resourcemanager.projects.updateLiens`.
      *
      * Create a request for the method "liens.delete".
@@ -1115,7 +1115,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^liens/.*$");
 
       /**
-       * Delete a Lien by `name`. Callers of this method will require permission on the `parent`
+       * Deletes a Lien by `name`. Callers of this method will require permission on the `parent`
        * resource. For example, a Lien with a `parent` of `projects/1234` requires permission
        * `resourcemanager.projects.updateLiens`.
        *
@@ -1222,7 +1222,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * Retrieve a Lien by `name`. Callers of this method will require permission on the `parent`
+     * Retrieves a Lien by `name`. Callers of this method will require permission on the `parent`
      * resource. For example, a Lien with a `parent` of `projects/1234` requires permission
      * `resourcemanager.projects.get`
      *
@@ -1248,7 +1248,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^liens/.*$");
 
       /**
-       * Retrieve a Lien by `name`. Callers of this method will require permission on the `parent`
+       * Retrieves a Lien by `name`. Callers of this method will require permission on the `parent`
        * resource. For example, a Lien with a `parent` of `projects/1234` requires permission
        * `resourcemanager.projects.get`
        *
@@ -1365,7 +1365,7 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       }
     }
     /**
-     * List all Liens applied to the `parent` resource. Callers of this method will require permission
+     * Lists all Liens applied to the `parent` resource. Callers of this method will require permission
      * on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires
      * permission `resourcemanager.projects.get`.
      *
@@ -1387,9 +1387,9 @@ public class CloudResourceManager extends com.google.api.client.googleapis.servi
       private static final String REST_PATH = "v1/liens";
 
       /**
-       * List all Liens applied to the `parent` resource. Callers of this method will require permission
-       * on the `parent` resource. For example, a Lien with a `parent` of `projects/1234` requires
-       * permission `resourcemanager.projects.get`.
+       * Lists all Liens applied to the `parent` resource. Callers of this method will require
+       * permission on the `parent` resource. For example, a Lien with a `parent` of `projects/1234`
+       * requires permission `resourcemanager.projects.get`.
        *
        * Create a request for the method "liens.list".
        *

@@ -32126,7 +32126,15 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
   public class StudioCreativeAssets {
 
     /**
-     * Inserts a new studio creative asset.
+     * Inserts a new studio creative asset. Requests to upload an asset file must be sent to the upload
+     * URI using multipart media upload (or resumable media upload). For [multipart
+     * uploads](https://developers.google.com/doubleclick-advertisers/upload#multipart)
+     * (`uploadType=multipart`), the request uses `multipart/related` and includes two parts: *
+     * **Metadata**: A JSON object representing DfareportingStudioCreativeAssetsInsertRequest with
+     * `studioAdvertiserId`, and optional `studioAccountId` and `studioCreativeId`. * **Media**: The
+     * binary data of the asset file, specifying the `Content-Type` of the asset and a `Content-
+     * Disposition` header with `name="media"` and `filename=""` (for example, `Content-Disposition:
+     * form-data; name="media"; filename="asset.jpg"`).
      *
      * Create a request for the method "studioCreativeAssets.insert".
      *
@@ -32143,7 +32151,15 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
     }
 
     /**
-     * Inserts a new studio creative asset.
+     * Inserts a new studio creative asset. Requests to upload an asset file must be sent to the upload
+     * URI using multipart media upload (or resumable media upload). For [multipart
+     * uploads](https://developers.google.com/doubleclick-advertisers/upload#multipart)
+     * (`uploadType=multipart`), the request uses `multipart/related` and includes two parts: *
+     * **Metadata**: A JSON object representing DfareportingStudioCreativeAssetsInsertRequest with
+     * `studioAdvertiserId`, and optional `studioAccountId` and `studioCreativeId`. * **Media**: The
+     * binary data of the asset file, specifying the `Content-Type` of the asset and a `Content-
+     * Disposition` header with `name="media"` and `filename=""` (for example, `Content-Disposition:
+     * form-data; name="media"; filename="asset.jpg"`).
      *
      * Create a request for the method "studioCreativeAssets.insert".
      *
@@ -32171,7 +32187,15 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       private static final String REST_PATH = "studio/creativeAssets";
 
       /**
-       * Inserts a new studio creative asset.
+       * Inserts a new studio creative asset. Requests to upload an asset file must be sent to the
+       * upload URI using multipart media upload (or resumable media upload). For [multipart
+       * uploads](https://developers.google.com/doubleclick-advertisers/upload#multipart)
+       * (`uploadType=multipart`), the request uses `multipart/related` and includes two parts: *
+       * **Metadata**: A JSON object representing DfareportingStudioCreativeAssetsInsertRequest with
+       * `studioAdvertiserId`, and optional `studioAccountId` and `studioCreativeId`. * **Media**: The
+       * binary data of the asset file, specifying the `Content-Type` of the asset and a `Content-
+       * Disposition` header with `name="media"` and `filename=""` (for example, `Content-Disposition:
+       * form-data; name="media"; filename="asset.jpg"`).
        *
        * Create a request for the method "studioCreativeAssets.insert".
        *
@@ -32189,7 +32213,15 @@ public class Dfareporting extends com.google.api.client.googleapis.services.json
       }
 
       /**
-       * Inserts a new studio creative asset.
+       * Inserts a new studio creative asset. Requests to upload an asset file must be sent to the
+       * upload URI using multipart media upload (or resumable media upload). For [multipart
+       * uploads](https://developers.google.com/doubleclick-advertisers/upload#multipart)
+       * (`uploadType=multipart`), the request uses `multipart/related` and includes two parts: *
+       * **Metadata**: A JSON object representing DfareportingStudioCreativeAssetsInsertRequest with
+       * `studioAdvertiserId`, and optional `studioAccountId` and `studioCreativeId`. * **Media**: The
+       * binary data of the asset file, specifying the `Content-Type` of the asset and a `Content-
+       * Disposition` header with `name="media"` and `filename=""` (for example, `Content-Disposition:
+       * form-data; name="media"; filename="asset.jpg"`).
        *
        * Create a request for the method "studioCreativeAssets.insert".
        *

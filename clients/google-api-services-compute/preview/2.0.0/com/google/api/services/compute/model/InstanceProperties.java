@@ -57,6 +57,13 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
   private ConfidentialInstanceConfig confidentialInstanceConfig;
 
   /**
+   * Whether the resource should be protected against deletion.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean deletionProtection;
+
+  /**
    * An optional text description for the instances that are created from these properties.
    * The value may be {@code null}.
    */
@@ -289,6 +296,23 @@ public final class InstanceProperties extends com.google.api.client.json.Generic
    */
   public InstanceProperties setConfidentialInstanceConfig(ConfidentialInstanceConfig confidentialInstanceConfig) {
     this.confidentialInstanceConfig = confidentialInstanceConfig;
+    return this;
+  }
+
+  /**
+   * Whether the resource should be protected against deletion.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getDeletionProtection() {
+    return deletionProtection;
+  }
+
+  /**
+   * Whether the resource should be protected against deletion.
+   * @param deletionProtection deletionProtection or {@code null} for none
+   */
+  public InstanceProperties setDeletionProtection(java.lang.Boolean deletionProtection) {
+    this.deletionProtection = deletionProtection;
     return this;
   }
 

@@ -12803,6 +12803,555 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
 
       }
       /**
+       * An accessor for creating requests from the GeneratedSpecApis collection.
+       *
+       * <p>The typical use is:</p>
+       * <pre>
+       *   {@code APIhub apihub = new APIhub(...);}
+       *   {@code APIhub.GeneratedSpecApis.List request = apihub.generatedSpecApis().list(parameters ...)}
+       * </pre>
+       *
+       * @return the resource collection
+       */
+      public GeneratedSpecApis generatedSpecApis() {
+        return new GeneratedSpecApis();
+      }
+
+      /**
+       * The "generatedSpecApis" collection of methods.
+       */
+      public class GeneratedSpecApis {
+
+        /**
+         * Merges the per-day stored specs across the requested window and returns the merged OpenAPI
+         * document. Preview: this method is in Public Preview. Behavior and the API surface may change
+         * until the Spec Generation feature reaches General Availability.
+         *
+         * Create a request for the method "generatedSpecApis.generateSpec".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link GenerateSpec#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the GeneratedSpecApi to generate from. Format:
+         *        `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+         * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GenerateSpecRequest}
+         * @return the request
+         */
+        public GenerateSpec generateSpec(java.lang.String name, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GenerateSpecRequest content) throws java.io.IOException {
+          GenerateSpec result = new GenerateSpec(name, content);
+          initialize(result);
+          return result;
+        }
+
+        public class GenerateSpec extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GenerateSpecResponse> {
+
+          private static final String REST_PATH = "v1/{+name}:generateSpec";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/generatedSpecApis/[^/]+$");
+
+          /**
+           * Merges the per-day stored specs across the requested window and returns the merged OpenAPI
+           * document. Preview: this method is in Public Preview. Behavior and the API surface may change
+           * until the Spec Generation feature reaches General Availability.
+           *
+           * Create a request for the method "generatedSpecApis.generateSpec".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link GenerateSpec#execute()} method to invoke the remote operation. <p>
+           * {@link
+           * GenerateSpec#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
+           * must be called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the GeneratedSpecApi to generate from. Format:
+         *        `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           * @param content the {@link com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GenerateSpecRequest}
+           * @since 1.13
+           */
+          protected GenerateSpec(java.lang.String name, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GenerateSpecRequest content) {
+            super(APIhub.this, "POST", REST_PATH, content, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GenerateSpecResponse.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/generatedSpecApis/[^/]+$");
+            }
+          }
+
+          @Override
+          public GenerateSpec set$Xgafv(java.lang.String $Xgafv) {
+            return (GenerateSpec) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public GenerateSpec setAccessToken(java.lang.String accessToken) {
+            return (GenerateSpec) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public GenerateSpec setAlt(java.lang.String alt) {
+            return (GenerateSpec) super.setAlt(alt);
+          }
+
+          @Override
+          public GenerateSpec setCallback(java.lang.String callback) {
+            return (GenerateSpec) super.setCallback(callback);
+          }
+
+          @Override
+          public GenerateSpec setFields(java.lang.String fields) {
+            return (GenerateSpec) super.setFields(fields);
+          }
+
+          @Override
+          public GenerateSpec setKey(java.lang.String key) {
+            return (GenerateSpec) super.setKey(key);
+          }
+
+          @Override
+          public GenerateSpec setOauthToken(java.lang.String oauthToken) {
+            return (GenerateSpec) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public GenerateSpec setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (GenerateSpec) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public GenerateSpec setQuotaUser(java.lang.String quotaUser) {
+            return (GenerateSpec) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public GenerateSpec setUploadType(java.lang.String uploadType) {
+            return (GenerateSpec) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public GenerateSpec setUploadProtocol(java.lang.String uploadProtocol) {
+            return (GenerateSpec) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the GeneratedSpecApi to generate from. Format:
+           * `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the GeneratedSpecApi to generate from. Format:
+         `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the GeneratedSpecApi to generate from. Format:
+           * `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           */
+          public GenerateSpec setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/generatedSpecApis/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public GenerateSpec set(String parameterName, Object value) {
+            return (GenerateSpec) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Gets a single GeneratedSpecApi by resource name. Preview: this method is in Public Preview.
+         * Behavior and the API surface may change until the Spec Generation feature reaches General
+         * Availability.
+         *
+         * Create a request for the method "generatedSpecApis.get".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link Get#execute()} method to invoke the remote operation.
+         *
+         * @param name Required. The resource name of the GeneratedSpecApi to retrieve. Format:
+         *        `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+         * @return the request
+         */
+        public Get get(java.lang.String name) throws java.io.IOException {
+          Get result = new Get(name);
+          initialize(result);
+          return result;
+        }
+
+        public class Get extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GeneratedSpecApi> {
+
+          private static final String REST_PATH = "v1/{+name}";
+
+          private final java.util.regex.Pattern NAME_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/generatedSpecApis/[^/]+$");
+
+          /**
+           * Gets a single GeneratedSpecApi by resource name. Preview: this method is in Public Preview.
+           * Behavior and the API surface may change until the Spec Generation feature reaches General
+           * Availability.
+           *
+           * Create a request for the method "generatedSpecApis.get".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link Get#execute()} method to invoke the remote operation. <p> {@link
+           * Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param name Required. The resource name of the GeneratedSpecApi to retrieve. Format:
+         *        `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           * @since 1.13
+           */
+          protected Get(java.lang.String name) {
+            super(APIhub.this, "GET", REST_PATH, null, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1GeneratedSpecApi.class);
+            this.name = com.google.api.client.util.Preconditions.checkNotNull(name, "Required parameter name must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/generatedSpecApis/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public Get set$Xgafv(java.lang.String $Xgafv) {
+            return (Get) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public Get setAccessToken(java.lang.String accessToken) {
+            return (Get) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public Get setAlt(java.lang.String alt) {
+            return (Get) super.setAlt(alt);
+          }
+
+          @Override
+          public Get setCallback(java.lang.String callback) {
+            return (Get) super.setCallback(callback);
+          }
+
+          @Override
+          public Get setFields(java.lang.String fields) {
+            return (Get) super.setFields(fields);
+          }
+
+          @Override
+          public Get setKey(java.lang.String key) {
+            return (Get) super.setKey(key);
+          }
+
+          @Override
+          public Get setOauthToken(java.lang.String oauthToken) {
+            return (Get) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public Get setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (Get) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public Get setQuotaUser(java.lang.String quotaUser) {
+            return (Get) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public Get setUploadType(java.lang.String uploadType) {
+            return (Get) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public Get setUploadProtocol(java.lang.String uploadProtocol) {
+            return (Get) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The resource name of the GeneratedSpecApi to retrieve. Format:
+           * `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String name;
+
+          /** Required. The resource name of the GeneratedSpecApi to retrieve. Format:
+         `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           */
+          public java.lang.String getName() {
+            return name;
+          }
+
+          /**
+           * Required. The resource name of the GeneratedSpecApi to retrieve. Format:
+           * `projects/{project}/locations/{location}/generatedSpecApis/{generated_spec_api}`
+           */
+          public Get setName(java.lang.String name) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(NAME_PATTERN.matcher(name).matches(),
+                  "Parameter name must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+/generatedSpecApis/[^/]+$");
+            }
+            this.name = name;
+            return this;
+          }
+
+          @Override
+          public Get set(String parameterName, Object value) {
+            return (Get) super.set(parameterName, value);
+          }
+        }
+        /**
+         * Lists the APIs the pipeline is tracking, ordered by `update_time desc`. Preview: this method is
+         * in Public Preview. Behavior and the API surface may change until the Spec Generation feature
+         * reaches General Availability.
+         *
+         * Create a request for the method "generatedSpecApis.list".
+         *
+         * This request holds the parameters needed by the apihub server.  After setting any optional
+         * parameters, call the {@link List#execute()} method to invoke the remote operation.
+         *
+         * @param parent Required. The parent resource, which owns this collection of tracked APIs. Format:
+         *        `projects/{project}/locations/{location}`
+         * @return the request
+         */
+        public List list(java.lang.String parent) throws java.io.IOException {
+          List result = new List(parent);
+          initialize(result);
+          return result;
+        }
+
+        public class List extends APIhubRequest<com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ListGeneratedSpecApisResponse> {
+
+          private static final String REST_PATH = "v1/{+parent}/generatedSpecApis";
+
+          private final java.util.regex.Pattern PARENT_PATTERN =
+              java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
+
+          /**
+           * Lists the APIs the pipeline is tracking, ordered by `update_time desc`. Preview: this method is
+           * in Public Preview. Behavior and the API surface may change until the Spec Generation feature
+           * reaches General Availability.
+           *
+           * Create a request for the method "generatedSpecApis.list".
+           *
+           * This request holds the parameters needed by the the apihub server.  After setting any optional
+           * parameters, call the {@link List#execute()} method to invoke the remote operation. <p> {@link
+           * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+           * called to initialize this instance immediately after invoking the constructor. </p>
+           *
+           * @param parent Required. The parent resource, which owns this collection of tracked APIs. Format:
+         *        `projects/{project}/locations/{location}`
+           * @since 1.13
+           */
+          protected List(java.lang.String parent) {
+            super(APIhub.this, "GET", REST_PATH, null, com.google.api.services.apihub.v1.model.GoogleCloudApihubV1ListGeneratedSpecApisResponse.class);
+            this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+          }
+
+          @Override
+          public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+            return super.executeUsingHead();
+          }
+
+          @Override
+          public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+            return super.buildHttpRequestUsingHead();
+          }
+
+          @Override
+          public List set$Xgafv(java.lang.String $Xgafv) {
+            return (List) super.set$Xgafv($Xgafv);
+          }
+
+          @Override
+          public List setAccessToken(java.lang.String accessToken) {
+            return (List) super.setAccessToken(accessToken);
+          }
+
+          @Override
+          public List setAlt(java.lang.String alt) {
+            return (List) super.setAlt(alt);
+          }
+
+          @Override
+          public List setCallback(java.lang.String callback) {
+            return (List) super.setCallback(callback);
+          }
+
+          @Override
+          public List setFields(java.lang.String fields) {
+            return (List) super.setFields(fields);
+          }
+
+          @Override
+          public List setKey(java.lang.String key) {
+            return (List) super.setKey(key);
+          }
+
+          @Override
+          public List setOauthToken(java.lang.String oauthToken) {
+            return (List) super.setOauthToken(oauthToken);
+          }
+
+          @Override
+          public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+            return (List) super.setPrettyPrint(prettyPrint);
+          }
+
+          @Override
+          public List setQuotaUser(java.lang.String quotaUser) {
+            return (List) super.setQuotaUser(quotaUser);
+          }
+
+          @Override
+          public List setUploadType(java.lang.String uploadType) {
+            return (List) super.setUploadType(uploadType);
+          }
+
+          @Override
+          public List setUploadProtocol(java.lang.String uploadProtocol) {
+            return (List) super.setUploadProtocol(uploadProtocol);
+          }
+
+          /**
+           * Required. The parent resource, which owns this collection of tracked APIs. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String parent;
+
+          /** Required. The parent resource, which owns this collection of tracked APIs. Format:
+         `projects/{project}/locations/{location}`
+           */
+          public java.lang.String getParent() {
+            return parent;
+          }
+
+          /**
+           * Required. The parent resource, which owns this collection of tracked APIs. Format:
+           * `projects/{project}/locations/{location}`
+           */
+          public List setParent(java.lang.String parent) {
+            if (!getSuppressPatternChecks()) {
+              com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                  "Parameter parent must conform to the pattern " +
+                  "^projects/[^/]+/locations/[^/]+$");
+            }
+            this.parent = parent;
+            return this;
+          }
+
+          /**
+           * Optional. An AIP-160 filter. This release supports the fields `state` and
+           * `source.source_type`, the `=` comparison operator only, and `AND` conjunction only.
+           * Examples: - `state = "SPEC_GENERATED"` - `state = "SPEC_ASSOCIATED" AND
+           * source.source_type = APIGEE_X`
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String filter;
+
+          /** Optional. An AIP-160 filter. This release supports the fields `state` and `source.source_type`, the
+         `=` comparison operator only, and `AND` conjunction only. Examples: - `state = "SPEC_GENERATED"` -
+         `state = "SPEC_ASSOCIATED" AND source.source_type = APIGEE_X`
+           */
+          public java.lang.String getFilter() {
+            return filter;
+          }
+
+          /**
+           * Optional. An AIP-160 filter. This release supports the fields `state` and
+           * `source.source_type`, the `=` comparison operator only, and `AND` conjunction only.
+           * Examples: - `state = "SPEC_GENERATED"` - `state = "SPEC_ASSOCIATED" AND
+           * source.source_type = APIGEE_X`
+           */
+          public List setFilter(java.lang.String filter) {
+            this.filter = filter;
+            return this;
+          }
+
+          /**
+           * Optional. The maximum number of results to return. The service may return fewer. If
+           * unspecified, at most 50 will be returned. The maximum value is 1000; values above 1000
+           * will be coerced to 1000.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.Integer pageSize;
+
+          /** Optional. The maximum number of results to return. The service may return fewer. If unspecified, at
+         most 50 will be returned. The maximum value is 1000; values above 1000 will be coerced to 1000.
+           */
+          public java.lang.Integer getPageSize() {
+            return pageSize;
+          }
+
+          /**
+           * Optional. The maximum number of results to return. The service may return fewer. If
+           * unspecified, at most 50 will be returned. The maximum value is 1000; values above 1000
+           * will be coerced to 1000.
+           */
+          public List setPageSize(java.lang.Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListGeneratedSpecApis` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters (except
+           * `page_size`) provided to `ListGeneratedSpecApis` must match the call that provided the
+           * page token.
+           */
+          @com.google.api.client.util.Key
+          private java.lang.String pageToken;
+
+          /** Optional. A page token, received from a previous `ListGeneratedSpecApis` call. Provide this to
+         retrieve the subsequent page. When paginating, all other parameters (except `page_size`) provided
+         to `ListGeneratedSpecApis` must match the call that provided the page token.
+           */
+          public java.lang.String getPageToken() {
+            return pageToken;
+          }
+
+          /**
+           * Optional. A page token, received from a previous `ListGeneratedSpecApis` call. Provide
+           * this to retrieve the subsequent page. When paginating, all other parameters (except
+           * `page_size`) provided to `ListGeneratedSpecApis` must match the call that provided the
+           * page token.
+           */
+          public List setPageToken(java.lang.String pageToken) {
+            this.pageToken = pageToken;
+            return this;
+          }
+
+          @Override
+          public List set(String parameterName, Object value) {
+            return (List) super.set(parameterName, value);
+          }
+        }
+
+      }
+      /**
        * An accessor for creating requests from the HostProjectRegistrations collection.
        *
        * <p>The typical use is:</p>
@@ -12824,8 +13373,9 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
 
         /**
          * Create a host project registration. A Google cloud project can be registered as a host project if
-         * it is not attached as a runtime project to another host project. A project can be registered as a
-         * host project only once. Subsequent register calls for the same project will fail.
+         * it is not attached as a runtime project to another host project. A project can have only one host
+         * project registration at a time. Subsequent register calls for the same project will fail until
+         * the existing registration is deleted.
          *
          * Create a request for the method "hostProjectRegistrations.create".
          *
@@ -12852,8 +13402,9 @@ public class APIhub extends com.google.api.client.googleapis.services.json.Abstr
 
           /**
            * Create a host project registration. A Google cloud project can be registered as a host project
-           * if it is not attached as a runtime project to another host project. A project can be registered
-           * as a host project only once. Subsequent register calls for the same project will fail.
+           * if it is not attached as a runtime project to another host project. A project can have only one
+           * host project registration at a time. Subsequent register calls for the same project will fail
+           * until the existing registration is deleted.
            *
            * Create a request for the method "hostProjectRegistrations.create".
            *

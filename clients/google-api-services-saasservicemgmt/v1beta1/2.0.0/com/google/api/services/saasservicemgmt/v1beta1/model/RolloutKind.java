@@ -75,6 +75,14 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.String> labels;
 
   /**
+   * Optional. The location type of the rollout. Based on the location type, the rollout will target
+   * the corresponding locations.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String locationType;
+
+  /**
    * Identifier. The resource name (full URI of the resource) following the standard naming scheme:
    * "projects/{project}/locations/{location}/rolloutKinds/{rollout_kind_id}"
    * The value may be {@code null}.
@@ -243,6 +251,25 @@ public final class RolloutKind extends com.google.api.client.json.GenericJson {
    */
   public RolloutKind setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. The location type of the rollout. Based on the location type, the rollout will target
+   * the corresponding locations.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLocationType() {
+    return locationType;
+  }
+
+  /**
+   * Optional. The location type of the rollout. Based on the location type, the rollout will target
+   * the corresponding locations.
+   * @param locationType locationType or {@code null} for none
+   */
+  public RolloutKind setLocationType(java.lang.String locationType) {
+    this.locationType = locationType;
     return this;
   }
 

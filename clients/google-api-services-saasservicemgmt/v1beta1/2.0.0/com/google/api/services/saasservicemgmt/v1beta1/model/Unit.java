@@ -81,6 +81,14 @@ public final class Unit extends com.google.api.client.json.GenericJson {
   private java.util.List<UnitDependency> dependents;
 
   /**
+   * Optional. Deployment location of the unit. Deployment location is used to determine which
+   * cloud_zone, prod_zone or prod_region to use for the unit.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private Location deploymentLocation;
+
+  /**
    * Optional. Output only. Metadata about the underlying actuation engine instance managing this
    * Unit.
    * The value may be {@code null}.
@@ -380,6 +388,25 @@ public final class Unit extends com.google.api.client.json.GenericJson {
    */
   public Unit setDependents(java.util.List<UnitDependency> dependents) {
     this.dependents = dependents;
+    return this;
+  }
+
+  /**
+   * Optional. Deployment location of the unit. Deployment location is used to determine which
+   * cloud_zone, prod_zone or prod_region to use for the unit.
+   * @return value or {@code null} for none
+   */
+  public Location getDeploymentLocation() {
+    return deploymentLocation;
+  }
+
+  /**
+   * Optional. Deployment location of the unit. Deployment location is used to determine which
+   * cloud_zone, prod_zone or prod_region to use for the unit.
+   * @param deploymentLocation deploymentLocation or {@code null} for none
+   */
+  public Unit setDeploymentLocation(Location deploymentLocation) {
+    this.deploymentLocation = deploymentLocation;
     return this;
   }
 

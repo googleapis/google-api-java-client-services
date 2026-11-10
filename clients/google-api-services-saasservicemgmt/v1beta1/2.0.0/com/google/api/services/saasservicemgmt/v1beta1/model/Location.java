@@ -38,6 +38,13 @@ public final class Location extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
+   * Type of location.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String type;
+
+  /**
    * Optional. Name of location.
    * @return value or {@code null} for none
    */
@@ -51,6 +58,23 @@ public final class Location extends com.google.api.client.json.GenericJson {
    */
   public Location setName(java.lang.String name) {
     this.name = name;
+    return this;
+  }
+
+  /**
+   * Type of location.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type of location.
+   * @param type type or {@code null} for none
+   */
+  public Location setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

@@ -31,6 +31,14 @@ package com.google.api.services.batch.v1.model;
 public final class AllocationPolicy extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The instance flexibility policy for the job. This configuration overrides the
+   * `instances` configuration. Only allowed in job level. Not allowed in task group level.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private InstanceFlexibilityPolicy instanceFlexibilityPolicy;
+
+  /**
    * Describe instances that can be created by this AllocationPolicy. Only instances[0] is supported
    * now.
    * The value may be {@code null}.
@@ -94,6 +102,25 @@ public final class AllocationPolicy extends com.google.api.client.json.GenericJs
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> tags;
+
+  /**
+   * Optional. The instance flexibility policy for the job. This configuration overrides the
+   * `instances` configuration. Only allowed in job level. Not allowed in task group level.
+   * @return value or {@code null} for none
+   */
+  public InstanceFlexibilityPolicy getInstanceFlexibilityPolicy() {
+    return instanceFlexibilityPolicy;
+  }
+
+  /**
+   * Optional. The instance flexibility policy for the job. This configuration overrides the
+   * `instances` configuration. Only allowed in job level. Not allowed in task group level.
+   * @param instanceFlexibilityPolicy instanceFlexibilityPolicy or {@code null} for none
+   */
+  public AllocationPolicy setInstanceFlexibilityPolicy(InstanceFlexibilityPolicy instanceFlexibilityPolicy) {
+    this.instanceFlexibilityPolicy = instanceFlexibilityPolicy;
+    return this;
+  }
 
   /**
    * Describe instances that can be created by this AllocationPolicy. Only instances[0] is supported

@@ -68,10 +68,24 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   private java.lang.Boolean installOpsAgent;
 
   /**
-   * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
-   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates from
-   * the same project as the job. You can specify the global instance template as a full or partial
-   * URL.
+   * An instance template used to create VMs. Batch supports global and regional instance templates
+   * from the same project as the job. In case of a regional instance template, the job and the
+   * instance template must be in the same region. As shown in the following examples, you can
+   * specify the instance template as either only its ID, only its name (not unique), or a partial
+   * or full URL. If you specify only its name, then Batch checks for a global instance template
+   * first. The following formats are valid for global instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/global/instanceTemplates/{instance_template_id_number}` *
+   * `projects/{project}/global/instanceTemplates/{instance_template_name}` * `https://www.googleapi
+   * s.com/compute/v1/projects/{project}/global/instanceTemplates/{instance_template_id_number}` * `
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/instanceTemplates/{instance_tem
+   * plate_name}` The following formats are valid for regional instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_id_number}` *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_name}` * `https://www
+   * .googleapis.com/compute/v1/projects/{project}/regions/{region}/instanceTemplates/{instance_temp
+   * late_id_number}` * `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/i
+   * nstanceTemplates/{instance_template_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,10 +180,24 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   }
 
   /**
-   * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
-   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates from
-   * the same project as the job. You can specify the global instance template as a full or partial
-   * URL.
+   * An instance template used to create VMs. Batch supports global and regional instance templates
+   * from the same project as the job. In case of a regional instance template, the job and the
+   * instance template must be in the same region. As shown in the following examples, you can
+   * specify the instance template as either only its ID, only its name (not unique), or a partial
+   * or full URL. If you specify only its name, then Batch checks for a global instance template
+   * first. The following formats are valid for global instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/global/instanceTemplates/{instance_template_id_number}` *
+   * `projects/{project}/global/instanceTemplates/{instance_template_name}` * `https://www.googleapi
+   * s.com/compute/v1/projects/{project}/global/instanceTemplates/{instance_template_id_number}` * `
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/instanceTemplates/{instance_tem
+   * plate_name}` The following formats are valid for regional instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_id_number}` *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_name}` * `https://www
+   * .googleapis.com/compute/v1/projects/{project}/regions/{region}/instanceTemplates/{instance_temp
+   * late_id_number}` * `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/i
+   * nstanceTemplates/{instance_template_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getInstanceTemplate() {
@@ -177,10 +205,24 @@ public final class InstancePolicyOrTemplate extends com.google.api.client.json.G
   }
 
   /**
-   * Name of an instance template used to create VMs. Named the field as 'instance_template' instead
-   * of 'template' to avoid C++ keyword conflict. Batch only supports global instance templates from
-   * the same project as the job. You can specify the global instance template as a full or partial
-   * URL.
+   * An instance template used to create VMs. Batch supports global and regional instance templates
+   * from the same project as the job. In case of a regional instance template, the job and the
+   * instance template must be in the same region. As shown in the following examples, you can
+   * specify the instance template as either only its ID, only its name (not unique), or a partial
+   * or full URL. If you specify only its name, then Batch checks for a global instance template
+   * first. The following formats are valid for global instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/global/instanceTemplates/{instance_template_id_number}` *
+   * `projects/{project}/global/instanceTemplates/{instance_template_name}` * `https://www.googleapi
+   * s.com/compute/v1/projects/{project}/global/instanceTemplates/{instance_template_id_number}` * `
+   * https://www.googleapis.com/compute/v1/projects/{project}/global/instanceTemplates/{instance_tem
+   * plate_name}` The following formats are valid for regional instance templates: *
+   * `{instance_template_id_number}` * `{instance_template_name}` (not unique) *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_id_number}` *
+   * `projects/{project}/regions/{region}/instanceTemplates/{instance_template_name}` * `https://www
+   * .googleapis.com/compute/v1/projects/{project}/regions/{region}/instanceTemplates/{instance_temp
+   * late_id_number}` * `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/i
+   * nstanceTemplates/{instance_template_name}`
    * @param instanceTemplate instanceTemplate or {@code null} for none
    */
   public InstancePolicyOrTemplate setInstanceTemplate(java.lang.String instanceTemplate) {

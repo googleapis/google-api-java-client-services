@@ -4520,6 +4520,22 @@ public class CloudSearch extends com.google.api.client.googleapis.services.json.
           return this;
         }
 
+        /** Optional. The BCP-47 language code representing the language of the query. */
+        @com.google.api.client.util.Key("requestOptions.queryLanguageCode")
+        private java.lang.String requestOptionsQueryLanguageCode;
+
+        /** Optional. The BCP-47 language code representing the language of the query.
+         */
+        public java.lang.String getRequestOptionsQueryLanguageCode() {
+          return requestOptionsQueryLanguageCode;
+        }
+
+        /** Optional. The BCP-47 language code representing the language of the query. */
+        public List setRequestOptionsQueryLanguageCode(java.lang.String requestOptionsQueryLanguageCode) {
+          this.requestOptionsQueryLanguageCode = requestOptionsQueryLanguageCode;
+          return this;
+        }
+
         /**
          * The ID generated when you create a search application using the [admin
          * console](https://support.google.com/a/answer/9043922).

@@ -51,7 +51,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    * float number between 0 and 1 based on the RGB color value, where `0` (0/255) represents the
    * absence of color and `1` (255/255) represents the maximum intensity of the color. For example,
    * the following sets the color to red at its maximum intensity: ``` "color": { "red": 1, "green":
-   * 0, "blue": 0, } ``` The `alpha` field is unavailable for button color. If specified, this field
+   * 0, "blue": 0 } ``` The `alpha` field is unavailable for button color. If specified, this field
    * is ignored.
    * The value may be {@code null}.
    */
@@ -128,7 +128,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    * float number between 0 and 1 based on the RGB color value, where `0` (0/255) represents the
    * absence of color and `1` (255/255) represents the maximum intensity of the color. For example,
    * the following sets the color to red at its maximum intensity: ``` "color": { "red": 1, "green":
-   * 0, "blue": 0, } ``` The `alpha` field is unavailable for button color. If specified, this field
+   * 0, "blue": 0 } ``` The `alpha` field is unavailable for button color. If specified, this field
    * is ignored.
    * @return value or {@code null} for none
    */
@@ -144,7 +144,7 @@ public final class GoogleAppsCardV1Button extends com.google.api.client.json.Gen
    * float number between 0 and 1 based on the RGB color value, where `0` (0/255) represents the
    * absence of color and `1` (255/255) represents the maximum intensity of the color. For example,
    * the following sets the color to red at its maximum intensity: ``` "color": { "red": 1, "green":
-   * 0, "blue": 0, } ``` The `alpha` field is unavailable for button color. If specified, this field
+   * 0, "blue": 0 } ``` The `alpha` field is unavailable for button color. If specified, this field
    * is ignored.
    * @param color color or {@code null} for none
    */

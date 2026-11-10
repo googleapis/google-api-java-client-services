@@ -28,8 +28,8 @@ package com.google.api.services.chat.v1.model;
  * creates a 2 column grid with a single item: ``` "grid": { "title": "A fine collection of items",
  * "columnCount": 2, "borderStyle": { "type": "STROKE", "cornerRadius": 4 }, "items": [ { "image": {
  * "imageUri": "https://www.example.com/image.png", "cropStyle": { "type": "SQUARE" },
- * "borderStyle": { "type": "STROKE" } }, "title": "An item", "textAlignment": "CENTER" } ],
- * "onClick": { "openLink": { "url": "https://www.example.com" } } } ```
+ * "borderStyle": { "type": "STROKE" } }, "title": "An item" } ], "onClick": { "openLink": { "url":
+ * "https://www.example.com" } } } ```
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Google Chat API. For a detailed explanation see:

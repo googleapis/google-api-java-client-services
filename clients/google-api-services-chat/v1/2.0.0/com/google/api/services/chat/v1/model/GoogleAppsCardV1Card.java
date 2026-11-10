@@ -55,10 +55,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    * The card's actions. Actions are added to the card's toolbar menu. Supports up to 10
    * `CardAction` items. [Google Workspace add-ons](https://developers.google.com/workspace/add-
    * ons): For example, the following JSON constructs a card action menu with `Settings` and `Send
-   * Feedback` options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": {
-   * "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ],
-   * "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": {
-   * "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * Feedback` options: ``` "cardActions": [ { "actionLabel": "Settings", "onClick": { "action": {
+   * "function": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ],
+   * "loadIndicator": "SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
+   * "url": "https://example.com/feedback" } } } ] ```
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,10 +137,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    * The card's actions. Actions are added to the card's toolbar menu. Supports up to 10
    * `CardAction` items. [Google Workspace add-ons](https://developers.google.com/workspace/add-
    * ons): For example, the following JSON constructs a card action menu with `Settings` and `Send
-   * Feedback` options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": {
-   * "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ],
-   * "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": {
-   * "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * Feedback` options: ``` "cardActions": [ { "actionLabel": "Settings", "onClick": { "action": {
+   * "function": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ],
+   * "loadIndicator": "SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
+   * "url": "https://example.com/feedback" } } } ] ```
    * @return value or {@code null} for none
    */
   public java.util.List<GoogleAppsCardV1CardAction> getCardActions() {
@@ -151,10 +151,10 @@ public final class GoogleAppsCardV1Card extends com.google.api.client.json.Gener
    * The card's actions. Actions are added to the card's toolbar menu. Supports up to 10
    * `CardAction` items. [Google Workspace add-ons](https://developers.google.com/workspace/add-
    * ons): For example, the following JSON constructs a card action menu with `Settings` and `Send
-   * Feedback` options: ``` "card_actions": [ { "actionLabel": "Settings", "onClick": { "action": {
-   * "functionName": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ],
-   * "loadIndicator": "LoadIndicator.SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": {
-   * "openLink": { "url": "https://example.com/feedback" } } } ] ```
+   * Feedback` options: ``` "cardActions": [ { "actionLabel": "Settings", "onClick": { "action": {
+   * "function": "goToView", "parameters": [ { "key": "viewType", "value": "SETTING" } ],
+   * "loadIndicator": "SPINNER" } } }, { "actionLabel": "Send Feedback", "onClick": { "openLink": {
+   * "url": "https://example.com/feedback" } } } ] ```
    * @param cardActions cardActions or {@code null} for none
    */
   public GoogleAppsCardV1Card setCardActions(java.util.List<GoogleAppsCardV1CardAction> cardActions) {

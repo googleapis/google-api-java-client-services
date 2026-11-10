@@ -30,7 +30,8 @@ package com.google.api.services.apihub.v1.model;
 public final class GoogleCloudApihubV1SpecContents extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded while calling the
+   * OnePlatform APIs like CreateSpec, UpdateSpec and CollectApiData.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -45,7 +46,8 @@ public final class GoogleCloudApihubV1SpecContents extends com.google.api.client
   private java.lang.String mimeType;
 
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded while calling the
+   * OnePlatform APIs like CreateSpec, UpdateSpec and CollectApiData.
    * @see #decodeContents()
    * @return value or {@code null} for none
    */
@@ -54,7 +56,8 @@ public final class GoogleCloudApihubV1SpecContents extends com.google.api.client
   }
 
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded while calling the
+   * OnePlatform APIs like CreateSpec, UpdateSpec and CollectApiData.
    * @see #getContents()
    * @return Base64 decoded value or {@code null} for none
    *
@@ -65,7 +68,8 @@ public final class GoogleCloudApihubV1SpecContents extends com.google.api.client
   }
 
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded while calling the
+   * OnePlatform APIs like CreateSpec, UpdateSpec and CollectApiData.
    * @see #encodeContents()
    * @param contents contents or {@code null} for none
    */
@@ -75,7 +79,8 @@ public final class GoogleCloudApihubV1SpecContents extends com.google.api.client
   }
 
   /**
-   * Required. The contents of the spec.
+   * Required. The contents of the spec. The contents should be base64 encoded while calling the
+   * OnePlatform APIs like CreateSpec, UpdateSpec and CollectApiData.
    * @see #setContents()
    *
    * <p>

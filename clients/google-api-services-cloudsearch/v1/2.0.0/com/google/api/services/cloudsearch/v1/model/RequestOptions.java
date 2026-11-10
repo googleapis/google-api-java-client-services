@@ -65,6 +65,13 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
   private java.lang.String languageCode;
 
   /**
+   * Optional. The BCP-47 language code representing the language of the query.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String queryLanguageCode;
+
+  /**
    * The ID generated when you create a search application using the [admin
    * console](https://support.google.com/a/answer/9043922).
    * The value may be {@code null}.
@@ -163,6 +170,23 @@ public final class RequestOptions extends com.google.api.client.json.GenericJson
    */
   public RequestOptions setLanguageCode(java.lang.String languageCode) {
     this.languageCode = languageCode;
+    return this;
+  }
+
+  /**
+   * Optional. The BCP-47 language code representing the language of the query.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getQueryLanguageCode() {
+    return queryLanguageCode;
+  }
+
+  /**
+   * Optional. The BCP-47 language code representing the language of the query.
+   * @param queryLanguageCode queryLanguageCode or {@code null} for none
+   */
+  public RequestOptions setQueryLanguageCode(java.lang.String queryLanguageCode) {
+    this.queryLanguageCode = queryLanguageCode;
     return this;
   }
 

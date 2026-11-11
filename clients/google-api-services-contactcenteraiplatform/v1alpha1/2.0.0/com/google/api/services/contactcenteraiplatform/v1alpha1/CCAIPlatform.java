@@ -1779,6 +1779,215 @@ public class CCAIPlatform extends com.google.api.client.googleapis.services.json
           }
         }
 
+        /**
+         * An accessor for creating requests from the PhoneNumbers collection.
+         *
+         * <p>The typical use is:</p>
+         * <pre>
+         *   {@code CCAIPlatform contactcenteraiplatform = new CCAIPlatform(...);}
+         *   {@code CCAIPlatform.PhoneNumbers.List request = contactcenteraiplatform.phoneNumbers().list(parameters ...)}
+         * </pre>
+         *
+         * @return the resource collection
+         */
+        public PhoneNumbers phoneNumbers() {
+          return new PhoneNumbers();
+        }
+
+        /**
+         * The "phoneNumbers" collection of methods.
+         */
+        public class PhoneNumbers {
+
+          /**
+           * Lists phone numbers allocated to a single ContactCenter.
+           *
+           * Create a request for the method "phoneNumbers.list".
+           *
+           * This request holds the parameters needed by the contactcenteraiplatform server.  After setting
+           * any optional parameters, call the {@link List#execute()} method to invoke the remote operation.
+           *
+           * @param parent Required. The parent ContactCenter resource name. Format:
+           *        projects/{project}/locations/{location}/contactCenters/{contact_center}
+           * @return the request
+           */
+          public List list(java.lang.String parent) throws java.io.IOException {
+            List result = new List(parent);
+            initialize(result);
+            return result;
+          }
+
+          public class List extends CCAIPlatformRequest<com.google.api.services.contactcenteraiplatform.v1alpha1.model.ListPhoneNumbersResponse> {
+
+            private static final String REST_PATH = "v1alpha1/{+parent}/phoneNumbers";
+
+            private final java.util.regex.Pattern PARENT_PATTERN =
+                java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/contactCenters/[^/]+$");
+
+            /**
+             * Lists phone numbers allocated to a single ContactCenter.
+             *
+             * Create a request for the method "phoneNumbers.list".
+             *
+             * This request holds the parameters needed by the the contactcenteraiplatform server.  After
+             * setting any optional parameters, call the {@link List#execute()} method to invoke the remote
+             * operation. <p> {@link
+             * List#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must be
+             * called to initialize this instance immediately after invoking the constructor. </p>
+             *
+             * @param parent Required. The parent ContactCenter resource name. Format:
+           *        projects/{project}/locations/{location}/contactCenters/{contact_center}
+             * @since 1.13
+             */
+            protected List(java.lang.String parent) {
+              super(CCAIPlatform.this, "GET", REST_PATH, null, com.google.api.services.contactcenteraiplatform.v1alpha1.model.ListPhoneNumbersResponse.class);
+              this.parent = com.google.api.client.util.Preconditions.checkNotNull(parent, "Required parameter parent must be specified.");
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/contactCenters/[^/]+$");
+              }
+            }
+
+            @Override
+            public com.google.api.client.http.HttpResponse executeUsingHead() throws java.io.IOException {
+              return super.executeUsingHead();
+            }
+
+            @Override
+            public com.google.api.client.http.HttpRequest buildHttpRequestUsingHead() throws java.io.IOException {
+              return super.buildHttpRequestUsingHead();
+            }
+
+            @Override
+            public List set$Xgafv(java.lang.String $Xgafv) {
+              return (List) super.set$Xgafv($Xgafv);
+            }
+
+            @Override
+            public List setAccessToken(java.lang.String accessToken) {
+              return (List) super.setAccessToken(accessToken);
+            }
+
+            @Override
+            public List setAlt(java.lang.String alt) {
+              return (List) super.setAlt(alt);
+            }
+
+            @Override
+            public List setCallback(java.lang.String callback) {
+              return (List) super.setCallback(callback);
+            }
+
+            @Override
+            public List setFields(java.lang.String fields) {
+              return (List) super.setFields(fields);
+            }
+
+            @Override
+            public List setKey(java.lang.String key) {
+              return (List) super.setKey(key);
+            }
+
+            @Override
+            public List setOauthToken(java.lang.String oauthToken) {
+              return (List) super.setOauthToken(oauthToken);
+            }
+
+            @Override
+            public List setPrettyPrint(java.lang.Boolean prettyPrint) {
+              return (List) super.setPrettyPrint(prettyPrint);
+            }
+
+            @Override
+            public List setQuotaUser(java.lang.String quotaUser) {
+              return (List) super.setQuotaUser(quotaUser);
+            }
+
+            @Override
+            public List setUploadType(java.lang.String uploadType) {
+              return (List) super.setUploadType(uploadType);
+            }
+
+            @Override
+            public List setUploadProtocol(java.lang.String uploadProtocol) {
+              return (List) super.setUploadProtocol(uploadProtocol);
+            }
+
+            /**
+             * Required. The parent ContactCenter resource name. Format:
+             * projects/{project}/locations/{location}/contactCenters/{contact_center}
+             */
+            @com.google.api.client.util.Key
+            private java.lang.String parent;
+
+            /** Required. The parent ContactCenter resource name. Format:
+           projects/{project}/locations/{location}/contactCenters/{contact_center}
+             */
+            public java.lang.String getParent() {
+              return parent;
+            }
+
+            /**
+             * Required. The parent ContactCenter resource name. Format:
+             * projects/{project}/locations/{location}/contactCenters/{contact_center}
+             */
+            public List setParent(java.lang.String parent) {
+              if (!getSuppressPatternChecks()) {
+                com.google.api.client.util.Preconditions.checkArgument(PARENT_PATTERN.matcher(parent).matches(),
+                    "Parameter parent must conform to the pattern " +
+                    "^projects/[^/]+/locations/[^/]+/contactCenters/[^/]+$");
+              }
+              this.parent = parent;
+              return this;
+            }
+
+            /**
+             * Optional. Requested page size. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000. If unspecified, the default page size is 500.
+             */
+            @com.google.api.client.util.Key
+            private java.lang.Integer pageSize;
+
+            /** Optional. Requested page size. The maximum value is 1000; values above 1000 will be coerced to
+           1000. If unspecified, the default page size is 500.
+             */
+            public java.lang.Integer getPageSize() {
+              return pageSize;
+            }
+
+            /**
+             * Optional. Requested page size. The maximum value is 1000; values above 1000 will be
+             * coerced to 1000. If unspecified, the default page size is 500.
+             */
+            public List setPageSize(java.lang.Integer pageSize) {
+              this.pageSize = pageSize;
+              return this;
+            }
+
+            /** Optional. Page token from a previous ListPhoneNumbers call. */
+            @com.google.api.client.util.Key
+            private java.lang.String pageToken;
+
+            /** Optional. Page token from a previous ListPhoneNumbers call.
+             */
+            public java.lang.String getPageToken() {
+              return pageToken;
+            }
+
+            /** Optional. Page token from a previous ListPhoneNumbers call. */
+            public List setPageToken(java.lang.String pageToken) {
+              this.pageToken = pageToken;
+              return this;
+            }
+
+            @Override
+            public List set(String parameterName, Object value) {
+              return (List) super.set(parameterName, value);
+            }
+          }
+
+        }
       }
       /**
        * An accessor for creating requests from the Operations collection.

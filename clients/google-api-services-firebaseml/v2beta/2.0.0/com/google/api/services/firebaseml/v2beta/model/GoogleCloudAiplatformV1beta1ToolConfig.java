@@ -37,6 +37,14 @@ public final class GoogleCloudAiplatformV1beta1ToolConfig extends com.google.api
   private GoogleCloudAiplatformV1beta1FunctionCallingConfig functionCallingConfig;
 
   /**
+   * Optional. If true, the API response will include the server-side tool calls and responses
+   * within the `Content` message. This allows clients to observe the server's tool interactions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean includeServerSideToolInvocations;
+
+  /**
    * Optional. Retrieval config.
    * The value may be {@code null}.
    */
@@ -57,6 +65,25 @@ public final class GoogleCloudAiplatformV1beta1ToolConfig extends com.google.api
    */
   public GoogleCloudAiplatformV1beta1ToolConfig setFunctionCallingConfig(GoogleCloudAiplatformV1beta1FunctionCallingConfig functionCallingConfig) {
     this.functionCallingConfig = functionCallingConfig;
+    return this;
+  }
+
+  /**
+   * Optional. If true, the API response will include the server-side tool calls and responses
+   * within the `Content` message. This allows clients to observe the server's tool interactions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIncludeServerSideToolInvocations() {
+    return includeServerSideToolInvocations;
+  }
+
+  /**
+   * Optional. If true, the API response will include the server-side tool calls and responses
+   * within the `Content` message. This allows clients to observe the server's tool interactions.
+   * @param includeServerSideToolInvocations includeServerSideToolInvocations or {@code null} for none
+   */
+  public GoogleCloudAiplatformV1beta1ToolConfig setIncludeServerSideToolInvocations(java.lang.Boolean includeServerSideToolInvocations) {
+    this.includeServerSideToolInvocations = includeServerSideToolInvocations;
     return this;
   }
 

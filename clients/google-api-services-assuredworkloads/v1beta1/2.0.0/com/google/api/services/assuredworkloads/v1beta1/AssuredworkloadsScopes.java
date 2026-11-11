@@ -23,6 +23,12 @@ package com.google.api.services.assuredworkloads.v1beta1;
  */
 public class AssuredworkloadsScopes {
 
+  /** See, edit, configure, and delete your Google Cloud Assured Workloads data and see the email address for your Google Account. */
+  public static final String ASSUREDWORKLOADS = "https://www.googleapis.com/auth/assuredworkloads";
+
+  /** See your Google Cloud Assured Workloads data and the email address of your Google Account. */
+  public static final String ASSUREDWORKLOADS_READONLY = "https://www.googleapis.com/auth/assuredworkloads.readonly";
+
   /** See, edit, configure, and delete your Google Cloud data and see the email address for your Google Account.. */
   public static final String CLOUD_PLATFORM = "https://www.googleapis.com/auth/cloud-platform";
 
@@ -33,6 +39,8 @@ public class AssuredworkloadsScopes {
    */
   public static java.util.Set<String> all() {
     java.util.Set<String> set = new java.util.HashSet<String>();
+    set.add(ASSUREDWORKLOADS);
+    set.add(ASSUREDWORKLOADS_READONLY);
     set.add(CLOUD_PLATFORM);
     return java.util.Collections.unmodifiableSet(set);
   }

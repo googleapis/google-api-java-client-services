@@ -48,7 +48,7 @@ public final class ExportAppRequest extends com.google.api.client.json.GenericJs
   /**
    * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to which to
    * export the app. The format of this URI must be `gs:`. The exported app archive will be written
-   * directly to the specified GCS object.
+   * directly to the specified Cloud Storage object.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -93,7 +93,7 @@ public final class ExportAppRequest extends com.google.api.client.json.GenericJs
   /**
    * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to which to
    * export the app. The format of this URI must be `gs:`. The exported app archive will be written
-   * directly to the specified GCS object.
+   * directly to the specified Cloud Storage object.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -103,7 +103,7 @@ public final class ExportAppRequest extends com.google.api.client.json.GenericJs
   /**
    * Optional. The [Google Cloud Storage](https://cloud.google.com/storage/docs/) URI to which to
    * export the app. The format of this URI must be `gs:`. The exported app archive will be written
-   * directly to the specified GCS object.
+   * directly to the specified Cloud Storage object.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public ExportAppRequest setGcsUri(java.lang.String gcsUri) {

@@ -91,6 +91,14 @@ public final class AssistantConfirmationRequest extends com.google.api.client.js
   private java.util.List<OptionQuestionsChunkQuestion> questions;
 
   /**
+   * Everything the confirmed action will change, so the console can render "Update 2 apps" and one
+   * badge per app. Empty for legacy single-target cards.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<AssistantConfirmationRequestTarget> targets;
+
+  /**
    * Name of the tool call the agent paused on (e.g. "update_app"), for the card header. Unset for
    * pure questions.
    * The value may be {@code null}.
@@ -232,6 +240,25 @@ public final class AssistantConfirmationRequest extends com.google.api.client.js
    */
   public AssistantConfirmationRequest setQuestions(java.util.List<OptionQuestionsChunkQuestion> questions) {
     this.questions = questions;
+    return this;
+  }
+
+  /**
+   * Everything the confirmed action will change, so the console can render "Update 2 apps" and one
+   * badge per app. Empty for legacy single-target cards.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<AssistantConfirmationRequestTarget> getTargets() {
+    return targets;
+  }
+
+  /**
+   * Everything the confirmed action will change, so the console can render "Update 2 apps" and one
+   * badge per app. Empty for legacy single-target cards.
+   * @param targets targets or {@code null} for none
+   */
+  public AssistantConfirmationRequest setTargets(java.util.List<AssistantConfirmationRequestTarget> targets) {
+    this.targets = targets;
     return this;
   }
 

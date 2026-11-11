@@ -70,6 +70,15 @@ public final class ToolCall extends com.google.api.client.json.GenericJson {
   private java.lang.String parentToolCallId;
 
   /**
+   * Output only. The app this call targets, derived by the assistant from the call's resource
+   * arguments: an app resource name, `PROJECT` for location-scoped tools, or empty for session-
+   * local tools. Set only in project-scoped assistant sessions.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetApp;
+
+  /**
    * Optional. The name of the tool to execute. Format:
    * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}`
    * The value may be {@code null}.
@@ -174,6 +183,27 @@ public final class ToolCall extends com.google.api.client.json.GenericJson {
    */
   public ToolCall setParentToolCallId(java.lang.String parentToolCallId) {
     this.parentToolCallId = parentToolCallId;
+    return this;
+  }
+
+  /**
+   * Output only. The app this call targets, derived by the assistant from the call's resource
+   * arguments: an app resource name, `PROJECT` for location-scoped tools, or empty for session-
+   * local tools. Set only in project-scoped assistant sessions.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetApp() {
+    return targetApp;
+  }
+
+  /**
+   * Output only. The app this call targets, derived by the assistant from the call's resource
+   * arguments: an app resource name, `PROJECT` for location-scoped tools, or empty for session-
+   * local tools. Set only in project-scoped assistant sessions.
+   * @param targetApp targetApp or {@code null} for none
+   */
+  public ToolCall setTargetApp(java.lang.String targetApp) {
+    this.targetApp = targetApp;
     return this;
   }
 

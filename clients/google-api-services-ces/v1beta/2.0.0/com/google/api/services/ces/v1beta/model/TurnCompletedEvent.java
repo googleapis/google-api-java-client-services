@@ -46,6 +46,14 @@ public final class TurnCompletedEvent extends com.google.api.client.json.Generic
   private java.lang.String reason;
 
   /**
+   * Apps this turn targeted or changed, so the console can refresh exactly those apps' stores.
+   * Project-scoped sessions only. Format: `projects/{project}/locations/{location}/apps/{app}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> touchedApps;
+
+  /**
    * Identifier of the turn that ended; matches TurnResumeSnapshot.turn_id and
    * ActiveTurnInfo.turn_id.
    * The value may be {@code null}.
@@ -86,6 +94,25 @@ public final class TurnCompletedEvent extends com.google.api.client.json.Generic
    */
   public TurnCompletedEvent setReason(java.lang.String reason) {
     this.reason = reason;
+    return this;
+  }
+
+  /**
+   * Apps this turn targeted or changed, so the console can refresh exactly those apps' stores.
+   * Project-scoped sessions only. Format: `projects/{project}/locations/{location}/apps/{app}`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTouchedApps() {
+    return touchedApps;
+  }
+
+  /**
+   * Apps this turn targeted or changed, so the console can refresh exactly those apps' stores.
+   * Project-scoped sessions only. Format: `projects/{project}/locations/{location}/apps/{app}`
+   * @param touchedApps touchedApps or {@code null} for none
+   */
+  public TurnCompletedEvent setTouchedApps(java.util.List<java.lang.String> touchedApps) {
+    this.touchedApps = touchedApps;
     return this;
   }
 

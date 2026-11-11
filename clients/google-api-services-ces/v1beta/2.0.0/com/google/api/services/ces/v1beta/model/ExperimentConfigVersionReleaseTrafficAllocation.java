@@ -46,7 +46,8 @@ public final class ExperimentConfigVersionReleaseTrafficAllocation extends com.g
   private java.lang.String id;
 
   /**
-   * Optional. Traffic percentage of the traffic allocation. Must be between 0 and 100.
+   * Optional. Traffic percentage of the traffic allocation, relative to the remaining non-study
+   * traffic. Must be between `0` and `100`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,7 +90,8 @@ public final class ExperimentConfigVersionReleaseTrafficAllocation extends com.g
   }
 
   /**
-   * Optional. Traffic percentage of the traffic allocation. Must be between 0 and 100.
+   * Optional. Traffic percentage of the traffic allocation, relative to the remaining non-study
+   * traffic. Must be between `0` and `100`.
    * @return value or {@code null} for none
    */
   public java.lang.Integer getTrafficPercentage() {
@@ -97,7 +99,8 @@ public final class ExperimentConfigVersionReleaseTrafficAllocation extends com.g
   }
 
   /**
-   * Optional. Traffic percentage of the traffic allocation. Must be between 0 and 100.
+   * Optional. Traffic percentage of the traffic allocation, relative to the remaining non-study
+   * traffic. Must be between `0` and `100`.
    * @param trafficPercentage trafficPercentage or {@code null} for none
    */
   public ExperimentConfigVersionReleaseTrafficAllocation setTrafficPercentage(java.lang.Integer trafficPercentage) {

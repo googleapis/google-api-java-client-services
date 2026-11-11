@@ -71,6 +71,13 @@ public final class ToolResponse extends com.google.api.client.json.GenericJson {
   private java.util.Map<String, java.lang.Object> response;
 
   /**
+   * Output only. The app the executed tool targeted; mirrors ToolCall.target_app.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetApp;
+
+  /**
    * Optional. The name of the tool to execute. Format:
    * `projects/{project}/locations/{location}/apps/{app}/tools/{tool}`
    * The value may be {@code null}.
@@ -177,6 +184,23 @@ public final class ToolResponse extends com.google.api.client.json.GenericJson {
    */
   public ToolResponse setResponse(java.util.Map<String, java.lang.Object> response) {
     this.response = response;
+    return this;
+  }
+
+  /**
+   * Output only. The app the executed tool targeted; mirrors ToolCall.target_app.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetApp() {
+    return targetApp;
+  }
+
+  /**
+   * Output only. The app the executed tool targeted; mirrors ToolCall.target_app.
+   * @param targetApp targetApp or {@code null} for none
+   */
+  public ToolResponse setTargetApp(java.lang.String targetApp) {
+    this.targetApp = targetApp;
     return this;
   }
 

@@ -85,6 +85,13 @@ public final class EvaluationResultScenarioResult extends com.google.api.client.
   }
 
   /**
+   * Output only. The results of each milestone in the scenario.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EvaluationResultScenarioResultMilestoneResult> milestoneResults;
+
+  /**
    * Output only. The outcome of the rubric.
    * The value may be {@code null}.
    */
@@ -225,6 +232,23 @@ public final class EvaluationResultScenarioResult extends com.google.api.client.
    */
   public EvaluationResultScenarioResult setHallucinationResult(java.util.List<EvaluationResultHallucinationResult> hallucinationResult) {
     this.hallucinationResult = hallucinationResult;
+    return this;
+  }
+
+  /**
+   * Output only. The results of each milestone in the scenario.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EvaluationResultScenarioResultMilestoneResult> getMilestoneResults() {
+    return milestoneResults;
+  }
+
+  /**
+   * Output only. The results of each milestone in the scenario.
+   * @param milestoneResults milestoneResults or {@code null} for none
+   */
+  public EvaluationResultScenarioResult setMilestoneResults(java.util.List<EvaluationResultScenarioResultMilestoneResult> milestoneResults) {
+    this.milestoneResults = milestoneResults;
     return this;
   }
 

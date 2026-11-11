@@ -103,6 +103,14 @@ public final class AssistantSession extends com.google.api.client.json.GenericJs
   private java.lang.String state;
 
   /**
+   * Output only. Apps this session has targeted or changed (project-scoped sessions only), for
+   * history tags. Format: `projects/{project}/locations/{location}/apps/{app}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> touchedApps;
+
+  /**
    * Output only. The time the assistant session was last updated.
    * The value may be {@code null}.
    */
@@ -272,6 +280,25 @@ public final class AssistantSession extends com.google.api.client.json.GenericJs
    */
   public AssistantSession setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. Apps this session has targeted or changed (project-scoped sessions only), for
+   * history tags. Format: `projects/{project}/locations/{location}/apps/{app}`
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getTouchedApps() {
+    return touchedApps;
+  }
+
+  /**
+   * Output only. Apps this session has targeted or changed (project-scoped sessions only), for
+   * history tags. Format: `projects/{project}/locations/{location}/apps/{app}`
+   * @param touchedApps touchedApps or {@code null} for none
+   */
+  public AssistantSession setTouchedApps(java.util.List<java.lang.String> touchedApps) {
+    this.touchedApps = touchedApps;
     return this;
   }
 

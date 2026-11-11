@@ -48,6 +48,13 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
   private java.lang.Integer maxTurns;
 
   /**
+   * Optional. The milestones for this scenario.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<EvaluationScenarioMilestone> milestones;
+
+  /**
    * Required. The rubrics to score the scenario against.
    * The value may be {@code null}.
    */
@@ -144,6 +151,23 @@ public final class EvaluationScenario extends com.google.api.client.json.Generic
    */
   public EvaluationScenario setMaxTurns(java.lang.Integer maxTurns) {
     this.maxTurns = maxTurns;
+    return this;
+  }
+
+  /**
+   * Optional. The milestones for this scenario.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<EvaluationScenarioMilestone> getMilestones() {
+    return milestones;
+  }
+
+  /**
+   * Optional. The milestones for this scenario.
+   * @param milestones milestones or {@code null} for none
+   */
+  public EvaluationScenario setMilestones(java.util.List<EvaluationScenarioMilestone> milestones) {
+    this.milestones = milestones;
     return this;
   }
 

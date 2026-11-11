@@ -19,7 +19,7 @@ package com.google.api.services.ces.v1beta.model;
 /**
  * A streamed fragment of a document artifact (e.g. a markdown TDD) that the assistant is
  * generating. Content deltas stream while the document is being written so clients can render a
- * live preview; the FINALIZED chunk carries the GCS URI once the file has been persisted.
+ * live preview; the FINALIZED chunk carries the Cloud Storage URI once the file has been persisted.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a
@@ -55,7 +55,7 @@ public final class ArtifactChunk extends com.google.api.client.json.GenericJson 
   private java.lang.String displayName;
 
   /**
-   * The GCS object the artifact was persisted to. Set on FINALIZED chunks.
+   * The Cloud Storage object the artifact was persisted to. Set on FINALIZED chunks.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -74,6 +74,14 @@ public final class ArtifactChunk extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
+
+  /**
+   * Output only. The app this artifact was produced for, when it was produced for one. Format:
+   * `projects/{project}/locations/{location}/apps/{app}`
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String targetApp;
 
   /**
    * Identifier of the artifact, stable across all chunks of one artifact within the stream.
@@ -129,7 +137,7 @@ public final class ArtifactChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The GCS object the artifact was persisted to. Set on FINALIZED chunks.
+   * The Cloud Storage object the artifact was persisted to. Set on FINALIZED chunks.
    * @return value or {@code null} for none
    */
   public java.lang.String getGcsUri() {
@@ -137,7 +145,7 @@ public final class ArtifactChunk extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * The GCS object the artifact was persisted to. Set on FINALIZED chunks.
+   * The Cloud Storage object the artifact was persisted to. Set on FINALIZED chunks.
    * @param gcsUri gcsUri or {@code null} for none
    */
   public ArtifactChunk setGcsUri(java.lang.String gcsUri) {
@@ -176,6 +184,25 @@ public final class ArtifactChunk extends com.google.api.client.json.GenericJson 
    */
   public ArtifactChunk setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Output only. The app this artifact was produced for, when it was produced for one. Format:
+   * `projects/{project}/locations/{location}/apps/{app}`
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTargetApp() {
+    return targetApp;
+  }
+
+  /**
+   * Output only. The app this artifact was produced for, when it was produced for one. Format:
+   * `projects/{project}/locations/{location}/apps/{app}`
+   * @param targetApp targetApp or {@code null} for none
+   */
+  public ArtifactChunk setTargetApp(java.lang.String targetApp) {
+    this.targetApp = targetApp;
     return this;
   }
 

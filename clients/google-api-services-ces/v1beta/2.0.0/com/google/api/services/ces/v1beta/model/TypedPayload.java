@@ -17,7 +17,9 @@
 package com.google.api.services.ces.v1beta.model;
 
 /**
- * Payload with a type.
+ * Payload with a type. Used by the assistant history (`AssistantChunk`) and by the streaming
+ * `typed_payload` event; lives here because both assistant_service.proto and session_service.proto
+ * need it.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Gemini Enterprise for Customer Experience API. For a

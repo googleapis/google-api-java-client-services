@@ -31,7 +31,7 @@ package com.google.api.services.ces.v1.model;
 public final class StreamChatAiAssistantResponse extends com.google.api.client.json.GenericJson {
 
   /**
-   * Generated-document artifact event (live preview deltas + final GCS pointer).
+   * Generated-document artifact event (live preview deltas + final Cloud Storage pointer).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -166,7 +166,7 @@ public final class StreamChatAiAssistantResponse extends com.google.api.client.j
   private UiEvent uiEvent;
 
   /**
-   * Generated-document artifact event (live preview deltas + final GCS pointer).
+   * Generated-document artifact event (live preview deltas + final Cloud Storage pointer).
    * @return value or {@code null} for none
    */
   public ArtifactChunk getArtifactChunk() {
@@ -174,7 +174,7 @@ public final class StreamChatAiAssistantResponse extends com.google.api.client.j
   }
 
   /**
-   * Generated-document artifact event (live preview deltas + final GCS pointer).
+   * Generated-document artifact event (live preview deltas + final Cloud Storage pointer).
    * @param artifactChunk artifactChunk or {@code null} for none
    */
   public StreamChatAiAssistantResponse setArtifactChunk(ArtifactChunk artifactChunk) {

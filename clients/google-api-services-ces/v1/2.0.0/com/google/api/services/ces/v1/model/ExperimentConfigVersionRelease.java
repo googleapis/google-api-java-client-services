@@ -38,7 +38,9 @@ public final class ExperimentConfigVersionRelease extends com.google.api.client.
   private java.lang.String state;
 
   /**
-   * Optional. Traffic allocations for the version release.
+   * Optional. Traffic allocations for the version release. When non-empty, the `traffic_percentage`
+   * values across all allocations must sum to `100`, representing the split of remaining non-study
+   * traffic.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +64,9 @@ public final class ExperimentConfigVersionRelease extends com.google.api.client.
   }
 
   /**
-   * Optional. Traffic allocations for the version release.
+   * Optional. Traffic allocations for the version release. When non-empty, the `traffic_percentage`
+   * values across all allocations must sum to `100`, representing the split of remaining non-study
+   * traffic.
    * @return value or {@code null} for none
    */
   public java.util.List<ExperimentConfigVersionReleaseTrafficAllocation> getTrafficAllocations() {
@@ -70,7 +74,9 @@ public final class ExperimentConfigVersionRelease extends com.google.api.client.
   }
 
   /**
-   * Optional. Traffic allocations for the version release.
+   * Optional. Traffic allocations for the version release. When non-empty, the `traffic_percentage`
+   * values across all allocations must sum to `100`, representing the split of remaining non-study
+   * traffic.
    * @param trafficAllocations trafficAllocations or {@code null} for none
    */
   public ExperimentConfigVersionRelease setTrafficAllocations(java.util.List<ExperimentConfigVersionReleaseTrafficAllocation> trafficAllocations) {

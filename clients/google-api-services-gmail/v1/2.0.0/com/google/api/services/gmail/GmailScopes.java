@@ -41,11 +41,38 @@ public class GmailScopes {
   /** Manage drafts and send emails. */
   public static final String GMAIL_COMPOSE = "https://www.googleapis.com/auth/gmail.compose";
 
+  /** Read, compose, send, update, and permanently delete your draft emails. */
+  public static final String GMAIL_DRAFTS = "https://www.googleapis.com/auth/gmail.drafts";
+
+  /** Compose new draft emails. */
+  public static final String GMAIL_DRAFTS_CREATE = "https://www.googleapis.com/auth/gmail.drafts.create";
+
+  /** Read your draft emails. */
+  public static final String GMAIL_DRAFTS_READONLY = "https://www.googleapis.com/auth/gmail.drafts.readonly";
+
   /** Add emails into your Gmail mailbox. */
   public static final String GMAIL_INSERT = "https://www.googleapis.com/auth/gmail.insert";
 
   /** See and edit your email labels. */
   public static final String GMAIL_LABELS = "https://www.googleapis.com/auth/gmail.labels";
+
+  /** Create new email labels. */
+  public static final String GMAIL_LABELS_CREATE = "https://www.googleapis.com/auth/gmail.labels.create";
+
+  /** Read your email labels. */
+  public static final String GMAIL_LABELS_READONLY = "https://www.googleapis.com/auth/gmail.labels.readonly";
+
+  /** Read, update, and permanently delete all your emails. */
+  public static final String GMAIL_MESSAGES = "https://www.googleapis.com/auth/gmail.messages";
+
+  /** Permanently delete all your emails. */
+  public static final String GMAIL_MESSAGES_DELETE = "https://www.googleapis.com/auth/gmail.messages.delete";
+
+  /** Update but not delete your emails. */
+  public static final String GMAIL_MESSAGES_MODIFY = "https://www.googleapis.com/auth/gmail.messages.modify";
+
+  /** Read your emails. */
+  public static final String GMAIL_MESSAGES_READONLY = "https://www.googleapis.com/auth/gmail.messages.readonly";
 
   /** View your email message metadata such as labels and headers, but not the email body. */
   public static final String GMAIL_METADATA = "https://www.googleapis.com/auth/gmail.metadata";
@@ -59,8 +86,17 @@ public class GmailScopes {
   /** Send email on your behalf. */
   public static final String GMAIL_SEND = "https://www.googleapis.com/auth/gmail.send";
 
+  /** Send email to yourself. */
+  public static final String GMAIL_SEND_SELF = "https://www.googleapis.com/auth/gmail.send.self";
+
   /** See, edit, create, or change your email settings and filters in Gmail. */
   public static final String GMAIL_SETTINGS_BASIC = "https://www.googleapis.com/auth/gmail.settings.basic";
+
+  /** Read, create, and delete your filters. */
+  public static final String GMAIL_SETTINGS_FILTERS = "https://www.googleapis.com/auth/gmail.settings.filters";
+
+  /** Read your filters. */
+  public static final String GMAIL_SETTINGS_FILTERS_READONLY = "https://www.googleapis.com/auth/gmail.settings.filters.readonly";
 
   /** Manage your sensitive mail settings, including who can manage your mail. */
   public static final String GMAIL_SETTINGS_SHARING = "https://www.googleapis.com/auth/gmail.settings.sharing";
@@ -78,13 +114,25 @@ public class GmailScopes {
     set.add(GMAIL_ADDONS_CURRENT_MESSAGE_METADATA);
     set.add(GMAIL_ADDONS_CURRENT_MESSAGE_READONLY);
     set.add(GMAIL_COMPOSE);
+    set.add(GMAIL_DRAFTS);
+    set.add(GMAIL_DRAFTS_CREATE);
+    set.add(GMAIL_DRAFTS_READONLY);
     set.add(GMAIL_INSERT);
     set.add(GMAIL_LABELS);
+    set.add(GMAIL_LABELS_CREATE);
+    set.add(GMAIL_LABELS_READONLY);
+    set.add(GMAIL_MESSAGES);
+    set.add(GMAIL_MESSAGES_DELETE);
+    set.add(GMAIL_MESSAGES_MODIFY);
+    set.add(GMAIL_MESSAGES_READONLY);
     set.add(GMAIL_METADATA);
     set.add(GMAIL_MODIFY);
     set.add(GMAIL_READONLY);
     set.add(GMAIL_SEND);
+    set.add(GMAIL_SEND_SELF);
     set.add(GMAIL_SETTINGS_BASIC);
+    set.add(GMAIL_SETTINGS_FILTERS);
+    set.add(GMAIL_SETTINGS_FILTERS_READONLY);
     set.add(GMAIL_SETTINGS_SHARING);
     return java.util.Collections.unmodifiableSet(set);
   }

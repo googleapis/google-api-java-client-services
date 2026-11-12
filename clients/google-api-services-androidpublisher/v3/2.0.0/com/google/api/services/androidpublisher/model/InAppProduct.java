@@ -77,7 +77,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
 
   /**
    * Prices per buyer region. None of these can be zero, as in-app products are never free. Map key
-   * is region code, as defined by ISO 3166-2.
+   * is region code, as defined by ISO 3166-1 alpha-2.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -238,7 +238,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
 
   /**
    * Prices per buyer region. None of these can be zero, as in-app products are never free. Map key
-   * is region code, as defined by ISO 3166-2.
+   * is region code, as defined by ISO 3166-1 alpha-2.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, Price> getPrices() {
@@ -247,7 +247,7 @@ public final class InAppProduct extends com.google.api.client.json.GenericJson {
 
   /**
    * Prices per buyer region. None of these can be zero, as in-app products are never free. Map key
-   * is region code, as defined by ISO 3166-2.
+   * is region code, as defined by ISO 3166-1 alpha-2.
    * @param prices prices or {@code null} for none
    */
   public InAppProduct setPrices(java.util.Map<String, Price> prices) {

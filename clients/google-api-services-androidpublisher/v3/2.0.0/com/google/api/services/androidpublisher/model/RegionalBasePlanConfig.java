@@ -48,7 +48,8 @@ public final class RegionalBasePlanConfig extends com.google.api.client.json.Gen
   private Money price;
 
   /**
-   * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g.
+   * "US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +96,8 @@ public final class RegionalBasePlanConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g.
+   * "US".
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -103,7 +105,8 @@ public final class RegionalBasePlanConfig extends com.google.api.client.json.Gen
   }
 
   /**
-   * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g.
+   * "US".
    * @param regionCode regionCode or {@code null} for none
    */
   public RegionalBasePlanConfig setRegionCode(java.lang.String regionCode) {

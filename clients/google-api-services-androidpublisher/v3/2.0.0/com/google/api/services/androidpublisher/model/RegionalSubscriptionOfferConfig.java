@@ -40,8 +40,8 @@ public final class RegionalSubscriptionOfferConfig extends com.google.api.client
   private java.lang.Boolean newSubscriberAvailability;
 
   /**
-   * Required. Immutable. Region code this configuration applies to, as defined by ISO 3166-2, e.g.
-   * "US".
+   * Required. Immutable. Region code this configuration applies to, as defined by ISO 3166-1
+   * alpha-2, e.g. "US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,8 +69,8 @@ public final class RegionalSubscriptionOfferConfig extends com.google.api.client
   }
 
   /**
-   * Required. Immutable. Region code this configuration applies to, as defined by ISO 3166-2, e.g.
-   * "US".
+   * Required. Immutable. Region code this configuration applies to, as defined by ISO 3166-1
+   * alpha-2, e.g. "US".
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -78,8 +78,8 @@ public final class RegionalSubscriptionOfferConfig extends com.google.api.client
   }
 
   /**
-   * Required. Immutable. Region code this configuration applies to, as defined by ISO 3166-2, e.g.
-   * "US".
+   * Required. Immutable. Region code this configuration applies to, as defined by ISO 3166-1
+   * alpha-2, e.g. "US".
    * @param regionCode regionCode or {@code null} for none
    */
   public RegionalSubscriptionOfferConfig setRegionCode(java.lang.String regionCode) {

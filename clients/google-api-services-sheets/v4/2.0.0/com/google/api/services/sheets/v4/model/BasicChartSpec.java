@@ -95,8 +95,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   private java.lang.String legendPosition;
 
   /**
-   * Gets whether all lines should be rendered smooth or straight by default. Applies to Line
-   * charts.
+   * Gets whether all lines should be rendered smooth or straight by default. Applies to Line and
+   * Combo charts.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -274,8 +274,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Gets whether all lines should be rendered smooth or straight by default. Applies to Line
-   * charts.
+   * Gets whether all lines should be rendered smooth or straight by default. Applies to Line and
+   * Combo charts.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getLineSmoothing() {
@@ -283,8 +283,8 @@ public final class BasicChartSpec extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Gets whether all lines should be rendered smooth or straight by default. Applies to Line
-   * charts.
+   * Gets whether all lines should be rendered smooth or straight by default. Applies to Line and
+   * Combo charts.
    * @param lineSmoothing lineSmoothing or {@code null} for none
    */
   public BasicChartSpec setLineSmoothing(java.lang.Boolean lineSmoothing) {

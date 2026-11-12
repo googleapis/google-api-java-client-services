@@ -73,6 +73,13 @@ public final class BucketStorageLayout extends com.google.api.client.json.Generi
   private java.lang.String locationType;
 
   /**
+   * The Rapid Cache configuration for the bucket.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private RapidCacheInfo rapidCacheInfo;
+
+  /**
    * The name of the bucket.
    * @return value or {@code null} for none
    */
@@ -174,6 +181,23 @@ public final class BucketStorageLayout extends com.google.api.client.json.Generi
     return this;
   }
 
+  /**
+   * The Rapid Cache configuration for the bucket.
+   * @return value or {@code null} for none
+   */
+  public RapidCacheInfo getRapidCacheInfo() {
+    return rapidCacheInfo;
+  }
+
+  /**
+   * The Rapid Cache configuration for the bucket.
+   * @param rapidCacheInfo rapidCacheInfo or {@code null} for none
+   */
+  public BucketStorageLayout setRapidCacheInfo(RapidCacheInfo rapidCacheInfo) {
+    this.rapidCacheInfo = rapidCacheInfo;
+    return this;
+  }
+
   @Override
   public BucketStorageLayout set(String fieldName, Object value) {
     return (BucketStorageLayout) super.set(fieldName, value);
@@ -266,4 +290,47 @@ public final class BucketStorageLayout extends com.google.api.client.json.Generi
 
   }
 
+  /**
+   * The Rapid Cache configuration for the bucket.
+   */
+  public static final class RapidCacheInfo extends com.google.api.client.json.GenericJson {
+
+    /**
+     * The type of cache in the bucket. Set to `rapid-cache` or `rapid-cache-ultra`, only if there is
+     * a cache present.
+     * The value may be {@code null}.
+     */
+    @com.google.api.client.util.Key
+    private java.lang.String cacheType;
+
+    /**
+     * The type of cache in the bucket. Set to `rapid-cache` or `rapid-cache-ultra`, only if there is
+     * a cache present.
+     * @return value or {@code null} for none
+     */
+    public java.lang.String getCacheType() {
+      return cacheType;
+    }
+
+    /**
+     * The type of cache in the bucket. Set to `rapid-cache` or `rapid-cache-ultra`, only if there is
+     * a cache present.
+     * @param cacheType cacheType or {@code null} for none
+     */
+    public RapidCacheInfo setCacheType(java.lang.String cacheType) {
+      this.cacheType = cacheType;
+      return this;
+    }
+
+    @Override
+    public RapidCacheInfo set(String fieldName, Object value) {
+      return (RapidCacheInfo) super.set(fieldName, value);
+    }
+
+    @Override
+    public RapidCacheInfo clone() {
+      return (RapidCacheInfo) super.clone();
+    }
+
+  }
 }

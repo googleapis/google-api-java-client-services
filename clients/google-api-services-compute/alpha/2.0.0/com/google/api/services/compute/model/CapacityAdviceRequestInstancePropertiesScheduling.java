@@ -30,7 +30,9 @@ package com.google.api.services.compute.model;
 public final class CapacityAdviceRequestInstancePropertiesScheduling extends com.google.api.client.json.GenericJson {
 
   /**
-   * The maximum time that instances can run before Compute Engine terminates them.
+   * Optional. The maximum time that instances can run before Compute Engine terminates them. If you
+   * set the `provisioning_model` to `FLEX_START`, then Compute Engine requires this duration, and
+   * the value must be between 10 minutes and 7 days.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -44,7 +46,9 @@ public final class CapacityAdviceRequestInstancePropertiesScheduling extends com
   private java.lang.String provisioningModel;
 
   /**
-   * The maximum time that instances can run before Compute Engine terminates them.
+   * Optional. The maximum time that instances can run before Compute Engine terminates them. If you
+   * set the `provisioning_model` to `FLEX_START`, then Compute Engine requires this duration, and
+   * the value must be between 10 minutes and 7 days.
    * @return value or {@code null} for none
    */
   public String getMaxRunDuration() {
@@ -52,7 +56,9 @@ public final class CapacityAdviceRequestInstancePropertiesScheduling extends com
   }
 
   /**
-   * The maximum time that instances can run before Compute Engine terminates them.
+   * Optional. The maximum time that instances can run before Compute Engine terminates them. If you
+   * set the `provisioning_model` to `FLEX_START`, then Compute Engine requires this duration, and
+   * the value must be between 10 minutes and 7 days.
    * @param maxRunDuration maxRunDuration or {@code null} for none
    */
   public CapacityAdviceRequestInstancePropertiesScheduling setMaxRunDuration(String maxRunDuration) {

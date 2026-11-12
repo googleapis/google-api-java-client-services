@@ -159,7 +159,9 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The issuer name. Recommended maximum length is 20 characters to ensure full string is
-   * displayed on smaller screens.
+   * displayed on smaller screens. Ignored if `localizedIssuerName` is set, including when a patch
+   * request sets only this field. To change the issuer name of a class that has
+   * `localizedIssuerName`, update `localizedIssuerName` instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -195,7 +197,8 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
 
   /**
    * Translated strings for the issuer_name. Recommended maximum length is 20 characters to ensure
-   * full string is displayed on smaller screens.
+   * full string is displayed on smaller screens. If set, this field takes precedence over
+   * `issuerName`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -699,7 +702,9 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The issuer name. Recommended maximum length is 20 characters to ensure full string is
-   * displayed on smaller screens.
+   * displayed on smaller screens. Ignored if `localizedIssuerName` is set, including when a patch
+   * request sets only this field. To change the issuer name of a class that has
+   * `localizedIssuerName`, update `localizedIssuerName` instead.
    * @return value or {@code null} for none
    */
   public java.lang.String getIssuerName() {
@@ -708,7 +713,9 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
 
   /**
    * Required. The issuer name. Recommended maximum length is 20 characters to ensure full string is
-   * displayed on smaller screens.
+   * displayed on smaller screens. Ignored if `localizedIssuerName` is set, including when a patch
+   * request sets only this field. To change the issuer name of a class that has
+   * `localizedIssuerName`, update `localizedIssuerName` instead.
    * @param issuerName issuerName or {@code null} for none
    */
   public OfferClass setIssuerName(java.lang.String issuerName) {
@@ -786,7 +793,8 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
 
   /**
    * Translated strings for the issuer_name. Recommended maximum length is 20 characters to ensure
-   * full string is displayed on smaller screens.
+   * full string is displayed on smaller screens. If set, this field takes precedence over
+   * `issuerName`.
    * @return value or {@code null} for none
    */
   public LocalizedString getLocalizedIssuerName() {
@@ -795,7 +803,8 @@ public final class OfferClass extends com.google.api.client.json.GenericJson {
 
   /**
    * Translated strings for the issuer_name. Recommended maximum length is 20 characters to ensure
-   * full string is displayed on smaller screens.
+   * full string is displayed on smaller screens. If set, this field takes precedence over
+   * `issuerName`.
    * @param localizedIssuerName localizedIssuerName or {@code null} for none
    */
   public OfferClass setLocalizedIssuerName(LocalizedString localizedIssuerName) {

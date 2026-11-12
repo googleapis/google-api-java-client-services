@@ -52,7 +52,7 @@ public final class ListAutoProtectionPoliciesResponse extends com.google.api.cli
   private java.lang.String nextPageToken;
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class ListAutoProtectionPoliciesResponse extends com.google.api.cli
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -103,7 +103,7 @@ public final class ListAutoProtectionPoliciesResponse extends com.google.api.cli
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListAutoProtectionPoliciesResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

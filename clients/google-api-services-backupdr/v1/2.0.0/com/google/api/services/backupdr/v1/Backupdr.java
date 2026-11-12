@@ -1893,22 +1893,22 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The current etag of the autoprotectionpolicy. If an etag is provided and does not match
-           * the current etag of the connection, deletion will be blocked.
+           * Optional. The current etag of the autoprotectionpolicy. If an etag is provided and does
+           * not match the current etag of the connection, deletion will be blocked.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** The current etag of the autoprotectionpolicy. If an etag is provided and does not match the current
-         etag of the connection, deletion will be blocked.
+          /** Optional. The current etag of the autoprotectionpolicy. If an etag is provided and does not match
+         the current etag of the connection, deletion will be blocked.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * The current etag of the autoprotectionpolicy. If an etag is provided and does not match
-           * the current etag of the connection, deletion will be blocked.
+           * Optional. The current etag of the autoprotectionpolicy. If an etag is provided and does
+           * not match the current etag of the connection, deletion will be blocked.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;

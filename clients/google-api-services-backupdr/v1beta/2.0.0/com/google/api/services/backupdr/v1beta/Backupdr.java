@@ -1883,22 +1883,24 @@ public class Backupdr extends com.google.api.client.googleapis.services.json.Abs
           }
 
           /**
-           * The current etag of the AutoProtectionPolicy. If an etag is provided and does not match
-           * the current etag of the connection, the request will be rejected with an ABORTED error.
+           * Optional. The current etag of the AutoProtectionPolicy. If an etag is provided and does
+           * not match the current etag of the connection, the request will be rejected with an
+           * ABORTED error.
            */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** The current etag of the AutoProtectionPolicy. If an etag is provided and does not match the current
-         etag of the connection, the request will be rejected with an ABORTED error.
+          /** Optional. The current etag of the AutoProtectionPolicy. If an etag is provided and does not match
+         the current etag of the connection, the request will be rejected with an ABORTED error.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
           /**
-           * The current etag of the AutoProtectionPolicy. If an etag is provided and does not match
-           * the current etag of the connection, the request will be rejected with an ABORTED error.
+           * Optional. The current etag of the AutoProtectionPolicy. If an etag is provided and does
+           * not match the current etag of the connection, the request will be rejected with an
+           * ABORTED error.
            */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;

@@ -46,7 +46,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the VPC network where NAT translation takes place. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,7 +117,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -173,7 +173,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the VPC network where NAT translation takes place. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -182,7 +182,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the VPC network where NAT translation takes place. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @param networkUri networkUri or {@code null} for none
    */
   public NatInfo setNetworkUri(java.lang.String networkUri) {
@@ -345,7 +345,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    * @return value or {@code null} for none
    */
   public java.lang.String getRouterUri() {
@@ -354,7 +354,7 @@ public final class NatInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the Cloud Router. Only valid when type is CLOUD_NAT. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    * @param routerUri routerUri or {@code null} for none
    */
   public NatInfo setRouterUri(java.lang.String routerUri) {

@@ -52,8 +52,7 @@ public final class AppEngineVersionInfo extends com.google.api.client.json.Gener
   private java.lang.String runtime;
 
   /**
-   * URI of the App Engine version. Format:
-   * `apps/{app_id}/services/{service_id}/versions/{version_id}`
+   * URI of the App Engine version. Format: `apps/{app}/services/{service}/versions/{version}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,8 +110,7 @@ public final class AppEngineVersionInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of the App Engine version. Format:
-   * `apps/{app_id}/services/{service_id}/versions/{version_id}`
+   * URI of the App Engine version. Format: `apps/{app}/services/{service}/versions/{version}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -120,8 +118,7 @@ public final class AppEngineVersionInfo extends com.google.api.client.json.Gener
   }
 
   /**
-   * URI of the App Engine version. Format:
-   * `apps/{app_id}/services/{service_id}/versions/{version_id}`
+   * URI of the App Engine version. Format: `apps/{app}/services/{service}/versions/{version}`
    * @param uri uri or {@code null} for none
    */
   public AppEngineVersionInfo setUri(java.lang.String uri) {

@@ -31,18 +31,16 @@ package com.google.api.services.networkmanagement.v1.model;
 public final class NgfwPacketInspectionInfo extends com.google.api.client.json.GenericJson {
 
   /**
-   * URI of the security profile group associated with this firewall packet inspection. Format: `org
-   * anizations/{organization_id}/locations/global/securityProfileGroups/{security_profile_group_id}
-   * `
+   * URI of the security profile group associated with this firewall packet inspection. Format:
+   * `organizations/{organization}/locations/global/securityProfileGroups/{security_profile_group}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String securityProfileGroupUri;
 
   /**
-   * URI of the security profile group associated with this firewall packet inspection. Format: `org
-   * anizations/{organization_id}/locations/global/securityProfileGroups/{security_profile_group_id}
-   * `
+   * URI of the security profile group associated with this firewall packet inspection. Format:
+   * `organizations/{organization}/locations/global/securityProfileGroups/{security_profile_group}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSecurityProfileGroupUri() {
@@ -50,9 +48,8 @@ public final class NgfwPacketInspectionInfo extends com.google.api.client.json.G
   }
 
   /**
-   * URI of the security profile group associated with this firewall packet inspection. Format: `org
-   * anizations/{organization_id}/locations/global/securityProfileGroups/{security_profile_group_id}
-   * `
+   * URI of the security profile group associated with this firewall packet inspection. Format:
+   * `organizations/{organization}/locations/global/securityProfileGroups/{security_profile_group}`
    * @param securityProfileGroupUri securityProfileGroupUri or {@code null} for none
    */
   public NgfwPacketInspectionInfo setSecurityProfileGroupUri(java.lang.String securityProfileGroupUri) {

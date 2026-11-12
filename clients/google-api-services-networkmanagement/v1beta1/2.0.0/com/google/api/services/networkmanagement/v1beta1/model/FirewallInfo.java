@@ -87,10 +87,9 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   /**
    * The URI of the firewall policy that this rule is associated with. This field is not applicable
    * to VPC firewall rules and implied VPC firewall rules. Format: *
-   * `locations/global/firewallPolicies/{policy_id}` (hierarchical policy) *
-   * `projects/{project_id}/global/firewallPolicies/{policy_id}` (global network firewall policy) *
-   * `projects/{project_id}/regions/{region}/firewallPolicies/{policy_id}` (regional network
-   * firewall policy)
+   * `locations/global/firewallPolicies/{policy}` (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}` (global network firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -126,8 +125,13 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   private java.lang.String targetType;
 
   /**
-   * The URI of the firewall rule in format "projects/{project}/global/firewalls/{firewall}". This
-   * field is not applicable to implied VPC firewall rules.
+   * The URI of the firewall rule in format *
+   * `locations/global/firewallPolicies/{policy}/priority/{priority}` (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}/priority/{priority}` (global network
+   * firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}/priority/{priority}` (regional
+   * network firewall policy) * `projects/{project}/global/firewalls/{firewall}` (VPC firewall
+   * rule). This field is not applicable to implied VPC firewall rules.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -263,10 +267,9 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   /**
    * The URI of the firewall policy that this rule is associated with. This field is not applicable
    * to VPC firewall rules and implied VPC firewall rules. Format: *
-   * `locations/global/firewallPolicies/{policy_id}` (hierarchical policy) *
-   * `projects/{project_id}/global/firewallPolicies/{policy_id}` (global network firewall policy) *
-   * `projects/{project_id}/regions/{region}/firewallPolicies/{policy_id}` (regional network
-   * firewall policy)
+   * `locations/global/firewallPolicies/{policy}` (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}` (global network firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}`
    * @return value or {@code null} for none
    */
   public java.lang.String getPolicyUri() {
@@ -276,10 +279,9 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   /**
    * The URI of the firewall policy that this rule is associated with. This field is not applicable
    * to VPC firewall rules and implied VPC firewall rules. Format: *
-   * `locations/global/firewallPolicies/{policy_id}` (hierarchical policy) *
-   * `projects/{project_id}/global/firewallPolicies/{policy_id}` (global network firewall policy) *
-   * `projects/{project_id}/regions/{region}/firewallPolicies/{policy_id}` (regional network
-   * firewall policy)
+   * `locations/global/firewallPolicies/{policy}` (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}` (global network firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}`
    * @param policyUri policyUri or {@code null} for none
    */
   public FirewallInfo setPolicyUri(java.lang.String policyUri) {
@@ -358,8 +360,13 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI of the firewall rule in format "projects/{project}/global/firewalls/{firewall}". This
-   * field is not applicable to implied VPC firewall rules.
+   * The URI of the firewall rule in format *
+   * `locations/global/firewallPolicies/{policy}/priority/{priority}` (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}/priority/{priority}` (global network
+   * firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}/priority/{priority}` (regional
+   * network firewall policy) * `projects/{project}/global/firewalls/{firewall}` (VPC firewall
+   * rule). This field is not applicable to implied VPC firewall rules.
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -367,8 +374,13 @@ public final class FirewallInfo extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * The URI of the firewall rule in format "projects/{project}/global/firewalls/{firewall}". This
-   * field is not applicable to implied VPC firewall rules.
+   * The URI of the firewall rule in format *
+   * `locations/global/firewallPolicies/{policy}/priority/{priority}` (hierarchical policy) *
+   * `projects/{project}/global/firewallPolicies/{policy}/priority/{priority}` (global network
+   * firewall policy) *
+   * `projects/{project}/regions/{region}/firewallPolicies/{policy}/priority/{priority}` (regional
+   * network firewall policy) * `projects/{project}/global/firewalls/{firewall}` (VPC firewall
+   * rule). This field is not applicable to implied VPC firewall rules.
    * @param uri uri or {@code null} for none
    */
   public FirewallInfo setUri(java.lang.String uri) {

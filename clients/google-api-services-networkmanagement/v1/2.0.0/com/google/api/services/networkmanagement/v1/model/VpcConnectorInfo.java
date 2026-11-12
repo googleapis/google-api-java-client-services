@@ -46,7 +46,7 @@ public final class VpcConnectorInfo extends com.google.api.client.json.GenericJs
 
   /**
    * URI of a VPC connector. Format:
-   * `projects/{project_id}/locations/{location}/connectors/{connector_id}`
+   * `projects/{project}/locations/{location}/connectors/{connector}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -88,7 +88,7 @@ public final class VpcConnectorInfo extends com.google.api.client.json.GenericJs
 
   /**
    * URI of a VPC connector. Format:
-   * `projects/{project_id}/locations/{location}/connectors/{connector_id}`
+   * `projects/{project}/locations/{location}/connectors/{connector}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -97,7 +97,7 @@ public final class VpcConnectorInfo extends com.google.api.client.json.GenericJs
 
   /**
    * URI of a VPC connector. Format:
-   * `projects/{project_id}/locations/{location}/connectors/{connector_id}`
+   * `projects/{project}/locations/{location}/connectors/{connector}`
    * @param uri uri or {@code null} for none
    */
   public VpcConnectorInfo setUri(java.lang.String uri) {

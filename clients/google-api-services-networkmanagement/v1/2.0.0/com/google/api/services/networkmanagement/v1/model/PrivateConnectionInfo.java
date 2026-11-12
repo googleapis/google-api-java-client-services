@@ -32,7 +32,7 @@ public final class PrivateConnectionInfo extends com.google.api.client.json.Gene
 
   /**
    * URI of the Private Connection in format
-   * "projects/{project_id}/locations/{location}/privateConnections/{private_connection_id}"
+   * "projects/{project}/locations/{location}/privateConnections/{private_connection}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -40,7 +40,7 @@ public final class PrivateConnectionInfo extends com.google.api.client.json.Gene
 
   /**
    * URI of the Private Connection in format
-   * "projects/{project_id}/locations/{location}/privateConnections/{private_connection_id}"
+   * "projects/{project}/locations/{location}/privateConnections/{private_connection}"
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -49,7 +49,7 @@ public final class PrivateConnectionInfo extends com.google.api.client.json.Gene
 
   /**
    * URI of the Private Connection in format
-   * "projects/{project_id}/locations/{location}/privateConnections/{private_connection_id}"
+   * "projects/{project}/locations/{location}/privateConnections/{private_connection}"
    * @param uri uri or {@code null} for none
    */
   public PrivateConnectionInfo setUri(java.lang.String uri) {

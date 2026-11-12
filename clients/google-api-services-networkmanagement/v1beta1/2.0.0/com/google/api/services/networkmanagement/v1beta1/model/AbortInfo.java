@@ -54,8 +54,8 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that caused the abort. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC network) *
-   * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (VM instance)
+   * `projects/{project}/global/networks/{network}` (VPC network) *
+   * `projects/{project}/zones/{zone}/instances/{instance}` (VM instance)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -116,8 +116,8 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that caused the abort. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC network) *
-   * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (VM instance)
+   * `projects/{project}/global/networks/{network}` (VPC network) *
+   * `projects/{project}/zones/{zone}/instances/{instance}` (VM instance)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -126,8 +126,8 @@ public final class AbortInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that caused the abort. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC network) *
-   * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (VM instance)
+   * `projects/{project}/global/networks/{network}` (VPC network) *
+   * `projects/{project}/zones/{zone}/instances/{instance}` (VM instance)
    * @param resourceUri resourceUri or {@code null} for none
    */
   public AbortInfo setResourceUri(java.lang.String resourceUri) {

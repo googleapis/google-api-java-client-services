@@ -39,8 +39,8 @@ public final class ForwardInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that the packet is forwarded to. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC peering network) *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (VPN gateway)
+   * `projects/{project}/global/networks/{network}` (VPC peering network) *
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (VPN gateway)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,8 +72,8 @@ public final class ForwardInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that the packet is forwarded to. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC peering network) *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (VPN gateway)
+   * `projects/{project}/global/networks/{network}` (VPC peering network) *
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (VPN gateway)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -82,8 +82,8 @@ public final class ForwardInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that the packet is forwarded to. Format: *
-   * `projects/{project_id}/global/networks/{network_id}` (VPC peering network) *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (VPN gateway)
+   * `projects/{project}/global/networks/{network}` (VPC peering network) *
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (VPN gateway)
    * @param resourceUri resourceUri or {@code null} for none
    */
   public ForwardInfo setResourceUri(java.lang.String resourceUri) {

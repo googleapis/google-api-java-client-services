@@ -46,7 +46,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
 
   /**
    * URI of the Cloud Function. Format:
-   * `projects/{project_id}/locations/{location}/functions/{function_id}`
+   * `projects/{project}/locations/{location}/functions/{function}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,7 +95,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
 
   /**
    * URI of the Cloud Function. Format:
-   * `projects/{project_id}/locations/{location}/functions/{function_id}`
+   * `projects/{project}/locations/{location}/functions/{function}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -104,7 +104,7 @@ public final class CloudFunctionInfo extends com.google.api.client.json.GenericJ
 
   /**
    * URI of the Cloud Function. Format:
-   * `projects/{project_id}/locations/{location}/functions/{function_id}`
+   * `projects/{project}/locations/{location}/functions/{function}`
    * @param uri uri or {@code null} for none
    */
   public CloudFunctionInfo setUri(java.lang.String uri) {

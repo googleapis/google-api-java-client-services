@@ -54,7 +54,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually exclusive with
+   * `projects/{project}/locations/{location}/services/{service}` Mutually exclusive with
    * `worker_pool_uri`.
    * The value may be {@code null}.
    */
@@ -63,7 +63,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of the Cloud Run revision. Format:
-   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
+   * `projects/{project}/locations/{location}/revisions/{revision}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -71,8 +71,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}` Mutually exclusive
-   * with `service_uri`.
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}` Mutually exclusive with
+   * `service_uri`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -133,7 +133,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually exclusive with
+   * `projects/{project}/locations/{location}/services/{service}` Mutually exclusive with
    * `worker_pool_uri`.
    * @return value or {@code null} for none
    */
@@ -143,7 +143,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run service this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/services/{service_id}` Mutually exclusive with
+   * `projects/{project}/locations/{location}/services/{service}` Mutually exclusive with
    * `worker_pool_uri`.
    * @param serviceUri serviceUri or {@code null} for none
    */
@@ -154,7 +154,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of the Cloud Run revision. Format:
-   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
+   * `projects/{project}/locations/{location}/revisions/{revision}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -163,7 +163,7 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of the Cloud Run revision. Format:
-   * `projects/{project_id}/locations/{location}/revisions/{revision_id}`
+   * `projects/{project}/locations/{location}/revisions/{revision}`
    * @param uri uri or {@code null} for none
    */
   public CloudRunRevisionInfo setUri(java.lang.String uri) {
@@ -173,8 +173,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}` Mutually exclusive
-   * with `service_uri`.
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}` Mutually exclusive with
+   * `service_uri`.
    * @return value or {@code null} for none
    */
   public java.lang.String getWorkerPoolUri() {
@@ -183,8 +183,8 @@ public final class CloudRunRevisionInfo extends com.google.api.client.json.Gener
 
   /**
    * URI of Cloud Run worker pool this revision belongs to. Format:
-   * `projects/{project_id}/locations/{location}/workerPools/{worker_pool_id}` Mutually exclusive
-   * with `service_uri`.
+   * `projects/{project}/locations/{location}/workerPools/{worker_pool}` Mutually exclusive with
+   * `service_uri`.
    * @param workerPoolUri workerPoolUri or {@code null} for none
    */
   public CloudRunRevisionInfo setWorkerPoolUri(java.lang.String workerPoolUri) {

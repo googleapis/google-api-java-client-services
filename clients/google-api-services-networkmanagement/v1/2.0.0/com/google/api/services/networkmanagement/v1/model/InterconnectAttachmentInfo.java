@@ -32,7 +32,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
 
   /**
    * URI of the Cloud Router to be used for dynamic routing. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -46,7 +46,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
   private java.lang.String displayName;
 
   /**
-   * URI of the Interconnect. Format: `projects/{project_id}/global/interconnects/{interconnect_id}`
+   * URI of the Interconnect. Format: `projects/{project}/global/interconnects/{interconnect}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +75,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
 
   /**
    * URI of the Interconnect attachment. Format:
-   * `projects/{project_id}/regions/{region}/interconnectAttachments/{attachment_id}`
+   * `projects/{project}/regions/{region}/interconnectAttachments/{attachment}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -83,7 +83,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
 
   /**
    * URI of the Cloud Router to be used for dynamic routing. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    * @return value or {@code null} for none
    */
   public java.lang.String getCloudRouterUri() {
@@ -92,7 +92,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
 
   /**
    * URI of the Cloud Router to be used for dynamic routing. Format:
-   * `projects/{project_id}/regions/{region}/routers/{router_id}`
+   * `projects/{project}/regions/{region}/routers/{router}`
    * @param cloudRouterUri cloudRouterUri or {@code null} for none
    */
   public InterconnectAttachmentInfo setCloudRouterUri(java.lang.String cloudRouterUri) {
@@ -118,7 +118,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
   }
 
   /**
-   * URI of the Interconnect. Format: `projects/{project_id}/global/interconnects/{interconnect_id}`
+   * URI of the Interconnect. Format: `projects/{project}/global/interconnects/{interconnect}`
    * @return value or {@code null} for none
    */
   public java.lang.String getInterconnectUri() {
@@ -126,7 +126,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
   }
 
   /**
-   * URI of the Interconnect. Format: `projects/{project_id}/global/interconnects/{interconnect_id}`
+   * URI of the Interconnect. Format: `projects/{project}/global/interconnects/{interconnect}`
    * @param interconnectUri interconnectUri or {@code null} for none
    */
   public InterconnectAttachmentInfo setInterconnectUri(java.lang.String interconnectUri) {
@@ -187,7 +187,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
 
   /**
    * URI of the Interconnect attachment. Format:
-   * `projects/{project_id}/regions/{region}/interconnectAttachments/{attachment_id}`
+   * `projects/{project}/regions/{region}/interconnectAttachments/{attachment}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -196,7 +196,7 @@ public final class InterconnectAttachmentInfo extends com.google.api.client.json
 
   /**
    * URI of the Interconnect attachment. Format:
-   * `projects/{project_id}/regions/{region}/interconnectAttachments/{attachment_id}`
+   * `projects/{project}/regions/{region}/interconnectAttachments/{attachment}`
    * @param uri uri or {@code null} for none
    */
   public InterconnectAttachmentInfo setUri(java.lang.String uri) {

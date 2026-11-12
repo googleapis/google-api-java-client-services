@@ -38,7 +38,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.Boolean canDelete;
 
   /**
-   * Output only. Indicates if the listing is eligible for business calls.
+   * Output only. Deprecated: Relates to the Call Tracking feature which is no longer supported.
+   * Indicates whether the location is eligible for business calls.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,7 +138,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   private java.lang.String newReviewUri;
 
   /**
-   * Output only. If this locationappears on Google Maps, this field is populated with the place ID
+   * Output only. If this location appears on Google Maps, this field is populated with the place ID
    * for the location. This ID can be used in various Places APIs. This field can be set during
    * Create calls, but not for Update.
    * The value may be {@code null}.
@@ -163,7 +164,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates if the listing is eligible for business calls.
+   * Output only. Deprecated: Relates to the Call Tracking feature which is no longer supported.
+   * Indicates whether the location is eligible for business calls.
    * @return value or {@code null} for none
    */
   public java.lang.Boolean getCanHaveBusinessCalls() {
@@ -171,7 +173,8 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. Indicates if the listing is eligible for business calls.
+   * Output only. Deprecated: Relates to the Call Tracking feature which is no longer supported.
+   * Indicates whether the location is eligible for business calls.
    * @param canHaveBusinessCalls canHaveBusinessCalls or {@code null} for none
    */
   public Metadata setCanHaveBusinessCalls(java.lang.Boolean canHaveBusinessCalls) {
@@ -400,7 +403,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If this locationappears on Google Maps, this field is populated with the place ID
+   * Output only. If this location appears on Google Maps, this field is populated with the place ID
    * for the location. This ID can be used in various Places APIs. This field can be set during
    * Create calls, but not for Update.
    * @return value or {@code null} for none
@@ -410,7 +413,7 @@ public final class Metadata extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. If this locationappears on Google Maps, this field is populated with the place ID
+   * Output only. If this location appears on Google Maps, this field is populated with the place ID
    * for the location. This ID can be used in various Places APIs. This field can be set during
    * Create calls, but not for Update.
    * @param placeId placeId or {@code null} for none

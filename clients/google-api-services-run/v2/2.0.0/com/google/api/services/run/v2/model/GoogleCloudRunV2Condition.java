@@ -44,14 +44,14 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   private java.lang.String instanceReason;
 
   /**
-   * Last time the condition transitioned from one status to another.
+   * Output only. Last time the condition transitioned from one status to another.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private String lastTransitionTime;
 
   /**
-   * Human readable message indicating details about the current status.
+   * Output only. Human readable message indicating details about the current status.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -72,21 +72,21 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   private java.lang.String revisionReason;
 
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info
+   * Output only. How to interpret failures of this condition, one of Error, Warning, Info
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String severity;
 
   /**
-   * State of the condition.
+   * Output only. State of the condition.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * type is used to communicate the status of the reconciliation process. See also:
+   * Output only. type is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
    * Types common to all resources include: * "Ready": True when the Resource is ready.
    * The value may be {@code null}.
@@ -129,7 +129,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * Last time the condition transitioned from one status to another.
+   * Output only. Last time the condition transitioned from one status to another.
    * @return value or {@code null} for none
    */
   public String getLastTransitionTime() {
@@ -137,7 +137,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * Last time the condition transitioned from one status to another.
+   * Output only. Last time the condition transitioned from one status to another.
    * @param lastTransitionTime lastTransitionTime or {@code null} for none
    */
   public GoogleCloudRunV2Condition setLastTransitionTime(String lastTransitionTime) {
@@ -146,7 +146,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * Human readable message indicating details about the current status.
+   * Output only. Human readable message indicating details about the current status.
    * @return value or {@code null} for none
    */
   public java.lang.String getMessage() {
@@ -154,7 +154,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * Human readable message indicating details about the current status.
+   * Output only. Human readable message indicating details about the current status.
    * @param message message or {@code null} for none
    */
   public GoogleCloudRunV2Condition setMessage(java.lang.String message) {
@@ -197,7 +197,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info
+   * Output only. How to interpret failures of this condition, one of Error, Warning, Info
    * @return value or {@code null} for none
    */
   public java.lang.String getSeverity() {
@@ -205,7 +205,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * How to interpret failures of this condition, one of Error, Warning, Info
+   * Output only. How to interpret failures of this condition, one of Error, Warning, Info
    * @param severity severity or {@code null} for none
    */
   public GoogleCloudRunV2Condition setSeverity(java.lang.String severity) {
@@ -214,7 +214,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * State of the condition.
+   * Output only. State of the condition.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -222,7 +222,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * State of the condition.
+   * Output only. State of the condition.
    * @param state state or {@code null} for none
    */
   public GoogleCloudRunV2Condition setState(java.lang.String state) {
@@ -231,7 +231,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * type is used to communicate the status of the reconciliation process. See also:
+   * Output only. type is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
    * Types common to all resources include: * "Ready": True when the Resource is ready.
    * @return value or {@code null} for none
@@ -241,7 +241,7 @@ public final class GoogleCloudRunV2Condition extends com.google.api.client.json.
   }
 
   /**
-   * type is used to communicate the status of the reconciliation process. See also:
+   * Output only. type is used to communicate the status of the reconciliation process. See also:
    * https://github.com/knative/serving/blob/main/docs/spec/errors.md#error-conditions-and-reporting
    * Types common to all resources include: * "Ready": True when the Resource is ready.
    * @param type type or {@code null} for none

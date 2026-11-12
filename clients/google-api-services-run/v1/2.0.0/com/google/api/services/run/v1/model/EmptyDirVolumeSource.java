@@ -31,9 +31,10 @@ package com.google.api.services.run.v1.model;
 public final class EmptyDirVolumeSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The medium on which the data is stored. The default is "" which means to use the node's default
-   * medium. Must be an empty string (default), `Memory`, or `Disk`. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+   * The medium on which the data is stored. The default is `""` which means to use the node's
+   * default medium. Must be an empty string (default), `Memory`, or `Disk`. For more information,
+   * see the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes#emptydir).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,18 +44,20 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
    * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for
    * memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between
    * the SizeLimit specified here and the sum of memory limits of all containers. The default is nil
-   * which means that the limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume. Info in
-   * Kubernetes: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * which means that the limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume) and
+   * the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sizeLimit;
 
   /**
-   * The medium on which the data is stored. The default is "" which means to use the node's default
-   * medium. Must be an empty string (default), `Memory`, or `Disk`. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+   * The medium on which the data is stored. The default is `""` which means to use the node's
+   * default medium. Must be an empty string (default), `Memory`, or `Disk`. For more information,
+   * see the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes#emptydir).
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -62,9 +65,10 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
   }
 
   /**
-   * The medium on which the data is stored. The default is "" which means to use the node's default
-   * medium. Must be an empty string (default), `Memory`, or `Disk`. More info:
-   * https://kubernetes.io/docs/concepts/storage/volumes#emptydir
+   * The medium on which the data is stored. The default is `""` which means to use the node's
+   * default medium. Must be an empty string (default), `Memory`, or `Disk`. For more information,
+   * see the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes#emptydir).
    * @param medium medium or {@code null} for none
    */
   public EmptyDirVolumeSource setMedium(java.lang.String medium) {
@@ -76,9 +80,10 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
    * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for
    * memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between
    * the SizeLimit specified here and the sum of memory limits of all containers. The default is nil
-   * which means that the limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume. Info in
-   * Kubernetes: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * which means that the limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume) and
+   * the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    * @return value or {@code null} for none
    */
   public java.lang.String getSizeLimit() {
@@ -89,9 +94,10 @@ public final class EmptyDirVolumeSource extends com.google.api.client.json.Gener
    * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for
    * memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between
    * the SizeLimit specified here and the sum of memory limits of all containers. The default is nil
-   * which means that the limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume. Info in
-   * Kubernetes: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * which means that the limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume) and
+   * the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    * @param sizeLimit sizeLimit or {@code null} for none
    */
   public EmptyDirVolumeSource setSizeLimit(java.lang.String sizeLimit) {

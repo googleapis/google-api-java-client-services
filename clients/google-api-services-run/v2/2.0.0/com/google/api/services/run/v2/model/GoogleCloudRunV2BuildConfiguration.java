@@ -44,6 +44,13 @@ public final class GoogleCloudRunV2BuildConfiguration extends com.google.api.cli
   private GoogleCloudRunV2BuildConfigurationDockerBuild dockerBuild;
 
   /**
+   * Optional. Environment variables for the build.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<GoogleCloudRunV2EnvVar> environmentVariables;
+
+  /**
    * Required. Artifact Registry URI to store the built image.
    * The value may be {@code null}.
    */
@@ -103,6 +110,23 @@ public final class GoogleCloudRunV2BuildConfiguration extends com.google.api.cli
    */
   public GoogleCloudRunV2BuildConfiguration setDockerBuild(GoogleCloudRunV2BuildConfigurationDockerBuild dockerBuild) {
     this.dockerBuild = dockerBuild;
+    return this;
+  }
+
+  /**
+   * Optional. Environment variables for the build.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<GoogleCloudRunV2EnvVar> getEnvironmentVariables() {
+    return environmentVariables;
+  }
+
+  /**
+   * Optional. Environment variables for the build.
+   * @param environmentVariables environmentVariables or {@code null} for none
+   */
+  public GoogleCloudRunV2BuildConfiguration setEnvironmentVariables(java.util.List<GoogleCloudRunV2EnvVar> environmentVariables) {
+    this.environmentVariables = environmentVariables;
     return this;
   }
 

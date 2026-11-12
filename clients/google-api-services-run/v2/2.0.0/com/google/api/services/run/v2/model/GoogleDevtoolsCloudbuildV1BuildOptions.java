@@ -119,10 +119,8 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   private java.lang.String pubsubTopic;
 
   /**
-   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
-   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
-   * in the given region. This field must be empty for the Build to be eligible to be paired with a
-   * pre-provisioned worker VM.
+   * Optional. Deprecated: Use PrivatePoolV1Config.WorkerConfig.ranked_machine_series instead. This
+   * field has no effect.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -405,10 +403,8 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   }
 
   /**
-   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
-   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
-   * in the given region. This field must be empty for the Build to be eligible to be paired with a
-   * pre-provisioned worker VM.
+   * Optional. Deprecated: Use PrivatePoolV1Config.WorkerConfig.ranked_machine_series instead. This
+   * field has no effect.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRankedMachineSeries() {
@@ -416,10 +412,8 @@ public final class GoogleDevtoolsCloudbuildV1BuildOptions extends com.google.api
   }
 
   /**
-   * Optional. Ranked list (earlier items have higher priority) of Machine Series to consider when
-   * provisioning Worker VMs. A concrete machine type will be selected based on machine availability
-   * in the given region. This field must be empty for the Build to be eligible to be paired with a
-   * pre-provisioned worker VM.
+   * Optional. Deprecated: Use PrivatePoolV1Config.WorkerConfig.ranked_machine_series instead. This
+   * field has no effect.
    * @param rankedMachineSeries rankedMachineSeries or {@code null} for none
    */
   public GoogleDevtoolsCloudbuildV1BuildOptions setRankedMachineSeries(java.util.List<java.lang.String> rankedMachineSeries) {

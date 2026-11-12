@@ -46,13 +46,6 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
   private GoogleCloudRunV2EmptyDirVolumeSource emptyDir;
 
   /**
-   * Optional. Represents a volume backed by a Filestore instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private GoogleCloudRunV2FilestoreVolumeSource filestore;
-
-  /**
    * Persistent storage backed by a Google Cloud Storage bucket.
    * The value may be {@code null}.
    */
@@ -115,23 +108,6 @@ public final class GoogleCloudRunV2Volume extends com.google.api.client.json.Gen
    */
   public GoogleCloudRunV2Volume setEmptyDir(GoogleCloudRunV2EmptyDirVolumeSource emptyDir) {
     this.emptyDir = emptyDir;
-    return this;
-  }
-
-  /**
-   * Optional. Represents a volume backed by a Filestore instance.
-   * @return value or {@code null} for none
-   */
-  public GoogleCloudRunV2FilestoreVolumeSource getFilestore() {
-    return filestore;
-  }
-
-  /**
-   * Optional. Represents a volume backed by a Filestore instance.
-   * @param filestore filestore or {@code null} for none
-   */
-  public GoogleCloudRunV2Volume setFilestore(GoogleCloudRunV2FilestoreVolumeSource filestore) {
-    this.filestore = filestore;
     return this;
   }
 

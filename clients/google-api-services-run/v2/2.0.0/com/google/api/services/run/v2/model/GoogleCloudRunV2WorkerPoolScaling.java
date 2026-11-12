@@ -30,11 +30,58 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2WorkerPoolScaling extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. The CPU scaling settings for the worker pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private GoogleCloudRunV2CpuScaling cpuScaling;
+
+  /**
    * Optional. The total number of instances in manual scaling mode.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.Integer manualInstanceCount;
+
+  /**
+   * Optional. The maximum count of instances distributed among revisions based on the specified
+   * instance split percentages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer maxInstanceCount;
+
+  /**
+   * Optional. The minimum count of instances distributed among revisions based on the specified
+   * instance split percentages.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Integer minInstanceCount;
+
+  /**
+   * Optional. The scaling mode for the worker pool.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String scalingMode;
+
+  /**
+   * Optional. The CPU scaling settings for the worker pool.
+   * @return value or {@code null} for none
+   */
+  public GoogleCloudRunV2CpuScaling getCpuScaling() {
+    return cpuScaling;
+  }
+
+  /**
+   * Optional. The CPU scaling settings for the worker pool.
+   * @param cpuScaling cpuScaling or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolScaling setCpuScaling(GoogleCloudRunV2CpuScaling cpuScaling) {
+    this.cpuScaling = cpuScaling;
+    return this;
+  }
 
   /**
    * Optional. The total number of instances in manual scaling mode.
@@ -50,6 +97,61 @@ public final class GoogleCloudRunV2WorkerPoolScaling extends com.google.api.clie
    */
   public GoogleCloudRunV2WorkerPoolScaling setManualInstanceCount(java.lang.Integer manualInstanceCount) {
     this.manualInstanceCount = manualInstanceCount;
+    return this;
+  }
+
+  /**
+   * Optional. The maximum count of instances distributed among revisions based on the specified
+   * instance split percentages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMaxInstanceCount() {
+    return maxInstanceCount;
+  }
+
+  /**
+   * Optional. The maximum count of instances distributed among revisions based on the specified
+   * instance split percentages.
+   * @param maxInstanceCount maxInstanceCount or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolScaling setMaxInstanceCount(java.lang.Integer maxInstanceCount) {
+    this.maxInstanceCount = maxInstanceCount;
+    return this;
+  }
+
+  /**
+   * Optional. The minimum count of instances distributed among revisions based on the specified
+   * instance split percentages.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Integer getMinInstanceCount() {
+    return minInstanceCount;
+  }
+
+  /**
+   * Optional. The minimum count of instances distributed among revisions based on the specified
+   * instance split percentages.
+   * @param minInstanceCount minInstanceCount or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolScaling setMinInstanceCount(java.lang.Integer minInstanceCount) {
+    this.minInstanceCount = minInstanceCount;
+    return this;
+  }
+
+  /**
+   * Optional. The scaling mode for the worker pool.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getScalingMode() {
+    return scalingMode;
+  }
+
+  /**
+   * Optional. The scaling mode for the worker pool.
+   * @param scalingMode scalingMode or {@code null} for none
+   */
+  public GoogleCloudRunV2WorkerPoolScaling setScalingMode(java.lang.String scalingMode) {
+    this.scalingMode = scalingMode;
     return this;
   }
 

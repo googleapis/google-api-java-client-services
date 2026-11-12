@@ -2492,8 +2492,8 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
           }
         }
         /**
-         * Returns permissions that a caller has on the specified Project. There are no permissions required
-         * for making this API call.
+         * Returns permissions that a caller has on the specified Instance. There are no permissions
+         * required for making this API call.
          *
          * Create a request for the method "instances.testIamPermissions".
          *
@@ -2520,7 +2520,7 @@ public class CloudRun extends com.google.api.client.googleapis.services.json.Abs
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/instances/[^/]+$");
 
           /**
-           * Returns permissions that a caller has on the specified Project. There are no permissions
+           * Returns permissions that a caller has on the specified Instance. There are no permissions
            * required for making this API call.
            *
            * Create a request for the method "instances.testIamPermissions".

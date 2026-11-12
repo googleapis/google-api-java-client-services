@@ -38,7 +38,7 @@ public final class RegionalProductAgeRatingInfo extends com.google.api.client.js
   private java.lang.String productAgeRatingTier;
 
   /**
-   * Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g. "US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -62,7 +62,7 @@ public final class RegionalProductAgeRatingInfo extends com.google.api.client.js
   }
 
   /**
-   * Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g. "US".
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -70,7 +70,7 @@ public final class RegionalProductAgeRatingInfo extends com.google.api.client.js
   }
 
   /**
-   * Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g. "US".
    * @param regionCode regionCode or {@code null} for none
    */
   public RegionalProductAgeRatingInfo setRegionCode(java.lang.String regionCode) {

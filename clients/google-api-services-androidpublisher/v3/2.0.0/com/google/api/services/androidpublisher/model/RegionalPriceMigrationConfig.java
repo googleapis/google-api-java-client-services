@@ -49,7 +49,8 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
   private java.lang.String priceIncreaseType;
 
   /**
-   * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g.
+   * "US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -98,7 +99,8 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
   }
 
   /**
-   * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g.
+   * "US".
    * @return value or {@code null} for none
    */
   public java.lang.String getRegionCode() {
@@ -106,7 +108,8 @@ public final class RegionalPriceMigrationConfig extends com.google.api.client.js
   }
 
   /**
-   * Required. Region code this configuration applies to, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region code this configuration applies to, as defined by ISO 3166-1 alpha-2, e.g.
+   * "US".
    * @param regionCode regionCode or {@code null} for none
    */
   public RegionalPriceMigrationConfig setRegionCode(java.lang.String regionCode) {

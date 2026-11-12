@@ -32,14 +32,16 @@ package com.google.api.services.androidpublisher.model;
 public final class RestrictedPaymentCountries extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. Region codes to impose payment restrictions on, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region codes to impose payment restrictions on, as defined by ISO 3166-1 alpha-2,
+   * e.g. "US".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> regionCodes;
 
   /**
-   * Required. Region codes to impose payment restrictions on, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region codes to impose payment restrictions on, as defined by ISO 3166-1 alpha-2,
+   * e.g. "US".
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getRegionCodes() {
@@ -47,7 +49,8 @@ public final class RestrictedPaymentCountries extends com.google.api.client.json
   }
 
   /**
-   * Required. Region codes to impose payment restrictions on, as defined by ISO 3166-2, e.g. "US".
+   * Required. Region codes to impose payment restrictions on, as defined by ISO 3166-1 alpha-2,
+   * e.g. "US".
    * @param regionCodes regionCodes or {@code null} for none
    */
   public RestrictedPaymentCountries setRegionCodes(java.util.List<java.lang.String> regionCodes) {

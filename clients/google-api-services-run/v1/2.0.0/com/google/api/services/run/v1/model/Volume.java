@@ -51,13 +51,6 @@ public final class Volume extends com.google.api.client.json.GenericJson {
   private EmptyDirVolumeSource emptyDir;
 
   /**
-   * Represents a volume backed by a Filestore instance.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private FilestoreVolumeSource filestore;
-
-  /**
    * Volume's name. In Cloud Run Fully Managed, the name 'cloudsql' is reserved.
    * The value may be {@code null}.
    */
@@ -126,23 +119,6 @@ public final class Volume extends com.google.api.client.json.GenericJson {
    */
   public Volume setEmptyDir(EmptyDirVolumeSource emptyDir) {
     this.emptyDir = emptyDir;
-    return this;
-  }
-
-  /**
-   * Represents a volume backed by a Filestore instance.
-   * @return value or {@code null} for none
-   */
-  public FilestoreVolumeSource getFilestore() {
-    return filestore;
-  }
-
-  /**
-   * Represents a volume backed by a Filestore instance.
-   * @param filestore filestore or {@code null} for none
-   */
-  public Volume setFilestore(FilestoreVolumeSource filestore) {
-    this.filestore = filestore;
     return this;
   }
 

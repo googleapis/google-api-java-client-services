@@ -17,8 +17,9 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * In memory (tmpfs) ephemeral storage. It is ephemeral in the sense that when the sandbox is taken
- * down, the data is destroyed with it (it does not persist across sandbox runs).
+ * Represents in-memory (tmpfs) or disk-backed ephemeral storage. It is ephemeral in the sense that
+ * when the sandbox is taken down, the data is destroyed with it (it does not persist across sandbox
+ * runs).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -31,8 +32,9 @@ package com.google.api.services.run.v2.model;
 public final class GoogleCloudRunV2EmptyDirVolumeSource extends com.google.api.client.json.GenericJson {
 
   /**
-   * The medium on which the data is stored. Acceptable values today is only MEMORY or none. When
-   * none, the default will currently be backed by memory but could change over time. +optional
+   * The medium on which the data is stored. Acceptable values are `MEMORY`, `DISK`, or unset
+   * (`MEDIUM_UNSPECIFIED`). When unset, the default is currently memory-backed but could change
+   * over time.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -42,17 +44,19 @@ public final class GoogleCloudRunV2EmptyDirVolumeSource extends com.google.api.c
    * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for
    * memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between
    * the SizeLimit specified here and the sum of memory limits of all containers. The default is nil
-   * which means that the limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume. Info in
-   * Kubernetes: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * which means that the limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume) and
+   * the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String sizeLimit;
 
   /**
-   * The medium on which the data is stored. Acceptable values today is only MEMORY or none. When
-   * none, the default will currently be backed by memory but could change over time. +optional
+   * The medium on which the data is stored. Acceptable values are `MEMORY`, `DISK`, or unset
+   * (`MEDIUM_UNSPECIFIED`). When unset, the default is currently memory-backed but could change
+   * over time.
    * @return value or {@code null} for none
    */
   public java.lang.String getMedium() {
@@ -60,8 +64,9 @@ public final class GoogleCloudRunV2EmptyDirVolumeSource extends com.google.api.c
   }
 
   /**
-   * The medium on which the data is stored. Acceptable values today is only MEMORY or none. When
-   * none, the default will currently be backed by memory but could change over time. +optional
+   * The medium on which the data is stored. Acceptable values are `MEMORY`, `DISK`, or unset
+   * (`MEDIUM_UNSPECIFIED`). When unset, the default is currently memory-backed but could change
+   * over time.
    * @param medium medium or {@code null} for none
    */
   public GoogleCloudRunV2EmptyDirVolumeSource setMedium(java.lang.String medium) {
@@ -73,9 +78,10 @@ public final class GoogleCloudRunV2EmptyDirVolumeSource extends com.google.api.c
    * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for
    * memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between
    * the SizeLimit specified here and the sum of memory limits of all containers. The default is nil
-   * which means that the limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume. Info in
-   * Kubernetes: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * which means that the limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume) and
+   * the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    * @return value or {@code null} for none
    */
   public java.lang.String getSizeLimit() {
@@ -86,9 +92,10 @@ public final class GoogleCloudRunV2EmptyDirVolumeSource extends com.google.api.c
    * Limit on the storage usable by this EmptyDir volume. The size limit is also applicable for
    * memory medium. The maximum usage on memory medium EmptyDir would be the minimum value between
    * the SizeLimit specified here and the sum of memory limits of all containers. The default is nil
-   * which means that the limit is undefined. More info:
-   * https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume. Info in
-   * Kubernetes: https://kubernetes.io/docs/concepts/storage/volumes/#emptydir
+   * which means that the limit is undefined. For more information, see [Configure in-memory volume
+   * mounts](https://cloud.google.com/run/docs/configuring/in-memory-volumes#configure-volume) and
+   * the [Kubernetes `emptyDir` volume
+   * documentation](https://kubernetes.io/docs/concepts/storage/volumes/#emptydir).
    * @param sizeLimit sizeLimit or {@code null} for none
    */
   public GoogleCloudRunV2EmptyDirVolumeSource setSizeLimit(java.lang.String sizeLimit) {

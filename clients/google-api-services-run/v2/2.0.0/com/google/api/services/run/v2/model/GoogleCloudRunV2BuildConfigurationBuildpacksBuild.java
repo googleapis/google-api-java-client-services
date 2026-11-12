@@ -44,7 +44,7 @@ public final class GoogleCloudRunV2BuildConfigurationBuildpacksBuild extends com
   private java.lang.String cacheImageUri;
 
   /**
-   * Optional. Environment variables for the build.
+   * Optional. Deprecated: Use environment_variables in BuildConfiguration instead.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -85,7 +85,7 @@ public final class GoogleCloudRunV2BuildConfigurationBuildpacksBuild extends com
   }
 
   /**
-   * Optional. Environment variables for the build.
+   * Optional. Deprecated: Use environment_variables in BuildConfiguration instead.
    * @return value or {@code null} for none
    */
   public java.util.Map<String, java.lang.String> getEnvironmentVariables() {
@@ -93,7 +93,7 @@ public final class GoogleCloudRunV2BuildConfigurationBuildpacksBuild extends com
   }
 
   /**
-   * Optional. Environment variables for the build.
+   * Optional. Deprecated: Use environment_variables in BuildConfiguration instead.
    * @param environmentVariables environmentVariables or {@code null} for none
    */
   public GoogleCloudRunV2BuildConfigurationBuildpacksBuild setEnvironmentVariables(java.util.Map<String, java.lang.String> environmentVariables) {

@@ -17,7 +17,7 @@
 package com.google.api.services.run.v2.model;
 
 /**
- * Represents a volume backed by a Filestore instance.
+ * Represents CPU-related scaling settings.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Run Admin API. For a detailed explanation see:
@@ -27,43 +27,46 @@ package com.google.api.services.run.v2.model;
  * @author Google, Inc.
  */
 @SuppressWarnings("javadoc")
-public final class GoogleCloudRunV2FilestoreVolumeSource extends com.google.api.client.json.GenericJson {
+public final class GoogleCloudRunV2CpuScaling extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The resource name of the Filestore volume. Format:
-   * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`
+   * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
+   * between `0.1` and `0.90` (inclusive) or `0.0` to disable CPU utilization as threshold for
+   * scaling.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
-  private java.lang.String volume;
+  private java.lang.Float cpuUtilization;
 
   /**
-   * Required. The resource name of the Filestore volume. Format:
-   * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`
+   * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
+   * between `0.1` and `0.90` (inclusive) or `0.0` to disable CPU utilization as threshold for
+   * scaling.
    * @return value or {@code null} for none
    */
-  public java.lang.String getVolume() {
-    return volume;
+  public java.lang.Float getCpuUtilization() {
+    return cpuUtilization;
   }
 
   /**
-   * Required. The resource name of the Filestore volume. Format:
-   * `projects/{project}/locations/{location}/volumePools/{volume_pool}/volumes/{volume}`
-   * @param volume volume or {@code null} for none
+   * Optional. Determines a threshold for CPU utilization before scaling begins. Accepted values are
+   * between `0.1` and `0.90` (inclusive) or `0.0` to disable CPU utilization as threshold for
+   * scaling.
+   * @param cpuUtilization cpuUtilization or {@code null} for none
    */
-  public GoogleCloudRunV2FilestoreVolumeSource setVolume(java.lang.String volume) {
-    this.volume = volume;
+  public GoogleCloudRunV2CpuScaling setCpuUtilization(java.lang.Float cpuUtilization) {
+    this.cpuUtilization = cpuUtilization;
     return this;
   }
 
   @Override
-  public GoogleCloudRunV2FilestoreVolumeSource set(String fieldName, Object value) {
-    return (GoogleCloudRunV2FilestoreVolumeSource) super.set(fieldName, value);
+  public GoogleCloudRunV2CpuScaling set(String fieldName, Object value) {
+    return (GoogleCloudRunV2CpuScaling) super.set(fieldName, value);
   }
 
   @Override
-  public GoogleCloudRunV2FilestoreVolumeSource clone() {
-    return (GoogleCloudRunV2FilestoreVolumeSource) super.clone();
+  public GoogleCloudRunV2CpuScaling clone() {
+    return (GoogleCloudRunV2CpuScaling) super.clone();
   }
 
 }

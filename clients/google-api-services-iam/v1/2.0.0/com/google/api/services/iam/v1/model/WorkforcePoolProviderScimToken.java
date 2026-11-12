@@ -17,8 +17,8 @@
 package com.google.api.services.iam.v1.model;
 
 /**
- * Gemini Enterprise only. Represents a token for the WorkforcePoolProviderScimTenant. Used for
- * authenticating SCIM provisioning requests.
+ * Gemini Enterprise and Looker only. Represents a token for the WorkforcePoolProviderScimTenant.
+ * Used for authenticating SCIM provisioning requests.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Identity and Access Management (IAM) API. For a
@@ -32,15 +32,15 @@ package com.google.api.services.iam.v1.model;
 public final class WorkforcePoolProviderScimToken extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Gemini Enterprise only. The display name of the SCIM token. Cannot exceed 32
-   * characters.
+   * Optional. Gemini Enterprise and Looker only. The display name of the SCIM token. Cannot exceed
+   * 32 characters.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String displayName;
 
   /**
-   * Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
+   * Identifier. Gemini Enterprise and Looker only. The resource name of the SCIM Token. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
    * The value may be {@code null}.
@@ -49,7 +49,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   private java.lang.String name;
 
   /**
-   * Output only. Gemini Enterprise only. The token string. Provide this to the IdP for
+   * Output only. Gemini Enterprise and Looker only. The token string. Provide this to the IdP for
    * authentication. Will be set only during creation.
    * The value may be {@code null}.
    */
@@ -57,15 +57,15 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   private java.lang.String securityToken;
 
   /**
-   * Output only. Gemini Enterprise only. The state of the token.
+   * Output only. Gemini Enterprise and Looker only. The state of the token.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String state;
 
   /**
-   * Optional. Gemini Enterprise only. The display name of the SCIM token. Cannot exceed 32
-   * characters.
+   * Optional. Gemini Enterprise and Looker only. The display name of the SCIM token. Cannot exceed
+   * 32 characters.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -73,8 +73,8 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Optional. Gemini Enterprise only. The display name of the SCIM token. Cannot exceed 32
-   * characters.
+   * Optional. Gemini Enterprise and Looker only. The display name of the SCIM token. Cannot exceed
+   * 32 characters.
    * @param displayName displayName or {@code null} for none
    */
   public WorkforcePoolProviderScimToken setDisplayName(java.lang.String displayName) {
@@ -83,7 +83,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
+   * Identifier. Gemini Enterprise and Looker only. The resource name of the SCIM Token. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
    * @return value or {@code null} for none
@@ -93,7 +93,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Identifier. Gemini Enterprise only. The resource name of the SCIM Token. Format:
+   * Identifier. Gemini Enterprise and Looker only. The resource name of the SCIM Token. Format:
    * `locations/{location}/workforcePools/{workforce_pool}/providers/
    * {workforce_pool_provider}/scimTenants/{scim_tenant}/tokens/{token}`
    * @param name name or {@code null} for none
@@ -104,7 +104,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Output only. Gemini Enterprise only. The token string. Provide this to the IdP for
+   * Output only. Gemini Enterprise and Looker only. The token string. Provide this to the IdP for
    * authentication. Will be set only during creation.
    * @return value or {@code null} for none
    */
@@ -113,7 +113,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Output only. Gemini Enterprise only. The token string. Provide this to the IdP for
+   * Output only. Gemini Enterprise and Looker only. The token string. Provide this to the IdP for
    * authentication. Will be set only during creation.
    * @param securityToken securityToken or {@code null} for none
    */
@@ -123,7 +123,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Output only. Gemini Enterprise only. The state of the token.
+   * Output only. Gemini Enterprise and Looker only. The state of the token.
    * @return value or {@code null} for none
    */
   public java.lang.String getState() {
@@ -131,7 +131,7 @@ public final class WorkforcePoolProviderScimToken extends com.google.api.client.
   }
 
   /**
-   * Output only. Gemini Enterprise only. The state of the token.
+   * Output only. Gemini Enterprise and Looker only. The state of the token.
    * @param state state or {@code null} for none
    */
   public WorkforcePoolProviderScimToken setState(java.lang.String state) {

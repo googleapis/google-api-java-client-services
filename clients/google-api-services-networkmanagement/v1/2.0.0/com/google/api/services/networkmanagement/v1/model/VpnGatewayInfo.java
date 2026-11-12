@@ -46,7 +46,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
 
   /**
    * URI of the VPC network where the VPN gateway is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -61,8 +61,8 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
 
   /**
    * URI of the VPN gateway. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA VPN gateway) *
-   * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN gateway) *
+   * `projects/{project}/regions/{region}/targetVpnGateways/{target_vpn_gateway}` (Classic VPN
    * gateway)
    * The value may be {@code null}.
    */
@@ -72,7 +72,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
   /**
    * URI of the VPN tunnel associated with the VPN gateway. There may be multiple VPN tunnels
    * configured on a VPN gateway, and only the one relevant to the test is displayed. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -114,7 +114,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
 
   /**
    * URI of the VPC network where the VPN gateway is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -123,7 +123,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
 
   /**
    * URI of the VPC network where the VPN gateway is configured. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @param networkUri networkUri or {@code null} for none
    */
   public VpnGatewayInfo setNetworkUri(java.lang.String networkUri) {
@@ -150,8 +150,8 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
 
   /**
    * URI of the VPN gateway. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA VPN gateway) *
-   * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN gateway) *
+   * `projects/{project}/regions/{region}/targetVpnGateways/{target_vpn_gateway}` (Classic VPN
    * gateway)
    * @return value or {@code null} for none
    */
@@ -161,8 +161,8 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
 
   /**
    * URI of the VPN gateway. Format: *
-   * `projects/{project_id}/regions/{region}/vpnGateways/{vpn_gateway_id}` (HA VPN gateway) *
-   * `projects/{project_id}/regions/{region}/targetVpnGateways/{target_vpn_gateway_id}` (Classic VPN
+   * `projects/{project}/regions/{region}/vpnGateways/{vpn_gateway}` (HA VPN gateway) *
+   * `projects/{project}/regions/{region}/targetVpnGateways/{target_vpn_gateway}` (Classic VPN
    * gateway)
    * @param uri uri or {@code null} for none
    */
@@ -174,7 +174,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
   /**
    * URI of the VPN tunnel associated with the VPN gateway. There may be multiple VPN tunnels
    * configured on a VPN gateway, and only the one relevant to the test is displayed. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    * @return value or {@code null} for none
    */
   public java.lang.String getVpnTunnelUri() {
@@ -184,7 +184,7 @@ public final class VpnGatewayInfo extends com.google.api.client.json.GenericJson
   /**
    * URI of the VPN tunnel associated with the VPN gateway. There may be multiple VPN tunnels
    * configured on a VPN gateway, and only the one relevant to the test is displayed. Format:
-   * `projects/{project_id}/regions/{region}/vpnTunnels/{vpn_tunnel_id}`
+   * `projects/{project}/regions/{region}/vpnTunnels/{vpn_tunnel}`
    * @param vpnTunnelUri vpnTunnelUri or {@code null} for none
    */
   public VpnGatewayInfo setVpnTunnelUri(java.lang.String vpnTunnelUri) {

@@ -53,7 +53,7 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
 
   /**
    * URI of the network containing the Redis Cluster endpoints in format
-   * "projects/{project_id}/global/networks/{network_id}".
+   * "projects/{project}/global/networks/{network}".
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -67,8 +67,7 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
   private java.lang.String secondaryEndpointIpAddress;
 
   /**
-   * URI of a Redis Cluster in format
-   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   * URI of a Redis Cluster in format "projects/{project}/locations/{location}/clusters/{cluster}"
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -127,7 +126,7 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
 
   /**
    * URI of the network containing the Redis Cluster endpoints in format
-   * "projects/{project_id}/global/networks/{network_id}".
+   * "projects/{project}/global/networks/{network}".
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -136,7 +135,7 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
 
   /**
    * URI of the network containing the Redis Cluster endpoints in format
-   * "projects/{project_id}/global/networks/{network_id}".
+   * "projects/{project}/global/networks/{network}".
    * @param networkUri networkUri or {@code null} for none
    */
   public RedisClusterInfo setNetworkUri(java.lang.String networkUri) {
@@ -162,8 +161,7 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of a Redis Cluster in format
-   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   * URI of a Redis Cluster in format "projects/{project}/locations/{location}/clusters/{cluster}"
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -171,8 +169,7 @@ public final class RedisClusterInfo extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * URI of a Redis Cluster in format
-   * "projects/{project_id}/locations/{location}/clusters/{cluster_id}"
+   * URI of a Redis Cluster in format "projects/{project}/locations/{location}/clusters/{cluster}"
    * @param uri uri or {@code null} for none
    */
   public RedisClusterInfo setUri(java.lang.String uri) {

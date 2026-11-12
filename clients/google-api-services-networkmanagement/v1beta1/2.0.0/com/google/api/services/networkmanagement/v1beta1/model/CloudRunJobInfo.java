@@ -45,7 +45,7 @@ public final class CloudRunJobInfo extends com.google.api.client.json.GenericJso
   private java.lang.String location;
 
   /**
-   * URI of the Cloud Run job. Format: `projects/{project_id}/locations/{location}/jobs/{job_id}`
+   * URI of the Cloud Run job. Format: `projects/{project}/locations/{location}/jobs/{job}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class CloudRunJobInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * URI of the Cloud Run job. Format: `projects/{project_id}/locations/{location}/jobs/{job_id}`
+   * URI of the Cloud Run job. Format: `projects/{project}/locations/{location}/jobs/{job}`
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -94,7 +94,7 @@ public final class CloudRunJobInfo extends com.google.api.client.json.GenericJso
   }
 
   /**
-   * URI of the Cloud Run job. Format: `projects/{project_id}/locations/{location}/jobs/{job_id}`
+   * URI of the Cloud Run job. Format: `projects/{project}/locations/{location}/jobs/{job}`
    * @param uri uri or {@code null} for none
    */
   public CloudRunJobInfo setUri(java.lang.String uri) {

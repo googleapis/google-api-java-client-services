@@ -32,7 +32,7 @@ public final class ProxyConnectionInfo extends com.google.api.client.json.Generi
 
   /**
    * URI of the VPC network where connection is proxied. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -102,8 +102,7 @@ public final class ProxyConnectionInfo extends com.google.api.client.json.Generi
   private java.lang.String protocol;
 
   /**
-   * URI of the proxy subnet. Format:
-   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   * URI of the proxy subnet. Format: `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -111,7 +110,7 @@ public final class ProxyConnectionInfo extends com.google.api.client.json.Generi
 
   /**
    * URI of the VPC network where connection is proxied. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -120,7 +119,7 @@ public final class ProxyConnectionInfo extends com.google.api.client.json.Generi
 
   /**
    * URI of the VPC network where connection is proxied. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @param networkUri networkUri or {@code null} for none
    */
   public ProxyConnectionInfo setNetworkUri(java.lang.String networkUri) {
@@ -282,8 +281,7 @@ public final class ProxyConnectionInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * URI of the proxy subnet. Format:
-   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   * URI of the proxy subnet. Format: `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    * @return value or {@code null} for none
    */
   public java.lang.String getSubnetUri() {
@@ -291,8 +289,7 @@ public final class ProxyConnectionInfo extends com.google.api.client.json.Generi
   }
 
   /**
-   * URI of the proxy subnet. Format:
-   * `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
+   * URI of the proxy subnet. Format: `projects/{project}/regions/{region}/subnetworks/{subnetwork}`
    * @param subnetUri subnetUri or {@code null} for none
    */
   public ProxyConnectionInfo setSubnetUri(java.lang.String subnetUri) {

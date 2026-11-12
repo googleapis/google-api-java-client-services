@@ -60,9 +60,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
 
   /**
    * URI of the health check attached to this backend (if applicable). Format: *
-   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
+   * `projects/{project}/global/healthChecks/{health_check}` *
+   * `projects/{project}/regions/{region}/healthChecks/{health_check}` *
+   * `projects/{project}/global/httpHealthChecks/{health_check}` (legacy)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -95,9 +95,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
 
   /**
    * URI of the network endpoint group this backend belongs to (if applicable) Format: *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}` (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional NEG) *
+   * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,9 +185,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
 
   /**
    * URI of the health check attached to this backend (if applicable). Format: *
-   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
+   * `projects/{project}/global/healthChecks/{health_check}` *
+   * `projects/{project}/regions/{region}/healthChecks/{health_check}` *
+   * `projects/{project}/global/httpHealthChecks/{health_check}` (legacy)
    * @return value or {@code null} for none
    */
   public java.lang.String getHealthCheckUri() {
@@ -196,9 +196,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
 
   /**
    * URI of the health check attached to this backend (if applicable). Format: *
-   * `projects/{project_id}/global/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/regions/{region}/healthChecks/{health_check_id}` *
-   * `projects/{project_id}/global/httpHealthChecks/{health_check_id}` (legacy)
+   * `projects/{project}/global/healthChecks/{health_check}` *
+   * `projects/{project}/regions/{region}/healthChecks/{health_check}` *
+   * `projects/{project}/global/httpHealthChecks/{health_check}` (legacy)
    * @param healthCheckUri healthCheckUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setHealthCheckUri(java.lang.String healthCheckUri) {
@@ -267,9 +267,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
 
   /**
    * URI of the network endpoint group this backend belongs to (if applicable) Format: *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}` (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional NEG) *
+   * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkEndpointGroupUri() {
@@ -278,9 +278,9 @@ public final class LoadBalancerBackendInfo extends com.google.api.client.json.Ge
 
   /**
    * URI of the network endpoint group this backend belongs to (if applicable) Format: *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}` (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional NEG) *
+   * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    * @param networkEndpointGroupUri networkEndpointGroupUri or {@code null} for none
    */
   public LoadBalancerBackendInfo setNetworkEndpointGroupUri(java.lang.String networkEndpointGroupUri) {

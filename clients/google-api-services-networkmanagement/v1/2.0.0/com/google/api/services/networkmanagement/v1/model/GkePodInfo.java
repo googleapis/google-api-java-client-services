@@ -40,7 +40,7 @@ public final class GkePodInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the network containing the GKE Pod. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +77,7 @@ public final class GkePodInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the network containing the GKE Pod. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @return value or {@code null} for none
    */
   public java.lang.String getNetworkUri() {
@@ -86,7 +86,7 @@ public final class GkePodInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the network containing the GKE Pod. Format:
-   * `projects/{project_id}/global/networks/{network_id}`
+   * `projects/{project}/global/networks/{network}`
    * @param networkUri networkUri or {@code null} for none
    */
   public GkePodInfo setNetworkUri(java.lang.String networkUri) {

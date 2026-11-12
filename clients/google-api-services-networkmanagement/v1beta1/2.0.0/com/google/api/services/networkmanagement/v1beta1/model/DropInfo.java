@@ -60,8 +60,9 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that caused the drop. Format: *
-   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
-   * `projects/{project_id}/global/routes/{route_id}` (route)
+   * `projects/{project}/global/firewalls/{firewall}` (firewall rule) *
+   * `projects/{project}/global/routes/{route}` (subnet, static or peering subnet route) *
+   * `projects/{project}/locations/{location}/policyBasedRoutes/{route}` (policy-based route)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -151,8 +152,9 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that caused the drop. Format: *
-   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
-   * `projects/{project_id}/global/routes/{route_id}` (route)
+   * `projects/{project}/global/firewalls/{firewall}` (firewall rule) *
+   * `projects/{project}/global/routes/{route}` (subnet, static or peering subnet route) *
+   * `projects/{project}/locations/{location}/policyBasedRoutes/{route}` (policy-based route)
    * @return value or {@code null} for none
    */
   public java.lang.String getResourceUri() {
@@ -161,8 +163,9 @@ public final class DropInfo extends com.google.api.client.json.GenericJson {
 
   /**
    * URI of the resource that caused the drop. Format: *
-   * `projects/{project_id}/global/firewalls/{firewall_id}` (firewall rule) *
-   * `projects/{project_id}/global/routes/{route_id}` (route)
+   * `projects/{project}/global/firewalls/{firewall}` (firewall rule) *
+   * `projects/{project}/global/routes/{route}` (subnet, static or peering subnet route) *
+   * `projects/{project}/locations/{location}/policyBasedRoutes/{route}` (policy-based route)
    * @param resourceUri resourceUri or {@code null} for none
    */
   public DropInfo setResourceUri(java.lang.String resourceUri) {

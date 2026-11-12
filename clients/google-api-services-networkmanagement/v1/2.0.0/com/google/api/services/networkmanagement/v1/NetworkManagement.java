@@ -6059,17 +6059,32 @@ public class NetworkManagement extends com.google.api.client.googleapis.services
               return this;
             }
 
-            /** Optional. The deployment type for Cloud Monitoring Points. */
+            /**
+             * Optional. Specifies the deployment type for Cloud Monitoring Points. Supported
+             * values: `TERRAFORM` for `GCE_VM`; `BICEP` or `TERRAFORM` for `AZURE_VM`; and
+             * `CLOUD_FORMATION` or `TERRAFORM` for `AWS_EC2`. If unspecified, defaults to
+             * `TERRAFORM`, `BICEP`, and `CLOUD_FORMATION`, respectively. Leave it unspecified for
+             * other types.
+             */
             @com.google.api.client.util.Key
             private java.lang.String cloudDeploymentType;
 
-            /** Optional. The deployment type for Cloud Monitoring Points.
+            /** Optional. Specifies the deployment type for Cloud Monitoring Points. Supported values: `TERRAFORM`
+           for `GCE_VM`; `BICEP` or `TERRAFORM` for `AZURE_VM`; and `CLOUD_FORMATION` or `TERRAFORM` for
+           `AWS_EC2`. If unspecified, defaults to `TERRAFORM`, `BICEP`, and `CLOUD_FORMATION`, respectively.
+           Leave it unspecified for other types.
              */
             public java.lang.String getCloudDeploymentType() {
               return cloudDeploymentType;
             }
 
-            /** Optional. The deployment type for Cloud Monitoring Points. */
+            /**
+             * Optional. Specifies the deployment type for Cloud Monitoring Points. Supported
+             * values: `TERRAFORM` for `GCE_VM`; `BICEP` or `TERRAFORM` for `AZURE_VM`; and
+             * `CLOUD_FORMATION` or `TERRAFORM` for `AWS_EC2`. If unspecified, defaults to
+             * `TERRAFORM`, `BICEP`, and `CLOUD_FORMATION`, respectively. Leave it unspecified for
+             * other types.
+             */
             public DownloadInstallScript setCloudDeploymentType(java.lang.String cloudDeploymentType) {
               this.cloudDeploymentType = cloudDeploymentType;
               return this;

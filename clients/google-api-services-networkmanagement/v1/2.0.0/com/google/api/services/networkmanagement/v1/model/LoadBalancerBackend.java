@@ -60,10 +60,10 @@ public final class LoadBalancerBackend extends com.google.api.client.json.Generi
 
   /**
    * URI of the backend instance or network endpoint. Format: *
-   * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (instance) *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * `projects/{project}/zones/{zone}/instances/{instance}` (instance) *
+   * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}` (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional NEG) *
+   * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -139,10 +139,10 @@ public final class LoadBalancerBackend extends com.google.api.client.json.Generi
 
   /**
    * URI of the backend instance or network endpoint. Format: *
-   * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (instance) *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * `projects/{project}/zones/{zone}/instances/{instance}` (instance) *
+   * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}` (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional NEG) *
+   * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    * @return value or {@code null} for none
    */
   public java.lang.String getUri() {
@@ -151,10 +151,10 @@ public final class LoadBalancerBackend extends com.google.api.client.json.Generi
 
   /**
    * URI of the backend instance or network endpoint. Format: *
-   * `projects/{project_id}/zones/{zone}/instances/{instance_id}` (instance) *
-   * `projects/{project_id}/zones/{zone}/networkEndpointGroups/{neg_id}` (zonal NEG) *
-   * `projects/{project_id}/regions/{region}/networkEndpointGroups/{neg_id}` (regional NEG) *
-   * `projects/{project_id}/global/networkEndpointGroups/{neg_id}` (global NEG)
+   * `projects/{project}/zones/{zone}/instances/{instance}` (instance) *
+   * `projects/{project}/zones/{zone}/networkEndpointGroups/{neg}` (zonal NEG) *
+   * `projects/{project}/regions/{region}/networkEndpointGroups/{neg}` (regional NEG) *
+   * `projects/{project}/global/networkEndpointGroups/{neg}` (global NEG)
    * @param uri uri or {@code null} for none
    */
   public LoadBalancerBackend setUri(java.lang.String uri) {

@@ -38,8 +38,8 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   private String estimatedUptime;
 
   /**
-   * Output only. The likely maximum time that you will have to wait until Compute Engine provisions
-   * your instances.
+   * Output only. The estimated time you have to wait before Compute Engine provisions your
+   * instances. The value 999999999s indicates that the wait time is unknown or very long.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -82,8 +82,8 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   }
 
   /**
-   * Output only. The likely maximum time that you will have to wait until Compute Engine provisions
-   * your instances.
+   * Output only. The estimated time you have to wait before Compute Engine provisions your
+   * instances. The value 999999999s indicates that the wait time is unknown or very long.
    * @return value or {@code null} for none
    */
   public String getEstimatedWaitDuration() {
@@ -91,8 +91,8 @@ public final class CapacityAdviceResponseRecommendationScores extends com.google
   }
 
   /**
-   * Output only. The likely maximum time that you will have to wait until Compute Engine provisions
-   * your instances.
+   * Output only. The estimated time you have to wait before Compute Engine provisions your
+   * instances. The value 999999999s indicates that the wait time is unknown or very long.
    * @param estimatedWaitDuration estimatedWaitDuration or {@code null} for none
    */
   public CapacityAdviceResponseRecommendationScores setEstimatedWaitDuration(String estimatedWaitDuration) {

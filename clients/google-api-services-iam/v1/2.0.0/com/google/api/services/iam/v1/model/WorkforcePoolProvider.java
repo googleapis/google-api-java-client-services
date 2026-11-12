@@ -89,6 +89,17 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private java.util.Map<String, java.lang.String> attributeMapping;
 
   /**
+   * Optional. An interval that determines how often user attributes are synced from the IdP. Must
+   * be between 30 minutes (1800s) and 12 hours (43200s). This configuration is used only when the
+   * Google Cloud session length policy is configured. When Google Cloud session length policy is
+   * configured and `attribute_sync_interval` is not configured, attributes are synced after a
+   * default interval of 12 hours (43200 seconds).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private String attributeSyncInterval;
+
+  /**
    * Optional. A description of the provider. Cannot exceed 256 characters.
    * The value may be {@code null}.
    */
@@ -174,11 +185,10 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   private GoogleIamAdminV1WorkforcePoolProviderSaml saml;
 
   /**
-   * Optional. Gemini Enterprise only. Specifies whether the workforce identity pool provider uses
-   * SCIM-managed groups instead of the `google.groups` attribute mapping for authorization checks.
-   * The `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A
-   * request that enables both fields on the same workforce identity pool provider will produce an
-   * error.
+   * Optional. Gemini Enterprise and Looker only. Specifies whether the workforce identity pool
+   * provider uses SCIM-managed groups, or users and groups. The `scim_usage` and
+   * `extended_attributes_oauth2_client` fields are mutually exclusive. A request that enables both
+   * fields on the same workforce identity pool provider will produce an error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -317,6 +327,31 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
    */
   public WorkforcePoolProvider setAttributeMapping(java.util.Map<String, java.lang.String> attributeMapping) {
     this.attributeMapping = attributeMapping;
+    return this;
+  }
+
+  /**
+   * Optional. An interval that determines how often user attributes are synced from the IdP. Must
+   * be between 30 minutes (1800s) and 12 hours (43200s). This configuration is used only when the
+   * Google Cloud session length policy is configured. When Google Cloud session length policy is
+   * configured and `attribute_sync_interval` is not configured, attributes are synced after a
+   * default interval of 12 hours (43200 seconds).
+   * @return value or {@code null} for none
+   */
+  public String getAttributeSyncInterval() {
+    return attributeSyncInterval;
+  }
+
+  /**
+   * Optional. An interval that determines how often user attributes are synced from the IdP. Must
+   * be between 30 minutes (1800s) and 12 hours (43200s). This configuration is used only when the
+   * Google Cloud session length policy is configured. When Google Cloud session length policy is
+   * configured and `attribute_sync_interval` is not configured, attributes are synced after a
+   * default interval of 12 hours (43200 seconds).
+   * @param attributeSyncInterval attributeSyncInterval or {@code null} for none
+   */
+  public WorkforcePoolProvider setAttributeSyncInterval(String attributeSyncInterval) {
+    this.attributeSyncInterval = attributeSyncInterval;
     return this;
   }
 
@@ -521,11 +556,10 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Gemini Enterprise only. Specifies whether the workforce identity pool provider uses
-   * SCIM-managed groups instead of the `google.groups` attribute mapping for authorization checks.
-   * The `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A
-   * request that enables both fields on the same workforce identity pool provider will produce an
-   * error.
+   * Optional. Gemini Enterprise and Looker only. Specifies whether the workforce identity pool
+   * provider uses SCIM-managed groups, or users and groups. The `scim_usage` and
+   * `extended_attributes_oauth2_client` fields are mutually exclusive. A request that enables both
+   * fields on the same workforce identity pool provider will produce an error.
    * @return value or {@code null} for none
    */
   public java.lang.String getScimUsage() {
@@ -533,11 +567,10 @@ public final class WorkforcePoolProvider extends com.google.api.client.json.Gene
   }
 
   /**
-   * Optional. Gemini Enterprise only. Specifies whether the workforce identity pool provider uses
-   * SCIM-managed groups instead of the `google.groups` attribute mapping for authorization checks.
-   * The `scim_usage` and `extended_attributes_oauth2_client` fields are mutually exclusive. A
-   * request that enables both fields on the same workforce identity pool provider will produce an
-   * error.
+   * Optional. Gemini Enterprise and Looker only. Specifies whether the workforce identity pool
+   * provider uses SCIM-managed groups, or users and groups. The `scim_usage` and
+   * `extended_attributes_oauth2_client` fields are mutually exclusive. A request that enables both
+   * fields on the same workforce identity pool provider will produce an error.
    * @param scimUsage scimUsage or {@code null} for none
    */
   public WorkforcePoolProvider setScimUsage(java.lang.String scimUsage) {

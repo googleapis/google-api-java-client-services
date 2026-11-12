@@ -52,9 +52,9 @@ public final class RestoreVerificationPlanAssociation extends com.google.api.cli
   private java.util.Map<String, java.lang.String> labels;
 
   /**
-   * Output only. Identifier. The resource name of RestoreVerificationPlanAssociation in below
-   * format Format : projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verif
-   * ication_plan}/associations/{association}
+   * Output only. Identifier. The resource name of the `RestoreVerificationPlanAssociation`. Format:
+   * `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/a
+   * ssociations/{association}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -149,9 +149,9 @@ public final class RestoreVerificationPlanAssociation extends com.google.api.cli
   }
 
   /**
-   * Output only. Identifier. The resource name of RestoreVerificationPlanAssociation in below
-   * format Format : projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verif
-   * ication_plan}/associations/{association}
+   * Output only. Identifier. The resource name of the `RestoreVerificationPlanAssociation`. Format:
+   * `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/a
+   * ssociations/{association}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -159,9 +159,9 @@ public final class RestoreVerificationPlanAssociation extends com.google.api.cli
   }
 
   /**
-   * Output only. Identifier. The resource name of RestoreVerificationPlanAssociation in below
-   * format Format : projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verif
-   * ication_plan}/associations/{association}
+   * Output only. Identifier. The resource name of the `RestoreVerificationPlanAssociation`. Format:
+   * `projects/{project}/locations/{location}/restoreVerificationPlans/{restore_verification_plan}/a
+   * ssociations/{association}`
    * @param name name or {@code null} for none
    */
   public RestoreVerificationPlanAssociation setName(java.lang.String name) {

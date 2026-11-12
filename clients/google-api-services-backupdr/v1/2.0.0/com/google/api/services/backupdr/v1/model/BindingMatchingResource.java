@@ -47,17 +47,17 @@ public final class BindingMatchingResource extends com.google.api.client.json.Ge
   private String lastEvaluationTime;
 
   /**
-   * Identifier. The resource name of the `BindingMatchingResource`. Format: `projects/{project}/loc
-   * ations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingRe
-   * sources/{matching_resource}`
+   * Output only. Identifier. The resource name of the `BindingMatchingResource`. Format: `projects/
+   * {project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bindin
+   * g}/matchingResources/{matching_resource}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String name;
 
   /**
-   * Required. Immutable. Resource name of the workload that matches the criteria of the binding.
-   * The format can be either a relative resource name (e.g., `projects/my-project/zones/us-
+   * Output only. Resource name of the workload that matches the criteria of the binding. The format
+   * can be either a relative resource name (e.g., `projects/my-project/zones/us-
    * central1-a/instances/my-instance`) or a schemeless full resource name (e.g.,
    * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`).
    * The value may be {@code null}.
@@ -102,9 +102,9 @@ public final class BindingMatchingResource extends com.google.api.client.json.Ge
   }
 
   /**
-   * Identifier. The resource name of the `BindingMatchingResource`. Format: `projects/{project}/loc
-   * ations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingRe
-   * sources/{matching_resource}`
+   * Output only. Identifier. The resource name of the `BindingMatchingResource`. Format: `projects/
+   * {project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bindin
+   * g}/matchingResources/{matching_resource}`
    * @return value or {@code null} for none
    */
   public java.lang.String getName() {
@@ -112,9 +112,9 @@ public final class BindingMatchingResource extends com.google.api.client.json.Ge
   }
 
   /**
-   * Identifier. The resource name of the `BindingMatchingResource`. Format: `projects/{project}/loc
-   * ations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{binding}/matchingRe
-   * sources/{matching_resource}`
+   * Output only. Identifier. The resource name of the `BindingMatchingResource`. Format: `projects/
+   * {project}/locations/{location}/autoProtectionPolicies/{auto_protection_policy}/bindings/{bindin
+   * g}/matchingResources/{matching_resource}`
    * @param name name or {@code null} for none
    */
   public BindingMatchingResource setName(java.lang.String name) {
@@ -123,8 +123,8 @@ public final class BindingMatchingResource extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Immutable. Resource name of the workload that matches the criteria of the binding.
-   * The format can be either a relative resource name (e.g., `projects/my-project/zones/us-
+   * Output only. Resource name of the workload that matches the criteria of the binding. The format
+   * can be either a relative resource name (e.g., `projects/my-project/zones/us-
    * central1-a/instances/my-instance`) or a schemeless full resource name (e.g.,
    * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`).
    * @return value or {@code null} for none
@@ -134,8 +134,8 @@ public final class BindingMatchingResource extends com.google.api.client.json.Ge
   }
 
   /**
-   * Required. Immutable. Resource name of the workload that matches the criteria of the binding.
-   * The format can be either a relative resource name (e.g., `projects/my-project/zones/us-
+   * Output only. Resource name of the workload that matches the criteria of the binding. The format
+   * can be either a relative resource name (e.g., `projects/my-project/zones/us-
    * central1-a/instances/my-instance`) or a schemeless full resource name (e.g.,
    * `//compute.googleapis.com/projects/my-project/zones/us-central1-a/instances/my-instance`).
    * @param resource resource or {@code null} for none

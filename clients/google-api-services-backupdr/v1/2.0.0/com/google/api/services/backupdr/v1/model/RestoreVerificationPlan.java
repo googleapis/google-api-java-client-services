@@ -18,8 +18,8 @@ package com.google.api.services.backupdr.v1.model;
 
 /**
  * A `RestoreVerificationPlan` specifies the scheduling and clean-up template for automated restore
- * verification. It contains a `RestoreVerificationSchedule` to dictate when the verifications
- * should run, and a `CleanupConfig` for post-verification resource deletion.
+ * verification. It contains a `schedule` to dictate when the verifications should run, and a
+ * `RestoreVerificationCleanupRule` for post-verification resource deletion.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Backup and DR Service API. For a detailed explanation

@@ -54,8 +54,8 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   private java.lang.String description;
 
   /**
-   * Optional. Output only. The etag for the binding. If this is provided on update, it must match
-   * the server's etag.
+   * Output only. The etag for the binding. If this is provided on update, it must match the
+   * server's etag.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -146,8 +146,8 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Output only. The etag for the binding. If this is provided on update, it must match
-   * the server's etag.
+   * Output only. The etag for the binding. If this is provided on update, it must match the
+   * server's etag.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -155,8 +155,8 @@ public final class AutoProtectionPolicyBinding extends com.google.api.client.jso
   }
 
   /**
-   * Optional. Output only. The etag for the binding. If this is provided on update, it must match
-   * the server's etag.
+   * Output only. The etag for the binding. If this is provided on update, it must match the
+   * server's etag.
    * @param etag etag or {@code null} for none
    */
   public AutoProtectionPolicyBinding setEtag(java.lang.String etag) {

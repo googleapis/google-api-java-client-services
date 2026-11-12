@@ -653,126 +653,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       }
     }
     /**
-     * Pauses an Anywhere Cache instance.
-     *
-     * Create a request for the method "anywhereCaches.pause".
-     *
-     * This request holds the parameters needed by the storage server.  After setting any optional
-     * parameters, call the {@link Pause#execute()} method to invoke the remote operation.
-     *
-     * @param bucket Name of the parent bucket.
-     * @param anywhereCacheId The ID of requested Anywhere Cache instance.
-     * @return the request
-     */
-    public Pause pause(java.lang.String bucket, java.lang.String anywhereCacheId) throws java.io.IOException {
-      Pause result = new Pause(bucket, anywhereCacheId);
-      initialize(result);
-      return result;
-    }
-
-    public class Pause extends StorageRequest<com.google.api.services.storage.model.AnywhereCache> {
-
-      private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}/pause";
-
-      /**
-       * Pauses an Anywhere Cache instance.
-       *
-       * Create a request for the method "anywhereCaches.pause".
-       *
-       * This request holds the parameters needed by the the storage server.  After setting any optional
-       * parameters, call the {@link Pause#execute()} method to invoke the remote operation. <p> {@link
-       * Pause#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
-       * be called to initialize this instance immediately after invoking the constructor. </p>
-       *
-       * @param bucket Name of the parent bucket.
-       * @param anywhereCacheId The ID of requested Anywhere Cache instance.
-       * @since 1.13
-       */
-      protected Pause(java.lang.String bucket, java.lang.String anywhereCacheId) {
-        super(Storage.this, "POST", REST_PATH, null, com.google.api.services.storage.model.AnywhereCache.class);
-        this.bucket = com.google.api.client.util.Preconditions.checkNotNull(bucket, "Required parameter bucket must be specified.");
-        this.anywhereCacheId = com.google.api.client.util.Preconditions.checkNotNull(anywhereCacheId, "Required parameter anywhereCacheId must be specified.");
-      }
-
-      @Override
-      public Pause setAlt(java.lang.String alt) {
-        return (Pause) super.setAlt(alt);
-      }
-
-      @Override
-      public Pause setFields(java.lang.String fields) {
-        return (Pause) super.setFields(fields);
-      }
-
-      @Override
-      public Pause setKey(java.lang.String key) {
-        return (Pause) super.setKey(key);
-      }
-
-      @Override
-      public Pause setOauthToken(java.lang.String oauthToken) {
-        return (Pause) super.setOauthToken(oauthToken);
-      }
-
-      @Override
-      public Pause setPrettyPrint(java.lang.Boolean prettyPrint) {
-        return (Pause) super.setPrettyPrint(prettyPrint);
-      }
-
-      @Override
-      public Pause setQuotaUser(java.lang.String quotaUser) {
-        return (Pause) super.setQuotaUser(quotaUser);
-      }
-
-      @Override
-      public Pause setUploadType(java.lang.String uploadType) {
-        return (Pause) super.setUploadType(uploadType);
-      }
-
-      @Override
-      public Pause setUserIp(java.lang.String userIp) {
-        return (Pause) super.setUserIp(userIp);
-      }
-
-      /** Name of the parent bucket. */
-      @com.google.api.client.util.Key
-      private java.lang.String bucket;
-
-      /** Name of the parent bucket.
-       */
-      public java.lang.String getBucket() {
-        return bucket;
-      }
-
-      /** Name of the parent bucket. */
-      public Pause setBucket(java.lang.String bucket) {
-        this.bucket = bucket;
-        return this;
-      }
-
-      /** The ID of requested Anywhere Cache instance. */
-      @com.google.api.client.util.Key
-      private java.lang.String anywhereCacheId;
-
-      /** The ID of requested Anywhere Cache instance.
-       */
-      public java.lang.String getAnywhereCacheId() {
-        return anywhereCacheId;
-      }
-
-      /** The ID of requested Anywhere Cache instance. */
-      public Pause setAnywhereCacheId(java.lang.String anywhereCacheId) {
-        this.anywhereCacheId = anywhereCacheId;
-        return this;
-      }
-
-      @Override
-      public Pause set(String parameterName, Object value) {
-        return (Pause) super.set(parameterName, value);
-      }
-    }
-    /**
-     * Resumes a paused or disabled Anywhere Cache instance.
+     * Resumes a disabled Anywhere Cache instance.
      *
      * Create a request for the method "anywhereCaches.resume".
      *
@@ -794,7 +675,7 @@ public class Storage extends com.google.api.client.googleapis.services.json.Abst
       private static final String REST_PATH = "b/{bucket}/anywhereCaches/{anywhereCacheId}/resume";
 
       /**
-       * Resumes a paused or disabled Anywhere Cache instance.
+       * Resumes a disabled Anywhere Cache instance.
        *
        * Create a request for the method "anywhereCaches.resume".
        *

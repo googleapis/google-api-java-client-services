@@ -4670,8 +4670,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Folders {
 
     /**
-     * Looks up the configured service perimeter for a given resource. Format:
-     * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
+     * Looks up the configured ServicePerimeter for a given resource.
      *
      * Create a request for the method "folders.lookupConfiguredServicePerimeter".
      *
@@ -4679,7 +4678,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to invoke
      * the remote operation.
      *
-     * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
+     * @param resource Required. The resource name. Format: `projects/{project_number}` or `folders/{folder_number}` (for
+     *        example, `projects/123` or `folders/456`)
      * @return the request
      */
     public LookupConfiguredServicePerimeter lookupConfiguredServicePerimeter(java.lang.String resource) throws java.io.IOException {
@@ -4696,8 +4696,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^folders/[^/]+$");
 
       /**
-       * Looks up the configured service perimeter for a given resource. Format:
-       * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
+       * Looks up the configured ServicePerimeter for a given resource.
        *
        * Create a request for the method "folders.lookupConfiguredServicePerimeter".
        *
@@ -4707,7 +4706,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
+       * @param resource Required. The resource name. Format: `projects/{project_number}` or `folders/{folder_number}` (for
+     *        example, `projects/123` or `folders/456`)
        * @since 1.13
        */
       protected LookupConfiguredServicePerimeter(java.lang.String resource) {
@@ -4785,17 +4785,24 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (LookupConfiguredServicePerimeter) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
+      /**
+       * Required. The resource name. Format: `projects/{project_number}` or
+       * `folders/{folder_number}` (for example, `projects/123` or `folders/456`)
+       */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`).
+      /** Required. The resource name. Format: `projects/{project_number}` or `folders/{folder_number}` (for
+     example, `projects/123` or `folders/456`)
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
+      /**
+       * Required. The resource name. Format: `projects/{project_number}` or
+       * `folders/{folder_number}` (for example, `projects/123` or `folders/456`)
+       */
       public LookupConfiguredServicePerimeter setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),
@@ -6572,8 +6579,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
   public class Projects {
 
     /**
-     * Looks up the configured service perimeter for a given resource. Format:
-     * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
+     * Looks up the configured ServicePerimeter for a given resource.
      *
      * Create a request for the method "projects.lookupConfiguredServicePerimeter".
      *
@@ -6581,7 +6587,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
      * optional parameters, call the {@link LookupConfiguredServicePerimeter#execute()} method to invoke
      * the remote operation.
      *
-     * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
+     * @param resource Required. The resource name. Format: `projects/{project_number}` or `folders/{folder_number}` (for
+     *        example, `projects/123` or `folders/456`)
      * @return the request
      */
     public LookupConfiguredServicePerimeter lookupConfiguredServicePerimeter(java.lang.String resource) throws java.io.IOException {
@@ -6598,8 +6605,7 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
           java.util.regex.Pattern.compile("^projects/[^/]+$");
 
       /**
-       * Looks up the configured service perimeter for a given resource. Format:
-       * `['projects/{projectNumber}', 'folders/{folderNumber}']`.
+       * Looks up the configured ServicePerimeter for a given resource.
        *
        * Create a request for the method "projects.lookupConfiguredServicePerimeter".
        *
@@ -6609,7 +6615,8 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
        * api.client.googleapis.services.AbstractGoogleClientRequest)} must be called to initialize this
        * instance immediately after invoking the constructor. </p>
        *
-       * @param resource Required. The resource to resolve (for example, `projects/123` or `folders/456`).
+       * @param resource Required. The resource name. Format: `projects/{project_number}` or `folders/{folder_number}` (for
+     *        example, `projects/123` or `folders/456`)
        * @since 1.13
        */
       protected LookupConfiguredServicePerimeter(java.lang.String resource) {
@@ -6687,17 +6694,24 @@ public class AccessContextManager extends com.google.api.client.googleapis.servi
         return (LookupConfiguredServicePerimeter) super.setUploadProtocol(uploadProtocol);
       }
 
-      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
+      /**
+       * Required. The resource name. Format: `projects/{project_number}` or
+       * `folders/{folder_number}` (for example, `projects/123` or `folders/456`)
+       */
       @com.google.api.client.util.Key
       private java.lang.String resource;
 
-      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`).
+      /** Required. The resource name. Format: `projects/{project_number}` or `folders/{folder_number}` (for
+     example, `projects/123` or `folders/456`)
        */
       public java.lang.String getResource() {
         return resource;
       }
 
-      /** Required. The resource to resolve (for example, `projects/123` or `folders/456`). */
+      /**
+       * Required. The resource name. Format: `projects/{project_number}` or
+       * `folders/{folder_number}` (for example, `projects/123` or `folders/456`)
+       */
       public LookupConfiguredServicePerimeter setResource(java.lang.String resource) {
         if (!getSuppressPatternChecks()) {
           com.google.api.client.util.Preconditions.checkArgument(RESOURCE_PATTERN.matcher(resource).matches(),

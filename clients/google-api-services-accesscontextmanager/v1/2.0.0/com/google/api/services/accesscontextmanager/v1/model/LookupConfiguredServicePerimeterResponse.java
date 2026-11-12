@@ -17,7 +17,7 @@
 package com.google.api.services.accesscontextmanager.v1.model;
 
 /**
- * A configured service perimeter returned by Access Context Manager.
+ * A configured ServicePerimeter returned by Access Context Manager.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Access Context Manager API. For a detailed
@@ -47,18 +47,17 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   private java.lang.String restrictedResourceDryRun;
 
   /**
-   * Fully qualified name of the configured enforced perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field is empty if no
-   * enforced perimeter applies.
+   * Fully qualified name of the configured enforced perimeter. This field is empty if no enforced
+   * perimeter applies. Format: `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String servicePerimeter;
 
   /**
-   * Fully qualified name of the configured dry-run perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field is empty if no dry-
-   * run perimeter configuration applies.
+   * Fully qualified name of the configured dry-run perimeter. This field is empty if no dry-run
+   * perimeter configuration applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -103,9 +102,8 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * Fully qualified name of the configured enforced perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field is empty if no
-   * enforced perimeter applies.
+   * Fully qualified name of the configured enforced perimeter. This field is empty if no enforced
+   * perimeter applies. Format: `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServicePerimeter() {
@@ -113,9 +111,8 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * Fully qualified name of the configured enforced perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field is empty if no
-   * enforced perimeter applies.
+   * Fully qualified name of the configured enforced perimeter. This field is empty if no enforced
+   * perimeter applies. Format: `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    * @param servicePerimeter servicePerimeter or {@code null} for none
    */
   public LookupConfiguredServicePerimeterResponse setServicePerimeter(java.lang.String servicePerimeter) {
@@ -124,9 +121,9 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * Fully qualified name of the configured dry-run perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field is empty if no dry-
-   * run perimeter configuration applies.
+   * Fully qualified name of the configured dry-run perimeter. This field is empty if no dry-run
+   * perimeter configuration applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    * @return value or {@code null} for none
    */
   public java.lang.String getServicePerimeterDryRun() {
@@ -134,9 +131,9 @@ public final class LookupConfiguredServicePerimeterResponse extends com.google.a
   }
 
   /**
-   * Fully qualified name of the configured dry-run perimeter. Format:
-   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}` This field is empty if no dry-
-   * run perimeter configuration applies.
+   * Fully qualified name of the configured dry-run perimeter. This field is empty if no dry-run
+   * perimeter configuration applies. Format:
+   * `accessPolicies/{policy_id}/servicePerimeters/{perimeter_name}`
    * @param servicePerimeterDryRun servicePerimeterDryRun or {@code null} for none
    */
   public LookupConfiguredServicePerimeterResponse setServicePerimeterDryRun(java.lang.String servicePerimeterDryRun) {

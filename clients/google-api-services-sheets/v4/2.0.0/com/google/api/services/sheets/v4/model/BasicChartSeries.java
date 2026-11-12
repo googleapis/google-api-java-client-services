@@ -55,7 +55,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The line style of this series. Valid only if the chartType is AREA, LINE, or SCATTER. COMBO
-   * charts are also supported if the series chart type is AREA or LINE.
+   * charts are also supported if the series chart type is AREA, STEPPED_AREA, or LINE.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -96,7 +96,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The type of this series. Valid only if the chartType is COMBO. Different types will change the
-   * way the series is visualized. Only LINE, AREA, and COLUMN are supported.
+   * way the series is visualized. Only LINE, AREA, STEPPED_AREA, and COLUMN are supported.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -159,7 +159,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The line style of this series. Valid only if the chartType is AREA, LINE, or SCATTER. COMBO
-   * charts are also supported if the series chart type is AREA or LINE.
+   * charts are also supported if the series chart type is AREA, STEPPED_AREA, or LINE.
    * @return value or {@code null} for none
    */
   public LineStyle getLineStyle() {
@@ -168,7 +168,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The line style of this series. Valid only if the chartType is AREA, LINE, or SCATTER. COMBO
-   * charts are also supported if the series chart type is AREA or LINE.
+   * charts are also supported if the series chart type is AREA, STEPPED_AREA, or LINE.
    * @param lineStyle lineStyle or {@code null} for none
    */
   public BasicChartSeries setLineStyle(LineStyle lineStyle) {
@@ -256,7 +256,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The type of this series. Valid only if the chartType is COMBO. Different types will change the
-   * way the series is visualized. Only LINE, AREA, and COLUMN are supported.
+   * way the series is visualized. Only LINE, AREA, STEPPED_AREA, and COLUMN are supported.
    * @return value or {@code null} for none
    */
   public java.lang.String getType() {
@@ -265,7 +265,7 @@ public final class BasicChartSeries extends com.google.api.client.json.GenericJs
 
   /**
    * The type of this series. Valid only if the chartType is COMBO. Different types will change the
-   * way the series is visualized. Only LINE, AREA, and COLUMN are supported.
+   * way the series is visualized. Only LINE, AREA, STEPPED_AREA, and COLUMN are supported.
    * @param type type or {@code null} for none
    */
   public BasicChartSeries setType(java.lang.String type) {

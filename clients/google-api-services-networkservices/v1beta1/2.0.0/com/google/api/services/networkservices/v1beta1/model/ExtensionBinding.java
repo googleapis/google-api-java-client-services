@@ -53,7 +53,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Determines the behavior of the extension binding when the call to the extension fails
-   * or times out. Default value is `FALSE`. When set to `TRUE`, failures of the extension are
+   * or times out. Default value is `false`. When set to `true`, failures of the extension are
    * silently ignored.
    * The value may be {@code null}.
    */
@@ -96,7 +96,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The name of the extension that this binding should attach to target resources.
-   * Format: For Google-provided extensions, specify the service endpoint, for example
+   * Format: * For Google-provided extensions, specify the service endpoint, for example
    * `modelarmor.us-central1.rep.googleapis.com`.
    * The value may be {@code null}.
    */
@@ -183,7 +183,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Determines the behavior of the extension binding when the call to the extension fails
-   * or times out. Default value is `FALSE`. When set to `TRUE`, failures of the extension are
+   * or times out. Default value is `false`. When set to `true`, failures of the extension are
    * silently ignored.
    * @return value or {@code null} for none
    */
@@ -193,7 +193,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Optional. Determines the behavior of the extension binding when the call to the extension fails
-   * or times out. Default value is `FALSE`. When set to `TRUE`, failures of the extension are
+   * or times out. Default value is `false`. When set to `true`, failures of the extension are
    * silently ignored.
    * @param failOpen failOpen or {@code null} for none
    */
@@ -284,7 +284,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The name of the extension that this binding should attach to target resources.
-   * Format: For Google-provided extensions, specify the service endpoint, for example
+   * Format: * For Google-provided extensions, specify the service endpoint, for example
    * `modelarmor.us-central1.rep.googleapis.com`.
    * @return value or {@code null} for none
    */
@@ -294,7 +294,7 @@ public final class ExtensionBinding extends com.google.api.client.json.GenericJs
 
   /**
    * Required. The name of the extension that this binding should attach to target resources.
-   * Format: For Google-provided extensions, specify the service endpoint, for example
+   * Format: * For Google-provided extensions, specify the service endpoint, for example
    * `modelarmor.us-central1.rep.googleapis.com`.
    * @param producerExtension producerExtension or {@code null} for none
    */

@@ -17,7 +17,7 @@
 package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * Specifies the set of targets to which `CdnEdgeExtension` should be applied to.
+ * Specifies the set of targets to which a `CdnEdgeExtension` will be applied.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -31,11 +31,10 @@ public final class CdnEdgeExtensionTarget extends com.google.api.client.json.Gen
 
   /**
    * Required. A list of references to the resources that are targeted by `CdnEdgeExtension`. Types
-   * of resources supported: `EdgeCacheService`. The format must be the full resource name of
-   * [EdgeCacheService](https://cloud.google.com/media-
-   * cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices) in the following format: `//ne
-   * tworkservices.googleapis.com/projects/{project}/locations/{location}/edgeCacheServices/{edgeCac
-   * heService}`.
+   * of resources supported: `EdgeCacheService`. The format must be the full resource name of an
+   * [`EdgeCacheService`](/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices) in
+   * the following format: `//networkservices.googleapis.com/projects/{project}/locations/{location}
+   * /edgeCacheServices/{edgeCacheService}`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -43,11 +42,10 @@ public final class CdnEdgeExtensionTarget extends com.google.api.client.json.Gen
 
   /**
    * Required. A list of references to the resources that are targeted by `CdnEdgeExtension`. Types
-   * of resources supported: `EdgeCacheService`. The format must be the full resource name of
-   * [EdgeCacheService](https://cloud.google.com/media-
-   * cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices) in the following format: `//ne
-   * tworkservices.googleapis.com/projects/{project}/locations/{location}/edgeCacheServices/{edgeCac
-   * heService}`.
+   * of resources supported: `EdgeCacheService`. The format must be the full resource name of an
+   * [`EdgeCacheService`](/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices) in
+   * the following format: `//networkservices.googleapis.com/projects/{project}/locations/{location}
+   * /edgeCacheServices/{edgeCacheService}`.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getResources() {
@@ -56,11 +54,10 @@ public final class CdnEdgeExtensionTarget extends com.google.api.client.json.Gen
 
   /**
    * Required. A list of references to the resources that are targeted by `CdnEdgeExtension`. Types
-   * of resources supported: `EdgeCacheService`. The format must be the full resource name of
-   * [EdgeCacheService](https://cloud.google.com/media-
-   * cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices) in the following format: `//ne
-   * tworkservices.googleapis.com/projects/{project}/locations/{location}/edgeCacheServices/{edgeCac
-   * heService}`.
+   * of resources supported: `EdgeCacheService`. The format must be the full resource name of an
+   * [`EdgeCacheService`](/media-cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices) in
+   * the following format: `//networkservices.googleapis.com/projects/{project}/locations/{location}
+   * /edgeCacheServices/{edgeCacheService}`.
    * @param resources resources or {@code null} for none
    */
   public CdnEdgeExtensionTarget setResources(java.util.List<java.lang.String> resources) {

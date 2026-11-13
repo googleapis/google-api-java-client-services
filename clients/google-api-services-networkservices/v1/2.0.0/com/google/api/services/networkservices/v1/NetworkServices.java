@@ -5863,7 +5863,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the `ExtensionBinding` resource to delete. Must be in the format
+         * @param name Required. The name of the `ExtensionBinding` resource to delete. Must be in the format
          *        `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
          * @return the request
          */
@@ -5891,7 +5891,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the `ExtensionBinding` resource to delete. Must be in the format
+           * @param name Required. The name of the `ExtensionBinding` resource to delete. Must be in the format
          *        `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            * @since 1.13
            */
@@ -5961,13 +5961,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ExtensionBinding` resource to delete. Must be in the format
+           * Required. The name of the `ExtensionBinding` resource to delete. Must be in the format
            * `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the `ExtensionBinding` resource to delete. Must be in the format
+          /** Required. The name of the `ExtensionBinding` resource to delete. Must be in the format
          `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            */
           public java.lang.String getName() {
@@ -5975,7 +5975,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ExtensionBinding` resource to delete. Must be in the format
+           * Required. The name of the `ExtensionBinding` resource to delete. Must be in the format
            * `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            */
           public Delete setName(java.lang.String name) {
@@ -5988,17 +5988,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. The etag of the ExtensionBinding to delete. */
+          /** Optional. The ETag of the `ExtensionBinding` to delete. */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. The etag of the ExtensionBinding to delete.
+          /** Optional. The ETag of the `ExtensionBinding` to delete.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
-          /** Optional. The etag of the ExtensionBinding to delete. */
+          /** Optional. The ETag of the `ExtensionBinding` to delete. */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
             return this;
@@ -6017,7 +6017,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the `ExtensionBinding` resource to get. Must be in the format
+         * @param name Required. The name of the `ExtensionBinding` resource to get. Must be in the format
          *        `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
          * @return the request
          */
@@ -6044,7 +6044,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the `ExtensionBinding` resource to get. Must be in the format
+           * @param name Required. The name of the `ExtensionBinding` resource to get. Must be in the format
          *        `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            * @since 1.13
            */
@@ -6124,13 +6124,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ExtensionBinding` resource to get. Must be in the format
+           * Required. The name of the `ExtensionBinding` resource to get. Must be in the format
            * `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the `ExtensionBinding` resource to get. Must be in the format
+          /** Required. The name of the `ExtensionBinding` resource to get. Must be in the format
          `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            */
           public java.lang.String getName() {
@@ -6138,7 +6138,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ExtensionBinding` resource to get. Must be in the format
+           * Required. The name of the `ExtensionBinding` resource to get. Must be in the format
            * `projects/{project}/locations/{location}/extensionBindings/{extension_binding}`.
            */
           public Get setName(java.lang.String name) {
@@ -6315,14 +6315,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The value returned by the last `ListExtensionBindingsResponse` Indicates that
-           * this is a continuation of a prior `ListExtensionBindings` call, and that the system
-           * should return the next page of data.
+           * Optional. The value returned by the last `ListExtensionBindingsResponse`. Indicates
+           * that this is a continuation of a prior `ListExtensionBindings` call, and that the
+           * system should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The value returned by the last `ListExtensionBindingsResponse` Indicates that this is a
+          /** Optional. The value returned by the last `ListExtensionBindingsResponse`. Indicates that this is a
          continuation of a prior `ListExtensionBindings` call, and that the system should return the next
          page of data.
            */
@@ -6331,9 +6331,9 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The value returned by the last `ListExtensionBindingsResponse` Indicates that
-           * this is a continuation of a prior `ListExtensionBindings` call, and that the system
-           * should return the next page of data.
+           * Optional. The value returned by the last `ListExtensionBindingsResponse`. Indicates
+           * that this is a continuation of a prior `ListExtensionBindings` call, and that the
+           * system should return the next page of data.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -6482,17 +6482,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Field mask is used to specify the fields to be overwritten in the
-           * `ExtensionBinding` resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           * `ExtensionBinding` resource by the update. The fields specified in the `update_mask`
+           * are relative to the resource, not the full request. A field is overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields are overwritten.
            */
           @com.google.api.client.util.Key
           private String updateMask;
 
           /** Optional. Field mask is used to specify the fields to be overwritten in the `ExtensionBinding`
-         resource by the update. The fields specified in the update_mask are relative to the resource, not
-         the full request. A field will be overwritten if it is in the mask. If the user does not provide a
-         mask then all fields will be overwritten.
+         resource by the update. The fields specified in the `update_mask` are relative to the resource, not
+         the full request. A field is overwritten if it is in the mask. If the user does not provide a mask
+         then all fields are overwritten.
            */
           public String getUpdateMask() {
             return updateMask;
@@ -6500,9 +6500,9 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Optional. Field mask is used to specify the fields to be overwritten in the
-           * `ExtensionBinding` resource by the update. The fields specified in the update_mask are
-           * relative to the resource, not the full request. A field will be overwritten if it is in
-           * the mask. If the user does not provide a mask then all fields will be overwritten.
+           * `ExtensionBinding` resource by the update. The fields specified in the `update_mask`
+           * are relative to the resource, not the full request. A field is overwritten if it is in
+           * the mask. If the user does not provide a mask then all fields are overwritten.
            */
           public Patch setUpdateMask(String updateMask) {
             this.updateMask = updateMask;
@@ -16327,17 +16327,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Required. Short name of the `ProducerExtension` resource to be created. */
+          /** Required. The short name of the `ProducerExtension` resource to be created. */
           @com.google.api.client.util.Key
           private java.lang.String producerExtensionId;
 
-          /** Required. Short name of the `ProducerExtension` resource to be created.
+          /** Required. The short name of the `ProducerExtension` resource to be created.
            */
           public java.lang.String getProducerExtensionId() {
             return producerExtensionId;
           }
 
-          /** Required. Short name of the `ProducerExtension` resource to be created. */
+          /** Required. The short name of the `ProducerExtension` resource to be created. */
           public Create setProducerExtensionId(java.lang.String producerExtensionId) {
             this.producerExtensionId = producerExtensionId;
             return this;
@@ -16356,7 +16356,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Delete#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the `ProducerExtension` resource to delete. Must be in the format
+         * @param name Required. The name of the `ProducerExtension` resource to delete. It must be in this format:
          *        `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
          * @return the request
          */
@@ -16384,7 +16384,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * Delete#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)} must
            * be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the `ProducerExtension` resource to delete. Must be in the format
+           * @param name Required. The name of the `ProducerExtension` resource to delete. It must be in this format:
          *        `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            * @since 1.13
            */
@@ -16454,13 +16454,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ProducerExtension` resource to delete. Must be in the format
+           * Required. The name of the `ProducerExtension` resource to delete. It must be in this
+           * format:
            * `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the `ProducerExtension` resource to delete. Must be in the format
+          /** Required. The name of the `ProducerExtension` resource to delete. It must be in this format:
          `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            */
           public java.lang.String getName() {
@@ -16468,7 +16469,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ProducerExtension` resource to delete. Must be in the format
+           * Required. The name of the `ProducerExtension` resource to delete. It must be in this
+           * format:
            * `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            */
           public Delete setName(java.lang.String name) {
@@ -16481,17 +16483,17 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             return this;
           }
 
-          /** Optional. The etag of the ProducerExtension to delete. */
+          /** Optional. The ETag of the `ProducerExtension` to delete. */
           @com.google.api.client.util.Key
           private java.lang.String etag;
 
-          /** Optional. The etag of the ProducerExtension to delete.
+          /** Optional. The ETag of the `ProducerExtension` to delete.
            */
           public java.lang.String getEtag() {
             return etag;
           }
 
-          /** Optional. The etag of the ProducerExtension to delete. */
+          /** Optional. The ETag of the `ProducerExtension` to delete. */
           public Delete setEtag(java.lang.String etag) {
             this.etag = etag;
             return this;
@@ -16510,7 +16512,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * This request holds the parameters needed by the networkservices server.  After setting any
          * optional parameters, call the {@link Get#execute()} method to invoke the remote operation.
          *
-         * @param name Required. A name of the `ProducerExtension` resource to get. Must be in the format
+         * @param name Required. The name of the `ProducerExtension` resource to get. It must be in this format:
          *        `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
          * @return the request
          */
@@ -16537,7 +16539,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * {@link Get#initialize(com.google.api.client.googleapis.services.AbstractGoogleClientRequest)}
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
-           * @param name Required. A name of the `ProducerExtension` resource to get. Must be in the format
+           * @param name Required. The name of the `ProducerExtension` resource to get. It must be in this format:
          *        `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            * @since 1.13
            */
@@ -16617,13 +16619,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ProducerExtension` resource to get. Must be in the format
+           * Required. The name of the `ProducerExtension` resource to get. It must be in this
+           * format:
            * `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String name;
 
-          /** Required. A name of the `ProducerExtension` resource to get. Must be in the format
+          /** Required. The name of the `ProducerExtension` resource to get. It must be in this format:
          `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            */
           public java.lang.String getName() {
@@ -16631,7 +16634,8 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Required. A name of the `ProducerExtension` resource to get. Must be in the format
+           * Required. The name of the `ProducerExtension` resource to get. It must be in this
+           * format:
            * `projects/{project}/locations/{location}/producerExtensions/{producer_extension}`.
            */
           public Get setName(java.lang.String name) {
@@ -16658,7 +16662,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
          * optional parameters, call the {@link List#execute()} method to invoke the remote operation.
          *
          * @param parent Required. The project and location from which the `ProducerExtension` resources should be listed,
-         *        specified in the format `projects/{project}/locations/{location}`.
+         *        specified in this format: `projects/{project}/locations/{location}`.
          * @return the request
          */
         public List list(java.lang.String parent) throws java.io.IOException {
@@ -16685,7 +16689,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
            * must be called to initialize this instance immediately after invoking the constructor. </p>
            *
            * @param parent Required. The project and location from which the `ProducerExtension` resources should be listed,
-         *        specified in the format `projects/{project}/locations/{location}`.
+         *        specified in this format: `projects/{project}/locations/{location}`.
            * @since 1.13
            */
           protected List(java.lang.String parent) {
@@ -16765,13 +16769,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `ProducerExtension` resources should
-           * be listed, specified in the format `projects/{project}/locations/{location}`.
+           * be listed, specified in this format: `projects/{project}/locations/{location}`.
            */
           @com.google.api.client.util.Key
           private java.lang.String parent;
 
           /** Required. The project and location from which the `ProducerExtension` resources should be listed,
-         specified in the format `projects/{project}/locations/{location}`.
+         specified in this format: `projects/{project}/locations/{location}`.
            */
           public java.lang.String getParent() {
             return parent;
@@ -16779,7 +16783,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
 
           /**
            * Required. The project and location from which the `ProducerExtension` resources should
-           * be listed, specified in the format `projects/{project}/locations/{location}`.
+           * be listed, specified in this format: `projects/{project}/locations/{location}`.
            */
           public List setParent(java.lang.String parent) {
             if (!getSuppressPatternChecks()) {
@@ -16808,23 +16812,23 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Optional. The value returned by the last `ListProducerExtensionsResponse` Indicates
+           * Optional. The value returned by the last `ListProducerExtensionsResponse`. It indicates
            * that this is a continuation of a prior `ListProducerExtensions` call, and that the
            * system should return the next page of data.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** Optional. The value returned by the last `ListProducerExtensionsResponse` Indicates that this is a
-         continuation of a prior `ListProducerExtensions` call, and that the system should return the next
-         page of data.
+          /** Optional. The value returned by the last `ListProducerExtensionsResponse`. It indicates that this
+         is a continuation of a prior `ListProducerExtensions` call, and that the system should return the
+         next page of data.
            */
           public java.lang.String getPageToken() {
             return pageToken;
           }
 
           /**
-           * Optional. The value returned by the last `ListProducerExtensionsResponse` Indicates
+           * Optional. The value returned by the last `ListProducerExtensionsResponse`. It indicates
            * that this is a continuation of a prior `ListProducerExtensions` call, and that the
            * system should return the next page of data.
            */
@@ -20739,13 +20743,13 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Determines how much data must be returned in the response. See
+           * Optional. Determines how much data must be returned in the response. See
            * [AIP-157](https://google.aip.dev/157).
            */
           @com.google.api.client.util.Key
           private java.lang.String view;
 
-          /** Determines how much data must be returned in the response. See
+          /** Optional. Determines how much data must be returned in the response. See
          [AIP-157](https://google.aip.dev/157).
            */
           public java.lang.String getView() {
@@ -20753,7 +20757,7 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Determines how much data must be returned in the response. See
+           * Optional. Determines how much data must be returned in the response. See
            * [AIP-157](https://google.aip.dev/157).
            */
           public Get setView(java.lang.String view) {
@@ -20909,14 +20913,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of `WasmPlugin` resources to return per call. If not specified, at most
-           * 50 `WasmPlugin` resources are returned. The maximum value is 1000; values above 1000
-           * are coerced to 1000.
+           * Optional. Maximum number of `WasmPlugin` resources to return per call. If not
+           * specified, at most 50 `WasmPlugin` resources are returned. The maximum value is 1000;
+           * values above 1000 are coerced to 1000.
            */
           @com.google.api.client.util.Key
           private java.lang.Integer pageSize;
 
-          /** Maximum number of `WasmPlugin` resources to return per call. If not specified, at most 50
+          /** Optional. Maximum number of `WasmPlugin` resources to return per call. If not specified, at most 50
          `WasmPlugin` resources are returned. The maximum value is 1000; values above 1000 are coerced to
          1000.
            */
@@ -20925,9 +20929,9 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * Maximum number of `WasmPlugin` resources to return per call. If not specified, at most
-           * 50 `WasmPlugin` resources are returned. The maximum value is 1000; values above 1000
-           * are coerced to 1000.
+           * Optional. Maximum number of `WasmPlugin` resources to return per call. If not
+           * specified, at most 50 `WasmPlugin` resources are returned. The maximum value is 1000;
+           * values above 1000 are coerced to 1000.
            */
           public List setPageSize(java.lang.Integer pageSize) {
             this.pageSize = pageSize;
@@ -20935,14 +20939,14 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The value returned by the last `ListWasmPluginsResponse` call. Indicates that this is a
-           * continuation of a prior `ListWasmPlugins` call, and that the next page of data is to be
-           * returned.
+           * Optional. The value returned by the last `ListWasmPluginsResponse` call. Indicates that
+           * this is a continuation of a prior `ListWasmPlugins` call, and that the next page of
+           * data is to be returned.
            */
           @com.google.api.client.util.Key
           private java.lang.String pageToken;
 
-          /** The value returned by the last `ListWasmPluginsResponse` call. Indicates that this is a
+          /** Optional. The value returned by the last `ListWasmPluginsResponse` call. Indicates that this is a
          continuation of a prior `ListWasmPlugins` call, and that the next page of data is to be returned.
            */
           public java.lang.String getPageToken() {
@@ -20950,9 +20954,9 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
           }
 
           /**
-           * The value returned by the last `ListWasmPluginsResponse` call. Indicates that this is a
-           * continuation of a prior `ListWasmPlugins` call, and that the next page of data is to be
-           * returned.
+           * Optional. The value returned by the last `ListWasmPluginsResponse` call. Indicates that
+           * this is a continuation of a prior `ListWasmPlugins` call, and that the next page of
+           * data is to be returned.
            */
           public List setPageToken(java.lang.String pageToken) {
             this.pageToken = pageToken;
@@ -21756,25 +21760,25 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * Maximum number of `WasmPluginVersion` resources to return per call. If not specified,
-             * at most 50 `WasmPluginVersion` resources are returned. The maximum value is 1000;
-             * values above 1000 are coerced to 1000.
+             * Optional. Maximum number of `WasmPluginVersion` resources to return per call. If not
+             * specified, at most 50 `WasmPluginVersion` resources are returned. The maximum value
+             * is 1000; values above 1000 are coerced to 1000.
              */
             @com.google.api.client.util.Key
             private java.lang.Integer pageSize;
 
-            /** Maximum number of `WasmPluginVersion` resources to return per call. If not specified, at most 50
-           `WasmPluginVersion` resources are returned. The maximum value is 1000; values above 1000 are
-           coerced to 1000.
+            /** Optional. Maximum number of `WasmPluginVersion` resources to return per call. If not specified, at
+           most 50 `WasmPluginVersion` resources are returned. The maximum value is 1000; values above 1000
+           are coerced to 1000.
              */
             public java.lang.Integer getPageSize() {
               return pageSize;
             }
 
             /**
-             * Maximum number of `WasmPluginVersion` resources to return per call. If not specified,
-             * at most 50 `WasmPluginVersion` resources are returned. The maximum value is 1000;
-             * values above 1000 are coerced to 1000.
+             * Optional. Maximum number of `WasmPluginVersion` resources to return per call. If not
+             * specified, at most 50 `WasmPluginVersion` resources are returned. The maximum value
+             * is 1000; values above 1000 are coerced to 1000.
              */
             public List setPageSize(java.lang.Integer pageSize) {
               this.pageSize = pageSize;
@@ -21782,15 +21786,15 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The value returned by the last `ListWasmPluginVersionsResponse` call. Indicates that
-             * this is a continuation of a prior `ListWasmPluginVersions` call, and that the next
-             * page of data is to be returned.
+             * Optional. The value returned by the last `ListWasmPluginVersionsResponse` call.
+             * Indicates that this is a continuation of a prior `ListWasmPluginVersions` call, and
+             * that the next page of data is to be returned.
              */
             @com.google.api.client.util.Key
             private java.lang.String pageToken;
 
-            /** The value returned by the last `ListWasmPluginVersionsResponse` call. Indicates that this is a
-           continuation of a prior `ListWasmPluginVersions` call, and that the next page of data is to be
+            /** Optional. The value returned by the last `ListWasmPluginVersionsResponse` call. Indicates that this
+           is a continuation of a prior `ListWasmPluginVersions` call, and that the next page of data is to be
            returned.
              */
             public java.lang.String getPageToken() {
@@ -21798,9 +21802,9 @@ public class NetworkServices extends com.google.api.client.googleapis.services.j
             }
 
             /**
-             * The value returned by the last `ListWasmPluginVersionsResponse` call. Indicates that
-             * this is a continuation of a prior `ListWasmPluginVersions` call, and that the next
-             * page of data is to be returned.
+             * Optional. The value returned by the last `ListWasmPluginVersionsResponse` call.
+             * Indicates that this is a continuation of a prior `ListWasmPluginVersions` call, and
+             * that the next page of data is to be returned.
              */
             public List setPageToken(java.lang.String pageToken) {
               this.pageToken = pageToken;

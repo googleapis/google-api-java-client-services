@@ -44,7 +44,7 @@ public final class ProducerExtensionExtensionSettings extends com.google.api.cli
   private java.lang.Boolean observabilityMode;
 
   /**
-   * Required. URI of the PSC attachment.
+   * Required. The URI of the Private Service Connect (PSC) attachment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -92,7 +92,7 @@ public final class ProducerExtensionExtensionSettings extends com.google.api.cli
   }
 
   /**
-   * Required. URI of the PSC attachment.
+   * Required. The URI of the Private Service Connect (PSC) attachment.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -100,7 +100,7 @@ public final class ProducerExtensionExtensionSettings extends com.google.api.cli
   }
 
   /**
-   * Required. URI of the PSC attachment.
+   * Required. The URI of the Private Service Connect (PSC) attachment.
    * @param service service or {@code null} for none
    */
   public ProducerExtensionExtensionSettings setService(java.lang.String service) {

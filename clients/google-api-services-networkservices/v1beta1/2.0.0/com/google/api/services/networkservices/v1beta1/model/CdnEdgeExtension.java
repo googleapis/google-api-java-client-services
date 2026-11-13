@@ -18,8 +18,7 @@ package com.google.api.services.networkservices.v1beta1.model;
 
 /**
  * `CdnEdgeExtension` is a resource that lets the extension service modify the headers of both
- * requests to the cache and responses from the cache served by an
- * [`EdgeCacheService`](https://cloud.google.com/media-
+ * requests to the cache and responses from the cache served by an [`EdgeCacheService`](/media-
  * cdn/docs/reference/rest/v1/projects.locations.edgeCacheServices).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
@@ -74,7 +73,7 @@ public final class CdnEdgeExtension extends com.google.api.client.json.GenericJs
   private java.lang.String name;
 
   /**
-   * Required. Specifies the set of resources to which this extension should be applied to.
+   * Required. Specifies the set of resources to which this extension will be applied.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -185,7 +184,7 @@ public final class CdnEdgeExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Specifies the set of resources to which this extension should be applied to.
+   * Required. Specifies the set of resources to which this extension will be applied.
    * @return value or {@code null} for none
    */
   public CdnEdgeExtensionTarget getTarget() {
@@ -193,7 +192,7 @@ public final class CdnEdgeExtension extends com.google.api.client.json.GenericJs
   }
 
   /**
-   * Required. Specifies the set of resources to which this extension should be applied to.
+   * Required. Specifies the set of resources to which this extension will be applied.
    * @param target target or {@code null} for none
    */
   public CdnEdgeExtension setTarget(CdnEdgeExtensionTarget target) {

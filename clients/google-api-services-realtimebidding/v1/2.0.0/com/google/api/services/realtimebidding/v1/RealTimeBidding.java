@@ -654,6 +654,29 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Optional. The category taxonomy to use for the response. Overrides the default category
+         * taxonomy for the bidder.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String adCategoryTaxonomyOverride;
+
+        /** Optional. The category taxonomy to use for the response. Overrides the default category taxonomy
+       for the bidder.
+         */
+        public java.lang.String getAdCategoryTaxonomyOverride() {
+          return adCategoryTaxonomyOverride;
+        }
+
+        /**
+         * Optional. The category taxonomy to use for the response. Overrides the default category
+         * taxonomy for the bidder.
+         */
+        public List setAdCategoryTaxonomyOverride(java.lang.String adCategoryTaxonomyOverride) {
+          this.adCategoryTaxonomyOverride = adCategoryTaxonomyOverride;
+          return this;
+        }
+
+        /**
          * Query string to filter creatives. If no filter is specified, all active creatives will be
          * returned. Example: 'accountId=12345 AND (dealsStatus:DISAPPROVED AND
          * disapprovalReason:UNACCEPTABLE_CONTENT) OR declaredAttributes:IS_COOKIE_TARGETED'
@@ -5019,6 +5042,29 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
         }
 
         /**
+         * Optional. The category taxonomy to use for the response. Overrides the default category
+         * taxonomy for the bidder.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String adCategoryTaxonomyOverride;
+
+        /** Optional. The category taxonomy to use for the response. Overrides the default category taxonomy
+       for the bidder.
+         */
+        public java.lang.String getAdCategoryTaxonomyOverride() {
+          return adCategoryTaxonomyOverride;
+        }
+
+        /**
+         * Optional. The category taxonomy to use for the response. Overrides the default category
+         * taxonomy for the bidder.
+         */
+        public Get setAdCategoryTaxonomyOverride(java.lang.String adCategoryTaxonomyOverride) {
+          this.adCategoryTaxonomyOverride = adCategoryTaxonomyOverride;
+          return this;
+        }
+
+        /**
          * Controls the amount of information included in the response. By default only
          * creativeServingDecision is included. To retrieve the entire creative resource (including
          * the declared fields and the creative content) specify the view as "FULL".
@@ -5235,6 +5281,29 @@ public class RealTimeBidding extends com.google.api.client.googleapis.services.j
                 "^buyers/[^/]+$");
           }
           this.parent = parent;
+          return this;
+        }
+
+        /**
+         * Optional. The category taxonomy to use for the response. Overrides the default category
+         * taxonomy for the bidder.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String adCategoryTaxonomyOverride;
+
+        /** Optional. The category taxonomy to use for the response. Overrides the default category taxonomy
+       for the bidder.
+         */
+        public java.lang.String getAdCategoryTaxonomyOverride() {
+          return adCategoryTaxonomyOverride;
+        }
+
+        /**
+         * Optional. The category taxonomy to use for the response. Overrides the default category
+         * taxonomy for the bidder.
+         */
+        public List setAdCategoryTaxonomyOverride(java.lang.String adCategoryTaxonomyOverride) {
+          this.adCategoryTaxonomyOverride = adCategoryTaxonomyOverride;
           return this;
         }
 

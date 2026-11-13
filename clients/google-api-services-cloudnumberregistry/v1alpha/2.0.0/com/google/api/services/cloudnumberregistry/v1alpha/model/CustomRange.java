@@ -44,7 +44,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The description of the CustomRange.
+   * Optional. The description of the CustomRange. Do not include sensitive information, such as
+   * personally identifiable information or credentials, in the `description` field.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,7 +126,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The description of the CustomRange.
+   * Optional. The description of the CustomRange. Do not include sensitive information, such as
+   * personally identifiable information or credentials, in the `description` field.
    * @return value or {@code null} for none
    */
   public java.lang.String getDescription() {
@@ -133,7 +135,8 @@ public final class CustomRange extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The description of the CustomRange.
+   * Optional. The description of the CustomRange. Do not include sensitive information, such as
+   * personally identifiable information or credentials, in the `description` field.
    * @param description description or {@code null} for none
    */
   public CustomRange setDescription(java.lang.String description) {

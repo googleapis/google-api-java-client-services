@@ -1986,15 +1986,13 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Optional. Destination task list identifier. If set, the task is moved from tasklist to the
-       * destinationTasklist list. Otherwise the task is moved within its current list. Recurrent
-       * tasks cannot currently be moved between lists.
+       * destinationTasklist list. Otherwise the task is moved within its current list.
        */
       @com.google.api.client.util.Key
       private java.lang.String destinationTasklist;
 
       /** Optional. Destination task list identifier. If set, the task is moved from tasklist to the
-     destinationTasklist list. Otherwise the task is moved within its current list. Recurrent tasks
-     cannot currently be moved between lists.
+     destinationTasklist list. Otherwise the task is moved within its current list.
        */
       public java.lang.String getDestinationTasklist() {
         return destinationTasklist;
@@ -2002,8 +2000,7 @@ public class Tasks extends com.google.api.client.googleapis.services.json.Abstra
 
       /**
        * Optional. Destination task list identifier. If set, the task is moved from tasklist to the
-       * destinationTasklist list. Otherwise the task is moved within its current list. Recurrent
-       * tasks cannot currently be moved between lists.
+       * destinationTasklist list. Otherwise the task is moved within its current list.
        */
       public Move setDestinationTasklist(java.lang.String destinationTasklist) {
         this.destinationTasklist = destinationTasklist;

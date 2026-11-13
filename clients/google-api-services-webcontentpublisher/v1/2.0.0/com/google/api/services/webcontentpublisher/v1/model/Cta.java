@@ -31,7 +31,8 @@ package com.google.api.services.webcontentpublisher.v1.model;
 public final class Cta extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The user-visible display name of the CTA.
+   * Optional. The user-visible display name of the CTA (up to 40 characters). Defaults to a server-
+   * specified name based on the CTA type when omitted on creation.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,7 +76,8 @@ public final class Cta extends com.google.api.client.json.GenericJson {
   private java.lang.String type;
 
   /**
-   * Required. The user-visible display name of the CTA.
+   * Optional. The user-visible display name of the CTA (up to 40 characters). Defaults to a server-
+   * specified name based on the CTA type when omitted on creation.
    * @return value or {@code null} for none
    */
   public java.lang.String getDisplayName() {
@@ -83,7 +85,8 @@ public final class Cta extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user-visible display name of the CTA.
+   * Optional. The user-visible display name of the CTA (up to 40 characters). Defaults to a server-
+   * specified name based on the CTA type when omitted on creation.
    * @param displayName displayName or {@code null} for none
    */
   public Cta setDisplayName(java.lang.String displayName) {

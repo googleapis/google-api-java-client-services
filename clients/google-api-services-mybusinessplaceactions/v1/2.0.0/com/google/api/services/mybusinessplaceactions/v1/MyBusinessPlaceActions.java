@@ -954,16 +954,16 @@ public class MyBusinessPlaceActions extends com.google.api.client.googleapis.ser
 
         /**
          * Required. The specific fields to update. The only editable fields are `uri`,
-         * `place_action_type` and `is_preferred`. If the updated link already exists at the same
-         * location with the same `place_action_type` and `uri`, fails with an `ALREADY_EXISTS`
-         * error.
+         * `place_action_type`, `is_preferred` and `is_disabled`. If the updated link already exists
+         * at the same location with the same `place_action_type` and `uri`, fails with an
+         * `ALREADY_EXISTS` error.
          */
         @com.google.api.client.util.Key
         private String updateMask;
 
-        /** Required. The specific fields to update. The only editable fields are `uri`, `place_action_type`
-       and `is_preferred`. If the updated link already exists at the same location with the same
-       `place_action_type` and `uri`, fails with an `ALREADY_EXISTS` error.
+        /** Required. The specific fields to update. The only editable fields are `uri`, `place_action_type`,
+       `is_preferred` and `is_disabled`. If the updated link already exists at the same location with the
+       same `place_action_type` and `uri`, fails with an `ALREADY_EXISTS` error.
          */
         public String getUpdateMask() {
           return updateMask;
@@ -971,9 +971,9 @@ public class MyBusinessPlaceActions extends com.google.api.client.googleapis.ser
 
         /**
          * Required. The specific fields to update. The only editable fields are `uri`,
-         * `place_action_type` and `is_preferred`. If the updated link already exists at the same
-         * location with the same `place_action_type` and `uri`, fails with an `ALREADY_EXISTS`
-         * error.
+         * `place_action_type`, `is_preferred` and `is_disabled`. If the updated link already exists
+         * at the same location with the same `place_action_type` and `uri`, fails with an
+         * `ALREADY_EXISTS` error.
          */
         public Patch setUpdateMask(String updateMask) {
           this.updateMask = updateMask;

@@ -30,12 +30,32 @@ package com.google.api.services.bigquery.model;
 public final class PythonOptions extends com.google.api.client.json.GenericJson {
 
   /**
+   * Optional. Fully qualified name of the connection whose service account will be used to
+   * authenticate to private package repositories during build-time. Format:
+   * "projects/{project_id}/locations/{location_id}/connections/{connection_id}"
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String buildConnection;
+
+  /**
    * Required. The name of the function defined in Python code as the entry point when the Python
    * UDF is invoked.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String entryPoint;
+
+  /**
+   * Optional. The list of additional package repositories to search when resolving Python packages.
+   * These repositories are searched in addition to the default public PyPI. Only repositories
+   * hosted in Artifact Registry (.pkg.dev) are supported. Only pre-compiled Wheel (.whl) packages
+   * are supported from these repositories. E.g. ['https://my-region-python.pkg.dev/my-project/my-
+   * repo/simple']
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> extraPackageRepositories;
 
   /**
    * Optional. A list of Python package names along with versions to be installed. Example:
@@ -46,6 +66,27 @@ public final class PythonOptions extends com.google.api.client.json.GenericJson 
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> packages;
+
+  /**
+   * Optional. Fully qualified name of the connection whose service account will be used to
+   * authenticate to private package repositories during build-time. Format:
+   * "projects/{project_id}/locations/{location_id}/connections/{connection_id}"
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getBuildConnection() {
+    return buildConnection;
+  }
+
+  /**
+   * Optional. Fully qualified name of the connection whose service account will be used to
+   * authenticate to private package repositories during build-time. Format:
+   * "projects/{project_id}/locations/{location_id}/connections/{connection_id}"
+   * @param buildConnection buildConnection or {@code null} for none
+   */
+  public PythonOptions setBuildConnection(java.lang.String buildConnection) {
+    this.buildConnection = buildConnection;
+    return this;
+  }
 
   /**
    * Required. The name of the function defined in Python code as the entry point when the Python
@@ -63,6 +104,31 @@ public final class PythonOptions extends com.google.api.client.json.GenericJson 
    */
   public PythonOptions setEntryPoint(java.lang.String entryPoint) {
     this.entryPoint = entryPoint;
+    return this;
+  }
+
+  /**
+   * Optional. The list of additional package repositories to search when resolving Python packages.
+   * These repositories are searched in addition to the default public PyPI. Only repositories
+   * hosted in Artifact Registry (.pkg.dev) are supported. Only pre-compiled Wheel (.whl) packages
+   * are supported from these repositories. E.g. ['https://my-region-python.pkg.dev/my-project/my-
+   * repo/simple']
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getExtraPackageRepositories() {
+    return extraPackageRepositories;
+  }
+
+  /**
+   * Optional. The list of additional package repositories to search when resolving Python packages.
+   * These repositories are searched in addition to the default public PyPI. Only repositories
+   * hosted in Artifact Registry (.pkg.dev) are supported. Only pre-compiled Wheel (.whl) packages
+   * are supported from these repositories. E.g. ['https://my-region-python.pkg.dev/my-project/my-
+   * repo/simple']
+   * @param extraPackageRepositories extraPackageRepositories or {@code null} for none
+   */
+  public PythonOptions setExtraPackageRepositories(java.util.List<java.lang.String> extraPackageRepositories) {
+    this.extraPackageRepositories = extraPackageRepositories;
     return this;
   }
 

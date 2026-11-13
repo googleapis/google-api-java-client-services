@@ -66,6 +66,20 @@ public final class RoutineBuildStatus extends com.google.api.client.json.Generic
   private java.lang.Long imageSizeBytes;
 
   /**
+   * Output only. The list of installed packages in the routine's execution environment. Populated
+   * only after the build succeeds.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<InstalledPackage> installedPackages;
+
+  static {
+    // hack to force ProGuard to consider InstalledPackage used, since otherwise it would be stripped out
+    // see https://github.com/google/google-api-java-client/issues/543
+    com.google.api.client.util.Data.nullOf(InstalledPackage.class);
+  }
+
+  /**
    * Output only. The time taken for the image build. Populated only after the build succeeds or
    * fails.
    * @return value or {@code null} for none
@@ -149,6 +163,25 @@ public final class RoutineBuildStatus extends com.google.api.client.json.Generic
    */
   public RoutineBuildStatus setImageSizeBytes(java.lang.Long imageSizeBytes) {
     this.imageSizeBytes = imageSizeBytes;
+    return this;
+  }
+
+  /**
+   * Output only. The list of installed packages in the routine's execution environment. Populated
+   * only after the build succeeds.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<InstalledPackage> getInstalledPackages() {
+    return installedPackages;
+  }
+
+  /**
+   * Output only. The list of installed packages in the routine's execution environment. Populated
+   * only after the build succeeds.
+   * @param installedPackages installedPackages or {@code null} for none
+   */
+  public RoutineBuildStatus setInstalledPackages(java.util.List<InstalledPackage> installedPackages) {
+    this.installedPackages = installedPackages;
     return this;
   }
 

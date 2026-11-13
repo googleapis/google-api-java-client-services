@@ -210,11 +210,11 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The query results format. If the value is anything other than `STRUCT_ENCODING` or
-   * unspecified: * The schema of the results will be provided in `QueryResponse.results_schema`
-   * field. * The results of the first page will be provided in `QueryResponse.results` field. * The
-   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema` for
-   * `QueryResponse.rows` will also not be populated since it is the schema of the
-   * `QueryResponse.rows`. This feature is not yet available.
+   * unspecified: * The schema of the results is provided in the `QueryResponse.results_schema`
+   * field. * The results of the first page are provided in the `QueryResponse.results` field. * The
+   * `QueryResponse.rows` is not populated. * The `QueryResponse.schema` for `QueryResponse.rows` is
+   * not populated since it is the schema of the `QueryResponse.rows`.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -701,11 +701,11 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The query results format. If the value is anything other than `STRUCT_ENCODING` or
-   * unspecified: * The schema of the results will be provided in `QueryResponse.results_schema`
-   * field. * The results of the first page will be provided in `QueryResponse.results` field. * The
-   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema` for
-   * `QueryResponse.rows` will also not be populated since it is the schema of the
-   * `QueryResponse.rows`. This feature is not yet available.
+   * unspecified: * The schema of the results is provided in the `QueryResponse.results_schema`
+   * field. * The results of the first page are provided in the `QueryResponse.results` field. * The
+   * `QueryResponse.rows` is not populated. * The `QueryResponse.schema` for `QueryResponse.rows` is
+   * not populated since it is the schema of the `QueryResponse.rows`.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public java.lang.String getQueryResultsFormat() {
@@ -714,11 +714,11 @@ public final class QueryRequest extends com.google.api.client.json.GenericJson {
 
   /**
    * Optional. The query results format. If the value is anything other than `STRUCT_ENCODING` or
-   * unspecified: * The schema of the results will be provided in `QueryResponse.results_schema`
-   * field. * The results of the first page will be provided in `QueryResponse.results` field. * The
-   * `QueryResponse.rows` will not be populated. * The `QueryResponse.schema` for
-   * `QueryResponse.rows` will also not be populated since it is the schema of the
-   * `QueryResponse.rows`. This feature is not yet available.
+   * unspecified: * The schema of the results is provided in the `QueryResponse.results_schema`
+   * field. * The results of the first page are provided in the `QueryResponse.results` field. * The
+   * `QueryResponse.rows` is not populated. * The `QueryResponse.schema` for `QueryResponse.rows` is
+   * not populated since it is the schema of the `QueryResponse.rows`.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @param queryResultsFormat queryResultsFormat or {@code null} for none
    */
   public QueryRequest setQueryResultsFormat(java.lang.String queryResultsFormat) {

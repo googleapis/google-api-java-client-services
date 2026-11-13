@@ -47,6 +47,13 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
   private java.lang.String fileFormat;
 
   /**
+   * Optional. The type of Metadata Export for BigLake Managed Tables.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String metadataExportMode;
+
+  /**
    * Optional. The fully qualified location prefix of the external folder where table data is
    * stored. The '*' wildcard character is not allowed. The URI should be in the format
    * `gs://bucket/path_to_table/`
@@ -99,6 +106,23 @@ public final class BigLakeConfiguration extends com.google.api.client.json.Gener
    */
   public BigLakeConfiguration setFileFormat(java.lang.String fileFormat) {
     this.fileFormat = fileFormat;
+    return this;
+  }
+
+  /**
+   * Optional. The type of Metadata Export for BigLake Managed Tables.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getMetadataExportMode() {
+    return metadataExportMode;
+  }
+
+  /**
+   * Optional. The type of Metadata Export for BigLake Managed Tables.
+   * @param metadataExportMode metadataExportMode or {@code null} for none
+   */
+  public BigLakeConfiguration setMetadataExportMode(java.lang.String metadataExportMode) {
+    this.metadataExportMode = metadataExportMode;
     return this;
   }
 

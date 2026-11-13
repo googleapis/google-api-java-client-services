@@ -165,6 +165,15 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   private ExternalDatasetReference externalDatasetReference;
 
   /**
+   * Optional. The failover reservation associated with the dataset in the regionless format.
+   * Example: .. To learn about about failover reservations see:
+   * https://docs.cloud.google.com/bigquery/docs/managed-disaster-recovery#overview
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String failoverReservationId;
+
+  /**
    * Optional. A descriptive name for the dataset.
    * The value may be {@code null}.
    */
@@ -244,6 +253,13 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
   private java.lang.Long maxTimeTravelHours;
+
+  /**
+   * Optional. The list of replicas in a cross region replicated or disaster recovery dataset.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<Replica> replicas;
 
   /**
    * Optional. The [tags](https://cloud.google.com/bigquery/docs/tags) attached to this dataset. Tag
@@ -618,6 +634,27 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The failover reservation associated with the dataset in the regionless format.
+   * Example: .. To learn about about failover reservations see:
+   * https://docs.cloud.google.com/bigquery/docs/managed-disaster-recovery#overview
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getFailoverReservationId() {
+    return failoverReservationId;
+  }
+
+  /**
+   * Optional. The failover reservation associated with the dataset in the regionless format.
+   * Example: .. To learn about about failover reservations see:
+   * https://docs.cloud.google.com/bigquery/docs/managed-disaster-recovery#overview
+   * @param failoverReservationId failoverReservationId or {@code null} for none
+   */
+  public Dataset setFailoverReservationId(java.lang.String failoverReservationId) {
+    this.failoverReservationId = failoverReservationId;
+    return this;
+  }
+
+  /**
    * Optional. A descriptive name for the dataset.
    * @return value or {@code null} for none
    */
@@ -806,6 +843,23 @@ public final class Dataset extends com.google.api.client.json.GenericJson {
    */
   public Dataset setMaxTimeTravelHours(java.lang.Long maxTimeTravelHours) {
     this.maxTimeTravelHours = maxTimeTravelHours;
+    return this;
+  }
+
+  /**
+   * Optional. The list of replicas in a cross region replicated or disaster recovery dataset.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<Replica> getReplicas() {
+    return replicas;
+  }
+
+  /**
+   * Optional. The list of replicas in a cross region replicated or disaster recovery dataset.
+   * @param replicas replicas or {@code null} for none
+   */
+  public Dataset setReplicas(java.util.List<Replica> replicas) {
+    this.replicas = replicas;
     return this;
   }
 

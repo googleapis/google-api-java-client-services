@@ -88,6 +88,25 @@ public final class AzureProperties extends com.google.api.client.json.GenericJso
   private java.lang.String redirectUri;
 
   /**
+   * Output only. The email address of the Google-owned service account that represents the
+   * connection's identity. Grant IAM roles to this service account, for example, to let the
+   * connection resolve the Service Directory service in
+   * `AzureProperties.service_directory_service`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountId;
+
+  /**
+   * Optional. The service directory resource name for routing traffic over a private network
+   * connection through Cross-Cloud Interconnect, in the format
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace_id}/services/{service_id}`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceDirectoryService;
+
+  /**
    * Output only. The name of the Azure Active Directory Application.
    * @return value or {@code null} for none
    */
@@ -222,6 +241,50 @@ public final class AzureProperties extends com.google.api.client.json.GenericJso
    */
   public AzureProperties setRedirectUri(java.lang.String redirectUri) {
     this.redirectUri = redirectUri;
+    return this;
+  }
+
+  /**
+   * Output only. The email address of the Google-owned service account that represents the
+   * connection's identity. Grant IAM roles to this service account, for example, to let the
+   * connection resolve the Service Directory service in
+   * `AzureProperties.service_directory_service`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountId() {
+    return serviceAccountId;
+  }
+
+  /**
+   * Output only. The email address of the Google-owned service account that represents the
+   * connection's identity. Grant IAM roles to this service account, for example, to let the
+   * connection resolve the Service Directory service in
+   * `AzureProperties.service_directory_service`.
+   * @param serviceAccountId serviceAccountId or {@code null} for none
+   */
+  public AzureProperties setServiceAccountId(java.lang.String serviceAccountId) {
+    this.serviceAccountId = serviceAccountId;
+    return this;
+  }
+
+  /**
+   * Optional. The service directory resource name for routing traffic over a private network
+   * connection through Cross-Cloud Interconnect, in the format
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace_id}/services/{service_id}`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceDirectoryService() {
+    return serviceDirectoryService;
+  }
+
+  /**
+   * Optional. The service directory resource name for routing traffic over a private network
+   * connection through Cross-Cloud Interconnect, in the format
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace_id}/services/{service_id}`.
+   * @param serviceDirectoryService serviceDirectoryService or {@code null} for none
+   */
+  public AzureProperties setServiceDirectoryService(java.lang.String serviceDirectoryService) {
+    this.serviceDirectoryService = serviceDirectoryService;
     return this;
   }
 

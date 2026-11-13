@@ -47,6 +47,15 @@ public final class AwsAccessRole extends com.google.api.client.json.GenericJson 
   private java.lang.String identity;
 
   /**
+   * Output only. The email address of the Google-owned service account that represents the
+   * connection's identity. Grant IAM roles to this service account, for example, to let the
+   * connection resolve the Service Directory service in `AwsProperties.service_directory_service`.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceAccountId;
+
+  /**
    * The user’s AWS IAM Role that trusts the Google-owned AWS IAM user Connection.
    * @return value or {@code null} for none
    */
@@ -79,6 +88,27 @@ public final class AwsAccessRole extends com.google.api.client.json.GenericJson 
    */
   public AwsAccessRole setIdentity(java.lang.String identity) {
     this.identity = identity;
+    return this;
+  }
+
+  /**
+   * Output only. The email address of the Google-owned service account that represents the
+   * connection's identity. Grant IAM roles to this service account, for example, to let the
+   * connection resolve the Service Directory service in `AwsProperties.service_directory_service`.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceAccountId() {
+    return serviceAccountId;
+  }
+
+  /**
+   * Output only. The email address of the Google-owned service account that represents the
+   * connection's identity. Grant IAM roles to this service account, for example, to let the
+   * connection resolve the Service Directory service in `AwsProperties.service_directory_service`.
+   * @param serviceAccountId serviceAccountId or {@code null} for none
+   */
+  public AwsAccessRole setServiceAccountId(java.lang.String serviceAccountId) {
+    this.serviceAccountId = serviceAccountId;
     return this;
   }
 

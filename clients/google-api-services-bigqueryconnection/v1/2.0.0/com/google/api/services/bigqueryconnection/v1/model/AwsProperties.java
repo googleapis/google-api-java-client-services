@@ -45,6 +45,16 @@ public final class AwsProperties extends com.google.api.client.json.GenericJson 
   private CrossCloudCacheOptions crossCloudCacheOptions;
 
   /**
+   * Optional. The Service Directory resource name for routing traffic to AWS over a private network
+   * connection through Cross-Cloud Interconnect, in the format
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace_id}/services/{service_id}`.
+   * If both this field and `s3_service_directory_service` are set, this field takes precedence.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String serviceDirectoryService;
+
+  /**
    * Authentication using Google owned service account to assume into customer's AWS IAM Role.
    * @return value or {@code null} for none
    */
@@ -75,6 +85,29 @@ public final class AwsProperties extends com.google.api.client.json.GenericJson 
    */
   public AwsProperties setCrossCloudCacheOptions(CrossCloudCacheOptions crossCloudCacheOptions) {
     this.crossCloudCacheOptions = crossCloudCacheOptions;
+    return this;
+  }
+
+  /**
+   * Optional. The Service Directory resource name for routing traffic to AWS over a private network
+   * connection through Cross-Cloud Interconnect, in the format
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace_id}/services/{service_id}`.
+   * If both this field and `s3_service_directory_service` are set, this field takes precedence.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getServiceDirectoryService() {
+    return serviceDirectoryService;
+  }
+
+  /**
+   * Optional. The Service Directory resource name for routing traffic to AWS over a private network
+   * connection through Cross-Cloud Interconnect, in the format
+   * `projects/{project_id}/locations/{location}/namespaces/{namespace_id}/services/{service_id}`.
+   * If both this field and `s3_service_directory_service` are set, this field takes precedence.
+   * @param serviceDirectoryService serviceDirectoryService or {@code null} for none
+   */
+  public AwsProperties setServiceDirectoryService(java.lang.String serviceDirectoryService) {
+    this.serviceDirectoryService = serviceDirectoryService;
     return this;
   }
 

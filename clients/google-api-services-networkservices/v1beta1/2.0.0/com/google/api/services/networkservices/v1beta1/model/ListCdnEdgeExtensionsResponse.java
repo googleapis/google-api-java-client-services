@@ -17,7 +17,7 @@
 package com.google.api.services.networkservices.v1beta1.model;
 
 /**
- * Message for response to listing `CdnEdgeExtension` resources.
+ * Contains the response from listing `CdnEdgeExtension` resources.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:

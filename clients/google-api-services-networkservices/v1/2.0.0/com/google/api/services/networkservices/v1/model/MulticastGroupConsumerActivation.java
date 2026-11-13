@@ -70,16 +70,6 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
   private java.lang.String multicastConsumerAssociation;
 
   /**
-   * Optional. The resource name of the multicast group created by the admin in the same zone as
-   * this multicast group consumer activation. Use the following format:
-   * `projects/locations/multicastGroups`. This field is deprecated. Use
-   * multicast_group_range_activation instead.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String multicastGroup;
-
-  /**
    * Required. The resource name of the multicast group range activation created by the admin in the
    * same zone as this multicast group consumer activation. Use the following format:
    * `projects/locations/multicastGroupRangeActivations`.
@@ -221,29 +211,6 @@ public final class MulticastGroupConsumerActivation extends com.google.api.clien
    */
   public MulticastGroupConsumerActivation setMulticastConsumerAssociation(java.lang.String multicastConsumerAssociation) {
     this.multicastConsumerAssociation = multicastConsumerAssociation;
-    return this;
-  }
-
-  /**
-   * Optional. The resource name of the multicast group created by the admin in the same zone as
-   * this multicast group consumer activation. Use the following format:
-   * `projects/locations/multicastGroups`. This field is deprecated. Use
-   * multicast_group_range_activation instead.
-   * @return value or {@code null} for none
-   */
-  public java.lang.String getMulticastGroup() {
-    return multicastGroup;
-  }
-
-  /**
-   * Optional. The resource name of the multicast group created by the admin in the same zone as
-   * this multicast group consumer activation. Use the following format:
-   * `projects/locations/multicastGroups`. This field is deprecated. Use
-   * multicast_group_range_activation instead.
-   * @param multicastGroup multicastGroup or {@code null} for none
-   */
-  public MulticastGroupConsumerActivation setMulticastGroup(java.lang.String multicastGroup) {
-    this.multicastGroup = multicastGroup;
     return this;
   }
 

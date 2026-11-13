@@ -41,9 +41,9 @@ public final class ExtensionBindingMatchConditionTo extends com.google.api.clien
   private ExtensionBindingMatchConditionToDestination destination;
 
   /**
-   * Optional. Describes the negated properties of the request destination. Extension will not be
-   * invoked on requests that match the criteria specified in this field. At least one of
-   * destination or not_destination must be specified.
+   * Optional. Describes the negated properties of the request destination. The extension will not
+   * be invoked on requests that match the criteria specified in this field. At least one of
+   * `destination` or `not_destination` must be specified.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -75,9 +75,9 @@ public final class ExtensionBindingMatchConditionTo extends com.google.api.clien
   }
 
   /**
-   * Optional. Describes the negated properties of the request destination. Extension will not be
-   * invoked on requests that match the criteria specified in this field. At least one of
-   * destination or not_destination must be specified.
+   * Optional. Describes the negated properties of the request destination. The extension will not
+   * be invoked on requests that match the criteria specified in this field. At least one of
+   * `destination` or `not_destination` must be specified.
    * @return value or {@code null} for none
    */
   public ExtensionBindingMatchConditionToDestination getNotDestination() {
@@ -85,9 +85,9 @@ public final class ExtensionBindingMatchConditionTo extends com.google.api.clien
   }
 
   /**
-   * Optional. Describes the negated properties of the request destination. Extension will not be
-   * invoked on requests that match the criteria specified in this field. At least one of
-   * destination or not_destination must be specified.
+   * Optional. Describes the negated properties of the request destination. The extension will not
+   * be invoked on requests that match the criteria specified in this field. At least one of
+   * `destination` or `not_destination` must be specified.
    * @param notDestination notDestination or {@code null} for none
    */
   public ExtensionBindingMatchConditionTo setNotDestination(ExtensionBindingMatchConditionToDestination notDestination) {

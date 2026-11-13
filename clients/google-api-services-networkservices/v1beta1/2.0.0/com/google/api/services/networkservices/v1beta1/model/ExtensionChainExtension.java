@@ -149,7 +149,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Required. The reference to the service that runs the extension. To configure a callout
-   * extension, `service` must be a fully-qualified reference to a [backend
+   * extension, `service` must be a fully qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
@@ -157,9 +157,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * a [`WasmPlugin` resource](https://cloud.google.com/service-
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
-   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, the
-   * `LbEdgeExtension`, and the `CdnEdgeExtension` resources.
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Supports plugin
+   * extensions for `LbTrafficExtension`, `LbRouteExtension`, `LbEdgeExtension`, and
+   * `CdnEdgeExtension` resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -457,7 +457,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Required. The reference to the service that runs the extension. To configure a callout
-   * extension, `service` must be a fully-qualified reference to a [backend
+   * extension, `service` must be a fully qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
@@ -465,9 +465,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * a [`WasmPlugin` resource](https://cloud.google.com/service-
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
-   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, the
-   * `LbEdgeExtension`, and the `CdnEdgeExtension` resources.
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Supports plugin
+   * extensions for `LbTrafficExtension`, `LbRouteExtension`, `LbEdgeExtension`, and
+   * `CdnEdgeExtension` resources.
    * @return value or {@code null} for none
    */
   public java.lang.String getService() {
@@ -476,7 +476,7 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
 
   /**
    * Required. The reference to the service that runs the extension. To configure a callout
-   * extension, `service` must be a fully-qualified reference to a [backend
+   * extension, `service` must be a fully qualified reference to a [backend
    * service](https://cloud.google.com/compute/docs/reference/rest/v1/backendServices) in the
    * format: `https://www.googleapis.com/compute/v1/projects/{project}/regions/{region}/backendServi
    * ces/{backendService}` or `https://www.googleapis.com/compute/v1/projects/{project}/global/backe
@@ -484,9 +484,9 @@ public final class ExtensionChainExtension extends com.google.api.client.json.Ge
    * a [`WasmPlugin` resource](https://cloud.google.com/service-
    * extensions/docs/reference/rest/v1beta1/projects.locations.wasmPlugins) in the format:
    * `projects/{project}/locations/{location}/wasmPlugins/{plugin}` or `//networkservices.googleapis
-   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Plugin extensions are
-   * currently supported for the `LbTrafficExtension`, the `LbRouteExtension`, the
-   * `LbEdgeExtension`, and the `CdnEdgeExtension` resources.
+   * .com/projects/{project}/locations/{location}/wasmPlugins/{wasmPlugin}`. Supports plugin
+   * extensions for `LbTrafficExtension`, `LbRouteExtension`, `LbEdgeExtension`, and
+   * `CdnEdgeExtension` resources.
    * @param service service or {@code null} for none
    */
   public ExtensionChainExtension setService(java.lang.String service) {

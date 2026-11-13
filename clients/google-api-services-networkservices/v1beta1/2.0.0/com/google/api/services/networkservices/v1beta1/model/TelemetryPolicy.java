@@ -76,6 +76,14 @@ public final class TelemetryPolicy extends com.google.api.client.json.GenericJso
 
   /**
    * Optional. Specifies the top-level configuration block within the telemetry policy that contains
+   * all the settings for how logging will be applied to the target resources.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private LoggingConfiguration loggingConfiguration;
+
+  /**
+   * Optional. Specifies the top-level configuration block within the telemetry policy that contains
    * all the settings for how metrics will be applied to the target resources.
    * The value may be {@code null}.
    */
@@ -231,6 +239,25 @@ public final class TelemetryPolicy extends com.google.api.client.json.GenericJso
    */
   public TelemetryPolicy setLabels(java.util.Map<String, java.lang.String> labels) {
     this.labels = labels;
+    return this;
+  }
+
+  /**
+   * Optional. Specifies the top-level configuration block within the telemetry policy that contains
+   * all the settings for how logging will be applied to the target resources.
+   * @return value or {@code null} for none
+   */
+  public LoggingConfiguration getLoggingConfiguration() {
+    return loggingConfiguration;
+  }
+
+  /**
+   * Optional. Specifies the top-level configuration block within the telemetry policy that contains
+   * all the settings for how logging will be applied to the target resources.
+   * @param loggingConfiguration loggingConfiguration or {@code null} for none
+   */
+  public TelemetryPolicy setLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
+    this.loggingConfiguration = loggingConfiguration;
     return this;
   }
 

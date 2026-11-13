@@ -38,7 +38,7 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   private ExtensionBindingMatchConditionToDestinationHeaderSet headerSet;
 
   /**
-   * Optional. A list of HTTP Hosts to match against. Limited to 10 hosts. If not specified, any
+   * Optional. A list of HTTP hosts to match against. Limited to 10 hosts. If not specified, any
    * host is allowed. If specified, a match occurs if any of the hosts matches the host value in the
    * request.
    * The value may be {@code null}.
@@ -55,7 +55,7 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   /**
    * Optional. A list of paths to match against. Limited to 10 paths. If not specified, any path is
    * allowed. Note that this path match includes the query parameters. For gRPC services, this
-   * should be a fully-qualified name of the form /package.service/method.
+   * should be a fully qualified name of the form `/package.service/method`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -69,10 +69,10 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
 
   /**
    * Optional. A list of non-empty strings whose value is matched against the resource to which a
-   * request is sent (e.g., an Agent in AiApplication). If not specified, any resource is allowed.
-   * If specified, a match occurs if any of the resources matches the resource value in the request.
-   * Limited to 5 resources. When matching against resources in the AgentRegistry, use the URNs of
-   * the registry resources.
+   * request is sent (for example, an `Agent` in `AiApplication`). If not specified, any resource is
+   * allowed. If specified, a match occurs if any of the resources matches the resource value in the
+   * request. Limited to 5 resources. When matching against resources in the Agent Registry, use the
+   * URNs of the registry resources.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -104,7 +104,7 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   }
 
   /**
-   * Optional. A list of HTTP Hosts to match against. Limited to 10 hosts. If not specified, any
+   * Optional. A list of HTTP hosts to match against. Limited to 10 hosts. If not specified, any
    * host is allowed. If specified, a match occurs if any of the hosts matches the host value in the
    * request.
    * @return value or {@code null} for none
@@ -114,7 +114,7 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   }
 
   /**
-   * Optional. A list of HTTP Hosts to match against. Limited to 10 hosts. If not specified, any
+   * Optional. A list of HTTP hosts to match against. Limited to 10 hosts. If not specified, any
    * host is allowed. If specified, a match occurs if any of the hosts matches the host value in the
    * request.
    * @param hosts hosts or {@code null} for none
@@ -127,7 +127,7 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   /**
    * Optional. A list of paths to match against. Limited to 10 paths. If not specified, any path is
    * allowed. Note that this path match includes the query parameters. For gRPC services, this
-   * should be a fully-qualified name of the form /package.service/method.
+   * should be a fully qualified name of the form `/package.service/method`.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionBindingMatchConditionStringMatch> getPaths() {
@@ -137,7 +137,7 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
   /**
    * Optional. A list of paths to match against. Limited to 10 paths. If not specified, any path is
    * allowed. Note that this path match includes the query parameters. For gRPC services, this
-   * should be a fully-qualified name of the form /package.service/method.
+   * should be a fully qualified name of the form `/package.service/method`.
    * @param paths paths or {@code null} for none
    */
   public ExtensionBindingMatchConditionToDestination setPaths(java.util.List<ExtensionBindingMatchConditionStringMatch> paths) {
@@ -147,10 +147,10 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
 
   /**
    * Optional. A list of non-empty strings whose value is matched against the resource to which a
-   * request is sent (e.g., an Agent in AiApplication). If not specified, any resource is allowed.
-   * If specified, a match occurs if any of the resources matches the resource value in the request.
-   * Limited to 5 resources. When matching against resources in the AgentRegistry, use the URNs of
-   * the registry resources.
+   * request is sent (for example, an `Agent` in `AiApplication`). If not specified, any resource is
+   * allowed. If specified, a match occurs if any of the resources matches the resource value in the
+   * request. Limited to 5 resources. When matching against resources in the Agent Registry, use the
+   * URNs of the registry resources.
    * @return value or {@code null} for none
    */
   public java.util.List<ExtensionBindingMatchConditionStringMatch> getResources() {
@@ -159,10 +159,10 @@ public final class ExtensionBindingMatchConditionToDestination extends com.googl
 
   /**
    * Optional. A list of non-empty strings whose value is matched against the resource to which a
-   * request is sent (e.g., an Agent in AiApplication). If not specified, any resource is allowed.
-   * If specified, a match occurs if any of the resources matches the resource value in the request.
-   * Limited to 5 resources. When matching against resources in the AgentRegistry, use the URNs of
-   * the registry resources.
+   * request is sent (for example, an `Agent` in `AiApplication`). If not specified, any resource is
+   * allowed. If specified, a match occurs if any of the resources matches the resource value in the
+   * request. Limited to 5 resources. When matching against resources in the Agent Registry, use the
+   * URNs of the registry resources.
    * @param resources resources or {@code null} for none
    */
   public ExtensionBindingMatchConditionToDestination setResources(java.util.List<ExtensionBindingMatchConditionStringMatch> resources) {

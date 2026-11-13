@@ -38,8 +38,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   private java.lang.String contains;
 
   /**
-   * Optional. The input string must match exactly the string specified here. Examples: * `abc` only
-   * matches the value `abc`.
+   * Optional. The input string must match exactly the string specified here. Examples: * `abc`
+   * matches only the value `abc`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -89,8 +89,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must match exactly the string specified here. Examples: * `abc` only
-   * matches the value `abc`.
+   * Optional. The input string must match exactly the string specified here. Examples: * `abc`
+   * matches only the value `abc`.
    * @return value or {@code null} for none
    */
   public java.lang.String getExact() {
@@ -98,8 +98,8 @@ public final class ExtensionBindingMatchConditionStringMatch extends com.google.
   }
 
   /**
-   * Optional. The input string must match exactly the string specified here. Examples: * `abc` only
-   * matches the value `abc`.
+   * Optional. The input string must match exactly the string specified here. Examples: * `abc`
+   * matches only the value `abc`.
    * @param exact exact or {@code null} for none
    */
   public ExtensionBindingMatchConditionStringMatch setExact(java.lang.String exact) {

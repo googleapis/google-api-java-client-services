@@ -17,8 +17,8 @@
 package com.google.api.services.networkservices.v1.model;
 
 /**
- * `ProducerExtension` is a resource representing producer defined configuration for their service
- * extension.
+ * `ProducerExtension` is a resource that represents a producer-defined configuration for its
+ * service extension.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Network Services API. For a detailed explanation see:
@@ -45,8 +45,9 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
   private java.lang.String description;
 
   /**
-   * Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
-   * provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+   * Optional. ETag of the resource. If this is provided, it must match the server's ETag. If the
+   * provided ETag doesn't match the server's ETag, then the request fails with a `409 ABORTED`
+   * error.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -77,7 +78,7 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
   private java.lang.String name;
 
   /**
-   * Required. The phase in which this `ProducerExtension` should execute.
+   * Required. The phase in which this `ProducerExtension` runs.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -125,8 +126,9 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
-   * provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+   * Optional. ETag of the resource. If this is provided, it must match the server's ETag. If the
+   * provided ETag doesn't match the server's ETag, then the request fails with a `409 ABORTED`
+   * error.
    * @return value or {@code null} for none
    */
   public java.lang.String getEtag() {
@@ -134,8 +136,9 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Optional. Etag of the resource. If this is provided, it must match the server's etag. If the
-   * provided etag does not match the server's etag, the request will fail with a 409 ABORTED error.
+   * Optional. ETag of the resource. If this is provided, it must match the server's ETag. If the
+   * provided ETag doesn't match the server's ETag, then the request fails with a `409 ABORTED`
+   * error.
    * @param etag etag or {@code null} for none
    */
   public ProducerExtension setEtag(java.lang.String etag) {
@@ -201,7 +204,7 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The phase in which this `ProducerExtension` should execute.
+   * Required. The phase in which this `ProducerExtension` runs.
    * @return value or {@code null} for none
    */
   public java.lang.String getPhase() {
@@ -209,7 +212,7 @@ public final class ProducerExtension extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Required. The phase in which this `ProducerExtension` should execute.
+   * Required. The phase in which this `ProducerExtension` runs.
    * @param phase phase or {@code null} for none
    */
   public ProducerExtension setPhase(java.lang.String phase) {

@@ -45,7 +45,7 @@ public final class ListRealmsResponse extends com.google.api.client.json.Generic
   private java.util.List<Realm> realms;
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -86,7 +86,7 @@ public final class ListRealmsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getUnreachable() {
@@ -94,7 +94,7 @@ public final class ListRealmsResponse extends com.google.api.client.json.Generic
   }
 
   /**
-   * Locations that could not be reached.
+   * Unordered list. Locations that could not be reached.
    * @param unreachable unreachable or {@code null} for none
    */
   public ListRealmsResponse setUnreachable(java.util.List<java.lang.String> unreachable) {

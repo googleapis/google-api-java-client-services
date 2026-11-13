@@ -17,7 +17,10 @@
 package com.google.api.services.cloudnumberregistry.v1alpha.model;
 
 /**
- * A key-value pair representing a custom attribute associated with a resource.
+ * A key-value pair representing a custom attribute associated with a resource. Attributes are
+ * resource metadata used to organize and search for resources. Do not include sensitive
+ * information, such as personally identifiable information or credentials, in attribute `key` or
+ * `value`.
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Cloud Number Registry API. For a detailed explanation

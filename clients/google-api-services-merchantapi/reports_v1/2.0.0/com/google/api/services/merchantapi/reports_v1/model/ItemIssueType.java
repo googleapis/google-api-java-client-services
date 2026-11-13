@@ -38,7 +38,7 @@ public final class ItemIssueType extends com.google.api.client.json.GenericJson 
 
   /**
    * Error code of the issue, equivalent to the `code` of [Product
-   * issues](https://developers.google.com/shopping-content/guides/product-issues).
+   * issues](https://developers.google.com/merchant/api/guides/products/list-products-data-issues).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -63,7 +63,7 @@ public final class ItemIssueType extends com.google.api.client.json.GenericJson 
 
   /**
    * Error code of the issue, equivalent to the `code` of [Product
-   * issues](https://developers.google.com/shopping-content/guides/product-issues).
+   * issues](https://developers.google.com/merchant/api/guides/products/list-products-data-issues).
    * @return value or {@code null} for none
    */
   public java.lang.String getCode() {
@@ -72,7 +72,7 @@ public final class ItemIssueType extends com.google.api.client.json.GenericJson 
 
   /**
    * Error code of the issue, equivalent to the `code` of [Product
-   * issues](https://developers.google.com/shopping-content/guides/product-issues).
+   * issues](https://developers.google.com/merchant/api/guides/products/list-products-data-issues).
    * @param code code or {@code null} for none
    */
   public ItemIssueType setCode(java.lang.String code) {

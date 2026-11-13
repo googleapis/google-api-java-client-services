@@ -21,7 +21,8 @@ package com.google.api.services.merchantapi.reports_v1.model;
  * sellers](https://support.google.com/merchants/answer/9488679) report with top product clusters. A
  * product cluster is a grouping for different offers and variants that represent the same product,
  * for example, Google Pixel 7. Values are only set for fields requested explicitly in the request's
- * search query.
+ * search query. For more information, see [Understand the
+ * market](https://developers.google.com/merchant/api/guides/reports/understand-the-market).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

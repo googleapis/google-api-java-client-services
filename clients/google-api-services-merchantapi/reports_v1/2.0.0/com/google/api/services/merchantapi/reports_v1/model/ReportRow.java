@@ -19,7 +19,9 @@ package com.google.api.services.merchantapi.reports_v1.model;
 /**
  * Result row returned from the search query. Only the message corresponding to the queried table is
  * populated in the response. Within the populated message, only the fields requested explicitly in
- * the query are populated.
+ * the query are populated. For more information, see [Reports
+ * overview](https://developers.google.com/merchant/api/guides/reports/overview) and [Use Merchant
+ * Center Query Language](https://developers.google.com/merchant/api/guides/reports/query-language).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

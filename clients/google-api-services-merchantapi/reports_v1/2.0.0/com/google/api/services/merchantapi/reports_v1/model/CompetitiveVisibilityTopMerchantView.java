@@ -20,7 +20,9 @@ package com.google.api.services.merchantapi.reports_v1.model;
  * Fields available for query in `competitive_visibility_top_merchant_view` table. [Competitive
  * visibility](https://support.google.com/merchants/answer/11366442) report with business with
  * highest visibility. Values are only set for fields requested explicitly in the request's search
- * query.
+ * query. For more information, see [Explore your competitive
+ * landscape](https://developers.google.com/merchant/api/guides/reports/explore-competitive-
+ * landscape).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

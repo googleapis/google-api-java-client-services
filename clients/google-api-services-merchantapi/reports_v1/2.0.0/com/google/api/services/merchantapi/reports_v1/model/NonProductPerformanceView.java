@@ -22,7 +22,8 @@ package com.google.api.services.merchantapi.reports_v1.model;
  * example, `clicks`) and dimensions according to which performance metrics are segmented (for
  * example, `date`). Segment fields cannot be selected in queries without also selecting at least
  * one metric field. Values are only set for fields requested explicitly in the request's search
- * query.
+ * query. For more information, see [Performance
+ * reports](https://developers.google.com/merchant/api/guides/reports/performance-reports).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

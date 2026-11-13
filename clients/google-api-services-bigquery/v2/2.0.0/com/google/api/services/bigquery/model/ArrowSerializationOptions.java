@@ -17,7 +17,8 @@
 package com.google.api.services.bigquery.model;
 
 /**
- * Contains options specific to Arrow Serialization. This feature is not yet available.
+ * Contains options specific to Arrow Serialization.
+ * [Preview](https://cloud.google.com/products/#product-launch-stages)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

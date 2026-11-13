@@ -322,6 +322,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   private TableSchema schema;
 
   /**
+   * Output only. Search indexing specific statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private SearchIndexingStats searchIndexingStats;
+
+  /**
    * Output only. Search query specific statistics.
    * The value may be {@code null}.
    */
@@ -575,6 +582,13 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   @com.google.api.client.util.Key
   private java.util.List<QueryParameter> undeclaredQueryParameters;
+
+  /**
+   * Output only. Vector Search indexing specific statistics.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private VectorSearchIndexingStats vectorSearchIndexingStats;
 
   /**
    * Output only. Vector Search query specific statistics.
@@ -1243,6 +1257,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
   }
 
   /**
+   * Output only. Search indexing specific statistics.
+   * @return value or {@code null} for none
+   */
+  public SearchIndexingStats getSearchIndexingStats() {
+    return searchIndexingStats;
+  }
+
+  /**
+   * Output only. Search indexing specific statistics.
+   * @param searchIndexingStats searchIndexingStats or {@code null} for none
+   */
+  public JobStatistics2 setSearchIndexingStats(SearchIndexingStats searchIndexingStats) {
+    this.searchIndexingStats = searchIndexingStats;
+    return this;
+  }
+
+  /**
    * Output only. Search query specific statistics.
    * @return value or {@code null} for none
    */
@@ -1785,6 +1816,23 @@ public final class JobStatistics2 extends com.google.api.client.json.GenericJson
    */
   public JobStatistics2 setUndeclaredQueryParameters(java.util.List<QueryParameter> undeclaredQueryParameters) {
     this.undeclaredQueryParameters = undeclaredQueryParameters;
+    return this;
+  }
+
+  /**
+   * Output only. Vector Search indexing specific statistics.
+   * @return value or {@code null} for none
+   */
+  public VectorSearchIndexingStats getVectorSearchIndexingStats() {
+    return vectorSearchIndexingStats;
+  }
+
+  /**
+   * Output only. Vector Search indexing specific statistics.
+   * @param vectorSearchIndexingStats vectorSearchIndexingStats or {@code null} for none
+   */
+  public JobStatistics2 setVectorSearchIndexingStats(VectorSearchIndexingStats vectorSearchIndexingStats) {
+    this.vectorSearchIndexingStats = vectorSearchIndexingStats;
     return this;
   }
 

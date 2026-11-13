@@ -322,6 +322,14 @@ public final class Table extends com.google.api.client.json.GenericJson {
   private PartitioningDefinition partitionDefinition;
 
   /**
+   * Output only. Contains the resource identity token of the view that users can use to include in
+   * their policy bindings for authorization. This should be set only for views.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private ResourcePolicyMember policyMember;
+
+  /**
    * If specified, configures range partitioning for this table.
    * The value may be {@code null}.
    */
@@ -1134,6 +1142,25 @@ public final class Table extends com.google.api.client.json.GenericJson {
    */
   public Table setPartitionDefinition(PartitioningDefinition partitionDefinition) {
     this.partitionDefinition = partitionDefinition;
+    return this;
+  }
+
+  /**
+   * Output only. Contains the resource identity token of the view that users can use to include in
+   * their policy bindings for authorization. This should be set only for views.
+   * @return value or {@code null} for none
+   */
+  public ResourcePolicyMember getPolicyMember() {
+    return policyMember;
+  }
+
+  /**
+   * Output only. Contains the resource identity token of the view that users can use to include in
+   * their policy bindings for authorization. This should be set only for views.
+   * @param policyMember policyMember or {@code null} for none
+   */
+  public Table setPolicyMember(ResourcePolicyMember policyMember) {
+    this.policyMember = policyMember;
     return this;
   }
 

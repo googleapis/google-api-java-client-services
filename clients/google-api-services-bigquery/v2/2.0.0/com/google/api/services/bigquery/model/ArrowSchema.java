@@ -19,8 +19,8 @@ package com.google.api.services.bigquery.model;
 /**
  * Arrow schema as specified in https://arrow.apache.org/docs/python/api/datatypes.html and
  * serialized to bytes using IPC: https://arrow.apache.org/docs/format/Columnar.html#serialization-
- * and-interprocess-communication-ipc See code samples on how this message can be deserialized. This
- * feature is not yet available.
+ * and-interprocess-communication-ipc See code samples on how this message can be deserialized.
+ * [Preview](https://cloud.google.com/products/#product-launch-stages)
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the BigQuery API. For a detailed explanation see:

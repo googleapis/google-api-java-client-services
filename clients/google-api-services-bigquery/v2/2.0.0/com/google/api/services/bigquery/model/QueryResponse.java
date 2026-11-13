@@ -141,8 +141,8 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   private java.lang.Long numDmlAffectedRows;
 
   /**
-   * Output only. The number of rows out of `total_rows` returned in this response. This feature is
-   * not yet available.
+   * Output only. The number of rows out of `total_rows` returned in this response.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -644,8 +644,8 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The number of rows out of `total_rows` returned in this response. This feature is
-   * not yet available.
+   * Output only. The number of rows out of `total_rows` returned in this response.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @return value or {@code null} for none
    */
   public java.lang.Long getPageRowCount() {
@@ -653,8 +653,8 @@ public final class QueryResponse extends com.google.api.client.json.GenericJson 
   }
 
   /**
-   * Output only. The number of rows out of `total_rows` returned in this response. This feature is
-   * not yet available.
+   * Output only. The number of rows out of `total_rows` returned in this response.
+   * [Preview](https://cloud.google.com/products/#product-launch-stages)
    * @param pageRowCount pageRowCount or {@code null} for none
    */
   public QueryResponse setPageRowCount(java.lang.Long pageRowCount) {

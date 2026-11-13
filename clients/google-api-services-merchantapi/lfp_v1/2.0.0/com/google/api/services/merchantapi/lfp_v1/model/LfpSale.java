@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.lfp_v1.model;
 
 /**
- * A sale for the merchant.
+ * A sale for the merchant. For more information, see [Manage local feeds
+ * partnership](https://developers.google.com/merchant/api/guides/local-feeds-partnership/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -37,8 +38,8 @@ public final class LfpSale extends com.google.api.client.json.GenericJson {
   private java.lang.String contentLanguage;
 
   /**
-   * Optional. The [feed label](https://developers.google.com/shopping-content/guides/products/feed-
-   * labels) for the product. If this is not set, it will default to `regionCode`.
+   * Optional. The [feed label](https://developers.google.com/merchant/api/guides/data-sources/api-
+   * sources) for the product. If this is not set, it will default to `regionCode`.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -137,8 +138,8 @@ public final class LfpSale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [feed label](https://developers.google.com/shopping-content/guides/products/feed-
-   * labels) for the product. If this is not set, it will default to `regionCode`.
+   * Optional. The [feed label](https://developers.google.com/merchant/api/guides/data-sources/api-
+   * sources) for the product. If this is not set, it will default to `regionCode`.
    * @return value or {@code null} for none
    */
   public java.lang.String getFeedLabel() {
@@ -146,8 +147,8 @@ public final class LfpSale extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. The [feed label](https://developers.google.com/shopping-content/guides/products/feed-
-   * labels) for the product. If this is not set, it will default to `regionCode`.
+   * Optional. The [feed label](https://developers.google.com/merchant/api/guides/data-sources/api-
+   * sources) for the product. If this is not set, it will default to `regionCode`.
    * @param feedLabel feedLabel or {@code null} for none
    */
   public LfpSale setFeedLabel(java.lang.String feedLabel) {

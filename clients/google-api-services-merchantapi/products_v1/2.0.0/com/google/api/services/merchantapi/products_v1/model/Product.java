@@ -23,7 +23,12 @@ package com.google.api.services.merchantapi.products_v1.model;
  * data source inputs. After inserting, updating, or deleting a product input, it may take several
  * minutes before the updated processed product can be retrieved. All fields in the processed
  * product and its sub-messages match the name of their corresponding attribute in the [Product data
- * specification](https://support.google.com/merchants/answer/7052112) with some exceptions.
+ * specification](https://support.google.com/merchants/answer/7052112) with some exceptions. For
+ * product ingestion workflows and status checks, see [Manage
+ * products](https://developers.google.com/merchant/api/guides/products/overview), [Add and manage
+ * products](https://developers.google.com/merchant/api/guides/products/add-manage), and [List your
+ * products data and product
+ * issues](https://developers.google.com/merchant/api/guides/products/list-products-data-issues).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

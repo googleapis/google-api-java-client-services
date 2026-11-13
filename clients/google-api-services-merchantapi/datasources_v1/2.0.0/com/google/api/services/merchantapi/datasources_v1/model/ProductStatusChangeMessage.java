@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.datasources_v1.model;
 
 /**
- * The message that the merchant will receive to notify about product status change event
+ * The message that the merchant will receive to notify about product status change event. For more
+ * information, see [Product status
+ * changes](https://developers.google.com/merchant/api/guides/notifications/product-status-changes).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

@@ -23,7 +23,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * onboarding process, ensuring that merchants agree to the necessary legal agreements for using the
  * service. Merchants can retrieve the latest terms of service for a given `kind` and `region`
  * through `RetrieveLatestTermsOfService`, and accept them as required through
- * `AcceptTermsOfService`.
+ * `AcceptTermsOfService`. For step-by-step instructions, see [Manage Terms of
+ * Service](https://developers.google.com/merchant/api/guides/accounts/manage-tos-agreements).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

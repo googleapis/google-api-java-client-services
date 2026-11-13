@@ -23,7 +23,13 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * structure. In an advanced account setup the parent account manages multiple sub-accounts.
  * Establishing an account involves configuring attributes like the account name, time zone, and
  * language preferences. The `Account` message is the parent entity for many other resources, for
- * example, `AccountRelationship`, `Homepage`, `BusinessInfo` and so on.
+ * example, `AccountRelationship`, `Homepage`, `BusinessInfo` and so on. For more information, see
+ * [Sign up for Merchant Center](https://support.google.com/merchants/answer/188924), [Manage
+ * accounts and settings](https://developers.google.com/merchant/api/guides/accounts/overview),
+ * [Create accounts](https://developers.google.com/merchant/api/guides/accounts/create-accounts),
+ * [Create test accounts](https://developers.google.com/merchant/api/guides/accounts/test-accounts),
+ * and [Filter accounts you can
+ * access](https://developers.google.com/merchant/api/guides/accounts/filter).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

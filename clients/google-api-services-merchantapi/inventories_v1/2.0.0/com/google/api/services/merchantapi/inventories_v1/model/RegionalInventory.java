@@ -20,7 +20,12 @@ package com.google.api.services.merchantapi.inventories_v1.model;
  * Regional inventory information for the product. Represents specific information like price and
  * availability for a given product in a specific `region`. For a list of all accepted attribute
  * values, see the [regional product inventory data
- * specification](https://support.google.com/merchants/answer/9698880).
+ * specification](https://support.google.com/merchants/answer/9698880). For more information, see
+ * [Add regional inventory](https://developers.google.com/merchant/api/guides/inventories/add-
+ * regional-inventory), [Update regional
+ * inventory](https://developers.google.com/merchant/api/guides/inventories/update-regional-
+ * inventory), and [Create and update
+ * regions](https://developers.google.com/merchant/api/guides/accounts/regions).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

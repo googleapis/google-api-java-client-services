@@ -176,7 +176,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Retrieves a report defined by a search query. The response might contain fewer rows than
        * specified by `page_size`. Rely on `next_page_token` to determine if there are more rows to be
-       * requested.
+       * requested. For more information, see [Get
+       * started](https://developers.google.com/merchant/api/guides/reports/get-started), [Use Merchant
+       * Center Query Language](https://developers.google.com/merchant/api/guides/reports/query-language),
+       * and [Paginate query results](https://developers.google.com/merchant/api/guides/reports/paging).
        *
        * Create a request for the method "reports.search".
        *
@@ -204,7 +207,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Retrieves a report defined by a search query. The response might contain fewer rows than
          * specified by `page_size`. Rely on `next_page_token` to determine if there are more rows to be
-         * requested.
+         * requested. For more information, see [Get
+         * started](https://developers.google.com/merchant/api/guides/reports/get-started), [Use Merchant
+         * Center Query Language](https://developers.google.com/merchant/api/guides/reports/query-
+         * language), and [Paginate query
+         * results](https://developers.google.com/merchant/api/guides/reports/paging).
          *
          * Create a request for the method "reports.search".
          *

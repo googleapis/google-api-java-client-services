@@ -436,8 +436,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         }
       }
       /**
-       * [Uploads a product input to your Merchant Center account](/merchant/api/guides/products/add-
-       * manage#add_a_product). You must have a products [data source](/merchant/api/guides/data-
+       * [Uploads a product input to your Merchant Center
+       * account](https://developers.google.com/merchant/api/guides/products/add-manage#add_a_product).
+       * You must have a products [data source](https://developers.google.com/merchant/api/guides/data-
        * sources/api-sources#create-primary-data-source) to be able to insert a product. The unique
        * identifier of the data source is passed as a query parameter in the request URL. If a product
        * input with the same contentLanguage, offerId, and dataSource already exists, then the product
@@ -467,8 +468,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
             java.util.regex.Pattern.compile("^accounts/[^/]+$");
 
         /**
-         * [Uploads a product input to your Merchant Center account](/merchant/api/guides/products/add-
-         * manage#add_a_product). You must have a products [data source](/merchant/api/guides/data-
+         * [Uploads a product input to your Merchant Center
+         * account](https://developers.google.com/merchant/api/guides/products/add-manage#add_a_product).
+         * You must have a products [data source](https://developers.google.com/merchant/api/guides/data-
          * sources/api-sources#create-primary-data-source) to be able to insert a product. The unique
          * identifier of the data source is passed as a query parameter in the request URL. If a product
          * input with the same contentLanguage, offerId, and dataSource already exists, then the product
@@ -581,17 +583,19 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
          * data source. For more information, see [Create a primary data
-         * source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source). Only
-         * API data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`.
-         * For example, `accounts/123456/dataSources/104628`.
+         * source](https://developers.google.com/merchant/api/guides/data-sources/api-
+         * sources#create-primary-data-source). Only API data sources are supported. Format:
+         * `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         @com.google.api.client.util.Key
         private java.lang.String dataSource;
 
         /** Required. The primary or supplemental product data source name. If the product already exists and
        data source provided is different, then the product will be moved to a new data source. For more
-       information, see [Create a primary data source](/merchant/api/guides/data-sources/api-
-       sources#create-primary-data-source). Only API data sources are supported. Format:
+       information, see [Create a primary data
+       source](https://developers.google.com/merchant/api/guides/data-sources/api-sources#create-primary-
+       data-source). Only API data sources are supported. Format:
        `accounts/{account}/dataSources/{datasource}`. For example, `accounts/123456/dataSources/104628`.
          */
         public java.lang.String getDataSource() {
@@ -602,9 +606,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Required. The primary or supplemental product data source name. If the product already
          * exists and data source provided is different, then the product will be moved to a new
          * data source. For more information, see [Create a primary data
-         * source](/merchant/api/guides/data-sources/api-sources#create-primary-data-source). Only
-         * API data sources are supported. Format: `accounts/{account}/dataSources/{datasource}`.
-         * For example, `accounts/123456/dataSources/104628`.
+         * source](https://developers.google.com/merchant/api/guides/data-sources/api-
+         * sources#create-primary-data-source). Only API data sources are supported. Format:
+         * `accounts/{account}/dataSources/{datasource}`. For example,
+         * `accounts/123456/dataSources/104628`.
          */
         public Insert setDataSource(java.lang.String dataSource) {
           this.dataSource = dataSource;
@@ -620,7 +625,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * Updates the existing product input in your Merchant Center account. The name of the product input
        * to update is taken from the `name` field within the `ProductInput` resource. After inserting,
        * updating, or deleting a product input, it may take several minutes before the processed product
-       * can be retrieved.
+       * can be retrieved. For more information, see [Add and manage
+       * products](https://developers.google.com/merchant/api/guides/products/add-manage) and [Make
+       * frequent updates to your
+       * products](https://developers.google.com/merchant/api/guides/products/frequent-updates).
        *
        * Create a request for the method "productInputs.patch".
        *
@@ -668,7 +676,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Updates the existing product input in your Merchant Center account. The name of the product
          * input to update is taken from the `name` field within the `ProductInput` resource. After
          * inserting, updating, or deleting a product input, it may take several minutes before the
-         * processed product can be retrieved.
+         * processed product can be retrieved. For more information, see [Add and manage
+         * products](https://developers.google.com/merchant/api/guides/products/add-manage) and [Make
+         * frequent updates to your
+         * products](https://developers.google.com/merchant/api/guides/products/frequent-updates).
          *
          * Create a request for the method "productInputs.patch".
          *
@@ -1198,7 +1209,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * Lists the processed products in your Merchant Center account. The response might contain fewer
        * items than specified by `pageSize`. Rely on `pageToken` to determine if there are more items to
        * be requested. After inserting, updating, or deleting a product input, it may take several minutes
-       * before the updated processed product can be retrieved.
+       * before the updated processed product can be retrieved. For more information, see [List your
+       * products data and product
+       * issues](https://developers.google.com/merchant/api/guides/products/list-products-data-issues).
        *
        * Create a request for the method "products.list".
        *
@@ -1225,7 +1238,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Lists the processed products in your Merchant Center account. The response might contain fewer
          * items than specified by `pageSize`. Rely on `pageToken` to determine if there are more items to
          * be requested. After inserting, updating, or deleting a product input, it may take several
-         * minutes before the updated processed product can be retrieved.
+         * minutes before the updated processed product can be retrieved. For more information, see [List
+         * your products data and product
+         * issues](https://developers.google.com/merchant/api/guides/products/list-products-data-issues).
          *
          * Create a request for the method "products.list".
          *

@@ -18,8 +18,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * Describes the [accepted terms of
- * service](https://developers.google.com/merchant/api/guides/accounts/create-and-
- * configure#accept_the_merchant_center_terms_of_service).
+ * service](https://developers.google.com/merchant/api/guides/accounts/manage-tos-agreements#accept-
+ * tos).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

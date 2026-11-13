@@ -18,7 +18,10 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * The categories of notifications the user opted into / opted out of. The email preferences do not
- * include mandatory announcements as users can't opt out of them.
+ * include mandatory announcements as users can't opt out of them. For more information, see [Change
+ * your Merchant Center email preferences](https://support.google.com/merchants/answer/9370919) and
+ * [Manage Merchant Center email
+ * preferences](https://developers.google.com/merchant/api/guides/accounts/email-notifications).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

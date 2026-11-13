@@ -20,7 +20,10 @@ package com.google.api.services.merchantapi.inventories_v1.model;
  * Local inventory information for the product. Represents in-store information for a specific
  * product at the store specified by `storeCode`. For a list of all accepted attribute values, see
  * the [local product inventory data
- * specification](https://support.google.com/merchants/answer/3061342).
+ * specification](https://support.google.com/merchants/answer/3061342). For more information, see
+ * [Add local inventory](https://developers.google.com/merchant/api/guides/inventories/add-local-
+ * inventory) and [Update local
+ * inventory](https://developers.google.com/merchant/api/guides/inventories/update-local-inventory).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

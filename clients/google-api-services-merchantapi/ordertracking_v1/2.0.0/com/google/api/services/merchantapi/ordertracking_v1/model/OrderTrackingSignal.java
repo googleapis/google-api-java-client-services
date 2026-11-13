@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.ordertracking_v1.model;
 
 /**
- * Represents a business trade from which signals are extracted, such as shipping.
+ * Represents a business trade from which signals are extracted, such as shipping. For more
+ * information, see [Manage order tracking
+ * signals](https://developers.google.com/merchant/api/guides/order/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -71,8 +73,8 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
   /**
    * Optional. The Google Merchant Center ID of this order tracking signal. This value is optional.
    * If left unset, the caller's Merchant Center ID is used. You must request access in order to
-   * provide data on behalf of another business. For more information, see [Submitting Order
-   * Tracking Signals](/shopping-content/guides/order-tracking-signals).
+   * provide data on behalf of another business. For more information, see [Manage order tracking
+   * signals](https://developers.google.com/merchant/api/guides/order/overview).
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key @com.google.api.client.json.JsonString
@@ -196,8 +198,8 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
   /**
    * Optional. The Google Merchant Center ID of this order tracking signal. This value is optional.
    * If left unset, the caller's Merchant Center ID is used. You must request access in order to
-   * provide data on behalf of another business. For more information, see [Submitting Order
-   * Tracking Signals](/shopping-content/guides/order-tracking-signals).
+   * provide data on behalf of another business. For more information, see [Manage order tracking
+   * signals](https://developers.google.com/merchant/api/guides/order/overview).
    * @return value or {@code null} for none
    */
   public java.lang.Long getMerchantId() {
@@ -207,8 +209,8 @@ public final class OrderTrackingSignal extends com.google.api.client.json.Generi
   /**
    * Optional. The Google Merchant Center ID of this order tracking signal. This value is optional.
    * If left unset, the caller's Merchant Center ID is used. You must request access in order to
-   * provide data on behalf of another business. For more information, see [Submitting Order
-   * Tracking Signals](/shopping-content/guides/order-tracking-signals).
+   * provide data on behalf of another business. For more information, see [Manage order tracking
+   * signals](https://developers.google.com/merchant/api/guides/order/overview).
    * @param merchantId merchantId or {@code null} for none
    */
   public OrderTrackingSignal setMerchantId(java.lang.Long merchantId) {

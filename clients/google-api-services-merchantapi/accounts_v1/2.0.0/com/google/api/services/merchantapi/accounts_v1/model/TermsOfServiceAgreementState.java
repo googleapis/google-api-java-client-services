@@ -27,7 +27,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * we expect third-party providers to display the text associated with the given terms of service
  * agreement (the url to the file containing the text is added in the Required message below as
  * `tos_file_uri`). The actual acceptance of the terms of service is done by calling accept on the
- * `TermsOfService` resource. `valid_until` field.
+ * `TermsOfService` resource. `valid_until` field. For more information, see [Manage Terms of
+ * Service](https://developers.google.com/merchant/api/guides/accounts/manage-tos-agreements).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

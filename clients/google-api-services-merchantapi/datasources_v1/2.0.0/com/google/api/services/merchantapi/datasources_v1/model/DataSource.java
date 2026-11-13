@@ -17,7 +17,11 @@
 package com.google.api.services.merchantapi.datasources_v1.model;
 
 /**
- * The [data source](/merchant/api/guides/data-sources/overview) for the Merchant Center account.
+ * The [data source](https://developers.google.com/merchant/api/guides/data-sources/overview) for
+ * the Merchant Center account. For more information, see [Manage API data
+ * sources](https://developers.google.com/merchant/api/guides/data-sources/api-sources) and [Manage
+ * various data source types](https://developers.google.com/merchant/api/guides/data-sources/manage-
+ * various-data-sources).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

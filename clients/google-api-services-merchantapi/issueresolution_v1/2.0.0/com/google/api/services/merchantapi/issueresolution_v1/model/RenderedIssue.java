@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.issueresolution_v1.model;
 
 /**
- * An issue affecting specific business or their product.
+ * An issue affecting specific business or their product. For more information, see [Display issues
+ * and solutions to businesses](https://developers.google.com/merchant/api/guides/accounts/render-
+ * issues).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

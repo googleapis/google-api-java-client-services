@@ -17,7 +17,8 @@
 package com.google.api.services.merchantapi.lfp_v1.model;
 
 /**
- * The LFP state of a merchant.
+ * The LFP state of a merchant. For more information, see [Manage local feeds
+ * partnership](https://developers.google.com/merchant/api/guides/local-feeds-partnership/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

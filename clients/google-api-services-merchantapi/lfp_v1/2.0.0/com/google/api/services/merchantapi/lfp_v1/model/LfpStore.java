@@ -19,7 +19,8 @@ package com.google.api.services.merchantapi.lfp_v1.model;
 /**
  * A store for the merchant. This will be used to match to a store under the Google Business Profile
  * of the target merchant. If a matching store can't be found, the inventories or sales submitted
- * with the store code will not be used.
+ * with the store code will not be used. For more information, see [Manage local feeds
+ * partnership](https://developers.google.com/merchant/api/guides/local-feeds-partnership/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

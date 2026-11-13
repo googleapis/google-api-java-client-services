@@ -21,7 +21,11 @@ package com.google.api.services.merchantapi.promotions_v1.model;
  * attributes to pass data validation checks are primarily defined below: * [Promotions data
  * specification](https://support.google.com/merchants/answer/2906014) * [Local promotions data
  * specification](https://support.google.com/merchants/answer/10146130) After inserting, updating a
- * promotion input, it may take several minutes before the final promotion can be retrieved.
+ * promotion input, it may take several minutes before the final promotion can be retrieved. For
+ * more information, see [Manage
+ * promotions](https://developers.google.com/merchant/api/guides/promotions/overview) and
+ * [Troubleshoot
+ * issues](https://developers.google.com/merchant/api/guides/promotions/troubleshooting).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -77,9 +81,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Required. The user provided promotion ID to uniquely identify the promotion. Follow [minimum re
-   * quirements](https://support.google.com/merchants/answer/7050148?ref_topic=7322920&sjid=87186003
-   * 6916537104-NC#minimum_requirements) to prevent promotion disapprovals.
+   * Required. The user provided promotion ID to uniquely identify the promotion. Follow [minimum
+   * requirements](https://support.google.com/merchants/answer/7050148#minimum_requirements) to
+   * prevent promotion disapprovals.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,9 +219,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user provided promotion ID to uniquely identify the promotion. Follow [minimum re
-   * quirements](https://support.google.com/merchants/answer/7050148?ref_topic=7322920&sjid=87186003
-   * 6916537104-NC#minimum_requirements) to prevent promotion disapprovals.
+   * Required. The user provided promotion ID to uniquely identify the promotion. Follow [minimum
+   * requirements](https://support.google.com/merchants/answer/7050148#minimum_requirements) to
+   * prevent promotion disapprovals.
    * @return value or {@code null} for none
    */
   public java.lang.String getPromotionId() {
@@ -225,9 +229,9 @@ public final class Promotion extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The user provided promotion ID to uniquely identify the promotion. Follow [minimum re
-   * quirements](https://support.google.com/merchants/answer/7050148?ref_topic=7322920&sjid=87186003
-   * 6916537104-NC#minimum_requirements) to prevent promotion disapprovals.
+   * Required. The user provided promotion ID to uniquely identify the promotion. Follow [minimum
+   * requirements](https://support.google.com/merchants/answer/7050148#minimum_requirements) to
+   * prevent promotion disapprovals.
    * @param promotionId promotionId or {@code null} for none
    */
   public Promotion setPromotionId(java.lang.String promotionId) {

@@ -38,6 +38,16 @@ public final class PlaceActionLink extends com.google.api.client.json.GenericJso
   private String createTime;
 
   /**
+   * Optional. Whether the merchant disabled this link. Defaults to `false`, which means the link is
+   * enabled. If `provider_type` is `AGGREGATOR_3P`, the merchant can disable or enable this link
+   * through `UpdatePlaceActionLink`. If `provider_type` is `MERCHANT`, this field is always `false`
+   * and `UpdatePlaceActionLink` rejects updates to it.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Boolean isDisabled;
+
+  /**
    * Output only. Indicates whether this link can be edited by the client.
    * The value may be {@code null}.
    */
@@ -110,6 +120,29 @@ public final class PlaceActionLink extends com.google.api.client.json.GenericJso
    */
   public PlaceActionLink setCreateTime(String createTime) {
     this.createTime = createTime;
+    return this;
+  }
+
+  /**
+   * Optional. Whether the merchant disabled this link. Defaults to `false`, which means the link is
+   * enabled. If `provider_type` is `AGGREGATOR_3P`, the merchant can disable or enable this link
+   * through `UpdatePlaceActionLink`. If `provider_type` is `MERCHANT`, this field is always `false`
+   * and `UpdatePlaceActionLink` rejects updates to it.
+   * @return value or {@code null} for none
+   */
+  public java.lang.Boolean getIsDisabled() {
+    return isDisabled;
+  }
+
+  /**
+   * Optional. Whether the merchant disabled this link. Defaults to `false`, which means the link is
+   * enabled. If `provider_type` is `AGGREGATOR_3P`, the merchant can disable or enable this link
+   * through `UpdatePlaceActionLink`. If `provider_type` is `MERCHANT`, this field is always `false`
+   * and `UpdatePlaceActionLink` rejects updates to it.
+   * @param isDisabled isDisabled or {@code null} for none
+   */
+  public PlaceActionLink setIsDisabled(java.lang.Boolean isDisabled) {
+    this.isDisabled = isDisabled;
     return this;
   }
 

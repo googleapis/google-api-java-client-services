@@ -176,8 +176,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Creates a notification subscription for a business. For standalone or sub-accounts, the business
        * can create a subscription for self. For advanced accounts, the business can create a subscription
-       * for all managed accounts or for a specific subaccount. See [Decode
-       * notifications](/merchant/api/guides/accounts/notifications#decode_notifications) for information
+       * for all managed accounts or for a specific subaccount. See [Decode notifications](https://develop
+       * ers.google.com/merchant/api/guides/notifications/overview#decode_notifications) for information
        * on how to decode the notification payload and how to interpret its contents. We will allow the
        * following types of notification subscriptions to exist together (per business as a subscriber per
        * event type): 1. Subscription for all managed accounts + subscription for self. 2. Multiple
@@ -212,9 +212,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         /**
          * Creates a notification subscription for a business. For standalone or sub-accounts, the
          * business can create a subscription for self. For advanced accounts, the business can create a
-         * subscription for all managed accounts or for a specific subaccount. See [Decode
-         * notifications](/merchant/api/guides/accounts/notifications#decode_notifications) for
-         * information on how to decode the notification payload and how to interpret its contents. We
+         * subscription for all managed accounts or for a specific subaccount. See [Decode notifications](
+         * https://developers.google.com/merchant/api/guides/notifications/overview#decode_notifications)
+         * for information on how to decode the notification payload and how to interpret its contents. We
          * will allow the following types of notification subscriptions to exist together (per business as
          * a subscriber per event type): 1. Subscription for all managed accounts + subscription for self.
          * 2. Multiple "partial" subscriptions for managed accounts + subscription for self. we will not

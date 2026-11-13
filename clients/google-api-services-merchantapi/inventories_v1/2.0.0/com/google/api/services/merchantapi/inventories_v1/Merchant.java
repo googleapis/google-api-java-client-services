@@ -441,7 +441,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Inserts a `LocalInventory` resource to a product in your merchant account. Replaces the full
          * `LocalInventory` resource if an entry with the same `storeCode` already exists for the product.
          * It might take up to 30 minutes for the new or updated `LocalInventory` resource to appear in
-         * products.
+         * products. For step-by-step instructions, see [Add local
+         * inventory](https://developers.google.com/merchant/api/guides/inventories/add-local-inventory) and
+         * [Update local inventory](https://developers.google.com/merchant/api/guides/inventories/update-
+         * local-inventory).
          *
          * Create a request for the method "localInventories.insert".
          *
@@ -488,7 +491,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * Inserts a `LocalInventory` resource to a product in your merchant account. Replaces the full
            * `LocalInventory` resource if an entry with the same `storeCode` already exists for the product.
            * It might take up to 30 minutes for the new or updated `LocalInventory` resource to appear in
-           * products.
+           * products. For step-by-step instructions, see [Add local
+           * inventory](https://developers.google.com/merchant/api/guides/inventories/add-local-inventory)
+           * and [Update local
+           * inventory](https://developers.google.com/merchant/api/guides/inventories/update-local-
+           * inventory).
            *
            * Create a request for the method "localInventories.insert".
            *
@@ -1248,7 +1255,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Inserts a `RegionalInventory` to a given product in your merchant account. Replaces the full
          * `RegionalInventory` resource if an entry with the same `region` already exists for the product.
          * It might take up to 30 minutes for the new or updated `RegionalInventory` resource to appear in
-         * products.
+         * products. For step-by-step instructions, see [Add regional
+         * inventory](https://developers.google.com/merchant/api/guides/inventories/add-regional-inventory)
+         * and [Update regional
+         * inventory](https://developers.google.com/merchant/api/guides/inventories/update-regional-
+         * inventory).
          *
          * Create a request for the method "regionalInventories.insert".
          *
@@ -1295,7 +1306,11 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
            * Inserts a `RegionalInventory` to a given product in your merchant account. Replaces the full
            * `RegionalInventory` resource if an entry with the same `region` already exists for the product.
            * It might take up to 30 minutes for the new or updated `RegionalInventory` resource to appear in
-           * products.
+           * products. For step-by-step instructions, see [Add regional
+           * inventory](https://developers.google.com/merchant/api/guides/inventories/add-regional-
+           * inventory) and [Update regional
+           * inventory](https://developers.google.com/merchant/api/guides/inventories/update-regional-
+           * inventory).
            *
            * Create a request for the method "regionalInventories.insert".
            *

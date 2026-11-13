@@ -18,7 +18,9 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * [Online return policy](https://support.google.com/merchants/answer/10220642) object. This is
- * currently used to represent return policies for ads and free listings programs.
+ * currently used to represent return policies for ads and free listings programs. For more
+ * information, see [Manage your online return
+ * policies](https://developers.google.com/merchant/api/guides/online-return-policies/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

@@ -19,7 +19,9 @@ package com.google.api.services.merchantapi.quota_v1.model;
 /**
  * The group information for methods in the Merchant API. The quota is shared between all methods in
  * the group. Even if none of the methods within the group have usage the information for the group
- * is returned.
+ * is returned. For more information, see [Quotas and limits
+ * overview](https://developers.google.com/merchant/api/guides/quotas-limits/overview) and
+ * [Quotas](https://developers.google.com/merchant/api/guides/quotas-limits/quotas).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

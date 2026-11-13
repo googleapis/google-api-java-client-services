@@ -1005,8 +1005,9 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   private java.lang.String sizeSystem;
 
   /**
-   * The cut of the item. It can be used to represent combined size types for apparel items. Maximum
-   * two of size types can be provided, see [Size
+   * The cut of the item. It can be used to represent combined size types for apparel items. You can
+   * provide up to two `SizeType` values, for example, `["PETITE", "MATERNITY"]` or `["BIG",
+   * "TALL"]`. For more information, see [Size
    * type](https://support.google.com/merchants/answer/6324497).
    * The value may be {@code null}.
    */
@@ -3446,8 +3447,9 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The cut of the item. It can be used to represent combined size types for apparel items. Maximum
-   * two of size types can be provided, see [Size
+   * The cut of the item. It can be used to represent combined size types for apparel items. You can
+   * provide up to two `SizeType` values, for example, `["PETITE", "MATERNITY"]` or `["BIG",
+   * "TALL"]`. For more information, see [Size
    * type](https://support.google.com/merchants/answer/6324497).
    * @return value or {@code null} for none
    */
@@ -3456,8 +3458,9 @@ public final class ProductAttributes extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * The cut of the item. It can be used to represent combined size types for apparel items. Maximum
-   * two of size types can be provided, see [Size
+   * The cut of the item. It can be used to represent combined size types for apparel items. You can
+   * provide up to two `SizeType` values, for example, `["PETITE", "MATERNITY"]` or `["BIG",
+   * "TALL"]`. For more information, see [Size
    * type](https://support.google.com/merchants/answer/6324497).
    * @param sizeTypes sizeTypes or {@code null} for none
    */

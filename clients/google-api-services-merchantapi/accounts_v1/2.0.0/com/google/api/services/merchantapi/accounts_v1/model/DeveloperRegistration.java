@@ -17,7 +17,12 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * Represents a developer registration owned by a Merchant account.
+ * Represents a developer registration owned by a Merchant account. For more information, see
+ * [Register as a
+ * developer](https://developers.google.com/merchant/api/guides/quickstart/registration) and [Manage
+ * and transition Google Cloud
+ * projects](https://developers.google.com/merchant/api/guides/accounts/manage-transition-gcp-
+ * projects).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

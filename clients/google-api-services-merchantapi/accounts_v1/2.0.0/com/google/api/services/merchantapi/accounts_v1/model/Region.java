@@ -22,7 +22,9 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * areas or, in some countries, using predefined geotargets. A region must be defined by specifying
  * exactly one of `postal_code_area`, `geotarget_area`, or `radius_area`. For more information, see
  * [Set up regions ](https://support.google.com/merchants/answer/7410946#zippy=%2Ccreate-a-new-
- * region) for more information.
+ * region), [Create and update
+ * regions](https://developers.google.com/merchant/api/guides/accounts/regions), and [Manage region
+ * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

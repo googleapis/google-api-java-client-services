@@ -17,7 +17,10 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * Collection of information related to the omnichannel settings of a merchant.
+ * Collection of information related to the omnichannel settings of a merchant. For more
+ * information, see [Manage omnichannel
+ * settings](https://developers.google.com/merchant/api/guides/accounts/manage-omnichannel-
+ * settings).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

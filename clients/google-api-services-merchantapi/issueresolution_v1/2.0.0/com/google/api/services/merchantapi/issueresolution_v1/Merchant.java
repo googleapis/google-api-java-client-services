@@ -439,6 +439,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Provide a list of business's account issues with an issue resolution content and available
      * actions. This content and actions are meant to be rendered and shown in third-party applications.
+     * For more information, see [Display issues and solutions to
+     * businesses](https://developers.google.com/merchant/api/guides/accounts/render-issues).
      *
      * Create a request for the method "issueresolution.renderaccountissues".
      *
@@ -465,7 +467,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Provide a list of business's account issues with an issue resolution content and available
        * actions. This content and actions are meant to be rendered and shown in third-party
-       * applications.
+       * applications. For more information, see [Display issues and solutions to
+       * businesses](https://developers.google.com/merchant/api/guides/accounts/render-issues).
        *
        * Create a request for the method "issueresolution.renderaccountissues".
        *
@@ -624,6 +627,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     /**
      * Provide a list of issues for business's product with an issue resolution content and available
      * actions. This content and actions are meant to be rendered and shown in third-party applications.
+     * For more information, see [Display issues and solutions to
+     * businesses](https://developers.google.com/merchant/api/guides/accounts/render-issues).
      *
      * Create a request for the method "issueresolution.renderproductissues".
      *
@@ -669,7 +674,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       /**
        * Provide a list of issues for business's product with an issue resolution content and available
        * actions. This content and actions are meant to be rendered and shown in third-party
-       * applications.
+       * applications. For more information, see [Display issues and solutions to
+       * businesses](https://developers.google.com/merchant/api/guides/accounts/render-issues).
        *
        * Create a request for the method "issueresolution.renderproductissues".
        *
@@ -913,7 +919,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * all `required` inputs are provided. If any `required` input is missing, or invalid value was
      * provided, the service will return 400 error. Validation errors will contain Ids for all
      * problematic field together with translated, human readable error messages that can be shown to
-     * the user.
+     * the user. For more information, see [Display issues and solutions to
+     * businesses](https://developers.google.com/merchant/api/guides/accounts/render-issues).
      *
      * Create a request for the method "issueresolution.triggeraction".
      *
@@ -947,7 +954,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * once all `required` inputs are provided. If any `required` input is missing, or invalid value
        * was provided, the service will return 400 error. Validation errors will contain Ids for all
        * problematic field together with translated, human readable error messages that can be shown to
-       * the user.
+       * the user. For more information, see [Display issues and solutions to
+       * businesses](https://developers.google.com/merchant/api/guides/accounts/render-issues).
        *
        * Create a request for the method "issueresolution.triggeraction".
        *

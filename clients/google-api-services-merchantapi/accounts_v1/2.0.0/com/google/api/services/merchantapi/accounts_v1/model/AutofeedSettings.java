@@ -18,7 +18,9 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * Collection of information related to the
- * [autofeed](https://support.google.com/merchants/answer/7538732) settings.
+ * [autofeed](https://support.google.com/merchants/answer/7538732) settings. For more information,
+ * see [Configure Autofeed settings](https://developers.google.com/merchant/api/guides/data-
+ * sources/manage-various-data-sources#autofeed-settings).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

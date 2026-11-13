@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.issueresolution_v1.model;
 
 /**
- * Aggregate product statuses for a given reporting context and country.
+ * Aggregate product statuses for a given reporting context and country. For more information, see
+ * [View Aggregate Product
+ * Statuses](https://developers.google.com/merchant/api/guides/accounts/aggregate-product-statuses).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

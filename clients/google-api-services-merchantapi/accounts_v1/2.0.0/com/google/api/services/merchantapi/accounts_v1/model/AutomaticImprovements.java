@@ -18,8 +18,9 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * Collection of information related to the [automatic
- * improvements](https://developers.google.com/shopping-content/guides/automatic-improvements) of an
- * account.
+ * improvements](https://support.google.com/merchants/answer/12157888) of an account. For more
+ * information, see [Enable automatic
+ * improvements](https://developers.google.com/merchant/api/guides/automatic-improvements/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

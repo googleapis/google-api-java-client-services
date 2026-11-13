@@ -175,7 +175,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Creates the new data source configuration for the given account. This method always creates a new
-       * data source.
+       * data source. For more information, see [Manage API data
+       * sources](https://developers.google.com/merchant/api/guides/data-sources/api-sources) and [Manage
+       * various data source types](https://developers.google.com/merchant/api/guides/data-sources/manage-
+       * various-data-sources).
        *
        * Create a request for the method "dataSources.create".
        *
@@ -201,7 +204,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Creates the new data source configuration for the given account. This method always creates a
-         * new data source.
+         * new data source. For more information, see [Manage API data
+         * sources](https://developers.google.com/merchant/api/guides/data-sources/api-sources) and
+         * [Manage various data source types](https://developers.google.com/merchant/api/guides/data-
+         * sources/manage-various-data-sources).
          *
          * Create a request for the method "dataSources.create".
          *
@@ -454,7 +460,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * Performs the data fetch immediately (even outside fetch schedule) on a data source from your
        * Merchant Center Account. If you need to call this method more than once per day, you should use
        * the Products service to update your product data instead. This method only works on data sources
-       * with a file input set.
+       * with a file input set. For more information, see [Monitor and trigger data source
+       * processing](https://developers.google.com/merchant/api/guides/data-sources/monitor-status).
        *
        * Create a request for the method "dataSources.fetch".
        *
@@ -483,7 +490,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * Performs the data fetch immediately (even outside fetch schedule) on a data source from your
          * Merchant Center Account. If you need to call this method more than once per day, you should use
          * the Products service to update your product data instead. This method only works on data
-         * sources with a file input set.
+         * sources with a file input set. For more information, see [Monitor and trigger data source
+         * processing](https://developers.google.com/merchant/api/guides/data-sources/monitor-status).
          *
          * Create a request for the method "dataSources.fetch".
          *

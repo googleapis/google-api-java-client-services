@@ -20,7 +20,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * The Merchant Center account's [shipping
  * settings](https://support.google.com/merchants/answer/6069284). The `ShippingSettings` resource
  * lets you retrieve and update the shipping settings of your advanced account and all its
- * associated sub-accounts.
+ * associated sub-accounts. For more information, see [Manage shipping
+ * settings](https://developers.google.com/merchant/api/guides/accounts/manage-shipping-settings).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

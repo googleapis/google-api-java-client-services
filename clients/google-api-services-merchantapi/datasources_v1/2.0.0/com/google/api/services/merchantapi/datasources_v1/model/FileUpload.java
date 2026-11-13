@@ -19,7 +19,11 @@ package com.google.api.services.merchantapi.datasources_v1.model;
 /**
  * The file upload of a specific data source, that is, the result of the retrieval of the data
  * source at a certain timestamp computed asynchronously when the data source processing is
- * finished. Only applicable to file data sources.
+ * finished. Only applicable to file data sources. For more information, see [Monitor and trigger
+ * data source processing](https://developers.google.com/merchant/api/guides/data-sources/monitor-
+ * status) and [Manage various data source
+ * types](https://developers.google.com/merchant/api/guides/data-sources/manage-various-data-
+ * sources).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

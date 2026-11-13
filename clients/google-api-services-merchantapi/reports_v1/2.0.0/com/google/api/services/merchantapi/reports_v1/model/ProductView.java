@@ -24,7 +24,8 @@ package com.google.api.services.merchantapi.reports_v1.model;
  * contrast to Products sub-API, this table allows to filter the returned list of products by
  * product attributes. To retrieve a single product by `id` or list all products, Products sub-API
  * should be used. Values are only set for fields requested explicitly in the request's search
- * query.
+ * query. For more information, see [Evaluate your
+ * products](https://developers.google.com/merchant/api/guides/reports/evaluate-products).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

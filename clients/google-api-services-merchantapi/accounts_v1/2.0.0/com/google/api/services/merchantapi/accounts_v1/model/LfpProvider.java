@@ -17,7 +17,11 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * Collection of information related to a Local Feed Partnership (LFP) provider.
+ * Collection of information related to a Local Feed Partnership (LFP) provider. For more
+ * information, see [Manage Local Feeds Partnership (LFP)
+ * providers](https://developers.google.com/merchant/api/guides/accounts/manage-lfp-providers) and
+ * [Manage local feeds partnership](https://developers.google.com/merchant/api/guides/local-feeds-
+ * partnership/overview).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

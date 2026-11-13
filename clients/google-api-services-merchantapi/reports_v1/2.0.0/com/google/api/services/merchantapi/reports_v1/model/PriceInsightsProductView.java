@@ -19,7 +19,8 @@ package com.google.api.services.merchantapi.reports_v1.model;
 /**
  * Fields available for query in `price_insights_product_view` table. [Price
  * insights](https://support.google.com/merchants/answer/11916926) report. Values are only set for
- * fields requested explicitly in the request's search query.
+ * fields requested explicitly in the request's search query. For more information, see [Understand
+ * the market](https://developers.google.com/merchant/api/guides/reports/understand-the-market).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

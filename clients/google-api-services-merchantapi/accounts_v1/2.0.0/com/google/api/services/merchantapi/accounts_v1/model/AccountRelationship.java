@@ -23,7 +23,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * and permissions to the business's data relevant to those services. Establishing an account
  * relationship involves linking the merchant's account with a provider's account. The provider
  * could be another Google account (like Google Ads or Google My Business) or a third-party platform
- * (such as Shopify or WooCommerce).
+ * (such as Shopify or WooCommerce). For more information, see [Account
+ * relationships](https://developers.google.com/merchant/api/guides/accounts/relationships).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

@@ -18,7 +18,9 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * Collection of information related to the [identity of a
- * business](https://support.google.com/merchants/answer/12564247).
+ * business](https://support.google.com/merchants/answer/12564247). For more information, see
+ * [Manage business identity](https://developers.google.com/merchant/api/guides/accounts/business-
+ * identity).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

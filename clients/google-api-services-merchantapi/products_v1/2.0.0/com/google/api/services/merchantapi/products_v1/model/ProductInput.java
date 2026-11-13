@@ -20,8 +20,13 @@ package com.google.api.services.merchantapi.products_v1.model;
  * This resource represents input data you submit for a product, not the processed product that you
  * see in Merchant Center, in Shopping ads, or across Google surfaces. Product inputs, rules and
  * supplemental data source data are combined to create the processed Product. For more information,
- * see [Manage products](/merchant/api/guides/products/overview). Required product input attributes
- * to pass data validation checks are primarily defined in the [Products Data
+ * see [Manage products](https://developers.google.com/merchant/api/guides/products/overview), [Add
+ * and manage products](https://developers.google.com/merchant/api/guides/products/add-manage),
+ * [Make frequent updates to your
+ * products](https://developers.google.com/merchant/api/guides/products/frequent-updates), and
+ * [Manage API data sources](https://developers.google.com/merchant/api/guides/data-sources/api-
+ * sources#create-primary-data-source). Required product input attributes to pass data validation
+ * checks are primarily defined in the [Products Data
  * Specification](https://support.google.com/merchants/answer/188494). The following attributes are
  * required: feedLabel, contentLanguage and offerId. After inserting, updating, or deleting a
  * product input, it may take several minutes before the processed product can be retrieved. All

@@ -18,8 +18,9 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
  * Issues with your Merchant Center account that can impact all your products. For more information,
- * see [Account-level issues in Merchant Center](https://support.google.com/merchants/answer/1215380
- * 2?sjid=17798438912526418908-EU#account).
+ * see [Account-level issues in Merchant
+ * Center](https://support.google.com/merchants/answer/12153802#account) and [View account
+ * issues](https://developers.google.com/merchant/api/guides/accounts/view-issues).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

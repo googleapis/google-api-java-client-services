@@ -27,7 +27,11 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * aware of the services enabled. In scenarios where a user is an admin of both accounts, the
  * approval can happen automatically. The mutability of a service is also managed through
  * `AccountService`. Some services might be immutable, for example, if they were established through
- * other systems or APIs, and you cannot alter them through this API.
+ * other systems or APIs, and you cannot alter them through this API. For more information, see
+ * [Account relationships](https://developers.google.com/merchant/api/guides/accounts/relationships)
+ * and [Account service
+ * changes](https://developers.google.com/merchant/api/guides/notifications/account-service-
+ * changes).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

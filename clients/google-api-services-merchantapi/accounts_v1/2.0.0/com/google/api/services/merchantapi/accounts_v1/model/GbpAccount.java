@@ -17,7 +17,9 @@
 package com.google.api.services.merchantapi.accounts_v1.model;
 
 /**
- * Collection of information related to a Google Business Profile (GBP) account.
+ * Collection of information related to a Google Business Profile (GBP) account. For more
+ * information, see [Link a Google business
+ * profile](https://developers.google.com/merchant/api/guides/accounts/link-business-profile).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:

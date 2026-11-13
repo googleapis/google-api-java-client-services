@@ -20,7 +20,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
  * The `User` resource represents a user associated with a Merchant Center account. It is used to
  * manage user permissions and access rights within the account. For more information, see
  * [Frequently asked questions about people and access
- * levels](//support.google.com/merchants/answer/12160472).
+ * levels](//support.google.com/merchants/answer/12160472) and [Control access to your
+ * account](https://developers.google.com/merchant/api/guides/accounts/control-access).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -33,8 +34,8 @@ package com.google.api.services.merchantapi.accounts_v1.model;
 public final class User extends com.google.api.client.json.GenericJson {
 
   /**
-   * Required. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
-   * 943175119429-EU#accesstypes) the user has.
+   * Required. The [access rights](https://support.google.com/merchants/answer/12160472#accesstypes)
+   * the user has.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -56,8 +57,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
-   * Required. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
-   * 943175119429-EU#accesstypes) the user has.
+   * Required. The [access rights](https://support.google.com/merchants/answer/12160472#accesstypes)
+   * the user has.
    * @return value or {@code null} for none
    */
   public java.util.List<java.lang.String> getAccessRights() {
@@ -65,8 +66,8 @@ public final class User extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Required. The [access rights](https://support.google.com/merchants/answer/12160472?sjid=6789834
-   * 943175119429-EU#accesstypes) the user has.
+   * Required. The [access rights](https://support.google.com/merchants/answer/12160472#accesstypes)
+   * the user has.
    * @param accessRights accessRights or {@code null} for none
    */
   public User setAccessRights(java.util.List<java.lang.String> accessRights) {

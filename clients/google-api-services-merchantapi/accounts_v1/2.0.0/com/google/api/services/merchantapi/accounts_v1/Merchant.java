@@ -155,7 +155,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
     /**
      * Creates a Merchant Center account with additional configuration. Adds the user that makes the
-     * request as an admin for the new account.
+     * request as an admin for the new account. For step-by-step instructions, see [Create
+     * accounts](https://developers.google.com/merchant/api/guides/accounts/create-accounts).
      *
      * Create a request for the method "accounts.createAndConfigure".
      *
@@ -177,7 +178,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Creates a Merchant Center account with additional configuration. Adds the user that makes the
-       * request as an admin for the new account.
+       * request as an admin for the new account. For step-by-step instructions, see [Create
+       * accounts](https://developers.google.com/merchant/api/guides/accounts/create-accounts).
        *
        * Create a request for the method "accounts.createAndConfigure".
        *
@@ -262,7 +264,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * account. - Non-Serving Products: Any products, offers, or data created within a test account will
      * not be published or made visible to end-users on any Google surfaces. They are strictly for
      * testing environments. - Separate Environment: Test accounts operate in a sandbox-like manner,
-     * isolated from live serving and real user traffic.
+     * isolated from live serving and real user traffic. For more information, see [Create test
+     * accounts](https://developers.google.com/merchant/api/guides/accounts/test-accounts).
      *
      * Create a request for the method "accounts.createTestAccount".
      *
@@ -294,7 +297,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * test account. - Non-Serving Products: Any products, offers, or data created within a test
        * account will not be published or made visible to end-users on any Google surfaces. They are
        * strictly for testing environments. - Separate Environment: Test accounts operate in a sandbox-
-       * like manner, isolated from live serving and real user traffic.
+       * like manner, isolated from live serving and real user traffic. For more information, see
+       * [Create test accounts](https://developers.google.com/merchant/api/guides/accounts/test-
+       * accounts).
        *
        * Create a request for the method "accounts.createTestAccount".
        *
@@ -713,6 +718,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
      * Note: For the `accounts.list` method, quota and limits usage are charged for each user, and not
      * for the Merchant Center ID or the advanced account ID. To list several sub-accounts, you should
      * use the `accounts.listSubaccounts` method, which is more suitable for advanced accounts use case.
+     * For more information, see [Filter accounts you can
+     * access](https://developers.google.com/merchant/api/guides/accounts/filter).
      *
      * Create a request for the method "accounts.list".
      *
@@ -735,7 +742,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * Note: For the `accounts.list` method, quota and limits usage are charged for each user, and not
        * for the Merchant Center ID or the advanced account ID. To list several sub-accounts, you should
        * use the `accounts.listSubaccounts` method, which is more suitable for advanced accounts use
-       * case.
+       * case. For more information, see [Filter accounts you can
+       * access](https://developers.google.com/merchant/api/guides/accounts/filter).
        *
        * Create a request for the method "accounts.list".
        *
@@ -2614,7 +2622,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
     public class DeveloperRegistration {
 
       /**
-       * Retrieves the merchant account that the calling GCP is registered with.
+       * Retrieves the merchant account that the calling GCP is registered with. For more information, see
+       * [Verify your account's connection to Merchant
+       * API](https://developers.google.com/merchant/api/guides/accounts/verify-api-access).
        *
        * Create a request for the method "developerRegistration.getAccountForGcpRegistration".
        *
@@ -2635,7 +2645,9 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
         private static final String REST_PATH = "accounts/v1/accounts:getAccountForGcpRegistration";
 
         /**
-         * Retrieves the merchant account that the calling GCP is registered with.
+         * Retrieves the merchant account that the calling GCP is registered with. For more information,
+         * see [Verify your account's connection to Merchant
+         * API](https://developers.google.com/merchant/api/guides/accounts/verify-api-access).
          *
          * Create a request for the method "developerRegistration.getAccountForGcpRegistration".
          *
@@ -2870,7 +2882,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        * account. * The caller account must have a [verified
        * website](https://support.google.com/merchants/answer/11586344) in Merchant Center. * [Test
        * accounts](https://developers.google.com/merchant/api/guides/accounts/test-accounts) are not
-       * eligible for registration.
+       * eligible for registration. For step-by-step instructions, see [Register as a
+       * developer](https://developers.google.com/merchant/api/guides/quickstart/registration).
        *
        * Create a request for the method "developerRegistration.registerGcp".
        *
@@ -2881,7 +2894,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        *        will be registered with. Format: `accounts/{account}/developerRegistration` The {account}
        *        used must be the same account where user calling this API method is directly added to.
        *        Note: The account used must be a production account (can't be a [test
-       *        account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+       *        account](https://developers.google.com/merchant/api/guides/accounts/test-accounts)) and
        *        must have a [verified website](https://support.google.com/merchants/answer/11586344) in
        *        Merchant Center.
        * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.RegisterGcpRequest}
@@ -2909,7 +2922,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * account. * The caller account must have a [verified
          * website](https://support.google.com/merchants/answer/11586344) in Merchant Center. * [Test
          * accounts](https://developers.google.com/merchant/api/guides/accounts/test-accounts) are not
-         * eligible for registration.
+         * eligible for registration. For step-by-step instructions, see [Register as a
+         * developer](https://developers.google.com/merchant/api/guides/quickstart/registration).
          *
          * Create a request for the method "developerRegistration.registerGcp".
          *
@@ -2923,7 +2937,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        *        will be registered with. Format: `accounts/{account}/developerRegistration` The {account}
        *        used must be the same account where user calling this API method is directly added to.
        *        Note: The account used must be a production account (can't be a [test
-       *        account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+       *        account](https://developers.google.com/merchant/api/guides/accounts/test-accounts)) and
        *        must have a [verified website](https://support.google.com/merchants/answer/11586344) in
        *        Merchant Center.
          * @param content the {@link com.google.api.services.merchantapi.accounts_v1.model.RegisterGcpRequest}
@@ -2999,7 +3013,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
          * The {account} used must be the same account where user calling this API method is
          * directly added to. Note: The account used must be a production account (can't be a [test
-         * account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+         * account](https://developers.google.com/merchant/api/guides/accounts/test-accounts)) and
          * must have a [verified website](https://support.google.com/merchants/answer/11586344) in
          * Merchant Center.
          */
@@ -3010,8 +3024,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
        GCP will be registered with. Format: `accounts/{account}/developerRegistration` The {account} used
        must be the same account where user calling this API method is directly added to. Note: The account
        used must be a production account (can't be a [test
-       account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and must have
-       a [verified website](https://support.google.com/merchants/answer/11586344) in Merchant Center.
+       account](https://developers.google.com/merchant/api/guides/accounts/test-accounts)) and must have a
+       [verified website](https://support.google.com/merchants/answer/11586344) in Merchant Center.
          */
         public java.lang.String getName() {
           return name;
@@ -3022,7 +3036,7 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
          * that the GCP will be registered with. Format: `accounts/{account}/developerRegistration`
          * The {account} used must be the same account where user calling this API method is
          * directly added to. Note: The account used must be a production account (can't be a [test
-         * account](https://developers.google.com/merchant/api/guides/accounts/test-accounts) ) and
+         * account](https://developers.google.com/merchant/api/guides/accounts/test-accounts)) and
          * must have a [verified website](https://support.google.com/merchants/answer/11586344) in
          * Merchant Center.
          */
@@ -3043,7 +3057,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
       /**
        * Unregister the calling GCP from the calling shopping account. Note that the GCP will still be
-       * able to access the API for at most 1 day from the unregister succussful call.
+       * able to access the API for at most 1 day from the unregister successful call. For more
+       * information, see [Manage and transition Google Cloud
+       * projects](https://developers.google.com/merchant/api/guides/accounts/manage-transition-gcp-
+       * projects).
        *
        * Create a request for the method "developerRegistration.unregisterGcp".
        *
@@ -3070,7 +3087,10 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Unregister the calling GCP from the calling shopping account. Note that the GCP will still be
-         * able to access the API for at most 1 day from the unregister succussful call.
+         * able to access the API for at most 1 day from the unregister successful call. For more
+         * information, see [Manage and transition Google Cloud
+         * projects](https://developers.google.com/merchant/api/guides/accounts/manage-transition-gcp-
+         * projects).
          *
          * Create a request for the method "developerRegistration.unregisterGcp".
          *
@@ -7901,7 +7921,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
       /**
        * Creates one or more regions in your Merchant Center account. Executing this method requires admin
-       * access.
+       * access. For more information, see [Manage region
+       * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
        *
        * Create a request for the method "regions.batchCreate".
        *
@@ -7927,7 +7948,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Creates one or more regions in your Merchant Center account. Executing this method requires
-         * admin access.
+         * admin access. For more information, see [Manage region
+         * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
          *
          * Create a request for the method "regions.batchCreate".
          *
@@ -8038,7 +8060,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
       /**
        * Deletes multiple regions by name from your Merchant Center account. Executing this method
-       * requires admin access.
+       * requires admin access. For more information, see [Manage region
+       * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
        *
        * Create a request for the method "regions.batchDelete".
        *
@@ -8064,7 +8087,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Deletes multiple regions by name from your Merchant Center account. Executing this method
-         * requires admin access.
+         * requires admin access. For more information, see [Manage region
+         * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
          *
          * Create a request for the method "regions.batchDelete".
          *
@@ -8175,7 +8199,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
       }
       /**
        * Updates one or more regions in your Merchant Center account. Executing this method requires admin
-       * access.
+       * access. For more information, see [Manage region
+       * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
        *
        * Create a request for the method "regions.batchUpdate".
        *
@@ -8201,7 +8226,8 @@ public class Merchant extends com.google.api.client.googleapis.services.json.Abs
 
         /**
          * Updates one or more regions in your Merchant Center account. Executing this method requires
-         * admin access.
+         * admin access. For more information, see [Manage region
+         * batching](https://developers.google.com/merchant/api/guides/accounts/manage-region-batching).
          *
          * Create a request for the method "regions.batchUpdate".
          *

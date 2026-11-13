@@ -22,7 +22,9 @@ package com.google.api.services.merchantapi.reports_v1.model;
  * performance metrics are segmented (for example, `offer_id`). Values of product dimensions, such
  * as `offer_id`, reflect the state of a product at the time of the impression. Segment fields
  * cannot be selected in queries without also selecting at least one metric field. Values are only
- * set for fields requested explicitly in the request's search query.
+ * set for fields requested explicitly in the request's search query. For more information, see
+ * [Performance reports](https://developers.google.com/merchant/api/guides/reports/performance-
+ * reports).
  *
  * <p> This is the Java data model class that specifies how to parse/serialize into the JSON that is
  * transmitted over HTTP when working with the Merchant API. For a detailed explanation see:
@@ -42,45 +44,45 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   private java.lang.String brand;
 
   /**
-   * [Product category (1st level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (1st
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL1;
 
   /**
-   * [Product category (2nd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (2nd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL2;
 
   /**
-   * [Product category (3rd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (3rd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL3;
 
   /**
-   * [Product category (4th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (4th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String categoryL4;
 
   /**
-   * [Product category (5th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (5th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -208,45 +210,45 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   private java.lang.String offerId;
 
   /**
-   * [Product type (1st level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (1st
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL1;
 
   /**
-   * [Product type (2nd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (2nd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL2;
 
   /**
-   * [Product type (3rd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (3rd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL3;
 
   /**
-   * [Product type (4th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (4th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
   private java.lang.String productTypeL4;
 
   /**
-   * [Product type (5th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (5th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -293,9 +295,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (1st level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (1st
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL1() {
@@ -303,9 +305,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (1st level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (1st
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @param categoryL1 categoryL1 or {@code null} for none
    */
   public ProductPerformanceView setCategoryL1(java.lang.String categoryL1) {
@@ -314,9 +316,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (2nd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (2nd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL2() {
@@ -324,9 +326,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (2nd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (2nd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @param categoryL2 categoryL2 or {@code null} for none
    */
   public ProductPerformanceView setCategoryL2(java.lang.String categoryL2) {
@@ -335,9 +337,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (3rd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (3rd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL3() {
@@ -345,9 +347,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (3rd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (3rd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @param categoryL3 categoryL3 or {@code null} for none
    */
   public ProductPerformanceView setCategoryL3(java.lang.String categoryL3) {
@@ -356,9 +358,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (4th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (4th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL4() {
@@ -366,9 +368,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (4th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (4th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @param categoryL4 categoryL4 or {@code null} for none
    */
   public ProductPerformanceView setCategoryL4(java.lang.String categoryL4) {
@@ -377,9 +379,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (5th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (5th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getCategoryL5() {
@@ -387,9 +389,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product category (5th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in Google's product taxonomy.
-   * Segment.
+   * [Product category (5th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in Google's product taxonomy. Segment.
    * @param categoryL5 categoryL5 or {@code null} for none
    */
   public ProductPerformanceView setCategoryL5(java.lang.String categoryL5) {
@@ -688,9 +690,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (1st level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (1st
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL1() {
@@ -698,9 +700,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (1st level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (1st
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @param productTypeL1 productTypeL1 or {@code null} for none
    */
   public ProductPerformanceView setProductTypeL1(java.lang.String productTypeL1) {
@@ -709,9 +711,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (2nd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (2nd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL2() {
@@ -719,9 +721,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (2nd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (2nd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @param productTypeL2 productTypeL2 or {@code null} for none
    */
   public ProductPerformanceView setProductTypeL2(java.lang.String productTypeL2) {
@@ -730,9 +732,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (3rd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (3rd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL3() {
@@ -740,9 +742,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (3rd level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (3rd
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @param productTypeL3 productTypeL3 or {@code null} for none
    */
   public ProductPerformanceView setProductTypeL3(java.lang.String productTypeL3) {
@@ -751,9 +753,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (4th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (4th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL4() {
@@ -761,9 +763,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (4th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (4th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @param productTypeL4 productTypeL4 or {@code null} for none
    */
   public ProductPerformanceView setProductTypeL4(java.lang.String productTypeL4) {
@@ -772,9 +774,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (5th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (5th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @return value or {@code null} for none
    */
   public java.lang.String getProductTypeL5() {
@@ -782,9 +784,9 @@ public final class ProductPerformanceView extends com.google.api.client.json.Gen
   }
 
   /**
-   * [Product type (5th level)](https://developers.google.com/shopping-
-   * content/guides/reports/segmentation#category_and_product_type) in merchant's own product
-   * taxonomy. Segment.
+   * [Product type (5th
+   * level)](https://developers.google.com/merchant/api/guides/reports/performance-
+   * reports#category_and_product_type) in merchant's own product taxonomy. Segment.
    * @param productTypeL5 productTypeL5 or {@code null} for none
    */
   public ProductPerformanceView setProductTypeL5(java.lang.String productTypeL5) {

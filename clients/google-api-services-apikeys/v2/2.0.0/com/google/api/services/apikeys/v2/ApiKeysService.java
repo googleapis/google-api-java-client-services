@@ -507,8 +507,9 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
       public class Keys {
 
         /**
-         * Creates a new API key. NOTE: Key is a global resource; hence the only supported value for
-         * location is `global`.
+         * Creates a new API key. The key string of the API key is included in the response and can
+         * afterward only be retrieved through the `GetKeyString` method. NOTE: Key is a global resource;
+         * hence the only supported value for location is `global`.
          *
          * Create a request for the method "keys.create".
          *
@@ -534,8 +535,9 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+$");
 
           /**
-           * Creates a new API key. NOTE: Key is a global resource; hence the only supported value for
-           * location is `global`.
+           * Creates a new API key. The key string of the API key is included in the response and can
+           * afterward only be retrieved through the `GetKeyString` method. NOTE: Key is a global resource;
+           * hence the only supported value for location is `global`.
            *
            * Create a request for the method "keys.create".
            *
@@ -681,8 +683,9 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
         }
         /**
          * Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key will
-         * be purged from the project. NOTE: Key is a global resource; hence the only supported value for
-         * location is `global`.
+         * be purged from the project. The key string of the API key isn't included in the response and can
+         * only be retrieved through the `GetKeyString` method. NOTE: Key is a global resource; hence the
+         * only supported value for location is `global`.
          *
          * Create a request for the method "keys.delete".
          *
@@ -707,8 +710,9 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
 
           /**
            * Deletes an API key. Deleted key can be retrieved within 30 days of deletion. Afterward, key
-           * will be purged from the project. NOTE: Key is a global resource; hence the only supported value
-           * for location is `global`.
+           * will be purged from the project. The key string of the API key isn't included in the response
+           * and can only be retrieved through the `GetKeyString` method. NOTE: Key is a global resource;
+           * hence the only supported value for location is `global`.
            *
            * Create a request for the method "keys.delete".
            *
@@ -1332,8 +1336,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
         }
         /**
          * Patches the modifiable fields of an API key. The key string of the API key isn't included in the
-         * response. NOTE: Key is a global resource; hence the only supported value for location is
-         * `global`.
+         * response and can only be retrieved through the `GetKeyString` method. NOTE: Key is a global
+         * resource; hence the only supported value for location is `global`.
          *
          * Create a request for the method "keys.patch".
          *
@@ -1362,8 +1366,8 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
 
           /**
            * Patches the modifiable fields of an API key. The key string of the API key isn't included in
-           * the response. NOTE: Key is a global resource; hence the only supported value for location is
-           * `global`.
+           * the response and can only be retrieved through the `GetKeyString` method. NOTE: Key is a global
+           * resource; hence the only supported value for location is `global`.
            *
            * Create a request for the method "keys.patch".
            *
@@ -1536,8 +1540,9 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
           }
         }
         /**
-         * Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence the
-         * only supported value for location is `global`.
+         * Undeletes an API key which was deleted within 30 days. The key string of the API key isn't
+         * included in the response and can only be retrieved through the `GetKeyString` method. NOTE: Key
+         * is a global resource; hence the only supported value for location is `global`.
          *
          * Create a request for the method "keys.undelete".
          *
@@ -1562,8 +1567,9 @@ public class ApiKeysService extends com.google.api.client.googleapis.services.js
               java.util.regex.Pattern.compile("^projects/[^/]+/locations/[^/]+/keys/[^/]+$");
 
           /**
-           * Undeletes an API key which was deleted within 30 days. NOTE: Key is a global resource; hence
-           * the only supported value for location is `global`.
+           * Undeletes an API key which was deleted within 30 days. The key string of the API key isn't
+           * included in the response and can only be retrieved through the `GetKeyString` method. NOTE: Key
+           * is a global resource; hence the only supported value for location is `global`.
            *
            * Create a request for the method "keys.undelete".
            *

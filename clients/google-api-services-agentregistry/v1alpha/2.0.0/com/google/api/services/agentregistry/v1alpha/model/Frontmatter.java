@@ -30,7 +30,7 @@ package com.google.api.services.agentregistry.v1alpha.model;
 public final class Frontmatter extends com.google.api.client.json.GenericJson {
 
   /**
-   * Optional. Environmental dependencies or local sidecars.
+   * Optional. Environmental dependencies or companion services.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -65,7 +65,7 @@ public final class Frontmatter extends com.google.api.client.json.GenericJson {
   private java.lang.String name;
 
   /**
-   * Optional. Environmental dependencies or local sidecars.
+   * Optional. Environmental dependencies or companion services.
    * @return value or {@code null} for none
    */
   public java.lang.String getCompatibility() {
@@ -73,7 +73,7 @@ public final class Frontmatter extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Optional. Environmental dependencies or local sidecars.
+   * Optional. Environmental dependencies or companion services.
    * @param compatibility compatibility or {@code null} for none
    */
   public Frontmatter setCompatibility(java.lang.String compatibility) {

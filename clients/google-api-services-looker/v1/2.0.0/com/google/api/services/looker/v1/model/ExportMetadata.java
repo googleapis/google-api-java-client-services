@@ -32,9 +32,11 @@ package com.google.api.services.looker.v1.model;
 public final class ExportMetadata extends com.google.api.client.json.GenericJson {
 
   /**
-   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration. It is
-   * minted by the exporter together with the cloned source dataset and presented back to Looker
-   * Original when the import requests access to that dataset.
+   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration, encrypted
+   * by the exporter with the export encryption key (base64-encoded Cloud KMS ciphertext). It is
+   * minted by the exporter together with the cloned source dataset; Looker Core CLH decrypts it
+   * with the import's service account and presents the plaintext to Looker Original when the import
+   * requests access to that dataset.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -117,9 +119,11 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
   private java.lang.String source;
 
   /**
-   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration. It is
-   * minted by the exporter together with the cloned source dataset and presented back to Looker
-   * Original when the import requests access to that dataset.
+   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration, encrypted
+   * by the exporter with the export encryption key (base64-encoded Cloud KMS ciphertext). It is
+   * minted by the exporter together with the cloned source dataset; Looker Core CLH decrypts it
+   * with the import's service account and presents the plaintext to Looker Original when the import
+   * requests access to that dataset.
    * @return value or {@code null} for none
    */
   public java.lang.String getEsaMigrationToken() {
@@ -127,9 +131,11 @@ public final class ExportMetadata extends com.google.api.client.json.GenericJson
   }
 
   /**
-   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration. It is
-   * minted by the exporter together with the cloned source dataset and presented back to Looker
-   * Original when the import requests access to that dataset.
+   * Opaque capability token for O2C Elite System Activity (ESA) direct dataset migration, encrypted
+   * by the exporter with the export encryption key (base64-encoded Cloud KMS ciphertext). It is
+   * minted by the exporter together with the cloned source dataset; Looker Core CLH decrypts it
+   * with the import's service account and presents the plaintext to Looker Original when the import
+   * requests access to that dataset.
    * @param esaMigrationToken esaMigrationToken or {@code null} for none
    */
   public ExportMetadata setEsaMigrationToken(java.lang.String esaMigrationToken) {

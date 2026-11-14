@@ -45,6 +45,23 @@ public final class Certification extends com.google.api.client.json.GenericJson 
   private java.lang.String code;
 
   /**
+   * Optional. A URL to the certification fiche. For example:
+   * https://eprel.ec.europa.eu/fiches/smartphonestablets20231669/Fiche_2556297_EN.pdf In case of
+   * multiple languages, the English version is preferred.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String documentLink;
+
+  /**
+   * Optional. A URL to the certification label. For example:
+   * https://eprel.ec.europa.eu/labels/smartphonestablets20231669/Label_2556297.pdf
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String labelLink;
+
+  /**
    * Optional. A URL link to the certification.
    * The value may be {@code null}.
    */
@@ -110,6 +127,46 @@ public final class Certification extends com.google.api.client.json.GenericJson 
    */
   public Certification setCode(java.lang.String code) {
     this.code = code;
+    return this;
+  }
+
+  /**
+   * Optional. A URL to the certification fiche. For example:
+   * https://eprel.ec.europa.eu/fiches/smartphonestablets20231669/Fiche_2556297_EN.pdf In case of
+   * multiple languages, the English version is preferred.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getDocumentLink() {
+    return documentLink;
+  }
+
+  /**
+   * Optional. A URL to the certification fiche. For example:
+   * https://eprel.ec.europa.eu/fiches/smartphonestablets20231669/Fiche_2556297_EN.pdf In case of
+   * multiple languages, the English version is preferred.
+   * @param documentLink documentLink or {@code null} for none
+   */
+  public Certification setDocumentLink(java.lang.String documentLink) {
+    this.documentLink = documentLink;
+    return this;
+  }
+
+  /**
+   * Optional. A URL to the certification label. For example:
+   * https://eprel.ec.europa.eu/labels/smartphonestablets20231669/Label_2556297.pdf
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getLabelLink() {
+    return labelLink;
+  }
+
+  /**
+   * Optional. A URL to the certification label. For example:
+   * https://eprel.ec.europa.eu/labels/smartphonestablets20231669/Label_2556297.pdf
+   * @param labelLink labelLink or {@code null} for none
+   */
+  public Certification setLabelLink(java.lang.String labelLink) {
+    this.labelLink = labelLink;
     return this;
   }
 

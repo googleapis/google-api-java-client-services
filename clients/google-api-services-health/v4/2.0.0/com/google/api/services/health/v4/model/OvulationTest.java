@@ -44,6 +44,13 @@ public final class OvulationTest extends com.google.api.client.json.GenericJson 
   private ObservationSampleTime sampleTime;
 
   /**
+   * Optional. The type of ovulation test.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String testType;
+
+  /**
    * Required. The result of the ovulation test.
    * @return value or {@code null} for none
    */
@@ -74,6 +81,23 @@ public final class OvulationTest extends com.google.api.client.json.GenericJson 
    */
   public OvulationTest setSampleTime(ObservationSampleTime sampleTime) {
     this.sampleTime = sampleTime;
+    return this;
+  }
+
+  /**
+   * Optional. The type of ovulation test.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getTestType() {
+    return testType;
+  }
+
+  /**
+   * Optional. The type of ovulation test.
+   * @param testType testType or {@code null} for none
+   */
+  public OvulationTest setTestType(java.lang.String testType) {
+    this.testType = testType;
     return this;
   }
 

@@ -46,6 +46,15 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
   private InstallmentPlan installmentDetails;
 
   /**
+   * The information of the associated plan transition. Will be present only if this plan has a
+   * transition plan associated with it and will only include the latest transition details
+   * associated with the item.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private PlanTransitionDetails planTransitionDetails;
+
+  /**
    * The information of the last price change for the item since subscription signup.
    * The value may be {@code null}.
    */
@@ -101,6 +110,27 @@ public final class AutoRenewingPlan extends com.google.api.client.json.GenericJs
    */
   public AutoRenewingPlan setInstallmentDetails(InstallmentPlan installmentDetails) {
     this.installmentDetails = installmentDetails;
+    return this;
+  }
+
+  /**
+   * The information of the associated plan transition. Will be present only if this plan has a
+   * transition plan associated with it and will only include the latest transition details
+   * associated with the item.
+   * @return value or {@code null} for none
+   */
+  public PlanTransitionDetails getPlanTransitionDetails() {
+    return planTransitionDetails;
+  }
+
+  /**
+   * The information of the associated plan transition. Will be present only if this plan has a
+   * transition plan associated with it and will only include the latest transition details
+   * associated with the item.
+   * @param planTransitionDetails planTransitionDetails or {@code null} for none
+   */
+  public AutoRenewingPlan setPlanTransitionDetails(PlanTransitionDetails planTransitionDetails) {
+    this.planTransitionDetails = planTransitionDetails;
     return this;
   }
 

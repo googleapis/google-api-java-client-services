@@ -22606,6 +22606,157 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         }
       }
       /**
+       * Cancel a plan transition for a subscription.
+       *
+       * Create a request for the method "subscriptionsv2.cancelplantransition".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Cancelplantransition#execute()} method to invoke the remote
+       * operation.
+       *
+       * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param token Required. The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.CancelPlanTransitionRequest}
+       * @return the request
+       */
+      public Cancelplantransition cancelplantransition(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.CancelPlanTransitionRequest content) throws java.io.IOException {
+        Cancelplantransition result = new Cancelplantransition(packageName, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Cancelplantransition extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.CancelPlanTransitionResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:cancelPlanTransition";
+
+        /**
+         * Cancel a plan transition for a subscription.
+         *
+         * Create a request for the method "subscriptionsv2.cancelplantransition".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Cancelplantransition#execute()} method to invoke the
+         * remote operation. <p> {@link Cancelplantransition#initialize(com.google.api.client.googleapis.s
+         * ervices.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param token Required. The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.CancelPlanTransitionRequest}
+         * @since 1.13
+         */
+        protected Cancelplantransition(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.CancelPlanTransitionRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.CancelPlanTransitionResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Cancelplantransition set$Xgafv(java.lang.String $Xgafv) {
+          return (Cancelplantransition) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Cancelplantransition setAccessToken(java.lang.String accessToken) {
+          return (Cancelplantransition) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Cancelplantransition setAlt(java.lang.String alt) {
+          return (Cancelplantransition) super.setAlt(alt);
+        }
+
+        @Override
+        public Cancelplantransition setCallback(java.lang.String callback) {
+          return (Cancelplantransition) super.setCallback(callback);
+        }
+
+        @Override
+        public Cancelplantransition setFields(java.lang.String fields) {
+          return (Cancelplantransition) super.setFields(fields);
+        }
+
+        @Override
+        public Cancelplantransition setKey(java.lang.String key) {
+          return (Cancelplantransition) super.setKey(key);
+        }
+
+        @Override
+        public Cancelplantransition setOauthToken(java.lang.String oauthToken) {
+          return (Cancelplantransition) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Cancelplantransition setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Cancelplantransition) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Cancelplantransition setQuotaUser(java.lang.String quotaUser) {
+          return (Cancelplantransition) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Cancelplantransition setUploadType(java.lang.String uploadType) {
+          return (Cancelplantransition) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Cancelplantransition setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Cancelplantransition) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The package of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        public Cancelplantransition setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public Cancelplantransition setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Cancelplantransition set(String parameterName, Object value) {
+          return (Cancelplantransition) super.set(parameterName, value);
+        }
+      }
+      /**
        * Defers the renewal of a subscription.
        *
        * Create a request for the method "subscriptionsv2.defer".
@@ -23060,6 +23211,157 @@ public class AndroidPublisher extends com.google.api.client.googleapis.services.
         @Override
         public Revoke set(String parameterName, Object value) {
           return (Revoke) super.set(parameterName, value);
+        }
+      }
+      /**
+       * Schedule a plan transition for a subscription.
+       *
+       * Create a request for the method "subscriptionsv2.scheduleplantransition".
+       *
+       * This request holds the parameters needed by the androidpublisher server.  After setting any
+       * optional parameters, call the {@link Scheduleplantransition#execute()} method to invoke the
+       * remote operation.
+       *
+       * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+       * @param token Required. The token provided to the user's device when the subscription was purchased.
+       * @param content the {@link com.google.api.services.androidpublisher.model.SchedulePlanTransitionRequest}
+       * @return the request
+       */
+      public Scheduleplantransition scheduleplantransition(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.SchedulePlanTransitionRequest content) throws java.io.IOException {
+        Scheduleplantransition result = new Scheduleplantransition(packageName, token, content);
+        initialize(result);
+        return result;
+      }
+
+      public class Scheduleplantransition extends AndroidPublisherRequest<com.google.api.services.androidpublisher.model.SchedulePlanTransitionResponse> {
+
+        private static final String REST_PATH = "androidpublisher/v3/applications/{packageName}/purchases/subscriptionsv2/tokens/{token}:schedulePlanTransition";
+
+        /**
+         * Schedule a plan transition for a subscription.
+         *
+         * Create a request for the method "subscriptionsv2.scheduleplantransition".
+         *
+         * This request holds the parameters needed by the the androidpublisher server.  After setting any
+         * optional parameters, call the {@link Scheduleplantransition#execute()} method to invoke the
+         * remote operation. <p> {@link Scheduleplantransition#initialize(com.google.api.client.googleapis
+         * .services.AbstractGoogleClientRequest)} must be called to initialize this instance immediately
+         * after invoking the constructor. </p>
+         *
+         * @param packageName Required. The package of the application for which this subscription was purchased (for example,
+       *        'com.some.thing').
+         * @param token Required. The token provided to the user's device when the subscription was purchased.
+         * @param content the {@link com.google.api.services.androidpublisher.model.SchedulePlanTransitionRequest}
+         * @since 1.13
+         */
+        protected Scheduleplantransition(java.lang.String packageName, java.lang.String token, com.google.api.services.androidpublisher.model.SchedulePlanTransitionRequest content) {
+          super(AndroidPublisher.this, "POST", REST_PATH, content, com.google.api.services.androidpublisher.model.SchedulePlanTransitionResponse.class);
+          this.packageName = com.google.api.client.util.Preconditions.checkNotNull(packageName, "Required parameter packageName must be specified.");
+          this.token = com.google.api.client.util.Preconditions.checkNotNull(token, "Required parameter token must be specified.");
+        }
+
+        @Override
+        public Scheduleplantransition set$Xgafv(java.lang.String $Xgafv) {
+          return (Scheduleplantransition) super.set$Xgafv($Xgafv);
+        }
+
+        @Override
+        public Scheduleplantransition setAccessToken(java.lang.String accessToken) {
+          return (Scheduleplantransition) super.setAccessToken(accessToken);
+        }
+
+        @Override
+        public Scheduleplantransition setAlt(java.lang.String alt) {
+          return (Scheduleplantransition) super.setAlt(alt);
+        }
+
+        @Override
+        public Scheduleplantransition setCallback(java.lang.String callback) {
+          return (Scheduleplantransition) super.setCallback(callback);
+        }
+
+        @Override
+        public Scheduleplantransition setFields(java.lang.String fields) {
+          return (Scheduleplantransition) super.setFields(fields);
+        }
+
+        @Override
+        public Scheduleplantransition setKey(java.lang.String key) {
+          return (Scheduleplantransition) super.setKey(key);
+        }
+
+        @Override
+        public Scheduleplantransition setOauthToken(java.lang.String oauthToken) {
+          return (Scheduleplantransition) super.setOauthToken(oauthToken);
+        }
+
+        @Override
+        public Scheduleplantransition setPrettyPrint(java.lang.Boolean prettyPrint) {
+          return (Scheduleplantransition) super.setPrettyPrint(prettyPrint);
+        }
+
+        @Override
+        public Scheduleplantransition setQuotaUser(java.lang.String quotaUser) {
+          return (Scheduleplantransition) super.setQuotaUser(quotaUser);
+        }
+
+        @Override
+        public Scheduleplantransition setUploadType(java.lang.String uploadType) {
+          return (Scheduleplantransition) super.setUploadType(uploadType);
+        }
+
+        @Override
+        public Scheduleplantransition setUploadProtocol(java.lang.String uploadProtocol) {
+          return (Scheduleplantransition) super.setUploadProtocol(uploadProtocol);
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String packageName;
+
+        /** Required. The package of the application for which this subscription was purchased (for example,
+       'com.some.thing').
+         */
+        public java.lang.String getPackageName() {
+          return packageName;
+        }
+
+        /**
+         * Required. The package of the application for which this subscription was purchased (for
+         * example, 'com.some.thing').
+         */
+        public Scheduleplantransition setPackageName(java.lang.String packageName) {
+          this.packageName = packageName;
+          return this;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        @com.google.api.client.util.Key
+        private java.lang.String token;
+
+        /** Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public java.lang.String getToken() {
+          return token;
+        }
+
+        /**
+         * Required. The token provided to the user's device when the subscription was purchased.
+         */
+        public Scheduleplantransition setToken(java.lang.String token) {
+          this.token = token;
+          return this;
+        }
+
+        @Override
+        public Scheduleplantransition set(String parameterName, Object value) {
+          return (Scheduleplantransition) super.set(parameterName, value);
         }
       }
 

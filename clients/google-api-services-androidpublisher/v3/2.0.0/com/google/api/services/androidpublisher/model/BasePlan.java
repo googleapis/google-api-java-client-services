@@ -95,6 +95,13 @@ public final class BasePlan extends com.google.api.client.json.GenericJson {
   private java.lang.String state;
 
   /**
+   * Transition target base plan information when this base plan has a transition plan.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private TransitionTargetConfig transitionTargetConfig;
+
+  /**
    * Set when the base plan automatically renews at a regular interval.
    * @return value or {@code null} for none
    */
@@ -243,6 +250,23 @@ public final class BasePlan extends com.google.api.client.json.GenericJson {
    */
   public BasePlan setState(java.lang.String state) {
     this.state = state;
+    return this;
+  }
+
+  /**
+   * Transition target base plan information when this base plan has a transition plan.
+   * @return value or {@code null} for none
+   */
+  public TransitionTargetConfig getTransitionTargetConfig() {
+    return transitionTargetConfig;
+  }
+
+  /**
+   * Transition target base plan information when this base plan has a transition plan.
+   * @param transitionTargetConfig transitionTargetConfig or {@code null} for none
+   */
+  public BasePlan setTransitionTargetConfig(TransitionTargetConfig transitionTargetConfig) {
+    this.transitionTargetConfig = transitionTargetConfig;
     return this;
   }
 

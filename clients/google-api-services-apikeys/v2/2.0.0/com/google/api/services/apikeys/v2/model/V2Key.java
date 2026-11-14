@@ -71,8 +71,9 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   private java.lang.String etag;
 
   /**
-   * Output only. An encrypted and signed value held by this key. This field can be accessed only
-   * through the `GetKeyString` method.
+   * Output only. An encrypted and signed value held by this key. This field is returned upon
+   * initial key creation (`CreateKey`) and can afterward be accessed only through the
+   * `GetKeyString` method.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -215,8 +216,9 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An encrypted and signed value held by this key. This field can be accessed only
-   * through the `GetKeyString` method.
+   * Output only. An encrypted and signed value held by this key. This field is returned upon
+   * initial key creation (`CreateKey`) and can afterward be accessed only through the
+   * `GetKeyString` method.
    * @return value or {@code null} for none
    */
   public java.lang.String getKeyString() {
@@ -224,8 +226,9 @@ public final class V2Key extends com.google.api.client.json.GenericJson {
   }
 
   /**
-   * Output only. An encrypted and signed value held by this key. This field can be accessed only
-   * through the `GetKeyString` method.
+   * Output only. An encrypted and signed value held by this key. This field is returned upon
+   * initial key creation (`CreateKey`) and can afterward be accessed only through the
+   * `GetKeyString` method.
    * @param keyString keyString or {@code null} for none
    */
   public V2Key setKeyString(java.lang.String keyString) {

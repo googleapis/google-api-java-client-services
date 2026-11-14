@@ -31,13 +31,6 @@ package com.google.api.services.looker.v1.model;
 public final class ComponentMetrics extends com.google.api.client.json.GenericJson {
 
   /**
-   * Type of the exported component.
-   * The value may be {@code null}.
-   */
-  @com.google.api.client.util.Key
-  private java.lang.String componentType;
-
-  /**
    * Duration of the component export.
    * The value may be {@code null}.
    */
@@ -74,20 +67,10 @@ public final class ComponentMetrics extends com.google.api.client.json.GenericJs
 
   /**
    * Type of the exported component.
-   * @return value or {@code null} for none
+   * The value may be {@code null}.
    */
-  public java.lang.String getComponentType() {
-    return componentType;
-  }
-
-  /**
-   * Type of the exported component.
-   * @param componentType componentType or {@code null} for none
-   */
-  public ComponentMetrics setComponentType(java.lang.String componentType) {
-    this.componentType = componentType;
-    return this;
-  }
+  @com.google.api.client.util.Key
+  private java.lang.String type;
 
   /**
    * Duration of the component export.
@@ -171,6 +154,23 @@ public final class ComponentMetrics extends com.google.api.client.json.GenericJs
    */
   public ComponentMetrics setStartTime(String startTime) {
     this.startTime = startTime;
+    return this;
+  }
+
+  /**
+   * Type of the exported component.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getType() {
+    return type;
+  }
+
+  /**
+   * Type of the exported component.
+   * @param type type or {@code null} for none
+   */
+  public ComponentMetrics setType(java.lang.String type) {
+    this.type = type;
     return this;
   }
 

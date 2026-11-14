@@ -107,7 +107,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   private OracleProfile oracleProfile;
 
   /**
-   * Profile for connecting to a PostgreSQL source.
+   * Profile for connecting to a PostgreSQL source or destination.
    * The value may be {@code null}.
    */
   @com.google.api.client.util.Key
@@ -378,7 +378,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Profile for connecting to a PostgreSQL source.
+   * Profile for connecting to a PostgreSQL source or destination.
    * @return value or {@code null} for none
    */
   public PostgresqlProfile getPostgresqlProfile() {
@@ -386,7 +386,7 @@ public final class ConnectionProfile extends com.google.api.client.json.GenericJ
   }
 
   /**
-   * Profile for connecting to a PostgreSQL source.
+   * Profile for connecting to a PostgreSQL source or destination.
    * @param postgresqlProfile postgresqlProfile or {@code null} for none
    */
   public ConnectionProfile setPostgresqlProfile(PostgresqlProfile postgresqlProfile) {

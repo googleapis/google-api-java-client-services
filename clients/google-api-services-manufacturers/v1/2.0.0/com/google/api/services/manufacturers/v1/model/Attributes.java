@@ -103,6 +103,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String disclosureDate;
 
   /**
+   * Optional. URLs of PDF documents for the product, such as user manuals or specifications.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<java.lang.String> documentLink;
+
+  /**
    * A list of excluded destinations such as "ClientExport", "ClientShoppingCatalog" or
    * "PartnerShoppingCatalog". For more information, see
    * https://support.google.com/manufacturers/answer/7443550
@@ -195,6 +202,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   private java.lang.String itemGroupId;
 
   /**
+   * Optional. The shared title of the product group that this variant belongs to.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.String itemGroupTitle;
+
+  /**
    * The material of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#material.
    * The value may be {@code null}.
@@ -225,6 +239,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String pattern;
+
+  /**
+   * Optional. The popularity rank of the product from 0.0 (lowest) to 100.0 (highest).
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.lang.Double popularityRank;
 
   /**
    * The details of the product. For more information, see
@@ -273,6 +294,20 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.util.List<java.lang.String> productType;
+
+  /**
+   * Optional. Frequently asked questions and answers about the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<QuestionAndAnswer> questionAndAnswer;
+
+  /**
+   * Optional. Products related to this product, such as accessories or substitutes.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<RelatedProduct> relatedProduct;
 
   /**
    * The release date of the product. For more information, see
@@ -353,6 +388,13 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   @com.google.api.client.util.Key
   private java.lang.String title;
+
+  /**
+   * Optional. The list of all variant-identifying options for the product.
+   * The value may be {@code null}.
+   */
+  @com.google.api.client.util.Key
+  private java.util.List<VariantOption> variantOption;
 
   /**
    * The videos of the product. For more information, see
@@ -535,6 +577,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setDisclosureDate(java.lang.String disclosureDate) {
     this.disclosureDate = disclosureDate;
+    return this;
+  }
+
+  /**
+   * Optional. URLs of PDF documents for the product, such as user manuals or specifications.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<java.lang.String> getDocumentLink() {
+    return documentLink;
+  }
+
+  /**
+   * Optional. URLs of PDF documents for the product, such as user manuals or specifications.
+   * @param documentLink documentLink or {@code null} for none
+   */
+  public Attributes setDocumentLink(java.util.List<java.lang.String> documentLink) {
+    this.documentLink = documentLink;
     return this;
   }
 
@@ -756,6 +815,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
   }
 
   /**
+   * Optional. The shared title of the product group that this variant belongs to.
+   * @return value or {@code null} for none
+   */
+  public java.lang.String getItemGroupTitle() {
+    return itemGroupTitle;
+  }
+
+  /**
+   * Optional. The shared title of the product group that this variant belongs to.
+   * @param itemGroupTitle itemGroupTitle or {@code null} for none
+   */
+  public Attributes setItemGroupTitle(java.lang.String itemGroupTitle) {
+    this.itemGroupTitle = itemGroupTitle;
+    return this;
+  }
+
+  /**
    * The material of the product. For more information, see
    * https://support.google.com/manufacturers/answer/6124116#material.
    * @return value or {@code null} for none
@@ -828,6 +904,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setPattern(java.lang.String pattern) {
     this.pattern = pattern;
+    return this;
+  }
+
+  /**
+   * Optional. The popularity rank of the product from 0.0 (lowest) to 100.0 (highest).
+   * @return value or {@code null} for none
+   */
+  public java.lang.Double getPopularityRank() {
+    return popularityRank;
+  }
+
+  /**
+   * Optional. The popularity rank of the product from 0.0 (lowest) to 100.0 (highest).
+   * @param popularityRank popularityRank or {@code null} for none
+   */
+  public Attributes setPopularityRank(java.lang.Double popularityRank) {
+    this.popularityRank = popularityRank;
     return this;
   }
 
@@ -942,6 +1035,40 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setProductType(java.util.List<java.lang.String> productType) {
     this.productType = productType;
+    return this;
+  }
+
+  /**
+   * Optional. Frequently asked questions and answers about the product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<QuestionAndAnswer> getQuestionAndAnswer() {
+    return questionAndAnswer;
+  }
+
+  /**
+   * Optional. Frequently asked questions and answers about the product.
+   * @param questionAndAnswer questionAndAnswer or {@code null} for none
+   */
+  public Attributes setQuestionAndAnswer(java.util.List<QuestionAndAnswer> questionAndAnswer) {
+    this.questionAndAnswer = questionAndAnswer;
+    return this;
+  }
+
+  /**
+   * Optional. Products related to this product, such as accessories or substitutes.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<RelatedProduct> getRelatedProduct() {
+    return relatedProduct;
+  }
+
+  /**
+   * Optional. Products related to this product, such as accessories or substitutes.
+   * @param relatedProduct relatedProduct or {@code null} for none
+   */
+  public Attributes setRelatedProduct(java.util.List<RelatedProduct> relatedProduct) {
+    this.relatedProduct = relatedProduct;
     return this;
   }
 
@@ -1132,6 +1259,23 @@ public final class Attributes extends com.google.api.client.json.GenericJson {
    */
   public Attributes setTitle(java.lang.String title) {
     this.title = title;
+    return this;
+  }
+
+  /**
+   * Optional. The list of all variant-identifying options for the product.
+   * @return value or {@code null} for none
+   */
+  public java.util.List<VariantOption> getVariantOption() {
+    return variantOption;
+  }
+
+  /**
+   * Optional. The list of all variant-identifying options for the product.
+   * @param variantOption variantOption or {@code null} for none
+   */
+  public Attributes setVariantOption(java.util.List<VariantOption> variantOption) {
+    this.variantOption = variantOption;
     return this;
   }
 
